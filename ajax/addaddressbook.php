@@ -14,12 +14,18 @@ OCP\JSON::checkAppEnabled('contacts');
 OCP\JSON::callCheck();
 require_once 'loghandler.php';
 
+debug('name: '.$_POST['name']);
+
 $userid = OCP\USER::getUser();
-$name = trim(strip_tags($_POST['name']));
-if(!$name) {
+$name = isset($_POST['name'])?trim(strip_tags($_POST['name'])):null;
+$description = isset($_POST['description'])
+	? trim(strip_tags($_POST['description']))
+	: null;
+
+if(is_null($name)) {
 	bailOut('Cannot add addressbook with an empty name.');
 }
-$bookid = OC_Contacts_Addressbook::add($userid, $name, null);
+$bookid = OC_Contacts_Addressbook::add($userid, $name, $description);
 if(!$bookid) {
 	bailOut('Error adding addressbook: '.$name);
 }
@@ -28,9 +34,4 @@ if(!OC_Contacts_Addressbook::setActive($bookid, 1)) {
 	bailOut('Error activating addressbook.');
 }
 $addressbook = OC_Contacts_App::getAddressbook($bookid);
-$tmpl = new OCP\Template('contacts', 'part.chooseaddressbook.rowfields');
-$tmpl->assign('addressbook', $addressbook);
-OCP\JSON::success(array(
-	'page' => $tmpl->fetchPage(),
-	'addressbook' => $addressbook,
-));
+OCP\JSON::success(array('data' => $addressbook));
