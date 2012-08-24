@@ -20,13 +20,7 @@
  *
  */
 
-// Init owncloud
- 
-function bailOut($msg) {
-	OCP\JSON::error(array('data' => array('message' => $msg)));
-	OCP\Util::writeLog('contacts','ajax/contactdetails.php: '.$msg, OCP\Util::DEBUG);
-	exit();
-}
+require_once __DIR__.'/../loghandler.php';
 
 // Check if we are a user
 OCP\JSON::checkLoggedIn();
@@ -36,23 +30,12 @@ $id = isset($_GET['id'])?$_GET['id']:null;
 if(is_null($id)) {
 	bailOut(OC_Contacts_App::$l10n->t('Missing ID'));
 }
-$vcard = OC_Contacts_App::getContactVCard( $id );
+$card = OC_Contacts_VCard::find($id);
+$vcard = OC_VObject::parse($card['carddata']);
 if(is_null($vcard)) {
 	bailOut(OC_Contacts_App::$l10n->t('Error parsing VCard for ID: "'.$id.'"'));
 }
 $details = OC_Contacts_VCard::structureContact($vcard);
-
-// Some Google exported files have no FN field.
-/*if(!isset($details['FN'])) {
-	$fn = '';
-	if(isset($details['N'])) {
-		$details['FN'] = array(implode(' ', $details['N'][0]['value']));
-	} elseif(isset($details['EMAIL'])) {
-		$details['FN'] = array('value' => $details['EMAIL'][0]['value']);
-	} else {
-		$details['FN'] = array('value' => OC_Contacts_App::$l10n->t('Unknown'));
-	}
-}*/
 
 // Make up for not supporting the 'N' field in earlier version.
 if(!isset($details['N'])) {
@@ -67,6 +50,13 @@ if(isset($details['PHOTO'])) {
 } else {
 	$details['PHOTO'] = false;
 }
+$lastmodified = OC_Contacts_App::lastModified($vcard);
+if(!$lastmodified) {
+	$lastmodified = new DateTime();
+}
 $details['id'] = $id;
+$details['displayname'] = $card['fullname'];
+$details['addressbookid'] = $card['addressbookid'];
+$details['lastmodified'] = $lastmodified->format('U');
 OC_Contacts_App::setLastModifiedHeader($vcard);
 OCP\JSON::success(array('data' => $details));

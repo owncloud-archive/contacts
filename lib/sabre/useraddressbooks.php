@@ -1,9 +1,9 @@
 <?php
 /**
- * ownCloud - Image generator for contacts.
+ * ownCloud - Addressbook
  *
  * @author Thomas Tanghus
- * @copyright 2012 Thomas Tanghus <thomas@tanghus.net>
+ * @copyright 2012 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -20,16 +20,26 @@
  *
  */
 
-// Init owncloud
+/**
+ * This class overrides Sabre_CardDAV_UserAddressBooks::getChildren()
+ * to instantiate OC_Connector_Sabre_CardDAV_AddressBooks.
+*/
+class OC_Connector_Sabre_CardDAV_UserAddressBooks extends Sabre_CardDAV_UserAddressBooks {
 
-$tmp_path = $_GET['tmp_path'];
-$maxsize = isset($_GET['maxsize']) ? $_GET['maxsize'] : -1;
-header("Cache-Control: no-cache, no-store, must-revalidate");
+	/**
+	* Returns a list of addressbooks
+	*
+	* @return array
+	*/
+	public function getChildren() {
 
-OCP\Util::writeLog('contacts','dynphoto.php: tmp_path: '.$tmp_path.', exists: '.file_exists($tmp_path), OCP\Util::DEBUG);
+		$addressbooks = $this->carddavBackend->getAddressbooksForUser($this->principalUri);
+		$objs = array();
+		foreach($addressbooks as $addressbook) {
+			$objs[] = new OC_Connector_Sabre_CardDAV_AddressBook($this->carddavBackend, $addressbook);
+		}
+		return $objs;
 
-$image = new OC_Image($tmp_path);
-if($maxsize != -1) {
-	$image->resize($maxsize);
+	}
+
 }
-$image();

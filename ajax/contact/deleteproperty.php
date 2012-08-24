@@ -20,30 +20,35 @@
  *
  */
 
-// Init owncloud
- 
-
 // Check if we are a user
 OCP\JSON::checkLoggedIn();
 OCP\JSON::checkAppEnabled('contacts');
 OCP\JSON::callCheck();
 
+require_once __DIR__.'/../loghandler.php';
+
 $id = $_POST['id'];
 $checksum = $_POST['checksum'];
+$l10n = OC_Contacts_App::$l10n;
 
 $vcard = OC_Contacts_App::getContactVCard( $id );
 $line = OC_Contacts_App::getPropertyLineByChecksum($vcard, $checksum);
-if(is_null($line)){
-	OCP\JSON::error(array('data' => array( 'message' => OC_Contacts_App::$l10n->t('Information about vCard is incorrect. Please reload the page.'))));
+if(is_null($line)) {
+	bailOut($l10n->t('Information about vCard is incorrect. Please reload the page.'));
 	exit();
 }
 
 unset($vcard->children[$line]);
 
-if(!OC_Contacts_VCard::edit($id,$vcard)) {
-	OCP\JSON::error(array('data' => array('message' => OC_Contacts_App::$l10n->t('Error deleting contact property.'))));
-	OCP\Util::writeLog('contacts','ajax/deleteproperty.php: Error deleting contact property', OCP\Util::ERROR);
-	exit();
+try {
+	OC_Contacts_VCard::edit($id, $vcard);
+} catch(Exception $e) {
+	bailOut($e->getMessage());
 }
 
-OCP\JSON::success(array('data' => array( 'id' => $id )));
+OCP\JSON::success(array(
+	'data' => array(
+		'id' => $id,
+		'lastmodified' => OC_Contacts_App::lastModified($vcard)->format('U'),
+	)
+));

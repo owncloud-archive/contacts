@@ -1,9 +1,9 @@
 <?php
 /**
- * ownCloud - Addressbook
+ * ownCloud - Image generator for contacts.
  *
- * @author Jakob Sack
- * @copyright 2011 Jakob Sack mail@jakobsack.de
+ * @author Thomas Tanghus
+ * @copyright 2012 Thomas Tanghus <thomas@tanghus.net>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -20,17 +20,15 @@
  *
  */
 
-// Init owncloud
- 
+$tmpkey = $_GET['tmpkey'];
+$maxsize = isset($_GET['maxsize']) ? $_GET['maxsize'] : -1;
+header("Cache-Control: no-cache, no-store, must-revalidate");
 
-// Check if we are a user
-OCP\JSON::checkLoggedIn();
-OCP\JSON::checkAppEnabled('contacts');
-OCP\JSON::callCheck();
+OCP\Util::writeLog('contacts', 'tmpphoto.php: tmpkey: '.$tmpkey, OCP\Util::DEBUG);
 
-//$id = $_GET['id'];
-$id = $_POST['id'];
-OC_Contacts_App::getAddressbook( $id ); // is owner access check
-
-OC_Contacts_Addressbook::delete($id);
-OCP\JSON::success(array('data' => array( 'id' => $id )));
+$image = new OC_Image();
+$image->loadFromData(OC_Cache::get($tmpkey));
+if($maxsize != -1) {
+	$image->resize($maxsize);
+}
+$image();

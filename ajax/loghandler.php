@@ -2,8 +2,8 @@
 /**
  * ownCloud - Addressbook
  *
- * @author Jakob Sack
- * @copyright 2011 Jakob Sack mail@jakobsack.de
+ * @author Thomas Tanghus
+ * @copyright 2012 Thomas Tanghus <thomas@tanghus.net>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -19,25 +19,26 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-function bailOut($msg) {
+
+function bailOut($msg, $tracelevel=1, $debuglevel=OCP\Util::ERROR) 
+{
 	OCP\JSON::error(array('data' => array('message' => $msg)));
-	OCP\Util::writeLog('contacts','ajax/saveproperty.php: '.$msg, OCP\Util::DEBUG);
+	debug($msg, $tracelevel, $debuglevel);
 	exit();
 }
 
-// Init owncloud
- 
-
-// Check if we are a user
-OCP\JSON::checkLoggedIn();
-OCP\JSON::checkAppEnabled('contacts');
-OCP\JSON::callCheck();
-
-$id = isset($_POST['id'])?$_POST['id']:null;
-if(!$id) {
-	bailOut(OC_Contacts_App::$l10n->t('id is not set.'));
+function debug($msg, $tracelevel=0, $debuglevel=OCP\Util::DEBUG) 
+{
+	if(PHP_VERSION >= "5.4") {
+		$call = debug_backtrace(false, $tracelevel+1);
+	} else {
+		$call = debug_backtrace(false);
+	}
+	error_log('trace: '.print_r($call, true));
+	$call = $call[$tracelevel];
+	if($debuglevel !== false) {
+		OCP\Util::writeLog('contacts', 
+			$call['file'].'. Line: '.$call['line'].': '.$msg, 
+			$debuglevel);
+	}
 }
-$card = OC_Contacts_App::getContactObject( $id );
-
-OC_Contacts_VCard::delete($id);
-OCP\JSON::success(array('data' => array( 'id' => $id )));
