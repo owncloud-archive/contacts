@@ -146,9 +146,13 @@
 .form dd { display: inline-block; clear: right; float: left; margin: 0; padding: 0; white-space: nowrap; vertical-align: text-bottom; }
 
 /* override the default margin on share dropdown */
-#dropdown { margin: 1.5em 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; }
+#dropdown {
+	margin: 0;
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+	width: 100%;
+}
 #dropdown label { display: list-item; }
-
+#dropdown input[type="text"] { width: 90%; }
 /* reset box-sizing for multiSelect */
 #content div.multiselect, #content div.multiselect > * { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
 
@@ -407,8 +411,8 @@ dt[data-element="org"] { margin-top: 4px; }
 */
 .addressbooklist .actions { position: absolute; right: 5px; }
 
-#contacts-settings .addressbooklist {
-	max-height: 250px;
+#app-settings-content {
+	overflow-x: hidden;
 	overflow-y: auto;
 }
 
@@ -436,6 +440,10 @@ dt[data-element="org"] { margin-top: 4px; }
 
 .import-upload, .import-status {
 	height: 60px;
+}
+.import-upload select {
+	width: 80%; height: 30px;
+	margin: 5px;
 }
 .import-status {
 	display: none;

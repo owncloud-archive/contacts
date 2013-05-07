@@ -7,7 +7,7 @@
 				</a>
 			</li>
 			<li class="special">
-				<input class="add-group" type="text" tabindex="0" autofocus placeholder="<?php p($l->t('Group name')); ?>" title="<?php p($l->t('New Group')); ?>" />
+				<input class="add-group hidden" type="text" tabindex="0" autofocus placeholder="<?php p($l->t('Group name')); ?>" title="<?php p($l->t('New Group')); ?>" />
 			</li>
 		</ul>
 		<div id="app-settings">

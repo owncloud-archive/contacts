@@ -27,8 +27,8 @@ OC.Contacts = OC.Contacts || {};
 		this.$li.find('a.action.globe').on('click keypress', function() {
 			var uri = (self.book.owner === oc_current_user ) ? self.book.uri : self.book.uri + '_shared_by_' + self.book.owner;
 			var link = OC.linkToRemote('carddav')+'/addressbooks/'+encodeURIComponent(oc_current_user)+'/'+encodeURIComponent(uri);
-			var $dropdown = $('<li><div id="dropdown" class="drop"><input type="text" value="' + link + '" readonly /></div></li>');
-			$dropdown.insertAfter(self.$li);
+			var $dropdown = $('<li><div id="dropdown" class="drop"><input type="text" value="{link}" readonly /></div></li>')
+				.octemplate({link:link}).insertAfter(self.$li);
 			var $input = $dropdown.find('input');
 			$input.focus().get(0).select();
 			$input.on('blur', function() {
