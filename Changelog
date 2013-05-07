@@ -1,6 +1,7 @@
 ownCloud Contacts Changelog
 
 6.0
+ - Regression: Address book rename added again.
  - Rewritten backend to allow for multiple address book sources.
  - Abstraction layer for address books and contacts.
  - Partially ported to App Framework.
