@@ -4,6 +4,8 @@
 			width: 'auto',
 			height: 'auto',
 			closeOnEscape: true,
+			autoOpen: false,
+			autoClose: true,
 			addText: 'Add'
 		},
 		_create: function() {
@@ -22,7 +24,7 @@
 			//console.log('ocaddnew, title', this.options.title);
 			this.element.hide();
 
-			this.$ul = $('<ul class="oc-addnew" />').insertBefore(this.element);
+			this.$ul = $('<ul class="oc-addnew" />').insertBefore(this.element).css('display', 'inline-block');
 			$('<a class="oc-addnew-init"></a>').text(this.options.title).appendTo(this.$ul).wrap('<li />');
 			this.element.addClass('oc-addnew-name').appendTo(this.$ul).wrap('<li />');
 			//console.log('li', $li.parent());
@@ -54,8 +56,10 @@
 			});
 
 			$(document).on('click keydown keyup', function(event) {
-				if(event.target !== self.$ul.get(0) && self.$ul.find($(event.target)).length === 0) {
-					//console.log('outside');
+				if(self._isOpen && self.options.autoClose
+					&& event.target !== self.$ul.get(0)
+					&& self.$ul.find($(event.target)).length === 0) {
+					//console.log('outside', $(event.target), self.$ul.find(event.target));
 					self.close();
 					return;
 				}
@@ -77,10 +81,15 @@
 					return false;
 				}
 			});
+			//console.log('ocaddnew._create done', this);
 			this._setOptions(this.options);
+			this._isOpen = false;
 		},
 		_init: function() {
 			//console.log('ocaddnew._init');
+			if(this.options.autoOpen) {
+				this.open();
+			}
 		},
 		_setOption: function(key, value) {
 			//console.log('ocaddnew._setOption', key, value);
@@ -109,22 +118,32 @@
 			return this.$ul;
 		},
 		close: function() {
+			if(!this._isOpen) {
+				return;
+			}
 			//console.log('ocaddnew.close()');
 			this.$ul.removeClass('open');
 			this.$ul.find('li:not(:first-child)').hide();
 			this.$ul.find('li:first-child').show();
+			this._isOpen = false;
+			this._trigger('close');
 		},
 		open: function() {
-			//console.log('ocaddnew.open()', this.element.parent('li'));
+			if(this._isOpen) {
+				return;
+			}
+			//console.log('ocaddnew.open()', this.element.parent('li'), this.$ul);
 			this.$ul.addClass('open');
 			this.$ul.find('li:first-child').hide();
 			this.element.show().next('button').show().parent('li').show();
 			this.element.focus();
 			if(this.options.addTo) {
 			}
+			this._isOpen = true;
+			this._trigger('open');
 		},
 		destroy: function() {
-			console.log('destroy');
+			//console.log('destroy');
 			if(this.originalTitle) {
 				this.element.attr('title', this.originalTitle);
 			}
