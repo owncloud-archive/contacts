@@ -129,8 +129,8 @@ abstract class AbstractBackend {
 	* Returns the supported actions as int to be
 	* compared with \OCP\PERMISSION_CREATE etc.
 	*/
-	public function hasAddressBooksMethodFor($permission) {
-		return (bool)($this->getAddressBooksPermissions() & $permission);
+	public function hasAddressBookMethodFor($permission) {
+		return (bool)($this->getAddressBookPermissions() & $permission);
 	}
 
 	/**
