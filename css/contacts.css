@@ -410,6 +410,10 @@ dt[data-element="org"] { margin-top: 4px; }
 #contacts-settings a.action:not(.settings) { width: 16px; height: 16px; }
 */
 .addressbooklist .actions { position: absolute; right: 5px; }
+.addressbooklist > li > div {
+	display: inline-block;
+	clear: both;
+}
 
 #app-settings-content {
 	overflow-x: hidden;

@@ -56,6 +56,16 @@ $this->create('contacts_address_book_add', 'addressbook/{backend}/add')
 	)
 	->requirements(array('backend', 'addressbookid'));
 
+$this->create('contacts_address_book_update', 'addressbook/{backend}/{addressbookid}')
+	->post()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('AddressBookController', 'updateAddressBook', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbookid'));
+
 $this->create('contacts_address_book_delete', 'addressbook/{backend}/{addressbookid}')
 	->delete()
 	->action(

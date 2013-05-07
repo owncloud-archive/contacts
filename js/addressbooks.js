@@ -19,6 +19,12 @@ OC.Contacts = OC.Contacts || {};
 			permissions: this.book.permissions
 		});
 		this.$li.find('a.action').tipsy({gravity: 'w'});
+		if(!this.hasPermission(OC.PERMISSION_DELETE)) {
+			this.$li.find('a.action.delete').hide();
+		}
+		if(!this.hasPermission(OC.PERMISSION_UPDATE)) {
+			this.$li.find('a.action.edit').hide();
+		}
 		this.$li.find('a.action.delete').on('click keypress', function() {
 			$('.tipsy').remove();
 			console.log('delete', self.getId());
@@ -37,6 +43,44 @@ OC.Contacts = OC.Contacts || {};
 				});
 			});
 		});
+		this.$li.find('a.action.edit').on('click keypress', function(event) {
+			if($(this).data('open')) {
+				return;
+			}
+			var editor = this;
+			event.stopPropagation();
+			event.preventDefault();
+			var $dropdown = $('<li><div><input type="text" value="{name}" /></div></li>')
+				.octemplate({name:self.getDisplayName()}).insertAfter(self.$li);
+			var $input = $dropdown.find('input');
+			//$input.focus().get(0).select();
+			$input.addnew({
+				autoOpen: true,
+				//autoClose: false,
+				addText: t('contacts', 'Save'),
+				ok: function(event, name) {
+					console.log('edit-address-book ok', name);
+					$input.addClass('loading');
+					self.update({displayname:name}, function(response) {
+						console.log('response', response);
+						if(response.error) {
+							$(document).trigger('status.contact.error', {
+								message: response.message
+							});
+						} else {
+							self.setDisplayName(response.data.displayname);
+							$input.addnew('close');
+						}
+						$input.removeClass('loading');
+					});
+				},
+				close: function() {
+					$dropdown.remove();
+					$(editor).data('open', false);
+				}
+			});
+			$(this).data('open', true);
+		});
 		return this.$li;
 	};
 
@@ -52,8 +96,17 @@ OC.Contacts = OC.Contacts || {};
 		return this.book.displayname;
 	};
 
+	AddressBook.prototype.setDisplayName = function(name) {
+		this.book.displayname = name;
+		this.$li.find('label').text(escapeHTML(name));
+	};
+
 	AddressBook.prototype.getPermissions = function() {
 		return this.book.permissions;
+	};
+
+	AddressBook.prototype.hasPermission = function(permission) {
+		return (this.getPermissions() & permission);
 	};
 
 	AddressBook.prototype.getOwner = function() {
@@ -70,13 +123,32 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Update address book in data store
+	 * @param object properties An object current only supporting the property 'displayname'
+	 * @param cb Optional callback function which
+	 * @return An object with a boolean variable 'error'.
+	 */
+	AddressBook.prototype.update = function(properties, cb) {
+		var self = this;
+		$.when(this.storage.updateAddressBook(this.getBackend(), self.getId(), {properties:properties}))
+			.then(function(response) {
+			if(response.error) {
+				$(document).trigger('status.contact.error', {
+					message: response.message
+				});
+			}
+			cb(response);
+		});
+	}
+
+	/**
 	 * Delete address book from data store and remove it from the DOM
 	 * @param cb Optional callback function which
 	 * @return An object with a boolean variable 'error'.
 	 */
 	AddressBook.prototype.destroy = function(cb) {
 		var self = this;
-		$.when(this.storage.deleteAddressBook('local', self.getId()))
+		$.when(this.storage.deleteAddressBook(this.getBackend(), self.getId()))
 			.then(function(response) {
 			if(!response.error) {
 				self.$li.remove();

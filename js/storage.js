@@ -86,6 +86,33 @@ OC.Contacts = OC.Contacts || {};
 	}
 
 	/**
+	 * Update an address book in a specific backend
+	 *
+	 * @param string backend
+	 * @param string addressbookid Address book ID
+	 * @param object params An object {displayname:"My contacts", description:""}
+	 * @return An array containing contact data e.g.:
+	 * {
+	 * 	metadata:
+	 * 		{
+	 * 		id:'1234'
+	 * 		permissions:31,
+	 * 		displayname:'My contacts',
+	 * 		lastmodified: (unix timestamp),
+	 * 		owner: 'joye',
+	 * }
+	 */
+	Storage.prototype.updateAddressBook = function(backend, addressbookid, properties) {
+		console.log('Storage.updateAddressBook', backend);
+		return this.requestRoute(
+			'contacts_address_book_update',
+			'POST',
+			{backend: backend, addressbookid: addressbookid},
+			properties
+		);
+	}
+
+	/**
 	 * Delete an address book from a specific backend
 	 *
 	 * @param string backend
@@ -96,7 +123,7 @@ OC.Contacts = OC.Contacts || {};
 		return this.requestRoute(
 			'contacts_address_book_delete',
 			'DELETE',
-			{backend: 'local', addressbookid: addressbookid}
+			{backend: backend, addressbookid: addressbookid}
 		);
 	}
 

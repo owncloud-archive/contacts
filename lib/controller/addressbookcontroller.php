@@ -104,6 +104,29 @@ class AddressBookController extends BaseController {
 	 * @IsSubAdminExemption
 	 * @Ajax
 	 */
+	public function updateAddressBook() {
+		$params = $this->request->urlParams;
+		$app = new App($this->api->getUserId());
+
+		$response = new JSONResponse();
+
+		$backend = App::getBackend('local', $this->api->getUserId());
+		// TODO: Check actual permissions
+		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_UPDATE)) {
+			throw new \Exception('Not implemented');
+		}
+		if(!$backend->updateAddressBook($params['addressbookid'], $this->request['properties'])) {
+			$response->bailOut(App::$l10n->t('Error updating address book'));
+		}
+		$response->setParams($backend->getAddressBook($params['addressbookid']));
+		return $response;
+	}
+
+	/**
+	 * @IsAdminExemption
+	 * @IsSubAdminExemption
+	 * @Ajax
+	 */
 	public function deleteAddressBook() {
 		$params = $this->request->urlParams;
 		$app = new App($this->api->getUserId());
