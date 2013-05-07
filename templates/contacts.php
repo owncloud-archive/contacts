@@ -430,6 +430,7 @@
 		<a title="<?php p($l->t('Share')); ?>" class="share action" data-possible-permissions="{permissions}" data-item="{id}" data-item-type="addressbook"></a>
 		<a title="<?php p($l->t('Export')); ?>" class="download action" href="<?php print_unescaped(OCP\Util::linkTo('contacts', 'export.php')); ?>?bookid={id}"></a>
 		<a title="<?php p($l->t('CardDAV link')); ?>" class="globe action"></a>
+		<a title="<?php p($l->t('Edit')); ?>" class="edit action"></a>
 		<a title="<?php p($l->t('Delete')); ?>" class="delete action"></a>
 	</span>
 </li>
