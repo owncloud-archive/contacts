@@ -641,7 +641,7 @@ OC.Contacts = OC.Contacts || {};
 		var tmpl = this.$groupListItemTemplate;
 
 		if(!this.findById('all').length) {
-			tmpl.octemplate({id: 'all', type: 'all', num: numcontacts, name: t('contacts', 'All')}).appendTo($groupList);
+			tmpl.octemplate({id: 'all', type: 'all', num: 0, name: t('contacts', 'All')}).appendTo($groupList);
 		}
 		return $.when(this.storage.getGroupsForUser()).then(function(response) {
 			if (response && !response.error) {
