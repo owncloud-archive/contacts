@@ -634,7 +634,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 	};
 
-	GroupList.prototype.loadGroups = function(numcontacts, cb) {
+	GroupList.prototype.loadGroups = function(cb) {
 		var self = this;
 		var acceptdrop = '.dragContact';
 		var $groupList = this.$groupList;
