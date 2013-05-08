@@ -130,7 +130,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	AddressBook.prototype.update = function(properties, cb) {
 		var self = this;
-		$.when(this.storage.updateAddressBook(this.getBackend(), self.getId(), {properties:properties}))
+		return $.when(this.storage.updateAddressBook(this.getBackend(), self.getId(), {properties:properties}))
 			.then(function(response) {
 			if(response.error) {
 				$(document).trigger('status.contact.error', {
@@ -301,6 +301,10 @@ OC.Contacts = OC.Contacts || {};
 					console.log('Import done');
 					self.$importStatusText.text(t('contacts', 'Imported {imported} contacts. {failed} failed.',
 													  {imported:response.data.imported, failed: response.data.failed}));
+					var addressBook = self.find({id:response.data.addressbookid, backend: response.data.backend});
+					$(document).trigger('status.addressbook.imported', {
+						addressbook: addressBook
+					});
 				} else {
 					done = true;
 					self.$importStatusText.text(response.message);
@@ -362,6 +366,7 @@ OC.Contacts = OC.Contacts || {};
 	 * @return AddressBook|null
 	 */
 	AddressBookList.prototype.find = function(info) {
+		console.log('AddressBookList.find', info);
 		var addressBook = null;
 		$.each(this.addressBooks, function(idx, book) {
 			if(book.getId() === info.id && book.getBackend() === info.backend) {
@@ -472,8 +477,9 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	* Load address books
 	*/
-	AddressBookList.prototype.loadAddressBooks = function(cb) {
+	AddressBookList.prototype.loadAddressBooks = function() {
 		var self = this;
+		var defer = $.Deferred();
 		$.when(this.storage.getAddressBooksForUser()).then(function(response) {
 			if(!response.error) {
 				var num = response.data.addressbooks.length;
@@ -486,9 +492,9 @@ OC.Contacts = OC.Contacts || {};
 				} else {
 					self.$bookList.find('a.action.share').css('display', 'none');
 				}
-				cb({error:false, addressbooks: self.addressBooks});
+				defer.resolve(self.addressBooks);
 			} else {
-				cb(response);
+				defer.reject(response);
 				$(document).trigger('status.contact.error', {
 					message: response.message
 				});
@@ -498,10 +504,12 @@ OC.Contacts = OC.Contacts || {};
 		.fail(function(jqxhr, textStatus, error) {
 			var err = textStatus + ', ' + error;
 			console.warn( "Request Failed: " + err);
-			$(document).trigger('status.contact.error', {
+			defer.reject({
+				error: true,
 				message: t('contacts', 'Failed loading address books: {error}', {error:err})
 			});
 		});
+		return defer.promise();
 	};
 
 	OC.Contacts.AddressBookList = AddressBookList;

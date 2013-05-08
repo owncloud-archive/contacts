@@ -61,6 +61,11 @@ OC.Contacts = OC.Contacts || {};
 			}
 		});
 
+		$(document).bind('status.contacts.count', function(e, data) {
+			console.log('Num contacts:', data.count);
+			self.findById('all').find('.numcontacts').text(data.count);
+		});
+
 		this.$groupListItemTemplate = listItemTmpl;
 		this.categories = [];
 	};
@@ -74,6 +79,14 @@ OC.Contacts = OC.Contacts || {};
 	 * the group hasn't been saved/created yet.
 	 */
 	GroupList.prototype.selectGroup = function(params) {
+		var self = this;
+		if(!this.loaded) {
+			console.log('Not loaded');
+			setTimeout(function() {
+				self.selectGroup(params);
+			}, 100);
+			return;
+		}
 		var id, $elem;
 		if(typeof params.id !== 'undefined') {
 			id = params.id;
@@ -83,7 +96,7 @@ OC.Contacts = OC.Contacts || {};
 			$elem = params.element;
 		}
 		if(!$elem) {
-			self.selectGroup('all');
+			self.selectGroup({id:'all'});
 			return;
 		}
 		console.log('selectGroup', id, $elem);
@@ -99,6 +112,10 @@ OC.Contacts = OC.Contacts || {};
 			contacts: $elem.data('contacts')
 		});
 	};
+
+	GroupList.prototype.triggerLastGroup = function() {
+		this.selectGroup({id:this.lastgroup});
+	}
 
 	/**
 	 * Get the group name by id.
@@ -623,8 +640,10 @@ OC.Contacts = OC.Contacts || {};
 		var $groupList = this.$groupList;
 		var tmpl = this.$groupListItemTemplate;
 
-		tmpl.octemplate({id: 'all', type: 'all', num: numcontacts, name: t('contacts', 'All')}).appendTo($groupList);
-		$.when(this.storage.getGroupsForUser()).then(function(response) {
+		if(!this.findById('all').length) {
+			tmpl.octemplate({id: 'all', type: 'all', num: numcontacts, name: t('contacts', 'All')}).appendTo($groupList);
+		}
+		return $.when(this.storage.getGroupsForUser()).then(function(response) {
 			if (response && !response.error) {
 				self.lastgroup = response.data.lastgroup;
 				self.sortorder = contacts_groups_sortorder;
@@ -632,7 +651,8 @@ OC.Contacts = OC.Contacts || {};
 				// Favorites
 				// Map to strings easier lookup an contacts list.
 				var contacts = $.map(response.data.favorites, function(c) {return String(c);});
-				var $elem = tmpl.octemplate({
+				var $elem = self.findById('fav');
+				$elem = $elem.length ? $elem : tmpl.octemplate({
 					id: 'fav',
 					type: 'fav',
 					num: contacts.length,
@@ -640,7 +660,9 @@ OC.Contacts = OC.Contacts || {};
 				}).appendTo($groupList);
 				$elem.data('obj', self);
 				$elem.data('rawname', t('contacts', 'Favorites'));
-				$elem.data('contacts', contacts).find('.numcontacts').before('<span class="starred action" />');
+				if(!$elem.find('.starred').length) {
+					$elem.data('contacts', contacts).find('.numcontacts').before('<span class="starred action" />');
+				}
 				$elem.droppable({
 							drop: self.contactDropped,
 							over: function( event, ui ) {
@@ -657,27 +679,32 @@ OC.Contacts = OC.Contacts || {};
 				// Normal groups
 				$.each(response.data.categories, function(c, category) {
 					var contacts = $.map(category.contacts, function(c) {return String(c);});
-					var $elem = (tmpl).octemplate({
-						id: category.id,
-						type: 'category',
-						num: contacts.length,
-						name: category.name
-					});
-					self.categories.push({id: category.id, name: category.name});
-					$elem.data('obj', self);
+					var $elem = self.findById(category.id);
+					if($elem.length) {
+						$elem.find('.numcontacts').text(contacts.length);
+					} else {
+						$elem = $elem.length ? $elem : (tmpl).octemplate({
+							id: category.id,
+							type: 'category',
+							num: contacts.length,
+							name: category.name
+						});
+						self.categories.push({id: category.id, name: category.name});
+						$elem.data('obj', self);
+						$elem.data('rawname', category.name);
+						$elem.data('id', category.id);
+						$elem.droppable({
+										drop: self.contactDropped,
+										over: function( event, ui ) {
+											console.log('over group', ui.draggable);
+										},
+										activeClass: 'ui-state-active',
+										hoverClass: 'ui-state-hover',
+										scope: 'contacts'
+									});
+						$elem.appendTo($groupList);
+					}
 					$elem.data('contacts', contacts);
-					$elem.data('rawname', category.name);
-					$elem.data('id', category.id);
-					$elem.droppable({
-									drop: self.contactDropped,
-									over: function( event, ui ) {
-										console.log('over group', ui.draggable);
-									},
-									activeClass: 'ui-state-active',
-									hoverClass: 'ui-state-hover',
-									scope: 'contacts'
-								});
-					$elem.appendTo($groupList);
 				});
 
 				var elems = $groupList.find('li[data-type="category"]').get();
@@ -694,7 +721,8 @@ OC.Contacts = OC.Contacts || {};
 				$.each(response.data.shared, function(c, shared) {
 					var sharedindicator = '<img class="shared svg" src="' + OC.imagePath('core', 'actions/shared') + '"'
 						+ 'title="' + t('contacts', 'Shared by {owner}', {owner:shared.owner}) + '" />';
-					var $elem = (tmpl).octemplate({
+					var $elem = self.findById(shared.id);
+					$elem = $elem.length ? $elem : (tmpl).octemplate({
 						id: shared.id,
 						type: 'shared',
 						num: response.data.shared.length,
@@ -722,11 +750,7 @@ OC.Contacts = OC.Contacts || {};
 				});
 				var $elem = self.findById(self.lastgroup);
 				$elem.addClass('active');
-				$(document).trigger('status.group.selected', {
-					id: self.lastgroup,
-					type: $elem.data('type'),
-					contacts: $elem.data('contacts')
-				});
+				self.loaded = true;
 			} // TODO: else
 			if(typeof cb === 'function') {
 				cb();

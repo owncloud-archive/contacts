@@ -1721,17 +1721,18 @@ OC.Contacts = OC.Contacts || {};
 		});
 		$(document).bind('status.addressbook.removed', function(e, data) {
 			var addressBook = data.addressbook;
-			$.each(self.contacts, function(idx, contact) {
-				if(contact.getBackend() === addressBook.getBackend()
-					&& contact.getParent() === addressBook.getId()) {
-					console.log('Removing', contact);
-					delete self.contacts[contact.getId()];
-					//var c = self.contacts.splice(self.contacts.indexOf(contact.getId()), 1);
-					//console.log('Removed', c);
-					contact.detach();
-					contact = null;
-				}
-			});
+			self.purgeFromAddressbook(addressBook);
+			$(document).trigger('request.groups.reload');
+		});
+		$(document).bind('status.addressbook.imported', function(e, data) {
+			console.log('status.addressbook.imported', data);
+			var addressBook = data.addressbook;
+			self.purgeFromAddressbook(addressBook);
+			$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId()))
+				.then(function() {
+					self.doSort();
+					$(document).trigger('request.groups.reload');
+				});
 		});
 	};
 
@@ -1742,6 +1743,30 @@ OC.Contacts = OC.Contacts || {};
 	ContactList.prototype.count = function() {
 		return Object.keys(this.contacts.contacts).length
 	};
+
+	/**
+	* Remove contacts from the internal list and the DOM
+	*
+	* @param AddressBook addressBook
+	*/
+	ContactList.prototype.purgeFromAddressbook = function(addressBook) {
+		var self = this;
+		$.each(this.contacts, function(idx, contact) {
+			if(contact.getBackend() === addressBook.getBackend()
+				&& contact.getParent() === addressBook.getId()) {
+				//console.log('Removing', contact);
+				delete self.contacts[contact.getId()];
+				//var c = self.contacts.splice(self.contacts.indexOf(contact.getId()), 1);
+				//console.log('Removed', c);
+				contact.detach();
+				contact = null;
+				self.length -= 1;
+			}
+		});
+		$(document).trigger('status.contacts.count', {
+			count: self.length
+		});
+	}
 
 	/**
 	* Show/hide contacts belonging to an addressbook.
@@ -2110,11 +2135,11 @@ OC.Contacts = OC.Contacts || {};
 	* Load contacts
 	* @param string backend Name of the backend ('local', 'ldap' etc.)
 	* @param string addressBookId
-	* @param function cb Optional call back function.
 	*/
-	ContactList.prototype.loadContacts = function(backend, addressBookId, cb) {
+	ContactList.prototype.loadContacts = function(backend, addressBookId) {
 		var self = this;
-		$.when(this.storage.getContacts(backend, addressBookId)).then(function(response) {
+		return $.when(this.storage.getContacts(backend, addressBookId)).then(function(response) {
+			var defer = this;
 			//console.log('ContactList.loadContacts', response);
 			if(!response.error) {
 				var items = [];
@@ -2143,21 +2168,17 @@ OC.Contacts = OC.Contacts || {};
 				if(items.length > 0) {
 					self.$contactList.append(items);
 				}
-				cb({error:false});
+				$(document).trigger('status.contacts.count', {
+					count: self.length
+				});
 			} else {
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
-				cb({
-					error:true,
-					message: response.message
-				});
+				defer.reject(response);
 			}
 		})
 		.fail(function(jqxhr, textStatus, error) {
 			var err = textStatus + ', ' + error;
 			console.warn( "Request Failed: " + err);
-			cb({error: true, message: err});
+			this.reject({error: true, message: err});
 		});
 	};
 

@@ -179,33 +179,54 @@ OC.Contacts = OC.Contacts || {
 			this.$groupList,
 			this.$groupListItemTemplate
 		);
-		this.addressBooks.loadAddressBooks(function(response) {
-			if(!response.error) {
-				var num = response.addressbooks.length;
-				$.each(response.addressbooks, function(idx, book) {
-					self.contacts.loadContacts(book.getBackend(), book.getId(), function(response) {
-						if(response.error) {
-							console.log(response.message);
-							$(document).trigger('status.contact.error', {
-								message: response.message
-							});
-						}
-						num -= 1;
-						if(num === 0) {
-							self.contacts.doSort();
-							$(document).trigger('status.contacts.loaded', {
-								status: true,
-								numcontacts: self.contacts.length
-							});
-						}
-					});
+		self.groups.loadGroups(function() {
+			self.loading(0, self.$navigation, false);
+		});
+		$.when(this.addressBooks.loadAddressBooks()).then(function(addressBooks) {
+			var num = addressBooks.length;
+			var deferreds = $(addressBooks).map(function(i, elem) {
+				return self.contacts.loadContacts(this.getBackend(), this.getId());
+			});
+			// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
+			$.when.apply(null, deferreds.get()).then(function(response) {
+				self.contacts.doSort();
+				$(document).trigger('status.contacts.loaded', {
+					status: true,
+					numcontacts: self.contacts.length
 				});
-			} else {
-				console.log(response.message);
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
-			}
+				self.loading(self.$rightContent, false);
+				// TODO: Move this to event handler
+				self.groups.selectGroup({id:contacts_lastgroup});
+				var id = $.QueryString['id']; // Keep for backwards compatible links.
+				self.currentid = parseInt(id);
+				if(!self.currentid) {
+					self.currentid = parseInt(window.location.hash.substr(1));
+				}
+				console.log('Groups loaded, currentid', self.currentid);
+				if(self.currentid) {
+					self.openContact(self.currentid);
+				}
+				if(!contacts_properties_indexed) {
+					// Wait a couple of mins then check if contacts are indexed.
+					setTimeout(function() {
+							$.when($.post(OC.Router.generate('contacts_index_properties')))
+								.then(function(response) {
+									if(!response.isIndexed) {
+										OC.notify({message:t('contacts', 'Indexing contacts'), timeout:20});
+									}
+								});
+					}, 10000);
+				} else {
+					console.log('contacts are indexed.');
+				}
+			}).fail(function(response) {
+				console.warn(response);
+			});
+		}).fail(function(response) {
+			console.log(response.message);
+			$(document).trigger('status.contact.error', {
+				message: response.message
+			});
 		});
 		OCCategories.changed = this.groups.categoriesChanged;
 		OCCategories.app = 'contacts';
@@ -368,38 +389,13 @@ OC.Contacts = OC.Contacts || {
 			}*/
 		});
 
-		$(document).bind('status.contacts.loaded', function(e, result) {
-			console.log('status.contacts.loaded', result);
-			if(result.status !== true) {
-				alert('Error loading contacts!');
-			} else {
-				self.numcontacts = result.numcontacts;
-				self.loading(self.$rightContent, false);
-				self.groups.loadGroups(self.numcontacts, function() {
-					self.loading(self.$navigation, false);
-					var id = $.QueryString['id']; // Keep for backwards compatible links.
-					self.currentid = parseInt(id);
-					if(!self.currentid) {
-						self.currentid = parseInt(window.location.hash.substr(1));
-					}
-					console.log('Groups loaded, currentid', self.currentid);
-					if(self.currentid) {
-						self.openContact(self.currentid);
-					}
+		$(document).bind('status.contacts.loaded', function(e, response) {
+			console.log('status.contacts.loaded', response);
+			if(response.error) {
+				$(document).trigger('status.contact.error', {
+					message: response.message
 				});
-				if(!contacts_properties_indexed) {
-					// Wait a couple of mins then check if contacts are indexed.
-					setTimeout(function() {
-							$.when($.post(OC.Router.generate('contacts_index_properties')))
-								.then(function(response) {
-									if(!response.isIndexed) {
-										OC.notify({message:t('contacts', 'Indexing contacts'), timeout:20});
-									}
-								});
-					}, 10000);
-				} else {
-					console.log('contacts are indexed.');
-				}
+				console.log('Error loading contacts!');
 			}
 		});
 
@@ -551,6 +547,11 @@ OC.Contacts = OC.Contacts || {
 		$(document).bind('request.addressbook.activate', function(e, result) {
 			console.log('request.addressbook.activate', result);
 			self.contacts.showFromAddressbook(result.id, result.activate);
+		});
+
+		$(document).bind('request.groups.reload', function(e, result) {
+			console.log('request.groups.reload', result);
+			self.groups.loadGroups();
 		});
 
 		$(document).bind('status.contact.removedfromgroup', function(e, result) {

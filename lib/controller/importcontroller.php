@@ -205,6 +205,8 @@ class ImportController extends BaseController {
 		sleep(3); // Give client side a chance to read the progress.
 		$response->setParams(
 			array(
+				'backend' => $params['backend'],
+				'addressbookid' => $params['addressbookid'],
 				'imported' => $imported,
 				'failed' => $failed,
 			)
