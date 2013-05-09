@@ -353,7 +353,8 @@ OC.Contacts = OC.Contacts || {
 			}
 		}
 
-		$(window).bind('popstate', this.hashChange);
+		// This apparently get's called on some weird occasions.
+		//$(window).bind('popstate', this.hashChange);
 		$(window).bind('hashchange', this.hashChange);
 		
 		// App specific events
