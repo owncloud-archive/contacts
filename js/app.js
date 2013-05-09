@@ -198,13 +198,12 @@ OC.Contacts = OC.Contacts || {
 				// TODO: Move this to event handler
 				self.groups.selectGroup({id:contacts_lastgroup});
 				var id = $.QueryString['id']; // Keep for backwards compatible links.
-				self.currentid = parseInt(id);
-				if(!self.currentid) {
-					self.currentid = parseInt(window.location.hash.substr(1));
+				if(!id) {
+					id = window.location.hash.substr(1);
 				}
-				console.log('Groups loaded, currentid', self.currentid);
-				if(self.currentid) {
-					self.openContact(self.currentid);
+				console.log('Groups loaded, id from url:', id);
+				if(id) {
+					self.openContact(id);
 				}
 				if(!contacts_properties_indexed) {
 					// Wait a couple of mins then check if contacts are indexed.
@@ -344,9 +343,9 @@ OC.Contacts = OC.Contacts || {
 		});
 
 		this.hashChange = function() {
-			//console.log('hashchange', window.location.hash)
+			console.log('hashchange', window.location.hash)
 			var id = String(window.location.hash.substr(1));
-			if(id && id !== self.currentid && self.contacts.findById(id) !== null) {
+			if(id && id != self.currentid && self.contacts.findById(id) !== null) {
 				self.openContact(id);
 			} else if(!id && self.currentid) {
 				self.closeContact(self.currentid);
@@ -359,8 +358,8 @@ OC.Contacts = OC.Contacts || {
 		
 		// App specific events
 		$(document).bind('status.contact.deleted', function(e, data) {
-			var id = parseInt(data.id);
-			if(id === self.currentid) {
+			var id = String(data.id);
+			if(id == self.currentid) {
 				delete self.currentid;
 			}
 			console.log('contact', data.id, 'deleted');
@@ -369,7 +368,7 @@ OC.Contacts = OC.Contacts || {
 		});
 
 		$(document).bind('status.contact.added', function(e, data) {
-			self.currentid = parseInt(data.id);
+			self.currentid = String(data.id);
 			self.buildGroupSelect();
 			self.hideActions();
 		});
@@ -847,7 +846,7 @@ OC.Contacts = OC.Contacts || {
 				}
 				return;
 			}
-			self.openContact($(this).data('id'));
+			self.openContact(String($(this).data('id')));
 		});
 
 		this.$settings.find('#app-settings-header').on('click keydown',function(event) {
@@ -1230,8 +1229,12 @@ OC.Contacts = OC.Contacts || {
 		$(window).bind('hashchange', this.hashChange);
 	},
 	openContact: function(id) {
+		if(typeof id == 'undefined' || id == 'undefined') {
+			console.warn('id is undefined!');
+			console.trace();
+		}
 		this.hideActions();
-		console.log('Contacts.openContact', id);
+		console.log('Contacts.openContact', id, typeof id);
 		if(this.currentid && this.currentid !== id) {
 			this.closeContact(this.currentid);
 		}
@@ -1242,6 +1245,7 @@ OC.Contacts = OC.Contacts || {
 		//this.$contactList.hide();
 		this.$contactList.addClass('dim');
 		this.$toggleAll.hide();
+		console.assert(typeof this.currentid === 'string', 'Current ID not string');
 		this.jumpToContact(this.currentid);
 		// Properties that the contact doesn't know
 		var groupprops = {
