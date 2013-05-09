@@ -167,6 +167,16 @@ $this->create('contacts_contact_save_property', 'addressbook/{backend}/{addressb
 	)
 	->requirements(array('backend', 'addressbook', 'contactid'));
 
+$this->create('contacts_contact_get', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/')
+	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('ContactController', 'getContact', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbook', 'contactid'));
+
 // Save all properties. Used for merging contacts.
 $this->create('contacts_contact_save_all', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/save')
 	->post()

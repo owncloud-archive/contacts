@@ -29,6 +29,34 @@ class ContactController extends BaseController {
 	 * @IsSubAdminExemption
 	 * @Ajax
 	 */
+	public function getContact() {
+		$app = new App($this->api->getUserId());
+
+		$request = $this->request;
+		$response = new JSONResponse();
+
+		$contact = $app->getContact(
+			$request->parameters['backend'],
+			$request->parameters['addressbookid'],
+			$request->parameters['contactid']
+		);
+
+		if(!$contact) {
+			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
+		}
+
+		$data = JSONSerializer::serializeContact($contact);
+
+		$response->setParams($data);
+
+		return $response;
+	}
+
+	/**
+	 * @IsAdminExemption
+	 * @IsSubAdminExemption
+	 * @Ajax
+	 */
 	public function saveContact() {
 		$app = new App($this->api->getUserId());
 
