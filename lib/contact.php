@@ -88,7 +88,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 						case 'displayname':
 						case 'fullname':
 							$this->props['displayname'] = $value;
-							//$this->FN = $value;
+							$this->FN = $value;
 							break;
 					}
 				}
@@ -412,9 +412,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 	* @throws @see getPropertyByChecksum
 	*/
 	public function unsetPropertyByChecksum($checksum) {
-		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
-			throw new \Exception('Access denied');
-		}
 		$idx = $this->getPropertyIndexByChecksum($checksum);
 		unset($this->children[$idx]);
 		$this->setSaved(false);
@@ -432,9 +429,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 	* @return string new checksum
 	*/
 	public function setPropertyByChecksum($checksum, $name, $value, $parameters=array()) {
-		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
-			throw new \Exception('Access denied');
-		}
 		if($checksum === 'new') {
 			$property = Property::create($name);
 			$this->add($property);
@@ -488,9 +482,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 	* @return bool
 	*/
 	public function setPropertyByName($name, $value, $parameters=array()) {
-		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
-			throw new \Exception('Access denied');
-		}
 		// TODO: parameters are ignored for now.
 		switch($name) {
 			case 'BDAY':
@@ -591,9 +582,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @param array $data
 	 */
 	public function mergeFromArray(array $data) {
-		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
-			throw new \Exception('Access denied');
-		}
 		foreach($data as $name => $properties) {
 			if(in_array($name, array('PHOTO', 'UID'))) {
 				continue;
@@ -658,17 +646,11 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	public function __set($key, $value) {
-		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
-			throw new \Exception('Access denied');
-		}
 		parent::__set($key, $value);
 		$this->setSaved(false);
 	}
 
 	public function __unset($key) {
-		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
-			throw new \Exception('Access denied');
-		}
 		parent::__unset($key);
 		$this->setSaved(false);
 	}
