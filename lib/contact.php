@@ -292,7 +292,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	public function retrieve() {
 		//error_log(__METHOD__);
 		//\OCP\Util::writeLog('contacts', __METHOD__.' ' . print_r($this->props, true), \OCP\Util::DEBUG);
-		if($this->isRetrieved() || count($this->children) > 0) {
+		if($this->isRetrieved() || count($this->children) > 1) {
 			//\OCP\Util::writeLog('contacts', __METHOD__. ' children', \OCP\Util::DEBUG);
 			return true;
 		} else {
