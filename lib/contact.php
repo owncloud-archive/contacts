@@ -161,6 +161,15 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	/**
+	 * @return string|null
+	 * TODO: Cache result.
+	 */
+	public function getETag() {
+		$this->retrieve();
+		return md5($this->serialize());
+	}
+
+	/**
 	 * If this object is part of a collection return a reference
 	 * to the parent object, otherwise return null.
 	 * @return IPIMObject|null
