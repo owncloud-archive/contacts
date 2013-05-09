@@ -56,7 +56,7 @@ class AddressBookController extends BaseController {
 
 		if(!is_null($lastModified)) {
 			$response->addHeader('Cache-Control', 'private, must-revalidate');
-			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified));
+			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
 			$response->setETag(md5($lastModified));
 		}
 

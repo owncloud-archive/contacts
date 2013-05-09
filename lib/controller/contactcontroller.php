@@ -114,7 +114,7 @@ class ContactController extends BaseController {
 			$lastModified = $contact->lastModified();
 			// Force refresh if modified within the last minute.
 			if(!is_null($lastModified)) {
-				$response->setLastModified(\DateTime::createFromFormat('U', $lastModified));
+				$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
 			}
 			if(!is_null($etag)) {
 				$response->setETag($etag);
