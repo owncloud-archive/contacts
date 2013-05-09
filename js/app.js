@@ -346,7 +346,7 @@ OC.Contacts = OC.Contacts || {
 		this.hashChange = function() {
 			//console.log('hashchange', window.location.hash)
 			var id = String(window.location.hash.substr(1));
-			if(id && id !== self.currentid) {
+			if(id && id !== self.currentid && self.contacts.findById(id) !== null) {
 				self.openContact(id);
 			} else if(!id && self.currentid) {
 				self.closeContact(self.currentid);
@@ -354,7 +354,7 @@ OC.Contacts = OC.Contacts || {
 		}
 
 		// This apparently get's called on some weird occasions.
-		//$(window).bind('popstate', this.hashChange);
+		$(window).bind('popstate', this.hashChange);
 		$(window).bind('hashchange', this.hashChange);
 		
 		// App specific events
