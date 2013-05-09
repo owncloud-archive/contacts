@@ -345,7 +345,7 @@ OC.Contacts = OC.Contacts || {
 
 		this.hashChange = function() {
 			//console.log('hashchange', window.location.hash)
-			var id = parseInt(window.location.hash.substr(1));
+			var id = String(window.location.hash.substr(1));
 			if(id && id !== self.currentid) {
 				self.openContact(id);
 			} else if(!id && self.currentid) {
