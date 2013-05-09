@@ -452,7 +452,7 @@ class Database extends AbstractBackend {
 		}
 
 		try {
-			$query =  'SELECT `id`, `carddata`, `lastmodified`, `fullname` AS `displayname` FROM `'
+			$query =  'SELECT `id`, `uri`, `carddata`, `lastmodified`, `fullname` AS `displayname` FROM `'
 				. $this->cardsTableName . '` WHERE ' . $where_query;
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute($ids);
@@ -582,7 +582,7 @@ class Database extends AbstractBackend {
 				$id = $id['uri'];
 				$qname = 'createcontactbyuri';
 			} else {
-				throw new Exception(
+				throw new \Exception(
 					__METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
 				);
 			}
