@@ -182,7 +182,6 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 * @return array
 	 */
 	public function getCard($addressbookid, $carduri) {
-		\OCP\Util::writeLog('contacts', __METHOD__.' identifier: ' . $carduri . ' ' . print_r($addressbookid, true), \OCP\Util::DEBUG);
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
 		$contact = $backend->getContact($id, array('uri' => $carduri));
 		return ($contact ? $contact : false);
@@ -228,7 +227,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 */
 	public function deleteCard($addressbookid, $carduri) {
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
-		return $backend->deleteContact($id);
+		return $backend->deleteContact($addressbookid, array('uri' => $carduri));
 	}
 
 	/**
