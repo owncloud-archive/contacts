@@ -649,7 +649,7 @@ OC.Contacts = OC.Contacts || {};
 				self.sortorder = contacts_groups_sortorder;
 				console.log('sortorder', self.sortorder);
 				// Favorites
-				// Map to strings easier lookup an contacts list.
+				// Map to strings to easier lookup in contacts list.
 				var contacts = $.map(response.data.favorites, function(c) {return String(c);});
 				var $elem = self.findById('fav');
 				$elem = $elem.length ? $elem : tmpl.octemplate({
