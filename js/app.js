@@ -180,7 +180,7 @@ OC.Contacts = OC.Contacts || {
 			this.$groupListItemTemplate
 		);
 		self.groups.loadGroups(function() {
-			self.loading(0, self.$navigation, false);
+			self.loading(self.$navigation, false);
 		});
 		$.when(this.addressBooks.loadAddressBooks()).then(function(addressBooks) {
 			var num = addressBooks.length;
