@@ -50,20 +50,42 @@ class VCard extends VObject\Component\VCard {
 	const DEFAULT_VERSION = '3.0';
 
 	/**
-	* @brief Format property TYPE parameters for upgrading from v. 2.1
-	* @param $property Reference to a \Sabre\VObject\Property.
+	* The vCard 2.1 specification allows parameter values without a name.
+	* The parameter name is then determined from the unique parameter value.
 	* In version 2.1 e.g. a phone can be formatted like: TEL;HOME;CELL:123456789
 	* This has to be changed to either TEL;TYPE=HOME,CELL:123456789 or TEL;TYPE=HOME;TYPE=CELL:123456789 - both are valid.
+	*
+	* From: https://github.com/barnabywalters/vcard/blob/master/barnabywalters/VCard/VCard.php
+	*
+	* @param string value
+	* @return string
 	*/
-	protected function formatPropertyTypes(&$property) {
-		foreach($property->parameters as $key=>&$parameter) {
-			$types = Utils\Properties::getTypesForProperty($property->name);
-			if(is_array($types) && in_array(strtoupper($parameter->name), array_keys($types))
-				|| strtoupper($parameter->name) == 'PREF') {
-				unset($property->parameters[$key]);
-				$property->add('TYPE', $parameter->name);
-			}
+	protected function paramName($value) {
+		static $types = array (
+				'DOM', 'INTL', 'POSTAL', 'PARCEL','HOME', 'WORK',
+				'PREF', 'VOICE', 'FAX', 'MSG', 'CELL', 'PAGER',
+				'BBS', 'MODEM', 'CAR', 'ISDN', 'VIDEO',
+				'AOL', 'APPLELINK', 'ATTMAIL', 'CIS', 'EWORLD',
+				'INTERNET', 'IBMMAIL', 'MCIMAIL',
+				'POWERSHARE', 'PRODIGY', 'TLX', 'X400',
+				'GIF', 'CGM', 'WMF', 'BMP', 'MET', 'PMB', 'DIB',
+				'PICT', 'TIFF', 'PDF', 'PS', 'JPEG', 'QTIME',
+				'MPEG', 'MPEG2', 'AVI',
+				'WAVE', 'AIFF', 'PCM',
+				'X509', 'PGP');
+		static $values = array (
+				'INLINE', 'URL', 'CID');
+		static $encodings = array (
+				'7BIT', 'QUOTED-PRINTABLE', 'BASE64');
+		$name = 'UNKNOWN';
+		if (in_array($value, $types)) {
+			$name = 'TYPE';
+		} elseif (in_array($value, $values)) {
+			$name = 'VALUE';
+		} elseif (in_array($value, $encodings)) {
+			$name = 'ENCODING';
 		}
+		return $name;
 	}
 
 	/**
@@ -73,12 +95,16 @@ class VCard extends VObject\Component\VCard {
 	* must therefore be decoded and the parameters removed.
 	*/
 	protected function decodeProperty(&$property) {
-		// Check out for encoded string and decode them :-[
 		foreach($property->parameters as $key=>&$parameter) {
+			// Check for values without names which Sabre interprets
+			// as names without values.
+			if(trim($parameter->value) === '') {
+				$parameter->value = $parameter->name;
+				$parameter->name = $this->paramName($parameter->name);
+			}
+			// Check out for encoded string and decode them :-[
 			if(strtoupper($parameter->name) == 'ENCODING') {
 				if(strtoupper($parameter->value) == 'QUOTED-PRINTABLE') {
-					// Decode quoted-printable and strip any control chars
-					// except \n and \r
 					$property->value = str_replace(
 						"\r\n", "\n",
 						VObject\StringUtil::convertToUTF8(
@@ -86,7 +112,7 @@ class VCard extends VObject\Component\VCard {
 						)
 					);
 					unset($property->parameters[$key]);
-				} else if(strtoupper($parameter->value) == 'BASE64') {
+				} elseif(strtoupper($parameter->value) == 'BASE64') {
 					$parameter->value = 'b';
 				}
 			} elseif(strtoupper($parameter->name) == 'CHARSET') {
@@ -207,8 +233,6 @@ class VCard extends VObject\Component\VCard {
 			$this->VERSION = self::DEFAULT_VERSION;
 			foreach($this->children as &$property) {
 				$this->decodeProperty($property);
-				$this->formatPropertyTypes($property);
-				//\OCP\Util::writeLog('contacts', __METHOD__.' upgrade: '.$property->name, \OCP\Util::DEBUG);
 				switch((string)$property->name) {
 					case 'LOGO':
 					case 'SOUND':
