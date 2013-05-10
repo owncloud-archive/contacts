@@ -551,7 +551,9 @@ OC.Contacts = OC.Contacts || {
 
 		$(document).bind('request.groups.reload', function(e, result) {
 			console.log('request.groups.reload', result);
-			self.groups.loadGroups();
+			self.groups.loadGroups(function() {
+				self.groups.triggerLastGroup();
+			});
 		});
 
 		$(document).bind('status.contact.removedfromgroup', function(e, result) {
