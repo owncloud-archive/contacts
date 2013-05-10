@@ -237,9 +237,8 @@ OC.Contacts = OC.Contacts || {};
 				self.$importProgress.progressbar('value', progress);
 			},
 			fail: function(e, data) {
-				console.log('fail');
+				console.log('fail', data);
 				OC.notify({message:data.errorThrown + ': ' + data.textStatus});
-				numfiles = uploadedfiles = importedfiles = retries = failed = succeded = aid = 0;
 				$('.import-upload').show();
 				$('.import-status').hide();
 			}
@@ -338,7 +337,12 @@ OC.Contacts = OC.Contacts || {};
 			$opt.val(book.getId()).text(book.getDisplayName()).data('backend', book.getBackend());
 			self.$importIntoSelect.append($opt);
 		});
-		self.$importFileInput.prop('disabled', true);
+		if(addressBooks.length === 1) {
+			this.$importIntoSelect.val(this.$importIntoSelect.find('option:not([value="-1"])').first().val()).hide().trigger('change');
+			self.$importFileInput.prop('disabled', false);
+		} else {
+			self.$importFileInput.prop('disabled', true);
+		}
 	}
 
 	/**
