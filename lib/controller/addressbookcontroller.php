@@ -68,9 +68,7 @@ class AddressBookController extends BaseController {
 				$contacts[] = $result;
 			}
 		}
-		$response->setParams(array(
-				'contacts' => $contacts,
-			));
+		$response->setParams(array('contacts' => $contacts));
 		return $response;
 	}
 
@@ -95,6 +93,7 @@ class AddressBookController extends BaseController {
 			return $response;
 		}
 
+		$response->setStatus('201');
 		$response->setParams($backend->getAddressBook($id));
 		return $response;
 	}
@@ -161,6 +160,18 @@ class AddressBookController extends BaseController {
 			$response->bailOut(App::$l10n->t('Error creating contact.'));
 		}
 		$contact = $addressBook->getChild($id);
+		$response->setStatus('201');
+		$response->setETag($contact->getETag());
+		$response->addHeader('Location',
+			\OCP\Util::linkToRoute(
+				'contacts_contact_get',
+				array(
+					'backend' => $params['backend'],
+					'addressbookid' => $params['addressbookid'],
+					'contactid' => $id
+				)
+			)
+		);
 		$response->setParams(JSONSerializer::serializeContact($contact));
 		return $response;
 	}
@@ -196,6 +207,8 @@ class AddressBookController extends BaseController {
 
 		$response = new JSONResponse();
 
+		// TODO: Check if the backend supports move (is 'local') and use that operation instead.
+		// If so, set status 204 and don't return the serializes contact.
 		$fromAddressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
 		$targetAddressBook = $app->getAddressBook($targetInfo['backend'], $targetInfo['id']);
 		$contact = $fromAddressBook->getChild($params['contactid']);
