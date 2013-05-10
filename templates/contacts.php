@@ -25,11 +25,11 @@
 				<h2 data-id="import" tabindex="0" role="button"><?php p($l->t('Import')); ?></h2>
 					<ul>
 						<li class="import-upload">
-								<select id="import_into">
-									<option value="-1"><?php p($l->t('Import into...')); ?></option>
-								</select>
-								<button class="import-upload-button" ></button>
-								<input id="import_upload_start" class="tooltipped rightwards" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" title="<?php p($l->t('Select files')); ?>" disabled />
+							<select id="import_into">
+								<option value="-1"><?php p($l->t('Import into...')); ?></option>
+							</select>
+							<button class="tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
+							<input id="import_upload_start" class="tooltipped rightwards" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
 						</li>
 						<li class="import-status">
 							<label id="import-status-text"></label>
