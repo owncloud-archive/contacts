@@ -619,6 +619,8 @@ OC.Contacts = OC.Contacts || {
 				self.contacts.showContacts(result.contacts);
 			} else if(result.type === 'shared') {
 				self.contacts.showFromAddressbook(self.currentgroup, true, true);
+			} else if(result.type === 'uncategorized') {
+				self.contacts.showUncategorized();
 			} else {
 				self.contacts.showContacts(self.currentgroup);
 			}

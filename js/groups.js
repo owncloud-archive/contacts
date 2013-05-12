@@ -734,6 +734,9 @@ OC.Contacts = OC.Contacts || {};
 					$elem.data('id', shared.id);
 					$elem.appendTo($groupList);
 				});
+				if(!self.findById('uncategorized').length) {
+					tmpl.octemplate({id: 'uncategorized', type: 'uncategorized', num: '', name: t('contacts', 'Not grouped')}).appendTo($groupList);
+				}
 				$groupList.sortable({
 					items: 'li[data-type="category"]',
 					stop: function() {

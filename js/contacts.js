@@ -1787,6 +1787,23 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	* Show only uncategorized contacts.
+	* @param int aid. Addressbook id.
+	* @param boolean show. Whether to show or hide.
+	* @param boolean hideothers. Used when showing shared addressbook as a group.
+	*/
+	ContactList.prototype.showUncategorized = function() {
+		console.log('ContactList.showUncategorized');
+		for(var contact in this.contacts) {
+			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).length > 0) {
+				this.contacts[contact].getListItemElement().show();
+			} else {
+				this.contacts[contact].getListItemElement().hide();
+			}
+		}
+	};
+
+	/**
 	* Show/hide contacts belonging to shared addressbooks.
 	* @param boolean show. Whether to show or hide.
 	*/
