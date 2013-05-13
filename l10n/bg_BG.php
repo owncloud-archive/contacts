@@ -6,6 +6,7 @@
 "Missing a temporary folder" => "Липсва временна папка",
 "Failed to write to disk" => "Възникна проблем при запис в диска",
 "Contacts" => "Контакти",
+"Save" => "Запис",
 "Uploading..." => "Качване...",
 "Cancel" => "Отказ",
 "Error" => "Грешка",
@@ -39,6 +40,5 @@
 "Share" => "Споделяне",
 "Export" => "Експорт",
 "New Address Book" => "Нова адресна книга",
-"Name" => "Име",
-"Save" => "Запис"
+"Name" => "Име"
 );

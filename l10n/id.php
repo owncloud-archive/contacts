@@ -30,11 +30,12 @@
 "Couldn't load temporary image: " => "Tidak dapat memuat gambar sementara:",
 "Contacts" => "Kontak",
 "%d_selected_contacts" => "%d_selected_contacts",
+"Save" => "Simpan",
 "Uploading..." => "Mengunggah...",
+"Indexing contacts" => "Pembuatan indeks kontak",
 "Add to..." => "Tambahkan ke...",
 "Remove from..." => "Hapus dari...",
 "Add group..." => "Tambah grup...",
-"Indexing contacts" => "Pembuatan indeks kontak",
 "Select photo" => "Pilih foto",
 "Network or server error. Please inform administrator." => "Galat pada server atau jaringan. Mohon kabari administrator.",
 "Error adding to group." => "Galat saat menambahkan ke grup.",
@@ -114,8 +115,6 @@
 "Address books" => "Buku alamat",
 "Display name" => "Nama tampilan",
 "Import" => "Impor",
-"Import into:" => "Impor ke:",
-"Select files" => "Pilih berkas",
 "(De-)select all" => "Pilih semua/hapus pilihan",
 "Groups" => "Grup",
 "Favorite" => "Favorit",
@@ -195,6 +194,5 @@
 "Addressbooks" => "Buku alamat",
 "New Address Book" => "Buku Alamat Baru",
 "Name" => "Nama",
-"Description" => "Deskripsi",
-"Save" => "Simpan"
+"Description" => "Deskripsi"
 );

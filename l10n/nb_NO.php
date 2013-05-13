@@ -24,6 +24,7 @@
 "Couldn't save temporary image: " => "Kunne ikke lagre midlertidig bilde:",
 "Couldn't load temporary image: " => "Kunne ikke laste midlertidig bilde:",
 "Contacts" => "Kontakter",
+"Save" => "Lagre",
 "Uploading..." => "Laster opp...",
 "Select photo" => "Velg bilde",
 "Cancel" => "Avbryt",
@@ -70,7 +71,6 @@
 "New Contact" => "Ny kontakt",
 "New Group" => "Ny gruppe",
 "Import" => "Importer",
-"Select files" => "Velg filer",
 "Groups" => "Grupper",
 "Close" => "Lukk",
 "Keyboard shortcuts" => "Tastatur snarveier",
@@ -120,6 +120,5 @@
 "Addressbooks" => "Adressebøker",
 "New Address Book" => "Ny adressebok",
 "Name" => "Navn",
-"Description" => "Beskrivelse",
-"Save" => "Lagre"
+"Description" => "Beskrivelse"
 );

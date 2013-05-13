@@ -24,6 +24,7 @@
 "Couldn't save temporary image: " => "不能保存临时相片：",
 "Couldn't load temporary image: " => "不能载入临时相片：",
 "Contacts" => "联系人",
+"Save" => "保存",
 "Uploading..." => "上传中...",
 "Select photo" => "选择相片",
 "Cancel" => "取消",
@@ -130,6 +131,5 @@
 "Addressbooks" => "地址薄",
 "New Address Book" => "新地址薄",
 "Name" => "名称",
-"Description" => "描述",
-"Save" => "保存"
+"Description" => "描述"
 );

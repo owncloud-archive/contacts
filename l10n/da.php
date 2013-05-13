@@ -30,11 +30,12 @@
 "Couldn't load temporary image: " => "Kunne ikke indlæse midlertidigt billede",
 "Contacts" => "Kontaktpersoner",
 "%d_selected_contacts" => "%d_selected_contacts",
+"Save" => "Gem",
 "Uploading..." => "Uploader...",
+"Indexing contacts" => "Indeksering kontakter",
 "Add to..." => "Føj til...",
 "Remove from..." => "Fjern fra...",
 "Add group..." => "Tilføj gruppe...",
-"Indexing contacts" => "Indeksering kontakter",
 "Select photo" => "Vælg foto",
 "Network or server error. Please inform administrator." => "Netværk eller serverfejl. Informer venligst administratoren.",
 "Error adding to group." => "Fejl ved tilføjelse til gruppen.",
@@ -114,8 +115,6 @@
 "Address books" => "Adressebøger",
 "Display name" => "Vis navn",
 "Import" => "Importer",
-"Import into:" => "Importere til:",
-"Select files" => "Vælg filer",
 "(De-)select all" => "(Af)marker alle",
 "Groups" => "Grupper",
 "Favorite" => "favorit",
@@ -195,6 +194,5 @@
 "Addressbooks" => "Adressebøger",
 "New Address Book" => "Ny adressebog",
 "Name" => "Navn",
-"Description" => "Beskrivelse",
-"Save" => "Gem"
+"Description" => "Beskrivelse"
 );

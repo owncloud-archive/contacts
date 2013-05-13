@@ -25,6 +25,7 @@
 "Couldn't save temporary image: " => "Methwyd cadw delwedd dros dro:",
 "Couldn't load temporary image: " => "Methwyd llwytho delwedd dros dro:",
 "Contacts" => "Cysylltiadau",
+"Save" => "Cadw",
 "Uploading..." => "Yn llwytho i fyny...",
 "Cancel" => "Diddymu",
 "OK" => "Iawn",
@@ -104,6 +105,5 @@
 "Addressbooks" => "Llyfraucyfeiriadau",
 "New Address Book" => "Llyfr Cyfeiriadau Newydd",
 "Name" => "Enw",
-"Description" => "Disgrifiad",
-"Save" => "Cadw"
+"Description" => "Disgrifiad"
 );

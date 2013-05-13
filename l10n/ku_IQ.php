@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "File doesn't exist:" => "په‌ڕگه‌که‌ هه‌بوون نیه:",
+"Save" => "پاشکه‌وتکردن",
 "Error" => "هه‌ڵه",
 "Download" => "داگرتن",
 "Import" => "هێنان",
@@ -9,6 +10,5 @@
 "Email" => "ئیمه‌یل",
 "Address" => "ناونیشان",
 "Export" => "هه‌ناردن",
-"Name" => "ناو",
-"Save" => "پاشکه‌وتکردن"
+"Name" => "ناو"
 );

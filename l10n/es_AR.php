@@ -30,11 +30,12 @@
 "Couldn't load temporary image: " => "No se pudo cargar la imagen temporal",
 "Contacts" => "Contactos",
 "%d_selected_contacts" => "%d_selected_contacts",
+"Save" => "Guardar",
 "Uploading..." => "Subiendo...",
+"Indexing contacts" => "Indexando contactos",
 "Add to..." => "Añadir a...",
 "Remove from..." => "Borrar de...",
 "Add group..." => "Añadir grupo",
-"Indexing contacts" => "Indexando contactos",
 "Select photo" => "Seleccionar una imagen",
 "Network or server error. Please inform administrator." => "Error en la red o en el servidor. Por favor informe al administrador.",
 "Error adding to group." => "Error al añadir al grupo.",
@@ -114,8 +115,6 @@
 "Address books" => "Agendas",
 "Display name" => "Nombre a mostrar:",
 "Import" => "Importar",
-"Import into:" => "Importar a:",
-"Select files" => "Seleccionar archivos",
 "(De-)select all" => "(De)selecionar todos",
 "Groups" => "Grupos",
 "Favorite" => "Favorito",
@@ -195,6 +194,5 @@
 "Addressbooks" => "Agendas",
 "New Address Book" => "Nueva agenda",
 "Name" => "Nombre",
-"Description" => "Descripción",
-"Save" => "Guardar"
+"Description" => "Descripción"
 );

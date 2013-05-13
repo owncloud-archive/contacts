@@ -11,6 +11,7 @@
 "Missing a temporary folder" => "Nėra laikinojo katalogo",
 "Failed to write to disk" => "Nepavyko įrašyti į diską",
 "Contacts" => "Kontaktai",
+"Save" => "Išsaugoti",
 "Cancel" => "Atšaukti",
 "OK" => "Gerai",
 "Error" => "Klaida",
@@ -49,6 +50,5 @@
 "Export" => "Eksportuoti",
 "Addressbooks" => "Adresų knygos",
 "New Address Book" => "Nauja adresų knyga",
-"Name" => "Pavadinimas",
-"Save" => "Išsaugoti"
+"Name" => "Pavadinimas"
 );

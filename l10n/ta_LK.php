@@ -27,11 +27,12 @@
 "Couldn't save temporary image: " => "தற்காலிக படத்தை சேமிக்கமுடியாது",
 "Couldn't load temporary image: " => "தற்காலிக படத்தை ஏற்றமுடியாது",
 "Contacts" => "தொடர்புகள்",
+"Save" => "சேமிக்க",
 "Uploading..." => "பதிவேற்றல்...",
+"Indexing contacts" => "தொடர்புகளை அட்டவணையிடுதல்",
 "Add to..." => "இற்கு சேர்க்கப்பட்டது...",
 "Remove from..." => "இலிருந்து அகற்றுக...",
 "Add group..." => "குழுவிற்கு சேர்க்க...",
-"Indexing contacts" => "தொடர்புகளை அட்டவணையிடுதல்",
 "Select photo" => "படத்தை தெரிக",
 "Network or server error. Please inform administrator." => "வ​லைய​மைப்பு அல்லது சேவையக வழு. தயவுசெய்து நிர்வாகிக்கு தெரியப்படுத்தவும்.",
 "Error adding to group." => "குழுவில் சேர்ப்பதில் வழு.",
@@ -107,7 +108,6 @@
 "New Contact" => "புதிய தொடர்பு",
 "New Group" => "புதிய குழு",
 "Import" => "இறக்குமதி",
-"Import into:" => "இதற்கு இறக்குமதி செய்க:",
 "(De-)select all" => "எல்லாவற்றையும் தெரிவுசெய்க (செய்யாதிக-)",
 "Groups" => "குழுக்கள்",
 "Favorite" => "விருப்பமான",
@@ -181,6 +181,5 @@
 "Addressbooks" => "முகவரி புத்தகங்கள்",
 "New Address Book" => "புதிய முகவரி புத்தகம்",
 "Name" => "பெயர்",
-"Description" => "விவரிப்பு",
-"Save" => "சேமிக்க"
+"Description" => "விவரிப்பு"
 );

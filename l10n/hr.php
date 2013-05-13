@@ -14,6 +14,7 @@
 "Failed to write to disk" => "Neuspjelo pisanje na disk",
 "Error uploading contacts to storage." => "Pogreška pri slanju kontakata.",
 "Contacts" => "Kontakti",
+"Save" => "Spremi",
 "Cancel" => "Prekini",
 "Error" => "Greška",
 "Download" => "Preuzimanje",
@@ -77,6 +78,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresari",
 "New Address Book" => "Novi adresar",
-"Name" => "Ime",
-"Save" => "Spremi"
+"Name" => "Ime"
 );

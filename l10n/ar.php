@@ -14,6 +14,7 @@
 "Failed to write to disk" => "خطأ في الكتابة على القرص الصلب",
 "Not enough storage available" => "لا يوجد مساحة تخزينية كافية",
 "Contacts" => "المعارف",
+"Save" => "حفظ",
 "Uploading..." => "ترفيع...",
 "Cancel" => "الغاء",
 "OK" => "تم",
@@ -70,6 +71,5 @@
 "iOS/OS X" => "ط ن ت/ ن ت 10",
 "Addressbooks" => "كتب العناوين",
 "New Address Book" => "كتاب عناوين جديد",
-"Name" => "اسم",
-"Save" => "حفظ"
+"Name" => "اسم"
 );

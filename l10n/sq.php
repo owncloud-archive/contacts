@@ -10,6 +10,7 @@
 "Failed to write to disk" => "Ruajtja në disk dështoi",
 "Not enough storage available" => "Nuk ka mbetur hapësirë memorizimi e mjaftueshme",
 "Contacts" => "Kontake",
+"Save" => "Ruaj",
 "Cancel" => "Anulo",
 "Error" => "Veprim i gabuar",
 "Download" => "Shkarko",
@@ -39,6 +40,5 @@
 "Share" => "Nda",
 "Addressbooks" => "Blloqe numrash",
 "New Address Book" => "Bllok numrash i ri",
-"Name" => "Emri",
-"Save" => "Ruaj"
+"Name" => "Emri"
 );

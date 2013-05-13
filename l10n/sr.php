@@ -10,6 +10,7 @@
 "Failed to write to disk" => "Не могу да пишем на диск",
 "Not enough storage available" => "Нема довољно простора",
 "Contacts" => "Контакти",
+"Save" => "Сними",
 "Uploading..." => "Отпремам…",
 "Cancel" => "Откажи",
 "OK" => "У реду",
@@ -52,6 +53,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Адресар",
 "New Address Book" => "Нови адресар",
-"Name" => "Име",
-"Save" => "Сними"
+"Name" => "Име"
 );

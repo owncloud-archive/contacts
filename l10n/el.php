@@ -30,12 +30,13 @@
 "Couldn't load temporary image: " => "Δεν ήταν δυνατή η φόρτωση της προσωρινής εικόνας: ",
 "Contacts" => "Επαφές",
 "%d_selected_contacts" => "%d_επιλεγμένες_επαφές",
+"Save" => "Αποθήκευση",
 "Uploading..." => "Μεταφόρτωση...",
 "Failed loading address books: {error}" => "Απέτυχε να φορτώσει βιβλία διευθύνσεων. (σφάλμα)",
+"Indexing contacts" => "Εύρεση επαφών ",
 "Add to..." => "Προσθήκη στο...",
 "Remove from..." => "Αφαίρεση από το...",
 "Add group..." => "Προσθήκη ομάδας...",
-"Indexing contacts" => "Εύρεση επαφών ",
 "Merge failed. Cannot find contact: {id}" => "Η σύνδεση απέτυχε. Δεν μπορεί να βρεί τις πληροφορίες επαφής. ",
 "Merge failed." => "Η συγχώνευση απέτυχε. ",
 "Merge failed. Error saving contact." => "Η σύνδεση απέτυχε. Σφάλμα κατά την αποθήκευση των στοιχείων επαφής. ",
@@ -134,8 +135,6 @@
 "Address books" => "Βιβλία διευθύνσεων",
 "Display name" => "Όνομα εμφάνισης",
 "Import" => "Εισαγωγή",
-"Import into:" => "Εισαγωγή από:",
-"Select files" => "Επιλογή αρχείων",
 "(De-)select all" => "(Απο-)επιλογή όλων",
 "Groups" => "Ομάδες",
 "Favorite" => "Αγαπημένο",
@@ -218,6 +217,5 @@
 "Addressbooks" => "Βιβλία διευθύνσεων",
 "New Address Book" => "Νέο βιβλίο διευθύνσεων",
 "Name" => "Όνομα",
-"Description" => "Περιγραφή",
-"Save" => "Αποθήκευση"
+"Description" => "Περιγραφή"
 );

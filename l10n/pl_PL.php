@@ -1,4 +1,4 @@
 <?php $TRANSLATIONS = array(
-"Email" => "Email",
-"Save" => "Zapisz"
+"Save" => "Zapisz",
+"Email" => "Email"
 );

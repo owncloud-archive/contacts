@@ -30,11 +30,12 @@
 "Couldn't load temporary image: " => "Ezin izan da aldi bateko irudia kargatu:",
 "Contacts" => "Kontaktuak",
 "%d_selected_contacts" => "%d_kontaktu_hautatuta",
+"Save" => "Gorde",
 "Uploading..." => "Igotzen...",
+"Indexing contacts" => "Kontaktuak indexatzen",
 "Add to..." => "Gehitu hemen...",
 "Remove from..." => "Ezabatu hemendik...",
 "Add group..." => "Gehitu taldea...",
-"Indexing contacts" => "Kontaktuak indexatzen",
 "Select photo" => "Hautatu argazkia",
 "Network or server error. Please inform administrator." => "Errore bat izan da sare edo zerbitzarian. Mesedez abisatu administradorea.",
 "Error adding to group." => "Errore bat izan da taldera gehitzean.",
@@ -114,8 +115,6 @@
 "Address books" => "Helbide liburuak",
 "Display name" => "Bistaratze izena",
 "Import" => "Inportatu",
-"Import into:" => "Inportatu hemen:",
-"Select files" => "Hautatu fitxategiak",
 "(De-)select all" => "(Ez-)Hautatu dena",
 "Groups" => "Taldeak",
 "Favorite" => "Gogokoa",
@@ -195,6 +194,5 @@
 "Addressbooks" => "Helbide Liburuak",
 "New Address Book" => "Helbide-liburu berria",
 "Name" => "Izena",
-"Description" => "Deskribapena",
-"Save" => "Gorde"
+"Description" => "Deskribapena"
 );

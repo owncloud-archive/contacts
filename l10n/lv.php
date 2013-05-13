@@ -29,11 +29,12 @@
 "Couldn't load temporary image: " => "Nevarēja ielādēt pagaidu attēlu:",
 "Contacts" => "Kontakti",
 "%d_selected_contacts" => "%d_izvēlētu_kontaktu",
+"Save" => "Saglabāt",
 "Uploading..." => "Augšupielādē...",
+"Indexing contacts" => "Indeksē kontaktus",
 "Add to..." => "Pievienot pie...",
 "Remove from..." => "Izņemt no...",
 "Add group..." => "Pievienot grupu...",
-"Indexing contacts" => "Indeksē kontaktus",
 "Select photo" => "Izvēlieties fotogrāfiju",
 "Network or server error. Please inform administrator." => "Tīkla vai servera kļūda. Lūdzu, informējiet administratoru.",
 "Error adding to group." => "Kļūda, pievienojot grupai.",
@@ -112,8 +113,6 @@
 "New Group" => "Jauna grupa",
 "Address books" => "Adrešu grāmatas",
 "Import" => "Importēt",
-"Import into:" => "Importēt uz:",
-"Select files" => "Izvēlieties datnes",
 "(De-)select all" => "Izvēlēties visu/neko",
 "Groups" => "Grupas",
 "Favorite" => "Iecienītais",
@@ -193,6 +192,5 @@
 "Addressbooks" => "Adrešu grāmatas",
 "New Address Book" => "Jauna adrešu grāmata",
 "Name" => "Nosaukums",
-"Description" => "Apraksts",
-"Save" => "Saglabāt"
+"Description" => "Apraksts"
 );

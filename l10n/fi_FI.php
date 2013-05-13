@@ -27,12 +27,13 @@
 "Couldn't save temporary image: " => "Väliaikaiskuvan tallennus epäonnistui:",
 "Couldn't load temporary image: " => "Väliaikaiskuvan lataus epäonnistui:",
 "Contacts" => "Yhteystiedot",
+"Save" => "Tallenna",
 "Uploading..." => "Lähetetään...",
 "Imported {imported} contacts. {failed} failed." => "Tuotiin {imported} yhteystietoa. {failed} epäonnistui.",
 "An address book called {name} already exists" => "Osoitekirja nimeltä {name} on jo olemassa",
 "Failed adding address book: {error}" => "Virhe osoitekirjaa lisättäessä: {error}",
-"Add group..." => "Lisää ryhmä...",
 "Indexing contacts" => "Indeksoidaan yhteystietoja",
+"Add group..." => "Lisää ryhmä...",
 "Merge failed." => "Yhdistäminen epäonnistui.",
 "Merge failed. Error saving contact." => "Yhdistäminen epäonnistui. Virhe yhteystietoa tallennettaessa.",
 "Select photo" => "Valitse valokuva",
@@ -121,8 +122,6 @@
 "Display name" => "Näyttönimi",
 "Add Address Book" => "Lisää osoitekirja",
 "Import" => "Tuo",
-"Select Address Book" => "Valitse osoitekirja",
-"Select files" => "Valitse tiedostot",
 "(De-)select all" => "Valitse kaikki tai poista kaikki valinnat",
 "Groups" => "Ryhmät",
 "Favorite" => "Suosikki",
@@ -198,6 +197,5 @@
 "Addressbooks" => "Osoitekirjat",
 "New Address Book" => "Uusi osoitekirja",
 "Name" => "Nimi",
-"Description" => "Kuvaus",
-"Save" => "Tallenna"
+"Description" => "Kuvaus"
 );

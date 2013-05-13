@@ -29,11 +29,12 @@
 "Couldn't load temporary image: " => "Không thể tải hình ảnh tạm thời:",
 "Contacts" => "Liên lạc",
 "%d_selected_contacts" => "%d_liên_hệ_được_chọn",
+"Save" => "Lưu",
 "Uploading..." => "tải lên...",
+"Indexing contacts" => "Chỉ mục địa chỉ liên lạc",
 "Add to..." => "Thêm đến...",
 "Remove from..." => "Xóa từ...",
 "Add group..." => "Thêm nhóm...",
-"Indexing contacts" => "Chỉ mục địa chỉ liên lạc",
 "Select photo" => "Chọn ảnh",
 "Network or server error. Please inform administrator." => "Mạng hoặc máy chủ lỗi. Vui lòng liên hệ người quản trị.",
 "Error adding to group." => "Lỗi thêm vào nhóm.",
@@ -112,8 +113,6 @@
 "New Group" => "Nhóm mới",
 "Address books" => "Sổ địa chỉ",
 "Import" => "Nhập",
-"Import into:" => "Nhập vào :",
-"Select files" => "Chọn file",
 "(De-)select all" => "(Hủy) chọn tất cả",
 "Groups" => "Nhóm",
 "Favorite" => "Ưu thích",
@@ -193,6 +192,5 @@
 "Addressbooks" => "Sổ địa chỉ",
 "New Address Book" => "Sổ địa chỉ mới",
 "Name" => "Tên",
-"Description" => "Mô tả",
-"Save" => "Lưu"
+"Description" => "Mô tả"
 );
