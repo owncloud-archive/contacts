@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-13 21:42+0200\n"
-"PO-Revision-Date: 2013-05-13 19:42+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-05-14 00:50+0200\n"
+"PO-Revision-Date: 2013-05-13 20:40+0000\n"
+"Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -267,7 +267,7 @@ msgstr "OK"
 
 #: js/app.js:1265
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "Impossibile trovare il contatto: {id}"
 
 #: js/app.js:1302
 msgid "No files selected for upload."
@@ -365,7 +365,7 @@ msgstr "Condiviso da {owner}"
 
 #: js/groups.js:738
 msgid "Not grouped"
-msgstr ""
+msgstr "Non raggruppati"
 
 #: js/loader.js:49
 msgid "Result: "
@@ -441,7 +441,7 @@ msgstr "Errore durante la creazione della rubrica"
 
 #: lib/controller/addressbookcontroller.php:118
 msgid "Error updating address book"
-msgstr ""
+msgstr "Errore durante l'aggiornamento della rubrica."
 
 #: lib/controller/addressbookcontroller.php:141
 msgid "Error deleting address book"
@@ -457,11 +457,11 @@ msgstr "Errore durante l'eliminazione del contatto."
 
 #: lib/controller/addressbookcontroller.php:216
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "Errore durante il recupero del contatto."
 
 #: lib/controller/addressbookcontroller.php:226
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "Errore durante la rimozione del contatto da altre rubriche."
 
 #: lib/controller/contactcontroller.php:45
 #: lib/controller/contactcontroller.php:73
@@ -704,11 +704,11 @@ msgstr "Importa"
 
 #: templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "Importa in..."
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "Seleziona file..."
 
 #: templates/contacts.php:45
 msgid "(De-)select all"

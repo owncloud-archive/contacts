@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-13 21:42+0200\n"
-"PO-Revision-Date: 2013-05-13 19:42+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-05-14 00:50+0200\n"
+"PO-Revision-Date: 2013-05-13 19:50+0000\n"
+"Last-Translator: Rivo Zängov <eraser@eraser.ee>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/projects/p/owncloud/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -265,7 +265,7 @@ msgstr "OK"
 
 #: js/app.js:1265
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "Kontakti {id} ei leitud"
 
 #: js/app.js:1302
 msgid "No files selected for upload."
@@ -363,7 +363,7 @@ msgstr "Jagas {owner}"
 
 #: js/groups.js:738
 msgid "Not grouped"
-msgstr ""
+msgstr "Pole grupeeritud"
 
 #: js/loader.js:49
 msgid "Result: "
@@ -439,7 +439,7 @@ msgstr "Viga aadressiraamatu loomisel"
 
 #: lib/controller/addressbookcontroller.php:118
 msgid "Error updating address book"
-msgstr ""
+msgstr "Viga aadressiraamatu uuendamisel"
 
 #: lib/controller/addressbookcontroller.php:141
 msgid "Error deleting address book"
@@ -455,11 +455,11 @@ msgstr "Viga kontakti kustutamisel."
 
 #: lib/controller/addressbookcontroller.php:216
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "Viga kontakti hankimisel."
 
 #: lib/controller/addressbookcontroller.php:226
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "Viga kontakti eemaldamisel aadressiraamatust."
 
 #: lib/controller/contactcontroller.php:45
 #: lib/controller/contactcontroller.php:73
@@ -702,11 +702,11 @@ msgstr "Impordi"
 
 #: templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "Impordi aadressiraamatusse..."
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "Vali fail..."
 
 #: templates/contacts.php:45
 msgid "(De-)select all"
