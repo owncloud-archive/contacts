@@ -609,11 +609,15 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return true;
 	}
 
-	public function cacheThumbnail(\OC_Image $image = null) {
+	public function cacheThumbnail(\OC_Image $image = null, $remove = false) {
 		$key = self::THUMBNAIL_PREFIX . $this->combinedKey();
 		//\OC_Cache::remove($key);
-		if(\OC_Cache::hasKey($key) && $image === null) {
+		if(\OC_Cache::hasKey($key) && $image === null && $remove === false) {
 			return \OC_Cache::get($key);
+		}
+		if($remove) {
+			\OC_Cache::remove($key);
+			return false;
 		}
 		if(is_null($image)) {
 			$this->retrieve();
@@ -652,6 +656,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 
 	public function __unset($key) {
 		parent::__unset($key);
+		if($key === 'PHOTO') {
+			$this->cacheThumbnail(null, true);
+		}
 		$this->setSaved(false);
 	}
 

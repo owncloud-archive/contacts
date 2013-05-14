@@ -307,9 +307,14 @@ OC.Contacts = OC.Contacts || {};
 						newvalue: $container.find('input.value').val()
 					});
 					self.setAsSaving(obj, false);
-					self.$fullelem.find('[data-element="' + element.toLowerCase() + '"]').hide();
-					$container.find('input.value').val('');
-					self.$addMenu.find('option[value="' + element.toUpperCase() + '"]').prop('disabled', false);
+					if(element === 'PHOTO') {
+						self.data.PHOTO[0].value = false;
+						self.data.thumbnail = null;
+					} else {
+						self.$fullelem.find('[data-element="' + element.toLowerCase() + '"]').hide();
+						$container.find('input.value').val('');
+						self.$addMenu.find('option[value="' + element.toUpperCase() + '"]').prop('disabled', false);
+					}
 				}
 				$(document).trigger('status.contact.updated', {
 					property: element,
@@ -1439,13 +1444,14 @@ OC.Contacts = OC.Contacts || {};
 			$elem.css('background-image', 'url(data:image/png;base64,' + this.data.thumbnail + ')');
 		} else {
 			$elem.addClass('thumbnail');
+			$elem.removeAttr('style');
 		}
 	}
 
 	/**
 	 * Render the PHOTO property.
 	 */
-	Contact.prototype.loadPhoto = function(dontloadhandlers) {
+	Contact.prototype.loadPhoto = function() {
 		var self = this;
 		var id = this.id || 'new',
 			backend = this.metadata.backend,
@@ -1478,13 +1484,18 @@ OC.Contacts = OC.Contacts || {};
 					$('img.contactphoto').remove();
 					finishLoad(image);
 				})
-				.fail(function(defaultImage) {
+				.fail(function() {
+					console.log('Error getting photo, trying default image');
 					$('img.contactphoto').remove();
-					finishLoad(defaultImage);
+					$.when(self.storage.getDefaultPhoto())
+						.then(function(image) {
+							$('img.contactphoto').detach();
+							finishLoad(image);
+						});
 				});
 		}
 
-		if(!dontloadhandlers && this.isEditable()) {
+		if(this.isEditable()) {
 			this.$photowrapper.on('mouseenter', function(event) {
 				if($(event.target).is('.favorite') || !self.data) {
 					return;
@@ -1500,6 +1511,7 @@ OC.Contacts = OC.Contacts || {};
 			});
 			$phototools.find('li a').tipsy();
 
+			$phototools.find('.action').off('click');
 			$phototools.find('.edit').on('click', function() {
 				$(document).trigger('request.edit.contactphoto', self.metaData());
 			});
@@ -1509,7 +1521,7 @@ OC.Contacts = OC.Contacts || {};
 			$phototools.find('.upload').on('click', function() {
 				$(document).trigger('request.select.contactphoto.fromlocal', self.metaData());
 			});
-			if(this.data && this.data.PHOTO) {
+			if(this.getPreferredValue('PHOTO', false)) {
 				$phototools.find('.delete').show();
 				$phototools.find('.edit').show();
 			} else {
@@ -1518,8 +1530,17 @@ OC.Contacts = OC.Contacts || {};
 			}
 			$(document).bind('status.contact.photoupdated', function(e, data) {
 				console.log('status.contact.photoupdated', data);
+				if(!self.data.PHOTO) {
+					self.data.PHOTO = [];
+				}
+				if(data.thumbnail) {
+					self.data.thumbnail = data.thumbnail;
+					self.data.PHOTO[0] = {value:true};
+				} else {
+					self.data.thumbnail = null;
+					self.data.PHOTO[0] = {value:false};
+				}
 				self.loadPhoto(true);
-				self.data.thumbnail = data.thumbnail;
 				self.setThumbnail(null, true);
 			});
 		}
@@ -1717,6 +1738,10 @@ OC.Contacts = OC.Contacts || {};
 			if(['FN', 'EMAIL', 'TEL', 'ADR', 'CATEGORIES'].indexOf(data.property) !== -1) {
 				data.contact.getListItemElement().remove();
 				self.insertContact(data.contact.renderListItem(true));
+			} else if(data.property === 'PHOTO') {
+				$(document).trigger('status.contact.photoupdated', {
+					id: data.contact.getId()
+				});
 			}
 		});
 		$(document).bind('status.addressbook.removed', function(e, data) {
@@ -1795,7 +1820,7 @@ OC.Contacts = OC.Contacts || {};
 	ContactList.prototype.showUncategorized = function() {
 		console.log('ContactList.showUncategorized');
 		for(var contact in this.contacts) {
-			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).length > 0) {
+			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).length === 0) {
 				this.contacts[contact].getListItemElement().show();
 			} else {
 				this.contacts[contact].getListItemElement().hide();

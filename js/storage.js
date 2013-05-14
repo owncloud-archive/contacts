@@ -228,12 +228,14 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid, contactid: contactid}
 		);
 		var defer = $.Deferred();
+		var self = this;
 		$.when(
 			$(photo).load(function() {
 				defer.resolve(photo);
 			})
 			.error(function() {
-				console.log('Error loading default photo', arguments)
+				console.log('Error loading contact photo')
+				defer.reject();
 			})
 			.attr('src', url + '?refresh=' + Math.random())
 		)
