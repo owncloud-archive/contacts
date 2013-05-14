@@ -252,12 +252,12 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 }
 
 .ui-draggable { height: 3em; z-index: 1; }
+.ui-dialog { z-index: 102; }
 .dragContact {
 	cursor: move;
 	background-repeat: no-repeat !important;
 	background-position: .3em .3em !important;
 	background-color: #fff;
-	z-index: 5;
 	width: 200px; height: 30px;
 	text-indent: 30px;
 	font-weight: bold;
@@ -614,7 +614,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	border-radius: 3px; box-shadow: 0 0 10px #888888; 
 	padding: 10px; 
 	position: fixed !important; 
-	z-index: 200; 
+	z-index: 101;
 	top: 8em; left: 28em;
 	width: 490px;
 }
