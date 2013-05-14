@@ -42,10 +42,16 @@ class Shared extends Database {
 	public function getAddressBooksForUser($userid = null) {
 		$userid = $userid ? $userid : $this->userid;
 
-		$this->addressbooks = \OCP\Share::getItemsSharedWith(
+		// workaround for https://github.com/owncloud/core/issues/2814
+		$maybeSharedAddressBook = \OCP\Share::getItemsSharedWith(
 			'addressbook',
 			Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS
 		);
+		foreach($maybeSharedAddressBook as $sharedAddressbook) {
+			if(isset($sharedAddressbook['id'])) {
+				$this->addressbooks[] = $this->getAddressBook($sharedAddressbook['id']);
+			}
+		}
 
 		foreach($this->addressbooks as &$addressBook) {
 			$addressBook['backend'] = $this->name;
