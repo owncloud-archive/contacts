@@ -24,6 +24,7 @@
 "Couldn't save temporary image: " => "Не можеше да се сними привремената фотографија:",
 "Couldn't load temporary image: " => "Не можеше да се вчита привремената фотографија:",
 "Contacts" => "Контакти",
+"Save" => "Сними",
 "Uploading..." => "Подигнувам...",
 "Select photo" => "Одбери фотографија",
 "Cancel" => "Откажи",
@@ -90,6 +91,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Адресари",
 "New Address Book" => "Нов адресар",
-"Name" => "Име",
-"Save" => "Сними"
+"Name" => "Име"
 );

@@ -24,6 +24,7 @@
 "Couldn't save temporary image: " => "Tidak boleh menyimpan imej sementara: ",
 "Couldn't load temporary image: " => "Tidak boleh membuka imej sementara: ",
 "Contacts" => "Hubungan-hubungan",
+"Save" => "Simpan",
 "Select photo" => "Pilih foto",
 "Cancel" => "Batal",
 "OK" => "OK",
@@ -93,6 +94,5 @@
 "Addressbooks" => "Senarai Buku Alamat",
 "New Address Book" => "Buku Alamat Baru",
 "Name" => "Nama",
-"Description" => "Keterangan",
-"Save" => "Simpan"
+"Description" => "Keterangan"
 );

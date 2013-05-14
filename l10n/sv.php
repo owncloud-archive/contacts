@@ -30,11 +30,12 @@
 "Couldn't load temporary image: " => "Kunde inte ladda tillfällig bild:",
 "Contacts" => "Kontakter",
 "%d_selected_contacts" => "%d_selected_contacts",
+"Save" => "Spara",
 "Uploading..." => "Laddar upp...",
+"Indexing contacts" => "Indexerar kontakter",
 "Add to..." => "Lägga till...",
 "Remove from..." => "Ta bort från...",
 "Add group..." => "Lägg till grupp...",
-"Indexing contacts" => "Indexerar kontakter",
 "Select photo" => "Välj foto",
 "Network or server error. Please inform administrator." => "Nätverks- eller serverfel. Informera administratören.",
 "Error adding to group." => "Fel vid tillägg i grupp.",
@@ -114,8 +115,6 @@
 "Address books" => "Adressböcker",
 "Display name" => "Visningsnamn",
 "Import" => "Importera",
-"Import into:" => "Importera till:",
-"Select files" => "Välj filer",
 "(De-)select all" => "(Av-)markera alla",
 "Groups" => "Grupper",
 "Favorite" => "Favorit",
@@ -195,6 +194,5 @@
 "Addressbooks" => "Adressböcker",
 "New Address Book" => "Ny adressbok",
 "Name" => "Namn",
-"Description" => "Beskrivning",
-"Save" => "Spara"
+"Description" => "Beskrivning"
 );

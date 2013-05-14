@@ -7,6 +7,7 @@
 "Missing a temporary folder" => "Un dorsièr temporari manca",
 "Failed to write to disk" => "L'escriptura sul disc a fracassat",
 "Contacts" => "Contactes",
+"Save" => "Enregistra",
 "Cancel" => "Annula",
 "OK" => "D'accòrdi",
 "Error" => "Error",
@@ -26,6 +27,5 @@
 "more info" => "mai d'entresenhes",
 "Primary address (Kontact et al)" => "Adreiças primarias (Kontact et al)",
 "iOS/OS X" => "iOS/OS X",
-"Name" => "Nom",
-"Save" => "Enregistra"
+"Name" => "Nom"
 );

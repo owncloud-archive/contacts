@@ -30,11 +30,12 @@
 "Couldn't load temporary image: " => "ไม่สามารถโหลดรูปภาพชั่วคราวได้: ",
 "Contacts" => "ข้อมูลการติดต่อ",
 "%d_selected_contacts" => "%d_selected_contacts",
+"Save" => "บันทึก",
 "Uploading..." => "กำลังอัพโหลด...",
+"Indexing contacts" => "จัดทำสารบัญรายชื่อผู้ติดต่อ",
 "Add to..." => "เพิ่มเข้าไปที่...",
 "Remove from..." => "ลบออกจาก...",
 "Add group..." => "เพิ่มกลุ่ม...",
-"Indexing contacts" => "จัดทำสารบัญรายชื่อผู้ติดต่อ",
 "Select photo" => "เลือกรูปถ่าย",
 "Network or server error. Please inform administrator." => "เครือข่ายหรือเซิร์ฟเวอร์ เกิดข้อผิดพลาด กรุณาติดต่อผู้ดูแลระบบ",
 "Error adding to group." => "เกิดข้อผิดพลาดในการเพิ่มเข้าไปยังกลุ่ม",
@@ -114,8 +115,6 @@
 "Address books" => "สมุดบันทึกที่อยู่",
 "Display name" => "ชื่อที่ต้องการใช้แสดง",
 "Import" => "นำเข้า",
-"Import into:" => "นำเข้าข้อมูลไปไว้ที่:",
-"Select files" => "เลือกไฟล์",
 "(De-)select all" => "ยกเลิกการเลือกทั้งหมด",
 "Groups" => "กลุ่ม",
 "Favorite" => "รายการโปรด",
@@ -195,6 +194,5 @@
 "Addressbooks" => "สมุดบันทึกที่อยู่",
 "New Address Book" => "สร้างสมุดบันทึกข้อมูลการติดต่อใหม่",
 "Name" => "ชื่อ",
-"Description" => "คำอธิบาย",
-"Save" => "บันทึก"
+"Description" => "คำอธิบาย"
 );

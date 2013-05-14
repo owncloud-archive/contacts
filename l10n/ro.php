@@ -17,6 +17,7 @@
 "Error uploading contacts to storage." => "Eroare la încărcarea contactelor.",
 "Couldn't save temporary image: " => "Nu s-a putut salva imaginea temporară",
 "Contacts" => "Contacte",
+"Save" => "Salvează",
 "Uploading..." => "Încărcăm...",
 "Cancel" => "Anulează",
 "OK" => "OK",
@@ -90,6 +91,5 @@
 "Addressbooks" => "Agende",
 "New Address Book" => "Agendă nouă",
 "Name" => "Nume",
-"Description" => "Descriere",
-"Save" => "Salvează"
+"Description" => "Descriere"
 );

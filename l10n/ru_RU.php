@@ -29,11 +29,12 @@
 "Couldn't load temporary image: " => "Не удалось загрузить временное изображение:",
 "Contacts" => "Контакты",
 "%d_selected_contacts" => "%d_выбранные_контакты",
+"Save" => "Сохранить",
 "Uploading..." => "Загрузка...",
+"Indexing contacts" => "Индексирование контактов",
 "Add to..." => "Добавить к...",
 "Remove from..." => "Удалить из...",
 "Add group..." => "Добавить группу...",
-"Indexing contacts" => "Индексирование контактов",
 "Select photo" => "Выбрать фотографию",
 "Network or server error. Please inform administrator." => "Сетевая или серверная ошибка. Пожалуйста, сообщите адмистратору.",
 "Error adding to group." => "Ошибка добавления в группу.",
@@ -112,8 +113,6 @@
 "New Group" => "Новая группа",
 "Address books" => "Адресные книги",
 "Import" => "Импортировать",
-"Import into:" => "Импортировать в:",
-"Select files" => "Выбрать файлы",
 "(De-)select all" => "Отметить(снять отметку) все",
 "Groups" => "Группы",
 "Favorite" => "Избранный",
@@ -193,6 +192,5 @@
 "Addressbooks" => "Адресные книги",
 "New Address Book" => "Новая адресная книга",
 "Name" => "Имя",
-"Description" => "Описание",
-"Save" => "Сохранить"
+"Description" => "Описание"
 );

@@ -31,13 +31,14 @@
 "Couldn't load temporary image: " => "დროებითი სურათის ჩატვირთვა ვერ მოხერხდა:",
 "Contacts" => "კონტაქტები",
 "%d_selected_contacts" => "%d_selected_contacts",
+"Save" => "შენახვა",
 "Uploading..." => "მიმდინარეობს ატვირთვა...",
 "Failed adding address book: {error}" => "მისამართების წიგნის დამატება ვერ მოხერხდა: {error}",
 "Failed loading address books: {error}" => "მისამართების წიგნის ჩატვირთვა ვერ მოხერხდა:  {error}",
+"Indexing contacts" => "კონტაქტების ინდექსირება",
 "Add to..." => "დაამატე...",
 "Remove from..." => "წაშალე...",
 "Add group..." => "ჯგუფში დამატება...",
-"Indexing contacts" => "კონტაქტების ინდექსირება",
 "Merge failed. Cannot find contact: {id}" => "შერწყმა ვერ განხორციელდა. კონტაქტი ვერ მოიძებნა: {id}",
 "Merge failed." => "შერწყმა ვერ განხორციელდა.",
 "Merge failed. Error saving contact." => "შერწყმა ვერ განხორციელდა. შეცდომა კონტაქტის შენახვისას.",
@@ -143,8 +144,6 @@
 "Address books" => "Address books",
 "Display name" => "დისპლეის სახელი",
 "Import" => "იმპორტი",
-"Import into:" => "იმპორტირება შემდეგში:",
-"Select files" => "ფაილების არჩევა",
 "(De-)select all" => "ყველას მო(გადა)ნიშვნა ",
 "Groups" => "ჯგუფები",
 "Favorite" => "ფავორიტი",
@@ -228,6 +227,5 @@
 "Addressbooks" => "მისამართის წიგნები",
 "New Address Book" => "ახალი მისამართების წიგნი",
 "Name" => "სახელი",
-"Description" => "გვერდის დახასიათება",
-"Save" => "შენახვა"
+"Description" => "გვერდის დახასიათება"
 );

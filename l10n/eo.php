@@ -28,11 +28,12 @@
 "Couldn't load temporary image: " => "Ne eblis ŝargi provizoran bildon: ",
 "Contacts" => "Kontaktoj",
 "%d_selected_contacts" => "%d_selected_contacts",
+"Save" => "Konservi",
 "Uploading..." => "Alŝutante...",
+"Indexing contacts" => "Indeksante kontaktojn",
 "Add to..." => "Aldoni al...",
 "Remove from..." => "Forigi el...",
 "Add group..." => "Aldoni grupon...",
-"Indexing contacts" => "Indeksante kontaktojn",
 "Select photo" => "Elekti foton",
 "Network or server error. Please inform administrator." => "Reta aŭ servila eraro. Bonvolu sciigi al la administranto.",
 "Error adding to group." => "Eraro dum aldono al grupo.",
@@ -110,8 +111,6 @@
 "New Group" => "Nova grupo",
 "Address books" => "Adresaroj",
 "Import" => "Enporti",
-"Import into:" => "Enporti en:",
-"Select files" => "Elekti dosierojn",
 "(De-)select all" => "(Mal)elekti ĉion",
 "Groups" => "Grupoj",
 "Favorite" => "Favorato",
@@ -191,6 +190,5 @@
 "Addressbooks" => "Adresaroj",
 "New Address Book" => "Nova adresaro",
 "Name" => "Nomo",
-"Description" => "Priskribo",
-"Save" => "Konservi"
+"Description" => "Priskribo"
 );

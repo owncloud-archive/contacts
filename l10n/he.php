@@ -23,6 +23,7 @@
 "Couldn't save temporary image: " => "אין אפשרות לשמור תמונה זמנית:",
 "Couldn't load temporary image: " => "אין אפשרות לטעון תמונה זמנית:",
 "Contacts" => "אנשי קשר",
+"Save" => "שמירה",
 "Uploading..." => "העלאה...",
 "Add to..." => "הוסף אל...",
 "Remove from..." => "הסר מ...",
@@ -89,7 +90,6 @@
 "New Contact" => "איש קשר חדש",
 "New Group" => "קבוצה חדשה",
 "Import" => "יבא",
-"Import into:" => "ייבא אל:",
 "Groups" => "קבוצות",
 "Favorite" => "מועדף",
 "Close" => "סגירה",
@@ -152,6 +152,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "פנקסי כתובות",
 "New Address Book" => "פנקס כתובות חדש",
-"Name" => "שם",
-"Save" => "שמירה"
+"Name" => "שם"
 );

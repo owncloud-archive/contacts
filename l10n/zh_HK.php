@@ -7,6 +7,7 @@
 "Error resizing image" => "更改影相大小時發生錯誤",
 "Error cropping image" => "剪裁影像時發生錯誤",
 "Contacts" => "聯絡人",
+"Save" => "儲存",
 "Cancel" => "取消",
 "OK" => "確定",
 "Error" => "錯誤",
@@ -56,6 +57,5 @@
 "iOS/OS X" => "iOS/OSX",
 "Addressbooks" => "地址簿",
 "New Address Book" => "新增地址簿",
-"Name" => "名稱",
-"Save" => "儲存"
+"Name" => "名稱"
 );

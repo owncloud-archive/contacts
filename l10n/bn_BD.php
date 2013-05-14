@@ -24,6 +24,7 @@
 "Couldn't save temporary image: " => "অস্থায়ী ছবি সংরক্ষণ করতে পারা গেল নাঃ",
 "Couldn't load temporary image: " => "অস্থায়ী ছবি লোড করা সম্ভব হলো নাঃ",
 "Contacts" => "ঠিকানাসমূহ",
+"Save" => "সংরক্ষণ",
 "Uploading..." => "আপলোড করা হচ্ছে..........",
 "Cancel" => "বাতিল",
 "No files selected for upload." => "আপলোড করার জন্য কোন ফাইল নির্বাচন করা হয় নি।",
@@ -125,6 +126,5 @@
 "Addressbooks" => "ঠিকানাবহিসমূহ",
 "New Address Book" => "নতুন ঠিকানাপঞ্জী",
 "Name" => "নাম",
-"Description" => "বিবরণ",
-"Save" => "সংরক্ষণ"
+"Description" => "বিবরণ"
 );

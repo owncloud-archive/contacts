@@ -12,6 +12,7 @@
 "Missing a temporary folder" => "Et feelt en temporären Dossier",
 "Failed to write to disk" => "Konnt net op den Disk schreiwen",
 "Contacts" => "Kontakter",
+"Save" => "Späicheren",
 "Cancel" => "Ofbriechen",
 "OK" => "OK",
 "Result: " => "Resultat: ",
@@ -60,6 +61,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adressbicher ",
 "New Address Book" => "Neit Adressbuch",
-"Name" => "Numm",
-"Save" => "Späicheren"
+"Name" => "Numm"
 );

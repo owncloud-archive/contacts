@@ -5,6 +5,7 @@
 "The uploaded file was only partially uploaded" => "Poslati fajl je samo delimično otpremljen!",
 "No file was uploaded" => "Nijedan fajl nije poslat",
 "Missing a temporary folder" => "Nedostaje privremena fascikla",
+"Save" => "Snimi",
 "Cancel" => "Otkaži",
 "Download" => "Preuzmi",
 "Edit" => "Uredi",
@@ -29,6 +30,5 @@
 "Address" => "Adresa",
 "City" => "Grad",
 "Country" => "Zemlja",
-"Name" => "Ime",
-"Save" => "Snimi"
+"Name" => "Ime"
 );

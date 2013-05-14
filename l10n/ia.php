@@ -5,6 +5,7 @@
 "No file was uploaded" => "Nulle file esseva incargate.",
 "Missing a temporary folder" => "Manca un dossier temporari",
 "Contacts" => "Contactos",
+"Save" => "Salveguardar",
 "Cancel" => "Cancellar",
 "Error" => "Error",
 "Download" => "Discargar",
@@ -55,6 +56,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adressarios",
 "New Address Book" => "Nove adressario",
-"Name" => "Nomine",
-"Save" => "Salveguardar"
+"Name" => "Nomine"
 );

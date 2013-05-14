@@ -31,11 +31,12 @@
 "Couldn't load temporary image: " => "Začasne slike ni mogoče naložiti: ",
 "Contacts" => "Stiki",
 "%d_selected_contacts" => "%d izbranih stikov",
+"Save" => "Shrani",
 "Uploading..." => "Poteka pošiljanje ...",
+"Indexing contacts" => "Ustvarjanje kazala stikov",
 "Add to..." => "Dodaj v ...",
 "Remove from..." => "Odstrani iz ...",
 "Add group..." => "Dodaj skupino ...",
-"Indexing contacts" => "Ustvarjanje kazala stikov",
 "Select photo" => "Izbor slike",
 "Network or server error. Please inform administrator." => "Napaka omrežja ali strežnika. O napaki je treba obvestiti skrbnika.",
 "Error adding to group." => "Napaka med dodajanja v skupino.",
@@ -116,8 +117,6 @@
 "Address books" => "Imeniki",
 "Display name" => "Prikazano ime",
 "Import" => "Uvozi",
-"Import into:" => "Uvozi v:",
-"Select files" => "Izbor datotek",
 "(De-)select all" => "Preklopi izbor",
 "Groups" => "Skupine",
 "Favorite" => "Priljubljen",
@@ -197,6 +196,5 @@
 "Addressbooks" => "Imeniki",
 "New Address Book" => "Nov imenik",
 "Name" => "Ime",
-"Description" => "Opis",
-"Save" => "Shrani"
+"Description" => "Opis"
 );

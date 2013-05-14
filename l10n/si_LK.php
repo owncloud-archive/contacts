@@ -19,6 +19,7 @@
 "Error uploading contacts to storage." => "ගබඩාවට පුද්ගල විස්තර උඩුගත කිරීමේ දෝෂයක්",
 "Couldn't save temporary image: " => "තාවකාලික රූපය සුරැකීමට නොහැකි විය",
 "Contacts" => "සබඳතා",
+"Save" => "සුරකින්න",
 "Uploading..." => "උඩුගත කෙරේ...",
 "Cancel" => "එපා",
 "OK" => "හරි",
@@ -91,6 +92,5 @@
 "Addressbooks" => "ලිපින පොත්",
 "New Address Book" => "නව ලිපින පොතක් ",
 "Name" => "නම",
-"Description" => "විස්තරය",
-"Save" => "සුරකින්න"
+"Description" => "විස්තරය"
 );

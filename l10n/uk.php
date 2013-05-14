@@ -30,11 +30,12 @@
 "Couldn't load temporary image: " => "Не вдалося завантажити тимчасове зображення: ",
 "Contacts" => "Контакти",
 "%d_selected_contacts" => "%d_selected_contacts",
+"Save" => "Зберегти",
 "Uploading..." => "Вивантаження...",
+"Indexing contacts" => "Індексування контактів",
 "Add to..." => "Додати до...",
 "Remove from..." => "Видалити з...",
 "Add group..." => "Додати групу...",
-"Indexing contacts" => "Індексування контактів",
 "Select photo" => "Оберіть фото",
 "Network or server error. Please inform administrator." => "Мережева або серверна помилка. Будь ласка, проінформуйте адміністратора.",
 "Error adding to group." => "Помилка при додаванні у групу.",
@@ -114,8 +115,6 @@
 "Address books" => "Адресні книги",
 "Display name" => "Показати Ім'я",
 "Import" => "Імпорт",
-"Import into:" => "Імпортувати в:",
-"Select files" => "Виберіть файли",
 "(De-)select all" => "(Відміна) виділення усіх",
 "Groups" => "Групи",
 "Favorite" => "Улюблений",
@@ -195,6 +194,5 @@
 "Addressbooks" => "Адресні книги",
 "New Address Book" => "Нова адресна книга",
 "Name" => "Ім'я",
-"Description" => "Опис",
-"Save" => "Зберегти"
+"Description" => "Опис"
 );
