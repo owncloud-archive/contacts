@@ -126,6 +126,7 @@ class ContactController extends BaseController {
 		} else {
 			$response = new JSONResponse();
 			$response->bailOut('Error getting user photo');
+			return $response;
 		}
 	}
 
