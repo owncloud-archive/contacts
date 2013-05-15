@@ -68,7 +68,7 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 		// Test contacts
 		$this->assertEquals(array(), self::$backend->getContacts($aid));
 
-		$carddata = file_get_contents(__DIR__ . '/data/test.vcf');
+		$carddata = file_get_contents(__DIR__ . '/data/test1.vcf');
 		$id = self::$backend->createContact($aid, $carddata);
 		$this->assertNotEquals(false, $id); // Isn't there an assertNotFalse() ?
 		$this->assertEquals(1, count(self::$backend->getContacts($aid)));
@@ -118,5 +118,19 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 
 		$this->assertTrue($addressBook->deleteChild($id));
 		$this->assertEquals(0, count($addressBook));
+	}
+
+	public function testCrappyVCard() {
+		$carddata = file_get_contents(__DIR__ . '/data/test3.vcf');
+		$obj = \Sabre\VObject\Reader::read(
+			$carddata,
+			\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
+		);
+		$obj->validate($obj::REPAIR|$obj::UPGRADE);
+		echo "\n" . $obj->serialize();
+
+		$this->assertEquals('3.0', (string)$obj->VERSION);
+		$this->assertEquals('Adèle Fermée', (string)$obj->FN);
+		$this->assertEquals('Fermée;Adèle;;;', (string)$obj->N);
 	}
 }
