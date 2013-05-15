@@ -143,6 +143,21 @@ class VCard extends VObject\Component\VCard {
 
 		$warnings = array();
 
+		if ($options & self::UPGRADE) {
+			$this->VERSION = self::DEFAULT_VERSION;
+			foreach($this->children as &$property) {
+				$this->decodeProperty($property);
+				switch((string)$property->name) {
+					case 'LOGO':
+					case 'SOUND':
+					case 'PHOTO':
+						if(isset($property['TYPE']) && strpos((string)$property['TYPE'], '/') === false) {
+							$property['TYPE'] = 'image/' . strtolower($property['TYPE']);
+						}
+				}
+			}
+		}
+
 		$version = $this->select('VERSION');
 		if (count($version) !== 1) {
 			$warnings[] = array(
@@ -226,21 +241,6 @@ class VCard extends VObject\Component\VCard {
 			);
 			if ($options & self::REPAIR) {
 				$this->UID = Utils\Properties::generateUID();
-			}
-		}
-
-		if ($options & self::UPGRADE) {
-			$this->VERSION = self::DEFAULT_VERSION;
-			foreach($this->children as &$property) {
-				$this->decodeProperty($property);
-				switch((string)$property->name) {
-					case 'LOGO':
-					case 'SOUND':
-					case 'PHOTO':
-						if(isset($property['TYPE']) && strpos((string)$property['TYPE'], '/') === false) {
-							$property['TYPE'] = 'image/' . strtolower($property['TYPE']);
-						}
-				}
 			}
 		}
 
