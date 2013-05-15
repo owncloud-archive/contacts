@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-14 00:50+0200\n"
-"PO-Revision-Date: 2013-05-13 20:40+0000\n"
+"POT-Creation-Date: 2013-05-16 00:51+0200\n"
+"PO-Revision-Date: 2013-05-15 10:34+0000\n"
 "Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -151,7 +151,7 @@ msgstr "Impossibile salvare l'immagine temporanea: "
 msgid "Couldn't load temporary image: "
 msgstr "Impossibile caricare l'immagine temporanea: "
 
-#: appinfo/app.php:28
+#: appinfo/app.php:31
 msgid "Contacts"
 msgstr "Contatti"
 
@@ -287,29 +287,29 @@ msgstr "Modifica l'immagine del profilo"
 msgid "Error loading profile picture."
 msgstr "Errore durante il caricamento dell'immagine di profilo."
 
-#: js/contacts.js:331
+#: js/contacts.js:336
 msgid "Failed deleting property: {error}"
 msgstr "Eliminazione della proprietà non riuscita: {error}"
 
-#: js/contacts.js:522
+#: js/contacts.js:527
 msgid "Is this correct?"
 msgstr "È corretto?"
 
-#: js/contacts.js:941 js/contacts.js:983
+#: js/contacts.js:946 js/contacts.js:988
 msgid "# groups"
 msgstr "# gruppi"
 
-#: js/contacts.js:1950
+#: js/contacts.js:1975
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alcuni contatti sono marcati per l'eliminazione, ma non sono stati ancora rimossi. Attendere fino al completamento dell'operazione."
 
-#: js/contacts.js:1961
+#: js/contacts.js:1986
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Un clic per annullare l'eliminazione di {num} contatti"
 
-#: js/contacts.js:1976
+#: js/contacts.js:2001
 msgid "Cancelled deletion of {num}"
 msgstr "Eliminazione di {num} annullata"
 
@@ -419,11 +419,11 @@ msgstr "Altro..."
 msgid "Less..."
 msgstr "Meno..."
 
-#: js/storage.js:245
+#: js/storage.js:247
 msgid "Failed loading photo: {error}"
 msgstr "Caricamento foto non riuscito: {error}"
 
-#: js/storage.js:484
+#: js/storage.js:486
 msgid "Request failed: {error}"
 msgstr "Richiesta non riuscita: {error}"
 
@@ -465,8 +465,8 @@ msgstr "Errore durante la rimozione del contatto da altre rubriche."
 
 #: lib/controller/contactcontroller.php:45
 #: lib/controller/contactcontroller.php:73
-#: lib/controller/contactcontroller.php:155
-#: lib/controller/contactcontroller.php:213
+#: lib/controller/contactcontroller.php:156
+#: lib/controller/contactcontroller.php:214
 msgid "Couldn't find contact."
 msgstr "Impossibile trovare il contatto."
 
@@ -475,31 +475,31 @@ msgid "Error merging into contact."
 msgstr "Errore durante l'unione al contatto."
 
 #: lib/controller/contactcontroller.php:80
-#: lib/controller/contactcontroller.php:173
+#: lib/controller/contactcontroller.php:174
 msgid "Error saving contact to backend."
 msgstr "Errore di salvataggio del contatto nel motore."
 
-#: lib/controller/contactcontroller.php:158
-#: lib/controller/contactcontroller.php:216
+#: lib/controller/contactcontroller.php:159
+#: lib/controller/contactcontroller.php:217
 msgid "Property name is not set."
 msgstr "Il nome della proprietà non è impostato."
 
-#: lib/controller/contactcontroller.php:161
-#: lib/controller/contactcontroller.php:219
-#: lib/controller/contactcontroller.php:228
+#: lib/controller/contactcontroller.php:162
+#: lib/controller/contactcontroller.php:220
+#: lib/controller/contactcontroller.php:229
 msgid "Property checksum is not set."
 msgstr "Il nome della proprietà non è impostato."
 
-#: lib/controller/contactcontroller.php:167
-#: lib/controller/contactcontroller.php:234
+#: lib/controller/contactcontroller.php:168
+#: lib/controller/contactcontroller.php:235
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Informazioni sulla vCard non corrette. Ricarica la pagina."
 
-#: lib/controller/contactcontroller.php:238
+#: lib/controller/contactcontroller.php:239
 msgid "Error setting property"
 msgstr "Errore durante l'impostazione della proprietà"
 
-#: lib/controller/contactcontroller.php:242
+#: lib/controller/contactcontroller.php:243
 msgid "Error saving property to backend"
 msgstr "Errore di salvataggio della proprietà nel motore"
 
@@ -1024,7 +1024,7 @@ msgstr "Indirizzi di sincronizzazione CardDAV"
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "altre informazioni"
+msgstr "ulteriori informazioni"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"

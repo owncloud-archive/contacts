@@ -239,7 +239,7 @@
 "CardDAV link" => "Collegamento CardDav",
 "The temporary image has been removed from cache." => "L'immagine temporanea è stata rimossa dalla cache.",
 "CardDAV syncing addresses" => "Indirizzi di sincronizzazione CardDAV",
-"more info" => "altre informazioni",
+"more info" => "ulteriori informazioni",
 "Primary address (Kontact et al)" => "Indirizzo principale (Kontact e altri)",
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Rubriche",
