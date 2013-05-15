@@ -59,4 +59,6 @@ if(\OCP\App::isEnabled('appframework')) {
 			}
 		}
 	}
+} else {
+	\OCP\Util::writeLog('contacts', 'AppFramework is not enabled. App is not functional!', \OCP\Util::ERROR);
 }
