@@ -2201,6 +2201,10 @@ OC.Contacts = OC.Contacts || {};
 						);
 					self.length +=1;
 					var $item = self.contacts[id].renderListItem();
+					if(!$item) {
+						console.warn('Contact', contact, 'could not be rendered!');
+						return true; // continue
+					}
 					items.push($item.get(0));
 					if(items.length === 100) {
 						self.$contactList.append(items);
