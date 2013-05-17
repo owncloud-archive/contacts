@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-14 00:50+0200\n"
-"PO-Revision-Date: 2013-05-13 20:30+0000\n"
+"POT-Creation-Date: 2013-05-18 00:48+0200\n"
+"PO-Revision-Date: 2013-05-17 10:17+0000\n"
 "Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -160,7 +160,7 @@ msgstr "Δεν ήταν δυνατή η αποθήκευση της προσωρ
 msgid "Couldn't load temporary image: "
 msgstr "Δεν ήταν δυνατή η φόρτωση της προσωρινής εικόνας: "
 
-#: appinfo/app.php:28
+#: appinfo/app.php:31
 msgid "Contacts"
 msgstr "Επαφές"
 
@@ -296,29 +296,29 @@ msgstr "Επεξεργασία εικόνας προφίλ"
 msgid "Error loading profile picture."
 msgstr "Σφάλμα στην φόρτωση εικόνας προφίλ."
 
-#: js/contacts.js:331
+#: js/contacts.js:336
 msgid "Failed deleting property: {error}"
 msgstr "Απέτυχε να διαγράψει κανονικά "
 
-#: js/contacts.js:522
+#: js/contacts.js:527
 msgid "Is this correct?"
 msgstr "Είναι σωστό;"
 
-#: js/contacts.js:941 js/contacts.js:983
+#: js/contacts.js:946 js/contacts.js:988
 msgid "# groups"
 msgstr "# ομάδες"
 
-#: js/contacts.js:1950
+#: js/contacts.js:1975
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή,δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
-#: js/contacts.js:1961
+#: js/contacts.js:1986
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Κλικ για να αναιρέσετε τη διαγραφή {num} επαφών"
 
-#: js/contacts.js:1976
+#: js/contacts.js:2001
 msgid "Cancelled deletion of {num}"
 msgstr "Αναιρέθηκε η διαγραφή {num}"
 
@@ -428,11 +428,11 @@ msgstr "Περισσότερα..."
 msgid "Less..."
 msgstr "Λιγότερα"
 
-#: js/storage.js:245
+#: js/storage.js:247
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: js/storage.js:484
+#: js/storage.js:486
 msgid "Request failed: {error}"
 msgstr ""
 
@@ -474,8 +474,8 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:45
 #: lib/controller/contactcontroller.php:73
-#: lib/controller/contactcontroller.php:155
-#: lib/controller/contactcontroller.php:213
+#: lib/controller/contactcontroller.php:156
+#: lib/controller/contactcontroller.php:214
 msgid "Couldn't find contact."
 msgstr "Δεν μπόρεσε να βρει την επαφή "
 
@@ -484,31 +484,31 @@ msgid "Error merging into contact."
 msgstr ""
 
 #: lib/controller/contactcontroller.php:80
-#: lib/controller/contactcontroller.php:173
+#: lib/controller/contactcontroller.php:174
 msgid "Error saving contact to backend."
 msgstr "Σφάλμα κατά την αποθήκευση επαφής στο τέλος. "
 
-#: lib/controller/contactcontroller.php:158
-#: lib/controller/contactcontroller.php:216
+#: lib/controller/contactcontroller.php:159
+#: lib/controller/contactcontroller.php:217
 msgid "Property name is not set."
 msgstr "Δεν περάστηκε το όνομα σωστά "
 
-#: lib/controller/contactcontroller.php:161
-#: lib/controller/contactcontroller.php:219
-#: lib/controller/contactcontroller.php:228
+#: lib/controller/contactcontroller.php:162
+#: lib/controller/contactcontroller.php:220
+#: lib/controller/contactcontroller.php:229
 msgid "Property checksum is not set."
 msgstr "Δεν περάστηκε το ποσό του τσεκ σωστά "
 
-#: lib/controller/contactcontroller.php:167
-#: lib/controller/contactcontroller.php:234
+#: lib/controller/contactcontroller.php:168
+#: lib/controller/contactcontroller.php:235
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Οι πληροφορίες σχετικά με vCard είναι εσφαλμένες. Παρακαλώ επαναφορτώστε τη σελίδα."
 
-#: lib/controller/contactcontroller.php:238
+#: lib/controller/contactcontroller.php:239
 msgid "Error setting property"
 msgstr ""
 
-#: lib/controller/contactcontroller.php:242
+#: lib/controller/contactcontroller.php:243
 msgid "Error saving property to backend"
 msgstr "Σφάλμα κατά την αποθήκευση της ιδιότητας στο τέλος "
 

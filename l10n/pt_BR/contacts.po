@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-15 00:49+0200\n"
-"PO-Revision-Date: 2013-05-14 02:10+0000\n"
+"POT-Creation-Date: 2013-05-18 00:48+0200\n"
+"PO-Revision-Date: 2013-05-17 10:14+0000\n"
 "Last-Translator: Flávio Veras <flaviove@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -156,7 +156,7 @@ msgstr "Não foi possível salvar a imagem temporária:"
 msgid "Couldn't load temporary image: "
 msgstr "Não foi possível carregar a imagem temporária:"
 
-#: appinfo/app.php:28
+#: appinfo/app.php:31
 msgid "Contacts"
 msgstr "Contatos"
 
@@ -292,29 +292,29 @@ msgstr "Editar imagem do perfil"
 msgid "Error loading profile picture."
 msgstr "Erro ao carregar imagem de perfil."
 
-#: js/contacts.js:331
+#: js/contacts.js:336
 msgid "Failed deleting property: {error}"
 msgstr "Falha ao excluir propriedade: {error}"
 
-#: js/contacts.js:522
+#: js/contacts.js:527
 msgid "Is this correct?"
 msgstr "Isto está certo?"
 
-#: js/contacts.js:941 js/contacts.js:983
+#: js/contacts.js:946 js/contacts.js:988
 msgid "# groups"
 msgstr "# grupos"
 
-#: js/contacts.js:1950
+#: js/contacts.js:1975
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alguns contatos foram marcados para remoção, mas não foram removidos ainda. Por favor aguarde a remoção desses contatos."
 
-#: js/contacts.js:1961
+#: js/contacts.js:1986
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Clique para desfazer a exclusão de {num} contatos"
 
-#: js/contacts.js:1976
+#: js/contacts.js:2001
 msgid "Cancelled deletion of {num}"
 msgstr "Exclusão de {num} contatos cancelada"
 
@@ -424,11 +424,11 @@ msgstr "Mais..."
 msgid "Less..."
 msgstr "Menos..."
 
-#: js/storage.js:245
+#: js/storage.js:247
 msgid "Failed loading photo: {error}"
 msgstr "Falha carregendo foto: {error}"
 
-#: js/storage.js:484
+#: js/storage.js:486
 msgid "Request failed: {error}"
 msgstr "Requisição falhou: {error}"
 
@@ -470,8 +470,8 @@ msgstr "Erro removendo contato de outro livro de endereço."
 
 #: lib/controller/contactcontroller.php:45
 #: lib/controller/contactcontroller.php:73
-#: lib/controller/contactcontroller.php:155
-#: lib/controller/contactcontroller.php:213
+#: lib/controller/contactcontroller.php:156
+#: lib/controller/contactcontroller.php:214
 msgid "Couldn't find contact."
 msgstr "Não foi possível encontrar o contato."
 
@@ -480,31 +480,31 @@ msgid "Error merging into contact."
 msgstr "Erro mesclando contato."
 
 #: lib/controller/contactcontroller.php:80
-#: lib/controller/contactcontroller.php:173
+#: lib/controller/contactcontroller.php:174
 msgid "Error saving contact to backend."
 msgstr "Erro salvando contato no final."
 
-#: lib/controller/contactcontroller.php:158
-#: lib/controller/contactcontroller.php:216
+#: lib/controller/contactcontroller.php:159
+#: lib/controller/contactcontroller.php:217
 msgid "Property name is not set."
 msgstr "Nome da propriedade não está definida."
 
-#: lib/controller/contactcontroller.php:161
-#: lib/controller/contactcontroller.php:219
-#: lib/controller/contactcontroller.php:228
+#: lib/controller/contactcontroller.php:162
+#: lib/controller/contactcontroller.php:220
+#: lib/controller/contactcontroller.php:229
 msgid "Property checksum is not set."
 msgstr "Verificação da propriedade não está definida."
 
-#: lib/controller/contactcontroller.php:167
-#: lib/controller/contactcontroller.php:234
+#: lib/controller/contactcontroller.php:168
+#: lib/controller/contactcontroller.php:235
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Informações sobre vCard é incorreta. Por favor, recarregue a página."
 
-#: lib/controller/contactcontroller.php:238
+#: lib/controller/contactcontroller.php:239
 msgid "Error setting property"
 msgstr "Erro configurando propriedade"
 
-#: lib/controller/contactcontroller.php:242
+#: lib/controller/contactcontroller.php:243
 msgid "Error saving property to backend"
 msgstr "Erro salvando propriedade ao final"
 
