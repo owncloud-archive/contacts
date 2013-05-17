@@ -178,7 +178,7 @@ class ImportController extends BaseController {
 		$writeProgress('40');
 		$imported = 0;
 		$failed = 0;
-		$partial = 0;
+		$partially = 0;
 
 		foreach($parts as $part) {
 			try {
@@ -186,7 +186,7 @@ class ImportController extends BaseController {
 			} catch (VObject\ParseException $e) {
 				try {
 					$vcard = VObject\Reader::read($part, VObject\Reader::OPTION_IGNORE_INVALID_LINES);
-					$partial += 1;
+					$partially += 1;
 					$response->debug('Import: Retrying reading card. Error parsing VCard: ' . $e->getMessage());
 				} catch (\Exception $e) {
 					$failed += 1;
@@ -213,6 +213,7 @@ class ImportController extends BaseController {
 				'backend' => $params['backend'],
 				'addressbookid' => $params['addressbookid'],
 				'imported' => $imported,
+				'partially' => $partially,
 				'failed' => $failed,
 			)
 		);
