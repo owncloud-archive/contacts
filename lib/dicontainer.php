@@ -8,7 +8,11 @@
  */
 
 namespace OCA\Contacts;
+
 use OCA\AppFramework\DependencyInjection\DIContainer as BaseContainer;
+use OCA\AppFramework\Middleware\MiddlewareDispatcher;
+use OCA\AppFramework\Middleware\Security\SecurityMiddleware;
+use OCA\Contacts\Middleware\Http as HttpMiddleware;
 use OCA\Contacts\Controller\AddressBookController;
 use OCA\Contacts\Controller\GroupController;
 use OCA\Contacts\Controller\ContactController;
@@ -24,6 +28,18 @@ class DIContainer extends BaseContainer {
 	public function __construct(){
 		// tell parent container about the app name
 		parent::__construct('contacts');
+
+		$this['HttpMiddleware'] = $this->share(function($c){
+			return new HttpMiddleware($c['API']);
+		});
+
+		$this['MiddlewareDispatcher'] = $this->share(function($c){
+			$dispatcher = new MiddlewareDispatcher();
+			$dispatcher->registerMiddleware($c['HttpMiddleware']);
+			$dispatcher->registerMiddleware($c['SecurityMiddleware']);
+
+			return $dispatcher;
+		});
 
 		/**
 		 * CONTROLLERS

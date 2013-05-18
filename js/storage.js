@@ -24,6 +24,15 @@ OC.Contacts = OC.Contacts || {};
 		}
 	}
 
+	$(document).ajaxError(function(e, xhr, settings, exception) {
+		console.error('Error in: ', settings.url, ' : ', xhr.responseText, exception);
+		var response = $.parseJSON(xhr.responseText);
+		console.log('response', response);
+		$(document).trigger('status.contact.error', {
+			message: response ? new JSONResponse(response, xhr).message : xhr.responseText
+		});
+	});
+
 	/**
 	* An object for saving contact data to backends
 	*

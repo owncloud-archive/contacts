@@ -2221,10 +2221,9 @@ OC.Contacts = OC.Contacts || {};
 				defer.reject(response);
 			}
 		})
-		.fail(function(jqxhr, textStatus, error) {
-			var err = textStatus + ', ' + error;
-			console.warn( "Request Failed: " + err);
-			this.reject({error: true, message: err});
+		.fail(function(response) {
+			console.warn('Request Failed:', response.message);
+			this.reject({error: true, message: response.message});
 		});
 	};
 

@@ -42,6 +42,13 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 */
 	public $name = 'VCARD';
 
+	/**
+	 * @brief language object
+	 *
+	 * @var OC_L10N
+	 */
+	public static $l10n;
+
 	protected $props = array();
 
 	/**
@@ -52,6 +59,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @param mixed $data
 	 */
 	public function __construct($parent, $backend, $data = null) {
+		self::$l10n = $parent::$l10n;
 		//\OCP\Util::writeLog('contacts', __METHOD__ . ' parent: ' . print_r($parent, true) . ', backend: ' . print_r($backend, true) . ', data: ' . print_r($data, true), \OCP\Util::DEBUG);
 		//\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		$this->props['parent'] = $parent;
@@ -101,7 +109,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 */
 	public function getMetaData() {
 		if(!$this->hasPermission(\OCP\PERMISSION_READ)) {
-			throw new \Exception('Access denied');
+			throw new \Exception(self::$l10n('You do not have permissions to see this contacts'), 403);
 		}
 		if(!isset($this->props['displayname'])) {
 			if(!$this->retrieve()) {
@@ -148,7 +156,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 */
 	function getDisplayName() {
 		if(!$this->hasPermission(\OCP\PERMISSION_READ)) {
-			throw new \Exception('Access denied');
+			throw new \Exception(self::$l10n('You do not have permissions to see this contacts'), 403);
 		}
 		return isset($this->props['displayname']) ? $this->props['displayname'] : null;
 	}
@@ -231,7 +239,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 */
 	public function delete() {
 		if(!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
-			throw new \Exception('Access denied');
+			throw new \Exception(self::$l10n('You do not have permissions to delete this contact'), 403);
 		}
 		return $this->props['backend']->deleteContact(
 			$this->getParent()->getId(),
@@ -246,7 +254,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 */
 	public function save($force = false) {
 		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
-			throw new \Exception('Access denied');
+			throw new \Exception(self::$l10n('You do not have permissions to update this contact'), 403);
 		}
 		if($this->isSaved() && !$force) {
 			\OCP\Util::writeLog('contacts', __METHOD__.' Already saved: ' . print_r($this->props, true), \OCP\Util::DEBUG);
@@ -257,7 +265,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 		if($this->getId()) {
 			if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_UPDATE)) {
-				throw new \Exception('Not implemented');
+				throw new \Exception(self::$l10n('The backend for this contact does not support updating it'), 501);
 			}
 			if($this->getBackend()
 				->updateContact(
@@ -275,7 +283,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		} else {
 			//print(__METHOD__.' ' . print_r($this->getParent(), true));
 			if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_CREATE)) {
-				throw new \Exception('Not implemented');
+				throw new \Exception(self::$l10n('This not support adding contacts'), 501);
 			}
 			$this->props['id'] = $this->getBackend()->createContact(
 				$this->getParent()->getId(), $this
@@ -384,7 +392,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			}
 			$idx += 1;
 		}
-		throw new Exception('Property not found', 404);
+		throw new Exception(self::$l10n('Property not found'), 404);
 	}
 
 	/**
@@ -401,7 +409,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				return $property;
 			}
 		}
-		throw new \Exception('Property not found', 404);
+		throw new \Exception(self::$l10n('Property not found'), 404);
 	}
 
 	/**
@@ -449,7 +457,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				break;
 			case 'IMPP':
 				if(is_null($parameters) || !isset($parameters['X-SERVICE-TYPE'])) {
-					throw new \InvalidArgumentException(__METHOD__.' Missing IM parameter for: '.$name. ' ' . $value);
+					throw new \InvalidArgumentException(self::$l10n(' Missing IM parameter for: ') . $name. ' ' . $value, 412);
 				}
 				$serviceType = $parameters['X-SERVICE-TYPE'];
 				if(is_array($serviceType)) {
@@ -457,7 +465,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				}
 				$impp = Utils\Properties::getIMOptions($serviceType);
 				if(is_null($impp)) {
-					throw new \UnexpectedValueException(__METHOD__.' Unknown IM: ' . $serviceType);
+					throw new \UnexpectedValueException(self::$l10n('Unknown IM: ') . $serviceType, 415);
 				}
 				$value = $impp['protocol'] . ':' . $value;
 				$property->setValue($value);

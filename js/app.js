@@ -149,10 +149,7 @@ OC.notify = function(params) {
 OC.Contacts = OC.Contacts || {
 	init:function() {
 		if(oc_debug === true) {
-		$.error = console.error;
-		$(document).ajaxError(function(e, xhr, settings, exception) {
-				console.error('Error in: ', settings.url, ' : ', xhr.responseText, exception);
-			});
+			$.error = console.error;
 		}
 		var self = this;
 

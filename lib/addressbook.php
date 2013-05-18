@@ -25,7 +25,15 @@ namespace OCA\Contacts;
 /**
  * This class manages our addressbooks.
  */
+
 class Addressbook extends AbstractPIMCollection {
+
+	/**
+	 * @brief language object
+	 *
+	 * @var OC_L10N
+	 */
+	public static $l10n;
 
 	protected $_count;
 	/**
@@ -52,12 +60,13 @@ class Addressbook extends AbstractPIMCollection {
 	 * @param array $addressBookInfo
 	 */
 	public function __construct(Backend\AbstractBackend $backend, array $addressBookInfo) {
+		self::$l10n = \OC_L10N::get('contacts');
 		$this->backend = $backend;
 		$this->addressBookInfo = $addressBookInfo;
 		if(is_null($this->getId())) {
 			$id = $this->backend->createAddressBook($addressBookInfo);
 			if($id === false) {
-				throw new \Exception('Error creating address book.');
+				throw new \Exception('Error creating address book.', 500);
 			}
 			$this->addressBookInfo = $this->backend->getAddressBook($id);
 			//print(__METHOD__. ' '. __LINE__ . ' addressBookInfo: ' . print_r($this->backend->getAddressBook($id), true));
@@ -127,7 +136,7 @@ class Addressbook extends AbstractPIMCollection {
 	function getChild($id) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$id, \OCP\Util::DEBUG);
 		if(!$this->hasPermission(\OCP\PERMISSION_READ)) {
-			throw new \Exception('Access denied');
+			throw new \Exception(self::$l10n('You do not have permissions to see this contacts'), 403);
 		}
 		if(!isset($this->objects[$id])) {
 			$contact = $this->backend->getContact($this->getId(), $id);
@@ -159,7 +168,7 @@ class Addressbook extends AbstractPIMCollection {
 	*/
 	function getChildren($limit = null, $offset = null, $omitdata = false) {
 		if(!$this->hasPermission(\OCP\PERMISSION_READ)) {
-			throw new \Exception('Access denied');
+			throw new \Exception(self::$l10n('You do not have permissions to see these contacts'), 403);
 		}
 		//\OCP\Util::writeLog('contacts', __METHOD__.' backend: ' . print_r($this->backend, true), \OCP\Util::DEBUG);
 		$contacts = array();
@@ -185,10 +194,10 @@ class Addressbook extends AbstractPIMCollection {
 	 */
 	public function addChild($data = null) {
 		if(!$this->hasPermission(\OCP\PERMISSION_CREATE)) {
-			throw new \Exception('Access denied');
+			throw new \Exception(self::$l10n('You do not have permissions add contacts to the address book'), 403);
 		}
 		if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_CREATE)) {
-			throw new \Exception('Not implemented');
+			throw new \Exception(self::$l10n('The backend for this address book does not support adding contacts'), 501);
 		}
 		$contact = new Contact($this, $this->backend, $data);
 		if($contact->save() === false) {
@@ -210,10 +219,10 @@ class Addressbook extends AbstractPIMCollection {
 	 */
 	public function deleteChild($id) {
 		if(!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
-			throw new \Exception('Access denied');
+			throw new \Exception(self::$l10n('You do not have permissions to delete this contact'), 403);
 		}
 		if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_DELETE)) {
-			throw new \Exception('Not implemented');
+			throw new \Exception(self::$l10n('The backend for this address book does not support deleting contacts'), 501);
 		}
 		if($this->backend->deleteContact($this->getId(), $id)) {
 			if(isset($this->objects[$id])) {
@@ -273,7 +282,7 @@ class Addressbook extends AbstractPIMCollection {
 	 */
 	public function save() {
 		if(!$this->hasPermission(OCP\PERMISSION_UPDATE)) {
-			throw new Exception('You don\'t have permissions to update the address book.');
+			throw new Exception(self::$l10n('You don\'t have permissions to update the address book.'), 403);
 		}
 	}
 
@@ -284,7 +293,7 @@ class Addressbook extends AbstractPIMCollection {
 	 */
 	public function delete() {
 		if(!$this->hasPermission(OCP\PERMISSION_DELETE)) {
-			throw new Exception('You don\'t have permissions to delete the address book.');
+			throw new Exception(self::$l10n('You don\'t have permissions to delete the address book.'), 403);
 		}
 		return $this->backend->deleteAddressBook($this->getId());
 	}
