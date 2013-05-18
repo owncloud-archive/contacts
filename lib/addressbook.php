@@ -123,10 +123,6 @@ class Addressbook extends AbstractPIMCollection {
 		//return min($this->addressBookInfo['permissions'], $this->backend->getAddressBookPermissions());
 	}
 
-	function getBackend() {
-		return $this->backend;
-	}
-
 	/**
 	* Returns a specific child node, referenced by its id
 	*

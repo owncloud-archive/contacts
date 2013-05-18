@@ -50,6 +50,7 @@ interface IPIMObject {
 	 * 	'owner' @see getOwner()
 	 * 	'permissions' @see getPermissions
 	 * 	'lastmodified' @see lastModified()
+	 * 	'backend' The string type of the backend e.g. 'local', 'shared', 'ldap'
 	 *
 	 * If the object is part of a collection it MUST contain
 	 * 	'parent' The identifier for the parent object. @see getParent()
