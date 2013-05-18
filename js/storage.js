@@ -24,15 +24,6 @@ OC.Contacts = OC.Contacts || {};
 		}
 	}
 
-	$(document).ajaxError(function(e, xhr, settings, exception) {
-		console.error('Error in: ', settings.url, ' : ', xhr.responseText, exception);
-		var response = $.parseJSON(xhr.responseText);
-		console.log('response', response);
-		$(document).trigger('status.contact.error', {
-			message: response ? new JSONResponse(response, xhr).message : xhr.responseText
-		});
-	});
-
 	/**
 	* An object for saving contact data to backends
 	*
@@ -489,12 +480,10 @@ OC.Contacts = OC.Contacts || {};
 				defer.resolve(new JSONResponse(response, jqXHR));
 			})
 			.fail(function(jqXHR, textStatus, error) {
-				defer.reject(
-					new JSONResponse({
-						error:true,
-						data:{message:t('contacts', 'Request failed: {error}', {error:textStatus + ', ' + error})}
-					}, jqXHR)
-				);
+				console.log(jqXHR);
+				var response = $.parseJSON(jqXHR.responseText);
+				console.log('response', response);
+				defer.reject(new JSONResponse(response, jqXHR));
 			});
 
 		return defer.promise();

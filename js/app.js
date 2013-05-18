@@ -217,6 +217,9 @@ OC.Contacts = OC.Contacts || {
 				}
 			}).fail(function(response) {
 				console.warn(response);
+				self.$rightContent.removeClass('loading');
+				message = t('contacts', 'Unrecoverable error loading address books: {msg}', {msg:response.message});
+				OC.dialogs.alert(message, t('contacts', 'Error.'));
 			});
 		}).fail(function(response) {
 			console.log(response.message);
