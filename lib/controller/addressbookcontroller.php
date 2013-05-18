@@ -109,15 +109,11 @@ class AddressBookController extends BaseController {
 
 		$response = new JSONResponse();
 
-		$backend = App::getBackend('local', $this->api->getUserId());
-		// TODO: Check actual permissions
-		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_UPDATE)) {
-			throw new \Exception('Not implemented');
-		}
-		if(!$backend->updateAddressBook($params['addressbookid'], $this->request['properties'])) {
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		if(!$addressBook->update($this->request['properties'])) {
 			$response->bailOut(App::$l10n->t('Error updating address book'));
 		}
-		$response->setParams($backend->getAddressBook($params['addressbookid']));
+		$response->setParams($addressBook->getMetaData());
 		return $response;
 	}
 
