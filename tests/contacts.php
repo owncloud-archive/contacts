@@ -37,6 +37,9 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 			self::$addressBooksTableName,
 			self::$cardsTableName
 		);
+
+		\Sabre\VObject\Property::$classMap['CATEGORIES'] = 'OCA\Contacts\VObject\GroupProperty';
+
 	}
 
 	public static function tearDownAfterClass() {
@@ -127,10 +130,43 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 			\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
 		);
 		$obj->validate($obj::REPAIR|$obj::UPGRADE);
-		echo "\n" . $obj->serialize();
 
 		$this->assertEquals('3.0', (string)$obj->VERSION);
 		$this->assertEquals('Adèle Fermée', (string)$obj->FN);
 		$this->assertEquals('Fermée;Adèle;;;', (string)$obj->N);
+	}
+
+	public function testGroupProperty() {
+		$arr = array(
+			'Home',
+			'work',
+			'Friends, Family',
+		);
+
+		$property = \Sabre\VObject\Property::create('CATEGORIES');
+		$property->setParts($arr);
+
+		// Test parsing and serializing
+		$this->assertEquals('Home,work,Friends\, Family', $property->value);
+		$this->assertEquals('CATEGORIES:Home,work,Friends\, Family' . "\r\n", $property->serialize());
+		$this->assertEquals(3, count($property->getParts()));
+
+		// Test add
+		$property->addGroup('Coworkers');
+		$this->assertTrue($property->hasGroup('coworkers'));
+		$this->assertEquals(4, count($property->getParts()));
+		$this->assertEquals('Home,work,Friends\, Family,Coworkers', $property->value);
+
+		// Test remove
+		$this->assertTrue($property->hasGroup('Friends, fAmIlY'));
+		$property->removeGroup('Friends, fAmIlY');
+		$this->assertEquals(3, count($property->getParts()));
+		$parts = $property->getParts();
+		$this->assertEquals('Coworkers', $parts[2]);
+
+		// Test rename
+		$property->renameGroup('work', 'Work');
+		$parts = $property->getParts();
+		$this->assertEquals('Work', $parts[1]);
 	}
 }
