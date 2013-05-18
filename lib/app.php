@@ -66,7 +66,7 @@ class App {
 	* @param string $name
 	* @return \Backend\AbstractBackend
 	*/
-	static public function getBackend($name, $user = null) {
+	public public function getBackend($name, $user = null) {
 		$name = $name ? $name : 'local';
 		if (isset(self::$backendClasses[$name])) {
 			return new self::$backendClasses[$name]($user);

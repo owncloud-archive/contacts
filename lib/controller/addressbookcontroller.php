@@ -82,7 +82,7 @@ class AddressBookController extends BaseController {
 
 		$response = new JSONResponse();
 
-		$backend = App::getBackend('local', $this->api->getUserId());
+		$backend = $app->getBackend('local');
 		// TODO: Check actual permissions
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_CREATE)) {
 			throw new \Exception('Not implemented');
@@ -128,7 +128,7 @@ class AddressBookController extends BaseController {
 
 		$response = new JSONResponse();
 
-		$backend = App::getBackend('local', $this->api->getUserId());
+		$backend = $app->getBackend('local');
 		// TODO: Check actual permissions
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_DELETE)) {
 			throw new \Exception('Not implemented');
