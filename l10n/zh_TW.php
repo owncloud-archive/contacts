@@ -92,7 +92,6 @@
 "More..." => "更多...",
 "Less..." => "較少...",
 "Failed loading photo: {error}" => "圖片載入失敗{error}",
-"Request failed: {error}" => "請求失敗{error}",
 "There was an error updating the addressbook." => "更新這本聯絡簿時發生錯誤。",
 "There was an error deleting this addressbook." => "刪除這本聯絡簿時發生錯誤。",
 "Error creating address book" => "創建通訊錄時出現錯誤",

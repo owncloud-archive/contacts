@@ -92,7 +92,6 @@
 "More..." => "Devamı...",
 "Less..." => "daha küçük",
 "Failed loading photo: {error}" => "Foto yuklemedi (hata)",
-"Request failed: {error}" => "İstek başarısız oldu: {error}",
 "There was an error updating the addressbook." => "Adresdefteri güncellenirken hata oluştu.",
 "There was an error deleting this addressbook." => "Adresdefteri silinirken hata oluştu.",
 "Error creating address book" => "Adres kitaplarin yaratma hatali ",

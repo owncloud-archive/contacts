@@ -94,7 +94,6 @@
 "More..." => "更多",
 "Less..." => "更少...",
 "Failed loading photo: {error}" => "加载照片失败：{error}",
-"Request failed: {error}" => "请求失败：{error}",
 "There was an error updating the addressbook." => "更新地址簿时出错",
 "There was an error deleting this addressbook." => "删除地址簿时出错",
 "Error creating address book" => "创建地址薄出错",

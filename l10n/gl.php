@@ -94,7 +94,6 @@
 "More..." => "Máis...",
 "Less..." => "Menos...",
 "Failed loading photo: {error}" => "Non foi posíbel cargar a foto: {error}",
-"Request failed: {error}" => "Non foi posíbel facer a petición: {error}",
 "There was an error updating the addressbook." => "Produciuse un erro ao actualizar o caderno de enderezos.",
 "There was an error deleting this addressbook." => "Produciuse un erro ao eliminar este caderno de enderezos.",
 "Error creating address book" => "Produciuse un erro ao crear o caderno de enderezos",

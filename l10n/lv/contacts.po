@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-18 00:48+0200\n"
-"PO-Revision-Date: 2013-05-17 10:17+0000\n"
+"POT-Creation-Date: 2013-05-19 00:48+0200\n"
+"PO-Revision-Date: 2013-05-18 22:48+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Latvian (http://www.transifex.com/projects/p/owncloud/language/lv/)\n"
 "MIME-Version: 1.0\n"
@@ -54,7 +54,7 @@ msgstr "Kļūda, ielādējot attēlu."
 msgid "Error getting PHOTO property."
 msgstr "Kļūda, saņemot PHOTO īpašību."
 
-#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:221
+#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:217
 msgid "Error saving contact."
 msgstr "Kļūda, saglabājot kontaktu."
 
@@ -184,9 +184,17 @@ msgstr ""
 msgid "Failed loading address books: {error}"
 msgstr ""
 
-#: js/app.js:214
+#: js/app.js:211
 msgid "Indexing contacts"
 msgstr "Indeksē kontaktus"
+
+#: js/app.js:221
+msgid "Unrecoverable error loading address books: {msg}"
+msgstr ""
+
+#: js/app.js:222
+msgid "Error."
+msgstr ""
 
 #: js/app.js:313 js/app.js:327
 msgid "Add to..."
@@ -419,8 +427,40 @@ msgstr "Mazāk..."
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: js/storage.js:486
-msgid "Request failed: {error}"
+#: lib/addressbook.php:139
+msgid "You do not have permissions to see this contacts"
+msgstr ""
+
+#: lib/addressbook.php:171
+msgid "You do not have permissions to see these contacts"
+msgstr ""
+
+#: lib/addressbook.php:197
+msgid "You do not have permissions add contacts to the address book"
+msgstr ""
+
+#: lib/addressbook.php:200
+msgid "The backend for this address book does not support adding contacts"
+msgstr ""
+
+#: lib/addressbook.php:222 lib/contact.php:242
+msgid "You do not have permissions to delete this contact"
+msgstr ""
+
+#: lib/addressbook.php:225
+msgid "The backend for this address book does not support deleting contacts"
+msgstr ""
+
+#: lib/addressbook.php:262
+msgid "The backend for this address book does not support updating"
+msgstr ""
+
+#: lib/addressbook.php:288
+msgid "You don't have permissions to update the address book."
+msgstr ""
+
+#: lib/addressbook.php:299
+msgid "You don't have permissions to delete the address book."
 msgstr ""
 
 #: lib/backend/ldap.php:370
@@ -431,31 +471,59 @@ msgstr "Gadījās kļūda, atjauninot adrešu grāmatu."
 msgid "There was an error deleting this addressbook."
 msgstr "Gadījās kļūda, dzēšot šo adrešu grāmatu."
 
+#: lib/contact.php:112 lib/contact.php:159
+msgid "You do not have permissions to see this contact"
+msgstr ""
+
+#: lib/contact.php:257
+msgid "You do not have permissions to update this contact"
+msgstr ""
+
+#: lib/contact.php:268
+msgid "The backend for this contact does not support updating it"
+msgstr ""
+
+#: lib/contact.php:286
+msgid "This backend not support adding contacts"
+msgstr ""
+
+#: lib/contact.php:393 lib/contact.php:410
+msgid "Property not found"
+msgstr ""
+
+#: lib/contact.php:458
+msgid " Missing IM parameter for: "
+msgstr ""
+
+#: lib/contact.php:466
+msgid "Unknown IM: "
+msgstr ""
+
 #: lib/controller/addressbookcontroller.php:92
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:118
+#: lib/controller/addressbookcontroller.php:114
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:137
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:160
+#: lib/controller/addressbookcontroller.php:156
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:193
+#: lib/controller/addressbookcontroller.php:189
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:216
+#: lib/controller/addressbookcontroller.php:212
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:226
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error removing contact from other address book."
 msgstr ""
 
@@ -521,20 +589,24 @@ msgstr "Pieprasījumā pietrūkst kontakta ID."
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:118
-msgid "File name missing from request."
+#: lib/controller/importcontroller.php:115
+msgid "You do not have permissions to import into this address book."
 msgstr ""
 
 #: lib/controller/importcontroller.php:123
-#: lib/controller/importcontroller.php:228
+msgid "File name missing from request."
+msgstr ""
+
+#: lib/controller/importcontroller.php:128
+#: lib/controller/importcontroller.php:234
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:129
+#: lib/controller/importcontroller.php:134
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:173
 msgid "No contacts found in: "
 msgstr ""
 

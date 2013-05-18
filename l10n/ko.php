@@ -92,7 +92,6 @@
 "More..." => "더 보기...",
 "Less..." => "덜 보기...",
 "Failed loading photo: {error}" => "사진 불러오기 오류: {error}",
-"Request failed: {error}" => "요청 실패: {error}",
 "There was an error updating the addressbook." => "주소록을 업데이트하는 중 오류가 발생하였습니다.",
 "There was an error deleting this addressbook." => "이 주소록을 삭제하는 중 오류가 발생하였습니다.",
 "Error creating address book" => "주소록 생성 오류",

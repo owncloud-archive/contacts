@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-18 00:48+0200\n"
-"PO-Revision-Date: 2013-05-17 10:17+0000\n"
-"Last-Translator: unhammer <unhammer+dill@mm.st>\n"
+"POT-Creation-Date: 2013-05-19 00:48+0200\n"
+"PO-Revision-Date: 2013-05-18 22:48+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Norwegian Nynorsk (Norway) (http://www.transifex.com/projects/p/owncloud/language/nn_NO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,7 +57,7 @@ msgstr "Feil ved lasting av bilete."
 msgid "Error getting PHOTO property."
 msgstr "Feil ved henting av PHOTO-eigenskap."
 
-#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:221
+#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:217
 msgid "Error saving contact."
 msgstr "Feil ved lagring av kontakt."
 
@@ -187,9 +187,17 @@ msgstr "Klarte ikkje oppretta adresseboka: {error}"
 msgid "Failed loading address books: {error}"
 msgstr "Klarte ikkje lasta adresseboka: {error}"
 
-#: js/app.js:214
+#: js/app.js:211
 msgid "Indexing contacts"
 msgstr "Indekserer kontaktar"
+
+#: js/app.js:221
+msgid "Unrecoverable error loading address books: {msg}"
+msgstr ""
+
+#: js/app.js:222
+msgid "Error."
+msgstr ""
 
 #: js/app.js:313 js/app.js:327
 msgid "Add to..."
@@ -422,9 +430,41 @@ msgstr "Mindre …"
 msgid "Failed loading photo: {error}"
 msgstr "Klarte ikkje lasta bilete: {error}"
 
-#: js/storage.js:486
-msgid "Request failed: {error}"
-msgstr "Feil ved førespurnad: {error}"
+#: lib/addressbook.php:139
+msgid "You do not have permissions to see this contacts"
+msgstr ""
+
+#: lib/addressbook.php:171
+msgid "You do not have permissions to see these contacts"
+msgstr ""
+
+#: lib/addressbook.php:197
+msgid "You do not have permissions add contacts to the address book"
+msgstr ""
+
+#: lib/addressbook.php:200
+msgid "The backend for this address book does not support adding contacts"
+msgstr ""
+
+#: lib/addressbook.php:222 lib/contact.php:242
+msgid "You do not have permissions to delete this contact"
+msgstr ""
+
+#: lib/addressbook.php:225
+msgid "The backend for this address book does not support deleting contacts"
+msgstr ""
+
+#: lib/addressbook.php:262
+msgid "The backend for this address book does not support updating"
+msgstr ""
+
+#: lib/addressbook.php:288
+msgid "You don't have permissions to update the address book."
+msgstr ""
+
+#: lib/addressbook.php:299
+msgid "You don't have permissions to delete the address book."
+msgstr ""
 
 #: lib/backend/ldap.php:370
 msgid "There was an error updating the addressbook."
@@ -434,31 +474,59 @@ msgstr "Ein feil oppstod ved oppdatering av adresseboka."
 msgid "There was an error deleting this addressbook."
 msgstr "Ein feil oppstod ved sletting av adresseboka."
 
+#: lib/contact.php:112 lib/contact.php:159
+msgid "You do not have permissions to see this contact"
+msgstr ""
+
+#: lib/contact.php:257
+msgid "You do not have permissions to update this contact"
+msgstr ""
+
+#: lib/contact.php:268
+msgid "The backend for this contact does not support updating it"
+msgstr ""
+
+#: lib/contact.php:286
+msgid "This backend not support adding contacts"
+msgstr ""
+
+#: lib/contact.php:393 lib/contact.php:410
+msgid "Property not found"
+msgstr ""
+
+#: lib/contact.php:458
+msgid " Missing IM parameter for: "
+msgstr ""
+
+#: lib/contact.php:466
+msgid "Unknown IM: "
+msgstr ""
+
 #: lib/controller/addressbookcontroller.php:92
 msgid "Error creating address book"
 msgstr "Klarte ikkje oppretta adresseboka"
 
-#: lib/controller/addressbookcontroller.php:118
+#: lib/controller/addressbookcontroller.php:114
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:137
 msgid "Error deleting address book"
 msgstr "Klarte ikkje sletta adresseboka"
 
-#: lib/controller/addressbookcontroller.php:160
+#: lib/controller/addressbookcontroller.php:156
 msgid "Error creating contact."
 msgstr "Klarte ikkje oppretta kontakten."
 
-#: lib/controller/addressbookcontroller.php:193
+#: lib/controller/addressbookcontroller.php:189
 msgid "Error deleting contact."
 msgstr "Klarte ikkje sletta kontakten."
 
-#: lib/controller/addressbookcontroller.php:216
+#: lib/controller/addressbookcontroller.php:212
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:226
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error removing contact from other address book."
 msgstr ""
 
@@ -524,20 +592,24 @@ msgstr "Kontakt-ID manglar frå førespurnaden."
 msgid "Attempt to upload blacklisted file:"
 msgstr "Prøv å lasta opp svartelistefil:"
 
-#: lib/controller/importcontroller.php:118
+#: lib/controller/importcontroller.php:115
+msgid "You do not have permissions to import into this address book."
+msgstr ""
+
+#: lib/controller/importcontroller.php:123
 msgid "File name missing from request."
 msgstr "Filnamn manglar frå førespurnaden."
 
-#: lib/controller/importcontroller.php:123
-#: lib/controller/importcontroller.php:228
+#: lib/controller/importcontroller.php:128
+#: lib/controller/importcontroller.php:234
 msgid "Progress key missing from request."
 msgstr "Framgangsnøkkel manglar frå førespurnaden."
 
-#: lib/controller/importcontroller.php:129
+#: lib/controller/importcontroller.php:134
 msgid "Attempt to access blacklisted file:"
 msgstr "Prøv å få tilgang til svartelistefil:"
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:173
 msgid "No contacts found in: "
 msgstr "Fann ingen kontaktar i:"
 

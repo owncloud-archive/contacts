@@ -94,7 +94,6 @@
 "More..." => "Altro...",
 "Less..." => "Meno...",
 "Failed loading photo: {error}" => "Caricamento foto non riuscito: {error}",
-"Request failed: {error}" => "Richiesta non riuscita: {error}",
 "There was an error updating the addressbook." => "Si è verificato un errore durante l'aggiornamento della rubrica.",
 "There was an error deleting this addressbook." => "Si è verificato un errore durante l'eliminazione della rubrica.",
 "Error creating address book" => "Errore durante la creazione della rubrica",

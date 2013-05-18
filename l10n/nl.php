@@ -94,7 +94,6 @@
 "More..." => "Meer...",
 "Less..." => "Minder...",
 "Failed loading photo: {error}" => "Mislukt: inladen foto: {error}",
-"Request failed: {error}" => "Aanvraag mislukt: {error}",
 "There was an error updating the addressbook." => "Er is een fout opgetreden bij het bijwerken van het adresboek.",
 "There was an error deleting this addressbook." => "Er is een fout opgetreden bij het verwijderen van dit adresboek.",
 "Error creating address book" => "Fout bij aanmaken adresboek",

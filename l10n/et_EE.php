@@ -94,7 +94,6 @@
 "More..." => "Veel...",
 "Less..." => "Vähem...",
 "Failed loading photo: {error}" => "Pildi laadimine ebaõnnestus: {error}",
-"Request failed: {error}" => "Päring ebaõnnestus: {error}",
 "There was an error updating the addressbook." => "Aadressiraamatu uuendamisel tekkis viga.",
 "There was an error deleting this addressbook." => "Selle aadressiraamatu kustutamisel tekkis viga.",
 "Error creating address book" => "Viga aadressiraamatu loomisel",

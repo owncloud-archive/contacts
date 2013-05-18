@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-18 00:48+0200\n"
-"PO-Revision-Date: 2013-05-17 10:17+0000\n"
+"POT-Creation-Date: 2013-05-19 00:48+0200\n"
+"PO-Revision-Date: 2013-05-18 22:48+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr "İmaj yükleme hatası."
 msgid "Error getting PHOTO property."
 msgstr "Resim özelleğini alırken hata oluştu."
 
-#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:221
+#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:217
 msgid "Error saving contact."
 msgstr "Bağlantıyı kaydederken hata"
 
@@ -192,9 +192,17 @@ msgstr "Adres kitape birlemedi. (hata)"
 msgid "Failed loading address books: {error}"
 msgstr "Adres defterleri yüklenirken başarısız olundu: : {error}"
 
-#: js/app.js:214
+#: js/app.js:211
 msgid "Indexing contacts"
 msgstr "Bağlantılar listeleniyor"
+
+#: js/app.js:221
+msgid "Unrecoverable error loading address books: {msg}"
+msgstr ""
+
+#: js/app.js:222
+msgid "Error."
+msgstr ""
 
 #: js/app.js:313 js/app.js:327
 msgid "Add to..."
@@ -427,9 +435,41 @@ msgstr "daha küçük"
 msgid "Failed loading photo: {error}"
 msgstr "Foto yuklemedi (hata)"
 
-#: js/storage.js:486
-msgid "Request failed: {error}"
-msgstr "İstek başarısız oldu: {error}"
+#: lib/addressbook.php:139
+msgid "You do not have permissions to see this contacts"
+msgstr ""
+
+#: lib/addressbook.php:171
+msgid "You do not have permissions to see these contacts"
+msgstr ""
+
+#: lib/addressbook.php:197
+msgid "You do not have permissions add contacts to the address book"
+msgstr ""
+
+#: lib/addressbook.php:200
+msgid "The backend for this address book does not support adding contacts"
+msgstr ""
+
+#: lib/addressbook.php:222 lib/contact.php:242
+msgid "You do not have permissions to delete this contact"
+msgstr ""
+
+#: lib/addressbook.php:225
+msgid "The backend for this address book does not support deleting contacts"
+msgstr ""
+
+#: lib/addressbook.php:262
+msgid "The backend for this address book does not support updating"
+msgstr ""
+
+#: lib/addressbook.php:288
+msgid "You don't have permissions to update the address book."
+msgstr ""
+
+#: lib/addressbook.php:299
+msgid "You don't have permissions to delete the address book."
+msgstr ""
 
 #: lib/backend/ldap.php:370
 msgid "There was an error updating the addressbook."
@@ -439,31 +479,59 @@ msgstr "Adresdefteri güncellenirken hata oluştu."
 msgid "There was an error deleting this addressbook."
 msgstr "Adresdefteri silinirken hata oluştu."
 
+#: lib/contact.php:112 lib/contact.php:159
+msgid "You do not have permissions to see this contact"
+msgstr ""
+
+#: lib/contact.php:257
+msgid "You do not have permissions to update this contact"
+msgstr ""
+
+#: lib/contact.php:268
+msgid "The backend for this contact does not support updating it"
+msgstr ""
+
+#: lib/contact.php:286
+msgid "This backend not support adding contacts"
+msgstr ""
+
+#: lib/contact.php:393 lib/contact.php:410
+msgid "Property not found"
+msgstr ""
+
+#: lib/contact.php:458
+msgid " Missing IM parameter for: "
+msgstr ""
+
+#: lib/contact.php:466
+msgid "Unknown IM: "
+msgstr ""
+
 #: lib/controller/addressbookcontroller.php:92
 msgid "Error creating address book"
 msgstr "Adres kitaplarin yaratma hatali "
 
-#: lib/controller/addressbookcontroller.php:118
+#: lib/controller/addressbookcontroller.php:114
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:137
 msgid "Error deleting address book"
 msgstr "Silme adres kitapin yapamadi "
 
-#: lib/controller/addressbookcontroller.php:160
+#: lib/controller/addressbookcontroller.php:156
 msgid "Error creating contact."
 msgstr "Itibar yapmadi "
 
-#: lib/controller/addressbookcontroller.php:193
+#: lib/controller/addressbookcontroller.php:189
 msgid "Error deleting contact."
 msgstr "Bağlantıları depoya yükleme hatası"
 
-#: lib/controller/addressbookcontroller.php:216
+#: lib/controller/addressbookcontroller.php:212
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:226
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error removing contact from other address book."
 msgstr ""
 
@@ -529,20 +597,24 @@ msgstr "İstekde Contact IP eksik"
 msgid "Attempt to upload blacklisted file:"
 msgstr "Şu karaliste dosyasını yüklemeyi dene:"
 
-#: lib/controller/importcontroller.php:118
+#: lib/controller/importcontroller.php:115
+msgid "You do not have permissions to import into this address book."
+msgstr ""
+
+#: lib/controller/importcontroller.php:123
 msgid "File name missing from request."
 msgstr "İstekte dosya adı yok."
 
-#: lib/controller/importcontroller.php:123
-#: lib/controller/importcontroller.php:228
+#: lib/controller/importcontroller.php:128
+#: lib/controller/importcontroller.php:234
 msgid "Progress key missing from request."
 msgstr "İstekte süreç anahtarı(Progress key) eksik."
 
-#: lib/controller/importcontroller.php:129
+#: lib/controller/importcontroller.php:134
 msgid "Attempt to access blacklisted file:"
 msgstr "Şu karaliste dosyasına erişimi dene:"
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:173
 msgid "No contacts found in: "
 msgstr "Hiçbir kişi bulunamadı:"
 

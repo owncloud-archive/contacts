@@ -92,7 +92,6 @@
 "More..." => "Ещё...",
 "Less..." => "Меньше...",
 "Failed loading photo: {error}" => "Ошибка загрузки фото: {error}",
-"Request failed: {error}" => "Запрос не удался: {error}",
 "There was an error updating the addressbook." => "Ошибка при обновлении адресной книги.",
 "There was an error deleting this addressbook." => "Ошибка при удалении адресной книги.",
 "Error creating address book" => "Ошибка создания адресной книги",

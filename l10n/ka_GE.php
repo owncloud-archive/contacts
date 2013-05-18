@@ -89,7 +89,6 @@
 "More..." => "უფორ მეტი...",
 "Less..." => "ნაკლები...",
 "Failed loading photo: {error}" => "შეცდომა სურათის ჩატვირთვისას:  {error}",
-"Request failed: {error}" => "მოთხოვნის შეცდომა:  {error}",
 "There was an error updating the addressbook." => "მოხდა შეცდომა addressbook–ის განახლების დროს.",
 "There was an error deleting this addressbook." => "მოხდა შეცდომა  addressbook–ის წაშლის დროს.",
 "Error creating address book" => "შეცდომა მისამართების წიგნის შექმნისას",

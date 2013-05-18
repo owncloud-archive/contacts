@@ -94,7 +94,6 @@
 "More..." => "Mehr...",
 "Less..." => "Weniger...",
 "Failed loading photo: {error}" => "Fehler beim Laden eines Bildes: {error}",
-"Request failed: {error}" => "Anfrage fehlgeschlagen: {error}",
 "There was an error updating the addressbook." => "Ein Fehler ist bei der Aktualisierung des Adressbuches aufgetreten.",
 "There was an error deleting this addressbook." => "Beim Löschen des Adressbuches ist ein Fehler aufgetreten.",
 "Error creating address book" => "Fehler beim Anlegen eines Adressbuchs",

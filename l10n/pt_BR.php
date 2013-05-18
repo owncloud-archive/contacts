@@ -94,7 +94,6 @@
 "More..." => "Mais...",
 "Less..." => "Menos...",
 "Failed loading photo: {error}" => "Falha carregendo foto: {error}",
-"Request failed: {error}" => "Requisição falhou: {error}",
 "There was an error updating the addressbook." => "Houve um erro ao atualizar a agenda.",
 "There was an error deleting this addressbook." => "Houve um erro ao excluir esta agenda.",
 "Error creating address book" => "Erro criando livro de endereço",

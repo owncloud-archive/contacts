@@ -75,7 +75,6 @@
 "More..." => "Lisää...",
 "Less..." => "Vähemmän...",
 "Failed loading photo: {error}" => "Kuvan lataus epäonnistui: {error}",
-"Request failed: {error}" => "Pyyntö epäonnistui: {error}",
 "There was an error updating the addressbook." => "Virhe osoitekirjaa päivittäessä.",
 "There was an error deleting this addressbook." => "Virhe osoitekirjaa poistaessa.",
 "Error creating address book" => "Virhe osoitekirjaa luotaessa",

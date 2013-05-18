@@ -92,7 +92,6 @@
 "More..." => "Több...",
 "Less..." => "Kevesebb...",
 "Failed loading photo: {error}" => "Hiba a kép betöltésekor: {error}",
-"Request failed: {error}" => "Hiba a kérés teljesítésekor: {error}",
 "There was an error updating the addressbook." => "Hiba történt a a címjegyzék frissítésekor.",
 "There was an error deleting this addressbook." => "A címjegyzék törlése nem sikerült.",
 "Error creating address book" => "Hiba a címjegyzék létrehozásakor",

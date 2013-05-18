@@ -92,7 +92,6 @@
 "More..." => "Více...",
 "Less..." => "Méně...",
 "Failed loading photo: {error}" => "Načtení fotografie selhalo: {error}",
-"Request failed: {error}" => "Požadavek selhal: {error}",
 "There was an error updating the addressbook." => "Nastala chyba při aktualizaci knihy adres.",
 "There was an error deleting this addressbook." => "Nastala chyba při odstranění knihy adres.",
 "Error creating address book" => "Chyba při vytváření knihy adres",

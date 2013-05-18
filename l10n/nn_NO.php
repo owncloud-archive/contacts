@@ -92,7 +92,6 @@
 "More..." => "Meir …",
 "Less..." => "Mindre …",
 "Failed loading photo: {error}" => "Klarte ikkje lasta bilete: {error}",
-"Request failed: {error}" => "Feil ved førespurnad: {error}",
 "There was an error updating the addressbook." => "Ein feil oppstod ved oppdatering av adresseboka.",
 "There was an error deleting this addressbook." => "Ein feil oppstod ved sletting av adresseboka.",
 "Error creating address book" => "Klarte ikkje oppretta adresseboka",

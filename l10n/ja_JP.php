@@ -94,7 +94,6 @@
 "More..." => "もっと...",
 "Less..." => "簡略...",
 "Failed loading photo: {error}" => "写真の読み込みに失敗: {error}",
-"Request failed: {error}" => "リクエストに失敗: {error}",
 "There was an error updating the addressbook." => "アドレス帳を更新中にエラーが発生しました。",
 "There was an error deleting this addressbook." => "アドレス帳を削除するときにエラーが発生しました。",
 "Error creating address book" => "アドレス帳の作成エラー",

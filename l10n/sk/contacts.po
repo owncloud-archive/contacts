@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-13 21:42+0200\n"
-"PO-Revision-Date: 2013-05-13 19:42+0000\n"
+"POT-Creation-Date: 2013-05-19 00:48+0200\n"
+"PO-Revision-Date: 2013-05-18 22:48+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/owncloud/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Error getting PHOTO property."
 msgstr ""
 
-#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:221
+#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:217
 msgid "Error saving contact."
 msgstr ""
 
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Couldn't load temporary image: "
 msgstr ""
 
-#: appinfo/app.php:28
+#: appinfo/app.php:31
 msgid "Contacts"
 msgstr ""
 
@@ -183,8 +183,16 @@ msgstr ""
 msgid "Failed loading address books: {error}"
 msgstr ""
 
-#: js/app.js:214
+#: js/app.js:211
 msgid "Indexing contacts"
+msgstr ""
+
+#: js/app.js:221
+msgid "Unrecoverable error loading address books: {msg}"
+msgstr ""
+
+#: js/app.js:222
+msgid "Error."
 msgstr ""
 
 #: js/app.js:313 js/app.js:327
@@ -282,29 +290,29 @@ msgstr ""
 msgid "Error loading profile picture."
 msgstr ""
 
-#: js/contacts.js:331
+#: js/contacts.js:336
 msgid "Failed deleting property: {error}"
 msgstr ""
 
-#: js/contacts.js:522
+#: js/contacts.js:527
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:941 js/contacts.js:983
+#: js/contacts.js:946 js/contacts.js:988
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:1950
+#: js/contacts.js:1975
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:1961
+#: js/contacts.js:1986
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:1976
+#: js/contacts.js:2001
 msgid "Cancelled deletion of {num}"
 msgstr ""
 
@@ -414,12 +422,44 @@ msgstr ""
 msgid "Less..."
 msgstr ""
 
-#: js/storage.js:245
+#: js/storage.js:247
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: js/storage.js:484
-msgid "Request failed: {error}"
+#: lib/addressbook.php:139
+msgid "You do not have permissions to see this contacts"
+msgstr ""
+
+#: lib/addressbook.php:171
+msgid "You do not have permissions to see these contacts"
+msgstr ""
+
+#: lib/addressbook.php:197
+msgid "You do not have permissions add contacts to the address book"
+msgstr ""
+
+#: lib/addressbook.php:200
+msgid "The backend for this address book does not support adding contacts"
+msgstr ""
+
+#: lib/addressbook.php:222 lib/contact.php:242
+msgid "You do not have permissions to delete this contact"
+msgstr ""
+
+#: lib/addressbook.php:225
+msgid "The backend for this address book does not support deleting contacts"
+msgstr ""
+
+#: lib/addressbook.php:262
+msgid "The backend for this address book does not support updating"
+msgstr ""
+
+#: lib/addressbook.php:288
+msgid "You don't have permissions to update the address book."
+msgstr ""
+
+#: lib/addressbook.php:299
+msgid "You don't have permissions to delete the address book."
 msgstr ""
 
 #: lib/backend/ldap.php:370
@@ -430,38 +470,66 @@ msgstr ""
 msgid "There was an error deleting this addressbook."
 msgstr ""
 
+#: lib/contact.php:112 lib/contact.php:159
+msgid "You do not have permissions to see this contact"
+msgstr ""
+
+#: lib/contact.php:257
+msgid "You do not have permissions to update this contact"
+msgstr ""
+
+#: lib/contact.php:268
+msgid "The backend for this contact does not support updating it"
+msgstr ""
+
+#: lib/contact.php:286
+msgid "This backend not support adding contacts"
+msgstr ""
+
+#: lib/contact.php:393 lib/contact.php:410
+msgid "Property not found"
+msgstr ""
+
+#: lib/contact.php:458
+msgid " Missing IM parameter for: "
+msgstr ""
+
+#: lib/contact.php:466
+msgid "Unknown IM: "
+msgstr ""
+
 #: lib/controller/addressbookcontroller.php:92
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:118
+#: lib/controller/addressbookcontroller.php:114
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:137
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:160
+#: lib/controller/addressbookcontroller.php:156
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:193
+#: lib/controller/addressbookcontroller.php:189
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:216
+#: lib/controller/addressbookcontroller.php:212
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:226
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error removing contact from other address book."
 msgstr ""
 
 #: lib/controller/contactcontroller.php:45
 #: lib/controller/contactcontroller.php:73
-#: lib/controller/contactcontroller.php:155
-#: lib/controller/contactcontroller.php:213
+#: lib/controller/contactcontroller.php:156
+#: lib/controller/contactcontroller.php:214
 msgid "Couldn't find contact."
 msgstr ""
 
@@ -470,31 +538,31 @@ msgid "Error merging into contact."
 msgstr ""
 
 #: lib/controller/contactcontroller.php:80
-#: lib/controller/contactcontroller.php:173
+#: lib/controller/contactcontroller.php:174
 msgid "Error saving contact to backend."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:158
-#: lib/controller/contactcontroller.php:216
+#: lib/controller/contactcontroller.php:159
+#: lib/controller/contactcontroller.php:217
 msgid "Property name is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:161
-#: lib/controller/contactcontroller.php:219
-#: lib/controller/contactcontroller.php:228
+#: lib/controller/contactcontroller.php:162
+#: lib/controller/contactcontroller.php:220
+#: lib/controller/contactcontroller.php:229
 msgid "Property checksum is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:167
-#: lib/controller/contactcontroller.php:234
+#: lib/controller/contactcontroller.php:168
+#: lib/controller/contactcontroller.php:235
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:238
+#: lib/controller/contactcontroller.php:239
 msgid "Error setting property"
 msgstr ""
 
-#: lib/controller/contactcontroller.php:242
+#: lib/controller/contactcontroller.php:243
 msgid "Error saving property to backend"
 msgstr ""
 
@@ -520,20 +588,24 @@ msgstr ""
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:118
-msgid "File name missing from request."
+#: lib/controller/importcontroller.php:115
+msgid "You do not have permissions to import into this address book."
 msgstr ""
 
 #: lib/controller/importcontroller.php:123
-#: lib/controller/importcontroller.php:228
+msgid "File name missing from request."
+msgstr ""
+
+#: lib/controller/importcontroller.php:128
+#: lib/controller/importcontroller.php:234
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:129
+#: lib/controller/importcontroller.php:134
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:173
 msgid "No contacts found in: "
 msgstr ""
 
