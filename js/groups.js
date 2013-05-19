@@ -250,7 +250,8 @@ OC.Contacts = OC.Contacts || {};
 			console.warn('Invalid data type: ' + typeof contactid);
 		}
 		if(doPost) {
-			$.when(this.storage.addToGroup(ids, groupid)).then(function(response) {
+			var groupname = self.nameById(groupid);
+			$.when(this.storage.addToGroup(ids, groupid, groupname)).then(function(response) {
 				if(!response.error) {
 					contacts = contacts.concat(ids).sort();
 					$groupelem.data('contacts', contacts);
@@ -265,7 +266,7 @@ OC.Contacts = OC.Contacts || {};
 						$(document).trigger('status.group.contactadded', {
 							contactid: contactid,
 							groupid: groupid,
-							groupname: self.nameById(groupid)
+							groupname: groupname
 						});
 					}
 				} else {
@@ -308,7 +309,7 @@ OC.Contacts = OC.Contacts || {};
 			return;
 		}
 		var doPost = false;
-		if(typeof contactid === 'number') {
+		if(typeof contactid === 'string') {
 			if(contacts.indexOf(contactid) !== -1) {
 				ids.push(contactid);
 				doPost = true;
@@ -333,7 +334,8 @@ OC.Contacts = OC.Contacts || {};
 			}
 		}
 		if(doPost) {
-			$.when(this.storage.removeFromGroup(ids, groupid)).then(function(response) {
+			var groupname = this.nameById(groupid);
+			$.when(this.storage.removeFromGroup(ids, groupid, groupname)).then(function(response) {
 				if(!response.error) {
 					$.each(ids, function(idx, id) {
 						contacts.splice(contacts.indexOf(id), 1);

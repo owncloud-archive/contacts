@@ -562,7 +562,7 @@ class Database extends AbstractBackend {
 	 */
 	public function updateContact($addressbookid, $id, $contact, $noCollection = false) {
 		$updateRevision = true;
-		if(!$contact instanceof Contact) {
+		if(!$contact instanceof VCard) {
 			try {
 				$contact = Reader::read($contact);
 			} catch(\Exception $e) {

@@ -397,13 +397,13 @@ OC.Contacts = OC.Contacts || {};
 	 *
 	 * @param array contactids
 	 */
-	Storage.prototype.addToGroup = function(contactids, categoryid) {
+	Storage.prototype.addToGroup = function(contactids, categoryid, categoryname) {
 		console.log('Storage.addToGroup', contactids, categoryid);
 		return this.requestRoute(
 			'contacts_categories_addto',
 			'POST',
 			{categoryid: categoryid},
-			{contactids: contactids}
+			{contactids: contactids, name: categoryname}
 		);
 	}
 
@@ -412,13 +412,13 @@ OC.Contacts = OC.Contacts || {};
 	 *
 	 * @param array contactids
 	 */
-	Storage.prototype.removeFromGroup = function(contactids, categoryid) {
-		console.log('Storage.addToGroup', contactids, categoryid);
+	Storage.prototype.removeFromGroup = function(contactids, categoryid, categoryname) {
+		console.log('Storage.removeFromGroup', contactids, categoryid);
 		return this.requestRoute(
 			'contacts_categories_removefrom',
 			'POST',
 			{categoryid: categoryid},
-			{contactids: contactids}
+			{contactids: contactids, name: categoryname}
 		);
 	}
 

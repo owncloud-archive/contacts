@@ -1624,11 +1624,10 @@ OC.Contacts = OC.Contacts || {};
 					.text(this.getPreferredValue('CATEGORIES', []).clean('').join(' / '));
 			}
 		}
-		this.saveProperty({name:'CATEGORIES', value:this.data.CATEGORIES[0].value.join(',') });
 	};
 
 	/**
-	 * Remove this contact to a group
+	 * Remove this contact from a group
 	 * @param String name The group name
 	 */
 	Contact.prototype.removeFromGroup = function(name) {
@@ -1655,7 +1654,6 @@ OC.Contacts = OC.Contacts || {};
 					.text(categories.join(' / '));
 			}
 		}
-		this.saveProperty({name:'CATEGORIES', value:this.data.CATEGORIES[0].value.join(',') });
 	};
 
 	Contact.prototype.setCurrent = function(on) {
