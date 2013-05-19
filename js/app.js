@@ -664,10 +664,24 @@ OC.Contacts = OC.Contacts || {
 			form.find('input[name="contactid"]').val(metadata.contactid);
 			form.find('input[name="addressbookid"]').val(metadata.addressbookid);
 			form.find('input[name="backend"]').val(metadata.backend);
+		}).on('change', function() {
+			console.log('#contactphoto_fileupload, change');
+			self.uploadPhoto(this.files);
 		});
 
-		$('#contactphoto_fileupload').on('change', function() {
-			self.uploadPhoto(this.files);
+		var target = $('#file_upload_target');
+		target.load(function() {
+			var response = $.parseJSON(target.contents().text());
+			if(response && response.status == 'success') {
+				console.log('response', response);
+				self.editPhoto(
+					response.metadata,
+					response.data.tmp
+				);
+				//alert('File: ' + file.tmp + ' ' + file.name + ' ' + file.mime);
+			} else if(response) {
+				OC.notify({message:response.data.message});
+			}
 		});
 
 		this.$ninjahelp.find('.close').on('click keydown',function(event) {
@@ -1297,13 +1311,13 @@ OC.Contacts = OC.Contacts || {
 		console.log('update');
 	},
 	uploadPhoto:function(filelist) {
+		console.log('uploadPhoto');
 		var self = this;
 		if(!filelist) {
 			OC.notify({message:t('contacts','No files selected for upload.')});
 			return;
 		}
 		var file = filelist[0];
-		var target = $('#file_upload_target');
 		var form = $('#file_upload_form');
 		var totalSize=0;
 		if(file.size > $('#max_upload').val()){
@@ -1314,19 +1328,6 @@ OC.Contacts = OC.Contacts || {
 			});
 			return;
 		} else {
-			target.load(function() {
-				var response=jQuery.parseJSON(target.contents().text());
-				if(response != undefined && response.status == 'success') {
-					console.log('response', response);
-					self.editPhoto(
-						response.metadata,
-						response.data.tmp
-					);
-					//alert('File: ' + file.tmp + ' ' + file.name + ' ' + file.mime);
-				} else {
-					OC.notify({message:response.data.message});
-				}
-			});
 			form.submit();
 		}
 	},
@@ -1381,7 +1382,8 @@ OC.Contacts = OC.Contacts || {
 		if(!this.$cropBoxTmpl) {
 			this.$cropBoxTmpl = $('#cropBoxTemplate');
 		}
-		$('body').append('<div id="edit_photo_dialog"></div>');
+		//$('body').append('<div id="edit_photo_dialog"></div>');
+		var $container = $('<div />').appendTo($('body'));
 		var $dlg = this.$cropBoxTmpl.octemplate(
 			{
 				backend: metadata.backend,
@@ -1406,7 +1408,7 @@ OC.Contacts = OC.Contacts || {
 				setSelect:	[ 100, 130, 50, 50 ]//,
 				//aspectRatio: 0.8
 			});
-			$('#edit_photo_dialog').html($dlg).dialog({
+			$container.html($dlg).dialog({
 							modal: true,
 							closeOnEscape: true,
 							title:  t('contacts', 'Edit profile picture'),
@@ -1420,7 +1422,7 @@ OC.Contacts = OC.Contacts || {
 							},
 							close: function(event, ui) {
 								$(this).dialog('destroy').remove();
-								$('#edit_photo_dialog').remove();
+								$container.remove();
 							},
 							open: function(event, ui) {
 								// Jcrop maybe?
