@@ -94,6 +94,7 @@
 "Failed loading photo: {error}" => "Fehler beim Laden eines Bildes: {error}",
 "There was an error updating the addressbook." => "Ein Fehler ist bei der Aktualisierung des Adressbuches aufgetreten.",
 "There was an error deleting this addressbook." => "Beim Löschen des Adressbuches ist ein Fehler aufgetreten.",
+"Unknown IM: " => "IM unbekannt:",
 "Error creating address book" => "Fehler beim Anlegen eines Addressbuchs",
 "Error deleting address book" => "Fehler beim Löschen eines Addressbuchs",
 "Error creating contact." => "Fehler beim Anlegen eines Kontakts.",

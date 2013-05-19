@@ -20,6 +20,7 @@
 "No file was uploaded" => "Ingen filer ble lastet opp",
 "Missing a temporary folder" => "Mangler midlertidig mappe",
 "Failed to write to disk" => "Klarte ikke å skrive til disk",
+"Not enough storage available" => "Ikke nok lagringsplass",
 "Error uploading contacts to storage." => "Klarte ikke å laste opp kontakter til lagringsplassen",
 "Couldn't save temporary image: " => "Kunne ikke lagre midlertidig bilde:",
 "Couldn't load temporary image: " => "Kunne ikke laste midlertidig bilde:",

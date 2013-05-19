@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-19 00:48+0200\n"
-"PO-Revision-Date: 2013-05-18 22:48+0000\n"
+"POT-Creation-Date: 2013-05-20 01:06+0200\n"
+"PO-Revision-Date: 2013-05-19 23:06+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -199,11 +199,11 @@ msgstr "Indexando contatos"
 
 #: js/app.js:221
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "Erro irrecuperável carregando livros de endereços: {msg}"
 
 #: js/app.js:222
 msgid "Error."
-msgstr ""
+msgstr "Erro."
 
 #: js/app.js:313 js/app.js:327
 msgid "Add to..."
@@ -233,7 +233,7 @@ msgstr "A mesclagem falhou. Erro salvando o contato."
 msgid "Select photo"
 msgstr "Selecione foto"
 
-#: js/app.js:594 js/app.js:1448
+#: js/app.js:594 js/app.js:1450
 msgid "Network or server error. Please inform administrator."
 msgstr "Erro no servidor ou rede. Por favor, informe o administrador."
 
@@ -245,58 +245,58 @@ msgstr "Falha salvando em ordem de classificação: {error}"
 msgid "Failed saving last group: {error}"
 msgstr "Falha ao salvar último grupo: {error}"
 
-#: js/app.js:792
+#: js/app.js:806
 msgid "Error adding to group."
 msgstr "Erro ao adicionar ao grupo."
 
-#: js/app.js:821
+#: js/app.js:835
 msgid "Error removing from group."
 msgstr "Erro ao remover ao grupo."
 
-#: js/app.js:849
+#: js/app.js:863
 msgid "There was an error opening a mail composer."
 msgstr "Houve um erro ao abrir um editor de correio."
 
-#: js/app.js:968
+#: js/app.js:982
 msgid "Error setting {name} as favorite."
 msgstr "Erro configurando {name} como favorito."
 
-#: js/app.js:1107 js/app.js:1111 templates/contacts.php:141
+#: js/app.js:1121 js/app.js:1125 templates/contacts.php:141
 msgid "Merge contacts"
 msgstr "Mesclar contatos"
 
-#: js/app.js:1133 js/app.js:1187 js/settings.js:120 templates/contacts.php:290
+#: js/app.js:1147 js/app.js:1201 js/settings.js:120 templates/contacts.php:290
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: js/app.js:1161 templates/contacts.php:133
+#: js/app.js:1175 templates/contacts.php:133
 msgid "Add group"
 msgstr "Adicionar grupo"
 
-#: js/app.js:1165
+#: js/app.js:1179
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1265
+#: js/app.js:1279
 msgid "Could not find contact: {id}"
 msgstr "Não foi possível encontrar o contato:{id}"
 
-#: js/app.js:1302
+#: js/app.js:1317
 msgid "No files selected for upload."
 msgstr "Nenhum arquivo selecionado para carregar."
 
-#: js/app.js:1313
+#: js/app.js:1327
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "O arquivo que você está tentando enviar excede o tamanho máximo para este servidor."
 
-#: js/app.js:1412
+#: js/app.js:1414
 msgid "Edit profile picture"
 msgstr "Editar imagem do perfil"
 
-#: js/app.js:1430
+#: js/app.js:1432
 msgid "Error loading profile picture."
 msgstr "Erro ao carregar imagem de perfil."
 
@@ -312,17 +312,17 @@ msgstr "Isto está certo?"
 msgid "# groups"
 msgstr "# grupos"
 
-#: js/contacts.js:1975
+#: js/contacts.js:1973
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alguns contatos foram marcados para remoção, mas não foram removidos ainda. Por favor aguarde a remoção desses contatos."
 
-#: js/contacts.js:1986
+#: js/contacts.js:1984
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Clique para desfazer a exclusão de {num} contatos"
 
-#: js/contacts.js:2001
+#: js/contacts.js:1999
 msgid "Cancelled deletion of {num}"
 msgstr "Exclusão de {num} contatos cancelada"
 
@@ -334,49 +334,49 @@ msgstr "O contato já pertence ao grupo."
 msgid "Contacts are already in this group."
 msgstr "Os contatos já pertencem ao grupo."
 
-#: js/groups.js:306
+#: js/groups.js:307
 msgid "Couldn't get contact list."
 msgstr "Não foi possível obter lista de contatos."
 
-#: js/groups.js:317
+#: js/groups.js:318
 msgid "Contact is not in this group."
 msgstr "O contato não está neste grupo."
 
-#: js/groups.js:331
+#: js/groups.js:332
 msgid "Contacts are not in this group."
 msgstr "Os contatos não estão neste grupo."
 
-#: js/groups.js:454
+#: js/groups.js:456
 msgid "Failed deleting group: {error}"
 msgstr "Falha excluindo grupo: {error}"
 
-#: js/groups.js:582
+#: js/groups.js:584
 msgid "A group named {group} already exists"
 msgstr "Já existe um grupo com o nome {group}"
 
-#: js/groups.js:617
+#: js/groups.js:619
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Você pode arrastar grupos\npara ordená-los como quiser."
 
-#: js/groups.js:632
+#: js/groups.js:634
 msgid "Failed adding group: {error}"
 msgstr "Falha adicionando grupo: {error}"
 
-#: js/groups.js:644
+#: js/groups.js:646
 msgid "All"
 msgstr "Todos"
 
-#: js/groups.js:659 js/groups.js:662
+#: js/groups.js:661 js/groups.js:664
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: js/groups.js:723
+#: js/groups.js:725
 msgid "Shared by {owner}"
 msgstr "Compartilhado por {owner}"
 
-#: js/groups.js:738
+#: js/groups.js:740
 msgid "Not grouped"
 msgstr "Não agrupado"
 
@@ -436,41 +436,41 @@ msgstr "Menos..."
 msgid "Failed loading photo: {error}"
 msgstr "Falha carregendo foto: {error}"
 
-#: lib/addressbook.php:139
+#: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "Você não tem permissão para ver este contatos"
 
-#: lib/addressbook.php:171
+#: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "Você não tem permissão para ver esses contatos"
 
-#: lib/addressbook.php:197
+#: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "Você não tem permissão para adicionar contatos no catálogo de endereços"
 
-#: lib/addressbook.php:200
+#: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "O backend para este catálogo de endereços não suporta a adição de contatos"
 
-#: lib/addressbook.php:222 lib/contact.php:242
+#: lib/addressbook.php:218 lib/contact.php:242
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "Você não tem permissão para excluir esse contato"
 
-#: lib/addressbook.php:225
+#: lib/addressbook.php:221
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "O backend para este catálogo de endereços não suporta a exclusão de contatos"
 
-#: lib/addressbook.php:262
+#: lib/addressbook.php:258
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "O backend para este catálogo de endereços não suporta a atualização"
 
-#: lib/addressbook.php:288
+#: lib/addressbook.php:284
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "Você não tem permissão para atualizar o catálogo de endereços."
 
-#: lib/addressbook.php:299
+#: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "Você não tem permissões para excluir o livro de endereços."
 
 #: lib/backend/ldap.php:370
 msgid "There was an error updating the addressbook."
@@ -482,31 +482,31 @@ msgstr "Houve um erro ao excluir esta agenda."
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "Você não tem permissão para ver este contato"
 
 #: lib/contact.php:257
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Você não tem permissão para atualizar esse contato"
 
 #: lib/contact.php:268
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "O backend para este contato não suporta atualizá-lo"
 
 #: lib/contact.php:286
 msgid "This backend not support adding contacts"
-msgstr ""
+msgstr "Este backend não suporta adicionar contatos"
 
 #: lib/contact.php:393 lib/contact.php:410
 msgid "Property not found"
-msgstr ""
+msgstr "Propriedade não encontrada"
 
 #: lib/contact.php:458
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "Falta parâmetro IM para:"
 
 #: lib/contact.php:466
 msgid "Unknown IM: "
-msgstr ""
+msgstr "IM desconhecido:"
 
 #: lib/controller/addressbookcontroller.php:92
 msgid "Error creating address book"
@@ -584,13 +584,17 @@ msgstr "Nenhum nome de grupo foi fornecido."
 msgid "Error adding group."
 msgstr "Erro ao adicionar grupo."
 
-#: lib/controller/groupcontroller.php:105
-#: lib/controller/groupcontroller.php:133
+#: lib/controller/groupcontroller.php:107
+#: lib/controller/groupcontroller.php:155
 msgid "Group ID missing from request."
 msgstr "Falta ID do grupo na solicitação."
 
-#: lib/controller/groupcontroller.php:109
-#: lib/controller/groupcontroller.php:137
+#: lib/controller/groupcontroller.php:111
+msgid "Group name missing from request."
+msgstr ""
+
+#: lib/controller/groupcontroller.php:115
+#: lib/controller/groupcontroller.php:159
 msgid "Contact ID missing from request."
 msgstr "Falta ID do contato na solicitação."
 
@@ -600,7 +604,7 @@ msgstr "Tente fazer o envio do arquivo de lista negra:"
 
 #: lib/controller/importcontroller.php:115
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "Você não tem permissão para importar para este livro de endereços."
 
 #: lib/controller/importcontroller.php:123
 msgid "File name missing from request."

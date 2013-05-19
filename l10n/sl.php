@@ -79,6 +79,7 @@
 "Less..." => "Manj ...",
 "There was an error updating the addressbook." => "Med posodabljanjem imenika je prišlo do napake.",
 "There was an error deleting this addressbook." => "Med brisanjem imenika je prišlo do napake.",
+"Unknown IM: " => "Neznan IM:",
 "Information about vCard is incorrect. Please reload the page." => "Podrobnosti kartice vCard niso pravilne. Ponovno naložite stran.",
 "Error adding group." => "Napaka dodajanja skupine.",
 "Group ID missing from request." => "V zahtevku manjka ID skupine.",

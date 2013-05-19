@@ -94,6 +94,7 @@
 "Failed loading photo: {error}" => "Načtení fotografie selhalo: {error}",
 "There was an error updating the addressbook." => "Nastala chyba při aktualizaci knihy adres.",
 "There was an error deleting this addressbook." => "Nastala chyba při odstranění knihy adres.",
+"Unknown IM: " => "Neznámý komunikátor: ",
 "Error creating address book" => "Chyba při vytváření knihy adres",
 "Error deleting address book" => "Chyba při mazání knihy adres",
 "Error creating contact." => "Chyba při vytváření kontaktu.",

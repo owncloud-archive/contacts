@@ -94,6 +94,7 @@
 "Failed loading photo: {error}" => "사진 불러오기 오류: {error}",
 "There was an error updating the addressbook." => "주소록을 업데이트하는 중 오류가 발생하였습니다.",
 "There was an error deleting this addressbook." => "이 주소록을 삭제하는 중 오류가 발생하였습니다.",
+"Unknown IM: " => "알려지지 않은 IM:",
 "Error creating address book" => "주소록 생성 오류",
 "Error deleting address book" => "주소록 삭제 오류",
 "Error creating contact." => "연락처를 만드는 중 오류가 발생하였습니다.",

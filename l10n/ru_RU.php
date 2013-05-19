@@ -76,6 +76,7 @@
 "Less..." => "Менее...",
 "There was an error updating the addressbook." => "Произошла ошибка при обновлении адресной книги.",
 "There was an error deleting this addressbook." => "Произошла ошибка при удалении этой адресной книги.",
+"Unknown IM: " => "Неизвестный IM:  ",
 "Information about vCard is incorrect. Please reload the page." => "Информация о визитной карточке некорректна. Пожалуйста, перезагрузите страницу.",
 "Error adding group." => "Ошибка добавления группы.",
 "Group ID missing from request." => "В запросе отсутствует ID группы.",

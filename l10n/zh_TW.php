@@ -94,6 +94,7 @@
 "Failed loading photo: {error}" => "圖片載入失敗{error}",
 "There was an error updating the addressbook." => "更新這本聯絡簿時發生錯誤。",
 "There was an error deleting this addressbook." => "刪除這本聯絡簿時發生錯誤。",
+"Unknown IM: " => "未知的 IM:",
 "Error creating address book" => "創建通訊錄時出現錯誤",
 "Error deleting address book" => "刪除通訊錄時出現錯誤",
 "Error creating contact." => "創建聯絡人石出現錯誤",

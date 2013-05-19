@@ -96,6 +96,7 @@
 "Failed loading photo: {error}" => "加载照片失败：{error}",
 "There was an error updating the addressbook." => "更新地址簿时出错",
 "There was an error deleting this addressbook." => "删除地址簿时出错",
+"Unknown IM: " => "未知即时通讯服务：",
 "Error creating address book" => "创建地址薄出错",
 "Error updating address book" => "上传地址簿出错",
 "Error deleting address book" => "删除地址薄出错",

@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-19 00:48+0200\n"
-"PO-Revision-Date: 2013-05-18 22:48+0000\n"
+"POT-Creation-Date: 2013-05-20 01:06+0200\n"
+"PO-Revision-Date: 2013-05-19 23:06+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/projects/p/owncloud/language/vi/)\n"
 "MIME-Version: 1.0\n"
@@ -228,7 +228,7 @@ msgstr ""
 msgid "Select photo"
 msgstr "Chọn ảnh"
 
-#: js/app.js:594 js/app.js:1448
+#: js/app.js:594 js/app.js:1450
 msgid "Network or server error. Please inform administrator."
 msgstr "Mạng hoặc máy chủ lỗi. Vui lòng liên hệ người quản trị."
 
@@ -240,58 +240,58 @@ msgstr ""
 msgid "Failed saving last group: {error}"
 msgstr ""
 
-#: js/app.js:792
+#: js/app.js:806
 msgid "Error adding to group."
 msgstr "Lỗi thêm vào nhóm."
 
-#: js/app.js:821
+#: js/app.js:835
 msgid "Error removing from group."
 msgstr "Lỗi xóa khỏi nhóm."
 
-#: js/app.js:849
+#: js/app.js:863
 msgid "There was an error opening a mail composer."
 msgstr "Lỗi mở phần soạn email."
 
-#: js/app.js:968
+#: js/app.js:982
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1107 js/app.js:1111 templates/contacts.php:141
+#: js/app.js:1121 js/app.js:1125 templates/contacts.php:141
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1133 js/app.js:1187 js/settings.js:120 templates/contacts.php:290
+#: js/app.js:1147 js/app.js:1201 js/settings.js:120 templates/contacts.php:290
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Hủy"
 
-#: js/app.js:1161 templates/contacts.php:133
+#: js/app.js:1175 templates/contacts.php:133
 msgid "Add group"
 msgstr "Thêm nhóm"
 
-#: js/app.js:1165
+#: js/app.js:1179
 msgid "OK"
 msgstr "Chấp nhận"
 
-#: js/app.js:1265
+#: js/app.js:1279
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1302
+#: js/app.js:1317
 msgid "No files selected for upload."
 msgstr "Không có tập tin nào được chọn để tải lên."
 
-#: js/app.js:1313
+#: js/app.js:1327
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Các tập tin bạn đang cố gắng tải lên vượt quá kích thước tối đa cho tập tin tải lên trên máy chủ."
 
-#: js/app.js:1412
+#: js/app.js:1414
 msgid "Edit profile picture"
 msgstr "Chỉnh sửa hồ sơ ảnh"
 
-#: js/app.js:1430
+#: js/app.js:1432
 msgid "Error loading profile picture."
 msgstr "Lỗi khi tải lên hồ sơ hình ảnh."
 
@@ -307,17 +307,17 @@ msgstr "Bạn có chắc điều này là đúng không?"
 msgid "# groups"
 msgstr "# nhóm"
 
-#: js/contacts.js:1975
+#: js/contacts.js:1973
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Một số địa chỉ liên lạc được đánh dấu để xóa, nhưng chưa bị xóa . Hãy đợi đến khi họ xóa."
 
-#: js/contacts.js:1986
+#: js/contacts.js:1984
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Nhấn vào đây để  quay lại thao tác xóa {num} địa chỉ liên lạc"
 
-#: js/contacts.js:2001
+#: js/contacts.js:1999
 msgid "Cancelled deletion of {num}"
 msgstr "Hủy xóa của {num}"
 
@@ -329,49 +329,49 @@ msgstr "Liên lạc đã có trong nhóm này."
 msgid "Contacts are already in this group."
 msgstr "Thông tin liên lạc đã có trong nhóm"
 
-#: js/groups.js:306
+#: js/groups.js:307
 msgid "Couldn't get contact list."
 msgstr "Không thể nhận được danh dách liên lạc."
 
-#: js/groups.js:317
+#: js/groups.js:318
 msgid "Contact is not in this group."
 msgstr "Không có Liên hệ trong nhóm này"
 
-#: js/groups.js:331
+#: js/groups.js:332
 msgid "Contacts are not in this group."
 msgstr "Thông tin liên lạc không có trong nhóm"
 
-#: js/groups.js:454
+#: js/groups.js:456
 msgid "Failed deleting group: {error}"
 msgstr ""
 
-#: js/groups.js:582
+#: js/groups.js:584
 msgid "A group named {group} already exists"
 msgstr "Tên nhóm {group} đã tồn tại"
 
-#: js/groups.js:617
+#: js/groups.js:619
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Bạn có thể kéo nhóm sang\nsắp xếp theo ý bạn muốn."
 
-#: js/groups.js:632
+#: js/groups.js:634
 msgid "Failed adding group: {error}"
 msgstr ""
 
-#: js/groups.js:644
+#: js/groups.js:646
 msgid "All"
 msgstr "Tất cả"
 
-#: js/groups.js:659 js/groups.js:662
+#: js/groups.js:661 js/groups.js:664
 msgid "Favorites"
 msgstr "Ưa thích"
 
-#: js/groups.js:723
+#: js/groups.js:725
 msgid "Shared by {owner}"
 msgstr "Được chia sẽ bởi {owner}"
 
-#: js/groups.js:738
+#: js/groups.js:740
 msgid "Not grouped"
 msgstr ""
 
@@ -431,39 +431,39 @@ msgstr " ít hơn..."
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: lib/addressbook.php:139
+#: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
 msgstr ""
 
-#: lib/addressbook.php:171
+#: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
 msgstr ""
 
-#: lib/addressbook.php:197
+#: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
 msgstr ""
 
-#: lib/addressbook.php:200
+#: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:222 lib/contact.php:242
+#: lib/addressbook.php:218 lib/contact.php:242
 msgid "You do not have permissions to delete this contact"
 msgstr ""
 
-#: lib/addressbook.php:225
+#: lib/addressbook.php:221
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:262
+#: lib/addressbook.php:258
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:288
+#: lib/addressbook.php:284
 msgid "You don't have permissions to update the address book."
 msgstr ""
 
-#: lib/addressbook.php:299
+#: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
@@ -501,7 +501,7 @@ msgstr ""
 
 #: lib/contact.php:466
 msgid "Unknown IM: "
-msgstr ""
+msgstr "Không biết IM:"
 
 #: lib/controller/addressbookcontroller.php:92
 msgid "Error creating address book"
@@ -579,13 +579,17 @@ msgstr ""
 msgid "Error adding group."
 msgstr "Lỗi thêm nhóm."
 
-#: lib/controller/groupcontroller.php:105
-#: lib/controller/groupcontroller.php:133
+#: lib/controller/groupcontroller.php:107
+#: lib/controller/groupcontroller.php:155
 msgid "Group ID missing from request."
 msgstr "ID nhóm không tìm thấy."
 
-#: lib/controller/groupcontroller.php:109
-#: lib/controller/groupcontroller.php:137
+#: lib/controller/groupcontroller.php:111
+msgid "Group name missing from request."
+msgstr ""
+
+#: lib/controller/groupcontroller.php:115
+#: lib/controller/groupcontroller.php:159
 msgid "Contact ID missing from request."
 msgstr "ID liên lạc không tìm thấy."
 

@@ -96,6 +96,7 @@
 "Failed loading photo: {error}" => "Ha fallat en carregar la foto: {error}",
 "There was an error updating the addressbook." => "S'ha produït un error en actualitzar la llibreta d'adreces.",
 "There was an error deleting this addressbook." => "S'ha produït un error en eliminar la llibreta d'adreces",
+"Unknown IM: " => "IM desconegut:",
 "Error creating address book" => "Error en crear la llibreta d'adreces",
 "Error updating address book" => "Error en actualitzar la llibreta d'adreces",
 "Error deleting address book" => "Error en eliminar la llibreta d'adreces",

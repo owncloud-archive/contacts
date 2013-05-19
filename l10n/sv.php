@@ -77,6 +77,7 @@
 "Less..." => "Mindre...",
 "There was an error updating the addressbook." => "Ett fel uppstod när adressboken skulle uppdateras.",
 "There was an error deleting this addressbook." => "Fel uppstod vid radering av denna adressbok.",
+"Unknown IM: " => "Okänt IM:",
 "Information about vCard is incorrect. Please reload the page." => "Information om vCard är felaktigt. Vänligen ladda om sidan.",
 "Error adding group." => "Fel vid tillägg av grupp.",
 "Group ID missing from request." => "Grupp-ID fattas från anrop.",

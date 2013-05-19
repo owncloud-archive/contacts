@@ -96,6 +96,7 @@
 "Failed loading photo: {error}" => "Pildi laadimine ebaõnnestus: {error}",
 "There was an error updating the addressbook." => "Aadressiraamatu uuendamisel tekkis viga.",
 "There was an error deleting this addressbook." => "Selle aadressiraamatu kustutamisel tekkis viga.",
+"Unknown IM: " => "Tundmatu IM:",
 "Error creating address book" => "Viga aadressiraamatu loomisel",
 "Error updating address book" => "Viga aadressiraamatu uuendamisel",
 "Error deleting address book" => "Viga aadressiraamatu kustutamisel",

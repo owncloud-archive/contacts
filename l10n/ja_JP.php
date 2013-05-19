@@ -96,6 +96,7 @@
 "Failed loading photo: {error}" => "写真の読み込みに失敗: {error}",
 "There was an error updating the addressbook." => "アドレス帳を更新中にエラーが発生しました。",
 "There was an error deleting this addressbook." => "アドレス帳を削除するときにエラーが発生しました。",
+"Unknown IM: " => "不明なIM:",
 "Error creating address book" => "アドレス帳の作成エラー",
 "Error updating address book" => "アドレス帳の更新エラー",
 "Error deleting address book" => "アドレス帳の削除エラー",

@@ -94,6 +94,7 @@
 "Failed loading photo: {error}" => "Foto yuklemedi (hata)",
 "There was an error updating the addressbook." => "Adresdefteri güncellenirken hata oluştu.",
 "There was an error deleting this addressbook." => "Adresdefteri silinirken hata oluştu.",
+"Unknown IM: " => "Bilinmeyen IM:",
 "Error creating address book" => "Adres kitaplarin yaratma hatali ",
 "Error deleting address book" => "Silme adres kitapin yapamadi ",
 "Error creating contact." => "Itibar yapmadi ",

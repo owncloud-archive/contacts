@@ -96,6 +96,7 @@
 "Failed loading photo: {error}" => "Echec du chargement de la photo : {error}",
 "There was an error updating the addressbook." => "Une erreur s'est produite pendant la mise à jour du carnet d'adresses.",
 "There was an error deleting this addressbook." => "Erreur lors de la suppression du carnet d'adresses.",
+"Unknown IM: " => "Messagerie instantanée inconnue",
 "Error creating address book" => "Erreur à la création du carnet d'adresses",
 "Error updating address book" => "Erreur à la mise à jour du carnet d'adresses",
 "Error deleting address book" => "Erreur à la suppression du carnet d'adresses",

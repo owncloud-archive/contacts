@@ -86,6 +86,7 @@
 "Less..." => "Λιγότερα",
 "There was an error updating the addressbook." => "Υπήρξε σφάλμα κατά την ενημέρωση του βιβλίου διευθύνσεων.",
 "There was an error deleting this addressbook." => "Υπήρξε σφάλμα κατά την διαγραφή αυτού του βιβλίου διευθύνσεων",
+"Unknown IM: " => "Άγνωστο IM:",
 "Error creating address book" => "Σφάλμα κατά την δημιουργία βιβλίου διευθύνσεων ",
 "Error deleting address book" => "Σφάλμα κατά την διαγραφή βιβλίου διεευθύνσεων ",
 "Error creating contact." => "Σφάλμα κατά την δημιουργία επαφής ",
