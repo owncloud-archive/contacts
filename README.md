@@ -1,9 +1,14 @@
-The Contacts app
-================
+#The Contacts app
 
-Maintainers:
-------------
+
+##Maintainer:
 - [Thomas Tanghus](https://github.com/tanghus)
+
+###Additional maintainers:
+- [Bart Visscher](https://github.com/bartv2)
+ 
+###Original author:
+ - Jacob Sack
 
 Developer setup info:
 ---------------------
