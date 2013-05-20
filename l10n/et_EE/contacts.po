@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-20 01:06+0200\n"
-"PO-Revision-Date: 2013-05-19 23:06+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-05-21 00:48+0200\n"
+"PO-Revision-Date: 2013-05-20 07:58+0000\n"
+"Last-Translator: pisike.sipelgas <pisike.sipelgas@gmail.com>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/projects/p/owncloud/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -192,11 +192,11 @@ msgstr "Kontaktide indekseerimine"
 
 #: js/app.js:221
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "Taastumatu viga aadressiraamatute laadimisel: {msg}"
 
 #: js/app.js:222
 msgid "Error."
-msgstr ""
+msgstr "Viga."
 
 #: js/app.js:313 js/app.js:327
 msgid "Add to..."
@@ -226,7 +226,7 @@ msgstr "Ühendamine ebaõnnestus. Viga kontakti salvestamisel."
 msgid "Select photo"
 msgstr "Vali foto"
 
-#: js/app.js:594 js/app.js:1450
+#: js/app.js:594 js/app.js:1455
 msgid "Network or server error. Please inform administrator."
 msgstr "Võrgu või serveri viga. Palun informeeri administraatorit."
 
@@ -275,21 +275,21 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr "Kontakti {id} ei leitud"
 
-#: js/app.js:1317
+#: js/app.js:1321
 msgid "No files selected for upload."
 msgstr "Üleslaadimiseks pole faile valitud."
 
-#: js/app.js:1327
+#: js/app.js:1331
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Fail , mida sa proovid üles laadida ületab sinu serveri poolt määratud maksimaalse üleslaadimise limiidi."
 
-#: js/app.js:1414
+#: js/app.js:1419
 msgid "Edit profile picture"
 msgstr "Muuda profiili pilti"
 
-#: js/app.js:1432
+#: js/app.js:1437
 msgid "Error loading profile picture."
 msgstr "Viga profiilipildi laadimisel"
 
@@ -431,39 +431,39 @@ msgstr "Pildi laadimine ebaõnnestus: {error}"
 
 #: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "Sul pole selle kontakti vaatamiseks õigusi"
 
 #: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "Sul pole nende kontaktide vaatamiseks õigusi"
 
 #: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "Sul pole õigusi aadressiraamatusse kontaktide lisamiseks"
 
 #: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "Selle aadressiraamatu tagarakend ei toeta kontaktide lisamist"
 
 #: lib/addressbook.php:218 lib/contact.php:242
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "Sul pole selle kontakti kustutamiseks õigusi"
 
 #: lib/addressbook.php:221
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "Selle aadressiraamatu tagarakend ei toeta kontaktide kustutamist"
 
 #: lib/addressbook.php:258
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "Selle aadressiraamatu tagarakend ei toeta uuendamist"
 
 #: lib/addressbook.php:284
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "Sul pole õigusi selle aadressiraamatu uuendamiseks."
 
 #: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "Sul pole õigusi aadressiraamatu kustutamiseks."
 
 #: lib/backend/ldap.php:370
 msgid "There was an error updating the addressbook."
@@ -475,27 +475,27 @@ msgstr "Selle aadressiraamatu kustutamisel tekkis viga."
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "Sul pole selle kontakti vaatamiseks õigusi"
 
 #: lib/contact.php:257
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Sul pole selle kontakti uuendamiseks õigusi."
 
 #: lib/contact.php:268
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "Tagarakend ei toeta selle kontakti muutmist"
 
 #: lib/contact.php:286
 msgid "This backend not support adding contacts"
-msgstr ""
+msgstr "See tagarakend ei toeta kontaktide lisamist"
 
 #: lib/contact.php:393 lib/contact.php:410
 msgid "Property not found"
-msgstr ""
+msgstr "Omadust ei leitud"
 
 #: lib/contact.php:458
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "Puuduv IM parameeter:"
 
 #: lib/contact.php:466
 msgid "Unknown IM: "
@@ -584,7 +584,7 @@ msgstr "Päringust puudub Grupi ID."
 
 #: lib/controller/groupcontroller.php:111
 msgid "Group name missing from request."
-msgstr ""
+msgstr "Päringust puudub grupi nimi."
 
 #: lib/controller/groupcontroller.php:115
 #: lib/controller/groupcontroller.php:159
@@ -597,7 +597,7 @@ msgstr "Katse üles laadida mustas nimekirjas olevat faili:"
 
 #: lib/controller/importcontroller.php:115
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "Sul pole õigusi sellesse aadressiraamatuse importimiseks."
 
 #: lib/controller/importcontroller.php:123
 msgid "File name missing from request."

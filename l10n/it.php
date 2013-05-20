@@ -132,6 +132,7 @@
 "No group name given." => "Nessun nome di gruppo fornito.",
 "Error adding group." => "Errore durante l'aggiunta del gruppo.",
 "Group ID missing from request." => "ID del gruppo mancante nella richiesta.",
+"Group name missing from request." => "Nome del gruppo mancante nella richiesta.",
 "Contact ID missing from request." => "ID del contatta mancante nella richiesta.",
 "Attempt to upload blacklisted file:" => "Tentativo di caricare un file della lista nera:",
 "You do not have permissions to import into this address book." => "Non hai i permessi per importare in questa rubrica.",

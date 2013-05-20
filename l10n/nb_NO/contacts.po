@@ -7,15 +7,16 @@
 # Christer Eriksson <post@hc3web.com>, 2012
 # Daniel <i18n@daniel.priv.no>, 2012
 # espenbye <espenbye@me.com>, 2012
+# Hans Nesse <>, 2013
 # hdalgrav <hdalgrav@gmail.com>, 2012
 # owncloud <itssmail@yahoo.no>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-20 01:06+0200\n"
-"PO-Revision-Date: 2013-05-19 23:06+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-05-21 00:48+0200\n"
+"PO-Revision-Date: 2013-05-19 23:30+0000\n"
+"Last-Translator: Hans Nesse <>\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/projects/p/owncloud/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -229,7 +230,7 @@ msgstr ""
 msgid "Select photo"
 msgstr "Velg bilde"
 
-#: js/app.js:594 js/app.js:1450
+#: js/app.js:594 js/app.js:1455
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
@@ -278,23 +279,23 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1317
+#: js/app.js:1321
 msgid "No files selected for upload."
 msgstr "Ingen filer valgt for opplasting."
 
-#: js/app.js:1327
+#: js/app.js:1331
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Filen du prøver å laste opp er for stor."
 
-#: js/app.js:1414
+#: js/app.js:1419
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1432
+#: js/app.js:1437
 msgid "Error loading profile picture."
-msgstr ""
+msgstr "Kan ikke laste profilbildet."
 
 #: js/contacts.js:336
 msgid "Failed deleting property: {error}"
@@ -312,7 +313,7 @@ msgstr ""
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr ""
+msgstr "Noen kontakter er merket for slettet, men ikke slettet enda. Vennligst vent mens de blir slettet."
 
 #: js/contacts.js:1984
 msgid "Click to undo deletion of {num} contacts"
@@ -394,15 +395,15 @@ msgstr "Feil"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr ""
+msgstr "Visningsnavn kan ikke være tomt."
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
-msgstr ""
+msgstr "Vis CardDAV link"
 
 #: js/settings.js:98 templates/settings.php:29
 msgid "Show read-only VCF link"
-msgstr ""
+msgstr "VIs lesbar VCF link"
 
 #: js/settings.js:99 templates/contacts.php:52 templates/contacts.php:292
 #: templates/settings.php:40
@@ -470,7 +471,7 @@ msgstr ""
 
 #: lib/backend/ldap.php:370
 msgid "There was an error updating the addressbook."
-msgstr ""
+msgstr "Feil ved oppdatering av adresseboken."
 
 #: lib/backend/ldap.php:434
 msgid "There was an error deleting this addressbook."
@@ -578,7 +579,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
-msgstr ""
+msgstr "Kunne ikke legge til gruppe."
 
 #: lib/controller/groupcontroller.php:107
 #: lib/controller/groupcontroller.php:155
@@ -741,11 +742,11 @@ msgstr "Internett"
 
 #: lib/utils/properties.php:187
 msgid "Friends"
-msgstr ""
+msgstr "Venner"
 
 #: lib/utils/properties.php:188
 msgid "Family"
-msgstr ""
+msgstr "Familie"
 
 #: lib/utils/properties.php:223
 msgid "There was an error deleting properties for this contact."
@@ -829,19 +830,19 @@ msgstr "Vis/skjul adresseboken"
 
 #: templates/contacts.php:71
 msgid "Next addressbook"
-msgstr ""
+msgstr "Neste adressebok"
 
 #: templates/contacts.php:73
 msgid "Previous addressbook"
-msgstr ""
+msgstr "Forrige adressebok"
 
 #: templates/contacts.php:77
 msgid "Actions"
-msgstr ""
+msgstr "Handlinger"
 
 #: templates/contacts.php:80
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "Oppdater kontaktliste"
 
 #: templates/contacts.php:82
 msgid "Add new contact"
@@ -967,7 +968,7 @@ msgstr "E-post"
 
 #: templates/contacts.php:301
 msgid "Instant Messaging"
-msgstr ""
+msgstr "Lynmelding"
 
 #: templates/contacts.php:302
 msgid "Address"
@@ -1037,7 +1038,7 @@ msgstr ""
 
 #: templates/contacts.php:378
 msgid "Street address"
-msgstr ""
+msgstr "Gateadresse"
 
 #: templates/contacts.php:382
 msgid "12345"
@@ -1045,7 +1046,7 @@ msgstr ""
 
 #: templates/contacts.php:383
 msgid "Postal code"
-msgstr ""
+msgstr "Postnummer"
 
 #: templates/contacts.php:385
 msgid "Your city"
@@ -1073,7 +1074,7 @@ msgstr "Land"
 
 #: templates/contacts.php:418
 msgid "Instant Messenger"
-msgstr ""
+msgstr "Lynmeldinger"
 
 #: templates/contacts.php:420
 msgid "Delete IM"

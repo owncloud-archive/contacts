@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-20 01:06+0200\n"
-"PO-Revision-Date: 2013-05-19 23:06+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-05-21 00:48+0200\n"
+"PO-Revision-Date: 2013-05-20 13:00+0000\n"
+"Last-Translator: unhammer <unhammer+dill@mm.st>\n"
 "Language-Team: Norwegian Nynorsk (Norway) (http://www.transifex.com/projects/p/owncloud/language/nn_NO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -193,11 +193,11 @@ msgstr "Indekserer kontaktar"
 
 #: js/app.js:221
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "Ugjenoppretteleg feil ved lasting av adressebøker: {msg}"
 
 #: js/app.js:222
 msgid "Error."
-msgstr ""
+msgstr "Feil."
 
 #: js/app.js:313 js/app.js:327
 msgid "Add to..."
@@ -227,7 +227,7 @@ msgstr "Feil ved samanslåing. Klarte ikkje lagra kontakten."
 msgid "Select photo"
 msgstr "Vel bilete"
 
-#: js/app.js:594 js/app.js:1450
+#: js/app.js:594 js/app.js:1455
 msgid "Network or server error. Please inform administrator."
 msgstr "Nettverks- eller tenarfeil. Ver venleg og informer administratoren."
 
@@ -274,23 +274,23 @@ msgstr "Greitt"
 
 #: js/app.js:1279
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "Klarte ikkje finna kontakt: {id}"
 
-#: js/app.js:1317
+#: js/app.js:1321
 msgid "No files selected for upload."
 msgstr "Inga filer valt for opplasting."
 
-#: js/app.js:1327
+#: js/app.js:1331
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Fila du prøver å lasta opp er større enn storleiksgrensa for filopplastingar på denne tenaren."
 
-#: js/app.js:1414
+#: js/app.js:1419
 msgid "Edit profile picture"
 msgstr "Endra profilbilete"
 
-#: js/app.js:1432
+#: js/app.js:1437
 msgid "Error loading profile picture."
 msgstr "Feil ved lasting av profilbilete."
 
@@ -372,7 +372,7 @@ msgstr "Delt av {owner}"
 
 #: js/groups.js:740
 msgid "Not grouped"
-msgstr ""
+msgstr "Ikkje gruppert"
 
 #: js/loader.js:49
 msgid "Result: "
@@ -432,39 +432,39 @@ msgstr "Klarte ikkje lasta bilete: {error}"
 
 #: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "Du har ikkje tilgang til å sjå denne kontakten"
 
 #: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "Du har ikkje tilgang til å sjå desse kontaktane"
 
 #: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "Du har ikkje tilgang til leggja til kontaktar i adresseboka"
 
 #: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "Bakstykket til denne adresseboka støttar ikkje å leggja til nye kontaktar"
 
 #: lib/addressbook.php:218 lib/contact.php:242
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "Du har ikkje tilgang til å sletta denne kontakten"
 
 #: lib/addressbook.php:221
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "Bakstykket til denne adresseboka støttar ikkje sletting av kontaktar"
 
 #: lib/addressbook.php:258
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "Bakstykket til denne adresseboka støttar ikkje oppdatering"
 
 #: lib/addressbook.php:284
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "Du har ikkje tilgang til å oppdatera adresseboka"
 
 #: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "Du har ikkje tilgang til å sletta adresseboka."
 
 #: lib/backend/ldap.php:370
 msgid "There was an error updating the addressbook."
@@ -476,31 +476,31 @@ msgstr "Ein feil oppstod ved sletting av adresseboka."
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "Du har ikkje tilgang til å sjå denne kontakten"
 
 #: lib/contact.php:257
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Du har ikkje tilgang til å oppdatera denne kontakten"
 
 #: lib/contact.php:268
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "Bakstykket til denne kontakten støttar ikkje oppdatering"
 
 #: lib/contact.php:286
 msgid "This backend not support adding contacts"
-msgstr ""
+msgstr "Dette bakstykket støttar ikkje å leggja til kontaktar"
 
 #: lib/contact.php:393 lib/contact.php:410
 msgid "Property not found"
-msgstr ""
+msgstr "Fann ikkje eigenskapen"
 
 #: lib/contact.php:458
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "Manglar lynmeldingsteneste for:"
 
 #: lib/contact.php:466
 msgid "Unknown IM: "
-msgstr ""
+msgstr "Ukjend lynmeldingsteneste:"
 
 #: lib/controller/addressbookcontroller.php:92
 msgid "Error creating address book"
@@ -508,7 +508,7 @@ msgstr "Klarte ikkje oppretta adresseboka"
 
 #: lib/controller/addressbookcontroller.php:114
 msgid "Error updating address book"
-msgstr ""
+msgstr "Klarte ikkje oppdatera adresseboka"
 
 #: lib/controller/addressbookcontroller.php:137
 msgid "Error deleting address book"
@@ -524,11 +524,11 @@ msgstr "Klarte ikkje sletta kontakten."
 
 #: lib/controller/addressbookcontroller.php:212
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "Klarte ikkje henta kontakten."
 
 #: lib/controller/addressbookcontroller.php:222
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "Klarte ikkje fjerna kontakten frå den andre adresseboka."
 
 #: lib/controller/contactcontroller.php:45
 #: lib/controller/contactcontroller.php:73
@@ -585,7 +585,7 @@ msgstr "Gruppe-ID manglar frå førespurnaden."
 
 #: lib/controller/groupcontroller.php:111
 msgid "Group name missing from request."
-msgstr ""
+msgstr "Gruppenamnet manglar frå førespurnaden."
 
 #: lib/controller/groupcontroller.php:115
 #: lib/controller/groupcontroller.php:159
@@ -598,7 +598,7 @@ msgstr "Prøv å lasta opp svartelistefil:"
 
 #: lib/controller/importcontroller.php:115
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "Du har ikkje tilgang til å importera inn i denne adresseboka."
 
 #: lib/controller/importcontroller.php:123
 msgid "File name missing from request."
@@ -779,11 +779,11 @@ msgstr "Importer"
 
 #: templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "Importer til …"
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "Vel fil …"
 
 #: templates/contacts.php:45
 msgid "(De-)select all"
