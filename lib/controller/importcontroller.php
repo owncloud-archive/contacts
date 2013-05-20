@@ -110,7 +110,7 @@ class ImportController extends BaseController {
 		$app = new App($this->api->getUserId());
 
 		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		if(!$addressBook->hasPermission(OCP\PERMISSION_CREATE)) {
+		if(!$addressBook->hasPermission(\OCP\PERMISSION_CREATE)) {
 			$response->setStatus('403');
 			$response->bailOut(App::$l10n->t('You do not have permissions to import into this address book.'));
 			return $response;
