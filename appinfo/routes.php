@@ -215,6 +215,15 @@ $this->create('contacts_categories_delete', 'groups/delete')
 		}
 	);
 
+$this->create('contacts_categories_rename', 'groups/rename')
+	->post()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('GroupController', 'renameGroup', $params, new DIContainer());
+		}
+	);
+
 $this->create('contacts_categories_addto', 'groups/addto/{categoryid}')
 	->post()
 	->action(

@@ -11,9 +11,10 @@ OC.Contacts = OC.Contacts || {};
 		this.getAllResponseHeaders = jqXHR.getAllResponseHeaders;
 		this.getResponseHeader = jqXHR.getResponseHeader;
 		this.status = jqXHR.status;
-		if(!response || !response.status || response.status === 'error') {
+		if(!response) {
+			console.log('jqXHR', jqXHR);
 			this.error = true;
-			this.message = response.data.message || 'Unknown error.';
+			this.message = jqXHR.statusText;
 		} else {
 			this.error = false;
 			if(response.data) {
@@ -389,6 +390,21 @@ OC.Contacts = OC.Contacts || {};
 			'POST',
 			{},
 			{name: name}
+		);
+	}
+
+	/**
+	 * Rename a group
+	 *
+	 * @param string from
+	 * @param string to
+	 */
+	Storage.prototype.renameGroup = function(from, to) {
+		return this.requestRoute(
+			'contacts_categories_rename',
+			'POST',
+			{},
+			{from: from, to: to}
 		);
 	}
 

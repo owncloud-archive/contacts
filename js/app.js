@@ -577,6 +577,18 @@ OC.Contacts = OC.Contacts || {
 			});
 		});
 
+		$(document).bind('status.group.grouprenamed', function(e, result) {
+			console.log('status.group.grouprenamed', result);
+			$.each(result.contacts, function(idx, contactid) {
+				var contact = self.contacts.findById(contactid);
+				if(!contact) {
+					console.log('Couldn\'t find contact', contactid)
+					return true; // continue
+				}
+				contact.renameGroup(result.from, result.to);
+			});
+		});
+
 		$(document).bind('status.group.contactadded', function(e, result) {
 			console.log('status.group.contactadded', result);
 			var contact = self.contacts.findById(result.contactid);

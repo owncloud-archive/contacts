@@ -21,34 +21,36 @@ OC.Contacts = OC.Contacts || {};
 		this.$groupList = groupList;
 		var self = this;
 		var numtypes = ['category', 'fav', 'all'];
-		this.$groupList.on('click', 'li', function(event) {
+		this.$groupList.on('click', 'li.group', function(event) {
 			$('.tipsy').remove();
 			if(wrongKey(event)) {
 				return;
 			}
-			console.log($(event.target));
+			console.log('group click', $(this));
 			if($(event.target).is('.action.delete')) {
+				event.stopPropagation();
+				event.preventDefault();
 				var id = $(event.target).parents('li').first().data('id');
 				self.deleteGroup(id, function(response) {
 					if(response.error) {
 						OC.notify({message:response.data.message});
 					}
 				});
-			} else if($(event.target).is('.add-group')) {
-				//self.editGroup();
-			} else if($(event.target).is('.add-contact')) {
-				$.noop(); // handled elsewhere in app.js
+			} else if($(event.target).is('.action.edit')) {
+				event.stopPropagation();
+				event.preventDefault();
+				self.editGroup($(this));
 			} else {
-				self.selectGroup({element:$(this)});
+				if($(this).is(':not(.editing)')) {
+					self.selectGroup({element:$(this)});
+				}
 			}
 		});
 		var $addInput = this.$groupList.find('.add-group');
 		$addInput.addnew({
 			ok: function(event, name) {
-				console.log('add-address-book ok', name);
 				$addInput.addClass('loading');
 				self.addGroup({name:name}, function(response) {
-					console.log('response', response);
 					if(response.error) {
 						$(document).trigger('status.contact.error', {
 							message: response.message
@@ -118,6 +120,16 @@ OC.Contacts = OC.Contacts || {};
 	}
 
 	/**
+	 * Test if a group with this name exists (case-insensitive)
+	 *
+	 * @param string name
+	 * @return bool
+	 */
+	GroupList.prototype.hasGroup = function(name) {
+		return (this.findByName(name) !== null);
+	}
+
+	/**
 	 * Get the group name by id.
 	 * 
 	 * Kind of a hack. Need to get the immidiate text without the enclosed spans with number etc.
@@ -129,6 +141,22 @@ OC.Contacts = OC.Contacts || {};
 	GroupList.prototype.nameById = function(id) {
 		return $.trim(this.findById(id).data('rawname'));
 		//return $.trim(this.findById(id).clone().find("*").remove().end().text()); //.contents().filter(function(){ return(this.nodeType == 3); }).text().trim();
+	};
+
+	/** Get the group element by name.
+	 *
+	 * @param string name. The name of the group to search for (case-insensitive).
+	 * @returns object|null The jQuery object.
+	 */
+	GroupList.prototype.findByName = function(name) {
+		var $elem = null;
+		self.$groupList.find('li[data-type="category"]').each(function() {
+			if ($(this).data('rawname').toLowerCase() === name.toLowerCase()) {
+				$elem = $(this);
+				return false; //break out of loop
+			}
+		});
+		return $elem;
 	};
 
 	/** Get the group element by id.
@@ -460,94 +488,78 @@ OC.Contacts = OC.Contacts || {};
 
 	/**
 	 * Edit a groups name.
-	 * Currently only used for adding, as renaming a group also
-	 * requires updating all contacts in that group.
 	 * 
-	 * @param integer id. Group id NOTE: Not used yet.
-	 * FIXME: This works fine for adding, but will need refactoring
-	 * if used for renaming.
+	 * @param object $element jQuery element
 	 */
-	/*GroupList.prototype.editGroup = function(id) {
+	GroupList.prototype.editGroup = function($element) {
+		console.log('editGroup', $element);
 		var self = this;
-		if(this.$editelem) {
-			console.log('Already editing, returning');
-			return;
-		}
-		// NOTE: Currently this only works for adding, not renaming
-		var saveChanges = function($elem, $input) {
-			console.log('saveChanges', $input.val());
-			var name = $.trim($input.val());
-			if(name.length === 0) {
-				return false;
+		var oldname = $element.data('rawname');
+		var id = $element.data('id');
+
+		var $editInput = $('<input type="text" />').val(oldname);
+		$element.hide();
+		$editInput.insertBefore($element).wrap('<li class="group editing" />');
+		var $tmpelem = $editInput.parent('li');
+		console.log('tmpelem', $tmpelem);
+
+		$editInput.addnew({
+			autoOpen: true,
+			addText: t('contacts', 'Save'),
+			ok: function(event, newname) {
+				console.log('New name', newname);
+				$editInput.addClass('loading');
+				self.renameGroup(oldname, newname, function(response) {
+					if(response.error) {
+						$(document).trigger('status.contact.error', {
+							message: response.message
+						});
+					} else {
+						$editInput.addnew('close');
+						$(document).trigger('status.group.grouprenamed', {
+							groupid: id,
+							from: oldname,
+							to: newname,
+							contacts: $element.data('contacts')
+						});
+						$element.data('rawname', newname);
+						$element.find('.name').text(escapeHTML(newname));
+					}
+					$editInput.removeClass('loading');
+				});
+			},
+			cancel: function(event) {
+				console.log('cancel');
+				$editInput.removeClass('loading');
+			},
+			close: function() {
+				console.log('close');
+				$tmpelem.remove();
+				$element.show();
 			}
-			$input.prop('disabled', true);
-			$elem.data('rawname', '');
-			self.addGroup({name:name}, function(response) {
-				if(!response.error) {
-					$elem.remove();
-					self.$editelem = null;
-				} else {
-					$input.prop('disabled', false);
-					OC.notify({message:response.message});
-				}
-			});
-		};
+		});
 
-		if(typeof id === 'undefined') {
-			// Add new group
-			var tmpl = this.$groupListItemTemplate;
-			self.$editelem = (tmpl).octemplate({
-				id: 'new',
-				type: 'category',
-				num: 0,
-				name: ''
-			});
-			var $input = $('<input type="text" class="active" /><a class="action checked disabled" />');
-			self.$editelem.prepend($input).addClass('editing');
-			self.$editelem.data('contacts', []);
-			self.$editelem.data('rawname', '');
-			this.$groupList.find('li.group[data-type="category"]').first().before(self.$editelem);
-			this.selectGroup({element:self.$editelem});
-			$input.on('input', function(event) {
-				if($(this).val().length > 0) {
-					$(this).next('.checked').removeClass('disabled');
-				} else {
-					$(this).next('.checked').addClass('disabled');
-				}
-			});
-			$input.on('keyup', function(event) {
-				var keyCode = Math.max(event.keyCode, event.which);
-				if(keyCode === 13) {
-					saveChanges(self.$editelem, $(this));
-				} else if(keyCode === 27) {
-					self.$editelem.remove();
-					self.$editelem = null;
-				}
-			});
-			$input.next('.checked').on('click keydown', function(event) {
-				console.log('clicked', event);
-				if(wrongKey(event)) {
-					return;
-				}
-				saveChanges(self.$editelem, $input);
-			});
-			$input.focus();
-		} else if(utils.isUInt(id)) {
-			alert('Renaming groups is not implemented!');
-			return;
-			var $elem = this.findById(id);
-			var $text = $elem.contents().filter(function(){ return(this.nodeType == 3); });
-			var name = $text.text();
-			console.log('Group name', $text, name);
-			$text.remove();
-			var $input = $('<input type="text" class="active" value="' + name + '" /><a class="action checked disabled />');
-			$elem.prepend($input).addClass('editing');
-			$input.focus();
+	};
 
-		} else {
-			throw { name: 'WrongParameterType', message: 'GroupList.editGroup only accept integers.'};
-		}
-	};*/
+	/**
+	 * Rename a group.
+	 *
+	 * @param string from
+	 * @param string to
+	 * @param function cb
+	 */
+	GroupList.prototype.renameGroup = function(from, to, cb) {
+		$.when(this.storage.renameGroup(from, to)).then(function(response) {
+			cb({error:false});
+		})
+		.fail(function(response) {
+			console.log( "Request Failed: " + response);
+			cb({error:true});
+			$(document).trigger('status.contact.error', {
+				message: t('contacts', 'Failed renaming group: {error}', {error:response.message})
+			});
+		});
+	};
 
 	/**
 	 * Add a new group.
@@ -572,14 +584,8 @@ OC.Contacts = OC.Contacts || {};
 		//console.log('GroupList.addGroup', params);
 		var name = params.name;
 		var contacts = []; // $.map(contacts, function(c) {return parseInt(c)});
-		var self = this, exists = false;
-		self.$groupList.find('li[data-type="category"]').each(function() {
-			if ($(this).data('rawname').toLowerCase() === name.toLowerCase()) {
-				exists = true;
-				return false; //break out of loop
-			}
-		});
-		if(exists) {
+		var self = this;
+		if(this.hasGroup(name)) {
 			if(typeof cb === 'function') {
 				cb({error:true, message:t('contacts', 'A group named {group} already exists', {group: escapeHTML(name)})});
 			}
@@ -627,11 +633,10 @@ OC.Contacts = OC.Contacts || {};
 				}
 			}
 		})
-		.fail(function(jqxhr, textStatus, error) {
-			var err = textStatus + ', ' + error;
-			console.log( "Request Failed: " + err);
+		.fail(function(response) {
+			console.log( "Request Failed: " + response);
 			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed adding group: {error}', {error:err})
+				message: t('contacts', 'Failed adding group: {error}', {error:response.message})
 			});
 		});
 	};
@@ -761,9 +766,11 @@ OC.Contacts = OC.Contacts || {};
 				cb();
 			}
 		})
-		.fail(function(jqxhr, textStatus, error) {
-			var err = textStatus + ', ' + error;
-			console.log( "Request Failed: " + err);
+		.fail(function(response) {
+			console.log( "Request Failed: " + response);
+			$(document).trigger('status.contact.error', {
+				message: t('contacts', 'Failed loading groups: {error}', {error:response.message})
+			});
 		});
 	};
 

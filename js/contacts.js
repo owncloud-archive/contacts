@@ -165,6 +165,29 @@ OC.Contacts = OC.Contacts || {};
 		}*/
 	};
 
+	/**
+	 * Update group name internally. No saving as this is done by groups backend.
+	 */
+	Contact.prototype.renameGroup = function(from, to) {
+		if(!this.data.CATEGORIES.length) {
+			console.warn(this.getDisplayName(), 'had no groups!?!');
+			return;
+		}
+		var groups = this.data.CATEGORIES[0].value;
+		var self = this;
+		$.each(groups, function(idx, group) {
+			if(from.toLowerCase() === group.toLowerCase()) {
+				console.log('Updating group name for', self.getDisplayName(), group, to);
+				self.data.CATEGORIES[0].value[idx] = to;
+				return false; // break
+			}
+		});
+		$(document).trigger('status.contact.updated', {
+			property: 'CATEGORIES',
+			contact: this
+		});
+	};
+
 	Contact.prototype.pushToUndo = function(params) {
 		// Check if the same property has been changed before
 		// and update it's checksum if so.
@@ -1926,7 +1949,7 @@ OC.Contacts = OC.Contacts || {};
 		id = String(id);
 		if(typeof this.contacts[id] === 'undefined') {
 			console.warn('Could not find contact with id', id);
-			console.trace();
+			//console.trace();
 			return null;
 		}
 		return this.contacts[String(id)];

@@ -80,8 +80,9 @@ class GroupController extends BaseController {
 		$name = $this->request->post['name'];
 
 		$response = new JSONResponse();
-		if(is_null($name) || $name === "") {
+		if(is_null($name) || $name === '') {
 			$response->bailOut(App::$l10n->t('No group name given.'));
+			return $response;
 		}
 
 		$catman = new \OC_VCategories('contact', $this->api->getUserId());
@@ -89,6 +90,49 @@ class GroupController extends BaseController {
 		return $response;
 	}
 
+	/**
+	 * @IsAdminExemption
+	 * @IsSubAdminExemption
+	 * @Ajax
+	 */
+	public function renameGroup() {
+		$from = $this->request->post['from'];
+		$to = $this->request->post['to'];
+
+		$response = new JSONResponse();
+		if(is_null($from) || $from === '') {
+			$response->bailOut(App::$l10n->t('No group name to rename from given.'));
+			return $response;
+		}
+		if(is_null($to) || $to === '') {
+			$response->bailOut(App::$l10n->t('No group name to rename to given.'));
+			return $response;
+		}
+
+		$catman = new \OC_VCategories('contact', $this->api->getUserId());
+		if(!$catman->rename($from, $to)) {
+			$response->bailOut(App::$l10n->t('Error renaming group.'));
+			return $response;
+		}
+		$ids = $catman->idsForCategory($to);
+		$app = new App($this->api->getUserId());
+		$backend = $app->getBackend('local');
+		foreach($ids as $id) {
+			$contact = $backend->getContact(null, $id, true);
+			$obj = \Sabre\VObject\Reader::read(
+				$contact['carddata'],
+				\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
+			);
+			if($obj) {
+				if(!isset($obj->CATEGORIES)) {
+					continue;
+				}
+				$obj->CATEGORIES->renameGroup($from, $to);
+				$backend->updateContact(null, $id, $obj, true);
+			}
+		}
+		return $response;
+	}
 
 	/**
 	 * @IsAdminExemption

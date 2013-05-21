@@ -137,6 +137,17 @@
 	</div>
 </script>
 
+<script id="groupListItemTemplate" type="text/template">
+	<li class="group" data-type="{type}" data-id="{id}">
+		<a class="name" role="button">{name}</a>
+		<span class="utils">
+			<a class="action delete tooltipped rightwards" title="<?php p($l->t('Delete group')); ?>"></a>
+			<a class="action edit tooltipped rightwards" title="<?php p($l->t('Rename group')); ?>"></a>
+			<span class="action numcontacts">{num}</span>
+		</span>
+	</li>
+</script>
+
 <script id="mergeContactsTemplate" type="text/template">
 	<div id="dialog-merge-contacts" title="<?php p($l->t('Merge contacts')); ?>">
 		<p><?php p($l->t('Which contact should the data be merged into?')); ?></p>
@@ -171,16 +182,6 @@
 	<div class="dragContact thumbnail" data-id="{id}">
 		{name}
 	</div>
-</script>
-
-<script id="groupListItemTemplate" type="text/template">
-	<li class="group" data-type="{type}" data-id="{id}">
-		<a role="button">{name}</a>
-		<span class="utils">
-			<a class="action delete tooltipped rightwards" title="<?php p($l->t('Delete group')); ?>"></a>
-			<span class="action numcontacts">{num}</span>
-		</span>
-	</li>
 </script>
 
 <script id="contactFullTemplate" type="text/template">
