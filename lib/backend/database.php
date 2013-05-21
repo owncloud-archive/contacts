@@ -452,7 +452,7 @@ class Database extends AbstractBackend {
 		}
 
 		try {
-			$query =  'SELECT `id`, `uri`, `carddata`, `lastmodified`, `fullname` AS `displayname` FROM `'
+			$query =  'SELECT `id`, `uri`, `carddata`, `lastmodified`, `addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
 				. $this->cardsTableName . '` WHERE ' . $where_query;
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute($ids);
@@ -598,10 +598,15 @@ class Database extends AbstractBackend {
 		$data = $contact->serialize();
 
 		$updates = array($contact->FN, $data, time(), $id);
-		if(!$noCollection) {
+
+		if($noCollection) {
+			$me = $this->getContact(null, $id, true);
+			$addressbookid = $me['parent'];
+		}
+		//if(!$noCollection) {
 			$where_query .= ' AND `addressbookid` = ?';
 			$updates[] = $addressbookid;
-		}
+		//}
 
 		$query = 'UPDATE `' . $this->cardsTableName
 				. '` SET `fullname` = ?,`carddata` = ?, `lastmodified` = ? WHERE ' . $where_query;
