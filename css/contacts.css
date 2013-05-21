@@ -76,6 +76,10 @@
 	border-bottom: 1px solid silver;
 }
 
+
+#app-navigation > ul > li.group.editing {
+	height: 40px;
+}
 #app-navigation a.unshare {
 	float: right;
 }
@@ -123,8 +127,9 @@
 #grouplist li:not([data-type="shared"]):not(.editing):hover .action.numcontacts,
 #grouplist li:not([data-type="shared"]):not(.editing) .active.action.numcontacts { display: inline-block; }
 .action.numcontacts { width: 6em; }
-#grouplist li.active[data-type="category"]:not(.editing):hover .action.delete { display: inline-block; }
-#grouplist li:not(.editing) .action.delete { width: 20px; height: 20px; }
+#grouplist li.active[data-type="category"]:not(.editing):hover .action.delete { display: inline-block; width: 20px; height: 20px; }
+#grouplist li.active[data-type="category"]:not(.editing):hover .action.edit { display: inline-block; width: 20px; height: 20px; }
+/*#grouplist li:not(.editing) .action.delete { width: 20px; height: 20px; }*/
 #grouplist .group span.numcontacts { width: 30px; text-align: right; margin-right: 10px !important; }
 #grouplist li.special { height: 40px; }
 
