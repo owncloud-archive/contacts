@@ -61,15 +61,21 @@
 					&& self.$ul.find($(event.target)).length === 0) {
 					//console.log('outside', $(event.target), self.$ul.find(event.target));
 					self.close();
+					self._trigger('cancel');
 					return;
 				}
 				// Escape
 				if(event.keyCode && event.keyCode === 27 && self.options.closeOnEscape) {
 					self.close();
+					self._trigger('cancel');
 					return false;
 				}
+			});
+
+			this.element.on('keydown keyup', function(event) {
 				// Enter
 				if(event.keyCode && event.keyCode === 13) {
+					event.stopPropagation();
 					event.stopImmediatePropagation();
 					if(event.type === 'keyup') {
 						event.preventDefault();
