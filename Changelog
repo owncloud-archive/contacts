@@ -1,12 +1,32 @@
 ownCloud Contacts Changelog
 
 6.0
- - Regression: Address book rename added again.
+ - Don't fire a request for every contacts when mass adding to/removing from groups.
+ - Don't have a request for each thumbnail.
+ - Only load default contact photo once.
+ - Added virtual group "Ungrouped".
+ - Groups can now be renamed. contacts#97
+ - Smoother and more failsafe importing.
  - Rewritten backend to allow for multiple address book sources.
  - Abstraction layer for address books and contacts.
  - Partially ported to App Framework.
  - Use updated app styles.
  - Experimental contacts merge. Might eat kittens!
+ - Regression fixed: Address book rename added again.
+ - Regression fixed: Contacts can be moved between address books again; also with different backends. contacts#57
+
+5.0.7:
+ - Fix: Send correct lastModified. contacts#48 contacts#99
+ - Fix: Don't keep attaching event handler for uploaded photo. contacts#24
+ - Fix: Don't recreate default groups after user has deleted them. contacts#47
+ - Fix: Properly format and decode properties on update from 2.1. contacts#54
+ - Fix: When importing into a shared address book, groups were created for the "sharee"
+   instead of the owner. contacts#39
+ - Fix: If a shared address book was selecting while creating a contacts a new group
+   with the same name would be created. contacts#39
+ - Fix: Properties are now properly (un)escaped. contacts#42 contacts#7
+ - Fix: Add workaround for stale shares. core#2814 contacts#78
+ - Fix: Cached thumbnail wasn't removed when photo was delete. contacts#77
 
 5.0.6:
  - Improvement: If contacts display name doesn't exists check first for ORG then EMAIL.
