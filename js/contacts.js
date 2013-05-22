@@ -1071,7 +1071,7 @@ OC.Contacts = OC.Contacts || {};
 			return false;
 		});
 		
-		if(this.hasPermission(OC.PERMISSION_UPDATE)) {
+		if(this.getOwner() === OC.currentUser) {
 			this.$groupSelect = this.$fullelem.find('#contactgroups');
 			buildGroupSelect(groupprops.groups);
 		}
