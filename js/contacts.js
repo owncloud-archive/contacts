@@ -37,7 +37,30 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	Contact.prototype.getDisplayName = function() {
-		return this.getPreferredValue('FN') || this.getPreferredValue('ORG') || this.getPreferredValue('EMAIL');
+		return this.getPreferredValue('FN')
+			|| this.getPreferredValue('ORG')
+			|| this.getPreferredValue('EMAIL')
+			|| this.getPreferredValue('TEL');
+	};
+
+	Contact.prototype.setDisplayMethod = function(method) {
+		// TODO: Cache the different display method names, and remember to update on change.
+		var $elem = this.$listelem.find('.nametext');
+		switch(method) {
+			case 'fn':
+				$elem.text(escapeHTML(this.getDisplayName()||''));
+				break;
+			case 'fl':
+				var n = this.getPreferredValue('N', [this.getDisplayName(), '', '', '', '']);
+				var name = n[1] + ' ' + n[0];
+				$elem.text(escapeHTML(name.length > 1 ? name : this.getDisplayName()));
+				break;
+			case 'lf':
+				var n = this.getPreferredValue('N', [this.getDisplayName(), '', '', '', '']);
+				var name = n[0] + ', ' + n[1];
+				$elem.text(escapeHTML(name.length > 2 ? name : this.getDisplayName()));
+				break;
+		}
 	};
 
 	Contact.prototype.getId = function() {
@@ -2190,13 +2213,20 @@ OC.Contacts = OC.Contacts || {};
 		this.contacts[String(id)].setCurrent(true);
 	};
 
+	ContactList.prototype.setSortOrder = function(method) {
+		$.each(this.contacts, function(idx, contact) {
+			contact.setDisplayMethod(method);
+		});
+		this.doSort();
+	};
+
 	// Should only be neccesary with progressive loading, but it's damn fast, so... ;)
 	ContactList.prototype.doSort = function() {
 		var self = this;
 		var rows = this.$contactList.find('tr').get();
 
 		rows.sort(function(a, b) {
-			return $(a).find('td.name').text().toUpperCase().localeCompare($(b).find('td.name').text().toUpperCase());
+			return $(a).find('.nametext').text().toUpperCase().localeCompare($(b).find('td.name').text().toUpperCase());
 		});
 
 		// TODO: Test if I couldn't just append rows.
