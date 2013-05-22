@@ -158,7 +158,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 		if(!$this->hasPermission(\OCP\PERMISSION_READ)) {
 			throw new \Exception(self::$l10n->t('You do not have permissions to see this contact'), 403);
 		}
-		return isset($this->props['displayname']) ? $this->props['displayname'] : null;
+		return isset($this->props['displayname'])
+			? $this->props['displayname']
+			: (isset($this->FN) ? $this->FN : null);
 	}
 
 	/**
