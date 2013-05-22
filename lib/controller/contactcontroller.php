@@ -43,6 +43,7 @@ class ContactController extends BaseController {
 
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
+			return $response;
 		}
 
 		$data = JSONSerializer::serializeContact($contact);
@@ -71,13 +72,16 @@ class ContactController extends BaseController {
 
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
+			return $response;
 		}
 
 		if(!$contact->mergeFromArray($request->params)) {
 			$response->bailOut(App::$l10n->t('Error merging into contact.'));
+			return $response;
 		}
 		if(!$contact->save()) {
 			$response->bailOut(App::$l10n->t('Error saving contact to backend.'));
+			return $response;
 		}
 		$data = JSONSerializer::serializeContact($contact);
 
@@ -154,24 +158,29 @@ class ContactController extends BaseController {
 
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
+			return $response;
 		}
 		if(!$name) {
 			$response->bailOut(App::$l10n->t('Property name is not set.'));
+			return $response;
 		}
 		if(!$checksum && in_array($name, Properties::$multi_properties)) {
 			$response->bailOut(App::$l10n->t('Property checksum is not set.'));
+			return $response;
 		}
 		if(!is_null($checksum)) {
 			try {
 				$contact->unsetPropertyByChecksum($checksum);
 			} catch(Exception $e) {
 				$response->bailOut(App::$l10n->t('Information about vCard is incorrect. Please reload the page.'));
+				return $response;
 			}
 		} else {
 			unset($contact->{$name});
 		}
 		if(!$contact->save()) {
 			$response->bailOut(App::$l10n->t('Error saving contact to backend.'));
+			return $response;
 		}
 
 		$response->setParams(array(
@@ -212,12 +221,15 @@ class ContactController extends BaseController {
 
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
+			return $response;
 		}
 		if(!$name) {
 			$response->bailOut(App::$l10n->t('Property name is not set.'));
+			return $response;
 		}
 		if(!$checksum && in_array($name, Properties::$multi_properties)) {
 			$response->bailOut(App::$l10n->t('Property checksum is not set.'));
+			return $response;
 		}
 		if(is_array($value)) {
 			// NOTE: Important, otherwise the compound value will be
@@ -227,12 +239,14 @@ class ContactController extends BaseController {
 		$result = array('contactid' => $params['contactid']);
 		if(!$checksum && in_array($name, Properties::$multi_properties)) {
 			$response->bailOut(App::$l10n->t('Property checksum is not set.'));
+			return $response;
 		} elseif($checksum && in_array($name, Properties::$multi_properties)) {
 			try {
 				$checksum = $contact->setPropertyByChecksum($checksum, $name, $value, $parameters);
 				$result['checksum'] = $checksum;
 			} catch(Exception $e)	{
 				$response->bailOut(App::$l10n->t('Information about vCard is incorrect. Please reload the page.'));
+				return $response;
 			}
 		} elseif(!in_array($name, Properties::$multi_properties)) {
 			if(!$contact->setPropertyByName($name, $value, $parameters)) {
@@ -241,6 +255,7 @@ class ContactController extends BaseController {
 		}
 		if(!$contact->save()) {
 			$response->bailOut(App::$l10n->t('Error saving property to backend'));
+			return $response;
 		}
 		$result['lastmodified'] = $contact->lastModified();
 

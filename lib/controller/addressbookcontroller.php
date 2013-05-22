@@ -112,6 +112,7 @@ class AddressBookController extends BaseController {
 		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
 		if(!$addressBook->update($this->request['properties'])) {
 			$response->bailOut(App::$l10n->t('Error updating address book'));
+			return $response;
 		}
 		$response->setParams($addressBook->getMetaData());
 		return $response;
@@ -135,6 +136,7 @@ class AddressBookController extends BaseController {
 		}
 		if(!$backend->deleteAddressBook($params['addressbookid'])) {
 			$response->bailOut(App::$l10n->t('Error deleting address book'));
+			return $response;
 		}
 		return $response;
 	}
@@ -154,6 +156,7 @@ class AddressBookController extends BaseController {
 		$id = $addressBook->addChild();
 		if($id === false) {
 			$response->bailOut(App::$l10n->t('Error creating contact.'));
+			return $response;
 		}
 		$contact = $addressBook->getChild($id);
 		$response->setStatus('201');
@@ -210,11 +213,13 @@ class AddressBookController extends BaseController {
 		$contact = $fromAddressBook->getChild($params['contactid']);
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Error retrieving contact.'));
+			return $response;
 		}
 		$contactid = $targetAddressBook->addChild($contact);
 		$contact = $targetAddressBook->getChild($contactid);
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Error saving contact.'));
+			return $response;
 		}
 		if(!$fromAddressBook->deleteChild($params['contactid'])) {
 			// Don't bail out because we have to return the contact

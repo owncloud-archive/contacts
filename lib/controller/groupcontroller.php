@@ -149,14 +149,17 @@ class GroupController extends BaseController {
 
 		if(is_null($categoryid) || $categoryid === '') {
 			$response->bailOut(App::$l10n->t('Group ID missing from request.'));
+			return $response;
 		}
 
 		if(is_null($categoryid) || $categoryid === '') {
 			$response->bailOut(App::$l10n->t('Group name missing from request.'));
+			return $response;
 		}
 
 		if(is_null($ids)) {
 			$response->bailOut(App::$l10n->t('Contact ID missing from request.'));
+			return $response;
 		}
 
 		$app = new App($this->api->getUserId());
@@ -197,10 +200,12 @@ class GroupController extends BaseController {
 
 		if(is_null($categoryid) || $categoryid === '') {
 			$response->bailOut(App::$l10n->t('Group ID missing from request.'));
+			return $response;
 		}
 
 		if(is_null($ids)) {
 			$response->bailOut(App::$l10n->t('Contact ID missing from request.'));
+			return $response;
 		}
 
 		$app = new App($this->api->getUserId());
