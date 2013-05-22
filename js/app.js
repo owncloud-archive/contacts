@@ -447,8 +447,6 @@ OC.Contacts = OC.Contacts || {
 			console.log('contact', data, 'request.contact.move');
 			var from = self.addressBooks.find(data.from);
 			var to = self.addressBooks.find(data.target);
-			console.log('From:', from);
-			console.log('To:', to);
 			self.addressBooks.moveContact(data.contact, data.from, data.target);
 		});
 
@@ -478,6 +476,12 @@ OC.Contacts = OC.Contacts || {
 			var id = String(data.id);
 			console.log('contact', data.id, 'request.contact.close');
 			self.closeContact(id);
+		});
+
+		$(document).bind('request.contact.open', function(e, data) {
+			var id = String(data.id);
+			console.log('contact', data.id, 'request.contact.open');
+			self.openContact(id);
 		});
 
 		$(document).bind('request.contact.delete', function(e, data) {

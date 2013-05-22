@@ -203,8 +203,8 @@ class AddressBookController extends BaseController {
 
 		$response = new JSONResponse();
 
-		// TODO: Check if the backend supports move (is 'local') and use that operation instead.
-		// If so, set status 204 and don't return the serializes contact.
+		// TODO: Check if the backend supports move (is 'local' or 'shared') and use that operation instead.
+		// If so, set status 204 and don't return the serialized contact.
 		$fromAddressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
 		$targetAddressBook = $app->getAddressBook($targetInfo['backend'], $targetInfo['id']);
 		$contact = $fromAddressBook->getChild($params['contactid']);
@@ -216,8 +216,7 @@ class AddressBookController extends BaseController {
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Error saving contact.'));
 		}
-		$result = $fromAddressBook->deleteChild($params['contactid']);
-		if($result === false) {
+		if(!$fromAddressBook->deleteChild($params['contactid'])) {
 			// Don't bail out because we have to return the contact
 			$response->debug(App::$l10n->t('Error removing contact from other address book.'));
 		}

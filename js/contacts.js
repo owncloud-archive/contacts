@@ -77,6 +77,16 @@ OC.Contacts = OC.Contacts || {};
 		this.metadata.backend = backend;
 	};
 
+	Contact.prototype.reload = function(data) {
+		console.log('Contact.reload', data);
+		this.id = data.metadata.id;
+		this.metadata = data.metadata;
+		this.data = data.data;
+		/*if(this.$fullelem) {
+			this.$fullelem.replaceWith(this.renderContact(this.groupprops));
+		}*/
+	};
+
 	Contact.prototype.merge = function(mergees) {
 		console.log('Contact.merge, mergees', mergees);
 		if(!mergees instanceof Array && !mergees instanceof Contact) {
@@ -630,6 +640,7 @@ OC.Contacts = OC.Contacts || {};
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
 			this.$fullelem.remove();
+			this.$fullelem = null;
 			return true;
 		} else {
 			return false;
@@ -1010,7 +1021,7 @@ OC.Contacts = OC.Contacts || {};
 				noneSelectedText: self.$addressBookSelect.attr('title'),
 				selectedText: t('contacts', '# groups')
 			});
-			self.$addressBookSelect.on("multiselectclick", function(event, ui) {
+			self.$addressBookSelect.on('multiselectclick', function(event, ui) {
 				console.log('AddressBook select', ui);
 				self.$addressBookSelect.val(ui.value);
 				var opt = self.$addressBookSelect.find(':selected');
@@ -1750,6 +1761,14 @@ OC.Contacts = OC.Contacts || {};
 			self.insertContact(data.contact.renderListItem(true));
 		});
 		$(document).bind('status.contact.moved', function(e, data) {
+			var contact = data.contact;
+			var oldid = contact.getId();
+			contact.close();
+			contact.reload(data.data);
+			self.contacts[contact.getId()] = contact;
+			$(document).trigger('request.contact.open', {
+				id: contact.getId()
+			});
 			console.log('status.contact.moved', data);
 		});
 		$(document).bind('request.contact.close', function(e, data) {
