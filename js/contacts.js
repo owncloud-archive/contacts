@@ -24,6 +24,8 @@ OC.Contacts = OC.Contacts || {};
 			this.$listTemplate = listtemplate,
 			this.$fullTemplate = fulltemplate;
 			this.detailTemplates = detailtemplates;
+			this.displayNames = {};
+			this.sortOrder = contacts_sortby || 'fn';
 		this.undoQueue = [];
 		this.multi_properties = ['EMAIL', 'TEL', 'IMPP', 'ADR', 'URL'];
 	};
@@ -37,30 +39,16 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	Contact.prototype.getDisplayName = function() {
-		return this.getPreferredValue('FN')
-			|| this.getPreferredValue('ORG')
-			|| this.getPreferredValue('EMAIL')
-			|| this.getPreferredValue('TEL');
+		return this.displayNames[this.sortOrder];
 	};
 
 	Contact.prototype.setDisplayMethod = function(method) {
-		// TODO: Cache the different display method names, and remember to update on change.
-		var $elem = this.$listelem.find('.nametext');
-		switch(method) {
-			case 'fn':
-				$elem.text(escapeHTML(this.getDisplayName()||''));
-				break;
-			case 'fl':
-				var n = this.getPreferredValue('N', [this.getDisplayName(), '', '', '', '']);
-				var name = n[1] + ' ' + n[0];
-				$elem.text(escapeHTML(name.length > 1 ? name : this.getDisplayName()));
-				break;
-			case 'lf':
-				var n = this.getPreferredValue('N', [this.getDisplayName(), '', '', '', '']);
-				var name = n[0] + ', ' + n[1];
-				$elem.text(escapeHTML(name.length > 2 ? name : this.getDisplayName()));
-				break;
+		if(this.sortOrder === method) {
+			return;
 		}
+		this.sortOrder = method;
+		var $elem = this.$listelem.find('.nametext');
+		$elem.text(escapeHTML(this.displayNames[method]));
 	};
 
 	Contact.prototype.getId = function() {
@@ -943,6 +931,17 @@ OC.Contacts = OC.Contacts || {};
 	 * @return A jquery object to be inserted in the DOM
 	 */
 	Contact.prototype.renderListItem = function(isnew) {
+		this.displayNames.fn = this.getPreferredValue('FN')
+			|| this.getPreferredValue('ORG')
+			|| this.getPreferredValue('EMAIL')
+			|| this.getPreferredValue('TEL');
+
+		this.displayNames.fl = this.getPreferredValue('N', [this.displayNames.fn])
+			.slice(0, 2).reverse().join(' ');
+
+		this.displayNames.lf = this.getPreferredValue('N', [this.displayNames.fn])
+			.slice(0, 2).join(', ');
+
 		this.$listelem = this.$listTemplate.octemplate({
 			id: this.id,
 			parent: this.metadata.parent,
@@ -1640,6 +1639,9 @@ OC.Contacts = OC.Contacts || {};
 				}
 			});
 		}
+		if(name === 'N' && pref.join('').trim() === '') {
+			return def;
+		}
 		return pref;
 	};
 
@@ -1818,7 +1820,7 @@ OC.Contacts = OC.Contacts || {};
 			self.purgeFromAddressbook(addressBook);
 			$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId()))
 				.then(function() {
-					self.doSort();
+					self.setSortOrder();
 					$(document).trigger('request.groups.reload');
 				});
 		});
@@ -1872,6 +1874,7 @@ OC.Contacts = OC.Contacts || {};
 				this.contacts[contact].getListItemElement().hide();
 			}
 		}
+		this.setSortOrder();
 	};
 
 	/**
@@ -1889,6 +1892,7 @@ OC.Contacts = OC.Contacts || {};
 				this.contacts[contact].getListItemElement().hide();
 			}
 		}
+		this.setSortOrder();
 	};
 
 	/**
@@ -1906,6 +1910,7 @@ OC.Contacts = OC.Contacts || {};
 				}
 			}
 		}
+		this.setSortOrder();
 	};
 
 	/**
@@ -1932,6 +1937,7 @@ OC.Contacts = OC.Contacts || {};
 					console.warn('Failed getting id from', $elem, e);
 				}
 			});
+			this.setSortOrder();
 			return;
 		}
 		for(var id in this.contacts) {
@@ -1946,6 +1952,7 @@ OC.Contacts = OC.Contacts || {};
 				contact.setThumbnail();
 			}
 		}
+		this.setSortOrder();
 	};
 
 	ContactList.prototype.contactPos = function(id) {
@@ -2213,24 +2220,35 @@ OC.Contacts = OC.Contacts || {};
 		this.contacts[String(id)].setCurrent(true);
 	};
 
-	ContactList.prototype.setSortOrder = function(method) {
-		$.each(this.contacts, function(idx, contact) {
-			contact.setDisplayMethod(method);
+	ContactList.prototype.setSortOrder = function(order) {
+		order = order || contacts_sortby;
+		console.time('set name');
+		var rows = this.$contactList.find('tr:visible.contact');
+		var self = this;
+		$.each(rows, function(idx, row) {
+			self.contacts[$(row).data('id')].setDisplayMethod(order);
 		});
-		this.doSort();
+		console.timeEnd('set name');
+		if(rows.length > 1) {
+			console.time('sort');
+			this.doSort(rows.get());
+			console.timeEnd('sort');
+		}
 	};
 
 	// Should only be neccesary with progressive loading, but it's damn fast, so... ;)
-	ContactList.prototype.doSort = function() {
+	ContactList.prototype.doSort = function(rows) {
 		var self = this;
-		var rows = this.$contactList.find('tr').get();
+		//var rows = this.$contactList.find('tr:visible.contact').get();
 
 		rows.sort(function(a, b) {
 			return $(a).find('.nametext').text().toUpperCase().localeCompare($(b).find('td.name').text().toUpperCase());
 		});
 
-		// TODO: Test if I couldn't just append rows.
-		var items = [];
+		// NOTE: This is slightly faster than using batches in Chrome, but I'm not sure how IE etc. deals with it.
+		self.$contactList.prepend(rows);
+
+		/*var items = [];
 		$.each(rows, function(index, row) {
 			items.push(row);
 			if(items.length === 100) {
@@ -2240,7 +2258,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 		if(items.length > 0) {
 			self.$contactList.append(items);
-		}
+		}*/
 	};
 
 	/**

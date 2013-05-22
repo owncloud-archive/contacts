@@ -43,12 +43,17 @@
 	<div id="app-content" class="loading">
 		<div id="contactsHeader">
 			<input type="checkbox" class="toggle" title="<?php p($l->t('(De-)select all')); ?>" />
+			<select class="action sort permanent" name="sort" title="<?php p($l->t('Sort order')); ?>">
+				<option value="fn"><?php p($l->t('Display name')); ?></option>
+				<option value="fl"><?php p($l->t('First- Lastname')); ?></option>
+				<option value="lf"><?php p($l->t('Last-, Firstname')); ?></option>
+			</select>
 			<span class="actions">
 				<select class="groups svg action text permanent" name="groups">
 					<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
 				</select>
 				<!--a class="favorite action svg inactive control permanent" title="<?php p($l->t('Favorite')); ?>"></a -->
-				<a class="merge"><?php p($l->t('Merge selected')); ?></a>
+				<a class="action merge"><?php p($l->t('Merge selected')); ?></a>
 				<a class="download svg action text permanent"><?php p($l->t('Download')); ?></a>
 				<a class="delete action permanent" title="<?php p($l->t('Delete')); ?>"></a>
 			</span>

@@ -28,6 +28,7 @@ $user = OCP\User::getUser();
 
 echo 'var contacts_groups_sortorder=[' . OCP\Config::getUserValue($user, 'contacts', 'groupsort', '') . '],';
 echo 'contacts_lastgroup=\'' . OCP\Config::getUserValue($user, 'contacts', 'lastgroup', 'all') . '\',';
+echo 'contacts_sortby=\'' . OCP\Config::getUserValue($user, 'contacts', 'sortby', 'fn') . '\',';
 echo 'contacts_properties_indexed = '
 	. (OCP\Config::getUserValue($user, 'contacts', 'contacts_properties_indexed', 'no') === 'no'
 	? 'false' : 'true') . ',';

@@ -186,7 +186,7 @@ OC.Contacts = OC.Contacts || {
 			});
 			// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
 			$.when.apply(null, deferreds.get()).then(function(response) {
-				self.contacts.doSort();
+				self.contacts.setSortOrder(contacts_sortby);
 				$(document).trigger('status.contacts.loaded', {
 					status: true,
 					numcontacts: self.contacts.length
@@ -284,6 +284,8 @@ OC.Contacts = OC.Contacts || {
 		this.$groupList = $('#grouplist');
 		this.$contactList = $('#contactlist');
 		this.$contactListHeader = $('#contactsHeader');
+		this.$sortOrder = this.$contactListHeader.find('.action.sort');
+		this.$sortOrder.val(contacts_sortby||'fn');
 		this.$headeractions = this.$contactListHeader.find('.actions');
 		this.$toggleAll = this.$contactListHeader.find('.toggle');
 		this.$groups = this.$headeractions.find('.groups');
@@ -733,6 +735,14 @@ OC.Contacts = OC.Contacts || {
 			} else {
 				self.showActions(['add', 'download', 'groups', 'delete', 'favorite', 'merge']);
 			}
+		});
+
+		this.$sortOrder.on('change', function() {
+			$(this).blur().addClass('loading');
+			contacts_sortby = $(this).val();
+			self.contacts.setSortOrder();
+			$(this).removeClass('loading');
+			self.storage.setPreference('sortby', contacts_sortby);
 		});
 
 		// Add to/remove from group multiple contacts.
