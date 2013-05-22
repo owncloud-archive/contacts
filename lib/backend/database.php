@@ -682,6 +682,7 @@ class Database extends AbstractBackend {
 				. $id, \OCP\Util::DEBUG);
 			return false;
 		}
+		$this->touchAddressBook($addressbookid);
 		return true;
 	}
 
