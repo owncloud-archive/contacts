@@ -392,7 +392,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			}
 			$idx += 1;
 		}
-		throw new Exception(self::$l10n->t('Property not found'), 404);
+		throw new \Exception(self::$l10n->t('Property not found'), 404);
 	}
 
 	/**
