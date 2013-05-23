@@ -1,7 +1,12 @@
 <?php
 
 $installedVersion=OCP\Config::getAppValue('contacts', 'installed_version');
-if (version_compare($installedVersion, '0.2.3', '<')) {
+if (version_compare($installedVersion, '0.2.5', '>=')) {
+	// Set all address books active as (de)activating went awol at rewrite.
+	$stmt = OCP\DB::prepare( 'UPDATE `*PREFIX*contacts_addressbooks` SET `active`= 1' );
+	$result = $stmt->execute(array());
+}
+elseif (version_compare($installedVersion, '0.2.4', '==')) {
 	// First set all address books in-active.
 	$stmt = OCP\DB::prepare( 'UPDATE `*PREFIX*contacts_addressbooks` SET `active`=0' );
 	$result = $stmt->execute(array());
