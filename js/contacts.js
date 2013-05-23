@@ -47,8 +47,10 @@ OC.Contacts = OC.Contacts || {};
 			return;
 		}
 		this.sortOrder = method;
-		var $elem = this.$listelem.find('.nametext');
-		$elem.text(escapeHTML(this.displayNames[method]));
+		// ~30% faster than jQuery.
+		this.$listelem.get(0).firstElementChild.getElementsByClassName('nametext')[0].innerHTML = escapeHTML(this.displayNames[method]);
+		//var $elem = this.$listelem.find('.nametext').text(escapeHTML(this.displayNames[method]));
+		//$elem.text(escapeHTML(this.displayNames[method]));
 	};
 
 	Contact.prototype.getId = function() {
