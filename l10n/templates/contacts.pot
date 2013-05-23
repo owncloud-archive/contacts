@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-05-23 00:48+0200\n"
+"POT-Creation-Date: 2013-05-24 00:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -290,29 +290,29 @@ msgstr ""
 msgid "Error loading profile picture."
 msgstr ""
 
-#: js/contacts.js:380
+#: js/contacts.js:382
 msgid "Failed deleting property: {error}"
 msgstr ""
 
-#: js/contacts.js:571
+#: js/contacts.js:573
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:1002 js/contacts.js:1044
+#: js/contacts.js:1004 js/contacts.js:1046
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2045
+#: js/contacts.js:2047
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2056
+#: js/contacts.js:2058
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2071
+#: js/contacts.js:2073
 msgid "Cancelled deletion of {num}"
 msgstr ""
 
