@@ -2242,23 +2242,13 @@ OC.Contacts = OC.Contacts || {};
 		//var rows = this.$contactList.find('tr:visible.contact').get();
 
 		rows.sort(function(a, b) {
-			return $(a).find('.nametext').text().toUpperCase().localeCompare($(b).find('td.name').text().toUpperCase());
+			// 10 (TEN!) times faster than using jQuery!
+			return a.firstElementChild.textContent.trim().toUpperCase().localeCompare(b.firstElementChild.textContent.trim().toUpperCase());
+			//return $(a).find('.nametext').text().toUpperCase().localeCompare($(b).find('td.name').text().toUpperCase());
 		});
 
-		// NOTE: This is slightly faster than using batches in Chrome, but I'm not sure how IE etc. deals with it.
 		self.$contactList.prepend(rows);
 
-		/*var items = [];
-		$.each(rows, function(index, row) {
-			items.push(row);
-			if(items.length === 100) {
-				self.$contactList.append(items);
-				items = [];
-			}
-		});
-		if(items.length > 0) {
-			self.$contactList.append(items);
-		}*/
 	};
 
 	/**
