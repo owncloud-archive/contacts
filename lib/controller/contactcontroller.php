@@ -35,11 +35,8 @@ class ContactController extends BaseController {
 		$request = $this->request;
 		$response = new JSONResponse();
 
-		$contact = $app->getContact(
-			$request->parameters['backend'],
-			$request->parameters['addressbookid'],
-			$request->parameters['contactid']
-		);
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$contact = $addressBook->getChild($params['contactid']);
 
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
@@ -62,13 +59,11 @@ class ContactController extends BaseController {
 		$app = new App($this->api->getUserId());
 
 		$request = $this->request;
+		$params = $this->request->urlParams;
 		$response = new JSONResponse();
 
-		$contact = $app->getContact(
-			$request->parameters['backend'],
-			$request->parameters['addressbookid'],
-			$request->parameters['contactid']
-		);
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$contact = $addressBook->getChild($params['contactid']);
 
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
@@ -101,7 +96,16 @@ class ContactController extends BaseController {
 		$app = new App($this->api->getUserId());
 		$etag = null;
 		$max_size = 170;
-		$contact = $app->getContact($params['backend'], $params['addressbookid'], $params['contactid']);
+
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$contact = $addressBook->getChild($params['contactid']);
+
+		if(!$contact) {
+			$response = new JSONResponse();
+			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
+			return $response;
+		}
+
 		$image = new \OC_Image();
 		if (isset($contact->PHOTO) && $image->loadFromBase64((string)$contact->PHOTO)) {
 			// OK
