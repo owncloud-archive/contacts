@@ -188,7 +188,6 @@ OC.Contacts = OC.Contacts || {
 			$.when.apply(null, deferreds.get()).then(function(response) {
 				self.contacts.setSortOrder(contacts_sortby);
 				$(document).trigger('status.contacts.loaded', {
-					status: true,
 					numcontacts: self.contacts.length
 				});
 				self.loading(self.$rightContent, false);
@@ -398,6 +397,9 @@ OC.Contacts = OC.Contacts || {
 					message: response.message
 				});
 				console.log('Error loading contacts!');
+			} else if(response.numcontacts === 0) {
+				self.$contactList.hide();
+				self.$firstRun.show();
 			}
 		});
 
