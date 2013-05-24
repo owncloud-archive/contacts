@@ -68,7 +68,19 @@ class Hooks{
 	public static function addressBookDeletion($parameters) {
 	}
 
+	/**
+	 * A contact has been deleted and cleanup for property indexes and
+	 * group/contact relations must be performed.
+	 *
+	 * NOTE: When deleting an entire address book the cleanup is done directly
+	 * in the backend for effeciency. If any other cleanup procedures are added
+	 * to this hook, the equivalent must also be done in the backend(s) (Database).
+	 * (Or better, implement addressBookDeletion)
+	 *
+	 * @param array $parameters Currently only the id of the contact.
+	 */
 	public static function contactDeletion($parameters) {
+		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
 		$catctrl = new \OC_VCategories('contact');
 		$catctrl->purgeObjects(array($parameters['id']));
 		Utils\Properties::updateIndex($parameters['id']);
@@ -79,12 +91,15 @@ class Hooks{
 
 	public static function contactUpdated($parameters) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
-		$catctrl = new \OC_VCategories('contact');
-		$catctrl->loadFromVObject(
-			$parameters['id'],
-			new \OC_VObject($parameters['contact']), // OC_VCategories still uses OC_VObject
-			true // force save
-		);
+		$contact = $parameters['contact'];
+		if(isset($contact->CATEGORIES)) {
+			\OCP\Util::writeLog('contacts', __METHOD__.' groups: '.print_r($contact->CATEGORIES->getParts(), true), \OCP\Util::DEBUG);
+			$catctrl = new \OC_VCategories('contact');
+			foreach($contact->CATEGORIES->getParts() as $group) {
+				\OCP\Util::writeLog('contacts', __METHOD__.' group: '.$group, \OCP\Util::DEBUG);
+				$catctrl->addToCategory($parameters['id'], $group);
+			}
+		}
 		Utils\Properties::updateIndex($parameters['id'], $parameters['contact']);
 	}
 

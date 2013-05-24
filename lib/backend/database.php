@@ -240,6 +240,9 @@ class Database extends AbstractBackend {
 	/**
 	 * Deletes an entire addressbook and all its contents
 	 *
+	 * NOTE: For efficience this method bypasses the cleanup hooks and deletes
+	 * property indexes and category/group relations by itself.
+	 *
 	 * @param string $addressbookid
 	 * @return bool
 	 */
@@ -292,7 +295,7 @@ class Database extends AbstractBackend {
 
 		}
 
-
+		// Delete contacts in address book.
 		if(!isset(self::$preparedQueries['deleteaddressbookcontacts'])) {
 			self::$preparedQueries['deleteaddressbookcontacts'] =
 				\OCP\DB::prepare('DELETE FROM `' . $this->cardsTableName
@@ -307,6 +310,7 @@ class Database extends AbstractBackend {
 			return false;
 		}
 
+		// Delete the address book.
 		if(!isset(self::$preparedQueries['deleteaddressbook'])) {
 			self::$preparedQueries['deleteaddressbook'] =
 				\OCP\DB::prepare('DELETE FROM `'
