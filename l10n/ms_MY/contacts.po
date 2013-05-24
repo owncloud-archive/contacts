@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-24 00:53+0200\n"
-"PO-Revision-Date: 2013-05-23 22:53+0000\n"
+"POT-Creation-Date: 2013-05-25 01:01+0200\n"
+"PO-Revision-Date: 2013-05-24 23:01+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Malay (Malaysia) (http://www.transifex.com/projects/p/owncloud/language/ms_MY/)\n"
 "MIME-Version: 1.0\n"
@@ -58,7 +58,7 @@ msgstr ""
 msgid "Error getting PHOTO property."
 msgstr ""
 
-#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:221
+#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:249
 msgid "Error saving contact."
 msgstr ""
 
@@ -155,169 +155,160 @@ msgstr ""
 msgid "Contacts"
 msgstr ""
 
-#: export.php:68
-#, php-format
-msgid "%d_selected_contacts"
-msgstr ""
-
-#: js/addressbooks.js:60 js/groups.js:508 templates/settings.php:61
+#: js/addressbooks.js:68 js/groups.js:508 templates/settings.php:61
 msgid "Save"
 msgstr ""
 
-#: js/addressbooks.js:229
+#: js/addressbooks.js:242
 msgid "Uploading..."
 msgstr ""
 
-#: js/addressbooks.js:284
+#: js/addressbooks.js:297
 msgid "Imported {count} of {total} contacts"
 msgstr ""
 
-#: js/addressbooks.js:301
+#: js/addressbooks.js:320
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr ""
 
-#: js/addressbooks.js:447
+#: js/addressbooks.js:472
 msgid "An address book called {name} already exists"
 msgstr ""
 
-#: js/addressbooks.js:475
+#: js/addressbooks.js:500
 msgid "Failed adding address book: {error}"
 msgstr ""
 
-#: js/addressbooks.js:513
+#: js/addressbooks.js:538
 msgid "Failed loading address books: {error}"
 msgstr ""
 
-#: js/app.js:211
+#: js/app.js:210
 msgid "Indexing contacts"
 msgstr ""
 
-#: js/app.js:221
+#: js/app.js:220
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr ""
 
-#: js/app.js:222
+#: js/app.js:221
 msgid "Error."
 msgstr ""
 
-#: js/app.js:315 js/app.js:329
+#: js/app.js:314 js/app.js:328
 msgid "Add to..."
 msgstr ""
 
-#: js/app.js:319 js/app.js:331
+#: js/app.js:318 js/app.js:330
 msgid "Remove from..."
 msgstr ""
 
-#: js/app.js:336
+#: js/app.js:335
 msgid "Add group..."
 msgstr ""
 
-#: js/app.js:504
-msgid "Merge failed. Cannot find contact: {id}"
+#: js/app.js:458
+msgid "Invalid URL: \"{url}\""
 msgstr ""
 
-#: js/app.js:517
-msgid "Merge failed."
-msgstr ""
-
-#: js/app.js:524
-msgid "Merge failed. Error saving contact."
-msgstr ""
-
-#: js/app.js:543
-msgid "Select photo"
-msgstr ""
-
-#: js/app.js:612 js/app.js:1481
-msgid "Network or server error. Please inform administrator."
-msgstr ""
-
-#: js/app.js:619
-msgid "Failed saving sort order: {error}"
-msgstr ""
-
-#: js/app.js:654
-msgid "Failed saving last group: {error}"
-msgstr ""
-
-#: js/app.js:832
-msgid "Error adding to group."
-msgstr ""
-
-#: js/app.js:861
-msgid "Error removing from group."
-msgstr ""
-
-#: js/app.js:889
+#: js/app.js:469
 msgid "There was an error opening a mail composer."
 msgstr ""
 
-#: js/app.js:1008
+#: js/app.js:474
+msgid "Invalid email: \"{url}\""
+msgstr ""
+
+#: js/app.js:552
+msgid "Merge failed. Cannot find contact: {id}"
+msgstr ""
+
+#: js/app.js:565
+msgid "Merge failed."
+msgstr ""
+
+#: js/app.js:572
+msgid "Merge failed. Error saving contact."
+msgstr ""
+
+#: js/app.js:591
+msgid "Select photo"
+msgstr ""
+
+#: js/app.js:660 js/app.js:1527
+msgid "Network or server error. Please inform administrator."
+msgstr ""
+
+#: js/app.js:880
+msgid "Error adding to group."
+msgstr ""
+
+#: js/app.js:909
+msgid "Error removing from group."
+msgstr ""
+
+#: js/app.js:1054
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1147 js/app.js:1151 templates/contacts.php:157
+#: js/app.js:1193 js/app.js:1197 templates/contacts.php:157
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1173 js/app.js:1227 js/settings.js:120 templates/contacts.php:296
+#: js/app.js:1219 js/app.js:1273 js/settings.js:120 templates/contacts.php:296
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr ""
 
-#: js/app.js:1201 templates/contacts.php:138
+#: js/app.js:1247 templates/contacts.php:138
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1205
+#: js/app.js:1251
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1305
+#: js/app.js:1351
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1347
+#: js/app.js:1393
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1357
+#: js/app.js:1403
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1445
+#: js/app.js:1491
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1463
+#: js/app.js:1509
 msgid "Error loading profile picture."
 msgstr ""
 
-#: js/contacts.js:382
-msgid "Failed deleting property: {error}"
-msgstr ""
-
-#: js/contacts.js:573
+#: js/contacts.js:583
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:1004 js/contacts.js:1046
+#: js/contacts.js:1014 js/contacts.js:1056
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2047
+#: js/contacts.js:2065
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2058
+#: js/contacts.js:2076
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2073
+#: js/contacts.js:2091
 msgid "Cancelled deletion of {num}"
 msgstr ""
 
@@ -435,7 +426,7 @@ msgstr ""
 msgid "Less..."
 msgstr ""
 
-#: js/storage.js:248
+#: js/storage.js:258
 msgid "Failed loading photo: {error}"
 msgstr ""
 
@@ -511,71 +502,73 @@ msgstr ""
 msgid "Unknown IM: "
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:92
+#: lib/controller/addressbookcontroller.php:120
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:114
+#: lib/controller/addressbookcontroller.php:142
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:138
+#: lib/controller/addressbookcontroller.php:166
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:186
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:192
+#: lib/controller/addressbookcontroller.php:220
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:215
+#: lib/controller/addressbookcontroller.php:243
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:226
+#: lib/controller/addressbookcontroller.php:254
 msgid "Error removing contact from other address book."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:45
-#: lib/controller/contactcontroller.php:74
-#: lib/controller/contactcontroller.php:160
-#: lib/controller/contactcontroller.php:223
+#: lib/controller/contactcontroller.php:42
+#: lib/controller/contactcontroller.php:68
+#: lib/controller/contactcontroller.php:92
+#: lib/controller/contactcontroller.php:128
+#: lib/controller/contactcontroller.php:187
+#: lib/controller/contactcontroller.php:250
 msgid "Couldn't find contact."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:79
+#: lib/controller/contactcontroller.php:97
 msgid "Error merging into contact."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:83
-#: lib/controller/contactcontroller.php:182
+#: lib/controller/contactcontroller.php:101
+#: lib/controller/contactcontroller.php:209
 msgid "Error saving contact to backend."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:164
-#: lib/controller/contactcontroller.php:227
+#: lib/controller/contactcontroller.php:191
+#: lib/controller/contactcontroller.php:254
 msgid "Property name is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:168
-#: lib/controller/contactcontroller.php:231
-#: lib/controller/contactcontroller.php:241
+#: lib/controller/contactcontroller.php:195
+#: lib/controller/contactcontroller.php:258
+#: lib/controller/contactcontroller.php:268
 msgid "Property checksum is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:175
-#: lib/controller/contactcontroller.php:248
+#: lib/controller/contactcontroller.php:202
+#: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:253
+#: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
 msgstr ""
 
-#: lib/controller/contactcontroller.php:257
+#: lib/controller/contactcontroller.php:284
 msgid "Error saving property to backend"
 msgstr ""
 
