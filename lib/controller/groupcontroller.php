@@ -213,6 +213,10 @@ class GroupController extends BaseController {
 		$catman = new \OC_VCategories('contact', $this->api->getUserId());
 		foreach($ids as $contactid) {
 			$contact = $backend->getContact(null, $contactid, true);
+			if(!$contact) {
+				$response->debug('Couldn\'t get contact: ' . $contactid);
+				continue;
+			}
 			$obj = \Sabre\VObject\Reader::read(
 				$contact['carddata'],
 				\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
