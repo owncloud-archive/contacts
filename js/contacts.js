@@ -375,11 +375,10 @@ OC.Contacts = OC.Contacts || {};
 				return false;
 			}
 		})
-		.fail(function(jqxhr, textStatus, error) {
-			var err = textStatus + ', ' + error;
-			console.warn( "Request Failed: " + err);
+		.fail(function(response) {
+			console.log(response.message);
 			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed deleting property: {error}', {error:err})
+				message: response.message
 			});
 		});
 ;

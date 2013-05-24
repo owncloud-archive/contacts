@@ -614,12 +614,12 @@ OC.Contacts = OC.Contacts || {
 					OC.notify({message: response ? response.message : t('contacts', 'Network or server error. Please inform administrator.')});
 				}
 			})
-			.fail(function(jqxhr, textStatus, error) {
-				var err = textStatus + ', ' + error;
-				console.log( "Request Failed: " + err);
+			.fail(function(response) {
+				console.log(response.message);
 				$(document).trigger('status.contact.error', {
-					message: t('contacts', 'Failed saving sort order: {error}', {error:err})
+					message: response.message
 				});
+				done = true;
 			});
 		});
 		// Group selected, only show contacts from that group
@@ -649,12 +649,12 @@ OC.Contacts = OC.Contacts || {
 					OC.notify({message: response.message});
 				}
 			})
-			.fail(function(jqxhr, textStatus, error) {
-				var err = textStatus + ', ' + error;
-				console.log( "Request Failed: " + err);
+			.fail(function(response) {
+				console.log(response.message);
 				$(document).trigger('status.contact.error', {
-					message: t('contacts', 'Failed saving last group: {error}', {error:err})
+					message: response.message
 				});
+				done = true;
 			});
 			self.$rightContent.scrollTop(0);
 		});
