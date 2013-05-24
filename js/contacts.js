@@ -188,6 +188,17 @@ OC.Contacts = OC.Contacts || {};
 		}*/
 	};
 
+	Contact.prototype.handleURL = function(obj) {
+		if(!obj) {
+			return;
+		}
+		var $container = this.propertyContainerFor(obj);
+		$(document).trigger('request.openurl', {
+			type: $container.data('element'),
+			url: this.valueFor(obj)
+		});
+	};
+
 	/**
 	 * Update group name internally. No saving as this is done by groups backend.
 	 */
@@ -1143,6 +1154,14 @@ OC.Contacts = OC.Contacts || {};
 				return;
 			}
 			self.deleteProperty({obj:event.target});
+		});
+
+		this.$fullelem.on('click keydown', '.globe,.mail', function(event) {
+			$('.tipsy').remove();
+			if(wrongKey(event)) {
+				return;
+			}
+			self.handleURL(event.target);
 		});
 
 		this.$footer.on('click keydown', 'button', function(event) {

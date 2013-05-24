@@ -16,6 +16,7 @@ ownCloud Contacts Changelog
  - Regression fixed: Contacts can be moved between address books again; also with different backends. contacts#57
 
 5.0.7:
+ - Fix: URL and EMAIL event handlers reenabled: contacts#109
  - Fix: Send correct lastModified. contacts#48 contacts#99
  - Fix: Don't keep attaching event handler for uploaded photo. contacts#24
  - Fix: Don't recreate default groups after user has deleted them. contacts#47
