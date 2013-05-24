@@ -16,11 +16,16 @@ OC.Contacts = OC.Contacts || {};
 			this.error = true;
 			this.message = jqXHR.statusText;
 		} else {
-			this.error = false;
-			if(response.data) {
-				this.data = response.data;
+			if(response.status === 'error') {
+				this.error = true;
+				this.message = response.data.message;
 			} else {
-				this.data = response;
+				this.error = false;
+				if(response.data) {
+					this.data = response.data;
+				} else {
+					this.data = response;
+				}
 			}
 		}
 	}
