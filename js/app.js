@@ -390,6 +390,14 @@ OC.Contacts = OC.Contacts || {
 			}*/
 		});
 
+		$(document).bind('status.contacts.count', function(e, response) {
+			console.log('Num contacts:', response.count);
+			if(response.count > 0) {
+				self.$contactList.show();
+				self.$firstRun.hide();
+			}
+		});
+
 		$(document).bind('status.contacts.loaded', function(e, response) {
 			console.log('status.contacts.loaded', response);
 			if(response.error) {
@@ -397,9 +405,14 @@ OC.Contacts = OC.Contacts || {
 					message: response.message
 				});
 				console.log('Error loading contacts!');
-			} else if(response.numcontacts === 0) {
-				self.$contactList.hide();
-				self.$firstRun.show();
+			} else {
+				if(response.numcontacts === 0) {
+					self.$contactList.hide();
+					self.$firstRun.show();
+				} else {
+					self.$contactList.show();
+					self.$firstRun.hide();
+				}
 			}
 		});
 
