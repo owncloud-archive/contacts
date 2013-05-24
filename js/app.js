@@ -160,7 +160,7 @@ OC.Contacts = OC.Contacts || {
 		this.addressBooks = new OC.Contacts.AddressBookList(
 			this.storage,
 			$('#app-settings-content'),
-			$('#addressbookTemplate')
+			$('#addressBookTemplate')
 		);
 		this.contacts = new OC.Contacts.ContactList(
 			this.storage,
