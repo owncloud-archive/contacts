@@ -138,7 +138,9 @@ OC.Contacts = OC.Contacts || {};
 	 *
 	 * @param string backend
 	 * @param string addressbookid Address book ID
-	 * @return An array containing contact data e.g.:
+	 * @return Depending of the value of the 'request' property in params:
+	 * 'collection'
+	 * An array containing contact data e.g.:
 	 * {
 	 * 	metadata:
 	 * 		{
@@ -150,12 +152,15 @@ OC.Contacts = OC.Contacts || {};
 	 * 		parent: (id of the parent address book)
 	 * 	data: //array of VCard data
 	 * }
+	 * 'export'
+	 * A stream of vCards separated by "\r\n\r\n"
 	 */
-	Storage.prototype.getContacts = function(backend, addressbookid) {
+	Storage.prototype.getAddressBook = function(backend, addressbookid, params) {
 		return this.requestRoute(
-			'contacts_address_book_collection',
+			'contacts_address_book',
 			'GET',
-			{backend: backend, addressbookid: addressbookid}
+			{backend: backend, addressbookid: addressbookid},
+			params
 		);
 	}
 

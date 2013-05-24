@@ -36,7 +36,17 @@ $this->create('contacts_address_books_for_user', 'addressbooks/')
 		}
 	);
 
-$this->create('contacts_address_book_collection', 'addressbook/{backend}/{addressbookid}/contacts')
+$this->create('contacts_address_book_add', 'addressbook/{backend}/add')
+	->post()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('AddressBookController', 'addAddressBook', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbookid'));
+
+$this->create('contacts_address_book', 'addressbook/{backend}/{addressbookid}')
 	->get()
 	->action(
 		function($params) {
@@ -46,12 +56,12 @@ $this->create('contacts_address_book_collection', 'addressbook/{backend}/{addres
 	)
 	->requirements(array('backend', 'addressbookid'));
 
-$this->create('contacts_address_book_add', 'addressbook/{backend}/add')
-	->post()
+$this->create('contacts_address_book_export', 'addressbook/{backend}/{addressbookid}/export')
+	->get()
 	->action(
 		function($params) {
 			session_write_close();
-			Main::main('AddressBookController', 'addAddressBook', $params, new DIContainer());
+			Main::main('AddressBookController', 'exportAddressBook', $params, new DIContainer());
 		}
 	)
 	->requirements(array('backend', 'addressbookid'));
@@ -142,6 +152,16 @@ $this->create('contacts_contact_photo', 'addressbook/{backend}/{addressbookid}/c
 		function($params) {
 			session_write_close();
 			Main::main('ContactController', 'getPhoto', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbook', 'contactid'));
+
+$this->create('contacts_contact_export', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/export')
+	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('ContactController', 'exportContact', $params, new DIContainer());
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactid'));

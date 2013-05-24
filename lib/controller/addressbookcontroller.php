@@ -9,12 +9,11 @@
 
 namespace OCA\Contacts\Controller;
 
-use OCA\Contacts\App;
-use OCA\Contacts\JSONResponse;
-use OCA\Contacts\Utils\JSONSerializer;
-//use OCA\Contacts\Request;
-use OCA\AppFramework\Controller\Controller as BaseController;
-use OCA\AppFramework\Core\API;
+use OCA\Contacts\App,
+	OCA\Contacts\JSONResponse,
+	OCA\Contacts\Utils\JSONSerializer,
+	OCA\AppFramework\Controller\Controller as BaseController,
+	OCA\AppFramework\Http\TextDownloadResponse;
 
 
 /**
@@ -47,6 +46,7 @@ class AddressBookController extends BaseController {
 	 * @Ajax
 	 */
 	public function getAddressBook() {
+		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		$params = $this->request->urlParams;
 		$app = new App($this->api->getUserId());
 
@@ -70,6 +70,34 @@ class AddressBookController extends BaseController {
 		}
 		$response->setParams(array('contacts' => $contacts));
 		return $response;
+	}
+
+	/**
+	 * @IsAdminExemption
+	 * @IsSubAdminExemption
+	 * @CSRFExemption
+	 */
+	public function exportAddressBook() {
+		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
+		$params = $this->request->urlParams;
+		$app = new App($this->api->getUserId());
+
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$lastModified = $addressBook->lastModified();
+		$response = new JSONResponse();
+
+		if(!is_null($lastModified)) {
+			$response->addHeader('Cache-Control', 'private, must-revalidate');
+			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
+			$response->setETag(md5($lastModified));
+		}
+
+		$contacts = '';
+		foreach($addressBook->getChildren() as $i => $contact) {
+			$contacts .= $contact->serialize() . "\r\n";
+		}
+		$name = str_replace(' ', '_', $addressBook->getDisplayName()) . '.vcf';
+		return new TextDownloadResponse($contacts, $name, 'text/directory');
 	}
 
 	/**

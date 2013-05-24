@@ -518,9 +518,8 @@ OC.Contacts = OC.Contacts || {
 		});
 
 		$(document).bind('request.contact.export', function(e, data) {
-			var id = String(data.id);
-			console.log('contact', data.id, 'request.contact.export');
-			document.location.href = OC.linkTo('contacts', 'export.php') + '?' + $.param(data);
+			console.log('request.contact.export', data);
+			document.location.href = OC.Router.generate('contacts_contact_export', data);
 		});
 
 		$(document).bind('request.contact.close', function(e, data) {

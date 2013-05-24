@@ -25,6 +25,14 @@ OC.Contacts = OC.Contacts || {};
 		if(!this.hasPermission(OC.PERMISSION_UPDATE)) {
 			this.$li.find('a.action.edit').hide();
 		}
+		this.$li.find('a.action.download')
+			.attr('href', OC.Router.generate(
+				'contacts_address_book_export',
+				{
+					backend: this.getBackend(),
+					addressbookid: this.getId()
+				}
+			));
 		this.$li.find('a.action.delete').on('click keypress', function() {
 			$('.tipsy').remove();
 			console.log('delete', self.getId());

@@ -2278,7 +2278,7 @@ OC.Contacts = OC.Contacts || {};
 	*/
 	ContactList.prototype.loadContacts = function(backend, addressBookId) {
 		var self = this;
-		return $.when(this.storage.getContacts(backend, addressBookId)).then(function(response) {
+		return $.when(this.storage.getAddressBook(backend, addressBookId)).then(function(response) {
 			var defer = this;
 			//console.log('ContactList.loadContacts', response);
 			if(!response.error) {

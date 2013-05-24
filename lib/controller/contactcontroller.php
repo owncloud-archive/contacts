@@ -9,14 +9,14 @@
 
 namespace OCA\Contacts\Controller;
 
-use OCA\Contacts\App;
-use OCA\Contacts\JSONResponse;
-use OCA\Contacts\ImageResponse;
-use OCA\Contacts\Utils\JSONSerializer;
-use OCA\Contacts\Utils\Properties;
-//use OCA\Contacts\Request;
-use OCA\AppFramework\Controller\Controller as BaseController;
-use OCA\AppFramework\Core\API;
+use OCA\Contacts\App,
+	OCA\Contacts\JSONResponse,
+	OCA\Contacts\ImageResponse,
+	OCA\Contacts\Utils\JSONSerializer,
+	OCA\Contacts\Utils\Properties,
+	OCA\AppFramework\Controller\Controller as BaseController,
+	OCA\AppFramework\Core\API,
+	OCA\AppFramework\Http\TextDownloadResponse;
 
 
 /**
@@ -48,6 +48,29 @@ class ContactController extends BaseController {
 		$response->setParams($data);
 
 		return $response;
+	}
+
+	/**
+	 * @IsAdminExemption
+	 * @IsSubAdminExemption
+	 * @CSRFExemption
+	 */
+	public function exportContact() {
+		$app = new App($this->api->getUserId());
+
+		$params = $this->request->urlParams;
+
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$contact = $addressBook->getChild($params['contactid']);
+
+		if(!$contact) {
+			$response = new JSONResponse();
+			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
+			return $response;
+		}
+
+		$name = str_replace(' ', '_', $contact->getDisplayName()) . '.vcf';
+		return new TextDownloadResponse($contact->serialize(), $name, 'text/vcard');
 	}
 
 	/**
