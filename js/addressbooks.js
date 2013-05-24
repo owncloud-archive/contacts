@@ -160,6 +160,11 @@ OC.Contacts = OC.Contacts || {};
 					message: response.message
 				});
 			}
+		}).fail(function(response) {
+			console.log(response.message);
+			$(document).trigger('status.contact.error', {
+				message: response.message
+			});
 		});
 	}
 
@@ -278,7 +283,7 @@ OC.Contacts = OC.Contacts || {};
 						backend, addressbookid,
 						{progresskey:progresskey}
 					))
-					.then(function(response) {
+				.then(function(response) {
 					if(!response.error) {
 						self.$importProgress.progressbar('value', response.data.progress);
 						self.$importStatusText.text(t('contacts', 'Imported {count} of {total} contacts',
@@ -287,6 +292,12 @@ OC.Contacts = OC.Contacts || {};
 						console.warn('Error', response.message);
 						self.$importStatusText.text(response.message);
 					}
+				}).fail(function(response) {
+					console.log(response.message);
+					$(document).trigger('status.contact.error', {
+						message: response.message
+					});
+					done = true;
 				});
 			};
 			$.when(
@@ -295,8 +306,8 @@ OC.Contacts = OC.Contacts || {};
 					{filename:data.filename, progresskey:data.progresskey}
   				))
 				.then(function(response) {
+				console.log('response', response);
 				if(!response.error) {
-					done = true;
 					console.log('Import done');
 					self.$importStatusText.text(t('contacts', 'Imported {imported} contacts. {failed} failed.',
 													  {imported:response.data.imported, failed: response.data.failed}));
@@ -305,12 +316,18 @@ OC.Contacts = OC.Contacts || {};
 						addressbook: addressBook
 					});
 				} else {
-					done = true;
 					self.$importStatusText.text(response.message);
 					$(document).trigger('status.contact.error', {
 						message: response.message
 					});
 				}
+				done = true;
+			}).fail(function(response) {
+				console.log(response.message);
+				$(document).trigger('status.contact.error', {
+					message: response.message
+				});
+				done = true;
 			});
 			interval = setInterval(function() {
 				getStatus(data.backend, data.addressbookid, data.progresskey, interval, done);
