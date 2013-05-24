@@ -218,6 +218,9 @@ OC.Contacts = OC.Contacts || {};
 			self.addressBooks.splice(self.addressBooks.indexOf(addressBook), 1);
 			self.buildImportSelect();
 		});
+		$(document).bind('status.addressbook.added', function(e) {
+			self.buildImportSelect();
+		});
 		this.$importIntoSelect.on('change', function() {
 			// Disable file input if no address book selected
 			var value = $(this).val();
@@ -366,6 +369,7 @@ OC.Contacts = OC.Contacts || {};
 			this.$importIntoSelect.val(this.$importIntoSelect.find('option:not([value="-1"])').first().val()).hide().trigger('change');
 			self.$importFileInput.prop('disabled', false);
 		} else {
+			this.$importIntoSelect.show();
 			self.$importFileInput.prop('disabled', true);
 		}
 	}
@@ -377,14 +381,11 @@ OC.Contacts = OC.Contacts || {};
 	 * @param bool rebuild If true rebuild the address book select for import.
 	 * @return AddressBook
 	 */
-	AddressBookList.prototype.insertAddressBook = function(addressBook, rebuild) {
+	AddressBookList.prototype.insertAddressBook = function(addressBook) {
 		var book = new AddressBook(this.storage, addressBook, this.$bookItemTemplate);
 		var result = book.render();
 		this.$bookList.append(result);
 		this.addressBooks.push(book);
-		if(rebuild) {
-			this.buildImportSelect();
-		}
 		return book;
 	};
 
@@ -486,7 +487,8 @@ OC.Contacts = OC.Contacts || {};
 				cb({error:true, message:error});
 				return;
 			} else {
-				var book = self.insertAddressBook(response.data, true);
+				var book = self.insertAddressBook(response.data);
+				$(document).trigger('status.addressbook.added');
 				if(typeof cb === 'function') {
 					cb({error:false, addressbook: book});
 					return;
