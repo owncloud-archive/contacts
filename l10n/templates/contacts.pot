@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-05-25 01:01+0200\n"
+"POT-Creation-Date: 2013-05-26 00:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,27 +154,27 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: js/addressbooks.js:242
+#: js/addressbooks.js:245
 msgid "Uploading..."
 msgstr ""
 
-#: js/addressbooks.js:297
+#: js/addressbooks.js:300
 msgid "Imported {count} of {total} contacts"
 msgstr ""
 
-#: js/addressbooks.js:320
+#: js/addressbooks.js:323
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr ""
 
-#: js/addressbooks.js:472
+#: js/addressbooks.js:473
 msgid "An address book called {name} already exists"
 msgstr ""
 
-#: js/addressbooks.js:500
+#: js/addressbooks.js:502
 msgid "Failed adding address book: {error}"
 msgstr ""
 
-#: js/addressbooks.js:538
+#: js/addressbooks.js:540
 msgid "Failed loading address books: {error}"
 msgstr ""
 
@@ -634,7 +634,7 @@ msgstr ""
 msgid "No value is given."
 msgstr ""
 
-#: lib/hooks.php:183
+#: lib/hooks.php:198
 msgid "{name}'s Birthday"
 msgstr ""
 
