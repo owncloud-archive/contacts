@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-26 00:56+0200\n"
-"PO-Revision-Date: 2013-05-25 22:56+0000\n"
+"POT-Creation-Date: 2013-05-27 00:57+0200\n"
+"PO-Revision-Date: 2013-05-26 22:57+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -156,7 +156,7 @@ msgstr ""
 msgid "Contacts"
 msgstr ""
 
-#: js/addressbooks.js:68 js/groups.js:508 templates/settings.php:61
+#: js/addressbooks.js:68 js/groups.js:511 templates/settings.php:61
 msgid "Save"
 msgstr ""
 
@@ -295,83 +295,87 @@ msgstr ""
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:1014 js/contacts.js:1056
+#: js/contacts.js:1015 js/contacts.js:1057
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2065
+#: js/contacts.js:2068
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2076
+#: js/contacts.js:2079
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2091
+#: js/contacts.js:2094
 msgid "Cancelled deletion of {num}"
 msgstr ""
 
-#: js/groups.js:261
+#: js/groups.js:51 templates/contacts.php:300
+msgid "Add"
+msgstr ""
+
+#: js/groups.js:262
 msgid "Contact is already in this group."
 msgstr ""
 
-#: js/groups.js:274
+#: js/groups.js:275
 msgid "Contacts are already in this group."
 msgstr ""
 
-#: js/groups.js:335
+#: js/groups.js:338
 msgid "Couldn't get contact list."
 msgstr ""
 
-#: js/groups.js:346
+#: js/groups.js:349
 msgid "Contact is not in this group."
 msgstr ""
 
-#: js/groups.js:360
+#: js/groups.js:363
 msgid "Contacts are not in this group."
 msgstr ""
 
-#: js/groups.js:484
+#: js/groups.js:487
 msgid "Failed deleting group: {error}"
 msgstr ""
 
-#: js/groups.js:559
+#: js/groups.js:562
 msgid "Failed renaming group: {error}"
 msgstr ""
 
-#: js/groups.js:590
+#: js/groups.js:593
 msgid "A group named {group} already exists"
 msgstr ""
 
-#: js/groups.js:625
+#: js/groups.js:628
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr ""
 
-#: js/groups.js:639
+#: js/groups.js:642
 msgid "Failed adding group: {error}"
 msgstr ""
 
-#: js/groups.js:651
+#: js/groups.js:654
 msgid "All"
 msgstr ""
 
-#: js/groups.js:666 js/groups.js:669
+#: js/groups.js:669 js/groups.js:672
 msgid "Favorites"
 msgstr ""
 
-#: js/groups.js:730
+#: js/groups.js:733
 msgid "Shared by {owner}"
 msgstr ""
 
-#: js/groups.js:745
+#: js/groups.js:748
 msgid "Not grouped"
 msgstr ""
 
-#: js/groups.js:772
+#: js/groups.js:775
 msgid "Failed loading groups: {error}"
 msgstr ""
 
@@ -465,6 +469,10 @@ msgstr ""
 
 #: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
+msgstr ""
+
+#: lib/app.php:131
+msgid "Address book not found"
 msgstr ""
 
 #: lib/backend/ldap.php:370
@@ -980,10 +988,6 @@ msgstr ""
 
 #: templates/contacts.php:298
 msgid "Export as VCF"
-msgstr ""
-
-#: templates/contacts.php:300
-msgid "Add"
 msgstr ""
 
 #: templates/contacts.php:305
