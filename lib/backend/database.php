@@ -250,12 +250,6 @@ class Database extends AbstractBackend {
 	 * @return bool
 	 */
 	public function deleteAddressBook($addressbookid) {
-		\OC_Hook::emit('OCA\Contacts', 'pre_deleteAddressBook',
-			array('id' => $addressbookid)
-		);
-
-		// Clean up sharing
-		\OCP\Share::unshareAll('addressbook', $addressbookid);
 
 		// Get all contact ids for this address book
 		$ids = array();
@@ -281,22 +275,9 @@ class Database extends AbstractBackend {
 			}
 		}
 
-		// Purge contact property indexes
-		if(count($ids)) {
-			$stmt = \OCP\DB::prepare('DELETE FROM `' . $this->indexTableName
-				.'` WHERE `contactid` IN ('.str_repeat('?,', count($ids)-1).'?)');
-			try {
-				$stmt->execute($ids);
-			} catch(\Exception $e) {
-				\OCP\Util::writeLog('contacts', __METHOD__.
-					', exception: ' . $e->getMessage(), \OCP\Util::ERROR);
-			}
-
-			// Purge categories
-			$catctrl = new \OC_VCategories('contact');
-			$catctrl->purgeObjects($ids);
-
-		}
+		\OC_Hook::emit('OCA\Contacts', 'pre_deleteAddressBook',
+			array('addressbookid' => $addressbookid, 'contactids' => $ids)
+		);
 
 		// Delete contacts in address book.
 		if(!isset(self::$preparedQueries['deleteaddressbookcontacts'])) {

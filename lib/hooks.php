@@ -66,6 +66,17 @@ class Hooks{
 	* Delete any registred address books (Future)
 	*/
 	public static function addressBookDeletion($parameters) {
+		// Clean up sharing
+		\OCP\Share::unshareAll('addressbook', $parameters['addressbookid']);
+
+		if(count($parameters['contactids'])) {
+			// Remove contacts from groups
+			$catctrl = new \OC_VCategories('contact');
+			$catctrl->purgeObjects($parameters['contactids']);
+
+			// Purge property indexes
+			Utils\Properties::purgeIndexes($parameters['contactids']);
+		}
 	}
 
 	/**
