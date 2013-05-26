@@ -48,6 +48,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 		var $addInput = this.$groupList.find('.add-group');
 		$addInput.addnew({
+			addText: t('core', 'Add'),
 			ok: function(event, name) {
 				$addInput.addClass('loading');
 				self.addGroup({name:name}, function(response) {
