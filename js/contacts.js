@@ -2247,32 +2247,25 @@ OC.Contacts = OC.Contacts || {};
 	ContactList.prototype.setSortOrder = function(order) {
 		order = order || contacts_sortby;
 		console.time('set name');
-		var rows = this.$contactList.find('tr:visible.contact');
+		var $rows = this.$contactList.find('tr:visible.contact');
 		var self = this;
-		$.each(rows, function(idx, row) {
+		$.each($rows, function(idx, row) {
 			self.contacts[$(row).data('id')].setDisplayMethod(order);
 		});
 		console.timeEnd('set name');
-		if(rows.length > 1) {
+		if($rows.length > 1) {
 			console.time('sort');
-			this.doSort(rows.get());
+			var rows = $rows.get();
+			rows.sort(function(a, b) {
+				// 10 (TEN!) times faster than using jQuery!
+				return a.firstElementChild.textContent.trim().toUpperCase()
+					.localeCompare(b.firstElementChild.textContent.trim().toUpperCase());
+				//return $(a).find('.nametext').text().toUpperCase()
+				//	.localeCompare($(b).find('td.name').text().toUpperCase());
+			});
+			this.$contactList.prepend(rows);
 			console.timeEnd('sort');
 		}
-	};
-
-	// Should only be neccesary with progressive loading, but it's damn fast, so... ;)
-	ContactList.prototype.doSort = function(rows) {
-		var self = this;
-		//var rows = this.$contactList.find('tr:visible.contact').get();
-
-		rows.sort(function(a, b) {
-			// 10 (TEN!) times faster than using jQuery!
-			return a.firstElementChild.textContent.trim().toUpperCase().localeCompare(b.firstElementChild.textContent.trim().toUpperCase());
-			//return $(a).find('.nametext').text().toUpperCase().localeCompare($(b).find('td.name').text().toUpperCase());
-		});
-
-		self.$contactList.prepend(rows);
-
 	};
 
 	/**
