@@ -108,7 +108,10 @@ class Database extends AbstractBackend {
 			if (\OC_DB::isError($result)) {
 				\OCP\Util::write('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-				return array();
+				return null;
+			}
+			if((int)$result->numRows() === 0) {
+				throw new \Exception('Address Book not found', 404);
 			}
 			$row = $result->fetchRow();
 			$row['permissions'] = \OCP\PERMISSION_ALL;
@@ -118,9 +121,9 @@ class Database extends AbstractBackend {
 		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
 				. $e->getMessage(), \OCP\Util::ERROR);
-			return array();
+			return null;
 		}
-		return array();
+		return null;
 	}
 
 	public function hasAddressBook($addressbookid) {
