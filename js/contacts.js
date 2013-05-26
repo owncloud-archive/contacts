@@ -2026,7 +2026,9 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
-	 * @param object data An object or array of objects containing contact identification
+	 * TODO: Instead of having a timeout the contacts should be moved to a "Trash" backend/address book
+	 * https://github.com/owncloud/contacts/issues/107
+	 * @param object|object[] data An object or array of objects containing contact identification
 	 * {
 	 * 	contactid: '1234',
 	 * 	addressbookid: '4321',
@@ -2098,6 +2100,7 @@ OC.Contacts = OC.Contacts || {};
 
 	/**
 	* Delete contacts in the queue
+	* TODO: Batch delete contacts instead of sending multiple requests.
 	*/
 	ContactList.prototype.deleteContacts = function() {
 		var self = this;
