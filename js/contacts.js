@@ -660,6 +660,7 @@ OC.Contacts = OC.Contacts || {};
 	 * Remove any open contact from the DOM.
 	 */
 	Contact.prototype.close = function() {
+		$(document).unbind('status.contact.photoupdated');
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
 			this.$fullelem.remove();
