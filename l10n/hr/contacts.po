@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-27 00:57+0200\n"
-"PO-Revision-Date: 2013-05-26 22:57+0000\n"
+"POT-Creation-Date: 2013-05-28 00:55+0200\n"
+"PO-Revision-Date: 2013-05-27 22:55+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/owncloud/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -645,7 +645,7 @@ msgstr ""
 msgid "No value is given."
 msgstr ""
 
-#: lib/hooks.php:198
+#: lib/hooks.php:209
 msgid "{name}'s Birthday"
 msgstr ""
 
@@ -763,10 +763,6 @@ msgstr ""
 
 #: lib/utils/properties.php:188
 msgid "Family"
-msgstr ""
-
-#: lib/utils/properties.php:223
-msgid "There was an error deleting properties for this contact."
 msgstr ""
 
 #: templates/contacts.php:6
