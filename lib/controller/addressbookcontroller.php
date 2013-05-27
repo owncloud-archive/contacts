@@ -60,15 +60,17 @@ class AddressBookController extends BaseController {
 			$response->setETag(md5($lastModified));
 		}
 
-		$contacts = array();
-		foreach($addressBook->getChildren() as $i => $contact) {
-			$result = JSONSerializer::serializeContact($contact);
-			//\OCP\Util::writeLog('contacts', __METHOD__.' contact: '.print_r($result, true), \OCP\Util::DEBUG);
-			if($result !== null) {
-				$contacts[] = $result;
+		if($this->request->method === 'GET') {
+			$contacts = array();
+			foreach($addressBook->getChildren() as $i => $contact) {
+				$result = JSONSerializer::serializeContact($contact);
+				//\OCP\Util::writeLog('contacts', __METHOD__.' contact: '.print_r($result, true), \OCP\Util::DEBUG);
+				if($result !== null) {
+					$contacts[] = $result;
+				}
 			}
+			$response->setParams(array('contacts' => $contacts));
 		}
-		$response->setParams(array('contacts' => $contacts));
 		return $response;
 	}
 
