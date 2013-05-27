@@ -107,11 +107,11 @@ class AddressBookController extends BaseController {
 	 */
 	public function addAddressBook() {
 		$app = new App($this->api->getUserId());
+		$params = $this->request->urlParams;
 
 		$response = new JSONResponse();
 
-		$backend = $app->getBackend('local');
-		// TODO: Check actual permissions
+		$backend = $app->getBackend($params['backend']);
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_CREATE)) {
 			throw new \Exception('Not implemented');
 		}
@@ -157,7 +157,7 @@ class AddressBookController extends BaseController {
 
 		$response = new JSONResponse();
 
-		$backend = $app->getBackend('local');
+		$backend = $app->getBackend($params['backend']);
 		// TODO: Check actual permissions
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_DELETE)) {
 			throw new \Exception('Not implemented');
