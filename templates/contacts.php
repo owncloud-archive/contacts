@@ -28,7 +28,7 @@
 							<select id="import_into">
 								<option value="-1"><?php p($l->t('Import into...')); ?></option>
 							</select>
-							<button class="tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
+							<button class="svg tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
 							<input id="import_upload_start" class="tooltipped rightwards" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
 						</li>
 						<li class="import-status">
