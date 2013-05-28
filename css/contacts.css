@@ -428,6 +428,7 @@ dt[data-element="org"] { margin-top: 4px; }
 #contacts-settings a.action:not(.settings) { width: 16px; height: 16px; }
 */
 .addressbooklist .actions { position: absolute; right: 5px; }
+.addressbooklist .actions > a { width: 20px; height: 20px; }
 .addressbooklist > li > div {
 	display: inline-block;
 	clear: both;
