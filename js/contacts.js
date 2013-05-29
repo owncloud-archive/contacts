@@ -1964,6 +1964,20 @@ OC.Contacts = OC.Contacts || {};
 			this.setSortOrder();
 			return;
 		}
+		/*console.time('show');
+		$('tr.contact:visible').hide();
+		$.each(contacts, function(idx, id) {
+			var contact =  self.findById(id);
+			if(contact === null) {
+				return true; // continue
+			}
+			contact.getListItemElement().show();
+			contact.setThumbnail();
+		});
+		console.timeEnd('show');
+		*/
+		// Amazingly this is slightly faster
+		//console.time('show');
 		for(var id in this.contacts) {
 			var contact = this.findById(id);
 			if(contact === null) {
@@ -1976,6 +1990,8 @@ OC.Contacts = OC.Contacts || {};
 				contact.setThumbnail();
 			}
 		}
+		//console.timeEnd('show');
+
 		this.setSortOrder();
 	};
 
