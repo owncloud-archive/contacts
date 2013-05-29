@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-05-29 00:55+0200\n"
-"PO-Revision-Date: 2013-05-28 22:55+0000\n"
+"POT-Creation-Date: 2013-05-30 01:16+0200\n"
+"PO-Revision-Date: 2013-05-29 23:16+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +67,7 @@ msgstr ""
 msgid "Error getting PHOTO property."
 msgstr ""
 
-#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:249
+#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
 msgstr ""
 
@@ -299,25 +299,25 @@ msgstr ""
 msgid "Error loading profile picture."
 msgstr ""
 
-#: js/contacts.js:583
+#: js/contacts.js:586
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:1015 js/contacts.js:1057
+#: js/contacts.js:1018 js/contacts.js:1060
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2068
+#: js/contacts.js:2071
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2079
+#: js/contacts.js:2082
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2094
+#: js/contacts.js:2097
 msgid "Cancelled deletion of {num}"
 msgstr ""
 
@@ -519,31 +519,31 @@ msgstr ""
 msgid "Unknown IM: "
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:120
+#: lib/controller/addressbookcontroller.php:122
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:142
+#: lib/controller/addressbookcontroller.php:144
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:166
+#: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:186
+#: lib/controller/addressbookcontroller.php:188
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:220
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:243
+#: lib/controller/addressbookcontroller.php:245
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:254
+#: lib/controller/addressbookcontroller.php:256
 msgid "Error removing contact from other address book."
 msgstr ""
 
