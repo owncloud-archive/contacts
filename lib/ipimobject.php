@@ -69,20 +69,20 @@ interface IPIMObject {
 	/**
 	 * @return string|null
 	 */
-	function getDisplayName();
+	public function getDisplayName();
 
 	/**
 	 * Get the owner of the object.
 	 * @return string|null
 	 */
-	function getOwner();
+	public function getOwner();
 
 	/**
 	 * If this object is part of a collection return a reference
 	 * to the parent object, otherwise return null.
 	 * @return IPIMObject|null
 	 */
-	function getParent();
+	public function getParent();
 
 
 	/** CRUDS permissions (Create, Read, Update, Delete, Share) using a bitmask of
@@ -97,18 +97,18 @@ interface IPIMObject {
 	 *
 	 * @return integer
 	 */
-	function getPermissions();
+	public function getPermissions();
 
 	/**
 	 * @return AbstractBackend
 	 */
-	function getBackend();
+	public function getBackend();
 
 	/**
 	 * @param integer $permission
 	 * @return boolean
 	 */
-	function hasPermission($permission);
+	public function hasPermission($permission);
 
 	/**
 	 * @brief Get the last modification time for the object.
