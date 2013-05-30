@@ -56,6 +56,8 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 					'{' . \Sabre_CardDAV_Plugin::NS_CARDDAV . '}addressbook-description'
 							=> $addressBook['description'],
 					'{http://calendarserver.org/ns/}getctag' => $addressBook['lastmodified'],
+					'{' . \Sabre_CardDAV_Plugin::NS_CARDDAV . '}supported-address-data' =>
+						new \Sabre_CardDAV_Property_SupportedAddressData(),
 				);
 			}
 		}
