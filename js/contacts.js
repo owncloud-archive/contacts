@@ -2336,10 +2336,6 @@ OC.Contacts = OC.Contacts || {};
 						return true; // continue
 					}
 					items.push($item.get(0));
-					if(items.length === 100) {
-						self.$contactList.append(items);
-						items = [];
-					}
 				});
 				if(items.length > 0) {
 					self.$contactList.append(items);

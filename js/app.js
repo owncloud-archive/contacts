@@ -179,6 +179,8 @@ OC.Contacts = OC.Contacts || {
 		self.groups.loadGroups(function() {
 			self.loading(self.$navigation, false);
 		});
+		// Hide the list while populating it.
+		this.$contactList.hide();
 		$.when(this.addressBooks.loadAddressBooks()).then(function(addressBooks) {
 			var num = addressBooks.length;
 			var deferreds = $(addressBooks).map(function(i, elem) {
@@ -187,6 +189,7 @@ OC.Contacts = OC.Contacts || {
 			// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
 			$.when.apply(null, deferreds.get()).then(function(response) {
 				self.contacts.setSortOrder(contacts_sortby);
+				self.$contactList.show();
 				$(document).trigger('status.contacts.loaded', {
 					numcontacts: self.contacts.length
 				});
