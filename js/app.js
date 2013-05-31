@@ -249,10 +249,12 @@ OC.Contacts = OC.Contacts || {
 		this.$headeractions.children().hide();
 		if(act && act.length > 0) {
 			this.$contactList.addClass('multiselect');
-			this.$contactListHeader.show();
+			this.$contactListHeader.find('.actions').show();
+			this.$contactListHeader.find('.info').hide();
 			this.$headeractions.children('.'+act.join(',.')).show();
 		} else {
-			this.$contactListHeader.hide();
+			this.$contactListHeader.find('.actions').hide();
+			this.$contactListHeader.find('.info').show();
 			this.$contactList.removeClass('multiselect');
 		}
 	},
@@ -757,14 +759,16 @@ OC.Contacts = OC.Contacts || {
 			self.$ninjahelp.hide();
 		});
 
-		this.$toggleAll.on('change', function() {
+		this.$toggleAll.on('change', function(event) {
+			event.stopPropagation();
+			event.preventDefault();
 			var isChecked = $(this).is(':checked');
 			self.setAllChecked(isChecked);
 			if(self.$groups.find('option').length === 1) {
 				self.buildGroupSelect();
 			}
 			if(isChecked) {
-				self.showActions(['add', 'download', 'groups', 'delete', 'favorite', 'merge']);
+				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite', 'merge']);
 			} else {
 				self.hideActions();
 			}
@@ -779,9 +783,9 @@ OC.Contacts = OC.Contacts || {
 			if(selected.length === 0) {
 				self.hideActions();
 			} else if(selected.length === 1) {
-				self.showActions(['add', 'download', 'groups', 'delete', 'favorite']);
+				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite']);
 			} else {
-				self.showActions(['add', 'download', 'groups', 'delete', 'favorite', 'merge']);
+				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite', 'merge']);
 			}
 		});
 
@@ -918,7 +922,7 @@ OC.Contacts = OC.Contacts || {
 		});
 
 		// Contact list. Either open a contact or perform an action (mailto etc.)
-		this.$contactList.on('click', 'tr', function(event) {
+		this.$contactList.on('click', 'tr.contact', function(event) {
 			if($(event.target).is('input')) {
 				return;
 			}

@@ -41,7 +41,7 @@
 		</div>
 	</div>
 	<div id="app-content" class="loading">
-		<div id="contactsHeader">
+		<!-- div id="contactsHeader">
 			<input type="checkbox" class="toggle" title="<?php p($l->t('(De-)select all')); ?>" />
 			<select class="action sort permanent" name="sort" title="<?php p($l->t('Sort order')); ?>">
 				<option value="fn"><?php p($l->t('Display name')); ?></option>
@@ -52,13 +52,40 @@
 				<select class="groups svg action text permanent" name="groups">
 					<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
 				</select>
-				<!--a class="favorite action svg inactive control permanent" title="<?php p($l->t('Favorite')); ?>"></a -->
+				<a class="favorite action svg inactive control permanent" title="<?php p($l->t('Favorite')); ?>"></a>
 				<a class="action merge"><?php p($l->t('Merge selected')); ?></a>
 				<a class="download svg action text permanent"><?php p($l->t('Download')); ?></a>
 				<a class="delete action permanent" title="<?php p($l->t('Delete')); ?>"></a>
 			</span>
-		</div>
+		</div -->
 		<table id="contactlist">
+			<thead>
+				<tr id="contactsHeader">
+					<td class="name">
+						<input type="checkbox" class="toggle" title="<?php p($l->t('(De-)select all')); ?>" />
+						<select class="action sort permanent" name="sort" title="<?php p($l->t('Sort order')); ?>">
+							<option value="fn"><?php p($l->t('Display name')); ?></option>
+							<option value="fl"><?php p($l->t('First- Lastname')); ?></option>
+							<option value="lf"><?php p($l->t('Last-, Firstname')); ?></option>
+						</select>
+					</td>
+					<td class="info email">Email</td>
+					<td class="info tel">Phone</td>
+					<td class="info adr">Address</td>
+					<td class="info categories"></td>
+					<td colspan="4" class="actions">
+						<a class="delete action permanent" title="<?php p($l->t('Delete')); ?>"></a>
+						<a class="download svg action text permanent"><?php p($l->t('Download')); ?></a>
+						<select class="groups svg action text permanent" name="groups">
+							<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
+						</select>
+						<!--a class="favorite action svg inactive control permanent" title="<?php p($l->t('Favorite')); ?>"></a -->
+						<a class="action text permanent merge"><?php p($l->t('Merge selected')); ?></a>
+					</td>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
 		</table>
 		<div class="hidden popup" id="ninjahelp">
 			<a class="close" tabindex="0" role="button" title="<?php p($l->t('Close')); ?>"></a>
