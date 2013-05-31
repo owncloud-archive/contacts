@@ -206,7 +206,10 @@
 		</td>
 		<td class="tel">{tel}</td>
 		<td class="adr">{adr}</td>
-		<td class="categories">{categories}</td>
+		<td class="categories">
+			{categories}
+			<a class="svg delete hidden" title="<?php p($l->t('Delete contact')); ?>"></a>
+		</td>
 	</tr>
 </script>
 
