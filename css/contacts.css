@@ -635,6 +635,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	opacity: 1;
 }
 #contactlist tr > td:not(.adr) { max-width: 270px; }
+#contactlist tr > td:not(.name) { padding-left:10px; }
 #contactlist tr > td.adr { max-width: 300px; }
 #contactlist tr > td.name > input[type=checkbox]:first-child {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
@@ -658,7 +659,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	position: absolute; float: right;  clear: none;
 	cursor:pointer;
 	width:16px; height:16px;
-	margin: 2px; z-index: 200;
+	margin: 2px 0 2px 5px; z-index: 200;
 	opacity: 0.6; background-image:url('%webroot%/core/img/actions/mail.svg');
 }
 #contactlist tr > td a.mailto:hover { opacity: 0.8; }
