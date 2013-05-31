@@ -630,11 +630,11 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactlist {  }
 #contactlist > tbody {
-	position: absolute;
-	top: 20px; padding-bottom: 300px;
+	position: relative;
+ 	padding-bottom: 300px;
 	width: 100%;
 }
-#contactlist { position: relative; top: 0; left: 0; right: 0; width: 100%; }
+#contactlist { position: absolute; top: 20px; left:250px; right: 0; width: 100%; }
 #contactlist td {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
@@ -770,5 +770,5 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 @media screen and (max-width: 900px) {
 	#contactlist tr td.email { display: none; }
-	#contactlist tr td.name { width:100%;}
+	#contactlist tr td.name { width:100%; max-width: auto;}
 }
