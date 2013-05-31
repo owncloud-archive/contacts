@@ -582,12 +582,13 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 /* contact list */
 
 #contactsHeader {
-	left: 315px; right: 15px; top: 45px;
+	top: 46px;
 	position: fixed;
 	height: 20px;
-    background: none repeat scroll 0 0 rgba(230, 230, 230, .9);
-    color: #999;
-	z-index: 1;
+	background: none repeat scroll 0 0 rgba(230,230,230,.95);
+	color: #999;
+	z-index: 999;
+	width: 100%;
 }
 #contactsHeader > tr {
 }
@@ -629,11 +630,12 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactlist {  }
 #contactlist > tbody {
-	position: absolute;
-	top: 20px; padding-bottom: 300px;
+	position: relative;
+ 	padding-bottom: 300px;
 	width: 100%;
+	z-index: 1;
 }
-#contactlist { position: relative; top: 0; left: 0; right: 0; width: 100%; }
+#contactlist { margin-top:20px; position: relative; width: 100%; }
 #contactlist td {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
@@ -659,7 +661,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	max-width: 180px;
 	min-width: 180px;
 }
-#contactlist tbody > tr > td.adr { width: auto; }
+#contactlist tbody > tr > td.adr { width: 100%; max-width:300px; }
 #contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
 	-webkit-transition:opacity 200ms; -moz-transition:opacity 200ms; -o-transition:opacity 200ms; transition:opacity 200ms;
@@ -761,10 +763,13 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 @media screen and (max-width: 1400px) {
 	#contactlist tr td.adr { display: none; }
+	#contactlist tr td.tel { width:100%; }
 }
 @media screen and (max-width: 1200px) {
 	#contactlist tr td.tel { display: none; }
+	#contactlist tr td.email { width:100%; }
 }
 @media screen and (max-width: 900px) {
 	#contactlist tr td.email { display: none; }
+	#contactlist tr td.name { width:100%; max-width: auto;}
 }
