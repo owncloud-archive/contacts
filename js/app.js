@@ -943,6 +943,12 @@ OC.Contacts = OC.Contacts || {
 				});
 				return;
 			}
+			if($(event.target).is('a.delete')) {
+				$(document).trigger('request.contact.delete', {
+					contactid: $(this).parents('tr.contact').data('id')
+				});
+				return;
+			}
 			self.openContact(String($(this).data('id')));
 		});
 
