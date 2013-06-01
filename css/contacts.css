@@ -587,7 +587,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	height: 20px;
 	background: none repeat scroll 0 0 rgba(230,230,230,.95);
 	color: #999;
-	z-index: 999;
+	z-index: 2;
 	width: 100%;
 }
 #contactsHeader > tr {
