@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-01 01:03+0200\n"
-"PO-Revision-Date: 2013-05-31 23:04+0000\n"
+"POT-Creation-Date: 2013-06-02 00:56+0200\n"
+"PO-Revision-Date: 2013-06-01 22:56+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Armenian (http://www.transifex.com/projects/p/owncloud/language/hy/)\n"
 "MIME-Version: 1.0\n"
@@ -178,110 +178,110 @@ msgstr ""
 msgid "Failed loading address books: {error}"
 msgstr ""
 
-#: js/app.js:210
+#: js/app.js:213
 msgid "Indexing contacts"
 msgstr ""
 
-#: js/app.js:220
+#: js/app.js:223
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr ""
 
-#: js/app.js:221
+#: js/app.js:224
 msgid "Error."
 msgstr ""
 
-#: js/app.js:316 js/app.js:330
+#: js/app.js:319 js/app.js:333
 msgid "Add to..."
 msgstr ""
 
-#: js/app.js:320 js/app.js:332
+#: js/app.js:323 js/app.js:335
 msgid "Remove from..."
 msgstr ""
 
-#: js/app.js:337
+#: js/app.js:340
 msgid "Add group..."
 msgstr ""
 
-#: js/app.js:460
+#: js/app.js:463
 msgid "Invalid URL: \"{url}\""
 msgstr ""
 
-#: js/app.js:471
+#: js/app.js:474
 msgid "There was an error opening a mail composer."
 msgstr ""
 
-#: js/app.js:476
+#: js/app.js:479
 msgid "Invalid email: \"{url}\""
 msgstr ""
 
-#: js/app.js:554
+#: js/app.js:557
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr ""
 
-#: js/app.js:567
+#: js/app.js:570
 msgid "Merge failed."
 msgstr ""
 
-#: js/app.js:574
+#: js/app.js:577
 msgid "Merge failed. Error saving contact."
 msgstr ""
 
-#: js/app.js:593
+#: js/app.js:596
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:662 js/app.js:1531
+#: js/app.js:665 js/app.js:1540
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
-#: js/app.js:884
+#: js/app.js:887
 msgid "Error adding to group."
 msgstr ""
 
-#: js/app.js:913
+#: js/app.js:916
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1058
+#: js/app.js:1067
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1197 js/app.js:1201 templates/contacts.php:184
+#: js/app.js:1206 js/app.js:1210 templates/contacts.php:184
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1223 js/app.js:1277 js/settings.js:120 templates/contacts.php:323
+#: js/app.js:1232 js/app.js:1286 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr ""
 
-#: js/app.js:1251 templates/contacts.php:165
+#: js/app.js:1260 templates/contacts.php:165
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1255
+#: js/app.js:1264
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1355
+#: js/app.js:1364
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1397
+#: js/app.js:1406
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1407
+#: js/app.js:1416
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1495
+#: js/app.js:1504
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1513
+#: js/app.js:1522
 msgid "Error loading profile picture."
 msgstr ""
 
