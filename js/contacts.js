@@ -2288,16 +2288,6 @@ OC.Contacts = OC.Contacts || {};
 						.localeCompare($(b).find('td.name').text().toUpperCase());
 				});
 			}
-			rows.sort(function(a, b) {
-				// 10 (TEN!) times faster than using jQuery!
-				if(a.firstElementChild) {
-					return a.firstElementChild.textContent.trim().toUpperCase()
-						.localeCompare(b.firstElementChild.textContent.trim().toUpperCase());
-				} else {
-					return $(a).find('.nametext').text().toUpperCase()
-						.localeCompare($(b).find('td.name').text().toUpperCase());
-				}
-			});
 			this.$contactList.prepend(rows);
 			//console.timeEnd('sort');
 		}
