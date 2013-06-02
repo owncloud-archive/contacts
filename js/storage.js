@@ -10,7 +10,7 @@ OC.Contacts = OC.Contacts || {};
 	var JSONResponse = function(response, jqXHR) {
 		this.getAllResponseHeaders = jqXHR.getAllResponseHeaders;
 		this.getResponseHeader = jqXHR.getResponseHeader;
-		this.status = jqXHR.status;
+		this.statusCode = jqXHR.status;
 		if(!response) {
 			console.log('jqXHR', jqXHR);
 			this.error = true;

@@ -225,9 +225,7 @@ OC.Contacts = OC.Contacts || {
 			});
 		}).fail(function(response) {
 			console.log(response.message);
-			$(document).trigger('status.contact.error', {
-				message: response.message
-			});
+			$(document).trigger('status.contacts.error', response);
 		});
 		OCCategories.changed = this.groups.categoriesChanged;
 		OCCategories.app = 'contacts';
@@ -380,7 +378,7 @@ OC.Contacts = OC.Contacts || {
 		});
 
 		// Keep error messaging at one place to be able to replace it.
-		$(document).bind('status.contact.error', function(e, data) {
+		$(document).bind('status.contacts.error', function(e, data) {
 			console.warn(data.message);
 			//console.trace();
 			OC.notify({message:data.message});
@@ -406,9 +404,7 @@ OC.Contacts = OC.Contacts || {
 		$(document).bind('status.contacts.loaded', function(e, response) {
 			console.log('status.contacts.loaded', response);
 			if(response.error) {
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 				console.log('Error loading contacts!');
 			} else {
 				if(response.numcontacts === 0) {
@@ -458,8 +454,8 @@ OC.Contacts = OC.Contacts || {
 						var newWindow = window.open(data.url,'_blank');
 						newWindow.focus();
 					} else {
-						$(document).trigger('status.contact.error', {
-							status: 'error',
+						$(document).trigger('status.contacts.error', {
+							error: true,
 							message: t('contacts', 'Invalid URL: "{url}"', {url:data.url})
 						});
 					}
@@ -474,8 +470,8 @@ OC.Contacts = OC.Contacts || {
 							alert(t('contacts', 'There was an error opening a mail composer.'));
 						}
 					} else {
-						$(document).trigger('status.contact.error', {
-							status: 'error',
+						$(document).trigger('status.contacts.error', {
+							error: true,
 							message: t('contacts', 'Invalid email: "{url}"', {url:data.url})
 						});
 					}
@@ -553,7 +549,7 @@ OC.Contacts = OC.Contacts || {
 			var merger = self.contacts.findById(data.merger);
 			var mergees = [];
 			if(!merger) {
-				$(document).trigger('status.contact.error', {
+				$(document).trigger('status.contacts.error', {
 					message: t('contacts', 'Merge failed. Cannot find contact: {id}', {id:data.merger})
 				});
 				return;
@@ -566,14 +562,14 @@ OC.Contacts = OC.Contacts || {
 				mergees.push(contact);
 			});
 			if(!merger.merge(mergees)) {
-				$(document).trigger('status.contact.error', {
+				$(document).trigger('status.contacts.error', {
 					message: t('contacts', 'Merge failed.')
 				});
 				return;
 			}
 			merger.saveAll(function(response) {
 				if(response.error) {
-					$(document).trigger('status.contact.error', {
+					$(document).trigger('status.contacts.error', {
 						message: t('contacts', 'Merge failed. Error saving contact.')
 					});
 					return;
@@ -662,14 +658,14 @@ OC.Contacts = OC.Contacts || {
 			console.log('status.groups.sorted', result);
 			$.when(self.storage.setPreference('groupsort', result.sortorder)).then(function(response) {
 				if(response.error) {
-					OC.notify({message: response ? response.message : t('contacts', 'Network or server error. Please inform administrator.')});
+					$(document).trigger('status.contacts.error', {
+						message: response ? response.message : t('contacts', 'Network or server error. Please inform administrator.')
+					});
 				}
 			})
 			.fail(function(response) {
 				console.log(response.message);
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 				done = true;
 			});
 		});
@@ -697,14 +693,12 @@ OC.Contacts = OC.Contacts || {
 			}
 			$.when(self.storage.setPreference('lastgroup', self.currentgroup)).then(function(response) {
 				if(response.error) {
-					OC.notify({message: response.message});
+					$(document).trigger('status.contacts.error', response);
 				}
 			})
 			.fail(function(response) {
 				console.log(response.message);
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 				done = true;
 			});
 			self.$rightContent.scrollTop(0);
@@ -751,7 +745,7 @@ OC.Contacts = OC.Contacts || {
 				);
 				//alert('File: ' + file.tmp + ' ' + file.name + ' ' + file.mime);
 			} else if(response) {
-				OC.notify({message:response.data.message});
+				$(document).trigger('status.contacts.error', response);
 			}
 		});
 
@@ -846,11 +840,11 @@ OC.Contacts = OC.Contacts || {
 									}, 1000);
 								});
 							} else {
-								OC.notify({message:result.message});
+								$(document).trigger('status.contacts.error', result);
 							}
 						});
 					} else {
-						OC.notify({message: response.message});
+						$(document).trigger('status.contacts.error', response);
 					}
 				});
 				return;
@@ -885,7 +879,7 @@ OC.Contacts = OC.Contacts || {
 						});
 					} else {
 						var msg = result.message ? result.message : t('contacts', 'Error adding to group.');
-						OC.notify({message:msg});
+						$(document).trigger('status.contacts.error', {message:msg});
 					}
 				});
 				if(!buildnow) {
@@ -914,7 +908,7 @@ OC.Contacts = OC.Contacts || {
 						});
 					} else {
 						var msg = result.message ? result.message : t('contacts', 'Error removing from group.');
-						OC.notify({message:msg});
+						$(document).trigger('status.contacts.error', {message:msg});
 					}
 				});
 				if(!buildnow) {
@@ -1071,7 +1065,7 @@ OC.Contacts = OC.Contacts || {
 				if(!self.groups.isFavorite(contact.getId())) {
 					self.groups.setAsFavorite(contact.getId(), true, function(result) {
 						if(result.status !== 'success') {
-							OC.notify({message:
+							$(document).trigger('status.contacts.error', {message:
 								t('contacts',
 									'Error setting {name} as favorite.',
 									{name:contact.getDisplayName()})
@@ -1283,7 +1277,7 @@ OC.Contacts = OC.Contacts || {
 									cb(response);
 								} else {
 									if(response.error) {
-										OC.notify({message: response.message});
+										$(document).trigger('status.contacts.error', response);
 									}
 								}
 							});
@@ -1369,7 +1363,7 @@ OC.Contacts = OC.Contacts || {
 		if(!$contactelem) {
 			console.warn('Error opening', this.currentid);
 			this.$contactList.removeClass('dim');
-			$(document).trigger('status.contact.error', {
+			$(document).trigger('status.contacts.error', {
 				message: t('contacts', 'Could not find contact: {id}', {id:this.currentid})
 			});
 			this.currentid = null;
@@ -1412,14 +1406,14 @@ OC.Contacts = OC.Contacts || {
 		console.log('uploadPhoto');
 		var self = this;
 		if(!filelist) {
-			OC.notify({message:t('contacts','No files selected for upload.')});
+			$(document).trigger('status.contacts.error', {message:t('contacts','No files selected for upload.')});
 			return;
 		}
 		var file = filelist[0];
 		var form = $('#file_upload_form');
 		var totalSize=0;
-		if(file.size > $('#max_upload').val()){
-			OC.notify({
+		if(file.size > $('#max_upload').val()) {
+			$(document).trigger('status.contacts.error', {
 				message:t(
 					'contacts',
 					'The file you are trying to upload exceed the maximum size for file uploads on this server.')
@@ -1433,28 +1427,27 @@ OC.Contacts = OC.Contacts || {
 		var self = this;
 		console.log('cloudPhotoSelected', metadata);
 		$.getJSON(OC.filePath('contacts', 'ajax', 'oc_photo.php'),
-				  {path: path, contact: metadata},function(jsondata) {
-			if(jsondata.status == 'success') {
+				  {path: path, contact: metadata},function(response) {
+			if(response.status == 'success') {
 				//alert(jsondata.data.page);
-				self.editPhoto(metadata, jsondata.data.tmp);
+				self.editPhoto(metadata, response.data.tmp);
 				//$('#edit_photo_dialog_img').html(jsondata.data.page);
 			}
 			else{
-				OC.notify({message: jsondata.data.message});
+				$(document).trigger('status.contacts.error', response);
 			}
 		});
 	},
 	editCurrentPhoto:function(metadata) {
 		var self = this;
 		$.getJSON(OC.filePath('contacts', 'ajax', 'currentphoto.php'), metadata,
-			function(jsondata) {
-			if(jsondata.status == 'success') {
+			function(response) {
+			if(response.status == 'success') {
 				//alert(jsondata.data.page);
-				self.editPhoto(metadata, jsondata.data.tmp);
-				$('#edit_photo_dialog_img').html(jsondata.data.page);
-			}
-			else{
-				OC.notify({message: jsondata.data.message});
+				self.editPhoto(metadata, response.data.tmp);
+				$('#edit_photo_dialog_img').html(response.data.page);
+			} else {
+				$(document).trigger('status.contacts.error', response);
 			}
 		});
 	},
@@ -1528,7 +1521,7 @@ OC.Contacts = OC.Contacts || {
 							}
 						});
 		}).error(function () {
-			OC.notify({message:t('contacts','Error loading profile picture.')});
+			$(document).trigger('status.contacts.error', {message:t('contacts','Error loading profile picture.')});
 		}).attr('src', OC.linkTo('contacts', 'tmpphoto.php')+'?tmpkey='+tmpkey+'&refresh='+Math.random());
 	},
 	savePhoto:function($dlg) {
@@ -1546,9 +1539,11 @@ OC.Contacts = OC.Contacts || {
 				});
 			} else {
 				if(!response) {
-					OC.notify({message:t('contacts', 'Network or server error. Please inform administrator.')});
+					$(document).trigger('status.contacts.error', {
+						message:t('contacts', 'Network or server error. Please inform administrator.')
+					});
 				} else {
-					OC.notify({message: response.data.message});
+					$(document).trigger('status.contacts.error', response);
 				}
 			}
 		});

@@ -72,9 +72,7 @@ OC.Contacts = OC.Contacts || {};
 					self.update({displayname:name}, function(response) {
 						console.log('response', response);
 						if(response.error) {
-							$(document).trigger('status.contact.error', {
-								message: response.message
-							});
+							$(document).trigger('status.contacts.error', response);
 						} else {
 							self.setDisplayName(response.data.displayname);
 							$input.addnew('close');
@@ -141,9 +139,7 @@ OC.Contacts = OC.Contacts || {};
 		return $.when(this.storage.updateAddressBook(this.getBackend(), self.getId(), {properties:properties}))
 			.then(function(response) {
 			if(response.error) {
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 			}
 			cb(response);
 		});
@@ -164,15 +160,11 @@ OC.Contacts = OC.Contacts || {};
 					addressbook: self
 				});
 			} else {
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 			}
 		}).fail(function(response) {
 			console.log(response.message);
-			$(document).trigger('status.contact.error', {
-				message: response.message
-			});
+			$(document).trigger('status.contacts.error', response);
 		});
 	}
 
@@ -203,9 +195,7 @@ OC.Contacts = OC.Contacts || {};
 				self.add(name, function(response) {
 					console.log('response', response);
 					if(response.error) {
-						$(document).trigger('status.contact.error', {
-							message: response.message
-						});
+						$(document).trigger('status.contacts.error', response);
 					} else {
 						$(this).addnew('close');
 					}
@@ -305,9 +295,7 @@ OC.Contacts = OC.Contacts || {};
 					}
 				}).fail(function(response) {
 					console.log(response.message);
-					$(document).trigger('status.contact.error', {
-						message: response.message
-					});
+					$(document).trigger('status.contacts.error', response);
 					done = true;
 				});
 			};
@@ -328,16 +316,12 @@ OC.Contacts = OC.Contacts || {};
 					});
 				} else {
 					self.$importStatusText.text(response.message);
-					$(document).trigger('status.contact.error', {
-						message: response.message
-					});
+					$(document).trigger('status.contacts.error', response);
 				}
 				done = true;
 			}).fail(function(response) {
 				console.log(response.message);
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 				done = true;
 			});
 			interval = setInterval(function() {
@@ -347,9 +331,7 @@ OC.Contacts = OC.Contacts || {};
 			done = true;
 			self.$importStatusText.text(response.data.message);
 			closeImport();
-			$(document).trigger('status.contact.error', {
-				message: response.data.message
-			});
+			$(document).trigger('status.contacts.error', response);
 		}
 	}
 
@@ -426,9 +408,7 @@ OC.Contacts = OC.Contacts || {};
 					data: response.data
 				});
 			} else {
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 			}
 		});
 	}
@@ -526,9 +506,7 @@ OC.Contacts = OC.Contacts || {};
 				defer.resolve(self.addressBooks);
 			} else {
 				defer.reject(response);
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 				return false;
 			}
 		})

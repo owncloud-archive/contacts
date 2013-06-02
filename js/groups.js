@@ -53,9 +53,7 @@ OC.Contacts = OC.Contacts || {};
 				$addInput.addClass('loading');
 				self.addGroup({name:name}, function(response) {
 					if(response.error) {
-						$(document).trigger('status.contact.error', {
-							message: response.message
-						});
+						$(document).trigger('status.contacts.error', response);
 					} else {
 						$addInput.addnew('close');
 					}
@@ -480,12 +478,10 @@ OC.Contacts = OC.Contacts || {};
 				cb(response);
 			}
 		})
-		.fail(function(jqxhr, textStatus, error) {
+		.fail(function(response) {
 			var err = textStatus + ', ' + error;
 			console.log( "Request Failed: " + err);
-			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed deleting group: {error}', {error:err})
-			});
+			$(document).trigger('status.contacts.error', response);
 		});
 	};
 
@@ -514,9 +510,7 @@ OC.Contacts = OC.Contacts || {};
 				$editInput.addClass('loading');
 				self.renameGroup(oldname, newname, function(response) {
 					if(response.error) {
-						$(document).trigger('status.contact.error', {
-							message: response.message
-						});
+						$(document).trigger('status.contacts.error', response);
 					} else {
 						$editInput.addnew('close');
 						$(document).trigger('status.group.grouprenamed', {
@@ -558,9 +552,8 @@ OC.Contacts = OC.Contacts || {};
 		.fail(function(response) {
 			console.log( "Request Failed: " + response);
 			cb({error:true});
-			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed renaming group: {error}', {error:response.message})
-			});
+			response.message = t('contacts', 'Failed renaming group: {error}', {error:response.message});
+			$(document).trigger('status.contacts.error', response);
 		});
 	};
 
@@ -638,9 +631,8 @@ OC.Contacts = OC.Contacts || {};
 		})
 		.fail(function(response) {
 			console.log( "Request Failed: " + response);
-			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed adding group: {error}', {error:response.message})
-			});
+			response.message = t('contacts', 'Failed adding group: {error}', {error:response.message})
+			$(document).trigger('status.contacts.error', response);
 		});
 	};
 
@@ -771,9 +763,8 @@ OC.Contacts = OC.Contacts || {};
 		})
 		.fail(function(response) {
 			console.log( "Request Failed: " + response);
-			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed loading groups: {error}', {error:response.message})
-			});
+			response.message = t('contacts', 'Failed loading groups: {error}', {error:response.message});
+			$(document).trigger('status.contacts.error', response);
 		});
 	};
 

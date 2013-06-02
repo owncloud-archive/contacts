@@ -382,18 +382,14 @@ OC.Contacts = OC.Contacts || {};
 				});
 				return true;
 			} else {
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 				self.setAsSaving(obj, false);
 				return false;
 			}
 		})
 		.fail(function(response) {
 			console.log(response.message);
-			$(document).trigger('status.contact.error', {
-				message: response.message
-			});
+			$(document).trigger('status.contacts.error', response);
 		});
 ;
 	};
@@ -429,7 +425,7 @@ OC.Contacts = OC.Contacts || {};
 					cb({error:false});
 				}
 			} else {
-				$(document).trigger('status.contact.error', {
+				$(document).trigger('status.contacts.error', {
 					message: response.message
 				});
 				if(typeof cb === 'function') {
@@ -643,9 +639,7 @@ OC.Contacts = OC.Contacts || {};
 				});
 				return true;
 			} else {
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 				self.setAsSaving(obj, false);
 				return false;
 			}
@@ -755,9 +749,7 @@ OC.Contacts = OC.Contacts || {};
 					contact: self
 				});
 			} else {
-				$(document).trigger('status.contact.error', {
-					message: response.message
-				});
+				$(document).trigger('status.contacts.error', response);
 				return false;
 			}
 			if(typeof cb == 'function') {
