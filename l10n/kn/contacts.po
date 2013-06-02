@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-02 00:56+0200\n"
-"PO-Revision-Date: 2013-06-01 22:56+0000\n"
+"POT-Creation-Date: 2013-06-03 00:58+0200\n"
+"PO-Revision-Date: 2013-06-02 22:58+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Kannada (http://www.transifex.com/projects/p/owncloud/language/kn/)\n"
 "MIME-Version: 1.0\n"
@@ -230,7 +230,7 @@ msgstr ""
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:665 js/app.js:1540
+#: js/app.js:665 js/app.js:1549
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
@@ -242,46 +242,46 @@ msgstr ""
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1067
+#: js/app.js:1076
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1206 js/app.js:1210 templates/contacts.php:184
+#: js/app.js:1215 js/app.js:1219 templates/contacts.php:184
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1232 js/app.js:1286 js/settings.js:120 templates/contacts.php:323
+#: js/app.js:1241 js/app.js:1295 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr ""
 
-#: js/app.js:1260 templates/contacts.php:165
+#: js/app.js:1269 templates/contacts.php:165
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1264
+#: js/app.js:1273
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1364
+#: js/app.js:1373
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1406
+#: js/app.js:1415
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1416
+#: js/app.js:1425
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1504
+#: js/app.js:1513
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1522
+#: js/app.js:1531
 msgid "Error loading profile picture."
 msgstr ""
 
@@ -466,15 +466,15 @@ msgstr ""
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
-#: lib/app.php:131
+#: lib/app.php:132
 msgid "Address book not found"
 msgstr ""
 
-#: lib/backend/ldap.php:370
+#: lib/backend/ldap.php:433
 msgid "There was an error updating the addressbook."
 msgstr ""
 
-#: lib/backend/ldap.php:434
+#: lib/backend/ldap.php:497
 msgid "There was an error deleting this addressbook."
 msgstr ""
 
