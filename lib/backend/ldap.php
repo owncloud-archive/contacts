@@ -201,10 +201,14 @@ class Ldap extends AbstractBackend {
 			}
 			error_log(__METHOD__." - search what $ldapbasedn, $bindsearch ");
 
-			$ldap_results = @ldap_search ($this->ldapConnection, $ldapbasedn, $bindsearch, $entries, $start, max(($start+$num), LDAP_OPT_SIZELIMIT));
+			$ldap_results = @ldap_search ($this->ldapConnection, $ldapbasedn, $bindsearch, $entries);
 			if ($ldap_results) {
 				$entries = ldap_get_entries ($this->ldapConnection, $ldap_results);
-				return $entries[0];
+				if ($entries['count'] > 0) {
+					return $entries[0];
+				} else {
+					return false;
+				}
 			} else {
 				error_log(__METHOD__." - search failed $ldapbasedn , $bindsearch ");
 			}
