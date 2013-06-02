@@ -924,6 +924,15 @@ OC.Contacts = OC.Contacts || {
 			self.setAllChecked(false);
 		});
 
+		this.$contactList.on('mouseenter', 'tr.contact', function(event) {
+			var $td = $(this).find('td').filter(':visible').last();
+			$('<a />').addClass('svg delete action').appendTo($td);
+		});
+
+		this.$contactList.on('mouseleave', 'tr.contact', function(event) {
+			$(this).find('a.delete').remove();
+		});
+
 		// Contact list. Either open a contact or perform an action (mailto etc.)
 		this.$contactList.on('click', 'tr.contact', function(event) {
 			if($(event.target).is('input')) {
@@ -945,7 +954,7 @@ OC.Contacts = OC.Contacts || {
 			}
 			if($(event.target).is('a.delete')) {
 				$(document).trigger('request.contact.delete', {
-					contactid: $(this).parents('tr.contact').data('id')
+					contactid: $(this).data('id')
 				});
 				return;
 			}

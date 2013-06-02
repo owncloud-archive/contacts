@@ -689,7 +689,14 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactlist tbody > tr > td a.mailto:hover { opacity: 0.8; }
 
-#contact { 
+#contactlist tbody > tr > td a.delete {
+	position: absolute;
+	right: 20px; clear: none;
+	cursor:pointer;
+	width:16px; height:16px;
+	z-index: 200;
+}
+#contact {
 	background-color: white; color: #333333;
 	border-radius: 3px; box-shadow: 0 0 10px #888888; 
 	padding: 10px; 
