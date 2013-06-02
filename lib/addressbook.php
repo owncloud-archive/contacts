@@ -129,7 +129,7 @@ class Addressbook extends AbstractPIMCollection {
 	* @param string $id
 	* @return Contact|null
 	*/
-	function getChild($id) {
+	public function getChild($id) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$id, \OCP\Util::DEBUG);
 		if(!$this->hasPermission(\OCP\PERMISSION_READ)) {
 			throw new \Exception(self::$l10n->t('You do not have permissions to see this contacts'), 403);
@@ -153,7 +153,7 @@ class Addressbook extends AbstractPIMCollection {
 	* @param string $id
 	* @return bool
 	*/
-	function childExists($id) {
+	public function childExists($id) {
 		return ($this->getChild($id) !== null);
 	}
 
@@ -162,7 +162,7 @@ class Addressbook extends AbstractPIMCollection {
 	*
 	* @return Contact[]
 	*/
-	function getChildren($limit = null, $offset = null, $omitdata = false) {
+	public function getChildren($limit = null, $offset = null, $omitdata = false) {
 		if(!$this->hasPermission(\OCP\PERMISSION_READ)) {
 			throw new \Exception(self::$l10n->t('You do not have permissions to see these contacts'), 403);
 		}

@@ -38,7 +38,7 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	 * This is a collection so return null.
 	 * @return null
 	 */
-	function getParent() {
+	public function getParent() {
 		null;
 	}
 
@@ -49,14 +49,14 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	* @param string $id
 	* @return IPIMObject
 	*/
-	abstract function getChild($id);
+	public abstract function getChild($id);
 
 	/**
 	* Returns an array with all the child nodes
 	*
 	* @return IPIMObject[]
 	*/
-	abstract function getChildren($limit = null, $offset = null);
+	public abstract function getChildren($limit = null, $offset = null);
 
 	/**
 	* Checks if a child-node with the specified id exists
@@ -64,7 +64,7 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	* @param string $id
 	* @return bool
 	*/
-	abstract function childExists($id);
+	public abstract function childExists($id);
 
 	/**
 	 * Add a child to the collection
@@ -74,7 +74,7 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	 * @param mixed $data
 	 * @return string ID of the newly added child
 	 */
-	abstract public function addChild($data);
+	public abstract function addChild($data);
 
 	/**
 	 * Delete a child from the collection
@@ -82,7 +82,7 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	 * @param string $id
 	 * @return bool
 	 */
-	abstract public function deleteChild($id);
+	public abstract function deleteChild($id);
 
     // Iterator methods
 

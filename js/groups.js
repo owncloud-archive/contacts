@@ -48,6 +48,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 		var $addInput = this.$groupList.find('.add-group');
 		$addInput.addnew({
+			addText: t('core', 'Add'),
 			ok: function(event, name) {
 				$addInput.addClass('loading');
 				self.addGroup({name:name}, function(response) {
@@ -308,6 +309,8 @@ OC.Contacts = OC.Contacts || {};
 
 	/**
 	* Removes one or more contact ids from a group
+	* TODO: When deleting contacts this method should just remove the contact id
+	* from its internal list without saving.
 	* @param integer|array contactid. An integer id or an array of integer ids.
 	* @param integer groupid. The integer id of the group
 	* @param function cb. Optional call-back function

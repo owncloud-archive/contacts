@@ -428,6 +428,7 @@ dt[data-element="org"] { margin-top: 4px; }
 #contacts-settings a.action:not(.settings) { width: 16px; height: 16px; }
 */
 .addressbooklist .actions { position: absolute; right: 5px; }
+.addressbooklist .actions > a { width: 20px; height: 20px; }
 .addressbooklist > li > div {
 	display: inline-block;
 	clear: both;
@@ -581,43 +582,66 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 /* contact list */
 
 #contactsHeader {
-	display: none;
-	-moz-box-sizing: border-box;
-	left: 315px; right: 15px; top: 45px;
+	top: 46px;
 	position: fixed;
-	height: 32px;
+	height: 20px;
+	background: none repeat scroll 0 0 rgba(230,230,230,.95);
+	color: #999;
 	z-index: 2;
-    background: none repeat scroll 0 0 rgba(230, 230, 230, .8);
-    border-bottom: 0 none;
-    color: #000000;
-    font-weight: bold;
+	width: 100%;
+}
+#contactsHeader > tr {
+}
+#contactsHeader > td {
+	z-index: 300;
+}
+#contactsHeader > td.actions {
+	left: 600px; right: 15px; top: 45px;
+	position: fixed;
+	height: 20px;
+	font-weight: bold;
 	opacity: 1;
+	padding: 0; margin: 0 10px;
+	float: right;
+}
+#contactsHeader > td > * {
+	/*-webkit-box-sizing: border-box;  -moz-box-sizing: border-box; box-sizing: border-box;*/
+	display: inline-block;
+	float: left;
 }
 #contactsHeader .toggle {
-	margin: 10px 0 0 12px;
+	margin: 0 15px;
+	opacity: 1;
 }
-
-#contactsHeader .actions {
-	-webkit-box-sizing: border-box;  -moz-box-sizing: border-box; box-sizing: border-box;
-	display: block;
-	padding: 0 .5em; margin: 0 auto;
+#contactsHeader select {
+	width: auto;
+	font-size: 90%;
+	padding: 0; margin: 0 10px;
+}
+#contactsHeader .actions > * {
 	float: right;
 }
 #contactsHeader .action {
-	height: 20px;
 	margin: 0;
 	padding: 0 5px;
 }
-#contactsHeader .actions > .delete {
-	margin-top: 6px;
+#contactsHeader .actions > .toggle {
+	float: left;
 }
-#contactlist.multiselect {
-	top: 32px;
+#contactlist {  }
+#contactlist > tbody {
+	position: relative;
+ 	padding-bottom: 300px;
+	width: 100%;
+	z-index: 1;
 }
-#contactlist { position: relative; top: 0; left: 0; right: 0; width: 100%; }
-#contactlist tr.contact { height: 3em; display: none; }
-#contactlist tr.active, #contactlist tr:hover { background-color: #eee; }
-#contactlist tr > td {
+#contactlist { margin-top:20px; position: relative; width: 100%; }
+#contactlist td {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+#contactlist > tbody > tr.contact { height: 3em; display: none; }
+#contactlist > tbody > tr.contact.active, #contactlist tr:hover { background-color: #eee; }
+#contactlist > tbody > tr > td {
 	border-bottom: 1px solid #DDDDDD;
 	font-weight: normal;
 	text-align: left;
@@ -626,43 +650,53 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	vertical-align: middle;
 	white-space: nowrap;
 }
-#contactlist tr > td:hover {
-	overflow: inherit;
-	text-overflow: inherit;
-	background-color: #fff;
-	z-index: 200;
-	opacity: 1;
+#contactlist tr > td:not(.name) {
+	padding-left:10px;
 }
-#contactlist tr > td:not(.adr) { max-width: 270px; }
-#contactlist tr > td.adr { max-width: 300px; }
-#contactlist tr > td.name > input[type=checkbox]:first-child {
+#contactlist tr > td:not(.tel):not(.adr):not(.actions) {
+	max-width: 270px;
+	min-width: 270px;
+}
+#contactlist tr > td.tel {
+	max-width: 180px;
+	min-width: 180px;
+}
+#contactlist tbody > tr > td.adr { width: 100%; max-width:300px; }
+#contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
 	-webkit-transition:opacity 200ms; -moz-transition:opacity 200ms; -o-transition:opacity 200ms; transition:opacity 200ms;
 	float:left;
-	margin:.5em 0 0 1.2em;
+	margin:.5em 0 0 15px;
 }
-#contactlist tr > td.name > input[type="checkbox"]:hover:first-child {
+#contactlist tbody > tr > td.name > input[type="checkbox"]:hover:first-child {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter:alpha(opacity=80); opacity:.8;
 }
-#contactlist tr > td.name > input[type="checkbox"]:checked:first-child {
+#contactlist tbody > tr > td.name > input[type="checkbox"]:checked:first-child {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter:alpha(opacity=100); opacity:1;
 }
-#contactlist tr > td.name {
+#contactlist tbody > tr > td.name {
 	font-weight: bold; text-indent: 1.6em;
 	-webkit-transition:background-image 500ms; -moz-transition:background-image 500ms; -o-transition:background-image 500ms;  transition:background-image 500ms;
 	background-repeat:no-repeat !important;
-	position:relative; background-position:1em .5em !important;
+	position:relative; background-position: 10px center !important;
 }
-#contactlist tr > td a.mailto {
+#contactlist tbody > tr > td a.mailto {
 	position: absolute; float: right;  clear: none;
 	cursor:pointer;
 	width:16px; height:16px;
-	margin: 2px; z-index: 200;
+	margin: 2px 0 2px 5px; z-index: 200;
 	opacity: 0.6; background-image:url('%webroot%/core/img/actions/mail.svg');
 }
-#contactlist tr > td a.mailto:hover { opacity: 0.8; }
+#contactlist tbody > tr > td a.mailto:hover { opacity: 0.8; }
 
-#contact { 
+#contactlist tbody > tr > td a.delete {
+	position: absolute;
+	right: 20px; clear: none;
+	cursor:pointer;
+	width:16px; height:16px;
+	z-index: 200;
+}
+#contact {
 	background-color: white; color: #333333;
 	border-radius: 3px; box-shadow: 0 0 10px #888888; 
 	padding: 10px; 
@@ -736,10 +770,13 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 @media screen and (max-width: 1400px) {
 	#contactlist tr td.adr { display: none; }
+	#contactlist tr td.tel { width:100%; }
 }
 @media screen and (max-width: 1200px) {
 	#contactlist tr td.tel { display: none; }
+	#contactlist tr td.email { width:100%; }
 }
 @media screen and (max-width: 900px) {
 	#contactlist tr td.email { display: none; }
+	#contactlist tr td.name { width:100%; max-width: auto;}
 }

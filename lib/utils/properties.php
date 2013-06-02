@@ -196,6 +196,34 @@ Class Properties {
 	}
 
 	/**
+	 * Purge indexed properties.
+	 *
+	 * @param string[] $ids
+	 * @param \OCA\VObject\VCard|null $vcard
+	 */
+	public static function purgeIndexes($ids) {
+		\OCP\Util::writeLog('contacts', __METHOD__.', ids: ' . print_r($ids, true), \OCP\Util::DEBUG);
+		if(!is_array($ids) || count($ids) === 0) {
+			throw new \Exception(__METHOD__ . ' takes only arrays with at least one value.');
+		}
+		\OCP\Util::writeLog('contacts', __METHOD__.', ids: ' . print_r($ids, true), \OCP\Util::DEBUG);
+		if(!isset(self::$deleteindexstmt)) {
+			self::$deleteindexstmt
+				= \OCP\DB::prepare('DELETE FROM `' . self::$indexTableName . '`'
+					. ' WHERE `contactid` IN (' . str_repeat('?,', count($ids)-1) . '?) ');
+		}
+		try {
+			self::$deleteindexstmt->execute($ids);
+		} catch(\Exception $e) {
+			\OCP\Util::writeLog('contacts', __METHOD__.
+				', exception: ' . $e->getMessage(), \OCP\Util::ERROR);
+			\OCP\Util::writeLog('contacts', __METHOD__.', ids: '
+				. $ids, \OCP\Util::DEBUG);
+			return false;
+		}
+	}
+
+	/**
 	 * Update the contact property index.
 	 *
 	 * If vcard is null the properties for that contact will be purged.
@@ -206,24 +234,7 @@ Class Properties {
 	 * @param \OCA\VObject\VCard|null $vcard
 	 */
 	public static function updateIndex($contactid, $vcard = null) {
-		if(!isset(self::$deleteindexstmt)) {
-			self::$deleteindexstmt
-				= \OCP\DB::prepare('DELETE FROM `' . self::$indexTableName . '`'
-					. ' WHERE `contactid` = ?');
-		}
-		try {
-			self::$deleteindexstmt->execute(array($contactid));
-		} catch(\Exception $e) {
-			\OCP\Util::writeLog('contacts', __METHOD__.
-				', exception: ' . $e->getMessage(), \OCP\Util::ERROR);
-			\OCP\Util::writeLog('contacts', __METHOD__.', id: '
-				. $id, \OCP\Util::DEBUG);
-			throw new \Exception(
-				App::$l10n->t(
-					'There was an error deleting properties for this contact.'
-				)
-			);
-		}
+		self::purgeIndexes(array($contactid));
 
 		if(is_null($vcard)) {
 			return;

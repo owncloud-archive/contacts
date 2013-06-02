@@ -60,15 +60,17 @@ class AddressBookController extends BaseController {
 			$response->setETag(md5($lastModified));
 		}
 
-		$contacts = array();
-		foreach($addressBook->getChildren() as $i => $contact) {
-			$result = JSONSerializer::serializeContact($contact);
-			//\OCP\Util::writeLog('contacts', __METHOD__.' contact: '.print_r($result, true), \OCP\Util::DEBUG);
-			if($result !== null) {
-				$contacts[] = $result;
+		if($this->request->method === 'GET') {
+			$contacts = array();
+			foreach($addressBook->getChildren() as $i => $contact) {
+				$result = JSONSerializer::serializeContact($contact);
+				//\OCP\Util::writeLog('contacts', __METHOD__.' contact: '.print_r($result, true), \OCP\Util::DEBUG);
+				if($result !== null) {
+					$contacts[] = $result;
+				}
 			}
+			$response->setParams(array('contacts' => $contacts));
 		}
-		$response->setParams(array('contacts' => $contacts));
 		return $response;
 	}
 
@@ -107,11 +109,11 @@ class AddressBookController extends BaseController {
 	 */
 	public function addAddressBook() {
 		$app = new App($this->api->getUserId());
+		$params = $this->request->urlParams;
 
 		$response = new JSONResponse();
 
-		$backend = $app->getBackend('local');
-		// TODO: Check actual permissions
+		$backend = $app->getBackend($params['backend']);
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_CREATE)) {
 			throw new \Exception('Not implemented');
 		}
@@ -157,7 +159,7 @@ class AddressBookController extends BaseController {
 
 		$response = new JSONResponse();
 
-		$backend = $app->getBackend('local');
+		$backend = $app->getBackend($params['backend']);
 		// TODO: Check actual permissions
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_DELETE)) {
 			throw new \Exception('Not implemented');

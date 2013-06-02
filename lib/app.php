@@ -72,7 +72,7 @@ class App {
 		if (isset(self::$backendClasses[$name])) {
 			return new self::$backendClasses[$name]($user);
 		} else {
-			throw new \Exception('No backend for: ' . $name);
+			throw new \Exception('No backend for: ' . $name, '404');
 		}
 	}
 
@@ -128,8 +128,9 @@ class App {
 		// TODO: Check for return values
 		$backend = self::getBackend($backendName, $this->user);
 		$info = $backend->getAddressBook($addressbookid);
-		// FIXME: Backend name should be set by the backend.
-		$info['backend'] = $backendName;
+		if(!$info) {
+			throw new \Exception(self::$l10n->t('Address book not found'), 404);
+		}
 		$addressBook = new AddressBook($backend, $info);
 		self::$addressBooks[] = $addressBook;
 		return $addressBook;

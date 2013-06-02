@@ -179,6 +179,8 @@ OC.Contacts = OC.Contacts || {
 		self.groups.loadGroups(function() {
 			self.loading(self.$navigation, false);
 		});
+		// Hide the list while populating it.
+		this.$contactList.hide();
 		$.when(this.addressBooks.loadAddressBooks()).then(function(addressBooks) {
 			var num = addressBooks.length;
 			var deferreds = $(addressBooks).map(function(i, elem) {
@@ -187,6 +189,7 @@ OC.Contacts = OC.Contacts || {
 			// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
 			$.when.apply(null, deferreds.get()).then(function(response) {
 				self.contacts.setSortOrder(contacts_sortby);
+				self.$contactList.show();
 				$(document).trigger('status.contacts.loaded', {
 					numcontacts: self.contacts.length
 				});
@@ -249,10 +252,12 @@ OC.Contacts = OC.Contacts || {
 		this.$headeractions.children().hide();
 		if(act && act.length > 0) {
 			this.$contactList.addClass('multiselect');
-			this.$contactListHeader.show();
+			this.$contactListHeader.find('.actions').show();
+			this.$contactListHeader.find('.info').hide();
 			this.$headeractions.children('.'+act.join(',.')).show();
 		} else {
-			this.$contactListHeader.hide();
+			this.$contactListHeader.find('.actions').hide();
+			this.$contactListHeader.find('.info').show();
 			this.$contactList.removeClass('multiselect');
 		}
 	},
@@ -757,14 +762,16 @@ OC.Contacts = OC.Contacts || {
 			self.$ninjahelp.hide();
 		});
 
-		this.$toggleAll.on('change', function() {
+		this.$toggleAll.on('change', function(event) {
+			event.stopPropagation();
+			event.preventDefault();
 			var isChecked = $(this).is(':checked');
 			self.setAllChecked(isChecked);
 			if(self.$groups.find('option').length === 1) {
 				self.buildGroupSelect();
 			}
 			if(isChecked) {
-				self.showActions(['add', 'download', 'groups', 'delete', 'favorite', 'merge']);
+				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite', 'merge']);
 			} else {
 				self.hideActions();
 			}
@@ -779,9 +786,9 @@ OC.Contacts = OC.Contacts || {
 			if(selected.length === 0) {
 				self.hideActions();
 			} else if(selected.length === 1) {
-				self.showActions(['add', 'download', 'groups', 'delete', 'favorite']);
+				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite']);
 			} else {
-				self.showActions(['add', 'download', 'groups', 'delete', 'favorite', 'merge']);
+				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite', 'merge']);
 			}
 		});
 
@@ -917,8 +924,17 @@ OC.Contacts = OC.Contacts || {
 			self.setAllChecked(false);
 		});
 
+		this.$contactList.on('mouseenter', 'tr.contact', function(event) {
+			var $td = $(this).find('td').filter(':visible').last();
+			$('<a />').addClass('svg delete action').appendTo($td);
+		});
+
+		this.$contactList.on('mouseleave', 'tr.contact', function(event) {
+			$(this).find('a.delete').remove();
+		});
+
 		// Contact list. Either open a contact or perform an action (mailto etc.)
-		this.$contactList.on('click', 'tr', function(event) {
+		this.$contactList.on('click', 'tr.contact', function(event) {
 			if($(event.target).is('input')) {
 				return;
 			}
@@ -933,6 +949,12 @@ OC.Contacts = OC.Contacts || {
 				$(document).trigger('request.openurl', {
 					type: 'email',
 					url: $.trim($(this).find('.email').text())
+				});
+				return;
+			}
+			if($(event.target).is('a.delete')) {
+				$(document).trigger('request.contact.delete', {
+					contactid: $(this).data('id')
 				});
 				return;
 			}

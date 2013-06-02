@@ -179,7 +179,7 @@ abstract class AbstractBackend {
 	 * 'description', but backends can implement additional.
 	 *
 	 * @param string $addressbookid
-	 * @return array $properties
+	 * @return array|null $properties
 	 */
 	public abstract function getAddressBook($addressbookid);
 

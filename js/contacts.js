@@ -48,9 +48,12 @@ OC.Contacts = OC.Contacts || {};
 		}
 		this.sortOrder = method;
 		// ~30% faster than jQuery.
-		this.$listelem.get(0).firstElementChild.getElementsByClassName('nametext')[0].innerHTML = escapeHTML(this.displayNames[method]);
-		//var $elem = this.$listelem.find('.nametext').text(escapeHTML(this.displayNames[method]));
-		//$elem.text(escapeHTML(this.displayNames[method]));
+		try {
+			this.$listelem.get(0).firstElementChild.getElementsByClassName('nametext')[0].innerHTML = escapeHTML(this.displayNames[method]);
+		} catch(e) {
+			var $elem = this.$listelem.find('.nametext').text(escapeHTML(this.displayNames[method]));
+			$elem.text(escapeHTML(this.displayNames[method]));
+		}
 	};
 
 	Contact.prototype.getId = function() {
@@ -660,6 +663,7 @@ OC.Contacts = OC.Contacts || {};
 	 * Remove any open contact from the DOM.
 	 */
 	Contact.prototype.close = function() {
+		$(document).unbind('status.contact.photoupdated');
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
 			this.$fullelem.remove();
@@ -1960,6 +1964,20 @@ OC.Contacts = OC.Contacts || {};
 			this.setSortOrder();
 			return;
 		}
+		console.time('show');
+		$('tr.contact').filter(':visible').hide();
+		$.each(contacts, function(idx, id) {
+			var contact =  self.findById(id);
+			if(contact === null) {
+				return true; // continue
+			}
+			contact.getListItemElement().show();
+			contact.setThumbnail();
+		});
+		console.timeEnd('show');
+
+		// Amazingly this is slightly faster
+		//console.time('show');
 		for(var id in this.contacts) {
 			var contact = this.findById(id);
 			if(contact === null) {
@@ -1972,6 +1990,8 @@ OC.Contacts = OC.Contacts || {};
 				contact.setThumbnail();
 			}
 		}
+		//console.timeEnd('show');*/
+
 		this.setSortOrder();
 	};
 
@@ -2025,7 +2045,9 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
-	 * @param object data An object or array of objects containing contact identification
+	 * TODO: Instead of having a timeout the contacts should be moved to a "Trash" backend/address book
+	 * https://github.com/owncloud/contacts/issues/107
+	 * @param object|object[] data An object or array of objects containing contact identification
 	 * {
 	 * 	contactid: '1234',
 	 * 	addressbookid: '4321',
@@ -2097,6 +2119,7 @@ OC.Contacts = OC.Contacts || {};
 
 	/**
 	* Delete contacts in the queue
+	* TODO: Batch delete contacts instead of sending multiple requests.
 	*/
 	ContactList.prototype.deleteContacts = function() {
 		var self = this;
@@ -2242,33 +2265,32 @@ OC.Contacts = OC.Contacts || {};
 
 	ContactList.prototype.setSortOrder = function(order) {
 		order = order || contacts_sortby;
-		console.time('set name');
-		var rows = this.$contactList.find('tr:visible.contact');
+		//console.time('set name');
+		var $rows = this.$contactList.find('tr:visible.contact');
 		var self = this;
-		$.each(rows, function(idx, row) {
+		$.each($rows, function(idx, row) {
 			self.contacts[$(row).data('id')].setDisplayMethod(order);
 		});
-		console.timeEnd('set name');
-		if(rows.length > 1) {
-			console.time('sort');
-			this.doSort(rows.get());
-			console.timeEnd('sort');
+		//console.timeEnd('set name');
+		if($rows.length > 1) {
+			//console.time('sort');
+			var rows = $rows.get();
+			if(rows[0].firstElementChild && rows[0].firstElementChild.textContent) {
+				rows.sort(function(a, b) {
+					// 10 (TEN!) times faster than using jQuery!
+					return a.firstElementChild.textContent.trim().toUpperCase()
+						.localeCompare(b.firstElementChild.textContent.trim().toUpperCase());
+				});
+			} else {
+				// IE8 doesn't support firstElementChild or textContent
+				rows.sort(function(a, b) {
+					return $(a).find('.nametext').text().toUpperCase()
+						.localeCompare($(b).find('td.name').text().toUpperCase());
+				});
+			}
+			this.$contactList.prepend(rows);
+			//console.timeEnd('sort');
 		}
-	};
-
-	// Should only be neccesary with progressive loading, but it's damn fast, so... ;)
-	ContactList.prototype.doSort = function(rows) {
-		var self = this;
-		//var rows = this.$contactList.find('tr:visible.contact').get();
-
-		rows.sort(function(a, b) {
-			// 10 (TEN!) times faster than using jQuery!
-			return a.firstElementChild.textContent.trim().toUpperCase().localeCompare(b.firstElementChild.textContent.trim().toUpperCase());
-			//return $(a).find('.nametext').text().toUpperCase().localeCompare($(b).find('td.name').text().toUpperCase());
-		});
-
-		self.$contactList.prepend(rows);
-
 	};
 
 	/**
@@ -2304,10 +2326,6 @@ OC.Contacts = OC.Contacts || {};
 						return true; // continue
 					}
 					items.push($item.get(0));
-					if(items.length === 100) {
-						self.$contactList.append(items);
-						items = [];
-					}
 				});
 				if(items.length > 0) {
 					self.$contactList.append(items);

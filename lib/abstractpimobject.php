@@ -84,7 +84,7 @@ abstract class AbstractPIMObject implements IPIMObject {
 	 * to the parent object, otherwise return null.
 	 * @return IPIMObject|null
 	 */
-	function getParent() {
+	public function getParent() {
 		return $this->parent;
 	}
 
@@ -100,14 +100,14 @@ abstract class AbstractPIMObject implements IPIMObject {
 	 *
 	 * @return integer
 	 */
-	function getPermissions() {
+	public function getPermissions() {
 		return $this->permissions;
 	}
 
 	/**
 	 * @return AbstractBackend
 	 */
-	function getBackend() {
+	public function getBackend() {
 		return $this->backend;
 	}
 
@@ -115,7 +115,7 @@ abstract class AbstractPIMObject implements IPIMObject {
 	 * @param integer $permission
 	 * @return boolean
 	 */
-	function hasPermission($permission) {
+	public function hasPermission($permission) {
 		return $this->getPermissions() & $permission;
 	}
 

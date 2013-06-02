@@ -184,11 +184,11 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * to the parent object, otherwise return null.
 	 * @return IPIMObject|null
 	 */
-	function getParent() {
+	public function getParent() {
 		return $this->props['parent'];
 	}
 
-	function getBackend() {
+	public function getBackend() {
 		return $this->props['backend'];
 	}
 
@@ -196,7 +196,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 *
 	 * @return integer
 	 */
-	function getPermissions() {
+	public function getPermissions() {
 		return $this->props['parent']->getPermissions();
 	}
 
@@ -204,7 +204,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @param integer $permission
 	 * @return bool
 	 */
-	function hasPermission($permission) {
+	public function hasPermission($permission) {
 		return $this->getPermissions() & $permission;
 	}
 

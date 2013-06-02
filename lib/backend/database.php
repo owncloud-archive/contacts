@@ -108,7 +108,10 @@ class Database extends AbstractBackend {
 			if (\OC_DB::isError($result)) {
 				\OCP\Util::write('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-				return array();
+				return null;
+			}
+			if((int)$result->numRows() === 0) {
+				throw new \Exception('Address Book not found', 404);
 			}
 			$row = $result->fetchRow();
 			$row['permissions'] = \OCP\PERMISSION_ALL;
@@ -118,9 +121,9 @@ class Database extends AbstractBackend {
 		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
 				. $e->getMessage(), \OCP\Util::ERROR);
-			return array();
+			return null;
 		}
-		return array();
+		return null;
 	}
 
 	public function hasAddressBook($addressbookid) {
@@ -247,12 +250,6 @@ class Database extends AbstractBackend {
 	 * @return bool
 	 */
 	public function deleteAddressBook($addressbookid) {
-		\OC_Hook::emit('OCA\Contacts', 'pre_deleteAddressBook',
-			array('id' => $addressbookid)
-		);
-
-		// Clean up sharing
-		\OCP\Share::unshareAll('addressbook', $addressbookid);
 
 		// Get all contact ids for this address book
 		$ids = array();
@@ -278,22 +275,9 @@ class Database extends AbstractBackend {
 			}
 		}
 
-		// Purge contact property indexes
-		if(count($ids)) {
-			$stmt = \OCP\DB::prepare('DELETE FROM `' . $this->indexTableName
-				.'` WHERE `contactid` IN ('.str_repeat('?,', count($ids)-1).'?)');
-			try {
-				$stmt->execute($ids);
-			} catch(\Exception $e) {
-				\OCP\Util::writeLog('contacts', __METHOD__.
-					', exception: ' . $e->getMessage(), \OCP\Util::ERROR);
-			}
-
-			// Purge categories
-			$catctrl = new \OC_VCategories('contact');
-			$catctrl->purgeObjects($ids);
-
-		}
+		\OC_Hook::emit('OCA\Contacts', 'pre_deleteAddressBook',
+			array('addressbookid' => $addressbookid, 'contactids' => $ids)
+		);
 
 		// Delete contacts in address book.
 		if(!isset(self::$preparedQueries['deleteaddressbookcontacts'])) {
@@ -462,6 +446,10 @@ class Database extends AbstractBackend {
 			$result = $stmt->execute($ids);
 			if (\OC_DB::isError($result)) {
 				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+				return false;
+			}
+			if((int)$result->numRows() === 0) {
+				\OCP\Util::writeLog('contacts', __METHOD__.', Not found, id: '. $id, \OCP\Util::DEBUG);
 				return false;
 			}
 		} catch(\Exception $e) {
