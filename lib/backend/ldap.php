@@ -51,7 +51,7 @@ class Ldap extends AbstractBackend {
 	 */
 	public function setLdapParams($aid) {
 		//error_log( __METHOD__.', id: '.$aid);
-		$sql = 'SELECT displayname, uri, description, ldapurl, ldapbasednsearch, ldapbasednmodify, ldapuser, ldappass, ldapanonymous, ldapreadonly, ldap_vcard_connector FROM `'.$this->addressBooksTableName.'` WHERE `id` = ? and `active` = 1';
+		$sql = 'SELECT displayname, uri, description, ldapurl, ldapbasednsearch, ldapbasednmodify, ldapuser, ldappass, ldapanonymous, ldapreadonly, ldappagesize, ldap_vcard_connector FROM `'.$this->addressBooksTableName.'` WHERE `id` = ? and `active` = 1';
 		try {
 			$stmt = \OCP\DB::prepare($sql);
 			$result = $stmt->execute(array($aid));
@@ -72,6 +72,7 @@ class Ldap extends AbstractBackend {
 																'ldappass' => base64_decode($row['ldappass']),
 																'ldapanonymous' => intval($row['ldapanonymous']),
 																'ldapreadonly' => intval($row['ldapreadonly']),
+																'ldappagesize' => intval($row['ldappagesize']),
 																'ldap_vcard_connector' => $row['ldap_vcard_connector']);
 			$this->connector = new LdapConnector($this->ldapParams['ldap_vcard_connector']);
 			return true;
@@ -97,7 +98,7 @@ class Ldap extends AbstractBackend {
 					//error_log( __METHOD__.', anonymous bind');
 				} else {
 					$ldapbind = ldap_bind($this->ldapConnection, $this->ldapParams['ldapuser'], $this->ldapParams['ldappass']);
-					//error_log( __METHOD__.", log in and bind as '".$this->ldapParams['ldapuser']."' - '".$this->ldapParams['ldappass']."'");
+					error_log( __METHOD__.", log in and bind as '".$this->ldapParams['ldapuser']."' - '".$this->ldapParams['ldappass']."'");
 				}
 				return $ldapbind;
 			}
@@ -126,7 +127,7 @@ class Ldap extends AbstractBackend {
 	}
 	
 	/**
-	 * @brief search in ldap server
+	 * @brief search a list in ldap server
 	 * @param $ldapbasedn the base dn
 	 * @param $bindsearch the search filter
 	 * @param $entries the ldap entries to reach
@@ -134,8 +135,8 @@ class Ldap extends AbstractBackend {
 	 * @param $num the number of entries to return
 	 * @return array|false
 	 */
-	public function ldapFind($ldapbasedn, $bindsearch, $entries, $start=null, $num=null) {
-		if (($entries != null) && self::ldapCreateAndBindConnection() && $ldapbasedn != null && $bindsearch != null) {
+	public function ldapFindMultiple($ldapbasedn, $bindsearch, $entriesName, $start=null, $num=null) {
+		if (($entriesName != null) && self::ldapCreateAndBindConnection() && $ldapbasedn != null && $bindsearch != null) {
 			
 			if ($start==null) {
 				$start=0;
@@ -144,20 +145,75 @@ class Ldap extends AbstractBackend {
 			if ($num==null) {
 				$num=PHP_INT_MAX;
 			}
-			error_log(__METHOD__." - search what $ldapbasedn, $bindsearch ");
 			
-			$ldap_results = @ldap_search ($this->ldapConnection, $ldapbasedn, $bindsearch, $entries, $start, max(($start+$num), LDAP_OPT_SIZELIMIT));
-			if ($ldap_results) {
-				return ldap_get_entries ($this->ldapConnection, $ldap_results);
-			} else {
-				error_log(__METHOD__." - search failed $ldapbasedn , $bindsearch ");
-			}
+			$pageSize = isset($this->ldapParams['ldappagesize'])?$this->ldapParams['ldappagesize']:"20";
+
+			$cookie = '';
 			
-			//self::ldapCloseConnection();
+			$entries = array();
+			
+			$cpt=0;
+			
+			\OC_Log::write('contacts_ldap', __METHOD__." - search what $ldapbasedn, $bindsearch $pageSize", \OC_Log::DEBUG);
+			do {
+				
+				ldap_control_paged_result($this->ldapConnection, $pageSize, true, $cookie);
+				$ldap_results = ldap_search ($this->ldapConnection, $ldapbasedn, $bindsearch, $entriesName);
+				
+				$LdapEntries = ldap_get_entries ($this->ldapConnection, $ldap_results);
+				
+				for ($i=0; $i<$LdapEntries['count']; $i++) {
+					$entries[] = $LdapEntries[$i];
+				}
+				ldap_control_paged_result_response($this->ldapConnection, $ldap_results, $cookie);
+
+				$cpt++;
+			} while($cookie !== null && $cookie != '' && $cpt < 10);
+			
+			$entries['count'] = count($entries);
+			
+			return $entries;
+
+			self::ldapCloseConnection();
 		}
 		return false;
 	}
 	
+	
+	/**
+	* @brief search one contact in ldap server
+	* @param $ldapbasedn the base dn
+	* @param $bindsearch the search filter
+	* @param $entries the ldap entries to reach
+	* @param $start the starting point
+	* @param $num the number of entries to return
+	* @return array|false
+	*/
+	public function ldapFindOne($ldapbasedn, $bindsearch, $entries, $start=null, $num=null) {
+		if (($entries != null) && self::ldapCreateAndBindConnection() && $ldapbasedn != null && $bindsearch != null) {
+
+			if ($start==null) {
+				$start=0;
+			}
+
+			if ($num==null) {
+				$num=PHP_INT_MAX;
+			}
+			error_log(__METHOD__." - search what $ldapbasedn, $bindsearch ");
+
+			$ldap_results = @ldap_search ($this->ldapConnection, $ldapbasedn, $bindsearch, $entries, $start, max(($start+$num), LDAP_OPT_SIZELIMIT));
+			if ($ldap_results) {
+				$entries = ldap_get_entries ($this->ldapConnection, $ldap_results);
+				return $entries[0];
+			} else {
+				error_log(__METHOD__." - search failed $ldapbasedn , $bindsearch ");
+			}
+
+			self::ldapCloseConnection();
+		}
+		return false;
+	}
+
 	/**
 	 * @brief adds a new ldap entry
 	 * @param $ldapDN the new DN (must be unique)
@@ -180,9 +236,10 @@ class Ldap extends AbstractBackend {
 	 */
 	public function ldapUpdate($ldapDN, $ldapValues) {
 		if (self::ldapIsConnected()) {
-			//error_log("updating $ldapDN");
+			error_log("updating $ldapDN ".print_r($ldapValues, true));
 			$result = @ldap_modify($this->ldapConnection, $ldapDN, $ldapValues);
 			if (!$result) {
+				error_log("Error updating : ".ldap_error($this->ldapConnection));
 				self::ldapDelete($ldapDN);
 				return self::ldapAdd($ldapDN, $ldapValues);
 			}
@@ -198,10 +255,12 @@ class Ldap extends AbstractBackend {
 	 */
 	public function ldapDelete($ldapDN) {
 		if (self::ldapIsConnected()) {
-			//error_log("deleting $ldapDN");
-			return @ldap_delete($this->ldapConnection, $ldapDN);
-		return false;
+			error_log("deleting $ldapDN");
+			ldap_delete($this->ldapConnection, $ldapDN);
+			error_log("Error updating : ".ldap_error($this->ldapConnection));
+			return true;
 		}
+		return false;
 	}
 	
 	/**
@@ -497,7 +556,7 @@ class Ldap extends AbstractBackend {
 		foreach ($id_array as $one_id) {
 			if (self::setLdapParams($one_id)) {
 				//OCP\Util::writeLog('contacts_ldap', __METHOD__.' Connector OK', \OC_Log::DEBUG);
-				$info = self::ldapFind($this->ldapParams['ldapbasednsearch'],
+				$info = self::ldapFindMultiple($this->ldapParams['ldapbasednsearch'],
 																			'(objectclass=person)',
 																			$this->connector->getLdapEntries(),
 																			$offset,
@@ -543,18 +602,18 @@ class Ldap extends AbstractBackend {
 					} else {
 						$filter = $ldifEntry[0]['name'] . "=" . $cid ."*";
 					}
-					$cards = self::ldapFind($this->ldapParams['ldapbasednsearch'],
+					$card = self::ldapFindOne($this->ldapParams['ldapbasednsearch'],
 																	$filter,
 																	$this->connector->getLdapEntries());
 				} else {
 					//error_log(__METHOD__." - contact id is '$cid'");
-					$cards = self::ldapFind(base64_decode($cid),
+					$card = self::ldapFindOne(base64_decode($cid),
 																	'objectClass=*',
 																	$this->connector->getLdapEntries());
 				}
 			}
-			if (isset ($cards['count']) && $cards['count']>0) {
-				return self::getSabreFormatCard($addressbookid, $this->connector->ldapToVCard($cards[0]));
+			if ($card != null) {
+				return self::getSabreFormatCard($addressbookid, $this->connector->ldapToVCard($card));
 			}
 		}
 		return false;
