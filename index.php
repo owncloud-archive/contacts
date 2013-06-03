@@ -27,10 +27,9 @@ foreach($ims as $name => $values) {
 
 $maxUploadFilesize = \OCP\Util::maxUploadFilesize('/');
 
-\OCP\Util::addscript('', 'multiselect');
+//\OCP\Util::addscript('', 'multiselect');
 \OCP\Util::addscript('', 'jquery.multiselect');
 \OCP\Util::addscript('', 'oc-vcategories');
-\OCP\Util::addscript('', 'octemplate');
 \OCP\Util::addscript('contacts', 'modernizr.custom');
 \OCP\Util::addscript('contacts', 'app');
 \OCP\Util::addscript('contacts', 'addressbooks');
@@ -38,17 +37,13 @@ $maxUploadFilesize = \OCP\Util::maxUploadFilesize('/');
 \OCP\Util::addscript('contacts', 'storage');
 \OCP\Util::addscript('contacts', 'groups');
 //\OCP\Util::addscript('contacts', 'expanding');
-\OCP\Util::addscript('contacts', 'jquery.combobox');
-\OCP\Util::addscript('core', 'jquery.ocdialog');
 \OCP\Util::addscript('contacts', 'jquery.ocaddnew');
 \OCP\Util::addscript('files', 'jquery.fileupload');
 \OCP\Util::addscript('contacts', 'jquery.Jcrop');
 \OCP\Util::addStyle('3rdparty/fontawesome', 'font-awesome');
 \OCP\Util::addStyle('contacts', 'font-awesome');
-\OCP\Util::addStyle('', 'multiselect');
+//\OCP\Util::addStyle('', 'multiselect');
 \OCP\Util::addStyle('', 'jquery.multiselect');
-\OCP\Util::addStyle('contacts', 'jquery.combobox');
-\OCP\Util::addStyle('core', 'jquery.ocdialog');
 \OCP\Util::addStyle('contacts', 'jquery.ocaddnew');
 \OCP\Util::addStyle('contacts', 'jquery.Jcrop');
 \OCP\Util::addStyle('contacts', 'contacts');
