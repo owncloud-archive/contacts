@@ -1203,8 +1203,8 @@ OC.Contacts = OC.Contacts || {
 			}
 			$mergeList.append($li);
 		});
-		this.$contactList.addClass('dim');
 		$('#merge_contacts_dialog').html($dlg).ocdialog({
+			modal: true,
 			closeOnEscape: true,
 			title:  t('contacts', 'Merge contacts'),
 			height: 'auto', width: 'auto',
@@ -1242,7 +1242,6 @@ OC.Contacts = OC.Contacts || {
 			close: function(event, ui) {
 				$(this).ocdialog('destroy').remove();
 				$('#add_group_dialog').remove();
-				self.$contactList.removeClass('dim');
 			},
 			open: function(event, ui) {
 				$dlg.find('input').focus();
