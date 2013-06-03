@@ -180,7 +180,10 @@
 	height: auto !important;
 	max-height: 200px;
 }
-.ui-multiselect-checkboxes label { width: 100%; color: #333 !important; font-size: 100% !important; }
+.ui-multiselect-checkboxes label {
+	width: 100%; color: #333 !important; font-size: 100% !important;
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
 .ui-multiselect-checkboxes label > span {color: #333 !important; font-size: 100% !important; }
 .ui-multiselect-checkboxes input[type="checkbox"] { margin: 3px !important; }
 button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
