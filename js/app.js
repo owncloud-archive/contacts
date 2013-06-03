@@ -1350,7 +1350,6 @@ OC.Contacts = OC.Contacts || {
 		this.setAllChecked(false);
 		//this.$contactList.hide();
 		this.$contactList.addClass('dim');
-		this.$toggleAll.hide();
 		console.assert(typeof this.currentid === 'string', 'Current ID not string');
 		this.jumpToContact(this.currentid);
 		// Properties that the contact doesn't know
