@@ -44,6 +44,7 @@ $maxUploadFilesize = \OCP\Util::maxUploadFilesize('/');
 \OCP\Util::addStyle('contacts', 'font-awesome');
 //\OCP\Util::addStyle('', 'multiselect');
 \OCP\Util::addStyle('', 'jquery.multiselect');
+\OCP\Util::addStyle('contacts', 'jquery.combobox');
 \OCP\Util::addStyle('contacts', 'jquery.ocaddnew');
 \OCP\Util::addStyle('contacts', 'jquery.Jcrop');
 \OCP\Util::addStyle('contacts', 'contacts');
