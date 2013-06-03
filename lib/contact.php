@@ -617,7 +617,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return true;
 	}
 
-	public function cacheThumbnail(\OC_Image $image = null, $remove = false) {
+	// TODO: Cleanup these parameters
+	public function cacheThumbnail(\OC_Image $image = null, $remove = false, $update = false) {
 		$key = self::THUMBNAIL_PREFIX . $this->combinedKey();
 		//\OC_Cache::remove($key);
 		if(\OC_Cache::hasKey($key) && $image === null && $remove === false) {
@@ -625,7 +626,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 		if($remove) {
 			\OC_Cache::remove($key);
-			return false;
+			if(!$update) {
+				return false;
+			}
 		}
 		if(is_null($image)) {
 			$this->retrieve();

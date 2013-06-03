@@ -112,6 +112,11 @@ class Hooks{
 			}
 		}
 		Utils\Properties::updateIndex($parameters['id'], $parameters['contact']);
+		// If updated via CardDAV we don't know if PHOTO has changed
+		if(isset($parameters['carddav']) && $parameters['cardav']
+			&& (isset($contact->PHOTO) || isset($contact->LOGO))) {
+			$contact->cacheThumbnail(null, false, true);
+		}
 	}
 
 	/**

@@ -554,6 +554,7 @@ class Database extends AbstractBackend {
 	 */
 	public function updateContact($addressbookid, $id, $contact, $noCollection = false) {
 		$updateRevision = true;
+		$isCardDAV = false;
 		if(!$contact instanceof VCard) {
 			try {
 				$contact = Reader::read($contact);
@@ -570,6 +571,7 @@ class Database extends AbstractBackend {
 				$qname = 'createcontactbyid';
 			} elseif(isset($id['uri'])) {
 				$updateRevision = false;
+				$isCardDAV = true;
 				$where_query = '`id` = ?';
 				$id = $id['uri'];
 				$qname = 'createcontactbyuri';
@@ -620,7 +622,7 @@ class Database extends AbstractBackend {
 
 		$this->touchAddressBook($addressbookid);
 		\OC_Hook::emit('OCA\Contacts', 'post_updateContact',
-			array('id' => $id, 'parent' => $addressbookid, 'contact' => $contact)
+			array('id' => $id, 'parent' => $addressbookid, 'contact' => $contact, 'carddav' => $isCardDAV)
 		);
 		return true;
 	}
