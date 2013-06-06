@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# cuperous, 2013
 # matar <matar@linux.com>, 2013
 # Raed667 <shemada@gmail.com>, 2013
 # blackcoder <tarek.taha@gmail.com>, 2011, 2012
@@ -10,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-06 00:50+0200\n"
-"PO-Revision-Date: 2013-06-05 22:50+0000\n"
+"POT-Creation-Date: 2013-06-07 00:57+0200\n"
+"PO-Revision-Date: 2013-06-06 22:57+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -955,7 +956,7 @@ msgstr ""
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
-msgstr "العنوان"
+msgstr "عنوان"
 
 #: templates/contacts.php:276
 msgid "Enter title"
