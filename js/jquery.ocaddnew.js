@@ -26,7 +26,7 @@
 
 			this.$ul = $('<ul class="oc-addnew" />').insertBefore(this.element).css('display', 'inline-block');
 			$('<a class="oc-addnew-init"></a>').text(this.options.title).appendTo(this.$ul).wrap('<li />');
-			this.element.addClass('oc-addnew-name').appendTo(this.$ul).wrap('<li />');
+			this.element.addClass('oc-addnew-name').removeAttr('original-title').appendTo(this.$ul).wrap('<li />');
 			//console.log('li', $li.parent());
 			//$li.appendTo(this.$ul);
 			$('<button />').addClass('primary').text(this.options.addText).insertAfter(this.element).hide();
