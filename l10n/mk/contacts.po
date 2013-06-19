@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-19 01:04+0200\n"
-"PO-Revision-Date: 2013-06-18 23:04+0000\n"
+"POT-Creation-Date: 2013-06-20 01:15+0200\n"
+"PO-Revision-Date: 2013-06-18 23:21+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Macedonian (http://www.transifex.com/projects/p/owncloud/language/mk/)\n"
 "MIME-Version: 1.0\n"
@@ -21,19 +21,19 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr ""
+msgstr "Грешка при преземањето на контакт објектот,"
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr ""
+msgstr "Грешка во читање на контакт фотографија."
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr ""
+msgstr "Грешка во снимање на привремена датотека."
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr ""
+msgstr "Фотографијата која се вчитува е невалидна."
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
@@ -41,39 +41,39 @@ msgstr ""
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
-msgstr ""
+msgstr "Не беше поднесена патека за фотографија."
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr ""
+msgstr "Не постои датотеката:"
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr ""
+msgstr "Грешка во вчитување на слика."
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "Грешка при утврдувањето на карактеристиките на фотографијата."
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr ""
+msgstr "Грешка при снимање на контактите."
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
-msgstr ""
+msgstr "Грешка при скалирање на фотографијата"
 
 #: ajax/savecrop.php:129
 msgid "Error cropping image"
-msgstr ""
+msgstr "Грешка при сечење на фотографијата"
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr ""
+msgstr "Грешка при креирањето на привремената фотографија"
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr ""
+msgstr "Грешка при наоѓањето на фотографијата:"
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
@@ -90,43 +90,43 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr ""
+msgstr "Ниту еден фајл не се вчита. Непозната грешка"
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr ""
+msgstr "Датотеката беше успешно подигната."
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr ""
+msgstr "Големината на датотеката ја надминува upload_max_filesize директивата во php.ini"
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr ""
+msgstr "Големината на датотеката ја надминува MAX_FILE_SIZE директивата која беше специфицирана во HTML формата"
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "Датотеката беше само делумно подигната."
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr ""
+msgstr "Не беше подигната датотека."
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr ""
+msgstr "Недостасува привремена папка"
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr ""
+msgstr "Неуспеав да запишам на диск"
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
@@ -138,27 +138,27 @@ msgstr ""
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
-msgstr ""
+msgstr "Грешка во снимање на контактите на диск."
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
-msgstr ""
+msgstr "Не можеше да се сними привремената фотографија:"
 
 #: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
 msgid "Couldn't load temporary image: "
-msgstr ""
+msgstr "Не можеше да се вчита привремената фотографија:"
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr ""
+msgstr "Контакти"
 
 #: js/addressbooks.js:68 js/groups.js:507 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "Сними"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr ""
+msgstr "Подигнувам..."
 
 #: js/addressbooks.js:290
 msgid "Imported {count} of {total} contacts"
@@ -230,7 +230,7 @@ msgstr ""
 
 #: js/app.js:592
 msgid "Select photo"
-msgstr ""
+msgstr "Одбери фотографија"
 
 #: js/app.js:662 js/app.js:1541
 msgid "Network or server error. Please inform administrator."
@@ -255,7 +255,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "Откажи"
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -263,7 +263,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr ""
+msgstr "Во ред"
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -271,13 +271,13 @@ msgstr ""
 
 #: js/app.js:1407
 msgid "No files selected for upload."
-msgstr ""
+msgstr "Ниту еден фајл не е избран за вчитување."
 
 #: js/app.js:1417
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr ""
+msgstr "Датотеката која се обидувате да ја префрлите ја надминува максималната големина дефинирана за пренос на овој сервер."
 
 #: js/app.js:1504
 msgid "Edit profile picture"
@@ -311,7 +311,7 @@ msgstr ""
 
 #: js/groups.js:51 templates/contacts.php:327
 msgid "Add"
-msgstr ""
+msgstr "Додади"
 
 #: js/groups.js:260
 msgid "Contact is already in this group."
@@ -373,23 +373,23 @@ msgstr ""
 
 #: js/loader.js:49
 msgid "Result: "
-msgstr ""
+msgstr "Резултат: "
 
 #: js/loader.js:49
 msgid " imported, "
-msgstr ""
+msgstr "увезено,"
 
 #: js/loader.js:49
 msgid " failed."
-msgstr ""
+msgstr "неуспешно."
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "Грешка"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr ""
+msgstr "Прикажаното име не може да биде празно."
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
@@ -402,11 +402,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "Преземи"
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "Уреди"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -414,7 +414,7 @@ msgstr ""
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "Избриши"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -564,7 +564,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr ""
+msgstr "Информацијата за vCard не е точна. Ве молам превчитајте ја страницава."
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
@@ -643,17 +643,17 @@ msgstr ""
 
 #: lib/hooks.php:214
 msgid "{name}'s Birthday"
-msgstr ""
+msgstr "Роденден на {name}"
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr ""
+msgstr "Контакт"
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr ""
+msgstr "Останато"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -714,44 +714,44 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr ""
+msgstr "Работа"
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr ""
+msgstr "Дома"
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr ""
+msgstr "Мобилен"
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr ""
+msgstr "Текст"
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr ""
+msgstr "Глас"
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr ""
+msgstr "Порака"
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr ""
+msgstr "Факс"
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr ""
+msgstr "Видео"
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr ""
+msgstr "Пејџер"
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr ""
+msgstr "Интернет"
 
 #: lib/utils/properties.php:187
 msgid "Friends"
@@ -788,7 +788,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr ""
+msgstr "Увези"
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -816,7 +816,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr ""
+msgstr "Групи"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -828,7 +828,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr ""
+msgstr "Затвори"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -886,7 +886,7 @@ msgstr ""
 
 #: templates/contacts.php:126
 msgid "Add contact"
-msgstr ""
+msgstr "Додади контакт"
 
 #: templates/contacts.php:176
 msgid "Delete group"
@@ -910,19 +910,19 @@ msgstr ""
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
-msgstr ""
+msgstr "Избриши моментална фотографија"
 
 #: templates/contacts.php:228
 msgid "Edit current photo"
-msgstr ""
+msgstr "Уреди моментална фотографија"
 
 #: templates/contacts.php:229
 msgid "Upload new photo"
-msgstr ""
+msgstr "Подигни нова фотографија"
 
 #: templates/contacts.php:230
 msgid "Select photo from ownCloud"
-msgstr ""
+msgstr "Изберете фотографија од ownCloud"
 
 #: templates/contacts.php:241 templates/contacts.php:242
 msgid "First name"
@@ -930,7 +930,7 @@ msgstr ""
 
 #: templates/contacts.php:246 templates/contacts.php:247
 msgid "Additional names"
-msgstr ""
+msgstr "Дополнителни имиња"
 
 #: templates/contacts.php:251 templates/contacts.php:252
 msgid "Last name"
@@ -946,11 +946,11 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr ""
+msgstr "Прекар"
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
-msgstr ""
+msgstr "Внеси прекар"
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
@@ -962,7 +962,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr ""
+msgstr "Организација"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -970,7 +970,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr ""
+msgstr "Роденден"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -982,11 +982,11 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr ""
+msgstr "Телефон"
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr ""
+msgstr "Е-пошта"
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -994,11 +994,11 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr ""
+msgstr "Адреса"
 
 #: templates/contacts.php:336
 msgid "Note"
-msgstr ""
+msgstr "Забелешка"
 
 #: templates/contacts.php:337
 msgid "Web site"
@@ -1006,17 +1006,17 @@ msgstr ""
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr ""
+msgstr "Избриши го контактот"
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr ""
+msgstr "Претпочитано"
 
 #: templates/contacts.php:354
 msgid "Please specify a valid email address."
-msgstr ""
+msgstr "Ве молам внесете правилна адреса за е-пошта."
 
 #: templates/contacts.php:354
 msgid "someone@example.com"
@@ -1024,19 +1024,19 @@ msgstr ""
 
 #: templates/contacts.php:356
 msgid "Mail to address"
-msgstr ""
+msgstr "Прати порака до адреса"
 
 #: templates/contacts.php:357
 msgid "Delete email address"
-msgstr ""
+msgstr "Избриши адреса за е-пошта"
 
 #: templates/contacts.php:369
 msgid "Enter phone number"
-msgstr ""
+msgstr "Внесете телефонски број"
 
 #: templates/contacts.php:371
 msgid "Delete phone number"
-msgstr ""
+msgstr "Избриши телефонски број"
 
 #: templates/contacts.php:385
 msgid "Go to web site"
@@ -1048,7 +1048,7 @@ msgstr ""
 
 #: templates/contacts.php:397
 msgid "View on map"
-msgstr ""
+msgstr "Погледајте на мапа"
 
 #: templates/contacts.php:398
 msgid "Delete address"
@@ -1076,7 +1076,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr ""
+msgstr "Град"
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1092,7 +1092,7 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr ""
+msgstr "Држава"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
@@ -1104,11 +1104,11 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "Сподели"
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr ""
+msgstr "Извези"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1116,36 +1116,36 @@ msgstr ""
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
-msgstr ""
+msgstr "Привремената слика е отстранета од кешот."
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr ""
+msgstr "Адреса за синхронизација со CardDAV"
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr ""
+msgstr "повеќе информации"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr ""
+msgstr "Примарна адреса"
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr ""
+msgstr "iOS/OS X"
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr ""
+msgstr "Адресари"
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr ""
+msgstr "Нов адресар"
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr ""
+msgstr "Име"
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr ""
+msgstr "Опис"

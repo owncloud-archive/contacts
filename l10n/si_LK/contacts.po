@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-19 01:04+0200\n"
-"PO-Revision-Date: 2013-06-18 23:04+0000\n"
+"POT-Creation-Date: 2013-06-20 01:15+0200\n"
+"PO-Revision-Date: 2013-06-18 23:21+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Sinhala (Sri Lanka) (http://www.transifex.com/projects/p/owncloud/language/si_LK/)\n"
 "MIME-Version: 1.0\n"
@@ -22,19 +22,19 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr ""
+msgstr "සම්බන්ධතා වස්තුව ගෙන ඒමේදී දෝෂයක්"
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr ""
+msgstr "හඳුනාගැනීමේ ඡායාරූපය කියවීම දෝෂ සහිතයි."
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr ""
+msgstr "තාවකාලික ගොනුව සුරැකීම දෝෂ සහිතයි."
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr ""
+msgstr "පූරණය වන රූපය වලංගු නැත"
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
@@ -46,11 +46,11 @@ msgstr ""
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr ""
+msgstr "ගොනුව නොපවතී"
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr ""
+msgstr "රූපය පූරණය දෝෂ සහිතයි."
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
@@ -58,7 +58,7 @@ msgstr ""
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr ""
+msgstr "සම්බන්ධතාව සුරැකිමේදී දෝෂයක්"
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
@@ -70,11 +70,11 @@ msgstr ""
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr ""
+msgstr "තාවකාලික ඡායාරූපයක් තැනීමේ දෝෂයක්"
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr ""
+msgstr "ඡායාරූපය සොයාගැනීමේ දෝෂයක්"
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
@@ -91,43 +91,43 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr ""
+msgstr "ගොනුවක් උඩුගත නොවුනි. නොහැඳිනු දෝෂයක්"
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr ""
+msgstr "දෝෂයක් නොමැත. සාර්ථකව ගොනුව උඩුගත කෙරුණි"
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr ""
+msgstr "php.ini හි upload_max_filesize නියමයට වඩා ගොනුව විශාලය"
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr ""
+msgstr "උඩුගත කළ ගොනුවේ විශාලත්වය HTML පෝරමයේ නියම කළ ඇති MAX_FILE_SIZE විශාලත්වයට වඩා වැඩිය"
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "උඩුගත කළ ගොනුවේ කොටසක් පමණක් උඩුගත විය"
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr ""
+msgstr "ගොනුවක් උඩුගත නොවුණි"
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr ""
+msgstr "තාවකාලික ෆොල්ඩරයක් අතුරුදහන්"
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr ""
+msgstr "තැටිගත කිරීම අසාර්ථකයි"
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
@@ -139,11 +139,11 @@ msgstr ""
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
-msgstr ""
+msgstr "ගබඩාවට පුද්ගල විස්තර උඩුගත කිරීමේ දෝෂයක්"
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
-msgstr ""
+msgstr "තාවකාලික රූපය සුරැකීමට නොහැකි විය"
 
 #: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
 msgid "Couldn't load temporary image: "
@@ -151,15 +151,15 @@ msgstr ""
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr ""
+msgstr "සබඳතා"
 
 #: js/addressbooks.js:68 js/groups.js:507 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "සුරකින්න"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr ""
+msgstr "උඩුගත කෙරේ..."
 
 #: js/addressbooks.js:290
 msgid "Imported {count} of {total} contacts"
@@ -256,7 +256,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "එපා"
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -264,7 +264,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr ""
+msgstr "හරි"
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -272,13 +272,13 @@ msgstr ""
 
 #: js/app.js:1407
 msgid "No files selected for upload."
-msgstr ""
+msgstr "උඩුගත කිරීමට ගොනු තෝරා නැත"
 
 #: js/app.js:1417
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr ""
+msgstr "ඔබ උඩුගත කිරීමට තැත් කරන ගොනුව, සේවාදායකයාට උඩුගත කළ හැකි උපරිම ගොනු විශාලත්වයට වඩා වැඩිය"
 
 #: js/app.js:1504
 msgid "Edit profile picture"
@@ -300,7 +300,7 @@ msgstr ""
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr ""
+msgstr "සමහර සම්බන්ධතා මකන ලෙස ලකුණු කොට ඇත. කරුණාකර ඒවා මැකෙන තෙක් සිටින්න"
 
 #: js/contacts.js:2090
 msgid "Click to undo deletion of {num} contacts"
@@ -312,7 +312,7 @@ msgstr ""
 
 #: js/groups.js:51 templates/contacts.php:327
 msgid "Add"
-msgstr ""
+msgstr "එකතු කරන්න"
 
 #: js/groups.js:260
 msgid "Contact is already in this group."
@@ -374,23 +374,23 @@ msgstr ""
 
 #: js/loader.js:49
 msgid "Result: "
-msgstr ""
+msgstr "ප්‍රතිඵලය:"
 
 #: js/loader.js:49
 msgid " imported, "
-msgstr ""
+msgstr "ආයාත කරන ලදී,"
 
 #: js/loader.js:49
 msgid " failed."
-msgstr ""
+msgstr "අසාර්ථකයි"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "දෝෂයක්"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr ""
+msgstr "පෙන්වන නම හිස්ව තිබිය නොහැක"
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
@@ -403,11 +403,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "බාන්න"
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "සකසන්න"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -415,15 +415,15 @@ msgstr ""
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "මකා දමන්න"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr ""
+msgstr "තවත්..."
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr ""
+msgstr "අඩුවෙන්..."
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
@@ -471,11 +471,11 @@ msgstr ""
 
 #: lib/backend/ldap.php:433
 msgid "There was an error updating the addressbook."
-msgstr ""
+msgstr "මෙම ලිපින පොත යාවත්කාලීන කිරීමේදී දෝෂයක් ඇති විය"
 
 #: lib/backend/ldap.php:497
 msgid "There was an error deleting this addressbook."
-msgstr ""
+msgstr "මෙම ලිපින පොත මැකීමේදී දෝෂයක් ඇති විය"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
@@ -565,7 +565,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr ""
+msgstr "vCard පිළිබඳ තොරතුරු අසත්‍යයි. කරුණාකර පිටුව නැවත බාගත කරන්න."
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
@@ -644,17 +644,17 @@ msgstr ""
 
 #: lib/hooks.php:214
 msgid "{name}'s Birthday"
-msgstr ""
+msgstr "{name}ගේ උපන්දිනය"
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr ""
+msgstr "සබඳතාව"
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr ""
+msgstr "වෙනත්"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -715,44 +715,44 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr ""
+msgstr "කාර්යය"
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr ""
+msgstr "නිවස"
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr ""
+msgstr "ජංගම"
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr ""
+msgstr "පෙළ"
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr ""
+msgstr "හඬ"
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr ""
+msgstr "පණිවිඩය"
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr ""
+msgstr "ෆැක්ස්"
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr ""
+msgstr "වීඩියෝව"
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr ""
+msgstr "පේජරය"
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr ""
+msgstr "අන්තර්ජාලය"
 
 #: lib/utils/properties.php:187
 msgid "Friends"
@@ -789,7 +789,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr ""
+msgstr "ආයාත කරන්න"
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -817,7 +817,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr ""
+msgstr "කණ්ඩායම්"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -829,7 +829,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr ""
+msgstr "වසන්න"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -853,11 +853,11 @@ msgstr ""
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr ""
+msgstr "මෙයට පසු ලිපින පොත"
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr ""
+msgstr "මෙයට පෙර ලිපින පොත"
 
 #: templates/contacts.php:109
 msgid "Actions"
@@ -887,7 +887,7 @@ msgstr ""
 
 #: templates/contacts.php:126
 msgid "Add contact"
-msgstr ""
+msgstr "සම්බන්ධතාවක් එකතු කරන්න"
 
 #: templates/contacts.php:176
 msgid "Delete group"
@@ -911,15 +911,15 @@ msgstr ""
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
-msgstr ""
+msgstr "වර්තමාන ඡායාරූපය මකන්න"
 
 #: templates/contacts.php:228
 msgid "Edit current photo"
-msgstr ""
+msgstr "වර්තමාන ඡායාරූපය සංස්කරණය කරන්න"
 
 #: templates/contacts.php:229
 msgid "Upload new photo"
-msgstr ""
+msgstr "නව ඡායාරූපයක් උඩුගත කරන්න"
 
 #: templates/contacts.php:230
 msgid "Select photo from ownCloud"
@@ -931,7 +931,7 @@ msgstr ""
 
 #: templates/contacts.php:246 templates/contacts.php:247
 msgid "Additional names"
-msgstr ""
+msgstr "වෙනත් නම්"
 
 #: templates/contacts.php:251 templates/contacts.php:252
 msgid "Last name"
@@ -947,11 +947,11 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr ""
+msgstr "පටබැඳි නම"
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
-msgstr ""
+msgstr "පටබැඳි නම ඇතුලත් කරන්න"
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
@@ -963,7 +963,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr ""
+msgstr "ආයතනය"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -971,7 +971,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr ""
+msgstr "උපන් දිනය"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -983,11 +983,11 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr ""
+msgstr "දුරකථන"
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr ""
+msgstr "විද්‍යුත් තැපෑල"
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -995,29 +995,29 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr ""
+msgstr "ලිපිනය"
 
 #: templates/contacts.php:336
 msgid "Note"
-msgstr ""
+msgstr "නෝට්ටුවක්"
 
 #: templates/contacts.php:337
 msgid "Web site"
-msgstr ""
+msgstr "වෙබ් අඩවිය"
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr ""
+msgstr "සබඳතාව මකන්න"
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr ""
+msgstr "රුචි"
 
 #: templates/contacts.php:354
 msgid "Please specify a valid email address."
-msgstr ""
+msgstr "වලංගු විද්‍යුත් තැපැල් ලිපිනයක් ලබා දෙන්න"
 
 #: templates/contacts.php:354
 msgid "someone@example.com"
@@ -1025,23 +1025,23 @@ msgstr ""
 
 #: templates/contacts.php:356
 msgid "Mail to address"
-msgstr ""
+msgstr "තැපැල් එවිය යුතු ලිපිනය"
 
 #: templates/contacts.php:357
 msgid "Delete email address"
-msgstr ""
+msgstr "විද්‍යුත් තැපැල් ලිපිනය මකන්න"
 
 #: templates/contacts.php:369
 msgid "Enter phone number"
-msgstr ""
+msgstr "දුරකථන අංකයක් දෙන්න"
 
 #: templates/contacts.php:371
 msgid "Delete phone number"
-msgstr ""
+msgstr "දුරකථන අංකය මකන්න"
 
 #: templates/contacts.php:385
 msgid "Go to web site"
-msgstr ""
+msgstr "වෙබ් අඩවියට යන්න"
 
 #: templates/contacts.php:386
 msgid "Delete URL"
@@ -1049,7 +1049,7 @@ msgstr ""
 
 #: templates/contacts.php:397
 msgid "View on map"
-msgstr ""
+msgstr "සිතියමේ පෙන්වන්න"
 
 #: templates/contacts.php:398
 msgid "Delete address"
@@ -1077,7 +1077,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr ""
+msgstr "නගරය"
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1093,7 +1093,7 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr ""
+msgstr "රට"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
@@ -1105,11 +1105,11 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "බෙදා හදා ගන්න"
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr ""
+msgstr "නිර්යාත කරන්න"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1125,28 +1125,28 @@ msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr ""
+msgstr "තව විස්තර"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr ""
+msgstr "ප්‍රාථමික ලිපිනය(හැම විටම සම්බන්ධ කරගත හැක)"
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr ""
+msgstr "iOS/OS X"
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr ""
+msgstr "ලිපින පොත්"
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr ""
+msgstr "නව ලිපින පොතක් "
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr ""
+msgstr "නම"
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr ""
+msgstr "විස්තරය"

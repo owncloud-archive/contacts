@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-19 01:04+0200\n"
-"PO-Revision-Date: 2013-06-18 23:04+0000\n"
+"POT-Creation-Date: 2013-06-20 01:15+0200\n"
+"PO-Revision-Date: 2013-06-18 23:21+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -32,19 +32,19 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr ""
+msgstr "연락처 개체를 가져오는 중 오류가 발생했습니다. "
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr ""
+msgstr "사진 읽기 오류"
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr ""
+msgstr "임시 파일을 저장하는 동안 오류가 발생했습니다. "
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr ""
+msgstr "로딩 사진이 유효하지 않습니다. "
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
@@ -52,39 +52,39 @@ msgstr ""
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
-msgstr ""
+msgstr "사진 경로가 제출되지 않았습니다. "
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr ""
+msgstr "파일이 존재하지 않습니다:"
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr ""
+msgstr "로딩 이미지 오류입니다."
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "사진 속성을 가져오는 중 오류가 발생했습니다. "
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr ""
+msgstr "연락처 저장 중 오류가 발생했습니다."
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
-msgstr ""
+msgstr "이미지 크기 조정 중 오류가 발생했습니다."
 
 #: ajax/savecrop.php:129
 msgid "Error cropping image"
-msgstr ""
+msgstr "이미지를 자르던 중 오류가 발생했습니다."
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr ""
+msgstr "임시 이미지를 생성 중 오류가 발생했습니다."
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr ""
+msgstr "이미지를 찾던 중 오류가 발생했습니다:"
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
@@ -101,47 +101,47 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr ""
+msgstr "파일이 업로드되지 않았습니다. 알 수 없는 오류입니다"
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr ""
+msgstr "파일 업로드에 성공하였습니다."
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr ""
+msgstr "php.ini 형식으로 업로드 된 이 파일은 MAX_FILE_SIZE를 초과하였다."
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr ""
+msgstr "업로드한 파일 크기가 HTML 폼의 MAX_FILE_SIZE보다 큼"
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "파일의 일부분만 업로드됨"
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr ""
+msgstr "파일이 업로드되지 않았음"
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr ""
+msgstr "임시 폴더가 없음"
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr ""
+msgstr "디스크에 쓰지 못했습니다"
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
-msgstr ""
+msgstr "저장소가 용량이 충분하지 않습니다."
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
@@ -149,27 +149,27 @@ msgstr ""
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
-msgstr ""
+msgstr "스토리지 에러 업로드 연락처."
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
-msgstr ""
+msgstr "임시 이미지를 저장할 수 없습니다:"
 
 #: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
 msgid "Couldn't load temporary image: "
-msgstr ""
+msgstr "임시 이미지를 불러올 수 없습니다. "
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr ""
+msgstr "연락처"
 
 #: js/addressbooks.js:68 js/groups.js:507 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "저장"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr ""
+msgstr "업로드 중..."
 
 #: js/addressbooks.js:290
 msgid "Imported {count} of {total} contacts"
@@ -241,7 +241,7 @@ msgstr ""
 
 #: js/app.js:592
 msgid "Select photo"
-msgstr ""
+msgstr "사진 선택"
 
 #: js/app.js:662 js/app.js:1541
 msgid "Network or server error. Please inform administrator."
@@ -266,7 +266,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -274,7 +274,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr ""
+msgstr "확인"
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -282,13 +282,13 @@ msgstr ""
 
 #: js/app.js:1407
 msgid "No files selected for upload."
-msgstr ""
+msgstr "업로드를 위한 파일이 선택되지 않았습니다. "
 
 #: js/app.js:1417
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr ""
+msgstr "이 파일은 이 서버 파일 업로드 최대 용량을 초과 합니다. "
 
 #: js/app.js:1504
 msgid "Edit profile picture"
@@ -296,7 +296,7 @@ msgstr ""
 
 #: js/app.js:1522
 msgid "Error loading profile picture."
-msgstr ""
+msgstr "프로필 사진 로딩 에러"
 
 #: js/contacts.js:582
 msgid "Is this correct?"
@@ -310,7 +310,7 @@ msgstr ""
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr ""
+msgstr "일부 연락처가 삭제 표시 되었으나 아직 삭제되지 않았습니다. 삭제가 끝날 때 까지 기다려 주세요."
 
 #: js/contacts.js:2090
 msgid "Click to undo deletion of {num} contacts"
@@ -322,7 +322,7 @@ msgstr ""
 
 #: js/groups.js:51 templates/contacts.php:327
 msgid "Add"
-msgstr ""
+msgstr "추가"
 
 #: js/groups.js:260
 msgid "Contact is already in this group."
@@ -384,40 +384,40 @@ msgstr ""
 
 #: js/loader.js:49
 msgid "Result: "
-msgstr ""
+msgstr "결과:"
 
 #: js/loader.js:49
 msgid " imported, "
-msgstr ""
+msgstr "불러오기,"
 
 #: js/loader.js:49
 msgid " failed."
-msgstr ""
+msgstr "실패."
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "오류"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr ""
+msgstr "디스플레이 이름은 비워둘 수 없습니다. "
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
-msgstr ""
+msgstr "CardDav 링크를 표시"
 
 #: js/settings.js:98 templates/settings.php:29
 msgid "Show read-only VCF link"
-msgstr ""
+msgstr "읽기전용 VCF 링크 표시"
 
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "다운로드"
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "편집"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -425,15 +425,15 @@ msgstr ""
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "삭제"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr ""
+msgstr "더..."
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr ""
+msgstr "그외..."
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
@@ -481,11 +481,11 @@ msgstr ""
 
 #: lib/backend/ldap.php:433
 msgid "There was an error updating the addressbook."
-msgstr ""
+msgstr "주소록을 업데이트 하는중에 에러가 발생하였습니다."
 
 #: lib/backend/ldap.php:497
 msgid "There was an error deleting this addressbook."
-msgstr ""
+msgstr "이 주소록을 제거하는데 에러가 발생하였습니다."
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
@@ -513,7 +513,7 @@ msgstr ""
 
 #: lib/contact.php:468
 msgid "Unknown IM: "
-msgstr ""
+msgstr "알려지지 않은 IM:"
 
 #: lib/controller/addressbookcontroller.php:122
 msgid "Error creating address book"
@@ -575,7 +575,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr ""
+msgstr "vCard 정보가 올바르지 않습니다. 페이지를 새로 고치십시오."
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
@@ -654,17 +654,17 @@ msgstr ""
 
 #: lib/hooks.php:214
 msgid "{name}'s Birthday"
-msgstr ""
+msgstr "{이름}의 생일"
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr ""
+msgstr "연락처"
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr ""
+msgstr "기타"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -672,7 +672,7 @@ msgstr ""
 
 #: lib/utils/properties.php:66
 msgid "Jabber"
-msgstr ""
+msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
@@ -680,97 +680,97 @@ msgstr ""
 
 #: lib/utils/properties.php:76
 msgid "AIM"
-msgstr ""
+msgstr "AIM"
 
 #: lib/utils/properties.php:81
 msgid "MSN"
-msgstr ""
+msgstr "MSN"
 
 #: lib/utils/properties.php:86
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: lib/utils/properties.php:91
 msgid "GoogleTalk"
-msgstr ""
+msgstr "GoogleTalk"
 
 #: lib/utils/properties.php:96
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: lib/utils/properties.php:101
 msgid "XMPP"
-msgstr ""
+msgstr "XMPP"
 
 #: lib/utils/properties.php:106
 msgid "ICQ"
-msgstr ""
+msgstr "ICQ"
 
 #: lib/utils/properties.php:111
 msgid "Yahoo"
-msgstr ""
+msgstr "Yahoo"
 
 #: lib/utils/properties.php:116
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: lib/utils/properties.php:121
 msgid "QQ"
-msgstr ""
+msgstr "QQ"
 
 #: lib/utils/properties.php:126
 msgid "GaduGadu"
-msgstr ""
+msgstr "GaduGadu"
 
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr ""
+msgstr "작업"
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr ""
+msgstr "가정"
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr ""
+msgstr "휴대폰"
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr ""
+msgstr "텍스트"
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr ""
+msgstr "음성 번호"
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr ""
+msgstr "메세지"
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr ""
+msgstr "팩스 번호"
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr ""
+msgstr "영상 번호"
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr ""
+msgstr "호출기"
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr ""
+msgstr "인터넷"
 
 #: lib/utils/properties.php:187
 msgid "Friends"
-msgstr ""
+msgstr "친구들"
 
 #: lib/utils/properties.php:188
 msgid "Family"
-msgstr ""
+msgstr "가족"
 
 #: templates/contacts.php:6
 msgid "New Contact"
@@ -799,7 +799,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr ""
+msgstr "가져오기"
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -827,7 +827,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr ""
+msgstr "그룹"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -839,55 +839,55 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr ""
+msgstr "닫기"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "단축키"
 
 #: templates/contacts.php:94
 msgid "Navigation"
-msgstr ""
+msgstr "네비게이션"
 
 #: templates/contacts.php:97
 msgid "Next contact in list"
-msgstr ""
+msgstr "목록에서의 다음 연락처"
 
 #: templates/contacts.php:99
 msgid "Previous contact in list"
-msgstr ""
+msgstr "목록에서의 이전 연락처"
 
 #: templates/contacts.php:101
 msgid "Expand/collapse current addressbook"
-msgstr ""
+msgstr "현재 주소록을 확장/축소"
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr ""
+msgstr "다음 주소록"
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr ""
+msgstr "이전 주소록"
 
 #: templates/contacts.php:109
 msgid "Actions"
-msgstr ""
+msgstr "작업"
 
 #: templates/contacts.php:112
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "연락처 목록 새로 고침"
 
 #: templates/contacts.php:114
 msgid "Add new contact"
-msgstr ""
+msgstr "새로운 연락처 추가"
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
-msgstr ""
+msgstr "새로운 주소록 추가"
 
 #: templates/contacts.php:118
 msgid "Delete current contact"
-msgstr ""
+msgstr "현재 연락처 삭제"
 
 #: templates/contacts.php:123
 msgid ""
@@ -897,7 +897,7 @@ msgstr ""
 
 #: templates/contacts.php:126
 msgid "Add contact"
-msgstr ""
+msgstr "연락처 추가"
 
 #: templates/contacts.php:176
 msgid "Delete group"
@@ -921,19 +921,19 @@ msgstr ""
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
-msgstr ""
+msgstr "현재 사진 삭제"
 
 #: templates/contacts.php:228
 msgid "Edit current photo"
-msgstr ""
+msgstr "현재 사진 편집"
 
 #: templates/contacts.php:229
 msgid "Upload new photo"
-msgstr ""
+msgstr "새로운 사진 업로드"
 
 #: templates/contacts.php:230
 msgid "Select photo from ownCloud"
-msgstr ""
+msgstr "ownCloud에서 사진 선택"
 
 #: templates/contacts.php:241 templates/contacts.php:242
 msgid "First name"
@@ -941,7 +941,7 @@ msgstr ""
 
 #: templates/contacts.php:246 templates/contacts.php:247
 msgid "Additional names"
-msgstr ""
+msgstr "추가 이름"
 
 #: templates/contacts.php:251 templates/contacts.php:252
 msgid "Last name"
@@ -957,11 +957,11 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr ""
+msgstr "별명"
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
-msgstr ""
+msgstr "별명 입력"
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
@@ -973,7 +973,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr ""
+msgstr "조직"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -981,7 +981,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr ""
+msgstr "생일"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -993,41 +993,41 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr ""
+msgstr "전화 번호"
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr ""
+msgstr "이메일"
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
-msgstr ""
+msgstr "인스턴트 메세지"
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr ""
+msgstr "주소"
 
 #: templates/contacts.php:336
 msgid "Note"
-msgstr ""
+msgstr "메모"
 
 #: templates/contacts.php:337
 msgid "Web site"
-msgstr ""
+msgstr "웹 사이트"
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr ""
+msgstr "연락처 삭제"
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr ""
+msgstr "선호함"
 
 #: templates/contacts.php:354
 msgid "Please specify a valid email address."
-msgstr ""
+msgstr "올바른 이메일 주소를 입력하세요."
 
 #: templates/contacts.php:354
 msgid "someone@example.com"
@@ -1035,23 +1035,23 @@ msgstr ""
 
 #: templates/contacts.php:356
 msgid "Mail to address"
-msgstr ""
+msgstr "이메일 주소"
 
 #: templates/contacts.php:357
 msgid "Delete email address"
-msgstr ""
+msgstr "이메일 주소 삭제"
 
 #: templates/contacts.php:369
 msgid "Enter phone number"
-msgstr ""
+msgstr "전화번호 입력"
 
 #: templates/contacts.php:371
 msgid "Delete phone number"
-msgstr ""
+msgstr "전화번호 삭제"
 
 #: templates/contacts.php:385
 msgid "Go to web site"
-msgstr ""
+msgstr "웹 사이트로 가기"
 
 #: templates/contacts.php:386
 msgid "Delete URL"
@@ -1059,7 +1059,7 @@ msgstr ""
 
 #: templates/contacts.php:397
 msgid "View on map"
-msgstr ""
+msgstr "지도에서 보기"
 
 #: templates/contacts.php:398
 msgid "Delete address"
@@ -1071,7 +1071,7 @@ msgstr ""
 
 #: templates/contacts.php:411
 msgid "Street address"
-msgstr ""
+msgstr "번지"
 
 #: templates/contacts.php:415
 msgid "12345"
@@ -1079,7 +1079,7 @@ msgstr ""
 
 #: templates/contacts.php:416
 msgid "Postal code"
-msgstr ""
+msgstr "우편 번호"
 
 #: templates/contacts.php:418
 msgid "Your city"
@@ -1087,7 +1087,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr ""
+msgstr "도시"
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1103,23 +1103,23 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr ""
+msgstr "국가"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
-msgstr ""
+msgstr "인스턴트 메신저"
 
 #: templates/contacts.php:453
 msgid "Delete IM"
-msgstr ""
+msgstr "IM 삭제"
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "공유"
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr ""
+msgstr "내보내기"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1127,36 +1127,36 @@ msgstr ""
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
-msgstr ""
+msgstr "임시 이미지가 캐시에서 제거 되었습니다. "
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr ""
+msgstr "CardDAV 주소 동기화"
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr ""
+msgstr "더 많은 정보"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr ""
+msgstr "기본 주소 (Kontact 등)"
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr ""
+msgstr "iOS/OS X"
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr ""
+msgstr "주소록"
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr ""
+msgstr "새 주소록"
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr ""
+msgstr "이름"
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr ""
+msgstr "종류"
