@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-20 01:15+0200\n"
-"PO-Revision-Date: 2013-06-18 23:21+0000\n"
+"POT-Creation-Date: 2013-06-21 08:24+0200\n"
+"PO-Revision-Date: 2013-06-21 06:24+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Malay (Malaysia) (http://www.transifex.com/projects/p/owncloud/language/ms_MY/)\n"
 "MIME-Version: 1.0\n"
@@ -24,19 +24,19 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr "Ralat mendapatkan objek pada kenalan."
+msgstr ""
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr "Ralat pada foto kenalan."
+msgstr ""
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr "Ralat menyimpan fail sementara"
+msgstr ""
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr "Foto muatan tidak sah."
+msgstr ""
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
@@ -44,39 +44,39 @@ msgstr ""
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
-msgstr "Tiada direktori gambar yang diberi."
+msgstr ""
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr "Fail tidak wujud:"
+msgstr ""
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr "Ralat pada muatan imej."
+msgstr ""
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
-msgstr "Ralat mendapatkan maklumat gambar."
+msgstr ""
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr "Ralat menyimpan kenalan."
+msgstr ""
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
-msgstr "Ralat mengubah saiz imej"
+msgstr ""
 
 #: ajax/savecrop.php:129
 msgid "Error cropping image"
-msgstr "Ralat memotong imej"
+msgstr ""
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr "Ralat mencipta imej sementara"
+msgstr ""
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr "Ralat mencari imej: "
+msgstr ""
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
@@ -93,43 +93,43 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr "Tiada fail dimuatnaik. Ralat tidak diketahui."
+msgstr ""
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr "Tiada ralat berlaku, fail berjaya dimuatnaik"
+msgstr ""
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Saiz fail yang dimuatnaik melebihi upload_max_filesize yang ditetapkan dalam php.ini"
+msgstr ""
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Saiz fail yang dimuatnaik melebihi MAX_FILE_SIZE yang ditetapkan dalam borang HTML"
+msgstr ""
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr "Fail yang dimuatnaik tidak lengkap"
+msgstr ""
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr "Tiada fail dimuatnaik"
+msgstr ""
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr "Direktori sementara hilang"
+msgstr ""
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr "Gagal untuk disimpan"
+msgstr ""
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
@@ -141,23 +141,23 @@ msgstr ""
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
-msgstr "Ralat memuatnaik senarai kenalan."
+msgstr ""
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
-msgstr "Tidak boleh menyimpan imej sementara: "
+msgstr ""
 
 #: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
 msgid "Couldn't load temporary image: "
-msgstr "Tidak boleh membuka imej sementara: "
+msgstr ""
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr "Hubungi "
+msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:507 templates/settings.php:61
 msgid "Save"
-msgstr "Simpan"
+msgstr ""
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
@@ -233,7 +233,7 @@ msgstr ""
 
 #: js/app.js:592
 msgid "Select photo"
-msgstr "Pilih foto"
+msgstr ""
 
 #: js/app.js:662 js/app.js:1541
 msgid "Network or server error. Please inform administrator."
@@ -258,7 +258,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "Batal"
+msgstr ""
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -266,7 +266,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -274,13 +274,13 @@ msgstr ""
 
 #: js/app.js:1407
 msgid "No files selected for upload."
-msgstr "Tiada fail dipilih untuk muatnaik."
+msgstr ""
 
 #: js/app.js:1417
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr "Fail yang ingin dimuatnaik melebihi saiz yang dibenarkan."
+msgstr ""
 
 #: js/app.js:1504
 msgid "Edit profile picture"
@@ -314,7 +314,7 @@ msgstr ""
 
 #: js/groups.js:51 templates/contacts.php:327
 msgid "Add"
-msgstr "Tambah"
+msgstr ""
 
 #: js/groups.js:260
 msgid "Contact is already in this group."
@@ -376,23 +376,23 @@ msgstr ""
 
 #: js/loader.js:49
 msgid "Result: "
-msgstr "Hasil: "
+msgstr ""
 
 #: js/loader.js:49
 msgid " imported, "
-msgstr " import, "
+msgstr ""
 
 #: js/loader.js:49
 msgid " failed."
-msgstr " gagal."
+msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr "Ralat"
+msgstr ""
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr "Nama paparan tidak boleh kosong"
+msgstr ""
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
@@ -405,11 +405,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr "Muat turun"
+msgstr ""
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr "Sunting"
+msgstr ""
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -417,11 +417,11 @@ msgstr "Sunting"
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr "Padam"
+msgstr ""
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr "Lagi..."
+msgstr ""
 
 #: js/settings.js:162
 msgid "Less..."
@@ -567,7 +567,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr "Maklumat vCard tidak tepat. Sila reload semula halaman ini."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
@@ -646,17 +646,17 @@ msgstr ""
 
 #: lib/hooks.php:214
 msgid "{name}'s Birthday"
-msgstr "Hari Lahir {name}"
+msgstr ""
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr "Hubungan"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr "Lain"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -717,44 +717,44 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr "Kerja"
+msgstr ""
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr "Rumah"
+msgstr ""
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr "Mudah alih"
+msgstr ""
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr "Teks"
+msgstr ""
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr "Suara"
+msgstr ""
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr "Mesej"
+msgstr ""
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr "Fax"
+msgstr ""
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr "Alat Kelui"
+msgstr ""
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr "Internet"
+msgstr ""
 
 #: lib/utils/properties.php:187
 msgid "Friends"
@@ -791,7 +791,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr "Import"
+msgstr ""
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -819,7 +819,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr "Kumpulan"
+msgstr ""
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -831,7 +831,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr "Tutup"
+msgstr ""
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -855,11 +855,11 @@ msgstr ""
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr "Buku alamat seterusnya"
+msgstr ""
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr "Buku alamat sebelumnya"
+msgstr ""
 
 #: templates/contacts.php:109
 msgid "Actions"
@@ -889,7 +889,7 @@ msgstr ""
 
 #: templates/contacts.php:126
 msgid "Add contact"
-msgstr "Letak kenalan"
+msgstr ""
 
 #: templates/contacts.php:176
 msgid "Delete group"
@@ -913,19 +913,19 @@ msgstr ""
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
-msgstr "Padam foto semasa"
+msgstr ""
 
 #: templates/contacts.php:228
 msgid "Edit current photo"
-msgstr "Ubah foto semasa"
+msgstr ""
 
 #: templates/contacts.php:229
 msgid "Upload new photo"
-msgstr "Muatnaik foto baru"
+msgstr ""
 
 #: templates/contacts.php:230
 msgid "Select photo from ownCloud"
-msgstr "Pilih foto dari ownCloud"
+msgstr ""
 
 #: templates/contacts.php:241 templates/contacts.php:242
 msgid "First name"
@@ -933,7 +933,7 @@ msgstr ""
 
 #: templates/contacts.php:246 templates/contacts.php:247
 msgid "Additional names"
-msgstr "Nama tambahan"
+msgstr ""
 
 #: templates/contacts.php:251 templates/contacts.php:252
 msgid "Last name"
@@ -949,11 +949,11 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr "Nama Samaran"
+msgstr ""
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
-msgstr "Masukkan nama samaran"
+msgstr ""
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
@@ -965,7 +965,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr "Organisasi"
+msgstr ""
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -973,7 +973,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr "Hari lahir"
+msgstr ""
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -985,11 +985,11 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr "Telefon"
+msgstr ""
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -997,11 +997,11 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr "Alamat"
+msgstr ""
 
 #: templates/contacts.php:336
 msgid "Note"
-msgstr "Nota"
+msgstr ""
 
 #: templates/contacts.php:337
 msgid "Web site"
@@ -1009,17 +1009,17 @@ msgstr ""
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr "Padam hubungan"
+msgstr ""
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr "Pilihan"
+msgstr ""
 
 #: templates/contacts.php:354
 msgid "Please specify a valid email address."
-msgstr "Berikan alamat emel yang sah."
+msgstr ""
 
 #: templates/contacts.php:354
 msgid "someone@example.com"
@@ -1027,19 +1027,19 @@ msgstr ""
 
 #: templates/contacts.php:356
 msgid "Mail to address"
-msgstr "Hantar ke alamat"
+msgstr ""
 
 #: templates/contacts.php:357
 msgid "Delete email address"
-msgstr "Padam alamat emel"
+msgstr ""
 
 #: templates/contacts.php:369
 msgid "Enter phone number"
-msgstr "Masukkan nombor telefon"
+msgstr ""
 
 #: templates/contacts.php:371
 msgid "Delete phone number"
-msgstr "Padam nombor telefon"
+msgstr ""
 
 #: templates/contacts.php:385
 msgid "Go to web site"
@@ -1051,7 +1051,7 @@ msgstr ""
 
 #: templates/contacts.php:397
 msgid "View on map"
-msgstr "Lihat pada peta"
+msgstr ""
 
 #: templates/contacts.php:398
 msgid "Delete address"
@@ -1079,7 +1079,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr "bandar"
+msgstr ""
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1095,7 +1095,7 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr "Negara"
+msgstr ""
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
@@ -1107,11 +1107,11 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr "Kongsi"
+msgstr ""
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr "Export"
+msgstr ""
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1119,36 +1119,36 @@ msgstr ""
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
-msgstr "Imej sementara telah dibuang dari cache."
+msgstr ""
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr "alamat selarian CardDAV"
+msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "maklumat lanjut"
+msgstr ""
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr "Alamat utama"
+msgstr ""
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr "iOS/OS X"
+msgstr ""
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr "Senarai Buku Alamat"
+msgstr ""
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr "Buku Alamat Baru"
+msgstr ""
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr "Nama"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "Keterangan"
+msgstr ""

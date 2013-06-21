@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-20 01:15+0200\n"
-"PO-Revision-Date: 2013-06-18 23:22+0000\n"
+"POT-Creation-Date: 2013-06-21 08:24+0200\n"
+"PO-Revision-Date: 2013-06-21 06:24+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/owncloud/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr "file tidak ditemukan:"
+msgstr ""
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
@@ -90,47 +90,47 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr "Tidak ada berkas yang diunggah. Galat tidak dikenal."
+msgstr ""
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr "Tidak ada galat, berkas sukses diunggah"
+msgstr ""
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "File yang diunggah melampaui directive upload_max_filesize di php.ini"
+msgstr ""
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Berkas yang diunggah melampaui direktif MAX_FILE_SIZE yang ditentukan dalam formulir HTML."
+msgstr ""
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr "Berkas hanya diunggah sebagian"
+msgstr ""
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr "Tidak ada berkas yang diunggah"
+msgstr ""
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr "Folder sementara tidak ada"
+msgstr ""
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr "Gagal menulis ke disk"
+msgstr ""
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
-msgstr "Ruang penyimpanan tidak mencukupi"
+msgstr ""
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
@@ -150,15 +150,15 @@ msgstr ""
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr "kontak"
+msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:507 templates/settings.php:61
 msgid "Save"
-msgstr "Simpan"
+msgstr ""
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr "Mengunggah..."
+msgstr ""
 
 #: js/addressbooks.js:290
 msgid "Imported {count} of {total} contacts"
@@ -255,7 +255,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "Batal"
+msgstr ""
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -263,7 +263,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr "Oke"
+msgstr ""
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -311,7 +311,7 @@ msgstr ""
 
 #: js/groups.js:51 templates/contacts.php:327
 msgid "Add"
-msgstr "Tambah"
+msgstr ""
 
 #: js/groups.js:260
 msgid "Contact is already in this group."
@@ -385,7 +385,7 @@ msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr "Galat"
+msgstr ""
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
@@ -402,11 +402,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr "Unduh"
+msgstr ""
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr "Edit"
+msgstr ""
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -414,7 +414,7 @@ msgstr "Edit"
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr "Hapus"
+msgstr ""
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -643,17 +643,17 @@ msgstr ""
 
 #: lib/hooks.php:214
 msgid "{name}'s Birthday"
-msgstr "hari ulang tahun {name}"
+msgstr ""
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr "kontak"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr "Lainnya"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -714,44 +714,44 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr "Kantor"
+msgstr ""
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr "rumah"
+msgstr ""
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr "ponsel"
+msgstr ""
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr "Teks"
+msgstr ""
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr "suara"
+msgstr ""
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr "pesan"
+msgstr ""
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr "fax"
+msgstr ""
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr "video"
+msgstr ""
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr "pager"
+msgstr ""
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr "internet"
+msgstr ""
 
 #: lib/utils/properties.php:187
 msgid "Friends"
@@ -788,7 +788,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr "Impor"
+msgstr ""
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -816,7 +816,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr "Grup"
+msgstr ""
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -828,7 +828,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr "Tutup"
+msgstr ""
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -946,11 +946,11 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr "nama panggilan"
+msgstr ""
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
-msgstr "masukkan nama panggilan"
+msgstr ""
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
@@ -962,7 +962,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr "organisasi"
+msgstr ""
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -970,7 +970,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr "tanggal lahir"
+msgstr ""
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -982,11 +982,11 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr "telefon"
+msgstr ""
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -994,7 +994,7 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr "Alamat"
+msgstr ""
 
 #: templates/contacts.php:336
 msgid "Note"
@@ -1006,13 +1006,13 @@ msgstr ""
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr "hapus kontak"
+msgstr ""
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr "disarankan"
+msgstr ""
 
 #: templates/contacts.php:354
 msgid "Please specify a valid email address."
@@ -1076,7 +1076,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr "kota"
+msgstr ""
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1092,7 +1092,7 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr "negara"
+msgstr ""
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
@@ -1104,11 +1104,11 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr "Bagikan"
+msgstr ""
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr "Ekspor"
+msgstr ""
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1124,19 +1124,19 @@ msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "lebih lanjut"
+msgstr ""
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr "Alamat utama (Kontak dsb)"
+msgstr ""
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr "iOS/OS X"
+msgstr ""
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr "buku alamat"
+msgstr ""
 
 #: templates/settings.php:58
 msgid "New Address Book"
@@ -1144,8 +1144,8 @@ msgstr ""
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr "Nama"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "Deskripsi"
+msgstr ""

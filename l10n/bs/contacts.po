@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-20 01:15+0200\n"
-"PO-Revision-Date: 2013-06-18 23:22+0000\n"
+"POT-Creation-Date: 2013-06-21 08:24+0200\n"
+"PO-Revision-Date: 2013-06-21 06:24+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Bosnian (http://www.transifex.com/projects/p/owncloud/language/bs/)\n"
 "MIME-Version: 1.0\n"
@@ -152,7 +152,7 @@ msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:507 templates/settings.php:61
 msgid "Save"
-msgstr "Spasi"
+msgstr ""
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
@@ -309,7 +309,7 @@ msgstr ""
 
 #: js/groups.js:51 templates/contacts.php:327
 msgid "Add"
-msgstr "Dodaj"
+msgstr ""
 
 #: js/groups.js:260
 msgid "Contact is already in this group."
@@ -826,7 +826,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr "Zatvori"
+msgstr ""
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -992,7 +992,7 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr "Adresa"
+msgstr ""
 
 #: templates/contacts.php:336
 msgid "Note"
@@ -1102,7 +1102,7 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr "Podijeli"
+msgstr ""
 
 #: templates/contacts.php:464
 msgid "Export"
@@ -1142,7 +1142,7 @@ msgstr ""
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr "Ime"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"

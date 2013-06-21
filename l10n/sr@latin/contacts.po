@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-20 01:15+0200\n"
-"PO-Revision-Date: 2013-06-18 23:21+0000\n"
+"POT-Creation-Date: 2013-06-21 08:24+0200\n"
+"PO-Revision-Date: 2013-06-21 06:24+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Serbian (Latin) (http://www.transifex.com/projects/p/owncloud/language/sr@latin/)\n"
 "MIME-Version: 1.0\n"
@@ -94,34 +94,34 @@ msgstr ""
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr "Nema greške, fajl je uspešno poslat"
+msgstr ""
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Poslati fajl prevazilazi direktivu upload_max_filesize iz "
+msgstr ""
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Poslati fajl prevazilazi direktivu MAX_FILE_SIZE koja je navedena u HTML formi"
+msgstr ""
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr "Poslati fajl je samo delimično otpremljen!"
+msgstr ""
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr "Nijedan fajl nije poslat"
+msgstr ""
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr "Nedostaje privremena fascikla"
+msgstr ""
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
@@ -153,7 +153,7 @@ msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:507 templates/settings.php:61
 msgid "Save"
-msgstr "Snimi"
+msgstr ""
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
@@ -254,7 +254,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "Otkaži"
+msgstr ""
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -401,11 +401,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr "Preuzmi"
+msgstr ""
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr "Uredi"
+msgstr ""
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -413,7 +413,7 @@ msgstr "Uredi"
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr "Obriši"
+msgstr ""
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -563,7 +563,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr "Podaci o vKarti su neispravni. Ponovo učitajte stranicu."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
@@ -652,7 +652,7 @@ msgstr ""
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr "Drugo"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -713,24 +713,24 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr "Posao"
+msgstr ""
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr "Kuća"
+msgstr ""
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr "Mobilni"
+msgstr ""
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr "Tekst"
+msgstr ""
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr "Glas"
+msgstr ""
 
 #: lib/utils/properties.php:164
 msgid "Message"
@@ -738,15 +738,15 @@ msgstr ""
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr "Faks"
+msgstr ""
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr "Pejdžer"
+msgstr ""
 
 #: lib/utils/properties.php:174
 msgid "Internet"
@@ -815,7 +815,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr "Grupe"
+msgstr ""
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -827,7 +827,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr "Zatvori"
+msgstr ""
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -961,7 +961,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr "Organizacija"
+msgstr ""
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -969,7 +969,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr "Rođendan"
+msgstr ""
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -981,11 +981,11 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr "Telefon"
+msgstr ""
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr "E-mail"
+msgstr ""
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -993,7 +993,7 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr "Adresa"
+msgstr ""
 
 #: templates/contacts.php:336
 msgid "Note"
@@ -1075,7 +1075,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr "Grad"
+msgstr ""
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1091,7 +1091,7 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr "Zemlja"
+msgstr ""
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
@@ -1143,8 +1143,8 @@ msgstr ""
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr "Ime"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "Opis"
+msgstr ""
