@@ -180,6 +180,7 @@ class ImportController extends BaseController {
 		$failed = 0;
 		$partially = 0;
 
+		// TODO: Add a new group: "Imported at {date}"
 		foreach($parts as $part) {
 			try {
 				$vcard = VObject\Reader::read($part);
