@@ -476,7 +476,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.importStatus = function(backend, addressbookid, params) {
 		return this.requestRoute(
 			'contacts_import_status',
-			'POST',
+			'GET',
 			{backend: backend, addressbookid: addressbookid},
 			params
 		);

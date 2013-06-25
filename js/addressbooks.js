@@ -235,6 +235,7 @@ OC.Contacts = OC.Contacts || {};
 				self.$importStatusText.text(t('contacts', 'Uploading...'));
 			},
 			done: function (e, data) {
+				self.$importStatusText.text(t('contacts', 'Importing...'));
 				console.log('Upload done:', data.result);
 				self.doImport(data.result);
 			},
@@ -257,7 +258,7 @@ OC.Contacts = OC.Contacts || {};
 
 	AddressBookList.prototype.doImport = function(response) {
 		var done = false;
-		var interval = null;
+		var interval = null, isChecking = false;
 		var self = this;
 		var closeImport = function() {
 			self.$importProgress.fadeOut();
@@ -279,6 +280,10 @@ OC.Contacts = OC.Contacts || {};
 					closeImport();
 					return;
 				}
+				if(isChecking) {
+					return;
+				}
+				isChecking = true;
 				$.when(
 					self.storage.importStatus(
 						backend, addressbookid,
@@ -293,10 +298,11 @@ OC.Contacts = OC.Contacts || {};
 						console.warn('Error', response.message);
 						self.$importStatusText.text(response.message);
 					}
+					isChecking = false;
 				}).fail(function(response) {
 					console.log(response.message);
 					$(document).trigger('status.contacts.error', response);
-					done = true;
+					isChecking = false;
 				});
 			};
 			$.when(
