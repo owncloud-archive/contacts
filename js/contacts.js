@@ -1029,8 +1029,6 @@ OC.Contacts = OC.Contacts || {};
 		
 		var buildAddressBookSelect = function(availableAddressBooks) {
 			console.log('address books', availableAddressBooks.length, availableAddressBooks);
-			/* TODO: Add method to change address book.
-			 */
 			$.each(availableAddressBooks, function(idx, addressBook) {
 				//console.log('addressBook', idx, addressBook);
 				var $option = $('<option />')
