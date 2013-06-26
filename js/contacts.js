@@ -1046,8 +1046,7 @@ OC.Contacts = OC.Contacts || {};
 				header: false,
 				multiple: false,
 				selectedList: 3,
-				noneSelectedText: self.$addressBookSelect.attr('title'),
-				selectedText: t('contacts', '# groups')
+				noneSelectedText: self.$addressBookSelect.attr('title')
 			});
 			self.$addressBookSelect.on('multiselectclick', function(event, ui) {
 				console.log('AddressBook select', ui);
