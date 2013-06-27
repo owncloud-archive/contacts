@@ -1703,13 +1703,15 @@ OC.Contacts = OC.Contacts || {};
 	 * @param String name The group name
 	 */
 	Contact.prototype.removeFromGroup = function(name) {
-		console.log('removeFromGroup', name);
+		name = name.trim();
 		if(!this.data.CATEGORIES) {
+			console.warn('removeFromGroup. No groups found');
 			return;
 		} else {
 			var found = false;
 			var categories = [];
 			$.each(this.data.CATEGORIES[0].value, function(idx, category) {
+				category = category.trim();
 				if(name.toLowerCase() === category.toLowerCase()) {
 					found = true;
 				} else {
@@ -1717,10 +1719,10 @@ OC.Contacts = OC.Contacts || {};
 				}
 			});
 			if(!found) {
+				console.log('not found');
 				return;
 			}
 			this.data.CATEGORIES[0].value = categories;
-			//this.data.CATEGORIES[0].value.splice(this.data.CATEGORIES[0].value.indexOf(name), 1);
 			if(this.$listelem) {
 				this.$listelem.find('td.categories')
 					.text(categories.join(' / '));

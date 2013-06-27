@@ -100,7 +100,7 @@ class Hooks{
 		//\OCP\Share::unshareAll('contact', $id);
 	}
 
-	public static function contactUpdated($parameters) {
+	public static function contactAdded($parameters) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
 		$contact = $parameters['contact'];
 		if(isset($contact->CATEGORIES)) {
@@ -111,9 +111,15 @@ class Hooks{
 				$catctrl->addToCategory($parameters['id'], $group);
 			}
 		}
-		Utils\Properties::updateIndex($parameters['id'], $parameters['contact']);
+		Utils\Properties::updateIndex($parameters['id'], $contact);
+	}
+
+	public static function contactUpdated($parameters) {
+		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
+		$contact = $parameters['contact'];
+		Utils\Properties::updateIndex($parameters['id'], $contact);
 		// If updated via CardDAV we don't know if PHOTO has changed
-		if(isset($parameters['carddav']) && $parameters['cardav']
+		if(isset($parameters['carddav']) && $parameters['carddav']
 			&& (isset($contact->PHOTO) || isset($contact->LOGO))) {
 			$contact->cacheThumbnail(null, false, true);
 		}
