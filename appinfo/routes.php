@@ -137,7 +137,7 @@ $this->create('contacts_import_start', 'addressbook/{backend}/{addressbookid}/im
 	->requirements(array('backend', 'addressbookid'));
 
 $this->create('contacts_import_status', 'addressbook/{backend}/{addressbookid}/import/status')
-	->post()
+	->get()
 	->action(
 		function($params) {
 			session_write_close();

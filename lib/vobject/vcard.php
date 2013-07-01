@@ -42,6 +42,13 @@ class VCard extends VObject\Component\VCard {
 	const UPGRADE = 2;
 
 	/**
+	 * The groups in the contained properties
+	 *
+	 * @var array
+	 */
+	protected $groups = array();
+
+	/**
 	* VCards with version 2.1, 3.0 and 4.0 are found.
 	*
 	* If the VCARD doesn't know its version, 3.0 is assumed and if
@@ -250,4 +257,21 @@ class VCard extends VObject\Component\VCard {
 		);
 
 	}
+
+	/**
+	 * Get all group names in the vCards properties
+	 * @return array
+	 */
+	public function propertyGroups() {
+		foreach($this->children as $property) {
+			if($property->group && !isset($this->groups[$property->group])) {
+				$this->groups[] = $property->group;
+			}
+		}
+		if(count($this->groups) > 1) {
+			sort($this->groups);
+		}
+		return $this->groups;
+	}
+
 }

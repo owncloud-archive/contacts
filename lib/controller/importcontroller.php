@@ -102,6 +102,7 @@ class ImportController extends BaseController {
 	 * @IsAdminExemption
 	 * @IsSubAdminExemption
 	 * @Ajax
+	 * @API
 	 */
 	public function start() {
 		$request = $this->request;
@@ -180,6 +181,7 @@ class ImportController extends BaseController {
 		$failed = 0;
 		$partially = 0;
 
+		// TODO: Add a new group: "Imported at {date}"
 		foreach($parts as $part) {
 			try {
 				$vcard = VObject\Reader::read($part);
@@ -229,7 +231,7 @@ class ImportController extends BaseController {
 		$request = $this->request;
 		$response = new JSONResponse();
 
-		$progresskey = isset($request->post['progresskey']) ? $request->post['progresskey'] : null;
+		$progresskey = isset($request->get['progresskey']) ? $request->get['progresskey'] : null;
 		if(is_null($progresskey)) {
 			$response->bailOut(App::$l10n->t('Progress key missing from request.'));
 			return $response;

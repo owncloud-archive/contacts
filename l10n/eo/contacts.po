@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-06-05 00:58+0200\n"
-"PO-Revision-Date: 2013-06-04 22:59+0000\n"
+"POT-Creation-Date: 2013-07-01 00:56+0200\n"
+"PO-Revision-Date: 2013-06-30 22:56+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Esperanto (http://www.transifex.com/projects/p/owncloud/language/eo/)\n"
 "MIME-Version: 1.0\n"
@@ -153,7 +153,7 @@ msgstr ""
 msgid "Contacts"
 msgstr ""
 
-#: js/addressbooks.js:68 js/groups.js:507 templates/settings.php:61
+#: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
 msgstr ""
 
@@ -161,23 +161,27 @@ msgstr ""
 msgid "Uploading..."
 msgstr ""
 
-#: js/addressbooks.js:290
+#: js/addressbooks.js:238
+msgid "Importing..."
+msgstr ""
+
+#: js/addressbooks.js:295
 msgid "Imported {count} of {total} contacts"
 msgstr ""
 
-#: js/addressbooks.js:311
+#: js/addressbooks.js:317
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr ""
 
-#: js/addressbooks.js:453
+#: js/addressbooks.js:459
 msgid "An address book called {name} already exists"
 msgstr ""
 
-#: js/addressbooks.js:482
+#: js/addressbooks.js:488
 msgid "Failed adding address book: {error}"
 msgstr ""
 
-#: js/addressbooks.js:518
+#: js/addressbooks.js:524
 msgid "Failed loading address books: {error}"
 msgstr ""
 
@@ -292,83 +296,83 @@ msgstr ""
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:1010 js/contacts.js:1052
+#: js/contacts.js:1010
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2079
+#: js/contacts.js:2078
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2090
+#: js/contacts.js:2089
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2105
+#: js/contacts.js:2104
 msgid "Cancelled deletion of {num}"
 msgstr ""
 
-#: js/groups.js:51 templates/contacts.php:327
+#: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
 msgstr ""
 
-#: js/groups.js:260
+#: js/groups.js:262
 msgid "Contact is already in this group."
 msgstr ""
 
-#: js/groups.js:273
+#: js/groups.js:275
 msgid "Contacts are already in this group."
 msgstr ""
 
-#: js/groups.js:336
+#: js/groups.js:338
 msgid "Couldn't get contact list."
 msgstr ""
 
-#: js/groups.js:347
+#: js/groups.js:349
 msgid "Contact is not in this group."
 msgstr ""
 
-#: js/groups.js:361
+#: js/groups.js:363
 msgid "Contacts are not in this group."
 msgstr ""
 
-#: js/groups.js:555
+#: js/groups.js:557
 msgid "Failed renaming group: {error}"
 msgstr ""
 
-#: js/groups.js:586
+#: js/groups.js:588
 msgid "A group named {group} already exists"
 msgstr ""
 
-#: js/groups.js:621
+#: js/groups.js:623
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr ""
 
-#: js/groups.js:634
+#: js/groups.js:636
 msgid "Failed adding group: {error}"
 msgstr ""
 
-#: js/groups.js:646
+#: js/groups.js:648
 msgid "All"
 msgstr ""
 
-#: js/groups.js:661 js/groups.js:664
+#: js/groups.js:663 js/groups.js:666
 msgid "Favorites"
 msgstr ""
 
-#: js/groups.js:725
+#: js/groups.js:727
 msgid "Shared by {owner}"
 msgstr ""
 
-#: js/groups.js:740
+#: js/groups.js:742
 msgid "Not grouped"
 msgstr ""
 
-#: js/groups.js:766
+#: js/groups.js:768
 msgid "Failed loading groups: {error}"
 msgstr ""
 
@@ -583,29 +587,29 @@ msgstr ""
 msgid "Error adding group."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:104
+#: lib/controller/groupcontroller.php:126
 msgid "No group name to rename from given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:108
+#: lib/controller/groupcontroller.php:130
 msgid "No group name to rename to given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:114
+#: lib/controller/groupcontroller.php:136
 msgid "Error renaming group."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:151
-#: lib/controller/groupcontroller.php:202
+#: lib/controller/groupcontroller.php:177
+#: lib/controller/groupcontroller.php:228
 msgid "Group ID missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:156
+#: lib/controller/groupcontroller.php:182
 msgid "Group name missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:161
-#: lib/controller/groupcontroller.php:207
+#: lib/controller/groupcontroller.php:187
+#: lib/controller/groupcontroller.php:233
 msgid "Contact ID missing from request."
 msgstr ""
 
@@ -613,24 +617,24 @@ msgstr ""
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:115
+#: lib/controller/importcontroller.php:116
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:123
+#: lib/controller/importcontroller.php:124
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:128
-#: lib/controller/importcontroller.php:234
+#: lib/controller/importcontroller.php:129
+#: lib/controller/importcontroller.php:236
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:134
+#: lib/controller/importcontroller.php:135
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:173
+#: lib/controller/importcontroller.php:174
 msgid "No contacts found in: "
 msgstr ""
 
@@ -642,7 +646,7 @@ msgstr ""
 msgid "No value is given."
 msgstr ""
 
-#: lib/hooks.php:214
+#: lib/hooks.php:220
 msgid "{name}'s Birthday"
 msgstr ""
 

@@ -39,6 +39,7 @@ class GroupProperty extends CompoundProperty {
 	* @param string $name
 	*/
 	public function addGroup($name) {
+		$name = trim($name);
 		if($this->hasGroup($name)) {
 			return;
 		}
@@ -51,14 +52,18 @@ class GroupProperty extends CompoundProperty {
 	* Remove an existing group.
 	*
 	* @param string $name
+	* @return bool
 	*/
 	public function removeGroup($name) {
+		$name = trim($name);
 		if(!$this->hasGroup($name)) {
-			return;
+			return false;
 		}
 		$groups = $this->getParts();
+		$groups = array_map('trim', $groups);
 		array_splice($groups, $this->array_searchi($name, $groups), 1);
 		$this->setParts($groups);
+		return true;
 	}
 
 	/**
@@ -68,7 +73,10 @@ class GroupProperty extends CompoundProperty {
 	* @return bool
 	*/
 	public function hasGroup($name) {
-		return $this->in_arrayi($name, $this->getParts());
+		$name = trim($name);
+		$groups = $this->getParts();
+		$groups = array_map('trim', $groups);
+		return $this->in_arrayi($name, $groups);
 	}
 
 	/**
@@ -78,10 +86,13 @@ class GroupProperty extends CompoundProperty {
 	* @param string $to
 	*/
 	public function renameGroup($from, $to) {
+		$from = trim($from);
+		$to = trim($to);
 		if(!$this->hasGroup($from)) {
 			return;
 		}
 		$groups = $this->getParts();
+		$groups = array_map('trim', $groups);
 		$groups[$this->array_searchi($from, $groups)] = $to;
 		$this->setParts($groups);
 	}

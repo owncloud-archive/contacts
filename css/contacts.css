@@ -180,7 +180,10 @@
 	height: auto !important;
 	max-height: 200px;
 }
-.ui-multiselect-checkboxes label { width: 100%; color: #333 !important; font-size: 100% !important; }
+.ui-multiselect-checkboxes label {
+	width: 100%; color: #333 !important; font-size: 100% !important;
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
 .ui-multiselect-checkboxes label > span {color: #333 !important; font-size: 100% !important; }
 .ui-multiselect-checkboxes input[type="checkbox"] { margin: 3px !important; }
 button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
@@ -213,7 +216,6 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 
 /*.no-svg .add { background-image:url('%webroot%/core/img/actions/add.png'); }*/
 .no-svg .delete { background-image:url('%webroot%/core/img/actions/delete.png'); }
-.no-svg .delete:hover { background-image:url('%webroot%/core/img/actions/delete-hover.png'); }
 .no-svg .edit { background-image:url('%webroot%/core/img/actions/rename.png'); }
 .no-svg .share { background-image:url('%webroot%/core/img/actions/share.png'); }
 /*.no-svg .groups { background-image:url('%webroot%/core/img/actions/shared.png'); }*/
@@ -234,7 +236,6 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 }
 /*.svg .add { background-image:url('%webroot%/core/img/actions/add.svg'); }*/
 .svg .delete { background-image:url('%webroot%/core/img/actions/delete.svg'); }
-.svg .delete:hover { background-image:url('%webroot%/core/img/actions/delete-hover.svg'); }
 .svg .edit { background-image:url('%webroot%/core/img/actions/rename.svg'); }
 .svg .share { background-image:url('%webroot%/core/img/actions/share.svg'); }
 /*.svg .groups { background-image:url('%webroot%/core/img/actions/shared.svg'); }*/

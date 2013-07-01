@@ -86,6 +86,28 @@ class GroupController extends BaseController {
 		}
 
 		$catman = new \OC_VCategories('contact', $this->api->getUserId());
+		$ids = $catman->idsForCategory($name);
+		if($ids !== false) {
+			$app = new App($this->api->getUserId());
+			$backend = $app->getBackend('local');
+			foreach($ids as $id) {
+				$contact = $backend->getContact(null, $id, $noCollection = true);
+				$obj = \Sabre\VObject\Reader::read(
+					$contact['carddata'],
+					\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
+				);
+				if($obj) {
+					if(!isset($obj->CATEGORIES)) {
+						continue;
+					}
+					if($obj->CATEGORIES->removeGroup($name)) {
+						$backend->updateContact(null, $id, $obj, true);
+					}
+				} else {
+					\OCP\Util::writeLog('contacts', __METHOD__.', could not parse card ' . $id, \OCP\Util::DEBUG);
+				}
+			}
+		}
 		$catman->delete($name);
 		return $response;
 	}
@@ -115,20 +137,24 @@ class GroupController extends BaseController {
 			return $response;
 		}
 		$ids = $catman->idsForCategory($to);
-		$app = new App($this->api->getUserId());
-		$backend = $app->getBackend('local');
-		foreach($ids as $id) {
-			$contact = $backend->getContact(null, $id, true);
-			$obj = \Sabre\VObject\Reader::read(
-				$contact['carddata'],
-				\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
-			);
-			if($obj) {
-				if(!isset($obj->CATEGORIES)) {
-					continue;
+		if($ids !== false) {
+			$app = new App($this->api->getUserId());
+			$backend = $app->getBackend('local');
+			foreach($ids as $id) {
+				$contact = $backend->getContact(null, $id, true);
+				$obj = \Sabre\VObject\Reader::read(
+					$contact['carddata'],
+					\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
+				);
+				if($obj) {
+					if(!isset($obj->CATEGORIES)) {
+						continue;
+					}
+					$obj->CATEGORIES->renameGroup($from, $to);
+					$backend->updateContact(null, $id, $obj, true);
+				} else {
+					\OCP\Util::writeLog('contacts', __METHOD__.', could not parse card ' . $id, \OCP\Util::DEBUG);
 				}
-				$obj->CATEGORIES->renameGroup($from, $to);
-				$backend->updateContact(null, $id, $obj, true);
 			}
 		}
 		return $response;

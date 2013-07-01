@@ -10,12 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2013-07-01 00:56+0200\n"
 "PO-Revision-Date: 2013-06-30 22:56+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
-"Language-Team: Occitan (post 1500) (http://www.transifex.com/projects/p/owncloud/language/oc/)\n"
+"Language-Team: Bosnian (http://www.transifex.com/projects/p/owncloud/language/bs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: oc\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: bs\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
@@ -956,7 +956,7 @@ msgstr ""
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
-msgstr "Títol"
+msgstr ""
 
 #: templates/contacts.php:276
 msgid "Enter title"
