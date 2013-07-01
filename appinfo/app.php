@@ -46,7 +46,7 @@ if(\OCP\App::isEnabled('appframework')) {
 	\OC_Search::registerProvider('OCA\Contacts\SearchProvider');
 	//\OCP\Share::registerBackend('contact', 'OCA\Contacts\Share_Backend_Contact');
 	\OCP\Share::registerBackend('addressbook', 'OCA\Contacts\Share\Addressbook', 'contact');
-
+	\OCP\App::registerPersonal('contacts','personalsettings');
 
 	if(\OCP\User::isLoggedIn()) {
 		$app = new App($api->getUserId());
