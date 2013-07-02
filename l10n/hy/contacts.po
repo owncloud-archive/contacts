@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-02 15:40+0200\n"
-"PO-Revision-Date: 2013-07-02 13:40+0000\n"
+"POT-Creation-Date: 2013-07-03 00:56+0200\n"
+"PO-Revision-Date: 2013-07-02 14:01+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Armenian (http://www.transifex.com/projects/p/owncloud/language/hy/)\n"
 "MIME-Version: 1.0\n"
@@ -152,7 +152,7 @@ msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "Պահպանել"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
@@ -404,7 +404,7 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "Բեռնել"
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
@@ -416,7 +416,7 @@ msgstr ""
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "Ջնջել"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -655,7 +655,7 @@ msgstr ""
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr ""
+msgstr "Այլ"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -830,7 +830,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr ""
+msgstr "Փակել"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -1150,4 +1150,4 @@ msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr ""
+msgstr "Նկարագրություն"

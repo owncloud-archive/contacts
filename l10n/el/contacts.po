@@ -29,8 +29,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-02 15:40+0200\n"
-"PO-Revision-Date: 2013-07-02 13:40+0000\n"
+"POT-Creation-Date: 2013-07-03 00:56+0200\n"
+"PO-Revision-Date: 2013-07-02 14:01+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -41,19 +41,19 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr ""
+msgstr "Σφάλμα κατά τη λήψη αντικειμένου επαφής"
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr ""
+msgstr "Σφάλμα ανάγνωσης εικόνας επαφής"
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr ""
+msgstr "Σφάλμα αποθήκευσης προσωρινού αρχείου"
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr ""
+msgstr "Η φορτωμένη φωτογραφία δεν είναι έγκυρη"
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
@@ -61,39 +61,39 @@ msgstr ""
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
-msgstr ""
+msgstr "Δε δόθηκε διαδρομή εικόνας"
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr ""
+msgstr "Το αρχείο δεν υπάρχει"
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr ""
+msgstr "Σφάλμα φόρτωσης εικόνας"
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "Σφάλμα κατά τη λήψη ιδιοτήτων ΦΩΤΟΓΡΑΦΙΑΣ."
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr ""
+msgstr "Σφάλμα κατά την αποθήκευση επαφής."
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
-msgstr ""
+msgstr "Σφάλμα κατά την αλλαγή μεγέθους εικόνας"
 
 #: ajax/savecrop.php:129
 msgid "Error cropping image"
-msgstr ""
+msgstr "Σφάλμα κατά την περικοπή εικόνας"
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr ""
+msgstr "Σφάλμα κατά την δημιουργία προσωρινής εικόνας"
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr ""
+msgstr "Σφάλμα κατά την εύρεση της εικόνας: "
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
@@ -110,47 +110,47 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr ""
+msgstr "Δεν ανέβηκε κάποιο αρχείο. Άγνωστο σφάλμα"
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr ""
+msgstr "Δεν υπάρχει σφάλμα, το αρχείο εστάλει επιτυχώς"
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr ""
+msgstr "Το αρχείο που εστάλει υπερβαίνει την οδηγία μέγιστου επιτρεπτού μεγέθους \"upload_max_filesize\" του php.ini"
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr ""
+msgstr "Το ανεβασμένο αρχείο υπερβαίνει το MAX_FILE_SIZE που ορίζεται στην  HTML φόρμα"
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "Το αρχείο εστάλει μόνο εν μέρει"
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr ""
+msgstr "Κανένα αρχείο δεν στάλθηκε"
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr ""
+msgstr "Λείπει ο προσωρινός φάκελος"
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr ""
+msgstr "Αποτυχία εγγραφής στο δίσκο"
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
-msgstr ""
+msgstr "Μη επαρκής διαθέσιμος αποθηκευτικός χώρος"
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
@@ -158,31 +158,31 @@ msgstr ""
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
-msgstr ""
+msgstr "Σφάλμα κατά την αποθήκευση επαφών"
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
-msgstr ""
+msgstr "Δεν ήταν δυνατή η αποθήκευση της προσωρινής εικόνας: "
 
 #: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
 msgid "Couldn't load temporary image: "
-msgstr ""
+msgstr "Δεν ήταν δυνατή η φόρτωση της προσωρινής εικόνας: "
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr ""
+msgstr "Επαφές"
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "Αποθήκευση"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr ""
+msgstr "Μεταφόρτωση..."
 
 #: js/addressbooks.js:238
 msgid "Importing..."
-msgstr ""
+msgstr "Γίνεται εισαγωγή..."
 
 #: js/addressbooks.js:295
 msgid "Imported {count} of {total} contacts"
@@ -218,15 +218,15 @@ msgstr ""
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr ""
+msgstr "Προσθήκη στο..."
 
 #: js/app.js:321 js/app.js:333
 msgid "Remove from..."
-msgstr ""
+msgstr "Αφαίρεση από το..."
 
 #: js/app.js:338
 msgid "Add group..."
-msgstr ""
+msgstr "Προσθήκη ομάδας..."
 
 #: js/app.js:459
 msgid "Invalid URL: \"{url}\""
@@ -234,7 +234,7 @@ msgstr ""
 
 #: js/app.js:470
 msgid "There was an error opening a mail composer."
-msgstr ""
+msgstr "Υπήρχε ένα σφάλμα στο άνοιγμα μίας σύνθεσης μηνύματος."
 
 #: js/app.js:475
 msgid "Invalid email: \"{url}\""
@@ -254,7 +254,7 @@ msgstr ""
 
 #: js/app.js:592
 msgid "Select photo"
-msgstr ""
+msgstr "Επέλεξε φωτογραφία"
 
 #: js/app.js:662 js/app.js:1541
 msgid "Network or server error. Please inform administrator."
@@ -262,11 +262,11 @@ msgstr ""
 
 #: js/app.js:881
 msgid "Error adding to group."
-msgstr ""
+msgstr "Σφάλμα κατά την προσθήκη σε ομάδα."
 
 #: js/app.js:910
 msgid "Error removing from group."
-msgstr ""
+msgstr "Σφάλμα κατά την αφαίρεση από ομάδα."
 
 #: js/app.js:1070
 msgid "Error setting {name} as favorite."
@@ -279,15 +279,15 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "Άκυρο"
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
-msgstr ""
+msgstr "Προσθήκη ομάδας"
 
 #: js/app.js:1266
 msgid "OK"
-msgstr ""
+msgstr "ΟΚ"
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -295,21 +295,21 @@ msgstr ""
 
 #: js/app.js:1407
 msgid "No files selected for upload."
-msgstr ""
+msgstr "Δεν επιλέχτηκαν αρχεία για μεταφόρτωση"
 
 #: js/app.js:1417
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr ""
+msgstr "Το αρχείο που προσπαθείτε να ανεβάσετε υπερβαίνει το μέγιστο μέγεθος για τις προσθήκες αρχείων σε αυτόν τον server."
 
 #: js/app.js:1504
 msgid "Edit profile picture"
-msgstr ""
+msgstr "Επεξεργασία εικόνας προφίλ"
 
 #: js/app.js:1522
 msgid "Error loading profile picture."
-msgstr ""
+msgstr "Σφάλμα στην φόρτωση εικόνας προφίλ."
 
 #: js/contacts.js:582
 msgid "Is this correct?"
@@ -323,7 +323,7 @@ msgstr ""
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr ""
+msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή,δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
 #: js/contacts.js:2089
 msgid "Click to undo deletion of {num} contacts"
@@ -335,15 +335,15 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr ""
+msgstr "Προσθήκη"
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
-msgstr ""
+msgstr "Η επαφή είναι ήδη σε αυτήν την ομάδα."
 
 #: js/groups.js:275
 msgid "Contacts are already in this group."
-msgstr ""
+msgstr "Οι επαφές είναι ήδη σε αυτήν την ομάδα."
 
 #: js/groups.js:338
 msgid "Couldn't get contact list."
@@ -377,11 +377,11 @@ msgstr ""
 
 #: js/groups.js:648
 msgid "All"
-msgstr ""
+msgstr "Όλες"
 
 #: js/groups.js:663 js/groups.js:666
 msgid "Favorites"
-msgstr ""
+msgstr "Αγαπημένες"
 
 #: js/groups.js:727
 msgid "Shared by {owner}"
@@ -397,40 +397,40 @@ msgstr ""
 
 #: js/loader.js:49
 msgid "Result: "
-msgstr ""
+msgstr "Αποτέλεσμα: "
 
 #: js/loader.js:49
 msgid " imported, "
-msgstr ""
+msgstr " εισάγεται,"
 
 #: js/loader.js:49
 msgid " failed."
-msgstr ""
+msgstr " απέτυχε."
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "Σφάλμα"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr ""
+msgstr "Το όνομα προβολής δεν μπορεί να είναι κενό. "
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
-msgstr ""
+msgstr "Εμφάνιση συνδέσμου CardDav"
 
 #: js/settings.js:98 templates/settings.php:29
 msgid "Show read-only VCF link"
-msgstr ""
+msgstr "Εμφάνιση συνδέσμου VCF μόνο για ανάγνωση"
 
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "Λήψη"
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "Επεξεργασία"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -438,15 +438,15 @@ msgstr ""
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "Διαγραφή"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr ""
+msgstr "Περισσότερα..."
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr ""
+msgstr "Λιγότερα"
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
@@ -494,11 +494,11 @@ msgstr ""
 
 #: lib/backend/ldap.php:433
 msgid "There was an error updating the addressbook."
-msgstr ""
+msgstr "Υπήρξε σφάλμα κατά την ενημέρωση του βιβλίου διευθύνσεων."
 
 #: lib/backend/ldap.php:497
 msgid "There was an error deleting this addressbook."
-msgstr ""
+msgstr "Υπήρξε σφάλμα κατά την διαγραφή αυτού του βιβλίου διευθύνσεων"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
@@ -526,7 +526,7 @@ msgstr ""
 
 #: lib/contact.php:468
 msgid "Unknown IM: "
-msgstr ""
+msgstr "Άγνωστο IM:"
 
 #: lib/controller/addressbookcontroller.php:122
 msgid "Error creating address book"
@@ -588,7 +588,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr ""
+msgstr "Οι πληροφορίες σχετικά με vCard είναι εσφαλμένες. Παρακαλώ επαναφορτώστε τη σελίδα."
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
@@ -604,7 +604,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
-msgstr ""
+msgstr "Σφάλμα κατά την προσθήκη ομάδας."
 
 #: lib/controller/groupcontroller.php:126
 msgid "No group name to rename from given."
@@ -667,17 +667,17 @@ msgstr ""
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
-msgstr ""
+msgstr "Τα Γεννέθλια του/της {name}"
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr ""
+msgstr "Επαφή"
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr ""
+msgstr "Άλλο"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -685,7 +685,7 @@ msgstr ""
 
 #: lib/utils/properties.php:66
 msgid "Jabber"
-msgstr ""
+msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
@@ -693,101 +693,101 @@ msgstr ""
 
 #: lib/utils/properties.php:76
 msgid "AIM"
-msgstr ""
+msgstr "AIM"
 
 #: lib/utils/properties.php:81
 msgid "MSN"
-msgstr ""
+msgstr "MSN"
 
 #: lib/utils/properties.php:86
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: lib/utils/properties.php:91
 msgid "GoogleTalk"
-msgstr ""
+msgstr "GoogleTalk"
 
 #: lib/utils/properties.php:96
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: lib/utils/properties.php:101
 msgid "XMPP"
-msgstr ""
+msgstr "XMPP"
 
 #: lib/utils/properties.php:106
 msgid "ICQ"
-msgstr ""
+msgstr "ICQ"
 
 #: lib/utils/properties.php:111
 msgid "Yahoo"
-msgstr ""
+msgstr "Yahoo"
 
 #: lib/utils/properties.php:116
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: lib/utils/properties.php:121
 msgid "QQ"
-msgstr ""
+msgstr "QQ"
 
 #: lib/utils/properties.php:126
 msgid "GaduGadu"
-msgstr ""
+msgstr "GaduGadu"
 
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr ""
+msgstr "Εργασία"
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr ""
+msgstr "Σπίτι"
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr ""
+msgstr "Κινητό"
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr ""
+msgstr "Κείμενο"
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr ""
+msgstr "Ομιλία"
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr ""
+msgstr "Μήνυμα"
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr ""
+msgstr "Φαξ"
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr ""
+msgstr "Βίντεο"
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr ""
+msgstr "Βομβητής"
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr ""
+msgstr "Διαδίκτυο"
 
 #: lib/utils/properties.php:187
 msgid "Friends"
-msgstr ""
+msgstr "Φίλοι"
 
 #: lib/utils/properties.php:188
 msgid "Family"
-msgstr ""
+msgstr "Οικογένεια"
 
 #: templates/contacts.php:6
 msgid "New Contact"
-msgstr ""
+msgstr "Νέα επαφή"
 
 #: templates/contacts.php:10
 msgid "Group name"
@@ -795,7 +795,7 @@ msgstr ""
 
 #: templates/contacts.php:10
 msgid "New Group"
-msgstr ""
+msgstr "Νέα Ομάδα"
 
 #: templates/contacts.php:19
 msgid "Address books"
@@ -812,7 +812,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr ""
+msgstr "Εισαγωγή"
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -840,7 +840,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr ""
+msgstr "Ομάδες"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -852,55 +852,55 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr ""
+msgstr "Κλείσιμο"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Συντομεύσεις πλητρολογίου"
 
 #: templates/contacts.php:94
 msgid "Navigation"
-msgstr ""
+msgstr "Πλοήγηση"
 
 #: templates/contacts.php:97
 msgid "Next contact in list"
-msgstr ""
+msgstr "Επόμενη επαφή στη λίστα"
 
 #: templates/contacts.php:99
 msgid "Previous contact in list"
-msgstr ""
+msgstr "Προηγούμενη επαφή στη λίστα"
 
 #: templates/contacts.php:101
 msgid "Expand/collapse current addressbook"
-msgstr ""
+msgstr "Ανάπτυξη/σύμπτυξη τρέχοντος βιβλίου διευθύνσεων"
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr ""
+msgstr "Επόμενο βιβλίο διευθύνσεων"
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr ""
+msgstr "Προηγούμενο βιβλίο διευθύνσεων"
 
 #: templates/contacts.php:109
 msgid "Actions"
-msgstr ""
+msgstr "Ενέργειες"
 
 #: templates/contacts.php:112
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "Ανανέωσε τη λίστα επαφών"
 
 #: templates/contacts.php:114
 msgid "Add new contact"
-msgstr ""
+msgstr "Προσθήκη νέας επαφής"
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
-msgstr ""
+msgstr "Προσθήκη νέου βιβλίου επαφών"
 
 #: templates/contacts.php:118
 msgid "Delete current contact"
-msgstr ""
+msgstr "Διαγραφή τρέχουσας επαφής"
 
 #: templates/contacts.php:123
 msgid ""
@@ -910,11 +910,11 @@ msgstr ""
 
 #: templates/contacts.php:126
 msgid "Add contact"
-msgstr ""
+msgstr "Προσθήκη επαφής"
 
 #: templates/contacts.php:176
 msgid "Delete group"
-msgstr ""
+msgstr "Διαγραφή ομάδας"
 
 #: templates/contacts.php:177
 msgid "Rename group"
@@ -930,35 +930,35 @@ msgstr ""
 
 #: templates/contacts.php:205
 msgid "Compose mail"
-msgstr ""
+msgstr "Σύνθεση μηνύματος"
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
-msgstr ""
+msgstr "Διαγραφή τρέχουσας φωτογραφίας"
 
 #: templates/contacts.php:228
 msgid "Edit current photo"
-msgstr ""
+msgstr "Επεξεργασία τρέχουσας φωτογραφίας"
 
 #: templates/contacts.php:229
 msgid "Upload new photo"
-msgstr ""
+msgstr "Ανέβασε νέα φωτογραφία"
 
 #: templates/contacts.php:230
 msgid "Select photo from ownCloud"
-msgstr ""
+msgstr "Επέλεξε φωτογραφία από το ownCloud"
 
 #: templates/contacts.php:241 templates/contacts.php:242
 msgid "First name"
-msgstr ""
+msgstr "Όνομα"
 
 #: templates/contacts.php:246 templates/contacts.php:247
 msgid "Additional names"
-msgstr ""
+msgstr "Επιπλέον ονόματα"
 
 #: templates/contacts.php:251 templates/contacts.php:252
 msgid "Last name"
-msgstr ""
+msgstr "Επώνυμο"
 
 #: templates/contacts.php:259
 msgid "Select groups"
@@ -970,11 +970,11 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr ""
+msgstr "Παρατσούκλι"
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
-msgstr ""
+msgstr "Εισάγετε παρατσούκλι"
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
@@ -986,7 +986,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr ""
+msgstr "Οργανισμός"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -994,7 +994,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr ""
+msgstr "Γενέθλια"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -1006,77 +1006,77 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr ""
+msgstr "Τηλέφωνο"
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr ""
+msgstr "Ηλ. ταχυδρομείο"
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
-msgstr ""
+msgstr "Άμεσα μυνήματα"
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr ""
+msgstr "Διεύθυνση"
 
 #: templates/contacts.php:336
 msgid "Note"
-msgstr ""
+msgstr "Σημείωση"
 
 #: templates/contacts.php:337
 msgid "Web site"
-msgstr ""
+msgstr "Ιστότοπος"
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr ""
+msgstr "Διαγραφή επαφής"
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr ""
+msgstr "Προτιμώμενο"
 
 #: templates/contacts.php:354
 msgid "Please specify a valid email address."
-msgstr ""
+msgstr "Παρακαλώ εισήγαγε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου"
 
 #: templates/contacts.php:354
 msgid "someone@example.com"
-msgstr ""
+msgstr "someone@example.com"
 
 #: templates/contacts.php:356
 msgid "Mail to address"
-msgstr ""
+msgstr "Αποστολή σε διεύθυνση"
 
 #: templates/contacts.php:357
 msgid "Delete email address"
-msgstr ""
+msgstr "Διαγραφή διεύθυνση email"
 
 #: templates/contacts.php:369
 msgid "Enter phone number"
-msgstr ""
+msgstr "Εισήγαγε αριθμό τηλεφώνου"
 
 #: templates/contacts.php:371
 msgid "Delete phone number"
-msgstr ""
+msgstr "Διέγραψε αριθμό τηλεφώνου"
 
 #: templates/contacts.php:385
 msgid "Go to web site"
-msgstr ""
+msgstr "Πήγαινε στον ιστότοπο"
 
 #: templates/contacts.php:386
 msgid "Delete URL"
-msgstr ""
+msgstr "Διαγραφή URL"
 
 #: templates/contacts.php:397
 msgid "View on map"
-msgstr ""
+msgstr "Προβολή στο χάρτη"
 
 #: templates/contacts.php:398
 msgid "Delete address"
-msgstr ""
+msgstr "Διαγραφή διεύθυνσης"
 
 #: templates/contacts.php:410
 msgid "1 Main Street"
@@ -1084,23 +1084,23 @@ msgstr ""
 
 #: templates/contacts.php:411
 msgid "Street address"
-msgstr ""
+msgstr "Διεύθυνση οδού"
 
 #: templates/contacts.php:415
 msgid "12345"
-msgstr ""
+msgstr "12345"
 
 #: templates/contacts.php:416
 msgid "Postal code"
-msgstr ""
+msgstr "Ταχυδρομικός Κωδικός"
 
 #: templates/contacts.php:418
 msgid "Your city"
-msgstr ""
+msgstr "Η πόλη σας"
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr ""
+msgstr "Πόλη"
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1112,27 +1112,27 @@ msgstr ""
 
 #: templates/contacts.php:428
 msgid "Your country"
-msgstr ""
+msgstr "Η χώρα σας"
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr ""
+msgstr "Χώρα"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
-msgstr ""
+msgstr "Instant Messenger"
 
 #: templates/contacts.php:453
 msgid "Delete IM"
-msgstr ""
+msgstr "Διαγραφή IM"
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "Διαμοιρασμός"
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr ""
+msgstr "Εξαγωγή"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1140,36 +1140,36 @@ msgstr ""
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
-msgstr ""
+msgstr "Η προσωρινή εικόνα αφαιρέθηκε από την κρυφή μνήμη."
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr ""
+msgstr "συγχρονισμός διευθύνσεων μέσω CardDAV "
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr ""
+msgstr "περισσότερες πλροφορίες"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr ""
+msgstr "Κύρια Διεύθυνση(Επαφή και άλλα)"
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr ""
+msgstr "iOS/OS X"
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr ""
+msgstr "Βιβλία διευθύνσεων"
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr ""
+msgstr "Νέο βιβλίο διευθύνσεων"
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr ""
+msgstr "Όνομα"
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr ""
+msgstr "Περιγραφή"

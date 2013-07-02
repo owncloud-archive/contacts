@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-02 15:40+0200\n"
-"PO-Revision-Date: 2013-07-02 13:40+0000\n"
+"POT-Creation-Date: 2013-07-03 00:56+0200\n"
+"PO-Revision-Date: 2013-07-02 14:01+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Georgian (Georgia) (http://www.transifex.com/projects/p/owncloud/language/ka_GE/)\n"
 "MIME-Version: 1.0\n"
@@ -90,47 +90,47 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr ""
+msgstr "ფაილი არ აიტვირთა. უცნობი შეცდომა"
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr ""
+msgstr "ჭოცდომა არ დაფიქსირდა, ფაილი წარმატებით აიტვირთა"
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr ""
+msgstr "ატვირთული ფაილი აჭარბებს upload_max_filesize დირექტივას php.ini ფაილში"
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr ""
+msgstr "ატვირთული ფაილი აჭარბებს  MAX_FILE_SIZE დირექტივას, რომელიც მითითებულია HTML ფორმაში"
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "ატვირთული ფაილი მხოლოდ ნაწილობრივ აიტვირთა"
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr ""
+msgstr "ფაილი არ აიტვირთა"
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr ""
+msgstr "დროებითი საქაღალდე არ არსებობს"
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr ""
+msgstr "შეცდომა დისკზე ჩაწერისას"
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
-msgstr ""
+msgstr "საცავში საკმარისი ადგილი არ არის"
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
@@ -150,15 +150,15 @@ msgstr ""
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr ""
+msgstr "კონტაქტები"
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "შენახვა"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr ""
+msgstr "მიმდინარეობს ატვირთვა..."
 
 #: js/addressbooks.js:238
 msgid "Importing..."
@@ -259,7 +259,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "უარყოფა"
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -267,7 +267,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr ""
+msgstr "დიახ"
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -315,7 +315,7 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr ""
+msgstr "დამატება"
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
@@ -389,7 +389,7 @@ msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "შეცდომა"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
@@ -406,11 +406,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "ჩამოტვირთვა"
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "რედაქტირება"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -418,7 +418,7 @@ msgstr ""
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "წაშლა"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -651,13 +651,13 @@ msgstr ""
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr ""
+msgstr "კონტაქტი"
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr ""
+msgstr "სხვა"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -718,44 +718,44 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr ""
+msgstr "სამსახური"
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr ""
+msgstr "სახლი"
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr ""
+msgstr "მობილური"
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr ""
+msgstr "ტექსტი"
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr ""
+msgstr "ხმა"
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr ""
+msgstr "მესიჯი"
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr ""
+msgstr "ფაქსი"
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr ""
+msgstr "ვიდეო"
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr ""
+msgstr "პეიჯერი"
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr ""
+msgstr "ინტერნეტი"
 
 #: lib/utils/properties.php:187
 msgid "Friends"
@@ -792,7 +792,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr ""
+msgstr "იმპორტი"
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -820,7 +820,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr ""
+msgstr "ჯგუფები"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -832,7 +832,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr ""
+msgstr "დახურვა"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -890,7 +890,7 @@ msgstr ""
 
 #: templates/contacts.php:126
 msgid "Add contact"
-msgstr ""
+msgstr "კონტაქტის დამატება"
 
 #: templates/contacts.php:176
 msgid "Delete group"
@@ -914,19 +914,19 @@ msgstr ""
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
-msgstr ""
+msgstr "მიმდინარე სურათის წაშლა"
 
 #: templates/contacts.php:228
 msgid "Edit current photo"
-msgstr ""
+msgstr "მიმდინარე სურათის რედაქტირება"
 
 #: templates/contacts.php:229
 msgid "Upload new photo"
-msgstr ""
+msgstr "ახალი სურათის ატვირთვა"
 
 #: templates/contacts.php:230
 msgid "Select photo from ownCloud"
-msgstr ""
+msgstr "აირჩიე სურათი ownCloud –იდან"
 
 #: templates/contacts.php:241 templates/contacts.php:242
 msgid "First name"
@@ -950,7 +950,7 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr ""
+msgstr "ნიკნეიმი"
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
@@ -966,7 +966,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr ""
+msgstr "ორგანიზაცია"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -974,7 +974,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr ""
+msgstr "დაბადების დრე"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -986,11 +986,11 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr ""
+msgstr "ტელეფონი"
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr ""
+msgstr "იმეილი"
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -998,11 +998,11 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr ""
+msgstr "მისამართი"
 
 #: templates/contacts.php:336
 msgid "Note"
-msgstr ""
+msgstr "შენიშვნა"
 
 #: templates/contacts.php:337
 msgid "Web site"
@@ -1010,7 +1010,7 @@ msgstr ""
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr ""
+msgstr "კონტაქტის წაშლა"
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
@@ -1080,7 +1080,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr ""
+msgstr "ქალაქი"
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1096,7 +1096,7 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr ""
+msgstr "ქვეყანა"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
@@ -1108,11 +1108,11 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "გაზიარება"
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr ""
+msgstr "ექსპორტი"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1128,28 +1128,28 @@ msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr ""
+msgstr "უფრო მეტი ინფორმაცია"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr ""
+msgstr "პირველადი მისამართი (Kontact et al)"
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr ""
+msgstr "iOS/OS X"
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr ""
+msgstr "მისამართის წიგნები"
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr ""
+msgstr "ახალი მისამართების წიგნი"
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr ""
+msgstr "სახელი"
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr ""
+msgstr "გვერდის დახასიათება"
