@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-03 00:56+0200\n"
-"PO-Revision-Date: 2013-07-02 14:01+0000\n"
+"POT-Creation-Date: 2013-07-04 09:39+0200\n"
+"PO-Revision-Date: 2013-07-04 07:40+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Luxembourgish (http://www.transifex.com/projects/p/owncloud/language/lb/)\n"
 "MIME-Version: 1.0\n"
@@ -24,15 +24,15 @@ msgstr ""
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr "Fehler beim liesen vun der Kontakt Photo."
+msgstr ""
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr "Fehler beim späicheren vum temporäre Fichier."
+msgstr ""
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr "Déi geluede Photo ass net gülteg."
+msgstr ""
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
@@ -44,11 +44,11 @@ msgstr ""
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr "Fichier existéiert net:"
+msgstr ""
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr "Fehler beim lueden vum Bild."
+msgstr ""
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
@@ -94,38 +94,38 @@ msgstr ""
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr "Keen Feeler, Datei ass komplett ropgelueden ginn"
+msgstr ""
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Déi ropgelueden Datei ass méi grouss wei d'upload_max_filesize Eegenschaft an der php.ini"
+msgstr ""
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Déi ropgelueden Datei ass méi grouss wei d'MAX_FILE_SIZE Eegenschaft déi an der HTML form uginn ass"
+msgstr ""
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr "Déi ropgelueden Datei ass nëmmen hallef ropgelueden ginn"
+msgstr ""
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr "Et ass kee Fichier ropgeluede ginn"
+msgstr ""
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr "Et feelt en temporären Dossier"
+msgstr ""
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr "Konnt net op den Disk schreiwen"
+msgstr ""
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
@@ -149,11 +149,11 @@ msgstr ""
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr "Kontakter"
+msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr "Späicheren"
+msgstr ""
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
@@ -258,7 +258,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "Ofbriechen"
+msgstr ""
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -266,7 +266,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -314,7 +314,7 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr "Dobäisetzen"
+msgstr ""
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
@@ -376,11 +376,11 @@ msgstr ""
 
 #: js/loader.js:49
 msgid "Result: "
-msgstr "Resultat: "
+msgstr ""
 
 #: js/loader.js:49
 msgid " imported, "
-msgstr " importéiert, "
+msgstr ""
 
 #: js/loader.js:49
 msgid " failed."
@@ -388,7 +388,7 @@ msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr "Fehler"
+msgstr ""
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
@@ -405,11 +405,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr "Download"
+msgstr ""
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr "Editéieren"
+msgstr ""
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -417,7 +417,7 @@ msgstr "Editéieren"
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr "Läschen"
+msgstr ""
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -567,7 +567,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr "Informatioun iwwert vCard ass net richteg. Lued d'Säit wegl nei."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
@@ -646,17 +646,17 @@ msgstr ""
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
-msgstr "{name} säi Gebuertsdag"
+msgstr ""
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr "Kontakt"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr "Aner"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -717,44 +717,44 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr "Aarbecht"
+msgstr ""
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr "Doheem"
+msgstr ""
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr "GSM"
+msgstr ""
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr "SMS"
+msgstr ""
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr "Voice"
+msgstr ""
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr "Message"
+msgstr ""
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr "Fax"
+msgstr ""
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr "Pager"
+msgstr ""
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr "Internet"
+msgstr ""
 
 #: lib/utils/properties.php:187
 msgid "Friends"
@@ -791,7 +791,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr "Import"
+msgstr ""
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -819,7 +819,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr "Gruppen"
+msgstr ""
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -831,7 +831,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr "Zoumaachen"
+msgstr ""
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -933,7 +933,7 @@ msgstr ""
 
 #: templates/contacts.php:246 templates/contacts.php:247
 msgid "Additional names"
-msgstr "Weider Nimm"
+msgstr ""
 
 #: templates/contacts.php:251 templates/contacts.php:252
 msgid "Last name"
@@ -949,11 +949,11 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr "Spëtznumm"
+msgstr ""
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
-msgstr "Gëff e Spëtznumm an"
+msgstr ""
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
@@ -965,7 +965,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr "Firma"
+msgstr ""
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -973,7 +973,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr "Gebuertsdag"
+msgstr ""
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -985,11 +985,11 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr "Telefon"
+msgstr ""
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -997,11 +997,11 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr "Adress"
+msgstr ""
 
 #: templates/contacts.php:336
 msgid "Note"
-msgstr "Note"
+msgstr ""
 
 #: templates/contacts.php:337
 msgid "Web site"
@@ -1009,7 +1009,7 @@ msgstr ""
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr "Kontakt läschen"
+msgstr ""
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
@@ -1035,11 +1035,11 @@ msgstr ""
 
 #: templates/contacts.php:369
 msgid "Enter phone number"
-msgstr "Telefonsnummer aginn"
+msgstr ""
 
 #: templates/contacts.php:371
 msgid "Delete phone number"
-msgstr "Telefonsnummer läschen"
+msgstr ""
 
 #: templates/contacts.php:385
 msgid "Go to web site"
@@ -1051,7 +1051,7 @@ msgstr ""
 
 #: templates/contacts.php:397
 msgid "View on map"
-msgstr "Op da Kaart uweisen"
+msgstr ""
 
 #: templates/contacts.php:398
 msgid "Delete address"
@@ -1079,7 +1079,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr "Staat"
+msgstr ""
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1095,7 +1095,7 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr "Land"
+msgstr ""
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
@@ -1107,11 +1107,11 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr "Deelen"
+msgstr ""
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr "Export"
+msgstr ""
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1127,7 +1127,7 @@ msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "méi Informatiounen"
+msgstr ""
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
@@ -1135,20 +1135,20 @@ msgstr ""
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr "iOS/OS X"
+msgstr ""
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr "Adressbicher "
+msgstr ""
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr "Neit Adressbuch"
+msgstr ""
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr "Numm"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "Beschreiwung"
+msgstr ""

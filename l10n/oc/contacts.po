@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-03 00:56+0200\n"
-"PO-Revision-Date: 2013-07-02 14:01+0000\n"
+"POT-Creation-Date: 2013-07-04 09:39+0200\n"
+"PO-Revision-Date: 2013-07-04 07:40+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/projects/p/owncloud/language/oc/)\n"
 "MIME-Version: 1.0\n"
@@ -93,38 +93,38 @@ msgstr ""
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr "Amontcargament capitat, pas d'errors"
+msgstr ""
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Lo fichièr amontcargat es tròp bèl per la directiva «upload_max_filesize » del php.ini"
+msgstr ""
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Lo fichièr amontcargat es mai gròs que la directiva «MAX_FILE_SIZE» especifiada dins lo formulari HTML"
+msgstr ""
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr "Lo fichièr foguèt pas completament amontcargat"
+msgstr ""
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr "Cap de fichièrs son estats amontcargats"
+msgstr ""
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr "Un dorsièr temporari manca"
+msgstr ""
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr "L'escriptura sul disc a fracassat"
+msgstr ""
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
@@ -148,11 +148,11 @@ msgstr ""
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr "Contactes"
+msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr "Enregistra"
+msgstr ""
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
@@ -257,7 +257,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "Annula"
+msgstr ""
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -265,7 +265,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr "D'accòrdi"
+msgstr ""
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -313,7 +313,7 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr "Ajusta"
+msgstr ""
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
@@ -387,7 +387,7 @@ msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr "Error"
+msgstr ""
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
@@ -404,11 +404,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr "Avalcarga"
+msgstr ""
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr "Editar"
+msgstr ""
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -416,7 +416,7 @@ msgstr "Editar"
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr "Escafa"
+msgstr ""
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -655,7 +655,7 @@ msgstr ""
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr "Autres"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -716,7 +716,7 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr "Trabalh"
+msgstr ""
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
@@ -790,7 +790,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr "Importa"
+msgstr ""
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -818,7 +818,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr "Grops"
+msgstr ""
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -972,7 +972,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr "Anniversari"
+msgstr ""
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -988,7 +988,7 @@ msgstr ""
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr "Corrièl"
+msgstr ""
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -1106,11 +1106,11 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr "Parteja"
+msgstr ""
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr "Exporta"
+msgstr ""
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1126,15 +1126,15 @@ msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "mai d'entresenhes"
+msgstr ""
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr "Adreiças primarias (Kontact et al)"
+msgstr ""
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr "iOS/OS X"
+msgstr ""
 
 #: templates/settings.php:11
 msgid "Addressbooks"
@@ -1146,8 +1146,8 @@ msgstr ""
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr "Nom"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "Descripcion"
+msgstr ""

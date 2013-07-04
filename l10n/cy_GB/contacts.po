@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-03 00:56+0200\n"
-"PO-Revision-Date: 2013-07-02 14:01+0000\n"
+"POT-Creation-Date: 2013-07-04 09:39+0200\n"
+"PO-Revision-Date: 2013-07-04 07:40+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Welsh (United Kingdom) (http://www.transifex.com/projects/p/owncloud/language/cy_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -89,12 +89,12 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr "Ni lwythwyd ffeil i fyny. Gwall anhysbys."
+msgstr ""
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr "Does dim gwall, llwythodd y ffeil i fyny'n llwyddiannus"
+msgstr ""
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
@@ -106,30 +106,30 @@ msgstr ""
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Mae'r ffeil lwythwyd i fyny'n fwy na chyfarwyddeb MAX_FILE_SIZE bennwyd yn y ffurflen HTML"
+msgstr ""
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr "Dim ond yn rhannol y llwythwyd y ffeil i fyny"
+msgstr ""
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr "Ni lwythwyd ffeil i fyny"
+msgstr ""
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr "Plygell dros dro yn eisiau"
+msgstr ""
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr "Methwyd ysgrifennu i'r ddisg"
+msgstr ""
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
-msgstr "Dim digon o le storio ar gael"
+msgstr ""
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
@@ -149,15 +149,15 @@ msgstr ""
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr "Cysylltiadau"
+msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr "Cadw"
+msgstr ""
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr "Yn llwytho i fyny..."
+msgstr ""
 
 #: js/addressbooks.js:238
 msgid "Importing..."
@@ -258,7 +258,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "Diddymu"
+msgstr ""
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -266,7 +266,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr "Iawn"
+msgstr ""
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -314,7 +314,7 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr "Ychwanegu"
+msgstr ""
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
@@ -388,7 +388,7 @@ msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr "Gwall"
+msgstr ""
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
@@ -405,11 +405,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr "Llwytho i lawr"
+msgstr ""
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr "Golygu"
+msgstr ""
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -417,7 +417,7 @@ msgstr "Golygu"
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr "Dileu"
+msgstr ""
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -656,7 +656,7 @@ msgstr ""
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr "Arall"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -717,7 +717,7 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr "Gwaith"
+msgstr ""
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
@@ -730,7 +730,7 @@ msgstr ""
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr "Testun"
+msgstr ""
 
 #: lib/utils/properties.php:163
 msgid "Voice"
@@ -791,7 +791,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr "Mewnforio"
+msgstr ""
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -819,7 +819,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr "Grwpiau"
+msgstr ""
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -831,7 +831,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr "Cau"
+msgstr ""
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -973,7 +973,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr "Penblwydd"
+msgstr ""
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -989,7 +989,7 @@ msgstr ""
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr "E-bost"
+msgstr ""
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -997,7 +997,7 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr "Cyfeiriad"
+msgstr ""
 
 #: templates/contacts.php:336
 msgid "Note"
@@ -1107,11 +1107,11 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr "Rhannu"
+msgstr ""
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr "Allforio"
+msgstr ""
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1127,15 +1127,15 @@ msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "mwy o wybodaeth"
+msgstr ""
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr "Prif gyfeiriad (Kontact et al)"
+msgstr ""
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr "iOS/OS X"
+msgstr ""
 
 #: templates/settings.php:11
 msgid "Addressbooks"
@@ -1147,8 +1147,8 @@ msgstr ""
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr "Enw"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "Disgrifiad"
+msgstr ""

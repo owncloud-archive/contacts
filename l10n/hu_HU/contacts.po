@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-03 00:56+0200\n"
-"PO-Revision-Date: 2013-07-02 14:01+0000\n"
+"POT-Creation-Date: 2013-07-04 09:39+0200\n"
+"PO-Revision-Date: 2013-07-04 07:40+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -26,19 +26,19 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr "A kontakt-objektum feldolgozása sikertelen"
+msgstr ""
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr "A kontakt képének beolvasása sikertelen"
+msgstr ""
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr "Ideiglenes fájl mentése sikertelen"
+msgstr ""
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr "A kép érvénytelen"
+msgstr ""
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
@@ -46,39 +46,39 @@ msgstr ""
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
-msgstr "Nincs fénykép-útvonal megadva"
+msgstr ""
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr "A fájl nem létezik:"
+msgstr ""
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr "Kép betöltése sikertelen"
+msgstr ""
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
-msgstr "A PHOTO-tulajdonság  feldolgozása sikertelen"
+msgstr ""
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr "A kontakt mentése sikertelen"
+msgstr ""
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
-msgstr "Képméretezés sikertelen"
+msgstr ""
 
 #: ajax/savecrop.php:129
 msgid "Error cropping image"
-msgstr "Képvágás sikertelen"
+msgstr ""
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr "Ideiglenes kép létrehozása sikertelen"
+msgstr ""
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr "A kép nem található"
+msgstr ""
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
@@ -95,47 +95,47 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr "Nem történt feltöltés. Ismeretlen hiba"
+msgstr ""
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr "A fájlt sikerült feltölteni"
+msgstr ""
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "A feltöltött fájl mérete meghaladja az upload_max_filesize értéket a php.ini-ben"
+msgstr ""
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "A feltöltött fájl mérete meghaladja a MAX_FILE_SIZE paramétert, ami a HTML  formban került megadásra."
+msgstr ""
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr "Az eredeti fájlt csak részben sikerült feltölteni."
+msgstr ""
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr "Nem töltődött fel állomány"
+msgstr ""
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr "Hiányzik egy ideiglenes mappa"
+msgstr ""
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr "Nem sikerült a lemezre történő írás"
+msgstr ""
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
-msgstr "Nincs elég szabad hely."
+msgstr ""
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
@@ -143,27 +143,27 @@ msgstr ""
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
-msgstr "Hiba a kapcsolatok feltöltésekor"
+msgstr ""
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
-msgstr "Ideiglenes kép létrehozása sikertelen"
+msgstr ""
 
 #: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
 msgid "Couldn't load temporary image: "
-msgstr "Ideiglenes kép betöltése sikertelen"
+msgstr ""
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr "Címtár"
+msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr "Mentés"
+msgstr ""
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr "Feltöltés..."
+msgstr ""
 
 #: js/addressbooks.js:238
 msgid "Importing..."
@@ -239,7 +239,7 @@ msgstr ""
 
 #: js/app.js:592
 msgid "Select photo"
-msgstr "Fotó kiválasztása"
+msgstr ""
 
 #: js/app.js:662 js/app.js:1541
 msgid "Network or server error. Please inform administrator."
@@ -264,7 +264,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr ""
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -272,7 +272,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -280,13 +280,13 @@ msgstr ""
 
 #: js/app.js:1407
 msgid "No files selected for upload."
-msgstr "Nincs kiválasztva feltöltendő fájl"
+msgstr ""
 
 #: js/app.js:1417
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr "A feltöltendő fájl mérete meghaladja a megengedett mértéket"
+msgstr ""
 
 #: js/app.js:1504
 msgid "Edit profile picture"
@@ -320,7 +320,7 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr "Hozzáadás"
+msgstr ""
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
@@ -382,23 +382,23 @@ msgstr ""
 
 #: js/loader.js:49
 msgid "Result: "
-msgstr "Eredmény: "
+msgstr ""
 
 #: js/loader.js:49
 msgid " imported, "
-msgstr "  beimportálva,  "
+msgstr ""
 
 #: js/loader.js:49
 msgid " failed."
-msgstr "  sikertelen"
+msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr "Hiba"
+msgstr ""
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr "Megjelenített név kitöltendő"
+msgstr ""
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
@@ -411,11 +411,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr "Letöltés"
+msgstr ""
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr "Szerkesztés"
+msgstr ""
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -423,7 +423,7 @@ msgstr "Szerkesztés"
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr "Törlés"
+msgstr ""
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -573,7 +573,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr "A vCardról szóló információ helytelen. Töltsd újra az oldalt."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
@@ -652,17 +652,17 @@ msgstr ""
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
-msgstr "{name} születésnapja"
+msgstr ""
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr "Kapcsolat"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr "Más"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -723,44 +723,44 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr "Munkahelyi"
+msgstr ""
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr "Otthoni"
+msgstr ""
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr "Mobiltelefonszám"
+msgstr ""
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr "Szöveg"
+msgstr ""
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr "Hang"
+msgstr ""
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr "Üzenet"
+msgstr ""
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr "Fax"
+msgstr ""
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr "Személyhívó"
+msgstr ""
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr "Internet"
+msgstr ""
 
 #: lib/utils/properties.php:187
 msgid "Friends"
@@ -797,7 +797,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr "Importálás"
+msgstr ""
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -825,7 +825,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr "Csoportok"
+msgstr ""
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -837,7 +837,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr "Bezárás"
+msgstr ""
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -895,7 +895,7 @@ msgstr ""
 
 #: templates/contacts.php:126
 msgid "Add contact"
-msgstr "Kapcsolat hozzáadása"
+msgstr ""
 
 #: templates/contacts.php:176
 msgid "Delete group"
@@ -919,19 +919,19 @@ msgstr ""
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
-msgstr "Aktuális kép törlése"
+msgstr ""
 
 #: templates/contacts.php:228
 msgid "Edit current photo"
-msgstr "Aktuális kép szerkesztése"
+msgstr ""
 
 #: templates/contacts.php:229
 msgid "Upload new photo"
-msgstr "Új kép feltöltése"
+msgstr ""
 
 #: templates/contacts.php:230
 msgid "Select photo from ownCloud"
-msgstr "Kép kiválasztása ownCloud-ból"
+msgstr ""
 
 #: templates/contacts.php:241 templates/contacts.php:242
 msgid "First name"
@@ -939,7 +939,7 @@ msgstr ""
 
 #: templates/contacts.php:246 templates/contacts.php:247
 msgid "Additional names"
-msgstr "További nevek"
+msgstr ""
 
 #: templates/contacts.php:251 templates/contacts.php:252
 msgid "Last name"
@@ -955,11 +955,11 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr "Becenév"
+msgstr ""
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
-msgstr "Becenév megadása"
+msgstr ""
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
@@ -971,7 +971,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr "Szervezet"
+msgstr ""
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -979,7 +979,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr "Születésap"
+msgstr ""
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -991,11 +991,11 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr "Telefonszám"
+msgstr ""
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -1003,11 +1003,11 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr "Cím"
+msgstr ""
 
 #: templates/contacts.php:336
 msgid "Note"
-msgstr "Jegyzet"
+msgstr ""
 
 #: templates/contacts.php:337
 msgid "Web site"
@@ -1015,17 +1015,17 @@ msgstr ""
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr "Kapcsolat törlése"
+msgstr ""
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr "Előnyben részesített"
+msgstr ""
 
 #: templates/contacts.php:354
 msgid "Please specify a valid email address."
-msgstr "Adjon meg érvényes email címet"
+msgstr ""
 
 #: templates/contacts.php:354
 msgid "someone@example.com"
@@ -1033,19 +1033,19 @@ msgstr ""
 
 #: templates/contacts.php:356
 msgid "Mail to address"
-msgstr "Postai cím"
+msgstr ""
 
 #: templates/contacts.php:357
 msgid "Delete email address"
-msgstr "Email cím törlése"
+msgstr ""
 
 #: templates/contacts.php:369
 msgid "Enter phone number"
-msgstr "Adja meg a telefonszámot"
+msgstr ""
 
 #: templates/contacts.php:371
 msgid "Delete phone number"
-msgstr "Telefonszám törlése"
+msgstr ""
 
 #: templates/contacts.php:385
 msgid "Go to web site"
@@ -1057,7 +1057,7 @@ msgstr ""
 
 #: templates/contacts.php:397
 msgid "View on map"
-msgstr "Megtekintés a térképen"
+msgstr ""
 
 #: templates/contacts.php:398
 msgid "Delete address"
@@ -1085,7 +1085,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr "Város"
+msgstr ""
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1101,7 +1101,7 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr "Ország"
+msgstr ""
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
@@ -1113,11 +1113,11 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr "Megosztás"
+msgstr ""
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr "Exportálás"
+msgstr ""
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1125,36 +1125,36 @@ msgstr ""
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
-msgstr "Az ideiglenes kép el lett távolítva a gyorsítótárból"
+msgstr ""
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr "CardDAV szinkronizációs címek"
+msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "további információ"
+msgstr ""
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr "Elsődleges cím (Kontact és már programok)"
+msgstr ""
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr "iOS/OS X"
+msgstr ""
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr "Címlisták"
+msgstr ""
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr "Új címlista"
+msgstr ""
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr "Név"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "Leírás"
+msgstr ""
