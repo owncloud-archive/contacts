@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-04 09:39+0200\n"
-"PO-Revision-Date: 2013-07-04 07:40+0000\n"
+"POT-Creation-Date: 2013-07-05 00:56+0200\n"
+"PO-Revision-Date: 2013-07-04 07:52+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Urdu (Pakistan) (http://www.transifex.com/projects/p/owncloud/language/ur_PK/)\n"
 "MIME-Version: 1.0\n"
@@ -257,7 +257,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "منسوخ کریں"
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -313,7 +313,7 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr ""
+msgstr "شامل کریں"
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
@@ -387,7 +387,7 @@ msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "ایرر"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."

@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-04 09:39+0200\n"
-"PO-Revision-Date: 2013-07-04 07:40+0000\n"
+"POT-Creation-Date: 2013-07-05 00:56+0200\n"
+"PO-Revision-Date: 2013-07-04 07:52+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -34,19 +34,19 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr ""
+msgstr "获取联系人对象时出错。"
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr ""
+msgstr "读取联系人照片时错误。"
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr ""
+msgstr "保存临时文件错误。"
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr ""
+msgstr "载入的照片无效。"
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
@@ -54,39 +54,39 @@ msgstr ""
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
-msgstr ""
+msgstr "未提供照片路径。"
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr ""
+msgstr "文件不存在"
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr ""
+msgstr "加载图片错误。"
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "获取照片属性时出错。"
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr ""
+msgstr "保存联系人时出错。"
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
-msgstr ""
+msgstr "缩放图像时出错"
 
 #: ajax/savecrop.php:129
 msgid "Error cropping image"
-msgstr ""
+msgstr "裁切图像时出错"
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr ""
+msgstr "创建临时图像时出错"
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr ""
+msgstr "查找图像时出错: "
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
@@ -103,47 +103,47 @@ msgstr ""
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr ""
+msgstr "没有文件被上传。未知错误"
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr ""
+msgstr "文件上传成功，没有错误发生"
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr ""
+msgstr "上传的文件长度超出了 php.ini 中 upload_max_filesize 的限制"
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr ""
+msgstr "上传的文件长度超出了 HTML 表单中 MAX_FILE_SIZE 的限制"
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr ""
+msgstr "已上传文件只上传了部分（不完整）"
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr ""
+msgstr "没有文件被上传"
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr ""
+msgstr "缺少临时目录"
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr ""
+msgstr "写入磁盘失败"
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
-msgstr ""
+msgstr "没有足够的存储空间"
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
@@ -151,31 +151,31 @@ msgstr ""
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
-msgstr ""
+msgstr "上传联系人到存储空间时出错"
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
-msgstr ""
+msgstr "无法保存临时图像: "
 
 #: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
 msgid "Couldn't load temporary image: "
-msgstr ""
+msgstr "无法加载临时图像: "
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr ""
+msgstr "联系人"
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr ""
+msgstr "上传中……"
 
 #: js/addressbooks.js:238
 msgid "Importing..."
-msgstr ""
+msgstr "导入中"
 
 #: js/addressbooks.js:295
 msgid "Imported {count} of {total} contacts"
@@ -247,7 +247,7 @@ msgstr ""
 
 #: js/app.js:592
 msgid "Select photo"
-msgstr ""
+msgstr "选择图片"
 
 #: js/app.js:662 js/app.js:1541
 msgid "Network or server error. Please inform administrator."
@@ -272,7 +272,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -280,7 +280,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -288,13 +288,13 @@ msgstr ""
 
 #: js/app.js:1407
 msgid "No files selected for upload."
-msgstr ""
+msgstr "没有选择文件以上传"
 
 #: js/app.js:1417
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr ""
+msgstr "您试图上传的文件超出了该服务器的最大文件限制"
 
 #: js/app.js:1504
 msgid "Edit profile picture"
@@ -302,7 +302,7 @@ msgstr ""
 
 #: js/app.js:1522
 msgid "Error loading profile picture."
-msgstr ""
+msgstr "载入档案图片时出错"
 
 #: js/contacts.js:582
 msgid "Is this correct?"
@@ -316,7 +316,7 @@ msgstr ""
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr ""
+msgstr "一些联系人已被标注为删除，但是尚未完成，请稍候。"
 
 #: js/contacts.js:2089
 msgid "Click to undo deletion of {num} contacts"
@@ -328,7 +328,7 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr ""
+msgstr "增加"
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
@@ -390,40 +390,40 @@ msgstr ""
 
 #: js/loader.js:49
 msgid "Result: "
-msgstr ""
+msgstr "结果: "
 
 #: js/loader.js:49
 msgid " imported, "
-msgstr ""
+msgstr " 已导入， "
 
 #: js/loader.js:49
 msgid " failed."
-msgstr ""
+msgstr " 失败。"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "错误"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr ""
+msgstr "显示名称不能为空"
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
-msgstr ""
+msgstr "显示CardDav连接"
 
 #: js/settings.js:98 templates/settings.php:29
 msgid "Show read-only VCF link"
-msgstr ""
+msgstr "显示只读VCF连接"
 
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "下载"
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -431,15 +431,15 @@ msgstr ""
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr ""
+msgstr "更多"
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr ""
+msgstr "更少..."
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
@@ -487,11 +487,11 @@ msgstr ""
 
 #: lib/backend/ldap.php:433
 msgid "There was an error updating the addressbook."
-msgstr ""
+msgstr "更新地址簿时出错"
 
 #: lib/backend/ldap.php:497
 msgid "There was an error deleting this addressbook."
-msgstr ""
+msgstr "删除地址簿时出错"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
@@ -519,7 +519,7 @@ msgstr ""
 
 #: lib/contact.php:468
 msgid "Unknown IM: "
-msgstr ""
+msgstr "未知即时通讯服务："
 
 #: lib/controller/addressbookcontroller.php:122
 msgid "Error creating address book"
@@ -581,7 +581,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr ""
+msgstr "vCard 的信息不正确。请重新加载页面。"
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
@@ -660,17 +660,17 @@ msgstr ""
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
-msgstr ""
+msgstr "{name} 的生日"
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr ""
+msgstr "联系人"
 
 #: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
 #: lib/utils/properties.php:168 lib/utils/properties.php:175
 #: lib/utils/properties.php:190
 msgid "Other"
-msgstr ""
+msgstr "其它"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
@@ -678,7 +678,7 @@ msgstr ""
 
 #: lib/utils/properties.php:66
 msgid "Jabber"
-msgstr ""
+msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
@@ -686,97 +686,97 @@ msgstr ""
 
 #: lib/utils/properties.php:76
 msgid "AIM"
-msgstr ""
+msgstr "AIM"
 
 #: lib/utils/properties.php:81
 msgid "MSN"
-msgstr ""
+msgstr "MSN"
 
 #: lib/utils/properties.php:86
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: lib/utils/properties.php:91
 msgid "GoogleTalk"
-msgstr ""
+msgstr "GoogleTalk"
 
 #: lib/utils/properties.php:96
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: lib/utils/properties.php:101
 msgid "XMPP"
-msgstr ""
+msgstr "XMPP"
 
 #: lib/utils/properties.php:106
 msgid "ICQ"
-msgstr ""
+msgstr "ICQ"
 
 #: lib/utils/properties.php:111
 msgid "Yahoo"
-msgstr ""
+msgstr "Yahoo"
 
 #: lib/utils/properties.php:116
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: lib/utils/properties.php:121
 msgid "QQ"
-msgstr ""
+msgstr "QQ"
 
 #: lib/utils/properties.php:126
 msgid "GaduGadu"
-msgstr ""
+msgstr "GaduGadu"
 
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr ""
+msgstr "工作"
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr ""
+msgstr "家庭"
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
-msgstr ""
+msgstr "手机"
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr ""
+msgstr "文本"
 
 #: lib/utils/properties.php:163
 msgid "Voice"
-msgstr ""
+msgstr "语音"
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr ""
+msgstr "消息"
 
 #: lib/utils/properties.php:165
 msgid "Fax"
-msgstr ""
+msgstr "传真"
 
 #: lib/utils/properties.php:166
 msgid "Video"
-msgstr ""
+msgstr "视频"
 
 #: lib/utils/properties.php:167
 msgid "Pager"
-msgstr ""
+msgstr "传呼机"
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr ""
+msgstr "互联网"
 
 #: lib/utils/properties.php:187
 msgid "Friends"
-msgstr ""
+msgstr "朋友"
 
 #: lib/utils/properties.php:188
 msgid "Family"
-msgstr ""
+msgstr "家庭"
 
 #: templates/contacts.php:6
 msgid "New Contact"
@@ -805,7 +805,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr ""
+msgstr "导入"
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -833,7 +833,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr ""
+msgstr "组"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -845,55 +845,55 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "快捷键"
 
 #: templates/contacts.php:94
 msgid "Navigation"
-msgstr ""
+msgstr "导航"
 
 #: templates/contacts.php:97
 msgid "Next contact in list"
-msgstr ""
+msgstr "列表中的下一个联系人"
 
 #: templates/contacts.php:99
 msgid "Previous contact in list"
-msgstr ""
+msgstr "列表中的上一个联系人"
 
 #: templates/contacts.php:101
 msgid "Expand/collapse current addressbook"
-msgstr ""
+msgstr "展开/收起此地址簿"
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr ""
+msgstr "下一个地址簿"
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr ""
+msgstr "上一个地址簿"
 
 #: templates/contacts.php:109
 msgid "Actions"
-msgstr ""
+msgstr "地址"
 
 #: templates/contacts.php:112
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "刷新联系人列表"
 
 #: templates/contacts.php:114
 msgid "Add new contact"
-msgstr ""
+msgstr "新增联系人"
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
-msgstr ""
+msgstr "新增地址簿"
 
 #: templates/contacts.php:118
 msgid "Delete current contact"
-msgstr ""
+msgstr "删除当前联系人"
 
 #: templates/contacts.php:123
 msgid ""
@@ -903,7 +903,7 @@ msgstr ""
 
 #: templates/contacts.php:126
 msgid "Add contact"
-msgstr ""
+msgstr "添加联系人"
 
 #: templates/contacts.php:176
 msgid "Delete group"
@@ -927,19 +927,19 @@ msgstr ""
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
-msgstr ""
+msgstr "删除当前照片"
 
 #: templates/contacts.php:228
 msgid "Edit current photo"
-msgstr ""
+msgstr "编辑当前照片"
 
 #: templates/contacts.php:229
 msgid "Upload new photo"
-msgstr ""
+msgstr "上传新照片"
 
 #: templates/contacts.php:230
 msgid "Select photo from ownCloud"
-msgstr ""
+msgstr "从 ownCloud 选择照片"
 
 #: templates/contacts.php:241 templates/contacts.php:242
 msgid "First name"
@@ -947,7 +947,7 @@ msgstr ""
 
 #: templates/contacts.php:246 templates/contacts.php:247
 msgid "Additional names"
-msgstr ""
+msgstr "其他名称"
 
 #: templates/contacts.php:251 templates/contacts.php:252
 msgid "Last name"
@@ -963,11 +963,11 @@ msgstr ""
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
-msgstr ""
+msgstr "昵称"
 
 #: templates/contacts.php:269
 msgid "Enter nickname"
-msgstr ""
+msgstr "输入昵称"
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
@@ -979,7 +979,7 @@ msgstr ""
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
-msgstr ""
+msgstr "组织"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
@@ -987,7 +987,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr ""
+msgstr "生日"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -999,41 +999,41 @@ msgstr ""
 
 #: templates/contacts.php:332
 msgid "Phone"
-msgstr ""
+msgstr "电话"
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr ""
+msgstr "电子邮件"
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
-msgstr ""
+msgstr "即时通讯"
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr ""
+msgstr "地址"
 
 #: templates/contacts.php:336
 msgid "Note"
-msgstr ""
+msgstr "注释"
 
 #: templates/contacts.php:337
 msgid "Web site"
-msgstr ""
+msgstr "网址"
 
 #: templates/contacts.php:339
 msgid "Delete contact"
-msgstr ""
+msgstr "删除联系人"
 
 #: templates/contacts.php:352 templates/contacts.php:367
 #: templates/contacts.php:381 templates/contacts.php:406
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr ""
+msgstr "偏好"
 
 #: templates/contacts.php:354
 msgid "Please specify a valid email address."
-msgstr ""
+msgstr "请指定合法的电子邮件地址"
 
 #: templates/contacts.php:354
 msgid "someone@example.com"
@@ -1041,23 +1041,23 @@ msgstr ""
 
 #: templates/contacts.php:356
 msgid "Mail to address"
-msgstr ""
+msgstr "发送邮件到地址"
 
 #: templates/contacts.php:357
 msgid "Delete email address"
-msgstr ""
+msgstr "删除电子邮件地址"
 
 #: templates/contacts.php:369
 msgid "Enter phone number"
-msgstr ""
+msgstr "输入电话号码"
 
 #: templates/contacts.php:371
 msgid "Delete phone number"
-msgstr ""
+msgstr "删除电话号码"
 
 #: templates/contacts.php:385
 msgid "Go to web site"
-msgstr ""
+msgstr "访问网址"
 
 #: templates/contacts.php:386
 msgid "Delete URL"
@@ -1065,7 +1065,7 @@ msgstr ""
 
 #: templates/contacts.php:397
 msgid "View on map"
-msgstr ""
+msgstr "在地图上显示"
 
 #: templates/contacts.php:398
 msgid "Delete address"
@@ -1077,7 +1077,7 @@ msgstr ""
 
 #: templates/contacts.php:411
 msgid "Street address"
-msgstr ""
+msgstr "街道地址"
 
 #: templates/contacts.php:415
 msgid "12345"
@@ -1085,7 +1085,7 @@ msgstr ""
 
 #: templates/contacts.php:416
 msgid "Postal code"
-msgstr ""
+msgstr "邮政编码"
 
 #: templates/contacts.php:418
 msgid "Your city"
@@ -1093,7 +1093,7 @@ msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr ""
+msgstr "城市"
 
 #: templates/contacts.php:423
 msgid "Some region"
@@ -1109,23 +1109,23 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr ""
+msgstr "国家"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
-msgstr ""
+msgstr "即时通讯"
 
 #: templates/contacts.php:453
 msgid "Delete IM"
-msgstr ""
+msgstr "删除即时通讯工具"
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "共享"
 
 #: templates/contacts.php:464
 msgid "Export"
-msgstr ""
+msgstr "导出"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
@@ -1133,36 +1133,36 @@ msgstr ""
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
-msgstr ""
+msgstr "临时图像文件已从缓存中删除"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr ""
+msgstr "CardDAV 同步地址"
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr ""
+msgstr "更多信息"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr ""
+msgstr "主地址"
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr ""
+msgstr "iOS/OS X"
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr ""
+msgstr "地址簿"
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr ""
+msgstr "新建地址簿"
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr ""
+msgstr "描述"
