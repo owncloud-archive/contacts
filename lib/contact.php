@@ -581,13 +581,14 @@ class Contact extends VObject\VCard implements IPIMObject {
 	/**
 	 * Merge in data from a multi-dimentional array
 	 *
-	 * NOTE: This is *NOT* tested!
+	 * NOTE: The data has actually already been merged client side!
 	 * The data array has this structure:
 	 *
 	 * array(
 	 * 	'EMAIL' => array(array('value' => 'johndoe@example.com', 'parameters' = array('TYPE' => array('HOME','VOICE'))))
 	 * );
 	 * @param array $data
+	 * @return bool
 	 */
 	public function mergeFromArray(array $data) {
 		foreach($data as $name => $properties) {
@@ -615,6 +616,53 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 		$this->setSaved(false);
 		return true;
+	}
+
+	/**
+	 * Merge in data from another VCard
+	 * Used on import if a matching UID is found. Returns true if any updates
+	 * take place, otherwise false.
+	 *
+	 * @param VCard $vcard
+	 * @return bool
+	 */
+	public function mergeFromVCard(VCard $vcard) {
+		$updated = false;
+		foreach($vcard->children as $property) {
+			if(in_array($property->name, array('REV', 'UID'))) {
+				continue;
+			}
+			\OCP\Util::writeLog('contacts', __METHOD__.' merging: ' .$property->name, \OCP\Util::DEBUG);
+			if(in_array($property->name, Utils\Properties::$multi_properties)) {
+				$ownproperties = $this->select($property->name);
+				if(count($ownproperties) === 0) {
+					// We don't have any instances of this property, so just add it.
+					$this->add($property);
+					$updated = true;
+					continue;
+				} else {
+					foreach($ownproperties as $ownproperty) {
+						if(strtolower($property->value) === strtolower($ownproperty->value)) {
+							// We already have this property, so skip both loops
+							continue 2;
+						}
+					}
+					$this->add($property);
+					$updated = true;
+				}
+			} else {
+				if(!isset($this->{$name})) {
+					$this->add($property);
+					$updated = true;
+				} else {
+					$this->setPropertyByName($property->name, $property->value, $property->parameters);
+				}
+			}
+		}
+		if($updated) {
+			$this->setSaved(false);
+		}
+		return $updated;
 	}
 
 	// TODO: Cleanup these parameters
