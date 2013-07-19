@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-18 00:59-0400\n"
-"PO-Revision-Date: 2013-07-18 05:01+0000\n"
+"POT-Creation-Date: 2013-07-19 01:00-0400\n"
+"PO-Revision-Date: 2013-07-19 05:00+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Burmese (Myanmar) (http://www.transifex.com/projects/p/owncloud/language/my_MM/)\n"
 "MIME-Version: 1.0\n"
@@ -257,7 +257,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "ပယ်ဖျက်မည်"
+msgstr ""
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -313,7 +313,7 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr "ပေါင်းထည့်"
+msgstr ""
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
@@ -729,7 +729,7 @@ msgstr ""
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr "စာသား"
+msgstr ""
 
 #: lib/utils/properties.php:163
 msgid "Voice"
@@ -1150,4 +1150,4 @@ msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "ဖော်ပြချက်"
+msgstr ""
