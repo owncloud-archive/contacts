@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-23 00:48-0400\n"
-"PO-Revision-Date: 2013-07-23 04:48+0000\n"
+"POT-Creation-Date: 2013-07-24 00:49-0400\n"
+"PO-Revision-Date: 2013-07-23 05:01+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Hindi (http://www.transifex.com/projects/p/owncloud/language/hi/)\n"
 "MIME-Version: 1.0\n"
@@ -152,7 +152,7 @@ msgstr ""
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "सहेजें"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
@@ -387,7 +387,7 @@ msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "त्रुटि"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
@@ -1106,7 +1106,7 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "साझा करें"
 
 #: templates/contacts.php:464
 msgid "Export"
