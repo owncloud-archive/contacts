@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-24 00:49-0400\n"
-"PO-Revision-Date: 2013-07-23 05:01+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-07-25 00:49-0400\n"
+"PO-Revision-Date: 2013-07-24 09:34+0000\n"
+"Last-Translator: pellaeon <nfsmwlin@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/owncloud/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr ""
+msgstr "讀取聯絡人時發生錯誤"
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
@@ -39,15 +39,15 @@ msgstr "讀取聯絡人相片時發生錯誤."
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr ""
+msgstr "儲存到暫存檔時發生錯誤。"
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr ""
+msgstr "載入中的圖片有問題。"
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr ""
+msgstr "沒有聯絡人資料被發送"
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
@@ -63,39 +63,39 @@ msgstr "載入影像時發生錯誤."
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "讀取 PHOTO 屬性時發生錯誤"
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr ""
+msgstr "儲存聯絡人時發生錯誤"
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
-msgstr ""
+msgstr "縮放圖片發生錯誤"
 
 #: ajax/savecrop.php:129
 msgid "Error cropping image"
-msgstr ""
+msgstr "修剪圖片發生錯誤"
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr ""
+msgstr "產生暫存圖片發生錯誤"
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr ""
+msgstr "尋找圖片發生錯誤："
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
-msgstr ""
+msgstr "用於此項的鍵值尚未被設定"
 
 #: ajax/setpreference.php:41
 msgid "Value is not set for: "
-msgstr ""
+msgstr "值尚未設定"
 
 #: ajax/setpreference.php:53 lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr ""
+msgstr "無法設定偏好："
 
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
@@ -144,11 +144,11 @@ msgstr "儲存空間不足"
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
-msgstr ""
+msgstr "上傳的檔案在黑名單當中："
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
-msgstr ""
+msgstr "上傳聯絡人到儲存空間時發生錯誤"
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
@@ -156,7 +156,7 @@ msgstr "無法儲存暫存影像"
 
 #: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
 msgid "Couldn't load temporary image: "
-msgstr ""
+msgstr "無法載入暫存圖片："
 
 #: appinfo/app.php:31
 msgid "Contacts"
@@ -172,75 +172,75 @@ msgstr "上傳中..."
 
 #: js/addressbooks.js:238
 msgid "Importing..."
-msgstr ""
+msgstr "匯入中..."
 
 #: js/addressbooks.js:295
 msgid "Imported {count} of {total} contacts"
-msgstr ""
+msgstr "已匯入 {count}筆/共{total} 筆聯絡人資料"
 
 #: js/addressbooks.js:317
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "成功匯入{imported}筆聯絡人資料，有{failed}筆匯入失敗。"
 
 #: js/addressbooks.js:459
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "通訊錄 {name} 已存在"
 
 #: js/addressbooks.js:488
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "通訊錄匯入失敗：{error}"
 
 #: js/addressbooks.js:524
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "通訊錄載入失敗：{error}"
 
 #: js/app.js:213
 msgid "Indexing contacts"
-msgstr ""
+msgstr "正在索引聯絡人..."
 
 #: js/app.js:223
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "載入通訊錄時發生無法修正的錯誤：{msg}"
 
 #: js/app.js:224
 msgid "Error."
-msgstr ""
+msgstr "錯誤。"
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr ""
+msgstr "加入至..."
 
 #: js/app.js:321 js/app.js:333
 msgid "Remove from..."
-msgstr ""
+msgstr "從...移除"
 
 #: js/app.js:338
 msgid "Add group..."
-msgstr ""
+msgstr "新增群組"
 
 #: js/app.js:459
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "無效的 URL ：\"{url}\""
 
 #: js/app.js:470
 msgid "There was an error opening a mail composer."
-msgstr ""
+msgstr "開啟郵件編輯器發生錯誤。"
 
 #: js/app.js:475
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "無效的電子郵件：\"{url}\""
 
 #: js/app.js:553
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "合併失敗，沒有找到聯絡人：{id}"
 
 #: js/app.js:566
 msgid "Merge failed."
-msgstr ""
+msgstr "合併失敗。"
 
 #: js/app.js:573
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "合併失敗，儲存聯絡人時發生錯誤。"
 
 #: js/app.js:592
 msgid "Select photo"
@@ -248,23 +248,23 @@ msgstr "選擇相片"
 
 #: js/app.js:662 js/app.js:1541
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "網路或伺服器錯誤，請通知系統管理員。"
 
 #: js/app.js:881
 msgid "Error adding to group."
-msgstr ""
+msgstr "新增到群組時出錯。"
 
 #: js/app.js:910
 msgid "Error removing from group."
-msgstr ""
+msgstr "從群組中移除出錯。"
 
 #: js/app.js:1070
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "設定 {name} 為最愛時發生錯誤。"
 
 #: js/app.js:1209 js/app.js:1213 templates/contacts.php:184
 msgid "Merge contacts"
-msgstr ""
+msgstr "合併聯絡人"
 
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
@@ -281,25 +281,25 @@ msgstr "好"
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "找不到聯絡人：{id}"
 
 #: js/app.js:1407
 msgid "No files selected for upload."
-msgstr ""
+msgstr "沒有選定上傳的檔案。"
 
 #: js/app.js:1417
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr ""
+msgstr "您想要上傳的檔案大小超過伺服器限制。"
 
 #: js/app.js:1504
 msgid "Edit profile picture"
-msgstr ""
+msgstr "編輯大頭貼照"
 
 #: js/app.js:1522
 msgid "Error loading profile picture."
-msgstr ""
+msgstr "載入大頭貼照發生錯誤。"
 
 #: js/contacts.js:582
 msgid "Is this correct?"
@@ -307,21 +307,21 @@ msgstr "是否正確?"
 
 #: js/contacts.js:1010
 msgid "# groups"
-msgstr ""
+msgstr "# groups"
 
 #: js/contacts.js:2078
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr ""
+msgstr "有一些聯絡人被標記為將刪除但是尚未刪除，稍等一下就會刪除了。"
 
 #: js/contacts.js:2089
 msgid "Click to undo deletion of {num} contacts"
-msgstr ""
+msgstr "點一下來復原刪除 {num} 個聯絡人"
 
 #: js/contacts.js:2104
 msgid "Cancelled deletion of {num}"
-msgstr ""
+msgstr "取消 {num} 個刪除動作"
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
@@ -329,61 +329,61 @@ msgstr "增加"
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
-msgstr ""
+msgstr "該聯絡人已在此群組中。"
 
 #: js/groups.js:275
 msgid "Contacts are already in this group."
-msgstr ""
+msgstr "聯絡人皆已在此群組中。"
 
 #: js/groups.js:338
 msgid "Couldn't get contact list."
-msgstr ""
+msgstr "無法取得聯絡人清單。"
 
 #: js/groups.js:349
 msgid "Contact is not in this group."
-msgstr ""
+msgstr "聯絡人不在此群組中。"
 
 #: js/groups.js:363
 msgid "Contacts are not in this group."
-msgstr ""
+msgstr "聯絡人皆不在此群組中。"
 
 #: js/groups.js:557
 msgid "Failed renaming group: {error}"
-msgstr ""
+msgstr "重新命名群組失敗：{error}"
 
 #: js/groups.js:588
 msgid "A group named {group} already exists"
-msgstr ""
+msgstr "群組 {group} 已經存在"
 
 #: js/groups.js:623
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr ""
+msgstr "你可以拖曳群組以你喜歡的方式排列。"
 
 #: js/groups.js:636
 msgid "Failed adding group: {error}"
-msgstr ""
+msgstr "加入群組失敗：{error}"
 
 #: js/groups.js:648
 msgid "All"
-msgstr ""
+msgstr "所有"
 
 #: js/groups.js:663 js/groups.js:666
 msgid "Favorites"
-msgstr ""
+msgstr "最愛"
 
 #: js/groups.js:727
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "由 {owner} 分享"
 
 #: js/groups.js:742
 msgid "Not grouped"
-msgstr ""
+msgstr "不在群組裡"
 
 #: js/groups.js:768
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "載入群組失敗：{error}"
 
 #: js/loader.js:49
 msgid "Result: "

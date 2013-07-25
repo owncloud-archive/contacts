@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-24 00:49-0400\n"
-"PO-Revision-Date: 2013-07-23 23:10+0000\n"
+"POT-Creation-Date: 2013-07-25 00:49-0400\n"
+"PO-Revision-Date: 2013-07-24 16:50+0000\n"
 "Last-Translator: Francesco Capuano <francesco@capu.it>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -570,7 +570,7 @@ msgstr "Il nome della proprietà non è impostato."
 #: lib/controller/contactcontroller.php:258
 #: lib/controller/contactcontroller.php:268
 msgid "Property checksum is not set."
-msgstr ""
+msgstr "La proprietà del codice di controllo non è impostata."
 
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
@@ -583,7 +583,7 @@ msgstr "Errore durante l'impostazione della proprietà"
 
 #: lib/controller/contactcontroller.php:284
 msgid "Error saving property to backend"
-msgstr ""
+msgstr "Errore di salvataggio della proprietà nel motore"
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
@@ -595,7 +595,7 @@ msgstr "Errore durante l'aggiunta del gruppo."
 
 #: lib/controller/groupcontroller.php:126
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Non è stato fornito nessun nome gruppo da rinominare."
 
 #: lib/controller/groupcontroller.php:130
 msgid "No group name to rename to given."
@@ -621,7 +621,7 @@ msgstr "ID del contatta mancante nella richiesta."
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "Tentativo di caricare un file della lista nera:"
 
 #: lib/controller/importcontroller.php:116
 msgid "You do not have permissions to import into this address book."
@@ -629,16 +629,16 @@ msgstr "Non hai i permessi per importare in questa rubrica."
 
 #: lib/controller/importcontroller.php:124
 msgid "File name missing from request."
-msgstr ""
+msgstr "Manca il nome del file nella richiesta."
 
 #: lib/controller/importcontroller.php:129
 #: lib/controller/importcontroller.php:236
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Manca la chiave di avanzamento nella richiesta."
 
 #: lib/controller/importcontroller.php:135
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "Tentativo di accedere a un file della lista nera:"
 
 #: lib/controller/importcontroller.php:174
 msgid "No contacts found in: "
@@ -791,7 +791,7 @@ msgstr "Rubriche"
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
@@ -815,7 +815,7 @@ msgstr "(De)seleziona tutto"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr ""
+msgstr "Ordinamento"
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"

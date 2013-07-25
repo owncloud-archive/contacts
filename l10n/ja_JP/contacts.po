@@ -6,15 +6,16 @@
 # Daisuke Deguchi <ddeguchi@nagoya-u.jp>, 2012
 # Daisuke Deguchi <ddeguchi@nagoya-u.jp>, 2012-2013
 # plazmism <gomidori@live.jp>, 2013
+# pabook <pabook.32@gmail.com>, 2013
 # tt yn <tetuyano+transi@gmail.com>, 2012
 # tt yn <tetuyano+transi@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-24 00:49-0400\n"
-"PO-Revision-Date: 2013-07-23 05:01+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-07-25 00:49-0400\n"
+"PO-Revision-Date: 2013-07-25 02:20+0000\n"
+"Last-Translator: pabook <pabook.32@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +41,7 @@ msgstr "写真の読み込みは無効です。"
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr ""
+msgstr "連絡先情報は何も送信されませんでした。"
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
@@ -137,7 +138,7 @@ msgstr "ストレージに十分な空き容量がありません"
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
-msgstr ""
+msgstr "ブラックリストファイルのアップロード:"
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
@@ -169,7 +170,7 @@ msgstr "インポート中..."
 
 #: js/addressbooks.js:295
 msgid "Imported {count} of {total} contacts"
-msgstr ""
+msgstr "{count} 件中 {total} 件の連絡先をインポート"
 
 #: js/addressbooks.js:317
 msgid "Imported {imported} contacts. {failed} failed."
@@ -177,15 +178,15 @@ msgstr ""
 
 #: js/addressbooks.js:459
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "{name} という名前のアドレス帳はすでに存在します"
 
 #: js/addressbooks.js:488
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "アドレス帳の追加に失敗: {error}"
 
 #: js/addressbooks.js:524
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "アドレス帳の読み込みに失敗: {error}"
 
 #: js/app.js:213
 msgid "Indexing contacts"
@@ -197,7 +198,7 @@ msgstr ""
 
 #: js/app.js:224
 msgid "Error."
-msgstr ""
+msgstr "エラー"
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
@@ -213,7 +214,7 @@ msgstr "グループを追加..."
 
 #: js/app.js:459
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "無効なURL: \"{url}\""
 
 #: js/app.js:470
 msgid "There was an error opening a mail composer."
@@ -221,11 +222,11 @@ msgstr "メールコンポーザの起動エラーが発生しました。"
 
 #: js/app.js:475
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "無効なメールアドレス: \"{url}\""
 
 #: js/app.js:553
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "マージに失敗しました。 連絡先が見つかりません: {id}"
 
 #: js/app.js:566
 msgid "Merge failed."
@@ -253,7 +254,7 @@ msgstr "グループから削除エラー。"
 
 #: js/app.js:1070
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "{name} をお気に入りにする際にエラーが発生しました。"
 
 #: js/app.js:1209 js/app.js:1213 templates/contacts.php:184
 msgid "Merge contacts"
@@ -376,7 +377,7 @@ msgstr ""
 
 #: js/groups.js:768
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "グループの読み込みに失敗: {error}"
 
 #: js/loader.js:49
 msgid "Result: "
@@ -433,7 +434,7 @@ msgstr "簡略..."
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "写真の読み込みに失敗: {error}"
 
 #: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"

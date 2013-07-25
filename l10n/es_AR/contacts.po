@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-24 00:49-0400\n"
-"PO-Revision-Date: 2013-07-23 05:01+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-07-25 00:49-0400\n"
+"PO-Revision-Date: 2013-07-24 15:30+0000\n"
+"Last-Translator: cjtess <claudio.tessone@gmail.com>\n"
 "Language-Team: Spanish (Argentina) (http://www.transifex.com/projects/p/owncloud/language/es_AR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -197,11 +197,11 @@ msgstr ""
 
 #: js/app.js:224
 msgid "Error."
-msgstr ""
+msgstr "Error."
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr ""
+msgstr "Agregar a..."
 
 #: js/app.js:321 js/app.js:333
 msgid "Remove from..."
@@ -300,7 +300,7 @@ msgstr ""
 
 #: js/contacts.js:1010
 msgid "# groups"
-msgstr ""
+msgstr "# grupos"
 
 #: js/contacts.js:2078
 msgid ""
@@ -360,19 +360,19 @@ msgstr ""
 
 #: js/groups.js:648
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 #: js/groups.js:663 js/groups.js:666
 msgid "Favorites"
-msgstr ""
+msgstr "Favoritos"
 
 #: js/groups.js:727
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "Compartido por {owner}"
 
 #: js/groups.js:742
 msgid "Not grouped"
-msgstr ""
+msgstr "No agrupado"
 
 #: js/groups.js:768
 msgid "Failed loading groups: {error}"

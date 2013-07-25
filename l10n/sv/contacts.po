@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-24 00:49-0400\n"
-"PO-Revision-Date: 2013-07-23 05:01+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-07-25 00:49-0400\n"
+"PO-Revision-Date: 2013-07-24 15:40+0000\n"
+"Last-Translator: medialabs\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +46,7 @@ msgstr "Det laddade fotot är inte giltigt."
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr ""
+msgstr "Ingen kontaktinformation skickades."
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
@@ -143,7 +143,7 @@ msgstr "Inte tillräckligt med lagringsutrymme tillgängligt"
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
-msgstr ""
+msgstr "Uppladdning av svartlistad fil:"
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
@@ -175,23 +175,23 @@ msgstr "Importerar..."
 
 #: js/addressbooks.js:295
 msgid "Imported {count} of {total} contacts"
-msgstr ""
+msgstr "Importerade {count} av {total} kontakter"
 
 #: js/addressbooks.js:317
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "Importerade {imported} kontakter. {failed} misslyckades."
 
 #: js/addressbooks.js:459
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "En adressbok vid namn {name} existerar redan"
 
 #: js/addressbooks.js:488
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "Misslyckades att lägga till adressbok: {error}"
 
 #: js/addressbooks.js:524
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "Misslyckades ladda adressböcker: {error}"
 
 #: js/app.js:213
 msgid "Indexing contacts"
@@ -203,7 +203,7 @@ msgstr ""
 
 #: js/app.js:224
 msgid "Error."
-msgstr ""
+msgstr "Fel."
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
@@ -219,7 +219,7 @@ msgstr "Lägg till grupp..."
 
 #: js/app.js:459
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "Felaktig URL: \"{url}\""
 
 #: js/app.js:470
 msgid "There was an error opening a mail composer."
@@ -227,15 +227,15 @@ msgstr "Fel uppstod när e-postklient skulle öppnas."
 
 #: js/app.js:475
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "Felaktig e-mail: \"{url}\""
 
 #: js/app.js:553
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "Sammanslagning misslyckades. Kan inte hitta kontakt: {id}"
 
 #: js/app.js:566
 msgid "Merge failed."
-msgstr ""
+msgstr "Sammanslagning misslyckades."
 
 #: js/app.js:573
 msgid "Merge failed. Error saving contact."
@@ -263,7 +263,7 @@ msgstr ""
 
 #: js/app.js:1209 js/app.js:1213 templates/contacts.php:184
 msgid "Merge contacts"
-msgstr ""
+msgstr "Sammanfoga kontakter"
 
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
@@ -306,7 +306,7 @@ msgstr "Är detta korrekt?"
 
 #: js/contacts.js:1010
 msgid "# groups"
-msgstr ""
+msgstr "# grupper"
 
 #: js/contacts.js:2078
 msgid ""
