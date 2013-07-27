@@ -133,7 +133,7 @@
 "Error saving property to backend" => "Errore di salvataggio della proprietà nel motore",
 "No group name given." => "Nessun nome di gruppo fornito.",
 "Error adding group." => "Errore durante l'aggiunta del gruppo.",
-"No group name to rename from given." => "Non è stato fornito nessun nome gruppo da rinominare.",
+"No group name to rename from given." => "Non è stato fornito nessun nome per il gruppo da rinominare.",
 "No group name to rename to given." => "Nessun nome gruppo di destinazione fornito.",
 "Error renaming group." => "Errore durante la rinomina del gruppo.",
 "Group ID missing from request." => "ID del gruppo mancante nella richiesta.",
