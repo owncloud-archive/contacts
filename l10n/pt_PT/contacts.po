@@ -6,6 +6,7 @@
 # Mouxy <daniel@mouxy.net>, 2012-2013
 # Mouxy <daniel@mouxy.net>, 2013
 # Duarte Velez Grilo <duartegrilo@gmail.com>, 2012
+# moura232 <moura232@gmail.com>, 2013
 # rlameiro <geral@ricardolameiro.pt>, 2012
 # Helder Meneses <helder.meneses@gmail.com>, 2011
 # Helder Meneses <helder.meneses@gmail.com>, 2012-2013
@@ -15,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-24 00:49-0400\n"
-"PO-Revision-Date: 2013-07-23 05:01+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-07-29 00:49-0400\n"
+"PO-Revision-Date: 2013-07-28 11:30+0000\n"
+"Last-Translator: moura232 <moura232@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +44,7 @@ msgstr "A foto carregada não é valida."
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr ""
+msgstr "Não foi submetida nenhuma informação de contacto.\n    "
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
@@ -91,7 +92,7 @@ msgstr "O valor não está definido para:"
 
 #: ajax/setpreference.php:53 lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr "Não foi possível definir as preferencias:"
+msgstr "Não foi possível definir as preferências :"
 
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
@@ -106,7 +107,7 @@ msgstr "Não ocorreram erros, o ficheiro foi submetido com sucesso"
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "O ficheiro enviado excede a directiva upload_max_filesize no php.ini"
+msgstr "O ficheiro enviado excede a directiva upload_max_filesize no php. ini\n "
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
@@ -118,7 +119,7 @@ msgstr "O tamanho do ficheiro carregado ultrapassa o valor MAX_FILE_SIZE definid
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr "O ficheiro seleccionado foi apenas carregado parcialmente"
+msgstr "O ficheiro selecionado  foi apenas carregado parcialmente"
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
@@ -240,7 +241,7 @@ msgstr ""
 
 #: js/app.js:592
 msgid "Select photo"
-msgstr "Seleccione uma fotografia"
+msgstr "Selecione uma fotografia"
 
 #: js/app.js:662 js/app.js:1541
 msgid "Network or server error. Please inform administrator."
@@ -281,7 +282,7 @@ msgstr ""
 
 #: js/app.js:1407
 msgid "No files selected for upload."
-msgstr "Nenhum ficheiro seleccionado para enviar."
+msgstr "Nenhum ficheiro selecionado para enviar."
 
 #: js/app.js:1417
 msgid ""
@@ -480,7 +481,7 @@ msgstr ""
 
 #: lib/backend/ldap.php:433
 msgid "There was an error updating the addressbook."
-msgstr "Ocorreu um erro ao actualizar o livro de endereços."
+msgstr "Ocorreu um erro ao atualizar o livro de endereços."
 
 #: lib/backend/ldap.php:497
 msgid "There was an error deleting this addressbook."
