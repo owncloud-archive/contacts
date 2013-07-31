@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-30 00:49-0400\n"
-"PO-Revision-Date: 2013-07-29 18:10+0000\n"
-"Last-Translator: Honza K. <honza889@gmail.com>\n"
+"POT-Creation-Date: 2013-07-31 00:49-0400\n"
+"PO-Revision-Date: 2013-07-30 21:30+0000\n"
+"Last-Translator: pstast <petr@stastny.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -478,11 +478,11 @@ msgstr "Adresář kontaktů nenalezen"
 
 #: lib/backend/ldap.php:433
 msgid "There was an error updating the addressbook."
-msgstr "Nastala chyba při aktualizaci knihy adres."
+msgstr "Nastala chyba při aktualizaci adresáře kontaktů."
 
 #: lib/backend/ldap.php:497
 msgid "There was an error deleting this addressbook."
-msgstr "Nastala chyba při odstranění knihy adres."
+msgstr "Nastala chyba při odstraňování tohoto adresáře kontaktů."
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
@@ -860,11 +860,11 @@ msgstr "Rozbalit/svinout současnou knihu adres"
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr "Následující kniha adres"
+msgstr "Následující adresář kontaktů"
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr "Předchozí kniha adres"
+msgstr "Předchozí adresář kontaktů"
 
 #: templates/contacts.php:109
 msgid "Actions"
@@ -880,7 +880,7 @@ msgstr "Přidat nový kontakt"
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
-msgstr "Přidat novou knihu adres"
+msgstr "Přidat nový adresář kontaktů"
 
 #: templates/contacts.php:118
 msgid "Delete current contact"
@@ -890,7 +890,7 @@ msgstr "Odstranit současný kontakt"
 msgid ""
 "<h3>You have no contacts in your addressbook.</h3><p>Add a new contact or "
 "import existing contacts from a VCF file.</p>"
-msgstr "<h3>Ve vaší knize adres nemáte žádné kontakty.</h3><p>Přidejte nový kontakt nebo importujte existující ze souboru VCF.</p>"
+msgstr "<h3>Ve vašem adresáři kontaktů nemáte žádné kontakty.</h3><p>Přidejte nový kontakt nebo importujte existující ze souboru VCF.</p>"
 
 #: templates/contacts.php:126
 msgid "Add contact"
@@ -1144,11 +1144,11 @@ msgstr "iOS/OS X"
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr "Knihy adres"
+msgstr "Adresáře kontaktů"
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr "Nová kniha adres"
+msgstr "Nový adresář kontaktů"
 
 #: templates/settings.php:59
 msgid "Name"
