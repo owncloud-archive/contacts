@@ -8,13 +8,14 @@
 # cjtess <claudio.tessone@gmail.com>, 2013
 # cjtess <claudio.tessone@gmail.com>, 2012
 # Javierkaiser <javierkaiser@gmail.com>, 2012
+# juliabis, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-31 00:49-0400\n"
-"PO-Revision-Date: 2013-07-30 12:11+0000\n"
-"Last-Translator: cjtess <claudio.tessone@gmail.com>\n"
+"POT-Creation-Date: 2013-08-01 00:49-0400\n"
+"PO-Revision-Date: 2013-07-31 14:10+0000\n"
+"Last-Translator: juliabis\n"
 "Language-Team: Spanish (Argentina) (http://www.transifex.com/projects/p/owncloud/language/es_AR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +41,7 @@ msgstr "La imagen que se estaba cargando no es válida."
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr ""
+msgstr "No ha sido enviada ninguna información de contacto."
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
@@ -209,7 +210,7 @@ msgstr ""
 
 #: js/app.js:338
 msgid "Add group..."
-msgstr ""
+msgstr "Añadir grupo..."
 
 #: js/app.js:459
 msgid "Invalid URL: \"{url}\""
@@ -229,11 +230,11 @@ msgstr ""
 
 #: js/app.js:566
 msgid "Merge failed."
-msgstr ""
+msgstr "Falló la combinación"
 
 #: js/app.js:573
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "Falló la combinación. Error al guardar el contacto."
 
 #: js/app.js:592
 msgid "Select photo"
@@ -241,7 +242,7 @@ msgstr "Seleccionar una imagen"
 
 #: js/app.js:662 js/app.js:1541
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "Error en la red o en el servidor. Por favor, informe al administrador."
 
 #: js/app.js:881
 msgid "Error adding to group."
@@ -257,7 +258,7 @@ msgstr ""
 
 #: js/app.js:1209 js/app.js:1213 templates/contacts.php:184
 msgid "Merge contacts"
-msgstr ""
+msgstr "Combinar contactos."
 
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
@@ -266,7 +267,7 @@ msgstr "Cancelar"
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
-msgstr ""
+msgstr "Añadir grupo"
 
 #: js/app.js:1266
 msgid "OK"
@@ -296,7 +297,7 @@ msgstr "Error al cargar la imagen del perfil."
 
 #: js/contacts.js:582
 msgid "Is this correct?"
-msgstr ""
+msgstr "¿Es esto correcto?"
 
 #: js/contacts.js:1010
 msgid "# groups"
@@ -322,11 +323,11 @@ msgstr "Agregar"
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
-msgstr ""
+msgstr "El contacto ya está en este grupo."
 
 #: js/groups.js:275
 msgid "Contacts are already in this group."
-msgstr ""
+msgstr "Los contactos ya están en este grupo."
 
 #: js/groups.js:338
 msgid "Couldn't get contact list."
@@ -334,11 +335,11 @@ msgstr ""
 
 #: js/groups.js:349
 msgid "Contact is not in this group."
-msgstr ""
+msgstr "El contacto no está en este grupo."
 
 #: js/groups.js:363
 msgid "Contacts are not in this group."
-msgstr ""
+msgstr "Los contactos no están en este grupo."
 
 #: js/groups.js:557
 msgid "Failed renaming group: {error}"
@@ -437,15 +438,15 @@ msgstr ""
 
 #: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "No tiene permisos para ver este contacto."
 
 #: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "No tiene permisos para ver estos contactos."
 
 #: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "No tiene atribuciones para añadir contactos a la libreta de direcciones."
 
 #: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
@@ -453,7 +454,7 @@ msgstr ""
 
 #: lib/addressbook.php:218 lib/contact.php:244
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "No tiene permisos para borrar este contacto."
 
 #: lib/addressbook.php:221
 msgid "The backend for this address book does not support deleting contacts"
@@ -465,11 +466,11 @@ msgstr ""
 
 #: lib/addressbook.php:284
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "No tiene atribuciones para actualizar la libreta de direcciones."
 
 #: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "No tiene atribuciones para borrar la libreta de direcciones."
 
 #: lib/app.php:132
 msgid "Address book not found"
