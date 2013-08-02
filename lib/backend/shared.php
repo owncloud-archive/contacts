@@ -25,78 +25,98 @@ namespace OCA\Contacts\Backend;
 use OCA\Contacts;
 
 /**
- * Subclass this class for Cantacts backends
+ * Shared address books backend
  */
 
 class Shared extends Database {
 
 	public $name = 'shared';
-	public $addressbooks = array();
+	public $addressBooks = array();
+
+	protected $itemType;
+	protected $shareManager;
+
+	public function __construct(
+		$userid = null,
+		$addressBooksTableName = '*PREFIX*contacts_addressbooks',
+		$cardsTableName = '*PREFIX*contacts_cards',
+		$indexTableName = '*PREFIX*contacts_cards_properties',
+		ShareManager $shareManager
+	) {
+		parent::__construct($userid, $addressBooksTableName, $cardsTableName, $indexTableName);
+		$this->itemType = 'addressbooks';
+		$this->shareManager = $shareManager;
+	}
 
 	/**
-	 * Returns the list of addressbooks for a specific user.
+	 * Returns the list of address books for a specific user.
 	 *
 	 * @param string $principaluri
 	 * @return array
 	 */
 	public function getAddressBooksForUser($userid = null) {
 		$userid = $userid ? $userid : $this->userid;
-
-		// workaround for https://github.com/owncloud/core/issues/2814
-		$maybeSharedAddressBook = \OCP\Share::getItemsSharedWith(
-			'addressbook',
-			Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS
+		$filter = array(
+			'shareWith' => $userid,
 		);
-		foreach($maybeSharedAddressBook as $sharedAddressbook) {
-			if(isset($sharedAddressbook['id'])) {
-				$this->addressbooks[] = $this->getAddressBook($sharedAddressbook['id']);
+		$shares = $this->shareManger->getShares($this->itemType, $filter);
+		foreach ($shares as $share) {
+			$addressBookId = $share->getItemSource();
+			if (!isset($this->addressBooks[$addressBookId])) {
+				$this->addressBooks[$addressBookId] = $share->toAddressBook();
+			} else {
+				// Combine permissions for duplicate shared address books
+				$this->addressBooks[$addressBookId]['permissions'] |= $share->getPermissions();
 			}
 		}
-
-		foreach($this->addressbooks as &$addressBook) {
-			$addressBook['backend'] = $this->name;
-		}
-		return $this->addressbooks;
+		return $this->addressBooks;
 	}
 
 	/**
 	 * Returns a specific address book.
 	 *
-	 * @param string $addressbookid
-	 * @param mixed $id Contact ID
+	 * @param string $addressBookId
 	 * @return mixed
 	 */
-	public function getAddressBook($addressbookid) {
-		$addressBook = \OCP\Share::getItemSharedWithBySource(
-			'addressbook',
-			$addressbookid,
-			Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS
-		);
-		// Not sure if I'm doing it wrongly, or if its supposed to return
-		// the info in an array?
-		$addressBook = (isset($addressBook['permissions']) ? $addressBook : $addressBook[0]);
-		$addressBook['backend'] = $this->name;
-		return $addressBook;
+	public function getAddressBook($addressBookId) {
+		if (isset($this->addressbooks[$addressBookId])) {
+			return $this->addressbooks[$addressBookId];
+		} else {
+			$filter = array(
+				'shareWith' => $this->userid,
+				'itemSource' => $addressBookId,
+			);
+			$shares = $this->shareManger->getShares($this->itemType, $filter);
+			if (!empty($shares)) {
+				$share = reset($shares);
+				$this->addressBooks[$addressBookId] = $share->toAddressBook();
+				foreach ($shares as $share) {
+					// Combine permissions for duplicate shared address books
+					$this->addressBooks[$addressBookId]['permissions'] |= $share->getPermissions();
+				}
+				return $this->addressBooks[$addressBookId];
+			}
+		}
+		return null;
 	}
 
 	/**
-	 * Returns all contacts for a specific addressbook id.
+	 * Returns all contacts for a specific address book id.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
 	 * @return array
 	 */
-	public function getContacts($addressbookid, $limit = null, $offset = null, $omitdata = false) {
-
-		$addressBook = $this->getAddressBook($addressbookid);
-		if(!$addressBook) {
-			throw new \Exception('Shared Address Book not found: ' . $addressbookid, 404);
+	public function getContacts($addressBookId, $limit = null, $offset = null, $omitdata = false) {
+		$addressBook = $this->getAddressBook($addressBookId);
+		if (!$addressBook) {
+			throw new \Exception('Shared Address Book not found: ' . $addressBookId, 404);
 		}
 		$permissions = $addressBook['permissions'];
 
-		$cards = parent::getContacts($addressbookid, $limit, $offset, $omitdata);
+		$cards = parent::getContacts($addressBookId, $limit, $offset, $omitdata);
 
-		foreach($cards as &$card) {
+		foreach ($cards as &$card) {
 			$card['permissions'] = $permissions;
 		}
 
@@ -111,19 +131,20 @@ class Shared extends Database {
 	 * CardDAV backend.
 	 * @see \Database\getContact
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param mixed $id Contact ID
 	 * @return array|false
 	 */
-	public function getContact($addressbookid, $id, $noCollection = false) {
-		$addressBook = $this->getAddressBook($addressbookid);
-		if(!$addressBook) {
-			throw new \Exception('Shared Address Book not found: ' . $addressbookid, 404);
+	public function getContact($addressBookId, $id, $noCollection = false) {
+		$addressBook = $this->getAddressBook($addressBookId);
+		if (!$addressBook) {
+			throw new \Exception('Shared Address Book not found: ' . $addressBookId, 404);
 		}
 		$permissions = $addressBook['permissions'];
 
-		$card = parent::getContact($addressbookid, $id, $noCollection);
+		$card = parent::getContact($addressBookId, $id, $noCollection);
 		$card['permissions'] = $permissions;
 		return $card;
 	}
+
 }
