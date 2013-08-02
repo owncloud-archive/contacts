@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-01 00:49-0400\n"
-"PO-Revision-Date: 2013-07-31 14:50+0000\n"
+"POT-Creation-Date: 2013-08-02 00:49-0400\n"
+"PO-Revision-Date: 2013-08-01 18:10+0000\n"
 "Last-Translator: Twiguard <nightwitcher@seznam.cz>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -296,25 +296,25 @@ msgstr "Upravit obrázek profilu"
 msgid "Error loading profile picture."
 msgstr "Chyba při načítání obrázku profilu."
 
-#: js/contacts.js:582
+#: js/contacts.js:587
 msgid "Is this correct?"
 msgstr "Je to správně?"
 
-#: js/contacts.js:1010
+#: js/contacts.js:1015
 msgid "# groups"
 msgstr "počet skupin"
 
-#: js/contacts.js:2078
+#: js/contacts.js:2079
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Některé kontakty jsou označeny ke smazání, ale ještě smazány nejsou. Počkejte, prosím, na dokončení operace."
 
-#: js/contacts.js:2089
+#: js/contacts.js:2090
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikněte pro navrácení smazání {num} kontaktů"
 
-#: js/contacts.js:2104
+#: js/contacts.js:2105
 msgid "Cancelled deletion of {num}"
 msgstr "Smazání {num} položek zrušeno"
 
