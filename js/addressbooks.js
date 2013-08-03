@@ -239,10 +239,6 @@ OC.Contacts = OC.Contacts || {};
 				console.log('Upload done:', data.result);
 				self.doImport(data.result);
 			},
-			progressall: function (e, data) {
-				var progress = parseInt(data.loaded / data.total * 100, 10);
-				self.$importProgress.progressbar('value', progress);
-			},
 			fail: function(e, data) {
 				console.log('fail', data);
 				OC.notify({message:data.errorThrown + ': ' + data.textStatus});
