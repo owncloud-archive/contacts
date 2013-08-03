@@ -401,7 +401,7 @@ OC.Contacts = OC.Contacts || {
 			}
 		});
 
-		$(document).bind('status.contacts.loaded', function(e, response) {
+		$(document).bind('status.contacts.loaded status.contacts.deleted', function(e, response) {
 			console.log('status.contacts.loaded', response);
 			if(response.error) {
 				$(document).trigger('status.contacts.error', response);

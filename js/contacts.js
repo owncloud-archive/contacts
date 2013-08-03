@@ -1829,6 +1829,9 @@ OC.Contacts = OC.Contacts || {};
 			var addressBook = data.addressbook;
 			self.purgeFromAddressbook(addressBook);
 			$(document).trigger('request.groups.reload');
+			$(document).trigger('status.contacts.deleted', {
+				numcontacts: self.length
+			});
 		});
 		$(document).bind('status.addressbook.imported', function(e, data) {
 			console.log('status.addressbook.imported', data);
