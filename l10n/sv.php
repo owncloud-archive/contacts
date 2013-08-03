@@ -56,6 +56,7 @@
 "Cancel" => "Avbryt",
 "Add group" => "Lägg till grupp",
 "OK" => "OK",
+"Could not find contact: {id}" => "Kunde inte hitta kontakt: {id}",
 "No files selected for upload." => "Inga filer valda för uppladdning",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Filen du försöker ladda upp är större än den maximala storleken för filuppladdning på denna server.",
 "Edit profile picture" => "Anpassa profilbild",

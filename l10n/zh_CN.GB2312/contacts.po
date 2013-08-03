@@ -4,13 +4,14 @@
 # 
 # Translators:
 # marguerite su <i@marguerite.su>, 2012
+# Martin Liu <liuzh66@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-01 00:49-0400\n"
-"PO-Revision-Date: 2013-07-31 05:40+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-03 00:49-0400\n"
+"PO-Revision-Date: 2013-08-02 12:20+0000\n"
+"Last-Translator: Martin Liu <liuzh66@gmail.com>\n"
 "Language-Team: Chinese (China) (GB2312) (http://www.transifex.com/projects/p/owncloud/language/zh_CN.GB2312/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +37,7 @@ msgstr "载入的相片无效。"
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr ""
+msgstr "无联系人信息被提交。"
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
@@ -290,25 +291,25 @@ msgstr ""
 msgid "Error loading profile picture."
 msgstr "加载档案相片出错。"
 
-#: js/contacts.js:582
+#: js/contacts.js:587
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:1010
+#: js/contacts.js:1015
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2078
+#: js/contacts.js:2079
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一些联系人标记为删除，但尚未删除。请等待它们被删除。"
 
-#: js/contacts.js:2089
+#: js/contacts.js:2090
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2104
+#: js/contacts.js:2105
 msgid "Cancelled deletion of {num}"
 msgstr ""
 
@@ -957,7 +958,7 @@ msgstr "输入昵称"
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
-msgstr "标题"
+msgstr "头衔"
 
 #: templates/contacts.php:276
 msgid "Enter title"
