@@ -86,7 +86,12 @@ class GroupController extends BaseController {
 		}
 
 		$catman = new \OC_VCategories('contact', $this->api->getUserId());
-		$ids = $catman->idsForCategory($name);
+		try {
+			$ids = $catman->idsForCategory($name);
+		} catch(\Exception $e) {
+			$response->setErrorMessage($e->getMessage());
+			return $response;
+		}
 		if($ids !== false) {
 			$app = new App($this->api->getUserId());
 			$backend = $app->getBackend('local');
@@ -108,7 +113,11 @@ class GroupController extends BaseController {
 				}
 			}
 		}
-		$catman->delete($name);
+		try {
+			$catman->delete($name);
+		} catch(\Exception $e) {
+			$response->setErrorMessage($e->getMessage());
+		}
 		return $response;
 	}
 
