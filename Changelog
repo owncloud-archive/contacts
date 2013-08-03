@@ -15,6 +15,12 @@ ownCloud Contacts Changelog
  - Regression fixed: Address book rename added again.
  - Regression fixed: Contacts can be moved between address books again; also with different backends. contacts#57
 
+5.0.8
+ - Regression fix: It is again possible to select which address book a new contact should
+   be saved in.
+ - Regression fix: It is again possible to move contacts between address books.
+ - Fix: When users where deleted, any address books shared with them would also deleted.
+
 5.0.7:
  - Feature: Delete button for single contacts in list. contacts#101
  - Improvement: Cut ~40% off of initial rendering time.
