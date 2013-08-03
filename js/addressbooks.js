@@ -267,7 +267,7 @@ OC.Contacts = OC.Contacts || {};
 		};
 		if(response.status === 'success') {
 			this.importCount = response.data.count;
-			this.$importProgress.progressbar('value', '0');
+			this.$importProgress.progressbar('value', 0);
 			this.$importProgress.progressbar('option', 'max', this.importCount);
 			var data = response.data;
 			var getStatus = function(backend, addressbookid, progresskey, interval, done) {
@@ -287,7 +287,7 @@ OC.Contacts = OC.Contacts || {};
 					))
 				.then(function(response) {
 					if(!response.error) {
-						self.$importProgress.progressbar('value', response.data.progress);
+						self.$importProgress.progressbar('value', Number(response.data.progress));
 						self.$importStatusText.text(t('contacts', 'Imported {count} of {total} contacts',
 													  {count:response.data.progress, total: self.importCount}));
 					} else {
