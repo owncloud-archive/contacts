@@ -478,7 +478,10 @@ dt[data-element="org"] { margin-top: 4px; }
 .import-status {
 	display: none;
 }
-
+#import-status-text {
+	white-space: nowrap;
+	overflow: hidden;
+}
 input:not([type="checkbox"]).propertytype { 
 	float: left; font-size: .8em; 
 	max-width: 100px; 
