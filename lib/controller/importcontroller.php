@@ -196,6 +196,13 @@ class ImportController extends BaseController {
 					continue; // Ditch cards that can't be parsed by Sabre.
 				}
 			}
+			/**
+			 * TODO
+			 * - Check if a contact with identical UID exists.
+			 * - If so, fetch that contact and call $contact->mergeFromVCard($vcard);
+			 * - Increment $updated var (not present yet.)
+			 * - continue
+			 */
 			try {
 				if($addressBook->addChild($vcard)) {
 					$imported += 1;
