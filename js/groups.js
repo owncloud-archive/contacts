@@ -35,7 +35,7 @@ OC.Contacts = OC.Contacts || {};
 				var id = $(event.target).parents('li').first().data('id');
 				self.deleteGroup(id, function(response) {
 					if(response.error) {
-						OC.notify({message:response.data.message});
+						OC.notify({message:response.message});
 					}
 				});
 			} else if($(event.target).is('.action.edit')) {
