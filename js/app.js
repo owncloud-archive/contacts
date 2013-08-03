@@ -408,9 +408,11 @@ OC.Contacts = OC.Contacts || {
 				console.log('Error loading contacts!');
 			} else {
 				if(response.numcontacts === 0) {
+					self.$contactListHeader.hide();
 					self.$contactList.hide();
 					self.$firstRun.show();
 				} else {
+					self.$contactListHeader.show();
 					self.$contactList.show();
 					self.$firstRun.hide();
 				}
