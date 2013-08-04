@@ -31,7 +31,7 @@ OCP\Util::addstyle('contacts', 'personalsettings');
 $tmpl = new OCP\Template('contacts', 'personalsettings');
 
 $ldap = new OCA\Contacts\Backend\Ldap();
-$ldapArray = $ldap->getAllAddressBooksForUser(\OCP\User::getUser());
+//$ldapArray = $ldap->getAllAddressBooksForUser(\OCP\User::getUser());
 
 $tmpl->assign('ldapArray', $ldapArray);
 
