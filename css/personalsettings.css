@@ -1,0 +1,17 @@
+#contactsldap fieldset p label {
+	width: 20%;
+	max-width: 200px;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 9px;
+}
+
+#contactsldap fieldset input, #contactsldap fieldset textarea {
+	width: 70%;
+	display: inline-block;
+}
+
+.ldapwarning {
+	margin-left: 1.4em;
+	color: #FF3B3B;
+}

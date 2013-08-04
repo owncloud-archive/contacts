@@ -45,7 +45,6 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 			
 			if (is_array($addressBooks)) {
 				foreach($addressBooks as $addressBook) {
-					error_log(" - ".$addressBook['displayname']);
 					if($addressBook['owner'] != \OCP\USER::getUser()) {
 						$addressBook['uri'] = $addressBook['uri'] . '_shared_by_' . $addressBook['owner'];
 						$addressBook['displayname'] = $addressBook['displayname'];
