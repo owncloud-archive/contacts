@@ -41,24 +41,26 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 		$userid = $this->userIDByPrincipal($principaluri);
 		$userAddressBooks = array();
 		foreach($this->backends as $backend) {
-			$addressBooks = $backend->getAddressBooksForUser($userid);
-
-			foreach($addressBooks as $addressBook) {
-				if($addressBook['owner'] != \OCP\USER::getUser()) {
-					$addressBook['uri'] = $addressBook['uri'] . '_shared_by_' . $addressBook['owner'];
-					$addressBook['displayname'] = $addressBook['displayname'];
+			$addressBooks = $backend->getAddressBooksForUser('nico');
+			
+			if (is_array($addressBooks)) {
+				foreach($addressBooks as $addressBook) {
+					if($addressBook['owner'] != \OCP\USER::getUser()) {
+						$addressBook['uri'] = $addressBook['uri'] . '_shared_by_' . $addressBook['owner'];
+						$addressBook['displayname'] = $addressBook['displayname'];
+					}
+					$userAddressbooks[] = array(
+						'id'  => $backend->name . '::' . $addressBook['id'],
+						'uri' => $addressBook['uri'],
+						'principaluri' => 'principals/'.$addressBook['owner'],
+						'{DAV:}displayname' => $addressBook['displayname'],
+						'{' . \Sabre_CardDAV_Plugin::NS_CARDDAV . '}addressbook-description'
+								=> $addressBook['description'],
+						'{http://calendarserver.org/ns/}getctag' => $addressBook['lastmodified'],
+						'{' . \Sabre_CardDAV_Plugin::NS_CARDDAV . '}supported-address-data' =>
+							new \Sabre_CardDAV_Property_SupportedAddressData(),
+					);
 				}
-				$userAddressbooks[] = array(
-					'id'  => $backend->name . '::' . $addressBook['id'],
-					'uri' => $addressBook['uri'],
-					'principaluri' => 'principals/'.$addressBook['owner'],
-					'{DAV:}displayname' => $addressBook['displayname'],
-					'{' . \Sabre_CardDAV_Plugin::NS_CARDDAV . '}addressbook-description'
-							=> $addressBook['description'],
-					'{http://calendarserver.org/ns/}getctag' => $addressBook['lastmodified'],
-					'{' . \Sabre_CardDAV_Plugin::NS_CARDDAV . '}supported-address-data' =>
-						new \Sabre_CardDAV_Property_SupportedAddressData(),
-				);
 			}
 		}
 

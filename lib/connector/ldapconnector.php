@@ -65,7 +65,6 @@ class LdapConnector {
 							$property = \Sabre\VObject\Reader::read($ldapEntry[$l_property][$j]);
 							$vcard->add($property);
 						} catch (exception $e) {
-							error_log("what is zat ? ".$ldapEntry[$l_property][$j]);
 						}
 					} else {
 						// Checks if a same kind of property already exists in the VCard (property and parameters)
@@ -408,13 +407,10 @@ class LdapConnector {
 			}
 			
 			foreach ($this->config_content->vcard_entries[0]->vcard_entry as $vcardEntry)  {
-				//error_log("Enter uniking loop 1");
 				foreach ($vcardEntry->ldif_entry as $ldifEntry) {
-					//error_log("Enter uniking loop 2 ".$ldifEntry['name']." - ".$ldifEntry['unique']);
 					// Remove duplicates if relevant
 					if (strcmp("true", $ldifEntry['unique'])==0 && array_key_exists((string)$ldifEntry['name'], $ldapEntry)) { // Y aller à coup de "bool array_key_exists ( mixed $key , array $search )"
 						// Holy hand-grenade, there are like 3 imbricated loops...
-						//error_log("Uniking $ldifEntry->name");
 						$ldapEntry[(string)$ldifEntry['name']] = array_unique($ldapEntry[(string)$ldifEntry['name']]);
 					}
 				}

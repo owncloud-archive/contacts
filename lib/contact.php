@@ -350,7 +350,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 				}
 			} elseif(isset($this->props['carddata'])) {
 				$data = $this->props['carddata'];
-				//error_log(__METHOD__.' data: '.print_r($data, true));
 			}
 			try {
 				$obj = \Sabre\VObject\Reader::read(

@@ -165,9 +165,9 @@ abstract class AbstractBackend {
 	 *
 	 * @param string $principaluri
 	 * @return array
+	 */
 	public function getAddressBooksForUser($userid) {
 	}
-	 */
 
 	/**
 	 * Get an addressbook's properties
@@ -315,5 +315,114 @@ abstract class AbstractBackend {
 	 * @returns int | null
 	 */
 	public function lastModifiedContact($addressbookid, $id) {
+	}
+	
+	/**
+	 * Returns the list of active addressbooks for a specific user.
+	 *
+	 * @param string $userid
+	 * @return array
+	 */
+	/*public function getAddressBooksForUser($userid = null) {
+		$userid = $userid ? $userid : $this->userid;
+		
+		$sql = "SELECT `configkey`, `configvalue`
+						FROM `*PREFIX*preferences`
+						WHERE `userid`=?
+						AND `appid`='contacts'
+						AND `configkey` like ?";
+						
+		$configkeyPrefix = $this->name . "_%_uri";
+		$prefQuery = \OCP\DB::prepare($sql);
+		$result = $prefQuery->execute(array($this->userid, $configkeyPrefix));
+		if (\OC_DB::isError($result)) {
+			\OCP\Util::write('contacts', __METHOD__. 'DB error: '
+				. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			return false;
+		}
+		if(!is_null($result)) {
+			$paramsArray = array();
+			while($row = $result->fetchRow()) {
+				$param = substr($row['configkey'], strlen($this->name)+1);
+				$param = substr($param, strpos($param, "_"));
+				$paramsArray[] = $param;
+			}
+		}
+		return $paramsArray;
+	}*/
+
+	/**
+	 * @brief get all the preferences for the addressbook
+	 * @param mixed $id
+	 * @return array|false format array('param1' => 'value', 'param2' => 'value')
+	 */
+	public function getPreferences($addressbookid) {
+		if ($addressbookid != null) {
+			$sql = "SELECT `configkey`, `configvalue`
+								FROM `*PREFIX*preferences`
+								WHERE `userid`=?
+								AND `appid`='contacts'
+								AND `configkey` like ?";
+			$configkeyPrefix = $this->name . "_" . $addressbookid . "_%";
+			$prefQuery = \OCP\DB::prepare($sql);
+			$result = $prefQuery->execute(array($this->userid, $configkeyPrefix));
+			if (\OC_DB::isError($result)) {
+				\OCP\Util::write('contacts', __METHOD__. 'DB error: '
+					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+				return false;
+			}
+			if(!is_null($result)) {
+				$paramsArray = array();
+				while($row = $result->fetchRow()) {
+					$param = substr($row['configkey'], strlen($this->name)+strlen($addressbookid)+2);
+					$value = $row['configvalue'];
+					$paramsArray[$param] = $value;
+				}
+			}
+			return $paramsArray;
+		}
+	}
+	
+	/**
+	 * @brief sets the preferences for the addressbook given in parameter
+	 * @param mixed $id
+	 * @param array the preferences, format array('param1' => 'value', 'param2' => 'value')
+	 * @return boolean
+	 */
+	public function setPreferences($addressbookid, $params) {
+		if ($addressbookid != null && $params != null && is_array($params)) {
+			if (!getPreferences($addressbookid)) {
+				// No preferences for this addressbook, inserting new ones
+				$sql = "INSERT INTO `*PREFIX*preferences` (`userid`, `appid`, `configkey`, `configvalue`)
+								values ('?', 'contacts', '?', '?')";
+				foreach ($params as $key => $value) {
+					$query = \OCP\DB::prepare($sql);
+					$sqlParams = array($this->userid, $this->name . "_" . $addressbookid . "_" . $key, $value);
+					$result = $query->execute($sqlParams);
+					if (\OC_DB::isError($result)) {
+						\OCP\Util::write('contacts', __METHOD__. 'DB error: '
+							. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+					}
+				}
+			} else {
+				// Updating existing preferences
+				$sql = "UPDATE `*PREFIX*preferences` 
+								SET `configvalue` = '?')
+								WHERE `userid` = '?'
+								AND `appid` = 'contacts'
+								AND `configkey` = '?'";
+				foreach ($params as $key => $value) {
+					$query = \OCP\DB::prepare($sql);
+					$sqlParams = array($value, $this->userid, $this->name . "_" . $addressbookid . "_" . $key);
+					$result = $query->execute($sqlParams);
+					if (\OC_DB::isError($result)) {
+						\OCP\Util::write('contacts', __METHOD__. 'DB error: '
+							. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+					}
+				}
+			}
+			return true;
+		}
+		return false;
 	}
 }
