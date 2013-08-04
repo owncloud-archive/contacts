@@ -48,8 +48,6 @@
 "Delete" => "删除",
 "More..." => "更多",
 "Less..." => "更少...",
-"There was an error updating the addressbook." => "更新地址簿时出错",
-"There was an error deleting this addressbook." => "删除地址簿时出错",
 "Unknown IM: " => "未知即时通讯服务：",
 "Information about vCard is incorrect. Please reload the page." => "vCard 的信息不正确。请重新加载页面。",
 "{name}'s Birthday" => "{name} 的生日",

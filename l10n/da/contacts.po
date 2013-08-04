@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-01 00:49-0400\n"
-"PO-Revision-Date: 2013-07-31 05:40+0000\n"
-"Last-Translator: Sappe\n"
+"POT-Creation-Date: 2013-08-04 00:49-0400\n"
+"PO-Revision-Date: 2013-08-04 04:49+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -301,25 +301,25 @@ msgstr ""
 msgid "Error loading profile picture."
 msgstr "Fejl ved indlæsning af profilbillede"
 
-#: js/contacts.js:582
+#: js/contacts.js:587
 msgid "Is this correct?"
 msgstr "Er dette korrekt?"
 
-#: js/contacts.js:1010
+#: js/contacts.js:1015
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2078
+#: js/contacts.js:2079
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Nogle kontakter er markeret til sletning, men er endnu ikke slettet. Vent venligst på, at de bliver slettet."
 
-#: js/contacts.js:2089
+#: js/contacts.js:2090
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2104
+#: js/contacts.js:2105
 msgid "Cancelled deletion of {num}"
 msgstr ""
 
@@ -396,6 +396,38 @@ msgstr " importeret "
 #: js/loader.js:49
 msgid " failed."
 msgstr " fejl."
+
+#: js/personalsettings.js:67
+msgid "Deletion failed"
+msgstr ""
+
+#: js/personalsettings.js:83
+msgid "Take over settings from recent server configuration?"
+msgstr ""
+
+#: js/personalsettings.js:84
+msgid "Keep settings?"
+msgstr ""
+
+#: js/personalsettings.js:98
+msgid "Cannot add server configuration"
+msgstr ""
+
+#: js/personalsettings.js:121
+msgid "Connection test succeeded"
+msgstr ""
+
+#: js/personalsettings.js:126
+msgid "Connection test failed"
+msgstr ""
+
+#: js/personalsettings.js:136
+msgid "Do you really want to delete the current Server Configuration?"
+msgstr ""
+
+#: js/personalsettings.js:137
+msgid "Confirm Deletion"
+msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -482,14 +514,6 @@ msgstr "Du har ikke rettigheder til at slette denne adressebog"
 msgid "Address book not found"
 msgstr ""
 
-#: lib/backend/ldap.php:433
-msgid "There was an error updating the addressbook."
-msgstr "Du har ikke rettigheder til at opdatere denne kontaktperson"
-
-#: lib/backend/ldap.php:497
-msgid "There was an error deleting this addressbook."
-msgstr "Der opstod en fejl ved sletning af denne adressebog."
-
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
 msgstr ""
@@ -506,15 +530,15 @@ msgstr ""
 msgid "This backend not support adding contacts"
 msgstr ""
 
-#: lib/contact.php:395 lib/contact.php:412
+#: lib/contact.php:394 lib/contact.php:411
 msgid "Property not found"
 msgstr ""
 
-#: lib/contact.php:460
+#: lib/contact.php:459
 msgid " Missing IM parameter for: "
 msgstr ""
 
-#: lib/contact.php:468
+#: lib/contact.php:467
 msgid "Unknown IM: "
 msgstr "Ukendt IM:"
 
@@ -1131,6 +1155,94 @@ msgstr "CardDAV link"
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
 msgstr "Det midlertidige billede er ikke længere tilgængeligt."
+
+#: templates/personalsettings.php:4
+msgid "LDAP Directories for Contacts"
+msgstr ""
+
+#: templates/personalsettings.php:7
+msgid "Server configuration"
+msgstr ""
+
+#: templates/personalsettings.php:16
+msgid "Add LDAP addressbook"
+msgstr ""
+
+#: templates/personalsettings.php:19
+msgid "Delete Addressbook"
+msgstr ""
+
+#: templates/personalsettings.php:22
+msgid "Addressbook name"
+msgstr ""
+
+#: templates/personalsettings.php:23
+msgid "Name of the addressbook"
+msgstr ""
+
+#: templates/personalsettings.php:25
+msgid "Addressbook description"
+msgstr ""
+
+#: templates/personalsettings.php:28
+msgid "Addressbook uri"
+msgstr ""
+
+#: templates/personalsettings.php:30
+msgid "Must be unique"
+msgstr ""
+
+#: templates/personalsettings.php:32
+msgid "LDAP Server"
+msgstr ""
+
+#: templates/personalsettings.php:34
+msgid "URL of the LDAP server (ldap:// or ldaps://)"
+msgstr ""
+
+#: templates/personalsettings.php:36
+msgid "Base DN for search"
+msgstr ""
+
+#: templates/personalsettings.php:38
+msgid "Search is recursive"
+msgstr ""
+
+#: templates/personalsettings.php:40
+msgid "Read only"
+msgstr ""
+
+#: templates/personalsettings.php:44
+msgid "Base DN for modification"
+msgstr ""
+
+#: templates/personalsettings.php:46
+msgid "All new contacts will be saved in this directory"
+msgstr ""
+
+#: templates/personalsettings.php:48
+msgid "Anonymous"
+msgstr ""
+
+#: templates/personalsettings.php:52
+msgid "User"
+msgstr ""
+
+#: templates/personalsettings.php:56
+msgid "Password"
+msgstr ""
+
+#: templates/personalsettings.php:60
+msgid "LDAP to VCard connector XML"
+msgstr ""
+
+#: templates/personalsettings.php:64
+msgid "Test connection"
+msgstr ""
+
+#: templates/personalsettings.php:64
+msgid "Help"
+msgstr ""
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

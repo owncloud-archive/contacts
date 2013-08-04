@@ -74,8 +74,6 @@
 "You do not have permissions to delete this contact" => "No tiene permisos para borrar este contacto.",
 "You don't have permissions to update the address book." => "No tiene atribuciones para actualizar la libreta de direcciones.",
 "You don't have permissions to delete the address book." => "No tiene atribuciones para borrar la libreta de direcciones.",
-"There was an error updating the addressbook." => "Hubo un error mientras se actualizaba la agenda.",
-"There was an error deleting this addressbook." => "Hubo un error mientras se borraba esta agenda.",
 "Unknown IM: " => "MI desconocido:",
 "Information about vCard is incorrect. Please reload the page." => "La información sobre la vCard es incorrecta. Por favor, cargá nuevamente la página",
 "{name}'s Birthday" => "Cumpleaños de {name}",

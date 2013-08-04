@@ -73,8 +73,6 @@
 "Delete" => "ลบ",
 "More..." => "เพิ่มเติม...",
 "Less..." => "ย่อ...",
-"There was an error updating the addressbook." => "เกิดข้อผิดพลาดบางประการในการอัพเดทข้อมูลในสมุดบันทึกที่อยู่",
-"There was an error deleting this addressbook." => "เกิดข้อผิดพลาดบางประการในการลบสมุดบันทึกที่อยู่นี้ทิ้ง",
 "Unknown IM: " => "IM ไม่ทราบชื่อ:",
 "Information about vCard is incorrect. Please reload the page." => "ข้อมูลเกี่ยวกับ vCard ไม่ถูกต้อง กรุณาโหลดหน้าเวปใหม่อีกครั้ง",
 "Error adding group." => "เกิดข้อผิดพลาดในการเพิ่มกลุ่ม",

@@ -73,8 +73,6 @@
 "Delete" => "Видалити",
 "More..." => "Більше...",
 "Less..." => "Менше...",
-"There was an error updating the addressbook." => "Виникла помилка при оновленні адресної книги.",
-"There was an error deleting this addressbook." => "Виникла помилка при видаленні цієї адресної книги.",
 "Unknown IM: " => "Невідомий IM: ",
 "Information about vCard is incorrect. Please reload the page." => "Інформація про vCard помилкова. Будь ласка, перезавантажте сторінку.",
 "Error adding group." => "Помилка при додаванні групи.",

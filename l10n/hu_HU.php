@@ -98,7 +98,6 @@
 "You do not have permissions to see this contacts" => "Nincs jogosultsága megnézni az illető adatait.",
 "You do not have permissions to see these contacts" => "Nincs jogosultsága megnézni a kapcsolatokat.",
 "You do not have permissions add contacts to the address book" => "Nincs jogosultsága hozzáadni kapcsolatokat a címjegyzékhez",
-"There was an error deleting this addressbook." => "Hiba történt miközben törölte a címjegyzéket.",
 "You do not have permissions to see this contact" => "Nincs jogosultsága megnézni ez a partnert.",
 "Information about vCard is incorrect. Please reload the page." => "A vCardról szóló információ helytelen. Töltsd újra az oldalt.",
 "{name}'s Birthday" => "{name} születésnapja",

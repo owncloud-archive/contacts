@@ -107,8 +107,6 @@
 "You don't have permissions to update the address book." => "No teniu permisos per actualitzar la llibreta d'adreces.",
 "You don't have permissions to delete the address book." => "No teniu permisos per esborar la llibreta d'adreces.",
 "Address book not found" => "No s'han trobat llibretes d'adreces.",
-"There was an error updating the addressbook." => "S'ha produït un error en actualitzar la llibreta d'adreces.",
-"There was an error deleting this addressbook." => "S'ha produït un error en eliminar la llibreta d'adreces",
 "You do not have permissions to see this contact" => "No teniu permisos per veure aquest contacte",
 "You do not have permissions to update this contact" => "No teniu permisos per actualitzar aquest contacte",
 "The backend for this contact does not support updating it" => "El dorsal d'aquest contacte no permet actualitzar-lo",

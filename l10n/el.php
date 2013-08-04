@@ -69,8 +69,6 @@
 "Delete" => "Διαγραφή",
 "More..." => "Περισσότερα...",
 "Less..." => "Λιγότερα",
-"There was an error updating the addressbook." => "Υπήρξε σφάλμα κατά την ενημέρωση του βιβλίου διευθύνσεων.",
-"There was an error deleting this addressbook." => "Υπήρξε σφάλμα κατά την διαγραφή αυτού του βιβλίου διευθύνσεων",
 "Unknown IM: " => "Άγνωστο IM:",
 "Information about vCard is incorrect. Please reload the page." => "Οι πληροφορίες σχετικά με vCard είναι εσφαλμένες. Παρακαλώ επαναφορτώστε τη σελίδα.",
 "Error adding group." => "Σφάλμα κατά την προσθήκη ομάδας.",

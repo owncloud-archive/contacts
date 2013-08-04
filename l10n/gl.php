@@ -107,8 +107,6 @@
 "You don't have permissions to update the address book." => "Vostede non ten permisos para actualizar o caderno de enderezos",
 "You don't have permissions to delete the address book." => "Vostede non ten permisos para eliminar o caderno de enderezos",
 "Address book not found" => "Non se atoparon cadernos de enderezos",
-"There was an error updating the addressbook." => "Houbo un erro actualizando o caderno de enderezos.",
-"There was an error deleting this addressbook." => "Houbo un erro borrando este caderno de enderezos.",
 "You do not have permissions to see this contact" => "Vostede non ten permisos para ver este contacto",
 "You do not have permissions to update this contact" => "Vostede non ten permisos para actualizar este contacto",
 "The backend for this contact does not support updating it" => "A infraestrutura para este contacto non admite a súa actualización",

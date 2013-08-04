@@ -52,6 +52,8 @@
 "Country" => "Pais",
 "Share" => "Compartir",
 "Export" => "Exportar",
+"Password" => "Contrasigno",
+"Help" => "Adjuta",
 "more info" => "plus info",
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adressarios",

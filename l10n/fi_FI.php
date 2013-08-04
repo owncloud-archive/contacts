@@ -53,8 +53,6 @@
 "Delete" => "Poista",
 "More..." => "Lisää...",
 "Less..." => "Vähemmän...",
-"There was an error updating the addressbook." => "Virhe osoitekirjaa päivittäessä.",
-"There was an error deleting this addressbook." => "Virhe osoitekirjaa poistaessa.",
 "Unknown IM: " => "Tuntematon IM-arvo.",
 "Information about vCard is incorrect. Please reload the page." => "vCardin tiedot eivät kelpaa. Lataa sivu uudelleen.",
 "{name}'s Birthday" => "Henkilön {name} syntymäpäivä",

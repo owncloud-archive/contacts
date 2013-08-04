@@ -48,8 +48,6 @@
 "Delete" => "Sil",
 "More..." => "Devamı...",
 "Less..." => "daha küçük",
-"There was an error updating the addressbook." => "Adresdefteri güncellenirken hata oluştu.",
-"There was an error deleting this addressbook." => "Adresdefteri silinirken hata oluştu.",
 "Unknown IM: " => "Bilinmeyen IM:",
 "Information about vCard is incorrect. Please reload the page." => "vCard bilgileri doğru değil. Lütfen sayfayı yenileyin.",
 "{name}'s Birthday" => "{name}'nin Doğumgünü",

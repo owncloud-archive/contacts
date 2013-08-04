@@ -61,8 +61,6 @@
 "Less..." => "Mindre...",
 "You don't have permissions to update the address book." => "Du har ikke rettigheder til at opdatere denne adressebog",
 "You don't have permissions to delete the address book." => "Du har ikke rettigheder til at slette denne adressebog",
-"There was an error updating the addressbook." => "Du har ikke rettigheder til at opdatere denne kontaktperson",
-"There was an error deleting this addressbook." => "Der opstod en fejl ved sletning af denne adressebog.",
 "Unknown IM: " => "Ukendt IM:",
 "Information about vCard is incorrect. Please reload the page." => "Informationen om vCard er forkert. Genindlæs siden.",
 "{name}'s Birthday" => "{name}s fødselsdag",

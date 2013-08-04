@@ -73,8 +73,6 @@
 "Delete" => "Forigi",
 "More..." => "Pli...",
 "Less..." => "Malpli...",
-"There was an error updating the addressbook." => "Eraro okazis dum ĝisdatiĝis la adresaro.",
-"There was an error deleting this addressbook." => "Eraro okazis dum foriĝis ĉi tiu adresaro.",
 "Unknown IM: " => "Nekonata tujmesaĝado:",
 "Information about vCard is incorrect. Please reload the page." => "Informo pri vCard estas malĝusta. Bonvolu reŝargi la paĝon.",
 "Error adding group." => "Eraro dum aldono de grupo.",

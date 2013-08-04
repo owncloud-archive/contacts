@@ -75,8 +75,6 @@
 "Delete" => "Usuń",
 "More..." => "Więcej...",
 "Less..." => "Mniej...",
-"There was an error updating the addressbook." => "Wystąpił błąd podczas aktualizowania książki adresowej.",
-"There was an error deleting this addressbook." => "Wystąpił błąd podczas usuwania tej książki adresowej",
 "Unknown IM: " => "Nieznany Komunikator",
 "Information about vCard is incorrect. Please reload the page." => "Informacje o vCard są nieprawidłowe. Proszę odświeżyć stronę.",
 "Error adding group." => "Błąd dodania grupy.",
