@@ -258,7 +258,9 @@ OC.Contacts = OC.Contacts || {};
 			case 'ORG':
 			case 'BDAY':
 			case 'NOTE':
-				this.$fullelem.find('[data-element="' + name.toLowerCase() + '"]').addClass('new').show();
+				$elem = this.$fullelem.find('[data-element="' + name.toLowerCase() + '"]');
+				$elem.addClass('new').show();
+				$elem.find('input:not(:checkbox),textarea').first().focus();
 				$option.prop('disabled', true);
 				break;
 			case 'TEL':
@@ -269,6 +271,7 @@ OC.Contacts = OC.Contacts || {};
 				$list.show();
 				$list.append($elem);
 				$elem.find('input.value').addClass('new');
+				$elem.find('input:not(:checkbox)').first().focus();
 				break;
 			case 'ADR':
 				var $elem = this.renderAddressProperty();
@@ -277,6 +280,7 @@ OC.Contacts = OC.Contacts || {};
 				$list.append($elem);
 				$elem.find('.display').trigger('click');
 				$elem.find('input.value').addClass('new');
+				$elem.find('input:not(:checkbox)').first().focus();
 				break;
 			case 'IMPP':
 				var $elem = this.renderIMProperty();
@@ -284,6 +288,7 @@ OC.Contacts = OC.Contacts || {};
 				$list.show();
 				$list.append($elem);
 				$elem.find('input.value').addClass('new');
+				$elem.find('input:not(:checkbox)').first().focus();
 				break;
 		}
 
@@ -1288,10 +1293,6 @@ OC.Contacts = OC.Contacts || {};
 									var found = false;
 									var et = property.parameters[param][etype];
 									if(typeof et !== 'string') {
-										continue;
-									}
-									//console.log('et', et);
-									if(et.toUpperCase() === 'INTERNET') {
 										continue;
 									}
 									$property.find('select.type option').each(function() {

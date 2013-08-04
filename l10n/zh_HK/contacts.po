@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-07-11 01:18+0200\n"
-"PO-Revision-Date: 2013-07-10 23:18+0000\n"
+"POT-Creation-Date: 2013-08-01 00:49-0400\n"
+"PO-Revision-Date: 2013-07-31 05:40+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Chinese (Hong Kong) (http://www.transifex.com/projects/p/owncloud/language/zh_HK/)\n"
 "MIME-Version: 1.0\n"
@@ -149,11 +149,11 @@ msgstr ""
 
 #: appinfo/app.php:31
 msgid "Contacts"
-msgstr ""
+msgstr "聯絡人"
 
 #: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "儲存"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
@@ -258,7 +258,7 @@ msgstr ""
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: js/app.js:1262 templates/contacts.php:165
 msgid "Add group"
@@ -266,7 +266,7 @@ msgstr ""
 
 #: js/app.js:1266
 msgid "OK"
-msgstr ""
+msgstr "確定"
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
@@ -314,7 +314,7 @@ msgstr ""
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
-msgstr ""
+msgstr "加入"
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
@@ -388,7 +388,7 @@ msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "錯誤"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
@@ -405,11 +405,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "下載"
 
 #: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "編輯"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:270 templates/contacts.php:277
@@ -417,7 +417,7 @@ msgstr ""
 #: templates/contacts.php:339 templates/contacts.php:467
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "刪除"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -717,12 +717,12 @@ msgstr ""
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
 msgid "Work"
-msgstr ""
+msgstr "工作"
 
 #: lib/utils/properties.php:154 lib/utils/properties.php:159
 #: lib/utils/properties.php:173
 msgid "Home"
-msgstr ""
+msgstr "主頁"
 
 #: lib/utils/properties.php:160
 msgid "Mobile"
@@ -730,7 +730,7 @@ msgstr ""
 
 #: lib/utils/properties.php:162
 msgid "Text"
-msgstr ""
+msgstr "文字"
 
 #: lib/utils/properties.php:163
 msgid "Voice"
@@ -791,7 +791,7 @@ msgstr ""
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
-msgstr ""
+msgstr "導入"
 
 #: templates/contacts.php:29
 msgid "Import into..."
@@ -819,7 +819,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr ""
+msgstr "群組"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
@@ -831,7 +831,7 @@ msgstr ""
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -973,7 +973,7 @@ msgstr ""
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
-msgstr ""
+msgstr "生日"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
@@ -989,7 +989,7 @@ msgstr ""
 
 #: templates/contacts.php:333
 msgid "Email"
-msgstr ""
+msgstr "電郵"
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
@@ -997,7 +997,7 @@ msgstr ""
 
 #: templates/contacts.php:335
 msgid "Address"
-msgstr ""
+msgstr "地址"
 
 #: templates/contacts.php:336
 msgid "Note"
@@ -1107,7 +1107,7 @@ msgstr ""
 
 #: templates/contacts.php:463 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "分享"
 
 #: templates/contacts.php:464
 msgid "Export"
@@ -1127,15 +1127,15 @@ msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr ""
+msgstr "更多"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr ""
+msgstr "主要地址"
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr ""
+msgstr "iOS/OSX"
 
 #: templates/settings.php:11
 msgid "Addressbooks"
@@ -1147,7 +1147,7 @@ msgstr ""
 
 #: templates/settings.php:59
 msgid "Name"
-msgstr ""
+msgstr "名稱"
 
 #: templates/settings.php:60
 msgid "Description"
