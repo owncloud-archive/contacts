@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-04 00:49-0400\n"
-"PO-Revision-Date: 2013-08-04 04:49+0000\n"
+"POT-Creation-Date: 2013-08-05 05:52-0400\n"
+"PO-Revision-Date: 2013-08-04 05:00+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Tamil (Sri-Lanka) (http://www.transifex.com/projects/p/owncloud/language/ta_LK/)\n"
 "MIME-Version: 1.0\n"
@@ -388,7 +388,7 @@ msgstr "தோல்வியுற்றது"
 
 #: js/personalsettings.js:67
 msgid "Deletion failed"
-msgstr ""
+msgstr "நீக்கம் தோல்வியடைந்தது"
 
 #: js/personalsettings.js:83
 msgid "Take over settings from recent server configuration?"
@@ -1215,11 +1215,11 @@ msgstr ""
 
 #: templates/personalsettings.php:52
 msgid "User"
-msgstr ""
+msgstr "பயனாளர்"
 
 #: templates/personalsettings.php:56
 msgid "Password"
-msgstr ""
+msgstr "கடவுச்சொல்"
 
 #: templates/personalsettings.php:60
 msgid "LDAP to VCard connector XML"
@@ -1231,7 +1231,7 @@ msgstr ""
 
 #: templates/personalsettings.php:64
 msgid "Help"
-msgstr ""
+msgstr "உதவி"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

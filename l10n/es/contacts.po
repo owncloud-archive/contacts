@@ -31,9 +31,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-04 00:49-0400\n"
-"PO-Revision-Date: 2013-08-04 04:50+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-05 05:52-0400\n"
+"PO-Revision-Date: 2013-08-05 05:50+0000\n"
+"Last-Translator: Art O. Pal <artopal@fastmail.fm>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1182,23 +1182,23 @@ msgstr ""
 
 #: templates/personalsettings.php:19
 msgid "Delete Addressbook"
-msgstr ""
+msgstr "Eliminar libreta de contactos"
 
 #: templates/personalsettings.php:22
 msgid "Addressbook name"
-msgstr ""
+msgstr "Nombre de libreta de contactos"
 
 #: templates/personalsettings.php:23
 msgid "Name of the addressbook"
-msgstr ""
+msgstr "Nombre de la libreta de contactos"
 
 #: templates/personalsettings.php:25
 msgid "Addressbook description"
-msgstr ""
+msgstr "Descripción de libreta de contactos"
 
 #: templates/personalsettings.php:28
 msgid "Addressbook uri"
-msgstr ""
+msgstr "URI de libreta de contactos"
 
 #: templates/personalsettings.php:30
 msgid "Must be unique"
@@ -1206,11 +1206,11 @@ msgstr ""
 
 #: templates/personalsettings.php:32
 msgid "LDAP Server"
-msgstr ""
+msgstr "Servidor LDAP"
 
 #: templates/personalsettings.php:34
 msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr ""
+msgstr "URL del servidor LDAP (ldap:// o ldaps://)"
 
 #: templates/personalsettings.php:36
 msgid "Base DN for search"
@@ -1218,11 +1218,11 @@ msgstr ""
 
 #: templates/personalsettings.php:38
 msgid "Search is recursive"
-msgstr ""
+msgstr "La búsqueda es recursiva"
 
 #: templates/personalsettings.php:40
 msgid "Read only"
-msgstr ""
+msgstr "Solo lectura"
 
 #: templates/personalsettings.php:44
 msgid "Base DN for modification"
@@ -1230,11 +1230,11 @@ msgstr ""
 
 #: templates/personalsettings.php:46
 msgid "All new contacts will be saved in this directory"
-msgstr ""
+msgstr "Todos los contactos nuevos serán guardados en esta carpeta"
 
 #: templates/personalsettings.php:48
 msgid "Anonymous"
-msgstr ""
+msgstr "Anónimo"
 
 #: templates/personalsettings.php:52
 msgid "User"
@@ -1250,7 +1250,7 @@ msgstr ""
 
 #: templates/personalsettings.php:64
 msgid "Test connection"
-msgstr ""
+msgstr "Probar conexión"
 
 #: templates/personalsettings.php:64
 msgid "Help"

@@ -1,3 +1,4 @@
 <?php $TRANSLATIONS = array(
-"Settings" => "Instellings"
+"Password" => "Wagwoord",
+"Help" => "Hulp"
 );

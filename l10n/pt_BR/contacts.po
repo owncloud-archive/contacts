@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-04 00:49-0400\n"
-"PO-Revision-Date: 2013-08-04 04:49+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-05 05:52-0400\n"
+"PO-Revision-Date: 2013-08-05 01:00+0000\n"
+"Last-Translator: Flávio Veras <flaviove@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -398,35 +398,35 @@ msgstr "falhou."
 
 #: js/personalsettings.js:67
 msgid "Deletion failed"
-msgstr ""
+msgstr "Remoção falhou"
 
 #: js/personalsettings.js:83
 msgid "Take over settings from recent server configuration?"
-msgstr ""
+msgstr "Tomar parámetros de recente configuração de servidor?"
 
 #: js/personalsettings.js:84
 msgid "Keep settings?"
-msgstr ""
+msgstr "Manter ajustes?"
 
 #: js/personalsettings.js:98
 msgid "Cannot add server configuration"
-msgstr ""
+msgstr "Impossível adicionar a configuração do servidor"
 
 #: js/personalsettings.js:121
 msgid "Connection test succeeded"
-msgstr ""
+msgstr "Teste de conexão bem sucedida"
 
 #: js/personalsettings.js:126
 msgid "Connection test failed"
-msgstr ""
+msgstr "Teste de conexão falhou"
 
 #: js/personalsettings.js:136
 msgid "Do you really want to delete the current Server Configuration?"
-msgstr ""
+msgstr "Você quer realmente deletar as atuais Configurações de Servidor?"
 
 #: js/personalsettings.js:137
 msgid "Confirm Deletion"
-msgstr ""
+msgstr "Confirmar Exclusão"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -1157,91 +1157,91 @@ msgstr "A imagem temporária foi removida cache."
 
 #: templates/personalsettings.php:4
 msgid "LDAP Directories for Contacts"
-msgstr ""
+msgstr "Diretórios para contatos LDAP"
 
 #: templates/personalsettings.php:7
 msgid "Server configuration"
-msgstr ""
+msgstr "Configuração de servidor"
 
 #: templates/personalsettings.php:16
 msgid "Add LDAP addressbook"
-msgstr ""
+msgstr "Adicionar endereços LDAP"
 
 #: templates/personalsettings.php:19
 msgid "Delete Addressbook"
-msgstr ""
+msgstr "Excluir Livro de Endereços"
 
 #: templates/personalsettings.php:22
 msgid "Addressbook name"
-msgstr ""
+msgstr "Nome do Livro de Endereço"
 
 #: templates/personalsettings.php:23
 msgid "Name of the addressbook"
-msgstr ""
+msgstr "Nome do Livro de Endereço"
 
 #: templates/personalsettings.php:25
 msgid "Addressbook description"
-msgstr ""
+msgstr "Descrição do Livro de Endereço"
 
 #: templates/personalsettings.php:28
 msgid "Addressbook uri"
-msgstr ""
+msgstr "URI do Livro de Endereço"
 
 #: templates/personalsettings.php:30
 msgid "Must be unique"
-msgstr ""
+msgstr "Deve ser exclusivo"
 
 #: templates/personalsettings.php:32
 msgid "LDAP Server"
-msgstr ""
+msgstr "Servidor LDAP"
 
 #: templates/personalsettings.php:34
 msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr ""
+msgstr "Endereço URL de servidor LDAP (ldap:// ou ldaps://)"
 
 #: templates/personalsettings.php:36
 msgid "Base DN for search"
-msgstr ""
+msgstr "DN de base para pesquisa"
 
 #: templates/personalsettings.php:38
 msgid "Search is recursive"
-msgstr ""
+msgstr "Pesquisa recursiva"
 
 #: templates/personalsettings.php:40
 msgid "Read only"
-msgstr ""
+msgstr "Somente leitura"
 
 #: templates/personalsettings.php:44
 msgid "Base DN for modification"
-msgstr ""
+msgstr "DN de base para a modificação"
 
 #: templates/personalsettings.php:46
 msgid "All new contacts will be saved in this directory"
-msgstr ""
+msgstr "Todos os novos contatos serão salvos neste diretório"
 
 #: templates/personalsettings.php:48
 msgid "Anonymous"
-msgstr ""
+msgstr "Anônimo"
 
 #: templates/personalsettings.php:52
 msgid "User"
-msgstr ""
+msgstr "Usuário"
 
 #: templates/personalsettings.php:56
 msgid "Password"
-msgstr ""
+msgstr "Senha"
 
 #: templates/personalsettings.php:60
 msgid "LDAP to VCard connector XML"
-msgstr ""
+msgstr "LDAP para vCard conector XML"
 
 #: templates/personalsettings.php:64
 msgid "Test connection"
-msgstr ""
+msgstr "Teste de conexão"
 
 #: templates/personalsettings.php:64
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

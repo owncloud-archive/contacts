@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-04 00:49-0400\n"
-"PO-Revision-Date: 2013-08-04 04:49+0000\n"
+"POT-Creation-Date: 2013-08-05 05:52-0400\n"
+"PO-Revision-Date: 2013-08-04 05:00+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/owncloud/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -392,35 +392,35 @@ msgstr " не вдалося."
 
 #: js/personalsettings.js:67
 msgid "Deletion failed"
-msgstr ""
+msgstr "Видалення не було виконано"
 
 #: js/personalsettings.js:83
 msgid "Take over settings from recent server configuration?"
-msgstr ""
+msgstr "Застосувати налаштування  з останньої конфігурації сервера ?"
 
 #: js/personalsettings.js:84
 msgid "Keep settings?"
-msgstr ""
+msgstr "Зберегти налаштування ?"
 
 #: js/personalsettings.js:98
 msgid "Cannot add server configuration"
-msgstr ""
+msgstr "Неможливо додати конфігурацію сервера"
 
 #: js/personalsettings.js:121
 msgid "Connection test succeeded"
-msgstr ""
+msgstr "Перевірка з'єднання пройшла успішно"
 
 #: js/personalsettings.js:126
 msgid "Connection test failed"
-msgstr ""
+msgstr "Перевірка з'єднання завершилась неуспішно"
 
 #: js/personalsettings.js:136
 msgid "Do you really want to delete the current Server Configuration?"
-msgstr ""
+msgstr "Ви дійсно бажаєте видалити поточну конфігурацію сервера ?"
 
 #: js/personalsettings.js:137
 msgid "Confirm Deletion"
-msgstr ""
+msgstr "Підтвердіть Видалення"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -1155,7 +1155,7 @@ msgstr ""
 
 #: templates/personalsettings.php:7
 msgid "Server configuration"
-msgstr ""
+msgstr "Налаштування Сервера"
 
 #: templates/personalsettings.php:16
 msgid "Add LDAP addressbook"
@@ -1219,11 +1219,11 @@ msgstr ""
 
 #: templates/personalsettings.php:52
 msgid "User"
-msgstr ""
+msgstr "Користувач"
 
 #: templates/personalsettings.php:56
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: templates/personalsettings.php:60
 msgid "LDAP to VCard connector XML"
@@ -1235,7 +1235,7 @@ msgstr ""
 
 #: templates/personalsettings.php:64
 msgid "Help"
-msgstr ""
+msgstr "Допомога"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

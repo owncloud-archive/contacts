@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-04 00:49-0400\n"
-"PO-Revision-Date: 2013-08-04 04:49+0000\n"
+"POT-Creation-Date: 2013-08-05 05:52-0400\n"
+"PO-Revision-Date: 2013-08-04 05:00+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/owncloud/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -399,35 +399,35 @@ msgstr ""
 
 #: js/personalsettings.js:67
 msgid "Deletion failed"
-msgstr ""
+msgstr "移除失敗"
 
 #: js/personalsettings.js:83
 msgid "Take over settings from recent server configuration?"
-msgstr ""
+msgstr "要使用最近一次的伺服器設定嗎?"
 
 #: js/personalsettings.js:84
 msgid "Keep settings?"
-msgstr ""
+msgstr "維持設定嗎?"
 
 #: js/personalsettings.js:98
 msgid "Cannot add server configuration"
-msgstr ""
+msgstr "無法新增伺服器設定"
 
 #: js/personalsettings.js:121
 msgid "Connection test succeeded"
-msgstr ""
+msgstr "連線測試成功"
 
 #: js/personalsettings.js:126
 msgid "Connection test failed"
-msgstr ""
+msgstr "連線測試失敗"
 
 #: js/personalsettings.js:136
 msgid "Do you really want to delete the current Server Configuration?"
-msgstr ""
+msgstr "您真的確定要刪除現在的伺服器設定嗎?"
 
 #: js/personalsettings.js:137
 msgid "Confirm Deletion"
-msgstr ""
+msgstr "確認已刪除"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -1162,7 +1162,7 @@ msgstr ""
 
 #: templates/personalsettings.php:7
 msgid "Server configuration"
-msgstr ""
+msgstr "伺服器設定"
 
 #: templates/personalsettings.php:16
 msgid "Add LDAP addressbook"
@@ -1226,11 +1226,11 @@ msgstr ""
 
 #: templates/personalsettings.php:52
 msgid "User"
-msgstr ""
+msgstr "使用者名稱"
 
 #: templates/personalsettings.php:56
 msgid "Password"
-msgstr ""
+msgstr "密碼"
 
 #: templates/personalsettings.php:60
 msgid "LDAP to VCard connector XML"
@@ -1242,7 +1242,7 @@ msgstr ""
 
 #: templates/personalsettings.php:64
 msgid "Help"
-msgstr ""
+msgstr "說明"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
