@@ -6,6 +6,7 @@
 # Twiguard <nightwitcher@seznam.cz>, 2013
 # Honza K. <honza889@gmail.com>, 2013
 # Jan Krejci <krejca85@gmail.com>, 2011-2012
+# Martin <fireball@atlas.cz>, 2013
 # Martin <fireball@atlas.cz>, 2011-2012
 # Michal Hrušecký <Michal@hrusecky.net>, 2012-2013
 # pstast <petr@stastny.eu>, 2013
@@ -14,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-05 05:52-0400\n"
-"PO-Revision-Date: 2013-08-04 05:00+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-07 06:59-0400\n"
+"PO-Revision-Date: 2013-08-05 10:40+0000\n"
+"Last-Translator: Martin <fireball@atlas.cz>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1153,7 +1154,7 @@ msgstr "Obrázek byl odstraněn z vyrovnávací paměti."
 
 #: templates/personalsettings.php:4
 msgid "LDAP Directories for Contacts"
-msgstr ""
+msgstr "LDAP adresáře pro Kontakry"
 
 #: templates/personalsettings.php:7
 msgid "Server configuration"
@@ -1161,63 +1162,63 @@ msgstr "Nastavení serveru"
 
 #: templates/personalsettings.php:16
 msgid "Add LDAP addressbook"
-msgstr ""
+msgstr "Přidat LDAP adresář"
 
 #: templates/personalsettings.php:19
 msgid "Delete Addressbook"
-msgstr ""
+msgstr "Odstranit Adresář"
 
 #: templates/personalsettings.php:22
 msgid "Addressbook name"
-msgstr ""
+msgstr "Název adresáře"
 
 #: templates/personalsettings.php:23
 msgid "Name of the addressbook"
-msgstr ""
+msgstr "Název Adresáře"
 
 #: templates/personalsettings.php:25
 msgid "Addressbook description"
-msgstr ""
+msgstr "Popis Adresáře"
 
 #: templates/personalsettings.php:28
 msgid "Addressbook uri"
-msgstr ""
+msgstr "uri Adresáře"
 
 #: templates/personalsettings.php:30
 msgid "Must be unique"
-msgstr ""
+msgstr "Musí být unikátní"
 
 #: templates/personalsettings.php:32
 msgid "LDAP Server"
-msgstr ""
+msgstr "Server LDAP"
 
 #: templates/personalsettings.php:34
 msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr ""
+msgstr "URL LDAP serveru  (ldap:// or ldaps://)"
 
 #: templates/personalsettings.php:36
 msgid "Base DN for search"
-msgstr ""
+msgstr "Výchozí DN pro vyhledávávní"
 
 #: templates/personalsettings.php:38
 msgid "Search is recursive"
-msgstr ""
+msgstr "Vyhledávání je rekurzivní"
 
 #: templates/personalsettings.php:40
 msgid "Read only"
-msgstr ""
+msgstr "Pouze ke čtení"
 
 #: templates/personalsettings.php:44
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Výchozí DN pro změnu"
 
 #: templates/personalsettings.php:46
 msgid "All new contacts will be saved in this directory"
-msgstr ""
+msgstr "Všechny nové kontaktu budou uloženy v tomto adresáři"
 
 #: templates/personalsettings.php:48
 msgid "Anonymous"
-msgstr ""
+msgstr "Anonymní"
 
 #: templates/personalsettings.php:52
 msgid "User"
@@ -1229,11 +1230,11 @@ msgstr "Heslo"
 
 #: templates/personalsettings.php:60
 msgid "LDAP to VCard connector XML"
-msgstr ""
+msgstr "Konektor XML mezi LDAP a VCard"
 
 #: templates/personalsettings.php:64
 msgid "Test connection"
-msgstr ""
+msgstr "Test připojení"
 
 #: templates/personalsettings.php:64
 msgid "Help"
