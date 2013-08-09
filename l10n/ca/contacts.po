@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-05 05:52-0400\n"
-"PO-Revision-Date: 2013-08-04 05:00+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-09 05:57-0400\n"
+"PO-Revision-Date: 2013-08-08 14:20+0000\n"
+"Last-Translator: rogerc\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/owncloud/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1152,7 +1152,7 @@ msgstr "La imatge temporal ha estat eliminada de la memòria de cau."
 
 #: templates/personalsettings.php:4
 msgid "LDAP Directories for Contacts"
-msgstr ""
+msgstr "Carpetes LDAP dels contactes"
 
 #: templates/personalsettings.php:7
 msgid "Server configuration"
@@ -1160,63 +1160,63 @@ msgstr "Configuració del servidor"
 
 #: templates/personalsettings.php:16
 msgid "Add LDAP addressbook"
-msgstr ""
+msgstr "Afegeix llibreta d'adreces LDAP"
 
 #: templates/personalsettings.php:19
 msgid "Delete Addressbook"
-msgstr ""
+msgstr "Elimina llibreta d'adreces"
 
 #: templates/personalsettings.php:22
 msgid "Addressbook name"
-msgstr ""
+msgstr "Nom de la llibreta d'adreces"
 
 #: templates/personalsettings.php:23
 msgid "Name of the addressbook"
-msgstr ""
+msgstr "Nom de la llibreta d'adreces"
 
 #: templates/personalsettings.php:25
 msgid "Addressbook description"
-msgstr ""
+msgstr "Descripció de la llibreta d'adreces"
 
 #: templates/personalsettings.php:28
 msgid "Addressbook uri"
-msgstr ""
+msgstr "URI de la llibreta d'adreces"
 
 #: templates/personalsettings.php:30
 msgid "Must be unique"
-msgstr ""
+msgstr "Ha de ser única"
 
 #: templates/personalsettings.php:32
 msgid "LDAP Server"
-msgstr ""
+msgstr "Servidor LDAP"
 
 #: templates/personalsettings.php:34
 msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr ""
+msgstr "URL del servidor LDAP (ldap:// o ldaps://)"
 
 #: templates/personalsettings.php:36
 msgid "Base DN for search"
-msgstr ""
+msgstr "DN base per la cerca"
 
 #: templates/personalsettings.php:38
 msgid "Search is recursive"
-msgstr ""
+msgstr "La cerca és recursiva"
 
 #: templates/personalsettings.php:40
 msgid "Read only"
-msgstr ""
+msgstr "Només de lectura"
 
 #: templates/personalsettings.php:44
 msgid "Base DN for modification"
-msgstr ""
+msgstr "DN Base per modificació"
 
 #: templates/personalsettings.php:46
 msgid "All new contacts will be saved in this directory"
-msgstr ""
+msgstr "Tots els contactes nous es desaran en aquesta carpeta"
 
 #: templates/personalsettings.php:48
 msgid "Anonymous"
-msgstr ""
+msgstr "Anònim"
 
 #: templates/personalsettings.php:52
 msgid "User"
@@ -1228,11 +1228,11 @@ msgstr "Contrasenya"
 
 #: templates/personalsettings.php:60
 msgid "LDAP to VCard connector XML"
-msgstr ""
+msgstr "Connector XML de LDAP a VCard"
 
 #: templates/personalsettings.php:64
 msgid "Test connection"
-msgstr ""
+msgstr "Comprova la connexió"
 
 #: templates/personalsettings.php:64
 msgid "Help"
