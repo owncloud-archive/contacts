@@ -289,6 +289,7 @@
 "Anonymous" => "Anonimo",
 "User" => "Utente",
 "Password" => "Password",
+"LDAP to VCard connector XML" => "Connettore XML da LDAP a vCard",
 "Test connection" => "Prova la connessione",
 "Help" => "Aiuto",
 "CardDAV syncing addresses" => "Indirizzi di sincronizzazione CardDAV",

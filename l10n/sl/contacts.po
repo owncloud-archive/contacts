@@ -5,6 +5,7 @@
 # Translators:
 # mateju <>, 2013
 # mateju <>, 2012
+# barbarak <barbarak@arnes.si>, 2013
 # mateju <>, 2013
 # Peter Peroša <peter.perosa@gmail.com>, 2012
 # Peter Peroša <peter.perosa@gmail.com>, 2012
@@ -13,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-09 05:57-0400\n"
-"PO-Revision-Date: 2013-08-07 12:20+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-11 06:05-0400\n"
+"PO-Revision-Date: 2013-08-11 09:50+0000\n"
+"Last-Translator: barbarak <barbarak@arnes.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,7 +42,7 @@ msgstr "Slika, ki se nalaga, ni veljavna."
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr ""
+msgstr "Noben stik ni bil vnešen."
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
@@ -170,7 +171,7 @@ msgstr "Uvažanje ..."
 
 #: js/addressbooks.js:295
 msgid "Imported {count} of {total} contacts"
-msgstr ""
+msgstr "Uvoženih je bilo {count} od skupno {total} stikov"
 
 #: js/addressbooks.js:317
 msgid "Imported {imported} contacts. {failed} failed."
@@ -178,15 +179,15 @@ msgstr ""
 
 #: js/addressbooks.js:459
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "Imenik z imenom {name} že obstaja"
 
 #: js/addressbooks.js:488
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "Dodajanje imenika je spodletelo: {error}"
 
 #: js/addressbooks.js:524
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "Nalaganje imenikov je spodletelo: {error}"
 
 #: js/app.js:213
 msgid "Indexing contacts"
@@ -194,11 +195,11 @@ msgstr "Ustvarjanje kazala stikov"
 
 #: js/app.js:223
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "Prišlo je do nepopravljive napake pri nalaganju imenikov: {msg}"
 
 #: js/app.js:224
 msgid "Error."
-msgstr ""
+msgstr "Napaka"
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
@@ -214,7 +215,7 @@ msgstr "Dodaj skupino ..."
 
 #: js/app.js:459
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "Neveljaven internetni naslov: \"{url}\""
 
 #: js/app.js:470
 msgid "There was an error opening a mail composer."
@@ -222,19 +223,19 @@ msgstr "Med odpiranjem sestavljalnika pošte je prišlo do napake."
 
 #: js/app.js:475
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "Neveljaven elektronski naslov: \"{url}\""
 
 #: js/app.js:553
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "Spajanje ni uspelo. Stika ni bilo mogoče najti: {id}"
 
 #: js/app.js:566
 msgid "Merge failed."
-msgstr ""
+msgstr "Spajanje je spodletelo."
 
 #: js/app.js:573
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "Spajanje je spodletelo. Stik ni bil shranjen."
 
 #: js/app.js:592
 msgid "Select photo"
@@ -254,11 +255,11 @@ msgstr "Napaka pri odstranjevanju iz skupine."
 
 #: js/app.js:1070
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "Napaka pri nastavitvi  {name} kot priljubljenega."
 
 #: js/app.js:1209 js/app.js:1213 templates/contacts.php:184
 msgid "Merge contacts"
-msgstr ""
+msgstr "Spoji stike"
 
 #: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
@@ -275,7 +276,7 @@ msgstr "V redu"
 
 #: js/app.js:1365
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "Stika ni bilo mogoče najti: {id}"
 
 #: js/app.js:1407
 msgid "No files selected for upload."
@@ -301,7 +302,7 @@ msgstr "Ali je to pravilno?"
 
 #: js/contacts.js:1015
 msgid "# groups"
-msgstr ""
+msgstr "# skupine"
 
 #: js/contacts.js:2079
 msgid ""
@@ -343,7 +344,7 @@ msgstr "Stiki niso v tej skupini."
 
 #: js/groups.js:557
 msgid "Failed renaming group: {error}"
-msgstr ""
+msgstr "Napaka pri preimenovanju skupine: {error}"
 
 #: js/groups.js:588
 msgid "A group named {group} already exists"
@@ -357,7 +358,7 @@ msgstr ""
 
 #: js/groups.js:636
 msgid "Failed adding group: {error}"
-msgstr ""
+msgstr "Dodajanje skupine ni uspelo: {error}"
 
 #: js/groups.js:648
 msgid "All"
@@ -377,7 +378,7 @@ msgstr ""
 
 #: js/groups.js:768
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "Nalaganje skupine ni uspelo: {error}"
 
 #: js/loader.js:49
 msgid "Result: "
@@ -466,11 +467,11 @@ msgstr "Manj ..."
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "Napaka pri nalaganju slike: {error}"
 
 #: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "Nimate pravic za ogled teh stikov."
 
 #: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
@@ -478,7 +479,7 @@ msgstr ""
 
 #: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "Nimate ustreznih pravic za dodajanje stikov v imenik."
 
 #: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
