@@ -1,4 +1,5 @@
 <?php $TRANSLATIONS = array(
 "Download" => "Download",
-"Title" => "Title"
+"Title" => "Title",
+"Password" => "Secret Code"
 );

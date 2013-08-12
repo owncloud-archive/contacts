@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-01 00:49-0400\n"
-"PO-Revision-Date: 2013-07-31 05:40+0000\n"
+"POT-Creation-Date: 2013-08-11 06:05-0400\n"
+"PO-Revision-Date: 2013-08-09 11:20+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/owncloud/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -294,25 +294,25 @@ msgstr "Редагувати зображення облікового запи�
 msgid "Error loading profile picture."
 msgstr "Помилка при завантаженні зображення облікового запису."
 
-#: js/contacts.js:582
+#: js/contacts.js:587
 msgid "Is this correct?"
 msgstr "Це вірно?"
 
-#: js/contacts.js:1010
+#: js/contacts.js:1015
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2078
+#: js/contacts.js:2079
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Деякі контакти помічено для видалення, але ще не видалені. Будь ласка, зачекайте, доки вони будуть видалені."
 
-#: js/contacts.js:2089
+#: js/contacts.js:2090
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Натисніть для відміни видалення {num} контактів"
 
-#: js/contacts.js:2104
+#: js/contacts.js:2105
 msgid "Cancelled deletion of {num}"
 msgstr "Відмінено видалення {num}"
 
@@ -389,6 +389,38 @@ msgstr " імпортовано, "
 #: js/loader.js:49
 msgid " failed."
 msgstr " не вдалося."
+
+#: js/personalsettings.js:67
+msgid "Deletion failed"
+msgstr "Видалення не було виконано"
+
+#: js/personalsettings.js:83
+msgid "Take over settings from recent server configuration?"
+msgstr "Застосувати налаштування  з останньої конфігурації сервера ?"
+
+#: js/personalsettings.js:84
+msgid "Keep settings?"
+msgstr "Зберегти налаштування ?"
+
+#: js/personalsettings.js:98
+msgid "Cannot add server configuration"
+msgstr "Неможливо додати конфігурацію сервера"
+
+#: js/personalsettings.js:121
+msgid "Connection test succeeded"
+msgstr "Перевірка з'єднання пройшла успішно"
+
+#: js/personalsettings.js:126
+msgid "Connection test failed"
+msgstr "Перевірка з'єднання завершилась неуспішно"
+
+#: js/personalsettings.js:136
+msgid "Do you really want to delete the current Server Configuration?"
+msgstr "Ви дійсно бажаєте видалити поточну конфігурацію сервера ?"
+
+#: js/personalsettings.js:137
+msgid "Confirm Deletion"
+msgstr "Підтвердіть Видалення"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -475,14 +507,6 @@ msgstr ""
 msgid "Address book not found"
 msgstr ""
 
-#: lib/backend/ldap.php:433
-msgid "There was an error updating the addressbook."
-msgstr "Виникла помилка при оновленні адресної книги."
-
-#: lib/backend/ldap.php:497
-msgid "There was an error deleting this addressbook."
-msgstr "Виникла помилка при видаленні цієї адресної книги."
-
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
 msgstr ""
@@ -499,15 +523,15 @@ msgstr ""
 msgid "This backend not support adding contacts"
 msgstr ""
 
-#: lib/contact.php:395 lib/contact.php:412
+#: lib/contact.php:394 lib/contact.php:411
 msgid "Property not found"
 msgstr ""
 
-#: lib/contact.php:460
+#: lib/contact.php:459
 msgid " Missing IM parameter for: "
 msgstr ""
 
-#: lib/contact.php:468
+#: lib/contact.php:467
 msgid "Unknown IM: "
 msgstr "Невідомий IM: "
 
@@ -1124,6 +1148,94 @@ msgstr ""
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
 msgstr "Тимчасове зображення було видалене з кешу."
+
+#: templates/personalsettings.php:4
+msgid "LDAP Directories for Contacts"
+msgstr ""
+
+#: templates/personalsettings.php:7
+msgid "Server configuration"
+msgstr "Налаштування Сервера"
+
+#: templates/personalsettings.php:16
+msgid "Add LDAP addressbook"
+msgstr ""
+
+#: templates/personalsettings.php:19
+msgid "Delete Addressbook"
+msgstr ""
+
+#: templates/personalsettings.php:22
+msgid "Addressbook name"
+msgstr ""
+
+#: templates/personalsettings.php:23
+msgid "Name of the addressbook"
+msgstr ""
+
+#: templates/personalsettings.php:25
+msgid "Addressbook description"
+msgstr ""
+
+#: templates/personalsettings.php:28
+msgid "Addressbook uri"
+msgstr ""
+
+#: templates/personalsettings.php:30
+msgid "Must be unique"
+msgstr ""
+
+#: templates/personalsettings.php:32
+msgid "LDAP Server"
+msgstr ""
+
+#: templates/personalsettings.php:34
+msgid "URL of the LDAP server (ldap:// or ldaps://)"
+msgstr ""
+
+#: templates/personalsettings.php:36
+msgid "Base DN for search"
+msgstr ""
+
+#: templates/personalsettings.php:38
+msgid "Search is recursive"
+msgstr ""
+
+#: templates/personalsettings.php:40
+msgid "Read only"
+msgstr ""
+
+#: templates/personalsettings.php:44
+msgid "Base DN for modification"
+msgstr ""
+
+#: templates/personalsettings.php:46
+msgid "All new contacts will be saved in this directory"
+msgstr ""
+
+#: templates/personalsettings.php:48
+msgid "Anonymous"
+msgstr ""
+
+#: templates/personalsettings.php:52
+msgid "User"
+msgstr "Користувач"
+
+#: templates/personalsettings.php:56
+msgid "Password"
+msgstr "Пароль"
+
+#: templates/personalsettings.php:60
+msgid "LDAP to VCard connector XML"
+msgstr ""
+
+#: templates/personalsettings.php:64
+msgid "Test connection"
+msgstr ""
+
+#: templates/personalsettings.php:64
+msgid "Help"
+msgstr "Допомога"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

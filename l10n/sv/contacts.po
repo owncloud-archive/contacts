@@ -4,23 +4,25 @@
 # 
 # Translators:
 # Lokal_Profil <lokal_profil@hotmail.com>, 2013
-# Christer Eriksson <post@hc3web.com>, 2012
+# Christer Eriksson <post@hceriksson.com>, 2012
 # Daniel Sandman <revoltism@gmail.com>, 2012
 # Gunnar Norin <blittan@xbmc.org>, 2013
+# Jan Busk, 2013
 # medialabs, 2013
 # Magnus Höglund <magnus@linux.com>, 2012-2013
 # Magnus Höglund <magnus@linux.com>, 2012
 # medialabs, 2013
 # Daniel Sandman <revoltism@gmail.com>, 2011, 2012
+# Stefan Gagner <stefan@mei-ya.se>, 2013
 # tsarkon <tg@osswriter.com>, 2013
 # tscooter <tscooter@hotmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-03 00:49-0400\n"
-"PO-Revision-Date: 2013-08-02 11:40+0000\n"
-"Last-Translator: Magnus Höglund <magnus@linux.com>\n"
+"POT-Creation-Date: 2013-08-11 06:05-0400\n"
+"PO-Revision-Date: 2013-08-09 11:20+0000\n"
+"Last-Translator: Stefan Gagner <stefan@mei-ya.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +48,7 @@ msgstr "Det laddade fotot är inte giltigt."
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr "Ingen kontaktinformation skickades."
+msgstr "Ingen kontaktinformation har skickats."
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
@@ -54,11 +56,11 @@ msgstr "Ingen sökväg till foto angavs."
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr "Filen existerar inte:"
+msgstr "Filen finns inte:"
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr "Fel uppstod när bild laddades."
+msgstr "Fel vid laddning av bild."
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
@@ -66,7 +68,7 @@ msgstr "Fel vid hämtning av egenskaper för FOTO."
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr "Fel vid sparande av kontakt."
+msgstr "Fel vid spara kontakt."
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
@@ -78,11 +80,11 @@ msgstr "Fel vid beskärning av bilden"
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr "Fel vid skapande av tillfällig bild"
+msgstr "Fel vid skapa tillfällig bild"
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr "Kunde inte hitta bild:"
+msgstr "Kan inte hitta bild:"
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
@@ -94,52 +96,52 @@ msgstr "Värde är inte satt för:"
 
 #: ajax/setpreference.php:53 lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr "Kunde inte sätta inställning:"
+msgstr "Kan inte ange inställning:"
 
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
 msgid "No file was uploaded. Unknown error"
-msgstr "Ingen fil uppladdad. Okänt fel"
+msgstr "Ingen fil har laddats upp. Okänt fel"
 
 #: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
 #: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
-msgstr "Inga fel uppstod. Filen laddades upp utan problem."
+msgstr "Inga fel har uppstått. Filen har laddats upp utan problem."
 
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Den uppladdade filen överskrider upload_max_filesize direktivet i php.ini"
+msgstr "Den uppladdade filen överskrider värdet för upload_max_filesize i php.ini"
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Den uppladdade filen överskrider MAX_FILE_SIZE direktivet som har angetts i HTML formuläret"
+msgstr "Den uppladdade filen överskrider värdet för MAX_FILE_SIZE som har angivits i HTML-formuläret"
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
-msgstr "Den uppladdade filen var endast delvis uppladdad"
+msgstr "Den uppladdade filen har endast delvis laddats upp"
 
 #: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
 #: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
-msgstr "Ingen fil laddades upp"
+msgstr "Ingen fil har laddats upp"
 
 #: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr "En temporär mapp saknas"
+msgstr "Temporär-mapp saknas"
 
 #: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
-msgstr "Misslyckades spara till disk"
+msgstr "Misslyckades att spara till disk"
 
 #: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
-msgstr "Inte tillräckligt med lagringsutrymme tillgängligt"
+msgstr "Det finns inte tillräckligt med lagringsutrymme"
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
@@ -147,15 +149,15 @@ msgstr "Uppladdning av svartlistad fil:"
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
 msgid "Error uploading contacts to storage."
-msgstr "Fel uppstod när kontakt skulle lagras."
+msgstr "Fel uppstod när kontakter sparades."
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
-msgstr "Kunde inte spara tillfällig bild:"
+msgstr "Kan inte spara tillfällig bild:"
 
 #: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
 msgid "Couldn't load temporary image: "
-msgstr "Kunde inte ladda tillfällig bild:"
+msgstr "Kan inte ladda tillfällig bild:"
 
 #: appinfo/app.php:31
 msgid "Contacts"
@@ -183,11 +185,11 @@ msgstr "Importerade {imported} kontakter. {failed} misslyckades."
 
 #: js/addressbooks.js:459
 msgid "An address book called {name} already exists"
-msgstr "En adressbok vid namn {name} existerar redan"
+msgstr "En adressbok vid namn {name} finns redan"
 
 #: js/addressbooks.js:488
 msgid "Failed adding address book: {error}"
-msgstr "Misslyckades att lägga till adressbok: {error}"
+msgstr "Kan inte lägga till adressbok: {error}"
 
 #: js/addressbooks.js:524
 msgid "Failed loading address books: {error}"
@@ -199,7 +201,7 @@ msgstr "Indexerar kontakter"
 
 #: js/app.js:223
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "Irreparabelt fel när adressböckerna skulle laddas: {msg}"
 
 #: js/app.js:224
 msgid "Error."
@@ -239,7 +241,7 @@ msgstr "Sammanslagning misslyckades."
 
 #: js/app.js:573
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "Sammanslagningen fungerade inte: Fel när kontakten sparades."
 
 #: js/app.js:592
 msgid "Select photo"
@@ -259,7 +261,7 @@ msgstr "Fel vid radering från grupp."
 
 #: js/app.js:1070
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "Fel när {name} skulle läggas till favoriter."
 
 #: js/app.js:1209 js/app.js:1213 templates/contacts.php:184
 msgid "Merge contacts"
@@ -348,7 +350,7 @@ msgstr "Kontakterna är inte i denna grupp."
 
 #: js/groups.js:557
 msgid "Failed renaming group: {error}"
-msgstr ""
+msgstr "Det gick inte att ändra namn på gruppen: {error}"
 
 #: js/groups.js:588
 msgid "A group named {group} already exists"
@@ -358,11 +360,11 @@ msgstr "En grupp men namnet {group} finns redan"
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr ""
+msgstr "Du kan dra och släppa grupper⏎\nför att arrangera dem som du vill."
 
 #: js/groups.js:636
 msgid "Failed adding group: {error}"
-msgstr ""
+msgstr "Det gick inte att lägga till gruppen :{error}"
 
 #: js/groups.js:648
 msgid "All"
@@ -378,11 +380,11 @@ msgstr "Delad av {owner}"
 
 #: js/groups.js:742
 msgid "Not grouped"
-msgstr ""
+msgstr "Inte tillagd till någon grupp."
 
 #: js/groups.js:768
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "Kan inte ladda grupper: {error}"
 
 #: js/loader.js:49
 msgid "Result: "
@@ -395,6 +397,38 @@ msgstr "importerad,"
 #: js/loader.js:49
 msgid " failed."
 msgstr "misslyckades."
+
+#: js/personalsettings.js:67
+msgid "Deletion failed"
+msgstr "Raderingen misslyckades"
+
+#: js/personalsettings.js:83
+msgid "Take over settings from recent server configuration?"
+msgstr "Ta över inställningar från tidigare serverkonfiguration?"
+
+#: js/personalsettings.js:84
+msgid "Keep settings?"
+msgstr "Behåll inställningarna?"
+
+#: js/personalsettings.js:98
+msgid "Cannot add server configuration"
+msgstr "Kunde inte lägga till serverinställning"
+
+#: js/personalsettings.js:121
+msgid "Connection test succeeded"
+msgstr "Anslutningstestet lyckades"
+
+#: js/personalsettings.js:126
+msgid "Connection test failed"
+msgstr "Anslutningstestet misslyckades"
+
+#: js/personalsettings.js:136
+msgid "Do you really want to delete the current Server Configuration?"
+msgstr "Vill du verkligen radera den nuvarande serverinställningen?"
+
+#: js/personalsettings.js:137
+msgid "Confirm Deletion"
+msgstr "Bekräfta radering"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -439,107 +473,99 @@ msgstr "Mindre..."
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "Kan inte ladda foton:{error}"
 
 #: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "Du har inte rättigheter att se denna kontakt"
 
 #: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "Du har inte tillräckliga rättigheter för att kunna se denna kontakt."
 
 #: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "Du har inte tillräckliga rättigheter att lägga till denna kontakt till adressboken"
 
 #: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "Backend för denna adressbok stöder inte att lägga till kontakter."
 
 #: lib/addressbook.php:218 lib/contact.php:244
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "Du har inte behörighet att ta bort denna kontakt"
 
 #: lib/addressbook.php:221
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "Backend för denna adressbok stöder inte att ta bort kontakter. "
 
 #: lib/addressbook.php:258
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "Backend för denna adressbok stöder inte uppdateringar"
 
 #: lib/addressbook.php:284
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "Du har inte behörighet att uppdatera adressboken."
 
 #: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "Du har inte behörighet att ta bort adressboken."
 
 #: lib/app.php:132
 msgid "Address book not found"
-msgstr ""
-
-#: lib/backend/ldap.php:433
-msgid "There was an error updating the addressbook."
-msgstr "Ett fel uppstod när adressboken skulle uppdateras."
-
-#: lib/backend/ldap.php:497
-msgid "There was an error deleting this addressbook."
-msgstr "Fel uppstod vid radering av denna adressbok."
+msgstr "Kan inte hitta adressboken."
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "Du har inte behörighet att se denna kontakt"
 
 #: lib/contact.php:259
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Du har inte behörighet att uppdatera denna kontakt"
 
 #: lib/contact.php:270
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "Backend för denna kontakt stöder inte uppdatering av den."
 
 #: lib/contact.php:288
 msgid "This backend not support adding contacts"
-msgstr ""
+msgstr "Denna backend stöder inte att lägga till kontakter"
 
-#: lib/contact.php:395 lib/contact.php:412
+#: lib/contact.php:394 lib/contact.php:411
 msgid "Property not found"
-msgstr ""
+msgstr "Kan inte hitta egenskaper"
 
-#: lib/contact.php:460
+#: lib/contact.php:459
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "IM-parametrar saknas för:"
 
-#: lib/contact.php:468
+#: lib/contact.php:467
 msgid "Unknown IM: "
 msgstr "Okänt IM:"
 
 #: lib/controller/addressbookcontroller.php:122
 msgid "Error creating address book"
-msgstr ""
+msgstr "FEL vid skapa adressbok"
 
 #: lib/controller/addressbookcontroller.php:144
 msgid "Error updating address book"
-msgstr ""
+msgstr "FEL vid uppdatering av adressbok"
 
 #: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
-msgstr ""
+msgstr "FEL vid Ta bort adressbok"
 
 #: lib/controller/addressbookcontroller.php:188
 msgid "Error creating contact."
-msgstr ""
+msgstr "FEL vid skapa kontakt"
 
 #: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting contact."
-msgstr ""
+msgstr "FEL vid ta bort kontakt"
 
 #: lib/controller/addressbookcontroller.php:245
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "FEL vid hämta kontakt."
 
 #: lib/controller/addressbookcontroller.php:256
 msgid "Error removing contact from other address book."
@@ -967,7 +993,7 @@ msgstr "Ange smeknamn"
 
 #: templates/contacts.php:273 templates/contacts.php:329
 msgid "Title"
-msgstr "Titel"
+msgstr "Rubrik"
 
 #: templates/contacts.php:276
 msgid "Enter title"
@@ -1130,6 +1156,94 @@ msgstr ""
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
 msgstr "Den tillfälliga bilden har raderats från cache."
+
+#: templates/personalsettings.php:4
+msgid "LDAP Directories for Contacts"
+msgstr ""
+
+#: templates/personalsettings.php:7
+msgid "Server configuration"
+msgstr "Serverinställning"
+
+#: templates/personalsettings.php:16
+msgid "Add LDAP addressbook"
+msgstr ""
+
+#: templates/personalsettings.php:19
+msgid "Delete Addressbook"
+msgstr ""
+
+#: templates/personalsettings.php:22
+msgid "Addressbook name"
+msgstr ""
+
+#: templates/personalsettings.php:23
+msgid "Name of the addressbook"
+msgstr ""
+
+#: templates/personalsettings.php:25
+msgid "Addressbook description"
+msgstr ""
+
+#: templates/personalsettings.php:28
+msgid "Addressbook uri"
+msgstr ""
+
+#: templates/personalsettings.php:30
+msgid "Must be unique"
+msgstr ""
+
+#: templates/personalsettings.php:32
+msgid "LDAP Server"
+msgstr ""
+
+#: templates/personalsettings.php:34
+msgid "URL of the LDAP server (ldap:// or ldaps://)"
+msgstr ""
+
+#: templates/personalsettings.php:36
+msgid "Base DN for search"
+msgstr ""
+
+#: templates/personalsettings.php:38
+msgid "Search is recursive"
+msgstr ""
+
+#: templates/personalsettings.php:40
+msgid "Read only"
+msgstr ""
+
+#: templates/personalsettings.php:44
+msgid "Base DN for modification"
+msgstr ""
+
+#: templates/personalsettings.php:46
+msgid "All new contacts will be saved in this directory"
+msgstr ""
+
+#: templates/personalsettings.php:48
+msgid "Anonymous"
+msgstr ""
+
+#: templates/personalsettings.php:52
+msgid "User"
+msgstr "Användare"
+
+#: templates/personalsettings.php:56
+msgid "Password"
+msgstr "Lösenord"
+
+#: templates/personalsettings.php:60
+msgid "LDAP to VCard connector XML"
+msgstr ""
+
+#: templates/personalsettings.php:64
+msgid "Test connection"
+msgstr ""
+
+#: templates/personalsettings.php:64
+msgid "Help"
+msgstr "Hjälp"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

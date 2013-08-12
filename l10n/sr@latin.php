@@ -30,6 +30,8 @@
 "Address" => "Adresa",
 "City" => "Grad",
 "Country" => "Zemlja",
+"Password" => "Lozinka",
+"Help" => "Pomoć",
 "Name" => "Ime",
 "Description" => "Opis"
 );

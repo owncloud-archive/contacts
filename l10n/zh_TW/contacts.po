@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-01 00:49-0400\n"
-"PO-Revision-Date: 2013-07-31 05:40+0000\n"
+"POT-Creation-Date: 2013-08-11 06:05-0400\n"
+"PO-Revision-Date: 2013-08-09 11:20+0000\n"
 "Last-Translator: pellaeon <nfsmwlin@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/owncloud/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "讀取聯絡人時發生錯誤"
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr "讀取聯絡人相片時發生錯誤."
+msgstr "讀取聯絡人相片時發生錯誤"
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
@@ -51,7 +51,7 @@ msgstr "沒有聯絡人資料被發送"
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
-msgstr "沒有提供相片路徑."
+msgstr "沒有提供相片路徑"
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
@@ -59,7 +59,7 @@ msgstr "檔案不存在"
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr "載入影像時發生錯誤."
+msgstr "載入影像時發生錯誤"
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
@@ -168,11 +168,11 @@ msgstr "儲存"
 
 #: js/addressbooks.js:235
 msgid "Uploading..."
-msgstr "上傳中..."
+msgstr "上傳中…"
 
 #: js/addressbooks.js:238
 msgid "Importing..."
-msgstr "匯入中..."
+msgstr "匯入中…"
 
 #: js/addressbooks.js:295
 msgid "Imported {count} of {total} contacts"
@@ -196,7 +196,7 @@ msgstr "通訊錄載入失敗：{error}"
 
 #: js/app.js:213
 msgid "Indexing contacts"
-msgstr "正在索引聯絡人..."
+msgstr "正在建立聯絡人索引..."
 
 #: js/app.js:223
 msgid "Unrecoverable error loading address books: {msg}"
@@ -208,11 +208,11 @@ msgstr "錯誤。"
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr "加入至..."
+msgstr "加入至…"
 
 #: js/app.js:321 js/app.js:333
 msgid "Remove from..."
-msgstr "從...移除"
+msgstr "從…移除"
 
 #: js/app.js:338
 msgid "Add group..."
@@ -301,25 +301,25 @@ msgstr "編輯大頭貼照"
 msgid "Error loading profile picture."
 msgstr "載入大頭貼照發生錯誤。"
 
-#: js/contacts.js:582
+#: js/contacts.js:587
 msgid "Is this correct?"
 msgstr "是否正確?"
 
-#: js/contacts.js:1010
+#: js/contacts.js:1015
 msgid "# groups"
 msgstr "# groups"
 
-#: js/contacts.js:2078
+#: js/contacts.js:2079
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "有一些聯絡人被標記為將刪除但是尚未刪除，稍等一下就會刪除了。"
 
-#: js/contacts.js:2089
+#: js/contacts.js:2090
 msgid "Click to undo deletion of {num} contacts"
 msgstr "點一下來復原刪除 {num} 個聯絡人"
 
-#: js/contacts.js:2104
+#: js/contacts.js:2105
 msgid "Cancelled deletion of {num}"
 msgstr "取消 {num} 個刪除動作"
 
@@ -387,15 +387,47 @@ msgstr "載入群組失敗：{error}"
 
 #: js/loader.js:49
 msgid "Result: "
-msgstr ""
+msgstr "結果："
 
 #: js/loader.js:49
 msgid " imported, "
-msgstr ""
+msgstr "已匯入，"
 
 #: js/loader.js:49
 msgid " failed."
-msgstr ""
+msgstr "失敗。"
+
+#: js/personalsettings.js:67
+msgid "Deletion failed"
+msgstr "移除失敗"
+
+#: js/personalsettings.js:83
+msgid "Take over settings from recent server configuration?"
+msgstr "要使用最近一次的伺服器設定嗎?"
+
+#: js/personalsettings.js:84
+msgid "Keep settings?"
+msgstr "維持設定嗎?"
+
+#: js/personalsettings.js:98
+msgid "Cannot add server configuration"
+msgstr "無法新增伺服器設定"
+
+#: js/personalsettings.js:121
+msgid "Connection test succeeded"
+msgstr "連線測試成功"
+
+#: js/personalsettings.js:126
+msgid "Connection test failed"
+msgstr "連線測試失敗"
+
+#: js/personalsettings.js:136
+msgid "Do you really want to delete the current Server Configuration?"
+msgstr "您真的確定要刪除現在的伺服器設定嗎?"
+
+#: js/personalsettings.js:137
+msgid "Confirm Deletion"
+msgstr "確認已刪除"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -403,15 +435,15 @@ msgstr "錯誤"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr ""
+msgstr "顯示名稱不能留空。"
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
-msgstr ""
+msgstr "顯示 CardDAV 連結"
 
 #: js/settings.js:98 templates/settings.php:29
 msgid "Show read-only VCF link"
-msgstr ""
+msgstr "顯示 VCF 唯讀連結"
 
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:325 templates/settings.php:40
@@ -432,119 +464,111 @@ msgstr "刪除"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr "更多..."
+msgstr "更多…"
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr "較少..."
+msgstr "較少…"
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "圖片載入失敗： {error}"
 
 #: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "您沒有權限檢視這個聯絡人。"
 
 #: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "您沒有權限檢視這些聯絡人。"
 
 #: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "您沒有權限新增聯絡人至這本通訊錄。"
 
 #: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "這本通訊錄的後端不支援新增聯絡人"
 
 #: lib/addressbook.php:218 lib/contact.php:244
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "您沒有權限刪除這位聯絡人。"
 
 #: lib/addressbook.php:221
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "這本通訊錄的後端不支援刪除聯絡人"
 
 #: lib/addressbook.php:258
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "這本通訊錄的後端不支援編輯聯絡人"
 
 #: lib/addressbook.php:284
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "您沒有權限編輯這本通訊錄。"
 
 #: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "您沒有權限刪除這本通訊錄。"
 
 #: lib/app.php:132
 msgid "Address book not found"
-msgstr ""
-
-#: lib/backend/ldap.php:433
-msgid "There was an error updating the addressbook."
-msgstr ""
-
-#: lib/backend/ldap.php:497
-msgid "There was an error deleting this addressbook."
-msgstr ""
+msgstr "找不到通訊錄"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "您沒有權限檢視這個聯絡人"
 
 #: lib/contact.php:259
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "您沒有權限編輯這位聯絡人"
 
 #: lib/contact.php:270
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "這個聯絡人的後端不支援編輯"
 
 #: lib/contact.php:288
 msgid "This backend not support adding contacts"
-msgstr ""
+msgstr "後端不支援新增聯絡人"
 
-#: lib/contact.php:395 lib/contact.php:412
+#: lib/contact.php:394 lib/contact.php:411
 msgid "Property not found"
-msgstr ""
+msgstr "找不到這個屬性"
 
-#: lib/contact.php:460
+#: lib/contact.php:459
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "遺失的 IM 參數："
 
-#: lib/contact.php:468
+#: lib/contact.php:467
 msgid "Unknown IM: "
 msgstr "未知的 IM:"
 
 #: lib/controller/addressbookcontroller.php:122
 msgid "Error creating address book"
-msgstr ""
+msgstr "建立通訊錄出現錯誤"
 
 #: lib/controller/addressbookcontroller.php:144
 msgid "Error updating address book"
-msgstr ""
+msgstr "編輯通訊錄出現錯誤"
 
 #: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
-msgstr ""
+msgstr "刪除通訊錄出現錯誤"
 
 #: lib/controller/addressbookcontroller.php:188
 msgid "Error creating contact."
-msgstr ""
+msgstr "建立聯絡人出現錯誤"
 
 #: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting contact."
-msgstr ""
+msgstr "刪除聯絡人出現錯誤"
 
 #: lib/controller/addressbookcontroller.php:245
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "取得聯絡人出現錯誤"
 
 #: lib/controller/addressbookcontroller.php:256
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "從其他通訊錄移除聯絡人時發生錯誤。"
 
 #: lib/controller/contactcontroller.php:42
 #: lib/controller/contactcontroller.php:68
@@ -553,27 +577,27 @@ msgstr ""
 #: lib/controller/contactcontroller.php:187
 #: lib/controller/contactcontroller.php:250
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "找不到聯絡人"
 
 #: lib/controller/contactcontroller.php:97
 msgid "Error merging into contact."
-msgstr ""
+msgstr "合併聯絡人資料時出現錯誤"
 
 #: lib/controller/contactcontroller.php:101
 #: lib/controller/contactcontroller.php:209
 msgid "Error saving contact to backend."
-msgstr ""
+msgstr "儲存聯絡人資料至後端時出現錯誤"
 
 #: lib/controller/contactcontroller.php:191
 #: lib/controller/contactcontroller.php:254
 msgid "Property name is not set."
-msgstr ""
+msgstr "尚未設定屬性名稱"
 
 #: lib/controller/contactcontroller.php:195
 #: lib/controller/contactcontroller.php:258
 #: lib/controller/contactcontroller.php:268
 msgid "Property checksum is not set."
-msgstr ""
+msgstr "尚未設定檢查碼"
 
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
@@ -582,78 +606,78 @@ msgstr "有關 vCard 的資訊不正確，請重新載入此頁。"
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
-msgstr ""
+msgstr "設定屬性時發生錯誤"
 
 #: lib/controller/contactcontroller.php:284
 msgid "Error saving property to backend"
-msgstr ""
+msgstr "儲存屬性至後端時發生錯誤"
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
-msgstr ""
+msgstr "未設定群組名稱"
 
 #: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
-msgstr ""
+msgstr "新增群組錯誤"
 
 #: lib/controller/groupcontroller.php:126
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "未提供要更名的群組名稱"
 
 #: lib/controller/groupcontroller.php:130
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "未設定新群組名稱"
 
 #: lib/controller/groupcontroller.php:136
 msgid "Error renaming group."
-msgstr ""
+msgstr "群組更名錯誤"
 
 #: lib/controller/groupcontroller.php:177
 #: lib/controller/groupcontroller.php:228
 msgid "Group ID missing from request."
-msgstr ""
+msgstr "請求中缺少群組 ID"
 
 #: lib/controller/groupcontroller.php:182
 msgid "Group name missing from request."
-msgstr ""
+msgstr "請求中缺少群組名稱"
 
 #: lib/controller/groupcontroller.php:187
 #: lib/controller/groupcontroller.php:233
 msgid "Contact ID missing from request."
-msgstr ""
+msgstr "請求中缺少聯絡人 ID"
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "試圖上傳被禁止的檔案："
 
 #: lib/controller/importcontroller.php:116
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "您沒有權限將資料匯入至這本通訊錄。"
 
 #: lib/controller/importcontroller.php:124
 msgid "File name missing from request."
-msgstr ""
+msgstr "請求中缺少檔名"
 
 #: lib/controller/importcontroller.php:129
 #: lib/controller/importcontroller.php:236
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "請求中缺少 progress key"
 
 #: lib/controller/importcontroller.php:135
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "試圖存取被禁止的檔案："
 
 #: lib/controller/importcontroller.php:174
 msgid "No contacts found in: "
-msgstr ""
+msgstr "在這些地方找不到聯絡人："
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
-msgstr ""
+msgstr "沒有提供鍵名"
 
 #: lib/controller/settingscontroller.php:40
 msgid "No value is given."
-msgstr ""
+msgstr "沒有提供鍵值"
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
@@ -679,7 +703,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
-msgstr ""
+msgstr "網際網路呼叫"
 
 #: lib/utils/properties.php:76
 msgid "AIM"
@@ -781,7 +805,7 @@ msgstr "新聯絡人"
 
 #: templates/contacts.php:10
 msgid "Group name"
-msgstr ""
+msgstr "群組名稱"
 
 #: templates/contacts.php:10
 msgid "New Group"
@@ -789,16 +813,16 @@ msgstr "新群組"
 
 #: templates/contacts.php:19
 msgid "Address books"
-msgstr ""
+msgstr "通訊錄"
 
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr ""
+msgstr "顯示名稱"
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
-msgstr ""
+msgstr "新增通訊錄"
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
@@ -806,11 +830,11 @@ msgstr "匯入"
 
 #: templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "匯入至…"
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "選擇檔案…"
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
@@ -818,15 +842,15 @@ msgstr "(反)全選"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr ""
+msgstr "排序方式"
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr ""
+msgstr "名字 - 姓氏"
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "姓氏 - 名字"
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
@@ -838,7 +862,7 @@ msgstr "我的最愛"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
-msgstr ""
+msgstr "合併已選擇的項目"
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
@@ -846,57 +870,57 @@ msgstr " 關閉"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "快速鍵"
 
 #: templates/contacts.php:94
 msgid "Navigation"
-msgstr ""
+msgstr "導覽"
 
 #: templates/contacts.php:97
 msgid "Next contact in list"
-msgstr ""
+msgstr "清單中的下一位聯絡人"
 
 #: templates/contacts.php:99
 msgid "Previous contact in list"
-msgstr ""
+msgstr "清單中的上一位聯絡人"
 
 #: templates/contacts.php:101
 msgid "Expand/collapse current addressbook"
-msgstr ""
+msgstr "展開/收合目前的通訊錄"
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr ""
+msgstr "下一本通訊錄"
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr ""
+msgstr "上一本通訊錄"
 
 #: templates/contacts.php:109
 msgid "Actions"
-msgstr ""
+msgstr "動作"
 
 #: templates/contacts.php:112
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "重新整理聯絡人清單"
 
 #: templates/contacts.php:114
 msgid "Add new contact"
-msgstr ""
+msgstr "新增聯絡人"
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
-msgstr ""
+msgstr "新增通訊錄"
 
 #: templates/contacts.php:118
 msgid "Delete current contact"
-msgstr ""
+msgstr "刪除這個聯絡人"
 
 #: templates/contacts.php:123
 msgid ""
 "<h3>You have no contacts in your addressbook.</h3><p>Add a new contact or "
 "import existing contacts from a VCF file.</p>"
-msgstr ""
+msgstr "<h3>你的通訊錄中無聯絡人</h3><p>請新增一位新聯絡人或從 VCF 檔案匯入聯絡人</p>"
 
 #: templates/contacts.php:126
 msgid "Add contact"
@@ -908,23 +932,23 @@ msgstr "刪除群組"
 
 #: templates/contacts.php:177
 msgid "Rename group"
-msgstr ""
+msgstr "更名群組"
 
 #: templates/contacts.php:185
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "要將資料匯入至哪一個聯絡人?"
 
 #: templates/contacts.php:193
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "合併成功後刪除多餘的聯絡人？"
 
 #: templates/contacts.php:205
 msgid "Compose mail"
-msgstr ""
+msgstr "撰寫郵件"
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
-msgstr ""
+msgstr "刪除這張相片"
 
 #: templates/contacts.php:228
 msgid "Edit current photo"
@@ -952,11 +976,11 @@ msgstr "姓氏"
 
 #: templates/contacts.php:259
 msgid "Select groups"
-msgstr ""
+msgstr "選擇群組"
 
 #: templates/contacts.php:262
 msgid "Select address book"
-msgstr ""
+msgstr "選擇通訊錄"
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
@@ -972,7 +996,7 @@ msgstr "標題"
 
 #: templates/contacts.php:276
 msgid "Enter title"
-msgstr ""
+msgstr "輸入標題"
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
@@ -980,7 +1004,7 @@ msgstr "組織"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
-msgstr ""
+msgstr "輸入組織"
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
@@ -988,11 +1012,11 @@ msgstr "生日"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
-msgstr ""
+msgstr "註釋在此處"
 
 #: templates/contacts.php:325
 msgid "Export as VCF"
-msgstr ""
+msgstr "以 VCF 匯出"
 
 #: templates/contacts.php:332
 msgid "Phone"
@@ -1004,7 +1028,7 @@ msgstr "信箱"
 
 #: templates/contacts.php:334
 msgid "Instant Messaging"
-msgstr ""
+msgstr "即時通訊"
 
 #: templates/contacts.php:335
 msgid "Address"
@@ -1016,7 +1040,7 @@ msgstr "註解"
 
 #: templates/contacts.php:337
 msgid "Web site"
-msgstr ""
+msgstr "網站"
 
 #: templates/contacts.php:339
 msgid "Delete contact"
@@ -1034,7 +1058,7 @@ msgstr "註填入合法的電子郵件住址"
 
 #: templates/contacts.php:354
 msgid "someone@example.com"
-msgstr ""
+msgstr "someone@example.com"
 
 #: templates/contacts.php:356
 msgid "Mail to address"
@@ -1054,7 +1078,7 @@ msgstr "刪除電話號碼"
 
 #: templates/contacts.php:385
 msgid "Go to web site"
-msgstr ""
+msgstr "打開網站"
 
 #: templates/contacts.php:386
 msgid "Delete URL"
@@ -1062,19 +1086,19 @@ msgstr "刪除 URL"
 
 #: templates/contacts.php:397
 msgid "View on map"
-msgstr ""
+msgstr "在地圖上檢視"
 
 #: templates/contacts.php:398
 msgid "Delete address"
-msgstr ""
+msgstr "刪除地址"
 
 #: templates/contacts.php:410
 msgid "1 Main Street"
-msgstr ""
+msgstr "1 主街道"
 
 #: templates/contacts.php:411
 msgid "Street address"
-msgstr ""
+msgstr "街道地址"
 
 #: templates/contacts.php:415
 msgid "12345"
@@ -1094,11 +1118,11 @@ msgstr "城市"
 
 #: templates/contacts.php:423
 msgid "Some region"
-msgstr ""
+msgstr "某地區"
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr ""
+msgstr "州或省"
 
 #: templates/contacts.php:428
 msgid "Your country"
@@ -1110,7 +1134,7 @@ msgstr "國家"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
-msgstr ""
+msgstr "即時通訊軟體"
 
 #: templates/contacts.php:453
 msgid "Delete IM"
@@ -1126,15 +1150,103 @@ msgstr "匯出"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
-msgstr ""
+msgstr "顯示 CardDav 連結"
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
-msgstr ""
+msgstr "暫存圖片已經從快取中被移除。"
+
+#: templates/personalsettings.php:4
+msgid "LDAP Directories for Contacts"
+msgstr "聯絡人的 LDAP 目錄"
+
+#: templates/personalsettings.php:7
+msgid "Server configuration"
+msgstr "伺服器設定"
+
+#: templates/personalsettings.php:16
+msgid "Add LDAP addressbook"
+msgstr "新增 LDAP 通訊錄"
+
+#: templates/personalsettings.php:19
+msgid "Delete Addressbook"
+msgstr "刪除通訊錄"
+
+#: templates/personalsettings.php:22
+msgid "Addressbook name"
+msgstr "通訊錄名稱"
+
+#: templates/personalsettings.php:23
+msgid "Name of the addressbook"
+msgstr "通訊錄名稱"
+
+#: templates/personalsettings.php:25
+msgid "Addressbook description"
+msgstr "通訊錄描述"
+
+#: templates/personalsettings.php:28
+msgid "Addressbook uri"
+msgstr "通訊錄 URL"
+
+#: templates/personalsettings.php:30
+msgid "Must be unique"
+msgstr "不能為重複"
+
+#: templates/personalsettings.php:32
+msgid "LDAP Server"
+msgstr "LDAP 伺服器"
+
+#: templates/personalsettings.php:34
+msgid "URL of the LDAP server (ldap:// or ldaps://)"
+msgstr "LDAP 伺服器位址 (ldap:// 或 ldaps://)"
+
+#: templates/personalsettings.php:36
+msgid "Base DN for search"
+msgstr "Base DN for search"
+
+#: templates/personalsettings.php:38
+msgid "Search is recursive"
+msgstr "遞迴的搜尋"
+
+#: templates/personalsettings.php:40
+msgid "Read only"
+msgstr "唯讀"
+
+#: templates/personalsettings.php:44
+msgid "Base DN for modification"
+msgstr "Base DN for modification"
+
+#: templates/personalsettings.php:46
+msgid "All new contacts will be saved in this directory"
+msgstr "未來的新聯絡人都會存至此目錄"
+
+#: templates/personalsettings.php:48
+msgid "Anonymous"
+msgstr "匿名"
+
+#: templates/personalsettings.php:52
+msgid "User"
+msgstr "使用者名稱"
+
+#: templates/personalsettings.php:56
+msgid "Password"
+msgstr "密碼"
+
+#: templates/personalsettings.php:60
+msgid "LDAP to VCard connector XML"
+msgstr "LDAP to VCard connector XML"
+
+#: templates/personalsettings.php:64
+msgid "Test connection"
+msgstr "測試連線"
+
+#: templates/personalsettings.php:64
+msgid "Help"
+msgstr "說明"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr ""
+msgstr "CardDAV 同步位址"
 
 #: templates/settings.php:3
 msgid "more info"

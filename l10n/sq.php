@@ -22,5 +22,7 @@
 "Email" => "Email-i",
 "Address" => "Adresa",
 "Share" => "Nda",
+"Password" => "Kodi",
+"Help" => "Ndihmë",
 "Name" => "Emri"
 );

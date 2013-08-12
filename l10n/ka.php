@@ -1,3 +1,5 @@
 <?php $TRANSLATIONS = array(
-"Download" => "გადმოწერა"
+"Download" => "გადმოწერა",
+"Password" => "პაროლი",
+"Help" => "შველა"
 );
