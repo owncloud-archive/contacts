@@ -19,8 +19,6 @@
 "Email" => "電郵",
 "Address" => "地址",
 "Share" => "分享",
-"Password" => "密碼",
-"Help" => "幫助",
 "more info" => "更多",
 "Primary address (Kontact et al)" => "主要地址",
 "iOS/OS X" => "iOS/OSX",

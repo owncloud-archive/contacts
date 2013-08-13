@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-11 06:05-0400\n"
-"PO-Revision-Date: 2013-08-09 11:20+0000\n"
-"Last-Translator: Martin <fireball@atlas.cz>\n"
+"POT-Creation-Date: 2013-08-13 07:09-0400\n"
+"PO-Revision-Date: 2013-08-13 11:09+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -392,38 +392,6 @@ msgstr " importováno, "
 #: js/loader.js:49
 msgid " failed."
 msgstr " selhalo."
-
-#: js/personalsettings.js:67
-msgid "Deletion failed"
-msgstr "Mazání selhalo"
-
-#: js/personalsettings.js:83
-msgid "Take over settings from recent server configuration?"
-msgstr "Převzít nastavení z nedávného nastavení serveru?"
-
-#: js/personalsettings.js:84
-msgid "Keep settings?"
-msgstr "Ponechat nastavení?"
-
-#: js/personalsettings.js:98
-msgid "Cannot add server configuration"
-msgstr "Nelze přidat nastavení serveru"
-
-#: js/personalsettings.js:121
-msgid "Connection test succeeded"
-msgstr "Test spojení byl úspěšný"
-
-#: js/personalsettings.js:126
-msgid "Connection test failed"
-msgstr "Test spojení selhal"
-
-#: js/personalsettings.js:136
-msgid "Do you really want to delete the current Server Configuration?"
-msgstr "Opravdu si přejete smazat současné nastavení serveru?"
-
-#: js/personalsettings.js:137
-msgid "Confirm Deletion"
-msgstr "Potvrdit smazání"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -1151,94 +1119,6 @@ msgstr "CardDAV odkaz"
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
 msgstr "Obrázek byl odstraněn z vyrovnávací paměti."
-
-#: templates/personalsettings.php:4
-msgid "LDAP Directories for Contacts"
-msgstr "LDAP adresáře pro Kontakry"
-
-#: templates/personalsettings.php:7
-msgid "Server configuration"
-msgstr "Nastavení serveru"
-
-#: templates/personalsettings.php:16
-msgid "Add LDAP addressbook"
-msgstr "Přidat LDAP adresář"
-
-#: templates/personalsettings.php:19
-msgid "Delete Addressbook"
-msgstr "Odstranit Adresář"
-
-#: templates/personalsettings.php:22
-msgid "Addressbook name"
-msgstr "Název adresáře"
-
-#: templates/personalsettings.php:23
-msgid "Name of the addressbook"
-msgstr "Název Adresáře"
-
-#: templates/personalsettings.php:25
-msgid "Addressbook description"
-msgstr "Popis Adresáře"
-
-#: templates/personalsettings.php:28
-msgid "Addressbook uri"
-msgstr "uri Adresáře"
-
-#: templates/personalsettings.php:30
-msgid "Must be unique"
-msgstr "Musí být unikátní"
-
-#: templates/personalsettings.php:32
-msgid "LDAP Server"
-msgstr "Server LDAP"
-
-#: templates/personalsettings.php:34
-msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr "URL LDAP serveru  (ldap:// or ldaps://)"
-
-#: templates/personalsettings.php:36
-msgid "Base DN for search"
-msgstr "Výchozí DN pro vyhledávávní"
-
-#: templates/personalsettings.php:38
-msgid "Search is recursive"
-msgstr "Vyhledávání je rekurzivní"
-
-#: templates/personalsettings.php:40
-msgid "Read only"
-msgstr "Pouze ke čtení"
-
-#: templates/personalsettings.php:44
-msgid "Base DN for modification"
-msgstr "Výchozí DN pro změnu"
-
-#: templates/personalsettings.php:46
-msgid "All new contacts will be saved in this directory"
-msgstr "Všechny nové kontaktu budou uloženy v tomto adresáři"
-
-#: templates/personalsettings.php:48
-msgid "Anonymous"
-msgstr "Anonymní"
-
-#: templates/personalsettings.php:52
-msgid "User"
-msgstr "Uživatel"
-
-#: templates/personalsettings.php:56
-msgid "Password"
-msgstr "Heslo"
-
-#: templates/personalsettings.php:60
-msgid "LDAP to VCard connector XML"
-msgstr "Konektor XML mezi LDAP a VCard"
-
-#: templates/personalsettings.php:64
-msgid "Test connection"
-msgstr "Test připojení"
-
-#: templates/personalsettings.php:64
-msgid "Help"
-msgstr "Nápověda"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

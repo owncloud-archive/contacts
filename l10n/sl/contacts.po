@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-11 06:05-0400\n"
-"PO-Revision-Date: 2013-08-11 09:50+0000\n"
-"Last-Translator: barbarak <barbarak@arnes.si>\n"
+"POT-Creation-Date: 2013-08-13 07:09-0400\n"
+"PO-Revision-Date: 2013-08-13 11:09+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -392,38 +392,6 @@ msgstr " uvoženih, "
 msgid " failed."
 msgstr " je spodletelo."
 
-#: js/personalsettings.js:67
-msgid "Deletion failed"
-msgstr "Brisanje je spodletelo."
-
-#: js/personalsettings.js:83
-msgid "Take over settings from recent server configuration?"
-msgstr "Ali naj se prevzame nastavitve nedavne nastavitve strežnika?"
-
-#: js/personalsettings.js:84
-msgid "Keep settings?"
-msgstr "Ali nas se nastavitve ohranijo?"
-
-#: js/personalsettings.js:98
-msgid "Cannot add server configuration"
-msgstr "Ni mogoče dodati nastavitev strežnika"
-
-#: js/personalsettings.js:121
-msgid "Connection test succeeded"
-msgstr "Preizkus povezave je uspešno končan."
-
-#: js/personalsettings.js:126
-msgid "Connection test failed"
-msgstr "Preizkus povezave je spodletel."
-
-#: js/personalsettings.js:136
-msgid "Do you really want to delete the current Server Configuration?"
-msgstr "Ali res želite izbrisati trenutne nastavitve strežnika?"
-
-#: js/personalsettings.js:137
-msgid "Confirm Deletion"
-msgstr "Potrdi brisanje"
-
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
 msgstr "Napaka"
@@ -475,7 +443,7 @@ msgstr "Nimate pravic za ogled teh stikov."
 
 #: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "Nimate ustreznih pravic za ogled teh stikov."
 
 #: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
@@ -483,35 +451,35 @@ msgstr "Nimate ustreznih pravic za dodajanje stikov v imenik."
 
 #: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "Zaledje tega imenika ne omogoča dodajanja stikov."
 
 #: lib/addressbook.php:218 lib/contact.php:244
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "Nimate ustreznih pravic za brisanje tega stika"
 
 #: lib/addressbook.php:221
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "Zaledje tega imenika ne omogoča brisanje stikov"
 
 #: lib/addressbook.php:258
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "Zaledje tega imenika ne omogoča posodobitev"
 
 #: lib/addressbook.php:284
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "Nimate ustreznih pravic za posodobitev imenika."
 
 #: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "Nimate ustreznih pravic za brisanje imenika."
 
 #: lib/app.php:132
 msgid "Address book not found"
-msgstr ""
+msgstr "Imenika ni bilo mogoče najti"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "Nimate ustreznih pravic za ogled tega stika"
 
 #: lib/contact.php:259
 msgid "You do not have permissions to update this contact"
@@ -539,23 +507,23 @@ msgstr "Neznan IM:"
 
 #: lib/controller/addressbookcontroller.php:122
 msgid "Error creating address book"
-msgstr ""
+msgstr "Napaka pri ustvarjanju imenika"
 
 #: lib/controller/addressbookcontroller.php:144
 msgid "Error updating address book"
-msgstr ""
+msgstr "Napaka pri posodabljanju imenika"
 
 #: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
-msgstr ""
+msgstr "Napaka pri brisanju imenika"
 
 #: lib/controller/addressbookcontroller.php:188
 msgid "Error creating contact."
-msgstr ""
+msgstr "Napaka pri ustvarjanju stika."
 
 #: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting contact."
-msgstr ""
+msgstr "Napaka pri brisanju stika."
 
 #: lib/controller/addressbookcontroller.php:245
 msgid "Error retrieving contact."
@@ -563,7 +531,7 @@ msgstr ""
 
 #: lib/controller/addressbookcontroller.php:256
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "Napaka pri brisanju stika iz drugega imenika."
 
 #: lib/controller/contactcontroller.php:42
 #: lib/controller/contactcontroller.php:68
@@ -572,16 +540,16 @@ msgstr ""
 #: lib/controller/contactcontroller.php:187
 #: lib/controller/contactcontroller.php:250
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "Stika ni bilo mogoče najti."
 
 #: lib/controller/contactcontroller.php:97
 msgid "Error merging into contact."
-msgstr ""
+msgstr "Napaka pri spajanju podatkov v stik."
 
 #: lib/controller/contactcontroller.php:101
 #: lib/controller/contactcontroller.php:209
 msgid "Error saving contact to backend."
-msgstr ""
+msgstr "Napaka pri shranjevanju stika."
 
 #: lib/controller/contactcontroller.php:191
 #: lib/controller/contactcontroller.php:254
@@ -609,7 +577,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
-msgstr ""
+msgstr "Niste navedli imena skupine."
 
 #: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
@@ -625,7 +593,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:136
 msgid "Error renaming group."
-msgstr ""
+msgstr "Napaka pri preimenovanju skupine."
 
 #: lib/controller/groupcontroller.php:177
 #: lib/controller/groupcontroller.php:228
@@ -647,11 +615,11 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:116
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "Nimate ustreznih pravic za uvoz v ta imenik."
 
 #: lib/controller/importcontroller.php:124
 msgid "File name missing from request."
-msgstr ""
+msgstr "V zahtevi manjka ime datoteke."
 
 #: lib/controller/importcontroller.php:129
 #: lib/controller/importcontroller.php:236
@@ -664,7 +632,7 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:174
 msgid "No contacts found in: "
-msgstr ""
+msgstr "Nobenega stika ni bilo mogoče najti v:"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -698,7 +666,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
-msgstr ""
+msgstr "Internetni klic"
 
 #: lib/utils/properties.php:76
 msgid "AIM"
@@ -800,7 +768,7 @@ msgstr "Nov stik"
 
 #: templates/contacts.php:10
 msgid "Group name"
-msgstr ""
+msgstr "Ime skupine"
 
 #: templates/contacts.php:10
 msgid "New Group"
@@ -808,16 +776,16 @@ msgstr "Nova skupina"
 
 #: templates/contacts.php:19
 msgid "Address books"
-msgstr ""
+msgstr "Imeniki"
 
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr ""
+msgstr "Ime za prikaz"
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
-msgstr ""
+msgstr "Dodaj imenik"
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
@@ -825,11 +793,11 @@ msgstr "Uvozi"
 
 #: templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "Uvozi v..."
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "Izberi dokument..."
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
@@ -837,15 +805,15 @@ msgstr "(Od-)izberi vse"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr ""
+msgstr "Vrstni red razvrščanja"
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr ""
+msgstr "Ime-Priimek"
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "Ime,Priimek"
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
@@ -927,7 +895,7 @@ msgstr "Izbriši skupino"
 
 #: templates/contacts.php:177
 msgid "Rename group"
-msgstr ""
+msgstr "Preimenuj skupino"
 
 #: templates/contacts.php:185
 msgid "Which contact should the data be merged into?"
@@ -971,11 +939,11 @@ msgstr "Priimek"
 
 #: templates/contacts.php:259
 msgid "Select groups"
-msgstr ""
+msgstr "Izberi skupine"
 
 #: templates/contacts.php:262
 msgid "Select address book"
-msgstr ""
+msgstr "Izberi imenik"
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
@@ -991,7 +959,7 @@ msgstr "Naslov"
 
 #: templates/contacts.php:276
 msgid "Enter title"
-msgstr ""
+msgstr "Vnesi naziv"
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
@@ -999,7 +967,7 @@ msgstr "Ustanova"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
-msgstr ""
+msgstr "Vnesi organizacijo"
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
@@ -1011,7 +979,7 @@ msgstr "Prostor za opombe ..."
 
 #: templates/contacts.php:325
 msgid "Export as VCF"
-msgstr ""
+msgstr "Izvozi kot VCF"
 
 #: templates/contacts.php:332
 msgid "Phone"
@@ -1145,99 +1113,11 @@ msgstr "Izvozi"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
-msgstr ""
+msgstr "Povezava CardDAV"
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
 msgstr "Začasna slika je odstranjena iz predpomnilnika."
-
-#: templates/personalsettings.php:4
-msgid "LDAP Directories for Contacts"
-msgstr ""
-
-#: templates/personalsettings.php:7
-msgid "Server configuration"
-msgstr "Nastavitev strežnika"
-
-#: templates/personalsettings.php:16
-msgid "Add LDAP addressbook"
-msgstr ""
-
-#: templates/personalsettings.php:19
-msgid "Delete Addressbook"
-msgstr ""
-
-#: templates/personalsettings.php:22
-msgid "Addressbook name"
-msgstr ""
-
-#: templates/personalsettings.php:23
-msgid "Name of the addressbook"
-msgstr ""
-
-#: templates/personalsettings.php:25
-msgid "Addressbook description"
-msgstr ""
-
-#: templates/personalsettings.php:28
-msgid "Addressbook uri"
-msgstr ""
-
-#: templates/personalsettings.php:30
-msgid "Must be unique"
-msgstr ""
-
-#: templates/personalsettings.php:32
-msgid "LDAP Server"
-msgstr ""
-
-#: templates/personalsettings.php:34
-msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr ""
-
-#: templates/personalsettings.php:36
-msgid "Base DN for search"
-msgstr ""
-
-#: templates/personalsettings.php:38
-msgid "Search is recursive"
-msgstr ""
-
-#: templates/personalsettings.php:40
-msgid "Read only"
-msgstr ""
-
-#: templates/personalsettings.php:44
-msgid "Base DN for modification"
-msgstr ""
-
-#: templates/personalsettings.php:46
-msgid "All new contacts will be saved in this directory"
-msgstr ""
-
-#: templates/personalsettings.php:48
-msgid "Anonymous"
-msgstr ""
-
-#: templates/personalsettings.php:52
-msgid "User"
-msgstr "Uporabnik"
-
-#: templates/personalsettings.php:56
-msgid "Password"
-msgstr "Geslo"
-
-#: templates/personalsettings.php:60
-msgid "LDAP to VCard connector XML"
-msgstr ""
-
-#: templates/personalsettings.php:64
-msgid "Test connection"
-msgstr ""
-
-#: templates/personalsettings.php:64
-msgid "Help"
-msgstr "Pomoč"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

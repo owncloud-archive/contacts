@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-11 06:05-0400\n"
-"PO-Revision-Date: 2013-08-09 11:20+0000\n"
+"POT-Creation-Date: 2013-08-13 07:09-0400\n"
+"PO-Revision-Date: 2013-08-13 11:09+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -393,38 +393,6 @@ msgstr " içe aktarıldı, "
 #: js/loader.js:49
 msgid " failed."
 msgstr " hatalı."
-
-#: js/personalsettings.js:67
-msgid "Deletion failed"
-msgstr "Silme başarısız oldu"
-
-#: js/personalsettings.js:83
-msgid "Take over settings from recent server configuration?"
-msgstr "Ayarları son sunucu yapılandırmalarından devral?"
-
-#: js/personalsettings.js:84
-msgid "Keep settings?"
-msgstr "Ayarlar kalsın mı?"
-
-#: js/personalsettings.js:98
-msgid "Cannot add server configuration"
-msgstr "Sunucu yapılandırması eklenemedi"
-
-#: js/personalsettings.js:121
-msgid "Connection test succeeded"
-msgstr "Bağlantı testi başarılı oldu"
-
-#: js/personalsettings.js:126
-msgid "Connection test failed"
-msgstr "Bağlantı testi başarısız oldu"
-
-#: js/personalsettings.js:136
-msgid "Do you really want to delete the current Server Configuration?"
-msgstr "Şu anki sunucu yapılandırmasını silmek istediğinizden emin misiniz?"
-
-#: js/personalsettings.js:137
-msgid "Confirm Deletion"
-msgstr "Silmeyi onayla"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -1152,94 +1120,6 @@ msgstr ""
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
 msgstr "Geçici resim ön bellekten silinmiştir."
-
-#: templates/personalsettings.php:4
-msgid "LDAP Directories for Contacts"
-msgstr ""
-
-#: templates/personalsettings.php:7
-msgid "Server configuration"
-msgstr "Sunucu uyunlama "
-
-#: templates/personalsettings.php:16
-msgid "Add LDAP addressbook"
-msgstr ""
-
-#: templates/personalsettings.php:19
-msgid "Delete Addressbook"
-msgstr ""
-
-#: templates/personalsettings.php:22
-msgid "Addressbook name"
-msgstr ""
-
-#: templates/personalsettings.php:23
-msgid "Name of the addressbook"
-msgstr ""
-
-#: templates/personalsettings.php:25
-msgid "Addressbook description"
-msgstr ""
-
-#: templates/personalsettings.php:28
-msgid "Addressbook uri"
-msgstr ""
-
-#: templates/personalsettings.php:30
-msgid "Must be unique"
-msgstr ""
-
-#: templates/personalsettings.php:32
-msgid "LDAP Server"
-msgstr ""
-
-#: templates/personalsettings.php:34
-msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr ""
-
-#: templates/personalsettings.php:36
-msgid "Base DN for search"
-msgstr ""
-
-#: templates/personalsettings.php:38
-msgid "Search is recursive"
-msgstr ""
-
-#: templates/personalsettings.php:40
-msgid "Read only"
-msgstr ""
-
-#: templates/personalsettings.php:44
-msgid "Base DN for modification"
-msgstr ""
-
-#: templates/personalsettings.php:46
-msgid "All new contacts will be saved in this directory"
-msgstr ""
-
-#: templates/personalsettings.php:48
-msgid "Anonymous"
-msgstr ""
-
-#: templates/personalsettings.php:52
-msgid "User"
-msgstr "Kullanıcı"
-
-#: templates/personalsettings.php:56
-msgid "Password"
-msgstr "Parola"
-
-#: templates/personalsettings.php:60
-msgid "LDAP to VCard connector XML"
-msgstr ""
-
-#: templates/personalsettings.php:64
-msgid "Test connection"
-msgstr ""
-
-#: templates/personalsettings.php:64
-msgid "Help"
-msgstr "Yardım"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

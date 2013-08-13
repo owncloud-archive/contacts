@@ -74,8 +74,6 @@
 "Country" => "Država",
 "Share" => "Podijeli",
 "Export" => "Izvoz",
-"Password" => "Lozinka",
-"Help" => "Pomoć",
 "more info" => "više informacija",
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresari",

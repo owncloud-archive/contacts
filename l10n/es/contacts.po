@@ -31,9 +31,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-11 06:05-0400\n"
-"PO-Revision-Date: 2013-08-09 11:20+0000\n"
-"Last-Translator: Art O. Pal <artopal@fastmail.fm>\n"
+"POT-Creation-Date: 2013-08-13 07:09-0400\n"
+"PO-Revision-Date: 2013-08-13 11:09+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -408,38 +408,6 @@ msgstr "Importado."
 #: js/loader.js:49
 msgid " failed."
 msgstr "Fallo."
-
-#: js/personalsettings.js:67
-msgid "Deletion failed"
-msgstr "Falló el borrado"
-
-#: js/personalsettings.js:83
-msgid "Take over settings from recent server configuration?"
-msgstr "¿Asumir los ajustes actuales de la configuración del servidor?"
-
-#: js/personalsettings.js:84
-msgid "Keep settings?"
-msgstr "Mantener la configuración?"
-
-#: js/personalsettings.js:98
-msgid "Cannot add server configuration"
-msgstr "No se puede añadir la configuración del servidor"
-
-#: js/personalsettings.js:121
-msgid "Connection test succeeded"
-msgstr "La prueba de conexión fue exitosa"
-
-#: js/personalsettings.js:126
-msgid "Connection test failed"
-msgstr "La prueba de conexión falló"
-
-#: js/personalsettings.js:136
-msgid "Do you really want to delete the current Server Configuration?"
-msgstr "¿Realmente desea eliminar la configuración actual del servidor?"
-
-#: js/personalsettings.js:137
-msgid "Confirm Deletion"
-msgstr "Confirmar eliminación"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -1167,94 +1135,6 @@ msgstr "Enlace CardDav"
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
 msgstr "La foto temporal se ha borrado del cache."
-
-#: templates/personalsettings.php:4
-msgid "LDAP Directories for Contacts"
-msgstr ""
-
-#: templates/personalsettings.php:7
-msgid "Server configuration"
-msgstr "Configuración del Servidor"
-
-#: templates/personalsettings.php:16
-msgid "Add LDAP addressbook"
-msgstr ""
-
-#: templates/personalsettings.php:19
-msgid "Delete Addressbook"
-msgstr "Eliminar libreta de contactos"
-
-#: templates/personalsettings.php:22
-msgid "Addressbook name"
-msgstr "Nombre de libreta de contactos"
-
-#: templates/personalsettings.php:23
-msgid "Name of the addressbook"
-msgstr "Nombre de la libreta de contactos"
-
-#: templates/personalsettings.php:25
-msgid "Addressbook description"
-msgstr "Descripción de libreta de contactos"
-
-#: templates/personalsettings.php:28
-msgid "Addressbook uri"
-msgstr "URI de libreta de contactos"
-
-#: templates/personalsettings.php:30
-msgid "Must be unique"
-msgstr ""
-
-#: templates/personalsettings.php:32
-msgid "LDAP Server"
-msgstr "Servidor LDAP"
-
-#: templates/personalsettings.php:34
-msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr "URL del servidor LDAP (ldap:// o ldaps://)"
-
-#: templates/personalsettings.php:36
-msgid "Base DN for search"
-msgstr ""
-
-#: templates/personalsettings.php:38
-msgid "Search is recursive"
-msgstr "La búsqueda es recursiva"
-
-#: templates/personalsettings.php:40
-msgid "Read only"
-msgstr "Solo lectura"
-
-#: templates/personalsettings.php:44
-msgid "Base DN for modification"
-msgstr ""
-
-#: templates/personalsettings.php:46
-msgid "All new contacts will be saved in this directory"
-msgstr "Todos los contactos nuevos serán guardados en esta carpeta"
-
-#: templates/personalsettings.php:48
-msgid "Anonymous"
-msgstr "Anónimo"
-
-#: templates/personalsettings.php:52
-msgid "User"
-msgstr "Usuario"
-
-#: templates/personalsettings.php:56
-msgid "Password"
-msgstr "Contraseña"
-
-#: templates/personalsettings.php:60
-msgid "LDAP to VCard connector XML"
-msgstr ""
-
-#: templates/personalsettings.php:64
-msgid "Test connection"
-msgstr "Probar conexión"
-
-#: templates/personalsettings.php:64
-msgid "Help"
-msgstr "Ayuda"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

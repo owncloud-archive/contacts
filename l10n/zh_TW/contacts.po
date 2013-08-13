@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-11 06:05-0400\n"
-"PO-Revision-Date: 2013-08-09 11:20+0000\n"
-"Last-Translator: pellaeon <nfsmwlin@gmail.com>\n"
+"POT-Creation-Date: 2013-08-13 07:09-0400\n"
+"PO-Revision-Date: 2013-08-13 11:09+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/owncloud/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -396,38 +396,6 @@ msgstr "已匯入，"
 #: js/loader.js:49
 msgid " failed."
 msgstr "失敗。"
-
-#: js/personalsettings.js:67
-msgid "Deletion failed"
-msgstr "移除失敗"
-
-#: js/personalsettings.js:83
-msgid "Take over settings from recent server configuration?"
-msgstr "要使用最近一次的伺服器設定嗎?"
-
-#: js/personalsettings.js:84
-msgid "Keep settings?"
-msgstr "維持設定嗎?"
-
-#: js/personalsettings.js:98
-msgid "Cannot add server configuration"
-msgstr "無法新增伺服器設定"
-
-#: js/personalsettings.js:121
-msgid "Connection test succeeded"
-msgstr "連線測試成功"
-
-#: js/personalsettings.js:126
-msgid "Connection test failed"
-msgstr "連線測試失敗"
-
-#: js/personalsettings.js:136
-msgid "Do you really want to delete the current Server Configuration?"
-msgstr "您真的確定要刪除現在的伺服器設定嗎?"
-
-#: js/personalsettings.js:137
-msgid "Confirm Deletion"
-msgstr "確認已刪除"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -1155,94 +1123,6 @@ msgstr "顯示 CardDav 連結"
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
 msgstr "暫存圖片已經從快取中被移除。"
-
-#: templates/personalsettings.php:4
-msgid "LDAP Directories for Contacts"
-msgstr "聯絡人的 LDAP 目錄"
-
-#: templates/personalsettings.php:7
-msgid "Server configuration"
-msgstr "伺服器設定"
-
-#: templates/personalsettings.php:16
-msgid "Add LDAP addressbook"
-msgstr "新增 LDAP 通訊錄"
-
-#: templates/personalsettings.php:19
-msgid "Delete Addressbook"
-msgstr "刪除通訊錄"
-
-#: templates/personalsettings.php:22
-msgid "Addressbook name"
-msgstr "通訊錄名稱"
-
-#: templates/personalsettings.php:23
-msgid "Name of the addressbook"
-msgstr "通訊錄名稱"
-
-#: templates/personalsettings.php:25
-msgid "Addressbook description"
-msgstr "通訊錄描述"
-
-#: templates/personalsettings.php:28
-msgid "Addressbook uri"
-msgstr "通訊錄 URL"
-
-#: templates/personalsettings.php:30
-msgid "Must be unique"
-msgstr "不能為重複"
-
-#: templates/personalsettings.php:32
-msgid "LDAP Server"
-msgstr "LDAP 伺服器"
-
-#: templates/personalsettings.php:34
-msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr "LDAP 伺服器位址 (ldap:// 或 ldaps://)"
-
-#: templates/personalsettings.php:36
-msgid "Base DN for search"
-msgstr "Base DN for search"
-
-#: templates/personalsettings.php:38
-msgid "Search is recursive"
-msgstr "遞迴的搜尋"
-
-#: templates/personalsettings.php:40
-msgid "Read only"
-msgstr "唯讀"
-
-#: templates/personalsettings.php:44
-msgid "Base DN for modification"
-msgstr "Base DN for modification"
-
-#: templates/personalsettings.php:46
-msgid "All new contacts will be saved in this directory"
-msgstr "未來的新聯絡人都會存至此目錄"
-
-#: templates/personalsettings.php:48
-msgid "Anonymous"
-msgstr "匿名"
-
-#: templates/personalsettings.php:52
-msgid "User"
-msgstr "使用者名稱"
-
-#: templates/personalsettings.php:56
-msgid "Password"
-msgstr "密碼"
-
-#: templates/personalsettings.php:60
-msgid "LDAP to VCard connector XML"
-msgstr "LDAP to VCard connector XML"
-
-#: templates/personalsettings.php:64
-msgid "Test connection"
-msgstr "測試連線"
-
-#: templates/personalsettings.php:64
-msgid "Help"
-msgstr "說明"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

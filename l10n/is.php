@@ -12,7 +12,6 @@
 "Uploading..." => "Sendi inn ...",
 "Cancel" => "Hætta við",
 "Add" => "Bæta við",
-"Keep settings?" => "Geyma stillingar ?",
 "Error" => "Villa",
 "Download" => "Niðurhal",
 "Edit" => "Breyta",
@@ -28,8 +27,6 @@
 "Address" => "Slóð",
 "Share" => "Deila",
 "Export" => "Flytja út",
-"Password" => "Lykilorð",
-"Help" => "Hjálp",
 "more info" => "fleiri upplýsingar",
 "iOS/OS X" => "iOS/OS X",
 "Name" => "Nafn"

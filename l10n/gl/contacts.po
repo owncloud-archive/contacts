@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-11 06:05-0400\n"
-"PO-Revision-Date: 2013-08-09 11:20+0000\n"
-"Last-Translator: mbouzada <mbouzada@gmail.com>\n"
+"POT-Creation-Date: 2013-08-13 07:09-0400\n"
+"PO-Revision-Date: 2013-08-13 11:09+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/owncloud/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -391,38 +391,6 @@ msgstr " importado, "
 #: js/loader.js:49
 msgid " failed."
 msgstr " fallou."
-
-#: js/personalsettings.js:67
-msgid "Deletion failed"
-msgstr "Produciuse un fallo ao eliminar"
-
-#: js/personalsettings.js:83
-msgid "Take over settings from recent server configuration?"
-msgstr "Tomar os recentes axustes de configuración do servidor?"
-
-#: js/personalsettings.js:84
-msgid "Keep settings?"
-msgstr "Manter os axustes?"
-
-#: js/personalsettings.js:98
-msgid "Cannot add server configuration"
-msgstr "Non é posíbel engadir a configuración do servidor"
-
-#: js/personalsettings.js:121
-msgid "Connection test succeeded"
-msgstr "A proba de conexión foi satisfactoria"
-
-#: js/personalsettings.js:126
-msgid "Connection test failed"
-msgstr "A proba de conexión fracasou"
-
-#: js/personalsettings.js:136
-msgid "Do you really want to delete the current Server Configuration?"
-msgstr "Confirma que quere eliminar a configuración actual do servidor?"
-
-#: js/personalsettings.js:137
-msgid "Confirm Deletion"
-msgstr "Confirmar a eliminación"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -1150,94 +1118,6 @@ msgstr "Ligazón a CardDAV"
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
 msgstr "A imaxe temporal foi eliminada da caché."
-
-#: templates/personalsettings.php:4
-msgid "LDAP Directories for Contacts"
-msgstr "Directorios LDAP para os contactos"
-
-#: templates/personalsettings.php:7
-msgid "Server configuration"
-msgstr "Configuración do servidor"
-
-#: templates/personalsettings.php:16
-msgid "Add LDAP addressbook"
-msgstr "Engadir un caderno de enderezos LDAP"
-
-#: templates/personalsettings.php:19
-msgid "Delete Addressbook"
-msgstr "Eliminar caderno de enderezos"
-
-#: templates/personalsettings.php:22
-msgid "Addressbook name"
-msgstr "Nome do caderno de enderezos"
-
-#: templates/personalsettings.php:23
-msgid "Name of the addressbook"
-msgstr "Nome do caderno de enderezos"
-
-#: templates/personalsettings.php:25
-msgid "Addressbook description"
-msgstr "Descrición do caderno de enderezos"
-
-#: templates/personalsettings.php:28
-msgid "Addressbook uri"
-msgstr "URI do caderno de enderezos"
-
-#: templates/personalsettings.php:30
-msgid "Must be unique"
-msgstr "Ten que ser único"
-
-#: templates/personalsettings.php:32
-msgid "LDAP Server"
-msgstr "Servidor LDAP"
-
-#: templates/personalsettings.php:34
-msgid "URL of the LDAP server (ldap:// or ldaps://)"
-msgstr "URL do servidor LDAP (ldap:// ou ldaps://)"
-
-#: templates/personalsettings.php:36
-msgid "Base DN for search"
-msgstr "DN base para buscas"
-
-#: templates/personalsettings.php:38
-msgid "Search is recursive"
-msgstr "A busca é recursiva"
-
-#: templates/personalsettings.php:40
-msgid "Read only"
-msgstr "Só lectura"
-
-#: templates/personalsettings.php:44
-msgid "Base DN for modification"
-msgstr "DN base para modificacións"
-
-#: templates/personalsettings.php:46
-msgid "All new contacts will be saved in this directory"
-msgstr "Todos os contactos novos gardaranse neste directorio"
-
-#: templates/personalsettings.php:48
-msgid "Anonymous"
-msgstr "Anónimo"
-
-#: templates/personalsettings.php:52
-msgid "User"
-msgstr "Usuario"
-
-#: templates/personalsettings.php:56
-msgid "Password"
-msgstr "Contrasinal"
-
-#: templates/personalsettings.php:60
-msgid "LDAP to VCard connector XML"
-msgstr "Conectador XML de LDAP a VCard"
-
-#: templates/personalsettings.php:64
-msgid "Test connection"
-msgstr "Proba de conexión"
-
-#: templates/personalsettings.php:64
-msgid "Help"
-msgstr "Axuda"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

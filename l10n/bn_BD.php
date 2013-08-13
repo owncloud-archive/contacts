@@ -31,8 +31,6 @@
 "Note" => "দ্রষ্টব্য",
 "Share" => "ভাগাভাগি কর",
 "Export" => "রপ্তানি",
-"Password" => "কূটশব্দ",
-"Help" => "সহায়িকা",
 "more info" => "আরও তথ্য",
 "Primary address (Kontact et al)" => "প্রাথমিক ঠিকানা (Kontact et al)",
 "iOS/OS X" => "iOS/OS X",
