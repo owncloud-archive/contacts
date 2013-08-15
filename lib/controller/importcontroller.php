@@ -74,7 +74,10 @@ class ImportController extends BaseController {
 			return $response;
 			}
 			$content = file_get_contents($tmpname);
+			$proxyStatus = \OC_FileProxy::$enabled;
+			\OC_FileProxy::$enabled = false;
 			if($view->file_put_contents('/imports/'.$filename, $content)) {
+				\OC_FileProxy::$enabled = $proxyStatus;
 				$count = substr_count($content, 'BEGIN:');
 				$progresskey = 'contacts-import-' . rand();
 				$response->setParams(
@@ -88,6 +91,7 @@ class ImportController extends BaseController {
 				);
 				\OC_Cache::set($progresskey, '10', 300);
 			} else {
+				\OC_FileProxy::$enabled = $proxyStatus;
 				$response->bailOut(App::$l10n->t('Error uploading contacts to storage.'));
 			return $response;
 			}
@@ -136,7 +140,10 @@ class ImportController extends BaseController {
 			return $response;
 		}
 		$view = \OCP\Files::getStorage('contacts');
+		$proxyStatus = \OC_FileProxy::$enabled;
+		\OC_FileProxy::$enabled = false;
 		$file = $view->file_get_contents('/imports/' . $filename);
+		\OC_FileProxy::$enabled = $proxyStatus;
 
 		$writeProgress = function($pct) use ($progresskey) {
 			\OC_Cache::set($progresskey, $pct, 300);
