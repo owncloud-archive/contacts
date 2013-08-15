@@ -480,6 +480,10 @@ OC.Contacts = OC.Contacts || {};
 				? $.param(params.value)
 				: encodeURIComponent(params.value);
 		}
+		if(!args) {
+			console.log('No arguments. returning');
+			return false;
+		}
 		console.log('args', args);
 		var self = this;
 		this.setAsSaving(obj, true);
@@ -548,7 +552,7 @@ OC.Contacts = OC.Contacts || {};
 							break;
 						case 'BDAY':
 							// reverse order again.
-							value = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate('dd-mm-yy', value));
+							value = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate(datepickerFormatDate, value));
 							self.data[element][0] = {
 								name: element,
 								value: value,
@@ -796,6 +800,7 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	Contact.prototype.argumentsFor = function(obj) {
+		console.log('Contact.argumentsFor', $(obj));
 		var args = {};
 		var ptype = this.propertyTypeFor(obj);
 		args['name'] = ptype;
@@ -823,7 +828,23 @@ OC.Contacts = OC.Contacts || {};
 					//args['value'].push($(e).val());
 				});
 			} else {
-				args['value'] = $elements.val();
+				var value = $elements.val();
+				switch(args['name']) {
+					case 'BDAY':
+						try {
+							args['value'] = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate(datepickerFormatDate, value));
+						} catch(e) {
+							$(document).trigger(
+								'status.contacts.error',
+								{message:t('contacts', 'Error parsing date: {date}', {date:value})}
+							);
+							return false;
+						}
+						break;
+					default:
+						args['value'] = value;
+						break;
+				}
 			}
 		}
 		args['parameters'] = this.parametersFor(obj);
@@ -1087,7 +1108,7 @@ OC.Contacts = OC.Contacts || {};
 				title: this.getPreferredValue('TITLE', ''),
 				org: this.getPreferredValue('ORG', []).clean('').join(', '), // TODO Add parts if more than one.
 				bday: this.getPreferredValue('BDAY', '').length >= 10
-					? $.datepicker.formatDate('dd-mm-yy',
+					? $.datepicker.formatDate(datepickerFormatDate,
 						$.datepicker.parseDate('yy-mm-dd',
 							this.getPreferredValue('BDAY', '').substring(0, 10)))
 					: '',
@@ -1182,6 +1203,7 @@ OC.Contacts = OC.Contacts || {};
 			if(event.keyCode === 13 && $(this).is('input')) {
 				$(this).trigger('change');
 				// Prevent a second save on blur.
+				this.previousValue = this.defaultValue || '';
 				this.defaultValue = this.value;
 				return false;
 			} else if(event.keyCode === 27) {
@@ -1200,10 +1222,12 @@ OC.Contacts = OC.Contacts || {};
 			self.saveProperty({obj:event.target});
 		});
 
-		this.$fullelem.find('[data-element="bday"]')
-			.find('input').datepicker({
-				dateFormat : 'dd-mm-yy'
+		var $bdayinput = this.$fullelem.find('[data-element="bday"]').find('input');
+		$bdayinput.datepicker({
+				dateFormat : datepickerFormatDate
 		});
+		$bdayinput.attr('placeholder', $.datepicker.formatDate(datepickerFormatDate, new Date()));
+
 		this.$fullelem.find('.favorite').on('click', function () {
 			var state = $(this).hasClass('active');
 			if(!self.data) {
