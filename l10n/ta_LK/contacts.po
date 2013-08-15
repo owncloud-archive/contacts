@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-13 07:09-0400\n"
-"PO-Revision-Date: 2013-08-13 11:09+0000\n"
+"POT-Creation-Date: 2013-08-15 16:57-0400\n"
+"PO-Revision-Date: 2013-08-15 20:57+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Tamil (Sri-Lanka) (http://www.transifex.com/projects/p/owncloud/language/ta_LK/)\n"
 "MIME-Version: 1.0\n"
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Upload of blacklisted file:"
 msgstr ""
 
-#: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
+#: ajax/uploadimport.php:74 lib/controller/importcontroller.php:95
 msgid "Error uploading contacts to storage."
 msgstr "சேமிப்பகத்தில் தொடர்புகளை பதிவேற்றுவதில் வழு"
 
@@ -163,23 +163,23 @@ msgstr "பதிவேற்றல்..."
 msgid "Importing..."
 msgstr ""
 
-#: js/addressbooks.js:295
+#: js/addressbooks.js:291
 msgid "Imported {count} of {total} contacts"
 msgstr ""
 
-#: js/addressbooks.js:317
+#: js/addressbooks.js:313
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr ""
 
-#: js/addressbooks.js:459
+#: js/addressbooks.js:455
 msgid "An address book called {name} already exists"
 msgstr ""
 
-#: js/addressbooks.js:488
+#: js/addressbooks.js:484
 msgid "Failed adding address book: {error}"
 msgstr ""
 
-#: js/addressbooks.js:524
+#: js/addressbooks.js:520
 msgid "Failed loading address books: {error}"
 msgstr ""
 
@@ -207,108 +207,112 @@ msgstr "இலிருந்து அகற்றுக..."
 msgid "Add group..."
 msgstr "குழுவிற்கு சேர்க்க..."
 
-#: js/app.js:459
+#: js/app.js:461
 msgid "Invalid URL: \"{url}\""
 msgstr ""
 
-#: js/app.js:470
+#: js/app.js:472
 msgid "There was an error opening a mail composer."
 msgstr "மின்னஞ்சல் செய்தியாக்குகையை திறப்பதில் வழு."
 
-#: js/app.js:475
+#: js/app.js:477
 msgid "Invalid email: \"{url}\""
 msgstr ""
 
-#: js/app.js:553
+#: js/app.js:555
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr ""
 
-#: js/app.js:566
+#: js/app.js:568
 msgid "Merge failed."
 msgstr ""
 
-#: js/app.js:573
+#: js/app.js:575
 msgid "Merge failed. Error saving contact."
 msgstr ""
 
-#: js/app.js:592
+#: js/app.js:594
 msgid "Select photo"
 msgstr "படத்தை தெரிக"
 
-#: js/app.js:662 js/app.js:1541
+#: js/app.js:664 js/app.js:1543
 msgid "Network or server error. Please inform administrator."
 msgstr "வ​லைய​மைப்பு அல்லது சேவையக வழு. தயவுசெய்து நிர்வாகிக்கு தெரியப்படுத்தவும்."
 
-#: js/app.js:881
+#: js/app.js:883
 msgid "Error adding to group."
 msgstr "குழுவில் சேர்ப்பதில் வழு."
 
-#: js/app.js:910
+#: js/app.js:912
 msgid "Error removing from group."
 msgstr "குழுவிலிருந்து அகற்றுவதிலிருந்து வழு."
 
-#: js/app.js:1070
+#: js/app.js:1072
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1209 js/app.js:1213 templates/contacts.php:184
+#: js/app.js:1211 js/app.js:1215 templates/contacts.php:184
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
+#: js/app.js:1237 js/app.js:1290 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "இரத்து செய்க"
 
-#: js/app.js:1262 templates/contacts.php:165
+#: js/app.js:1264 templates/contacts.php:165
 msgid "Add group"
 msgstr "குழுவில் சேர்க்க"
 
-#: js/app.js:1266
+#: js/app.js:1268
 msgid "OK"
 msgstr "சரி "
 
-#: js/app.js:1365
+#: js/app.js:1367
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1407
+#: js/app.js:1409
 msgid "No files selected for upload."
 msgstr "பதிவேற்றுவதற்கு கோப்புகள் தெரிவுசெய்யப்படவில்லை"
 
-#: js/app.js:1417
+#: js/app.js:1419
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "நீங்கள் பதிவேற்ற முயற்சிக்கும் கோப்பானது இந்த சேவையகத்தில் பதிவேற்றக்கூடிய கோப்பின் ஆகக்கூடிய அளவைவிட கூடியது. "
 
-#: js/app.js:1504
+#: js/app.js:1506
 msgid "Edit profile picture"
 msgstr "விபரக்கோவை படத்தை தொகுக்க "
 
-#: js/app.js:1522
+#: js/app.js:1524
 msgid "Error loading profile picture."
 msgstr "விபரக்கோவை படத்தை ஏற்றுவதில் வழு"
 
-#: js/contacts.js:587
+#: js/contacts.js:591
 msgid "Is this correct?"
 msgstr "இது சரியா?"
 
-#: js/contacts.js:1015
+#: js/contacts.js:839
+msgid "Error parsing date: {date}"
+msgstr ""
+
+#: js/contacts.js:1036
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2079
+#: js/contacts.js:2106
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "சில தொடர்புகள் அழிப்பதற்காக அடையாளப்படுத்தப்பட்டுள்ளது, ஆனால் இன்னும் அழிக்கவில்லை. தயவுசெய்து அது அழியும் வரை காத்திருக்கவும்."
 
-#: js/contacts.js:2090
+#: js/contacts.js:2117
 msgid "Click to undo deletion of {num} contacts"
 msgstr "தொடர்புகள் நீக்கியதை முன் செயல் நீக்கம் {num} செய்வதற்கு சொடக்குக"
 
-#: js/contacts.js:2105
+#: js/contacts.js:2132
 msgid "Cancelled deletion of {num}"
 msgstr "{num} ஐ நீக்குவதை இரத்துசெய்க"
 
@@ -577,29 +581,29 @@ msgstr ""
 msgid "Error adding group."
 msgstr "குழுவை சேர்ப்பதில் வழு"
 
-#: lib/controller/groupcontroller.php:126
+#: lib/controller/groupcontroller.php:135
 msgid "No group name to rename from given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:130
+#: lib/controller/groupcontroller.php:139
 msgid "No group name to rename to given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:136
+#: lib/controller/groupcontroller.php:145
 msgid "Error renaming group."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:177
-#: lib/controller/groupcontroller.php:228
+#: lib/controller/groupcontroller.php:186
+#: lib/controller/groupcontroller.php:237
 msgid "Group ID missing from request."
 msgstr "வேண்டுகோளில் குழு ID விடுபட்டுள்ளது."
 
-#: lib/controller/groupcontroller.php:182
+#: lib/controller/groupcontroller.php:191
 msgid "Group name missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:187
-#: lib/controller/groupcontroller.php:233
+#: lib/controller/groupcontroller.php:196
+#: lib/controller/groupcontroller.php:242
 msgid "Contact ID missing from request."
 msgstr "வேண்டுகோளில் தொடர்பு ID விடுபட்டுள்ளது."
 
@@ -607,24 +611,24 @@ msgstr "வேண்டுகோளில் தொடர்பு ID விட�
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:116
+#: lib/controller/importcontroller.php:120
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:124
+#: lib/controller/importcontroller.php:128
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:129
-#: lib/controller/importcontroller.php:236
+#: lib/controller/importcontroller.php:133
+#: lib/controller/importcontroller.php:250
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:135
+#: lib/controller/importcontroller.php:139
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:181
 msgid "No contacts found in: "
 msgstr ""
 

@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-13 07:09-0400\n"
-"PO-Revision-Date: 2013-08-13 11:09+0000\n"
+"POT-Creation-Date: 2013-08-15 16:57-0400\n"
+"PO-Revision-Date: 2013-08-15 20:57+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -140,7 +140,7 @@ msgstr "ストレージに十分な空き容量がありません"
 msgid "Upload of blacklisted file:"
 msgstr "ブラックリストファイルのアップロード:"
 
-#: ajax/uploadimport.php:74 lib/controller/importcontroller.php:91
+#: ajax/uploadimport.php:74 lib/controller/importcontroller.php:95
 msgid "Error uploading contacts to storage."
 msgstr "ストレージへの連絡先のアップロードエラー。"
 
@@ -168,23 +168,23 @@ msgstr "アップロード中..."
 msgid "Importing..."
 msgstr "インポート中..."
 
-#: js/addressbooks.js:295
+#: js/addressbooks.js:291
 msgid "Imported {count} of {total} contacts"
 msgstr "{count} 件中 {total} 件の連絡先をインポート"
 
-#: js/addressbooks.js:317
+#: js/addressbooks.js:313
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "{imported} 件の連絡先をインポート。{failed} 件失敗。"
 
-#: js/addressbooks.js:459
+#: js/addressbooks.js:455
 msgid "An address book called {name} already exists"
 msgstr "{name} という名前のアドレス帳はすでに存在します"
 
-#: js/addressbooks.js:488
+#: js/addressbooks.js:484
 msgid "Failed adding address book: {error}"
 msgstr "アドレス帳の追加に失敗: {error}"
 
-#: js/addressbooks.js:524
+#: js/addressbooks.js:520
 msgid "Failed loading address books: {error}"
 msgstr "アドレス帳の読み込みに失敗: {error}"
 
@@ -212,108 +212,112 @@ msgstr "削除..."
 msgid "Add group..."
 msgstr "グループを追加..."
 
-#: js/app.js:459
+#: js/app.js:461
 msgid "Invalid URL: \"{url}\""
 msgstr "無効なURL: \"{url}\""
 
-#: js/app.js:470
+#: js/app.js:472
 msgid "There was an error opening a mail composer."
 msgstr "メールコンポーザの起動エラーが発生しました。"
 
-#: js/app.js:475
+#: js/app.js:477
 msgid "Invalid email: \"{url}\""
 msgstr "無効なメールアドレス: \"{url}\""
 
-#: js/app.js:553
+#: js/app.js:555
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "マージに失敗しました。 連絡先が見つかりません: {id}"
 
-#: js/app.js:566
+#: js/app.js:568
 msgid "Merge failed."
 msgstr "マージに失敗しました。"
 
-#: js/app.js:573
+#: js/app.js:575
 msgid "Merge failed. Error saving contact."
 msgstr "マージに失敗しました。連絡先の保存エラー。"
 
-#: js/app.js:592
+#: js/app.js:594
 msgid "Select photo"
 msgstr "写真を選択"
 
-#: js/app.js:662 js/app.js:1541
+#: js/app.js:664 js/app.js:1543
 msgid "Network or server error. Please inform administrator."
 msgstr "ネットワークもしくはサーバエラーです。管理者に連絡してください。"
 
-#: js/app.js:881
+#: js/app.js:883
 msgid "Error adding to group."
 msgstr "グループに追加エラー。"
 
-#: js/app.js:910
+#: js/app.js:912
 msgid "Error removing from group."
 msgstr "グループから削除エラー。"
 
-#: js/app.js:1070
+#: js/app.js:1072
 msgid "Error setting {name} as favorite."
 msgstr "{name} をお気に入りにする際にエラーが発生しました。"
 
-#: js/app.js:1209 js/app.js:1213 templates/contacts.php:184
+#: js/app.js:1211 js/app.js:1215 templates/contacts.php:184
 msgid "Merge contacts"
 msgstr "連絡先をマージ"
 
-#: js/app.js:1235 js/app.js:1288 js/settings.js:120 templates/contacts.php:323
+#: js/app.js:1237 js/app.js:1290 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: js/app.js:1262 templates/contacts.php:165
+#: js/app.js:1264 templates/contacts.php:165
 msgid "Add group"
 msgstr "グループを追加"
 
-#: js/app.js:1266
+#: js/app.js:1268
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1365
+#: js/app.js:1367
 msgid "Could not find contact: {id}"
 msgstr "連絡先が見つかりませんでした: {id}"
 
-#: js/app.js:1407
+#: js/app.js:1409
 msgid "No files selected for upload."
 msgstr "アップロードするファイルが選択されていません。"
 
-#: js/app.js:1417
+#: js/app.js:1419
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "アップロードしようとしているファイルは、このサーバの最大ファイルアップロードサイズを超えています。"
 
-#: js/app.js:1504
+#: js/app.js:1506
 msgid "Edit profile picture"
 msgstr "プロフィール写真を編集"
 
-#: js/app.js:1522
+#: js/app.js:1524
 msgid "Error loading profile picture."
 msgstr "プロファイルの画像の読み込みエラー"
 
-#: js/contacts.js:587
+#: js/contacts.js:591
 msgid "Is this correct?"
 msgstr "これは正しいですか？"
 
-#: js/contacts.js:1015
+#: js/contacts.js:839
+msgid "Error parsing date: {date}"
+msgstr ""
+
+#: js/contacts.js:1036
 msgid "# groups"
 msgstr "グループ数"
 
-#: js/contacts.js:2079
+#: js/contacts.js:2106
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "いくつかの連絡先が削除対象としてマークされていますが、まだ削除されていません。削除するまでお待ちください。"
 
-#: js/contacts.js:2090
+#: js/contacts.js:2117
 msgid "Click to undo deletion of {num} contacts"
 msgstr "{num} 個の連絡先の削除を元に戻す"
 
-#: js/contacts.js:2105
+#: js/contacts.js:2132
 msgid "Cancelled deletion of {num}"
 msgstr "{num} 個の削除をキャンセルしました"
 
@@ -506,31 +510,31 @@ msgstr "不明なIM:"
 
 #: lib/controller/addressbookcontroller.php:122
 msgid "Error creating address book"
-msgstr ""
+msgstr "アドレス帳の作成エラー"
 
 #: lib/controller/addressbookcontroller.php:144
 msgid "Error updating address book"
-msgstr ""
+msgstr "アドレス帳の更新エラー"
 
 #: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
-msgstr ""
+msgstr "アドレス帳の削除エラー"
 
 #: lib/controller/addressbookcontroller.php:188
 msgid "Error creating contact."
-msgstr ""
+msgstr "連絡先の作成エラー。"
 
 #: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting contact."
-msgstr ""
+msgstr "連絡先の削除エラー。"
 
 #: lib/controller/addressbookcontroller.php:245
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "連絡先の取得エラー"
 
 #: lib/controller/addressbookcontroller.php:256
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "他のアドレス帳からの連絡先の削除エラー"
 
 #: lib/controller/contactcontroller.php:42
 #: lib/controller/contactcontroller.php:68
@@ -543,12 +547,12 @@ msgstr "連絡先が見つかりませんでした。"
 
 #: lib/controller/contactcontroller.php:97
 msgid "Error merging into contact."
-msgstr ""
+msgstr "連絡先へのマージエラー。"
 
 #: lib/controller/contactcontroller.php:101
 #: lib/controller/contactcontroller.php:209
 msgid "Error saving contact to backend."
-msgstr ""
+msgstr "バックエンドへの連絡先の保存エラー"
 
 #: lib/controller/contactcontroller.php:191
 #: lib/controller/contactcontroller.php:254
@@ -568,11 +572,11 @@ msgstr "vCardの情報に誤りがあります。ページをリロードして�
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
-msgstr ""
+msgstr "プロパティの設定エラー"
 
 #: lib/controller/contactcontroller.php:284
 msgid "Error saving property to backend"
-msgstr ""
+msgstr "バックエンドへのプロパティの保存エラー"
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
@@ -582,29 +586,29 @@ msgstr "グループ名が指定されていません。"
 msgid "Error adding group."
 msgstr "グループの追加エラー。"
 
-#: lib/controller/groupcontroller.php:126
+#: lib/controller/groupcontroller.php:135
 msgid "No group name to rename from given."
 msgstr "名前変更元のグループ名が指定されていません。"
 
-#: lib/controller/groupcontroller.php:130
+#: lib/controller/groupcontroller.php:139
 msgid "No group name to rename to given."
 msgstr "名前変更先のグループ名が指定されていません。"
 
-#: lib/controller/groupcontroller.php:136
+#: lib/controller/groupcontroller.php:145
 msgid "Error renaming group."
-msgstr ""
+msgstr "グループの名前変更エラー"
 
-#: lib/controller/groupcontroller.php:177
-#: lib/controller/groupcontroller.php:228
+#: lib/controller/groupcontroller.php:186
+#: lib/controller/groupcontroller.php:237
 msgid "Group ID missing from request."
 msgstr "リクエストにはグループIDがありません。"
 
-#: lib/controller/groupcontroller.php:182
+#: lib/controller/groupcontroller.php:191
 msgid "Group name missing from request."
 msgstr "リクエストにはグループ名が不足しています。"
 
-#: lib/controller/groupcontroller.php:187
-#: lib/controller/groupcontroller.php:233
+#: lib/controller/groupcontroller.php:196
+#: lib/controller/groupcontroller.php:242
 msgid "Contact ID missing from request."
 msgstr "リクエストには連絡先IDがありません。"
 
@@ -612,24 +616,24 @@ msgstr "リクエストには連絡先IDがありません。"
 msgid "Attempt to upload blacklisted file:"
 msgstr "ブラックリストファイルのアップロードの試行:"
 
-#: lib/controller/importcontroller.php:116
+#: lib/controller/importcontroller.php:120
 msgid "You do not have permissions to import into this address book."
 msgstr "このアドレス帳にインポートする権限がありません"
 
-#: lib/controller/importcontroller.php:124
+#: lib/controller/importcontroller.php:128
 msgid "File name missing from request."
 msgstr "リクエストにはファイル名が不足しています。"
 
-#: lib/controller/importcontroller.php:129
-#: lib/controller/importcontroller.php:236
+#: lib/controller/importcontroller.php:133
+#: lib/controller/importcontroller.php:250
 msgid "Progress key missing from request."
 msgstr "リクエストにはプログレスキーが不足しています。"
 
-#: lib/controller/importcontroller.php:135
+#: lib/controller/importcontroller.php:139
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "ブラックリストファイルへのアクセスの試み:"
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:181
 msgid "No contacts found in: "
 msgstr "連絡先が見つかりません:"
 
@@ -898,11 +902,11 @@ msgstr "グループ名の変更"
 
 #: templates/contacts.php:185
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "どの連絡先のデータをマージしますか？"
 
 #: templates/contacts.php:193
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "マージが成功した後に他を削除しますか？"
 
 #: templates/contacts.php:205
 msgid "Compose mail"
@@ -938,11 +942,11 @@ msgstr "姓"
 
 #: templates/contacts.php:259
 msgid "Select groups"
-msgstr ""
+msgstr "グループを選択"
 
 #: templates/contacts.php:262
 msgid "Select address book"
-msgstr ""
+msgstr "アドレス帳を選択"
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
@@ -966,7 +970,7 @@ msgstr "所属"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
-msgstr ""
+msgstr "組織を入力"
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
@@ -1084,7 +1088,7 @@ msgstr "都道府県"
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr ""
+msgstr "州／県"
 
 #: templates/contacts.php:428
 msgid "Your country"
