@@ -8,10 +8,4 @@
 		strict="true"
 		verbose="true"
 		 >
-	<testsuites>
-		<testsuite name="Contacts App">
-			<directory suffix=".php">tests</directory>
-			<exclude>tests/data</exclude>
-		</testsuite>
-	</testsuites>
 </phpunit>
