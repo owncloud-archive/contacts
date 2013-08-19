@@ -1,8 +1,9 @@
 language: php
 php:
   - 5.3
-  - 5.4
-  - 5.5
+
+#  - 5.4
+#  - 5.5
 
 branches:
   except:
@@ -13,8 +14,9 @@ script:
 
 env:
   - DB=mysql
-  - DB=pgsql
-  - DB=sqlite
+
+#  - DB=pgsql
+#  - DB=sqlite
 
 before_script:
   - composer install

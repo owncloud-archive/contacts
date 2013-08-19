@@ -41,7 +41,7 @@ package_name=$(build_directory)$(app_name)
 test: javascript-tests unit-tests integration-tests acceptance-tests
 
 unit-tests:
-	cd tests; phpunit *.php
+	cd tests && phpunit *.php
 
 #tests/vobject.php
 
