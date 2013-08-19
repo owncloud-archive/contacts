@@ -7,6 +7,11 @@ php:
 script:
   - phpunit --configuration tests/phpunit.xml
 
+env:
+  - DB=mysql
+  - DB=pgsql
+  - DB=sqlite
+
 before_script:
   - composer install
   - ./tests/install_dependencies.sh
