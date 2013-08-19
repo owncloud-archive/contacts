@@ -1,11 +1,10 @@
-<phpunit bootstrap="../../core/tests/bootstrap.php"
-		convertErrorsToExceptions="true"
-		convertNoticesToExceptions="true"
-		convertWarningsToExceptions="true"
-		processIsolation="false"
-		stopOnFailure="false"
-		syntaxCheck="true"
-		strict="true"
-		verbose="true"
-		 >
+<phpunit
+	bootstrap="../../core/tests/bootstrap.php"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	strict="true"
+	verbose="true"
+	colors="true"
+>
 </phpunit>
