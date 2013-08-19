@@ -1,5 +1,10 @@
 #The Contacts app
 
+|travis-ci|_
+
+.. |travis-ci| image:: https://travis-ci.org/owncloud/contacts.png
+.. _travis-ci: https://travis-ci.org/owncloud/contacts
+
 
 ##Maintainer:
 - [Thomas Tanghus](https://github.com/tanghus)
