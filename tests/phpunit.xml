@@ -1,13 +1,17 @@
 <phpunit bootstrap="../../core/tests/bootstrap.php"
+		convertErrorsToExceptions="true"
+		convertNoticesToExceptions="true"
+		convertWarningsToExceptions="true"
+		processIsolation="false"
+		stopOnFailure="false"
+		syntaxCheck="true"
 		strict="true"
 		verbose="true"
 		 >
 	<testsuites>
-		<testsuite name="VObject mods">
-		<file>./tests/vobject.php</file>
-		</testsuite>
 		<testsuite name="Contacts App">
-		<file>./tests/contacts.php</file>
+			<directory suffix=".php">tests</directory>
+			<exclude>tests/data</exclude>
 		</testsuite>
 	</testsuites>
 </phpunit>
