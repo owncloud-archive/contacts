@@ -4,8 +4,12 @@ php:
   - 5.4
   - 5.5
 
+branches:
+  except:
+    - share
+
 script:
-  - phpunit --configuration tests/phpunit.xml
+  - make unit-tests
 
 env:
   - DB=mysql
