@@ -1,10 +1,13 @@
-<phpunit bootstrap="../../core/tests/bootstrap.php">
-  <testsuites>
-    <testsuite name="VObject mods">
-      <file>./tests/vobject.php</file>
-    </testsuite>
-    <testsuite name="Contacts App">
-      <file>./tests/contacts.php</file>
-    </testsuite>
-  </testsuites>
+<phpunit bootstrap="../../core/tests/bootstrap.php"
+		strict="true"
+		verbose="true"
+		 >
+	<testsuites>
+		<testsuite name="VObject mods">
+		<file>./tests/vobject.php</file>
+		</testsuite>
+		<testsuite name="Contacts App">
+		<file>./tests/contacts.php</file>
+		</testsuite>
+	</testsuites>
 </phpunit>
