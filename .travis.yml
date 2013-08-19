@@ -10,7 +10,8 @@ branches:
     - share
 
 script:
-  - make unit-tests
+  - cd tests
+  - phpunit
 
 env:
   - DB=mysql
