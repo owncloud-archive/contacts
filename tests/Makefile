@@ -43,7 +43,7 @@ test: javascript-tests unit-tests integration-tests acceptance-tests
 unit-tests:
 	ls
 	phpunit --version
-	phpunit --no-configuration *.php
+	phpunit *.php
 
 #tests/vobject.php
 
