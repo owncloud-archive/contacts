@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-15 16:57-0400\n"
-"PO-Revision-Date: 2013-08-15 20:57+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-19 13:05-0400\n"
+"PO-Revision-Date: 2013-08-17 06:10+0000\n"
+"Last-Translator: André Koot <meneer@tken.net>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -306,25 +306,25 @@ msgstr "Fout profiel plaatje kan niet worden geladen."
 msgid "Is this correct?"
 msgstr "Is dit correct?"
 
-#: js/contacts.js:839
+#: js/contacts.js:849
 msgid "Error parsing date: {date}"
-msgstr ""
+msgstr "Fout bij lezen datum: {date}"
 
-#: js/contacts.js:1036
+#: js/contacts.js:1046
 msgid "# groups"
 msgstr "# groepen"
 
-#: js/contacts.js:2106
+#: js/contacts.js:2116
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd."
 
-#: js/contacts.js:2117
+#: js/contacts.js:2127
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik om het verwijderen van {num} contactpersonen ongedaan te maken."
 
-#: js/contacts.js:2132
+#: js/contacts.js:2142
 msgid "Cancelled deletion of {num}"
 msgstr "Verwijderen geannuleerd van {num}"
 

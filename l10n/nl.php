@@ -65,6 +65,7 @@
 "Edit profile picture" => "Bewerk profielafbeelding",
 "Error loading profile picture." => "Fout profiel plaatje kan niet worden geladen.",
 "Is this correct?" => "Is dit correct?",
+"Error parsing date: {date}" => "Fout bij lezen datum: {date}",
 "# groups" => "# groepen",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd.",
 "Click to undo deletion of {num} contacts" => "Klik om het verwijderen van {num} contactpersonen ongedaan te maken.",

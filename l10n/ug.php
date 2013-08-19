@@ -27,6 +27,7 @@
 "Share" => "ھەمبەھىر",
 "Export" => "چىقار",
 "more info" => "تېخىمۇ كۆپ ئۇچۇرلار",
+"Primary address (Kontact et al)" => "ئاساسىي ئادرېس (ئالاقە ئۇچۇرى قاتارلىق)",
 "iOS/OS X" => "iOS/OS X",
 "Name" => "ئاتى",
 "Description" => "چۈشەندۈرۈش"

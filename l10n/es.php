@@ -65,6 +65,7 @@
 "Edit profile picture" => "Editar imagen de perfil.",
 "Error loading profile picture." => "Error cargando la imagen del perfil.",
 "Is this correct?" => "¿Es esto correcto?",
+"Error parsing date: {date}" => "Error al analizar la fecha: {date}",
 "# groups" => "# grupos",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Algunos contactos están marcados para su eliminación, pero no eliminados todavía. Por favor, espere a que sean eliminados.",
 "Click to undo deletion of {num} contacts" => "Pulse para deshacer la eliminación de {num} contactos",

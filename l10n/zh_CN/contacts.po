@@ -13,6 +13,7 @@
 # marguerite su <i@marguerite.su>, 2013
 # Phoenix Nemo <mrphoenixlzx@gmail.com>, 2012
 # leonfeng <rainofchaos@gmail.com>, 2012
+# waterone <suiy02@gmail.com>, 2013
 # waterone <suiy02@gmail.com>, 2012
 # tonnie <supertonnie@hotmail.com>, 2012
 # modokwang <modokwang@gmail.com>, 2013
@@ -22,9 +23,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-15 16:57-0400\n"
-"PO-Revision-Date: 2013-08-15 20:57+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-19 13:05-0400\n"
+"PO-Revision-Date: 2013-08-16 16:40+0000\n"
+"Last-Translator: waterone <suiy02@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +51,7 @@ msgstr "载入的照片无效。"
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr ""
+msgstr "未提交联系人信息。"
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
@@ -90,15 +91,15 @@ msgstr "查找图像时出错: "
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
-msgstr ""
+msgstr "用于此项的键未设置:"
 
 #: ajax/setpreference.php:41
 msgid "Value is not set for: "
-msgstr ""
+msgstr "用于此项的值未设置:"
 
 #: ajax/setpreference.php:53 lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr ""
+msgstr "无法设定偏好："
 
 #: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
 #: lib/controller/importcontroller.php:39
@@ -120,7 +121,7 @@ msgstr "上传的文件长度超出了 php.ini 中 upload_max_filesize 的限制
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "上传的文件长度超出了 HTML 表单中 MAX_FILE_SIZE 的限制"
+msgstr "上传的文件超过MAX_FILE_SIZE的指令是在HTML表单中中指定的"
 
 #: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
 #: lib/controller/importcontroller.php:51
@@ -147,7 +148,7 @@ msgstr "没有足够的存储空间"
 
 #: ajax/uploadimport.php:69
 msgid "Upload of blacklisted file:"
-msgstr ""
+msgstr "上传黑名单文件:"
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:95
 msgid "Error uploading contacts to storage."
@@ -179,71 +180,71 @@ msgstr "导入中"
 
 #: js/addressbooks.js:291
 msgid "Imported {count} of {total} contacts"
-msgstr ""
+msgstr "已从{total}个联系人导入{count}个"
 
 #: js/addressbooks.js:313
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "已导入{imported}联系人。{failed}失败。"
 
 #: js/addressbooks.js:455
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "名为{name}的地址薄已存在"
 
 #: js/addressbooks.js:484
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "添加地址薄失败：{error}"
 
 #: js/addressbooks.js:520
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "加载地址薄失败：{error}"
 
 #: js/app.js:213
 msgid "Indexing contacts"
-msgstr ""
+msgstr "联系人索引中"
 
 #: js/app.js:223
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "加载地址薄时遇到无法恢复的错误：{msg}"
 
 #: js/app.js:224
 msgid "Error."
-msgstr ""
+msgstr "错误"
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr ""
+msgstr "添加到"
 
 #: js/app.js:321 js/app.js:333
 msgid "Remove from..."
-msgstr ""
+msgstr "从…删除"
 
 #: js/app.js:338
 msgid "Add group..."
-msgstr ""
+msgstr "添加分组…"
 
 #: js/app.js:461
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "无效URL:\"{url}\""
 
 #: js/app.js:472
 msgid "There was an error opening a mail composer."
-msgstr ""
+msgstr "打开邮件撰写器时出错。"
 
 #: js/app.js:477
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "无效的电子邮件: \"{url}\""
 
 #: js/app.js:555
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "合并失败。无法找到联系人：{id}"
 
 #: js/app.js:568
 msgid "Merge failed."
-msgstr ""
+msgstr "合并失败"
 
 #: js/app.js:575
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "合并失败。保存联系人出错。"
 
 #: js/app.js:594
 msgid "Select photo"
@@ -251,23 +252,23 @@ msgstr "选择图片"
 
 #: js/app.js:664 js/app.js:1543
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "网络或服务器错误。请通知管理员。"
 
 #: js/app.js:883
 msgid "Error adding to group."
-msgstr ""
+msgstr "添加到组时出错。"
 
 #: js/app.js:912
 msgid "Error removing from group."
-msgstr ""
+msgstr "从组删除时出错。"
 
 #: js/app.js:1072
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "无法将{name}设为喜欢。"
 
 #: js/app.js:1211 js/app.js:1215 templates/contacts.php:184
 msgid "Merge contacts"
-msgstr ""
+msgstr "合并联系人"
 
 #: js/app.js:1237 js/app.js:1290 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
@@ -276,7 +277,7 @@ msgstr "取消"
 
 #: js/app.js:1264 templates/contacts.php:165
 msgid "Add group"
-msgstr ""
+msgstr "添加分组"
 
 #: js/app.js:1268
 msgid "OK"
@@ -284,7 +285,7 @@ msgstr "OK"
 
 #: js/app.js:1367
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "不能找到联系人: {id}"
 
 #: js/app.js:1409
 msgid "No files selected for upload."
@@ -298,7 +299,7 @@ msgstr "您试图上传的文件超出了该服务器的最大文件限制"
 
 #: js/app.js:1506
 msgid "Edit profile picture"
-msgstr ""
+msgstr "编辑配置图片"
 
 #: js/app.js:1524
 msgid "Error loading profile picture."
@@ -306,29 +307,29 @@ msgstr "载入档案图片时出错"
 
 #: js/contacts.js:591
 msgid "Is this correct?"
-msgstr ""
+msgstr "这正确吗？"
 
-#: js/contacts.js:839
+#: js/contacts.js:849
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1036
+#: js/contacts.js:1046
 msgid "# groups"
-msgstr ""
+msgstr "#群组"
 
-#: js/contacts.js:2106
+#: js/contacts.js:2116
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一些联系人已被标注为删除，但是尚未完成，请稍候。"
 
-#: js/contacts.js:2117
+#: js/contacts.js:2127
 msgid "Click to undo deletion of {num} contacts"
-msgstr ""
+msgstr "点击以撤销删除这{num}个联系人"
 
-#: js/contacts.js:2132
+#: js/contacts.js:2142
 msgid "Cancelled deletion of {num}"
-msgstr ""
+msgstr "已取消的删除{num}"
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
@@ -340,7 +341,7 @@ msgstr ""
 
 #: js/groups.js:275
 msgid "Contacts are already in this group."
-msgstr ""
+msgstr "联系人都已经在这个组中。"
 
 #: js/groups.js:338
 msgid "Couldn't get contact list."
@@ -475,11 +476,11 @@ msgstr ""
 
 #: lib/addressbook.php:258
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "此地址簿的后端不支持更新"
 
 #: lib/addressbook.php:284
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "你没有权限更新地址簿"
 
 #: lib/addressbook.php:295
 msgid "You don't have permissions to delete the address book."
@@ -495,11 +496,11 @@ msgstr ""
 
 #: lib/contact.php:259
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "你没有权限更新此联系人"
 
 #: lib/contact.php:270
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "此地址簿的后端不支持更新它"
 
 #: lib/contact.php:288
 msgid "This backend not support adding contacts"
@@ -511,7 +512,7 @@ msgstr ""
 
 #: lib/contact.php:459
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "这些缺少IM参数："
 
 #: lib/contact.php:467
 msgid "Unknown IM: "
@@ -780,11 +781,11 @@ msgstr ""
 
 #: templates/contacts.php:10
 msgid "Group name"
-msgstr ""
+msgstr "组名称"
 
 #: templates/contacts.php:10
 msgid "New Group"
-msgstr ""
+msgstr "新建分组"
 
 #: templates/contacts.php:19
 msgid "Address books"
@@ -833,7 +834,7 @@ msgstr "组"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
-msgstr ""
+msgstr "收藏"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
@@ -939,7 +940,7 @@ msgstr "从 ownCloud 选择照片"
 
 #: templates/contacts.php:241 templates/contacts.php:242
 msgid "First name"
-msgstr ""
+msgstr "名"
 
 #: templates/contacts.php:246 templates/contacts.php:247
 msgid "Additional names"
@@ -947,7 +948,7 @@ msgstr "其他名称"
 
 #: templates/contacts.php:251 templates/contacts.php:252
 msgid "Last name"
-msgstr ""
+msgstr "姓"
 
 #: templates/contacts.php:259
 msgid "Select groups"

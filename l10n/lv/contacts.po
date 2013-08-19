@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# jeanmarcgailis <jeanmarc.gailis@gmail.com>, 2013
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-15 16:57-0400\n"
-"PO-Revision-Date: 2013-08-15 20:57+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-19 13:05-0400\n"
+"PO-Revision-Date: 2013-08-19 13:40+0000\n"
+"Last-Translator: jeanmarcgailis <jeanmarc.gailis@gmail.com>\n"
 "Language-Team: Latvian (http://www.transifex.com/projects/p/owncloud/language/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,51 +21,51 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr ""
+msgstr "Kļūda, saņemot kontakta objektu."
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr ""
+msgstr "Kļūda, nolasot kontakta fotogrāfiju."
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr ""
+msgstr "Kļūda, saglabājot pagaidu datni."
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr ""
+msgstr "Ielādeta fotogrāfija nav derīga."
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
-msgstr ""
+msgstr "Netika iesniegts kontakta informacija. "
 
 #: ajax/oc_photo.php:32
 msgid "No photo path was submitted."
-msgstr ""
+msgstr "Nav iesniegts fotogrāfijas ceļš."
 
 #: ajax/oc_photo.php:39
 msgid "File doesn't exist:"
-msgstr ""
+msgstr "Datne neeksistē:"
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr ""
+msgstr "Kļūda, ielādējot attēlu."
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "Kļūda, saņemot PHOTO īpašību."
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
 msgid "Error saving contact."
-msgstr ""
+msgstr "Kļūda, saglabājot kontaktu."
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
-msgstr ""
+msgstr "Kļūda, mainot attēla izmēru"
 
 #: ajax/savecrop.php:129
 msgid "Error cropping image"
-msgstr ""
+msgstr "Kļūda, apcērtot attēlu"
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
@@ -294,25 +295,25 @@ msgstr ""
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:839
+#: js/contacts.js:849
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1036
+#: js/contacts.js:1046
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:2106
+#: js/contacts.js:2116
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2117
+#: js/contacts.js:2127
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2132
+#: js/contacts.js:2142
 msgid "Cancelled deletion of {num}"
 msgstr ""
 

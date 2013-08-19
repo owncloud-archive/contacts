@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-15 16:57-0400\n"
-"PO-Revision-Date: 2013-08-15 20:57+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-19 13:05-0400\n"
+"PO-Revision-Date: 2013-08-18 15:20+0000\n"
+"Last-Translator: medialabs\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -306,25 +306,25 @@ msgstr "Fel vid hämtning av profilbild."
 msgid "Is this correct?"
 msgstr "Är detta korrekt?"
 
-#: js/contacts.js:839
+#: js/contacts.js:849
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1036
+#: js/contacts.js:1046
 msgid "# groups"
 msgstr "# grupper"
 
-#: js/contacts.js:2106
+#: js/contacts.js:2116
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Vissa kontakter är markerade för radering, men är inte raderade än. Vänta tills dom är raderade."
 
-#: js/contacts.js:2117
+#: js/contacts.js:2127
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klicka för att ångra radering av {num} kontakter"
 
-#: js/contacts.js:2132
+#: js/contacts.js:2142
 msgid "Cancelled deletion of {num}"
 msgstr "Avbruten radering av {num}"
 
@@ -550,11 +550,11 @@ msgstr ""
 #: lib/controller/contactcontroller.php:187
 #: lib/controller/contactcontroller.php:250
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "Kunde inte hitta kontakt."
 
 #: lib/controller/contactcontroller.php:97
 msgid "Error merging into contact."
-msgstr ""
+msgstr "Fel vid sammanslagning till en kontakt"
 
 #: lib/controller/contactcontroller.php:101
 #: lib/controller/contactcontroller.php:209
@@ -587,7 +587,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
-msgstr ""
+msgstr "Inget gruppnamn angivet."
 
 #: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
@@ -603,7 +603,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:145
 msgid "Error renaming group."
-msgstr ""
+msgstr "Fel vid omdöpning av grupp."
 
 #: lib/controller/groupcontroller.php:186
 #: lib/controller/groupcontroller.php:237
@@ -642,15 +642,15 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:181
 msgid "No contacts found in: "
-msgstr ""
+msgstr "Hittade inga kontakter i:"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
-msgstr ""
+msgstr "Ingen nyckel angavs."
 
 #: lib/controller/settingscontroller.php:40
 msgid "No value is given."
-msgstr ""
+msgstr "Inget värde angavs."
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
@@ -676,7 +676,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
-msgstr ""
+msgstr "Internetsamtal"
 
 #: lib/utils/properties.php:76
 msgid "AIM"
@@ -778,7 +778,7 @@ msgstr "Ny kontakt"
 
 #: templates/contacts.php:10
 msgid "Group name"
-msgstr ""
+msgstr "Gruppnamn"
 
 #: templates/contacts.php:10
 msgid "New Group"
@@ -786,16 +786,16 @@ msgstr "Ny grupp"
 
 #: templates/contacts.php:19
 msgid "Address books"
-msgstr ""
+msgstr "Adressböcker"
 
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr ""
+msgstr "Visningsnamn"
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
-msgstr ""
+msgstr "Lägg till adressbok"
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
@@ -803,11 +803,11 @@ msgstr "Importera"
 
 #: templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "Importera till..."
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "Välj fil..."
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
@@ -815,15 +815,15 @@ msgstr "(Av-)markera alla"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr ""
+msgstr "Sorteringsordning"
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr ""
+msgstr "För- Efternamn"
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "Efter-, Förnamn"
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
@@ -835,7 +835,7 @@ msgstr "Favorit"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
-msgstr ""
+msgstr "Slå ihop valda"
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
@@ -905,11 +905,11 @@ msgstr "Radera grupp"
 
 #: templates/contacts.php:177
 msgid "Rename group"
-msgstr ""
+msgstr "Döp om grupp"
 
 #: templates/contacts.php:185
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "Vilken kontakt ska informationen slås ihop med?"
 
 #: templates/contacts.php:193
 msgid "Delete the other(s) after successful merge?"
@@ -949,11 +949,11 @@ msgstr "Efternamn"
 
 #: templates/contacts.php:259
 msgid "Select groups"
-msgstr ""
+msgstr "Välj grupper"
 
 #: templates/contacts.php:262
 msgid "Select address book"
-msgstr ""
+msgstr "Välj adressbok"
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
@@ -969,7 +969,7 @@ msgstr "Rubrik"
 
 #: templates/contacts.php:276
 msgid "Enter title"
-msgstr ""
+msgstr "Ange titel"
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
@@ -977,7 +977,7 @@ msgstr "Organisation"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
-msgstr ""
+msgstr "Ange organisation"
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
@@ -989,7 +989,7 @@ msgstr "Noteringar här..."
 
 #: templates/contacts.php:325
 msgid "Export as VCF"
-msgstr ""
+msgstr "Exportera som VCF"
 
 #: templates/contacts.php:332
 msgid "Phone"
@@ -1095,7 +1095,7 @@ msgstr "En region"
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr ""
+msgstr "Stat eller provins"
 
 #: templates/contacts.php:428
 msgid "Your country"
@@ -1123,7 +1123,7 @@ msgstr "Exportera"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
-msgstr ""
+msgstr "CardDAV-länk"
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
