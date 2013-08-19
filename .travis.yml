@@ -11,7 +11,7 @@ install:
   phpunit
 
 script:
-  which phpunit
+  whereis phpunit
   phpunit
 #before_install:
 #  - cd ..; git clone https://github.com/owncloud/appframework; cd contacts
