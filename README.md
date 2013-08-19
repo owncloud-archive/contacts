@@ -1,9 +1,11 @@
 #The Contacts app
 
-|travis-ci|_
+Build status
+------------
 
-.. |travis-ci| image:: https://travis-ci.org/owncloud/contacts.png
-.. _travis-ci: https://travis-ci.org/owncloud/contacts
+| branch      | status |
+| ----------- | ------ |
+| master      | [![Build Status](https://travis-ci.org/owncloud/contacts.png?branch=master)](https://travis-ci.org/owncloud/contacts) |
 
 
 ##Maintainer:
