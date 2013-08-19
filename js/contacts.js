@@ -600,14 +600,19 @@ OC.Contacts = OC.Contacts || {};
 								// Then it is auto-generated from FN.
 								var $nelems = self.$fullelem.find('.n.editor input');
 								$.each(value, function(idx, val) {
-									self.$fullelem.find('#n_' + idx).val(val);
+									self.$fullelem.find('#n_' + idx).val(val).get(0).defaultValue = val;
 								});
 							}
 							var $fullname = self.$fullelem.find('.fullname'), fullname = '';
 							var update_fn = false;
 							if(!self.data.FN) {
-								self.data.FN = [{name:'N', value:'', parameters:[]}];
+								self.data.FN = [{name:'FN', value:'', parameters:[]}];
 							}
+							/* If FN is empty fill it with the values from N.
+							 * As N consists of several fields which each trigger a change/save
+							 * also check if the contents of FN equals parts of N and fill
+							 * out the rest.
+							 */
 							if(self.data.FN[0]['value'] === '') {
 								self.data.FN[0]['value'] = value[1] + ' ' + value[0];
 								$fullname.val(self.data.FN[0]['value']);
@@ -628,6 +633,11 @@ OC.Contacts = OC.Contacts || {};
 							}
 						case 'NICKNAME':
 						case 'ORG':
+							// Auto-fill FN if empty
+							if(!self.data.FN) {
+								self.data.FN = [{name:'FN', value:value, parameters:[]}];
+								self.$fullelem.find('.fullname').val(value).trigger('change');
+							}
 						case 'TITLE':
 						case 'NOTE':
 							self.data[element][0] = {
