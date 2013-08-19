@@ -7,4 +7,10 @@
 	verbose="true"
 	colors="true"
 >
+<testsuites>
+	<testsuite name="contacts">
+		<file>vobject.php</file>
+		<file>contacts.php</file>
+	</testsuite>
+</testsuites>
 </phpunit>

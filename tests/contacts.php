@@ -121,7 +121,6 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 
 		$this->assertTrue($addressBook->deleteChild($id));
 		$this->assertEquals(0, count($addressBook));
-		$this->assertEquals(0, 1);
 	}
 
 }
