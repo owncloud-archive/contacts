@@ -1,4 +1,4 @@
-<phpunit>
+<phpunit bootstrap="../../core/tests/php/bootstrap.php">
   <testsuites>
     <testsuite name="VObject mods">
       <file>./tests/vobject.php</file>
