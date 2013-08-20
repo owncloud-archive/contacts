@@ -1,5 +1,5 @@
 <phpunit
-	bootstrap="../../core/tests/bootstrap.php"
+	bootstrap="bootstrap.php"
 	convertErrorsToExceptions="true"
 	convertNoticesToExceptions="true"
 	convertWarningsToExceptions="true"
