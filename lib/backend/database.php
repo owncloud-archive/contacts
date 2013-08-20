@@ -235,7 +235,8 @@ class Database extends AbstractBackend {
 			$updates['id'] = $newid;
 			$updates['ctag'] = $ctag;
 			$updates['lastmodified'] = $ctag;
-			$this->addressbooks[$addressbookid] = $updates;
+			$updates['permissions'] = \OCP\PERMISSION_ALL;
+			$this->addressbooks[$newid] = $updates;
 		}
 		return $newid;
 	}
