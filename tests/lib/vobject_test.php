@@ -19,7 +19,7 @@ class Test_VObject extends PHPUnit_Framework_TestCase {
 	}*/
 
 	public function testCrappyVCard() {
-		$carddata = file_get_contents(__DIR__ . '/data/test3.vcf');
+		$carddata = file_get_contents(__DIR__ . '/../data/test3.vcf');
 		$obj = \Sabre\VObject\Reader::read(
 			$carddata,
 			\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES

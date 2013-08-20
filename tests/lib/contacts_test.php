@@ -15,7 +15,7 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 	protected static $cardsTableName;
 
 	public static function setUpBeforeClass() {
-		$dbfile = __DIR__.'/../appinfo/database.xml';
+		$dbfile = __DIR__.'/../../appinfo/database.xml';
 
 		self::$test_prefix = '_'.OC_Util::generate_random_bytes('4').'_';
 		$content = file_get_contents($dbfile);
@@ -71,14 +71,14 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 		// Test contacts
 		$this->assertEquals(array(), self::$backend->getContacts($aid));
 
-		$carddata = file_get_contents(__DIR__ . '/data/test1.vcf');
+		$carddata = file_get_contents(__DIR__ . '/../data/test1.vcf');
 		$id = self::$backend->createContact($aid, $carddata);
 		$this->assertNotEquals(false, $id); // Isn't there an assertNotFalse() ?
 		$this->assertEquals(1, count(self::$backend->getContacts($aid)));
 		$this->assertTrue(self::$backend->hasContact($aid, $id));
 		$contact = self::$backend->getContact($aid, $id);
 		$this->assertEquals('Max Mustermann', $contact['displayname']);
-		$carddata = file_get_contents(__DIR__ . '/data/test2.vcf');
+		$carddata = file_get_contents(__DIR__ . '/../data/test2.vcf');
 		$this->assertTrue(self::$backend->updateContact($aid, $id, $carddata));
 		$contact = self::$backend->getContact($aid, $id);
 		$this->assertEquals('John Q. Public', $contact['displayname']);

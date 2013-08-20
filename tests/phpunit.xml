@@ -6,11 +6,10 @@
 	strict="true"
 	verbose="true"
 	colors="true"
->
-<testsuites>
-	<testsuite name="contacts">
-		<file>vobject.php</file>
-		<file>contacts.php</file>
-	</testsuite>
-</testsuites>
+	>
+	<testsuites>
+		<testsuite name="Contacts App">
+			<directory suffix="_test.php">lib</directory>
+		</testsuite>
+	</testsuites>
 </phpunit>

@@ -29,6 +29,6 @@ before_script:
 #  - sudo ln -s $(pwd)/phantomjs-1.9.0-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
 
 script:
-  - make unit-tests
+  - phpunit --configuration tests/phpunit.xml
   
 #&& make javascript-tests
