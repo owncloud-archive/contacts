@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-15 16:57-0400\n"
-"PO-Revision-Date: 2013-08-15 20:57+0000\n"
+"POT-Creation-Date: 2013-08-21 06:08-0400\n"
+"PO-Revision-Date: 2013-08-19 18:21+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -307,25 +307,25 @@ msgstr "Błąd wczytywania zdjęcia profilu."
 msgid "Is this correct?"
 msgstr "Jest to prawidłowe?"
 
-#: js/contacts.js:839
+#: js/contacts.js:849
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1036
+#: js/contacts.js:1046
 msgid "# groups"
 msgstr "# grupy"
 
-#: js/contacts.js:2106
+#: js/contacts.js:2116
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Niektóre kontakty są zaznaczone do usunięcia, ale nie są usunięte jeszcze. Proszę czekać na ich usunięcie."
 
-#: js/contacts.js:2117
+#: js/contacts.js:2127
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kliknij aby cofnąć usunięcie {num} kontaktów"
 
-#: js/contacts.js:2132
+#: js/contacts.js:2142
 msgid "Cancelled deletion of {num}"
 msgstr "Usunięcie Anulowane {num}"
 

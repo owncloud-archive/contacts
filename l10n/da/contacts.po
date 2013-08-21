@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-19 13:05-0400\n"
-"PO-Revision-Date: 2013-08-16 05:20+0000\n"
+"POT-Creation-Date: 2013-08-21 06:08-0400\n"
+"PO-Revision-Date: 2013-08-21 05:20+0000\n"
 "Last-Translator: claus_chr <claus_chr@webspeed.dk>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -177,15 +177,15 @@ msgstr "Importerer..."
 
 #: js/addressbooks.js:291
 msgid "Imported {count} of {total} contacts"
-msgstr ""
+msgstr "Importeret {count} af {total} kontakter"
 
 #: js/addressbooks.js:313
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "Importeret {imported} kontakter. {failed} fejlede."
 
 #: js/addressbooks.js:455
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "Der eksistere allerede en adressebog med navnet: {name}"
 
 #: js/addressbooks.js:484
 msgid "Failed adding address book: {error}"
@@ -221,7 +221,7 @@ msgstr "Tilføj gruppe..."
 
 #: js/app.js:461
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "Ugyldig URL: \"{url}\""
 
 #: js/app.js:472
 msgid "There was an error opening a mail composer."
@@ -229,19 +229,19 @@ msgstr "Der opstod en fejl under åbning af en e-mail-editor."
 
 #: js/app.js:477
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "Ugyldig email: \"{url}\""
 
 #: js/app.js:555
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "Sammenlægning fejlede. Kan ikke finde kontakt: {id}"
 
 #: js/app.js:568
 msgid "Merge failed."
-msgstr ""
+msgstr "Sammenlægning fejlede."
 
 #: js/app.js:575
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "Indfletning lykkedes ikke. Fejl ved gemning af kontakt."
 
 #: js/app.js:594
 msgid "Select photo"
@@ -249,7 +249,7 @@ msgstr "Vælg foto"
 
 #: js/app.js:664 js/app.js:1543
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "Netværks- eller serverfejl: Informér administrator."
 
 #: js/app.js:883
 msgid "Error adding to group."
@@ -265,7 +265,7 @@ msgstr ""
 
 #: js/app.js:1211 js/app.js:1215 templates/contacts.php:184
 msgid "Merge contacts"
-msgstr ""
+msgstr "Sammenlæg kontakter"
 
 #: js/app.js:1237 js/app.js:1290 js/settings.js:120 templates/contacts.php:323
 #: templates/settings.php:62
@@ -282,7 +282,7 @@ msgstr "OK"
 
 #: js/app.js:1367
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "Kunne ikke finde kontakt: {id}"
 
 #: js/app.js:1409
 msgid "No files selected for upload."
@@ -296,7 +296,7 @@ msgstr "Dr."
 
 #: js/app.js:1506
 msgid "Edit profile picture"
-msgstr ""
+msgstr "Redigér profilbillede"
 
 #: js/app.js:1524
 msgid "Error loading profile picture."
@@ -334,23 +334,23 @@ msgstr "Tilføj"
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
-msgstr ""
+msgstr "Kontaktperson er allerede i denne gruppe."
 
 #: js/groups.js:275
 msgid "Contacts are already in this group."
-msgstr ""
+msgstr "Kontakterpersoner er allerede i denne gruppe."
 
 #: js/groups.js:338
 msgid "Couldn't get contact list."
-msgstr ""
+msgstr "Kunne ikke hente liste over kontaktpersoner."
 
 #: js/groups.js:349
 msgid "Contact is not in this group."
-msgstr ""
+msgstr "Kontaktperson er ikke i denne gruppe."
 
 #: js/groups.js:363
 msgid "Contacts are not in this group."
-msgstr ""
+msgstr "Kontakterpersoner er ikke i denne gruppe."
 
 #: js/groups.js:557
 msgid "Failed renaming group: {error}"
@@ -364,7 +364,7 @@ msgstr ""
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr ""
+msgstr "Du kan trække grupper til⏎ arrangér dem som du vil."
 
 #: js/groups.js:636
 msgid "Failed adding group: {error}"
@@ -380,7 +380,7 @@ msgstr "Foretrukne"
 
 #: js/groups.js:727
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "Delt af {owner}"
 
 #: js/groups.js:742
 msgid "Not grouped"
@@ -449,15 +449,15 @@ msgstr ""
 
 #: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "Du har ikke rettigheder til at se denne kontaktperson"
 
 #: lib/addressbook.php:167
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "Du har ikke rettigheder til at se disse kontaktpersoner"
 
 #: lib/addressbook.php:193
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "Du har ikke rettigheder til at føje kontaktpersoner til denne adressebog"
 
 #: lib/addressbook.php:196
 msgid "The backend for this address book does not support adding contacts"
@@ -465,7 +465,7 @@ msgstr ""
 
 #: lib/addressbook.php:218 lib/contact.php:244
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "Du har ikke rettigheder til at slette denne kontaktperson"
 
 #: lib/addressbook.php:221
 msgid "The backend for this address book does not support deleting contacts"
@@ -485,15 +485,15 @@ msgstr "Du har ikke rettigheder til at slette denne adressebog"
 
 #: lib/app.php:132
 msgid "Address book not found"
-msgstr ""
+msgstr "Adressebog ikke fundet"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "Du har ikke rettigheder til at se denne kontaktperson"
 
 #: lib/contact.php:259
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Du har ikke rettigheder til at opdatere denne kontaktperson"
 
 #: lib/contact.php:270
 msgid "The backend for this contact does not support updating it"
@@ -505,11 +505,11 @@ msgstr ""
 
 #: lib/contact.php:394 lib/contact.php:411
 msgid "Property not found"
-msgstr ""
+msgstr "Egenskab ikke fundet"
 
 #: lib/contact.php:459
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "Manglende IM-parameter for:"
 
 #: lib/contact.php:467
 msgid "Unknown IM: "
@@ -517,31 +517,31 @@ msgstr "Ukendt IM:"
 
 #: lib/controller/addressbookcontroller.php:122
 msgid "Error creating address book"
-msgstr ""
+msgstr "Fejl ved oprettelse af adressebog"
 
 #: lib/controller/addressbookcontroller.php:144
 msgid "Error updating address book"
-msgstr ""
+msgstr "Fejl ved opdatering af adressebog"
 
 #: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
-msgstr ""
+msgstr "Fejl ved sletning af adressebog"
 
 #: lib/controller/addressbookcontroller.php:188
 msgid "Error creating contact."
-msgstr ""
+msgstr "Fejl ved oprettelse af kontaktperson."
 
 #: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting contact."
-msgstr ""
+msgstr "Fejl ved sletning af kontaktperson."
 
 #: lib/controller/addressbookcontroller.php:245
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "Fejl ved hentning af kontaktperson."
 
 #: lib/controller/addressbookcontroller.php:256
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "Fejl ved fjernelse af kontaktperson fra anden adressebog."
 
 #: lib/controller/contactcontroller.php:42
 #: lib/controller/contactcontroller.php:68
@@ -550,11 +550,11 @@ msgstr ""
 #: lib/controller/contactcontroller.php:187
 #: lib/controller/contactcontroller.php:250
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "Kunne ikke finde kontakt."
 
 #: lib/controller/contactcontroller.php:97
 msgid "Error merging into contact."
-msgstr ""
+msgstr "Fejl ved indfletning til kontaktperson."
 
 #: lib/controller/contactcontroller.php:101
 #: lib/controller/contactcontroller.php:209
@@ -564,13 +564,13 @@ msgstr ""
 #: lib/controller/contactcontroller.php:191
 #: lib/controller/contactcontroller.php:254
 msgid "Property name is not set."
-msgstr ""
+msgstr "Egenskabsnavn er ikke angivet."
 
 #: lib/controller/contactcontroller.php:195
 #: lib/controller/contactcontroller.php:258
 #: lib/controller/contactcontroller.php:268
 msgid "Property checksum is not set."
-msgstr ""
+msgstr "Tjeksum for egenskab er ikke angivet."
 
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
@@ -579,7 +579,7 @@ msgstr "Informationen om vCard er forkert. Genindlæs siden."
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
-msgstr ""
+msgstr "Fejl ved angivelse af egenskab"
 
 #: lib/controller/contactcontroller.php:284
 msgid "Error saving property to backend"
@@ -587,49 +587,49 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
-msgstr ""
+msgstr "Intet gruppenavn givet."
 
 #: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
-msgstr ""
+msgstr "Fejl ved tilføjelse af gruppe."
 
 #: lib/controller/groupcontroller.php:135
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Intet gruppenavn at omdøbe fra det givne."
 
 #: lib/controller/groupcontroller.php:139
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Intet gruppenavn at omdøbe til det givne."
 
 #: lib/controller/groupcontroller.php:145
 msgid "Error renaming group."
-msgstr ""
+msgstr "Fejl ved omdøbning af gruppenavn."
 
 #: lib/controller/groupcontroller.php:186
 #: lib/controller/groupcontroller.php:237
 msgid "Group ID missing from request."
-msgstr ""
+msgstr "Gruppe-id mangler i forespørgsel."
 
 #: lib/controller/groupcontroller.php:191
 msgid "Group name missing from request."
-msgstr ""
+msgstr "Gruppenavn mangler i forespørgsel."
 
 #: lib/controller/groupcontroller.php:196
 #: lib/controller/groupcontroller.php:242
 msgid "Contact ID missing from request."
-msgstr ""
+msgstr "Kontaktpersons-id mangler i forespørgsel."
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "Forsøg på at oploade sortlistede filer:"
 
 #: lib/controller/importcontroller.php:120
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "Du har ikke rettigheder til at importere til denne adressebog"
 
 #: lib/controller/importcontroller.php:128
 msgid "File name missing from request."
-msgstr ""
+msgstr "Filnavn mangler fra forespørgsel."
 
 #: lib/controller/importcontroller.php:133
 #: lib/controller/importcontroller.php:250
@@ -638,11 +638,11 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:139
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "Forsøg på at tilgå sortlistet fil:"
 
 #: lib/controller/importcontroller.php:181
 msgid "No contacts found in: "
-msgstr ""
+msgstr "Ingen kontaktpersoner fundet i:"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -650,7 +650,7 @@ msgstr ""
 
 #: lib/controller/settingscontroller.php:40
 msgid "No value is given."
-msgstr ""
+msgstr "Ingen værdi er givet."
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
@@ -803,27 +803,27 @@ msgstr "Importer"
 
 #: templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "Importér til..."
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "Vælg fil..."
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
-msgstr ""
+msgstr "(Fra)vælg alle"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr ""
+msgstr "Sorteringsorden"
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr ""
+msgstr "For- efernavn"
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "For-, efternavn"
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
@@ -831,11 +831,11 @@ msgstr "Grupper"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
-msgstr ""
+msgstr "Foretrukken"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
-msgstr ""
+msgstr "Sammenlæg markerede"
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
@@ -893,7 +893,7 @@ msgstr "Slet aktuelle kontaktperson"
 msgid ""
 "<h3>You have no contacts in your addressbook.</h3><p>Add a new contact or "
 "import existing contacts from a VCF file.</p>"
-msgstr ""
+msgstr "<h3>Du har ingen kontaktpersoner i din adressebog.</h3><p>Tilføj en ny kontaktperson eller importér eksisterende kontaktpersoner fra en VCF-fil.</p>"
 
 #: templates/contacts.php:126
 msgid "Add contact"
