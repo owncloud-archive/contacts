@@ -90,6 +90,8 @@
 "Delete" => "Supprimer",
 "More..." => "Plus…",
 "Less..." => "Moins...",
+"Failed loading photo: {error}" => "Echec du chargement de la photo : {error}",
+"You do not have permissions to delete this contact" => "Vous n'avez pas l'autorisation de supprimer ce contact.",
 "Unknown IM: " => "Messagerie instantanée inconnue",
 "Information about vCard is incorrect. Please reload the page." => "Les informations relatives à cette vCard sont incorrectes. Veuillez recharger la page.",
 "Error adding group." => "Erreur lors de l'ajout du groupe.",

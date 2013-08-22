@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-21 06:08-0400\n"
-"PO-Revision-Date: 2013-08-21 05:20+0000\n"
-"Last-Translator: claus_chr <claus_chr@webspeed.dk>\n"
+"POT-Creation-Date: 2013-08-22 10:35-0400\n"
+"PO-Revision-Date: 2013-08-22 07:30+0000\n"
+"Last-Translator: Sappe\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -189,7 +189,7 @@ msgstr "Der eksistere allerede en adressebog med navnet: {name}"
 
 #: js/addressbooks.js:484
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "Kunne ikke tilføje adressebog: {error}"
 
 #: js/addressbooks.js:520
 msgid "Failed loading address books: {error}"
@@ -312,7 +312,7 @@ msgstr ""
 
 #: js/contacts.js:1046
 msgid "# groups"
-msgstr ""
+msgstr "# grupper"
 
 #: js/contacts.js:2116
 msgid ""
@@ -322,11 +322,11 @@ msgstr "Nogle kontakter er markeret til sletning, men er endnu ikke slettet. Ven
 
 #: js/contacts.js:2127
 msgid "Click to undo deletion of {num} contacts"
-msgstr ""
+msgstr "Klik for at fortryde sletning af {num} kontakter"
 
 #: js/contacts.js:2142
 msgid "Cancelled deletion of {num}"
-msgstr ""
+msgstr "Annullerede sletning af {num}"
 
 #: js/groups.js:53 templates/contacts.php:327
 msgid "Add"
@@ -358,7 +358,7 @@ msgstr ""
 
 #: js/groups.js:588
 msgid "A group named {group} already exists"
-msgstr ""
+msgstr "En gruppe med navnet {group} eksistere allerede"
 
 #: js/groups.js:623
 msgid ""
@@ -676,7 +676,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
-msgstr ""
+msgstr "Internet opkald"
 
 #: lib/utils/properties.php:76
 msgid "AIM"
@@ -909,15 +909,15 @@ msgstr "Omdøb gruppe"
 
 #: templates/contacts.php:185
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "Hvilken kontaktperson skal data føjes til?"
 
 #: templates/contacts.php:193
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Slet de andre efter gennemgørt sammenfletning?"
 
 #: templates/contacts.php:205
 msgid "Compose mail"
-msgstr ""
+msgstr "Skriv mail"
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
@@ -949,11 +949,11 @@ msgstr "Efternavn"
 
 #: templates/contacts.php:259
 msgid "Select groups"
-msgstr ""
+msgstr "Vælg grupper"
 
 #: templates/contacts.php:262
 msgid "Select address book"
-msgstr ""
+msgstr "Vælg adressebog"
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
@@ -969,7 +969,7 @@ msgstr "Titel"
 
 #: templates/contacts.php:276
 msgid "Enter title"
-msgstr ""
+msgstr "Angiv titel"
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
@@ -977,7 +977,7 @@ msgstr "Organisation"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
-msgstr ""
+msgstr "Angiv organisation"
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
@@ -985,7 +985,7 @@ msgstr "Fødselsdag"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
-msgstr ""
+msgstr "Skriv noter her..."
 
 #: templates/contacts.php:325
 msgid "Export as VCF"
@@ -1067,7 +1067,7 @@ msgstr "Slet adresse"
 
 #: templates/contacts.php:410
 msgid "1 Main Street"
-msgstr ""
+msgstr "Hovedgaden 1"
 
 #: templates/contacts.php:411
 msgid "Street address"
@@ -1091,11 +1091,11 @@ msgstr "By"
 
 #: templates/contacts.php:423
 msgid "Some region"
-msgstr ""
+msgstr "En region"
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr ""
+msgstr "Stat eller provins"
 
 #: templates/contacts.php:428
 msgid "Your country"

@@ -65,6 +65,7 @@
 "Edit profile picture" => "Edita la fotografia de perfil",
 "Error loading profile picture." => "Error en carregar la imatge de perfil.",
 "Is this correct?" => "És correcte?",
+"Error parsing date: {date}" => "Error en processar la data: {date}",
 "# groups" => "# grups",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Heu marcat eliminar alguns contactes, però encara no s'han eliminat. Espereu mentre s'esborren.",
 "Click to undo deletion of {num} contacts" => "Feu clic a desfés eliminació de {num} contactes",

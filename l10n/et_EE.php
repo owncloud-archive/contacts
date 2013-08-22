@@ -65,6 +65,7 @@
 "Edit profile picture" => "Muuda profiili pilti",
 "Error loading profile picture." => "Viga profiilipildi laadimisel",
 "Is this correct?" => "Kas see on õige?",
+"Error parsing date: {date}" => "Viga kuupäeva parsimisel: {date}",
 "# groups" => "# grupid",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Mõned kontaktid on märgitud kustutamiseks, aga pole veel kustutatud. Palun oota, kuni need kustutatakse.",
 "Click to undo deletion of {num} contacts" => "Kliki, et tühistada {num} kontakti kustutamine",
