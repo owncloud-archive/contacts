@@ -1,8 +1,13 @@
 <?php $TRANSLATIONS = array(
+"Error getting contact object." => "Klaida gaunant kontaktų objektą.",
 "Error reading contact photo." => "Klaida skaitant kontakto nuotrauką.",
+"Error saving temporary file." => "Klaida saigant laikiną duominį.",
 "The loading photo is not valid." => "Netinkama įkeliama nuotrauka.",
+"No contact info was submitted." => "Nenurodyta kontakto informacija.",
+"No photo path was submitted." => "Nenurodytas nuotraukos kelias. ",
 "File doesn't exist:" => "Failas neegzistuoja:",
 "Error loading image." => "Klaida įkeliant nuotrauką.",
+"Error getting PHOTO property." => "Klaida gaunant nuotraukos  savybes.",
 "No file was uploaded. Unknown error" => "Failai nebuvo įkelti dėl nežinomos priežasties",
 "There is no error, the file uploaded with success" => "Failas įkeltas sėkmingai, be klaidų",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "Įkeliamo failo dydis viršija upload_max_filesize nustatymą php.ini",

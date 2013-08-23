@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-22 10:35-0400\n"
-"PO-Revision-Date: 2013-08-22 07:30+0000\n"
+"POT-Creation-Date: 2013-08-23 18:13-0400\n"
+"PO-Revision-Date: 2013-08-22 19:40+0000\n"
 "Last-Translator: Sappe\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -193,7 +193,7 @@ msgstr "Kunne ikke tilføje adressebog: {error}"
 
 #: js/addressbooks.js:520
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "Kunne ikke hente adressebøger: {error}"
 
 #: js/app.js:213
 msgid "Indexing contacts"
@@ -261,7 +261,7 @@ msgstr "Fejl ved fjernelse fra gruppe."
 
 #: js/app.js:1072
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "Kunne ikke indstille {name} som favorit."
 
 #: js/app.js:1211 js/app.js:1215 templates/contacts.php:184
 msgid "Merge contacts"
@@ -354,7 +354,7 @@ msgstr "Kontakterpersoner er ikke i denne gruppe."
 
 #: js/groups.js:557
 msgid "Failed renaming group: {error}"
-msgstr ""
+msgstr "Kunne ikke omdøbe gruppe: {error}"
 
 #: js/groups.js:588
 msgid "A group named {group} already exists"
@@ -368,7 +368,7 @@ msgstr "Du kan trække grupper til⏎ arrangér dem som du vil."
 
 #: js/groups.js:636
 msgid "Failed adding group: {error}"
-msgstr ""
+msgstr "Kunne ikke tilføje gruppe: {error}"
 
 #: js/groups.js:648
 msgid "All"
@@ -388,7 +388,7 @@ msgstr "Ikke i gruppe"
 
 #: js/groups.js:768
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "Kunne ikke hente grupper: {error}"
 
 #: js/loader.js:49
 msgid "Result: "
@@ -445,7 +445,7 @@ msgstr "Mindre..."
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "Kunne ikke hente billede: {error}"
 
 #: lib/addressbook.php:135
 msgid "You do not have permissions to see this contacts"
