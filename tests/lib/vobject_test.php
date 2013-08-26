@@ -5,18 +5,14 @@
  * later.
  * See the COPYING-README file.
  */
-OC_App::loadApp('contacts');
+
 class Test_VObject extends PHPUnit_Framework_TestCase {
 
 	public static function setUpBeforeClass() {
+		\Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
 		\Sabre\VObject\Property::$classMap['CATEGORIES'] = 'OCA\Contacts\VObject\GroupProperty';
 
 	}
-
-	/*public static function tearDownAfterClass() {
-		OC_DB::removeDBStructure(self::$schema_file);
-		unlink(self::$schema_file);
-	}*/
 
 	public function testCrappyVCard() {
 		$carddata = file_get_contents(__DIR__ . '/../data/test3.vcf');
@@ -63,5 +59,6 @@ class Test_VObject extends PHPUnit_Framework_TestCase {
 		$property->renameGroup('work', 'Work');
 		$parts = $property->getParts();
 		$this->assertEquals('Work', $parts[1]);
+		//$this->assertEquals(true, false);
 	}
 }

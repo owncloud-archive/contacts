@@ -255,8 +255,8 @@ class Ldap extends AbstractBackend {
 	 * @param string $userid
 	 * @return array
 	 */
-	public function getAddressBooksForUser($userid = null) {
-		$userid = $userid ? $userid : $this->userid;
+	public function getAddressBooksForUser(array $options = array()) {
+
 		try {
 			if(!isset(self::$preparedQueries['addressbooksforuser'])) {
 				$sql = 'SELECT `configkey` from *PREFIX*preferences where `configkey` like ?';
@@ -293,7 +293,7 @@ class Ldap extends AbstractBackend {
 	 * @param string $addressbookid
 	 * @return array $properties
 	 */
-	public function getAddressBook($addressbookid) {
+	public function getAddressBook($addressbookid, array $options = array()) {
 		//\OC_Log::write('contacts', __METHOD__.' id: '
 		//	. $addressbookid, \OC_Log::DEBUG);
 		if($this->addressbooks && isset($this->addressbooks[$addressbookid])) {
@@ -340,7 +340,7 @@ class Ldap extends AbstractBackend {
 	 * @param array $properties
 	 * @return bool
 	 */
-	public function updateAddressBook($addressbookid, array $properties) {
+	public function updateAddressBook($addressbookid, array $properties, array $options = array()) {
 		// TODO: use backend settings
 
 		return true;
@@ -356,7 +356,7 @@ class Ldap extends AbstractBackend {
 	 * @param array $properties
 	 * @return string|false The ID if the newly created AddressBook or false on error.
 	 */
-	public function createAddressBook(array $properties) {
+	public function createAddressBook(array $properties, array $options = array()) {
 		// TODO: use backend settings
 	}
 
@@ -366,7 +366,7 @@ class Ldap extends AbstractBackend {
 	 * @param string $addressbookid
 	 * @return bool
 	 */
-	public function deleteAddressBook($addressbookid) {
+	public function deleteAddressBook($addressbookid, array $options = array()) {
 		$addressbook = self::getAddressBook($addressbookid);
 
 		// TODO: use backend settings
@@ -384,7 +384,7 @@ class Ldap extends AbstractBackend {
 	 * @param string $addressbookid
 	 * @returns int | null
 	 */
-	public function lastModifiedAddressBook($addressbookid) {
+	public function lastModifiedAddressBook($addressbookid, array $options = array()) {
     return null;
 	}
 
@@ -414,7 +414,7 @@ class Ldap extends AbstractBackend {
 	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
 	 * @return array
 	 */
-	public function getContacts($addressbookid, $limit = null, $offset = null, $omitdata = false) {
+	public function getContacts($addressbookid, array $options = array()) {
 		$cards = array();
 		$vcards = array();
 		if(is_array($addressbookid) && count($addressbookid)) {
@@ -429,11 +429,13 @@ class Ldap extends AbstractBackend {
 		foreach ($id_array as $one_id) {
 			if (self::setLdapParams($one_id)) {
 				//OCP\Util::writeLog('contacts_ldap', __METHOD__.' Connector OK', \OC_Log::DEBUG);
-				$info = self::ldapFindMultiple($this->ldapParams['ldapbasednsearch'],
-																			'(objectclass=person)',
-																			$this->connector->getLdapEntries(),
-																			$offset,
-																			$limit);
+				$info = self::ldapFindMultiple(
+					$this->ldapParams['ldapbasednsearch'],
+					'(objectclass=person)',
+					$this->connector->getLdapEntries(),
+					isset($options['offset']) ? $options['offset'] : null,
+					isset($options['limit']) ? $options['limit'] : null
+				);
 				for ($i=0; $i<$info["count"]; $i++) {
 					$a_card = $this->connector->ldapToVCard($info[$i]);
 					$cards[] = self::getSabreFormatCard($addressbookid, $a_card);
@@ -453,7 +455,7 @@ class Ldap extends AbstractBackend {
 	 * @param mixed $id
 	 * @return array|bool
 	 */
-	public function getContact($addressbookid, $ids) {
+	public function getContact($addressbookid, $ids, array $options = array()) {
 		if (!is_array($ids)) {
 			$a_ids = array($ids);
 		} else {
@@ -526,27 +528,46 @@ class Ldap extends AbstractBackend {
 	 * Creates a new contact
 	 *
 	 * @param string $addressbookid
-	 * @param string $carddata
+	 * @param VCard|string $carddata
 	 * @return string|bool The identifier for the new contact or false on error.
 	 */
-	public function createContact($addressbookid, $carddata, $uri = null) {
-		$vcard = \Sabre\VObject\Reader::read($carddata);
+	public function createContact($addressbookid, $contact, array $options = array()) {
+
+		$uri = isset($options['uri']) ? $options['uri'] : null;
+
+		if(!$contact instanceof VCard) {
+			try {
+				$contact = Reader::read($contact);
+			} catch(\Exception $e) {
+				\OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
+				return false;
+			}
+		}
+
+		try {
+			$contact->validate(VCard::REPAIR|VCard::UPGRADE);
+		} catch (\Exception $e) {
+			OCP\Util::writeLog('contacts', __METHOD__ . ' ' .
+				'Error validating vcard: ' . $e->getMessage(), \OCP\Util::ERROR);
+			return false;
+		}
+
 		self::setLdapParams($addressbookid);
 		
 		self::ldapCreateAndBindConnection();
-		$newDN = $this->connector->getLdapId() . "=" . $vcard->FN . "," . $this->ldapParams['ldapbasednmodify'];
-		$vcard->{'X-LDAP-DN'} = base64_encode($newDN);
+		$newDN = $this->connector->getLdapId() . "=" . $contact->FN . "," . $this->ldapParams['ldapbasednmodify'];
+		$contact->{'X-LDAP-DN'} = base64_encode($newDN);
 		if ($uri!=null) {
-			$vcard->{'X-URI'} = $uri;
+			$contact->{'X-URI'} = $uri;
 		}
 				
-		$ldifEntries = $this->connector->VCardToLdap($vcard);
+		$ldifEntries = $this->connector->VCardToLdap($contact);
 		
 		// Inserts the new card
 		$cardId = self::ldapAdd($newDN, $ldifEntries);
 		if ($cardId) {
 			self::ldapCloseConnection();
-			return $vcard->UID;
+			return $contact->UID;
 		} else {
 			self::ldapCloseConnection();
 			return false;
@@ -561,7 +582,7 @@ class Ldap extends AbstractBackend {
 	 * @param string $carddata
 	 * @return bool
 	 */
-	public function updateContact($addressbookid, $id, $carddata) {
+	public function updateContact($addressbookid, $id, $carddata, array $options = array()) {
 		$vcard = \Sabre\VObject\Reader::read($carddata);
 		
 		if (!is_array($id)) {
@@ -597,7 +618,7 @@ class Ldap extends AbstractBackend {
 	 * @param mixed $id
 	 * @return bool
 	 */
-	public function deleteContact($addressbookid, $id) {
+	public function deleteContact($addressbookid, $id, array $options = array()) {
 		self::setLdapParams($addressbookid);
 		self::ldapCreateAndBindConnection();
 		$card = self::getContact($addressbookid, array($id));

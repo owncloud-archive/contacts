@@ -117,7 +117,12 @@ class AddressBookController extends BaseController {
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_CREATE)) {
 			throw new \Exception('Not implemented');
 		}
-		$id = $backend->createAddressBook($this->request->post);
+		try {
+			$id = $backend->createAddressBook($this->request->post);
+		} catch(Exception $e) {
+			$response->bailOut($e->getMessage());
+			return $response;
+		}
 		if($id === false) {
 			$response->bailOut(App::$l10n->t('Error creating address book'));
 			return $response;
@@ -140,8 +145,13 @@ class AddressBookController extends BaseController {
 		$response = new JSONResponse();
 
 		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		if(!$addressBook->update($this->request['properties'])) {
-			$response->bailOut(App::$l10n->t('Error updating address book'));
+		try {
+			if(!$addressBook->update($this->request['properties'])) {
+				$response->bailOut(App::$l10n->t('Error updating address book'));
+				return $response;
+			}
+		} catch(Exception $e) {
+			$response->bailOut($e->getMessage());
 			return $response;
 		}
 		$response->setParams($addressBook->getMetaData());
@@ -160,10 +170,23 @@ class AddressBookController extends BaseController {
 		$response = new JSONResponse();
 
 		$backend = $app->getBackend($params['backend']);
-		// TODO: Check actual permissions
+
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_DELETE)) {
-			throw new \Exception('Not implemented');
+			throw new \Exception(
+				'The "%s" backend does not support deleting address books', array($backend->name)
+			);
 		}
+
+		$addressBookInfo = $backend->getAddressBook($params['addressbookid']);
+
+		if(!$addressBookInfo['permissions'] & \OCP\PERMISSION_DELETE) {
+			$response->bailOut(App::$l10n->t(
+				'You do not have permissions to delete the "%s" address book'),
+				array($addressBookInfo['displayname']
+			));
+			return $response;
+		}
+
 		if(!$backend->deleteAddressBook($params['addressbookid'])) {
 			$response->bailOut(App::$l10n->t('Error deleting address book'));
 			return $response;
@@ -183,11 +206,19 @@ class AddressBookController extends BaseController {
 		$response = new JSONResponse();
 
 		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$id = $addressBook->addChild();
+
+		try {
+			$id = $addressBook->addChild();
+		} catch(Exception $e) {
+			$response->bailOut($e->getMessage());
+			return $response;
+		}
+
 		if($id === false) {
 			$response->bailOut(App::$l10n->t('Error creating contact.'));
 			return $response;
 		}
+
 		$contact = $addressBook->getChild($id);
 		$response->setStatus('201');
 		$response->setETag($contact->getETag());
@@ -217,7 +248,14 @@ class AddressBookController extends BaseController {
 		$response = new JSONResponse();
 
 		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$result = $addressBook->deleteChild($params['contactid']);
+
+		try {
+			$result = $addressBook->deleteChild($params['contactid']);
+		} catch(Exception $e) {
+			$response->bailOut($e->getMessage());
+			return $response;
+		}
+
 		if($result === false) {
 			$response->bailOut(App::$l10n->t('Error deleting contact.'));
 		}
@@ -245,7 +283,12 @@ class AddressBookController extends BaseController {
 			$response->bailOut(App::$l10n->t('Error retrieving contact.'));
 			return $response;
 		}
-		$contactid = $targetAddressBook->addChild($contact);
+		try {
+			$contactid = $targetAddressBook->addChild($contact);
+		} catch(Exception $e) {
+			$response->bailOut($e->getMessage());
+			return $response;
+		}
 		$contact = $targetAddressBook->getChild($contactid);
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Error saving contact.'));

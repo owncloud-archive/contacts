@@ -96,7 +96,7 @@ class GroupController extends BaseController {
 			$app = new App($this->api->getUserId());
 			$backend = $app->getBackend('local');
 			foreach($ids as $id) {
-				$contact = $backend->getContact(null, $id, $noCollection = true);
+				$contact = $backend->getContact(null, $id, array('noCollection' => true));
 				$obj = \Sabre\VObject\Reader::read(
 					$contact['carddata'],
 					\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES

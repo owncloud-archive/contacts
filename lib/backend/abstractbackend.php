@@ -22,24 +22,26 @@
 
 namespace OCA\Contacts\Backend;
 
+use OCA\Contacts\VObject\VCard;
+
 /**
  * Subclass this class for address book backends
  *
  * The following methods MUST be implemented:
- * @method array getAddressBooksForUser(string $userid) FIXME: I'm not sure about this one.
- * @method array getAddressBook(string $addressbookid)
- * @method array getContacts(string $addressbookid)
- * @method array getContact(string $addressbookid, mixed $id)
+ * @method array getAddressBooksForUser(array $options = array())
+ * @method array|null getAddressBook(string $addressbookid, array $options = array())
+ * @method array getContacts(string $addressbookid, array $options = array())
+ * @method array|null getContact(string $addressbookid, mixed $id, array $options = array())
  * The following methods MAY be implemented:
  * @method bool hasAddressBook(string $addressbookid)
- * @method bool updateAddressBook(string $addressbookid, array $updates)
- * @method string createAddressBook(string $addressbookid, array $properties)
- * @method bool deleteAddressBook(string $addressbookid)
+ * @method bool updateAddressBook(string $addressbookid, array $updates, array $options = array())
+ * @method string createAddressBook(array $properties, array $options = array())
+ * @method bool deleteAddressBook(string $addressbookid, array $options = array())
  * @method int lastModifiedAddressBook(string $addressbookid)
  * @method array numContacts(string $addressbookid)
- * @method bool updateContact(string $addressbookid, string $id, array $updates)
- * @method string createContact(string $addressbookid, string $id, array $properties)
- * @method bool deleteContact(string $addressbookid, string $id)
+ * @method bool updateContact(string $addressbookid, string $id, VCard $contact, array $options = array())
+ * @method string createContact(string $addressbookid, VCard $contact, array $properties)
+ * @method bool deleteContact(string $addressbookid, string $id, array $options = array())
  * @method int lastModifiedContact(string $addressbookid)
  */
 
@@ -60,25 +62,27 @@ abstract class AbstractBackend {
 
 	protected $possibleAddressBookPermissions = array(
 		\OCP\PERMISSION_CREATE 	=> 'createAddressBook',
-		\OCP\PERMISSION_READ		=> 'getAddressBook',
+		\OCP\PERMISSION_READ	=> 'getAddressBook',
 		\OCP\PERMISSION_UPDATE	=> 'updateAddressBook',
 		\OCP\PERMISSION_DELETE 	=> 'deleteAddressBook',
 	);
 
 	/**
-	* @brief Get all permissions for contacts
+	* Sets up the backend
+	*
+	*/
+	public function __construct($userid = null) {
+		$this->userid = $userid ? $userid : \OCP\User::getUser();
+	}
+
+	/**
+	* @brief Get all possible permissions for contacts based on what the backend implements.
 	* @returns bitwise-or'ed actions
 	*
-	* Returns the supported actions as int to be
+	* Returns the supported actions as an int to be
 	* compared with \OCP\PERMISSION_CREATE etc.
-	* When getting the permissions we also have to check for
-	* configured permissions and return min() of the two values.
-	* A user can for example configure an address book with a backend
-	* that implements deleteContact() but wants to set it read-only.
-	* This is done in the AddressBook and Contact classes.
-	* NOTE: A more suitable
 	*/
-	public function getContactPermissions() {
+	protected function getContactPermissions() {
 		$permissions = 0;
 		foreach($this->possibleContactPermissions AS $permission => $methodName) {
 			if(method_exists($this, $methodName)) {
@@ -91,13 +95,13 @@ abstract class AbstractBackend {
 	}
 
 	/**
-	* @brief Get all permissions for address book.
+	* @brief Get all permissions for address book based on what the backend implements.
 	* @returns bitwise-or'ed actions
 	*
 	* Returns the supported actions as int to be
 	* compared with \OCP\PERMISSION_CREATE etc.
 	*/
-	public function getAddressBookPermissions() {
+	protected function getAddressBookPermissions() {
 		$permissions = 0;
 		foreach($this->possibleAddressBookPermissions AS $permission => $methodName) {
 			if(method_exists($this, $methodName)) {
@@ -136,6 +140,8 @@ abstract class AbstractBackend {
 	/**
 	 * Check if the backend has the address book
 	 *
+	 * This can be reimplemented in the backend to improve performance.
+	 *
 	 * @param string $addressbookid
 	 * @return bool
 	 */
@@ -163,11 +169,10 @@ abstract class AbstractBackend {
 	 * backend and a 'displayname', and it MAY contain a
 	 * 'description'.
 	 *
-	 * @param string $principaluri
+	 * @param array $options - Optional (backend specific options)
 	 * @return array
 	 */
-	public function getAddressBooksForUser($userid) {
-	}
+	public abstract function getAddressBooksForUser(array $options = array());
 
 	/**
 	 * Get an addressbook's properties
@@ -179,9 +184,10 @@ abstract class AbstractBackend {
 	 * 'description', but backends can implement additional.
 	 *
 	 * @param string $addressbookid
+	 * @param array $options - Optional (backend specific options)
 	 * @return array|null $properties
 	 */
-	public abstract function getAddressBook($addressbookid);
+	public abstract function getAddressBook($addressbookid, array $options = array());
 
 	/**
 	 * Updates an addressbook's properties
@@ -193,31 +199,35 @@ abstract class AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param array $properties
+	 * @param array $options - Optional (backend specific options)
 	 * @return bool
-	public function updateAddressBook($addressbookid, array $properties) {
-	}
+	public function updateAddressBook($addressbookid, array $properties, array $options = array());
 	 */
 
 	/**
 	 * Creates a new address book
+	 *
+	 * Classes that doesn't support adding address books MUST NOT implement this method.
 	 *
 	 * Currently the only ones supported are 'displayname' and
 	 * 'description', but backends can implement additional.
 	 * 'displayname' MUST be present.
 	 *
 	 * @param array $properties
+	 * @param array $options - Optional (backend specific options)
 	 * @return string|false The ID if the newly created AddressBook or false on error.
-	public function createAddressBook(array $properties) {
-	}
+	public function createAddressBook(array $properties, array $options = array());
 	 */
 
 	/**
-	 * Deletes an entire addressbook and all its contents
+	 * Deletes an entire address book and all its contents
+	 *
+	 * Classes that doesn't support deleting address books MUST NOT implement this method.
 	 *
 	 * @param string $addressbookid
+	 * @param array $options - Optional (backend specific options)
 	 * @return bool
-	public function deleteAddressBook($addressbookid) {
-	}
+	public function deleteAddressBook($addressbookid, array $options = array());
 	 */
 
 	/**
@@ -226,8 +236,6 @@ abstract class AbstractBackend {
 	 * Must return a UNIX time stamp or null if the backend
 	 * doesn't support it.
 	 *
-	 * TODO: Implement default methods get/set for backends that
-	 * don't support.
 	 * @param string $addressbookid
 	 * @returns int | null
 	 */
@@ -237,8 +245,8 @@ abstract class AbstractBackend {
 	/**
 	 * Returns all contacts for a specific addressbook id.
 	 *
-	 * The returned array MUST contain the unique ID of the contact mapped to 'id', a
-	 * displayname mapped to 'displayname' and an integer 'permissions' value using there
+	 * The returned array MUST contain the unique ID a string value 'id', a string
+	 * value 'displayname', a string value 'owner' and an integer 'permissions' value using there
 	 * ownCloud CRUDS constants (which MUST be at least \OCP\PERMISSION_READ), and SHOULD
 	 * contain the properties of the contact formatted as a vCard 3.0
 	 * https://tools.ietf.org/html/rfc2426 mapped to 'carddata' or as an
@@ -247,20 +255,24 @@ abstract class AbstractBackend {
 	 * Example:
 	 *
 	 * array(
-	 *   0 => array('id' => '4e111fef5df', 'permissions' => 1, 'displayname' => 'John Q. Public', 'vcard' => $object),
-	 *   1 => array('id' => 'bbcca2d1535', 'permissions' => 32, 'displayname' => 'Jane Doe', 'carddata' => $data)
+	 *   0 => array('id' => '4e111fef5df', 'owner' => 'foo', 'permissions' => 1, 'displayname' => 'John Q. Public', 'vcard' => $vobject),
+	 *   1 => array('id' => 'bbcca2d1535', 'owner' => 'bar', 'permissions' => 32, 'displayname' => 'Jane Doe', 'carddata' => $data)
 	 * );
 	 *
 	 * For contacts that contain loads of data, the 'carddata' or 'vcard' MAY be omitted
 	 * as it can be fetched later.
 	 *
-	 * TODO: Some sort of ETag?
+	 * The following options are supported in the $options array:
+	 *
+	 * - 'limit': An integer value for the number of contacts to fetch in each call.
+	 * - 'offset': The offset to start at.
+	 * - 'omitdata': Whether to fetch the entire carddata or vcard.
 	 *
 	 * @param string $addressbookid
-	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
+	 * @param array $options - Optional options
 	 * @return array
 	 */
-	public abstract function getContacts($addressbookid, $limit = null, $offset = null, $omitdata = false);
+	public abstract function getContacts($addressbookid, array $options = array());
 
 	/**
 	 * Returns a specfic contact.
@@ -269,39 +281,46 @@ abstract class AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param mixed $id
-	 * @return array|bool
+	 * @param array $options - Optional options
+	 * @return array|null
 	 */
-	public abstract function getContact($addressbookid, $id);
+	public abstract function getContact($addressbookid, $id, array $options = array());
 
 	/**
 	 * Creates a new contact
 	 *
+	 * Classes that doesn't support adding contacts MUST NOT implement this method.
+	 *
 	 * @param string $addressbookid
-	 * @param string $carddata
+	 * @param VCard $contact
+	 * @param array $options - Optional options
 	 * @return string|bool The identifier for the new contact or false on error.
-	public function createContact($addressbookid, $carddata) {
-	}
+	public function createContact($addressbookid, $contact, array $options = array());
 	 */
 
 	/**
 	 * Updates a contact
 	 *
+	 * Classes that doesn't support updating contacts MUST NOT implement this method.
+	 *
 	 * @param string $addressbookid
 	 * @param mixed $id
-	 * @param string $carddata
+	 * @param VCard $contact
+	 * @param array $options - Optional options
 	 * @return bool
-	public function updateContact($addressbookid, $id, $carddata) {
-	}
+	public function updateContact($addressbookid, $id, $carddata, array $options = array());
 	 */
 
 	/**
 	 * Deletes a contact
 	 *
+	 * Classes that doesn't support deleting contacts MUST NOT implement this method.
+	 *
 	 * @param string $addressbookid
 	 * @param mixed $id
+	 * @param array $options - Optional options
 	 * @return bool
-	public function deleteContact($addressbookid, $id) {
-	}
+	public function deleteContact($addressbookid, $id, array $options = array());
 	 */
 
 	/**

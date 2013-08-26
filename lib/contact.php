@@ -237,6 +237,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 	/**
 	 * Delete the data from backend
 	 *
+	 * FIXME: Should be removed as it could leave the parent with a dataless object.
+	 *
 	 * @return bool
 	 */
 	public function delete() {
@@ -273,7 +275,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				->updateContact(
 					$this->getParent()->getId(),
 					$this->getId(),
-					$this->serialize()
+					$this
 				)
 			) {
 				$this->props['lastmodified'] = time();
@@ -315,6 +317,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 					}
 				}
 				$this->setRetrieved(true);
+				$this->setSaved(true);
 				//$this->children = $this->props['vcard']->children();
 				unset($this->props['vcard']);
 				return true;
@@ -361,6 +364,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 						$this->add($child);
 					}
 					$this->setRetrieved(true);
+					$this->setSaved(true);
 				} else {
 					\OCP\Util::writeLog('contacts', __METHOD__.' Error reading: ' . print_r($data, true), \OCP\Util::DEBUG);
 					return false;
@@ -569,7 +573,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	public function lastModified() {
-		if(!isset($this->props['lastmodified'])) {
+		if(!isset($this->props['lastmodified']) && !$this->isRetrieved()) {
 			$this->retrieve();
 		}
 		return isset($this->props['lastmodified'])
@@ -581,6 +585,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * Merge in data from a multi-dimentional array
 	 *
 	 * NOTE: The data has actually already been merged client side!
+	 * NOTE: The only properties coming from the web client are the ones
+	 * defined in \OCA\Contacts\Utils\Properties::$index_properties and
+	 * UID is skipped for obvious reasons, and PHOTO is currently not updated.
 	 * The data array has this structure:
 	 *
 	 * array(
@@ -658,9 +665,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 				}
 			}
 		}
-		if($updated) {
-			$this->setSaved(false);
-		}
+
+		$this->setSaved(!$updated);
+
 		return $updated;
 	}
 
@@ -709,6 +716,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 
 	public function __set($key, $value) {
 		parent::__set($key, $value);
+		if($key === 'FN') {
+			$this->props['displayname'] = $value;
+		}
 		$this->setSaved(false);
 	}
 
@@ -720,19 +730,19 @@ class Contact extends VObject\VCard implements IPIMObject {
 		$this->setSaved(false);
 	}
 
-	protected function setRetrieved($state) {
+	public function setRetrieved($state) {
 		$this->props['retrieved'] = $state;
 	}
 
-	protected function isRetrieved() {
+	public function isRetrieved() {
 		return $this->props['retrieved'];
 	}
 
-	protected function setSaved($state) {
+	public function setSaved($state) {
 		$this->props['saved'] = $state;
 	}
 
-	protected function isSaved() {
+	public function isSaved() {
 		return $this->props['saved'];
 	}
 

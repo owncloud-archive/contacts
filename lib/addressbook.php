@@ -120,7 +120,6 @@ class Addressbook extends AbstractPIMCollection {
 	 */
 	public function getPermissions() {
 		return $this->addressBookInfo['permissions'];
-		//return min($this->addressBookInfo['permissions'], $this->backend->getAddressBookPermissions());
 	}
 
 	/**
@@ -138,6 +137,8 @@ class Addressbook extends AbstractPIMCollection {
 			$contact = $this->backend->getContact($this->getId(), $id);
 			if($contact) {
 				$this->objects[$id] = new Contact($this, $this->backend, $contact);
+			} else {
+				throw new \Exception(self::$l10n->t('Contact not found'), 404);
 			}
 		}
 		// When requesting a single contact we preparse it
@@ -169,7 +170,8 @@ class Addressbook extends AbstractPIMCollection {
 
 		$contacts = array();
 
-		foreach($this->backend->getContacts($this->getId(), $limit, $offset, $omitdata) as $contact) {
+		$options = array('limit' => $limit, 'offset' => $offset, 'omitdata' => $omitdata);
+		foreach($this->backend->getContacts($this->getId(), $options) as $contact) {
 			//\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$contact['id'], \OCP\Util::DEBUG);
 			if(!isset($this->objects[$contact['id']])) {
 				$this->objects[$contact['id']] = new Contact($this, $this->backend, $contact);
@@ -280,7 +282,7 @@ class Addressbook extends AbstractPIMCollection {
 	 * @return bool
 	 */
 	public function save() {
-		if(!$this->hasPermission(OCP\PERMISSION_UPDATE)) {
+		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
 			throw new Exception(self::$l10n->t('You don\'t have permissions to update the address book.'), 403);
 		}
 	}
@@ -291,7 +293,7 @@ class Addressbook extends AbstractPIMCollection {
 	 * @return bool
 	 */
 	public function delete() {
-		if(!$this->hasPermission(OCP\PERMISSION_DELETE)) {
+		if(!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
 			throw new Exception(self::$l10n->t('You don\'t have permissions to delete the address book.'), 403);
 		}
 		return $this->backend->deleteAddressBook($this->getId());

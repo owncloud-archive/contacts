@@ -38,10 +38,10 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 * @return array
 	 */
 	public function getAddressBooksForUser($principaluri) {
-		$userid = $this->userIDByPrincipal($principaluri);
+
 		$userAddressBooks = array();
 		foreach($this->backends as $backend) {
-			$addressBooks = $backend->getAddressBooksForUser($userid);
+			$addressBooks = $backend->getAddressBooksForUser();
 			
 			if (is_array($addressBooks)) {
 				foreach($addressBooks as $addressBook) {
@@ -49,7 +49,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 						$addressBook['uri'] = $addressBook['uri'] . '_shared_by_' . $addressBook['owner'];
 						$addressBook['displayname'] = $addressBook['displayname'];
 					}
-					$userAddressbooks[] = array(
+					$userAddressBooks[] = array(
 						'id'  => $backend->name . '::' . $addressBook['id'],
 						'uri' => $addressBook['uri'],
 						'principaluri' => 'principals/'.$addressBook['owner'],
@@ -64,7 +64,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 			}
 		}
 
-		return $userAddressbooks;
+		return $userAddressBooks;
 	}
 
 
@@ -144,12 +144,23 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	/**
 	 * Deletes an entire addressbook and all its contents
 	 *
-	 * @param int $addressbookid
+	 * @param mixed $addressbookid
 	 * @return void
 	 */
 	public function deleteAddressBook($addressbookid) {
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
 		$backend->deleteAddressBook($id);
+	}
+
+	/**
+	 * Returns the last modified date if the backend supports it.
+	 *
+	 * @param mixed $addressbookid
+	 * @return void
+	 */
+	public function lastModifiedAddressBook($addressbookid) {
+		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
+		return $backend->lastModifiedAddressBook($id);
 	}
 
 	/**
@@ -206,7 +217,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 */
 	public function createCard($addressbookid, $carduri, $carddata) {
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
-		$backend->createContact($id, $carddata, $carduri);
+		$backend->createContact($id, $carddata, array('uri' => $carduri));
 	}
 
 	/**
@@ -236,6 +247,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 
 	/**
 	 * @brief gets the userid from a principal path
+	 * @param string $principaluri
 	 * @return string
 	 */
 	public function userIDByPrincipal($principaluri) {

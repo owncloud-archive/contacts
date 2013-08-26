@@ -38,8 +38,6 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 			self::$cardsTableName
 		);
 
-		\Sabre\VObject\Property::$classMap['CATEGORIES'] = 'OCA\Contacts\VObject\GroupProperty';
-
 	}
 
 	public static function tearDownAfterClass() {
@@ -59,6 +57,7 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 		);
 
 		// Test address books
+		$this->assertNotEquals(false, $aid); // Isn't there an assertNotFalse() ?
 		$this->assertEquals(1, count(self::$backend->getAddressBooksForUser()));
 		$this->assertTrue(self::$backend->hasAddressBook($aid));
 		$addressBook = self::$backend->getAddressBook($aid);

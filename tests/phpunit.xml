@@ -8,8 +8,11 @@
 	colors="true"
 	>
 	<testsuites>
-		<testsuite name="Contacts App">
+		<testsuite name="unit-tests">
 			<directory suffix="_test.php">lib</directory>
+		</testsuite>
+		<testsuite name="app-tests">
+			<directory suffix="_app.php">lib</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>

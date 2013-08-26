@@ -481,8 +481,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 		})
 		.fail(function(response) {
-			var err = textStatus + ', ' + error;
-			console.log( "Request Failed: " + err);
+			console.log( "Request Failed: " + response.message);
 			$(document).trigger('status.contacts.error', response);
 		});
 	};
