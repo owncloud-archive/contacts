@@ -60,6 +60,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 */
 	public function __construct($parent, $backend, $data = null) {
 		self::$l10n = $parent::$l10n;
+		parent::__construct();
 		//\OCP\Util::writeLog('contacts', __METHOD__ . ' parent: ' . print_r($parent, true) . ', backend: ' . print_r($backend, true) . ', data: ' . print_r($data, true), \OCP\Util::DEBUG);
 		//\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		$this->props['parent'] = $parent;
@@ -160,7 +161,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 		return isset($this->props['displayname'])
 			? $this->props['displayname']
-			: (isset($this->FN) ? $this->FN : null);
+			: (isset($this->FN) ? (string)$this->FN : null);
 	}
 
 	/**

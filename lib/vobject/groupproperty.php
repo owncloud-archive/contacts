@@ -21,7 +21,8 @@
 
 namespace OCA\Contacts\VObject;
 
-use OC\VObject\CompoundProperty;
+//use OC\VObject\CompoundProperty;
+use Sabre\VObject\Property\Text as CompoundProperty;
 
 /**
  * This class adds convenience methods for the CATEGORIES property.

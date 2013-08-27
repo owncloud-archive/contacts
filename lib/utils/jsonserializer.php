@@ -93,7 +93,7 @@ class JSONSerializer {
 			$details['thumbnail'] = $contact->cacheThumbnail();
 		}
 
-		foreach($contact->children as $property) {
+		foreach($contact->children() as $property) {
 			$pname = $property->name;
 			$temp = self::serializeProperty($property);
 			if(!is_null($temp)) {
@@ -135,7 +135,7 @@ class JSONSerializer {
 		if(!in_array($property->name, Properties::$index_properties)) {
 			return;
 		}
-		$value = $property->value;
+		$value = $property->getValue();
 		if($property->name == 'ADR' || $property->name == 'N' || $property->name == 'ORG' || $property->name == 'CATEGORIES') {
 			$value = $property->getParts();
 			$value = array_map('trim', $value);

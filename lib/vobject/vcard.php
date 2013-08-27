@@ -105,21 +105,21 @@ class VCard extends VObject\Component\VCard {
 		foreach($property->parameters as $key=>&$parameter) {
 			// Check for values without names which Sabre interprets
 			// as names without values.
-			if(trim($parameter->value) === '') {
-				$parameter->value = $parameter->name;
+			if(trim($parameter->getValue()) === '') {
+				$parameter->setValue($parameter->name);
 				$parameter->name = $this->paramName($parameter->name);
 			}
 			// Check out for encoded string and decode them :-[
 			if(strtoupper($parameter->name) == 'ENCODING') {
-				if(strtoupper($parameter->value) == 'QUOTED-PRINTABLE') {
-					$property->value = str_replace(
+				if(strtoupper($parameter->getValue()) == 'QUOTED-PRINTABLE') {
+					$property->setValue(str_replace(
 						"\r\n", "\n",
 						VObject\StringUtil::convertToUTF8(
-							quoted_printable_decode($property->value)
+							quoted_printable_decode($property->getValue())
 						)
-					);
+					));
 					unset($property->parameters[$key]);
-				} elseif(strtoupper($parameter->value) == 'BASE64') {
+				} elseif(strtoupper($parameter->getValue()) == 'BASE64') {
 					$parameter->value = 'b';
 				}
 			} elseif(strtoupper($parameter->name) == 'CHARSET') {
@@ -153,7 +153,7 @@ class VCard extends VObject\Component\VCard {
 		if ($options & self::UPGRADE) {
 			$this->VERSION = self::DEFAULT_VERSION;
 			foreach($this->children as &$property) {
-				$this->decodeProperty($property);
+				//$this->decodeProperty($property);
 				switch((string)$property->name) {
 					case 'LOGO':
 					case 'SOUND':

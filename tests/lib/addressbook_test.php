@@ -29,8 +29,6 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
 	function setUp() {
 
-		\Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
-
 		$this->backend = new Backend\Mock('foobar');
 		$this->abinfo = $this->backend->getAddressBook('foo');
 		$this->ab = new AddressBook($this->backend, $this->abinfo);

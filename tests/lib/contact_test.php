@@ -143,6 +143,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 	function testUnsetByChecksum() {
 
 		$serialized = JSONSerializer::serializeContact($this->contact);
+		print_r($serialized);
 		$checksum = $serialized['data']['EMAIL'][0]['checksum'];
 
 		$this->assertTrue(isset($this->contact->EMAIL));
