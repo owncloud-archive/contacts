@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-21 06:08-0400\n"
-"PO-Revision-Date: 2013-08-19 18:21+0000\n"
+"POT-Creation-Date: 2013-08-27 09:14-0400\n"
+"PO-Revision-Date: 2013-08-27 13:15+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Thai (Thailand) (http://www.transifex.com/projects/p/owncloud/language/th_TH/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "เกิดข้อผิดพลาดในการโหลดร
 msgid "Error getting PHOTO property."
 msgstr "เกิดข้อผิดพลาดในการดึงคุณสมบัติของรูปภาพ"
 
-#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:251
+#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:294
 msgid "Error saving contact."
 msgstr "เกิดข้อผิดพลาดในการบันทึกข้อมูลผู้ติดต่อ"
 
@@ -152,7 +152,7 @@ msgstr "ไม่สามารถโหลดรูปภาพชั่วค
 msgid "Contacts"
 msgstr "ข้อมูลผู้ิติดต่อ"
 
-#: js/addressbooks.js:68 js/groups.js:509 templates/settings.php:61
+#: js/addressbooks.js:68 js/groups.js:508 templates/settings.php:61
 msgid "Save"
 msgstr "บันทึก"
 
@@ -341,41 +341,41 @@ msgstr "รายชื่อผู้ติดต่อไม่มีอยู
 msgid "Contacts are not in this group."
 msgstr "รายชื่อผู้ติดต่อดังกล่าวไม่มีอยู่ในกลุ่มนี้"
 
-#: js/groups.js:557
+#: js/groups.js:556
 msgid "Failed renaming group: {error}"
 msgstr ""
 
-#: js/groups.js:588
+#: js/groups.js:587
 msgid "A group named {group} already exists"
 msgstr "ชื่อกลุ่มดังกล่าว {group} มีอยู่แล้ว"
 
-#: js/groups.js:623
+#: js/groups.js:622
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr ""
 
-#: js/groups.js:636
+#: js/groups.js:635
 msgid "Failed adding group: {error}"
 msgstr ""
 
-#: js/groups.js:648
+#: js/groups.js:647
 msgid "All"
 msgstr "ทั้งหมด"
 
-#: js/groups.js:663 js/groups.js:666
+#: js/groups.js:662 js/groups.js:665
 msgid "Favorites"
 msgstr "รายการโปรด"
 
-#: js/groups.js:727
+#: js/groups.js:726
 msgid "Shared by {owner}"
 msgstr "ถูกแชร์โดย {owner}"
 
-#: js/groups.js:742
+#: js/groups.js:741
 msgid "Not grouped"
 msgstr ""
 
-#: js/groups.js:768
+#: js/groups.js:767
 msgid "Failed loading groups: {error}"
 msgstr ""
 
@@ -436,39 +436,43 @@ msgstr "ย่อ..."
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: lib/addressbook.php:135
+#: lib/addressbook.php:134
 msgid "You do not have permissions to see this contacts"
 msgstr ""
 
-#: lib/addressbook.php:167
+#: lib/addressbook.php:141
+msgid "Contact not found"
+msgstr ""
+
+#: lib/addressbook.php:168
 msgid "You do not have permissions to see these contacts"
 msgstr ""
 
-#: lib/addressbook.php:193
+#: lib/addressbook.php:195
 msgid "You do not have permissions add contacts to the address book"
 msgstr ""
 
-#: lib/addressbook.php:196
+#: lib/addressbook.php:198
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:218 lib/contact.php:244
+#: lib/addressbook.php:220 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
 msgstr ""
 
-#: lib/addressbook.php:221
+#: lib/addressbook.php:223
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:258
+#: lib/addressbook.php:260
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:284
+#: lib/addressbook.php:286
 msgid "You don't have permissions to update the address book."
 msgstr ""
 
-#: lib/addressbook.php:295
+#: lib/addressbook.php:297
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
@@ -480,55 +484,60 @@ msgstr ""
 msgid "You do not have permissions to see this contact"
 msgstr ""
 
-#: lib/contact.php:259
+#: lib/contact.php:261
 msgid "You do not have permissions to update this contact"
 msgstr ""
 
-#: lib/contact.php:270
+#: lib/contact.php:272
 msgid "The backend for this contact does not support updating it"
 msgstr ""
 
-#: lib/contact.php:288
+#: lib/contact.php:290
 msgid "This backend not support adding contacts"
 msgstr ""
 
-#: lib/contact.php:394 lib/contact.php:411
+#: lib/contact.php:398 lib/contact.php:415
 msgid "Property not found"
 msgstr ""
 
-#: lib/contact.php:459
+#: lib/contact.php:463
 msgid " Missing IM parameter for: "
 msgstr ""
 
-#: lib/contact.php:467
+#: lib/contact.php:471
 msgid "Unknown IM: "
 msgstr "IM ไม่ทราบชื่อ:"
 
-#: lib/controller/addressbookcontroller.php:122
+#: lib/controller/addressbookcontroller.php:127
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:144
+#: lib/controller/addressbookcontroller.php:150
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:168
+#: lib/controller/addressbookcontroller.php:184
+#, php-format
+msgid "You do not have permissions to delete the \"%s\" address book"
+msgstr ""
+
+#: lib/controller/addressbookcontroller.php:191
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:188
+#: lib/controller/addressbookcontroller.php:218
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:222
+#: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:245
+#: lib/controller/addressbookcontroller.php:283
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:256
+#: lib/controller/addressbookcontroller.php:299
 msgid "Error removing contact from other address book."
 msgstr ""
 
