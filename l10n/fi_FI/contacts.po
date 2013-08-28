@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-27 09:14-0400\n"
-"PO-Revision-Date: 2013-08-27 13:15+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-28 04:23-0400\n"
+"PO-Revision-Date: 2013-08-27 22:30+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/projects/p/owncloud/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -187,11 +187,11 @@ msgstr "Osoitekirjan lisääminen epäonnistui: {error}"
 
 #: js/addressbooks.js:520
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "Osoitekirjojen lataaminen epäonnistui: {error}"
 
 #: js/app.js:213
 msgid "Indexing contacts"
-msgstr ""
+msgstr "Indeksoidaan yhteystietoja"
 
 #: js/app.js:223
 msgid "Unrecoverable error loading address books: {msg}"
@@ -203,11 +203,11 @@ msgstr "Virhe."
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr ""
+msgstr "Lisää..."
 
 #: js/app.js:321 js/app.js:333
 msgid "Remove from..."
-msgstr ""
+msgstr "Poista..."
 
 #: js/app.js:338
 msgid "Add group..."
@@ -227,7 +227,7 @@ msgstr "Virheellinen sähköposti: \"{url}\""
 
 #: js/app.js:555
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "Yhdistäminen epäonnistui. Yhteystietoa ei löydy: {id}"
 
 #: js/app.js:568
 msgid "Merge failed."
@@ -251,7 +251,7 @@ msgstr "Virhe ryhmään lisättäessä."
 
 #: js/app.js:912
 msgid "Error removing from group."
-msgstr ""
+msgstr "Virhe poistaessa ryhmästä."
 
 #: js/app.js:1072
 msgid "Error setting {name} as favorite."
@@ -276,7 +276,7 @@ msgstr "OK"
 
 #: js/app.js:1367
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "Yhteystietoa ei löydy: {id}"
 
 #: js/app.js:1409
 msgid "No files selected for upload."
@@ -340,7 +340,7 @@ msgstr ""
 
 #: js/groups.js:349
 msgid "Contact is not in this group."
-msgstr ""
+msgstr "Yhteystieto ei ole tässä ryhmässä."
 
 #: js/groups.js:363
 msgid "Contacts are not in this group."
@@ -374,7 +374,7 @@ msgstr "Suosikit"
 
 #: js/groups.js:726
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "Jakanut {owner}"
 
 #: js/groups.js:741
 msgid "Not grouped"
@@ -447,7 +447,7 @@ msgstr ""
 
 #: lib/addressbook.php:141
 msgid "Contact not found"
-msgstr ""
+msgstr "Yhteystietoa ei löydy"
 
 #: lib/addressbook.php:168
 msgid "You do not have permissions to see these contacts"
@@ -679,7 +679,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
-msgstr ""
+msgstr "Internet-puhelu"
 
 #: lib/utils/properties.php:76
 msgid "AIM"
@@ -952,7 +952,7 @@ msgstr "Sukunimi"
 
 #: templates/contacts.php:259
 msgid "Select groups"
-msgstr ""
+msgstr "Valitse ryhmät"
 
 #: templates/contacts.php:262
 msgid "Select address book"
@@ -988,7 +988,7 @@ msgstr "Syntymäpäivä"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
-msgstr ""
+msgstr "Muistiinpanot kuuluvat tähän..."
 
 #: templates/contacts.php:325
 msgid "Export as VCF"

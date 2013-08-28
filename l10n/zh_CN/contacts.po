@@ -17,15 +17,16 @@
 # waterone <suiy02@gmail.com>, 2012
 # tonnie <supertonnie@hotmail.com>, 2012
 # modokwang <modokwang@gmail.com>, 2013
+# Xuetian Weng <wengxt@gmail.com>, 2013
 # Xuetian Weng <wengxt@gmail.com>, 2011, 2012
 # zhangmin <zm1990s@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-27 09:14-0400\n"
-"PO-Revision-Date: 2013-08-27 13:14+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-28 04:23-0400\n"
+"PO-Revision-Date: 2013-08-27 22:30+0000\n"
+"Last-Translator: Xuetian Weng <wengxt@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -311,7 +312,7 @@ msgstr "这正确吗？"
 
 #: js/contacts.js:849
 msgid "Error parsing date: {date}"
-msgstr ""
+msgstr "解析日期出错：{date}"
 
 #: js/contacts.js:1046
 msgid "# groups"
@@ -337,7 +338,7 @@ msgstr "增加"
 
 #: js/groups.js:262
 msgid "Contact is already in this group."
-msgstr ""
+msgstr "联系人已经在此分组中。"
 
 #: js/groups.js:275
 msgid "Contacts are already in this group."
@@ -345,53 +346,53 @@ msgstr "联系人都已经在这个组中。"
 
 #: js/groups.js:338
 msgid "Couldn't get contact list."
-msgstr ""
+msgstr "无法获取联系人列表。"
 
 #: js/groups.js:349
 msgid "Contact is not in this group."
-msgstr ""
+msgstr "联系人不在此分组中。"
 
 #: js/groups.js:363
 msgid "Contacts are not in this group."
-msgstr ""
+msgstr "联系人都不在此分组中。"
 
 #: js/groups.js:556
 msgid "Failed renaming group: {error}"
-msgstr ""
+msgstr "重命名分组失败：{error}"
 
 #: js/groups.js:587
 msgid "A group named {group} already exists"
-msgstr ""
+msgstr "分组{group}已存在。"
 
 #: js/groups.js:622
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr ""
+msgstr "您可以通过拖拽分组的方式来按您喜欢的方式摆放他们。"
 
 #: js/groups.js:635
 msgid "Failed adding group: {error}"
-msgstr ""
+msgstr "添加分组失败：{error}"
 
 #: js/groups.js:647
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 #: js/groups.js:662 js/groups.js:665
 msgid "Favorites"
-msgstr ""
+msgstr "收藏"
 
 #: js/groups.js:726
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "由{owner}共享"
 
 #: js/groups.js:741
 msgid "Not grouped"
-msgstr ""
+msgstr "未分组"
 
 #: js/groups.js:767
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "加载分组失败:{error}"
 
 #: js/loader.js:49
 msgid "Result: "
@@ -448,35 +449,35 @@ msgstr "更少..."
 
 #: js/storage.js:258
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "加载照片失败：{error}"
 
 #: lib/addressbook.php:134
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "你没有权限查看此联系人"
 
 #: lib/addressbook.php:141
 msgid "Contact not found"
-msgstr ""
+msgstr "联系人未找到"
 
 #: lib/addressbook.php:168
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "您没有权限查看这些联系人"
 
 #: lib/addressbook.php:195
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "您没有权限添加联系人到此地址簿"
 
 #: lib/addressbook.php:198
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "此地址簿的后端不支持添加联系人"
 
 #: lib/addressbook.php:220 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "你没有权限删除此联系人"
 
 #: lib/addressbook.php:223
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "此地址簿的后端不支持删除联系人"
 
 #: lib/addressbook.php:260
 msgid "The backend for this address book does not support updating"
@@ -488,15 +489,15 @@ msgstr "你没有权限更新地址簿"
 
 #: lib/addressbook.php:297
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "您没有权限删除地址簿"
 
 #: lib/app.php:132
 msgid "Address book not found"
-msgstr ""
+msgstr "地址簿未找到"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "你没有权限查看此联系人"
 
 #: lib/contact.php:261
 msgid "You do not have permissions to update this contact"
@@ -508,11 +509,11 @@ msgstr "此地址簿的后端不支持更新它"
 
 #: lib/contact.php:290
 msgid "This backend not support adding contacts"
-msgstr ""
+msgstr "此后端不支持添加联系人"
 
 #: lib/contact.php:398 lib/contact.php:415
 msgid "Property not found"
-msgstr ""
+msgstr "属性未找到"
 
 #: lib/contact.php:463
 msgid " Missing IM parameter for: "
@@ -524,36 +525,36 @@ msgstr "未知即时通讯服务："
 
 #: lib/controller/addressbookcontroller.php:127
 msgid "Error creating address book"
-msgstr ""
+msgstr "创建地址薄出错"
 
 #: lib/controller/addressbookcontroller.php:150
 msgid "Error updating address book"
-msgstr ""
+msgstr "更新地址簿出错"
 
 #: lib/controller/addressbookcontroller.php:184
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "你没有权限删除地址簿“%s”"
 
 #: lib/controller/addressbookcontroller.php:191
 msgid "Error deleting address book"
-msgstr ""
+msgstr "删除地址薄出错"
 
 #: lib/controller/addressbookcontroller.php:218
 msgid "Error creating contact."
-msgstr ""
+msgstr "创建联系人出错。"
 
 #: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
-msgstr ""
+msgstr "删除联系人出错。"
 
 #: lib/controller/addressbookcontroller.php:283
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "检索联系人出错。"
 
 #: lib/controller/addressbookcontroller.php:299
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "从其他地址簿移除联系人出错。"
 
 #: lib/controller/contactcontroller.php:42
 #: lib/controller/contactcontroller.php:68
@@ -562,27 +563,27 @@ msgstr ""
 #: lib/controller/contactcontroller.php:187
 #: lib/controller/contactcontroller.php:250
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "无法找到联系人。"
 
 #: lib/controller/contactcontroller.php:97
 msgid "Error merging into contact."
-msgstr ""
+msgstr "合并到联系人出错。"
 
 #: lib/controller/contactcontroller.php:101
 #: lib/controller/contactcontroller.php:209
 msgid "Error saving contact to backend."
-msgstr ""
+msgstr "保存联系人到后台出错。"
 
 #: lib/controller/contactcontroller.php:191
 #: lib/controller/contactcontroller.php:254
 msgid "Property name is not set."
-msgstr ""
+msgstr "属性名称未设置。"
 
 #: lib/controller/contactcontroller.php:195
 #: lib/controller/contactcontroller.php:258
 #: lib/controller/contactcontroller.php:268
 msgid "Property checksum is not set."
-msgstr ""
+msgstr "属性校验值未设置。"
 
 #: lib/controller/contactcontroller.php:202
 #: lib/controller/contactcontroller.php:275
@@ -591,78 +592,78 @@ msgstr "vCard 的信息不正确。请重新加载页面。"
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
-msgstr ""
+msgstr "设置属性出错"
 
 #: lib/controller/contactcontroller.php:284
 msgid "Error saving property to backend"
-msgstr ""
+msgstr "将属性保存到后端出错"
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
-msgstr ""
+msgstr "未指定组名称。"
 
 #: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
-msgstr ""
+msgstr "添加分组错误。"
 
 #: lib/controller/groupcontroller.php:135
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "未指定分组名称。"
 
 #: lib/controller/groupcontroller.php:139
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "未指定重命名的分组名称。"
 
 #: lib/controller/groupcontroller.php:145
 msgid "Error renaming group."
-msgstr ""
+msgstr "重命名分组错误。"
 
 #: lib/controller/groupcontroller.php:186
 #: lib/controller/groupcontroller.php:237
 msgid "Group ID missing from request."
-msgstr ""
+msgstr "请求缺少分组ID。"
 
 #: lib/controller/groupcontroller.php:191
 msgid "Group name missing from request."
-msgstr ""
+msgstr "请求中缺少分组名"
 
 #: lib/controller/groupcontroller.php:196
 #: lib/controller/groupcontroller.php:242
 msgid "Contact ID missing from request."
-msgstr ""
+msgstr "请求缺少联系人ID。"
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "尝试上传黑名单文件："
 
 #: lib/controller/importcontroller.php:120
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "您没有权限导入到此地址簿。"
 
 #: lib/controller/importcontroller.php:128
 msgid "File name missing from request."
-msgstr ""
+msgstr "请求缺少文件名。"
 
 #: lib/controller/importcontroller.php:133
 #: lib/controller/importcontroller.php:250
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "请求缺少进度。"
 
 #: lib/controller/importcontroller.php:139
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "尝试访问黑名单文件："
 
 #: lib/controller/importcontroller.php:181
 msgid "No contacts found in: "
-msgstr ""
+msgstr "在这里未找到联系人："
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
-msgstr ""
+msgstr "未指定键。"
 
 #: lib/controller/settingscontroller.php:40
 msgid "No value is given."
-msgstr ""
+msgstr "未指定值。"
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
@@ -680,7 +681,7 @@ msgstr "其它"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
-msgstr ""
+msgstr "主页"
 
 #: lib/utils/properties.php:66
 msgid "Jabber"
@@ -688,7 +689,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
-msgstr ""
+msgstr "网络呼叫"
 
 #: lib/utils/properties.php:76
 msgid "AIM"
@@ -786,7 +787,7 @@ msgstr "家庭"
 
 #: templates/contacts.php:6
 msgid "New Contact"
-msgstr ""
+msgstr "新建联系人"
 
 #: templates/contacts.php:10
 msgid "Group name"
@@ -798,16 +799,16 @@ msgstr "新建分组"
 
 #: templates/contacts.php:19
 msgid "Address books"
-msgstr ""
+msgstr "地址簿"
 
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr ""
+msgstr "显示名称"
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
-msgstr ""
+msgstr "添加地址薄"
 
 #: templates/contacts.php:25 templates/contacts.php:127
 msgid "Import"
@@ -815,27 +816,27 @@ msgstr "导入"
 
 #: templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "导入至..."
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "选择文件..."
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
-msgstr ""
+msgstr "选择 (反选) 全部"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr ""
+msgstr "排序"
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr ""
+msgstr "名- 姓"
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "姓-, 名"
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
@@ -847,7 +848,7 @@ msgstr "收藏"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
-msgstr ""
+msgstr "合并选择项"
 
 #: templates/contacts.php:91 templates/contacts.php:324
 msgid "Close"
@@ -905,7 +906,7 @@ msgstr "删除当前联系人"
 msgid ""
 "<h3>You have no contacts in your addressbook.</h3><p>Add a new contact or "
 "import existing contacts from a VCF file.</p>"
-msgstr ""
+msgstr "<h3>你的地址薄中没有联系人。</h3><p>添加一个新的联系人或者从VCF文件中导入。</p>"
 
 #: templates/contacts.php:126
 msgid "Add contact"
@@ -913,23 +914,23 @@ msgstr "添加联系人"
 
 #: templates/contacts.php:176
 msgid "Delete group"
-msgstr ""
+msgstr "删除分组"
 
 #: templates/contacts.php:177
 msgid "Rename group"
-msgstr ""
+msgstr "重命名组"
 
 #: templates/contacts.php:185
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "要将数据合并到哪个联系人？"
 
 #: templates/contacts.php:193
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "在成功合并后删除其他项？"
 
 #: templates/contacts.php:205
 msgid "Compose mail"
-msgstr ""
+msgstr "编写邮件"
 
 #: templates/contacts.php:227
 msgid "Delete current photo"
@@ -961,11 +962,11 @@ msgstr "姓"
 
 #: templates/contacts.php:259
 msgid "Select groups"
-msgstr ""
+msgstr "选择分组"
 
 #: templates/contacts.php:262
 msgid "Select address book"
-msgstr ""
+msgstr "选择地址薄"
 
 #: templates/contacts.php:266 templates/contacts.php:330
 msgid "Nickname"
@@ -981,7 +982,7 @@ msgstr "标题"
 
 #: templates/contacts.php:276
 msgid "Enter title"
-msgstr ""
+msgstr "输入头衔"
 
 #: templates/contacts.php:280 templates/contacts.php:328
 msgid "Organization"
@@ -989,7 +990,7 @@ msgstr "组织"
 
 #: templates/contacts.php:283
 msgid "Enter organization"
-msgstr ""
+msgstr "输入组织"
 
 #: templates/contacts.php:287 templates/contacts.php:331
 msgid "Birthday"
@@ -997,11 +998,11 @@ msgstr "生日"
 
 #: templates/contacts.php:318
 msgid "Notes go here..."
-msgstr ""
+msgstr "注释放在这里..."
 
 #: templates/contacts.php:325
 msgid "Export as VCF"
-msgstr ""
+msgstr "导出为 VCF"
 
 #: templates/contacts.php:332
 msgid "Phone"
@@ -1043,7 +1044,7 @@ msgstr "请指定合法的电子邮件地址"
 
 #: templates/contacts.php:354
 msgid "someone@example.com"
-msgstr ""
+msgstr "someone@example.com"
 
 #: templates/contacts.php:356
 msgid "Mail to address"
@@ -1067,7 +1068,7 @@ msgstr "访问网址"
 
 #: templates/contacts.php:386
 msgid "Delete URL"
-msgstr ""
+msgstr "删除 URL"
 
 #: templates/contacts.php:397
 msgid "View on map"
@@ -1075,11 +1076,11 @@ msgstr "在地图上显示"
 
 #: templates/contacts.php:398
 msgid "Delete address"
-msgstr ""
+msgstr "删除地址"
 
 #: templates/contacts.php:410
 msgid "1 Main Street"
-msgstr ""
+msgstr "主街1号"
 
 #: templates/contacts.php:411
 msgid "Street address"
@@ -1087,7 +1088,7 @@ msgstr "街道地址"
 
 #: templates/contacts.php:415
 msgid "12345"
-msgstr ""
+msgstr "12345"
 
 #: templates/contacts.php:416
 msgid "Postal code"
@@ -1095,7 +1096,7 @@ msgstr "邮政编码"
 
 #: templates/contacts.php:418
 msgid "Your city"
-msgstr ""
+msgstr "城市"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1103,15 +1104,15 @@ msgstr "城市"
 
 #: templates/contacts.php:423
 msgid "Some region"
-msgstr ""
+msgstr "部分地区"
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr ""
+msgstr "州/省"
 
 #: templates/contacts.php:428
 msgid "Your country"
-msgstr ""
+msgstr "国家"
 
 #: templates/contacts.php:429
 msgid "Country"
@@ -1135,7 +1136,7 @@ msgstr "导出"
 
 #: templates/contacts.php:465
 msgid "CardDAV link"
-msgstr ""
+msgstr "CardDAV 链接"
 
 #: templates/part.cropphoto.php:31
 msgid "The temporary image has been removed from cache."
