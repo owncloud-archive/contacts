@@ -38,13 +38,13 @@ $maxUploadFilesize = \OCP\Util::maxUploadFilesize('/');
 \OCP\Util::addScript('contacts', 'groups');
 \OCP\Util::addScript('contacts', 'jquery.ocaddnew');
 \OCP\Util::addScript('files', 'jquery.fileupload');
-\OCP\Util::addScript('contacts', 'jquery.Jcrop');
+\OCP\Util::addScript('3rdparty/Jcrop', 'jquery.Jcrop');
 \OCP\Util::addStyle('3rdparty/fontawesome', 'font-awesome');
 \OCP\Util::addStyle('contacts', 'font-awesome');
 \OCP\Util::addStyle('', 'jquery.multiselect');
 \OCP\Util::addStyle('contacts', 'jquery.combobox');
 \OCP\Util::addStyle('contacts', 'jquery.ocaddnew');
-\OCP\Util::addStyle('contacts', 'jquery.Jcrop');
+\OCP\Util::addStyle('3rdparty/Jcrop', 'jquery.Jcrop');
 \OCP\Util::addStyle('contacts', 'contacts');
 
 $tmpl = new \OCP\Template( "contacts", "contacts", "user" );
