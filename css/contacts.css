@@ -665,7 +665,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactlist tr > td:not(.tel):not(.adr):not(.actions) {
 	max-width: 270px;
-	min-width: 270px;
+	min-width: 170px;
 }
 #contactlist tr > td.tel {
 	max-width: 180px;
