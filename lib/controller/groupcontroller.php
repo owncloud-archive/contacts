@@ -247,7 +247,7 @@ class GroupController extends BaseController {
 		$backend = $app->getBackend('local');
 		$catman = new \OC_VCategories('contact', $this->api->getUserId());
 		foreach($ids as $contactid) {
-			$contact = $backend->getContact(null, $contactid, true);
+			$contact = $backend->getContact(null, $contactid, array('noCollection' => true));
 			if(!$contact) {
 				$response->debug('Couldn\'t get contact: ' . $contactid);
 				continue;
@@ -261,7 +261,7 @@ class GroupController extends BaseController {
 					$obj->add('CATEGORIES');
 				}
 				$obj->CATEGORIES->removeGroup($categoryname);
-				$backend->updateContact(null, $contactid, $obj, true);
+				$backend->updateContact(null, $contactid, $obj, array('noCollection' => true));
 			} else {
 				$response->debug('Error parsing contact: ' . $contactid);
 			}
