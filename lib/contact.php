@@ -672,7 +672,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	// TODO: Cleanup these parameters
-	public function cacheThumbnail(\OC_Image $image = null, $remove = false, $update = false) {
+	public function cacheThumbnail(\OCP\Image $image = null, $remove = false, $update = false) {
 		$key = self::THUMBNAIL_PREFIX . $this->combinedKey();
 		//\OC_Cache::remove($key);
 		if(\OC_Cache::hasKey($key) && $image === null && $remove === false && $update === false) {
@@ -686,7 +686,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 		if(is_null($image)) {
 			$this->retrieve();
-			$image = new \OC_Image();
+			$image = new \OCP\Image();
 			if(!isset($this->PHOTO) && !isset($this->LOGO)) {
 				return false;
 			}
@@ -698,13 +698,13 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 		if(!$image->centerCrop()) {
 			\OCP\Util::writeLog('contacts',
-				'thumbnail.php. Couldn\'t crop thumbnail for ID ' . $key,
+				__METHOD__ .'. Couldn\'t crop thumbnail for ID ' . $key,
 				\OCP\Util::ERROR);
 			return false;
 		}
 		if(!$image->resize(self::THUMBNAIL_SIZE)) {
 			\OCP\Util::writeLog('contacts',
-				'thumbnail.php. Couldn\'t resize thumbnail for ID ' . $key,
+				__METHOD__ . '. Couldn\'t resize thumbnail for ID ' . $key,
 				\OCP\Util::ERROR);
 			return false;
 		}

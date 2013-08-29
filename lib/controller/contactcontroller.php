@@ -129,7 +129,7 @@ class ContactController extends BaseController {
 			return $response;
 		}
 
-		$image = new \OC_Image();
+		$image = new \OCP\Image();
 		if (isset($contact->PHOTO) && $image->loadFromBase64((string)$contact->PHOTO)) {
 			// OK
 			$etag = md5($contact->PHOTO);

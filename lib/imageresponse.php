@@ -16,7 +16,7 @@ use OCA\AppFramework\Http\Response;
  */
 class ImageResponse extends Response {
 	/**
-	 * @var OC_Image
+	 * @var OCP\Image
 	 */
 	protected $image;
 
@@ -25,7 +25,7 @@ class ImageResponse extends Response {
 		$this->setImage($image);
 	}
 
-	public function setImage(\OC_Image $image) {
+	public function setImage(\OCP\Image $image) {
 		if(!$image->valid()) {
 			throw new InvalidArgumentException(__METHOD__. ' The image resource is not valid.');
 		}
