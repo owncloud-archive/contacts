@@ -25,7 +25,7 @@ $parent = isset($_GET['parent']) ? $_GET['parent'] : null;
 $backend = isset($_GET['backend']) ? $_GET['backend'] : null;
 $etag = null;
 $caching = null;
-$max_size = 170;
+$max_size = (int)\OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'max_size', 200);
 
 if(!$id || $id === 'new') {
 	getStandardImage();
