@@ -8,15 +8,16 @@
 # mhh <marian.hvolka@stuba.sk>, 2013
 # martinb <martin.babik@gmail.com>, 2012
 # Roman Priesol <roman@priesol.net>, 2012
+# martin, 2013
 # martin, 2012-2013
 # zixo <zixo@zixo.sk>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-28 04:23-0400\n"
-"PO-Revision-Date: 2013-08-27 22:30+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-30 08:24-0400\n"
+"PO-Revision-Date: 2013-08-28 18:01+0000\n"
+"Last-Translator: martin\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -447,7 +448,7 @@ msgstr "Nemáte oprávnenie na prezeranie týchto kontaktov"
 
 #: lib/addressbook.php:141
 msgid "Contact not found"
-msgstr ""
+msgstr "Kontakt nenájdený"
 
 #: lib/addressbook.php:168
 msgid "You do not have permissions to see these contacts"
@@ -524,7 +525,7 @@ msgstr "Chyba pri aktualizácii adresára"
 #: lib/controller/addressbookcontroller.php:184
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "Nemáte oprávnenie pre zmazanie zoznamu kontaktov \"%s\""
 
 #: lib/controller/addressbookcontroller.php:191
 msgid "Error deleting address book"

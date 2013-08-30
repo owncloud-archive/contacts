@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-28 04:23-0400\n"
-"PO-Revision-Date: 2013-08-27 22:30+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-30 08:24-0400\n"
+"PO-Revision-Date: 2013-08-28 12:00+0000\n"
+"Last-Translator: Magnus Höglund <magnus@linux.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -308,7 +308,7 @@ msgstr "Är detta korrekt?"
 
 #: js/contacts.js:849
 msgid "Error parsing date: {date}"
-msgstr ""
+msgstr "Fel vid läsning av datum: {date}"
 
 #: js/contacts.js:1046
 msgid "# groups"
@@ -453,7 +453,7 @@ msgstr "Du har inte rättigheter att se denna kontakt"
 
 #: lib/addressbook.php:141
 msgid "Contact not found"
-msgstr ""
+msgstr "Kontakten kunde inte hittas"
 
 #: lib/addressbook.php:168
 msgid "You do not have permissions to see these contacts"
@@ -530,7 +530,7 @@ msgstr "FEL vid uppdatering av adressbok"
 #: lib/controller/addressbookcontroller.php:184
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "Du har inte behörighet att radera \"%s\" adressbok"
 
 #: lib/controller/addressbookcontroller.php:191
 msgid "Error deleting address book"
@@ -568,7 +568,7 @@ msgstr "Fel vid sammanslagning till en kontakt"
 #: lib/controller/contactcontroller.php:101
 #: lib/controller/contactcontroller.php:209
 msgid "Error saving contact to backend."
-msgstr ""
+msgstr "Fel när kontakt ska sparas till server."
 
 #: lib/controller/contactcontroller.php:191
 #: lib/controller/contactcontroller.php:254
@@ -588,11 +588,11 @@ msgstr "Information om vCard är felaktigt. Vänligen ladda om sidan."
 
 #: lib/controller/contactcontroller.php:280
 msgid "Error setting property"
-msgstr ""
+msgstr "Fel när inställning ska sparas"
 
 #: lib/controller/contactcontroller.php:284
 msgid "Error saving property to backend"
-msgstr ""
+msgstr "Fel när inställning ska sparas till server"
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
@@ -604,11 +604,11 @@ msgstr "Fel vid tillägg av grupp."
 
 #: lib/controller/groupcontroller.php:135
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Inget gruppnamn att byta från angivet."
 
 #: lib/controller/groupcontroller.php:139
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Inget gruppnamn att byta till angivet."
 
 #: lib/controller/groupcontroller.php:145
 msgid "Error renaming group."
@@ -621,7 +621,7 @@ msgstr "Grupp-ID fattas från anrop."
 
 #: lib/controller/groupcontroller.php:191
 msgid "Group name missing from request."
-msgstr ""
+msgstr "Gruppnamn saknas från begäran."
 
 #: lib/controller/groupcontroller.php:196
 #: lib/controller/groupcontroller.php:242
@@ -630,24 +630,24 @@ msgstr "Kontakt-ID fattas från anrop."
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "Försök att ladda upp svartlistad fil:"
 
 #: lib/controller/importcontroller.php:120
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "Du har inte behörighet att importera denna adressbok."
 
 #: lib/controller/importcontroller.php:128
 msgid "File name missing from request."
-msgstr ""
+msgstr "Filnamn saknas från begäran."
 
 #: lib/controller/importcontroller.php:133
 #: lib/controller/importcontroller.php:250
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Progress-nyckel saknas från begäran."
 
 #: lib/controller/importcontroller.php:139
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "Försök att komma åt svartlistad fil:"
 
 #: lib/controller/importcontroller.php:181
 msgid "No contacts found in: "
@@ -922,7 +922,7 @@ msgstr "Vilken kontakt ska informationen slås ihop med?"
 
 #: templates/contacts.php:193
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Radera dom andra efter lyckad sammanslagning?"
 
 #: templates/contacts.php:205
 msgid "Compose mail"

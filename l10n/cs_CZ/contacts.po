@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-28 04:23-0400\n"
-"PO-Revision-Date: 2013-08-27 22:30+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-30 08:24-0400\n"
+"PO-Revision-Date: 2013-08-30 07:31+0000\n"
+"Last-Translator: pstast <petr@stastny.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -448,7 +448,7 @@ msgstr "Nemáte oprávnění pro zobrazení těchto kontaktů"
 
 #: lib/addressbook.php:141
 msgid "Contact not found"
-msgstr ""
+msgstr "Kontakt nebyl nalezen"
 
 #: lib/addressbook.php:168
 msgid "You do not have permissions to see these contacts"
@@ -525,7 +525,7 @@ msgstr "Chyba při změně adresáře kontaktů"
 #: lib/controller/addressbookcontroller.php:184
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "Nemáte oprávnění pro smazání adresáře kontaktů \"%s\""
 
 #: lib/controller/addressbookcontroller.php:191
 msgid "Error deleting address book"

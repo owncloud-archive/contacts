@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-28 04:23-0400\n"
-"PO-Revision-Date: 2013-08-27 22:30+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-08-30 08:24-0400\n"
+"PO-Revision-Date: 2013-08-28 22:30+0000\n"
+"Last-Translator: mbouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/owncloud/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,19 +26,19 @@ msgstr ""
 
 #: ajax/currentphoto.php:49 ajax/savecrop.php:66
 msgid "Error getting contact object."
-msgstr "Erro obtendo o obxecto contacto."
+msgstr "Produciuse un erro ao obter o obxecto contacto."
 
 #: ajax/currentphoto.php:53
 msgid "Error reading contact photo."
-msgstr "Erro lendo a fotografía do contacto."
+msgstr "Produciuse un erro ao ler a fotografía do contacto."
 
 #: ajax/currentphoto.php:67
 msgid "Error saving temporary file."
-msgstr "Erro gardando o ficheiro temporal."
+msgstr "Produciuse un erro ao gardar o ficheiro temporal."
 
 #: ajax/currentphoto.php:70
 msgid "The loading photo is not valid."
-msgstr "A fotografía cargada non é válida."
+msgstr "A fotografía cargada non é correcta."
 
 #: ajax/oc_photo.php:28
 msgid "No contact info was submitted."
@@ -54,31 +54,31 @@ msgstr "Non existe o ficheiro:"
 
 #: ajax/oc_photo.php:44 ajax/oc_photo.php:47
 msgid "Error loading image."
-msgstr "Erro cargando imaxe."
+msgstr "Produciuse un erro ao cargar a imaxe."
 
 #: ajax/savecrop.php:96
 msgid "Error getting PHOTO property."
-msgstr "Erro obtendo a propiedade PHOTO."
+msgstr "Produciuse un erro ao obter a propiedade PHOTO."
 
 #: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:294
 msgid "Error saving contact."
-msgstr "Erro gardando o contacto."
+msgstr "Produciuse un erro ao gardar o contacto."
 
 #: ajax/savecrop.php:126
 msgid "Error resizing image"
-msgstr "Erro cambiando o tamaño da imaxe"
+msgstr "Produciuse un erro ao ao cambiar o tamaño da imaxe"
 
 #: ajax/savecrop.php:129
 msgid "Error cropping image"
-msgstr "Erro recortando a imaxe"
+msgstr "Produciuse un erro ao recortar a imaxe"
 
 #: ajax/savecrop.php:132
 msgid "Error creating temporary image"
-msgstr "Erro creando a imaxe temporal"
+msgstr "Produciuse un erro ao crear a imaxe temporal"
 
 #: ajax/savecrop.php:135
 msgid "Error finding image: "
-msgstr "Erro buscando a imaxe: "
+msgstr "Produciuse un erro ao buscar a imaxe: "
 
 #: ajax/setpreference.php:37
 msgid "Key is not set for: "
@@ -105,7 +105,7 @@ msgstr "Non houbo erros, o ficheiro enviouse correctamente"
 #: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "O ficheiro subido supera a directiva upload_max_filesize no php.ini"
+msgstr "O ficheiro enviado supera a directiva upload_max_filesize no php.ini"
 
 #: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
 #: lib/controller/importcontroller.php:50
@@ -143,7 +143,7 @@ msgstr "Envío do ficheiro de lista negra:"
 
 #: ajax/uploadimport.php:74 lib/controller/importcontroller.php:95
 msgid "Error uploading contacts to storage."
-msgstr "Erro subindo os contactos ao almacén."
+msgstr "Produciuse un erro ao enviar os contactos ao almacén."
 
 #: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
 msgid "Couldn't save temporary image: "
@@ -280,13 +280,13 @@ msgstr "Non foi posíbel atopar o contacto: {id}"
 
 #: js/app.js:1409
 msgid "No files selected for upload."
-msgstr "Sen ficheiros escollidos para subir."
+msgstr "Non foi seleccionado ningún ficheiro para enviar."
 
 #: js/app.js:1419
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr "O ficheiro que tenta subir supera o tamaño máximo permitido neste servidor."
+msgstr "O ficheiro que tenta enviar supera o tamaño máximo permitido neste servidor."
 
 #: js/app.js:1506
 msgid "Edit profile picture"
@@ -294,7 +294,7 @@ msgstr "Editar a imaxe do perfil"
 
 #: js/app.js:1524
 msgid "Error loading profile picture."
-msgstr "Erro ao cargar a imaxe de perfil."
+msgstr "Produciuse un erro ao cargar a imaxe de perfil."
 
 #: js/contacts.js:591
 msgid "Is this correct?"
@@ -447,7 +447,7 @@ msgstr "Vostede non ten permisos para ver estes contactos"
 
 #: lib/addressbook.php:141
 msgid "Contact not found"
-msgstr ""
+msgstr "Non se atopa o contacto"
 
 #: lib/addressbook.php:168
 msgid "You do not have permissions to see these contacts"
@@ -524,7 +524,7 @@ msgstr "Produciuse un erro ao actualizar o caderno de enderezos"
 #: lib/controller/addressbookcontroller.php:184
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "Vostede non ten permisos para eliminar o caderno de enderezos «%s»"
 
 #: lib/controller/addressbookcontroller.php:191
 msgid "Error deleting address book"
@@ -557,7 +557,7 @@ msgstr "Non foi posíbel atopar o contacto."
 
 #: lib/controller/contactcontroller.php:97
 msgid "Error merging into contact."
-msgstr "Produciuse un erro ao misturar en contacto."
+msgstr "Produciuse un erro ao mesturar en contacto."
 
 #: lib/controller/contactcontroller.php:101
 #: lib/controller/contactcontroller.php:209
@@ -932,7 +932,7 @@ msgstr "Editar a foto actual"
 
 #: templates/contacts.php:229
 msgid "Upload new photo"
-msgstr "Subir unha nova foto"
+msgstr "Enviar unha nova foto"
 
 #: templates/contacts.php:230
 msgid "Select photo from ownCloud"
