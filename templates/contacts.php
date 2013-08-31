@@ -145,7 +145,7 @@
 		method="post"
 		enctype="multipart/form-data"
 		target="crop_target"
-		action="<?php print_unescaped(OCP\Util::linkToAbsolute('contacts', 'ajax/savecrop.php')); ?>">
+		>
 		<input type="hidden" id="contactid" name="contactid" value="{contactid}" />
 		<input type="hidden" id="addressbookid" name="addressbookid" value="{addressbookid}" />
 		<input type="hidden" id="backend" name="backend" value="{backend}" />
