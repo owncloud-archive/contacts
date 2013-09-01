@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-28 04:23-0400\n"
-"PO-Revision-Date: 2013-08-27 22:30+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-09-01 11:41-0400\n"
+"PO-Revision-Date: 2013-08-31 13:20+0000\n"
+"Last-Translator: polxmod <paolo.velati@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -450,7 +450,7 @@ msgstr "Non hai i permessi per vedere questo contatto"
 
 #: lib/addressbook.php:141
 msgid "Contact not found"
-msgstr ""
+msgstr "Contatto non trovato"
 
 #: lib/addressbook.php:168
 msgid "You do not have permissions to see these contacts"
@@ -527,7 +527,7 @@ msgstr "Errore durante l'aggiornamento della rubrica"
 #: lib/controller/addressbookcontroller.php:184
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "Non hai i permessi per eliminare la rubrica \"%s\""
 
 #: lib/controller/addressbookcontroller.php:191
 msgid "Error deleting address book"

@@ -83,6 +83,7 @@
 "Delete" => "Διαγραφή",
 "More..." => "Περισσότερα...",
 "Less..." => "Λιγότερα",
+"Contact not found" => "Δεν βρέθηκε επαφή",
 "You do not have permissions add contacts to the address book" => "Δεν έχετε δικαιώματα για να προσθέσετε επαφές σε αυτό το βιβλίο διευθύνσεων.",
 "You do not have permissions to delete this contact" => "Δεν διαθέτε επαρκή δικαιώματα για την διαγραφή αυτής της επαφής.",
 "You don't have permissions to update the address book." => "Δεν έχετε δικαιώματα ενημέρωσης αυτού του βιβλίου διευθύνσεων.",
