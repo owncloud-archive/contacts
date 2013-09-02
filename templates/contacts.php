@@ -37,6 +37,11 @@
 						</li>
 					</ul>
 				</div>
+				<div id="max_size">
+				<h2 data-id="max_size" tabindex="0" role="button"><?php p($l->t('Maximum image size')); ?></h2>
+					<input type="range" min="50" max="2000" step="50" name="max_size" id="max_size_input" value="<?php p($_['max_size']) ?>"/>
+					<div id="max_size_value"><?php p($_['max_size']) ?>px</div>
+				</div>
 			</div> <!-- app-settings-content -->
 		</div>
 	</div>
