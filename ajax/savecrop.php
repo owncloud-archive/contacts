@@ -29,6 +29,7 @@ namespace OCA\Contacts;
 
 require_once 'loghandler.php';
 
+$max_size = (int)\OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'max_size', 400);
 $image = null;
 
 $x1 = (isset($_POST['x1']) && $_POST['x1']) ? $_POST['x1'] : 0;
@@ -76,8 +77,8 @@ if($data) {
 			'savecrop.php, x: '.$x1.' y: '.$y1.' w: '.$w.' h: '.$h,
 			\OCP\Util::DEBUG);
 		if($image->crop($x1, $y1, $w, $h)) {
-			if(($image->width() <= 200 && $image->height() <= 200)
-				|| $image->resize(200)) {
+			if(($image->width() <= $max_size && $image->height() <= $max_size)
+				|| $image->resize($max_size)) {
 
 				// For vCard 3.0 the type must be e.g. JPEG or PNG
 				// For version 4.0 the full mimetype should be used.
