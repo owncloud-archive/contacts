@@ -33,7 +33,7 @@ $l10n = OCA\Contacts\App::$l10n;
 $contactid = isset($_POST['contactid']) ? $_POST['contactid'] : '';
 $addressbookid = isset($_POST['addressbookid']) ? $_POST['addressbookid'] : '';
 $backend = isset($_POST['backend']) ? $_POST['backend'] : '';
-$max_size = (int)\OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'max_size', 200);
+$max_size = (int)\OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'max_size', 400);
 
 if($contactid == '') {
 	bailOut('Missing contact id.');
