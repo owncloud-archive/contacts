@@ -61,7 +61,7 @@ if(!$contact) {
 	if($image->valid()) {
 		$tmpkey = 'contact-photo-'.$contact->UID;
 		if(\OC_Cache::set($tmpkey, $image->data(), 600)) {
-			\OCP\JSON::success(array('data' => array('id'=>$_GET['id'], 'tmp'=>$tmpkey)));
+			\OCP\JSON::success(array('data' => array('id'=>$contactid, 'tmp'=>$tmpkey)));
 			exit();
 		} else {
 			bailOut(App::$l10n->t('Error saving temporary file.'));
