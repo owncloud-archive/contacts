@@ -11,10 +11,13 @@ OC.Contacts = OC.Contacts || {};
 		this.getAllResponseHeaders = jqXHR.getAllResponseHeaders;
 		this.getResponseHeader = jqXHR.getResponseHeader;
 		this.statusCode = jqXHR.status;
+		// 204 == No content
 		if(!response) {
-			console.log('jqXHR', jqXHR);
-			this.error = true;
-			this.message = jqXHR.statusText;
+			if(this.statusCode !== 204) {
+				console.log('jqXHR', jqXHR);
+				this.error = true;
+				this.message = jqXHR.statusText;
+			}
 		} else {
 			if(response.status === 'error') {
 				this.error = true;
