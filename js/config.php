@@ -36,3 +36,4 @@ echo 'contacts_categories_indexed = '
 	. (OCP\Config::getUserValue($user, 'contacts', 'contacts_categories_indexed', 'no') === 'no'
 	? 'false' : 'true') . ',';
 echo 'lang=\'' . OCP\Config::getUserValue($user, 'core', 'lang', 'en') . '\';';
+echo 'max_size=\'' . OCP\Config::getUserValue($user, 'contacts', 'max_size', 'en') . '\';';

@@ -202,4 +202,10 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	$('#max_size_input').on('change', function(event) {
+		event.preventDefault();
+		OC.Contacts.storage.setPreference('max_size', $(this).val());
+		$('#max_size_value').text($(this).val() + 'px');
+	});
 });

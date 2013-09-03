@@ -33,6 +33,7 @@ $l10n = OCA\Contacts\App::$l10n;
 $contactid = isset($_POST['contactid']) ? $_POST['contactid'] : '';
 $addressbookid = isset($_POST['addressbookid']) ? $_POST['addressbookid'] : '';
 $backend = isset($_POST['backend']) ? $_POST['backend'] : '';
+$max_size = (int)\OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'max_size', 400);
 
 if($contactid == '') {
 	bailOut('Missing contact id.');
@@ -50,8 +51,8 @@ if ($fn) {
 	$image = new OC_Image();
 	sleep(1); // Apparently it needs time to load the data.
 	if($image->loadFromData($data)) {
-		if($image->width() > 400 || $image->height() > 400) {
-			$image->resize(400); // Prettier resizing than with browser and saves bandwidth.
+		if($image->width() > $max_size || $image->height() > $max_size) {
+			$image->resize($max_size); // Prettier resizing than with browser and saves bandwidth.
 		}
 		if(!$image->fixOrientation()) { // No fatal error so we don't bail out.
 			debug('Couldn\'t save correct image orientation: '.$tmpkey);
@@ -98,8 +99,8 @@ if(file_exists($file['tmp_name'])) {
 	$tmpkey = 'contact-photo-'.md5(basename($file['tmp_name']));
 	$image = new OC_Image();
 	if($image->loadFromFile($file['tmp_name'])) {
-		if($image->width() > 400 || $image->height() > 400) {
-			$image->resize(400); // Prettier resizing than with browser and saves bandwidth.
+		if($image->width() > $max_size || $image->height() > $max_size) {
+			$image->resize($max_size); // Prettier resizing than with browser and saves bandwidth.
 		}
 		if(!$image->fixOrientation()) { // No fatal error so we don't bail out.
 			debug('Couldn\'t save correct image orientation: '.$tmpkey);
