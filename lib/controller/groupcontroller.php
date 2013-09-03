@@ -106,7 +106,8 @@ class GroupController extends BaseController {
 						continue;
 					}
 					if($obj->CATEGORIES->removeGroup($name)) {
-						$backend->updateContact(null, $id, $obj, true);
+						// TODO: don't let updateContact trigger emits, but do it here instead.
+						$backend->updateContact(null, $id, $obj, array('noCollection' => true));
 					}
 				} else {
 					\OCP\Util::writeLog('contacts', __METHOD__.', could not parse card ' . $id, \OCP\Util::DEBUG);
@@ -150,7 +151,7 @@ class GroupController extends BaseController {
 			$app = new App($this->api->getUserId());
 			$backend = $app->getBackend('local');
 			foreach($ids as $id) {
-				$contact = $backend->getContact(null, $id, true);
+				$contact = $backend->getContact(null, $id, array('noCollection' => true));
 				$obj = \Sabre\VObject\Reader::read(
 					$contact['carddata'],
 					\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
@@ -160,7 +161,7 @@ class GroupController extends BaseController {
 						continue;
 					}
 					$obj->CATEGORIES->renameGroup($from, $to);
-					$backend->updateContact(null, $id, $obj, true);
+					$backend->updateContact(null, $id, $obj, array('noCollection' => true));
 				} else {
 					\OCP\Util::writeLog('contacts', __METHOD__.', could not parse card ' . $id, \OCP\Util::DEBUG);
 				}
@@ -201,7 +202,7 @@ class GroupController extends BaseController {
 		$backend = $app->getBackend('local');
 		$catman = new \OC_VCategories('contact', $this->api->getUserId());
 		foreach($ids as $contactid) {
-			$contact = $backend->getContact(null, $contactid, true);
+			$contact = $backend->getContact(null, $contactid, array('noCollection' => true));
 			$obj = \Sabre\VObject\Reader::read(
 				$contact['carddata'],
 				\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
@@ -211,7 +212,7 @@ class GroupController extends BaseController {
 					$obj->add('CATEGORIES');
 				}
 				$obj->CATEGORIES->addGroup($categoryname);
-				$backend->updateContact(null, $contactid, $obj, true);
+				$backend->updateContact(null, $contactid, $obj, array('noCollection' => true));
 			}
 			$response->debug('contactid: ' . $contactid . ', categoryid: ' . $categoryid);
 			$catman->addToCategory($contactid, $categoryid);
