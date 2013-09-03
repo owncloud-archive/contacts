@@ -106,7 +106,6 @@ class GroupController extends BaseController {
 						continue;
 					}
 					if($obj->CATEGORIES->removeGroup($name)) {
-						// TODO: don't let updateContact trigger emits, but do it here instead.
 						$backend->updateContact(null, $id, $obj, array('noCollection' => true, 'isBatch' => true));
 					}
 				} else {
