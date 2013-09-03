@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# blackc0de <complic@vipmail.hu>, 2013
 # Adam Toth <adazlord@gmail.com>, 2012
 # akoscomp <nagy.akos@libreoffice.ro>, 2013
 # ebela <bela@dandre.hu>, 2013
@@ -16,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-28 04:23-0400\n"
-"PO-Revision-Date: 2013-08-27 22:30+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-09-03 05:31-0400\n"
+"PO-Revision-Date: 2013-09-01 19:20+0000\n"
+"Last-Translator: blackc0de <complic@vipmail.hu>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -229,7 +230,7 @@ msgstr "Hibás email: \"{url}\""
 
 #: js/app.js:555
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr "Sikertelen összefűzés. Nem található kapcsolat: {id}"
+msgstr "Sikertelen egyesítés. Nem található kapcsolat: {id}"
 
 #: js/app.js:568
 msgid "Merge failed."
@@ -241,7 +242,7 @@ msgstr "Sikertelen összefűzés. Hiba a kapcsolat mentésekor."
 
 #: js/app.js:594
 msgid "Select photo"
-msgstr "Fotó kiválasztása"
+msgstr "Fénykép kiválasztása"
 
 #: js/app.js:664 js/app.js:1543
 msgid "Network or server error. Please inform administrator."
@@ -449,7 +450,7 @@ msgstr "Nincs jogosultsága megnézni az illető adatait."
 
 #: lib/addressbook.php:141
 msgid "Contact not found"
-msgstr ""
+msgstr "Kapcsolat nem található"
 
 #: lib/addressbook.php:168
 msgid "You do not have permissions to see these contacts"
@@ -461,27 +462,27 @@ msgstr "Nincs jogosultsága hozzáadni kapcsolatokat a címjegyzékhez"
 
 #: lib/addressbook.php:198
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "A címjegyzék háttérfolyamata nem támogatja az új kapcsolatok felvételét"
 
 #: lib/addressbook.php:220 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "Nincs jogosultságod törölni ezt a kapcsolatot!"
 
 #: lib/addressbook.php:223
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "A címjegyzék háttérfolyamata nem támogatja a kapcsolatok törlését"
 
 #: lib/addressbook.php:260
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "A címjegyzék háttérfolyamata nem támogatja a frissítést"
 
 #: lib/addressbook.php:286
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "Nincs jogosultságod frissíteni a címjegyzéket!"
 
 #: lib/addressbook.php:297
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "Nincs jogosultságod törölni ezt a címjegyzéket!"
 
 #: lib/app.php:132
 msgid "Address book not found"
@@ -493,23 +494,23 @@ msgstr "Nincs jogosultsága megnézni ez a partnert."
 
 #: lib/contact.php:261
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Nincs jogosultságod frissíteni ezt a kapcsolatot"
 
 #: lib/contact.php:272
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "Ehhez a kapcsolathoz tartozó háttérfolyamat nem támogatja a frissítést"
 
 #: lib/contact.php:290
 msgid "This backend not support adding contacts"
-msgstr ""
+msgstr "Ez a háttérfolyamat nem támogatja a kapcsolatok felvételét"
 
 #: lib/contact.php:398 lib/contact.php:415
 msgid "Property not found"
-msgstr ""
+msgstr "Nem található tulajdonság"
 
 #: lib/contact.php:463
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "Hiányzó IM paraméter:"
 
 #: lib/contact.php:471
 msgid "Unknown IM: "
@@ -530,7 +531,7 @@ msgstr ""
 
 #: lib/controller/addressbookcontroller.php:191
 msgid "Error deleting address book"
-msgstr ""
+msgstr "Hiba a címjegyzék törlésekor"
 
 #: lib/controller/addressbookcontroller.php:218
 msgid "Error creating contact."
@@ -546,7 +547,7 @@ msgstr ""
 
 #: lib/controller/addressbookcontroller.php:299
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "Hiba a kapcsolat törlésénél más címjegyzékből."
 
 #: lib/controller/contactcontroller.php:42
 #: lib/controller/contactcontroller.php:68
@@ -555,7 +556,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:187
 #: lib/controller/contactcontroller.php:250
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "Nem található kapcsolat."
 
 #: lib/controller/contactcontroller.php:97
 msgid "Error merging into contact."
@@ -673,7 +674,7 @@ msgstr "Más"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
-msgstr ""
+msgstr "Kezdőlap"
 
 #: lib/utils/properties.php:66
 msgid "Jabber"
@@ -1056,7 +1057,7 @@ msgstr "Telefonszám törlése"
 
 #: templates/contacts.php:385
 msgid "Go to web site"
-msgstr ""
+msgstr "Ugrás a weboldalra"
 
 #: templates/contacts.php:386
 msgid "Delete URL"
