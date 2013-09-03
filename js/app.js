@@ -98,17 +98,18 @@ var wrongKey = function(event) {
 /**
  * Simply notifier
  * Arguments:
- * @param message The text message to show.
- * @param timeout The timeout in seconds before the notification disappears. Default 10.
- * @param timeouthandler A function to run on timeout.
- * @param clickhandler A function to run on click. If a timeouthandler is given it will be cancelled on click.
- * @param data An object that will be passed as argument to the timeouthandler and clickhandler functions.
- * @param cancel If set cancel all ongoing timer events and hide the notification.
+ * @param string message - The text message to show.
+ * @param int timeout - The timeout in seconds before the notification disappears. Default 10.
+ * @param function timeouthandler - A function to run on timeout.
+ * @param function clickhandler - A function to run on click. If a timeouthandler is given it will be cancelled on click.
+ * @param object data - An object that will be passed as argument to the timeouthandler and clickhandler functions.
+ * @param bool cancel - If set cancel all ongoing timer events and hide the notification.
  */
 OC.notify = function(params) {
 	var self = this;
 	if(!self.notifier) {
 		self.notifier = $('#notification');
+		self.notifier.on('click', function() { $(this).fadeOut();});
 	}
 	if(params.cancel) {
 		self.notifier.off('click');
@@ -118,11 +119,11 @@ OC.notify = function(params) {
 			}
 		}
 		self.notifier.text('').fadeOut().removeData();
-		return;
 	}
-	self.notifier.text(params.message);
-	self.notifier.fadeIn().css('display', 'inline');
-	self.notifier.on('click', function() { $(this).fadeOut();});
+	if(params.message) {
+		self.notifier.text(params.message).fadeIn().css('display', 'inline');
+	}
+
 	var timer = setTimeout(function() {
 		self.notifier.fadeOut();
 		if(params.timeouthandler && $.isFunction(params.timeouthandler)) {
