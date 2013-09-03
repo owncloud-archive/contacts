@@ -33,6 +33,10 @@ class JSONResponse extends OriginalResponse {
 	}
 
 	function bailOut($msg, $tracelevel = 1, $debuglevel = \OCP\Util::ERROR) {
+		if($msg instanceof \Exception) {
+			$msg = $msg->getMessage();
+			$this->setStatus($msg->getCode());
+		}
 		$this->setErrorMessage($msg);
 		$this->debug($msg, $tracelevel, $debuglevel);
 	}
