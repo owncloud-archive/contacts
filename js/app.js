@@ -1430,11 +1430,8 @@ OC.Contacts = OC.Contacts || {
 		$.getJSON(OC.filePath('contacts', 'ajax', 'oc_photo.php'),
 				  {path: path, contact: metadata},function(response) {
 			if(response.status == 'success') {
-				//alert(jsondata.data.page);
 				self.editPhoto(metadata, response.data.tmp);
-				//$('#edit_photo_dialog_img').html(jsondata.data.page);
-			}
-			else{
+			} else {
 				$(document).trigger('status.contacts.error', response);
 			}
 		});
@@ -1485,7 +1482,7 @@ OC.Contacts = OC.Contacts || {
 			});
 
 		var cropphoto = new Image();
-		$(cropphoto).load(function () {
+		$(cropphoto).on('load', function () {
 			var x = 5, y = 5, w = this.width-10, h = this.height-10;
 			$(this).attr('id', 'cropbox');
 			$(this).prependTo($dlg).fadeIn();
@@ -1501,26 +1498,43 @@ OC.Contacts = OC.Contacts || {
 				setSelect:	[ w, h, x, y ]//,
 				//aspectRatio: 0.8
 			});
-			$container.html($dlg).dialog({
-							modal: true,
-							closeOnEscape: true,
-							title:  t('contacts', 'Edit profile picture'),
-							height: 'auto', width: 'auto',
-							buttons: {
-								'Ok':function() {
-									self.savePhoto($(this));
-									$(this).dialog('close');
-								},
-								'Cancel':function() { $(this).dialog('close'); }
-							},
-							close: function(event, ui) {
-								$(this).dialog('destroy').remove();
-								$container.remove();
-							},
-							open: function(event, ui) {
-								showCoords({x:x,y:y,w:w,h:h});
-							}
-						});
+			$container.html($dlg).ocdialog({
+				modal: true,
+				closeOnEscape: true,
+				title:  t('contacts', 'Edit profile picture'),
+				height: 'auto', width: 'auto',
+				buttons: {
+					'Ok':function() {
+						self.savePhoto($(this));
+						$(this).ocdialog('close');
+					},
+					'Cancel':function() { $(this).ocdialog('close'); }
+				},
+				buttons: [
+					{
+						text: t('contacts', 'OK'),
+						click:function() {
+							self.savePhoto($(this));
+							$(this).ocdialog('close');
+						},
+						defaultButton: true
+					},
+					{
+						text: t('contacts', 'Cancel'),
+						click:function(dlg) {
+							$(this).ocdialog('close');
+							return false;
+						}
+					}
+				],
+				close: function(event, ui) {
+					$(this).dialog('destroy').remove();
+					$container.remove();
+				},
+				open: function(event, ui) {
+					showCoords({x:x,y:y,w:w,h:h});
+				}
+			});
 		}).error(function () {
 			$(document).trigger('status.contacts.error', {message:t('contacts','Error loading profile picture.')});
 		}).attr('src', OC.linkTo('contacts', 'tmpphoto.php')+'?tmpkey='+tmpkey+'&refresh='+Math.random());
