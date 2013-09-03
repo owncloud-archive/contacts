@@ -68,7 +68,7 @@ if(!$contact) {
 
 $data = \OC_Cache::get($tmpkey);
 if($data) {
-	$image = new \OC_Image();
+	$image = new \OCP\Image();
 	if($image->loadFromData($data)) {
 		$w = ($w != -1 ? $w : $image->width());
 		$h = ($h != -1 ? $h : $image->height());
@@ -82,9 +82,12 @@ if($data) {
 				// For vCard 3.0 the type must be e.g. JPEG or PNG
 				// For version 4.0 the full mimetype should be used.
 				// https://tools.ietf.org/html/rfc2426#section-3.1.4
-				$type = strval($contact->VERSION) === '4.0'
-					? $image->mimeType()
-					: strtoupper(array_pop(explode('/', $image->mimeType())));
+				if(strval($contact->VERSION) === '4.0') {
+					$type = $image->mimeType();
+				} else {
+					$type = explode('/', $image->mimeType());
+					$type = strtoupper(array_pop($type));
+				}
 				if(isset($contact->PHOTO)) {
 					\OCP\Util::writeLog('contacts',
 						'savecrop.php: PHOTO property exists.',
