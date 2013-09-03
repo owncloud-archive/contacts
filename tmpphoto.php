@@ -26,7 +26,7 @@ header("Cache-Control: no-cache, no-store, must-revalidate");
 
 OCP\Util::writeLog('contacts', 'tmpphoto.php: tmpkey: '.$tmpkey, OCP\Util::DEBUG);
 
-$image = new OC_Image();
+$image = new OCP\Image();
 $image->loadFromData(OC_Cache::get($tmpkey));
 if($maxsize != -1) {
 	$image->resize($maxsize);
