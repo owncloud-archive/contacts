@@ -214,6 +214,7 @@ class Addressbook extends AbstractPIMCollection {
 	 *
 	 * @param string $id
 	 * @return bool
+	 * @throws \Exception on missing permissions
 	 */
 	public function deleteChild($id) {
 		if(!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
@@ -232,6 +233,54 @@ class Addressbook extends AbstractPIMCollection {
 			return true;
 		}
 		return false;
+	}
+
+	/**
+	 * Delete a list of contacts from the address book
+	 *
+	 * @param array $ids
+	 * @return array containing the status
+	 * @throws \Exception on missing permissions
+	 */
+	public function deleteChildren($ids) {
+		if(!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
+			throw new \Exception(self::$l10n->t('You do not have permissions to delete this contact'), 403);
+		}
+		if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_DELETE)) {
+			throw new \Exception(self::$l10n->t('The backend for this address book does not support deleting contacts'), 501);
+		}
+
+		$response = array();
+
+		foreach($ids as $id) {
+			try {
+				if(!$this->deleteChild($id)) {
+					\OCP\Util::writeLog(
+						'contacts', __METHOD__.' Error deleting contact: '
+						. $this->getBackend()->name . '::'
+						. $this->getId() . '::' . $id,
+						\OCP\Util::ERROR
+					);
+					$response[] = array(
+						'id' => (string)$id,
+						'status' => 'error',
+						'message' => self::$l10n->t('Unknown error')
+					);
+				} else {
+					$response[] = array(
+						'id' => (string)$id,
+						'status' => 'success'
+					);
+				}
+			} catch(\Exception $e) {
+				$response[] = array(
+					'id' => (string)$id,
+					'status' => 'error',
+					'message' => $e->getMessage()
+				);
+			}
+		}
+		return $response;
 	}
 
 	/**

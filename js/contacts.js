@@ -2128,18 +2128,15 @@ OC.Contacts = OC.Contacts || {};
 			//timeout:5,
 			timeouthandler:function() {
 				//console.log('timeout');
-				// Don't fire all deletes at once
-				self.deletionTimer = setInterval(function() {
-					self.deleteContacts();
-				}, 500);
+				self.deleteContacts();
 			},
 			clickhandler:function() {
 				//console.log('clickhandler');
+				//OC.notify({cancel:true});
+				OC.notify({cancel:true, message:t('contacts', 'Cancelled deletion of {num} contacts', {num: self.deletionQueue.length})});
 				$.each(self.deletionQueue, function(idx, contact) {
 					self.insertContact(contact.getListItemElement());
 				});
-				OC.notify({cancel:true});
-				OC.notify({message:t('contacts', 'Cancelled deletion of {num}', {num: self.deletionQueue.length})});
 				self.deletionQueue = [];
 				window.onbeforeunload = null;
 			}
@@ -2151,39 +2148,81 @@ OC.Contacts = OC.Contacts || {};
 	* TODO: Batch delete contacts instead of sending multiple requests.
 	*/
 	ContactList.prototype.deleteContacts = function() {
-		var self = this;
-		//console.log('ContactList.deleteContacts, deletionQueue', this.deletionQueue);
-		if(typeof this.deletionTimer === 'undefined') {
-			console.log('No deletion timer!');
-			window.onbeforeunload = null;
-			return;
-		}
+		var self = this,
+			contact,
+			contactMap = {};
+		console.log('ContactList.deleteContacts, deletionQueue', this.deletionQueue);
 
-		var contact = this.deletionQueue.shift();
-		if(typeof contact === 'undefined') {
-			clearInterval(this.deletionTimer);
-			delete this.deletionTimer;
-			window.onbeforeunload = null;
-			return;
-		}
-
-		// Let contact remove itself.
-		var id = contact.getId();
-		contact.destroy(function(response) {
-			console.log('deleteContact', response, self.length);
-			if(!response.error) {
-				delete self.contacts[id];
-				$(document).trigger('status.contact.deleted', {
-					id: id
-				});
-				self.length -= 1;
-				if(self.length === 0) {
-					$(document).trigger('status.nomorecontacts');
+		if(this.deletionQueue.length === 1) {
+			contact = this.deletionQueue.shift()
+			// Let contact remove itself.
+			var id = contact.getId();
+			contact.destroy(function(response) {
+				console.log('deleteContact', response, self.length);
+				if(!response.error) {
+					delete self.contacts[id];
+					$(document).trigger('status.contact.deleted', {
+						id: id
+					});
+					self.length -= 1;
+					if(self.length === 0) {
+						$(document).trigger('status.nomorecontacts');
+					}
+				} else {
+					self.insertContact(contact.getListItemElement());
+					OC.notify({message:response.message});
 				}
-			} else {
-				OC.notify({message:response.message});
+			});
+		} else {
+
+			// Make a map of backends, address books and contacts for easier processing.
+			while(contact = this.deletionQueue.shift()) {
+				if(!contactMap[contact.getBackend()]) {
+					contactMap[contact.getBackend()] = {};
+				}
+				if(!contactMap[contact.getBackend()][contact.getParent()]) {
+					contactMap[contact.getBackend()][contact.getParent()] = [];
+				}
+				contactMap[contact.getBackend()][contact.getParent()].push(contact.getId());
 			}
-		});
+			console.log('map', contactMap);
+
+			// Call each backend/addressBook to delete contacts.
+			$.each(contactMap, function(backend, addressBooks) {
+				console.log(backend, addressBooks);
+				$.each(addressBooks, function(addressBook, contacts) {
+					console.log(addressBook, contacts);
+					var ab = self.addressBooks.find({backend:backend, id:addressBook});
+					ab.deleteContacts(contacts, function(response) {
+						console.log('response', response);
+						if(!response.error) {
+							// We get a result set back, so process all of them.
+							$.each(response.data.result, function(idx, result) {
+								console.log('deleting', idx, result.id);
+								if(result.status === 'success') {
+									delete self.contacts[result.id];
+									$(document).trigger('status.contact.deleted', {
+										id: result.id
+									});
+									self.length -= 1;
+									if(self.length === 0) {
+										$(document).trigger('status.nomorecontacts');
+									}
+								} else {
+									// Error deleting, so re-insert element.
+									// TODO: Collect errors and display them when done.
+									self.insertContact(self.contacts[result.id].getListItemElement());
+								}
+							});
+						}
+					});
+				});
+			});
+		}
+
+		window.onbeforeunload = null;
+		return;
+
 	};
 
 	/**

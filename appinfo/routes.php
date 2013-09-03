@@ -106,6 +106,16 @@ $this->create('contacts_address_book_delete_contact', 'addressbook/{backend}/{ad
 	)
 	->requirements(array('backend', 'addressbookid', 'contactid'));
 
+$this->create('contacts_address_book_delete_contacts', 'addressbook/{backend}/{addressbookid}/deleteContacts')
+	->post()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('AddressBookController', 'deleteChildren', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbookid', 'contactid'));
+
 $this->create('contacts_address_book_move_contact', 'addressbook/{backend}/{addressbookid}/contact/{contactid}')
 	->post()
 	->action(

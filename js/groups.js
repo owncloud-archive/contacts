@@ -313,9 +313,10 @@ OC.Contacts = OC.Contacts || {};
 	* from its internal list without saving.
 	* @param integer|array contactid. An integer id or an array of integer ids.
 	* @param integer groupid. The integer id of the group
+	* @param boolean onlyInternal If true don't save to backend
 	* @param function cb. Optional call-back function
 	*/
-	GroupList.prototype.removeFrom = function(contactid, groupid, cb) {
+	GroupList.prototype.removeFrom = function(contactid, groupid, onlyInternal, cb) {
 		console.log('GroupList.removeFrom', contactid, groupid);
 		var $groupelem = this.findById(groupid);
 		var contacts = $groupelem.data('contacts');
@@ -364,15 +365,15 @@ OC.Contacts = OC.Contacts || {};
 				}
 			}
 		}
-		if(doPost) {
+		$.each(ids, function(idx, id) {
+			contacts.splice(contacts.indexOf(id), 1);
+		});
+		//console.log('contacts', contacts, contacts.indexOf(id), contacts.indexOf(String(id)));
+		$groupelem.data('contacts', contacts);
+		if(doPost && !onlyInternal) {
 			var groupname = this.nameById(groupid);
 			$.when(this.storage.removeFromGroup(ids, groupid, groupname)).then(function(response) {
 				if(!response.error) {
-					$.each(ids, function(idx, id) {
-						contacts.splice(contacts.indexOf(id), 1);
-					});
-					//console.log('contacts', contacts, contacts.indexOf(id), contacts.indexOf(String(id)));
-					$groupelem.data('contacts', contacts);
 					var $numelem = $groupelem.find('.numcontacts');
 					$numelem.text(contacts.length).switchClass('', 'active', 200);
 					setTimeout(function() {
@@ -394,14 +395,15 @@ OC.Contacts = OC.Contacts || {};
 	 * Remove a contact from all groups. Used on contact deletion.
 	 * 
 	 * @param integer contactid.
-	 * @param boolean alsospecial. Whether the contact should also be
+	 * @param boolean alsoSpecial. Whether the contact should also be
 	 *    removed from non 'category' groups.
+	 * @param boolean onlyInternal If true don't save to backend
 	 */
-	GroupList.prototype.removeFromAll = function(contactid, alsospecial) {
+	GroupList.prototype.removeFromAll = function(contactid, alsoSpecial, onlyInternal) {
 		var self = this;
-		var selector = alsospecial ? 'li' : 'li[data-type="category"]';
+		var selector = alsoSpecial ? 'li' : 'li[data-type="category"]';
 		$.each(this.$groupList.find(selector), function(i, group) {
-			self.removeFrom(contactid, $(this).data('id'));
+			self.removeFrom(contactid, $(this).data('id'), onlyInternal);
 		});
 	};
 

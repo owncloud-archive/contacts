@@ -208,6 +208,23 @@ OC.Contacts = OC.Contacts || {};
 	}
 
 	/**
+	 * Delete a list of contacts from an address book from a specific backend
+	 *
+	 * @param string backend
+	 * @param string addressbookid Address book ID
+	 * @param array contactids Address book ID
+	 */
+	Storage.prototype.deleteContacts = function(backend, addressbookid, contactids) {
+		console.log('Storage.deleteContacts', backend, addressbookid, contactids);
+		return this.requestRoute(
+			'contacts_address_book_delete_contacts',
+			'POST',
+			{backend: backend, addressbookid: addressbookid},
+			{contacts: contactids}
+		);
+	}
+
+	/**
 	 * Move a contact to an address book from a specific backend
 	 *
 	 * @param string backend

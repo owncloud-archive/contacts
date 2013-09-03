@@ -369,7 +369,7 @@ OC.Contacts = OC.Contacts || {
 			}
 			console.log('contact', data.id, 'deleted');
 			// update counts on group lists
-			self.groups.removeFromAll(data.id, true);
+			self.groups.removeFromAll(data.id, true, true);
 		});
 
 		$(document).bind('status.contact.added', function(e, data) {

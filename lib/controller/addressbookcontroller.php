@@ -259,6 +259,32 @@ class AddressBookController extends BaseController {
 		if($result === false) {
 			$response->bailOut(App::$l10n->t('Error deleting contact.'));
 		}
+		$response->setStatus('204');
+		return $response;
+	}
+
+	/**
+	 * @IsAdminExemption
+	 * @IsSubAdminExemption
+	 * @Ajax
+	 */
+	public function deleteChildren() {
+		$params = $this->request->urlParams;
+		$app = new App($this->api->getUserId());
+
+		$response = new JSONResponse();
+
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$contacts = $this->request->post['contacts'];
+
+		try {
+			$result = $addressBook->deleteChildren($contacts);
+		} catch(Exception $e) {
+			$response->bailOut($e->getMessage());
+			return $response;
+		}
+
+		$response->setParams(array('result' => $result));
 		return $response;
 	}
 

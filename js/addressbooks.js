@@ -135,15 +135,31 @@ OC.Contacts = OC.Contacts || {};
 	 * @return An object with a boolean variable 'error'.
 	 */
 	AddressBook.prototype.update = function(properties, cb) {
-		var self = this;
-		return $.when(this.storage.updateAddressBook(this.getBackend(), self.getId(), {properties:properties}))
+		return $.when(this.storage.updateAddressBook(this.getBackend(), this.getId(), {properties:properties}))
 			.then(function(response) {
 			if(response.error) {
 				$(document).trigger('status.contacts.error', response);
 			}
 			cb(response);
 		});
-	}
+	};
+
+	/**
+	 * Delete a list of contacts from the data store
+	 * @param array contactsIds An array of contact ids to be deleted.
+	 * @param cb Optional callback function which will be passed:
+	 * @return An object with a boolean variable 'error'.
+	 */
+	AddressBook.prototype.deleteContacts = function(contactsIds, cb) {
+		console.log('deleteContacts', contactsIds);
+		return $.when(this.storage.deleteContacts(this.getBackend(), this.getId(), contactsIds))
+			.then(function(response) {
+			if(response.error) {
+				$(document).trigger('status.contacts.error', response);
+			}
+			cb(response);
+		});
+	};
 
 	/**
 	 * Delete address book from data store and remove it from the DOM
@@ -166,7 +182,7 @@ OC.Contacts = OC.Contacts || {};
 			console.log(response.message);
 			$(document).trigger('status.contacts.error', response);
 		});
-	}
+	};
 
 	/**
 	 * Controls access to address books
