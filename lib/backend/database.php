@@ -613,7 +613,7 @@ class Database extends AbstractBackend {
 		$updates = array($contact->FN, $data, time(), $id);
 
 		if($noCollection) {
-			$me = $this->getContact(null, $id, true);
+			$me = $this->getContact(null, $id, $options);
 			$addressbookid = $me['parent'];
 		}
 		//if(!$noCollection) {
