@@ -98,7 +98,7 @@ OC.Contacts = OC.Contacts || {};
 			id = params.element.data('id');
 			$elem = params.element;
 		}
-		if(!$elem) {
+		if(!$elem.length) {
 			self.selectGroup({id:'all'});
 			return;
 		}
@@ -368,17 +368,13 @@ OC.Contacts = OC.Contacts || {};
 		$.each(ids, function(idx, id) {
 			contacts.splice(contacts.indexOf(id), 1);
 		});
+		$groupelem.find('.numcontacts').text(contacts.length);
 		//console.log('contacts', contacts, contacts.indexOf(id), contacts.indexOf(String(id)));
 		$groupelem.data('contacts', contacts);
 		if(doPost && !onlyInternal) {
 			var groupname = this.nameById(groupid);
 			$.when(this.storage.removeFromGroup(ids, groupid, groupname)).then(function(response) {
 				if(!response.error) {
-					var $numelem = $groupelem.find('.numcontacts');
-					$numelem.text(contacts.length).switchClass('', 'active', 200);
-					setTimeout(function() {
-						$numelem.switchClass('active', '', 1000);
-					}, 2000);
 					if(typeof cb === 'function') {
 						cb({ids:ids});
 					}
