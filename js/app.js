@@ -1503,13 +1503,6 @@ OC.Contacts = OC.Contacts || {
 				closeOnEscape: true,
 				title:  t('contacts', 'Edit profile picture'),
 				height: 'auto', width: 'auto',
-				buttons: {
-					'Ok':function() {
-						self.savePhoto($(this));
-						$(this).ocdialog('close');
-					},
-					'Cancel':function() { $(this).ocdialog('close'); }
-				},
 				buttons: [
 					{
 						text: t('contacts', 'OK'),
@@ -1528,7 +1521,7 @@ OC.Contacts = OC.Contacts || {
 					}
 				],
 				close: function(event, ui) {
-					$(this).dialog('destroy').remove();
+					$(this).ocdialog('destroy').remove();
 					$container.remove();
 				},
 				open: function(event, ui) {
