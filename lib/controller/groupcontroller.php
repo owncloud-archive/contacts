@@ -107,7 +107,7 @@ class GroupController extends BaseController {
 					}
 					if($obj->CATEGORIES->removeGroup($name)) {
 						// TODO: don't let updateContact trigger emits, but do it here instead.
-						$backend->updateContact(null, $id, $obj, array('noCollection' => true));
+						$backend->updateContact(null, $id, $obj, array('noCollection' => true, 'isBatch' => true));
 					}
 				} else {
 					\OCP\Util::writeLog('contacts', __METHOD__.', could not parse card ' . $id, \OCP\Util::DEBUG);

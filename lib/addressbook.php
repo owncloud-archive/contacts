@@ -213,17 +213,18 @@ class Addressbook extends AbstractPIMCollection {
 	 * Delete a contact from the address book
 	 *
 	 * @param string $id
+	 * @param array $options
 	 * @return bool
 	 * @throws \Exception on missing permissions
 	 */
-	public function deleteChild($id) {
+	public function deleteChild($id, $options = array()) {
 		if(!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
 			throw new \Exception(self::$l10n->t('You do not have permissions to delete this contact'), 403);
 		}
 		if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_DELETE)) {
 			throw new \Exception(self::$l10n->t('The backend for this address book does not support deleting contacts'), 501);
 		}
-		if($this->backend->deleteContact($this->getId(), $id)) {
+		if($this->backend->deleteContact($this->getId(), $id, $options)) {
 			if(isset($this->objects[$id])) {
 				unset($this->objects[$id]);
 			}
@@ -252,9 +253,13 @@ class Addressbook extends AbstractPIMCollection {
 
 		$response = array();
 
+		\OC_Hook::emit('OCA\Contacts', 'pre_deleteContact',
+			array('id' => $ids)
+		);
+
 		foreach($ids as $id) {
 			try {
-				if(!$this->deleteChild($id)) {
+				if(!$this->deleteChild($id, array('isBatch' => true))) {
 					\OCP\Util::writeLog(
 						'contacts', __METHOD__.' Error deleting contact: '
 						. $this->getBackend()->name . '::'

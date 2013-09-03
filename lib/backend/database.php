@@ -571,6 +571,7 @@ class Database extends AbstractBackend {
 	public function updateContact($addressbookid, $id, $contact, array $options = array()) {
 
 		$noCollection = isset($options['noCollection']) ? $options['noCollection'] : false;
+		$isBatch = isset($options['isBatch']) ? $options['isBatch'] : false;
 
 		$updateRevision = true;
 		$isCardDAV = false;
@@ -640,9 +641,11 @@ class Database extends AbstractBackend {
 		}
 
 		$this->touchAddressBook($addressbookid);
-		\OC_Hook::emit('OCA\Contacts', 'post_updateContact',
-			array('id' => $id, 'parent' => $addressbookid, 'contact' => $contact, 'carddav' => $isCardDAV)
-		);
+		if(!$isBatch) {
+			\OC_Hook::emit('OCA\Contacts', 'post_updateContact',
+				array('id' => $id, 'parent' => $addressbookid, 'contact' => $contact, 'carddav' => $isCardDAV)
+			);
+		}
 		return true;
 	}
 
@@ -657,6 +660,9 @@ class Database extends AbstractBackend {
 	 */
 	public function deleteContact($addressbookid, $id, array $options = array()) {
 		// TODO: pass the uri in $options instead.
+
+		$isBatch = isset($options['isBatch']) ? $options['isBatch'] : false;
+
 		$where_query = '`id` = ?';
 		if(is_array($id)) {
 			$where_query = '';
@@ -675,9 +681,12 @@ class Database extends AbstractBackend {
 		} else {
 			$qname = 'deletecontactsbyid';
 		}
-		\OC_Hook::emit('OCA\Contacts', 'pre_deleteContact',
-			array('id' => $id)
-		);
+
+		if(!$isBatch) {
+			\OC_Hook::emit('OCA\Contacts', 'pre_deleteContact',
+				array('id' => $id)
+			);
+		}
 		if(!isset(self::$preparedQueries[$qname])) {
 			self::$preparedQueries[$qname] = \OCP\DB::prepare('DELETE FROM `'
 				. $this->cardsTableName
