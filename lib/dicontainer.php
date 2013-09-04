@@ -9,15 +9,16 @@
 
 namespace OCA\Contacts;
 
-use OCA\AppFramework\DependencyInjection\DIContainer as BaseContainer;
-use OCA\AppFramework\Middleware\MiddlewareDispatcher;
-use OCA\AppFramework\Middleware\Security\SecurityMiddleware;
-use OCA\Contacts\Middleware\Http as HttpMiddleware;
-use OCA\Contacts\Controller\AddressBookController;
-use OCA\Contacts\Controller\GroupController;
-use OCA\Contacts\Controller\ContactController;
-use OCA\Contacts\Controller\SettingsController;
-use OCA\Contacts\Controller\ImportController;
+use OCA\AppFramework\DependencyInjection\DIContainer as BaseContainer,
+	OCA\AppFramework\Middleware\MiddlewareDispatcher,
+	OCA\AppFramework\Middleware\Security\SecurityMiddleware,
+	OCA\Contacts\Middleware\Http as HttpMiddleware,
+	OCA\Contacts\Controller\AddressBookController,
+	OCA\Contacts\Controller\GroupController,
+	OCA\Contacts\Controller\ContactController,
+	OCA\Contacts\Controller\ContactPhotoController,
+	OCA\Contacts\Controller\SettingsController,
+	OCA\Contacts\Controller\ImportController;
 
 class DIContainer extends BaseContainer {
 
@@ -54,6 +55,10 @@ class DIContainer extends BaseContainer {
 
 		$this['ContactController'] = $this->share(function($c){
 			return new ContactController($c['API'], $c['Request']);
+		});
+
+		$this['ContactPhotoController'] = $this->share(function($c){
+			return new ContactPhotoController($c['API'], $c['Request']);
 		});
 
 		$this['SettingsController'] = $this->share(function($c){

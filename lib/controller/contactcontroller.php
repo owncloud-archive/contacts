@@ -111,59 +111,6 @@ class ContactController extends BaseController {
 	/**
 	 * @IsAdminExemption
 	 * @IsSubAdminExemption
-	 * @CSRFExemption
-	 */
-	public function getPhoto() {
-		// TODO: Cache resized photo
-		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
-		$etag = null;
-		$max_size = 170;
-
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
-
-		if(!$contact) {
-			$response = new JSONResponse();
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
-		}
-
-		$image = new \OCP\Image();
-		if (isset($contact->PHOTO) && $image->loadFromBase64((string)$contact->PHOTO)) {
-			// OK
-			$etag = md5($contact->PHOTO);
-		}
-		else
-		// Logo :-/
-		if(isset($contact->LOGO) && $image->loadFromBase64((string)$contact->LOGO)) {
-			// OK
-			$etag = md5($contact->LOGO);
-		}
-		if($image->valid()) {
-			$response = new ImageResponse($image);
-			$lastModified = $contact->lastModified();
-			// Force refresh if modified within the last minute.
-			if(!is_null($lastModified)) {
-				$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
-			}
-			if(!is_null($etag)) {
-				$response->setETag($etag);
-			}
-			if ($image->width() > $max_size || $image->height() > $max_size) {
-				$image->resize($max_size);
-			}
-			return $response;
-		} else {
-			$response = new JSONResponse();
-			$response->bailOut('Error getting user photo');
-			return $response;
-		}
-	}
-
-	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
 	 * @Ajax
 	 */
 	public function deleteProperty() {

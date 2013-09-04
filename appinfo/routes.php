@@ -161,10 +161,60 @@ $this->create('contacts_contact_photo', 'addressbook/{backend}/{addressbookid}/c
 	->action(
 		function($params) {
 			session_write_close();
-			Main::main('ContactController', 'getPhoto', $params, new DIContainer());
+			Main::main('ContactPhotoController', 'getPhoto', $params, new DIContainer());
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactid'));
+
+$this->create('contacts_upload_contact_photo', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/photo')
+	->post()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('ContactPhotoController', 'uploadPhoto', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbook', 'contactid'));
+
+$this->create('contacts_cache_contact_photo', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/photo/cacheCurrent')
+	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('ContactPhotoController', 'cacheCurrentPhoto', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbook', 'contactid'));
+
+$this->create('contacts_cache_fs_photo', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/photo/cacheFS')
+	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('ContactPhotoController', 'cacheFileSystemPhoto', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbook', 'contactid'));
+
+$this->create('contacts_tmp_contact_photo', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/photo/{key}/tmp')
+	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('ContactPhotoController', 'getTempPhoto', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbook', 'contactid', 'key'));
+
+$this->create('contacts_crop_contact_photo', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/photo/{key}/crop')
+	->post()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('ContactPhotoController', 'cropPhoto', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbook', 'contactid', 'key'));
 
 $this->create('contacts_contact_export', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/export')
 	->get()

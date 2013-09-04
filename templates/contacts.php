@@ -128,9 +128,6 @@
 			</div>
 		</div>
 		<form class="float" id="file_upload_form" action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'ajax/uploadphoto.php')); ?>" method="post" enctype="multipart/form-data" target="file_upload_target">
-			<input type="hidden" name="contactid" value="">
-			<input type="hidden" name="addressbookid" value="">
-			<input type="hidden" name="backend" value="">
 			<input type="hidden" name="requesttoken" value="<?php p($_['requesttoken']) ?>">
 			<input type="hidden" name="MAX_FILE_SIZE" value="<?php p($_['uploadMaxFilesize']) ?>" id="max_upload">
 			<input type="hidden" class="max_human_file_size" value="(max <?php p($_['uploadMaxHumanFilesize']); ?>)">
@@ -145,20 +142,20 @@
 		method="post"
 		enctype="multipart/form-data"
 		target="crop_target"
+		action="{action}"
 		>
 		<input type="hidden" id="contactid" name="contactid" value="{contactid}" />
 		<input type="hidden" id="addressbookid" name="addressbookid" value="{addressbookid}" />
 		<input type="hidden" id="backend" name="backend" value="{backend}" />
 		<input type="hidden" id="tmpkey" name="tmpkey" value="{tmpkey}" />
 		<fieldset id="coords">
-		<input type="hidden" id="x1" name="x1" value="" />
-		<input type="hidden" id="y1" name="y1" value="" />
-		<input type="hidden" id="x2" name="x2" value="" />
-		<input type="hidden" id="y2" name="y2" value="" />
+		<input type="hidden" id="x" name="x" value="" />
+		<input type="hidden" id="y" name="y" value="" />
 		<input type="hidden" id="w" name="w" value="" />
 		<input type="hidden" id="h" name="h" value="" />
 		</fieldset>
 	</form>
+	<iframe name="crop_target" id="crop_target" src=""></iframe>
 </script>
 
 <script id="addGroupTemplate" type="text/template">

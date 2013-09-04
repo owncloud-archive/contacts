@@ -261,7 +261,7 @@ OC.Contacts = OC.Contacts || {};
 		var defer = $.Deferred();
 		var self = this;
 		$.when(
-			$(photo).load(function() {
+			$(photo).on('load', function() {
 				defer.resolve(photo);
 			})
 			.error(function() {
@@ -269,6 +269,45 @@ OC.Contacts = OC.Contacts || {};
 				defer.reject();
 			})
 			.attr('src', url + '?refresh=' + Math.random())
+		)
+		.fail(function(jqxhr, textStatus, error) {
+			defer.reject();
+			var err = textStatus + ', ' + error;
+			console.log( "Request Failed: " + err);
+			$(document).trigger('status.contact.error', {
+				message: t('contacts', 'Failed loading photo: {error}', {error:err})
+			});
+		});
+		return defer.promise();
+	}
+
+	/**
+	 * Get Image instance for a contacts profile picture
+	 *
+	 * @param string backend
+	 * @param string addressbookid Address book ID
+	 * @param string contactid Address book ID
+	 * @param string key The key to the cache where the photo is stored.
+	 * @return Image
+	 */
+	Storage.prototype.getTempContactPhoto = function(backend, addressbookid, contactid, key) {
+		var photo = new Image();
+		var url = OC.Router.generate(
+			'contacts_tmp_contact_photo',
+			{backend: backend, addressbookid: addressbookid, contactid: contactid, key: key, refresh: Math.random()}
+		);
+		console.log('url', url);
+		var defer = $.Deferred();
+		var self = this;
+		$.when(
+			$(photo).on('load', function() {
+				defer.resolve(photo);
+			})
+			.error(function(event) {
+				console.log('Error loading temporary photo', event)
+				defer.reject();
+			})
+			.attr('src', url)
 		)
 		.fail(function(jqxhr, textStatus, error) {
 			defer.reject();
