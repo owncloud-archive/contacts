@@ -53,6 +53,12 @@ abstract class AbstractBackend {
 	 */
 	public $name;
 
+	/**
+	 * The current usert.
+	 * @var string
+	 */
+	public $userid;
+
 	protected $possibleContactPermissions = array(
 		\OCP\PERMISSION_CREATE 	=> 'createContact',
 		\OCP\PERMISSION_READ	=> 'getContact',

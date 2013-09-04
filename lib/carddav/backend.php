@@ -27,7 +27,6 @@ use OCA\Contacts;
 class Backend extends \Sabre_CardDAV_Backend_Abstract {
 
 	public function __construct($backends) {
-		//\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		$this->backends = $backends;
 	}
 
@@ -39,8 +38,10 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 */
 	public function getAddressBooksForUser($principaluri) {
 
+		$app = new Contacts\App();
 		$userAddressBooks = array();
-		foreach($this->backends as $backend) {
+		foreach($this->backends as $backendName) {
+			$backend = $app->getBackend($backendName);
 			$addressBooks = $backend->getAddressBooksForUser();
 			
 			if (is_array($addressBooks)) {
@@ -176,7 +177,6 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 
 		$cards = array();
 		foreach($contacts as $contact) {
-			//OCP\Util::writeLog('contacts', __METHOD__.', uri: ' . $i['uri'], OCP\Util::DEBUG);
 			$cards[] = array(
 				'id' => $contact['id'],
 				//'carddata' => $i['carddata'],
@@ -262,11 +262,11 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 * @return array(string, \OCA\Contacts\Backend\AbstractBackend)
 	 */
 	public function getBackendForAddressBook($addressbookid) {
-		list($backendName, $id) = explode('::', $addressbookid);
-		foreach($this->backends as $backend) {
-			if($backend->name === $backendName && $backend->hasAddressBook($id)) {
-				return array($id, $backend);
-			}
+		list($BackendName, $id) = explode('::', $addressbookid);
+		$app = new Contacts\App();
+		$backend = $app->getBackend($backendName);
+		if($backend->name === $backendName && $backend->hasAddressBook($id)) {
+			return array($id, $backend);
 		}
 		throw new \Sabre_DAV_Exception_NotFound('Backend not found: ' . $addressbookid);
 	}
