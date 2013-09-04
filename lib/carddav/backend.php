@@ -262,7 +262,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 * @return array(string, \OCA\Contacts\Backend\AbstractBackend)
 	 */
 	public function getBackendForAddressBook($addressbookid) {
-		list($BackendName, $id) = explode('::', $addressbookid);
+		list($backendName, $id) = explode('::', $addressbookid);
 		$app = new Contacts\App();
 		$backend = $app->getBackend($backendName);
 		if($backend->name === $backendName && $backend->hasAddressBook($id)) {
