@@ -2093,12 +2093,16 @@ OC.Contacts = OC.Contacts || {};
 				this.deletionQueue.push(data);
 			} else {
 				var contact = this.findById(data.contactid);
-				this.deletionQueue.push(contact);
+				if(contact instanceof Contact) {
+					this.deletionQueue.push(contact);
+				}
 			}
 		} else if(utils.isArray(data)) {
 			$.each(data, function(idx, contact) {
 				//console.log('delayedDelete, meta:', contact);
-				self.deletionQueue.push(contact);
+				if(contact instanceof Contact) {
+					self.deletionQueue.push(contact);
+				}
 			});
 			//$.extend(this.deletionQueue, data);
 		} else {
@@ -2107,7 +2111,7 @@ OC.Contacts = OC.Contacts || {};
 		//console.log('delayedDelete, deletionQueue', this.deletionQueue);
 		$.each(this.deletionQueue, function(idx, contact) {
 			//console.log('delayedDelete', contact);
-			contact.detach().setChecked(false);
+			contact && contact.detach().setChecked(false);
 		});
 		//console.log('deletionQueue', this.deletionQueue);
 		if(!window.onbeforeunload) {
