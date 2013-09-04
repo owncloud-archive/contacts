@@ -159,7 +159,7 @@ class Mock extends AbstractBackend {
 
 	function createContact($addressBookId, $contact, array $options = array()) {
 
-		$id = \OC_Util::generate_random_bytes('4');
+		$id = \OC_Util::generateRandomBytes('4');
 		$this->contacts[$addressBookId][$id] = array(
 						'id' => $id,
 						'displayname' => $contact->FN,
