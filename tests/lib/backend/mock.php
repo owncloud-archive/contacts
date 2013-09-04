@@ -93,7 +93,7 @@ class Mock extends AbstractBackend {
 			return false;
 		}
 
-		$id = \OC_Util::generate_random_bytes('4');
+		$id = \OC_Util::generateRandomBytes('4');
 		$this->addressBooks[] = array_merge($properties, array(
 			'id' => $id,
 			'permissions' => \OCP\PERMISSION_ALL,
