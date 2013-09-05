@@ -13,7 +13,7 @@ OC.Contacts = OC.Contacts || {};
 		this.statusCode = jqXHR.status;
 		// 204 == No content
 		if(!response) {
-			if(this.statusCode !== 204) {
+			if([204, 304].indexOf(this.statusCode) === -1) {
 				console.log('jqXHR', jqXHR);
 				this.error = true;
 				this.message = jqXHR.statusText;
@@ -133,6 +133,23 @@ OC.Contacts = OC.Contacts || {};
 			'contacts_address_book_delete',
 			'DELETE',
 			{backend: backend, addressbookid: addressbookid}
+		);
+	}
+
+	/**
+	 * (De)active an address book from a specific backend
+	 *
+	 * @param string backend
+	 * @param string addressbookid Address book ID
+	 * @param bool state
+	 */
+	Storage.prototype.activateAddressBook = function(backend, addressbookid, state) {
+		console.log('Storage.activateAddressBook', backend, addressbookid, state);
+		return this.requestRoute(
+			'contacts_address_book_activate',
+			'POST',
+			{backend: backend, addressbookid: addressbookid},
+			{state: state}
 		);
 	}
 

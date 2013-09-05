@@ -89,6 +89,7 @@ class Addressbook extends AbstractPIMCollection {
 	public function getMetaData() {
 		$metadata = $this->addressBookInfo;
 		$metadata['lastmodified'] = $this->lastModified();
+		$metadata['active'] = $this->isActive();
 		$metadata['backend'] = $this->getBackend()->name;
 		return $metadata;
 	}
@@ -120,6 +121,23 @@ class Addressbook extends AbstractPIMCollection {
 	 */
 	public function getPermissions() {
 		return $this->addressBookInfo['permissions'];
+	}
+
+	/**
+	 * @brief Query whether an address book is active
+	 * @return boolean
+	 */
+	public function isActive() {
+		return $this->backend->isActive($this->getId());
+	}
+
+	/**
+	 * @brief Activate an address book
+	 * @param bool active
+	 * @return void
+	 */
+	public function setActive($active) {
+		$this->backend->setActive($active, $this->getId());
 	}
 
 	/**

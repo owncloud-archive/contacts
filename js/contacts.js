@@ -1877,6 +1877,22 @@ OC.Contacts = OC.Contacts || {};
 					$(document).trigger('request.groups.reload');
 				});
 		});
+		$(document).bind('status.addressbook.activated', function(e, data) {
+			console.log('status.addressbook.activated', data);
+			var addressBook = data.addressbook;
+			if(!data.state) {
+				self.purgeFromAddressbook(addressBook);
+				$(document).trigger('status.contacts.deleted', {
+					numcontacts: self.length
+				});
+			} else {
+			$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId(), true))
+				.then(function() {
+					self.setSortOrder();
+					$(document).trigger('request.groups.reload');
+				});
+			}
+		});
 	};
 
 	/**
@@ -2370,14 +2386,24 @@ OC.Contacts = OC.Contacts || {};
 	* @param string backend Name of the backend ('local', 'ldap' etc.)
 	* @param string addressBookId
 	*/
-	ContactList.prototype.loadContacts = function(backend, addressBookId) {
-		var self = this;
-		return $.when(this.storage.getAddressBook(backend, addressBookId)).then(function(response) {
-			var defer = this;
+	ContactList.prototype.loadContacts = function(backend, addressBookId, isActive) {
+		if(!isActive) {
+			return;
+		}
+		var self = this,
+			contacts,
+			key = 'contacts::' + backend + '::' + addressBookId;
+		var defer = $.when(this.storage.getAddressBook(backend, addressBookId)).then(function(response) {
 			//console.log('ContactList.loadContacts', response);
 			if(!response.error) {
+				if(response.statusCode === 304 && OC.localStorage.hasItem(key)) {
+					contacts = OC.localStorage.getItem(key);
+				} else {
+					contacts = response.data.contacts;
+					OC.localStorage.setItem(key, contacts);
+				}
 				var items = [];
-				$.each(response.data.contacts, function(c, contact) {
+				$.each(contacts, function(c, contact) {
 					var id = String(contact.metadata.id);
 					contact.metadata.backend = backend;
 					self.contacts[id]
@@ -2413,6 +2439,7 @@ OC.Contacts = OC.Contacts || {};
 			console.warn('Request Failed:', response.message);
 			this.reject({error: true, message: response.message});
 		});
+		return defer;
 	};
 
 	OC.Contacts.ContactList = ContactList;

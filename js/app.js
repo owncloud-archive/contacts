@@ -185,7 +185,7 @@ OC.Contacts = OC.Contacts || {
 		$.when(this.addressBooks.loadAddressBooks()).then(function(addressBooks) {
 			var num = addressBooks.length;
 			var deferreds = $(addressBooks).map(function(i, elem) {
-				return self.contacts.loadContacts(this.getBackend(), this.getId());
+				return self.contacts.loadContacts(this.getBackend(), this.getId(), this.isActive());
 			});
 			// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
 			$.when.apply(null, deferreds.get()).then(function(response) {
@@ -416,6 +416,12 @@ OC.Contacts = OC.Contacts || {
 					self.$contactListHeader.show();
 					self.$contactList.show();
 					self.$firstRun.hide();
+				$.each(self.addressBooks.addressBooks, function(idx, addressBook) {
+					console.log('addressBook', addressBook);
+					if(!addressBook.isActive()) {
+						self.contacts.showFromAddressbook(addressBook.getId(), false);
+					}
+				});
 				}
 			}
 		});
@@ -600,11 +606,6 @@ OC.Contacts = OC.Contacts || {
 		$(document).bind('request.edit.contactphoto', function(e, metadata) {
 			console.log('request.edit.contactphoto', metadata);
 			self.editCurrentPhoto(metadata);
-		});
-
-		$(document).bind('request.addressbook.activate', function(e, result) {
-			console.log('request.addressbook.activate', result);
-			self.contacts.showFromAddressbook(result.id, result.activate);
 		});
 
 		$(document).bind('request.groups.reload', function(e, result) {

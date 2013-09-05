@@ -25,6 +25,17 @@ OC.Contacts = OC.Contacts || {};
 		if(!this.hasPermission(OC.PERMISSION_UPDATE)) {
 			this.$li.find('a.action.edit').hide();
 		}
+		this.$li.find('input:checkbox').prop('checked', this.book.active).on('change', function() {
+			console.log('activate', self.getId());
+			var checkbox = $(this).get(0);
+			self.setActive(checkbox.checked, function(response) {
+				if(!response.error) {
+					self.book.active = checkbox.checked;
+				} else {
+					checkbox.checked = !checkbox.checked;
+				}
+			});
+		});
 		this.$li.find('a.action.download')
 			.attr('href', OC.Router.generate(
 				'contacts_address_book_export',
@@ -139,6 +150,32 @@ OC.Contacts = OC.Contacts || {};
 			.then(function(response) {
 			if(response.error) {
 				$(document).trigger('status.contacts.error', response);
+			}
+			cb(response);
+		});
+	};
+
+	AddressBook.prototype.isActive = function() {
+		return this.book.active;
+	};
+
+	/**
+	 * Save an address books active state to data store.
+	 * @param bool state
+	 * @param cb Optional callback function which
+	 * @return An object with a boolean variable 'error'.
+	 */
+	AddressBook.prototype.setActive = function(state, cb) {
+		var self = this;
+		return $.when(this.storage.activateAddressBook(this.getBackend(), this.getId(), state))
+			.then(function(response) {
+			if(response.error) {
+				$(document).trigger('status.contacts.error', response);
+			} else {
+				$(document).trigger('status.addressbook.activated', {
+					addressbook: self,
+					state: state
+				});
 			}
 			cb(response);
 		});

@@ -199,6 +199,24 @@ class AddressBookController extends BaseController {
 	 * @IsSubAdminExemption
 	 * @Ajax
 	 */
+	public function activateAddressBook() {
+		$params = $this->request->urlParams;
+		$app = new App($this->api->getUserId());
+
+		$response = new JSONResponse();
+
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+
+		$addressBook->setActive($this->request->post['state']);
+
+		return $response;
+	}
+
+	/**
+	 * @IsAdminExemption
+	 * @IsSubAdminExemption
+	 * @Ajax
+	 */
 	public function addChild() {
 		$params = $this->request->urlParams;
 		$app = new App($this->api->getUserId());

@@ -377,6 +377,55 @@ abstract class AbstractBackend {
 	}*/
 
 	/**
+	 * Creates a unique key for inserting into oc_preferences.
+	 * As IDs can have any length and the key field is limited to 64 chars,
+	 * the IDs are transformed to the first 8 chars of their md5 hash.
+	 * 
+	 * @param string $addressBookId.
+	 * @param string $contactId.
+	 * @return string
+	 */
+	protected function combinedKey($addressBookId = null, $contactId = null) {
+		$key = $this->name;
+		if(!is_null($addressBookId)) {
+			$key .= '_' . substr(md5($addressBookId), 0, 8);
+			if(!is_null($contactId)) {
+				$key .= '_' . substr(md5($contactId), 0, 8);
+			}
+		} else if(!is_null($contactId)) {
+			throw new \BadMethodCallException(
+				__METHOD__ . ' cannot be called with a contact ID but no address book ID'
+			);
+		}
+		return $key;
+	}
+
+	/**
+	 * @brief Query whether a backend or an address book is active
+	 * @param string $addressbookid If null it checks whether the backend is activated.
+	 * @return boolean
+	 */
+	public function isActive($addressBookId = null) {
+		$key = $this->combinedKey($addressBookId);
+		$key = 'active_' . $key;
+
+		return (\OCP\Config::getUserValue($this->userid, 'contacts', $key, 'true') === 'true');
+	}
+
+	/**
+	 * @brief Activate a backend or an address book
+	 * @param bool active
+	 * @param string $addressbookid If null it activates the backend.
+	 * @return void
+	 */
+	public function setActive($active, $addressBookId = null) {
+		$key = $this->combinedKey($addressBookId);
+		$key = 'active_' . $key;
+
+		\OCP\Config::setUserValue($this->userid, 'contacts', $key, $active);
+	}
+
+	/**
 	 * @brief get all the preferences for the addressbook
 	 * @param mixed $id
 	 * @return array|false format array('param1' => 'value', 'param2' => 'value')
@@ -388,7 +437,7 @@ abstract class AbstractBackend {
 								WHERE `userid`=?
 								AND `appid`='contacts'
 								AND `configkey` like ?";
-			$configkeyPrefix = $this->name . "_" . $addressbookid . "_%";
+			$configkeyPrefix = $this->name . "_" . md5($addressbookid) . "_%";
 			$prefQuery = \OCP\DB::prepare($sql);
 			$result = $prefQuery->execute(array($this->userid, $configkeyPrefix));
 			if (\OC_DB::isError($result)) {
@@ -422,7 +471,7 @@ abstract class AbstractBackend {
 								values ('?', 'contacts', '?', '?')";
 				foreach ($params as $key => $value) {
 					$query = \OCP\DB::prepare($sql);
-					$sqlParams = array($this->userid, $this->name . "_" . $addressbookid . "_" . $key, $value);
+					$sqlParams = array($this->userid, $this->name . "_" . md5($addressbookid) . "_" . $key, $value);
 					$result = $query->execute($sqlParams);
 					if (\OC_DB::isError($result)) {
 						\OCP\Util::write('contacts', __METHOD__. 'DB error: '
@@ -438,7 +487,7 @@ abstract class AbstractBackend {
 								AND `configkey` = '?'";
 				foreach ($params as $key => $value) {
 					$query = \OCP\DB::prepare($sql);
-					$sqlParams = array($value, $this->userid, $this->name . "_" . $addressbookid . "_" . $key);
+					$sqlParams = array($value, $this->userid, $this->name . "_" . md5($addressbookid) . "_" . $key);
 					$result = $query->execute($sqlParams);
 					if (\OC_DB::isError($result)) {
 						\OCP\Util::write('contacts', __METHOD__. 'DB error: '
