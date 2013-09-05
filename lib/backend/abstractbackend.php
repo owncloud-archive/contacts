@@ -343,40 +343,6 @@ abstract class AbstractBackend {
 	}
 	
 	/**
-	 * Returns the list of active addressbooks for a specific user.
-	 *
-	 * @param string $userid
-	 * @return array
-	 */
-	/*public function getAddressBooksForUser($userid = null) {
-		$userid = $userid ? $userid : $this->userid;
-		
-		$sql = "SELECT `configkey`, `configvalue`
-						FROM `*PREFIX*preferences`
-						WHERE `userid`=?
-						AND `appid`='contacts'
-						AND `configkey` like ?";
-						
-		$configkeyPrefix = $this->name . "_%_uri";
-		$prefQuery = \OCP\DB::prepare($sql);
-		$result = $prefQuery->execute(array($this->userid, $configkeyPrefix));
-		if (\OC_DB::isError($result)) {
-			\OCP\Util::write('contacts', __METHOD__. 'DB error: '
-				. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-			return false;
-		}
-		if(!is_null($result)) {
-			$paramsArray = array();
-			while($row = $result->fetchRow()) {
-				$param = substr($row['configkey'], strlen($this->name)+1);
-				$param = substr($param, strpos($param, "_"));
-				$paramsArray[] = $param;
-			}
-		}
-		return $paramsArray;
-	}*/
-
-	/**
 	 * Creates a unique key for inserting into oc_preferences.
 	 * As IDs can have any length and the key field is limited to 64 chars,
 	 * the IDs are transformed to the first 8 chars of their md5 hash.
