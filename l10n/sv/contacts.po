@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-08-30 08:24-0400\n"
-"PO-Revision-Date: 2013-08-28 12:00+0000\n"
-"Last-Translator: Magnus Höglund <magnus@linux.com>\n"
+"POT-Creation-Date: 2013-09-05 05:36-0400\n"
+"PO-Revision-Date: 2013-09-05 09:36+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,277 +30,148 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ajax/currentphoto.php:49 ajax/savecrop.php:66
-msgid "Error getting contact object."
-msgstr "Fel vid hämtning av kontakt."
-
-#: ajax/currentphoto.php:53
-msgid "Error reading contact photo."
-msgstr "Fel uppstod vid läsning av kontaktfoto."
-
-#: ajax/currentphoto.php:67
-msgid "Error saving temporary file."
-msgstr "Fel uppstod när temporär fil skulle sparas."
-
-#: ajax/currentphoto.php:70
-msgid "The loading photo is not valid."
-msgstr "Det laddade fotot är inte giltigt."
-
-#: ajax/oc_photo.php:28
-msgid "No contact info was submitted."
-msgstr "Ingen kontaktinformation har skickats."
-
-#: ajax/oc_photo.php:32
-msgid "No photo path was submitted."
-msgstr "Ingen sökväg till foto angavs."
-
-#: ajax/oc_photo.php:39
-msgid "File doesn't exist:"
-msgstr "Filen finns inte:"
-
-#: ajax/oc_photo.php:44 ajax/oc_photo.php:47
-msgid "Error loading image."
-msgstr "Fel vid laddning av bild."
-
-#: ajax/savecrop.php:96
-msgid "Error getting PHOTO property."
-msgstr "Fel vid hämtning av egenskaper för FOTO."
-
-#: ajax/savecrop.php:116 lib/controller/addressbookcontroller.php:294
-msgid "Error saving contact."
-msgstr "Fel vid spara kontakt."
-
-#: ajax/savecrop.php:126
-msgid "Error resizing image"
-msgstr "Fel vid storleksförändring av bilden"
-
-#: ajax/savecrop.php:129
-msgid "Error cropping image"
-msgstr "Fel vid beskärning av bilden"
-
-#: ajax/savecrop.php:132
-msgid "Error creating temporary image"
-msgstr "Fel vid skapa tillfällig bild"
-
-#: ajax/savecrop.php:135
-msgid "Error finding image: "
-msgstr "Kan inte hitta bild:"
-
-#: ajax/setpreference.php:37
-msgid "Key is not set for: "
-msgstr "Nyckel är inte angiven för:"
-
-#: ajax/setpreference.php:41
-msgid "Value is not set for: "
-msgstr "Värde är inte satt för:"
-
-#: ajax/setpreference.php:53 lib/controller/settingscontroller.php:51
-msgid "Could not set preference: "
-msgstr "Kan inte ange inställning:"
-
-#: ajax/uploadimport.php:38 ajax/uploadphoto.php:80
-#: lib/controller/importcontroller.php:39
-msgid "No file was uploaded. Unknown error"
-msgstr "Ingen fil har laddats upp. Okänt fel"
-
-#: ajax/uploadimport.php:45 ajax/uploadphoto.php:86
-#: lib/controller/importcontroller.php:47
-msgid "There is no error, the file uploaded with success"
-msgstr "Inga fel har uppstått. Filen har laddats upp utan problem."
-
-#: ajax/uploadimport.php:46 ajax/uploadphoto.php:87
-#: lib/controller/importcontroller.php:48
-msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Den uppladdade filen överskrider värdet för upload_max_filesize i php.ini"
-
-#: ajax/uploadimport.php:48 ajax/uploadphoto.php:88
-#: lib/controller/importcontroller.php:50
-msgid ""
-"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
-"the HTML form"
-msgstr "Den uppladdade filen överskrider värdet för MAX_FILE_SIZE som har angivits i HTML-formuläret"
-
-#: ajax/uploadimport.php:49 ajax/uploadphoto.php:89
-#: lib/controller/importcontroller.php:51
-msgid "The uploaded file was only partially uploaded"
-msgstr "Den uppladdade filen har endast delvis laddats upp"
-
-#: ajax/uploadimport.php:50 ajax/uploadphoto.php:90
-#: lib/controller/importcontroller.php:52
-msgid "No file was uploaded"
-msgstr "Ingen fil har laddats upp"
-
-#: ajax/uploadimport.php:51 ajax/uploadphoto.php:91
-#: lib/controller/importcontroller.php:53
-msgid "Missing a temporary folder"
-msgstr "Temporär-mapp saknas"
-
-#: ajax/uploadimport.php:52 lib/controller/importcontroller.php:54
-msgid "Failed to write to disk"
-msgstr "Misslyckades att spara till disk"
-
-#: ajax/uploadimport.php:62 lib/controller/importcontroller.php:65
-msgid "Not enough storage available"
-msgstr "Det finns inte tillräckligt med lagringsutrymme"
-
-#: ajax/uploadimport.php:69
-msgid "Upload of blacklisted file:"
-msgstr "Uppladdning av svartlistad fil:"
-
-#: ajax/uploadimport.php:74 lib/controller/importcontroller.php:95
-msgid "Error uploading contacts to storage."
-msgstr "Fel uppstod när kontakter sparades."
-
-#: ajax/uploadphoto.php:72 ajax/uploadphoto.php:123
-msgid "Couldn't save temporary image: "
-msgstr "Kan inte spara tillfällig bild:"
-
-#: ajax/uploadphoto.php:75 ajax/uploadphoto.php:126
-msgid "Couldn't load temporary image: "
-msgstr "Kan inte ladda tillfällig bild:"
-
 #: appinfo/app.php:31
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: js/addressbooks.js:68 js/groups.js:508 templates/settings.php:61
+#: js/addressbooks.js:68 js/groups.js:506 templates/settings.php:61
 msgid "Save"
 msgstr "Spara"
 
-#: js/addressbooks.js:235
+#: js/addressbooks.js:251
 msgid "Uploading..."
 msgstr "Laddar upp..."
 
-#: js/addressbooks.js:238
+#: js/addressbooks.js:254
 msgid "Importing..."
 msgstr "Importerar..."
 
-#: js/addressbooks.js:291
+#: js/addressbooks.js:307
 msgid "Imported {count} of {total} contacts"
 msgstr "Importerade {count} av {total} kontakter"
 
-#: js/addressbooks.js:313
+#: js/addressbooks.js:329
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "Importerade {imported} kontakter. {failed} misslyckades."
 
-#: js/addressbooks.js:455
+#: js/addressbooks.js:471
 msgid "An address book called {name} already exists"
 msgstr "En adressbok vid namn {name} finns redan"
 
-#: js/addressbooks.js:484
+#: js/addressbooks.js:500
 msgid "Failed adding address book: {error}"
 msgstr "Kan inte lägga till adressbok: {error}"
 
-#: js/addressbooks.js:520
+#: js/addressbooks.js:536
 msgid "Failed loading address books: {error}"
 msgstr "Misslyckades ladda adressböcker: {error}"
 
-#: js/app.js:213
+#: js/app.js:214
 msgid "Indexing contacts"
 msgstr "Indexerar kontakter"
 
-#: js/app.js:223
+#: js/app.js:224
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Irreparabelt fel när adressböckerna skulle laddas: {msg}"
 
-#: js/app.js:224
+#: js/app.js:225
 msgid "Error."
 msgstr "Fel."
 
-#: js/app.js:317 js/app.js:331
+#: js/app.js:318 js/app.js:332
 msgid "Add to..."
 msgstr "Lägga till..."
 
-#: js/app.js:321 js/app.js:333
+#: js/app.js:322 js/app.js:334
 msgid "Remove from..."
 msgstr "Ta bort från..."
 
-#: js/app.js:338
+#: js/app.js:339
 msgid "Add group..."
 msgstr "Lägg till grupp..."
 
-#: js/app.js:461
+#: js/app.js:462
 msgid "Invalid URL: \"{url}\""
 msgstr "Felaktig URL: \"{url}\""
 
-#: js/app.js:472
+#: js/app.js:473
 msgid "There was an error opening a mail composer."
 msgstr "Fel uppstod när e-postklient skulle öppnas."
 
-#: js/app.js:477
+#: js/app.js:478
 msgid "Invalid email: \"{url}\""
 msgstr "Felaktig e-mail: \"{url}\""
 
-#: js/app.js:555
+#: js/app.js:556
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Sammanslagning misslyckades. Kan inte hitta kontakt: {id}"
 
-#: js/app.js:568
+#: js/app.js:569
 msgid "Merge failed."
 msgstr "Sammanslagning misslyckades."
 
-#: js/app.js:575
+#: js/app.js:576
 msgid "Merge failed. Error saving contact."
 msgstr "Sammanslagningen fungerade inte: Fel när kontakten sparades."
 
-#: js/app.js:594
+#: js/app.js:595
 msgid "Select photo"
 msgstr "Välj foto"
 
-#: js/app.js:664 js/app.js:1543
+#: js/app.js:665 js/app.js:1564
 msgid "Network or server error. Please inform administrator."
 msgstr "Nätverk eller serverfel. Informera administratören."
 
-#: js/app.js:883
+#: js/app.js:886
 msgid "Error adding to group."
 msgstr "Fel vid tillägg i grupp."
 
-#: js/app.js:912
+#: js/app.js:915
 msgid "Error removing from group."
 msgstr "Fel vid radering från grupp."
 
-#: js/app.js:1072
+#: js/app.js:1075
 msgid "Error setting {name} as favorite."
 msgstr "Fel när {name} skulle läggas till favoriter."
 
-#: js/app.js:1211 js/app.js:1215 templates/contacts.php:184
+#: js/app.js:1214 js/app.js:1218 templates/contacts.php:181
 msgid "Merge contacts"
 msgstr "Sammanfoga kontakter"
 
-#: js/app.js:1237 js/app.js:1290 js/settings.js:120 templates/contacts.php:323
+#: js/app.js:1240 js/app.js:1293 js/settings.js:120 templates/contacts.php:320
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: js/app.js:1264 templates/contacts.php:165
+#: js/app.js:1267 templates/contacts.php:162
 msgid "Add group"
 msgstr "Lägg till grupp"
 
-#: js/app.js:1268
+#: js/app.js:1271
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1367
+#: js/app.js:1370
 msgid "Could not find contact: {id}"
 msgstr "Kunde inte hitta kontakt: {id}"
 
-#: js/app.js:1409
+#: js/app.js:1412
 msgid "No files selected for upload."
 msgstr "Inga filer valda för uppladdning"
 
-#: js/app.js:1419
+#: js/app.js:1422
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Filen du försöker ladda upp är större än den maximala storleken för filuppladdning på denna server."
 
-#: js/app.js:1506
+#: js/app.js:1522
 msgid "Edit profile picture"
 msgstr "Anpassa profilbild"
 
-#: js/app.js:1524
-msgid "Error loading profile picture."
-msgstr "Fel vid hämtning av profilbild."
+#: js/app.js:1526
+msgid "Crop photo"
+msgstr ""
 
 #: js/contacts.js:591
 msgid "Is this correct?"
@@ -314,21 +185,21 @@ msgstr "Fel vid läsning av datum: {date}"
 msgid "# groups"
 msgstr "# grupper"
 
-#: js/contacts.js:2116
+#: js/contacts.js:2120
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Vissa kontakter är markerade för radering, men är inte raderade än. Vänta tills dom är raderade."
 
-#: js/contacts.js:2127
+#: js/contacts.js:2131
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klicka för att ångra radering av {num} kontakter"
 
-#: js/contacts.js:2142
-msgid "Cancelled deletion of {num}"
-msgstr "Avbruten radering av {num}"
+#: js/contacts.js:2140
+msgid "Cancelled deletion of {num} contacts"
+msgstr ""
 
-#: js/groups.js:53 templates/contacts.php:327
+#: js/groups.js:53 templates/contacts.php:324
 msgid "Add"
 msgstr "Lägg till"
 
@@ -340,53 +211,53 @@ msgstr "Kontakten finns redan i denna grupp."
 msgid "Contacts are already in this group."
 msgstr "Kontakterna finns redan i denna grupp."
 
-#: js/groups.js:338
+#: js/groups.js:339
 msgid "Couldn't get contact list."
 msgstr "Kunde inte hämta kontaktlista."
 
-#: js/groups.js:349
+#: js/groups.js:350
 msgid "Contact is not in this group."
 msgstr "Kontakten är inte i denna grupp."
 
-#: js/groups.js:363
+#: js/groups.js:364
 msgid "Contacts are not in this group."
 msgstr "Kontakterna är inte i denna grupp."
 
-#: js/groups.js:556
+#: js/groups.js:554
 msgid "Failed renaming group: {error}"
 msgstr "Det gick inte att ändra namn på gruppen: {error}"
 
-#: js/groups.js:587
+#: js/groups.js:585
 msgid "A group named {group} already exists"
 msgstr "En grupp men namnet {group} finns redan"
 
-#: js/groups.js:622
+#: js/groups.js:620
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Du kan dra och släppa grupper⏎\nför att arrangera dem som du vill."
 
-#: js/groups.js:635
+#: js/groups.js:633
 msgid "Failed adding group: {error}"
 msgstr "Det gick inte att lägga till gruppen :{error}"
 
-#: js/groups.js:647
+#: js/groups.js:645
 msgid "All"
 msgstr "Alla"
 
-#: js/groups.js:662 js/groups.js:665
+#: js/groups.js:660 js/groups.js:663
 msgid "Favorites"
 msgstr "Favoriter"
 
-#: js/groups.js:726
+#: js/groups.js:724
 msgid "Shared by {owner}"
 msgstr "Delad av {owner}"
 
-#: js/groups.js:741
+#: js/groups.js:739
 msgid "Not grouped"
 msgstr "Inte tillagd till någon grupp."
 
-#: js/groups.js:767
+#: js/groups.js:765
 msgid "Failed loading groups: {error}"
 msgstr "Kan inte ladda grupper: {error}"
 
@@ -419,18 +290,18 @@ msgid "Show read-only VCF link"
 msgstr "Visa skrivskyddad VCF-länk"
 
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
-#: templates/contacts.php:325 templates/settings.php:40
+#: templates/contacts.php:322 templates/settings.php:40
 msgid "Download"
 msgstr "Ladda ner"
 
-#: js/settings.js:101 templates/contacts.php:466 templates/settings.php:45
+#: js/settings.js:101 templates/contacts.php:463 templates/settings.php:45
 msgid "Edit"
 msgstr "Redigera"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
-#: templates/contacts.php:270 templates/contacts.php:277
-#: templates/contacts.php:284 templates/contacts.php:291
-#: templates/contacts.php:339 templates/contacts.php:467
+#: templates/contacts.php:267 templates/contacts.php:274
+#: templates/contacts.php:281 templates/contacts.php:288
+#: templates/contacts.php:336 templates/contacts.php:464
 #: templates/settings.php:50
 msgid "Delete"
 msgstr "Radera"
@@ -443,7 +314,7 @@ msgstr "Mer..."
 msgid "Less..."
 msgstr "Mindre..."
 
-#: js/storage.js:258
+#: js/storage.js:278 js/storage.js:317
 msgid "Failed loading photo: {error}"
 msgstr "Kan inte ladda foton:{error}"
 
@@ -467,23 +338,27 @@ msgstr "Du har inte tillräckliga rättigheter att lägga till denna kontakt til
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Backend för denna adressbok stöder inte att lägga till kontakter."
 
-#: lib/addressbook.php:220 lib/contact.php:246
+#: lib/addressbook.php:222 lib/addressbook.php:248 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
 msgstr "Du har inte behörighet att ta bort denna kontakt"
 
-#: lib/addressbook.php:223
+#: lib/addressbook.php:225 lib/addressbook.php:251
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Backend för denna adressbok stöder inte att ta bort kontakter. "
 
-#: lib/addressbook.php:260
+#: lib/addressbook.php:272
+msgid "Unknown error"
+msgstr ""
+
+#: lib/addressbook.php:314
 msgid "The backend for this address book does not support updating"
 msgstr "Backend för denna adressbok stöder inte uppdateringar"
 
-#: lib/addressbook.php:286
+#: lib/addressbook.php:340
 msgid "You don't have permissions to update the address book."
 msgstr "Du har inte behörighet att uppdatera adressboken."
 
-#: lib/addressbook.php:297
+#: lib/addressbook.php:351
 msgid "You don't have permissions to delete the address book."
 msgstr "Du har inte behörighet att ta bort adressboken."
 
@@ -544,20 +419,26 @@ msgstr "FEL vid skapa kontakt"
 msgid "Error deleting contact."
 msgstr "FEL vid ta bort kontakt"
 
-#: lib/controller/addressbookcontroller.php:283
+#: lib/controller/addressbookcontroller.php:309
 msgid "Error retrieving contact."
 msgstr "FEL vid hämta kontakt."
 
-#: lib/controller/addressbookcontroller.php:299
+#: lib/controller/addressbookcontroller.php:320
+#: lib/controller/contactphotocontroller.php:345
+msgid "Error saving contact."
+msgstr "Fel vid spara kontakt."
+
+#: lib/controller/addressbookcontroller.php:325
 msgid "Error removing contact from other address book."
 msgstr "Fel vid borttagning av kontakt från den andra adressboken."
 
 #: lib/controller/contactcontroller.php:42
 #: lib/controller/contactcontroller.php:68
 #: lib/controller/contactcontroller.php:92
-#: lib/controller/contactcontroller.php:128
-#: lib/controller/contactcontroller.php:187
-#: lib/controller/contactcontroller.php:250
+#: lib/controller/contactcontroller.php:134
+#: lib/controller/contactcontroller.php:197
+#: lib/controller/contactphotocontroller.php:40
+#: lib/controller/contactphotocontroller.php:284
 msgid "Couldn't find contact."
 msgstr "Kunde inte hitta kontakt."
 
@@ -566,33 +447,116 @@ msgid "Error merging into contact."
 msgstr "Fel vid sammanslagning till en kontakt"
 
 #: lib/controller/contactcontroller.php:101
-#: lib/controller/contactcontroller.php:209
+#: lib/controller/contactcontroller.php:156
 msgid "Error saving contact to backend."
 msgstr "Fel när kontakt ska sparas till server."
 
-#: lib/controller/contactcontroller.php:191
-#: lib/controller/contactcontroller.php:254
+#: lib/controller/contactcontroller.php:138
+#: lib/controller/contactcontroller.php:201
 msgid "Property name is not set."
 msgstr "Objektnamn ej definierat"
 
-#: lib/controller/contactcontroller.php:195
-#: lib/controller/contactcontroller.php:258
-#: lib/controller/contactcontroller.php:268
+#: lib/controller/contactcontroller.php:142
+#: lib/controller/contactcontroller.php:205
+#: lib/controller/contactcontroller.php:215
 msgid "Property checksum is not set."
 msgstr "Kontrollsumma för objekt ej definierat."
 
-#: lib/controller/contactcontroller.php:202
-#: lib/controller/contactcontroller.php:275
+#: lib/controller/contactcontroller.php:149
+#: lib/controller/contactcontroller.php:222
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Information om vCard är felaktigt. Vänligen ladda om sidan."
 
-#: lib/controller/contactcontroller.php:280
+#: lib/controller/contactcontroller.php:227
 msgid "Error setting property"
 msgstr "Fel när inställning ska sparas"
 
-#: lib/controller/contactcontroller.php:284
+#: lib/controller/contactcontroller.php:231
 msgid "Error saving property to backend"
 msgstr "Fel när inställning ska sparas till server"
+
+#: lib/controller/contactphotocontroller.php:71
+msgid "Error getting user photo"
+msgstr ""
+
+#: lib/controller/contactphotocontroller.php:90
+#: lib/controller/importcontroller.php:39
+msgid "No file was uploaded. Unknown error"
+msgstr "Ingen fil har laddats upp. Okänt fel"
+
+#: lib/controller/contactphotocontroller.php:98
+#: lib/controller/importcontroller.php:47
+msgid "There is no error, the file uploaded with success"
+msgstr "Inga fel har uppstått. Filen har laddats upp utan problem."
+
+#: lib/controller/contactphotocontroller.php:99
+#: lib/controller/importcontroller.php:48
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "Den uppladdade filen överskrider värdet för upload_max_filesize i php.ini"
+
+#: lib/controller/contactphotocontroller.php:100
+#: lib/controller/importcontroller.php:50
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr "Den uppladdade filen överskrider värdet för MAX_FILE_SIZE som har angivits i HTML-formuläret"
+
+#: lib/controller/contactphotocontroller.php:101
+#: lib/controller/importcontroller.php:51
+msgid "The uploaded file was only partially uploaded"
+msgstr "Den uppladdade filen har endast delvis laddats upp"
+
+#: lib/controller/contactphotocontroller.php:102
+#: lib/controller/importcontroller.php:52
+msgid "No file was uploaded"
+msgstr "Ingen fil har laddats upp"
+
+#: lib/controller/contactphotocontroller.php:103
+#: lib/controller/importcontroller.php:53
+msgid "Missing a temporary folder"
+msgstr "Temporär-mapp saknas"
+
+#: lib/controller/contactphotocontroller.php:118
+msgid "Couldn't load temporary image: "
+msgstr "Kan inte ladda tillfällig bild:"
+
+#: lib/controller/contactphotocontroller.php:127
+#: lib/controller/contactphotocontroller.php:163
+msgid "Couldn't save temporary image: "
+msgstr "Kan inte spara tillfällig bild:"
+
+#: lib/controller/contactphotocontroller.php:193
+msgid "No photo path was submitted."
+msgstr "Ingen sökväg till foto angavs."
+
+#: lib/controller/contactphotocontroller.php:200
+msgid "File doesn't exist:"
+msgstr "Filen finns inte:"
+
+#: lib/controller/contactphotocontroller.php:205
+#: lib/controller/contactphotocontroller.php:209
+msgid "Error loading image."
+msgstr "Fel vid laddning av bild."
+
+#: lib/controller/contactphotocontroller.php:290
+msgid "Image has been removed from cache"
+msgstr ""
+
+#: lib/controller/contactphotocontroller.php:297
+msgid "Error creating temporary image"
+msgstr "Fel vid skapa tillfällig bild"
+
+#: lib/controller/contactphotocontroller.php:305
+msgid "Error cropping image"
+msgstr "Fel vid beskärning av bilden"
+
+#: lib/controller/contactphotocontroller.php:311
+msgid "Error resizing image"
+msgstr "Fel vid storleksförändring av bilden"
+
+#: lib/controller/contactphotocontroller.php:330
+msgid "Error getting PHOTO property."
+msgstr "Fel vid hämtning av egenskaper för FOTO."
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
@@ -628,9 +592,21 @@ msgstr "Gruppnamn saknas från begäran."
 msgid "Contact ID missing from request."
 msgstr "Kontakt-ID fattas från anrop."
 
+#: lib/controller/importcontroller.php:54
+msgid "Failed to write to disk"
+msgstr "Misslyckades att spara till disk"
+
+#: lib/controller/importcontroller.php:65
+msgid "Not enough storage available"
+msgstr "Det finns inte tillräckligt med lagringsutrymme"
+
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
 msgstr "Försök att ladda upp svartlistad fil:"
+
+#: lib/controller/importcontroller.php:95
+msgid "Error uploading contacts to storage."
+msgstr "Fel uppstod när kontakter sparades."
 
 #: lib/controller/importcontroller.php:120
 msgid "You do not have permissions to import into this address book."
@@ -660,6 +636,10 @@ msgstr "Ingen nyckel angavs."
 #: lib/controller/settingscontroller.php:40
 msgid "No value is given."
 msgstr "Inget värde angavs."
+
+#: lib/controller/settingscontroller.php:51
+msgid "Could not set preference: "
+msgstr "Kan inte ange inställning:"
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
@@ -846,7 +826,7 @@ msgstr "Favorit"
 msgid "Merge selected"
 msgstr "Slå ihop valda"
 
-#: templates/contacts.php:91 templates/contacts.php:324
+#: templates/contacts.php:91 templates/contacts.php:321
 msgid "Close"
 msgstr "Stäng"
 
@@ -908,235 +888,231 @@ msgstr "<h3>Du har inga kontakter i din adressbok.</h3><p>Lägg till en ny konta
 msgid "Add contact"
 msgstr "Lägg till en kontakt"
 
-#: templates/contacts.php:176
+#: templates/contacts.php:173
 msgid "Delete group"
 msgstr "Radera grupp"
 
-#: templates/contacts.php:177
+#: templates/contacts.php:174
 msgid "Rename group"
 msgstr "Döp om grupp"
 
-#: templates/contacts.php:185
+#: templates/contacts.php:182
 msgid "Which contact should the data be merged into?"
 msgstr "Vilken kontakt ska informationen slås ihop med?"
 
-#: templates/contacts.php:193
+#: templates/contacts.php:190
 msgid "Delete the other(s) after successful merge?"
 msgstr "Radera dom andra efter lyckad sammanslagning?"
 
-#: templates/contacts.php:205
+#: templates/contacts.php:202
 msgid "Compose mail"
 msgstr "Skapa e-post"
 
-#: templates/contacts.php:227
+#: templates/contacts.php:224
 msgid "Delete current photo"
 msgstr "Ta bort aktuellt foto"
 
-#: templates/contacts.php:228
+#: templates/contacts.php:225
 msgid "Edit current photo"
 msgstr "Redigera aktuellt foto"
 
-#: templates/contacts.php:229
+#: templates/contacts.php:226
 msgid "Upload new photo"
 msgstr "Ladda upp ett nytt foto"
 
-#: templates/contacts.php:230
+#: templates/contacts.php:227
 msgid "Select photo from ownCloud"
 msgstr "Välj foto från ownCloud"
 
-#: templates/contacts.php:241 templates/contacts.php:242
+#: templates/contacts.php:238 templates/contacts.php:239
 msgid "First name"
 msgstr "Förnamn"
 
-#: templates/contacts.php:246 templates/contacts.php:247
+#: templates/contacts.php:243 templates/contacts.php:244
 msgid "Additional names"
 msgstr "Mellannamn"
 
-#: templates/contacts.php:251 templates/contacts.php:252
+#: templates/contacts.php:248 templates/contacts.php:249
 msgid "Last name"
 msgstr "Efternamn"
 
-#: templates/contacts.php:259
+#: templates/contacts.php:256
 msgid "Select groups"
 msgstr "Välj grupper"
 
-#: templates/contacts.php:262
+#: templates/contacts.php:259
 msgid "Select address book"
 msgstr "Välj adressbok"
 
-#: templates/contacts.php:266 templates/contacts.php:330
+#: templates/contacts.php:263 templates/contacts.php:327
 msgid "Nickname"
 msgstr "Smeknamn"
 
-#: templates/contacts.php:269
+#: templates/contacts.php:266
 msgid "Enter nickname"
 msgstr "Ange smeknamn"
 
-#: templates/contacts.php:273 templates/contacts.php:329
+#: templates/contacts.php:270 templates/contacts.php:326
 msgid "Title"
 msgstr "Rubrik"
 
-#: templates/contacts.php:276
+#: templates/contacts.php:273
 msgid "Enter title"
 msgstr "Ange titel"
 
-#: templates/contacts.php:280 templates/contacts.php:328
+#: templates/contacts.php:277 templates/contacts.php:325
 msgid "Organization"
 msgstr "Organisation"
 
-#: templates/contacts.php:283
+#: templates/contacts.php:280
 msgid "Enter organization"
 msgstr "Ange organisation"
 
-#: templates/contacts.php:287 templates/contacts.php:331
+#: templates/contacts.php:284 templates/contacts.php:328
 msgid "Birthday"
 msgstr "Födelsedag"
 
-#: templates/contacts.php:318
+#: templates/contacts.php:315
 msgid "Notes go here..."
 msgstr "Noteringar här..."
 
-#: templates/contacts.php:325
+#: templates/contacts.php:322
 msgid "Export as VCF"
 msgstr "Exportera som VCF"
 
-#: templates/contacts.php:332
+#: templates/contacts.php:329
 msgid "Phone"
 msgstr "Telefon"
 
-#: templates/contacts.php:333
+#: templates/contacts.php:330
 msgid "Email"
 msgstr "E-post"
 
-#: templates/contacts.php:334
+#: templates/contacts.php:331
 msgid "Instant Messaging"
 msgstr "Instant Messaging"
 
-#: templates/contacts.php:335
+#: templates/contacts.php:332
 msgid "Address"
 msgstr "Adress"
 
-#: templates/contacts.php:336
+#: templates/contacts.php:333
 msgid "Note"
 msgstr "Notering"
 
-#: templates/contacts.php:337
+#: templates/contacts.php:334
 msgid "Web site"
 msgstr "Webbplats"
 
-#: templates/contacts.php:339
+#: templates/contacts.php:336
 msgid "Delete contact"
 msgstr "Radera kontakt"
 
-#: templates/contacts.php:352 templates/contacts.php:367
-#: templates/contacts.php:381 templates/contacts.php:406
-#: templates/contacts.php:443
+#: templates/contacts.php:349 templates/contacts.php:364
+#: templates/contacts.php:378 templates/contacts.php:403
+#: templates/contacts.php:440
 msgid "Preferred"
 msgstr "Föredragen"
 
-#: templates/contacts.php:354
+#: templates/contacts.php:351
 msgid "Please specify a valid email address."
 msgstr "Vänligen ange en giltig e-postadress."
 
-#: templates/contacts.php:354
+#: templates/contacts.php:351
 msgid "someone@example.com"
 msgstr "någon@exempel.com"
 
-#: templates/contacts.php:356
+#: templates/contacts.php:353
 msgid "Mail to address"
 msgstr "Posta till adress."
 
-#: templates/contacts.php:357
+#: templates/contacts.php:354
 msgid "Delete email address"
 msgstr "Ta bort e-postadress"
 
-#: templates/contacts.php:369
+#: templates/contacts.php:366
 msgid "Enter phone number"
 msgstr "Ange telefonnummer"
 
-#: templates/contacts.php:371
+#: templates/contacts.php:368
 msgid "Delete phone number"
 msgstr "Ta bort telefonnummer"
 
-#: templates/contacts.php:385
+#: templates/contacts.php:382
 msgid "Go to web site"
 msgstr "Gå till webbplats"
 
-#: templates/contacts.php:386
+#: templates/contacts.php:383
 msgid "Delete URL"
 msgstr "Radera URL"
 
-#: templates/contacts.php:397
+#: templates/contacts.php:394
 msgid "View on map"
 msgstr "Visa på karta"
 
-#: templates/contacts.php:398
+#: templates/contacts.php:395
 msgid "Delete address"
 msgstr "Radera adress"
 
-#: templates/contacts.php:410
+#: templates/contacts.php:407
 msgid "1 Main Street"
 msgstr "1 Main Street"
 
-#: templates/contacts.php:411
+#: templates/contacts.php:408
 msgid "Street address"
 msgstr "Gatuadress"
 
-#: templates/contacts.php:415
+#: templates/contacts.php:412
 msgid "12345"
 msgstr "12345"
 
-#: templates/contacts.php:416
+#: templates/contacts.php:413
 msgid "Postal code"
 msgstr "Postnummer"
 
-#: templates/contacts.php:418
+#: templates/contacts.php:415
 msgid "Your city"
 msgstr "Din stad"
 
-#: templates/contacts.php:419
+#: templates/contacts.php:416
 msgid "City"
 msgstr "Stad"
 
-#: templates/contacts.php:423
+#: templates/contacts.php:420
 msgid "Some region"
 msgstr "En region"
 
-#: templates/contacts.php:424
+#: templates/contacts.php:421
 msgid "State or province"
 msgstr "Stat eller provins"
 
-#: templates/contacts.php:428
+#: templates/contacts.php:425
 msgid "Your country"
 msgstr "Ditt land"
 
-#: templates/contacts.php:429
+#: templates/contacts.php:426
 msgid "Country"
 msgstr "Land"
 
-#: templates/contacts.php:451
+#: templates/contacts.php:448
 msgid "Instant Messenger"
 msgstr "Instant Messenger"
 
-#: templates/contacts.php:453
+#: templates/contacts.php:450
 msgid "Delete IM"
 msgstr "Radera IM"
 
-#: templates/contacts.php:463 templates/settings.php:36
+#: templates/contacts.php:460 templates/settings.php:36
 msgid "Share"
 msgstr "Dela"
 
-#: templates/contacts.php:464
+#: templates/contacts.php:461
 msgid "Export"
 msgstr "Exportera"
 
-#: templates/contacts.php:465
+#: templates/contacts.php:462
 msgid "CardDAV link"
 msgstr "CardDAV-länk"
-
-#: templates/part.cropphoto.php:31
-msgid "The temporary image has been removed from cache."
-msgstr "Den tillfälliga bilden har raderats från cache."
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

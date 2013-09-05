@@ -1,10 +1,10 @@
 <?php $TRANSLATIONS = array(
-"File doesn't exist:" => "په‌ڕگه‌که‌ هه‌بوون نیه:",
 "Save" => "پاشکه‌وتکردن",
 "Importing..." => "ده‌هێنرێت...",
 "Add" => "زیادکردن",
 "Error" => "هه‌ڵه",
 "Download" => "داگرتن",
+"File doesn't exist:" => "په‌ڕگه‌که‌ هه‌بوون نیه:",
 "Import" => "هێنان",
 "Close" => "داخستن",
 "Title" => "ناونیشان",
