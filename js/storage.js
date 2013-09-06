@@ -569,6 +569,10 @@ OC.Contacts = OC.Contacts || {};
 			type: type,
 			url: url,
 			dataType: 'json',
+			headers: {
+				Accept : 'application/json; charset=utf-8',
+			},
+			//accepts: { json: 'application/json'},
 			//ifModified: true,
 			cache: dontCache ? false : true,
 			contentType: contentType,
