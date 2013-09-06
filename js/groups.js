@@ -291,13 +291,14 @@ OC.Contacts = OC.Contacts || {};
 					}, 2000);
 					if(typeof cb === 'function') {
 						cb({ids:ids});
-					} else {
+					}
+					$.each(ids, function(idx, contactid) {
 						$(document).trigger('status.group.contactadded', {
 							contactid: contactid,
 							groupid: groupid,
 							groupname: groupname
 						});
-					}
+					});
 				} else {
 					if(typeof cb == 'function') {
 						cb({error:true, message:response.message});
@@ -319,6 +320,7 @@ OC.Contacts = OC.Contacts || {};
 	GroupList.prototype.removeFrom = function(contactid, groupid, onlyInternal, cb) {
 		console.log('GroupList.removeFrom', contactid, groupid);
 		var $groupelem = this.findById(groupid);
+		var groupname = this.nameById(groupid);
 		var contacts = $groupelem.data('contacts');
 		var ids = [];
 
@@ -371,19 +373,28 @@ OC.Contacts = OC.Contacts || {};
 		$groupelem.find('.numcontacts').text(contacts.length);
 		//console.log('contacts', contacts, contacts.indexOf(id), contacts.indexOf(String(id)));
 		$groupelem.data('contacts', contacts);
-		if(doPost && !onlyInternal) {
-			var groupname = this.nameById(groupid);
-			$.when(this.storage.removeFromGroup(ids, groupid, groupname)).then(function(response) {
-				if(!response.error) {
-					if(typeof cb === 'function') {
-						cb({ids:ids});
-					}
-				} else {
-					if(typeof cb == 'function') {
-						cb({error:true, message:response.message});
-					}
-				}
+		if(doPost) {
+			// If a group is selected the contact has to be removed from the list
+			$.each(ids, function(idx, contactid) {
+				$(document).trigger('status.group.contactremoved', {
+					contactid: contactid,
+					groupid: parseInt(groupid),
+					groupname: groupname
+				});
 			});
+			if(!onlyInternal) {
+				$.when(this.storage.removeFromGroup(ids, groupid, groupname)).then(function(response) {
+					if(!response.error) {
+						if(typeof cb === 'function') {
+							cb({ids:ids});
+						}
+					} else {
+						if(typeof cb == 'function') {
+							cb({error:true, message:response.message});
+						}
+					}
+				});
+			}
 		}
 	};
 

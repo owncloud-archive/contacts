@@ -615,14 +615,6 @@ OC.Contacts = OC.Contacts || {
 			});
 		});
 
-		$(document).bind('status.contact.removedfromgroup', function(e, result) {
-			console.log('status.contact.removedfromgroup', result);
-			if(self.currentgroup == result.groupid) {
-				self.contacts.hideContact(result.contactid);
-				self.closeContact(result.contactid);
-			}
-		});
-
 		$(document).bind('status.group.groupremoved', function(e, result) {
 			console.log('status.group.groupremoved', result);
 			if(parseInt(result.groupid) === parseInt(self.currentgroup)) {
@@ -641,20 +633,39 @@ OC.Contacts = OC.Contacts || {
 			$.each(result.contacts, function(idx, contactid) {
 				var contact = self.contacts.findById(contactid);
 				if(!contact) {
-					console.log('Couldn\'t find contact', contactid)
+					console.warn('Couldn\'t find contact', contactid)
 					return true; // continue
 				}
 				contact.renameGroup(result.from, result.to);
 			});
 		});
 
+		$(document).bind('status.group.contactremoved', function(e, result) {
+			console.log('status.group.contactremoved', result, self.currentgroup, result.groupid);
+			var contact = self.contacts.findById(result.contactid);
+			if(contact) {
+				if(contact.inGroup(result.groupname)) {
+					contact.removeFromGroup(result.groupname);
+				}
+				if(parseInt(self.currentgroup) === parseInt(result.groupid)) {
+					console.log('Hiding', contact.getId());
+					contact.hide();
+				}
+			}
+		});
+
 		$(document).bind('status.group.contactadded', function(e, result) {
 			console.log('status.group.contactadded', result);
 			var contact = self.contacts.findById(result.contactid);
-			if(!contact) {
-				return false;
+			if(contact) {
+				if(!contact.inGroup(result.groupname)) {
+					contact.addToGroup(result.groupname);
+				}
+				if(parseInt(self.currentgroup) === parseInt(result.groupid)) {
+					console.log('Showing', contact.getId());
+					contact.show();
+				}
 			}
-			contact.addToGroup(result.groupname);
 		});
 
 		// Group sorted, save the sort order
@@ -838,11 +849,6 @@ OC.Contacts = OC.Contacts || {
 										if(buildnow) {
 											self.buildGroupSelect();
 										}
-										$(document).trigger('status.contact.addedtogroup', {
-											contactid: id,
-											groupid: groupId,
-											groupname: groupName
-										});
 									}, 1000);
 								});
 							} else {
@@ -876,11 +882,6 @@ OC.Contacts = OC.Contacts || {
 								if(buildnow) {
 									self.buildGroupSelect();
 								}
-								$(document).trigger('status.contact.addedtogroup', {
-									contactid: id,
-									groupid: groupId,
-									groupname: groupName
-								});
 							}, 1000);
 						});
 					} else {
@@ -892,7 +893,7 @@ OC.Contacts = OC.Contacts || {
 					self.$groups.val(-1).hide().find('optgroup,option:not([value="-1"])').remove();
 				}
 			} else if(action === 'remove') {
-				self.groups.removeFrom(ids, $opt.val(), function(result) {
+				self.groups.removeFrom(ids, $opt.val(), false, function(result) {
 					console.log('after remove', result);
 					if(!result.error) {
 						var groupname = $opt.text(), groupid = $opt.val();
@@ -905,12 +906,6 @@ OC.Contacts = OC.Contacts || {
 							if(buildnow) {
 								self.buildGroupSelect();
 							}
-							// If a group is selected the contact has to be removed from the list
-							$(document).trigger('status.contact.removedfromgroup', {
-								contactid: id,
-								groupid: groupId,
-								groupname: groupName
-							});
 						});
 					} else {
 						var msg = result.message ? result.message : t('contacts', 'Error removing from group.');

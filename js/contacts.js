@@ -673,6 +673,13 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Show contact list element.
+	 */
+	Contact.prototype.show = function() {
+		this.getListItemElement().show();
+	};
+
+	/**
 	 * Remove any open contact from the DOM.
 	 */
 	Contact.prototype.close = function() {
@@ -1754,7 +1761,6 @@ OC.Contacts = OC.Contacts || {};
 				}
 			});
 			if(!found) {
-				console.log('not found');
 				return;
 			}
 			this.data.CATEGORIES[0].value = categories;
