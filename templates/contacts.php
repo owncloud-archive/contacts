@@ -454,7 +454,7 @@
 
 <script id="addressBookTemplate" class="hidden" type="text/template">
 <li data-id="{id}" data-backend="{backend}" data-permissions="{permissions}">
-	<input type="checkbox" name="active" title="<?php p($l->t('Active')); ?>" />
+	<input type="checkbox" name="active" checked="checked" title="<?php p($l->t('Active')); ?>" />
 	<label>{displayname}</label>
 	<span class="actions">
 		<a title="<?php p($l->t('Share')); ?>" class="share action" data-possible-permissions="{permissions}" data-item="{id}" data-item-type="addressbook"></a>
