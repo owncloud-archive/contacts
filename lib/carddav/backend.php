@@ -182,7 +182,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 				//'carddata' => $i['carddata'],
 				'size' => strlen($contact['carddata']),
 				'etag' => '"' . md5($contact['carddata']) . '"',
-				'uri' => $contact['uri'],
+				'uri' => urlencode($contact['uri']),
 				'lastmodified' => $contact['lastmodified'] );
 		}
 
@@ -198,7 +198,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 */
 	public function getCard($addressbookid, $carduri) {
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
-		$contact = $backend->getContact($id, array('uri' => $carduri));
+		$contact = $backend->getContact($id, array('uri' => urldecode($carduri)));
 		return ($contact ? $contact : false);
 
 	}
