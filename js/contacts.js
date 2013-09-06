@@ -2459,7 +2459,7 @@ OC.Contacts = OC.Contacts || {};
 				console.log('HEAD  response', response);
 				console.log('HEAD  Etag', etag);
 				console.log('Saved Etag', data.Etag);
-				if(etag === data.Etag) {
+				if(etag && etag === data.Etag) {
 					console.log('Returning saved data');
 					self.insertContacts(data.contacts);
 					defer.resolve();
