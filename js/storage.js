@@ -175,12 +175,12 @@ OC.Contacts = OC.Contacts || {};
 	 * 'export'
 	 * A stream of vCards separated by "\r\n\r\n"
 	 */
-	Storage.prototype.getAddressBook = function(backend, addressbookid, params) {
+	Storage.prototype.getAddressBook = function(backend, addressbookid, onlyHeaders) {
+		var verb = onlyHeaders ? 'HEAD' : 'GET';
 		return this.requestRoute(
 			'contacts_address_book',
-			'GET',
-			{backend: backend, addressbookid: addressbookid},
-			params
+			verb,
+			{backend: backend, addressbookid: addressbookid}
 		);
 	}
 
@@ -558,7 +558,7 @@ OC.Contacts = OC.Contacts || {};
 		);
 	}
 
-	Storage.prototype.requestRoute = function(route, type, routeParams, params) {
+	Storage.prototype.requestRoute = function(route, type, routeParams, params, dontCache) {
 		var isJSON = (typeof params === 'string');
 		var contentType = isJSON ? 'application/json' : 'application/x-www-form-urlencoded';
 		var processData = !isJSON;
@@ -569,7 +569,8 @@ OC.Contacts = OC.Contacts || {};
 			type: type,
 			url: url,
 			dataType: 'json',
-			ifModified: true,
+			//ifModified: true,
+			cache: dontCache ? false : true,
 			contentType: contentType,
 			processData: processData,
 			data: params

@@ -1871,11 +1871,11 @@ OC.Contacts = OC.Contacts || {};
 			console.log('status.addressbook.imported', data);
 			var addressBook = data.addressbook;
 			self.purgeFromAddressbook(addressBook);
-			$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId()))
-				.then(function() {
-					self.setSortOrder();
-					$(document).trigger('request.groups.reload');
-				});
+			$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId(), true))
+			.then(function() {
+				self.setSortOrder();
+				$(document).trigger('request.groups.reload');
+			});
 		});
 		$(document).bind('status.addressbook.activated', function(e, data) {
 			console.log('status.addressbook.activated', data);
@@ -1886,7 +1886,7 @@ OC.Contacts = OC.Contacts || {};
 					numcontacts: self.length
 				});
 			} else {
-			$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId(), true))
+				$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId(), true))
 				.then(function() {
 					self.setSortOrder();
 					$(document).trigger('request.groups.reload');
@@ -2381,6 +2381,37 @@ OC.Contacts = OC.Contacts || {};
 		}
 	};
 
+	ContactList.prototype.insertContacts = function(contacts) {
+		var self = this, items = [];
+		$.each(contacts, function(c, contact) {
+			var id = String(contact.metadata.id);
+			self.contacts[id]
+				= new Contact(
+					self,
+					id,
+					contact.metadata,
+					contact.data,
+					self.$contactListItemTemplate,
+					self.$contactDragItemTemplate,
+					self.$contactFullTemplate,
+					self.contactDetailTemplates
+				);
+			self.length +=1;
+			var $item = self.contacts[id].renderListItem();
+			if(!$item) {
+				console.warn('Contact', contact, 'could not be rendered!');
+				return true; // continue
+			}
+			items.push($item.get(0));
+		});
+		if(items.length > 0) {
+			self.$contactList.append(items);
+		}
+		$(document).trigger('status.contacts.count', {
+			count: self.length
+		});
+	}
+
 	/**
 	* Load contacts
 	* @param string backend Name of the backend ('local', 'ldap' etc.)
@@ -2392,53 +2423,75 @@ OC.Contacts = OC.Contacts || {};
 		}
 		var self = this,
 			contacts,
-			key = 'contacts::' + backend + '::' + addressBookId;
-		var defer = $.when(this.storage.getAddressBook(backend, addressBookId)).then(function(response) {
-			//console.log('ContactList.loadContacts', response);
-			if(!response.error) {
-				if(response.statusCode === 304 && OC.localStorage.hasItem(key)) {
-					contacts = OC.localStorage.getItem(key);
-				} else {
-					contacts = response.data.contacts;
-					OC.localStorage.setItem(key, contacts);
-				}
-				var items = [];
-				$.each(contacts, function(c, contact) {
-					var id = String(contact.metadata.id);
-					contact.metadata.backend = backend;
-					self.contacts[id]
-						= new Contact(
-							self,
-							id,
-							contact.metadata,
-							contact.data,
-							self.$contactListItemTemplate,
-							self.$contactDragItemTemplate,
-							self.$contactFullTemplate,
-							self.contactDetailTemplates
-						);
-					self.length +=1;
-					var $item = self.contacts[id].renderListItem();
-					if(!$item) {
-						console.warn('Contact', contact, 'could not be rendered!');
-						return true; // continue
+			key = 'contacts::' + backend + '::' + addressBookId,
+			defer = $.Deferred();
+
+		// Local function to get the contacts if they're not cached or invalid.
+		var fetchContacts = function(backend, addressBookId) {
+			return $.when(self.storage.getAddressBook(backend, addressBookId, false))
+				.then(function(response) {
+				console.log('ContactList.loadContacts - fetching', response);
+				if(!response.error) {
+					if(response.data) {
+						response.data.Etag = response.getResponseHeader('Etag');
+						OC.localStorage.setItem(key, response.data);
+						self.insertContacts(response.data.contacts);
+						defer.resolve();
 					}
-					items.push($item.get(0));
-				});
-				if(items.length > 0) {
-					self.$contactList.append(items);
+				} else {
+					console.warn('ContactList.loadContacts - no data!!');
 				}
-				$(document).trigger('status.contacts.count', {
-					count: self.length
-				});
-			} else {
-				defer.reject(response);
-			}
-		})
-		.fail(function(response) {
-			console.warn('Request Failed:', response.message);
-			this.reject({error: true, message: response.message});
-		});
+			})
+			.fail(function(response) {
+				console.warn('Request Failed:', response.message);
+				defer.reject({error: true, message: response.message});
+			});
+			return defer;
+		};
+
+		// First check if we have a valid local cache
+		if(OC.localStorage.hasItem(key)) {
+			$.when(this.storage.getAddressBook(backend, addressBookId, true))
+			.then(function(response) {
+				var data = OC.localStorage.getItem(key);
+				console.log('Local data', data);
+				var etag = response.getResponseHeader('Etag');
+				console.log('HEAD  response', response);
+				console.log('HEAD  Etag', etag);
+				console.log('Saved Etag', data.Etag);
+				if(etag === data.Etag) {
+					console.log('Returning saved data');
+					self.insertContacts(data.contacts);
+					defer.resolve();
+				} else {
+					console.log('Local cache invalid');
+					$.when(fetchContacts(backend, addressBookId))
+					.then(function(response) {
+						console.log('ContactList.loadContacts on invalid', response);
+						defer.resolve();
+					})
+					.fail(function(response) {
+						console.warn('Request Failed:', response.message);
+						defer.reject();
+					});
+				}
+			})
+			.fail(function(response) {
+				console.warn('Request Failed:', response.message);
+				defer.reject();
+			});
+		} else {
+			console.log('No local cache');
+			$.when(fetchContacts(backend, addressBookId))
+			.then(function(response) {
+				console.log('ContactList.loadContacts on no cache', response);
+				defer.resolve();
+			})
+			.fail(function(response) {
+				console.warn('Request Failed:', response.message);
+				defer.reject();
+			});
+		}
 		return defer;
 	};
 

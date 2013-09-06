@@ -55,16 +55,16 @@ class AddressBookController extends BaseController {
 		$response = new JSONResponse();
 
 		if(!is_null($lastModified)) {
-			$response->addHeader('Cache-Control', 'private, must-revalidate');
+			//$response->addHeader('Cache-Control', 'private, must-revalidate');
 			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
 			$response->setETag(md5($lastModified));
 		}
 
+		$response->debug('method: ' . $this->request->method);
 		if($this->request->method === 'GET') {
 			$contacts = array();
 			foreach($addressBook->getChildren() as $i => $contact) {
 				$result = JSONSerializer::serializeContact($contact);
-				//\OCP\Util::writeLog('contacts', __METHOD__.' contact: '.print_r($result, true), \OCP\Util::DEBUG);
 				if($result !== null) {
 					$contacts[] = $result;
 				}

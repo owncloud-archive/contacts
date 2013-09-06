@@ -29,7 +29,7 @@ OC.Contacts = OC.Contacts || {};
 			console.log('group click', $(this));
 			if($(event.target).is('.action.delete')) {
 				$('.tipsy').remove();
-				$(this).addClass('loading');
+				$(this).addClass('loading').removeClass('active');
 				event.stopPropagation();
 				event.preventDefault();
 				var id = $(event.target).parents('li').first().data('id');
