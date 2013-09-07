@@ -71,6 +71,7 @@
 "The backend for this address book does not support adding contacts" => "Bu adres defterinin geri plandaki mekanizması kişi eklemeyi desteklemiyor.",
 "You do not have permissions to delete this contact" => "Bu kişiyi silmek için izniniz yok.",
 "The backend for this address book does not support deleting contacts" => "Bu adres defterinin arka plandaki mekanizması kişi silmeyi desteklemiyor",
+"Unknown error" => "Bilinmeyen hata",
 "The backend for this address book does not support updating" => "Bu adres defterinin geri plandaki mekanizması güncellemeyi desteklemiyor.",
 "You don't have permissions to update the address book." => "Bu adres defterini güncellemek için yetkiniz yok.",
 "You don't have permissions to delete the address book." => "Bu adres defterini silmek için izniniz yok.",

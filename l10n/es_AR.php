@@ -49,6 +49,7 @@
 "You do not have permissions to see these contacts" => "No tiene permisos para ver estos contactos.",
 "You do not have permissions add contacts to the address book" => "No tiene atribuciones para añadir contactos a la libreta de direcciones.",
 "You do not have permissions to delete this contact" => "No tiene permisos para borrar este contacto.",
+"Unknown error" => "Error desconocido",
 "You don't have permissions to update the address book." => "No tiene atribuciones para actualizar la libreta de direcciones.",
 "You don't have permissions to delete the address book." => "No tiene atribuciones para borrar la libreta de direcciones.",
 "Address book not found" => "Libreta de direcciones no encontrada",

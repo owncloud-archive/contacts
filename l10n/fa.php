@@ -16,6 +16,7 @@
 "Download" => "دانلود",
 "Edit" => "ویرایش",
 "Delete" => "حذف",
+"Unknown error" => "خطای نامشخص",
 "Error saving contact." => "خطا در ذخیره سازی اطلاعات",
 "Information about vCard is incorrect. Please reload the page." => "اطلاعات درمورد vCard شما اشتباه است لطفا صفحه را دوباره بار گذاری کنید",
 "No file was uploaded. Unknown error" => "هیچ فایلی آپلود نشد.خطای ناشناس",

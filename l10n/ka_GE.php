@@ -9,6 +9,7 @@
 "Download" => "ჩამოტვირთვა",
 "Edit" => "რედაქტირება",
 "Delete" => "წაშლა",
+"Unknown error" => "უცნობი შეცდომა",
 "No file was uploaded. Unknown error" => "ფაილი არ აიტვირთა. უცნობი შეცდომა",
 "There is no error, the file uploaded with success" => "ჭოცდომა არ დაფიქსირდა, ფაილი წარმატებით აიტვირთა",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "ატვირთული ფაილი აჭარბებს upload_max_filesize დირექტივას php.ini ფაილში",

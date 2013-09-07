@@ -9,6 +9,7 @@
 "Download" => "چۈشۈر",
 "Edit" => "تەھرىر",
 "Delete" => "ئۆچۈر",
+"Unknown error" => "يوچۇن خاتالىق",
 "No file was uploaded. Unknown error" => "ھېچقانداق ھۆججەت يۈكلەنمىدى. يوچۇن خاتالىق",
 "No file was uploaded" => "ھېچقانداق ھۆججەت يۈكلەنمىدى",
 "Missing a temporary folder" => "ۋاقىتلىق قىسقۇچ كەم.",

@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-05 05:36-0400\n"
-"PO-Revision-Date: 2013-09-05 09:36+0000\n"
+"POT-Creation-Date: 2013-09-07 04:33-0400\n"
+"PO-Revision-Date: 2013-09-07 08:33+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -29,35 +29,35 @@ msgstr ""
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: js/addressbooks.js:68 js/groups.js:506 templates/settings.php:61
+#: js/addressbooks.js:79 js/groups.js:517 templates/settings.php:61
 msgid "Save"
 msgstr "Uložit"
 
-#: js/addressbooks.js:251
+#: js/addressbooks.js:288
 msgid "Uploading..."
 msgstr "Odesílám..."
 
-#: js/addressbooks.js:254
+#: js/addressbooks.js:291
 msgid "Importing..."
 msgstr "Importuji..."
 
-#: js/addressbooks.js:307
+#: js/addressbooks.js:344
 msgid "Imported {count} of {total} contacts"
 msgstr "Naimportováno {count} z celkového množství {total} kontaktů"
 
-#: js/addressbooks.js:329
+#: js/addressbooks.js:366
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "Naimportováno {imported} kontaktů. {failed} selhalo."
 
-#: js/addressbooks.js:471
+#: js/addressbooks.js:508
 msgid "An address book called {name} already exists"
 msgstr "Adresář kontaktů s názvem {name} již existuje"
 
-#: js/addressbooks.js:500
+#: js/addressbooks.js:537
 msgid "Failed adding address book: {error}"
 msgstr "Přidání adresáře kontaktů selhalo: {error}"
 
-#: js/addressbooks.js:536
+#: js/addressbooks.js:573
 msgid "Failed loading address books: {error}"
 msgstr "Načtení adresářů kontaktů selhalo: {error}"
 
@@ -85,116 +85,116 @@ msgstr "Odebrat z..."
 msgid "Add group..."
 msgstr "Přidat skupinu..."
 
-#: js/app.js:462
+#: js/app.js:468
 msgid "Invalid URL: \"{url}\""
 msgstr "Neplatná URL: \"{url}\""
 
-#: js/app.js:473
+#: js/app.js:479
 msgid "There was an error opening a mail composer."
 msgstr "Nastala chyba při otevírání editoru e-malů."
 
-#: js/app.js:478
+#: js/app.js:484
 msgid "Invalid email: \"{url}\""
 msgstr "Neplatný e-mail: \"{url}\""
 
-#: js/app.js:556
+#: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Sloučení selhalo. Nelze nalézt kontakt: {id}"
 
-#: js/app.js:569
+#: js/app.js:575
 msgid "Merge failed."
 msgstr "Sloučení selhalo."
 
-#: js/app.js:576
+#: js/app.js:582
 msgid "Merge failed. Error saving contact."
 msgstr "Sloučení selhalo. Chyba při ukládání kontaktu."
 
-#: js/app.js:595
+#: js/app.js:601
 msgid "Select photo"
 msgstr "Vybrat fotku"
 
-#: js/app.js:665 js/app.js:1564
+#: js/app.js:677 js/app.js:1560
 msgid "Network or server error. Please inform administrator."
 msgstr "Chyba sítě či serveru. Kontaktujte prosím správce."
 
-#: js/app.js:886
+#: js/app.js:888
 msgid "Error adding to group."
 msgstr "Chyba při přidávání do skupiny"
 
-#: js/app.js:915
+#: js/app.js:911
 msgid "Error removing from group."
 msgstr "Chyba při odebírání ze skupiny"
 
-#: js/app.js:1075
+#: js/app.js:1071
 msgid "Error setting {name} as favorite."
 msgstr "Chyba při nastavování {name} jako oblíbený."
 
-#: js/app.js:1214 js/app.js:1218 templates/contacts.php:181
+#: js/app.js:1210 js/app.js:1214 templates/contacts.php:180
 msgid "Merge contacts"
 msgstr "Sloučit kontakty"
 
-#: js/app.js:1240 js/app.js:1293 js/settings.js:120 templates/contacts.php:320
+#: js/app.js:1236 js/app.js:1289 js/settings.js:120 templates/contacts.php:319
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: js/app.js:1267 templates/contacts.php:162
+#: js/app.js:1263 templates/contacts.php:161
 msgid "Add group"
 msgstr "Přidat skupinu"
 
-#: js/app.js:1271
+#: js/app.js:1267
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1370
+#: js/app.js:1366
 msgid "Could not find contact: {id}"
 msgstr "Nelze nalézt kontakt: {id}"
 
-#: js/app.js:1412
+#: js/app.js:1408
 msgid "No files selected for upload."
 msgstr "Žádné soubory nebyly vybrány k nahrání."
 
-#: js/app.js:1422
+#: js/app.js:1418
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Soubor, který se pokoušíte odeslat, přesahuje maximální velikost povolenou na serveru."
 
-#: js/app.js:1522
+#: js/app.js:1518
 msgid "Edit profile picture"
 msgstr "Upravit obrázek profilu"
 
-#: js/app.js:1526
+#: js/app.js:1522
 msgid "Crop photo"
-msgstr ""
+msgstr "Oříznout fotku"
 
 #: js/contacts.js:591
 msgid "Is this correct?"
 msgstr "Je to správně?"
 
-#: js/contacts.js:849
+#: js/contacts.js:856
 msgid "Error parsing date: {date}"
 msgstr "Chyba při parsování data: {date}"
 
-#: js/contacts.js:1046
+#: js/contacts.js:1053
 msgid "# groups"
 msgstr "počet skupin"
 
-#: js/contacts.js:2120
+#: js/contacts.js:2142
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Některé kontakty jsou označeny ke smazání, ale ještě smazány nejsou. Počkejte, prosím, na dokončení operace."
 
-#: js/contacts.js:2131
+#: js/contacts.js:2153
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikněte pro navrácení smazání {num} kontaktů"
 
-#: js/contacts.js:2140
+#: js/contacts.js:2162
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "Zrušeno smazání {num} kontaktů"
 
-#: js/groups.js:53 templates/contacts.php:324
+#: js/groups.js:53 templates/contacts.php:323
 msgid "Add"
 msgstr "Přidat"
 
@@ -206,53 +206,53 @@ msgstr "Kontakt je již v této skupině."
 msgid "Contacts are already in this group."
 msgstr "Kontakty jsou již v této skupině."
 
-#: js/groups.js:339
+#: js/groups.js:341
 msgid "Couldn't get contact list."
 msgstr "Nelze získat seznam kontaktů."
 
-#: js/groups.js:350
+#: js/groups.js:352
 msgid "Contact is not in this group."
 msgstr "Kontakt není v této skupině."
 
-#: js/groups.js:364
+#: js/groups.js:366
 msgid "Contacts are not in this group."
 msgstr "Kontakty nejsou v této skupině."
 
-#: js/groups.js:554
+#: js/groups.js:565
 msgid "Failed renaming group: {error}"
 msgstr "Chyba při přejmenování skupiny: {error}"
 
-#: js/groups.js:585
+#: js/groups.js:596
 msgid "A group named {group} already exists"
 msgstr "Skupina s názvem {group} již existuje"
 
-#: js/groups.js:620
+#: js/groups.js:631
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Můžete přesouvat skupiny, pro\nsnadné seřazení dle vašich potřeb."
 
-#: js/groups.js:633
+#: js/groups.js:644
 msgid "Failed adding group: {error}"
 msgstr "Přidání skupiny se nezdařilo: {error}"
 
-#: js/groups.js:645
+#: js/groups.js:656
 msgid "All"
 msgstr "Vše"
 
-#: js/groups.js:660 js/groups.js:663
+#: js/groups.js:671 js/groups.js:674
 msgid "Favorites"
 msgstr "Oblíbené"
 
-#: js/groups.js:724
+#: js/groups.js:735
 msgid "Shared by {owner}"
 msgstr "Sdílí {owner}"
 
-#: js/groups.js:739
+#: js/groups.js:750
 msgid "Not grouped"
 msgstr "Neseskupené"
 
-#: js/groups.js:765
+#: js/groups.js:776
 msgid "Failed loading groups: {error}"
 msgstr "Načtení skupin se nezdařilo: {error}"
 
@@ -285,18 +285,18 @@ msgid "Show read-only VCF link"
 msgstr "Zobrazit odkaz VCF pouze pro čtení"
 
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
-#: templates/contacts.php:322 templates/settings.php:40
+#: templates/contacts.php:321 templates/settings.php:40
 msgid "Download"
 msgstr "Stáhnout"
 
-#: js/settings.js:101 templates/contacts.php:463 templates/settings.php:45
+#: js/settings.js:101 templates/contacts.php:464 templates/settings.php:45
 msgid "Edit"
 msgstr "Upravit"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
-#: templates/contacts.php:267 templates/contacts.php:274
-#: templates/contacts.php:281 templates/contacts.php:288
-#: templates/contacts.php:336 templates/contacts.php:464
+#: templates/contacts.php:266 templates/contacts.php:273
+#: templates/contacts.php:280 templates/contacts.php:287
+#: templates/contacts.php:335 templates/contacts.php:465
 #: templates/settings.php:50
 msgid "Delete"
 msgstr "Smazat"
@@ -309,51 +309,51 @@ msgstr "Více..."
 msgid "Less..."
 msgstr "Méně..."
 
-#: js/storage.js:278 js/storage.js:317
+#: js/storage.js:295 js/storage.js:334
 msgid "Failed loading photo: {error}"
 msgstr "Načtení fotografie se nezdařilo: {error}"
 
-#: lib/addressbook.php:134
+#: lib/addressbook.php:152
 msgid "You do not have permissions to see this contacts"
 msgstr "Nemáte oprávnění pro zobrazení těchto kontaktů"
 
-#: lib/addressbook.php:141
+#: lib/addressbook.php:159
 msgid "Contact not found"
 msgstr "Kontakt nebyl nalezen"
 
-#: lib/addressbook.php:168
+#: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
 msgstr "Nemáte oprávnění pro zobrazení těchto kontaktů"
 
-#: lib/addressbook.php:195
+#: lib/addressbook.php:213
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Nemáte oprávnění pro přidání kontaktů do adresáře kontaktů"
 
-#: lib/addressbook.php:198
+#: lib/addressbook.php:216
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Úložiště tohoto adresáře kontaktů nepodporuje přidávání kontaktů"
 
-#: lib/addressbook.php:222 lib/addressbook.php:248 lib/contact.php:246
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
 msgstr "Nemáte oprávnění pro smazání tohoto kontaktu"
 
-#: lib/addressbook.php:225 lib/addressbook.php:251
+#: lib/addressbook.php:243 lib/addressbook.php:269
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Úložiště tohoto adresáře kontaktů nepodporuje mazání kontaktů"
 
-#: lib/addressbook.php:272
+#: lib/addressbook.php:290
 msgid "Unknown error"
-msgstr ""
+msgstr "Neznámá chyba"
 
-#: lib/addressbook.php:314
+#: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
 msgstr "Úložiště tohoto adresáře kontaktů nepodporuje změnu kontaktů"
 
-#: lib/addressbook.php:340
+#: lib/addressbook.php:358
 msgid "You don't have permissions to update the address book."
 msgstr "Nemáte oprávnění pro provádění změn v adresáři kontaktů"
 
-#: lib/addressbook.php:351
+#: lib/addressbook.php:369
 msgid "You don't have permissions to delete the address book."
 msgstr "Nemáte oprávnění pro mazání v adresáři kontaktů"
 
@@ -406,24 +406,24 @@ msgstr "Nemáte oprávnění pro smazání adresáře kontaktů \"%s\""
 msgid "Error deleting address book"
 msgstr "Chyba při mazání adresáře kontaktů"
 
-#: lib/controller/addressbookcontroller.php:218
+#: lib/controller/addressbookcontroller.php:236
 msgid "Error creating contact."
 msgstr "Chyba při vytváření kontaktu"
 
-#: lib/controller/addressbookcontroller.php:260
+#: lib/controller/addressbookcontroller.php:278
 msgid "Error deleting contact."
 msgstr "Chyba při mazání kontaktu"
 
-#: lib/controller/addressbookcontroller.php:309
+#: lib/controller/addressbookcontroller.php:327
 msgid "Error retrieving contact."
 msgstr "Chyba při otevírání kontaktu."
 
-#: lib/controller/addressbookcontroller.php:320
+#: lib/controller/addressbookcontroller.php:338
 #: lib/controller/contactphotocontroller.php:345
 msgid "Error saving contact."
 msgstr "Chyba při ukládání kontaktu."
 
-#: lib/controller/addressbookcontroller.php:325
+#: lib/controller/addressbookcontroller.php:343
 msgid "Error removing contact from other address book."
 msgstr "Chyba při odebírání kontaktu z jiného adresáře kontaktů."
 
@@ -472,7 +472,7 @@ msgstr "Chyba při zápisu vlastnosti do úložiště"
 
 #: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
-msgstr ""
+msgstr "Chyba při získávání uživatelovy fotky"
 
 #: lib/controller/contactphotocontroller.php:90
 #: lib/controller/importcontroller.php:39
@@ -535,7 +535,7 @@ msgstr "Chyba při načítání obrázku."
 
 #: lib/controller/contactphotocontroller.php:290
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "Obrázek byl odstraněn z mezipaměti"
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error creating temporary image"
@@ -781,7 +781,7 @@ msgstr "Zobrazované jméno"
 msgid "Add Address Book"
 msgstr "Přidat adresář kontaktů"
 
-#: templates/contacts.php:25 templates/contacts.php:127
+#: templates/contacts.php:25
 msgid "Import"
 msgstr "Importovat"
 
@@ -821,7 +821,7 @@ msgstr "Oblíbit"
 msgid "Merge selected"
 msgstr "Sjednotit vybrané"
 
-#: templates/contacts.php:91 templates/contacts.php:321
+#: templates/contacts.php:91 templates/contacts.php:320
 msgid "Close"
 msgstr "Zavřít"
 
@@ -875,215 +875,216 @@ msgstr "Odstranit současný kontakt"
 
 #: templates/contacts.php:123
 msgid ""
-"<h3>You have no contacts in your addressbook.</h3><p>Add a new contact or "
-"import existing contacts from a VCF file.</p>"
-msgstr "<h3>Ve vašem adresáři kontaktů nemáte žádné kontakty.</h3><p>Přidejte nový kontakt nebo importujte existující ze souboru VCF.</p>"
+"<h3>You have no contacts in your address book or your address book is "
+"disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
+"file.</p>"
+msgstr ""
 
 #: templates/contacts.php:126
 msgid "Add contact"
 msgstr "Přidat kontakt"
 
-#: templates/contacts.php:173
+#: templates/contacts.php:172
 msgid "Delete group"
 msgstr "Smazat skupinu"
 
-#: templates/contacts.php:174
+#: templates/contacts.php:173
 msgid "Rename group"
 msgstr "Přejmenovat skupinu"
 
-#: templates/contacts.php:182
+#: templates/contacts.php:181
 msgid "Which contact should the data be merged into?"
 msgstr "Do kterého kontaktu mají být data sjednocena?"
 
-#: templates/contacts.php:190
+#: templates/contacts.php:189
 msgid "Delete the other(s) after successful merge?"
 msgstr "Smazat ostatní po úspěšném sjednocení?"
 
-#: templates/contacts.php:202
+#: templates/contacts.php:201
 msgid "Compose mail"
 msgstr "Napsat e-mail"
 
-#: templates/contacts.php:224
+#: templates/contacts.php:223
 msgid "Delete current photo"
 msgstr "Smazat současnou fotku"
 
-#: templates/contacts.php:225
+#: templates/contacts.php:224
 msgid "Edit current photo"
 msgstr "Upravit současnou fotku"
 
-#: templates/contacts.php:226
+#: templates/contacts.php:225
 msgid "Upload new photo"
 msgstr "Nahrát novou fotku"
 
-#: templates/contacts.php:227
+#: templates/contacts.php:226
 msgid "Select photo from ownCloud"
 msgstr "Vybrat fotku z ownCloudu"
 
-#: templates/contacts.php:238 templates/contacts.php:239
+#: templates/contacts.php:237 templates/contacts.php:238
 msgid "First name"
 msgstr "Křestní jméno"
 
-#: templates/contacts.php:243 templates/contacts.php:244
+#: templates/contacts.php:242 templates/contacts.php:243
 msgid "Additional names"
 msgstr "Další jména"
 
-#: templates/contacts.php:248 templates/contacts.php:249
+#: templates/contacts.php:247 templates/contacts.php:248
 msgid "Last name"
 msgstr "Příjmení"
 
-#: templates/contacts.php:256
+#: templates/contacts.php:255
 msgid "Select groups"
 msgstr "Vyberte skupiny"
 
-#: templates/contacts.php:259
+#: templates/contacts.php:258
 msgid "Select address book"
 msgstr "Vyberte adresář kontaktů"
 
-#: templates/contacts.php:263 templates/contacts.php:327
+#: templates/contacts.php:262 templates/contacts.php:326
 msgid "Nickname"
 msgstr "Přezdívka"
 
-#: templates/contacts.php:266
+#: templates/contacts.php:265
 msgid "Enter nickname"
 msgstr "Zadejte přezdívku"
 
-#: templates/contacts.php:270 templates/contacts.php:326
+#: templates/contacts.php:269 templates/contacts.php:325
 msgid "Title"
 msgstr "Název"
 
-#: templates/contacts.php:273
+#: templates/contacts.php:272
 msgid "Enter title"
 msgstr "Zadejte titul"
 
-#: templates/contacts.php:277 templates/contacts.php:325
+#: templates/contacts.php:276 templates/contacts.php:324
 msgid "Organization"
 msgstr "Organizace"
 
-#: templates/contacts.php:280
+#: templates/contacts.php:279
 msgid "Enter organization"
 msgstr "Zadejte organizaci"
 
-#: templates/contacts.php:284 templates/contacts.php:328
+#: templates/contacts.php:283 templates/contacts.php:327
 msgid "Birthday"
 msgstr "Narozeniny"
 
-#: templates/contacts.php:315
+#: templates/contacts.php:314
 msgid "Notes go here..."
 msgstr "Sem vložte poznámky..."
 
-#: templates/contacts.php:322
+#: templates/contacts.php:321
 msgid "Export as VCF"
 msgstr "Exportovat jako VCF"
 
-#: templates/contacts.php:329
+#: templates/contacts.php:328
 msgid "Phone"
 msgstr "Telefon"
 
-#: templates/contacts.php:330
+#: templates/contacts.php:329
 msgid "Email"
 msgstr "E-mail"
 
-#: templates/contacts.php:331
+#: templates/contacts.php:330
 msgid "Instant Messaging"
 msgstr "Komunikátor"
 
-#: templates/contacts.php:332
+#: templates/contacts.php:331
 msgid "Address"
 msgstr "Adresa"
 
-#: templates/contacts.php:333
+#: templates/contacts.php:332
 msgid "Note"
 msgstr "Poznámka"
 
-#: templates/contacts.php:334
+#: templates/contacts.php:333
 msgid "Web site"
 msgstr "Webová stránka"
 
-#: templates/contacts.php:336
+#: templates/contacts.php:335
 msgid "Delete contact"
 msgstr "Smazat kontakt"
 
-#: templates/contacts.php:349 templates/contacts.php:364
-#: templates/contacts.php:378 templates/contacts.php:403
+#: templates/contacts.php:348 templates/contacts.php:363
+#: templates/contacts.php:377 templates/contacts.php:402
 #: templates/contacts.php:440
 msgid "Preferred"
 msgstr "Preferované"
 
-#: templates/contacts.php:351
+#: templates/contacts.php:350
 msgid "Please specify a valid email address."
 msgstr "Prosím zadejte platnou e-mailovou adresu."
 
-#: templates/contacts.php:351
+#: templates/contacts.php:350
 msgid "someone@example.com"
 msgstr "někdo@example.com"
 
-#: templates/contacts.php:353
+#: templates/contacts.php:352
 msgid "Mail to address"
 msgstr "Odeslat na adresu"
 
-#: templates/contacts.php:354
+#: templates/contacts.php:353
 msgid "Delete email address"
 msgstr "Smazat e-mailovou adresu"
 
-#: templates/contacts.php:366
+#: templates/contacts.php:365
 msgid "Enter phone number"
 msgstr "Zadejte telefonní číslo"
 
-#: templates/contacts.php:368
+#: templates/contacts.php:367
 msgid "Delete phone number"
 msgstr "Smazat telefonní číslo"
 
-#: templates/contacts.php:382
+#: templates/contacts.php:381
 msgid "Go to web site"
 msgstr "Přejít na webovou stránku"
 
-#: templates/contacts.php:383
+#: templates/contacts.php:382
 msgid "Delete URL"
 msgstr "Smazat URL"
 
-#: templates/contacts.php:394
+#: templates/contacts.php:393
 msgid "View on map"
 msgstr "Zobrazit na mapě"
 
-#: templates/contacts.php:395
+#: templates/contacts.php:394
 msgid "Delete address"
 msgstr "Smazat adresu"
 
 #: templates/contacts.php:407
-msgid "1 Main Street"
-msgstr "Hlavní ulice 1"
+msgid "1600 Pennsylvania Avenue, NW"
+msgstr ""
 
 #: templates/contacts.php:408
 msgid "Street address"
 msgstr "Ulice"
 
 #: templates/contacts.php:412
-msgid "12345"
-msgstr "12345"
+msgid "20500"
+msgstr ""
 
 #: templates/contacts.php:413
 msgid "Postal code"
 msgstr "Směrovací číslo"
 
 #: templates/contacts.php:415
-msgid "Your city"
-msgstr "Vaše město"
+msgid "Washington, DC"
+msgstr ""
 
 #: templates/contacts.php:416
 msgid "City"
 msgstr "Město"
 
 #: templates/contacts.php:420
-msgid "Some region"
-msgstr "Nějaký region"
+msgid "District of Columbia"
+msgstr ""
 
 #: templates/contacts.php:421
 msgid "State or province"
 msgstr "Stát nebo provincie"
 
 #: templates/contacts.php:425
-msgid "Your country"
-msgstr "Vaše země"
+msgid "USA"
+msgstr ""
 
 #: templates/contacts.php:426
 msgid "Country"
@@ -1097,15 +1098,19 @@ msgstr "Komunikátor"
 msgid "Delete IM"
 msgstr "Smazat komunikátor"
 
-#: templates/contacts.php:460 templates/settings.php:36
+#: templates/contacts.php:458
+msgid "Active"
+msgstr ""
+
+#: templates/contacts.php:461 templates/settings.php:36
 msgid "Share"
 msgstr "Sdílet"
 
-#: templates/contacts.php:461
+#: templates/contacts.php:462
 msgid "Export"
 msgstr "Exportovat"
 
-#: templates/contacts.php:462
+#: templates/contacts.php:463
 msgid "CardDAV link"
 msgstr "CardDAV odkaz"
 

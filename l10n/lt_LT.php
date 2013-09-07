@@ -9,6 +9,7 @@
 "Download" => "Atsisiųsti",
 "Edit" => "Redaguoti",
 "Delete" => "Ištrinti",
+"Unknown error" => "Neatpažinta klaida",
 "Information about vCard is incorrect. Please reload the page." => "Informacija apie vCard yra neteisinga. ",
 "No file was uploaded. Unknown error" => "Failai nebuvo įkelti dėl nežinomos priežasties",
 "There is no error, the file uploaded with success" => "Failas įkeltas sėkmingai, be klaidų",

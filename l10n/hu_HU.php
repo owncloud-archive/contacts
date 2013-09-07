@@ -71,6 +71,7 @@
 "The backend for this address book does not support adding contacts" => "A címjegyzék háttérfolyamata nem támogatja az új kapcsolatok felvételét",
 "You do not have permissions to delete this contact" => "Nincs jogosultságod törölni ezt a kapcsolatot!",
 "The backend for this address book does not support deleting contacts" => "A címjegyzék háttérfolyamata nem támogatja a kapcsolatok törlését",
+"Unknown error" => "Ismeretlen hiba",
 "The backend for this address book does not support updating" => "A címjegyzék háttérfolyamata nem támogatja a frissítést",
 "You don't have permissions to update the address book." => "Nincs jogosultságod frissíteni a címjegyzéket!",
 "You don't have permissions to delete the address book." => "Nincs jogosultságod törölni ezt a címjegyzéket!",

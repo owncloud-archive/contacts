@@ -9,6 +9,7 @@
 "Download" => "הורדה",
 "Edit" => "עריכה",
 "Delete" => "מחיקה",
+"Unknown error" => "שגיאה בלתי ידועה",
 "Error saving contact." => "שגיאה בשמירת איש הקשר",
 "Information about vCard is incorrect. Please reload the page." => "המידע אודות vCard אינו נכון. נא לטעון מחדש את הדף.",
 "No file was uploaded. Unknown error" => "לא הועלה קובץ. טעות בלתי מזוהה.",
