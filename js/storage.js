@@ -1,9 +1,5 @@
 OC.Contacts = OC.Contacts || {};
 
-/**
- * TODO: Use $.Deferred.
- */
-
 (function(window, $, OC) {
 	'use strict';
 
