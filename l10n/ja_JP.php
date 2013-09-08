@@ -249,6 +249,7 @@
 "Country" => "国名",
 "Instant Messenger" => "インスタントメッセンジャー",
 "Delete IM" => "IMを削除",
+"Active" => "アクティブ",
 "Share" => "共有",
 "Export" => "エクスポート",
 "CardDAV link" => "CardDAVリンク",

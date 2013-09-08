@@ -50,6 +50,7 @@
 "Delete contact" => "Ištrinti kontaktą",
 "City" => "Miestas",
 "Country" => "Šalis",
+"Active" => "Aktyvus",
 "Share" => "Dalintis",
 "Export" => "Eksportuoti",
 "more info" => "daugiau informacijos",

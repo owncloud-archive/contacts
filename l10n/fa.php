@@ -79,6 +79,7 @@
 "View on map" => "دیدن روی نقشه",
 "City" => "شهر",
 "Country" => "کشور",
+"Active" => "فعال",
 "Share" => "اشتراک‌گذاری",
 "Export" => "گرفتن خروجی",
 "CardDAV syncing addresses" => "CardDAV syncing addresses ",

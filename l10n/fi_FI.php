@@ -188,6 +188,7 @@
 "Country" => "Maa",
 "Instant Messenger" => "Pikaviestin",
 "Delete IM" => "Poista IM",
+"Active" => "Aktiivinen",
 "Share" => "Jaa",
 "Export" => "Vie",
 "CardDAV link" => "CardDAV-linkki",

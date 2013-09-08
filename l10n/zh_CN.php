@@ -245,6 +245,7 @@
 "Country" => "国家",
 "Instant Messenger" => "即时通讯",
 "Delete IM" => "删除即时通讯工具",
+"Active" => "活动",
 "Share" => "共享",
 "Export" => "导出",
 "CardDAV link" => "CardDAV 链接",

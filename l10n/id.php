@@ -48,6 +48,7 @@
 "Preferred" => "disarankan",
 "City" => "kota",
 "Country" => "negara",
+"Active" => "Aktif",
 "Share" => "Bagikan",
 "Export" => "Ekspor",
 "more info" => "lebih lanjut",

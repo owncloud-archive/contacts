@@ -136,6 +136,7 @@
 "Delete address" => "Slett adresse",
 "City" => "By",
 "Country" => "Land",
+"Active" => "Aktiv",
 "Share" => "Del",
 "Export" => "Eksporter",
 "CardDAV syncing addresses" => "Synkroniseringsadresse for CardDAV",

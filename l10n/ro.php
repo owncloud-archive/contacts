@@ -80,6 +80,7 @@
 "Postal code" => "Codul poștal",
 "City" => "Oraș",
 "Country" => "Țară",
+"Active" => "Activ",
 "Share" => "Partajează",
 "Export" => "Exportă",
 "more info" => "mai multe informații",

@@ -156,6 +156,7 @@
 "Country" => "Країна",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "Видалити IM",
+"Active" => "Активний",
 "Share" => "Поділитися",
 "Export" => "Експорт",
 "CardDAV syncing addresses" => "CardDAV синхронізує адреси",

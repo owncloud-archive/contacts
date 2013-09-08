@@ -36,6 +36,7 @@
 "Email" => "E-pasts",
 "Address" => "Adrese",
 "Note" => "Piezīme",
+"Active" => "Aktīvs",
 "Share" => "Dalīties",
 "Export" => "Eksportēt",
 "more info" => "vairāk informācijas",

@@ -243,6 +243,7 @@
 "Country" => "Land",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "IM löschen",
+"Active" => "Aktiv",
 "Share" => "Teilen",
 "Export" => "Exportieren",
 "CardDAV link" => "CardDAV-Link",

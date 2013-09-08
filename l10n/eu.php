@@ -156,6 +156,7 @@
 "Country" => "Herrialdea",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "Ezabatu BM",
+"Active" => "Aktibo",
 "Share" => "Partekatu",
 "Export" => "Exportatu",
 "CardDAV syncing addresses" => "CardDAV sinkronizazio helbideak",

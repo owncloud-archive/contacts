@@ -244,6 +244,7 @@
 "Country" => "Kraj",
 "Instant Messenger" => "Komunikator",
 "Delete IM" => "Usuń Komunikator",
+"Active" => "Aktywna",
 "Share" => "Udostępnij",
 "Export" => "Eksportuj",
 "CardDAV link" => "Link CardDAV",

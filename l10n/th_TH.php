@@ -156,6 +156,7 @@
 "Country" => "ประเทศ",
 "Instant Messenger" => "โปรแกรมรับส่งข้อความ",
 "Delete IM" => "ลบ IM",
+"Active" => "เปิดใช้",
 "Share" => "แชร์",
 "Export" => "ส่งออก",
 "CardDAV syncing addresses" => "ที่อยู่ที่ใช้เชื่อมข้อมูลกับ CardDAV",

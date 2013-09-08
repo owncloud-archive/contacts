@@ -50,6 +50,7 @@
 "View on map" => "Vider in un carta",
 "City" => "Citate",
 "Country" => "Pais",
+"Active" => "Active",
 "Share" => "Compartir",
 "Export" => "Exportar",
 "more info" => "plus info",

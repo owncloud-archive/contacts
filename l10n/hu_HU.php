@@ -153,6 +153,7 @@
 "View on map" => "Megtekintés a térképen",
 "City" => "Város",
 "Country" => "Ország",
+"Active" => "Aktív",
 "Share" => "Megosztás",
 "Export" => "Exportálás",
 "CardDAV syncing addresses" => "CardDAV szinkronizációs címek",

@@ -245,6 +245,7 @@
 "Country" => "Land",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "Radera IM",
+"Active" => "Aktiv",
 "Share" => "Dela",
 "Export" => "Exportera",
 "CardDAV link" => "CardDAV-länk",

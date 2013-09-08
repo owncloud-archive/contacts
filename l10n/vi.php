@@ -157,6 +157,7 @@
 "Country" => "Quốc gia",
 "Instant Messenger" => "Tin nhắn khẩn cấp",
 "Delete IM" => "Xóa IM",
+"Active" => "Kích hoạt",
 "Share" => "Chia sẻ",
 "Export" => "Xuất ra",
 "CardDAV syncing addresses" => "CardDAV đồng bộ địa chỉ",

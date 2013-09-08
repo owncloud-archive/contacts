@@ -233,6 +233,7 @@
 "Country" => "Land",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "Slet IM",
+"Active" => "Aktiv",
 "Share" => "Del",
 "Export" => "Exporter",
 "CardDAV link" => "CardDAV link",

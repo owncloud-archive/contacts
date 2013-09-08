@@ -245,6 +245,7 @@
 "Country" => "Riik",
 "Instant Messenger" => "Kiirsõnum",
 "Delete IM" => "Kustuta IM",
+"Active" => "Aktiivne",
 "Share" => "Jaga",
 "Export" => "Ekspordi",
 "CardDAV link" => "CardDAV link",

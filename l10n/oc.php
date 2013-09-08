@@ -22,6 +22,7 @@
 "Title" => "Títol",
 "Birthday" => "Anniversari",
 "Email" => "Corrièl",
+"Active" => "Actiu",
 "Share" => "Parteja",
 "Export" => "Exporta",
 "more info" => "mai d'entresenhes",

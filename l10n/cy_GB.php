@@ -27,6 +27,7 @@
 "Birthday" => "Penblwydd",
 "Email" => "E-bost",
 "Address" => "Cyfeiriad",
+"Active" => "Gweithredol",
 "Share" => "Rhannu",
 "Export" => "Allforio",
 "more info" => "mwy o wybodaeth",

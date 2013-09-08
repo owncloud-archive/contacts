@@ -201,6 +201,7 @@
 "Country" => "Χώρα",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "Διαγραφή IM",
+"Active" => "Ενεργό",
 "Share" => "Διαμοιρασμός",
 "Export" => "Εξαγωγή",
 "CardDAV link" => "Σύνδεσμος CardDAV",

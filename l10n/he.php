@@ -69,6 +69,7 @@
 "View on map" => "ראה במפה",
 "City" => "עיר",
 "Country" => "מדינה",
+"Active" => "פעיל",
 "Share" => "שיתוף",
 "Export" => "ייצוא",
 "CardDAV syncing addresses" => "CardDAV מסנכרן כתובות",

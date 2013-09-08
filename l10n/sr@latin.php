@@ -30,6 +30,7 @@
 "Address" => "Adresa",
 "City" => "Grad",
 "Country" => "Zemlja",
+"Active" => "Aktivan",
 "Name" => "Ime",
 "Description" => "Opis"
 );

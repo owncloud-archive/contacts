@@ -245,6 +245,7 @@
 "Country" => "País",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "Elimina IM",
+"Active" => "Actiu",
 "Share" => "Comparteix",
 "Export" => "Exporta",
 "CardDAV link" => "Enllaç CardDAV",

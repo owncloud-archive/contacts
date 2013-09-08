@@ -202,6 +202,7 @@
 "Country" => "Ülke",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "IM Sil",
+"Active" => "Aktif",
 "Share" => "Paylaş",
 "Export" => "Dışa aktar",
 "CardDAV syncing addresses" => "CardDAV adresleri eşzamanlıyor",

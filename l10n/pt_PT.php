@@ -158,6 +158,7 @@
 "Country" => "País",
 "Instant Messenger" => "Mensageiro instantâneo",
 "Delete IM" => "Apagar mensageiro instantâneo (IM)",
+"Active" => "Activo",
 "Share" => "Partilhar",
 "Export" => "Exportar",
 "CardDAV syncing addresses" => "CardDAV a sincronizar endereços",

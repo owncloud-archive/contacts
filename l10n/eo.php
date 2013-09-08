@@ -157,6 +157,7 @@
 "Country" => "Lando",
 "Instant Messenger" => "Tujmesaĝilo",
 "Delete IM" => "Forigi tujmesaĝadon",
+"Active" => "Aktiva",
 "Share" => "Kunhavigi",
 "Export" => "Elporti",
 "CardDAV syncing addresses" => "adresoj por CardDAV-sinkronigo",

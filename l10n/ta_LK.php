@@ -154,6 +154,7 @@
 "Country" => "நாடு",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "IM ஐ நீக்குக",
+"Active" => "இயங்கும்",
 "Share" => "பகிர்வு",
 "Export" => "ஏற்றுமதி",
 "CardDAV syncing addresses" => "முகவரிகளை cardDAV ஒத்திசைக்கின்றன",

@@ -77,6 +77,7 @@
 "View on map" => "Погледајте на мапа",
 "City" => "Град",
 "Country" => "Држава",
+"Active" => "Активно",
 "Share" => "Сподели",
 "Export" => "Извези",
 "CardDAV syncing addresses" => "Адреса за синхронизација со CardDAV",

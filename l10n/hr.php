@@ -69,6 +69,7 @@
 "View on map" => "Prikaži na karti",
 "City" => "Grad",
 "Country" => "Država",
+"Active" => "Aktivno",
 "Share" => "Podijeli",
 "Export" => "Izvoz",
 "more info" => "više informacija",

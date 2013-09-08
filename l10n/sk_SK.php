@@ -245,6 +245,7 @@
 "Country" => "Krajina",
 "Instant Messenger" => "Okamžité správy IM",
 "Delete IM" => "Zmazať IM",
+"Active" => "Aktívny",
 "Share" => "Zdieľať",
 "Export" => "Export",
 "CardDAV link" => "CardDAV linka",

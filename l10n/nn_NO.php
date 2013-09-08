@@ -42,6 +42,7 @@
 "Preferred" => "Føretrekt",
 "City" => "Stad",
 "Country" => "Land",
+"Active" => "Aktiv",
 "Share" => "Del",
 "Export" => "Eksporter",
 "more info" => "meir info",

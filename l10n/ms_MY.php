@@ -79,6 +79,7 @@
 "View on map" => "Lihat pada peta",
 "City" => "bandar",
 "Country" => "Negara",
+"Active" => "Aktif",
 "Share" => "Kongsi",
 "Export" => "Export",
 "CardDAV syncing addresses" => "alamat selarian CardDAV",

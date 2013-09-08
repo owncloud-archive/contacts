@@ -249,6 +249,7 @@
 "Country" => "Země",
 "Instant Messenger" => "Komunikátor",
 "Delete IM" => "Smazat komunikátor",
+"Active" => "Aktivní",
 "Share" => "Sdílet",
 "Export" => "Exportovat",
 "CardDAV link" => "CardDAV odkaz",

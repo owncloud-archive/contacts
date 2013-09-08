@@ -53,6 +53,7 @@
 "View on map" => "Op da Kaart uweisen",
 "City" => "Staat",
 "Country" => "Land",
+"Active" => "Aktiv",
 "Share" => "Deelen",
 "Export" => "Exporteieren",
 "more info" => "méi Informatiounen",

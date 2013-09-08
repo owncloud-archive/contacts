@@ -243,6 +243,7 @@
 "Country" => "Страна",
 "Instant Messenger" => "Instant Messenger",
 "Delete IM" => "Удалить IM",
+"Active" => "Активно",
 "Share" => "Открыть доступ",
 "Export" => "Экспорт",
 "CardDAV link" => "Ссылка CardDAV",

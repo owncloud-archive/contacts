@@ -217,6 +217,7 @@
 "Country" => "Država",
 "Instant Messenger" => "Hipni sporočilnik",
 "Delete IM" => "Izbriši IM",
+"Active" => "Dejavno",
 "Share" => "Souporaba",
 "Export" => "Izvozi",
 "CardDAV link" => "Povezava CardDAV",

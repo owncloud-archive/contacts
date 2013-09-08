@@ -128,6 +128,7 @@
 "Country" => "국가",
 "Instant Messenger" => "인스턴트 메신저",
 "Delete IM" => "IM 삭제",
+"Active" => "활성",
 "Share" => "공유",
 "Export" => "내보내기",
 "CardDAV syncing addresses" => "CardDAV 주소 동기화",
