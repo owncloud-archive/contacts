@@ -27,7 +27,7 @@ OC.Contacts = OC.Contacts || {};
 				}
 			}
 		}
-	}
+	};
 
 	/**
 	* An object for saving contact data to backends
@@ -43,7 +43,11 @@ OC.Contacts = OC.Contacts || {};
 	*/
 	var Storage = function(user) {
 		this.user = user ? user : OC.currentUser;
-	}
+	};
+
+	Storage.prototype.formatResponse = function(response, jqXHR) {
+		return new JSONResponse(response, jqXHR);
+	};
 
 	/**
 	 * Get all address books registered for this user.
@@ -62,7 +66,7 @@ OC.Contacts = OC.Contacts || {};
 			'GET',
 			{}
 		);
-	}
+	};
 
 	/**
 	 * Add an address book to a specific backend
@@ -88,7 +92,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: 'local'},
 			parameters
 		);
-	}
+	};
 
 	/**
 	 * Update an address book in a specific backend
@@ -115,7 +119,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid},
 			properties
 		);
-	}
+	};
 
 	/**
 	 * Delete an address book from a specific backend
@@ -130,7 +134,7 @@ OC.Contacts = OC.Contacts || {};
 			'DELETE',
 			{backend: backend, addressbookid: addressbookid}
 		);
-	}
+	};
 
 	/**
 	 * (De)active an address book from a specific backend
@@ -147,7 +151,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid},
 			{state: state}
 		);
-	}
+	};
 
 	/**
 	 * Get contacts from an address book from a specific backend
@@ -178,7 +182,7 @@ OC.Contacts = OC.Contacts || {};
 			verb,
 			{backend: backend, addressbookid: addressbookid}
 		);
-	}
+	};
 
 	/**
 	 * Add a contact to an address book from a specific backend
@@ -205,7 +209,7 @@ OC.Contacts = OC.Contacts || {};
 			'POST',
 			{backend: backend, addressbookid: addressbookid}
 		);
-	}
+	};
 
 	/**
 	 * Delete a contact from an address book from a specific backend
@@ -238,7 +242,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid},
 			{contacts: contactids}
 		);
-	}
+	};
 
 	/**
 	 * Move a contact to an address book from a specific backend
@@ -255,7 +259,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid, contactid: contactid},
 			target
 		);
-	}
+	};
 
 	/**
 	 * Get Image instance for a contacts profile picture
@@ -292,7 +296,7 @@ OC.Contacts = OC.Contacts || {};
 			});
 		});
 		return defer.promise();
-	}
+	};
 
 	/**
 	 * Get Image instance for a contacts profile picture
@@ -331,7 +335,7 @@ OC.Contacts = OC.Contacts || {};
 			});
 		});
 		return defer.promise();
-	}
+	};
 
 	/**
 	 * Get Image instance for default profile picture
@@ -357,7 +361,7 @@ OC.Contacts = OC.Contacts || {};
 		} else {
 			return this.defaultPhoto;
 		}
-	}
+	};
 
 	/**
 	 * Delete a single property.
@@ -377,7 +381,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid, contactid: contactid},
 			params
 		);
-	}
+	};
 
 	/**
 	 * Save a property.
@@ -399,7 +403,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid, contactid: contactid},
 			params
 		);
-	}
+	};
 
 	/**
 	 * Save all properties. Used when merging contacts.
@@ -417,7 +421,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid, contactid: contactid},
 			params
 		);
-	}
+	};
 
 	/**
 	 * Get all groups for this user.
@@ -439,7 +443,7 @@ OC.Contacts = OC.Contacts || {};
 			'GET',
 			{}
 		);
-	}
+	};
 
 	/**
 	 * Add a group
@@ -459,7 +463,7 @@ OC.Contacts = OC.Contacts || {};
 			{},
 			{name: name}
 		);
-	}
+	};
 
 	/**
 	 * Delete a group
@@ -473,7 +477,7 @@ OC.Contacts = OC.Contacts || {};
 			{},
 			{name: name}
 		);
-	}
+	};
 
 	/**
 	 * Rename a group
@@ -488,7 +492,7 @@ OC.Contacts = OC.Contacts || {};
 			{},
 			{from: from, to: to}
 		);
-	}
+	};
 
 	/**
 	 * Add contacts to a group
@@ -503,7 +507,7 @@ OC.Contacts = OC.Contacts || {};
 			{categoryid: categoryid},
 			{contactids: contactids, name: categoryname}
 		);
-	}
+	};
 
 	/**
 	 * Remove contacts from a group
@@ -518,7 +522,7 @@ OC.Contacts = OC.Contacts || {};
 			{categoryid: categoryid},
 			{contactids: contactids, name: categoryname}
 		);
-	}
+	};
 
 	/**
 	 * Set a user preference
@@ -533,7 +537,17 @@ OC.Contacts = OC.Contacts || {};
 			{},
 			{key: key, value:value}
 		);
-	}
+	};
+
+	Storage.prototype.prepareImport = function(backend, addressbookid, params) {
+		console.log('Storage.prepareImport', backend, addressbookid);
+		return this.requestRoute(
+			'contacts_import_prepare',
+			'POST',
+			{backend: backend, addressbookid: addressbookid},
+			params
+		);
+	};
 
 	Storage.prototype.startImport = function(backend, addressbookid, params) {
 		console.log('Storage.startImport', backend, addressbookid);
@@ -543,7 +557,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid},
 			params
 		);
-	}
+	};
 
 	Storage.prototype.importStatus = function(backend, addressbookid, params) {
 		return this.requestRoute(
@@ -552,7 +566,7 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressbookid: addressbookid},
 			params
 		);
-	}
+	};
 
 	Storage.prototype.requestRoute = function(route, type, routeParams, params, dontCache) {
 		var isJSON = (typeof params === 'string');
@@ -590,7 +604,7 @@ OC.Contacts = OC.Contacts || {};
 			});
 
 		return defer.promise();
-	}
+	};
 
 	OC.Contacts.Storage = Storage;
 

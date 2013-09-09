@@ -106,6 +106,47 @@ class ImportController extends BaseController {
 	 * @IsAdminExemption
 	 * @IsSubAdminExemption
 	 * @Ajax
+	 */
+	public function prepare() {
+		$request = $this->request;
+		$params = $this->request->urlParams;
+		$response = new JSONResponse();
+		$filename = $request->post['filename'];
+		$path = $request->post['path'];
+
+		$view = \OCP\Files::getStorage('contacts');
+		if(!$view->file_exists('imports')) {
+			$view->mkdir('imports');
+		}
+
+		$proxyStatus = \OC_FileProxy::$enabled;
+		\OC_FileProxy::$enabled = false;
+		$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
+		if($view->file_put_contents('/imports/' . $filename, $content)) {
+			\OC_FileProxy::$enabled = $proxyStatus;
+			$count = substr_count($content, 'BEGIN:');
+			$progresskey = 'contacts-import-' . rand();
+			$response->setParams(
+				array(
+					'filename'=>$filename,
+					'count' => $count,
+					'progresskey' => $progresskey,
+					'backend' => $params['backend'],
+					'addressbookid' => $params['addressbookid']
+				)
+			);
+			\OC_Cache::set($progresskey, '10', 300);
+		} else {
+			\OC_FileProxy::$enabled = $proxyStatus;
+			$response->bailOut(App::$l10n->t('Error moving file to imports folder.'));
+		}
+		return $response;
+	}
+
+	/**
+	 * @IsAdminExemption
+	 * @IsSubAdminExemption
+	 * @Ajax
 	 * @API
 	 */
 	public function start() {

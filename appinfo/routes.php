@@ -146,6 +146,16 @@ $this->create('contacts_import_upload', 'addressbook/{backend}/{addressbookid}/i
 	)
 	->requirements(array('backend', 'addressbookid'));
 
+$this->create('contacts_import_prepare', 'addressbook/{backend}/{addressbookid}/import/prepare')
+	->post()
+	->action(
+		function($params) {
+			session_write_close();
+			Main::main('ImportController', 'prepare', $params, new DIContainer());
+		}
+	)
+	->requirements(array('backend', 'addressbookid'));
+
 $this->create('contacts_import_start', 'addressbook/{backend}/{addressbookid}/import/start')
 	->post()
 	->action(
