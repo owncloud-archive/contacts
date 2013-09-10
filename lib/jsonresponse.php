@@ -8,7 +8,8 @@
  */
 
 namespace OCA\Contacts;
-use OCA\AppFramework\Http\JSONResponse as OriginalResponse;
+use OCA\AppFramework\Http\JSONResponse as OriginalResponse,
+	OCA\AppFramework\Http\Http;
 
 
 /**
@@ -16,7 +17,8 @@ use OCA\AppFramework\Http\JSONResponse as OriginalResponse;
  */
 class JSONResponse extends OriginalResponse {
 
-	public function __construct($params = array()) {
+	public function __construct($params = array(), $statusCode=Http::STATUS_OK) {
+		parent::__construct(array(), $statusCode);
 		//\OCP\Util::writeLog('contacts', __METHOD__.' request: '.print_r($request, true), \OCP\Util::DEBUG);
 		parent::__construct();
 		$this->data['data'] = $params;
