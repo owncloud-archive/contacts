@@ -121,7 +121,6 @@
 	content: '+';
 	font-weight: bold;
 	font-size: 180%;
-	padding-right: 5px;
 }
 #grouplist li .action:not(.starred):not(.checked):not(.favorite):not([class^="add-"]) { display: none; padding: 0; }
 #grouplist li:not([data-type="shared"]):not(.editing):hover .action.numcontacts,
@@ -131,10 +130,36 @@
 #grouplist li.active[data-type="category"]:not(.editing):hover .action.edit { display: inline-block; width: 20px; height: 20px; }
 /*#grouplist li:not(.editing) .action.delete { width: 20px; height: 20px; }*/
 #grouplist .group span.numcontacts { width: 30px; text-align: right; margin-right: 10px !important; }
-#grouplist li.special { height: 40px; }
+#grouplist li.special { line-height: 40px; }
 
 /* First run */
 
+#firstrun {
+	height: 100%;
+	margin-left: 300px;
+	position: relative;
+}
+
+	#firstrun .message {
+		color: #888888;
+		font-size: 1.2em;
+		font-weight: bold;
+		text-shadow: 0 1px 0 #FFFFFF;
+		position: absolute;
+		top: 50%;
+		text-align: center;
+		width: 100%;
+		margin-top: -3em;
+		line-height: 1.8;
+	}
+
+	#firstrun button {
+		line-height: 1.2;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+/*
 #firstrun {
 	position:absolute;
 	left:50%; top:30%;
@@ -145,7 +170,7 @@
 #firstrun li { font-size:1.5em; text-align: center; margin-bottom: 1em; }
 #firstrun p { font-size:1.2em; text-align:center; }
 #firstrun #selections { font-size:0.8em; margin: 2em auto auto auto; clear: both; }
-
+*/
 #contact { margin: 1em; }
 #contact textarea { min-height: 5em; width: 100%; margin: 0 !important; padding: 0 !important; outline: 0 !important;}
 #contact footer {

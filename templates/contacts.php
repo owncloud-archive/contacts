@@ -29,7 +29,7 @@
 								<option value="-1"><?php p($l->t('Import into...')); ?></option>
 							</select>
 							<button class="svg tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
-							<input id="import_upload_start" class="tooltipped rightwards" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
+							<input id="import_upload_start" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" class="hidden"/>
 						</li>
 						<li class="import-status">
 							<label id="import-status-text"></label>
@@ -38,6 +38,15 @@
 					</ul>
 				</div>
 			</div> <!-- app-settings-content -->
+		</div>
+	</div>
+	<div id="firstrun" class="hidden">
+		<div class="message">
+			<h3><?php print_unescaped($l->t('You have no contacts in your address book or your address book is disabled')); ?></h3>
+			<p>
+				<button class="add-contact icon-plus text"><?php p($l->t('Add a new contact')); ?></button> 
+				<?php print_unescaped($l->t('or import existing contacts from a VCF file')); ?>
+			</p>
 		</div>
 	</div>
 	<div id="app-content" class="loading">
@@ -117,13 +126,6 @@
 					<dt>Shift-Delete</dt>
 					<dd><?php p($l->t('Delete current contact')); ?></dd>
 				</dl>
-			</div>
-		</div>
-		<div id="firstrun" class="hidden">
-			<?php print_unescaped($l->t('<h3>You have no contacts in your address book or your address book is disabled.</h3>'
-				. '<p>Add a new contact or import existing contacts from a VCF file.</p>')) ?>
-			<div id="selections">
-				<button class="add-contact icon-plus text"><?php p($l->t('Add contact')) ?></button>
 			</div>
 		</div>
 		<form class="float" id="file_upload_form" action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'ajax/uploadphoto.php')); ?>" method="post" enctype="multipart/form-data" target="file_upload_target">
