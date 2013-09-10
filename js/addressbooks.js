@@ -528,9 +528,12 @@ OC.Contacts = OC.Contacts || {};
 	 *
 	 * @param string name
 	 * @param function cb
+	 * @return jQuery.Deferred
+	 * @throws Error
 	 */
 	AddressBookList.prototype.add = function(name, cb) {
 		console.log('AddressBookList.add', name, typeof cb);
+		var defer = $.Deferred;
 		// Check for wrong, duplicate or empty name
 		if(typeof name !== 'string') {
 			throw new TypeError('BadArgument: AddressBookList.add() only takes String arguments.');
@@ -543,28 +546,33 @@ OC.Contacts = OC.Contacts || {};
 			if(book.getDisplayName() == name) {
 				console.log('Dupe');
 				error = t('contacts', 'An address book called {name} already exists', {name:name});
-				cb({error:true, message:error});
+				if(typeof cb === 'function') {
+					cb({error:true, message:error});
+				}
+				defer.reject({error:true, message:error});
 				return false; // break loop
 			}
 		});
 		if(error.length) {
 			console.warn('Error:', error);
-			return;
+			return defer;
 		}
 		var self = this;
 		$.when(this.storage.addAddressBook('local',
 		{displayname: name, description: ''})).then(function(response) {
 			if(response.error) {
 				error = response.message;
-				cb({error:true, message:error});
-				return;
+				if(typeof cb === 'function') {
+					cb({error:true, message:error});
+				}
+				defer.reject(response);
 			} else {
 				var book = self.insertAddressBook(response.data);
 				$(document).trigger('status.addressbook.added');
 				if(typeof cb === 'function') {
 					cb({error:false, addressbook: book});
-					return;
 				}
+				defer.resolve({error:false, addressbook: book});
 			}
 		})
 		.fail(function(jqxhr, textStatus, error) {
@@ -572,9 +580,12 @@ OC.Contacts = OC.Contacts || {};
 			var err = textStatus + ', ' + error;
 			console.log( "Request Failed: " + err);
 			error = t('contacts', 'Failed adding address book: {error}', {error:err});
-			cb({error:true, message:error});
-			return;
+			if(typeof cb === 'function') {
+				cb({error:true, message:error});
+			}
+			defer.reject({error:true, message:error});
 		});
+		return defer;
 	};
 
 	/**
