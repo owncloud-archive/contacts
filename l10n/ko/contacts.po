@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-08 19:35-0400\n"
-"PO-Revision-Date: 2013-09-07 08:50+0000\n"
+"POT-Creation-Date: 2013-09-10 08:43-0400\n"
+"PO-Revision-Date: 2013-09-10 12:43+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -35,35 +35,39 @@ msgstr ""
 msgid "Contacts"
 msgstr "연락처"
 
-#: js/addressbooks.js:79 js/groups.js:517 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:517 templates/settings.php:61
 msgid "Save"
 msgstr "저장"
 
-#: js/addressbooks.js:288
+#: js/addressbooks.js:298
 msgid "Uploading..."
 msgstr "업로드 중..."
 
-#: js/addressbooks.js:291
+#: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
 msgstr "가져오기중..."
 
-#: js/addressbooks.js:344
+#: js/addressbooks.js:324
+msgid "Preparing..."
+msgstr ""
+
+#: js/addressbooks.js:370
 msgid "Imported {count} of {total} contacts"
 msgstr ""
 
-#: js/addressbooks.js:366
+#: js/addressbooks.js:392
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr ""
 
-#: js/addressbooks.js:508
+#: js/addressbooks.js:548
 msgid "An address book called {name} already exists"
 msgstr ""
 
-#: js/addressbooks.js:537
+#: js/addressbooks.js:582
 msgid "Failed adding address book: {error}"
 msgstr "주소록 추가 실패: {error}"
 
-#: js/addressbooks.js:573
+#: js/addressbooks.js:625
 msgid "Failed loading address books: {error}"
 msgstr "주소록 불러오기 실패: {error}"
 
@@ -262,17 +266,33 @@ msgstr ""
 msgid "Failed loading groups: {error}"
 msgstr ""
 
-#: js/loader.js:49
-msgid "Result: "
-msgstr "결과:"
+#: js/loader.js:21
+msgid "Please choose the addressbook"
+msgstr ""
 
-#: js/loader.js:49
-msgid " imported, "
-msgstr "불러오기,"
+#: js/loader.js:22 templates/contacts.php:29
+msgid "Import into..."
+msgstr ""
 
-#: js/loader.js:49
-msgid " failed."
-msgstr "실패."
+#: js/loader.js:31
+msgid "Error loading import template"
+msgstr ""
+
+#: js/loader.js:48
+msgid "Import contacts"
+msgstr ""
+
+#: js/loader.js:61 templates/contacts.php:25
+msgid "Import"
+msgstr "가져오기"
+
+#: js/loader.js:92
+msgid "Import done"
+msgstr ""
+
+#: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:320
+msgid "Close"
+msgstr "닫기"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -395,41 +415,41 @@ msgstr ""
 msgid "Unknown IM: "
 msgstr "알려지지 않은 IM:"
 
-#: lib/controller/addressbookcontroller.php:127
+#: lib/controller/addressbookcontroller.php:138
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:150
+#: lib/controller/addressbookcontroller.php:161
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:202
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:289
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:338
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:338
+#: lib/controller/addressbookcontroller.php:349
 #: lib/controller/contactphotocontroller.php:345
 msgid "Error saving contact."
 msgstr "연락처 저장 중 오류가 발생했습니다."
 
-#: lib/controller/addressbookcontroller.php:343
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error removing contact from other address book."
 msgstr ""
 
@@ -609,24 +629,28 @@ msgstr ""
 msgid "Error uploading contacts to storage."
 msgstr "스토리지 에러 업로드 연락처."
 
-#: lib/controller/importcontroller.php:120
+#: lib/controller/importcontroller.php:141
+msgid "Error moving file to imports folder."
+msgstr ""
+
+#: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:128
+#: lib/controller/importcontroller.php:169
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:133
-#: lib/controller/importcontroller.php:250
+#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:291
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:139
+#: lib/controller/importcontroller.php:180
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:181
+#: lib/controller/importcontroller.php:222
 msgid "No contacts found in: "
 msgstr ""
 
@@ -787,14 +811,6 @@ msgstr ""
 msgid "Add Address Book"
 msgstr ""
 
-#: templates/contacts.php:25
-msgid "Import"
-msgstr "가져오기"
-
-#: templates/contacts.php:29
-msgid "Import into..."
-msgstr ""
-
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
 msgstr ""
@@ -826,10 +842,6 @@ msgstr ""
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
 msgstr ""
-
-#: templates/contacts.php:91 templates/contacts.php:320
-msgid "Close"
-msgstr "닫기"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"

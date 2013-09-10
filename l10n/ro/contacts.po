@@ -7,12 +7,13 @@
 # Dimon Pockemon <>, 2012
 # Eugen Mihalache <eugemjj@gmail.com>, 2012
 # g.ciprian <g.ciprian@osn.ro>, 2012
+# inaina <ina.c.ina@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-08 19:35-0400\n"
-"PO-Revision-Date: 2013-09-07 08:50+0000\n"
+"POT-Creation-Date: 2013-09-10 08:43-0400\n"
+"PO-Revision-Date: 2013-09-10 12:43+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/owncloud/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -25,65 +26,69 @@ msgstr ""
 msgid "Contacts"
 msgstr "Contacte"
 
-#: js/addressbooks.js:79 js/groups.js:517 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:517 templates/settings.php:61
 msgid "Save"
 msgstr "Salvează"
 
-#: js/addressbooks.js:288
+#: js/addressbooks.js:298
 msgid "Uploading..."
-msgstr "Încărcăm..."
+msgstr "Încărcare"
 
-#: js/addressbooks.js:291
+#: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
-msgstr "Se importă..."
+msgstr "a importa"
 
-#: js/addressbooks.js:344
+#: js/addressbooks.js:324
+msgid "Preparing..."
+msgstr ""
+
+#: js/addressbooks.js:370
 msgid "Imported {count} of {total} contacts"
 msgstr ""
 
-#: js/addressbooks.js:366
+#: js/addressbooks.js:392
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "contactele importate . esuat."
 
-#: js/addressbooks.js:508
+#: js/addressbooks.js:548
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "numele exista deja in agenda"
 
-#: js/addressbooks.js:537
+#: js/addressbooks.js:582
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "adaugarea agendei a esuat"
 
-#: js/addressbooks.js:573
+#: js/addressbooks.js:625
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "adaugarea agendei a esuat.eroare"
 
 #: js/app.js:214
 msgid "Indexing contacts"
-msgstr ""
+msgstr "indexarea contactelor"
 
 #: js/app.js:224
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "agenda este irecuperabila.mesaj"
 
 #: js/app.js:225
 msgid "Error."
-msgstr ""
+msgstr "eroare"
 
 #: js/app.js:318 js/app.js:332
 msgid "Add to..."
-msgstr ""
+msgstr "adaugat in..."
 
 #: js/app.js:322 js/app.js:334
 msgid "Remove from..."
-msgstr ""
+msgstr "eliminat din..."
 
 #: js/app.js:339
 msgid "Add group..."
-msgstr ""
+msgstr "adaoga grup"
 
 #: js/app.js:468
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "URL invalid.localizator uniform de resurse"
 
 #: js/app.js:479
 msgid "There was an error opening a mail composer."
@@ -252,17 +257,33 @@ msgstr ""
 msgid "Failed loading groups: {error}"
 msgstr ""
 
-#: js/loader.js:49
-msgid "Result: "
-msgstr "Rezultat:"
-
-#: js/loader.js:49
-msgid " imported, "
-msgstr "importat,"
-
-#: js/loader.js:49
-msgid " failed."
+#: js/loader.js:21
+msgid "Please choose the addressbook"
 msgstr ""
+
+#: js/loader.js:22 templates/contacts.php:29
+msgid "Import into..."
+msgstr ""
+
+#: js/loader.js:31
+msgid "Error loading import template"
+msgstr ""
+
+#: js/loader.js:48
+msgid "Import contacts"
+msgstr ""
+
+#: js/loader.js:61 templates/contacts.php:25
+msgid "Import"
+msgstr "Importă"
+
+#: js/loader.js:92
+msgid "Import done"
+msgstr ""
+
+#: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:320
+msgid "Close"
+msgstr "Închide"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -385,41 +406,41 @@ msgstr ""
 msgid "Unknown IM: "
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:127
+#: lib/controller/addressbookcontroller.php:138
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:150
+#: lib/controller/addressbookcontroller.php:161
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:202
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:289
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:338
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:338
+#: lib/controller/addressbookcontroller.php:349
 #: lib/controller/contactphotocontroller.php:345
 msgid "Error saving contact."
-msgstr ""
+msgstr "eroare in salvarea contactului"
 
-#: lib/controller/addressbookcontroller.php:343
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error removing contact from other address book."
 msgstr ""
 
@@ -509,7 +530,7 @@ msgstr "Lipsește un director temporar"
 
 #: lib/controller/contactphotocontroller.php:118
 msgid "Couldn't load temporary image: "
-msgstr ""
+msgstr "nu se poate incarca imaginea temporara"
 
 #: lib/controller/contactphotocontroller.php:127
 #: lib/controller/contactphotocontroller.php:163
@@ -535,19 +556,19 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error creating temporary image"
-msgstr ""
+msgstr "eroare la alegerea imaginii temporare"
 
 #: lib/controller/contactphotocontroller.php:305
 msgid "Error cropping image"
-msgstr ""
+msgstr "eroare la alegerea imaginii"
 
 #: lib/controller/contactphotocontroller.php:311
 msgid "Error resizing image"
-msgstr ""
+msgstr "eroare la redimensionarea imaginii"
 
 #: lib/controller/contactphotocontroller.php:330
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "eroare in gasirea proprietatilor fotografiei"
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
 msgid "No group name given."
@@ -597,26 +618,30 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:95
 msgid "Error uploading contacts to storage."
-msgstr "Eroare la încărcarea contactelor."
+msgstr "Eroare la "
 
-#: lib/controller/importcontroller.php:120
+#: lib/controller/importcontroller.php:141
+msgid "Error moving file to imports folder."
+msgstr ""
+
+#: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:128
+#: lib/controller/importcontroller.php:169
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:133
-#: lib/controller/importcontroller.php:250
+#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:291
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:139
+#: lib/controller/importcontroller.php:180
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:181
+#: lib/controller/importcontroller.php:222
 msgid "No contacts found in: "
 msgstr ""
 
@@ -630,7 +655,7 @@ msgstr ""
 
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr ""
+msgstr "nu se pot seta preferinte"
 
 #: lib/hooks.php:220
 msgid "{name}'s Birthday"
@@ -777,14 +802,6 @@ msgstr ""
 msgid "Add Address Book"
 msgstr ""
 
-#: templates/contacts.php:25
-msgid "Import"
-msgstr "Importă"
-
-#: templates/contacts.php:29
-msgid "Import into..."
-msgstr ""
-
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
 msgstr ""
@@ -816,10 +833,6 @@ msgstr ""
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
 msgstr ""
-
-#: templates/contacts.php:91 templates/contacts.php:320
-msgid "Close"
-msgstr "Închide"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"

@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-08 19:35-0400\n"
-"PO-Revision-Date: 2013-09-07 08:50+0000\n"
+"POT-Creation-Date: 2013-09-10 08:43-0400\n"
+"PO-Revision-Date: 2013-09-10 12:43+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
@@ -29,35 +29,39 @@ msgstr ""
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: js/addressbooks.js:79 js/groups.js:517 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:517 templates/settings.php:61
 msgid "Save"
 msgstr "Uložiť"
 
-#: js/addressbooks.js:288
+#: js/addressbooks.js:298
 msgid "Uploading..."
 msgstr "Nahrávam..."
 
-#: js/addressbooks.js:291
+#: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
 msgstr "Importujem..."
 
-#: js/addressbooks.js:344
+#: js/addressbooks.js:324
+msgid "Preparing..."
+msgstr ""
+
+#: js/addressbooks.js:370
 msgid "Imported {count} of {total} contacts"
 msgstr "Naimportovaných {count} z celkovo {total} kontaktov"
 
-#: js/addressbooks.js:366
+#: js/addressbooks.js:392
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "Naimportovaných {imported} kontaktov. {failed} zlyhalo."
 
-#: js/addressbooks.js:508
+#: js/addressbooks.js:548
 msgid "An address book called {name} already exists"
 msgstr "Adresár s názvom {name} už existuje"
 
-#: js/addressbooks.js:537
+#: js/addressbooks.js:582
 msgid "Failed adding address book: {error}"
 msgstr "Pridanie adresára zlyhalo: {error}"
 
-#: js/addressbooks.js:573
+#: js/addressbooks.js:625
 msgid "Failed loading address books: {error}"
 msgstr "Načítanie adresára zlyhalo: {error}"
 
@@ -256,17 +260,33 @@ msgstr "Bez skupiny"
 msgid "Failed loading groups: {error}"
 msgstr "Načítanie skupín sa nepodarilo: {error}"
 
-#: js/loader.js:49
-msgid "Result: "
-msgstr "Výsledok: "
+#: js/loader.js:21
+msgid "Please choose the addressbook"
+msgstr ""
 
-#: js/loader.js:49
-msgid " imported, "
-msgstr " importovaných, "
+#: js/loader.js:22 templates/contacts.php:29
+msgid "Import into..."
+msgstr "Import z..."
 
-#: js/loader.js:49
-msgid " failed."
-msgstr " zlyhaných."
+#: js/loader.js:31
+msgid "Error loading import template"
+msgstr ""
+
+#: js/loader.js:48
+msgid "Import contacts"
+msgstr ""
+
+#: js/loader.js:61 templates/contacts.php:25
+msgid "Import"
+msgstr "Import"
+
+#: js/loader.js:92
+msgid "Import done"
+msgstr ""
+
+#: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:320
+msgid "Close"
+msgstr "Zavrieť"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -389,41 +409,41 @@ msgstr " Chýba IM parameter pre: "
 msgid "Unknown IM: "
 msgstr "Neznáme IM:"
 
-#: lib/controller/addressbookcontroller.php:127
+#: lib/controller/addressbookcontroller.php:138
 msgid "Error creating address book"
 msgstr "Chyba pri vytváraní adresára"
 
-#: lib/controller/addressbookcontroller.php:150
+#: lib/controller/addressbookcontroller.php:161
 msgid "Error updating address book"
 msgstr "Chyba pri aktualizácii adresára"
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Nemáte oprávnenie pre zmazanie zoznamu kontaktov \"%s\""
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:202
 msgid "Error deleting address book"
 msgstr "Chyba pri vymazávaní adresára"
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error creating contact."
 msgstr "Chyba pri vytváraní kontaktu."
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:289
 msgid "Error deleting contact."
 msgstr "Chyba pri vymazávaní kontaktu."
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:338
 msgid "Error retrieving contact."
 msgstr "Chyba pri otváraní kontaktu."
 
-#: lib/controller/addressbookcontroller.php:338
+#: lib/controller/addressbookcontroller.php:349
 #: lib/controller/contactphotocontroller.php:345
 msgid "Error saving contact."
 msgstr "Chyba počas ukladania kontaktu."
 
-#: lib/controller/addressbookcontroller.php:343
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error removing contact from other address book."
 msgstr "Chyba pri vymazávaní kontaktu z iného adresára."
 
@@ -603,24 +623,28 @@ msgstr "Pokus o nahratie zakázaného súboru:"
 msgid "Error uploading contacts to storage."
 msgstr "Chyba pri nahrávaní kontaktov do úložiska."
 
-#: lib/controller/importcontroller.php:120
+#: lib/controller/importcontroller.php:141
+msgid "Error moving file to imports folder."
+msgstr ""
+
+#: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
 msgstr "Nemáte oprávnenie na import do tohto adresára."
 
-#: lib/controller/importcontroller.php:128
+#: lib/controller/importcontroller.php:169
 msgid "File name missing from request."
 msgstr "V požiadavke chýba názov súboru."
 
-#: lib/controller/importcontroller.php:133
-#: lib/controller/importcontroller.php:250
+#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:291
 msgid "Progress key missing from request."
 msgstr "V požiadavke chýba položka priebehu."
 
-#: lib/controller/importcontroller.php:139
+#: lib/controller/importcontroller.php:180
 msgid "Attempt to access blacklisted file:"
 msgstr "Pokus o prístup k zakázanému súboru:"
 
-#: lib/controller/importcontroller.php:181
+#: lib/controller/importcontroller.php:222
 msgid "No contacts found in: "
 msgstr "Žiadne kontakty v:"
 
@@ -781,14 +805,6 @@ msgstr "Zobrazované meno"
 msgid "Add Address Book"
 msgstr "Pridať adresár"
 
-#: templates/contacts.php:25
-msgid "Import"
-msgstr "Import"
-
-#: templates/contacts.php:29
-msgid "Import into..."
-msgstr "Import z..."
-
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
 msgstr "Vybrať súbor..."
@@ -820,10 +836,6 @@ msgstr "Obľúbené"
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
 msgstr "Zlúčiť vybrané"
-
-#: templates/contacts.php:91 templates/contacts.php:320
-msgid "Close"
-msgstr "Zavrieť"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"

@@ -3,6 +3,7 @@
 "Save" => "Ruaj",
 "Cancel" => "Anulo",
 "Add" => "Shto",
+"Import" => "Importo",
 "Error" => "Veprim i gabuar",
 "Download" => "Shkarko",
 "Edit" => "Ndrysho",
@@ -15,12 +16,16 @@
 "Missing a temporary folder" => "Një dosje e përkohshme nuk u gjet",
 "Failed to write to disk" => "Ruajtja në disk dështoi",
 "Not enough storage available" => "Nuk ka mbetur hapësirë memorizimi e mjaftueshme",
+"Other" => "Të tjera",
 "Work" => "Punë",
 "Text" => "Tekst",
 "Title" => "Titulli",
 "Birthday" => "Ditëlindja",
 "Email" => "Email-i",
 "Address" => "Adresa",
+"Active" => "Aktiv",
 "Share" => "Nda",
-"Name" => "Emri"
+"Export" => "Eksporto",
+"Name" => "Emri",
+"Description" => "Përshkrimi"
 );

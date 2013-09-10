@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-08 19:35-0400\n"
-"PO-Revision-Date: 2013-09-07 08:50+0000\n"
+"POT-Creation-Date: 2013-09-10 08:43-0400\n"
+"PO-Revision-Date: 2013-09-10 12:43+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -32,35 +32,39 @@ msgstr ""
 msgid "Contacts"
 msgstr "Contatos"
 
-#: js/addressbooks.js:79 js/groups.js:517 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:517 templates/settings.php:61
 msgid "Save"
 msgstr "Guardar"
 
-#: js/addressbooks.js:288
+#: js/addressbooks.js:298
 msgid "Uploading..."
 msgstr "Enviando..."
 
-#: js/addressbooks.js:291
+#: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
 msgstr "Importando..."
 
-#: js/addressbooks.js:344
+#: js/addressbooks.js:324
+msgid "Preparing..."
+msgstr ""
+
+#: js/addressbooks.js:370
 msgid "Imported {count} of {total} contacts"
 msgstr "Importado {count} de {total} contatos"
 
-#: js/addressbooks.js:366
+#: js/addressbooks.js:392
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "Importado {imported} contatos. {failed} falhou."
 
-#: js/addressbooks.js:508
+#: js/addressbooks.js:548
 msgid "An address book called {name} already exists"
 msgstr "Um livro de endereços chamado {name} já existe"
 
-#: js/addressbooks.js:537
+#: js/addressbooks.js:582
 msgid "Failed adding address book: {error}"
 msgstr "Falha na adição ao livro de endereços: {error}"
 
-#: js/addressbooks.js:573
+#: js/addressbooks.js:625
 msgid "Failed loading address books: {error}"
 msgstr "Falha no carregamento do livro de endereços: {error}"
 
@@ -169,7 +173,7 @@ msgstr "Editar imagem do perfil"
 
 #: js/app.js:1522
 msgid "Crop photo"
-msgstr ""
+msgstr "Recortar foto"
 
 #: js/contacts.js:591
 msgid "Is this correct?"
@@ -195,7 +199,7 @@ msgstr "Clique para desfazer a exclusão de {num} contatos"
 
 #: js/contacts.js:2162
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "Cancelada a eliminação de {num} contatos"
 
 #: js/groups.js:53 templates/contacts.php:323
 msgid "Add"
@@ -259,17 +263,33 @@ msgstr "Não agrupado"
 msgid "Failed loading groups: {error}"
 msgstr "Falha carregando grupos:{error}"
 
-#: js/loader.js:49
-msgid "Result: "
-msgstr "Resultado:"
+#: js/loader.js:21
+msgid "Please choose the addressbook"
+msgstr ""
 
-#: js/loader.js:49
-msgid " imported, "
-msgstr "importado,"
+#: js/loader.js:22 templates/contacts.php:29
+msgid "Import into..."
+msgstr "Importando..."
 
-#: js/loader.js:49
-msgid " failed."
-msgstr "falhou."
+#: js/loader.js:31
+msgid "Error loading import template"
+msgstr ""
+
+#: js/loader.js:48
+msgid "Import contacts"
+msgstr ""
+
+#: js/loader.js:61 templates/contacts.php:25
+msgid "Import"
+msgstr "Importar"
+
+#: js/loader.js:92
+msgid "Import done"
+msgstr ""
+
+#: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:320
+msgid "Close"
+msgstr "Fechar"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -392,41 +412,41 @@ msgstr "Falta parâmetro IM para:"
 msgid "Unknown IM: "
 msgstr "IM desconhecido:"
 
-#: lib/controller/addressbookcontroller.php:127
+#: lib/controller/addressbookcontroller.php:138
 msgid "Error creating address book"
 msgstr "Erro criando livro de endereço"
 
-#: lib/controller/addressbookcontroller.php:150
+#: lib/controller/addressbookcontroller.php:161
 msgid "Error updating address book"
 msgstr "Erro atualizando o livro de endereço"
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Você não tem permissão para excluir o livro de endereços \"%s\""
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:202
 msgid "Error deleting address book"
 msgstr "Erro excluindo livro de endereço"
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error creating contact."
 msgstr "Erro criando contato."
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:289
 msgid "Error deleting contact."
 msgstr "Erro excluindo conato."
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:338
 msgid "Error retrieving contact."
 msgstr "Erro recuperando contato."
 
-#: lib/controller/addressbookcontroller.php:338
+#: lib/controller/addressbookcontroller.php:349
 #: lib/controller/contactphotocontroller.php:345
 msgid "Error saving contact."
 msgstr "Erro ao salvar contato."
 
-#: lib/controller/addressbookcontroller.php:343
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error removing contact from other address book."
 msgstr "Erro removendo contato de outro livro de endereço."
 
@@ -475,7 +495,7 @@ msgstr "Erro salvando propriedade ao final"
 
 #: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
-msgstr ""
+msgstr "Erro obtendo a foto do usuário"
 
 #: lib/controller/contactphotocontroller.php:90
 #: lib/controller/importcontroller.php:39
@@ -538,7 +558,7 @@ msgstr "Erro ao carregar imagem."
 
 #: lib/controller/contactphotocontroller.php:290
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "Imagem foi removida do cache"
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error creating temporary image"
@@ -606,24 +626,28 @@ msgstr "Tente fazer o envio do arquivo de lista negra:"
 msgid "Error uploading contacts to storage."
 msgstr "Erro enviando contatos para armazenamento."
 
-#: lib/controller/importcontroller.php:120
+#: lib/controller/importcontroller.php:141
+msgid "Error moving file to imports folder."
+msgstr ""
+
+#: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
 msgstr "Você não tem permissão para importar para este livro de endereços."
 
-#: lib/controller/importcontroller.php:128
+#: lib/controller/importcontroller.php:169
 msgid "File name missing from request."
 msgstr "Nome do arquivo ausente da requisção."
 
-#: lib/controller/importcontroller.php:133
-#: lib/controller/importcontroller.php:250
+#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:291
 msgid "Progress key missing from request."
 msgstr "Chave de progresso faltando no pedido."
 
-#: lib/controller/importcontroller.php:139
+#: lib/controller/importcontroller.php:180
 msgid "Attempt to access blacklisted file:"
 msgstr "Tentando acessar o arquivo de lista negra:"
 
-#: lib/controller/importcontroller.php:181
+#: lib/controller/importcontroller.php:222
 msgid "No contacts found in: "
 msgstr "Nenhum contato encontrado em:"
 
@@ -784,14 +808,6 @@ msgstr "Nome de exibição"
 msgid "Add Address Book"
 msgstr "Adicionar Livro de Endereço"
 
-#: templates/contacts.php:25
-msgid "Import"
-msgstr "Importar"
-
-#: templates/contacts.php:29
-msgid "Import into..."
-msgstr "Importando..."
-
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
 msgstr "Selecionar arquivo..."
@@ -823,10 +839,6 @@ msgstr "Favorito"
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
 msgstr "Mesclar selecionado"
-
-#: templates/contacts.php:91 templates/contacts.php:320
-msgid "Close"
-msgstr "Fechar"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -881,7 +893,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>Você não possui contatos na agenda.</h3><p>Adicione um novo contato ou importe contatos existentes de um arquivo VCF.</p>"
 
 #: templates/contacts.php:126
 msgid "Add contact"
@@ -1055,7 +1067,7 @@ msgstr "Excluir endereço"
 
 #: templates/contacts.php:407
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "1600 Pennsylvania Avenue, NW"
 
 #: templates/contacts.php:408
 msgid "Street address"
@@ -1063,7 +1075,7 @@ msgstr "Endereço da rua"
 
 #: templates/contacts.php:412
 msgid "20500"
-msgstr ""
+msgstr "20500"
 
 #: templates/contacts.php:413
 msgid "Postal code"
@@ -1071,7 +1083,7 @@ msgstr "Código postal"
 
 #: templates/contacts.php:415
 msgid "Washington, DC"
-msgstr ""
+msgstr "Washington, DC"
 
 #: templates/contacts.php:416
 msgid "City"
@@ -1079,7 +1091,7 @@ msgstr "Cidade"
 
 #: templates/contacts.php:420
 msgid "District of Columbia"
-msgstr ""
+msgstr "District of Columbia"
 
 #: templates/contacts.php:421
 msgid "State or province"
@@ -1087,7 +1099,7 @@ msgstr "Estado ou província"
 
 #: templates/contacts.php:425
 msgid "USA"
-msgstr ""
+msgstr "USA"
 
 #: templates/contacts.php:426
 msgid "Country"

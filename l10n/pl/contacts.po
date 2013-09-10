@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-08 19:35-0400\n"
-"PO-Revision-Date: 2013-09-07 08:50+0000\n"
+"POT-Creation-Date: 2013-09-10 08:43-0400\n"
+"PO-Revision-Date: 2013-09-10 12:43+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -35,35 +35,39 @@ msgstr ""
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: js/addressbooks.js:79 js/groups.js:517 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:517 templates/settings.php:61
 msgid "Save"
 msgstr "Zapisz"
 
-#: js/addressbooks.js:288
+#: js/addressbooks.js:298
 msgid "Uploading..."
 msgstr "Wgrywanie...."
 
-#: js/addressbooks.js:291
+#: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
 msgstr "Importowanie..."
 
-#: js/addressbooks.js:344
+#: js/addressbooks.js:324
+msgid "Preparing..."
+msgstr ""
+
+#: js/addressbooks.js:370
 msgid "Imported {count} of {total} contacts"
 msgstr "Zaimportowano {count} z {total} kontaktów"
 
-#: js/addressbooks.js:366
+#: js/addressbooks.js:392
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "Zaimportowano {imported} kontaktów. {failed} nieudanych."
 
-#: js/addressbooks.js:508
+#: js/addressbooks.js:548
 msgid "An address book called {name} already exists"
 msgstr "Książka adresowa o nazwie {name} już istnieje"
 
-#: js/addressbooks.js:537
+#: js/addressbooks.js:582
 msgid "Failed adding address book: {error}"
 msgstr "Nieudane dodanie książki: {error}"
 
-#: js/addressbooks.js:573
+#: js/addressbooks.js:625
 msgid "Failed loading address books: {error}"
 msgstr "Nieudane wczytywanie książek adresowych: {error}"
 
@@ -262,17 +266,33 @@ msgstr "Nie zgrupowane"
 msgid "Failed loading groups: {error}"
 msgstr "Nieudane wczytanie grup: {error}"
 
-#: js/loader.js:49
-msgid "Result: "
-msgstr "Wynik: "
+#: js/loader.js:21
+msgid "Please choose the addressbook"
+msgstr ""
 
-#: js/loader.js:49
-msgid " imported, "
-msgstr " importowane, "
+#: js/loader.js:22 templates/contacts.php:29
+msgid "Import into..."
+msgstr "Importuj do..."
 
-#: js/loader.js:49
-msgid " failed."
-msgstr "  nie powiodło się."
+#: js/loader.js:31
+msgid "Error loading import template"
+msgstr ""
+
+#: js/loader.js:48
+msgid "Import contacts"
+msgstr ""
+
+#: js/loader.js:61 templates/contacts.php:25
+msgid "Import"
+msgstr "Importuj"
+
+#: js/loader.js:92
+msgid "Import done"
+msgstr ""
+
+#: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:320
+msgid "Close"
+msgstr "Zamknij"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -395,41 +415,41 @@ msgstr "Brak parametru komunikator dla:"
 msgid "Unknown IM: "
 msgstr "Nieznany Komunikator"
 
-#: lib/controller/addressbookcontroller.php:127
+#: lib/controller/addressbookcontroller.php:138
 msgid "Error creating address book"
 msgstr "Błąd przy tworzeniu książki adresowej"
 
-#: lib/controller/addressbookcontroller.php:150
+#: lib/controller/addressbookcontroller.php:161
 msgid "Error updating address book"
 msgstr "Błąd przy edytowaniu książki adresowej"
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Nie masz uprawnień do usunięcia \"%s\" książki adresowej."
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:202
 msgid "Error deleting address book"
 msgstr "Błąd przy usuwaniu książki adresowej"
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error creating contact."
 msgstr "Błąd przy tworzeniu kontaktu"
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:289
 msgid "Error deleting contact."
 msgstr "Błąd przy usuwaniu kontaktu."
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:338
 msgid "Error retrieving contact."
 msgstr "Błąd zapisu kontaktu."
 
-#: lib/controller/addressbookcontroller.php:338
+#: lib/controller/addressbookcontroller.php:349
 #: lib/controller/contactphotocontroller.php:345
 msgid "Error saving contact."
 msgstr "Błąd zapisu kontaktu."
 
-#: lib/controller/addressbookcontroller.php:343
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error removing contact from other address book."
 msgstr "Błąd usuwania kontaktu z innej książki adresowej."
 
@@ -609,24 +629,28 @@ msgstr "Próba wgrania pliku na czarną listę:"
 msgid "Error uploading contacts to storage."
 msgstr "Wystąpił błąd podczas wysyłania kontaktów do magazynu."
 
-#: lib/controller/importcontroller.php:120
+#: lib/controller/importcontroller.php:141
+msgid "Error moving file to imports folder."
+msgstr ""
+
+#: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
 msgstr "Nie masz uprawnień do importu do tej książki adresowej."
 
-#: lib/controller/importcontroller.php:128
+#: lib/controller/importcontroller.php:169
 msgid "File name missing from request."
 msgstr "Brakuje wymaganej nazwy pliku kontaktu "
 
-#: lib/controller/importcontroller.php:133
-#: lib/controller/importcontroller.php:250
+#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:291
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:139
+#: lib/controller/importcontroller.php:180
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:181
+#: lib/controller/importcontroller.php:222
 msgid "No contacts found in: "
 msgstr "Nie znaleziono kontaktów w:"
 
@@ -787,14 +811,6 @@ msgstr "Wyświetlana nazwa"
 msgid "Add Address Book"
 msgstr "Dodaj książkę adresową"
 
-#: templates/contacts.php:25
-msgid "Import"
-msgstr "Importuj"
-
-#: templates/contacts.php:29
-msgid "Import into..."
-msgstr "Importuj do..."
-
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
 msgstr "Wybierz plik..."
@@ -826,10 +842,6 @@ msgstr "Ulubione"
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
 msgstr "Połącz zaznaczone"
-
-#: templates/contacts.php:91 templates/contacts.php:320
-msgid "Close"
-msgstr "Zamknij"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"

@@ -1,6 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Save" => "Snimi",
 "Cancel" => "Otkaži",
+"Close" => "Zatvori",
 "Download" => "Preuzmi",
 "Edit" => "Uredi",
 "Delete" => "Obriši",
@@ -21,7 +22,6 @@
 "Video" => "Video",
 "Pager" => "Pejdžer",
 "Groups" => "Grupe",
-"Close" => "Zatvori",
 "Title" => "Naslov",
 "Organization" => "Organizacija",
 "Birthday" => "Rođendan",
