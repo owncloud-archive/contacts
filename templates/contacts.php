@@ -1,13 +1,22 @@
 <div id="app">
 	<div id="app-navigation" class="loading">
 		<ul id="grouplist">
-			<li class="special">
+			<li class="add-new">
 				<a role="button" class="add-contact">
 					<?php p($l->t('New Contact')); ?>
 				</a>
 			</li>
-			<li class="special">
-				<input class="add-group hidden" type="text" tabindex="0" autofocus placeholder="<?php p($l->t('Group name')); ?>" title="<?php p($l->t('New Group')); ?>" />
+			<li class="add-new">
+				<a role="button" class="">
+					<?php p($l->t('New Group')); ?>
+				</a>
+				<div>
+					<input type="text" 
+						tabindex="0" 
+						autofocus 
+						placeholder="<?php p($l->t('Group name')); ?>" 
+						title="<?php p($l->t('New Group')); ?>" />
+				</div>
 			</li>
 		</ul>
 		<div id="app-settings">
