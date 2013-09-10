@@ -30,13 +30,24 @@ class AddressBookController extends BaseController {
 		$app = new App($this->api->getUserId());
 		$addressBooks = $app->getAddressBooksForUser();
 		$response = array();
+		$lastModified = 0;
 		foreach($addressBooks as $addressBook) {
-			$response[] = $addressBook->getMetaData();
+			$data = $addressBook->getMetaData();
+			$response[] = $data;
+			if(!is_null($data['lastmodified'])) {
+				$lastModified = max($lastModified, $data['lastmodified']);
+			}
 		}
-		$response = new JSONResponse(
-			array(
+
+		$response = new JSONResponse(array(
 				'addressbooks' => $response,
 			));
+
+		if($lastModified > 0) {
+			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
+			$response->setETag(md5($lastModified));
+		}
+
 		return $response;
 	}
 
