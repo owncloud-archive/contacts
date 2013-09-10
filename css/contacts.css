@@ -117,7 +117,7 @@
 
 #grouplist { z-index: 100; }
 #grouplist .oc-addnew-init { padding: 0 16px; }
-#grouplist .add-new a:before {
+#grouplist .special a:before {
 	content: '+';
 	font-weight: bold;
 	font-size: 180%;
@@ -173,7 +173,7 @@
 #firstrun p { font-size:1.2em; text-align:center; }
 #firstrun #selections { font-size:0.8em; margin: 2em auto auto auto; clear: both; }
 */
-#contact { margin: 1em; }
+
 #contact textarea { min-height: 5em; width: 100%; margin: 0 !important; padding: 0 !important; outline: 0 !important;}
 #contact footer {
 	padding: 5px;
@@ -734,12 +734,14 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	z-index: 200;
 }
 #contact {
+	margin: 1em;
 	background-color: white; color: #333333;
 	border-radius: 3px; box-shadow: 0 0 10px #888888; 
 	padding: 10px; 
 	position: fixed !important; 
 	z-index: 101;
-	top: 8em; left: 28em;
+	top: 45px; 
+	left: 380px;
 	width: 490px;
 }
 #contact .arrow { 
@@ -749,7 +751,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	display: block; 
 	height: 0;
 	position: absolute; 
-	left: -28px; top: 2em;
+	left: -28px; top: 9px;
 	width: 0;
 	z-index: 201;
 	-webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -o-transform: rotate(270deg); 
