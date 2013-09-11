@@ -120,10 +120,12 @@
 			</div>
 		</div>
 		<div id="firstrun" class="hidden">
+			<div>
 			<?php print_unescaped($l->t('<h3>You have no contacts in your address book or your address book is disabled.</h3>'
 				. '<p>Add a new contact or import existing contacts from a VCF file.</p>')) ?>
 			<div id="selections">
 				<button class="add-contact icon-plus text"><?php p($l->t('Add contact')) ?></button>
+			</div>
 			</div>
 		</div>
 		<form class="float" id="file_upload_form" action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'ajax/uploadphoto.php')); ?>" method="post" enctype="multipart/form-data" target="file_upload_target">
