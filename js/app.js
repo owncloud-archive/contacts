@@ -1349,7 +1349,7 @@ OC.Contacts = OC.Contacts || {
 		console.log('Contacts.openContact, Favorite', this.currentid, this.groups.isFavorite(this.currentid), this.groups);
 		this.setAllChecked(false);
 		//this.$contactList.hide();
-		this.$contactList.addClass('dim');
+		//this.$contactList.addClass('dim');
 		console.assert(typeof this.currentid === 'string', 'Current ID not string');
 		this.jumpToContact(this.currentid);
 		// Properties that the contact doesn't know
@@ -1358,8 +1358,8 @@ OC.Contacts = OC.Contacts || {
 			groups: this.groups.categories,
 			currentgroup: {id:this.currentgroup, name:this.groups.nameById(this.currentgroup)}
 		};
-		var $contactelem = this.contacts.showContact(this.currentid, groupprops);
-		if(!$contactelem) {
+		var contact = this.contacts.findById(this.currentid);
+		if(!contact) {
 			console.warn('Error opening', this.currentid);
 			this.$contactList.removeClass('dim');
 			$(document).trigger('status.contacts.error', {
@@ -1368,6 +1368,9 @@ OC.Contacts = OC.Contacts || {
 			this.currentid = null;
 			return;
 		}
+		var $contactelem = contact.renderContact(groupprops);
+		var $listElement = contact.getListItemElement();
+		console.log('selected element', $listElement);
 		var self = this;
 		var adjustElems = function() {
 			var $contact = $contactelem.find('#contact');
@@ -1379,10 +1382,11 @@ OC.Contacts = OC.Contacts || {
 			});
 			$contact.css({'min-width' : Math.round(minWidth), 'max-height': maxheight, 'overflow-y': 'auto', 'overflow-x': 'hidden'});
 		};
-		$(window).resize(adjustElems);
-		//$contact.resizable({ minWidth: 400, minHeight: 400, maxHeight: maxheight});
-		this.$rightContent.prepend($contactelem);
-		adjustElems();
+		//$(window).resize(adjustElems);
+		//this.$rightContent.prepend($contactelem);
+		$contactelem.insertAfter($listElement).show();
+		$listElement.hide();
+		//adjustElems();
 		/*this.bodyListener = function(e) {
 			if(!self.currentid) {
 				return;

@@ -145,8 +145,8 @@
 }
 #firstrun > div {
 	position:relative;
-	left:50%; top:30%;
-	width: 50%;
+	left:50%; top:40%;
+	width: 80%;
 	transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%);
 	color:white; font-weight:bold; text-align: center; color: #777;
 }
@@ -154,7 +154,6 @@
 #firstrun p { font-size:1.2em; text-align:center; }
 #firstrun #selections { font-size:0.8em; margin: 2em auto auto auto; clear: both; }
 
-#contact { margin: 1em; }
 #contact textarea { min-height: 5em; width: 100%; margin: 0 !important; padding: 0 !important; outline: 0 !important;}
 #contact footer {
 	padding: 5px;
@@ -166,6 +165,7 @@
 #contact footer > * {
 	display: inline-block;
 	float: left;
+	opacity: 1;
 }
 #contact footer > .delete {
 	display: inline-block;
@@ -657,8 +657,15 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 #contactlist td {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
-#contactlist > tbody > tr.contact { height: 3em; display: none; }
-#contactlist > tbody > tr.contact.active, #contactlist tr:hover { background-color: #eee; }
+/* Override default style for an open cpntact */
+tbody tr, tbody tr.hover {
+	background-color: #fff !important;
+}
+tbody tr.contact.active, tbody tr.contact:hover {
+	background-color: #f8f8f8 !important;
+}
+#contactlist > tbody > tr { height: 3em; display: none; }
+#contactlist > tbody > tr.contact.active, #contactlist  > tbody > tr.contact:hover { background-color: #eee; }
 #contactlist > tbody > tr > td {
 	border-bottom: 1px solid #DDDDDD;
 	font-weight: normal;
@@ -668,7 +675,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	vertical-align: middle;
 	white-space: nowrap;
 }
-#contactlist tr > td:not(.name) {
+#contactlist tr.contact > td:not(.name) {
 	padding-left:10px;
 }
 #contactlist tr > td:not(.tel):not(.adr):not(.actions) {
@@ -696,7 +703,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	font-weight: bold; text-indent: 1.6em;
 	-webkit-transition:background-image 500ms; -moz-transition:background-image 500ms; -o-transition:background-image 500ms;  transition:background-image 500ms;
 	background-repeat:no-repeat !important;
-	position:relative; background-position: 10px center !important;
+	background-position: 10px center !important;
 }
 #contactlist tbody > tr > td a.mailto {
 	position: absolute; float: right;  clear: none;
@@ -716,14 +723,14 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contact {
 	background-color: white; color: #333333;
-	border-radius: 3px; box-shadow: 0 0 10px #888888; 
+	/*border-radius: 3px; box-shadow: 0 0 10px #888888;
 	padding: 10px; 
 	position: fixed !important; 
 	z-index: 101;
 	top: 8em; left: 28em;
-	width: 490px;
+	width: 490px;*/
 }
-#contact .arrow { 
+#contact .arrow {
 	border-bottom: 20px solid white; 
 	border-left: 20px solid transparent; 
 	border-right: 20px solid transparent; 

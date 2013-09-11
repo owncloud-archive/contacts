@@ -687,6 +687,7 @@ OC.Contacts = OC.Contacts || {};
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
 			this.$fullelem.remove();
+			this.show();
 			this.$fullelem = null;
 			return true;
 		} else {
@@ -2262,21 +2263,6 @@ OC.Contacts = OC.Contacts || {};
 		window.onbeforeunload = null;
 		return;
 
-	};
-
-	/**
-	* Opens the contact with this id in edit mode
-	* @param id the id of the contact
-	* @returns A jquery object to be inserted in the DOM.
-	*/
-	ContactList.prototype.showContact = function(id, props) {
-		var contact = this.findById(id);
-		if(!contact) {
-			return false;
-		}
-		this.currentContact = id;
-		console.log('Contacts.showContact', id, contact, this.contacts);
-		return contact.renderContact(props);
 	};
 
 	/**

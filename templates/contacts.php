@@ -196,7 +196,7 @@
 <script id="contactListItemTemplate" type="text/template">
 	<tr class="contact" data-id="{id}" data-parent="{parent}" data-backend="{backend}">
 		<td class="name thumbnail">
-			<input type="checkbox" name="id" value="{id}" /><span class="nametext">{name}</span>
+			<input type="checkbox" name="id" value="{id}" /><a href="#{id}" class="nametext">{name}</a>
 		</td>
 		<td class="email">
 			<a href="mailto:{email}">{email}</a>
@@ -215,9 +215,9 @@
 </script>
 
 <script id="contactFullTemplate" type="text/template">
-<form action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'index.php')); ?>" method="post" enctype="multipart/form-data">
+	<tr><td colspan="6">
+	<form action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'index.php')); ?>" method="post" enctype="multipart/form-data">
 	<section id="contact" data-id="{id}">
-	<span class="arrow"></span>
 	<ul>
 		<li>
 			<div id="photowrapper" class="propertycontainer" data-element="photo">
@@ -337,7 +337,8 @@
 		<button class="delete action text float right tooltipped downwards" title="<?php p($l->t('Delete contact')); ?>"><?php p($l->t('Delete')); ?></button>
 	</footer>
 	</section>
-</form>
+	</form>
+	</td></tr>
 </script>
 
 <script id="contactDetailsTemplate" class="hidden" type="text/template">
