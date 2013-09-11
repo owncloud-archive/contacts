@@ -5,6 +5,7 @@
 "Cancel" => "বাতির",
 "OK" => "তথাস্তু",
 "Add" => "যোগ কর",
+"Please choose the addressbook" => "ঠিকানাপঞ্জীটি নির্বাচন করুন",
 "Import" => "আমদানি",
 "Close" => "বন্ধ",
 "Error" => "সমস্যা",

@@ -28,6 +28,7 @@
 "All" => "Alle",
 "Favorites" => "Favoritter",
 "Shared by {owner}" => "Delt av {owner}",
+"Please choose the addressbook" => "Vennligst velg adressebok",
 "Import" => "Importer",
 "Close" => "Lukk",
 "Error" => "Feil",

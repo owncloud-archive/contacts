@@ -8,6 +8,7 @@
 "No files selected for upload." => "هیچ فایلی برای آپلود انتخاب نشده است",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "حجم فایل بسیار بیشتر از حجم تنظیم شده در تنظیمات سرور است",
 "Add" => "افزودن",
+"Please choose the addressbook" => "لطفا یک کتابچه نشانی انتخاب کنید",
 "Import" => "وارد کردن",
 "Close" => "بستن",
 "Error" => "خطا",

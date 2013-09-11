@@ -14,6 +14,8 @@
 "Remove from..." => "eliminat din...",
 "Add group..." => "adaoga grup",
 "Invalid URL: \"{url}\"" => "URL invalid.localizator uniform de resurse",
+"There was an error opening a mail composer." => "s-a inregistrat o eroare in deschiderea adresei",
+"Invalid email: \"{url}\"" => "email invalid",
 "Cancel" => "Anulare",
 "OK" => "OK",
 "Add" => "Adaugă",

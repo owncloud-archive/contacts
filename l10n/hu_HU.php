@@ -51,6 +51,7 @@
 "Shared by {owner}" => "Megosztva {owner} által",
 "Not grouped" => "Nem csoportosított",
 "Failed loading groups: {error}" => "Nem sikerült betölteni a csopotokat: {error}",
+"Please choose the addressbook" => "Válassza ki a címlistát",
 "Import" => "Importálás",
 "Close" => "Bezárás",
 "Error" => "Hiba",

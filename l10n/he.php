@@ -5,6 +5,7 @@
 "Cancel" => "ביטול",
 "OK" => "אישור",
 "Add" => "הוספה",
+"Please choose the addressbook" => "אנא בחר ספר כתובות",
 "Import" => "יבוא",
 "Close" => "סגירה",
 "Error" => "שגיאה",

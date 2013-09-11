@@ -7,6 +7,7 @@
 "No files selected for upload." => "Tiada fail dipilih untuk muatnaik.",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Fail yang ingin dimuatnaik melebihi saiz yang dibenarkan.",
 "Add" => "Tambah",
+"Please choose the addressbook" => "Sila pilih buku alamat",
 "Import" => "Import",
 "Close" => "Tutup",
 "Error" => "Ralat",

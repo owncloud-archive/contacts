@@ -3,6 +3,7 @@
 "Save" => "Salveguardar",
 "Cancel" => "Cancellar",
 "Add" => "Adder",
+"Please choose the addressbook" => "Per favor selige le adressario",
 "Import" => "Importar",
 "Close" => "Clauder",
 "Error" => "Error",

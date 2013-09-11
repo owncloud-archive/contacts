@@ -8,6 +8,7 @@
 "No files selected for upload." => "Ниту еден фајл не е избран за вчитување.",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Датотеката која се обидувате да ја префрлите ја надминува максималната големина дефинирана за пренос на овој сервер.",
 "Add" => "Додади",
+"Please choose the addressbook" => "Ве молам изберете адресар",
 "Import" => "Увези",
 "Close" => "Затвори",
 "Error" => "Грешка",

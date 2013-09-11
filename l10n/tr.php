@@ -52,6 +52,7 @@
 "Shared by {owner}" => "{owner} tarafından paylaşılmış",
 "Not grouped" => "Gruplanmadı",
 "Failed loading groups: {error}" => "Grup yüklemesi başarısız: {error}",
+"Please choose the addressbook" => "Yeni adres defterini seç",
 "Import" => "İçe aktar",
 "Close" => "Kapat",
 "Error" => "Hata",

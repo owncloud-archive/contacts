@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-10 08:43-0400\n"
-"PO-Revision-Date: 2013-09-10 12:43+0000\n"
+"POT-Creation-Date: 2013-09-11 04:46-0400\n"
+"PO-Revision-Date: 2013-09-11 08:46+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/owncloud/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -115,7 +115,7 @@ msgstr "La combinació ha fallat. Error en desar el contacte."
 msgid "Select photo"
 msgstr "Selecciona una foto"
 
-#: js/app.js:677 js/app.js:1560
+#: js/app.js:677 js/app.js:1564
 msgid "Network or server error. Please inform administrator."
 msgstr "Error de xarxa o del servidor. Informeu a l'administrador."
 
@@ -131,16 +131,16 @@ msgstr "Error en eliminar del grup"
 msgid "Error setting {name} as favorite."
 msgstr "Error en establir {name} com a preferit."
 
-#: js/app.js:1210 js/app.js:1214 templates/contacts.php:180
+#: js/app.js:1210 js/app.js:1214 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Combina contactes"
 
-#: js/app.js:1236 js/app.js:1289 js/settings.js:120 templates/contacts.php:319
+#: js/app.js:1236 js/app.js:1289 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: js/app.js:1263 templates/contacts.php:161
+#: js/app.js:1263 templates/contacts.php:163
 msgid "Add group"
 msgstr "Afegeix grup"
 
@@ -152,21 +152,21 @@ msgstr "D'acord"
 msgid "Could not find contact: {id}"
 msgstr "El contacte no s'ha trobat: {id}"
 
-#: js/app.js:1408
+#: js/app.js:1412
 msgid "No files selected for upload."
 msgstr "No s'han seleccionat fitxers per a la pujada."
 
-#: js/app.js:1418
+#: js/app.js:1422
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "El fitxer que intenteu pujar excedeix la mida màxima de pujada en aquest servidor."
 
-#: js/app.js:1518
+#: js/app.js:1522
 msgid "Edit profile picture"
 msgstr "Edita la fotografia de perfil"
 
-#: js/app.js:1522
+#: js/app.js:1526
 msgid "Crop photo"
 msgstr "Talla la fotografia"
 
@@ -174,29 +174,33 @@ msgstr "Talla la fotografia"
 msgid "Is this correct?"
 msgstr "És correcte?"
 
-#: js/contacts.js:856
+#: js/contacts.js:857
 msgid "Error parsing date: {date}"
 msgstr "Error en processar la data: {date}"
 
-#: js/contacts.js:1053
+#: js/contacts.js:1054
 msgid "# groups"
 msgstr "# grups"
 
-#: js/contacts.js:2142
+#: js/contacts.js:1126
+msgid "Error parsing birthday {bday}: {error}"
+msgstr ""
+
+#: js/contacts.js:2156
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Heu marcat eliminar alguns contactes, però encara no s'han eliminat. Espereu mentre s'esborren."
 
-#: js/contacts.js:2153
+#: js/contacts.js:2167
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Feu clic a desfés eliminació de {num} contactes"
 
-#: js/contacts.js:2162
+#: js/contacts.js:2176
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancel·la l'eliminació de {num} contactes"
 
-#: js/groups.js:53 templates/contacts.php:323
+#: js/groups.js:53 templates/contacts.php:325
 msgid "Add"
 msgstr "Afegeix"
 
@@ -260,7 +264,7 @@ msgstr "Ha fallat en carregar grups: {error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr ""
+msgstr "Escolliu la llibreta d'adreces"
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
@@ -280,9 +284,9 @@ msgstr "Importa"
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr ""
+msgstr "S'ha importat"
 
-#: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:320
+#: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:322
 msgid "Close"
 msgstr "Tanca"
 
@@ -303,18 +307,18 @@ msgid "Show read-only VCF link"
 msgstr "Mostra l'enllaç VCF només de lectura"
 
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
-#: templates/contacts.php:321 templates/settings.php:40
+#: templates/contacts.php:323 templates/settings.php:40
 msgid "Download"
 msgstr "Baixa"
 
-#: js/settings.js:101 templates/contacts.php:464 templates/settings.php:45
+#: js/settings.js:101 templates/contacts.php:467 templates/settings.php:45
 msgid "Edit"
 msgstr "Edita"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
-#: templates/contacts.php:266 templates/contacts.php:273
-#: templates/contacts.php:280 templates/contacts.php:287
-#: templates/contacts.php:335 templates/contacts.php:465
+#: templates/contacts.php:268 templates/contacts.php:275
+#: templates/contacts.php:282 templates/contacts.php:289
+#: templates/contacts.php:337 templates/contacts.php:468
 #: templates/settings.php:50
 msgid "Delete"
 msgstr "Esborra"
@@ -883,244 +887,244 @@ msgstr "Afegeix una llibreta d'adreces nova"
 msgid "Delete current contact"
 msgstr "Esborra el contacte"
 
-#: templates/contacts.php:123
+#: templates/contacts.php:124
 msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
 msgstr "<h3>No teniu contactes a la vostra llibreta d'adreces o la vostra llibreta d'adreces està inhabilitada.</h3><p>Afegiu un nou contacte o importeu-ne d'existents des d'un fitxer VCF.</p>"
 
-#: templates/contacts.php:126
+#: templates/contacts.php:127
 msgid "Add contact"
 msgstr "Afegeix un contacte"
 
-#: templates/contacts.php:172
+#: templates/contacts.php:174
 msgid "Delete group"
 msgstr "Elimina grup"
 
-#: templates/contacts.php:173
+#: templates/contacts.php:175
 msgid "Rename group"
 msgstr "Canvia el nom del grup"
 
-#: templates/contacts.php:181
+#: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
 msgstr "A quin contacte li voleu combinar les dades?"
 
-#: templates/contacts.php:189
+#: templates/contacts.php:191
 msgid "Delete the other(s) after successful merge?"
 msgstr "Elimino els altre(s) després d'una combinació satisfactòria?"
 
-#: templates/contacts.php:201
+#: templates/contacts.php:203
 msgid "Compose mail"
 msgstr "Redacta un correu electrónic"
 
-#: templates/contacts.php:223
+#: templates/contacts.php:225
 msgid "Delete current photo"
 msgstr "Elimina la foto actual"
 
-#: templates/contacts.php:224
+#: templates/contacts.php:226
 msgid "Edit current photo"
 msgstr "Edita la foto actual"
 
-#: templates/contacts.php:225
+#: templates/contacts.php:227
 msgid "Upload new photo"
 msgstr "Carrega una foto nova"
 
-#: templates/contacts.php:226
+#: templates/contacts.php:228
 msgid "Select photo from ownCloud"
 msgstr "Selecciona una foto de ownCloud"
 
-#: templates/contacts.php:237 templates/contacts.php:238
+#: templates/contacts.php:239 templates/contacts.php:240
 msgid "First name"
 msgstr "Nom"
 
-#: templates/contacts.php:242 templates/contacts.php:243
+#: templates/contacts.php:244 templates/contacts.php:245
 msgid "Additional names"
 msgstr "Noms addicionals"
 
-#: templates/contacts.php:247 templates/contacts.php:248
+#: templates/contacts.php:249 templates/contacts.php:250
 msgid "Last name"
 msgstr "Cognom"
 
-#: templates/contacts.php:255
+#: templates/contacts.php:257
 msgid "Select groups"
 msgstr "Selecciona els grups"
 
-#: templates/contacts.php:258
+#: templates/contacts.php:260
 msgid "Select address book"
 msgstr "Selecciona la llibreta d'adreces"
 
-#: templates/contacts.php:262 templates/contacts.php:326
+#: templates/contacts.php:264 templates/contacts.php:328
 msgid "Nickname"
 msgstr "Sobrenom"
 
-#: templates/contacts.php:265
+#: templates/contacts.php:267
 msgid "Enter nickname"
 msgstr "Escriviu el sobrenom"
 
-#: templates/contacts.php:269 templates/contacts.php:325
+#: templates/contacts.php:271 templates/contacts.php:327
 msgid "Title"
 msgstr "Títol"
 
-#: templates/contacts.php:272
+#: templates/contacts.php:274
 msgid "Enter title"
 msgstr "Escriviu el títol"
 
-#: templates/contacts.php:276 templates/contacts.php:324
+#: templates/contacts.php:278 templates/contacts.php:326
 msgid "Organization"
 msgstr "Organització"
 
-#: templates/contacts.php:279
+#: templates/contacts.php:281
 msgid "Enter organization"
 msgstr "Escriviu l'organització"
 
-#: templates/contacts.php:283 templates/contacts.php:327
+#: templates/contacts.php:285 templates/contacts.php:329
 msgid "Birthday"
 msgstr "Aniversari"
 
-#: templates/contacts.php:314
+#: templates/contacts.php:316
 msgid "Notes go here..."
 msgstr "Escriviu notes aquí..."
 
-#: templates/contacts.php:321
+#: templates/contacts.php:323
 msgid "Export as VCF"
 msgstr "Exporta com a VCF"
 
-#: templates/contacts.php:328
+#: templates/contacts.php:330
 msgid "Phone"
 msgstr "Telèfon"
 
-#: templates/contacts.php:329
+#: templates/contacts.php:331
 msgid "Email"
 msgstr "Correu electrònic"
 
-#: templates/contacts.php:330
+#: templates/contacts.php:332
 msgid "Instant Messaging"
 msgstr "Missatgeria instantània"
 
-#: templates/contacts.php:331
+#: templates/contacts.php:333
 msgid "Address"
 msgstr "Adreça"
 
-#: templates/contacts.php:332
+#: templates/contacts.php:334
 msgid "Note"
 msgstr "Nota"
 
-#: templates/contacts.php:333
+#: templates/contacts.php:335
 msgid "Web site"
 msgstr "Adreça web"
 
-#: templates/contacts.php:335
+#: templates/contacts.php:337
 msgid "Delete contact"
 msgstr "Suprimeix el contacte"
 
-#: templates/contacts.php:348 templates/contacts.php:363
-#: templates/contacts.php:377 templates/contacts.php:402
-#: templates/contacts.php:440
+#: templates/contacts.php:351 templates/contacts.php:366
+#: templates/contacts.php:380 templates/contacts.php:405
+#: templates/contacts.php:443
 msgid "Preferred"
 msgstr "Preferit"
 
-#: templates/contacts.php:350
+#: templates/contacts.php:353
 msgid "Please specify a valid email address."
 msgstr "Especifiqueu una adreça de correu electrònic correcta"
 
-#: templates/contacts.php:350
+#: templates/contacts.php:353
 msgid "someone@example.com"
 msgstr "algú@exemple.com"
 
-#: templates/contacts.php:352
+#: templates/contacts.php:355
 msgid "Mail to address"
 msgstr "Envia per correu electrònic a l'adreça"
 
-#: templates/contacts.php:353
+#: templates/contacts.php:356
 msgid "Delete email address"
 msgstr "Elimina l'adreça de correu electrònic"
 
-#: templates/contacts.php:365
+#: templates/contacts.php:368
 msgid "Enter phone number"
 msgstr "Escriviu el número de telèfon"
 
-#: templates/contacts.php:367
+#: templates/contacts.php:370
 msgid "Delete phone number"
 msgstr "Elimina el número de telèfon"
 
-#: templates/contacts.php:381
+#: templates/contacts.php:384
 msgid "Go to web site"
 msgstr "Vés a la web"
 
-#: templates/contacts.php:382
+#: templates/contacts.php:385
 msgid "Delete URL"
 msgstr "Elimina URL"
 
-#: templates/contacts.php:393
+#: templates/contacts.php:396
 msgid "View on map"
 msgstr "Visualitza al mapa"
 
-#: templates/contacts.php:394
+#: templates/contacts.php:397
 msgid "Delete address"
 msgstr "Elimina l'adreça"
 
-#: templates/contacts.php:407
+#: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
 msgstr "Carrer del pi, 32 2n 1a"
 
-#: templates/contacts.php:408
+#: templates/contacts.php:411
 msgid "Street address"
 msgstr "Adreça"
 
-#: templates/contacts.php:412
+#: templates/contacts.php:415
 msgid "20500"
 msgstr "08080"
 
-#: templates/contacts.php:413
+#: templates/contacts.php:416
 msgid "Postal code"
 msgstr "Codi postal"
 
-#: templates/contacts.php:415
+#: templates/contacts.php:418
 msgid "Washington, DC"
 msgstr "Barcelona"
 
-#: templates/contacts.php:416
+#: templates/contacts.php:419
 msgid "City"
 msgstr "Ciutat"
 
-#: templates/contacts.php:420
+#: templates/contacts.php:423
 msgid "District of Columbia"
 msgstr "Comarca del Bercelonès"
 
-#: templates/contacts.php:421
+#: templates/contacts.php:424
 msgid "State or province"
 msgstr "Estat o província"
 
-#: templates/contacts.php:425
+#: templates/contacts.php:428
 msgid "USA"
 msgstr "Catalunya"
 
-#: templates/contacts.php:426
+#: templates/contacts.php:429
 msgid "Country"
 msgstr "País"
 
-#: templates/contacts.php:448
+#: templates/contacts.php:451
 msgid "Instant Messenger"
 msgstr "Instant Messenger"
 
-#: templates/contacts.php:450
+#: templates/contacts.php:453
 msgid "Delete IM"
 msgstr "Elimina IM"
 
-#: templates/contacts.php:458
+#: templates/contacts.php:461
 msgid "Active"
 msgstr "Actiu"
 
-#: templates/contacts.php:461 templates/settings.php:36
+#: templates/contacts.php:464 templates/settings.php:36
 msgid "Share"
 msgstr "Comparteix"
 
-#: templates/contacts.php:462
+#: templates/contacts.php:465
 msgid "Export"
 msgstr "Exporta"
 
-#: templates/contacts.php:463
+#: templates/contacts.php:466
 msgid "CardDAV link"
 msgstr "Enllaç CardDAV"
 
