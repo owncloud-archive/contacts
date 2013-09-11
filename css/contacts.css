@@ -116,12 +116,17 @@
 }
 
 #grouplist { z-index: 100; }
-#grouplist .oc-addnew-init { padding: 0 16px; }
+#grouplist .oc-addnew-init, #grouplist .add-contact {
+	padding-top: 5px;
+}
+#grouplist .oc-addnew-init {
+	padding: 0 12px;
+}
 #grouplist .add-contact:before {
 	content: '+';
 	font-weight: bold;
 	font-size: 180%;
-	padding-right: 5px;
+	padding-right: 2px;
 }
 #grouplist li .action:not(.starred):not(.checked):not(.favorite):not([class^="add-"]) { display: none; padding: 0; }
 #grouplist li:not([data-type="shared"]):not(.editing):hover .action.numcontacts,
