@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Twiguard <nightwitcher@seznam.cz>, 2013
+# Twiguard, 2013
 # Honza K. <honza889@gmail.com>, 2013
 # Jan Krejci <krejca85@gmail.com>, 2011-2012
 # Martin <fireball@atlas.cz>, 2013
@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-11 04:46-0400\n"
-"PO-Revision-Date: 2013-09-11 08:46+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-09-13 19:45-0400\n"
+"PO-Revision-Date: 2013-09-11 16:50+0000\n"
+"Last-Translator: pstast <petr@stastny.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,7 +43,7 @@ msgstr "Importuji..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "Příprava..."
 
 #: js/addressbooks.js:370
 msgid "Imported {count} of {total} contacts"
@@ -186,7 +186,7 @@ msgstr "počet skupin"
 
 #: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "Chyba parsování narozenin {bday}: {error}"
 
 #: js/contacts.js:2156
 msgid ""
@@ -200,7 +200,7 @@ msgstr "Klikněte pro navrácení smazání {num} kontaktů"
 
 #: js/contacts.js:2176
 msgid "Cancelled deletion of {num} contacts"
-msgstr "Zrušeno smazání {num} kontaktů"
+msgstr "Smazání {num} kontaktů zrušeno"
 
 #: js/groups.js:53 templates/contacts.php:325
 msgid "Add"
@@ -266,7 +266,7 @@ msgstr "Načtení skupin se nezdařilo: {error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr "Prosím zvolte knihu adres"
+msgstr "Prosím zvolte adresář kontaktů"
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
@@ -274,11 +274,11 @@ msgstr "Importovat do..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Chyba při nahrávání šablony importu"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "Importovat kontakty"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -629,7 +629,7 @@ msgstr "Chyba při nahrávání kontaktů do úložiště."
 
 #: lib/controller/importcontroller.php:141
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Chyba při přesunu souboru do složky pro importy."
 
 #: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
@@ -894,7 +894,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>Váš adresář kontaktů je buď vypnutý nebo prázdný.</h3><p>Vložte nový kontakt nebo importujte již existující kontakty ze souboru VCF.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -1068,7 +1068,7 @@ msgstr "Smazat adresu"
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "1600 Pennsylvania Avenue, NW"
 
 #: templates/contacts.php:411
 msgid "Street address"
@@ -1076,7 +1076,7 @@ msgstr "Ulice"
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "20500"
 
 #: templates/contacts.php:416
 msgid "Postal code"
@@ -1084,7 +1084,7 @@ msgstr "Směrovací číslo"
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "Washington, DC"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1092,7 +1092,7 @@ msgstr "Město"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "District of Columbia"
 
 #: templates/contacts.php:424
 msgid "State or province"
@@ -1100,7 +1100,7 @@ msgstr "Stát nebo provincie"
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "USA"
 
 #: templates/contacts.php:429
 msgid "Country"

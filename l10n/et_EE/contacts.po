@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-11 04:46-0400\n"
-"PO-Revision-Date: 2013-09-11 08:46+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-09-13 19:45-0400\n"
+"PO-Revision-Date: 2013-09-11 09:00+0000\n"
+"Last-Translator: pisike.sipelgas <pisike.sipelgas@gmail.com>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/projects/p/owncloud/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,7 +38,7 @@ msgstr "Importimine..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "Valmistun..."
 
 #: js/addressbooks.js:370
 msgid "Imported {count} of {total} contacts"
@@ -165,7 +165,7 @@ msgstr "Muuda profiili pilti"
 
 #: js/app.js:1526
 msgid "Crop photo"
-msgstr ""
+msgstr "Lõika pilti"
 
 #: js/contacts.js:591
 msgid "Is this correct?"
@@ -181,7 +181,7 @@ msgstr "# grupid"
 
 #: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "Viga sünnipäeva {bday} parsimisel: {error}"
 
 #: js/contacts.js:2156
 msgid ""
@@ -195,7 +195,7 @@ msgstr "Kliki, et tühistada {num} kontakti kustutamine"
 
 #: js/contacts.js:2176
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "Tühistatud {num} kontakti kustutamine"
 
 #: js/groups.js:53 templates/contacts.php:325
 msgid "Add"
@@ -269,11 +269,11 @@ msgstr "Impordi ..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Viga impordi malli laadimisel"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "Impordi kontaktid"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -491,7 +491,7 @@ msgstr "Viga omaduse salvestamisel tagarakendisse"
 
 #: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
-msgstr ""
+msgstr "Viga kasutaja foto hankimisel"
 
 #: lib/controller/contactphotocontroller.php:90
 #: lib/controller/importcontroller.php:39
@@ -554,7 +554,7 @@ msgstr "Viga pildi laadimisel."
 
 #: lib/controller/contactphotocontroller.php:290
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "Pilt on puhvrist eemaldatud"
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error creating temporary image"
@@ -624,7 +624,7 @@ msgstr "Viga kontaktide üleslaadimisel kettale."
 
 #: lib/controller/importcontroller.php:141
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Viga faili liigutamisel impordi kataloogi."
 
 #: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
@@ -889,7 +889,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>Sul pole aadressiraamatus ühtegi kontakti või on sinu aadressiraamat keelatud.</h3><p>Lisa uus kontakt või impordi olemasolevad kontaktid VCF failist.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -1063,7 +1063,7 @@ msgstr "Kustuta aadress"
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "1600 Pennsylvania Avenue, NW"
 
 #: templates/contacts.php:411
 msgid "Street address"
@@ -1071,7 +1071,7 @@ msgstr "Tänava aadress"
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "20500"
 
 #: templates/contacts.php:416
 msgid "Postal code"
@@ -1079,7 +1079,7 @@ msgstr "Postiindeks"
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "Washington, DC"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1087,7 +1087,7 @@ msgstr "Linn"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "District of Columbia"
 
 #: templates/contacts.php:424
 msgid "State or province"
@@ -1095,7 +1095,7 @@ msgstr "Maakond"
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "USA"
 
 #: templates/contacts.php:429
 msgid "Country"

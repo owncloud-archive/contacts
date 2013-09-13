@@ -38,6 +38,7 @@
 "Is this correct?" => "É correcto isto?",
 "Error parsing date: {date}" => "Produciuse un erro ao analizar a data: {date}",
 "# groups" => "Núm. grupos",
+"Error parsing birthday {bday}: {error}" => "Produciuse un erro ao analizar o aniversario {bday}: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Algúns contactos están marcados para ser eliminados máis aínda non se eliminaron. Espera a que se eliminen.",
 "Click to undo deletion of {num} contacts" => "Prema para desfacer a eliminación de {num} contactos",
 "Cancelled deletion of {num} contacts" => "Cancelada a eliminación de {num} contactos",

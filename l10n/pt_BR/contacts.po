@@ -8,7 +8,7 @@
 # Schopfer <glauber.guimaraes@poli.ufrj.br>, 2012
 # Guilherme Maluf Balzana <guimalufb@gmail.com>, 2012
 # sedir <philippi.sedir@gmail.com>, 2012
-# Rodrigo Tavares <rodrigo.st23@hotmail.com>, 2013
+# Rodrigo Tavares <rodrigost23@gmail.com>, 2013
 # sedir <philippi.sedir@gmail.com>, 2013
 # targinosilveira <targinosilveira@gmail.com>, 2012
 # Thiago Vicente <thiagovice@gmail.com>, 2012
@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-11 04:46-0400\n"
-"PO-Revision-Date: 2013-09-11 08:46+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-09-13 19:45-0400\n"
+"PO-Revision-Date: 2013-09-11 10:00+0000\n"
+"Last-Translator: Flávio Veras <flaviove@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -189,7 +189,7 @@ msgstr "# grupos"
 
 #: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "Erro passando data do aniversário {bday}: {error}"
 
 #: js/contacts.js:2156
 msgid ""
