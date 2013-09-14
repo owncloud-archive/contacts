@@ -686,8 +686,10 @@ OC.Contacts = OC.Contacts || {};
 		$(document).unbind('status.contact.photoupdated');
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
-			this.$fullelem.remove();
-			this.show();
+			this.$fullelem.hide('slide', 500, function() {
+				$(this).remove();
+			});
+			this.getListItemElement().fadeIn();
 			this.$fullelem = null;
 			return true;
 		} else {

@@ -1315,7 +1315,7 @@ OC.Contacts = OC.Contacts || {
 	closeContact: function(id) {
 		$(window).unbind('hashchange', this.hashChange);
 		if(this.currentid === 'new') {
-			this.tmpcontact.remove();
+			this.tmpcontact.slideUp().remove();
 			this.$contactList.show();
 		} else {
 			var contact = this.contacts.findById(id);
