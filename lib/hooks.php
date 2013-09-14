@@ -53,12 +53,12 @@ class Hooks{
 	 * @return array
 	 */
 	public static function userDeleted($parameters) {
-		$backend = new Backend\Database();
-		$addressbook = $backend->getAddressBooksForUser($parameters['uid']);
+		$backend = new Backend\Database($parameters['uid']);
+		$addressBooks = $backend->getAddressBooksForUser();
 
-		foreach($addressbooks as $addressbook) {
+		foreach($addressBooks as $addressBook) {
 			// Purging of contact categories and and properties is done by backend.
-			$backend->deleteAddressBook($addressbook['id']);
+			$backend->deleteAddressBook($addressBook['id']);
 		}
 	}
 
