@@ -341,7 +341,9 @@ OC.Contacts = OC.Contacts || {};
 				$('.import-upload').show();
 				$('.import-status').hide();
 				self.importCount = null;
-				self.$importProgress.progressbar('destroy');
+				if(self.$importProgress.hasClass('ui-progressbar')) {
+					self.$importProgress.progressbar('destroy');
+				}
 			}, 5000);
 		};
 		if(!response.error) {
