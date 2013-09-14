@@ -981,7 +981,6 @@ OC.Contacts = OC.Contacts || {
 			self.currentid = 'new';
 			// Properties that the contact doesn't know
 			console.log('addContact, groupid', self.currentgroup);
-			self.$contactList.addClass('dim');
 			var groupprops = {
 				favorite: false,
 				groups: self.groups.categories,
@@ -989,9 +988,9 @@ OC.Contacts = OC.Contacts || {
 			};
 			self.$firstRun.hide();
 			self.$contactList.show();
-			self.$contactList.addClass('dim');
 			self.tmpcontact = self.contacts.addContact(groupprops);
-			self.$rightContent.prepend(self.tmpcontact);
+			self.tmpcontact.prependTo(self.$contactList.find('tbody')).show();
+			self.$rightContent.scrollTop(0);
 			self.hideActions();
 		};
 
