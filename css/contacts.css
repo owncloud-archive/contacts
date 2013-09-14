@@ -714,7 +714,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 }
 #contactlist tbody > tr > td a.mailto:hover { opacity: 0.8; }
 
-#contactlist tbody > tr > td a.delete {
+#contactlist tbody > tr > td > a.delete {
 	position: absolute;
 	right: 20px; clear: none;
 	cursor:pointer;
