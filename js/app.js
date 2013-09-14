@@ -1519,7 +1519,7 @@ OC.Contacts = OC.Contacts || {
 				modal: true,
 				closeOnEscape: true,
 				title:  t('contacts', 'Edit profile picture'),
-				height: h+100, width: w+80,
+				height: image.height+100, width: image.width+20,
 				buttons: [
 					{
 						text: t('contacts', 'Crop photo'),
