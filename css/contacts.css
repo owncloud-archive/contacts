@@ -116,9 +116,6 @@
 }
 
 #grouplist { z-index: 100; }
-#grouplist .oc-addnew-init, #grouplist .add-contact {
-	padding-top: 5px;
-}
 #grouplist .oc-addnew-init {
 	padding: 0 12px;
 }
