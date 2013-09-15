@@ -154,6 +154,7 @@ OC.Contacts = OC.Contacts || {
 		}
 		var self = this;
 
+		this.lastSelectedContacts = [];
 		this.scrollTimeoutMiliSecs = 100;
 		this.isScrolling = false;
 		this.cacheElements();
@@ -790,7 +791,12 @@ OC.Contacts = OC.Contacts || {
 
 		this.$contactList.on('change', 'input:checkbox', function(event) {
 			var selected = self.contacts.getSelectedContacts();
-			console.log('selected', selected.length);
+			var id = String($(this).val());
+			// Save list of last selected contact to be able to select range
+			($(this).is(':checked') && self.lastSelectedContacts.indexOf(id) === -1)
+				? self.lastSelectedContacts.push(id)
+				: self.lastSelectedContacts.splice(self.lastSelectedContacts.indexOf(id), 1);
+
 			if(selected.length > 0 && self.$groups.find('option').length === 1) {
 				self.buildGroupSelect();
 			}
@@ -928,16 +934,33 @@ OC.Contacts = OC.Contacts || {
 			$(this).find('a.delete').remove();
 		});
 
+		// Prevent Firefox from selecting the table-cell
+		this.$contactList.mousedown(function (event) {
+			if (event.ctrlKey || event.metaKey || event.shiftKey) {
+				event.preventDefault();
+			}
+		});
+
 		// Contact list. Either open a contact or perform an action (mailto etc.)
 		this.$contactList.on('click', 'tr.contact', function(event) {
 			if($(event.target).is('input')) {
 				return;
 			}
-			if(event.ctrlKey || event.metaKey) {
+			// Select a single contact or a range of contacts.
+			if(event.ctrlKey || event.metaKey || event.shiftKey) {
 				event.stopPropagation();
 				event.preventDefault();
 				self.dontScroll = true;
-				self.contacts.select($(this).data('id'), true);
+				var $input = $(this).find('input:checkbox');
+				var index = self.$contactList.find('tr.contact:visible').index($(this));
+				if(event.shiftKey && self.lastSelectedContacts.length > 0) {
+					self.contacts.selectRange(
+						$(this).data('id'),
+						self.lastSelectedContacts[self.lastSelectedContacts.length-1]
+					);
+				} else {
+					self.contacts.setSelected($(this).data('id'), !$input.prop('checked'));
+				}
 				return;
 			}
 			if($(event.target).is('a.mailto')) {
@@ -1307,6 +1330,7 @@ OC.Contacts = OC.Contacts || {
 		$.each(this.$contactList.find(selector), function() {
 			$(this).prop('checked', checked);
 		});
+		this.lastSelectedContacts = [];
 	},
 	jumpToContact: function(id) {
 		this.$rightContent.scrollTop(this.contacts.contactPos(id)-30);

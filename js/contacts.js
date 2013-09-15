@@ -1800,6 +1800,13 @@ OC.Contacts = OC.Contacts || {};
 		});
 	};
 
+	Contact.prototype.setSelected = function(state) {
+		//console.log('Selecting', this.getId(), state);
+		var $elem = this.getListItemElement();
+		var $input = $elem.find('input:checkbox');
+		$input.prop('checked', state).trigger('change');
+	};
+
 	Contact.prototype.next = function() {
 		// This used to work..?
 		//var $next = this.$listelem.next('tr:visible');
@@ -2331,14 +2338,14 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * Get contacts selected in list
 	 *
-	 * @returns array of contact ids.
+	 * @returns array of contact objects.
 	 */
 	ContactList.prototype.getSelectedContacts = function() {
 		var contacts = [];
 
 		var self = this;
-		$.each(this.$contactList.find('tr > td > input:checkbox:visible:checked'), function(a, b) {
-			var id = String($(b).parents('tr').first().data('id'));
+		$.each(this.$contactList.find('tr > td > input:checkbox:visible:checked'), function(idx, checkbox) {
+			var id = String($(checkbox).val());
 			contacts.push(self.contacts[id]);
 		});
 		return contacts;
@@ -2356,6 +2363,47 @@ OC.Contacts = OC.Contacts || {};
 			});
 		}
 		this.contacts[String(id)].setCurrent(true);
+	};
+
+	/**
+	 * (De)-select a contact
+	 *
+	 * @param string id
+	 * @param bool state
+	 * @param bool reverseOthers
+	 */
+	ContactList.prototype.setSelected = function(id, state, reverseOthers) {
+		console.log('ContactList.setSelected', id);
+		if(!id) {
+			return;
+		}
+		var self = this;
+		if(reverseOthers === true) {
+			var $rows = this.$contactList.find('tr:visible.contact');
+			$.each($rows, function(idx, row) {
+				self.contacts[$(row).data('id')].setSelected(!state);
+			});
+		}
+		this.contacts[String(id)].setSelected(state);
+	};
+
+	/**
+	 * Select a range of contacts by their id.
+	 *
+	 * @param string from
+	 * @param string to
+	 */
+	ContactList.prototype.selectRange = function(from, to) {
+		var self = this;
+		var $rows = this.$contactList.find('tr:visible.contact');
+		var index1 = $rows.index(this.contacts[String(from)].getListItemElement());
+		var index2 = $rows.index(this.contacts[String(to)].getListItemElement());
+		from = Math.min(index1, index2);
+		to = Math.max(index1, index2)+1;
+		$rows = $rows.slice(from, to);
+		$.each($rows, function(idx, row) {
+			self.contacts[$(row).data('id')].setSelected(true);
+		});
 	};
 
 	ContactList.prototype.setSortOrder = function(order) {
