@@ -36,7 +36,7 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 
 	function setUp() {
 
-		//\Sabre\VObject\Component\VCard::$componentMap['VCARD']	= 'OCA\\Contacts\\VObject\\VCard';
+		\Sabre\VObject\Component\VCard::$componentMap['VCARD']	= 'OCA\\Contacts\\VObject\\VCard';
 
 		$this->backend = new Mock('foobar');
 

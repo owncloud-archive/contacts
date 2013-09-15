@@ -3,20 +3,20 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "9f5c24fab8a0547f8b255d9e66272dc4",
+    "hash": "862b7b023a1bece5df3ff9c8228c8610",
     "packages": [
         {
             "name": "sabre/vobject",
-            "version": "3.1.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fruux/sabre-vobject.git",
-                "reference": "0b44e0c3f1d60b8c2aa9f9850b8d6f9cbd7301f7"
+                "reference": "622ae892324d819fbd5bf7272253143923194080"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fruux/sabre-vobject/zipball/0b44e0c3f1d60b8c2aa9f9850b8d6f9cbd7301f7",
-                "reference": "0b44e0c3f1d60b8c2aa9f9850b8d6f9cbd7301f7",
+                "url": "https://api.github.com/repos/fruux/sabre-vobject/zipball/622ae892324d819fbd5bf7272253143923194080",
+                "reference": "622ae892324d819fbd5bf7272253143923194080",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "iCalendar",
                 "vCard"
             ],
-            "time": "2013-08-13 12:09:49"
+            "time": "2013-09-11 12:58:24"
         }
     ],
     "packages-dev": [
@@ -66,9 +66,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "sabre/vobject": 20
+    },
     "platform": [
 
     ],

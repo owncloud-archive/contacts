@@ -1,5 +1,5 @@
 {
   "require" : {
-    "sabre/vobject" : "~3.1"
+    "sabre/vobject" : "dev-master"
   }
 }

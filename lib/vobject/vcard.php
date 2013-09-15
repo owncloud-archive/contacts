@@ -102,7 +102,7 @@ class VCard extends VObject\Component\VCard {
 	* must therefore be decoded and the parameters removed.
 	*/
 	protected function decodeProperty(&$property) {
-		foreach($property->parameters as $key=>&$parameter) {
+		foreach($property->parameters as $key => &$parameter) {
 			// Check for values without names which Sabre interprets
 			// as names without values.
 			if(trim($parameter->getValue()) === '') {
@@ -236,7 +236,7 @@ class VCard extends VObject\Component\VCard {
 				if(count($slice) < 2) { // If not enought, add one more...
 					$slice[] = "";
 				}
-				$this->N = implode(';', $slice).';;;';
+				$this->N = array_merge($slice, array('', '', ''));
 			}
 		}
 
@@ -259,6 +259,23 @@ class VCard extends VObject\Component\VCard {
 	}
 
 	/**
+	* This method should return a list of default property values.
+	*
+	* @return array
+	*/
+	protected function getDefaults() {
+
+		$appinfo = \OCP\App::getAppInfo('contacts');
+		$appversion = \OCP\App::getAppVersion('contacts');
+		$prodid = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
+		return array(
+			'VERSION' => '3.0',
+			'PRODID' => $prodid,
+		);
+
+	}
+
+    /**
 	 * Get all group names in the vCards properties
 	 * @return array
 	 */

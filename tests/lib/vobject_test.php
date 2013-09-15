@@ -22,7 +22,9 @@ class Test_VObject extends PHPUnit_Framework_TestCase {
 		);
 		$this->assertInstanceOf('\OCA\Contacts\VObject\VCard', $obj);
 
+		//$obj = $obj->convert($obj::VCARD30);
 		$obj->validate($obj::REPAIR|$obj::UPGRADE);
+		//print($obj->serialize());
 
 		$this->assertEquals('3.0', (string)$obj->VERSION);
 		$this->assertEquals('Adèle Fermée', (string)$obj->FN);

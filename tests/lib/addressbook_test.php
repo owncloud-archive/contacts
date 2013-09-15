@@ -29,6 +29,8 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
 	function setUp() {
 
+		\Sabre\VObject\Component\VCard::$componentMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
+
 		$this->backend = new Backend\Mock('foobar');
 		$this->abinfo = $this->backend->getAddressBook('foo');
 		$this->ab = new AddressBook($this->backend, $this->abinfo);
@@ -70,6 +72,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
 		$carddata = file_get_contents(__DIR__ . '/../data/test2.vcf');
 		$vcard = Reader::read($carddata);
+		$this->assertInstanceOf('OCA\\Contacts\\VObject\\VCard', $vcard);
 		$id = $this->ab->addChild($vcard);
 		$this->assertNotEquals(false, $id);
 
@@ -107,6 +110,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 		$this->assertCount(2, $contacts);
 
 		$this->assertEquals('Max Mustermann', $contacts[0]->getDisplayName());
+		//print($contacts[1]->serialize());
 		$this->assertEquals('John Q. Public', $contacts[1]->getDisplayName());
 
 	}

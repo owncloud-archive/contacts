@@ -519,10 +519,11 @@ class Database extends AbstractBackend {
 		$now = new \DateTime;
 		$contact->REV = $now->format(\DateTime::W3C);
 
+		/*
 		$appinfo = \OCP\App::getAppInfo('contacts');
 		$appversion = \OCP\App::getAppVersion('contacts');
 		$prodid = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
-		$contact->PRODID = $prodid;
+		$contact->PRODID = $prodid;*/
 
 		$data = $contact->serialize();
 		if(!isset(self::$preparedQueries['createcontact'])) {

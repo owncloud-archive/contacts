@@ -1,5 +1,23 @@
+3.1.3-stable (2013-??-??)
+	* Fixed: Support from properties from draft-daboo-valarm-extensions-04.
+	  Issue #56.
+	* Fixed: Issue #54. Parsing a stream of multiple vcards separated by more
+	  than one newline. Thanks @Vedmak for the patch.
+	* Fixed: Serializing vcard 2.1 parameters with no name caused a literal
+	  '1' to be inserted.
+	* Added: VCardConverter removed properties that are no longer supported in
+	  vCard 4.0.
+	* Added: vCards with a minimum number of values (such as N), but don't
+	  have that many, are now automatically padded with empty components.
+	* Added: The vCard validator now also checks for a minimum number of
+	  components, and has the ability to repair these.
+	* Added: Some support for vCard 2.1 in the VCard converter, to upgrade to
+	  vCard 3.0 or 4.0.
+	* Fixed: Issue 60 Use Document::$componentMap when instantiating the
+	  top-level VCalendar and VCard components.
+
 3.1.2-stable (2013-08-13)
-    * Fixed: Setting correct property group on VCard conversion
+	* Fixed: Setting correct property group on VCard conversion
 
 3.1.1-stable (2013-08-02)
 	* Fixed: Issue #53. A regression in RecurrenceIterator.
@@ -119,6 +137,9 @@
 	  such as VERSION and CALSCALE.
 	* Added: You can add new sub-components much quicker with the magic
 	  setters, and add() method.
+
+2.1.3-stable (2013-??-??)
+	* Fixed: Issue #55. \r must be stripped from property values.
 
 2.1.2-stable (2013-08-02)
 	* Fixed: Issue #53. A regression in RecurrenceIterator.

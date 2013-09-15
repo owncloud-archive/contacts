@@ -178,15 +178,15 @@ class JSONSerializer {
 			// Faulty entries by kaddressbook
 			// Actually TYPE=PREF is correct according to RFC 2426
 			// but this way is more handy in the UI. Tanghus.
-			if($parameter->name == 'TYPE' && strtoupper($parameter->value) == 'PREF') {
+			if($parameter->name == 'TYPE' && strtoupper($parameter->getValue()) === 'PREF') {
 				$parameter->name = 'PREF';
-				$parameter->value = '1';
+				$parameter->setValue('1');
 			}
 			// NOTE: Apparently Sabre_VObject_Reader can't always deal with value list parameters
 			// like TYPE=HOME,CELL,VOICE. Tanghus.
 			// TODO: Check if parameter is has commas and split + merge if so.
 			if ($parameter->name == 'TYPE') {
-				$pvalue = $parameter->value;
+				$pvalue = $parameter->getValue();
 				if(is_string($pvalue) && strpos($pvalue, ',') !== false) {
 					$pvalue = array_map('trim', explode(',', $pvalue));
 				}
@@ -199,7 +199,7 @@ class JSONSerializer {
 				}
 			}
 			else{
-				$temp['parameters'][$parameter->name] = \OCP\Util::sanitizeHTML($parameter->value);
+				$temp['parameters'][$parameter->name] = \OCP\Util::sanitizeHTML($parameter->getValue());
 			}
 		}
 		return $temp;

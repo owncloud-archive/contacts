@@ -117,6 +117,8 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 
 		$this->assertArrayHasKey('EMAIL', $serialized['data']);
 
+		$this->assertEquals('max.mustermann@example.org', (string)$this->contact->EMAIL);
+
 		$checksum = $serialized['data']['EMAIL'][0]['checksum'];
 		$newchecksum = $this->contact->setPropertyByChecksum($checksum, 'EMAIL', 'mmustermann@example.org');
 
@@ -143,7 +145,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 	function testUnsetByChecksum() {
 
 		$serialized = JSONSerializer::serializeContact($this->contact);
-		print_r($serialized);
+
 		$checksum = $serialized['data']['EMAIL'][0]['checksum'];
 
 		$this->assertTrue(isset($this->contact->EMAIL));
@@ -166,4 +168,19 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
+	function testSingleProperties() {
+
+		$version = $this->contact->select('VERSION');
+		$this->assertEquals(1, count($version));
+
+		$prodid = $this->contact->select('PRODID');
+		$this->assertEquals(1, count($prodid));
+
+		$fn = $this->contact->select('FN');
+		$this->assertEquals(1, count($fn));
+
+		$n = $this->contact->select('N');
+		$this->assertEquals(1, count($n));
+
+	}
 }

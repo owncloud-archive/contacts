@@ -1,24 +1,24 @@
 [
     {
         "name": "sabre/vobject",
-        "version": "3.1.2",
-        "version_normalized": "3.1.2.0",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/fruux/sabre-vobject.git",
-            "reference": "0b44e0c3f1d60b8c2aa9f9850b8d6f9cbd7301f7"
+            "reference": "622ae892324d819fbd5bf7272253143923194080"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/fruux/sabre-vobject/zipball/0b44e0c3f1d60b8c2aa9f9850b8d6f9cbd7301f7",
-            "reference": "0b44e0c3f1d60b8c2aa9f9850b8d6f9cbd7301f7",
+            "url": "https://api.github.com/repos/fruux/sabre-vobject/zipball/622ae892324d819fbd5bf7272253143923194080",
+            "reference": "622ae892324d819fbd5bf7272253143923194080",
             "shasum": ""
         },
         "require": {
             "ext-mbstring": "*",
             "php": ">=5.3.1"
         },
-        "time": "2013-08-13 12:09:49",
+        "time": "2013-09-11 12:58:24",
         "bin": [
             "bin/vobject"
         ],
@@ -28,7 +28,7 @@
                 "dev-master": "3.1.x-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-0": {
                 "Sabre\\VObject": "lib/"

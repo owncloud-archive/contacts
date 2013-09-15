@@ -60,7 +60,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 */
 	public function __construct($parent, $backend, $data = null) {
 		self::$l10n = $parent::$l10n;
-		parent::__construct();
 		//\OCP\Util::writeLog('contacts', __METHOD__ . ' parent: ' . print_r($parent, true) . ', backend: ' . print_r($backend, true) . ', data: ' . print_r($data, true), \OCP\Util::DEBUG);
 		//\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		$this->props['parent'] = $parent;
@@ -70,11 +69,16 @@ class Contact extends VObject\VCard implements IPIMObject {
 
 		if(!is_null($data)) {
 			if($data instanceof VObject\VCard) {
-				foreach($data->children as $child) {
+				parent::__construct($data->children);
+				/*foreach($data->children as $child) {
+					if(in_array($child->name, array('VERSION', 'PRODID')) && isset($this->{$child->name})) {
+						continue;
+					}
 					$this->add($child);
-				}
+				}*/
 				$this->setRetrieved(true);
 			} elseif(is_array($data)) {
+				parent::__construct();
 				foreach($data as $key => $value) {
 					switch($key) {
 						case 'id':
@@ -102,6 +106,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 					}
 				}
 			}
+		} else {
+			parent::__construct();
 		}
 	}
 
@@ -303,7 +309,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * FIXME: Clean this up and make sure the logic is OK.
 	 */
 	public function retrieve() {
-		if($this->isRetrieved() || count($this->children) > 1) {
+		if($this->isRetrieved()) {// || count($this->children) > 1) {
 			//\OCP\Util::writeLog('contacts', __METHOD__. ' children', \OCP\Util::DEBUG);
 			return true;
 		} else {
@@ -311,6 +317,10 @@ class Contact extends VObject\VCard implements IPIMObject {
 			if(isset($this->props['vcard'])
 				&& $this->props['vcard'] instanceof VObject\VCard) {
 				foreach($this->props['vcard']->children() as $child) {
+					echo $child->name . ' ' . in_array($child->name, array('VERSION', 'PRODID'));
+					if(in_array($child->name, array('VERSION', 'PRODID', 'FN')) && isset($this->{$child->name})) {
+						continue;
+					}
 					$this->add($child);
 					if($child->name === 'FN') {
 						$this->props['displayname']
@@ -331,6 +341,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 					if(isset($result['vcard'])
 						&& $result['vcard'] instanceof VObject\VCard) {
 						foreach($result['vcard']->children() as $child) {
+							if(in_array($child->name, array('VERSION', 'PRODID', 'FN')) && isset($this->{$child->name})) {
+								continue;
+							}
 							$this->add($child);
 						}
 						$this->setRetrieved(true);
@@ -362,6 +375,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 				);
 				if($obj) {
 					foreach($obj->children as $child) {
+						if(in_array($child->name, array('VERSION', 'PRODID', 'FN')) && isset($this->{$child->name})) {
+							continue;
+						}
 						$this->add($child);
 					}
 					$this->setRetrieved(true);
