@@ -1,7 +1,7 @@
 <?php
 
 namespace OCA\Contacts;
-use \OCA\AppFramework\Core\API;
+use \OC\AppFramework\Core\API;
 
 //require_once __DIR__ . '/../controller/groupcontroller.php';
 \Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
