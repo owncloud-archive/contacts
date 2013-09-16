@@ -47,9 +47,9 @@ class ValidatorPlugin extends \Sabre_DAV_ServerPlugin {
 	* @param resource $data
 	* @return void
 	*/
-	public function beforeWriteContent($path, Sabre_DAV_IFile $node, &$data) {
+	public function beforeWriteContent($path, \Sabre_DAV_IFile $node, &$data) {
 
-		if (!$node instanceof Sabre_CardDAV_ICard) {
+		if (!$node instanceof \Sabre_CardDAV_ICard) {
 			return;
 		}
 
@@ -68,9 +68,9 @@ class ValidatorPlugin extends \Sabre_DAV_ServerPlugin {
 	* @param Sabre_DAV_ICollection $parentNode
 	* @return void
 	*/
-	public function beforeCreateFile($path, &$data, Sabre_DAV_ICollection $parentNode) {
+	public function beforeCreateFile($path, &$data, \Sabre_DAV_ICollection $parentNode) {
 
-		if (!$parentNode instanceof Sabre_CardDAV_IAddressBook) {
+		if (!$parentNode instanceof \Sabre_CardDAV_IAddressBook) {
 			return;
 		}
 
@@ -94,7 +94,7 @@ class ValidatorPlugin extends \Sabre_DAV_ServerPlugin {
 		}
 
 		// Converting the data to unicode, if needed.
-		$data = Sabre_DAV_StringUtil::ensureUTF8($data);
+		$data = \Sabre_DAV_StringUtil::ensureUTF8($data);
 
 		try {
 
@@ -102,14 +102,14 @@ class ValidatorPlugin extends \Sabre_DAV_ServerPlugin {
 
 		} catch (VObject\ParseException $e) {
 
-			throw new Sabre_DAV_Exception_UnsupportedMediaType(
+			throw new \Sabre_DAV_Exception_UnsupportedMediaType(
 				'This resource only supports valid vcard data. Parse error: ' . $e->getMessage()
 			);
 
 		}
 
 		if ($vobj->name !== 'VCARD') {
-			throw new Sabre_DAV_Exception_UnsupportedMediaType(
+			throw new \Sabre_DAV_Exception_UnsupportedMediaType(
 				'This collection can only support vcard objects.'
 			);
 		}
