@@ -60,7 +60,7 @@ class Addressbook extends AbstractPIMCollection {
 	 * @param array $addressBookInfo
 	 */
 	public function __construct(Backend\AbstractBackend $backend, array $addressBookInfo) {
-		self::$l10n = \OC_L10N::get('contacts');
+		self::$l10n = \OCP\Util::getL10N('contacts');
 		$this->backend = $backend;
 		$this->addressBookInfo = $addressBookInfo;
 		if(is_null($this->getId())) {
@@ -271,7 +271,7 @@ class Addressbook extends AbstractPIMCollection {
 
 		$response = array();
 
-		\OC_Hook::emit('OCA\Contacts', 'pre_deleteContact',
+		\OCP\Util::emitHook('OCA\Contacts', 'pre_deleteContact',
 			array('id' => $ids)
 		);
 

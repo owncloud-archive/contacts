@@ -22,7 +22,7 @@
 
 namespace OCA\Contacts\Utils;
 
-Properties::$l10n = \OC_L10N::get('contacts');
+Properties::$l10n = \OCP\Util::getL10N('contacts');
 
 Class Properties {
 
@@ -265,9 +265,9 @@ Class Properties {
 						$preferred,
 					)
 				);
-				if (\OC_DB::isError($result)) {
+				if (\OCP\DB::isError($result)) {
 					\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
-						. \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+						. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 					return false;
 				}
 			} catch(\Exception $e) {

@@ -358,7 +358,7 @@ $this->create('contacts_index_properties', 'indexproperties/{user}/')
 		function($params) {
 			session_write_close();
 			// TODO: Add BackgroundJob for this.
-			\OC_Hook::emit('OCA\Contacts', 'indexProperties', array());
+			\OCP\Util::emitHook('OCA\Contacts', 'indexProperties', array());
 
 			\OCP\Config::setUserValue($params['user'], 'contacts', 'contacts_properties_indexed', 'yes');
 			\OCP\JSON::success(array('isIndexed' => true));

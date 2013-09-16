@@ -72,7 +72,7 @@ class Database extends AbstractBackend {
 				self::$preparedQueries['addressbooksforuser'] = \OCP\DB::prepare($sql);
 			}
 			$result = self::$preparedQueries['addressbooksforuser']->execute(array($this->userid));
-			if (\OC_DB::isError($result)) {
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $this->addressbooks;
 			}
@@ -104,7 +104,7 @@ class Database extends AbstractBackend {
 				self::$preparedQueries['getaddressbook'] = \OCP\DB::prepare($query);
 			}
 			$result = self::$preparedQueries['getaddressbook']->execute(array($addressbookid));
-			if (\OC_DB::isError($result)) {
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::write('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return null;
@@ -172,10 +172,10 @@ class Database extends AbstractBackend {
 		try {
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute($updates);
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts',
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts',
 					__METHOD__. 'DB error: '
-					. \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
 		} catch(Exception $e) {
@@ -222,8 +222,8 @@ class Database extends AbstractBackend {
 				self::$preparedQueries['createaddressbook'] = \OCP\DB::prepare($query);
 			}
 			$result = self::$preparedQueries['createaddressbook']->execute($updates);
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
 		} catch(Exception $e) {
@@ -261,9 +261,9 @@ class Database extends AbstractBackend {
 					. ' WHERE `addressbookid` = ?');
 		try {
 			$result = $stmt->execute(array($addressbookid));
-			if (\OC_DB::isError($result)) {
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
-					. \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
 		} catch(\Exception $e) {
@@ -278,7 +278,7 @@ class Database extends AbstractBackend {
 			}
 		}
 
-		\OC_Hook::emit('OCA\Contacts', 'pre_deleteAddressBook',
+		\OCP\Util::emitHook('OCA\Contacts', 'pre_deleteAddressBook',
 			array('addressbookid' => $addressbookid, 'contactids' => $ids)
 		);
 
@@ -359,8 +359,8 @@ class Database extends AbstractBackend {
 			self::$preparedQueries['count'] = \OCP\DB::prepare($query);
 		}
 		$result = self::$preparedQueries['count']->execute(array($addressbookid));
-		if (\OC_DB::isError($result)) {
-			\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+		if (\OCP\DB::isError($result)) {
+			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 			return null;
 		}
 		return (int)$result->fetchOne();
@@ -388,8 +388,8 @@ class Database extends AbstractBackend {
 				isset($options['offset']) ? $options['offset'] : null
 			);
 			$result = $stmt->execute(array($addressbookid));
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $cards;
 			}
 		} catch(\Exception $e) {
@@ -456,8 +456,8 @@ class Database extends AbstractBackend {
 				. $this->cardsTableName . '` WHERE ' . $where_query;
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute($ids);
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return null;
 			}
 			if((int)$result->numRows() === 0) {
@@ -541,8 +541,8 @@ class Database extends AbstractBackend {
 						time()
 					)
 				);
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
 		} catch(\Exception $e) {
@@ -552,7 +552,7 @@ class Database extends AbstractBackend {
 		$newid = \OCP\DB::insertid($this->cardsTableName);
 
 		$this->touchAddressBook($addressbookid);
-		\OC_Hook::emit('OCA\Contacts', 'post_createContact',
+		\OCP\Util::emitHook('OCA\Contacts', 'post_createContact',
 			array('id' => $newid, 'parent' => $addressbookid, 'contact' => $contact)
 		);
 		return (string)$newid;
@@ -629,7 +629,7 @@ class Database extends AbstractBackend {
 		}
 		try {
 			$result = self::$preparedQueries[$qname]->execute($updates);
-			if (\OC_DB::isError($result)) {
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
@@ -642,7 +642,7 @@ class Database extends AbstractBackend {
 
 		$this->touchAddressBook($addressbookid);
 		if(!$isBatch) {
-			\OC_Hook::emit('OCA\Contacts', 'post_updateContact',
+			\OCP\Util::emitHook('OCA\Contacts', 'post_updateContact',
 				array('id' => $id, 'parent' => $addressbookid, 'contact' => $contact, 'carddav' => $isCardDAV)
 			);
 		}
@@ -683,7 +683,7 @@ class Database extends AbstractBackend {
 		}
 
 		if(!$isBatch) {
-			\OC_Hook::emit('OCA\Contacts', 'pre_deleteContact',
+			\OCP\Util::emitHook('OCA\Contacts', 'pre_deleteContact',
 				array('id' => $id)
 			);
 		}
@@ -694,7 +694,7 @@ class Database extends AbstractBackend {
 		}
 		try {
 			$result = self::$preparedQueries[$qname]->execute(array($id, $addressbookid));
-			if (\OC_DB::isError($result)) {
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
@@ -731,8 +731,8 @@ class Database extends AbstractBackend {
 		try {
 			$stmt = \OCP\DB::prepare('SELECT `uri` FROM `' . $this->addressBooksTableName . '` WHERE `userid` = ? ');
 			$result = $stmt->execute(array($userid));
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $name;
 			}
 		} catch(Exception $e) {
