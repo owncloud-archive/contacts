@@ -6,7 +6,7 @@
  * See the COPYING-README file.
  */
 
-class Test_VObject extends PHPUnit_Framework_TestCase {
+class Test_VObjects extends PHPUnit_Framework_TestCase {
 
 	public static function setUpBeforeClass() {
 		\Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
