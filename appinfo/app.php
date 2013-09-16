@@ -28,9 +28,9 @@ if(\OCP\App::isEnabled('appframework')) {
 	$api->addNavigationEntry(array(
 		'id' => 'contacts_index',
 		'order' => 10,
-		'href' => \OC_Helper::linkToRoute('contacts_index'),
+		'href' => \OCP\Util::linkToRoute('contacts_index'),
 		'icon' => \OCP\Util::imagePath( 'contacts', 'contacts.svg' ),
-		'name' => \OC_L10N::get('contacts')->t('Contacts')
+		'name' => \OCP\Util::getL10N('contacts')->t('Contacts')
 		)
 	);
 

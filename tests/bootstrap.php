@@ -15,7 +15,7 @@ if(!class_exists('PHPUnit_Framework_TestCase')) {
 	require_once('PHPUnit/Autoload.php');
 }
 
-OC_App::enable('contacts');
+//OC_App::enable('contacts');
 
 OC_Hook::clear();
 OC_Log::$enabled = true;
