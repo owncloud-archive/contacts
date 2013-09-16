@@ -69,7 +69,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 
 		if(!is_null($data)) {
 			if($data instanceof VObject\VCard) {
-				parent::__construct($data->children);
+				parent::__construct($data->children());
 				/*foreach($data->children as $child) {
 					if(in_array($child->name, array('VERSION', 'PRODID')) && isset($this->{$child->name})) {
 						continue;
@@ -78,7 +78,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				}*/
 				$this->setRetrieved(true);
 			} elseif(is_array($data)) {
-				parent::__construct();
+				parent::__construct(array(), false);
 				foreach($data as $key => $value) {
 					switch($key) {
 						case 'id':
@@ -101,7 +101,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 						case 'displayname':
 						case 'fullname':
 							$this->props['displayname'] = $value;
-							$this->FN = $value;
+							//$this->FN = $value;
 							break;
 					}
 				}
