@@ -14,7 +14,7 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 	protected static $addressBooksTableName;
 	protected static $cardsTableName;
 
-	public static function setUpBeforeClass() {
+	public static function xsetUpBeforeClass() {
 		$dbfile = __DIR__.'/../../appinfo/database.xml';
 
 		self::$test_prefix = '_'.OC_Util::generate_random_bytes('4').'_';
@@ -40,12 +40,12 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 
 	}
 
-	public static function tearDownAfterClass() {
+	public static function xtearDownAfterClass() {
 		OC_DB::removeDBStructure(self::$schema_file);
 		unlink(self::$schema_file);
 	}
 
-	public function testDatabaseBackend() {
+	public function xtestDatabaseBackend() {
 
 		$this->assertEquals(array(), self::$backend->getAddressBooksForUser());
 
@@ -86,7 +86,7 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 		$this->assertTrue(self::$backend->deleteAddressBook($aid));
 	}
 
-	public function testAddressBook() {
+	public function xtestAddressBook() {
 		$addressBook = new OCA\Contacts\AddressBook(
 			self::$backend,
 			array(
