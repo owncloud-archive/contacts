@@ -24,16 +24,16 @@
 
 namespace OCA\Contacts\Middleware;
 
-use OCA\AppFramework\Controller\Controller;
-use OCA\AppFramework\Middleware\Middleware;
-use OCA\AppFramework\Core\API;
+use OCA\Contacts\Controller;
+use OC\AppFramework\Middleware\Middleware;
+use OC\AppFramework\Core\API;
 use OCA\Contacts\JSONResponse;
 
 /**
  * Used to intercept exceptions thrown in controllers and backends
  * and transform them into valid HTTP responses.
  */
-class HTTP extends Middleware {
+class Http extends Middleware {
 
 	private $api;
 

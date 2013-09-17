@@ -8,6 +8,7 @@ OC.Contacts = OC.Contacts || {};
 		this.getResponseHeader = jqXHR.getResponseHeader;
 		this.statusCode = jqXHR.status;
 		// 204 == No content
+		// 304 == Not modified
 		if(!response) {
 			if([204, 304].indexOf(this.statusCode) === -1) {
 				console.log('jqXHR', jqXHR);
@@ -598,7 +599,7 @@ OC.Contacts = OC.Contacts || {};
 			})
 			.fail(function(jqXHR, textStatus, error) {
 				console.log(jqXHR);
-				var response = $.parseJSON(jqXHR.responseText);
+				var response = jqXHR.responseText ? $.parseJSON(jqXHR.responseText) : null;
 				console.log('response', response);
 				defer.reject(new JSONResponse(response, jqXHR));
 			});

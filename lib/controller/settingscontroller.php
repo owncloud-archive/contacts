@@ -9,16 +9,16 @@
 
 namespace OCA\Contacts\Controller;
 
-use OCA\Contacts\App;
-use OCA\Contacts\JSONResponse;
-use OCA\AppFramework\Controller\Controller as BaseController;
-use OCA\AppFramework\Core\API;
+use OCA\Contacts\App,
+	OCA\Contacts\JSONResponse,
+	OCA\Contacts\Controller,
+	OCA\AppFramework\Core\API;
 
 
 /**
  * Controller class for groups/categories
  */
-class SettingsController extends BaseController {
+class SettingsController extends Controller {
 
 	/**
 	 * @IsAdminExemption

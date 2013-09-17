@@ -8,7 +8,14 @@
 
 namespace OCA\Contacts;
 
-use Sabre\VObject;
+use Sabre\VObject,
+	OCP\AppFramework,
+	OCA\Contacts\Controller\AddressBookController,
+	OCA\Contacts\Controller\GroupController,
+	OCA\Contacts\Controller\ContactController,
+	OCA\Contacts\Controller\ContactPhotoController,
+	OCA\Contacts\Controller\SettingsController,
+	OCA\Contacts\Controller\ImportController;
 
 /**
  * This class manages our app actions

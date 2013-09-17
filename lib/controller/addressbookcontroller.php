@@ -12,23 +12,19 @@ namespace OCA\Contacts\Controller;
 use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Utils\JSONSerializer,
-	OCA\AppFramework\Controller\Controller as BaseController,
+	OCA\Contacts\Controller,
 	OCA\AppFramework\Http\TextDownloadResponse;
-
 
 /**
  * Controller class For Address Books
  */
-class AddressBookController extends BaseController {
+class AddressBookController extends Controller {
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function userAddressBooks() {
-		$app = new App($this->api->getUserId());
-		$addressBooks = $app->getAddressBooksForUser();
+		$addressBooks = $this->app->getAddressBooksForUser();
 		$response = array();
 		$lastModified = 0;
 		foreach($addressBooks as $addressBook) {
@@ -52,16 +48,13 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function getAddressBook() {
 		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 		$lastModified = $addressBook->lastModified();
 		$response = new JSONResponse();
 
@@ -86,16 +79,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function exportAddressBook() {
 		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 		$lastModified = $addressBook->lastModified();
 		$response = new JSONResponse();
 
@@ -114,17 +105,15 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function addAddressBook() {
-		$app = new App($this->api->getUserId());
 		$params = $this->request->urlParams;
 
 		$response = new JSONResponse();
 
-		$backend = $app->getBackend($params['backend']);
+		$backend = $this->app->getBackend($params['backend']);
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_CREATE)) {
 			throw new \Exception('Not implemented');
 		}
@@ -145,17 +134,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function updateAddressBook() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 		try {
 			if(!$addressBook->update($this->request['properties'])) {
 				$response->bailOut(App::$l10n->t('Error updating address book'));
@@ -170,17 +156,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function deleteAddressBook() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$backend = $app->getBackend($params['backend']);
+		$backend = $this->app->getBackend($params['backend']);
 
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_DELETE)) {
 			throw new \Exception(
@@ -206,17 +189,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function activateAddressBook() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 
 		$addressBook->setActive($this->request->post['state']);
 
@@ -224,17 +204,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function addChild() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 
 		try {
 			$id = $addressBook->addChild();
@@ -266,17 +243,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function deleteChild() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 
 		try {
 			$result = $addressBook->deleteChild($params['contactid']);
@@ -293,17 +267,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function deleteChildren() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 		$contacts = $this->request->post['contacts'];
 
 		try {
@@ -318,21 +289,18 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function moveChild() {
 		$params = $this->request->urlParams;
 		$targetInfo = $this->request->post['target'];
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
 		// TODO: Check if the backend supports move (is 'local' or 'shared') and use that operation instead.
 		// If so, set status 204 and don't return the serialized contact.
-		$fromAddressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$targetAddressBook = $app->getAddressBook($targetInfo['backend'], $targetInfo['id']);
+		$fromAddressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
+		$targetAddressBook = $this->app->getAddressBook($targetInfo['backend'], $targetInfo['id']);
 		$contact = $fromAddressBook->getChild($params['contactid']);
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Error retrieving contact.'));

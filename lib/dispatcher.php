@@ -1,0 +1,68 @@
+<?php
+/**
+ * Copyright (c) 2013 Thomas Tanghus (thomas@tanghus.net)
+ * This file is licensed under the Affero General Public License version 3 or
+ * later.
+ * See the COPYING-README file.
+ */
+
+namespace OCA\Contacts;
+
+use OCP\AppFramework\App as MainApp,
+	OCP\AppFramework\IAppContainer,
+	OCA\Contacts\App,
+	OCA\Contacts\Middleware\Http as HttpMiddleware,
+	OCA\Contacts\Controller\AddressBookController,
+	OCA\Contacts\Controller\GroupController,
+	OCA\Contacts\Controller\ContactController,
+	OCA\Contacts\Controller\ContactPhotoController,
+	OCA\Contacts\Controller\SettingsController,
+	OCA\Contacts\Controller\ImportController;
+
+/**
+ * This class manages our app actions
+ */
+
+class Dispatcher extends MainApp {
+	/**
+	* @var App
+	*/
+	protected $app;
+
+	public function __construct(array $params) {
+		parent::__construct('contacts');
+		$this->container = $this->getContainer();
+		// TODO: Remove this once sorted out.
+		// When querying the middleware dispatcher Request gets instantiated
+		// but urlParams isn't set yet
+		$this->container['urlParams'] = $params;
+		$this->middleware = $this->container->query('MiddlewareDispatcher');
+		$this->middleware->registerMiddleware(new HttpMiddleware($this->container->query('API')));
+		$this->api = $this->container->query('API');
+		$this->request = $this->container->query('Request');
+		$this->app = new App($this->api->getUserId());
+		$this->registerServices();
+	}
+
+	public function registerServices() {
+		$this->container->registerService('AddressBookController', function(IAppContainer $container) {
+			return new AddressBookController($this->api, $this->request, $this->app);
+		});
+		$this->container->registerService('GroupController', function(IAppContainer $container) {
+			return new GroupController($this->api, $this->request, $this->app);
+		});
+		$this->container->registerService('ContactController', function(IAppContainer $container) {
+			return new ContactController($this->api, $this->request, $this->app);
+		});
+		$this->container->registerService('ContactPhotoController', function(IAppContainer $container) {
+			return new ContactPhotoController($this->api, $this->request, $this->app);
+		});
+		$this->container->registerService('SettingsController', function(IAppContainer $container) {
+			return new SettingsController($this->api, $this->request, $this->app);
+		});
+		$this->container->registerService('ImportController', function(IAppContainer $container) {
+			return new ImportController($this->api, $this->request, $this->app);
+		});
+	}
+
+}
