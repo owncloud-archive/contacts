@@ -772,7 +772,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 		})
 		.fail(function(response) {
-			console.log( "Request Failed: " + response);
+			console.log( "Request Failed:", response);
 			response.message = t('contacts', 'Failed loading groups: {error}', {error:response.message});
 			$(document).trigger('status.contacts.error', response);
 		});

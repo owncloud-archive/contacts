@@ -8,8 +8,8 @@
  */
 
 namespace OCA\Contacts;
-use OCA\AppFramework\Http\JSONResponse as OriginalResponse,
-	OCA\AppFramework\Http\Http;
+use OCP\AppFramework\Http\JSONResponse as OriginalResponse,
+	OCP\AppFramework\Http\Http;
 
 
 /**
@@ -19,10 +19,19 @@ class JSONResponse extends OriginalResponse {
 
 	public function __construct($params = array(), $statusCode=Http::STATUS_OK) {
 		parent::__construct(array(), $statusCode);
-		//\OCP\Util::writeLog('contacts', __METHOD__.' request: '.print_r($request, true), \OCP\Util::DEBUG);
-		parent::__construct();
 		$this->data['data'] = $params;
 	}
+
+	/**
+	 * Sets values in the data json array
+	 * @param array|object $params an array or object which will be transformed
+	 *                             to JSON
+	 */
+	public function setParams(array $params){
+		$this->data['data'] = $params;
+		$this->data['status'] = 'success';
+	}
+
 
 	/**
 	 * in case we want to render an error message, also logs into the owncloud log

@@ -14,15 +14,15 @@ use OCA\Contacts\App,
 	OCA\Contacts\ImageResponse,
 	OCA\Contacts\Utils\JSONSerializer,
 	OCA\Contacts\Utils\Properties,
-	OCA\AppFramework\Controller\Controller as BaseController,
-	OCA\AppFramework\Core\API,
-	OCA\AppFramework\Http\TextDownloadResponse;
+	OCA\Contacts\Controller;
+	//OCA\AppFramework\Core\API,
+	//OCA\AppFramework\Http\TextDownloadResponse;
 
 
 /**
  * Controller class For Contacts
  */
-class ContactController extends BaseController {
+class ContactController extends Controller {
 
 	/**
 	 * @IsAdminExemption

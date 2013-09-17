@@ -619,12 +619,11 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('status.contacts.error', response);
 			}
 		})
-		.fail(function(jqxhr, textStatus, error) {
-			var err = textStatus + ', ' + error;
-			console.warn( "Request Failed: " + err);
+		.fail(function(response) {
+			console.warn( "Request Failed:", response);
 			defer.reject({
 				error: true,
-				message: t('contacts', 'Failed loading address books: {error}', {error:err})
+				message: t('contacts', 'Failed loading address books: {error}', {error:response.message})
 			});
 		});
 		return defer.promise();

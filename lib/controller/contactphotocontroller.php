@@ -13,12 +13,12 @@ use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\ImageResponse,
 	OCA\Contacts\Utils\Properties,
-	OCA\AppFramework\Controller\Controller as BaseController;
+	OCA\Contacts\Controller;
 
 /**
  * Controller class For Contacts
  */
-class ContactPhotoController extends BaseController {
+class ContactPhotoController extends Controller {
 
 	/**
 	 * @IsAdminExemption

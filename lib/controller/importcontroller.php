@@ -10,15 +10,14 @@
 namespace OCA\Contacts\Controller;
 
 use OCA\Contacts\App;
-use OCA\Contacts\JSONResponse;
-use OCA\AppFramework\Controller\Controller as BaseController;
-use OCA\AppFramework\Core\API;
-use Sabre\VObject;
+	OCA\Contacts\JSONResponse,
+	OCA\Contacts\Controller,
+	Sabre\VObject;
 
 /**
  * Controller importing contacts
  */
-class ImportController extends BaseController {
+class ImportController extends Controller {
 
 	/**
 	 * @IsAdminExemption
