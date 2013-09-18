@@ -20,7 +20,7 @@ use \OC\AppFramework\Core\API;
 \Sabre\VObject\Property::$classMap['GEO']		= '\OC\VObject\CompoundProperty';
 
 // dont break owncloud when the appframework is not enabled
-if(\OCP\App::isEnabled('appframework')) {
+//if(\OCP\App::isEnabled('appframework')) {
 	$api = new API('contacts');
 
 	$api->addNavigationEntry(array(
@@ -57,6 +57,6 @@ if(\OCP\App::isEnabled('appframework')) {
 			}
 		}
 	}
-} else {
-	\OCP\Util::writeLog('contacts', 'AppFramework is not enabled. App is not functional!', \OCP\Util::ERROR);
-}
+//} else {
+//	\OCP\Util::writeLog('contacts', 'AppFramework is not enabled. App is not functional!', \OCP\Util::ERROR);
+//}
