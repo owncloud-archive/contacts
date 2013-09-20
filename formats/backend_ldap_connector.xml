@@ -69,11 +69,6 @@
 			</not_null>
 		</ldap_core>
     
-    <ldif_entry name="displayname" enabled="true">
-      <vcard_entry property="FN">
-      </vcard_entry>
-    </ldif_entry>
-    
     <ldif_entry name="mail" enabled="true">
       <vcard_entry property="EMAIL" type="HOME">
       </vcard_entry>

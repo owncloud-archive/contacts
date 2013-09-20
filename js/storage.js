@@ -533,31 +533,31 @@ OC.Contacts = OC.Contacts || {};
 		);
 	};
 
-	Storage.prototype.prepareImport = function(backend, addressBookId, params) {
-		console.log('Storage.prepareImport', backend, addressBookId);
+	Storage.prototype.prepareImport = function(backend, addressBookId, importType, params) {
+		console.log('Storage.prepareImport', backend, addressBookId, importType);
 		return this.requestRoute(
 			'addressbook/{backend}/{addressBookId}/import/prepare',
 			'POST',
-			{backend: backend, addressBookId: addressBookId},
+			{backend: backend, addressBookId: addressBookId, importType: importType},
 			JSON.stringify(params)
 		);
 	};
 
-	Storage.prototype.startImport = function(backend, addressBookId, params) {
-		console.log('Storage.startImport', backend, addressBookId);
+	Storage.prototype.startImport = function(backend, addressBookId, importType, params) {
+		console.log('Storage.startImport', backend, addressBookId, importType);
 		return this.requestRoute(
 			'addressbook/{backend}/{addressBookId}/import/start',
 			'POST',
-			{backend: backend, addressBookId: addressBookId},
+			{backend: backend, addressBookId: addressBookId, importType: importType},
 			JSON.stringify(params)
 		);
 	};
 
-	Storage.prototype.importStatus = function(backend, addressBookId, params) {
+	Storage.prototype.importStatus = function(backend, addressBookId, importType, params) {
 		return this.requestRoute(
 			'addressbook/{backend}/{addressBookId}/import/status',
 			'GET',
-			{backend: backend, addressBookId: addressBookId},
+			{backend: backend, addressBookId: addressBookId, importType: importType},
 			params
 		);
 	};

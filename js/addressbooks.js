@@ -242,6 +242,7 @@ OC.Contacts = OC.Contacts || {};
 		this.$bookList = this.$bookTemplate.find('.addressbooklist');
 		this.$bookItemTemplate = bookItemTemplate;
 		this.$importIntoSelect = this.$bookTemplate.find('#import_into');
+		this.$importFormatSelect = this.$bookTemplate.find('#import_format');
 		this.$importProgress = this.$bookTemplate.find('#import-status-progress');
 		this.$importStatusText = this.$bookTemplate.find('#import-status-text');
 		this.addressBooks = [];
@@ -274,6 +275,9 @@ OC.Contacts = OC.Contacts || {};
 		});
 		$(document).bind('status.addressbook.added', function() {
 			self.buildImportSelect();
+		})
+		this.$importFormatSelect.on('change', function() {
+			self.$importIntoSelect.trigger('change');
 		});
 		this.$importIntoSelect.on('change', function() {
 			// Disable file input if no address book selected
@@ -281,8 +285,8 @@ OC.Contacts = OC.Contacts || {};
 			self.$importFileInput.prop('disabled', value === '-1' );
 			if(value !== '-1') {
 				var url = OC.generateUrl(
-					'apps/contacts/addressbook/{backend}/{addressBookId}/import/upload',
-					{addressBookId:value, backend: $(this).find('option:selected').data('backend')}
+					'addressbook/{backend}/{addressBookId}/{importType}/import/upload',
+					{addressBookId:value, importType:self.$importFormatSelect.find('option:selected').val(), backend: $(this).find('option:selected').data('backend')}
 				);
 				self.$importFileInput.fileupload('option', 'url', url);
 				//self.$importFileInput.attr('data-url', url);
@@ -319,12 +323,12 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * For importing from oC filesyatem
 	 */
-	AddressBookList.prototype.prepareImport = function(backend, addressBookId, path, fileName) {
-		console.log('prepareImport', backend, addressBookId, path, fileName);
+	AddressBookList.prototype.prepareImport = function(backend, addressBookId, importType, path, fileName) {
+		console.log('prepareImport', backend, addressBookId, importType, path, fileName);
 		this.$importProgress.progressbar({value:false});
 		this.$importStatusText.text(t('contacts', 'Preparing...'));
 		return this.storage.prepareImport(
-				backend, addressBookId,
+				backend, addressBookId, importType,
 				{filename:fileName, path:path}
 			);
 	};
@@ -352,7 +356,7 @@ OC.Contacts = OC.Contacts || {};
 			this.$importProgress.progressbar('value', 0);
 			this.$importProgress.progressbar('option', 'max', this.importCount);
 			var data = response.data;
-			var getStatus = function(backend, addressbookid, progresskey, interval, done) {
+			var getStatus = function(backend, addressbookid, importType, progresskey, interval, done) {
 				if(done) {
 					clearInterval(interval);
 					closeImport();
@@ -364,7 +368,7 @@ OC.Contacts = OC.Contacts || {};
 				isChecking = true;
 				$.when(
 					self.storage.importStatus(
-						backend, addressbookid,
+						backend, addressbookid, importType,
 						{progresskey:progresskey}
 					))
 				.then(function(response) {
@@ -385,7 +389,7 @@ OC.Contacts = OC.Contacts || {};
 			};
 			$.when(
 				self.storage.startImport(
-					data.backend, data.addressBookId,
+					data.backend, data.addressBookId, data.importType,
 					{filename:data.filename, progresskey:data.progresskey}
 				)
 			)
@@ -413,7 +417,7 @@ OC.Contacts = OC.Contacts || {};
 				done = true;
 			});
 			interval = setInterval(function() {
-				getStatus(data.backend, data.addressBookId, data.progresskey, interval, done);
+				getStatus(data.backend, data.addressBookId, data.importType, data.progresskey, interval, done);
 			}, 1500);
 		} else {
 			defer.reject(response);
