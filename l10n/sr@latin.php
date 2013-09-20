@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Save" => "Snimi",
 "Cancel" => "Otkaži",
+"Add" => "Dodaj",
 "Close" => "Zatvori",
+"Error" => "Greška",
 "Download" => "Preuzmi",
 "Edit" => "Uredi",
 "Delete" => "Obriši",
@@ -31,6 +33,7 @@
 "City" => "Grad",
 "Country" => "Zemlja",
 "Active" => "Aktivan",
+"Share" => "Podeli",
 "Name" => "Ime",
 "Description" => "Opis"
 );

@@ -21,15 +21,16 @@
 # tonymc <tony.mccourin@gmail.com>, 2011
 # Victor Bravo <>, 2012
 # VicDeo <victor.dubiniuk@gmail.com>, 2012
+# navigator666 <yuriy.malyovaniy@gmail.com>, 2013
 # Vyacheslav Muranov <s@neola.ru>, 2013
 # Langaru <langaru@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-13 19:45-0400\n"
-"PO-Revision-Date: 2013-09-12 14:10+0000\n"
-"Last-Translator: Alexander Savchenko <>\n"
+"POT-Creation-Date: 2013-09-20 07:49-0400\n"
+"PO-Revision-Date: 2013-09-20 08:20+0000\n"
+"Last-Translator: navigator666 <yuriy.malyovaniy@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,164 +56,164 @@ msgstr "Импортирую..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "Готовимся..."
 
-#: js/addressbooks.js:370
+#: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
 msgstr "Импортировано {count} из {total} контактов"
 
-#: js/addressbooks.js:392
+#: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "Импортировано {imported} контактов. {failed} неудачно."
 
-#: js/addressbooks.js:548
+#: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
 msgstr "Адресная книга {name} уже существует"
 
-#: js/addressbooks.js:582
+#: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
 msgstr "Не удалось добавить адресную книгу: {error}"
 
-#: js/addressbooks.js:625
+#: js/addressbooks.js:627
 msgid "Failed loading address books: {error}"
 msgstr "Ошибка загрузки адресных книг: {error}"
 
-#: js/app.js:214
+#: js/app.js:215
 msgid "Indexing contacts"
 msgstr "Индексация контактов"
 
-#: js/app.js:224
+#: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Невосстановимая ошибка загрузки адресных книг: {msg}"
 
-#: js/app.js:225
+#: js/app.js:226
 msgid "Error."
 msgstr "Ошибка."
 
-#: js/app.js:318 js/app.js:332
+#: js/app.js:319 js/app.js:333
 msgid "Add to..."
 msgstr "Добавить в..."
 
-#: js/app.js:322 js/app.js:334
+#: js/app.js:323 js/app.js:335
 msgid "Remove from..."
 msgstr "Удалить из..."
 
-#: js/app.js:339
+#: js/app.js:340
 msgid "Add group..."
 msgstr "Добавить группу..."
 
-#: js/app.js:468
+#: js/app.js:469
 msgid "Invalid URL: \"{url}\""
 msgstr "Неверный URL: \"{url}\""
 
-#: js/app.js:479
+#: js/app.js:480
 msgid "There was an error opening a mail composer."
 msgstr "Произошла ошибка при открытии почтовой программы."
 
-#: js/app.js:484
+#: js/app.js:485
 msgid "Invalid email: \"{url}\""
 msgstr "Неправильная электронная почта: \"{url}\""
 
-#: js/app.js:562
+#: js/app.js:563
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Объединение не удалось. Не найден контакт: {id}"
 
-#: js/app.js:575
+#: js/app.js:576
 msgid "Merge failed."
 msgstr "Объединение не удалось."
 
-#: js/app.js:582
+#: js/app.js:583
 msgid "Merge failed. Error saving contact."
 msgstr "Объединение не удалось. Ошибка сохранения контакта."
 
-#: js/app.js:601
+#: js/app.js:602
 msgid "Select photo"
 msgstr "Выберите фото"
 
-#: js/app.js:677 js/app.js:1564
+#: js/app.js:678 js/app.js:1587
 msgid "Network or server error. Please inform administrator."
 msgstr "Ошибка сети или сервера. Пожалуйста, сообщите администратору."
 
-#: js/app.js:888
+#: js/app.js:894
 msgid "Error adding to group."
 msgstr "Ошибка добавления в группу."
 
-#: js/app.js:911
+#: js/app.js:917
 msgid "Error removing from group."
 msgstr "Ошибка удаления из группы."
 
-#: js/app.js:1071
+#: js/app.js:1093
 msgid "Error setting {name} as favorite."
 msgstr "Ошибка установки {name} избранным."
 
-#: js/app.js:1210 js/app.js:1214 templates/contacts.php:182
+#: js/app.js:1232 js/app.js:1236 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Объединить контакты"
 
-#: js/app.js:1236 js/app.js:1289 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1258 js/app.js:1311 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Отменить"
 
-#: js/app.js:1263 templates/contacts.php:163
+#: js/app.js:1285 templates/contacts.php:163
 msgid "Add group"
 msgstr "Добавить группу"
 
-#: js/app.js:1267
+#: js/app.js:1289
 msgid "OK"
 msgstr "ОК"
 
-#: js/app.js:1366
+#: js/app.js:1389
 msgid "Could not find contact: {id}"
 msgstr "Не удалось найти контакт: {id}"
 
-#: js/app.js:1412
+#: js/app.js:1435
 msgid "No files selected for upload."
 msgstr "Нет выбранных файлов для загрузки."
 
-#: js/app.js:1422
+#: js/app.js:1445
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Файл, который вы пытаетесь загрузить превышать максимальный размер загружаемых файлов на этом сервере."
 
-#: js/app.js:1522
+#: js/app.js:1545
 msgid "Edit profile picture"
 msgstr "Редактировать изображение профиля"
 
-#: js/app.js:1526
+#: js/app.js:1549
 msgid "Crop photo"
-msgstr ""
+msgstr "Обрезать фото"
 
 #: js/contacts.js:591
 msgid "Is this correct?"
 msgstr "Это верно?"
 
-#: js/contacts.js:857
+#: js/contacts.js:859
 msgid "Error parsing date: {date}"
 msgstr "Ошибка формата даты: {date}"
 
-#: js/contacts.js:1054
+#: js/contacts.js:1056
 msgid "# groups"
 msgstr "# группы"
 
-#: js/contacts.js:1126
+#: js/contacts.js:1128
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "Ошибка добавления дня рождения {bday}: {error}"
 
-#: js/contacts.js:2156
+#: js/contacts.js:2165
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Некоторые контакты помечены на удаление, но ещё не удалены. Подождите, пока они удаляются."
 
-#: js/contacts.js:2167
+#: js/contacts.js:2176
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Нажмите для отмены удаления {num} контактов"
 
-#: js/contacts.js:2176
+#: js/contacts.js:2185
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "Отмена удаления {num} контактов"
 
 #: js/groups.js:53 templates/contacts.php:325
 msgid "Add"
@@ -286,7 +287,7 @@ msgstr "Импорт в..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Ошибка загрузки шаблона импорта"
 
 #: js/loader.js:48
 msgid "Import contacts"
@@ -355,7 +356,7 @@ msgstr "У Вас нет разрешений просматривать это�
 
 #: lib/addressbook.php:159
 msgid "Contact not found"
-msgstr ""
+msgstr "Контакт не найден"
 
 #: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
@@ -436,7 +437,7 @@ msgstr "Ошибка обновления адресной книги"
 #: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "У вас нет прав удалять адресную книгу \"%s\""
 
 #: lib/controller/addressbookcontroller.php:202
 msgid "Error deleting address book"
@@ -508,7 +509,7 @@ msgstr "Ошибка сохранения свойства в бэкенд"
 
 #: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
-msgstr ""
+msgstr "Ошибка загрузки фото пользователя"
 
 #: lib/controller/contactphotocontroller.php:90
 #: lib/controller/importcontroller.php:39
@@ -571,7 +572,7 @@ msgstr "Ошибка загрузки картинки."
 
 #: lib/controller/contactphotocontroller.php:290
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "Изображение удалено из кеша"
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error creating temporary image"
@@ -641,7 +642,7 @@ msgstr "Ошибка загрузки контактов в хранилище."
 
 #: lib/controller/importcontroller.php:141
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Ошибка перемещения файла в папку импорта"
 
 #: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
@@ -906,7 +907,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>В вашей адресной книге нет контактов, либо ваша адресная книга отключена.</h3><p>Добавьте новый контакт или импортируйте контакты из файла VCF.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -1080,7 +1081,7 @@ msgstr "Удалить адрес"
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "1600 Пенсильвания авеню, NW"
 
 #: templates/contacts.php:411
 msgid "Street address"
@@ -1096,7 +1097,7 @@ msgstr "Почтовый индекс"
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "Киев, Украина"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1104,7 +1105,7 @@ msgstr "Город"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "Округ Колумбия"
 
 #: templates/contacts.php:424
 msgid "State or province"
