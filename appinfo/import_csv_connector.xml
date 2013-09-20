@@ -1,0 +1,46 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!-- XML connector for phpldapadmin csv export -->
+<import_entries>
+	
+	<import_core>
+		<card_separator value="\n"/>
+		<entry_separator value=","/>
+	</import_core>
+	
+	<import_entry position="4" enabled="true">
+		<vcard_entry property="FN" >
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry position="6" enabled="true">
+		<vcard_entry property="N" >
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry position="7" enabled="true">
+		<vcard_entry property="PHOTO" image="true">
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry position="8" enabled="true">
+		<vcard_entry property="EMAIL" type="HOME">
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry position="9" enabled="true">
+		<vcard_entry property="TEL" type="CELL" >
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry position="12" enabled="true">
+		<vcard_entry property="TEL" type="HOME" >
+		</vcard_entry>
+	</import_entry>
+	
+	<!--<import_entry property="" type="" prefix="" position="" enabled="true">
+		<vcard_entry property="" type="" prefix="" position="" image="">
+		</vcard_entry>
+	</import_entry>-->
+	
+</import_entries>
