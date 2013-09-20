@@ -1,6 +1,7 @@
 <?php
 /**
  * Copyright (c) 2012 Georg Ehrke <ownclouddev at georgswebsite dot de>
+ * 2013 Nicolas Mora <mail@babelouest.org>
  * This file is licensed under the Affero General Public License version 3 or
  * later.
  * See the COPYING-README file.
@@ -9,6 +10,7 @@
 namespace OCA\Contacts;
 
 use Sabre\VObject;
+use OCA\Contacts\Connector\ImportConnector;
 
 //check for addressbooks rights or create new one
 ob_start();
