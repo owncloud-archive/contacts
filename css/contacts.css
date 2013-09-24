@@ -77,37 +77,12 @@
 }
 
 
-#app-navigation > ul > li.group.editing {
-	height: 40px;
-}
 #app-navigation a.unshare {
 	float: right;
 }
 
-#app-navigation .utils {
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-#app-navigation .utils > * {
-    float: right;
-	margin: 6px 2px;
-}
 /*#app-navigation img.shared { float: right; opacity: 0.4; margin: 0 .5em; }
 #app-navigation img.shared:hover { opacity: 1; }*/
-#app-navigation li.editing .checked {
-	margin: 10px 0 0 -27px;
-	opacity: 1;
-	display: inline-block;
-	float: left;
-	cursor: pointer;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size:contain;
-	width: 18px; height: 18px;
-}
-#app-navigation li.editing .checked.disabled { opacity: .5 }
 #app-navigation input[type="text"] {
 	display: block;
 	width: 200px;
@@ -115,6 +90,28 @@
 	margin: 5px 0 5px .3em;
 }
 
+#app-navigation .utils {
+    bottom: 0; right: 0;
+    top: 0;
+	position: absolute;
+	padding: 0; margin: 0;
+}
+#app-navigation li > .utils > *:not(.numcontacts) {
+	display: none;
+}
+#app-navigation li > .utils > * {
+	line-height: 44px;
+	width: 44px; height: 44px;
+	background-size: auto;
+}
+#app-navigation li.active[data-type="category"] > .utils > * {
+	display: inline-block;
+	float: left;
+}
+#app-navigation li > .utils > .numcontacts {
+	padding-right: 5px;
+	text-align: right;
+}
 #grouplist { z-index: 100; }
 #grouplist .oc-addnew-init {
 	padding: 0 12px;
@@ -125,15 +122,9 @@
 	font-size: 180%;
 	padding-right: 2px;
 }
-#grouplist li .action:not(.starred):not(.checked):not(.favorite):not([class^="add-"]) { display: none; padding: 0; }
-#grouplist li:not([data-type="shared"]):not(.editing):hover .action.numcontacts,
-#grouplist li:not([data-type="shared"]):not(.editing) .active.action.numcontacts { display: inline-block; }
-.action.numcontacts { width: 6em; }
-#grouplist li.active[data-type="category"]:not(.editing):hover .action.delete { display: inline-block; width: 20px; height: 20px; }
-#grouplist li.active[data-type="category"]:not(.editing):hover .action.edit { display: inline-block; width: 20px; height: 20px; }
-/*#grouplist li:not(.editing) .action.delete { width: 20px; height: 20px; }*/
-#grouplist .group span.numcontacts { width: 30px; text-align: right; margin-right: 10px !important; }
-#grouplist li.special { height: 40px; }
+#grouplist > li {
+	height: 44px;
+}
 
 /* First run */
 

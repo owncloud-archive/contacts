@@ -151,7 +151,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	GroupList.prototype.findByName = function(name) {
 		var $elem = null;
-		self.$groupList.find('li[data-type="category"]').each(function() {
+		this.$groupList.find('li[data-type="category"]').each(function() {
 			if ($(this).data('rawname').toLowerCase() === name.toLowerCase()) {
 				$elem = $(this);
 				return false; //break out of loop
@@ -205,7 +205,7 @@ OC.Contacts = OC.Contacts || {};
 				if(jsondata.status === 'success') {
 					contacts.push(contactid);
 					$groupelem.data('contacts', contacts);
-					$groupelem.find('.numcontacts').text(contacts.length);
+					$groupelem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
 					if(contacts.length > 0 && $groupelem.is(':hidden')) {
 						$groupelem.show();
 					}
@@ -222,7 +222,7 @@ OC.Contacts = OC.Contacts || {};
 					contacts.splice(contacts.indexOf(contactid), 1);
 					//console.log('contacts', contacts, contacts.indexOf(id), contacts.indexOf(String(id)));
 					$groupelem.data('contacts', contacts);
-					$groupelem.find('.numcontacts').text(contacts.length);
+					$groupelem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
 					if(contacts.length === 0 && $groupelem.is(':visible')) {
 						$groupelem.hide();
 					}
@@ -285,7 +285,7 @@ OC.Contacts = OC.Contacts || {};
 					contacts = contacts.concat(ids).sort();
 					$groupelem.data('contacts', contacts);
 					var $numelem = $groupelem.find('.numcontacts');
-					$numelem.text(contacts.length).switchClass('', 'active', 200);
+					$numelem.text(contacts.length > 0 && contacts.length || '').switchClass('', 'active', 200);
 					setTimeout(function() {
 						$numelem.switchClass('active', '', 1000);
 					}, 2000);
@@ -370,7 +370,7 @@ OC.Contacts = OC.Contacts || {};
 		$.each(ids, function(idx, id) {
 			contacts.splice(contacts.indexOf(id), 1);
 		});
-		$groupelem.find('.numcontacts').text(contacts.length);
+		$groupelem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
 		//console.log('contacts', contacts, contacts.indexOf(id), contacts.indexOf(String(id)));
 		$groupelem.data('contacts', contacts);
 		if(doPost) {
@@ -605,7 +605,7 @@ OC.Contacts = OC.Contacts || {};
 				var $elem = (tmpl).octemplate({
 						id: id,
 						type: 'category',
-						num: contacts.length,
+						num: (contacts.length > 0 && contacts.length || ''),
 						name: escapeHTML(name)
 					});
 				self.categories.push({id: id, name: name});
@@ -653,7 +653,7 @@ OC.Contacts = OC.Contacts || {};
 		var tmpl = this.$groupListItemTemplate;
 
 		if(!this.findById('all').length) {
-			tmpl.octemplate({id: 'all', type: 'all', num: 0, name: t('contacts', 'All')}).appendTo($groupList);
+			tmpl.octemplate({id: 'all', type: 'all', num: '', name: t('contacts', 'All')}).appendTo($groupList);
 		}
 		return $.when(this.storage.getGroupsForUser()).then(function(response) {
 			if (response && !response.error) {
@@ -667,7 +667,7 @@ OC.Contacts = OC.Contacts || {};
 				$elem = $elem.length ? $elem : tmpl.octemplate({
 					id: 'fav',
 					type: 'fav',
-					num: contacts.length,
+					num: contacts.length > 0 && contacts.length || '',
 					name: t('contacts', 'Favorites')
 				}).appendTo($groupList);
 				$elem.data('obj', self);
@@ -693,12 +693,12 @@ OC.Contacts = OC.Contacts || {};
 					var contacts = $.map(category.contacts, function(c) {return String(c);});
 					var $elem = self.findById(category.id);
 					if($elem.length) {
-						$elem.find('.numcontacts').text(contacts.length);
+						$elem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
 					} else {
 						$elem = $elem.length ? $elem : (tmpl).octemplate({
 							id: category.id,
 							type: 'category',
-							num: contacts.length,
+							num: contacts.length > 0 && contacts.length || '',
 							name: category.name
 						});
 						self.categories.push({id: category.id, name: category.name});
