@@ -216,10 +216,10 @@ class ImportController extends Controller {
 			return $response;
 		}
 		//import the contacts
-		$writeProgress('40');
 		$imported = 0;
 		$failed = 0;
 		$partially = 0;
+		$processed = 0;
 
 		// TODO: Add a new group: "Imported at {date}"
 		foreach($parts as $part) {
@@ -244,12 +244,13 @@ class ImportController extends Controller {
 			 * - continue
 			 */
 			try {
+				$processed += 1;
 				if($addressBook->addChild($vcard)) {
 					$imported += 1;
-					$writeProgress($imported);
 				} else {
 					$failed += 1;
 				}
+				$writeProgress($processed);
 			} catch (\Exception $e) {
 				$response->debug('Error importing vcard: ' . $e->getMessage() . $nl . $vcard->serialize());
 				$failed += 1;
