@@ -83,13 +83,13 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	GroupList.prototype.selectGroup = function(params) {
 		var self = this;
-		if(!this.loaded) {
+		/*if(!this.loaded) {
 			console.log('Not loaded');
 			setTimeout(function() {
 				self.selectGroup(params);
 			}, 100);
 			return;
-		}
+		}*/
 		var id, $elem;
 		if(typeof params.id !== 'undefined') {
 			id = params.id;

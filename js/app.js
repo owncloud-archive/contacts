@@ -1058,9 +1058,11 @@ OC.Contacts = OC.Contacts || {
 			}
 			console.log('download');
 			var contacts = self.contacts.getSelectedContacts();
-			var ids = $.map(contacts, function(c) {return c.getId();});
-			document.location.href = OC.linkTo('contacts', 'export.php')
-				+ '?selectedids=' + ids.join(',');
+			// Only get backend, addressbookid and contactid
+			contacts = $.map(contacts, function(c) {return c.metaData();});
+			var url = OC.Router.generate('contacts_export_selected', {contacts:contacts});
+			console.log('export url', url);
+			document.location.href = url;
 		});
 
 		this.$contactListHeader.on('click keydown', '.merge', function(event) {

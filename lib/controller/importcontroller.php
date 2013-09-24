@@ -9,7 +9,7 @@
 
 namespace OCA\Contacts\Controller;
 
-use OCA\Contacts\App;
+use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Controller,
 	Sabre\VObject;
@@ -20,9 +20,7 @@ use OCA\Contacts\App;
 class ImportController extends Controller {
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function upload() {
 		$request = $this->request;
@@ -102,9 +100,7 @@ class ImportController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function prepare() {
 		$request = $this->request;
@@ -143,10 +139,7 @@ class ImportController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
-	 * @API
+	 * @NoAdminRequired
 	 */
 	public function start() {
 		$request = $this->request;
@@ -277,9 +270,7 @@ class ImportController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function status() {
 		$request = $this->request;

@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Thomas Tanghus, Bart Visscher
+ * @author Thomas Tanghus
  * Copyright (c) 2013 Thomas Tanghus (thomas@tanghus.net)
  * This file is licensed under the Affero General Public License version 3 or
  * later.
@@ -8,7 +8,8 @@
  */
 
 namespace OCA\Contacts;
-use OCA\AppFramework\Http\Response;
+
+use OCP\AppFramework\Http\Response;
 
 
 /**
@@ -20,11 +21,18 @@ class ImageResponse extends Response {
 	 */
 	protected $image;
 
+	/**
+	 * @param OCP\Image $image
+	 */
 	public function __construct($image = null) {
-		//\OCP\Util::writeLog('contacts', __METHOD__.' request: '.print_r($request, true), \OCP\Util::DEBUG);
-		$this->setImage($image);
+		if(!is_null($image)) {
+			$this->setImage($image);
+		}
 	}
 
+	/**
+	 * @param OCP\Image $image
+	 */
 	public function setImage(\OCP\Image $image) {
 		if(!$image->valid()) {
 			throw new InvalidArgumentException(__METHOD__. ' The image resource is not valid.');

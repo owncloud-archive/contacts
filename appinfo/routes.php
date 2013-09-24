@@ -59,17 +59,6 @@ $this->create('contacts_address_book', 'addressbook/{backend}/{addressbookid}')
 	)
 	->requirements(array('backend', 'addressbookid'));
 
-$this->create('contacts_address_book_export', 'addressbook/{backend}/{addressbookid}/export')
-	->get()
-	->action(
-		function($params) {
-			session_write_close();
-			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'exportAddressBook', $params);
-		}
-	)
-	->requirements(array('backend', 'addressbookid'));
-
 $this->create('contacts_address_book_update', 'addressbook/{backend}/{addressbookid}')
 	->post()
 	->action(
@@ -191,6 +180,38 @@ $this->create('contacts_import_status', 'addressbook/{backend}/{addressbookid}/i
 	)
 	->requirements(array('backend', 'addressbookid'));
 
+$this->create('contacts_address_book_export', 'addressbook/{backend}/{addressbookid}/export')
+	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('ExportController', 'exportAddressBook', $params);
+		}
+	)
+	->requirements(array('backend', 'addressbookid'));
+
+$this->create('contacts_contact_export', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/export')
+	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('ExportController', 'exportContact', $params);
+		}
+	)
+	->requirements(array('backend', 'addressbook', 'contactid'));
+
+$this->create('contacts_export_selected', 'exportSelected')
+	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('ExportController', 'exportSelected', $params);
+		}
+	);
+
 $this->create('contacts_contact_photo', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/photo')
 	->get()
 	->action(
@@ -256,17 +277,6 @@ $this->create('contacts_crop_contact_photo', 'addressbook/{backend}/{addressbook
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactid', 'key'));
-
-$this->create('contacts_contact_export', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/export')
-	->get()
-	->action(
-		function($params) {
-			session_write_close();
-			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactController', 'exportContact', $params);
-		}
-	)
-	->requirements(array('backend', 'addressbook', 'contactid'));
 
 $this->create('contacts_contact_delete_property', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/property/delete')
 	->post()

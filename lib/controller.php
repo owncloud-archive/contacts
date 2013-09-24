@@ -9,7 +9,7 @@
 
 namespace OCA\Contacts;
 
-use OCP\AppFramework\IApi,
+use OCP\AppFramework\IAppContainer,
 	OC\AppFramework\Controller\Controller as  BaseController,
 	OCP\IRequest,
 	OCA\Contacts\App;
@@ -34,9 +34,10 @@ class Controller extends BaseController {
 	*/
 	protected $app;
 
-	public function __construct(IApi $api, IRequest $request, App $app) {
-		$this->api = $api;
-		$this->request = $request;
+	public function __construct(IAppContainer $container, App $app) {
+		$this->api = $container->query('API');
+		$this->request = $container->query('Request');
+		$this->server = $container->getServer();
 		$this->app = $app;
 	}
 
