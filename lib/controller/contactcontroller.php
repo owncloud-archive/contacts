@@ -15,9 +15,6 @@ use OCA\Contacts\App,
 	OCA\Contacts\Utils\JSONSerializer,
 	OCA\Contacts\Utils\Properties,
 	OCA\Contacts\Controller;
-	//OCA\AppFramework\Core\API,
-	//OCA\AppFramework\Http\TextDownloadResponse;
-
 
 /**
  * Controller class For Contacts
@@ -25,17 +22,14 @@ use OCA\Contacts\App,
 class ContactController extends Controller {
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function getContact() {
-		$app = new App($this->api->getUserId());
 
 		$request = $this->request;
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 		$contact = $addressBook->getChild($params['contactid']);
 
 		if(!$contact) {
@@ -51,41 +45,15 @@ class ContactController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
-	 */
-	public function exportContact() {
-		$app = new App($this->api->getUserId());
-
-		$params = $this->request->urlParams;
-
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
-
-		if(!$contact) {
-			$response = new JSONResponse();
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
-		}
-
-		$name = str_replace(' ', '_', $contact->getDisplayName()) . '.vcf';
-		return new TextDownloadResponse($contact->serialize(), $name, 'text/vcard');
-	}
-
-	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function saveContact() {
-		$app = new App($this->api->getUserId());
 
 		$request = $this->request;
 		$params = $this->request->urlParams;
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 		$contact = $addressBook->getChild($params['contactid']);
 
 		if(!$contact) {
@@ -109,12 +77,9 @@ class ContactController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function deleteProperty() {
-		$app = new App($this->api->getUserId());
 
 		$request = $this->request;
 		$params = $request->urlParams;
@@ -126,8 +91,7 @@ class ContactController extends Controller {
 		$response->debug(__METHOD__ . ', name: ' . print_r($name, true));
 		$response->debug(__METHOD__ . ', checksum: ' . print_r($checksum, true));
 
-		$app = new App($this->api->getUserId());
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 		$contact = $addressBook->getChild($params['contactid']);
 
 		if(!$contact) {
@@ -168,13 +132,10 @@ class ContactController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function saveProperty() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$request = $this->request;
 		$response = new JSONResponse();
@@ -189,7 +150,7 @@ class ContactController extends Controller {
 		$response->debug(__METHOD__ . ', checksum: ' . print_r($checksum, true));
 		$response->debug(__METHOD__ . ', parameters: ' . print_r($parameters, true));
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
 		$response->debug(__METHOD__ . ', addressBook: ' . print_r($addressBook, true));
 		$contact = $addressBook->getChild($params['contactid']);
 

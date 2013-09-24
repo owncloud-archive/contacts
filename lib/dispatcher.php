@@ -17,7 +17,8 @@ use OCP\AppFramework\App as MainApp,
 	OCA\Contacts\Controller\ContactController,
 	OCA\Contacts\Controller\ContactPhotoController,
 	OCA\Contacts\Controller\SettingsController,
-	OCA\Contacts\Controller\ImportController;
+	OCA\Contacts\Controller\ImportController,
+	OCA\Contacts\Controller\ExportController;
 
 /**
  * This class manages our app actions
@@ -38,30 +39,33 @@ class Dispatcher extends MainApp {
 		$this->container['urlParams'] = $params;
 		$this->middleware = $this->container->query('MiddlewareDispatcher');
 		$this->middleware->registerMiddleware(new HttpMiddleware($this->container->query('API')));
-		$this->api = $this->container->query('API');
-		$this->request = $this->container->query('Request');
-		$this->app = new App($this->api->getUserId());
+		//$this->api = $this->container->query('API');
+		//$this->request = $this->container->query('Request');
+		$this->app = new App($this->container->query('API')->getUserId());
 		$this->registerServices();
 	}
 
 	public function registerServices() {
 		$this->container->registerService('AddressBookController', function(IAppContainer $container) {
-			return new AddressBookController($this->api, $this->request, $this->app);
+			return new AddressBookController($container, $this->app);
 		});
 		$this->container->registerService('GroupController', function(IAppContainer $container) {
-			return new GroupController($this->api, $this->request, $this->app);
+			return new GroupController($container, $this->app);
 		});
 		$this->container->registerService('ContactController', function(IAppContainer $container) {
-			return new ContactController($this->api, $this->request, $this->app);
+			return new ContactController($container, $this->app);
 		});
 		$this->container->registerService('ContactPhotoController', function(IAppContainer $container) {
-			return new ContactPhotoController($this->api, $this->request, $this->app);
+			return new ContactPhotoController($container, $this->app);
 		});
 		$this->container->registerService('SettingsController', function(IAppContainer $container) {
-			return new SettingsController($this->api, $this->request, $this->app);
+			return new SettingsController($container, $this->app);
 		});
 		$this->container->registerService('ImportController', function(IAppContainer $container) {
-			return new ImportController($this->api, $this->request, $this->app);
+			return new ImportController($container, $this->app);
+		});
+		$this->container->registerService('ExportController', function(IAppContainer $container) {
+			return new ExportController($container, $this->app);
 		});
 	}
 

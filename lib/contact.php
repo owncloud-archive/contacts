@@ -324,7 +324,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			} elseif(!isset($this->props['carddata'])) {
 				$result = $this->props['backend']->getContact(
 					$this->getParent()->getId(),
-					$this->id
+					$this->getId()
 				);
 				if($result) {
 					if(isset($result['vcard'])
@@ -714,7 +714,26 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return \OC_Cache::get($key);
 	}
 
+    public function __get($key) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
+
+		return parent::__get($key);
+	}
+
+    public function __isset($key) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
+
+		return parent::__isset($key);
+	}
+
 	public function __set($key, $value) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
 		parent::__set($key, $value);
 		if($key === 'FN') {
 			$this->props['displayname'] = $value;
@@ -723,6 +742,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	public function __unset($key) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
 		parent::__unset($key);
 		if($key === 'PHOTO') {
 			$this->cacheThumbnail(null, true);

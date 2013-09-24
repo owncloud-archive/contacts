@@ -21,9 +21,7 @@ use OCA\Contacts\App,
 class SettingsController extends Controller {
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function set() {
 		$request = $this->request;

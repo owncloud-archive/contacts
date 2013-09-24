@@ -19,23 +19,24 @@ use OCA\Contacts\App,
 class GroupController extends Controller {
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function getGroups() {
-		$app = new App($this->api->getUserId());
-		$catmgr = new \OC_VCategories('contact', $this->api->getUserId());
-		$categories = $catmgr->categories(\OC_VCategories::FORMAT_MAP);
-		foreach($categories as &$category) {
-			$ids = $catmgr->idsForCategory($category['name']);
-			$category['contacts'] = $ids;
+		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
+		$tags = $tagMgr->getTags();
+		foreach($tags as &$tag) {
+			try {
+			$ids = $tagMgr->getIdsForTag($tag['name']);
+			$tag['contacts'] = $ids;
+			} catch(\Exception $e) {
+				$this->api->log(__METHOD__ . ' ' . $e->getMessage());
+			}
 		}
 
-		$favorites = $catmgr->getFavorites();
+		$favorites = $tagMgr->getFavorites();
 
 		$groups = array(
-			'categories' => $categories,
+			'categories' => $tags,
 			'favorites' => $favorites,
 			'shared' => \OCP\Share::getItemsSharedWith('addressbook', \OCA\Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS),
 			'lastgroup' => \OCP\Config::getUserValue($this->api->getUserId(), 'contacts', 'lastgroup', 'all'),
@@ -46,9 +47,7 @@ class GroupController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function addGroup() {
 		$name = $this->request->post['name'];
@@ -58,8 +57,8 @@ class GroupController extends Controller {
 			$response->bailOut(App::$l10n->t('No group name given.'));
 		}
 
-		$catman = new \OC_VCategories('contact', $this->api->getUserId());
-		$id = $catman->add($name);
+		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
+		$id = $tagMgr->add($name);
 
 		if($id === false) {
 			$response->bailOut(App::$l10n->t('Error adding group.'));
@@ -70,9 +69,7 @@ class GroupController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function deleteGroup() {
 		$name = $this->request->post['name'];
@@ -83,16 +80,15 @@ class GroupController extends Controller {
 			return $response;
 		}
 
-		$catman = new \OC_VCategories('contact', $this->api->getUserId());
+		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
 		try {
-			$ids = $catman->idsForCategory($name);
+			$ids = $tagMgr->getIdsForTag($name);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 			return $response;
 		}
 		if($ids !== false) {
-			$app = new App($this->api->getUserId());
-			$backend = $app->getBackend('local');
+			$backend = $this->app->getBackend('local');
 			foreach($ids as $id) {
 				$contact = $backend->getContact(null, $id, array('noCollection' => true));
 				$obj = \Sabre\VObject\Reader::read(
@@ -112,7 +108,7 @@ class GroupController extends Controller {
 			}
 		}
 		try {
-			$catman->delete($name);
+			$tagMgr->delete($name);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 		}
@@ -120,9 +116,7 @@ class GroupController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function renameGroup() {
 		$from = $this->request->post['from'];
@@ -138,15 +132,14 @@ class GroupController extends Controller {
 			return $response;
 		}
 
-		$catman = new \OC_VCategories('contact', $this->api->getUserId());
-		if(!$catman->rename($from, $to)) {
+		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
+		if(!$tagMgr->rename($from, $to)) {
 			$response->bailOut(App::$l10n->t('Error renaming group.'));
 			return $response;
 		}
-		$ids = $catman->idsForCategory($to);
+		$ids = $tagMgr->getIdsForTag($to);
 		if($ids !== false) {
-			$app = new App($this->api->getUserId());
-			$backend = $app->getBackend('local');
+			$backend = $this->app->getBackend('local');
 			foreach($ids as $id) {
 				$contact = $backend->getContact(null, $id, array('noCollection' => true));
 				$obj = \Sabre\VObject\Reader::read(
@@ -168,9 +161,7 @@ class GroupController extends Controller {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function addToGroup() {
 		$response = new JSONResponse();
@@ -195,9 +186,8 @@ class GroupController extends Controller {
 			return $response;
 		}
 
-		$app = new App($this->api->getUserId());
-		$backend = $app->getBackend('local');
-		$catman = new \OC_VCategories('contact', $this->api->getUserId());
+		$backend = $this->app->getBackend('local');
+		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
 		foreach($ids as $contactid) {
 			$contact = $backend->getContact(null, $contactid, array('noCollection' => true));
 			$obj = \Sabre\VObject\Reader::read(
@@ -212,16 +202,14 @@ class GroupController extends Controller {
 				$backend->updateContact(null, $contactid, $obj, array('noCollection' => true));
 			}
 			$response->debug('contactid: ' . $contactid . ', categoryid: ' . $categoryid);
-			$catman->addToCategory($contactid, $categoryid);
+			$tagMgr->tagAs($contactid, $categoryid);
 		}
 
 		return $response;
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function removeFromGroup() {
 		$response = new JSONResponse();
@@ -241,9 +229,8 @@ class GroupController extends Controller {
 			return $response;
 		}
 
-		$app = new App($this->api->getUserId());
-		$backend = $app->getBackend('local');
-		$catman = new \OC_VCategories('contact', $this->api->getUserId());
+		$backend = $this->app->getBackend('local');
+		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
 		foreach($ids as $contactid) {
 			$contact = $backend->getContact(null, $contactid, array('noCollection' => true));
 			if(!$contact) {
@@ -264,7 +251,7 @@ class GroupController extends Controller {
 				$response->debug('Error parsing contact: ' . $contactid);
 			}
 			$response->debug('contactid: ' . $contactid . ', categoryid: ' . $categoryid);
-			$catman->removeFromCategory($contactid, $categoryid);
+			$tagMgr->unTag($contactid, $categoryid);
 		}
 
 		return $response;

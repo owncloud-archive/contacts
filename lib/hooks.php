@@ -71,8 +71,8 @@ class Hooks{
 
 		if(count($parameters['contactids'])) {
 			// Remove contacts from groups
-			$catctrl = new \OC_VCategories('contact');
-			$catctrl->purgeObjects($parameters['contactids']);
+			$tagMgr = \OC::$server->getTagManager()->loadTagsFor('contact');
+			$tagMgr->purgeObjects($parameters['contactids']);
 
 			// Purge property indexes
 			Utils\Properties::purgeIndexes($parameters['contactids']);
@@ -90,10 +90,10 @@ class Hooks{
 	 * @param array $parameters Currently only the id of the contact.
 	 */
 	public static function contactDeletion($parameters) {
-		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
+		\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$parameters['id'], \OCP\Util::DEBUG);
 		$ids = is_array($parameters['id']) ? $parameters['id'] : array($parameters['id']);
-		$catctrl = new \OC_VCategories('contact');
-		$catctrl->purgeObjects($ids);
+		$tagMgr = \OC::$server->getTagManager()->loadTagsFor('contact');
+		$tagMgr->purgeObjects($ids);
 		Utils\Properties::purgeIndexes($ids);
 
 		// Contact sharing not implemented, but keep for future.
@@ -101,14 +101,14 @@ class Hooks{
 	}
 
 	public static function contactAdded($parameters) {
-		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
+		\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$parameters['id'], \OCP\Util::DEBUG);
 		$contact = $parameters['contact'];
 		if(isset($contact->CATEGORIES)) {
 			\OCP\Util::writeLog('contacts', __METHOD__.' groups: '.print_r($contact->CATEGORIES->getParts(), true), \OCP\Util::DEBUG);
-			$catctrl = new \OC_VCategories('contact');
+			$tagMgr = \OC::$server->getTagManager()->loadTagsFor('contact');
 			foreach($contact->CATEGORIES->getParts() as $group) {
 				\OCP\Util::writeLog('contacts', __METHOD__.' group: '.$group, \OCP\Util::DEBUG);
-				$catctrl->addToCategory($parameters['id'], $group);
+				$tagMgr->tagAs($parameters['id'], $group);
 			}
 		}
 		Utils\Properties::updateIndex($parameters['id'], $contact);
@@ -132,31 +132,38 @@ class Hooks{
 		$offset = 0;
 		$limit = 10;
 
-		$categories = new \OC_VCategories('contact');
+		$tagMgr = \OC::$server->getTagManager()->loadTagsFor('contact');
+		$tags = array();
 
-		$app = new App();
-		$backend = $app->getBackend('local');
+		foreach($tagMgr->getTags() as $tag) {
+			$tags[] = $tag['name'];
+		}
+
+		// reset tags
+		$tagMgr->delete($tags);
+
+		$backend = $this->app->getBackend('local');
 		$addressBookInfos = $backend->getAddressBooksForUser();
 
 		foreach($addressBookInfos as $addressBookInfo) {
 			$addressBook = new AddressBook($backend, $addressBookInfo);
 			while($contacts = $addressBook->getChildren($limit, $offset, false)) {
 				foreach($contacts as $contact) {
-					$cards[] = array($contact['id'], $contact['carddata']);
+					if(isset($contact->CATEGORIES)) {
+						$tagMgr->addMultiple($contact->CATEGORIES->getParts(), true, $contact->getId());
+					}
 				}
 				\OCP\Util::writeLog('contacts',
-					__CLASS__.'::'.__METHOD__
-						.', scanning: ' . $limit . ' starting from ' . $offset,
+					__METHOD__ .', scanning: ' . $limit . ' starting from ' . $offset,
 					\OCP\Util::DEBUG);
 				// only reset on first batch.
-				$categories->rescan($cards, true, ($offset === 0 ? true : false));
 				$offset += $limit;
 			}
 		}
 	}
 
 	/**
-	 * Scan vCards for categories.
+	 * Scan vCards for properties.
 	 */
 	public static function indexProperties() {
 		$offset = 0;
