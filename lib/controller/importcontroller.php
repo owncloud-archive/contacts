@@ -244,17 +244,17 @@ class ImportController extends Controller {
 			 * - continue
 			 */
 			try {
-				$processed += 1;
 				if($addressBook->addChild($vcard)) {
 					$imported += 1;
 				} else {
 					$failed += 1;
 				}
-				$writeProgress($processed);
 			} catch (\Exception $e) {
 				$response->debug('Error importing vcard: ' . $e->getMessage() . $nl . $vcard->serialize());
 				$failed += 1;
 			}
+			$processed += 1;
+			$writeProgress($processed);
 		}
 		//done the import
 		sleep(3); // Give client side a chance to read the progress.
