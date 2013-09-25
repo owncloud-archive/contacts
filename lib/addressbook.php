@@ -383,4 +383,19 @@ class Addressbook extends AbstractPIMCollection {
 		return $this->backend->lastModifiedAddressBook($this->getId());
 	}
 
+	/**
+	 * Get an array of birthday events for contacts in this address book.
+	 *
+	 * @return \Sabre\VObject\Component\VEvent[]
+	 */
+	public function getBirthdayEvents() {
+
+		$events = array();
+		foreach($this->getChildren() as $contact) {
+			if($event = $contact->getBirthdayEvent()) {
+				$events[] = $event;
+			}
+		}
+		return $events;
+	}
 }

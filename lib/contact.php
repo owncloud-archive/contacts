@@ -768,4 +768,43 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return $this->props['saved'];
 	}
 
+	/**
+	 * Generate an event to show in the calendar
+	 *
+	 * @return \Sabre\VObject\Component\VCalendar|null
+	 */
+	public function getBirthdayEvent() {
+		if(!isset($this->BDAY)) {
+			return;
+		}
+		$birthday = $this->BDAY;
+		if ((string)$birthday) {
+			$title = str_replace('{name}',
+				strtr((string)$this->FN, array('\,' => ',', '\;' => ';')),
+				App::$l10n->t('{name}\'s Birthday')
+			);
+			try {
+				$date = new \DateTime($birthday);
+			} catch(\Exception $e) {
+				continue;
+			}
+			$vevent = \Sabre\VObject\Component::create('VEVENT');
+			$vevent->add('DTSTART');
+			$vevent->DTSTART->setDateTime(
+				$date,
+				\Sabre\VObject\Property\DateTime::DATE
+			);
+			$vevent->add('DURATION', 'P1D');
+			$vevent->{'UID'} = $this->UID;
+			$vevent->{'RRULE'} = 'FREQ=YEARLY';
+			$vevent->{'SUMMARY'} = $title;
+			$vcal = \Sabre\VObject\Component::create('VCALENDAR');
+			$vcal->VERSION = '2.0';
+			$appinfo = \OCP\App::getAppInfo('contacts');
+			$appversion = \OCP\App::getAppVersion('contacts');
+			$vcal->PRODID = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
+			$vcal->add($vevent);
+			return $vcal;
+		}
+	}
 }

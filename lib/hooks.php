@@ -190,12 +190,16 @@ class Hooks{
 	}
 
 	public static function getCalenderSources($parameters) {
-		/*
+		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
+
+		$app = new App();
+		$addressBooks = $app->getAddressBooksForUser();
 		$base_url = \OCP\Util::linkTo('calendar', 'ajax/events.php').'?calendar_id=';
-		foreach(Addressbook::all(\OCP\USER::getUser()) as $addressbook) {
+		foreach($addressBooks as $addressBook) {
+			$info = $addressBook->getMetaData();
 			$parameters['sources'][]
 				= array(
-					'url' => $base_url.'birthday_'. $addressbook['id'],
+					'url' => $base_url.'birthday_'. $info['backend'].'_'.$info['id'],
 					'backgroundColor' => '#cccccc',
 					'borderColor' => '#888',
 					'textColor' => 'black',
@@ -203,51 +207,27 @@ class Hooks{
 					'editable' => false,
 				);
 		}
-		*/
 	}
 
 	public static function getBirthdayEvents($parameters) {
+		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
 		$name = $parameters['calendar_id'];
 		if (strpos($name, 'birthday_') != 0) {
 			return;
 		}
 		$info = explode('_', $name);
-		$aid = $info[1];
-		Addressbook::find($aid);
-		foreach(VCard::all($aid) as $contact) {
-			try {
-				$vcard = VObject\Reader::read($contact['carddata']);
-			} catch (Exception $e) {
-				continue;
-			}
-			$birthday = $vcard->BDAY;
-			if ((string)$birthday) {
-				$title = str_replace('{name}',
-					strtr((string)$vcard->FN, array('\,' => ',', '\;' => ';')),
-					App::$l10n->t('{name}\'s Birthday'));
-				
-				$date = new \DateTime($birthday);
-				$vevent = VObject\Component::create('VEVENT');
-				//$vevent->setDateTime('LAST-MODIFIED', new DateTime($vcard->REV));
-				$vevent->add('DTSTART');
-				$vevent->DTSTART->setDateTime($date,
-					VObject\Property\DateTime::DATE);
-				$vevent->add('DURATION', 'P1D');
-				$vevent->{'UID'} = substr(md5(rand().time()), 0, 10);
-				// DESCRIPTION?
-				$vevent->{'RRULE'} = 'FREQ=YEARLY';
-				$vevent->{'SUMMARY'} = $title;
-				$parameters['events'][] = array(
-					'id' => 0,//$card['id'],
-					'vevent' => $vevent,
-					'repeating' => true,
-					'summary' => $title,
-					'calendardata' => "BEGIN:VCALENDAR\nVERSION:2.0\n"
-						. "PRODID:ownCloud Contacts "
-						. \OCP\App::getAppVersion('contacts') . "\n"
-						. $vevent->serialize() .  "END:VCALENDAR"
-					);
-			}
+		$backend = $info[1];
+		$aid = $info[2];
+		$app = new App();
+		$addressBook = $app->getAddressBook($backend, $aid);
+		foreach($addressBook->getBirthdayEvents() as $vevent) {
+			$parameters['events'][] = array(
+				'id' => 0,
+				'vevent' => $vevent,
+				'repeating' => true,
+				'summary' => $vevent->SUMMARY,
+				'calendardata' => $vevent->serialize()
+			);
 		}
 	}
 }
