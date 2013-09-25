@@ -22,7 +22,7 @@ class GroupController extends Controller {
 	 * @NoAdminRequired
 	 */
 	public function getGroups() {
-		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
+		$tagMgr = $this->server->getTagManager()->load('contact');
 		$tags = $tagMgr->getTags();
 		foreach($tags as &$tag) {
 			try {
@@ -57,7 +57,7 @@ class GroupController extends Controller {
 			$response->bailOut(App::$l10n->t('No group name given.'));
 		}
 
-		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
+		$tagMgr = $this->server->getTagManager()->load('contact');
 		$id = $tagMgr->add($name);
 
 		if($id === false) {
@@ -80,7 +80,7 @@ class GroupController extends Controller {
 			return $response;
 		}
 
-		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
+		$tagMgr = $this->server->getTagManager()->load('contact');
 		try {
 			$ids = $tagMgr->getIdsForTag($name);
 		} catch(\Exception $e) {
@@ -132,7 +132,7 @@ class GroupController extends Controller {
 			return $response;
 		}
 
-		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
+		$tagMgr = $this->server->getTagManager()->load('contact');
 		if(!$tagMgr->rename($from, $to)) {
 			$response->bailOut(App::$l10n->t('Error renaming group.'));
 			return $response;
@@ -187,7 +187,7 @@ class GroupController extends Controller {
 		}
 
 		$backend = $this->app->getBackend('local');
-		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
+		$tagMgr = $this->server->getTagManager()->load('contact');
 		foreach($ids as $contactid) {
 			$contact = $backend->getContact(null, $contactid, array('noCollection' => true));
 			$obj = \Sabre\VObject\Reader::read(
@@ -230,7 +230,7 @@ class GroupController extends Controller {
 		}
 
 		$backend = $this->app->getBackend('local');
-		$tagMgr = $this->server->getTagManager()->loadTagsFor('contact');
+		$tagMgr = $this->server->getTagManager()->load('contact');
 		foreach($ids as $contactid) {
 			$contact = $backend->getContact(null, $contactid, array('noCollection' => true));
 			if(!$contact) {
