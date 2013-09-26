@@ -71,7 +71,7 @@ class Hooks{
 
 		if(count($parameters['contactids'])) {
 			// Remove contacts from groups
-			$tagMgr = \OC::$server->getTagManager()->loadTagsFor('contact');
+			$tagMgr = \OC::$server->getTagManager()->load('contact');
 			$tagMgr->purgeObjects($parameters['contactids']);
 
 			// Purge property indexes
@@ -92,7 +92,7 @@ class Hooks{
 	public static function contactDeletion($parameters) {
 		\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$parameters['id'], \OCP\Util::DEBUG);
 		$ids = is_array($parameters['id']) ? $parameters['id'] : array($parameters['id']);
-		$tagMgr = \OC::$server->getTagManager()->loadTagsFor('contact');
+		$tagMgr = \OC::$server->getTagManager()->load('contact');
 		$tagMgr->purgeObjects($ids);
 		Utils\Properties::purgeIndexes($ids);
 
@@ -105,7 +105,7 @@ class Hooks{
 		$contact = $parameters['contact'];
 		if(isset($contact->CATEGORIES)) {
 			\OCP\Util::writeLog('contacts', __METHOD__.' groups: '.print_r($contact->CATEGORIES->getParts(), true), \OCP\Util::DEBUG);
-			$tagMgr = \OC::$server->getTagManager()->loadTagsFor('contact');
+			$tagMgr = \OC::$server->getTagManager()->load('contact');
 			foreach($contact->CATEGORIES->getParts() as $group) {
 				\OCP\Util::writeLog('contacts', __METHOD__.' group: '.$group, \OCP\Util::DEBUG);
 				$tagMgr->tagAs($parameters['id'], $group);
@@ -132,7 +132,7 @@ class Hooks{
 		$offset = 0;
 		$limit = 10;
 
-		$tagMgr = \OC::$server->getTagManager()->loadTagsFor('contact');
+		$tagMgr = \OC::$server->getTagManager()->load('contact');
 		$tags = array();
 
 		foreach($tagMgr->getTags() as $tag) {
