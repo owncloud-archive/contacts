@@ -97,6 +97,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 						case 'fullname':
 							$this->props['displayname'] = $value;
 							$this->FN = $value;
+							// Set it to saved again as we're not actually changing anything
+							$this->setSaved();
 							break;
 					}
 				}
@@ -338,7 +340,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 						// Save internal values
 						$data = $result['carddata'];
 						$this->props['carddata'] = $result['carddata'];
-						$this->props['lastmodified'] = $result['lastmodified'];
+						$this->props['lastmodified'] = isset($result['lastmodified'])
+							? $result['lastmodified']
+							: null;
 						$this->props['displayname'] = $result['displayname'];
 						$this->props['permissions'] = $result['permissions'];
 					} else {
@@ -760,7 +764,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return $this->props['retrieved'];
 	}
 
-	public function setSaved($state) {
+	public function setSaved($state = true) {
 		$this->props['saved'] = $state;
 	}
 

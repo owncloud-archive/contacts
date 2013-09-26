@@ -96,8 +96,9 @@ class VCard extends VObject\Component\VCard {
 	}
 
 	/**
-	* @brief Decode properties for upgrading from v. 2.1
-	* @param $property Reference to a \Sabre\VObject\Property.
+	* Decode properties for upgrading from v. 2.1
+	*
+	* @param Sabre_VObject_Property $property Reference to a \Sabre\VObject\Property.
 	* The only encoding allowed in version 3.0 is 'b' for binary. All encoded strings
 	* must therefore be decoded and the parameters removed.
 	*/
@@ -129,6 +130,29 @@ class VCard extends VObject\Component\VCard {
 	}
 
 	/**
+	* Work around issue in older VObject sersions
+	* https://github.com/fruux/sabre-vobject/issues/24
+	*
+	* @param Sabre_VObject_Property $property Reference to a Sabre_VObject_Property.
+	*/
+	public function fixPropertyParameters(&$property) {
+		// Work around issue in older VObject sersions
+		// https://github.com/fruux/sabre-vobject/issues/24
+		foreach($property->parameters as $key=>$parameter) {
+			$delim = '';
+			if(strpos($parameter->value, ',') === false) {
+				continue;
+			}
+			$values = explode(',', $parameter->value);
+			$values = array_map('trim', $values);
+			$parameter->value = array_shift($values);
+			foreach($values as $value) {
+				$property->add($parameter->name, $value);
+			}
+		}
+	}
+
+	/**
 	* Validates the node for correctness.
 	*
 	* The following options are supported:
@@ -154,6 +178,8 @@ class VCard extends VObject\Component\VCard {
 			$this->VERSION = self::DEFAULT_VERSION;
 			foreach($this->children as &$property) {
 				$this->decodeProperty($property);
+				$this->fixPropertyParameters($property);
+				/* What exactly was I thinking here?
 				switch((string)$property->name) {
 					case 'LOGO':
 					case 'SOUND':
@@ -161,7 +187,7 @@ class VCard extends VObject\Component\VCard {
 						if(isset($property['TYPE']) && strpos((string)$property['TYPE'], '/') === false) {
 							$property['TYPE'] = 'image/' . strtolower($property['TYPE']);
 						}
-				}
+				}*/
 			}
 		}
 
@@ -249,6 +275,11 @@ class VCard extends VObject\Component\VCard {
 			if ($options & self::REPAIR) {
 				$this->UID = Utils\Properties::generateUID();
 			}
+		}
+
+		if (($options & self::REPAIR) || ($options & self::UPGRADE)) {
+			$now = new \DateTime;
+			$this->REV = $now->format(\DateTime::W3C);
 		}
 
 		return array_merge(
