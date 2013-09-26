@@ -27,6 +27,19 @@ class Test_VObjects extends PHPUnit_Framework_TestCase {
 		$this->assertEquals('Fermée;Adèle;;;', (string)$obj->N);
 	}
 
+	public function testEscapedParameters() {
+		$carddata = file_get_contents(__DIR__ . '/../data/test6.vcf');
+		$obj = \Sabre\VObject\Reader::read(
+			$carddata,
+			\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
+		);
+		$obj->validate($obj::REPAIR|$obj::UPGRADE);
+
+		$this->assertEquals('3.0', (string)$obj->VERSION);
+		$this->assertEquals('Parameters;Escaped;;;', (string)$obj->N);
+		$this->assertEquals('TEL;TYPE=PREF;TYPE=WORK;TYPE=VOICE:123456789' . "\r\n", $obj->TEL->serialize());
+	}
+
 	public function testGroupProperty() {
 		$arr = array(
 			'Home',
