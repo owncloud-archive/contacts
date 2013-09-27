@@ -25,15 +25,17 @@
 namespace OCA\Contacts\Middleware;
 
 use OCA\Contacts\Controller;
-use OC\AppFramework\Middleware\Middleware;
+//use OC\AppFramework\Middleware\Middleware;
 use OC\AppFramework\Core\API;
 use OCA\Contacts\JSONResponse;
+use OCP\AppFramework\IMiddleWare;
+use OCP\AppFramework\Http\Response;
 
 /**
  * Used to intercept exceptions thrown in controllers and backends
  * and transform them into valid HTTP responses.
  */
-class Http extends Middleware {
+class Http implements IMiddleware {
 
 	private $api;
 
@@ -65,5 +67,9 @@ class Http extends Middleware {
 		$this->api->log(get_class($controller) . '->' . $methodName . ': ' . $exception->getMessage());
 		return $response;
 	}
+
+	function beforeOutput($controller, $methodName, $output) {}
+	function beforeController($controller, $methodName) {}
+	function afterController($controller, $methodName, Response $response) {}
 
 }
