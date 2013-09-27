@@ -14,7 +14,8 @@ use OCA\Contacts\App,
 	OCA\Contacts\ImageResponse,
 	OCA\Contacts\Utils\JSONSerializer,
 	OCA\Contacts\Utils\Properties,
-	OCA\Contacts\Controller;
+	OCA\Contacts\Controller,
+	OCP\AppFramework\Http\Http;
 
 /**
  * Controller class For Contacts
@@ -136,35 +137,33 @@ class ContactController extends Controller {
 	 */
 	public function saveProperty() {
 		$params = $this->request->urlParams;
+		$request = json_decode(file_get_contents('php://input'), true);
 
-		$request = $this->request;
+		//$request = $requestData;
 		$response = new JSONResponse();
+		$response->debug(__METHOD__ .', upload_max_filesize: ' . ini_get('upload_max_filesize'));
 
-		$name = $request->post['name'];
-		$value = $request->post['value'];
-		$checksum = isset($request->post['checksum']) ? $request->post['checksum'] : null;
-		$parameters = isset($request->post['parameters']) ? $request->post['parameters'] : null;
-
+		$name = $request['name'];
+		$value = $request['value'];
+		$checksum = isset($request['checksum']) ? $request['checksum'] : null;
+		$parameters = isset($request['parameters']) ? $request['parameters'] : null;
 		$response->debug(__METHOD__ . ', name: ' . print_r($name, true));
 		$response->debug(__METHOD__ . ', value: ' . print_r($value, true));
 		$response->debug(__METHOD__ . ', checksum: ' . print_r($checksum, true));
 		$response->debug(__METHOD__ . ', parameters: ' . print_r($parameters, true));
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
-		$response->debug(__METHOD__ . ', addressBook: ' . print_r($addressBook, true));
+		//$response->debug(__METHOD__ . ', addressBook: ' . print_r($addressBook, true));
 		$contact = $addressBook->getChild($params['contactid']);
 
 		if(!$contact) {
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
 		}
 		if(!$name) {
-			$response->bailOut(App::$l10n->t('Property name is not set.'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Property name is not set.'));
 		}
 		if(!$checksum && in_array($name, Properties::$multi_properties)) {
-			$response->bailOut(App::$l10n->t('Property checksum is not set.'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Property checksum is not set.'));
 		}
 		if(is_array($value)) {
 			// NOTE: Important, otherwise the compound value will be
@@ -173,30 +172,26 @@ class ContactController extends Controller {
 		}
 		$result = array('contactid' => $params['contactid']);
 		if(!$checksum && in_array($name, Properties::$multi_properties)) {
-			$response->bailOut(App::$l10n->t('Property checksum is not set.'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Property checksum is not set.'));
 		} elseif($checksum && in_array($name, Properties::$multi_properties)) {
 			try {
 				$checksum = $contact->setPropertyByChecksum($checksum, $name, $value, $parameters);
 				$result['checksum'] = $checksum;
 			} catch(Exception $e)	{
-				$response->bailOut(App::$l10n->t('Information about vCard is incorrect. Please reload the page.'));
-				return $response;
+				return $response->bailOut(App::$l10n->t('Information about vCard is incorrect. Please reload the page.'));
 			}
 		} elseif(!in_array($name, Properties::$multi_properties)) {
 			if(!$contact->setPropertyByName($name, $value, $parameters)) {
-				$response->bailOut(App::$l10n->t('Error setting property'));
+				return $response->bailOut(App::$l10n->t('Error setting property'));
 			}
 		}
 		if(!$contact->save()) {
-			$response->bailOut(App::$l10n->t('Error saving property to backend'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Error saving property to backend'));
 		}
 		$result['lastmodified'] = $contact->lastModified();
 
-		$response->setParams($result);
+		return $response->setData($result);
 
-		return $response;
 	}
 
 }

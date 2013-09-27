@@ -16,9 +16,18 @@ OC.Contacts = OC.Contacts || {};
 				this.message = jqXHR.statusText;
 			}
 		} else {
-			if(response.status === 'error') {
+			// We need to allow for both the 'old' success/error status property
+			// with the body in the data property, and the newer where we rely
+			// on the status code, and the entire body is used.
+			if(response.status === 'error'|| this.statusCode >= 400) {
 				this.error = true;
-				this.message = response.data.message;
+				if(this.statusCode < 500) {
+					this.message = (response.data && response.data.message)
+						? response.data.message
+						: response;
+				} else {
+					this.message = t('contacts', 'Server error! Please inform system administator');
+				}
 			} else {
 				this.error = false;
 				this.data = response.data || response;
@@ -42,6 +51,13 @@ OC.Contacts = OC.Contacts || {};
 		this.user = user ? user : OC.currentUser;
 	};
 
+	/**
+	 * When the response isn't returned from requestRoute(), you can
+	 * wrap it in a JSONResponse so that it's parsable by other objects.
+	 *
+	 * @param object response The body of the response
+	 * @param XMLHTTPRequest http://api.jquery.com/jQuery.ajax/#jqXHR
+	 */
 	Storage.prototype.formatResponse = function(response, jqXHR) {
 		return new JSONResponse(response, jqXHR);
 	};
@@ -396,9 +412,9 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.saveProperty = function(backend, addressbookid, contactid, params) {
 		return this.requestRoute(
 			'contacts_contact_save_property',
-			'POST',
+			'PATCH',
 			{backend: backend, addressbookid: addressbookid, contactid: contactid},
-			params
+			JSON.stringify(params)
 		);
 	};
 
@@ -532,7 +548,7 @@ OC.Contacts = OC.Contacts || {};
 			'contacts_setpreference',
 			'POST',
 			{},
-			{key: key, value:value}
+			JSON.stringify({key: key, value:value})
 		);
 	};
 

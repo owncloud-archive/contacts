@@ -116,7 +116,8 @@ class ImportController extends Controller {
 
 		$proxyStatus = \OC_FileProxy::$enabled;
 		\OC_FileProxy::$enabled = false;
-		$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
+		//$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
+		$content = file_get_contents('oc://' . $path . '/' . $filename);
 		if($view->file_put_contents('/imports/' . $filename, $content)) {
 			\OC_FileProxy::$enabled = $proxyStatus;
 			$count = substr_count($content, 'BEGIN:');

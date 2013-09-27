@@ -128,7 +128,7 @@ class App {
 			if($addressBook->getBackend()->name === $backendName
 				&& $addressBook->getId() === $addressbookid
 			) {
-				\OCP\Util::writeLog('contacts', __METHOD__ . ' returning: '. print_r($addressBook, true), \OCP\Util::DEBUG);
+				//\OCP\Util::writeLog('contacts', __METHOD__ . ' returning: '. print_r($addressBook, true), \OCP\Util::DEBUG);
 				return $addressBook;
 			}
 		}
