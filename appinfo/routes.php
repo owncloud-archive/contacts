@@ -290,8 +290,8 @@ $this->create('contacts_contact_delete_property', 'addressbook/{backend}/{addres
 	->requirements(array('backend', 'addressbook', 'contactid'));
 
 // Save a single property.
-$this->create('contacts_contact_save_property', 'addressbook/{backend}/{addressbookid}/contact/{contactid}/property/save')
-	->post()
+$this->create('contacts_contact_save_property', 'addressbook/{backend}/{addressbookid}/contact/{contactid}')
+	->method('PATCH')
 	->action(
 		function($params) {
 			session_write_close();

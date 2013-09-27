@@ -27,11 +27,22 @@ class JSONResponse extends OriginalResponse {
 	 * @param array|object $params an array or object which will be transformed
 	 *                             to JSON
 	 */
-	public function setParams(array $params){
+	public function setParams(array $params) {
+		$this->setData($params);
+		return $this;
 		$this->data['data'] = $params;
 		$this->data['status'] = 'success';
 	}
 
+	public function setData($data){
+		$this->data = $data;
+		return $this;
+	}
+
+	public function setStatus($status) {
+		parent::setStatus($status);
+		return $this;
+	}
 
 	/**
 	 * in case we want to render an error message, also logs into the owncloud log
@@ -39,8 +50,9 @@ class JSONResponse extends OriginalResponse {
 	 */
 	public function setErrorMessage($message){
 		$this->error = true;
-		$this->data['data']['message'] = $message;
-		$this->data['status'] = 'error';
+		$this->data = $message;
+		return $this;
+		//$this->data['status'] = 'error';
 	}
 
 	function bailOut($msg, $tracelevel = 1, $debuglevel = \OCP\Util::ERROR) {
@@ -50,11 +62,12 @@ class JSONResponse extends OriginalResponse {
 		}
 		$this->setErrorMessage($msg);
 		$this->debug($msg, $tracelevel, $debuglevel);
+		return $this;
 	}
 
 	function debug($msg, $tracelevel = 0, $debuglevel = \OCP\Util::DEBUG) {
 		if(!is_numeric($tracelevel)) {
-			return;
+			return $this;
 		}
 
 		if(PHP_VERSION >= "5.4") {
@@ -69,6 +82,7 @@ class JSONResponse extends OriginalResponse {
 				$call['file'].'. Line: '.$call['line'].': '.$msg,
 				$debuglevel);
 		}
+		return $this;
 	}
 
 }

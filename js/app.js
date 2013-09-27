@@ -381,9 +381,10 @@ OC.Contacts = OC.Contacts || {
 
 		// Keep error messaging at one place to be able to replace it.
 		$(document).bind('status.contacts.error', function(e, data) {
-			console.warn(data.message);
+			var message = data.message || data;
+			console.warn(message);
 			//console.trace();
-			OC.notify({message:data.message});
+			OC.notify({message:message});
 		});
 
 		$(document).bind('status.contact.enabled', function(e, enabled) {
