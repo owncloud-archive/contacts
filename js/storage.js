@@ -21,11 +21,7 @@ OC.Contacts = OC.Contacts || {};
 				this.message = response.data.message;
 			} else {
 				this.error = false;
-				if(response.data) {
-					this.data = response.data;
-				} else {
-					this.data = response;
-				}
+				this.data = response.data || response;
 			}
 		}
 	};
