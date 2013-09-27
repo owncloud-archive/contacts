@@ -21,14 +21,15 @@ use \OC\AppFramework\Core\API;
 
 $api = new API('contacts');
 
-$api->addNavigationEntry(array(
-	'id' => 'contacts_index',
+\OC::$server->getNavigationManager()->add(array(
+	'id' => 'contacts',
 	'order' => 10,
 	'href' => \OCP\Util::linkToRoute('contacts_index'),
 	'icon' => \OCP\Util::imagePath( 'contacts', 'contacts.svg' ),
 	'name' => \OCP\Util::getL10N('contacts')->t('Contacts')
 	)
 );
+\OC::$server->getNavigationManager()->setActiveEntry('contacts');
 
 $api->connectHook('OC_User', 'post_createUser', '\OCA\Contacts\Hooks', 'userCreated');
 $api->connectHook('OC_User', 'post_deleteUser', '\OCA\Contacts\Hooks', 'userDeleted');
