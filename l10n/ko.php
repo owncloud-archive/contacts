@@ -19,6 +19,8 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "이 파일은 이 서버 파일 업로드 최대 용량을 초과 합니다. ",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "일부 연락처가 삭제 표시 되었으나 아직 삭제되지 않았습니다. 삭제가 끝날 때 까지 기다려 주세요.",
 "Add" => "추가",
+"Contact is already in this group." => "연락처가 이미 이 그룹에 있습니다.",
+"Couldn't get contact list." => "연락처 목록을 가져올 수 없습니다.",
 "Please choose the addressbook" => "주소록 선택",
 "Import" => "가져오기",
 "Import done" => "가져오기 완료",
