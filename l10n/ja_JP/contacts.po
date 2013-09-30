@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-22 10:47-0400\n"
-"PO-Revision-Date: 2013-09-20 15:00+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-09-30 08:06-0400\n"
+"PO-Revision-Date: 2013-09-30 06:39+0000\n"
+"Last-Translator: Daisuke Deguchi <ddeguchi@nagoya-u.jp>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,7 +42,7 @@ msgstr "インポート中..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "準備中..."
 
 #: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
@@ -185,7 +185,7 @@ msgstr "グループ数"
 
 #: js/contacts.js:1128
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "誕生日 {bday} の解析エラー: {error}"
 
 #: js/contacts.js:2165
 msgid ""
@@ -273,11 +273,11 @@ msgstr "インポート ..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "インポートのテンプレートの読み込みエラー"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "連絡先をインポート"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -628,7 +628,7 @@ msgstr "ストレージへの連絡先のアップロードエラー。"
 
 #: lib/controller/importcontroller.php:141
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "ファイルのインポートフォルダへの移動エラー。"
 
 #: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
@@ -1075,7 +1075,7 @@ msgstr "住所1"
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "20500"
 
 #: templates/contacts.php:416
 msgid "Postal code"
@@ -1083,7 +1083,7 @@ msgstr "郵便番号"
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "ワシントンDC"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1091,7 +1091,7 @@ msgstr "都市"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "コロンビア特別区"
 
 #: templates/contacts.php:424
 msgid "State or province"
@@ -1099,7 +1099,7 @@ msgstr "州／県"
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "アメリカ合衆国"
 
 #: templates/contacts.php:429
 msgid "Country"
