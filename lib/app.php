@@ -42,7 +42,7 @@ class App {
 	* @var array
 	*/
 	public static $backendClasses = array(
-		//'ldap' => 'OCA\Contacts\Backend\Ldap',
+		'ldap' => 'OCA\Contacts\Backend\Ldap',
 		'local' => 'OCA\Contacts\Backend\Database',
 		'shared' => 'OCA\Contacts\Backend\Shared',
 	);
