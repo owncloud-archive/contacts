@@ -33,7 +33,7 @@ $this->create('contacts_address_books_for_user', 'addressbooks/')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'userAddressBooks', $params);
+			$dispatcher->dispatch('AddressBookController', 'userAddressBooks');
 		}
 	);
 
@@ -391,7 +391,7 @@ $this->create('contacts_setpreference', 'preference/set')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('SettingsController', 'set', $params);
+			$dispatcher->dispatch('SettingsController', 'set');
 		}
 	);
 

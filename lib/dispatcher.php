@@ -31,8 +31,9 @@ class Dispatcher extends MainApp {
 	protected $app;
 
 	public function __construct(array $params) {
-		parent::__construct('contacts');
+		parent::__construct('contacts', $params);
 		$this->container = $this->getContainer();
+		$this->container['urlParams'] = $params;
 		$this->container->registerMiddleware(new HttpMiddleware($this->container->query('API')));
 		// TODO: Remove this once sorted out.
 		// When querying the middleware dispatcher Request gets instantiated

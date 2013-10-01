@@ -25,8 +25,9 @@ class SettingsController extends Controller {
 	 */
 	public function set() {
 		$request = $this->request;
-		$key = $request->post['key'];
-		$value = $request->post['value'];
+		$request = json_decode(file_get_contents('php://input'), true);
+		$key = $request['key'];
+		$value = $request['value'];
 
 		$response = new JSONResponse();
 
