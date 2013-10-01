@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-13 19:45-0400\n"
-"PO-Revision-Date: 2013-09-11 10:50+0000\n"
-"Last-Translator: polxmod <paolo.velati@gmail.com>\n"
+"POT-Creation-Date: 2013-09-22 10:47-0400\n"
+"PO-Revision-Date: 2013-09-20 15:00+0000\n"
+"Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,132 +45,132 @@ msgstr "Importazione in corso..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr "Preparazione..."
+msgstr "Preparazione in corso..."
 
-#: js/addressbooks.js:370
+#: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
 msgstr "Importati {count} di {total} contatti"
 
-#: js/addressbooks.js:392
+#: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "Importati {imported} contatti. {failed} non riusciti."
 
-#: js/addressbooks.js:548
+#: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
 msgstr "Una rubrica con nome {name} esiste già"
 
-#: js/addressbooks.js:582
+#: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
 msgstr "Aggiunta della rubrica non riuscita: {error}"
 
-#: js/addressbooks.js:625
+#: js/addressbooks.js:627
 msgid "Failed loading address books: {error}"
 msgstr "Caricamento rubriche non riuscito: {error}"
 
-#: js/app.js:214
+#: js/app.js:215
 msgid "Indexing contacts"
 msgstr "Indicizzazione dei contatti"
 
-#: js/app.js:224
+#: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Errore irreversibile durante il caricamento delle rubriche: {msg}"
 
-#: js/app.js:225
+#: js/app.js:226
 msgid "Error."
 msgstr "Errore."
 
-#: js/app.js:318 js/app.js:332
+#: js/app.js:319 js/app.js:333
 msgid "Add to..."
 msgstr "Aggiungi a..."
 
-#: js/app.js:322 js/app.js:334
+#: js/app.js:323 js/app.js:335
 msgid "Remove from..."
 msgstr "Rimuovi da..."
 
-#: js/app.js:339
+#: js/app.js:340
 msgid "Add group..."
 msgstr "Aggiungi gruppo..."
 
-#: js/app.js:468
+#: js/app.js:469
 msgid "Invalid URL: \"{url}\""
 msgstr "URL non valido: \"{url}\""
 
-#: js/app.js:479
+#: js/app.js:480
 msgid "There was an error opening a mail composer."
 msgstr "Si è verificato un errore durante l'apertura del compositore."
 
-#: js/app.js:484
+#: js/app.js:485
 msgid "Invalid email: \"{url}\""
 msgstr "Email non valida: \"{url}\""
 
-#: js/app.js:562
+#: js/app.js:563
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Unione non riuscita. Impossibile trovare il contatto: {id}"
 
-#: js/app.js:575
+#: js/app.js:576
 msgid "Merge failed."
 msgstr "Unione non riuscita."
 
-#: js/app.js:582
+#: js/app.js:583
 msgid "Merge failed. Error saving contact."
 msgstr "Unione non riuscita. Errore durante il salvataggio del contatto."
 
-#: js/app.js:601
+#: js/app.js:602
 msgid "Select photo"
 msgstr "Seleziona la foto"
 
-#: js/app.js:677 js/app.js:1564
+#: js/app.js:678 js/app.js:1587
 msgid "Network or server error. Please inform administrator."
 msgstr "Errore di rete o del server. Informa l'amministratore."
 
-#: js/app.js:888
+#: js/app.js:894
 msgid "Error adding to group."
 msgstr "Errore durante l'aggiunta al gruppo."
 
-#: js/app.js:911
+#: js/app.js:917
 msgid "Error removing from group."
 msgstr "Errore durante la rimozione dal gruppo."
 
-#: js/app.js:1071
+#: js/app.js:1093
 msgid "Error setting {name} as favorite."
 msgstr "Errore durante l'impostazione di {name} come preferito."
 
-#: js/app.js:1210 js/app.js:1214 templates/contacts.php:182
+#: js/app.js:1232 js/app.js:1236 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Unisci contatti"
 
-#: js/app.js:1236 js/app.js:1289 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1258 js/app.js:1311 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Annulla"
 
-#: js/app.js:1263 templates/contacts.php:163
+#: js/app.js:1285 templates/contacts.php:163
 msgid "Add group"
 msgstr "Aggiungi gruppo"
 
-#: js/app.js:1267
+#: js/app.js:1289
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1366
+#: js/app.js:1389
 msgid "Could not find contact: {id}"
 msgstr "Impossibile trovare il contatto: {id}"
 
-#: js/app.js:1412
+#: js/app.js:1435
 msgid "No files selected for upload."
 msgstr "Nessun file selezionato per l'invio"
 
-#: js/app.js:1422
+#: js/app.js:1445
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Il file che stai cercando di inviare supera la dimensione massima per l'invio dei file su questo server."
 
-#: js/app.js:1522
+#: js/app.js:1545
 msgid "Edit profile picture"
 msgstr "Modifica l'immagine del profilo"
 
-#: js/app.js:1526
+#: js/app.js:1549
 msgid "Crop photo"
 msgstr "Ritaglia foto"
 
@@ -178,29 +178,29 @@ msgstr "Ritaglia foto"
 msgid "Is this correct?"
 msgstr "È corretto?"
 
-#: js/contacts.js:857
+#: js/contacts.js:859
 msgid "Error parsing date: {date}"
 msgstr "Errore durante l'elaborazione della data: {date}"
 
-#: js/contacts.js:1054
+#: js/contacts.js:1056
 msgid "# groups"
 msgstr "# gruppi"
 
-#: js/contacts.js:1126
+#: js/contacts.js:1128
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Errore durante l'elaborazione della data di nascita {bday}: {error}"
 
-#: js/contacts.js:2156
+#: js/contacts.js:2165
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alcuni contatti sono marcati per l'eliminazione, ma non sono stati ancora rimossi. Attendi fino al completamento dell'operazione."
 
-#: js/contacts.js:2167
+#: js/contacts.js:2176
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Un clic per annullare l'eliminazione di {num} contatti"
 
-#: js/contacts.js:2176
+#: js/contacts.js:2185
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Eliminazione di {num} contatti annullata"
 
@@ -631,7 +631,7 @@ msgstr "Errore di invio dei contatti in archivio."
 
 #: lib/controller/importcontroller.php:141
 msgid "Error moving file to imports folder."
-msgstr "Errore durante lo spostamento del file in una cartella."
+msgstr "Errore durante lo spostamento del file nella cartella di importazione."
 
 #: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."

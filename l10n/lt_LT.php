@@ -8,6 +8,7 @@
 "Imported {imported} contacts. {failed} failed." => "Importuota {imported} kontaktų. {failed} nepavyko.",
 "Error." => "Klaida.",
 "Add to..." => "Pridėti į...",
+"Remove from..." => "Pašalinti iš...",
 "Add group..." => "Pridėti grupę...",
 "Merge failed." => "Sulieti nepavyko.",
 "Select photo" => "Nurodykite nuotrauką",

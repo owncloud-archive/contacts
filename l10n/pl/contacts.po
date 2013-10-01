@@ -21,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-11 04:46-0400\n"
-"PO-Revision-Date: 2013-09-11 08:46+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-09-30 08:06-0400\n"
+"PO-Revision-Date: 2013-09-30 12:06+0000\n"
+"Last-Translator: Cyryl Sochacki <cyrylsochacki@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,132 +49,132 @@ msgstr "Importowanie..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "Przygotowuję..."
 
-#: js/addressbooks.js:370
+#: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
 msgstr "Zaimportowano {count} z {total} kontaktów"
 
-#: js/addressbooks.js:392
+#: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "Zaimportowano {imported} kontaktów. {failed} nieudanych."
 
-#: js/addressbooks.js:548
+#: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
 msgstr "Książka adresowa o nazwie {name} już istnieje"
 
-#: js/addressbooks.js:582
+#: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
 msgstr "Nieudane dodanie książki: {error}"
 
-#: js/addressbooks.js:625
+#: js/addressbooks.js:627
 msgid "Failed loading address books: {error}"
 msgstr "Nieudane wczytywanie książek adresowych: {error}"
 
-#: js/app.js:214
+#: js/app.js:215
 msgid "Indexing contacts"
 msgstr "Indeksuj kontakty"
 
-#: js/app.js:224
+#: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Nieodwracalny błąd podczas ładowania książek adresowych: {msg}"
 
-#: js/app.js:225
+#: js/app.js:226
 msgid "Error."
 msgstr "Błąd."
 
-#: js/app.js:318 js/app.js:332
+#: js/app.js:319 js/app.js:333
 msgid "Add to..."
 msgstr "Dodaj do..."
 
-#: js/app.js:322 js/app.js:334
+#: js/app.js:323 js/app.js:335
 msgid "Remove from..."
 msgstr "Usuń z..."
 
-#: js/app.js:339
+#: js/app.js:340
 msgid "Add group..."
 msgstr "Dodaje grupę...."
 
-#: js/app.js:468
+#: js/app.js:469
 msgid "Invalid URL: \"{url}\""
 msgstr "Niepoprawny adres: \"{url}\""
 
-#: js/app.js:479
+#: js/app.js:480
 msgid "There was an error opening a mail composer."
 msgstr "Wystąpił błąd podczas otwierania edytora."
 
-#: js/app.js:484
+#: js/app.js:485
 msgid "Invalid email: \"{url}\""
 msgstr "Niepoprawny email: \"{url}\""
 
-#: js/app.js:562
+#: js/app.js:563
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Złączenie nieudane. Nie można znaleźć kontaktu: {id}"
 
-#: js/app.js:575
+#: js/app.js:576
 msgid "Merge failed."
 msgstr "Złączenie nieudane."
 
-#: js/app.js:582
+#: js/app.js:583
 msgid "Merge failed. Error saving contact."
 msgstr "Złączenie nieudane. Błąd zapisu kontaktu."
 
-#: js/app.js:601
+#: js/app.js:602
 msgid "Select photo"
 msgstr "Wybierz zdjęcie"
 
-#: js/app.js:677 js/app.js:1564
+#: js/app.js:678 js/app.js:1587
 msgid "Network or server error. Please inform administrator."
 msgstr "Błąd połączenia lub serwera. Skontaktuj sie z administratorem."
 
-#: js/app.js:888
+#: js/app.js:894
 msgid "Error adding to group."
 msgstr "Błąd dodania do grupy."
 
-#: js/app.js:911
+#: js/app.js:917
 msgid "Error removing from group."
 msgstr "Błąd usunięcia z grupy."
 
-#: js/app.js:1071
+#: js/app.js:1093
 msgid "Error setting {name} as favorite."
 msgstr "Błąd ustawienia {name} jako ulubione."
 
-#: js/app.js:1210 js/app.js:1214 templates/contacts.php:182
+#: js/app.js:1232 js/app.js:1236 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Połącz kontakty"
 
-#: js/app.js:1236 js/app.js:1289 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1258 js/app.js:1311 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: js/app.js:1263 templates/contacts.php:163
+#: js/app.js:1285 templates/contacts.php:163
 msgid "Add group"
 msgstr "Dodaj drupę"
 
-#: js/app.js:1267
+#: js/app.js:1289
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1366
+#: js/app.js:1389
 msgid "Could not find contact: {id}"
 msgstr "Nie można znaleźć kontaktu: {id}"
 
-#: js/app.js:1412
+#: js/app.js:1435
 msgid "No files selected for upload."
 msgstr "Żadne pliki nie zostały zaznaczone do wysłania."
 
-#: js/app.js:1422
+#: js/app.js:1445
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Plik, który próbujesz wysłać przekracza maksymalny rozmiar pliku przekazywania na tym serwerze."
 
-#: js/app.js:1522
+#: js/app.js:1545
 msgid "Edit profile picture"
 msgstr "Edytuj zdjęcie profilu"
 
-#: js/app.js:1526
+#: js/app.js:1549
 msgid "Crop photo"
 msgstr "Kadruj zdjęcie"
 
@@ -182,29 +182,29 @@ msgstr "Kadruj zdjęcie"
 msgid "Is this correct?"
 msgstr "Jest to prawidłowe?"
 
-#: js/contacts.js:857
+#: js/contacts.js:859
 msgid "Error parsing date: {date}"
 msgstr "Błąd przetwarzania daty : {date}"
 
-#: js/contacts.js:1054
+#: js/contacts.js:1056
 msgid "# groups"
 msgstr "# grupy"
 
-#: js/contacts.js:1126
+#: js/contacts.js:1128
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2156
+#: js/contacts.js:2165
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Niektóre kontakty są zaznaczone do usunięcia, ale nie są usunięte jeszcze. Proszę czekać na ich usunięcie."
 
-#: js/contacts.js:2167
+#: js/contacts.js:2176
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kliknij aby cofnąć usunięcie {num} kontaktów"
 
-#: js/contacts.js:2176
+#: js/contacts.js:2185
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Usunięcie Anulowane {num} kontaktów"
 
@@ -1082,7 +1082,7 @@ msgstr "Ulica"
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "20500"
 
 #: templates/contacts.php:416
 msgid "Postal code"
@@ -1090,7 +1090,7 @@ msgstr "Kod pocztowy"
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "Washington, DC"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1098,7 +1098,7 @@ msgstr "Miasto"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "District of Columbia"
 
 #: templates/contacts.php:424
 msgid "State or province"
@@ -1106,7 +1106,7 @@ msgstr "Województwo "
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "USA"
 
 #: templates/contacts.php:429
 msgid "Country"

@@ -33,8 +33,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-13 19:45-0400\n"
-"PO-Revision-Date: 2013-09-11 10:10+0000\n"
+"POT-Creation-Date: 2013-09-22 10:47-0400\n"
+"PO-Revision-Date: 2013-09-20 15:00+0000\n"
 "Last-Translator: ogre_sympathique <ogre.sympathique@speed.1s.fr>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/owncloud/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -63,130 +63,130 @@ msgstr "Import en cours…"
 msgid "Preparing..."
 msgstr "En préparation..."
 
-#: js/addressbooks.js:370
+#: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
 msgstr "{count} contacts sur {total} ont été importés"
 
-#: js/addressbooks.js:392
+#: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "{imported} contacts importés. {failed} échoués."
 
-#: js/addressbooks.js:548
+#: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
 msgstr "Un carnet d'adresse appelé {name} existe déjà"
 
-#: js/addressbooks.js:582
+#: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
 msgstr "Échec de l'ajout du carnet d'adresses : {error}"
 
-#: js/addressbooks.js:625
+#: js/addressbooks.js:627
 msgid "Failed loading address books: {error}"
 msgstr "Echec du chargement des carnets d'adresses : {error}"
 
-#: js/app.js:214
+#: js/app.js:215
 msgid "Indexing contacts"
 msgstr "Indexation des contacts"
 
-#: js/app.js:224
+#: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Erreur irrécupérable lors du chargement des carnets d'adresses : {msg}"
 
-#: js/app.js:225
+#: js/app.js:226
 msgid "Error."
 msgstr "Erreur."
 
-#: js/app.js:318 js/app.js:332
+#: js/app.js:319 js/app.js:333
 msgid "Add to..."
 msgstr "Ajouter à…"
 
-#: js/app.js:322 js/app.js:334
+#: js/app.js:323 js/app.js:335
 msgid "Remove from..."
 msgstr "Retirer de…"
 
-#: js/app.js:339
+#: js/app.js:340
 msgid "Add group..."
 msgstr "Ajouter un groupe…"
 
-#: js/app.js:468
+#: js/app.js:469
 msgid "Invalid URL: \"{url}\""
 msgstr "Adresse URL invalide : \"{URL}\""
 
-#: js/app.js:479
+#: js/app.js:480
 msgid "There was an error opening a mail composer."
 msgstr "Une erreur s'est produite lors de l’ouverture d'un outil de composition email."
 
-#: js/app.js:484
+#: js/app.js:485
 msgid "Invalid email: \"{url}\""
 msgstr "Courriel invalide : \"{url}\""
 
-#: js/app.js:562
+#: js/app.js:563
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Échec de la fusion. Impossible de trouver le contact : {id}"
 
-#: js/app.js:575
+#: js/app.js:576
 msgid "Merge failed."
 msgstr "Echec de la fusion."
 
-#: js/app.js:582
+#: js/app.js:583
 msgid "Merge failed. Error saving contact."
 msgstr "Échec de la fusion. Erreur d'enregistrement du contact."
 
-#: js/app.js:601
+#: js/app.js:602
 msgid "Select photo"
 msgstr "Sélectionner une photo"
 
-#: js/app.js:677 js/app.js:1564
+#: js/app.js:678 js/app.js:1587
 msgid "Network or server error. Please inform administrator."
 msgstr "Erreur de serveur ou du réseau. Veuillez contacter votre administrateur."
 
-#: js/app.js:888
+#: js/app.js:894
 msgid "Error adding to group."
 msgstr "Erreur lors de l'ajout au groupe."
 
-#: js/app.js:911
+#: js/app.js:917
 msgid "Error removing from group."
 msgstr "Erreur lors du retrait du groupe."
 
-#: js/app.js:1071
+#: js/app.js:1093
 msgid "Error setting {name} as favorite."
 msgstr "Erreur lors de la mise en favori de {name}."
 
-#: js/app.js:1210 js/app.js:1214 templates/contacts.php:182
+#: js/app.js:1232 js/app.js:1236 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Fusionner les contacts"
 
-#: js/app.js:1236 js/app.js:1289 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1258 js/app.js:1311 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Annuler"
 
-#: js/app.js:1263 templates/contacts.php:163
+#: js/app.js:1285 templates/contacts.php:163
 msgid "Add group"
 msgstr "Ajouter un groupe"
 
-#: js/app.js:1267
+#: js/app.js:1289
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1366
+#: js/app.js:1389
 msgid "Could not find contact: {id}"
 msgstr "Impossible de trouver le contact : {id}"
 
-#: js/app.js:1412
+#: js/app.js:1435
 msgid "No files selected for upload."
 msgstr "Aucun fichiers choisis pour être chargés"
 
-#: js/app.js:1422
+#: js/app.js:1445
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Le fichier que vous tentez de charger dépasse la taille maximum de fichier autorisée sur ce serveur."
 
-#: js/app.js:1522
+#: js/app.js:1545
 msgid "Edit profile picture"
 msgstr "Éditer l'image de profil"
 
-#: js/app.js:1526
+#: js/app.js:1549
 msgid "Crop photo"
 msgstr "Recadrer la photo"
 
@@ -194,29 +194,29 @@ msgstr "Recadrer la photo"
 msgid "Is this correct?"
 msgstr "Est-ce correct ?"
 
-#: js/contacts.js:857
+#: js/contacts.js:859
 msgid "Error parsing date: {date}"
 msgstr "Erreur lors de l'analyse de la date : {date}"
 
-#: js/contacts.js:1054
+#: js/contacts.js:1056
 msgid "# groups"
 msgstr "# groupes"
 
-#: js/contacts.js:1126
+#: js/contacts.js:1128
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Erreur lors de l'analyse de l'anniversaire {bday} : {error}"
 
-#: js/contacts.js:2156
+#: js/contacts.js:2165
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Certains contacts sont marqués pour être supprimés, mais ne le sont pas encore. Veuillez attendre que l'opération se termine."
 
-#: js/contacts.js:2167
+#: js/contacts.js:2176
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Cliquer pour annuler la suppression de {num} contacts"
 
-#: js/contacts.js:2176
+#: js/contacts.js:2185
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Suppression annulée pour {num} contacts"
 

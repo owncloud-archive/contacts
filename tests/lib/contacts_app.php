@@ -17,7 +17,7 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 	public static function xsetUpBeforeClass() {
 		$dbfile = __DIR__.'/../../appinfo/database.xml';
 
-		self::$test_prefix = '_'.OC_Util::generate_random_bytes('4').'_';
+		self::$test_prefix = '_'.OC_Util::generateRandomBytes('4').'_';
 		$content = file_get_contents($dbfile);
 		$content = str_replace( '*dbprefix*', '*dbprefix*'.self::$test_prefix, $content );
 		file_put_contents( self::$schema_file, $content );

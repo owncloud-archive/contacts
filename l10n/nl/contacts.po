@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-11 04:46-0400\n"
-"PO-Revision-Date: 2013-09-11 08:46+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-09-22 10:47-0400\n"
+"PO-Revision-Date: 2013-09-20 15:00+0000\n"
+"Last-Translator: André Koot <meneer@tken.net>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,164 +48,164 @@ msgstr "Importeren..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "Voorbereiden..."
 
-#: js/addressbooks.js:370
+#: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
 msgstr "{count} van {total} contactpersonen geïmporteerd"
 
-#: js/addressbooks.js:392
+#: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "{imported} contactpersonen geïmporteerd. {failed} mislukt."
 
-#: js/addressbooks.js:548
+#: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
 msgstr "Er bestaat al een adresboek genaamd {name}"
 
-#: js/addressbooks.js:582
+#: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
 msgstr "Mislukt: toevoegen adresboek: {error}"
 
-#: js/addressbooks.js:625
+#: js/addressbooks.js:627
 msgid "Failed loading address books: {error}"
 msgstr "Mislukt: inladen adresboeken: {error}"
 
-#: js/app.js:214
+#: js/app.js:215
 msgid "Indexing contacts"
 msgstr "Bezig met indexeren van contactpersonen"
 
-#: js/app.js:224
+#: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Onherstelbare fout bij het laden van adresboeken: {msg}"
 
-#: js/app.js:225
+#: js/app.js:226
 msgid "Error."
 msgstr "Fout."
 
-#: js/app.js:318 js/app.js:332
+#: js/app.js:319 js/app.js:333
 msgid "Add to..."
 msgstr "Toevoegen aan..."
 
-#: js/app.js:322 js/app.js:334
+#: js/app.js:323 js/app.js:335
 msgid "Remove from..."
 msgstr "Verwijderen uit..."
 
-#: js/app.js:339
+#: js/app.js:340
 msgid "Add group..."
 msgstr "Nieuwe groep..."
 
-#: js/app.js:468
+#: js/app.js:469
 msgid "Invalid URL: \"{url}\""
 msgstr "Ongeldige URL: \"{url}\""
 
-#: js/app.js:479
+#: js/app.js:480
 msgid "There was an error opening a mail composer."
 msgstr "Er is iets misgegaan tijdens het openen van een email programma."
 
-#: js/app.js:484
+#: js/app.js:485
 msgid "Invalid email: \"{url}\""
 msgstr "Ongeldige e-mail: \"{url}\""
 
-#: js/app.js:562
+#: js/app.js:563
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Samenvoegen mislukt. Kan contactpersoon {id} niet vinden "
 
-#: js/app.js:575
+#: js/app.js:576
 msgid "Merge failed."
 msgstr "Samenvoeging mislukt."
 
-#: js/app.js:582
+#: js/app.js:583
 msgid "Merge failed. Error saving contact."
 msgstr "Samenvoegen mislukt. Fout bij opslaan contactpersoon."
 
-#: js/app.js:601
+#: js/app.js:602
 msgid "Select photo"
 msgstr "Selecteer een foto"
 
-#: js/app.js:677 js/app.js:1564
+#: js/app.js:678 js/app.js:1587
 msgid "Network or server error. Please inform administrator."
 msgstr "Netwerk- of serverfout. Neem contact op met de beheerder."
 
-#: js/app.js:888
+#: js/app.js:894
 msgid "Error adding to group."
 msgstr "Fout bij het toevoegen aan de groep."
 
-#: js/app.js:911
+#: js/app.js:917
 msgid "Error removing from group."
 msgstr "Fout bij het verwijderen uit de groep."
 
-#: js/app.js:1071
+#: js/app.js:1093
 msgid "Error setting {name} as favorite."
 msgstr "Fout bij instellen {name} als favoriet"
 
-#: js/app.js:1210 js/app.js:1214 templates/contacts.php:182
+#: js/app.js:1232 js/app.js:1236 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Samenvoegen contactgegevens"
 
-#: js/app.js:1236 js/app.js:1289 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1258 js/app.js:1311 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Annuleer"
 
-#: js/app.js:1263 templates/contacts.php:163
+#: js/app.js:1285 templates/contacts.php:163
 msgid "Add group"
 msgstr "Toevoegen groep"
 
-#: js/app.js:1267
+#: js/app.js:1289
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1366
+#: js/app.js:1389
 msgid "Could not find contact: {id}"
 msgstr "Kon contactpersoon niet vinden: {id}"
 
-#: js/app.js:1412
+#: js/app.js:1435
 msgid "No files selected for upload."
 msgstr "Geen bestanden geselecteerd voor upload."
 
-#: js/app.js:1422
+#: js/app.js:1445
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Het bestand dat u probeert te uploaden overschrijdt de maximale bestand grootte voor bestand uploads voor deze server."
 
-#: js/app.js:1522
+#: js/app.js:1545
 msgid "Edit profile picture"
 msgstr "Bewerk profielafbeelding"
 
-#: js/app.js:1526
+#: js/app.js:1549
 msgid "Crop photo"
-msgstr ""
+msgstr "Bijsnijden foto"
 
 #: js/contacts.js:591
 msgid "Is this correct?"
 msgstr "Is dit correct?"
 
-#: js/contacts.js:857
+#: js/contacts.js:859
 msgid "Error parsing date: {date}"
 msgstr "Fout bij lezen datum: {date}"
 
-#: js/contacts.js:1054
+#: js/contacts.js:1056
 msgid "# groups"
 msgstr "# groepen"
 
-#: js/contacts.js:1126
+#: js/contacts.js:1128
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "Fout bij interpreteren verjaardag {bday}: {error}"
 
-#: js/contacts.js:2156
+#: js/contacts.js:2165
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd."
 
-#: js/contacts.js:2167
+#: js/contacts.js:2176
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik om het verwijderen van {num} contactpersonen ongedaan te maken."
 
-#: js/contacts.js:2176
+#: js/contacts.js:2185
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "Verwijderen van {num} contacten geannuleerd"
 
 #: js/groups.js:53 templates/contacts.php:325
 msgid "Add"
@@ -279,11 +279,11 @@ msgstr "Importeren naar..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Fout bij laden importsjabloon"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "Importeren contactpersonen"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -348,7 +348,7 @@ msgstr "U heeft geen permissie om deze contactpersonen te bekijken"
 
 #: lib/addressbook.php:159
 msgid "Contact not found"
-msgstr ""
+msgstr "Contact niet gevonden"
 
 #: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
@@ -429,7 +429,7 @@ msgstr "Fout bij bijwerken adresboek"
 #: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "U hebt niet de permissies om het \"%s\" adresboek te verwijderen"
 
 #: lib/controller/addressbookcontroller.php:202
 msgid "Error deleting address book"
@@ -501,7 +501,7 @@ msgstr "Fout bij opslaan eigenschap in backend"
 
 #: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
-msgstr ""
+msgstr "Fout bij ophalen gebruikersfoto"
 
 #: lib/controller/contactphotocontroller.php:90
 #: lib/controller/importcontroller.php:39
@@ -564,7 +564,7 @@ msgstr "Fout bij laden plaatje."
 
 #: lib/controller/contactphotocontroller.php:290
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "Afbeelding is verwijderd uit de cache"
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error creating temporary image"
@@ -634,7 +634,7 @@ msgstr "Fout bij opslaan van contacten."
 
 #: lib/controller/importcontroller.php:141
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Fout bij verplaatsen bestand naar importmap."
 
 #: lib/controller/importcontroller.php:161
 msgid "You do not have permissions to import into this address book."
@@ -899,7 +899,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>U hebt geen contactpersonen in uw adresboek of uw adresboek is uitgeschakeld.</h3><p>Voeg een nieuwe contactpersoon toe, of importeer bestaande contactpersonen vanuit een VCF bestand.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -1073,7 +1073,7 @@ msgstr "Verwijder adres"
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "Dorpsstraat 1"
 
 #: templates/contacts.php:411
 msgid "Street address"
@@ -1081,7 +1081,7 @@ msgstr "Adres"
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "1234 AB"
 
 #: templates/contacts.php:416
 msgid "Postal code"
@@ -1089,7 +1089,7 @@ msgstr "Postcode"
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "Ons Dorp"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1097,7 +1097,7 @@ msgstr "Stad"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "Noord-Vlaanderen"
 
 #: templates/contacts.php:424
 msgid "State or province"
@@ -1105,7 +1105,7 @@ msgstr "Staat of provincie"
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "NL"
 
 #: templates/contacts.php:429
 msgid "Country"
