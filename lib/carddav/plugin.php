@@ -43,7 +43,6 @@ class Plugin extends \Sabre_CardDAV_Plugin {
 	* @return void
 	*/
 	protected function validateVCard(&$data) {
-		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 
 		// If it's a stream, we convert it to a string first.
 		if (is_resource($data)) {
@@ -52,6 +51,7 @@ class Plugin extends \Sabre_CardDAV_Plugin {
 
 		// Converting the data to unicode, if needed.
 		$data = \Sabre_DAV_StringUtil::ensureUTF8($data);
+		//\OCP\Util::writeLog('contacts', __METHOD__ . "\n".$data, \OCP\Util::DEBUG);
 
 		try {
 			$vobj = VObject\Reader::read($data, VObject\Reader::OPTION_IGNORE_INVALID_LINES);

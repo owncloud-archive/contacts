@@ -242,7 +242,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 */
 	public function deleteCard($addressbookid, $carduri) {
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
-		return $backend->deleteContact($addressbookid, array('uri' => $carduri));
+		return $backend->deleteContact($id, array('uri' => $carduri));
 	}
 
 	/**

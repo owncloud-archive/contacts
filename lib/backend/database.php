@@ -496,6 +496,7 @@ class Database extends AbstractBackend {
 	 */
 	public function createContact($addressbookid, $contact, array $options = array()) {
 
+		$qname = 'createcontact';
 		$uri = isset($options['uri']) ? $options['uri'] : null;
 
 		if(!$contact instanceof VCard) {
@@ -525,13 +526,13 @@ class Database extends AbstractBackend {
 		$contact->PRODID = $prodid;
 
 		$data = $contact->serialize();
-		if(!isset(self::$preparedQueries['createcontact'])) {
-		self::$preparedQueries['createcontact'] = \OCP\DB::prepare('INSERT INTO `'
+		if(!isset(self::$preparedQueries[$qname])) {
+		self::$preparedQueries[$qname] = \OCP\DB::prepare('INSERT INTO `'
 			. $this->cardsTableName
 			. '` (`addressbookid`,`fullname`,`carddata`,`uri`,`lastmodified`) VALUES(?,?,?,?,?)' );
 		}
 		try {
-			$result = self::$preparedQueries['createcontact']
+			$result = self::$preparedQueries[$qname]
 				->execute(
 					array(
 						$addressbookid,
@@ -569,9 +570,9 @@ class Database extends AbstractBackend {
 	 * @return bool
 	 */
 	public function updateContact($addressbookid, $id, $contact, array $options = array()) {
-
 		$noCollection = isset($options['noCollection']) ? $options['noCollection'] : false;
 		$isBatch = isset($options['isBatch']) ? $options['isBatch'] : false;
+		$qname = 'updatecontact';
 
 		$updateRevision = true;
 		$isCardDAV = false;
@@ -583,25 +584,24 @@ class Database extends AbstractBackend {
 				return false;
 			}
 		}
-		$where_query = '`id` = ?';
+
 		if(is_array($id)) {
 			$where_query = '';
 			if(isset($id['id'])) {
 				$id = $id['id'];
-				$qname = 'createcontactbyid';
 			} elseif(isset($id['uri'])) {
 				$updateRevision = false;
 				$isCardDAV = true;
-				$where_query = '`id` = ?';
-				$id = $id['uri'];
-				$qname = 'createcontactbyuri';
+				$id = $this->getIdFromUri($id['uri']);
+				if(is_null($id)) {
+					\OCP\Util::writeLog('contacts', __METHOD__ . ' Couldn\'t find contact', \OCP\Util::ERROR);
+					return false;
+				}
 			} else {
 				throw new \Exception(
 					__METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
 				);
 			}
-		} else {
-			$qname = 'createcontactbyid';
 		}
 
 		if($updateRevision || !isset($contact->REV)) {
@@ -611,19 +611,15 @@ class Database extends AbstractBackend {
 
 		$data = $contact->serialize();
 
-		$updates = array($contact->FN, $data, time(), $id);
-
 		if($noCollection) {
 			$me = $this->getContact(null, $id, $options);
 			$addressbookid = $me['parent'];
 		}
-		//if(!$noCollection) {
-			$where_query .= ' AND `addressbookid` = ?';
-			$updates[] = $addressbookid;
-		//}
+
+		$updates = array($contact->FN, $data, time(), $id, $addressbookid);
 
 		$query = 'UPDATE `' . $this->cardsTableName
-				. '` SET `fullname` = ?,`carddata` = ?, `lastmodified` = ? WHERE ' . $where_query;
+				. '` SET `fullname` = ?,`carddata` = ?, `lastmodified` = ? WHERE `id` = ? AND `addressbookid` = ?';
 		if(!isset(self::$preparedQueries[$qname])) {
 			self::$preparedQueries[$qname] = \OCP\DB::prepare($query);
 		}
@@ -661,25 +657,24 @@ class Database extends AbstractBackend {
 	public function deleteContact($addressbookid, $id, array $options = array()) {
 		// TODO: pass the uri in $options instead.
 
+		$qname = 'deletecontact';
+		$noCollection = isset($options['noCollection']) ? $options['noCollection'] : false;
 		$isBatch = isset($options['isBatch']) ? $options['isBatch'] : false;
 
-		$where_query = '`id` = ?';
 		if(is_array($id)) {
-			$where_query = '';
 			if(isset($id['id'])) {
 				$id = $id['id'];
-				$qname = 'deletecontactsbyid';
 			} elseif(isset($id['uri'])) {
-				$where_query = '`id` = ?';
-				$id = $id['uri'];
-				$qname = 'deletecontactsbyuri';
+				$id = $this->getIdFromUri($id['uri']);
+				if(is_null($id)) {
+					\OCP\Util::writeLog('contacts', __METHOD__ . ' Couldn\'t find contact', \OCP\Util::ERROR);
+					return false;
+				}
 			} else {
 				throw new Exception(
 					__METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
 				);
 			}
-		} else {
-			$qname = 'deletecontactsbyid';
 		}
 
 		if(!$isBatch) {
@@ -687,11 +682,18 @@ class Database extends AbstractBackend {
 				array('id' => $id)
 			);
 		}
+
+		if($noCollection) {
+			$me = $this->getContact(null, $id, $options);
+			$addressbookid = $me['parent'];
+		}
+
 		if(!isset(self::$preparedQueries[$qname])) {
 			self::$preparedQueries[$qname] = \OCP\DB::prepare('DELETE FROM `'
 				. $this->cardsTableName
-				. '` WHERE ' . $where_query . ' AND `addressbookid` = ?');
+				. '` WHERE `id` = ? AND `addressbookid` = ?');
 		}
+		\OCP\Util::writeLog('contacts', __METHOD__ . ' updates: ' . $id . '/' . $addressbookid, \OCP\Util::DEBUG);
 		try {
 			$result = self::$preparedQueries[$qname]->execute(array($id, $addressbookid));
 			if (\OCP\DB::isError($result)) {
@@ -723,6 +725,27 @@ class Database extends AbstractBackend {
 	public function lastModifiedContact($addressbookid, $id) {
 		$contact = $this->getContact($addressbookid, $id);
 		return ($contact ? $contact['lastmodified'] : null);
+	}
+
+	/**
+	 * @brief Get the contact id from the uri.
+	 *
+	 * @param mixed $id
+	 * @returns int | null
+	 */
+	public function getIdFromUri($uri) {
+		$query =  'SELECT `id` FROM `'. $this->cardsTableName . '` WHERE `uri` = ?';
+		$stmt = \OCP\DB::prepare($query);
+		$result = $stmt->execute(array($uri));
+		if (\OCP\DB::isError($result)) {
+			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			return null;
+		}
+		if((int)$result->numRows() === 0) {
+			\OCP\Util::writeLog('contacts', __METHOD__.', Not found, uri: '. $uri, \OCP\Util::DEBUG);
+			return null;
+		}
+		return $result->fetchOne();
 	}
 
 	private function createAddressBookURI($displayname, $userid = null) {
