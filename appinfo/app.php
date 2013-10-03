@@ -18,6 +18,7 @@ use \OC\AppFramework\Core\API;
 \Sabre\VObject\Property::$classMap['N']			= '\OC\VObject\CompoundProperty';
 \Sabre\VObject\Property::$classMap['ADR']		= '\OC\VObject\CompoundProperty';
 \Sabre\VObject\Property::$classMap['GEO']		= '\OC\VObject\CompoundProperty';
+\Sabre\VObject\Property::$classMap['ORG']		= '\OC\VObject\CompoundProperty';
 
 $api = new API('contacts');
 
