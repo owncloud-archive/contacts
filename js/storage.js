@@ -411,7 +411,7 @@ OC.Contacts = OC.Contacts || {};
 	 * @param string contactId Contact ID
 	 * @param object params An object with the following properties:
 	 * @param string name The name of the property e.g. EMAIL.
-	 * @param string|array value The of the property
+	 * @param string|array|null value The of the property
 	 * @param array parameters Optional parameters for the property
 	 * @param string checksum For non-singular properties such as email this must contain
 	 * 	an 8 character md5 checksum of the serialized \Sabre\Property
