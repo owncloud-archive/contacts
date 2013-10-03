@@ -30,7 +30,7 @@ class ExportController extends Controller {
 		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		$params = $this->request->urlParams;
 
-		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$lastModified = $addressBook->lastModified();
 
 		$contacts = '';
@@ -58,8 +58,8 @@ class ExportController extends Controller {
 
 		$params = $this->request->urlParams;
 
-		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
+		$contact = $addressBook->getChild($params['contactId']);
 
 		if(!$contact) {
 			$response = new JSONResponse();
@@ -87,10 +87,10 @@ class ExportController extends Controller {
 			if(!isset($targets[$contact['backend']])) {
 				$targets[$contact['backend']] = array();
 			}
-			if(!isset($targets[$contact['backend']][$contact['addressbookid']])) {
-				$targets[$contact['backend']][$contact['addressbookid']] = array();
+			if(!isset($targets[$contact['backend']][$contact['addressBookId']])) {
+				$targets[$contact['backend']][$contact['addressBookId']] = array();
 			}
-			$targets[$contact['backend']][$contact['addressbookid']][] = $contact['contactid'];
+			$targets[$contact['backend']][$contact['addressBookId']][] = $contact['contactId'];
 		}
 
 		$exports = '';

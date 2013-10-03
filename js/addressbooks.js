@@ -45,7 +45,7 @@ OC.Contacts = OC.Contacts || {};
 				'contacts_address_book_export',
 				{
 					backend: this.getBackend(),
-					addressbookid: this.getId()
+					addressBookId: this.getId()
 				}
 			));
 		this.$li.find('a.action.delete').on('click keypress', function() {
@@ -281,7 +281,7 @@ OC.Contacts = OC.Contacts || {};
 			if(value !== '-1') {
 				var url = OC.Router.generate(
 					'contacts_import_upload',
-					{addressbookid:value, backend: $(this).find('option:selected').data('backend')}
+					{addressBookId:value, backend: $(this).find('option:selected').data('backend')}
 				);
 				self.$importFileInput.fileupload('option', 'url', url);
 				//self.$importFileInput.attr('data-url', url);

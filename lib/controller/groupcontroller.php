@@ -166,17 +166,17 @@ class GroupController extends Controller {
 	public function addToGroup() {
 		$response = new JSONResponse();
 		$params = $this->request->urlParams;
-		$categoryid = $params['categoryid'];
+		$categoryId = $params['categoryId'];
 		$categoryname = $this->request->post['name'];
-		$ids = $this->request->post['contactids'];
+		$ids = $this->request->post['contactIds'];
 		$response->debug('request: '.print_r($this->request->post, true));
 
-		if(is_null($categoryid) || $categoryid === '') {
+		if(is_null($categoryId) || $categoryId === '') {
 			$response->bailOut(App::$l10n->t('Group ID missing from request.'));
 			return $response;
 		}
 
-		if(is_null($categoryid) || $categoryid === '') {
+		if(is_null($categoryId) || $categoryId === '') {
 			$response->bailOut(App::$l10n->t('Group name missing from request.'));
 			return $response;
 		}
@@ -188,8 +188,8 @@ class GroupController extends Controller {
 
 		$backend = $this->app->getBackend('local');
 		$tagMgr = $this->server->getTagManager()->load('contact');
-		foreach($ids as $contactid) {
-			$contact = $backend->getContact(null, $contactid, array('noCollection' => true));
+		foreach($ids as $contactId) {
+			$contact = $backend->getContact(null, $contactId, array('noCollection' => true));
 			$obj = \Sabre\VObject\Reader::read(
 				$contact['carddata'],
 				\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
@@ -199,10 +199,10 @@ class GroupController extends Controller {
 					$obj->add('CATEGORIES');
 				}
 				$obj->CATEGORIES->addGroup($categoryname);
-				$backend->updateContact(null, $contactid, $obj, array('noCollection' => true));
+				$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
 			}
-			$response->debug('contactid: ' . $contactid . ', categoryid: ' . $categoryid);
-			$tagMgr->tagAs($contactid, $categoryid);
+			$response->debug('contactId: ' . $contactId . ', categoryId: ' . $categoryId);
+			$tagMgr->tagAs($contactId, $categoryId);
 		}
 
 		return $response;
@@ -214,12 +214,12 @@ class GroupController extends Controller {
 	public function removeFromGroup() {
 		$response = new JSONResponse();
 		$params = $this->request->urlParams;
-		$categoryid = $params['categoryid'];
+		$categoryId = $params['categoryId'];
 		$categoryname = $this->request->post['name'];
-		$ids = $this->request->post['contactids'];
+		$ids = $this->request->post['contactIds'];
 		//$response->debug('request: '.print_r($this->request->post, true));
 
-		if(is_null($categoryid) || $categoryid === '') {
+		if(is_null($categoryId) || $categoryId === '') {
 			$response->bailOut(App::$l10n->t('Group ID missing from request.'));
 			return $response;
 		}
@@ -231,10 +231,10 @@ class GroupController extends Controller {
 
 		$backend = $this->app->getBackend('local');
 		$tagMgr = $this->server->getTagManager()->load('contact');
-		foreach($ids as $contactid) {
-			$contact = $backend->getContact(null, $contactid, array('noCollection' => true));
+		foreach($ids as $contactId) {
+			$contact = $backend->getContact(null, $contactId, array('noCollection' => true));
 			if(!$contact) {
-				$response->debug('Couldn\'t get contact: ' . $contactid);
+				$response->debug('Couldn\'t get contact: ' . $contactId);
 				continue;
 			}
 			$obj = \Sabre\VObject\Reader::read(
@@ -246,12 +246,12 @@ class GroupController extends Controller {
 					$obj->add('CATEGORIES');
 				}
 				$obj->CATEGORIES->removeGroup($categoryname);
-				$backend->updateContact(null, $contactid, $obj, array('noCollection' => true));
+				$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
 			} else {
-				$response->debug('Error parsing contact: ' . $contactid);
+				$response->debug('Error parsing contact: ' . $contactId);
 			}
-			$response->debug('contactid: ' . $contactid . ', categoryid: ' . $categoryid);
-			$tagMgr->unTag($contactid, $categoryid);
+			$response->debug('contactId: ' . $contactId . ', categoryId: ' . $categoryId);
+			$tagMgr->unTag($contactId, $categoryId);
 		}
 
 		return $response;

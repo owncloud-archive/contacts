@@ -83,7 +83,7 @@ class ImportController extends Controller {
 						'count' => $count,
 						'progresskey' => $progresskey,
 						'backend' => $params['backend'],
-						'addressbookid' => $params['addressbookid']
+						'addressBookId' => $params['addressBookId']
 					)
 				);
 				\OC_Cache::set($progresskey, '10', 300);
@@ -128,7 +128,7 @@ class ImportController extends Controller {
 					'count' => $count,
 					'progresskey' => $progresskey,
 					'backend' => $params['backend'],
-					'addressbookid' => $params['addressbookid']
+					'addressBookId' => $params['addressBookId']
 				)
 			);
 			\OC_Cache::set($progresskey, '10', 300);
@@ -148,7 +148,7 @@ class ImportController extends Controller {
 		$params = $this->request->urlParams;
 		$app = new App($this->api->getUserId());
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
 		if(!$addressBook->hasPermission(\OCP\PERMISSION_CREATE)) {
 			$response->setStatus('403');
 			$response->bailOut(App::$l10n->t('You do not have permissions to import into this address book.'));
@@ -262,7 +262,7 @@ class ImportController extends Controller {
 		$response->setParams(
 			array(
 				'backend' => $params['backend'],
-				'addressbookid' => $params['addressbookid'],
+				'addressBookId' => $params['addressBookId'],
 				'imported' => $imported,
 				'partially' => $partially,
 				'failed' => $failed,

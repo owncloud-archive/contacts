@@ -30,8 +30,8 @@ class ContactPhotoController extends Controller {
 		$etag = null;
 		//$maxSize = isset($this->request['maxSize']) ? $this->request['maxSize'] : 170;
 
-		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
+		$contact = $addressBook->getChild($params['contactId']);
 
 		if(!$contact) {
 			$response = new JSONResponse();
@@ -128,8 +128,8 @@ class ContactPhotoController extends Controller {
 		$response->setParams(array(
 			'tmp'=>$tmpkey,
 			'metadata' => array(
-				'contactid'=> $params['contactid'],
-				'addressbookid'=> $params['addressbookid'],
+				'contactId'=> $params['contactId'],
+				'addressBookId'=> $params['addressBookId'],
 				'backend'=> $params['backend'],
 			),
 		));
@@ -154,7 +154,7 @@ class ContactPhotoController extends Controller {
 		}
 
 		$data = $photoResponse->render();
-		$tmpkey = 'contact-photo-' . $params['contactid'];
+		$tmpkey = 'contact-photo-' . $params['contactId'];
 		if(!$this->server->getCache()->set($tmpkey, $data, 600)) {
 			$response->bailOut(App::$l10n->t('Couldn\'t save temporary image: ').$tmpkey);
 			return $response;
@@ -163,8 +163,8 @@ class ContactPhotoController extends Controller {
 		$response->setParams(array(
 			'tmp'=>$tmpkey,
 			'metadata' => array(
-				'contactid'=> $params['contactid'],
-				'addressbookid'=> $params['addressbookid'],
+				'contactId'=> $params['contactId'],
+				'addressBookId'=> $params['addressBookId'],
 				'backend'=> $params['backend'],
 			),
 		));
@@ -189,7 +189,7 @@ class ContactPhotoController extends Controller {
 		}
 
 		$localpath = \OC\Files\Filesystem::getLocalFile($this->request->get['path']);
-		$tmpkey = 'contact-photo-' . $params['contactid'];
+		$tmpkey = 'contact-photo-' . $params['contactId'];
 
 		if(!file_exists($localpath)) {
 			$response->bailOut(App::$l10n->t('File doesn\'t exist:').$localpath);
@@ -218,8 +218,8 @@ class ContactPhotoController extends Controller {
 		$response->setParams(array(
 			'tmp'=>$tmpkey,
 			'metadata' => array(
-				'contactid'=> $params['contactid'],
-				'addressbookid'=> $params['addressbookid'],
+				'contactId'=> $params['contactId'],
+				'addressBookId'=> $params['addressBookId'],
 				'backend'=> $params['backend'],
 			),
 		));
@@ -268,8 +268,8 @@ class ContactPhotoController extends Controller {
 		$maxSize = isset($this->request->get['maxSize']) ? $this->request->post['maxSize'] : 200;
 
 		$app = new App($this->api->getUserId());
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
+		$contact = $addressBook->getChild($params['contactId']);
 
 		$response = new JSONResponse();
 
@@ -339,7 +339,7 @@ class ContactPhotoController extends Controller {
 		}
 		$thumbnail = $contact->cacheThumbnail($image);
 		$response->setParams(array(
-			'id' => $params['contactid'],
+			'id' => $params['contactId'],
 			'thumbnail' => $thumbnail,
 		));
 

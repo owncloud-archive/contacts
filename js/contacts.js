@@ -32,8 +32,8 @@ OC.Contacts = OC.Contacts || {};
 
 	Contact.prototype.metaData = function() {
 		return {
-			contactid: this.id,
-			addressbookid: this.metadata.parent,
+			contactId: this.id,
+			addressBookId: this.metadata.parent,
 			backend: this.metadata.backend
 		}
 	};
@@ -320,9 +320,7 @@ OC.Contacts = OC.Contacts || {};
 		console.log('Contact.deleteProperty, element', element, $container);
 		var params = {
 			name: element,
-			backend: this.metadata.backend,
-			addressbookid: this.metadata.parent,
-			id: this.id
+			value: null
 		};
 		if(this.multi_properties.indexOf(element) !== -1) {
 			params['checksum'] = this.checksumFor(obj);
@@ -338,7 +336,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 		this.setAsSaving(obj, true);
 		var self = this;
-		$.when(this.storage.deleteProperty(this.metadata.backend, this.metadata.parent, this.id, params))
+		$.when(this.storage.patchContact(this.metadata.backend, this.metadata.parent, this.id, params))
 			.then(function(response) {
 			if(!response.error) {
 				if(self.multi_properties.indexOf(element) !== -1) {
@@ -487,7 +485,7 @@ OC.Contacts = OC.Contacts || {};
 		console.log('args', args);
 		var self = this;
 		this.setAsSaving(obj, true);
-		$.when(this.storage.saveProperty(this.metadata.backend, this.metadata.parent, this.id, args))
+		$.when(this.storage.patchContact(this.metadata.backend, this.metadata.parent, this.id, args))
 			.then(function(response) {
 			if(!response.error) {
 				if(!self.data[element]) {
@@ -2477,77 +2475,24 @@ OC.Contacts = OC.Contacts || {};
 			return;
 		}
 		var self = this,
-			contacts,
-			key = 'contacts::' + backend + '::' + addressBookId,
-			defer = $.Deferred();
+			contacts;
 
-		// Local function to get the contacts if they're not cached or invalid.
-		var fetchContacts = function(backend, addressBookId) {
-			return $.when(self.storage.getAddressBook(backend, addressBookId, false))
-				.then(function(response) {
-				console.log('ContactList.loadContacts - fetching', response);
-				if(!response.error) {
-					if(response.data) {
-						response.data.Etag = response.getResponseHeader('Etag');
-						OC.localStorage.setItem(key, response.data);
-						self.insertContacts(response.data.contacts);
-						defer.resolve();
-					}
-				} else {
-					console.warn('ContactList.loadContacts - no data!!');
+		return $.when(self.storage.getAddressBook(backend, addressBookId, false))
+			.then(function(response) {
+			console.log('ContactList.loadContacts - fetching', response);
+			if(!response.error) {
+				if(response.data) {
+					self.insertContacts(response.data.contacts);
 				}
-			})
-			.fail(function(response) {
-				console.warn('Request Failed:', response.message);
-				defer.reject({error: true, message: response.message});
-			});
-			return defer;
-		};
+			} else {
+				console.warn('ContactList.loadContacts - no data!!');
+			}
+		})
+		.fail(function(response) {
+			console.warn('Request Failed:', response.message);
+			defer.reject({error: true, message: response.message});
+		});
 
-		// First check if we have a valid local cache
-		if(OC.localStorage.hasItem(key)) {
-			$.when(this.storage.getAddressBook(backend, addressBookId, true))
-			.then(function(response) {
-				var data = OC.localStorage.getItem(key);
-				console.log('Local data', data);
-				var etag = response.getResponseHeader('Etag');
-				console.log('HEAD  response', response);
-				console.log('HEAD  Etag', etag);
-				console.log('Saved Etag', data.Etag);
-				if(etag && etag === data.Etag) {
-					console.log('Returning saved data');
-					self.insertContacts(data.contacts);
-					defer.resolve();
-				} else {
-					console.log('Local cache invalid');
-					$.when(fetchContacts(backend, addressBookId))
-					.then(function(response) {
-						console.log('ContactList.loadContacts on invalid', response);
-						defer.resolve();
-					})
-					.fail(function(response) {
-						console.warn('Request Failed:', response.message);
-						defer.reject();
-					});
-				}
-			})
-			.fail(function(response) {
-				console.warn('Request Failed:', response.message);
-				defer.reject();
-			});
-		} else {
-			console.log('No local cache');
-			$.when(fetchContacts(backend, addressBookId))
-			.then(function(response) {
-				console.log('ContactList.loadContacts on no cache', response);
-				defer.resolve();
-			})
-			.fail(function(response) {
-				console.warn('Request Failed:', response.message);
-				defer.reject();
-			});
-		}
-		return defer;
 	};
 
 	OC.Contacts.ContactList = ContactList;
