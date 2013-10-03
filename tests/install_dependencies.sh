@@ -10,5 +10,6 @@ mkdir apps2
 ln -s $WORKDIR apps2
 git checkout urlParams_fix
 git checkout -b oc6-integration
-git merge improved_request
+git fetch origin
+git merge origin/improved_request
 cd $WORKDIR
