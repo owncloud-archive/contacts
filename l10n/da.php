@@ -99,7 +99,6 @@
 "Property name is not set." => "Egenskabsnavn er ikke angivet.",
 "Property checksum is not set." => "Tjeksum for egenskab er ikke angivet.",
 "Information about vCard is incorrect. Please reload the page." => "Informationen om vCard er forkert. Genindlæs siden.",
-"Error setting property" => "Fejl ved angivelse af egenskab",
 "No file was uploaded. Unknown error" => "Ingen fil blev uploadet. Ukendt fejl.",
 "There is no error, the file uploaded with success" => "Der skete ingen fejl, filen blev succesfuldt uploadet",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "Den uploadede fil er større end upload_max_filesize indstillingen i php.ini",

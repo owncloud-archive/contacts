@@ -103,8 +103,6 @@
 "Property name is not set." => "尚未設定屬性名稱",
 "Property checksum is not set." => "尚未設定檢查碼",
 "Information about vCard is incorrect. Please reload the page." => "有關 vCard 的資訊不正確，請重新載入此頁。",
-"Error setting property" => "設定屬性時發生錯誤",
-"Error saving property to backend" => "儲存屬性至後端時發生錯誤",
 "Error getting user photo" => "取得使用者相片時發生錯誤",
 "No file was uploaded. Unknown error" => "沒有檔案被上傳。未知的錯誤。",
 "There is no error, the file uploaded with success" => "無錯誤，檔案上傳成功",

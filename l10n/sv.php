@@ -109,8 +109,6 @@
 "Property name is not set." => "Namn för egenskap ej definierat",
 "Property checksum is not set." => "Kontrollsumma för objekt ej definierat.",
 "Information about vCard is incorrect. Please reload the page." => "Information om vCard är felaktigt. Vänligen ladda om sidan.",
-"Error setting property" => "Fel när inställning ska sparas",
-"Error saving property to backend" => "Fel när inställning ska sparas till server",
 "Error getting user photo" => "Fel uppstod under hämtning av användarbild",
 "No file was uploaded. Unknown error" => "Ingen fil har laddats upp. Okänt fel",
 "There is no error, the file uploaded with success" => "Inga fel har uppstått. Filen har laddats upp utan problem.",

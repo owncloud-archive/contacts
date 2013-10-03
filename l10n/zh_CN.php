@@ -103,8 +103,6 @@
 "Property name is not set." => "属性名称未设置。",
 "Property checksum is not set." => "属性校验值未设置。",
 "Information about vCard is incorrect. Please reload the page." => "vCard 的信息不正确。请重新加载页面。",
-"Error setting property" => "设置属性出错",
-"Error saving property to backend" => "将属性保存到后端出错",
 "No file was uploaded. Unknown error" => "没有文件被上传。未知错误",
 "There is no error, the file uploaded with success" => "文件上传成功，没有错误发生",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "上传的文件长度超出了 php.ini 中 upload_max_filesize 的限制",

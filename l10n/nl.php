@@ -109,8 +109,6 @@
 "Property name is not set." => "Naam van eigenschap niet ingesteld.",
 "Property checksum is not set." => "Controlegetal van eigenschap niet ingesteld.",
 "Information about vCard is incorrect. Please reload the page." => "Informatie over de vCard is onjuist. Herlaad de pagina.",
-"Error setting property" => "Fout bij instellen eigenschap",
-"Error saving property to backend" => "Fout bij opslaan eigenschap in backend",
 "Error getting user photo" => "Fout bij ophalen gebruikersfoto",
 "No file was uploaded. Unknown error" => "Er was geen bestand geladen.  Onbekende fout",
 "There is no error, the file uploaded with success" => "De upload van het bestand is goedgegaan.",

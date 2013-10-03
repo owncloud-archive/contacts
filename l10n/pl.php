@@ -107,8 +107,6 @@
 "Property name is not set." => "Nazwa właściwości nie jest ustawiona",
 "Property checksum is not set." => "Właściwości checksum-y nie ustawione.",
 "Information about vCard is incorrect. Please reload the page." => "Informacje o vCard są nieprawidłowe. Proszę odświeżyć stronę.",
-"Error setting property" => "Błąd ustawiania właściwości",
-"Error saving property to backend" => "Wystąpił błąd podczas zapisywania właściwości do wewnętrznej bazy danych",
 "Error getting user photo" => "Błąd pobrania zdjęcia użytkownika",
 "No file was uploaded. Unknown error" => "Żaden plik nie został załadowany. Nieznany błąd",
 "There is no error, the file uploaded with success" => "Nie było błędów, plik wysłano poprawnie.",

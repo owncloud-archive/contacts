@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-02 08:04-0400\n"
-"PO-Revision-Date: 2013-10-02 12:04+0000\n"
+"POT-Creation-Date: 2013-10-03 07:10-0400\n"
+"PO-Revision-Date: 2013-10-03 11:10+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -171,33 +171,33 @@ msgstr "プロフィール写真を編集"
 msgid "Crop photo"
 msgstr "フォトをトリミング"
 
-#: js/contacts.js:591
+#: js/contacts.js:589
 msgid "Is this correct?"
 msgstr "これは正しいですか？"
 
-#: js/contacts.js:859
+#: js/contacts.js:857
 msgid "Error parsing date: {date}"
 msgstr "日付の読み取りでエラー発生: {date}"
 
-#: js/contacts.js:1056
+#: js/contacts.js:1054
 msgid "# groups"
 msgstr "グループ数"
 
-#: js/contacts.js:1128
+#: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "誕生日 {bday} の解析エラー: {error}"
 
-#: js/contacts.js:2165
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "いくつかの連絡先が削除対象としてマークされていますが、まだ削除されていません。削除には今しばらく時間がかかります。"
 
-#: js/contacts.js:2176
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "クリックして {num} 個の連絡先の削除を取り消す"
 
-#: js/contacts.js:2185
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num}件の連絡先の削除がキャンセルされました"
 
@@ -336,7 +336,7 @@ msgstr "閉じる..."
 msgid "Server error! Please inform system administator"
 msgstr ""
 
-#: js/storage.js:308 js/storage.js:347
+#: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
 msgstr "写真の読み込みに失敗: {error}"
 
@@ -420,48 +420,47 @@ msgstr "不明なIM:"
 msgid "{name}'s Birthday"
 msgstr "{name}の誕生日"
 
-#: lib/controller/addressbookcontroller.php:100
+#: lib/controller/addressbookcontroller.php:110
 msgid "Error creating address book"
 msgstr "アドレス帳の作成エラー"
 
-#: lib/controller/addressbookcontroller.php:120
+#: lib/controller/addressbookcontroller.php:130
 msgid "Error updating address book"
 msgstr "アドレス帳の更新エラー"
 
-#: lib/controller/addressbookcontroller.php:151
+#: lib/controller/addressbookcontroller.php:161
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "アドレス帳 \"%s\" を削除する権限がありません"
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
 msgstr "アドレス帳の削除エラー"
 
-#: lib/controller/addressbookcontroller.php:197
+#: lib/controller/addressbookcontroller.php:208
 msgid "Error creating contact."
 msgstr "連絡先の作成エラー。"
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error deleting contact."
 msgstr "連絡先の削除エラー。"
 
-#: lib/controller/addressbookcontroller.php:279
+#: lib/controller/addressbookcontroller.php:290
 msgid "Error retrieving contact."
 msgstr "連絡先の取得エラー"
 
-#: lib/controller/addressbookcontroller.php:290
+#: lib/controller/addressbookcontroller.php:301
 #: lib/controller/contactphotocontroller.php:338
 msgid "Error saving contact."
 msgstr "連絡先の保存エラー。"
 
-#: lib/controller/addressbookcontroller.php:295
+#: lib/controller/addressbookcontroller.php:306
 msgid "Error removing contact from other address book."
 msgstr "他のアドレス帳からの連絡先の削除エラー"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:61
-#: lib/controller/contactcontroller.php:99
-#: lib/controller/contactcontroller.php:160
+#: lib/controller/contactcontroller.php:106
 #: lib/controller/contactphotocontroller.php:38
 #: lib/controller/contactphotocontroller.php:277
 #: lib/controller/exportcontroller.php:66
@@ -473,33 +472,28 @@ msgid "Error merging into contact."
 msgstr "連絡先へのマージエラー。"
 
 #: lib/controller/contactcontroller.php:70
-#: lib/controller/contactcontroller.php:121
 msgid "Error saving contact to backend."
 msgstr "バックエンドへの連絡先の保存エラー"
 
-#: lib/controller/contactcontroller.php:103
-#: lib/controller/contactcontroller.php:163
+#: lib/controller/contactcontroller.php:111
 msgid "Property name is not set."
 msgstr "プロパティ名が設定されていません。"
 
-#: lib/controller/contactcontroller.php:107
-#: lib/controller/contactcontroller.php:166
-#: lib/controller/contactcontroller.php:175
+#: lib/controller/contactcontroller.php:116
 msgid "Property checksum is not set."
 msgstr "プロパティのチェックサムが設定されていません。"
 
-#: lib/controller/contactcontroller.php:114
-#: lib/controller/contactcontroller.php:181
+#: lib/controller/contactcontroller.php:135
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "vCardの情報に誤りがあります。ページをリロードして下さい。"
 
-#: lib/controller/contactcontroller.php:185
-msgid "Error setting property"
-msgstr "プロパティの設定エラー"
+#: lib/controller/contactcontroller.php:144
+msgid "Error updating contact"
+msgstr ""
 
-#: lib/controller/contactcontroller.php:189
-msgid "Error saving property to backend"
-msgstr "バックエンドへのプロパティの保存エラー"
+#: lib/controller/contactcontroller.php:149
+msgid "Error saving contact to backend"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"

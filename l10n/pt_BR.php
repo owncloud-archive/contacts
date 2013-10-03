@@ -109,8 +109,6 @@
 "Property name is not set." => "Nome da propriedade não está definida.",
 "Property checksum is not set." => "Verificação de propriedade não está definida.",
 "Information about vCard is incorrect. Please reload the page." => "Informações sobre vCard é incorreta. Por favor, recarregue a página.",
-"Error setting property" => "Erro configurando propriedade",
-"Error saving property to backend" => "Erro salvando propriedade ao final",
 "Error getting user photo" => "Erro obtendo a foto do usuário",
 "No file was uploaded. Unknown error" => "Nenhum arquivo foi enviado. Erro desconhecido",
 "There is no error, the file uploaded with success" => "Sem erros, o arquivo foi enviado com sucesso",

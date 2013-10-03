@@ -109,8 +109,6 @@
 "Property name is not set." => "Název vlastnosti není nastaven.",
 "Property checksum is not set." => "Kontrolní součet vlastnosti není nastaven.",
 "Information about vCard is incorrect. Please reload the page." => "Informace o vCard je neplatná. Obnovte, prosím, stránku.",
-"Error setting property" => "Chyba při nastavování vlastnosti",
-"Error saving property to backend" => "Chyba při zápisu vlastnosti do úložiště",
 "Error getting user photo" => "Chyba při získávání uživatelovy fotky",
 "No file was uploaded. Unknown error" => "Soubor nebyl odeslán. Neznámá chyba",
 "There is no error, the file uploaded with success" => "Soubor byl odeslán úspěšně",

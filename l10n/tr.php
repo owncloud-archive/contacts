@@ -98,8 +98,6 @@
 "Property name is not set." => "Özellik adı atanmadı.",
 "Property checksum is not set." => "Özellik için checksum atanmadı.",
 "Information about vCard is incorrect. Please reload the page." => "vCard bilgileri doğru değil. Lütfen sayfayı yenileyin.",
-"Error setting property" => "Hata ayarı özelliği",
-"Error saving property to backend" => "Özellik arka sisteme(backend) kaydedilirken hata oluştu",
 "No file was uploaded. Unknown error" => "Dosya yüklenmedi. Bilinmeyen hata",
 "There is no error, the file uploaded with success" => "Dosya başarıyla yüklendi, hata oluşmadı",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "Dosyanın boyutu php.ini dosyasındaki upload_max_filesize limitini aşıyor",

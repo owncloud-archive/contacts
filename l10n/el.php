@@ -82,7 +82,6 @@
 "Error removing contact from other address book." => "Σφάλμα διαγραφής επαφής από το βιβλίο διευθύνσεων",
 "Couldn't find contact." => "Η επαφή δεν μπόρεσε να βρεθεί.",
 "Information about vCard is incorrect. Please reload the page." => "Οι πληροφορίες σχετικά με vCard είναι εσφαλμένες. Παρακαλώ επαναφορτώστε τη σελίδα.",
-"Error setting property" => "Σφάλμα ορισμού δικαιωμάτων",
 "No file was uploaded. Unknown error" => "Δεν ανέβηκε κάποιο αρχείο. Άγνωστο σφάλμα",
 "There is no error, the file uploaded with success" => "Δεν υπάρχει σφάλμα, το αρχείο εστάλει επιτυχώς",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "Το αρχείο που εστάλει υπερβαίνει την οδηγία μέγιστου επιτρεπτού μεγέθους \"upload_max_filesize\" του php.ini",

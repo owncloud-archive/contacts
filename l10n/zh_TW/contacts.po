@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-02 08:04-0400\n"
-"PO-Revision-Date: 2013-10-02 12:04+0000\n"
+"POT-Creation-Date: 2013-10-03 07:10-0400\n"
+"PO-Revision-Date: 2013-10-03 11:10+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/owncloud/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -176,33 +176,33 @@ msgstr "編輯大頭貼照"
 msgid "Crop photo"
 msgstr "裁切相片"
 
-#: js/contacts.js:591
+#: js/contacts.js:589
 msgid "Is this correct?"
 msgstr "是否正確?"
 
-#: js/contacts.js:859
+#: js/contacts.js:857
 msgid "Error parsing date: {date}"
 msgstr "錯誤的解析日期:{date}"
 
-#: js/contacts.js:1056
+#: js/contacts.js:1054
 msgid "# groups"
 msgstr "# groups"
 
-#: js/contacts.js:1128
+#: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2165
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "有一些聯絡人被標記為將刪除但是尚未刪除，稍等一下就會刪除了。"
 
-#: js/contacts.js:2176
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "點一下來復原刪除 {num} 個聯絡人"
 
-#: js/contacts.js:2185
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr "取消 {num} 個聯絡人的刪除動作"
 
@@ -341,7 +341,7 @@ msgstr "較少…"
 msgid "Server error! Please inform system administator"
 msgstr ""
 
-#: js/storage.js:308 js/storage.js:347
+#: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
 msgstr "圖片載入失敗： {error}"
 
@@ -425,48 +425,47 @@ msgstr "未知的 IM:"
 msgid "{name}'s Birthday"
 msgstr "{name}的生日"
 
-#: lib/controller/addressbookcontroller.php:100
+#: lib/controller/addressbookcontroller.php:110
 msgid "Error creating address book"
 msgstr "建立通訊錄出現錯誤"
 
-#: lib/controller/addressbookcontroller.php:120
+#: lib/controller/addressbookcontroller.php:130
 msgid "Error updating address book"
 msgstr "編輯通訊錄出現錯誤"
 
-#: lib/controller/addressbookcontroller.php:151
+#: lib/controller/addressbookcontroller.php:161
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "你沒有刪除\"%s\"通訊錄的權限"
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
 msgstr "刪除通訊錄出現錯誤"
 
-#: lib/controller/addressbookcontroller.php:197
+#: lib/controller/addressbookcontroller.php:208
 msgid "Error creating contact."
 msgstr "建立聯絡人出現錯誤"
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error deleting contact."
 msgstr "刪除聯絡人出現錯誤"
 
-#: lib/controller/addressbookcontroller.php:279
+#: lib/controller/addressbookcontroller.php:290
 msgid "Error retrieving contact."
 msgstr "取得聯絡人出現錯誤"
 
-#: lib/controller/addressbookcontroller.php:290
+#: lib/controller/addressbookcontroller.php:301
 #: lib/controller/contactphotocontroller.php:338
 msgid "Error saving contact."
 msgstr "儲存聯絡人時發生錯誤"
 
-#: lib/controller/addressbookcontroller.php:295
+#: lib/controller/addressbookcontroller.php:306
 msgid "Error removing contact from other address book."
 msgstr "從其他通訊錄移除聯絡人時發生錯誤。"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:61
-#: lib/controller/contactcontroller.php:99
-#: lib/controller/contactcontroller.php:160
+#: lib/controller/contactcontroller.php:106
 #: lib/controller/contactphotocontroller.php:38
 #: lib/controller/contactphotocontroller.php:277
 #: lib/controller/exportcontroller.php:66
@@ -478,33 +477,28 @@ msgid "Error merging into contact."
 msgstr "合併聯絡人資料時出現錯誤"
 
 #: lib/controller/contactcontroller.php:70
-#: lib/controller/contactcontroller.php:121
 msgid "Error saving contact to backend."
 msgstr "儲存聯絡人資料至後端時出現錯誤"
 
-#: lib/controller/contactcontroller.php:103
-#: lib/controller/contactcontroller.php:163
+#: lib/controller/contactcontroller.php:111
 msgid "Property name is not set."
 msgstr "尚未設定屬性名稱"
 
-#: lib/controller/contactcontroller.php:107
-#: lib/controller/contactcontroller.php:166
-#: lib/controller/contactcontroller.php:175
+#: lib/controller/contactcontroller.php:116
 msgid "Property checksum is not set."
 msgstr "尚未設定檢查碼"
 
-#: lib/controller/contactcontroller.php:114
-#: lib/controller/contactcontroller.php:181
+#: lib/controller/contactcontroller.php:135
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "有關 vCard 的資訊不正確，請重新載入此頁。"
 
-#: lib/controller/contactcontroller.php:185
-msgid "Error setting property"
-msgstr "設定屬性時發生錯誤"
+#: lib/controller/contactcontroller.php:144
+msgid "Error updating contact"
+msgstr ""
 
-#: lib/controller/contactcontroller.php:189
-msgid "Error saving property to backend"
-msgstr "儲存屬性至後端時發生錯誤"
+#: lib/controller/contactcontroller.php:149
+msgid "Error saving contact to backend"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"

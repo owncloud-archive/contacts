@@ -109,8 +109,6 @@
 "Property name is not set." => "Property name is not set.",
 "Property checksum is not set." => "Property checksum is not set.",
 "Information about vCard is incorrect. Please reload the page." => "Information about vCard is incorrect. Please reload the page.",
-"Error setting property" => "Error setting property",
-"Error saving property to backend" => "Error saving property to backend",
 "Error getting user photo" => "Error getting user photo",
 "No file was uploaded. Unknown error" => "No file was uploaded. Unknown error",
 "There is no error, the file uploaded with success" => "There is no error, the file uploaded successfully",

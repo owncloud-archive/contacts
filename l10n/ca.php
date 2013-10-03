@@ -109,8 +109,6 @@
 "Property name is not set." => "La propietat nom no està definida.",
 "Property checksum is not set." => "La suma de verificació no està definida.",
 "Information about vCard is incorrect. Please reload the page." => "La informació de la vCard és incorrecta. Carregueu la pàgina de nou.",
-"Error setting property" => "Error en establir la propietat.",
-"Error saving property to backend" => "Error en desar la propietat al dorsal",
 "Error getting user photo" => "Error en obtenir la fotografia d'usuari.",
 "No file was uploaded. Unknown error" => "No s'ha carregat cap fitxer. Error desconegut",
 "There is no error, the file uploaded with success" => "No hi ha errors, el fitxer s'ha carregat correctament",

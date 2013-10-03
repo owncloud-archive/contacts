@@ -103,8 +103,6 @@
 "Property name is not set." => "Údaj Meno nie je nastavené.",
 "Property checksum is not set." => "Údaj Kontrolný súčet nie je nastavený.",
 "Information about vCard is incorrect. Please reload the page." => "Informácie o vCard sú neplatné. Prosím obnovte stránku.",
-"Error setting property" => "Chyba pri nastavovaní údaja",
-"Error saving property to backend" => "Chyba pri ukladaní údaja v úložisku.",
 "No file was uploaded. Unknown error" => "Žiaden súbor nebol odoslaný. Neznáma chyba",
 "There is no error, the file uploaded with success" => "Nenastala žiadna chyba, súbor bol úspešne nahraný",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "Nahrávaný súbor prekračuje nastavenie upload_max_filesize v php.ini",

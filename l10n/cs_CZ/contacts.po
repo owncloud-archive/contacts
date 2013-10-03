@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-02 08:04-0400\n"
-"PO-Revision-Date: 2013-10-02 12:04+0000\n"
+"POT-Creation-Date: 2013-10-03 07:10-0400\n"
+"PO-Revision-Date: 2013-10-03 11:10+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -172,33 +172,33 @@ msgstr "Upravit obrázek profilu"
 msgid "Crop photo"
 msgstr "Oříznout fotku"
 
-#: js/contacts.js:591
+#: js/contacts.js:589
 msgid "Is this correct?"
 msgstr "Je to správně?"
 
-#: js/contacts.js:859
+#: js/contacts.js:857
 msgid "Error parsing date: {date}"
 msgstr "Chyba při parsování data: {date}"
 
-#: js/contacts.js:1056
+#: js/contacts.js:1054
 msgid "# groups"
 msgstr "počet skupin"
 
-#: js/contacts.js:1128
+#: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Chyba parsování narozenin {bday}: {error}"
 
-#: js/contacts.js:2165
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Některé kontakty jsou označeny ke smazání, ale ještě smazány nejsou. Počkejte, prosím, na dokončení operace."
 
-#: js/contacts.js:2176
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikněte pro navrácení smazání {num} kontaktů"
 
-#: js/contacts.js:2185
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Smazání {num} kontaktů zrušeno"
 
@@ -337,7 +337,7 @@ msgstr "Méně..."
 msgid "Server error! Please inform system administator"
 msgstr ""
 
-#: js/storage.js:308 js/storage.js:347
+#: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
 msgstr "Načtení fotografie se nezdařilo: {error}"
 
@@ -421,48 +421,47 @@ msgstr "Neznámý komunikátor: "
 msgid "{name}'s Birthday"
 msgstr "Narozeniny {name}"
 
-#: lib/controller/addressbookcontroller.php:100
+#: lib/controller/addressbookcontroller.php:110
 msgid "Error creating address book"
 msgstr "Chyba při vytváření adresáře kontaktů"
 
-#: lib/controller/addressbookcontroller.php:120
+#: lib/controller/addressbookcontroller.php:130
 msgid "Error updating address book"
 msgstr "Chyba při změně adresáře kontaktů"
 
-#: lib/controller/addressbookcontroller.php:151
+#: lib/controller/addressbookcontroller.php:161
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Nemáte oprávnění pro smazání adresáře kontaktů \"%s\""
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
 msgstr "Chyba při mazání adresáře kontaktů"
 
-#: lib/controller/addressbookcontroller.php:197
+#: lib/controller/addressbookcontroller.php:208
 msgid "Error creating contact."
 msgstr "Chyba při vytváření kontaktu"
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error deleting contact."
 msgstr "Chyba při mazání kontaktu"
 
-#: lib/controller/addressbookcontroller.php:279
+#: lib/controller/addressbookcontroller.php:290
 msgid "Error retrieving contact."
 msgstr "Chyba při otevírání kontaktu."
 
-#: lib/controller/addressbookcontroller.php:290
+#: lib/controller/addressbookcontroller.php:301
 #: lib/controller/contactphotocontroller.php:338
 msgid "Error saving contact."
 msgstr "Chyba při ukládání kontaktu."
 
-#: lib/controller/addressbookcontroller.php:295
+#: lib/controller/addressbookcontroller.php:306
 msgid "Error removing contact from other address book."
 msgstr "Chyba při odebírání kontaktu z jiného adresáře kontaktů."
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:61
-#: lib/controller/contactcontroller.php:99
-#: lib/controller/contactcontroller.php:160
+#: lib/controller/contactcontroller.php:106
 #: lib/controller/contactphotocontroller.php:38
 #: lib/controller/contactphotocontroller.php:277
 #: lib/controller/exportcontroller.php:66
@@ -474,33 +473,28 @@ msgid "Error merging into contact."
 msgstr "Chyba při slučování do kontaktu."
 
 #: lib/controller/contactcontroller.php:70
-#: lib/controller/contactcontroller.php:121
 msgid "Error saving contact to backend."
 msgstr "Chyba při zápisu kontaktu do úložiště."
 
-#: lib/controller/contactcontroller.php:103
-#: lib/controller/contactcontroller.php:163
+#: lib/controller/contactcontroller.php:111
 msgid "Property name is not set."
 msgstr "Název vlastnosti není nastaven."
 
-#: lib/controller/contactcontroller.php:107
-#: lib/controller/contactcontroller.php:166
-#: lib/controller/contactcontroller.php:175
+#: lib/controller/contactcontroller.php:116
 msgid "Property checksum is not set."
 msgstr "Kontrolní součet vlastnosti není nastaven."
 
-#: lib/controller/contactcontroller.php:114
-#: lib/controller/contactcontroller.php:181
+#: lib/controller/contactcontroller.php:135
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Informace o vCard je neplatná. Obnovte, prosím, stránku."
 
-#: lib/controller/contactcontroller.php:185
-msgid "Error setting property"
-msgstr "Chyba při nastavování vlastnosti"
+#: lib/controller/contactcontroller.php:144
+msgid "Error updating contact"
+msgstr ""
 
-#: lib/controller/contactcontroller.php:189
-msgid "Error saving property to backend"
-msgstr "Chyba při zápisu vlastnosti do úložiště"
+#: lib/controller/contactcontroller.php:149
+msgid "Error saving contact to backend"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"

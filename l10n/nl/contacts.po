@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-02 08:04-0400\n"
-"PO-Revision-Date: 2013-10-02 12:04+0000\n"
+"POT-Creation-Date: 2013-10-03 07:10-0400\n"
+"PO-Revision-Date: 2013-10-03 11:10+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -177,33 +177,33 @@ msgstr "Bewerk profielafbeelding"
 msgid "Crop photo"
 msgstr "Bijsnijden foto"
 
-#: js/contacts.js:591
+#: js/contacts.js:589
 msgid "Is this correct?"
 msgstr "Is dit correct?"
 
-#: js/contacts.js:859
+#: js/contacts.js:857
 msgid "Error parsing date: {date}"
 msgstr "Fout bij lezen datum: {date}"
 
-#: js/contacts.js:1056
+#: js/contacts.js:1054
 msgid "# groups"
 msgstr "# groepen"
 
-#: js/contacts.js:1128
+#: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Fout bij interpreteren verjaardag {bday}: {error}"
 
-#: js/contacts.js:2165
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd."
 
-#: js/contacts.js:2176
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik om het verwijderen van {num} contactpersonen ongedaan te maken."
 
-#: js/contacts.js:2185
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Verwijderen van {num} contacten geannuleerd"
 
@@ -342,7 +342,7 @@ msgstr "Minder..."
 msgid "Server error! Please inform system administator"
 msgstr ""
 
-#: js/storage.js:308 js/storage.js:347
+#: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
 msgstr "Mislukt: inladen foto: {error}"
 
@@ -426,48 +426,47 @@ msgstr "Onbekende IM:"
 msgid "{name}'s Birthday"
 msgstr "{name}'s verjaardag"
 
-#: lib/controller/addressbookcontroller.php:100
+#: lib/controller/addressbookcontroller.php:110
 msgid "Error creating address book"
 msgstr "Fout bij aanmaken adresboek"
 
-#: lib/controller/addressbookcontroller.php:120
+#: lib/controller/addressbookcontroller.php:130
 msgid "Error updating address book"
 msgstr "Fout bij bijwerken adresboek"
 
-#: lib/controller/addressbookcontroller.php:151
+#: lib/controller/addressbookcontroller.php:161
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "U hebt niet de permissies om het \"%s\" adresboek te verwijderen"
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
 msgstr "Fout bij verwijderen adresboek"
 
-#: lib/controller/addressbookcontroller.php:197
+#: lib/controller/addressbookcontroller.php:208
 msgid "Error creating contact."
 msgstr "Fout bij aanmaken contactpersoon."
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error deleting contact."
 msgstr "Fout bij verwijderen contactpersoon."
 
-#: lib/controller/addressbookcontroller.php:279
+#: lib/controller/addressbookcontroller.php:290
 msgid "Error retrieving contact."
 msgstr "Fout bij ophalen contactpersonen."
 
-#: lib/controller/addressbookcontroller.php:290
+#: lib/controller/addressbookcontroller.php:301
 #: lib/controller/contactphotocontroller.php:338
 msgid "Error saving contact."
 msgstr "Fout om contact op te slaan"
 
-#: lib/controller/addressbookcontroller.php:295
+#: lib/controller/addressbookcontroller.php:306
 msgid "Error removing contact from other address book."
 msgstr "Fout bij verwijderen contactpersoon uit ander adresboek."
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:61
-#: lib/controller/contactcontroller.php:99
-#: lib/controller/contactcontroller.php:160
+#: lib/controller/contactcontroller.php:106
 #: lib/controller/contactphotocontroller.php:38
 #: lib/controller/contactphotocontroller.php:277
 #: lib/controller/exportcontroller.php:66
@@ -479,33 +478,28 @@ msgid "Error merging into contact."
 msgstr "Fout bij samenvoegen bij contactpersoon."
 
 #: lib/controller/contactcontroller.php:70
-#: lib/controller/contactcontroller.php:121
 msgid "Error saving contact to backend."
 msgstr "Fout bij bewaren contactpersoon in backend."
 
-#: lib/controller/contactcontroller.php:103
-#: lib/controller/contactcontroller.php:163
+#: lib/controller/contactcontroller.php:111
 msgid "Property name is not set."
 msgstr "Naam van eigenschap niet ingesteld."
 
-#: lib/controller/contactcontroller.php:107
-#: lib/controller/contactcontroller.php:166
-#: lib/controller/contactcontroller.php:175
+#: lib/controller/contactcontroller.php:116
 msgid "Property checksum is not set."
 msgstr "Controlegetal van eigenschap niet ingesteld."
 
-#: lib/controller/contactcontroller.php:114
-#: lib/controller/contactcontroller.php:181
+#: lib/controller/contactcontroller.php:135
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Informatie over de vCard is onjuist. Herlaad de pagina."
 
-#: lib/controller/contactcontroller.php:185
-msgid "Error setting property"
-msgstr "Fout bij instellen eigenschap"
+#: lib/controller/contactcontroller.php:144
+msgid "Error updating contact"
+msgstr ""
 
-#: lib/controller/contactcontroller.php:189
-msgid "Error saving property to backend"
-msgstr "Fout bij opslaan eigenschap in backend"
+#: lib/controller/contactcontroller.php:149
+msgid "Error saving contact to backend"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"

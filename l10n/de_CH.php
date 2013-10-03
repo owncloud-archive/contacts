@@ -99,8 +99,6 @@
 "Property name is not set." => "Merkmalsname ist nicht angegeben.",
 "Property checksum is not set." => "Merkmalsprüfsumme ist nicht angegeben.",
 "Information about vCard is incorrect. Please reload the page." => "Die Information der vCard ist fehlerhaft. Bitte aktualisieren Sie die Seite.",
-"Error setting property" => "Fehler bei der Angabe eines Merkmals",
-"Error saving property to backend" => "Fehler beim Speichern eines Merkmals ins Backend",
 "No file was uploaded. Unknown error" => "Keine Datei hochgeladen. Unbekannter Fehler",
 "There is no error, the file uploaded with success" => "Es ist kein Fehler aufgetreten. Die Datei wurde erfolgreich hochgeladen.",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "Die Datei ist grösser, als durch die upload_max_filesize Direktive in php.ini erlaubt",

@@ -24,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-02 08:04-0400\n"
-"PO-Revision-Date: 2013-10-02 12:04+0000\n"
+"POT-Creation-Date: 2013-10-03 07:10-0400\n"
+"PO-Revision-Date: 2013-10-03 11:10+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -181,33 +181,33 @@ msgstr "编辑配置图片"
 msgid "Crop photo"
 msgstr ""
 
-#: js/contacts.js:591
+#: js/contacts.js:589
 msgid "Is this correct?"
 msgstr "这正确吗？"
 
-#: js/contacts.js:859
+#: js/contacts.js:857
 msgid "Error parsing date: {date}"
 msgstr "解析日期出错：{date}"
 
-#: js/contacts.js:1056
+#: js/contacts.js:1054
 msgid "# groups"
 msgstr "#群组"
 
-#: js/contacts.js:1128
+#: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2165
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一些联系人已被标注为删除，但是尚未完成，请稍候。"
 
-#: js/contacts.js:2176
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "点击以撤销删除这{num}个联系人"
 
-#: js/contacts.js:2185
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -346,7 +346,7 @@ msgstr "更少..."
 msgid "Server error! Please inform system administator"
 msgstr ""
 
-#: js/storage.js:308 js/storage.js:347
+#: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
 msgstr "加载照片失败：{error}"
 
@@ -430,48 +430,47 @@ msgstr "未知即时通讯服务："
 msgid "{name}'s Birthday"
 msgstr "{name} 的生日"
 
-#: lib/controller/addressbookcontroller.php:100
+#: lib/controller/addressbookcontroller.php:110
 msgid "Error creating address book"
 msgstr "创建地址薄出错"
 
-#: lib/controller/addressbookcontroller.php:120
+#: lib/controller/addressbookcontroller.php:130
 msgid "Error updating address book"
 msgstr "更新地址簿出错"
 
-#: lib/controller/addressbookcontroller.php:151
+#: lib/controller/addressbookcontroller.php:161
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "你没有权限删除地址簿“%s”"
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
 msgstr "删除地址薄出错"
 
-#: lib/controller/addressbookcontroller.php:197
+#: lib/controller/addressbookcontroller.php:208
 msgid "Error creating contact."
 msgstr "创建联系人出错。"
 
-#: lib/controller/addressbookcontroller.php:236
+#: lib/controller/addressbookcontroller.php:247
 msgid "Error deleting contact."
 msgstr "删除联系人出错。"
 
-#: lib/controller/addressbookcontroller.php:279
+#: lib/controller/addressbookcontroller.php:290
 msgid "Error retrieving contact."
 msgstr "检索联系人出错。"
 
-#: lib/controller/addressbookcontroller.php:290
+#: lib/controller/addressbookcontroller.php:301
 #: lib/controller/contactphotocontroller.php:338
 msgid "Error saving contact."
 msgstr "保存联系人时出错。"
 
-#: lib/controller/addressbookcontroller.php:295
+#: lib/controller/addressbookcontroller.php:306
 msgid "Error removing contact from other address book."
 msgstr "从其他地址簿移除联系人出错。"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:61
-#: lib/controller/contactcontroller.php:99
-#: lib/controller/contactcontroller.php:160
+#: lib/controller/contactcontroller.php:106
 #: lib/controller/contactphotocontroller.php:38
 #: lib/controller/contactphotocontroller.php:277
 #: lib/controller/exportcontroller.php:66
@@ -483,33 +482,28 @@ msgid "Error merging into contact."
 msgstr "合并到联系人出错。"
 
 #: lib/controller/contactcontroller.php:70
-#: lib/controller/contactcontroller.php:121
 msgid "Error saving contact to backend."
 msgstr "保存联系人到后台出错。"
 
-#: lib/controller/contactcontroller.php:103
-#: lib/controller/contactcontroller.php:163
+#: lib/controller/contactcontroller.php:111
 msgid "Property name is not set."
 msgstr "属性名称未设置。"
 
-#: lib/controller/contactcontroller.php:107
-#: lib/controller/contactcontroller.php:166
-#: lib/controller/contactcontroller.php:175
+#: lib/controller/contactcontroller.php:116
 msgid "Property checksum is not set."
 msgstr "属性校验值未设置。"
 
-#: lib/controller/contactcontroller.php:114
-#: lib/controller/contactcontroller.php:181
+#: lib/controller/contactcontroller.php:135
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "vCard 的信息不正确。请重新加载页面。"
 
-#: lib/controller/contactcontroller.php:185
-msgid "Error setting property"
-msgstr "设置属性出错"
+#: lib/controller/contactcontroller.php:144
+msgid "Error updating contact"
+msgstr ""
 
-#: lib/controller/contactcontroller.php:189
-msgid "Error saving property to backend"
-msgstr "将属性保存到后端出错"
+#: lib/controller/contactcontroller.php:149
+msgid "Error saving contact to backend"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"

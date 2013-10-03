@@ -109,8 +109,6 @@
 "Property name is not set." => "プロパティ名が設定されていません。",
 "Property checksum is not set." => "プロパティのチェックサムが設定されていません。",
 "Information about vCard is incorrect. Please reload the page." => "vCardの情報に誤りがあります。ページをリロードして下さい。",
-"Error setting property" => "プロパティの設定エラー",
-"Error saving property to backend" => "バックエンドへのプロパティの保存エラー",
 "Error getting user photo" => "ユーザーフォト取得エラー",
 "No file was uploaded. Unknown error" => "アップロードされたファイルはありません。不明なエラー",
 "There is no error, the file uploaded with success" => "エラーはありません。ファイルのアップロードは成功しました",
