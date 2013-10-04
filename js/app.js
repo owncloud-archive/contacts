@@ -229,9 +229,7 @@ OC.Contacts = OC.Contacts || {
 			console.log(response.message);
 			$(document).trigger('status.contacts.error', response);
 		});
-		OCCategories.changed = this.groups.categoriesChanged;
-		OCCategories.app = 'contacts';
-		OCCategories.type = 'contact';
+		$(OC.Tags).on('change', this.groups.categoriesChanged)
 		this.bindEvents();
 		this.$toggleAll.show();
 		this.hideActions();

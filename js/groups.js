@@ -201,37 +201,38 @@ OC.Contacts = OC.Contacts || {};
 		var $groupelem = this.findById('fav');
 		var contacts = $groupelem.data('contacts');
 		if(state) {
-			OCCategories.addToFavorites(contactid, 'contact', function(jsondata) {
-				if(jsondata.status === 'success') {
-					contacts.push(contactid);
-					$groupelem.data('contacts', contacts);
-					$groupelem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
-					if(contacts.length > 0 && $groupelem.is(':hidden')) {
-						$groupelem.show();
-					}
+			$.when(OC.Tags.addToFavorites(contactid, 'contact'))
+			.then(function(response) {
+				console.log(response);
+				contacts.push(contactid);
+				$groupelem.data('contacts', contacts);
+				$groupelem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
+				if(contacts.length > 0 && $groupelem.is(':hidden')) {
+					$groupelem.show();
 				}
 				if(typeof cb === 'function') {
-					cb(jsondata);
-				} else if(jsondata.status !== 'success') {
-					OC.notify({message:t('contacts', jsondata.data.message)});
+					cb(response);
 				}
+			})
+			.fail(function(response) {
+				console.warn(response);
 			});
 		} else {
-			OCCategories.removeFromFavorites(contactid, 'contact', function(jsondata) {
-				if(jsondata.status === 'success') {
-					contacts.splice(contacts.indexOf(contactid), 1);
-					//console.log('contacts', contacts, contacts.indexOf(id), contacts.indexOf(String(id)));
-					$groupelem.data('contacts', contacts);
-					$groupelem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
-					if(contacts.length === 0 && $groupelem.is(':visible')) {
-						$groupelem.hide();
-					}
+			$.when(OC.Tags.removeFromFavorites(contactid, 'contact'))
+			.then(function(response) {
+				contacts.splice(contacts.indexOf(contactid), 1);
+				//console.log('contacts', contacts, contacts.indexOf(id), contacts.indexOf(String(id)));
+				$groupelem.data('contacts', contacts);
+				$groupelem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
+				if(contacts.length === 0 && $groupelem.is(':visible')) {
+					$groupelem.hide();
 				}
 				if(typeof cb === 'function') {
-					cb(jsondata);
-				} else if(jsondata.status !== 'success') {
-					OC.notify({message:t('contacts', jsondata.data.message)});
+					cb(response);
 				}
+			})
+			.fail(function(response) {
+				console.warn(response);
 			});
 		}
 	};
