@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-03 07:10-0400\n"
-"PO-Revision-Date: 2013-10-03 11:10+0000\n"
+"POT-Creation-Date: 2013-10-05 09:09-0400\n"
+"PO-Revision-Date: 2013-10-03 12:20+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -27,11 +27,11 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:29
+#: appinfo/app.php:30
 msgid "Contacts"
 msgstr "Contatti"
 
-#: js/addressbooks.js:83 js/groups.js:517 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:518 templates/settings.php:61
 msgid "Save"
 msgstr "Salva"
 
@@ -79,98 +79,98 @@ msgstr "Errore irreversibile durante il caricamento delle rubriche: {msg}"
 msgid "Error."
 msgstr "Errore."
 
-#: js/app.js:319 js/app.js:333
+#: js/app.js:317 js/app.js:331
 msgid "Add to..."
 msgstr "Aggiungi a..."
 
-#: js/app.js:323 js/app.js:335
+#: js/app.js:321 js/app.js:333
 msgid "Remove from..."
 msgstr "Rimuovi da..."
 
-#: js/app.js:340
+#: js/app.js:338
 msgid "Add group..."
 msgstr "Aggiungi gruppo..."
 
-#: js/app.js:470
+#: js/app.js:468
 msgid "Invalid URL: \"{url}\""
 msgstr "URL non valido: \"{url}\""
 
-#: js/app.js:481
+#: js/app.js:479
 msgid "There was an error opening a mail composer."
 msgstr "Si è verificato un errore durante l'apertura del compositore."
 
-#: js/app.js:486
+#: js/app.js:484
 msgid "Invalid email: \"{url}\""
 msgstr "Email non valida: \"{url}\""
 
-#: js/app.js:564
+#: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Unione non riuscita. Impossibile trovare il contatto: {id}"
 
-#: js/app.js:577
+#: js/app.js:575
 msgid "Merge failed."
 msgstr "Unione non riuscita."
 
-#: js/app.js:584
+#: js/app.js:582
 msgid "Merge failed. Error saving contact."
 msgstr "Unione non riuscita. Errore durante il salvataggio del contatto."
 
-#: js/app.js:603
+#: js/app.js:601
 msgid "Select photo"
 msgstr "Seleziona la foto"
 
-#: js/app.js:679 js/app.js:1590
+#: js/app.js:677 js/app.js:1588
 msgid "Network or server error. Please inform administrator."
 msgstr "Errore di rete o del server. Informa l'amministratore."
 
-#: js/app.js:895
+#: js/app.js:893
 msgid "Error adding to group."
 msgstr "Errore durante l'aggiunta al gruppo."
 
-#: js/app.js:918
+#: js/app.js:916
 msgid "Error removing from group."
 msgstr "Errore durante la rimozione dal gruppo."
 
-#: js/app.js:1096
+#: js/app.js:1094
 msgid "Error setting {name} as favorite."
 msgstr "Errore durante l'impostazione di {name} come preferito."
 
-#: js/app.js:1235 js/app.js:1239 templates/contacts.php:182
+#: js/app.js:1233 js/app.js:1237 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Unisci contatti"
 
-#: js/app.js:1261 js/app.js:1314 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1259 js/app.js:1312 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Annulla"
 
-#: js/app.js:1288 templates/contacts.php:163
+#: js/app.js:1286 templates/contacts.php:163
 msgid "Add group"
 msgstr "Aggiungi gruppo"
 
-#: js/app.js:1292
+#: js/app.js:1290
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1392
+#: js/app.js:1390
 msgid "Could not find contact: {id}"
 msgstr "Impossibile trovare il contatto: {id}"
 
-#: js/app.js:1438
+#: js/app.js:1436
 msgid "No files selected for upload."
 msgstr "Nessun file selezionato per l'invio"
 
-#: js/app.js:1448
+#: js/app.js:1446
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Il file che stai cercando di inviare supera la dimensione massima per l'invio dei file su questo server."
 
-#: js/app.js:1548
+#: js/app.js:1546
 msgid "Edit profile picture"
 msgstr "Modifica l'immagine del profilo"
 
-#: js/app.js:1552
+#: js/app.js:1550
 msgid "Crop photo"
 msgstr "Ritaglia foto"
 
@@ -208,61 +208,61 @@ msgstr "Eliminazione di {num} contatti annullata"
 msgid "Add"
 msgstr "Aggiungi"
 
-#: js/groups.js:262
+#: js/groups.js:263
 msgid "Contact is already in this group."
 msgstr "Il contatto è già in questo gruppo."
 
-#: js/groups.js:275
+#: js/groups.js:276
 msgid "Contacts are already in this group."
 msgstr "I contatti sono già in questo gruppo."
 
-#: js/groups.js:341
+#: js/groups.js:342
 msgid "Couldn't get contact list."
 msgstr "Impossibile ottenere l'elenco dei contatti."
 
-#: js/groups.js:352
+#: js/groups.js:353
 msgid "Contact is not in this group."
 msgstr "Il contatto non è in questo gruppo."
 
-#: js/groups.js:366
+#: js/groups.js:367
 msgid "Contacts are not in this group."
 msgstr "I contatti non sono in questo gruppo."
 
-#: js/groups.js:565
+#: js/groups.js:566
 msgid "Failed renaming group: {error}"
 msgstr "Rinomina gruppo non riuscita: {error}"
 
-#: js/groups.js:596
+#: js/groups.js:597
 msgid "A group named {group} already exists"
 msgstr "Un gruppo con nome {group} esiste già"
 
-#: js/groups.js:631
+#: js/groups.js:632
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Puoi trascinare i gruppi per\norganizzarli come preferisci."
 
-#: js/groups.js:644
+#: js/groups.js:645
 msgid "Failed adding group: {error}"
 msgstr "Aggiunta gruppo non riuscita: {error}"
 
-#: js/groups.js:656
+#: js/groups.js:657
 msgid "All"
 msgstr "Tutti"
 
-#: js/groups.js:671 js/groups.js:674
+#: js/groups.js:672 js/groups.js:675
 msgid "Favorites"
 msgstr "Preferiti"
 
-#: js/groups.js:735
+#: js/groups.js:736
 msgid "Shared by {owner}"
 msgstr "Condiviso da {owner}"
 
-#: js/groups.js:750
+#: js/groups.js:751
 msgid "Not grouped"
 msgstr "Non raggruppati"
 
-#: js/groups.js:776
+#: js/groups.js:777
 msgid "Failed loading groups: {error}"
 msgstr "Caricamento gruppi non riuscito: {error}"
 

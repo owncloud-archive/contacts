@@ -110,6 +110,8 @@
 "Property name is not set." => "Не установлено имя свойства.",
 "Property checksum is not set." => "Не установлена контрольная сумма свойства.",
 "Information about vCard is incorrect. Please reload the page." => "Информация о vCard некорректна. Пожалуйста, обновите страницу.",
+"Error updating contact" => "Ошибка при обновлении контакта",
+"Error saving contact to backend" => "Ошибка сохранения контакта в бэкенд",
 "Error getting user photo" => "Ошибка загрузки фото пользователя",
 "No file was uploaded. Unknown error" => "Файл не был загружен. Неизвестная ошибка",
 "There is no error, the file uploaded with success" => "Файл загружен успешно.",

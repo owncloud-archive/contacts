@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-03 07:10-0400\n"
-"PO-Revision-Date: 2013-10-03 11:10+0000\n"
+"POT-Creation-Date: 2013-10-05 09:09-0400\n"
+"PO-Revision-Date: 2013-10-03 12:20+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Urdu (Pakistan) (http://www.transifex.com/projects/p/owncloud/language/ur_PK/)\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Language: ur_PK\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:29
+#: appinfo/app.php:30
 msgid "Contacts"
 msgstr ""
 
-#: js/addressbooks.js:83 js/groups.js:517 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:518 templates/settings.php:61
 msgid "Save"
 msgstr ""
 
@@ -69,98 +69,98 @@ msgstr ""
 msgid "Error."
 msgstr ""
 
-#: js/app.js:319 js/app.js:333
+#: js/app.js:317 js/app.js:331
 msgid "Add to..."
 msgstr ""
 
-#: js/app.js:323 js/app.js:335
+#: js/app.js:321 js/app.js:333
 msgid "Remove from..."
 msgstr ""
 
-#: js/app.js:340
+#: js/app.js:338
 msgid "Add group..."
 msgstr ""
 
-#: js/app.js:470
+#: js/app.js:468
 msgid "Invalid URL: \"{url}\""
 msgstr ""
 
-#: js/app.js:481
+#: js/app.js:479
 msgid "There was an error opening a mail composer."
 msgstr ""
 
-#: js/app.js:486
+#: js/app.js:484
 msgid "Invalid email: \"{url}\""
 msgstr ""
 
-#: js/app.js:564
+#: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr ""
 
-#: js/app.js:577
+#: js/app.js:575
 msgid "Merge failed."
 msgstr ""
 
-#: js/app.js:584
+#: js/app.js:582
 msgid "Merge failed. Error saving contact."
 msgstr ""
 
-#: js/app.js:603
+#: js/app.js:601
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:679 js/app.js:1590
+#: js/app.js:677 js/app.js:1588
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
-#: js/app.js:895
+#: js/app.js:893
 msgid "Error adding to group."
 msgstr ""
 
-#: js/app.js:918
+#: js/app.js:916
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1096
+#: js/app.js:1094
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1235 js/app.js:1239 templates/contacts.php:182
+#: js/app.js:1233 js/app.js:1237 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1261 js/app.js:1314 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1259 js/app.js:1312 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "منسوخ کریں"
 
-#: js/app.js:1288 templates/contacts.php:163
+#: js/app.js:1286 templates/contacts.php:163
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1292
+#: js/app.js:1290
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1392
+#: js/app.js:1390
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1438
+#: js/app.js:1436
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1448
+#: js/app.js:1446
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1548
+#: js/app.js:1546
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1552
+#: js/app.js:1550
 msgid "Crop photo"
 msgstr ""
 
@@ -198,61 +198,61 @@ msgstr ""
 msgid "Add"
 msgstr "شامل کریں"
 
-#: js/groups.js:262
+#: js/groups.js:263
 msgid "Contact is already in this group."
 msgstr ""
 
-#: js/groups.js:275
+#: js/groups.js:276
 msgid "Contacts are already in this group."
 msgstr ""
 
-#: js/groups.js:341
+#: js/groups.js:342
 msgid "Couldn't get contact list."
 msgstr ""
 
-#: js/groups.js:352
+#: js/groups.js:353
 msgid "Contact is not in this group."
 msgstr ""
 
-#: js/groups.js:366
+#: js/groups.js:367
 msgid "Contacts are not in this group."
 msgstr ""
 
-#: js/groups.js:565
+#: js/groups.js:566
 msgid "Failed renaming group: {error}"
 msgstr ""
 
-#: js/groups.js:596
+#: js/groups.js:597
 msgid "A group named {group} already exists"
 msgstr ""
 
-#: js/groups.js:631
+#: js/groups.js:632
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr ""
 
-#: js/groups.js:644
+#: js/groups.js:645
 msgid "Failed adding group: {error}"
 msgstr ""
 
-#: js/groups.js:656
+#: js/groups.js:657
 msgid "All"
 msgstr ""
 
-#: js/groups.js:671 js/groups.js:674
+#: js/groups.js:672 js/groups.js:675
 msgid "Favorites"
 msgstr ""
 
-#: js/groups.js:735
+#: js/groups.js:736
 msgid "Shared by {owner}"
 msgstr ""
 
-#: js/groups.js:750
+#: js/groups.js:751
 msgid "Not grouped"
 msgstr ""
 
-#: js/groups.js:776
+#: js/groups.js:777
 msgid "Failed loading groups: {error}"
 msgstr ""
 

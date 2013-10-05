@@ -110,6 +110,8 @@
 "Property name is not set." => "Non foi estabelecido o nome da propiedade",
 "Property checksum is not set." => "Non foi estabelecida a suma de comprobación da propiedade",
 "Information about vCard is incorrect. Please reload the page." => "A información sobre a vCard é incorrecta. Volva cargar a páxina.",
+"Error updating contact" => "Produciuse un erro ao actualizar o contacto.",
+"Error saving contact to backend" => "Produciuse un erro ao gardar o contacto na infraestrutura",
 "Error getting user photo" => "Produciuse un erro ao obter a foto do usuario",
 "No file was uploaded. Unknown error" => "Non se enviou ningún ficheiro. Produciuse un erro descoñecido.",
 "There is no error, the file uploaded with success" => "Non houbo erros, o ficheiro enviouse correctamente",

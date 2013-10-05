@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-03 07:10-0400\n"
-"PO-Revision-Date: 2013-10-03 11:10+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-05 09:09-0400\n"
+"PO-Revision-Date: 2013-10-03 15:00+0000\n"
+"Last-Translator: mbouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/owncloud/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,11 +24,11 @@ msgstr ""
 "Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:29
+#: appinfo/app.php:30
 msgid "Contacts"
 msgstr "Contactos"
 
-#: js/addressbooks.js:83 js/groups.js:517 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:518 templates/settings.php:61
 msgid "Save"
 msgstr "Gardar"
 
@@ -76,98 +76,98 @@ msgstr "Produciuse un erro non recuperábel ao cargar os cadernos de enderezos: 
 msgid "Error."
 msgstr "Erro."
 
-#: js/app.js:319 js/app.js:333
+#: js/app.js:317 js/app.js:331
 msgid "Add to..."
 msgstr "Engadir a..."
 
-#: js/app.js:323 js/app.js:335
+#: js/app.js:321 js/app.js:333
 msgid "Remove from..."
 msgstr "Retirar de..."
 
-#: js/app.js:340
+#: js/app.js:338
 msgid "Add group..."
 msgstr "Engadir un grupo..."
 
-#: js/app.js:470
+#: js/app.js:468
 msgid "Invalid URL: \"{url}\""
 msgstr "URL incorrecto: «{url}»"
 
-#: js/app.js:481
+#: js/app.js:479
 msgid "There was an error opening a mail composer."
 msgstr "Produciuse un erro ao abrir o editor do correo."
 
-#: js/app.js:486
+#: js/app.js:484
 msgid "Invalid email: \"{url}\""
 msgstr "Correo incorrecto: «{url}»"
 
-#: js/app.js:564
+#: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Non foi posíbel facer a mistura. Non foi posíbel atopar o contacto: {id}"
 
-#: js/app.js:577
+#: js/app.js:575
 msgid "Merge failed."
 msgstr "Non foi posíbel facer a mistura."
 
-#: js/app.js:584
+#: js/app.js:582
 msgid "Merge failed. Error saving contact."
 msgstr "Non foi posíbel facer a mistura. produciuse un erro ao gardar o contacto."
 
-#: js/app.js:603
+#: js/app.js:601
 msgid "Select photo"
 msgstr "Seleccione fotografía"
 
-#: js/app.js:679 js/app.js:1590
+#: js/app.js:677 js/app.js:1588
 msgid "Network or server error. Please inform administrator."
 msgstr "Produciuse un erro na rede ou no servidor. Informe ao administrador."
 
-#: js/app.js:895
+#: js/app.js:893
 msgid "Error adding to group."
 msgstr "Produciuse un erro ao engadir ao grupo."
 
-#: js/app.js:918
+#: js/app.js:916
 msgid "Error removing from group."
 msgstr "Produciuse un erro ao retirar do grupo."
 
-#: js/app.js:1096
+#: js/app.js:1094
 msgid "Error setting {name} as favorite."
 msgstr "Produciuse un erro ao estabelecer {name} como favorito."
 
-#: js/app.js:1235 js/app.js:1239 templates/contacts.php:182
+#: js/app.js:1233 js/app.js:1237 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Misturar os contactos"
 
-#: js/app.js:1261 js/app.js:1314 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1259 js/app.js:1312 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: js/app.js:1288 templates/contacts.php:163
+#: js/app.js:1286 templates/contacts.php:163
 msgid "Add group"
 msgstr "Engadir un grupo"
 
-#: js/app.js:1292
+#: js/app.js:1290
 msgid "OK"
 msgstr "Aceptar"
 
-#: js/app.js:1392
+#: js/app.js:1390
 msgid "Could not find contact: {id}"
 msgstr "Non foi posíbel atopar o contacto: {id}"
 
-#: js/app.js:1438
+#: js/app.js:1436
 msgid "No files selected for upload."
 msgstr "Non foi seleccionado ningún ficheiro para enviar."
 
-#: js/app.js:1448
+#: js/app.js:1446
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "O ficheiro que tenta enviar supera o tamaño máximo permitido neste servidor."
 
-#: js/app.js:1548
+#: js/app.js:1546
 msgid "Edit profile picture"
 msgstr "Editar a imaxe do perfil"
 
-#: js/app.js:1552
+#: js/app.js:1550
 msgid "Crop photo"
 msgstr "Recortar a foto"
 
@@ -205,61 +205,61 @@ msgstr "Cancelada a eliminación de {num} contactos"
 msgid "Add"
 msgstr "Engadir"
 
-#: js/groups.js:262
+#: js/groups.js:263
 msgid "Contact is already in this group."
 msgstr "O contacto xa está neste grupo."
 
-#: js/groups.js:275
+#: js/groups.js:276
 msgid "Contacts are already in this group."
 msgstr "Os contactos xa están neste grupo."
 
-#: js/groups.js:341
+#: js/groups.js:342
 msgid "Couldn't get contact list."
 msgstr "Non é posíbel obter a lista de contactos."
 
-#: js/groups.js:352
+#: js/groups.js:353
 msgid "Contact is not in this group."
 msgstr "O contacto non está neste grupo."
 
-#: js/groups.js:366
+#: js/groups.js:367
 msgid "Contacts are not in this group."
 msgstr "Os contactos non están neste grupo."
 
-#: js/groups.js:565
+#: js/groups.js:566
 msgid "Failed renaming group: {error}"
 msgstr "Non foi posíbel renomear o grupo: {error}"
 
-#: js/groups.js:596
+#: js/groups.js:597
 msgid "A group named {group} already exists"
 msgstr "O grupo nomeado {group} xa existe"
 
-#: js/groups.js:631
+#: js/groups.js:632
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Pode arrastrar grupos para\norganizalos como desexe."
 
-#: js/groups.js:644
+#: js/groups.js:645
 msgid "Failed adding group: {error}"
 msgstr "Non foi posíbel engadir o grupo: {error}"
 
-#: js/groups.js:656
+#: js/groups.js:657
 msgid "All"
 msgstr "Todo"
 
-#: js/groups.js:671 js/groups.js:674
+#: js/groups.js:672 js/groups.js:675
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: js/groups.js:735
+#: js/groups.js:736
 msgid "Shared by {owner}"
 msgstr "Compartido por {owner}"
 
-#: js/groups.js:750
+#: js/groups.js:751
 msgid "Not grouped"
 msgstr "Sen agrupar"
 
-#: js/groups.js:776
+#: js/groups.js:777
 msgid "Failed loading groups: {error}"
 msgstr "Non foi posíbel cargar os grupos: {error}"
 
@@ -489,11 +489,11 @@ msgstr "A información sobre a vCard é incorrecta. Volva cargar a páxina."
 
 #: lib/controller/contactcontroller.php:144
 msgid "Error updating contact"
-msgstr ""
+msgstr "Produciuse un erro ao actualizar o contacto."
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Produciuse un erro ao gardar o contacto na infraestrutura"
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"

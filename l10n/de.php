@@ -110,6 +110,8 @@
 "Property name is not set." => "Merkmalsname ist nicht angegeben.",
 "Property checksum is not set." => "Merkmalsprüfsumme ist nicht angegeben.",
 "Information about vCard is incorrect. Please reload the page." => "Die Information der vCard ist fehlerhaft. Bitte aktualisiere die Seite.",
+"Error updating contact" => "Fehler beim Aktualisieren eines Kontakts",
+"Error saving contact to backend" => "Fehler beim Speichern eines Kontakts ins Backend",
 "Error getting user photo" => "Fehler beim Abrufen des Benutzerfotos",
 "No file was uploaded. Unknown error" => "Keine Datei hochgeladen. Unbekannter Fehler",
 "There is no error, the file uploaded with success" => "Es ist kein Fehler aufgetreten. Die Datei wurde erfolgreich hochgeladen.",
