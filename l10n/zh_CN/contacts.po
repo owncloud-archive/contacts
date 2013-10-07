@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# hanfeng <appweb.cn@gmail.com>, 2013
 # hanfeng <appweb.cn@gmail.com>, 2012
 # ccb <ccb3275@gmail.com>, 2013
 # houqp <dave2008713@gmail.com>, 2012
@@ -24,9 +25,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-05 09:09-0400\n"
-"PO-Revision-Date: 2013-10-03 12:20+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-07 09:33-0400\n"
+"PO-Revision-Date: 2013-10-07 11:00+0000\n"
+"Last-Translator: hanfeng <appweb.cn@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -283,11 +284,11 @@ msgstr "导入至..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "加载导入模板出错"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "导入联系人"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -499,11 +500,11 @@ msgstr "vCard 的信息不正确。请重新加载页面。"
 
 #: lib/controller/contactcontroller.php:144
 msgid "Error updating contact"
-msgstr ""
+msgstr "更新联系人错误。"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "保存联系人到后台出错。"
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"

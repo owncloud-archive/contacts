@@ -3,6 +3,7 @@
 "Save" => "Gorde",
 "Uploading..." => "Igotzen...",
 "Importing..." => "Inportatzen",
+"Imported {count} of {total} contacts" => "{total} kontaktuetatik {count} inportatuak",
 "Indexing contacts" => "Kontaktuak indexatzen",
 "Add to..." => "Gehitu hemen...",
 "Remove from..." => "Ezabatu hemendik...",

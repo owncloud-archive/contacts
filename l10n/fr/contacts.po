@@ -8,6 +8,7 @@
 # Christophe Lherieau <skimpax@gmail.com>, 2012-2013
 # Cyril Glapa <kyriog@gmail.com>, 2012
 # NumEricR <defnox@gmail.com>, 2013
+# etiess <etiess@gmail.com>, 2013
 # Francois_Boulogne <fboulogne@sciunto.org>, 2011
 # gp4004 <gp4004@arghh.org>, 2011-2012
 # guiguidu31300 <guiguidu31300@gmail.com>, 2012
@@ -33,9 +34,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-05 09:09-0400\n"
-"PO-Revision-Date: 2013-10-03 12:20+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-07 09:33-0400\n"
+"PO-Revision-Date: 2013-10-05 20:10+0000\n"
+"Last-Translator: etiess <etiess@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/owncloud/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -508,11 +509,11 @@ msgstr "Les informations relatives à cette vCard sont incorrectes. Veuillez rec
 
 #: lib/controller/contactcontroller.php:144
 msgid "Error updating contact"
-msgstr ""
+msgstr "Erreur lors de la mise à jour du contact"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Erreur d'enregistrement du contact sur l'infrastructure d'arrière-plan."
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
