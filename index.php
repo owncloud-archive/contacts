@@ -28,7 +28,7 @@ foreach($ims as $name => $values) {
 $maxUploadFilesize = \OCP\Util::maxUploadFilesize('/');
 
 \OCP\Util::addScript('', 'jquery.multiselect');
-\OCP\Util::addScript('', 'oc-vcategories');
+\OCP\Util::addScript('', 'tags');
 \OCP\Util::addScript('contacts', 'jquery.combobox');
 \OCP\Util::addScript('contacts', 'modernizr.custom');
 \OCP\Util::addScript('contacts', 'app');

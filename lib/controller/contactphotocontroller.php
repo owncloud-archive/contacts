@@ -13,27 +13,25 @@ use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\ImageResponse,
 	OCA\Contacts\Utils\Properties,
-	OCA\AppFramework\Controller\Controller as BaseController;
+	OCA\Contacts\Controller;
 
 /**
  * Controller class For Contacts
  */
-class ContactPhotoController extends BaseController {
+class ContactPhotoController extends Controller {
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function getPhoto($maxSize = 170) {
 		// TODO: Cache resized photo
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 		$etag = null;
 		//$maxSize = isset($this->request['maxSize']) ? $this->request['maxSize'] : 170;
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
+		$contact = $addressBook->getChild($params['contactId']);
 
 		if(!$contact) {
 			$response = new JSONResponse();
@@ -77,9 +75,8 @@ class ContactPhotoController extends BaseController {
 	 * Uploads a photo and saves in oC cache
 	 * @return JSONResponse with data.tmp set to the key in the cache.
 	 *
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function uploadPhoto() {
 		$params = $this->request->urlParams;
@@ -123,7 +120,7 @@ class ContactPhotoController extends BaseController {
 			$response->debug('Couldn\'t save correct image orientation: '.$tmpkey);
 		}
 
-		if(!\OC_Cache::set($tmpkey, $image->data(), 600)) {
+		if(!$this->server->getCache()->set($tmpkey, $image->data(), 600)) {
 			$response->bailOut(App::$l10n->t('Couldn\'t save temporary image: ').$tmpkey);
 			return $response;
 		}
@@ -131,8 +128,8 @@ class ContactPhotoController extends BaseController {
 		$response->setParams(array(
 			'tmp'=>$tmpkey,
 			'metadata' => array(
-				'contactid'=> $params['contactid'],
-				'addressbookid'=> $params['addressbookid'],
+				'contactId'=> $params['contactId'],
+				'addressBookId'=> $params['addressBookId'],
 				'backend'=> $params['backend'],
 			),
 		));
@@ -144,9 +141,8 @@ class ContactPhotoController extends BaseController {
 	 * Saves the photo from the contact being edited to oC cache
 	 * @return JSONResponse with data.tmp set to the key in the cache.
 	 *
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function cacheCurrentPhoto() {
 		$params = $this->request->urlParams;
@@ -158,8 +154,8 @@ class ContactPhotoController extends BaseController {
 		}
 
 		$data = $photoResponse->render();
-		$tmpkey = 'contact-photo-' . $params['contactid'];
-		if(!\OC_Cache::set($tmpkey, $data, 600)) {
+		$tmpkey = 'contact-photo-' . $params['contactId'];
+		if(!$this->server->getCache()->set($tmpkey, $data, 600)) {
 			$response->bailOut(App::$l10n->t('Couldn\'t save temporary image: ').$tmpkey);
 			return $response;
 		}
@@ -167,8 +163,8 @@ class ContactPhotoController extends BaseController {
 		$response->setParams(array(
 			'tmp'=>$tmpkey,
 			'metadata' => array(
-				'contactid'=> $params['contactid'],
-				'addressbookid'=> $params['addressbookid'],
+				'contactId'=> $params['contactId'],
+				'addressBookId'=> $params['addressBookId'],
 				'backend'=> $params['backend'],
 			),
 		));
@@ -181,9 +177,8 @@ class ContactPhotoController extends BaseController {
 	 * Saves the photo from ownCloud FS to oC cache
 	 * @return JSONResponse with data.tmp set to the key in the cache.
 	 *
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function cacheFileSystemPhoto() {
 		$params = $this->request->urlParams;
@@ -194,7 +189,7 @@ class ContactPhotoController extends BaseController {
 		}
 
 		$localpath = \OC\Files\Filesystem::getLocalFile($this->request->get['path']);
-		$tmpkey = 'contact-photo-' . $params['contactid'];
+		$tmpkey = 'contact-photo-' . $params['contactId'];
 
 		if(!file_exists($localpath)) {
 			$response->bailOut(App::$l10n->t('File doesn\'t exist:').$localpath);
@@ -215,7 +210,7 @@ class ContactPhotoController extends BaseController {
 		if(!$image->fixOrientation()) { // No fatal error so we don't bail out.
 			$response->debug('Couldn\'t save correct image orientation: '.$localpath);
 		}
-		if(!\OC_Cache::set($tmpkey, $image->data(), 600)) {
+		if(!$this->server->getCache()->set($tmpkey, $image->data(), 600)) {
 			$response->bailOut('Couldn\'t save temporary image: '.$tmpkey);
 			return $response;
 		}
@@ -223,8 +218,8 @@ class ContactPhotoController extends BaseController {
 		$response->setParams(array(
 			'tmp'=>$tmpkey,
 			'metadata' => array(
-				'contactid'=> $params['contactid'],
-				'addressbookid'=> $params['addressbookid'],
+				'contactId'=> $params['contactId'],
+				'addressBookId'=> $params['addressBookId'],
 				'backend'=> $params['backend'],
 			),
 		));
@@ -235,9 +230,8 @@ class ContactPhotoController extends BaseController {
 
 	/**
 	 * Get a photo from the oC cache for cropping.
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function getTempPhoto() {
 		$params = $this->request->urlParams;
@@ -245,7 +239,7 @@ class ContactPhotoController extends BaseController {
 		$maxSize = isset($this->request->get['maxSize']) ? $this->request->get['maxSize'] : 400;
 
 		$image = new \OCP\Image();
-		$image->loadFromData(\OC_Cache::get($tmpkey));
+		$image->loadFromData($this->server->getCache()->get($tmpkey));
 		if($image->valid()) {
 			if($image->height() > $maxSize || $image->width() > $maxSize) {
 				$image->resize($maxSize);
@@ -261,9 +255,8 @@ class ContactPhotoController extends BaseController {
 
 	/**
 	 * Get a photo from the oC and crops it with the suplied geometry.
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function cropPhoto() {
 		$params = $this->request->urlParams;
@@ -275,8 +268,8 @@ class ContactPhotoController extends BaseController {
 		$maxSize = isset($this->request->get['maxSize']) ? $this->request->post['maxSize'] : 200;
 
 		$app = new App($this->api->getUserId());
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
+		$contact = $addressBook->getChild($params['contactId']);
 
 		$response = new JSONResponse();
 
@@ -285,7 +278,7 @@ class ContactPhotoController extends BaseController {
 			return $response;
 		}
 
-		$data = \OC_Cache::get($tmpkey);
+		$data = $this->server->getCache()->get($tmpkey);
 		if(!$data) {
 			$response->bailOut(App::$l10n->t('Image has been removed from cache'));
 			return $response;
@@ -325,7 +318,7 @@ class ContactPhotoController extends BaseController {
 		if(isset($contact->PHOTO)) {
 			$property = $contact->PHOTO;
 			if(!$property) {
-				\OC_Cache::remove($tmpkey);
+				$this->server->getCache()->remove($tmpkey);
 				$response->bailOut(App::$l10n
 					->t('Error getting PHOTO property.'));
 			}
@@ -346,11 +339,11 @@ class ContactPhotoController extends BaseController {
 		}
 		$thumbnail = $contact->cacheThumbnail($image);
 		$response->setParams(array(
-			'id' => $params['contactid'],
+			'id' => $params['contactId'],
 			'thumbnail' => $thumbnail,
 		));
 
-		\OC_Cache::remove($tmpkey);
+		$this->server->getCache()->remove($tmpkey);
 
 		return $response;
 	}

@@ -8,7 +8,8 @@ cd core
 git submodule update --init
 mkdir apps2
 ln -s $WORKDIR apps2
-cd -
-git clone https://github.com/owncloud/appframework
-ln -s $PWD/appframework apps2
+git checkout urlParams_fix
+git checkout -b oc6-integration
+git fetch origin
+git merge origin/improved_request
 cd $WORKDIR

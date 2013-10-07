@@ -8,7 +8,14 @@
 
 namespace OCA\Contacts;
 
-use Sabre\VObject;
+use Sabre\VObject,
+	OCP\AppFramework,
+	OCA\Contacts\Controller\AddressBookController,
+	OCA\Contacts\Controller\GroupController,
+	OCA\Contacts\Controller\ContactController,
+	OCA\Contacts\Controller\ContactPhotoController,
+	OCA\Contacts\Controller\SettingsController,
+	OCA\Contacts\Controller\ImportController;
 
 /**
  * This class manages our app actions
@@ -121,7 +128,7 @@ class App {
 			if($addressBook->getBackend()->name === $backendName
 				&& $addressBook->getId() === $addressbookid
 			) {
-				\OCP\Util::writeLog('contacts', __METHOD__ . ' returning: '. print_r($addressBook, true), \OCP\Util::DEBUG);
+				//\OCP\Util::writeLog('contacts', __METHOD__ . ' returning: '. print_r($addressBook, true), \OCP\Util::DEBUG);
 				return $addressBook;
 			}
 		}

@@ -12,23 +12,19 @@ namespace OCA\Contacts\Controller;
 use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Utils\JSONSerializer,
-	OCA\AppFramework\Controller\Controller as BaseController,
-	OCA\AppFramework\Http\TextDownloadResponse;
-
+	OCA\Contacts\Controller,
+	OCP\AppFramework\Http\Http;
 
 /**
  * Controller class For Address Books
  */
-class AddressBookController extends BaseController {
+class AddressBookController extends Controller {
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function userAddressBooks() {
-		$app = new App($this->api->getUserId());
-		$addressBooks = $app->getAddressBooksForUser();
+		$addressBooks = $this->app->getAddressBooksForUser();
 		$response = array();
 		$lastModified = 0;
 		foreach($addressBooks as $addressBook) {
@@ -38,6 +34,12 @@ class AddressBookController extends BaseController {
 				$lastModified = max($lastModified, $data['lastmodified']);
 			}
 		}
+
+		// To avoid invalid cache deletion time is saved
+		$lastModified = max(
+			$lastModified,
+			\OCP\Config::getUserValue($this->api->getUserId(), 'contacts', 'last_address_book_deleted', 0)
+		);
 
 		$response = new JSONResponse(array(
 				'addressbooks' => $response,
@@ -52,27 +54,28 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function getAddressBook() {
 		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$lastModified = $addressBook->lastModified();
+		$etag = null;
 		$response = new JSONResponse();
 
 		if(!is_null($lastModified)) {
 			//$response->addHeader('Cache-Control', 'private, must-revalidate');
 			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
-			$response->setETag(md5($lastModified));
+			$etag = md5($lastModified);
+			$response->setETag($etag);
 		}
 
-		$response->debug('method: ' . $this->request->method);
-		if($this->request->method === 'GET') {
+		$response->debug('comparing: "' . $etag . '" to ' . $this->request->getHeader('If-None-Match'));
+		if(!is_null($etag) && $this->request->getHeader('If-None-Match') === '"'.$etag.'"') {
+			return $response->setStatus(Http::STATUS_NOT_MODIFIED);
+		} else {
 			$contacts = array();
 			foreach($addressBook->getChildren() as $i => $contact) {
 				$result = JSONSerializer::serializeContact($contact);
@@ -80,51 +83,20 @@ class AddressBookController extends BaseController {
 					$contacts[] = $result;
 				}
 			}
-			$response->setParams(array('contacts' => $contacts));
+			return $response->setData(array('contacts' => $contacts));
 		}
-		return $response;
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
-	 */
-	public function exportAddressBook() {
-		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
-		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
-
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$lastModified = $addressBook->lastModified();
-		$response = new JSONResponse();
-
-		if(!is_null($lastModified)) {
-			$response->addHeader('Cache-Control', 'private, must-revalidate');
-			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
-			$response->setETag(md5($lastModified));
-		}
-
-		$contacts = '';
-		foreach($addressBook->getChildren() as $i => $contact) {
-			$contacts .= $contact->serialize() . "\r\n";
-		}
-		$name = str_replace(' ', '_', $addressBook->getDisplayName()) . '.vcf';
-		return new TextDownloadResponse($contacts, $name, 'text/directory');
-	}
-
-	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function addAddressBook() {
-		$app = new App($this->api->getUserId());
 		$params = $this->request->urlParams;
 
 		$response = new JSONResponse();
 
-		$backend = $app->getBackend($params['backend']);
+		$backend = $this->app->getBackend($params['backend']);
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_CREATE)) {
 			throw new \Exception('Not implemented');
 		}
@@ -145,17 +117,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function updateAddressBook() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		try {
 			if(!$addressBook->update($this->request['properties'])) {
 				$response->bailOut(App::$l10n->t('Error updating address book'));
@@ -170,17 +139,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function deleteAddressBook() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$backend = $app->getBackend($params['backend']);
+		$backend = $this->app->getBackend($params['backend']);
 
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_DELETE)) {
 			throw new \Exception(
@@ -188,7 +154,7 @@ class AddressBookController extends BaseController {
 			);
 		}
 
-		$addressBookInfo = $backend->getAddressBook($params['addressbookid']);
+		$addressBookInfo = $backend->getAddressBook($params['addressBookId']);
 
 		if(!$addressBookInfo['permissions'] & \OCP\PERMISSION_DELETE) {
 			$response->bailOut(App::$l10n->t(
@@ -198,25 +164,23 @@ class AddressBookController extends BaseController {
 			return $response;
 		}
 
-		if(!$backend->deleteAddressBook($params['addressbookid'])) {
+		if(!$backend->deleteAddressBook($params['addressBookId'])) {
 			$response->bailOut(App::$l10n->t('Error deleting address book'));
 			return $response;
 		}
+		\OCP\Config::setUserValue($this->api->getUserId(), 'contacts', 'last_address_book_deleted', time());
 		return $response;
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function activateAddressBook() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 
 		$addressBook->setActive($this->request->post['state']);
 
@@ -224,17 +188,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function addChild() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 
 		try {
 			$id = $addressBook->addChild();
@@ -256,8 +217,8 @@ class AddressBookController extends BaseController {
 				'contacts_contact_get',
 				array(
 					'backend' => $params['backend'],
-					'addressbookid' => $params['addressbookid'],
-					'contactid' => $id
+					'addressBookId' => $params['addressBookId'],
+					'contactId' => $id
 				)
 			)
 		);
@@ -266,20 +227,17 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function deleteChild() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 
 		try {
-			$result = $addressBook->deleteChild($params['contactid']);
+			$result = $addressBook->deleteChild($params['contactId']);
 		} catch(Exception $e) {
 			$response->bailOut($e->getMessage());
 			return $response;
@@ -293,17 +251,14 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function deleteChildren() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contacts = $this->request->post['contacts'];
 
 		try {
@@ -318,38 +273,35 @@ class AddressBookController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function moveChild() {
 		$params = $this->request->urlParams;
 		$targetInfo = $this->request->post['target'];
-		$app = new App($this->api->getUserId());
 
 		$response = new JSONResponse();
 
 		// TODO: Check if the backend supports move (is 'local' or 'shared') and use that operation instead.
 		// If so, set status 204 and don't return the serialized contact.
-		$fromAddressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$targetAddressBook = $app->getAddressBook($targetInfo['backend'], $targetInfo['id']);
-		$contact = $fromAddressBook->getChild($params['contactid']);
+		$fromAddressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
+		$targetAddressBook = $this->app->getAddressBook($targetInfo['backend'], $targetInfo['id']);
+		$contact = $fromAddressBook->getChild($params['contactId']);
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Error retrieving contact.'));
 			return $response;
 		}
 		try {
-			$contactid = $targetAddressBook->addChild($contact);
+			$contactId = $targetAddressBook->addChild($contact);
 		} catch(Exception $e) {
 			$response->bailOut($e->getMessage());
 			return $response;
 		}
-		$contact = $targetAddressBook->getChild($contactid);
+		$contact = $targetAddressBook->getChild($contactId);
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Error saving contact.'));
 			return $response;
 		}
-		if(!$fromAddressBook->deleteChild($params['contactid'])) {
+		if(!$fromAddressBook->deleteChild($params['contactId'])) {
 			// Don't bail out because we have to return the contact
 			$response->debug(App::$l10n->t('Error removing contact from other address book.'));
 		}

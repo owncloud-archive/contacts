@@ -4,6 +4,7 @@
 # 
 # Translators:
 # cuperous, 2013
+# Meesh <M_almohimeed@yahoo.com>, 2013
 # matar <matar@linux.com>, 2013
 # Raed667 <shemada@gmail.com>, 2013
 # blackcoder <tarek.taha@gmail.com>, 2011, 2012
@@ -11,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-09-11 04:46-0400\n"
-"PO-Revision-Date: 2013-09-11 08:46+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-07 09:33-0400\n"
+"PO-Revision-Date: 2013-10-05 21:50+0000\n"
+"Last-Translator: Meesh <M_almohimeed@yahoo.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,11 +22,11 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: appinfo/app.php:31
+#: appinfo/app.php:30
 msgid "Contacts"
 msgstr "جهات الاتصال"
 
-#: js/addressbooks.js:83 js/groups.js:517 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:518 templates/settings.php:61
 msgid "Save"
 msgstr "حفظ"
 
@@ -35,142 +36,142 @@ msgstr "ترفيع..."
 
 #: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
-msgstr ""
+msgstr "استيراد..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "إعداد...\nتحضير..."
 
-#: js/addressbooks.js:370
+#: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
-msgstr ""
+msgstr "استيراد {عدد} من {إجمالي} جهات الإتصال"
 
-#: js/addressbooks.js:392
+#: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "فلشت {failed}  مهمة اسيراد جهات الإتصال {imported}"
 
-#: js/addressbooks.js:548
+#: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr " دفتر العناوين يحمل  {اسم } موجود مسبقاً"
 
-#: js/addressbooks.js:582
+#: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "{خطأ} فشلت مهمة إضافة عنوان "
 
-#: js/addressbooks.js:625
+#: js/addressbooks.js:626
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "{خطأ} فشلت مهمة تحميل دفتر العناوين"
 
-#: js/app.js:214
+#: js/app.js:215
 msgid "Indexing contacts"
-msgstr ""
-
-#: js/app.js:224
-msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "فهرسة جهات الاتصال"
 
 #: js/app.js:225
+msgid "Unrecoverable error loading address books: {msg}"
+msgstr "حدث خطأ فادح أثناء تحميل دفتر العناوين: {msg}"
+
+#: js/app.js:226
 msgid "Error."
-msgstr ""
+msgstr "خطأ."
 
-#: js/app.js:318 js/app.js:332
+#: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr ""
+msgstr "إضافة إلى..."
 
-#: js/app.js:322 js/app.js:334
+#: js/app.js:321 js/app.js:333
 msgid "Remove from..."
-msgstr ""
+msgstr "الحذف من ..."
 
-#: js/app.js:339
+#: js/app.js:338
 msgid "Add group..."
-msgstr ""
+msgstr "إضافة مجموعة ..."
 
 #: js/app.js:468
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "الرابط غير صحيح: \"{url}\""
 
 #: js/app.js:479
 msgid "There was an error opening a mail composer."
-msgstr ""
+msgstr "يوجد خطأ في فتح مؤلف الرسائل"
 
 #: js/app.js:484
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "رابط البريد الإلكتروني غير صالح:  \"{url}\""
 
 #: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "عملية الدمج فشلت. لا يمكن إيجاد جهة الاتصال: {id}"
 
 #: js/app.js:575
 msgid "Merge failed."
-msgstr ""
+msgstr "علمية الدمج فشلت."
 
 #: js/app.js:582
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "عملية الدمج فشلت. خطأ في حفظ جهة الاتصال. "
 
 #: js/app.js:601
 msgid "Select photo"
-msgstr ""
+msgstr "اختر صورة"
 
-#: js/app.js:677 js/app.js:1564
+#: js/app.js:677 js/app.js:1588
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "حدث خطأ في شبكة الاتصال أو في الخادم. يرجى إبلاغ المسؤول."
 
-#: js/app.js:888
+#: js/app.js:893
 msgid "Error adding to group."
-msgstr ""
+msgstr "خطأ في إضافة المجموعة"
 
-#: js/app.js:911
+#: js/app.js:916
 msgid "Error removing from group."
-msgstr ""
+msgstr "حدث خطأ أثناء الحذف من المجموعة"
 
-#: js/app.js:1071
+#: js/app.js:1094
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "حدث خطأ أثناء إعداد {name} كمفضلة ."
 
-#: js/app.js:1210 js/app.js:1214 templates/contacts.php:182
+#: js/app.js:1233 js/app.js:1237 templates/contacts.php:182
 msgid "Merge contacts"
-msgstr ""
+msgstr "دمج جهات الاتصال"
 
-#: js/app.js:1236 js/app.js:1289 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1259 js/app.js:1312 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "الغاء"
 
-#: js/app.js:1263 templates/contacts.php:163
+#: js/app.js:1286 templates/contacts.php:163
 msgid "Add group"
-msgstr ""
+msgstr "إضافة مجموعة"
 
-#: js/app.js:1267
+#: js/app.js:1290
 msgid "OK"
 msgstr "تم"
 
-#: js/app.js:1366
+#: js/app.js:1390
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "تعذر ايجاد جهة الاتصال:  {id}"
 
-#: js/app.js:1412
+#: js/app.js:1436
 msgid "No files selected for upload."
-msgstr ""
+msgstr "لا يوجد ملفات مختارة لتحميلها"
 
-#: js/app.js:1422
+#: js/app.js:1446
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr ""
+msgstr "الملف الذي تحاول تحميله يتجاوز الحد الأقصى لحجم الملف الذي يمكن تحميله على هذا الخادم."
 
-#: js/app.js:1522
+#: js/app.js:1546
 msgid "Edit profile picture"
-msgstr ""
+msgstr "تعديل صورة الملف الشخصي"
 
-#: js/app.js:1526
+#: js/app.js:1550
 msgid "Crop photo"
-msgstr ""
+msgstr "قص الصورة."
 
-#: js/contacts.js:591
+#: js/contacts.js:589
 msgid "Is this correct?"
-msgstr ""
+msgstr "هل هذا صحيح؟"
 
 #: js/contacts.js:857
 msgid "Error parsing date: {date}"
@@ -178,103 +179,103 @@ msgstr ""
 
 #: js/contacts.js:1054
 msgid "# groups"
-msgstr ""
+msgstr "#المجموعات"
 
 #: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2156
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr ""
+msgstr "بعض جهات الأتصال تم تحديدها للحذف لكن لم يتم حذفها بعد. يرجى الانتظار قليلاً حتى يتم حذفها بالكامل."
 
-#: js/contacts.js:2167
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
-msgstr ""
+msgstr "إضغط حتى يتم التراجع عن حذف {أرقام} جهات الاتصال"
 
-#: js/contacts.js:2176
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "ألغاء حذف {num}  من جهات الاتصال."
 
 #: js/groups.js:53 templates/contacts.php:325
 msgid "Add"
 msgstr "اضف"
 
-#: js/groups.js:262
+#: js/groups.js:263
 msgid "Contact is already in this group."
-msgstr ""
+msgstr "جهة الاتصال موجودة بالفعل في هذه المجموعة."
 
-#: js/groups.js:275
+#: js/groups.js:276
 msgid "Contacts are already in this group."
-msgstr ""
+msgstr "جهات الاتصال موجودة بالفعل في هذه المجموعة."
 
-#: js/groups.js:341
+#: js/groups.js:342
 msgid "Couldn't get contact list."
-msgstr ""
+msgstr "تعذر الحصول على قائمة جهات الاتصال."
 
-#: js/groups.js:352
+#: js/groups.js:353
 msgid "Contact is not in this group."
-msgstr ""
+msgstr "جهة الاتصال غير موجودة في هذه المجموعة. "
 
-#: js/groups.js:366
+#: js/groups.js:367
 msgid "Contacts are not in this group."
-msgstr ""
+msgstr "جهات الاتصال غير موجودة في هذه المجموعة. "
 
-#: js/groups.js:565
+#: js/groups.js:566
 msgid "Failed renaming group: {error}"
-msgstr ""
+msgstr "{خطأ}: فشلت مهمة تغيير اسم المجموعة"
 
-#: js/groups.js:596
+#: js/groups.js:597
 msgid "A group named {group} already exists"
-msgstr ""
+msgstr "اسم المجموعة { مجموعة } موجود مسبقاً."
 
-#: js/groups.js:631
+#: js/groups.js:632
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr ""
+msgstr "يمكنك سحب المجموعات إلى⏎\nو من ثم ترتيبها كما تريد."
 
-#: js/groups.js:644
+#: js/groups.js:645
 msgid "Failed adding group: {error}"
-msgstr ""
+msgstr "{خطأ}: فشلت مهمة إضافة مجموعة. "
 
-#: js/groups.js:656
+#: js/groups.js:657
 msgid "All"
-msgstr ""
+msgstr "الكل"
 
-#: js/groups.js:671 js/groups.js:674
+#: js/groups.js:672 js/groups.js:675
 msgid "Favorites"
-msgstr ""
+msgstr "المفضلة "
 
-#: js/groups.js:735
+#: js/groups.js:736
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "مشاركة بواسطة المالك  {owner}"
 
-#: js/groups.js:750
+#: js/groups.js:751
 msgid "Not grouped"
-msgstr ""
+msgstr "غير مصنف"
 
-#: js/groups.js:776
+#: js/groups.js:777
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "{خطأ}: فشلت مهمة تجميل المجموعات."
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr ""
+msgstr "يرجى اختيار دفتر العناوين"
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "استيراد إلى..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "خطأ في تحميل نموذج الاستيراد"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "استيراد جهات الإتصال."
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -282,7 +283,7 @@ msgstr "استيراد"
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr ""
+msgstr "تمت عملية الاستيراد "
 
 #: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:322
 msgid "Close"
@@ -294,11 +295,11 @@ msgstr "خطأ"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr ""
+msgstr "اسم العرض لا يمكن أن يكون فارغ "
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
-msgstr ""
+msgstr "أظهر وصلة -رابط - CardDav لمشاركة أو نقل جهات الاتصال."
 
 #: js/settings.js:98 templates/settings.php:29
 msgid "Show read-only VCF link"
@@ -323,39 +324,43 @@ msgstr "إلغاء"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr ""
+msgstr "المزيد..."
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr ""
+msgstr "تقليل..."
 
-#: js/storage.js:295 js/storage.js:334
+#: js/storage.js:29
+msgid "Server error! Please inform system administator"
+msgstr "خطأ في الخادم! يرجى ابلاغ مدير النظام."
+
+#: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "{خطأ}: فشلت مهمة تحميل الصورة"
 
 #: lib/addressbook.php:152
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "ليس لديك الصلاحية  لمشاهدة جهة الاتصال هذه"
 
 #: lib/addressbook.php:159
 msgid "Contact not found"
-msgstr ""
+msgstr "تعذر إيجاد جهة الاتصال."
 
 #: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "ليس لديك الصلاحية  لمشاهدة جهات الاتصال هذه"
 
 #: lib/addressbook.php:213
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "ليس لديك الصلاحية  لإضافة جهات اتصال لدفتر العناوين"
 
 #: lib/addressbook.php:216
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "ليس لديك الصلاحية  لحذف جهة الاتصال"
 
 #: lib/addressbook.php:243 lib/addressbook.php:269
 msgid "The backend for this address book does not support deleting contacts"
@@ -363,7 +368,7 @@ msgstr ""
 
 #: lib/addressbook.php:290
 msgid "Unknown error"
-msgstr ""
+msgstr "حدث خطأ غير معروف. "
 
 #: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
@@ -371,298 +376,292 @@ msgstr ""
 
 #: lib/addressbook.php:358
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "ليس لديك الصلاحية  لتحديث دفتر العناوين"
 
 #: lib/addressbook.php:369
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "ليس لديك الصلاحية  لحذف دفتر العناوين."
 
-#: lib/app.php:132
+#: lib/app.php:139
 msgid "Address book not found"
-msgstr ""
+msgstr "تعذر ايجاد دفتر العناوين"
 
-#: lib/contact.php:112 lib/contact.php:159
+#: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "ليس لديك الصلاحية  لمشاهدة جهة الاتصال "
 
-#: lib/contact.php:261
+#: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "ليس لديك الصلاحية  لتحديث جهة الاتصال هذه"
 
-#: lib/contact.php:272
+#: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
 msgstr ""
 
-#: lib/contact.php:290
+#: lib/contact.php:292
 msgid "This backend not support adding contacts"
 msgstr ""
 
-#: lib/contact.php:398 lib/contact.php:415
+#: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
 msgstr ""
 
-#: lib/contact.php:463
+#: lib/contact.php:467
 msgid " Missing IM parameter for: "
 msgstr ""
 
-#: lib/contact.php:471
+#: lib/contact.php:475
 msgid "Unknown IM: "
-msgstr ""
+msgstr "جهة تراسل فوري غير معروفة"
 
-#: lib/controller/addressbookcontroller.php:138
+#: lib/contact.php:788
+msgid "{name}'s Birthday"
+msgstr "يوم ميلاد {name}'s"
+
+#: lib/controller/addressbookcontroller.php:110
 msgid "Error creating address book"
-msgstr ""
+msgstr "خطأ في إنشاء دفتر العناوين"
+
+#: lib/controller/addressbookcontroller.php:130
+msgid "Error updating address book"
+msgstr "حدث خطأ في تحديث دفتر العناوين"
 
 #: lib/controller/addressbookcontroller.php:161
-msgid "Error updating address book"
-msgstr ""
-
-#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "ليس لديك الصلاحية لحذف  \"%s\" دفتر العناوين"
 
-#: lib/controller/addressbookcontroller.php:202
+#: lib/controller/addressbookcontroller.php:168
 msgid "Error deleting address book"
-msgstr ""
+msgstr "حدث خطأ أثناء إزالة دفتر العناوين"
+
+#: lib/controller/addressbookcontroller.php:208
+msgid "Error creating contact."
+msgstr "حدث خطأ أثناء إنشاء جهة اتصال."
 
 #: lib/controller/addressbookcontroller.php:247
-msgid "Error creating contact."
-msgstr ""
-
-#: lib/controller/addressbookcontroller.php:289
 msgid "Error deleting contact."
-msgstr ""
+msgstr "خطأ في حذف جهة الاتصال"
 
-#: lib/controller/addressbookcontroller.php:338
+#: lib/controller/addressbookcontroller.php:290
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "حدث خطأ أثناء استرداد جهة الاتصال."
 
-#: lib/controller/addressbookcontroller.php:349
-#: lib/controller/contactphotocontroller.php:345
+#: lib/controller/addressbookcontroller.php:301
+#: lib/controller/contactphotocontroller.php:338
 msgid "Error saving contact."
-msgstr ""
+msgstr "خطأ في حفظ جهة الإتصال."
 
-#: lib/controller/addressbookcontroller.php:354
+#: lib/controller/addressbookcontroller.php:306
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "حدث خطأ أثناء إزالة جهة اتصال من دفتر العناوين."
 
-#: lib/controller/contactcontroller.php:42
-#: lib/controller/contactcontroller.php:68
-#: lib/controller/contactcontroller.php:92
-#: lib/controller/contactcontroller.php:134
-#: lib/controller/contactcontroller.php:197
-#: lib/controller/contactphotocontroller.php:40
-#: lib/controller/contactphotocontroller.php:284
+#: lib/controller/contactcontroller.php:37
+#: lib/controller/contactcontroller.php:61
+#: lib/controller/contactcontroller.php:106
+#: lib/controller/contactphotocontroller.php:38
+#: lib/controller/contactphotocontroller.php:277
+#: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "تعذر ايجاد جهة الاتصال"
 
-#: lib/controller/contactcontroller.php:97
+#: lib/controller/contactcontroller.php:66
 msgid "Error merging into contact."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:101
-#: lib/controller/contactcontroller.php:156
+#: lib/controller/contactcontroller.php:70
 msgid "Error saving contact to backend."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:138
-#: lib/controller/contactcontroller.php:201
+#: lib/controller/contactcontroller.php:111
 msgid "Property name is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:142
-#: lib/controller/contactcontroller.php:205
-#: lib/controller/contactcontroller.php:215
+#: lib/controller/contactcontroller.php:116
 msgid "Property checksum is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:149
-#: lib/controller/contactcontroller.php:222
+#: lib/controller/contactcontroller.php:135
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "المعلومات الموجودة في ال vCard غير صحيحة. الرجاء إعادة تحديث الصفحة."
 
-#: lib/controller/contactcontroller.php:227
-msgid "Error setting property"
-msgstr ""
+#: lib/controller/contactcontroller.php:144
+msgid "Error updating contact"
+msgstr "خطأ في تحديث جهات الاتصال"
 
-#: lib/controller/contactcontroller.php:231
-msgid "Error saving property to backend"
-msgstr ""
+#: lib/controller/contactcontroller.php:149
+msgid "Error saving contact to backend"
+msgstr "حدث خطأ أثناء حفظ جهات الاتصال في الخلفية."
 
-#: lib/controller/contactphotocontroller.php:71
+#: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
-msgstr ""
+msgstr "حدث خطأ أثناء جلب صورة المستخدم"
 
-#: lib/controller/contactphotocontroller.php:90
-#: lib/controller/importcontroller.php:39
+#: lib/controller/contactphotocontroller.php:87
+#: lib/controller/importcontroller.php:36
 msgid "No file was uploaded. Unknown error"
 msgstr "لم يتم رفع أي ملف , خطأ غير معروف"
 
-#: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:47
+#: lib/controller/contactphotocontroller.php:95
+#: lib/controller/importcontroller.php:44
 msgid "There is no error, the file uploaded with success"
 msgstr "تم ترفيع الملفات بنجاح."
 
-#: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:48
+#: lib/controller/contactphotocontroller.php:96
+#: lib/controller/importcontroller.php:45
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "حجم الملف الذي تريد ترفيعه أعلى مما upload_max_filesize يسمح به في ملف php.ini"
 
-#: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:50
+#: lib/controller/contactphotocontroller.php:97
+#: lib/controller/importcontroller.php:47
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "حجم الملف الذي تريد ترفيعه أعلى مما MAX_FILE_SIZE يسمح به في واجهة ال HTML."
 
-#: lib/controller/contactphotocontroller.php:101
-#: lib/controller/importcontroller.php:51
+#: lib/controller/contactphotocontroller.php:98
+#: lib/controller/importcontroller.php:48
 msgid "The uploaded file was only partially uploaded"
 msgstr "تم ترفيع جزء من الملفات الذي تريد ترفيعها فقط"
 
-#: lib/controller/contactphotocontroller.php:102
-#: lib/controller/importcontroller.php:52
+#: lib/controller/contactphotocontroller.php:99
+#: lib/controller/importcontroller.php:49
 msgid "No file was uploaded"
 msgstr "لم يتم ترفيع أي من الملفات"
 
-#: lib/controller/contactphotocontroller.php:103
-#: lib/controller/importcontroller.php:53
+#: lib/controller/contactphotocontroller.php:100
+#: lib/controller/importcontroller.php:50
 msgid "Missing a temporary folder"
 msgstr "المجلد المؤقت غير موجود"
 
-#: lib/controller/contactphotocontroller.php:118
+#: lib/controller/contactphotocontroller.php:115
 msgid "Couldn't load temporary image: "
-msgstr ""
+msgstr "لا يمكن تحميل الصورة المؤقتة"
 
-#: lib/controller/contactphotocontroller.php:127
-#: lib/controller/contactphotocontroller.php:163
+#: lib/controller/contactphotocontroller.php:124
+#: lib/controller/contactphotocontroller.php:159
 msgid "Couldn't save temporary image: "
-msgstr ""
+msgstr "لا يمكن حفظ الصورة المؤقتة "
 
-#: lib/controller/contactphotocontroller.php:193
+#: lib/controller/contactphotocontroller.php:188
 msgid "No photo path was submitted."
-msgstr ""
+msgstr "لم يتم عرض مسار الصورة. \nلم يتم تقديم مسار للصورة. "
+
+#: lib/controller/contactphotocontroller.php:195
+msgid "File doesn't exist:"
+msgstr "الملف غير موجود"
 
 #: lib/controller/contactphotocontroller.php:200
-msgid "File doesn't exist:"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:205
-#: lib/controller/contactphotocontroller.php:209
+#: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image."
-msgstr ""
+msgstr "خطأ في تحميل الصورة. "
+
+#: lib/controller/contactphotocontroller.php:283
+msgid "Image has been removed from cache"
+msgstr "تم إزالة الصورة من ذاكرة التخزين المؤقتة. "
 
 #: lib/controller/contactphotocontroller.php:290
-msgid "Image has been removed from cache"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:297
 msgid "Error creating temporary image"
-msgstr ""
+msgstr "خطأ في إنشاء صورة مؤقتة "
 
-#: lib/controller/contactphotocontroller.php:305
+#: lib/controller/contactphotocontroller.php:298
 msgid "Error cropping image"
-msgstr ""
+msgstr "خطأ في قص الصورة"
 
-#: lib/controller/contactphotocontroller.php:311
+#: lib/controller/contactphotocontroller.php:304
 msgid "Error resizing image"
-msgstr ""
+msgstr "خطأ في تغيير حجم الصورة"
 
-#: lib/controller/contactphotocontroller.php:330
+#: lib/controller/contactphotocontroller.php:323
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "خطأ في الحصول على ملكية الصورة."
 
-#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:84
+#: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
 msgid "No group name given."
-msgstr ""
+msgstr "لم يتم تسمية المجموعة بعد."
 
-#: lib/controller/groupcontroller.php:67
+#: lib/controller/groupcontroller.php:64
 msgid "Error adding group."
-msgstr ""
+msgstr "حدث خطأ أثناء إضافة المجموعة,"
 
-#: lib/controller/groupcontroller.php:135
+#: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:139
+#: lib/controller/groupcontroller.php:131
 msgid "No group name to rename to given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:145
+#: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
-msgstr ""
+msgstr "حدث خطأ أثناء إعادة تسمية المجموعة."
 
-#: lib/controller/groupcontroller.php:186
-#: lib/controller/groupcontroller.php:237
+#: lib/controller/groupcontroller.php:175
+#: lib/controller/groupcontroller.php:223
 msgid "Group ID missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:191
+#: lib/controller/groupcontroller.php:180
 msgid "Group name missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:196
-#: lib/controller/groupcontroller.php:242
+#: lib/controller/groupcontroller.php:185
+#: lib/controller/groupcontroller.php:228
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:54
+#: lib/controller/importcontroller.php:51
 msgid "Failed to write to disk"
 msgstr "خطأ في الكتابة على القرص الصلب"
 
-#: lib/controller/importcontroller.php:65
+#: lib/controller/importcontroller.php:62
 msgid "Not enough storage available"
 msgstr "لا يوجد مساحة تخزينية كافية"
 
-#: lib/controller/importcontroller.php:73
+#: lib/controller/importcontroller.php:70
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:95
+#: lib/controller/importcontroller.php:92
 msgid "Error uploading contacts to storage."
-msgstr ""
+msgstr "خطأ في رفع جهات الإتصال للمخزن,"
 
-#: lib/controller/importcontroller.php:141
+#: lib/controller/importcontroller.php:137
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "خطأ في نقل الملف إلى مجلد الاستيراد."
 
-#: lib/controller/importcontroller.php:161
+#: lib/controller/importcontroller.php:154
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:169
+#: lib/controller/importcontroller.php:162
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:174
-#: lib/controller/importcontroller.php:291
+#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:283
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:173
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:222
+#: lib/controller/importcontroller.php:215
 msgid "No contacts found in: "
-msgstr ""
+msgstr "لم يتم إيجاد جهات اتصال في:"
 
-#: lib/controller/settingscontroller.php:36
+#: lib/controller/settingscontroller.php:35
 msgid "No key is given."
 msgstr ""
 
-#: lib/controller/settingscontroller.php:40
+#: lib/controller/settingscontroller.php:39
 msgid "No value is given."
 msgstr ""
 
-#: lib/controller/settingscontroller.php:51
+#: lib/controller/settingscontroller.php:50
 msgid "Could not set preference: "
-msgstr ""
-
-#: lib/hooks.php:220
-msgid "{name}'s Birthday"
-msgstr ""
+msgstr "تعذر تعيين المفضل "
 
 #: lib/searchprovider.php:24
 msgid "Contact"
@@ -676,7 +675,7 @@ msgstr "شيء آخر"
 
 #: lib/utils/jsonserializer.php:107
 msgid "HomePage"
-msgstr ""
+msgstr "الصفحة الرئيسية"
 
 #: lib/utils/properties.php:66
 msgid "Jabber"
@@ -684,7 +683,7 @@ msgstr ""
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
-msgstr ""
+msgstr "مكالمات عن طريق الإنترنت"
 
 #: lib/utils/properties.php:76
 msgid "AIM"
@@ -692,19 +691,19 @@ msgstr ""
 
 #: lib/utils/properties.php:81
 msgid "MSN"
-msgstr ""
+msgstr "مراسل MSN"
 
 #: lib/utils/properties.php:86
 msgid "Twitter"
-msgstr ""
+msgstr "تويتر"
 
 #: lib/utils/properties.php:91
 msgid "GoogleTalk"
-msgstr ""
+msgstr "جوجل توك للتراسل الفوري و الصوتي"
 
 #: lib/utils/properties.php:96
 msgid "Facebook"
-msgstr ""
+msgstr "فيسبوك"
 
 #: lib/utils/properties.php:101
 msgid "XMPP"
@@ -712,23 +711,23 @@ msgstr ""
 
 #: lib/utils/properties.php:106
 msgid "ICQ"
-msgstr ""
+msgstr "ICQ"
 
 #: lib/utils/properties.php:111
 msgid "Yahoo"
-msgstr ""
+msgstr "ياهو"
 
 #: lib/utils/properties.php:116
 msgid "Skype"
-msgstr ""
+msgstr "سكايب"
 
 #: lib/utils/properties.php:121
 msgid "QQ"
-msgstr ""
+msgstr "كيوكيو"
 
 #: lib/utils/properties.php:126
 msgid "GaduGadu"
-msgstr ""
+msgstr "قادو قادو البولندي للمراسلة الفورية"
 
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
@@ -754,7 +753,7 @@ msgstr "صوت"
 
 #: lib/utils/properties.php:164
 msgid "Message"
-msgstr ""
+msgstr "رسالة"
 
 #: lib/utils/properties.php:165
 msgid "Fax"
@@ -770,60 +769,60 @@ msgstr "الرنان"
 
 #: lib/utils/properties.php:174
 msgid "Internet"
-msgstr ""
+msgstr "إنترنت"
 
 #: lib/utils/properties.php:187
 msgid "Friends"
-msgstr ""
+msgstr "الاصدقاء"
 
 #: lib/utils/properties.php:188
 msgid "Family"
-msgstr ""
+msgstr "العائلة"
 
 #: templates/contacts.php:6
 msgid "New Contact"
-msgstr ""
+msgstr "جهة اتصال جديدة"
 
 #: templates/contacts.php:10
 msgid "Group name"
-msgstr ""
+msgstr "اسم المجموعة"
 
 #: templates/contacts.php:10
 msgid "New Group"
-msgstr ""
+msgstr "مجموعة جديدة"
 
 #: templates/contacts.php:19
 msgid "Address books"
-msgstr ""
+msgstr "دفتر العناوين"
 
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr ""
+msgstr "اسم العرض"
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
-msgstr ""
+msgstr "أضف دفتر عناوين جديد"
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "تحديد ملف..."
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
-msgstr ""
+msgstr "(De-) تحديد الكل"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr ""
+msgstr "* ترتيب.\n* فرز."
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr ""
+msgstr "الاسم الأول - العائلة"
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "العائلة -الاسم الأول"
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
@@ -831,142 +830,142 @@ msgstr "مجموعات"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
-msgstr ""
+msgstr "المفضلة"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
-msgstr ""
+msgstr "تم تحديد الدمج"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "اختصارات لوحة المفاتيح"
 
 #: templates/contacts.php:94
 msgid "Navigation"
-msgstr ""
+msgstr "تصفح"
 
 #: templates/contacts.php:97
 msgid "Next contact in list"
-msgstr ""
+msgstr "جهة الاتصال التالية في القائمة "
 
 #: templates/contacts.php:99
 msgid "Previous contact in list"
-msgstr ""
+msgstr "جهة الاتصال السابقة في القائمة "
 
 #: templates/contacts.php:101
 msgid "Expand/collapse current addressbook"
-msgstr ""
+msgstr "توسيع / طي دفتر العناوين الحالي."
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr ""
+msgstr "دفتر العنوان التالي"
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr ""
+msgstr "دفتر العنوان السابق"
 
 #: templates/contacts.php:109
 msgid "Actions"
-msgstr ""
+msgstr "* تطبيقات.\n* أنشطة."
 
 #: templates/contacts.php:112
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "تحديث قائمة جهات الاتصال"
 
 #: templates/contacts.php:114
 msgid "Add new contact"
-msgstr ""
+msgstr "أَف جهة اتصال جديدة"
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
-msgstr ""
+msgstr "أضف دفتر عناوين جديد"
 
 #: templates/contacts.php:118
 msgid "Delete current contact"
-msgstr ""
+msgstr "إزالة جهة الاتصال الحالية"
 
 #: templates/contacts.php:124
 msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>لا يوجد لديك جهات اتصال في دفتر العناوين أو أن دفتر العناوين معطل. </h3><p> يرجى إضافة جهات اتصال جديدة أو استيراد جهات الاتصال الموجودة من ملف  VCF . \n</p> "
 
 #: templates/contacts.php:127
 msgid "Add contact"
-msgstr ""
+msgstr "أضف جهة اتصال"
 
 #: templates/contacts.php:174
 msgid "Delete group"
-msgstr ""
+msgstr "إزالة المجموعة"
 
 #: templates/contacts.php:175
 msgid "Rename group"
-msgstr ""
+msgstr "إعادة تسمية المجموعة"
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "إي جهة اتصال ترغب بدمج البيانات إليها؟"
 
 #: templates/contacts.php:191
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "هل تريد إزالة (الآخرون) بعد نجاح عملية الدمج؟"
 
 #: templates/contacts.php:203
 msgid "Compose mail"
-msgstr ""
+msgstr "إنشاء رسالة بريد إلكتروني"
 
 #: templates/contacts.php:225
 msgid "Delete current photo"
-msgstr ""
+msgstr "إزالة الصورة الحالية"
 
 #: templates/contacts.php:226
 msgid "Edit current photo"
-msgstr ""
+msgstr "تحرير الصورة الحالية"
 
 #: templates/contacts.php:227
 msgid "Upload new photo"
-msgstr ""
+msgstr "رفع صورة جديدة"
 
 #: templates/contacts.php:228
 msgid "Select photo from ownCloud"
-msgstr ""
+msgstr "إختيار صورة من ownCloud"
 
 #: templates/contacts.php:239 templates/contacts.php:240
 msgid "First name"
-msgstr ""
+msgstr "الاسم الأول"
 
 #: templates/contacts.php:244 templates/contacts.php:245
 msgid "Additional names"
-msgstr ""
+msgstr "الاسماء الإضافية"
 
 #: templates/contacts.php:249 templates/contacts.php:250
 msgid "Last name"
-msgstr ""
+msgstr "اسم العائلة"
 
 #: templates/contacts.php:257
 msgid "Select groups"
-msgstr ""
+msgstr "إختر مجموعة"
 
 #: templates/contacts.php:260
 msgid "Select address book"
-msgstr ""
+msgstr "إختيار دفتر عناوين"
 
 #: templates/contacts.php:264 templates/contacts.php:328
 msgid "Nickname"
-msgstr ""
+msgstr "كنية.\nلقب."
 
 #: templates/contacts.php:267
 msgid "Enter nickname"
-msgstr ""
+msgstr "أدخل كنية."
 
 #: templates/contacts.php:271 templates/contacts.php:327
 msgid "Title"
-msgstr "عنوان"
+msgstr "اللقب"
 
 #: templates/contacts.php:274
 msgid "Enter title"
-msgstr ""
+msgstr "أدخل لقب."
 
 #: templates/contacts.php:278 templates/contacts.php:326
 msgid "Organization"
@@ -974,7 +973,7 @@ msgstr "المؤسسة"
 
 #: templates/contacts.php:281
 msgid "Enter organization"
-msgstr ""
+msgstr "أدخل اسم المنظمة"
 
 #: templates/contacts.php:285 templates/contacts.php:329
 msgid "Birthday"
@@ -982,11 +981,11 @@ msgstr "عيد ميلاد"
 
 #: templates/contacts.php:316
 msgid "Notes go here..."
-msgstr ""
+msgstr "للملاحظات إذهب هنا..."
 
 #: templates/contacts.php:323
 msgid "Export as VCF"
-msgstr ""
+msgstr "تصدير كملف VCF"
 
 #: templates/contacts.php:330
 msgid "Phone"
@@ -998,7 +997,7 @@ msgstr "البريد الإلكترونى"
 
 #: templates/contacts.php:332
 msgid "Instant Messaging"
-msgstr ""
+msgstr "التراسل الفوري"
 
 #: templates/contacts.php:333
 msgid "Address"
@@ -1006,11 +1005,11 @@ msgstr "عنوان"
 
 #: templates/contacts.php:334
 msgid "Note"
-msgstr ""
+msgstr "ملاحظة"
 
 #: templates/contacts.php:335
 msgid "Web site"
-msgstr ""
+msgstr "موقع إلكتروني"
 
 #: templates/contacts.php:337
 msgid "Delete contact"
@@ -1024,63 +1023,63 @@ msgstr "مفضل"
 
 #: templates/contacts.php:353
 msgid "Please specify a valid email address."
-msgstr ""
+msgstr "يرجى تحديد عنوان إلكتروني صالح للإستخدام."
 
 #: templates/contacts.php:353
 msgid "someone@example.com"
-msgstr ""
+msgstr "someone@example.com"
 
 #: templates/contacts.php:355
 msgid "Mail to address"
-msgstr ""
+msgstr "إرسال إلى العنوان."
 
 #: templates/contacts.php:356
 msgid "Delete email address"
-msgstr ""
+msgstr "حذف عنوان البريد الإلكتروني"
 
 #: templates/contacts.php:368
 msgid "Enter phone number"
-msgstr ""
+msgstr "إدخال رقم الهاتف"
 
 #: templates/contacts.php:370
 msgid "Delete phone number"
-msgstr ""
+msgstr "حذف رقم الهاتف"
 
 #: templates/contacts.php:384
 msgid "Go to web site"
-msgstr ""
+msgstr "الذهاب إلى الموقع الإلكتروني."
 
 #: templates/contacts.php:385
 msgid "Delete URL"
-msgstr ""
+msgstr "حذف رابط URL"
 
 #: templates/contacts.php:396
 msgid "View on map"
-msgstr ""
+msgstr "مشاهدة على الخريطة."
 
 #: templates/contacts.php:397
 msgid "Delete address"
-msgstr ""
+msgstr "حذف العنوان"
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "* 1600شمالي غرب جادة بنسلفانيا.\n* البيت الأبيض"
 
 #: templates/contacts.php:411
 msgid "Street address"
-msgstr ""
+msgstr "عنوان الشارع."
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "20500"
 
 #: templates/contacts.php:416
 msgid "Postal code"
-msgstr ""
+msgstr "الرمز البريدي."
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "العاصمة واشنطن. "
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1088,15 +1087,15 @@ msgstr "المدينة"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr " قطاع كولومبيا"
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr ""
+msgstr "الولاية أو المنطقة."
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "الولايات المتحدة الأمريكية."
 
 #: templates/contacts.php:429
 msgid "Country"
@@ -1104,11 +1103,11 @@ msgstr "البلد"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
-msgstr ""
+msgstr "رسائل فورية."
 
 #: templates/contacts.php:453
 msgid "Delete IM"
-msgstr ""
+msgstr "حذف الرسائل الفورية."
 
 #: templates/contacts.php:461
 msgid "Active"
@@ -1124,11 +1123,11 @@ msgstr "تصدير"
 
 #: templates/contacts.php:466
 msgid "CardDAV link"
-msgstr ""
+msgstr "رابط - وصلة - CardDA لنقل و مشاركة جهات الاتصال"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr ""
+msgstr "CardDAV يقوم بمزامنة العناوين"
 
 #: templates/settings.php:3
 msgid "more info"

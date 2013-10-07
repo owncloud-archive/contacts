@@ -229,9 +229,7 @@ OC.Contacts = OC.Contacts || {
 			console.log(response.message);
 			$(document).trigger('status.contacts.error', response);
 		});
-		OCCategories.changed = this.groups.categoriesChanged;
-		OCCategories.app = 'contacts';
-		OCCategories.type = 'contact';
+		$(OC.Tags).on('change', this.groups.categoriesChanged)
 		this.bindEvents();
 		this.$toggleAll.show();
 		this.hideActions();
@@ -381,9 +379,10 @@ OC.Contacts = OC.Contacts || {
 
 		// Keep error messaging at one place to be able to replace it.
 		$(document).bind('status.contacts.error', function(e, data) {
-			console.warn(data.message);
+			var message = data.message || data;
+			console.warn(message);
 			//console.trace();
-			OC.notify({message:data.message});
+			OC.notify({message:message});
 		});
 
 		$(document).bind('status.contact.enabled', function(e, enabled) {
@@ -1058,9 +1057,11 @@ OC.Contacts = OC.Contacts || {
 			}
 			console.log('download');
 			var contacts = self.contacts.getSelectedContacts();
-			var ids = $.map(contacts, function(c) {return c.getId();});
-			document.location.href = OC.linkTo('contacts', 'export.php')
-				+ '?selectedids=' + ids.join(',');
+			// Only get backend, addressbookid and contactid
+			contacts = $.map(contacts, function(c) {return c.metaData();});
+			var url = OC.Router.generate('contacts_export_selected', {contacts:contacts});
+			console.log('export url', url);
+			document.location.href = url;
 		});
 
 		this.$contactListHeader.on('click keydown', '.merge', function(event) {

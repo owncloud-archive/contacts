@@ -22,7 +22,9 @@
 
 OCP\App::checkAppEnabled('contacts');
 
-if(substr(OCP\Util::getRequestUri(), 0, strlen(OC_App::getAppWebPath('contacts').'/carddav.php')) == OC_App::getAppWebPath('contacts').'/carddav.php') {
+if(substr(OCP\Util::getRequestUri(), 0, strlen(OC_App::getAppWebPath('contacts').'/carddav.php'))
+	=== OC_App::getAppWebPath('contacts').'/carddav.php'
+) {
 	$baseuri = OC_App::getAppWebPath('contacts').'/carddav.php';
 }
 
@@ -61,7 +63,6 @@ $server->addPlugin(new OCA\Contacts\CardDAV\Plugin());
 $server->addPlugin(new Sabre_DAVACL_Plugin());
 $server->addPlugin(new Sabre_DAV_Browser_Plugin(false)); // Show something in the Browser, but no upload
 $server->addPlugin(new Sabre_CardDAV_VCFExportPlugin());
-$server->addPlugin(new OCA\Contacts\CardDAV\ValidatorPlugin());
 
 if(defined('DEBUG') && DEBUG) {
 	$server->debugExceptions = true;

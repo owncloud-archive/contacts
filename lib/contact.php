@@ -97,6 +97,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 						case 'fullname':
 							$this->props['displayname'] = $value;
 							$this->FN = $value;
+							// Set it to saved again as we're not actually changing anything
+							$this->setSaved();
 							break;
 					}
 				}
@@ -324,7 +326,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			} elseif(!isset($this->props['carddata'])) {
 				$result = $this->props['backend']->getContact(
 					$this->getParent()->getId(),
-					$this->id
+					$this->getId()
 				);
 				if($result) {
 					if(isset($result['vcard'])
@@ -338,7 +340,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 						// Save internal values
 						$data = $result['carddata'];
 						$this->props['carddata'] = $result['carddata'];
-						$this->props['lastmodified'] = $result['lastmodified'];
+						$this->props['lastmodified'] = isset($result['lastmodified'])
+							? $result['lastmodified']
+							: null;
 						$this->props['displayname'] = $result['displayname'];
 						$this->props['permissions'] = $result['permissions'];
 					} else {
@@ -714,7 +718,26 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return \OC_Cache::get($key);
 	}
 
+    public function __get($key) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
+
+		return parent::__get($key);
+	}
+
+    public function __isset($key) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
+
+		return parent::__isset($key);
+	}
+
 	public function __set($key, $value) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
 		parent::__set($key, $value);
 		if($key === 'FN') {
 			$this->props['displayname'] = $value;
@@ -723,6 +746,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	public function __unset($key) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
 		parent::__unset($key);
 		if($key === 'PHOTO') {
 			$this->cacheThumbnail(null, true);
@@ -738,7 +764,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return $this->props['retrieved'];
 	}
 
-	public function setSaved($state) {
+	public function setSaved($state = true) {
 		$this->props['saved'] = $state;
 	}
 
@@ -746,4 +772,43 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return $this->props['saved'];
 	}
 
+	/**
+	 * Generate an event to show in the calendar
+	 *
+	 * @return \Sabre\VObject\Component\VCalendar|null
+	 */
+	public function getBirthdayEvent() {
+		if(!isset($this->BDAY)) {
+			return;
+		}
+		$birthday = $this->BDAY;
+		if ((string)$birthday) {
+			$title = str_replace('{name}',
+				strtr((string)$this->FN, array('\,' => ',', '\;' => ';')),
+				App::$l10n->t('{name}\'s Birthday')
+			);
+			try {
+				$date = new \DateTime($birthday);
+			} catch(\Exception $e) {
+				continue;
+			}
+			$vevent = \Sabre\VObject\Component::create('VEVENT');
+			$vevent->add('DTSTART');
+			$vevent->DTSTART->setDateTime(
+				$date,
+				\Sabre\VObject\Property\DateTime::DATE
+			);
+			$vevent->add('DURATION', 'P1D');
+			$vevent->{'UID'} = $this->UID;
+			$vevent->{'RRULE'} = 'FREQ=YEARLY';
+			$vevent->{'SUMMARY'} = $title;
+			$vcal = \Sabre\VObject\Component::create('VCALENDAR');
+			$vcal->VERSION = '2.0';
+			$appinfo = \OCP\App::getAppInfo('contacts');
+			$appversion = \OCP\App::getAppVersion('contacts');
+			$vcal->PRODID = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
+			$vcal->add($vevent);
+			return $vcal;
+		}
+	}
 }

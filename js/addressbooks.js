@@ -45,7 +45,7 @@ OC.Contacts = OC.Contacts || {};
 				'contacts_address_book_export',
 				{
 					backend: this.getBackend(),
-					addressbookid: this.getId()
+					addressBookId: this.getId()
 				}
 			));
 		this.$li.find('a.action.delete').on('click keypress', function() {
@@ -281,7 +281,7 @@ OC.Contacts = OC.Contacts || {};
 			if(value !== '-1') {
 				var url = OC.Router.generate(
 					'contacts_import_upload',
-					{addressbookid:value, backend: $(this).find('option:selected').data('backend')}
+					{addressBookId:value, backend: $(this).find('option:selected').data('backend')}
 				);
 				self.$importFileInput.fileupload('option', 'url', url);
 				//self.$importFileInput.attr('data-url', url);
@@ -619,12 +619,11 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('status.contacts.error', response);
 			}
 		})
-		.fail(function(jqxhr, textStatus, error) {
-			var err = textStatus + ', ' + error;
-			console.warn( "Request Failed: " + err);
+		.fail(function(response) {
+			console.warn( "Request Failed:", response);
 			defer.reject({
 				error: true,
-				message: t('contacts', 'Failed loading address books: {error}', {error:err})
+				message: t('contacts', 'Failed loading address books: {error}', {error:response.message})
 			});
 		});
 		return defer.promise();

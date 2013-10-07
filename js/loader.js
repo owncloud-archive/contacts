@@ -130,6 +130,11 @@ OC.ContactsImporter = OC.ContactsImporter || {
 
 $(document).ready(function(){
 
+	// If the app is already active there's no need for the FileActions
+	if(OC.Contacts) {
+		return;
+	}
+
 	$(document).bind('status.contacts.error', function(e, data) {
 		console.warn(data.message);
 		//console.trace();

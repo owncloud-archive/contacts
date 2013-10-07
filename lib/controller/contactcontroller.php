@@ -14,29 +14,24 @@ use OCA\Contacts\App,
 	OCA\Contacts\ImageResponse,
 	OCA\Contacts\Utils\JSONSerializer,
 	OCA\Contacts\Utils\Properties,
-	OCA\AppFramework\Controller\Controller as BaseController,
-	OCA\AppFramework\Core\API,
-	OCA\AppFramework\Http\TextDownloadResponse;
-
+	OCA\Contacts\Controller,
+	OCP\AppFramework\Http\Http;
 
 /**
  * Controller class For Contacts
  */
-class ContactController extends BaseController {
+class ContactController extends Controller {
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function getContact() {
-		$app = new App($this->api->getUserId());
 
 		$request = $this->request;
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
+		$contact = $addressBook->getChild($params['contactId']);
 
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
@@ -51,42 +46,16 @@ class ContactController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @CSRFExemption
-	 */
-	public function exportContact() {
-		$app = new App($this->api->getUserId());
-
-		$params = $this->request->urlParams;
-
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
-
-		if(!$contact) {
-			$response = new JSONResponse();
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
-		}
-
-		$name = str_replace(' ', '_', $contact->getDisplayName()) . '.vcf';
-		return new TextDownloadResponse($contact->serialize(), $name, 'text/vcard');
-	}
-
-	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function saveContact() {
-		$app = new App($this->api->getUserId());
 
 		$request = $this->request;
 		$params = $this->request->urlParams;
 		$response = new JSONResponse();
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
+		$contact = $addressBook->getChild($params['contactId']);
 
 		if(!$contact) {
 			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
@@ -109,133 +78,80 @@ class ContactController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
-	public function deleteProperty() {
-		$app = new App($this->api->getUserId());
-
-		$request = $this->request;
-		$params = $request->urlParams;
-		$response = new JSONResponse();
-
-		$name = $request->post['name'];
-		$checksum = isset($request->post['checksum']) ? $request->post['checksum'] : null;
-
-		$response->debug(__METHOD__ . ', name: ' . print_r($name, true));
-		$response->debug(__METHOD__ . ', checksum: ' . print_r($checksum, true));
-
-		$app = new App($this->api->getUserId());
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$contact = $addressBook->getChild($params['contactid']);
-
-		if(!$contact) {
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
-		}
-		if(!$name) {
-			$response->bailOut(App::$l10n->t('Property name is not set.'));
-			return $response;
-		}
-		if(!$checksum && in_array($name, Properties::$multi_properties)) {
-			$response->bailOut(App::$l10n->t('Property checksum is not set.'));
-			return $response;
-		}
-		if(!is_null($checksum)) {
-			try {
-				$contact->unsetPropertyByChecksum($checksum);
-			} catch(Exception $e) {
-				$response->bailOut(App::$l10n->t('Information about vCard is incorrect. Please reload the page.'));
-				return $response;
-			}
-		} else {
-			unset($contact->{$name});
-		}
-		if(!$contact->save()) {
-			$response->bailOut(App::$l10n->t('Error saving contact to backend.'));
-			return $response;
-		}
-
-		$response->setParams(array(
-			'backend' => $request->parameters['backend'],
-			'addressbookid' => $request->parameters['addressbookid'],
-			'contactid' => $request->parameters['contactid'],
-			'lastmodified' => $contact->lastModified(),
-		));
-
-		return $response;
-	}
-
-	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
-	 */
-	public function saveProperty() {
+	public function patch() {
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
 
-		$request = $this->request;
+		$patch = $this->request->patch;
 		$response = new JSONResponse();
+		$response->debug(__METHOD__ .', upload_max_filesize: ' . ini_get('upload_max_filesize'));
 
-		$name = $request->post['name'];
-		$value = $request->post['value'];
-		$checksum = isset($request->post['checksum']) ? $request->post['checksum'] : null;
-		$parameters = isset($request->post['parameters']) ? $request->post['parameters'] : null;
-
+		$name = $patch['name'];
+		$value = $patch['value'];
+		$checksum = isset($patch['checksum']) ? $patch['checksum'] : null;
+		$parameters = isset($patch['parameters']) ? $patch['parameters'] : null;
 		$response->debug(__METHOD__ . ', name: ' . print_r($name, true));
 		$response->debug(__METHOD__ . ', value: ' . print_r($value, true));
 		$response->debug(__METHOD__ . ', checksum: ' . print_r($checksum, true));
 		$response->debug(__METHOD__ . ', parameters: ' . print_r($parameters, true));
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
-		$response->debug(__METHOD__ . ', addressBook: ' . print_r($addressBook, true));
-		$contact = $addressBook->getChild($params['contactid']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
+		//$response->debug(__METHOD__ . ', addressBook: ' . print_r($addressBook, true));
+		$contact = $addressBook->getChild($params['contactId']);
 
 		if(!$contact) {
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
+			return $response
+				->setStatus(Http::STATUS_NOT_FOUND)
+				->bailOut(App::$l10n->t('Couldn\'t find contact.'));
 		}
 		if(!$name) {
-			$response->bailOut(App::$l10n->t('Property name is not set.'));
-			return $response;
+			return $response
+				->setStatus(Http::STATUS_PRECONDITION_FAILED)
+				->bailOut(App::$l10n->t('Property name is not set.'));
 		}
 		if(!$checksum && in_array($name, Properties::$multi_properties)) {
-			$response->bailOut(App::$l10n->t('Property checksum is not set.'));
-			return $response;
+			return $response
+				->setStatus(Http::STATUS_PRECONDITION_FAILED)
+				->bailOut(App::$l10n->t('Property checksum is not set.'));
 		}
 		if(is_array($value)) {
 			// NOTE: Important, otherwise the compound value will be
 			// set in the order the fields appear in the form!
 			ksort($value);
 		}
-		$result = array('contactid' => $params['contactid']);
-		if(!$checksum && in_array($name, Properties::$multi_properties)) {
-			$response->bailOut(App::$l10n->t('Property checksum is not set.'));
-			return $response;
-		} elseif($checksum && in_array($name, Properties::$multi_properties)) {
+		$result = array('contactId' => $params['contactId']);
+		if($checksum && in_array($name, Properties::$multi_properties)) {
 			try {
-				$checksum = $contact->setPropertyByChecksum($checksum, $name, $value, $parameters);
-				$result['checksum'] = $checksum;
+				if(is_null($value)) {
+					$contact->unsetPropertyByChecksum($checksum);
+				} else {
+					$checksum = $contact->setPropertyByChecksum($checksum, $name, $value, $parameters);
+					$result['checksum'] = $checksum;
+				}
 			} catch(Exception $e)	{
-				$response->bailOut(App::$l10n->t('Information about vCard is incorrect. Please reload the page.'));
-				return $response;
+				return $response
+					->setStatus(Http::STATUS_PRECONDITION_FAILED)
+					->bailOut(App::$l10n->t('Information about vCard is incorrect. Please reload the page.'));
 			}
 		} elseif(!in_array($name, Properties::$multi_properties)) {
-			if(!$contact->setPropertyByName($name, $value, $parameters)) {
-				$response->bailOut(App::$l10n->t('Error setting property'));
+			if(is_null($value)) {
+				unset($contact->{$name});
+			} else {
+				if(!$contact->setPropertyByName($name, $value, $parameters)) {
+					return $response
+						->setStatus(Http::STATUS_INTERNAL_SERVER_ERROR)
+						->bailOut(App::$l10n->t('Error updating contact'));
+				}
 			}
 		}
 		if(!$contact->save()) {
-			$response->bailOut(App::$l10n->t('Error saving property to backend'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Error saving contact to backend'));
 		}
 		$result['lastmodified'] = $contact->lastModified();
 
-		$response->setParams($result);
+		return $response->setData($result);
 
-		return $response;
 	}
 
 }
