@@ -384,7 +384,7 @@ OC.Contacts = OC.Contacts || {};
 			};
 			$.when(
 				self.storage.startImport(
-					data.backend, data.addressbookid,
+					data.backend, data.addressBookId,
 					{filename:data.filename, progresskey:data.progresskey}
   				))
 			.then(function(response) {
@@ -393,7 +393,7 @@ OC.Contacts = OC.Contacts || {};
 					console.log('Import done');
 					self.$importStatusText.text(t('contacts', 'Imported {imported} contacts. {failed} failed.',
 													  {imported:response.data.imported, failed: response.data.failed}));
-					var addressBook = self.find({id:response.data.addressbookid, backend: response.data.backend});
+					var addressBook = self.find({id:response.data.addressBookId, backend: response.data.backend});
 					$(document).trigger('status.addressbook.imported', {
 						addressbook: addressBook
 					});
