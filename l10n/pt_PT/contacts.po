@@ -3,8 +3,10 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# carlosamp <carlos.am.pereira@hotmail.com>, 2013
 # Mouxy <daniel@mouxy.net>, 2012-2013
 # Mouxy <daniel@mouxy.net>, 2013
+# Duarte Velez Grilo <duartegrilo@gmail.com>, 2013
 # Duarte Velez Grilo <duartegrilo@gmail.com>, 2012
 # moura232 <moura232@gmail.com>, 2013
 # rlameiro <geral@ricardolameiro.pt>, 2012
@@ -17,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-05 09:09-0400\n"
-"PO-Revision-Date: 2013-10-03 12:20+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-10 20:23-0400\n"
+"PO-Revision-Date: 2013-10-10 09:30+0000\n"
+"Last-Translator: Helder Meneses <helder.meneses@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,19 +55,19 @@ msgstr "Importado {contagem} de {totais} contactos"
 
 #: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "Importou {imported} contactos. Falharam {failed}."
 
 #: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "O livro de endereços {name} já existe"
 
 #: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "Não foi possível adicionar o livro de endereços: {error}"
 
 #: js/addressbooks.js:626
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "Não foi possível carregar o livro de endereços: {error}"
 
 #: js/app.js:215
 msgid "Indexing contacts"
@@ -73,7 +75,7 @@ msgstr "A indexar os contactos"
 
 #: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "Erro irrecuperável enquanto tentava carregar os livros de endereço: {msg}"
 
 #: js/app.js:226
 msgid "Error."
@@ -109,11 +111,11 @@ msgstr ""
 
 #: js/app.js:575
 msgid "Merge failed."
-msgstr ""
+msgstr "Junção falhou."
 
 #: js/app.js:582
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "Junção falhou. Erro ao guardar contacto."
 
 #: js/app.js:601
 msgid "Select photo"
@@ -133,11 +135,11 @@ msgstr "Erro a remover do grupo."
 
 #: js/app.js:1094
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "Erro ao marcar {name} como favorito."
 
 #: js/app.js:1233 js/app.js:1237 templates/contacts.php:182
 msgid "Merge contacts"
-msgstr ""
+msgstr "Juntar contactos"
 
 #: js/app.js:1259 js/app.js:1312 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
@@ -230,7 +232,7 @@ msgstr "Os contactos não estão neste grupo"
 
 #: js/groups.js:566
 msgid "Failed renaming group: {error}"
-msgstr ""
+msgstr "Erro ao tentar renomear o grupo: {error}"
 
 #: js/groups.js:597
 msgid "A group named {group} already exists"
@@ -244,7 +246,7 @@ msgstr "Pode arrastar grupos para\ncolocá-los como desejar."
 
 #: js/groups.js:645
 msgid "Failed adding group: {error}"
-msgstr ""
+msgstr "Erro ao adicionar o grupo: {error}"
 
 #: js/groups.js:657
 msgid "All"
@@ -337,7 +339,7 @@ msgstr "Menos..."
 
 #: js/storage.js:29
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Erro no servidor! Por favor informe o Administrador do Sistema"
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -385,7 +387,7 @@ msgstr ""
 
 #: lib/addressbook.php:369
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "Não tem permissões para apagar este livro de endereços."
 
 #: lib/app.php:139
 msgid "Address book not found"
@@ -393,7 +395,7 @@ msgstr "Nenhum livro de endereços encontrado."
 
 #: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "Não tem permissões para ver este contacto"
 
 #: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
@@ -409,7 +411,7 @@ msgstr ""
 
 #: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
-msgstr ""
+msgstr "Propriedade não encontrada"
 
 #: lib/contact.php:467
 msgid " Missing IM parameter for: "
@@ -480,7 +482,7 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:111
 msgid "Property name is not set."
-msgstr ""
+msgstr "O nome da propriedade não está definido,"
 
 #: lib/controller/contactcontroller.php:116
 msgid "Property checksum is not set."
@@ -492,7 +494,7 @@ msgstr "A informação sobre o vCard está incorreta. Por favor recarregue a pá
 
 #: lib/controller/contactcontroller.php:144
 msgid "Error updating contact"
-msgstr ""
+msgstr "Erro ao actualizar o contacto"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
@@ -803,15 +805,15 @@ msgstr "Livro de endereços"
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr ""
+msgstr "Mostrar nome"
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
-msgstr ""
+msgstr "Adicionar Livro de Endereços"
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "Seleccionar ficheiro..."
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"

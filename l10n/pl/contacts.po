@@ -21,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-05 09:09-0400\n"
-"PO-Revision-Date: 2013-10-03 12:20+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-10 20:23-0400\n"
+"PO-Revision-Date: 2013-10-10 11:50+0000\n"
+"Last-Translator: Cyryl Sochacki <cyrylsochacki@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -192,7 +192,7 @@ msgstr "# grupy"
 
 #: js/contacts.js:1126
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "Błąd przetwarzania urodzin {bday}: {error}"
 
 #: js/contacts.js:2163
 msgid ""
@@ -280,7 +280,7 @@ msgstr "Importuj do..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Błąd przy importowaniu szablonu"
 
 #: js/loader.js:48
 msgid "Import contacts"
@@ -341,7 +341,7 @@ msgstr "Mniej..."
 
 #: js/storage.js:29
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Błąd serwera@ Skontaktuj się z administratorem"
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -496,7 +496,7 @@ msgstr "Informacje o vCard są nieprawidłowe. Proszę odświeżyć stronę."
 
 #: lib/controller/contactcontroller.php:144
 msgid "Error updating contact"
-msgstr ""
+msgstr "Błąd uaktualnienia kontaktu"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
@@ -1072,7 +1072,7 @@ msgstr "Usuń adres"
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "1600 Pennsylvania Avenue, NW"
 
 #: templates/contacts.php:411
 msgid "Street address"
