@@ -57,7 +57,7 @@ class AddressBookController extends Controller {
 	 * @NoAdminRequired
 	 */
 	public function getAddressBook() {
-		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
+		\OCP\Util::writeLog('contacts', __METHOD__ . ' ' . print_r($this->request->urlParams, true), \OCP\Util::DEBUG);
 		$params = $this->request->urlParams;
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);

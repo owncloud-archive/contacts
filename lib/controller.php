@@ -10,7 +10,7 @@
 namespace OCA\Contacts;
 
 use OCP\AppFramework\IAppContainer,
-	OC\AppFramework\Controller\Controller as  BaseController,
+	OCP\AppFramework\Controller as  BaseController,
 	OCP\IRequest,
 	OCA\Contacts\App;
 
