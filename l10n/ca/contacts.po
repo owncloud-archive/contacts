@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-05 09:09-0400\n"
-"PO-Revision-Date: 2013-10-03 12:20+0000\n"
+"POT-Creation-Date: 2013-10-13 18:27-0400\n"
+"PO-Revision-Date: 2013-10-13 22:27+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/owncloud/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -200,7 +200,7 @@ msgstr "Feu clic a desfés eliminació de {num} contactes"
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancel·la l'eliminació de {num} contactes"
 
-#: js/groups.js:53 templates/contacts.php:325
+#: js/groups.js:53
 msgid "Add"
 msgstr "Afegeix"
 
@@ -987,6 +987,10 @@ msgstr "Escriviu notes aquí..."
 #: templates/contacts.php:323
 msgid "Export as VCF"
 msgstr "Exporta com a VCF"
+
+#: templates/contacts.php:325
+msgid "Add field..."
+msgstr ""
 
 #: templates/contacts.php:330
 msgid "Phone"

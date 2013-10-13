@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-10-10 20:23-0400\n"
+"POT-Creation-Date: 2013-10-13 18:27-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
-#: js/groups.js:53 templates/contacts.php:325
+#: js/groups.js:53
 msgid "Add"
 msgstr ""
 
@@ -980,6 +980,10 @@ msgstr ""
 
 #: templates/contacts.php:323
 msgid "Export as VCF"
+msgstr ""
+
+#: templates/contacts.php:325
+msgid "Add field..."
 msgstr ""
 
 #: templates/contacts.php:330

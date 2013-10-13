@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-05 09:09-0400\n"
-"PO-Revision-Date: 2013-10-03 12:20+0000\n"
+"POT-Creation-Date: 2013-10-13 18:27-0400\n"
+"PO-Revision-Date: 2013-10-13 22:27+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -207,7 +207,7 @@ msgstr "Klik om het verwijderen van {num} contactpersonen ongedaan te maken."
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Verwijderen van {num} contacten geannuleerd"
 
-#: js/groups.js:53 templates/contacts.php:325
+#: js/groups.js:53
 msgid "Add"
 msgstr "Toevoegen"
 
@@ -340,7 +340,7 @@ msgstr "Minder..."
 
 #: js/storage.js:29
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Server fout! Neem contact op met de systeembeheerder"
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -495,11 +495,11 @@ msgstr "Informatie over de vCard is onjuist. Herlaad de pagina."
 
 #: lib/controller/contactcontroller.php:144
 msgid "Error updating contact"
-msgstr ""
+msgstr "Fout bij bijwerken contactpersoon"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Fout bij opslaan contactpersoongegevens baar backend"
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
@@ -994,6 +994,10 @@ msgstr "Hier de notities..."
 #: templates/contacts.php:323
 msgid "Export as VCF"
 msgstr "Exporteren als VCF"
+
+#: templates/contacts.php:325
+msgid "Add field..."
+msgstr ""
 
 #: templates/contacts.php:330
 msgid "Phone"

@@ -25,9 +25,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-07 09:33-0400\n"
-"PO-Revision-Date: 2013-10-07 11:00+0000\n"
-"Last-Translator: hanfeng <appweb.cn@gmail.com>\n"
+"POT-Creation-Date: 2013-10-13 18:27-0400\n"
+"PO-Revision-Date: 2013-10-13 22:27+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -212,7 +212,7 @@ msgstr "点击以撤销删除这{num}个联系人"
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
-#: js/groups.js:53 templates/contacts.php:325
+#: js/groups.js:53
 msgid "Add"
 msgstr "增加"
 
@@ -999,6 +999,10 @@ msgstr "注释放在这里..."
 #: templates/contacts.php:323
 msgid "Export as VCF"
 msgstr "导出为 VCF"
+
+#: templates/contacts.php:325
+msgid "Add field..."
+msgstr ""
 
 #: templates/contacts.php:330
 msgid "Phone"

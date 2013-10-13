@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-07 09:33-0400\n"
-"PO-Revision-Date: 2013-10-06 19:10+0000\n"
-"Last-Translator: asieriko <asieriko@gmail.com>\n"
+"POT-Creation-Date: 2013-10-13 18:27-0400\n"
+"PO-Revision-Date: 2013-10-13 22:27+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -198,7 +198,7 @@ msgstr "Klikatu {num} kontaktuen ezabaketa desegiteko"
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
-#: js/groups.js:53 templates/contacts.php:325
+#: js/groups.js:53
 msgid "Add"
 msgstr "Gehitu"
 
@@ -984,6 +984,10 @@ msgstr "Idatzi oharrak hemen..."
 
 #: templates/contacts.php:323
 msgid "Export as VCF"
+msgstr ""
+
+#: templates/contacts.php:325
+msgid "Add field..."
 msgstr ""
 
 #: templates/contacts.php:330

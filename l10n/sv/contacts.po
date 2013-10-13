@@ -13,6 +13,7 @@
 # Magnus Höglund <magnus@linux.com>, 2012
 # medialabs, 2013
 # Daniel Sandman <revoltism@gmail.com>, 2011, 2012
+# SBH1, 2013
 # Stefan Gagner <stefan@mei-ya.se>, 2013
 # tsarkon <tg@osswriter.com>, 2013
 # tscooter <tscooter@hotmail.com>, 2012
@@ -20,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-05 09:09-0400\n"
-"PO-Revision-Date: 2013-10-03 12:20+0000\n"
+"POT-Creation-Date: 2013-10-13 18:27-0400\n"
+"PO-Revision-Date: 2013-10-13 22:27+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -207,7 +208,7 @@ msgstr "Klicka för att ångra radering av {num} kontakter"
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Avbruten radering av {num} kontakter"
 
-#: js/groups.js:53 templates/contacts.php:325
+#: js/groups.js:53
 msgid "Add"
 msgstr "Lägg till"
 
@@ -340,7 +341,7 @@ msgstr "Mindre..."
 
 #: js/storage.js:29
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Serverfel! Vänligen Informera administratören."
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -495,11 +496,11 @@ msgstr "Information om vCard är felaktigt. Vänligen ladda om sidan."
 
 #: lib/controller/contactcontroller.php:144
 msgid "Error updating contact"
-msgstr ""
+msgstr "Fel uppstod när kontakt skulle uppdateras"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Fel när kontakt skulle sparas till server"
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
@@ -590,7 +591,7 @@ msgstr "Inget gruppnamn angivet."
 
 #: lib/controller/groupcontroller.php:64
 msgid "Error adding group."
-msgstr "Fel vid tillägg av grupp."
+msgstr "Fel uppstod när grupp skulle läggas till."
 
 #: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
@@ -994,6 +995,10 @@ msgstr "Noteringar här..."
 #: templates/contacts.php:323
 msgid "Export as VCF"
 msgstr "Exportera som VCF"
+
+#: templates/contacts.php:325
+msgid "Add field..."
+msgstr ""
 
 #: templates/contacts.php:330
 msgid "Phone"
