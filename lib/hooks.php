@@ -156,7 +156,6 @@ class Hooks{
 				\OCP\Util::writeLog('contacts',
 					__METHOD__ .', scanning: ' . $limit . ' starting from ' . $offset,
 					\OCP\Util::DEBUG);
-				// only reset on first batch.
 				$offset += $limit;
 			}
 		}
