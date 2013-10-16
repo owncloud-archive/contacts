@@ -230,6 +230,7 @@
 "Birthday" => "Sünnipäev",
 "Notes go here..." => "Märkmed lähevad siia..",
 "Export as VCF" => "Ekspordi VCF-ina",
+"Add field..." => "Lisa väli ...",
 "Phone" => "Telefon",
 "Email" => "E-post",
 "Instant Messaging" => "Kiirsõnumid",

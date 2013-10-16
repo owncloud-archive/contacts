@@ -230,6 +230,7 @@
 "Birthday" => "Geburtstag",
 "Notes go here..." => "Notizen hier hinein...",
 "Export as VCF" => "Als VCF exportieren",
+"Add field..." => "Feld hinzufügen...",
 "Phone" => "Telefon",
 "Email" => "E-Mail",
 "Instant Messaging" => "Instant Messaging",

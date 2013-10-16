@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-13 18:27-0400\n"
-"PO-Revision-Date: 2013-10-13 22:27+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-15 21:31-0400\n"
+"PO-Revision-Date: 2013-10-14 13:00+0000\n"
+"Last-Translator: mnestis <transifex@mnestis.net>\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/owncloud/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -985,7 +985,7 @@ msgstr "Export as VCF"
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr ""
+msgstr "Add field..."
 
 #: templates/contacts.php:330
 msgid "Phone"

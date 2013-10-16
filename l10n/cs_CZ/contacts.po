@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-13 18:27-0400\n"
-"PO-Revision-Date: 2013-10-13 22:27+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-15 21:31-0400\n"
+"PO-Revision-Date: 2013-10-15 19:40+0000\n"
+"Last-Translator: pstast <petr@stastny.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -335,7 +335,7 @@ msgstr "Méně..."
 
 #: js/storage.js:29
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Chyba serveru! Prosím informujte systémového správce."
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -490,11 +490,11 @@ msgstr "Informace o vCard je neplatná. Obnovte, prosím, stránku."
 
 #: lib/controller/contactcontroller.php:144
 msgid "Error updating contact"
-msgstr ""
+msgstr "Chyba při ukládání kontaktu"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Chyba při zápisu kontaktu do úložiště"
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
@@ -992,7 +992,7 @@ msgstr "Exportovat jako VCF"
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr ""
+msgstr "Přidat položku..."
 
 #: templates/contacts.php:330
 msgid "Phone"
