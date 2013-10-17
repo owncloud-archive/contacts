@@ -535,7 +535,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	AddressBookList.prototype.add = function(name, cb) {
 		console.log('AddressBookList.add', name, typeof cb);
-		var defer = $.Deferred;
+		var defer = $.Deferred();
 		// Check for wrong, duplicate or empty name
 		if(typeof name !== 'string') {
 			throw new TypeError('BadArgument: AddressBookList.add() only takes String arguments.');

@@ -74,10 +74,10 @@ class App {
 	* @param string $name
 	* @return \Backend\AbstractBackend
 	*/
-	public function getBackend($name, $user = null) {
+	public function getBackend($name) {
 		$name = $name ? $name : 'local';
 		if (isset(self::$backendClasses[$name])) {
-			return new self::$backendClasses[$name]($user);
+			return new self::$backendClasses[$name]($this->user);
 		} else {
 			throw new \Exception('No backend for: ' . $name, '404');
 		}
@@ -98,12 +98,16 @@ class App {
 				$backend = self::getBackend($backendName, $this->user);
 				$addressBooks = $backend->getAddressBooksForUser();
 				if($backendName === 'local' && count($addressBooks) === 0) {
-					$id = $backend->createAddressBook(array('displayname' => 'Contacts'));
+					$id = $backend->createAddressBook(array('displayname' => self::$l10n->t('Contacts')));
 					if($id !== false) {
 						$addressBook = $backend->getAddressBook($id);
 						$addressBooks = array($addressBook);
 					} else {
-						// TODO: Write log
+						\OCP\Util::writeLog(
+							'contacts',
+							__METHOD__ . ', Error creating default address book',
+							\OCP\Util::ERROR
+						);
 					}
 				}
 				foreach($addressBooks as $addressBook) {
@@ -123,16 +127,15 @@ class App {
 	 * @return AddressBook|null
 	 */
 	public function getAddressBook($backendName, $addressbookid) {
-		\OCP\Util::writeLog('contacts', __METHOD__ . ': '. $backendName . ', ' . $addressbookid, \OCP\Util::DEBUG);
+		//\OCP\Util::writeLog('contacts', __METHOD__ . ': '. $backendName . ', ' . $addressbookid, \OCP\Util::DEBUG);
 		foreach(self::$addressBooks as $addressBook) {
 			if($addressBook->getBackend()->name === $backendName
 				&& $addressBook->getId() === $addressbookid
 			) {
-				//\OCP\Util::writeLog('contacts', __METHOD__ . ' returning: '. print_r($addressBook, true), \OCP\Util::DEBUG);
 				return $addressBook;
 			}
 		}
-		// TODO: Check for return values
+
 		$backend = self::getBackend($backendName, $this->user);
 		$info = $backend->getAddressBook($addressbookid);
 		if(!$info) {
@@ -154,7 +157,6 @@ class App {
 	 */
 	public function getContact($backendName, $addressbookid, $id) {
 		$addressBook = $this->getAddressBook($backendName, $addressbookid);
-		// TODO: Check for return value
 		return $addressBook->getChild($id);
 	}
 

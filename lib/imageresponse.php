@@ -35,10 +35,11 @@ class ImageResponse extends Response {
 	 */
 	public function setImage(\OCP\Image $image) {
 		if(!$image->valid()) {
-			throw new InvalidArgumentException(__METHOD__. ' The image resource is not valid.');
+			throw new \InvalidArgumentException(__METHOD__. ' The image resource is not valid.');
 		}
 		$this->image = $image;
 		$this->addHeader('Content-Type', $image->mimeType());
+		return $this;
 	}
 
 	/**
@@ -47,7 +48,7 @@ class ImageResponse extends Response {
 	 */
 	public function render() {
 		if(is_null($this->image)) {
-			throw new BadMethodCallException(__METHOD__. ' Image must be set either in constructor or with setImage()');
+			throw new \BadMethodCallException(__METHOD__. ' Image must be set either in constructor or with setImage()');
 		}
 		return $this->image->data();
 	}

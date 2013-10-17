@@ -34,15 +34,13 @@ class ContactController extends Controller {
 		$contact = $addressBook->getChild($params['contactId']);
 
 		if(!$contact) {
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
 		}
 
 		$data = JSONSerializer::serializeContact($contact);
 
-		$response->setParams($data);
+		return $response->setData($data);
 
-		return $response;
 	}
 
 	/**
@@ -52,29 +50,28 @@ class ContactController extends Controller {
 
 		$request = $this->request;
 		$params = $this->request->urlParams;
+		$data = isset($request->post['data']) ? $request->post['data'] : null;
 		$response = new JSONResponse();
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contact = $addressBook->getChild($params['contactId']);
 
-		if(!$contact) {
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
+		if(!$data) {
+			return $response->bailOut(App::$l10n->t('No contact data in request.'));
 		}
 
-		if(!$contact->mergeFromArray($request->params)) {
-			$response->bailOut(App::$l10n->t('Error merging into contact.'));
-			return $response;
+		if(!$contact) {
+			return $response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
+		}
+
+		if(!$contact->mergeFromArray($data)) {
+			return $response->bailOut(App::$l10n->t('Error merging into contact.'));
 		}
 		if(!$contact->save()) {
-			$response->bailOut(App::$l10n->t('Error saving contact to backend.'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Error saving contact to backend.'));
 		}
-		$data = JSONSerializer::serializeContact($contact);
 
-		$response->setParams($data);
-
-		return $response;
+		return $response->setData(JSONSerializer::serializeContact($contact));
 	}
 
 	/**
@@ -85,19 +82,13 @@ class ContactController extends Controller {
 
 		$patch = $this->request->patch;
 		$response = new JSONResponse();
-		$response->debug(__METHOD__ .', upload_max_filesize: ' . ini_get('upload_max_filesize'));
 
 		$name = $patch['name'];
 		$value = $patch['value'];
 		$checksum = isset($patch['checksum']) ? $patch['checksum'] : null;
 		$parameters = isset($patch['parameters']) ? $patch['parameters'] : null;
-		$response->debug(__METHOD__ . ', name: ' . print_r($name, true));
-		$response->debug(__METHOD__ . ', value: ' . print_r($value, true));
-		$response->debug(__METHOD__ . ', checksum: ' . print_r($checksum, true));
-		$response->debug(__METHOD__ . ', parameters: ' . print_r($parameters, true));
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
-		//$response->debug(__METHOD__ . ', addressBook: ' . print_r($addressBook, true));
 		$contact = $addressBook->getChild($params['contactId']);
 
 		if(!$contact) {

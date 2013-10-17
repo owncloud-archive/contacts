@@ -30,7 +30,7 @@ OC.Contacts = OC.Contacts || {};
 				}
 			} else {
 				this.error = false;
-				this.data = response.data || response;
+				this.data = response;
 			}
 		}
 	};

@@ -192,17 +192,15 @@ class ContactPhotoController extends Controller {
 		$tmpkey = 'contact-photo-' . $params['contactId'];
 
 		if(!file_exists($localpath)) {
-			$response->bailOut(App::$l10n->t('File doesn\'t exist:').$localpath);
+			return $response->bailOut(App::$l10n->t('File doesn\'t exist:').$localpath);
 		}
 
 		$image = new \OCP\Image();
 		if(!$image) {
-			$response->bailOut(App::$l10n->t('Error loading image.'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Error loading image.'));
 		}
 		if(!$image->loadFromFile($localpath)) {
-			$response->bailOut(App::$l10n->t('Error loading image.'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Error loading image.'));
 		}
 		if($image->width() > 400 || $image->height() > 400) {
 			$image->resize(400); // Prettier resizing than with browser and saves bandwidth.
@@ -211,11 +209,10 @@ class ContactPhotoController extends Controller {
 			$response->debug('Couldn\'t save correct image orientation: '.$localpath);
 		}
 		if(!$this->server->getCache()->set($tmpkey, $image->data(), 600)) {
-			$response->bailOut('Couldn\'t save temporary image: '.$tmpkey);
-			return $response;
+			return $response->bailOut('Couldn\'t save temporary image: '.$tmpkey);
 		}
 
-		$response->setParams(array(
+		return $response->setData(array(
 			'tmp'=>$tmpkey,
 			'metadata' => array(
 				'contactId'=> $params['contactId'],
@@ -223,8 +220,6 @@ class ContactPhotoController extends Controller {
 				'backend'=> $params['backend'],
 			),
 		));
-
-		return $response;
 
 	}
 
@@ -248,8 +243,7 @@ class ContactPhotoController extends Controller {
 			return $response;
 		} else {
 			$response = new JSONResponse();
-			$response->bailOut('Error getting temporary photo');
-			return $response;
+			return $response->bailOut('Error getting temporary photo');
 		}
 	}
 
@@ -274,35 +268,30 @@ class ContactPhotoController extends Controller {
 		$response = new JSONResponse();
 
 		if(!$contact) {
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
 		}
 
 		$data = $this->server->getCache()->get($tmpkey);
 		if(!$data) {
-			$response->bailOut(App::$l10n->t('Image has been removed from cache'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Image has been removed from cache'));
 		}
 
 		$image = new \OCP\Image();
 
 		if(!$image->loadFromData($data)) {
-			$response->bailOut(App::$l10n->t('Error creating temporary image'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Error creating temporary image'));
 		}
 
 		$w = ($w !== -1 ? $w : $image->width());
 		$h = ($h !== -1 ? $h : $image->height());
 
 		if(!$image->crop($x, $y, $w, $h)) {
-			$response->bailOut(App::$l10n->t('Error cropping image'));
-			return $response;
+			return $response->bailOut(App::$l10n->t('Error cropping image'));
 		}
 
 		if($image->width() < $maxSize || $image->height() < $maxSize) {
 			if(!$image->resize(200)) {
-				$response->bailOut(App::$l10n->t('Error resizing image'));
-				return $response;
+				return $response->bailOut(App::$l10n->t('Error resizing image'));
 			}
 		}
 
@@ -319,7 +308,7 @@ class ContactPhotoController extends Controller {
 			$property = $contact->PHOTO;
 			if(!$property) {
 				$this->server->getCache()->remove($tmpkey);
-				$response->bailOut(App::$l10n
+				return $response->bailOut(App::$l10n
 					->t('Error getting PHOTO property.'));
 			}
 			$property->setValue(strval($image));
@@ -335,7 +324,7 @@ class ContactPhotoController extends Controller {
 				'TYPE' => $type));
 		}
 		if(!$contact->save()) {
-			$response->bailOut(App::$l10n->t('Error saving contact.'));
+			return $response->bailOut(App::$l10n->t('Error saving contact.'));
 		}
 		$thumbnail = $contact->cacheThumbnail($image);
 		$response->setParams(array(

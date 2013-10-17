@@ -586,6 +586,7 @@ OC.Contacts = OC.Contacts || {
 					if(data.deleteOther) {
 						self.contacts.delayedDelete(mergees);
 					}
+					console.log('merger', merger);
 					self.openContact(merger.getId());
 				}
 			});

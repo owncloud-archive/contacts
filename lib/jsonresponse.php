@@ -17,9 +17,9 @@ use OCP\AppFramework\Http\JSONResponse as OriginalResponse,
  */
 class JSONResponse extends OriginalResponse {
 
-	public function __construct($params = array(), $statusCode=Http::STATUS_OK) {
+	public function __construct($params = array(), $statusCode = Http::STATUS_OK) {
 		parent::__construct(array(), $statusCode);
-		$this->data['data'] = $params;
+		$this->data = $params;
 	}
 
 	/**
@@ -30,11 +30,9 @@ class JSONResponse extends OriginalResponse {
 	public function setParams(array $params) {
 		$this->setData($params);
 		return $this;
-		$this->data['data'] = $params;
-		$this->data['status'] = 'success';
 	}
 
-	public function setData($data){
+	public function setData($data) {
 		$this->data = $data;
 		return $this;
 	}
@@ -52,7 +50,6 @@ class JSONResponse extends OriginalResponse {
 		$this->error = true;
 		$this->data = $message;
 		return $this;
-		//$this->data['status'] = 'error';
 	}
 
 	function bailOut($msg, $tracelevel = 1, $debuglevel = \OCP\Util::ERROR) {
@@ -61,8 +58,7 @@ class JSONResponse extends OriginalResponse {
 			$this->setStatus($msg->getCode());
 		}
 		$this->setErrorMessage($msg);
-		$this->debug($msg, $tracelevel, $debuglevel);
-		return $this;
+		return $this->debug($msg, $tracelevel, $debuglevel);
 	}
 
 	function debug($msg, $tracelevel = 0, $debuglevel = \OCP\Util::DEBUG) {

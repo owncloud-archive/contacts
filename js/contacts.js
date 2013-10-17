@@ -419,7 +419,7 @@ OC.Contacts = OC.Contacts || {};
 		this.setAsSaving(this.$fullelem, true);
 		var data = JSON.stringify(this.data);
 		//console.log('stringified', data);
-		$.when(this.storage.saveAllProperties(this.metadata.backend, this.metadata.parent, this.id, data))
+		$.when(this.storage.saveAllProperties(this.metadata.backend, this.metadata.parent, this.id, {data:this.data}))
 			.then(function(response) {
 			if(!response.error) {
 				self.data = response.data.data;
@@ -758,8 +758,9 @@ OC.Contacts = OC.Contacts || {};
 				self.data = response.data.data;
 				self.$groupSelect.multiselect('enable');
 				// Add contact to current group
-				if(self.groupprops && self.groupprops.currentgroup.id !== 'all'
-					&& self.groupprops.currentgroup.id !== 'fav') {
+				if(self.groupprops
+					&& ['all', 'fav', 'uncategorized'].indexOf(self.groupprops.currentgroup.id) === -1
+				) {
 					if(!self.data.CATEGORIES) {
 						self.addToGroup(self.groupprops.currentgroup.name);
 						$(document).trigger('request.contact.addtogroup', {
@@ -1860,7 +1861,7 @@ OC.Contacts = OC.Contacts || {};
 		$(document).bind('status.contact.added', function(e, data) {
 			self.length += 1;
 			self.contacts[String(data.id)] = data.contact;
-			self.insertContact(data.contact.renderListItem(true));
+			//self.insertContact(data.contact.renderListItem(true));
 		});
 		$(document).bind('status.contact.moved', function(e, data) {
 			var contact = data.contact;

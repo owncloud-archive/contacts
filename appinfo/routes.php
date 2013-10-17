@@ -11,28 +11,26 @@ namespace OCA\Contacts;
 use OCA\Contacts\Dispatcher;
 
 //define the routes
-//for the index
 $this->create('contacts_index', '/')
-	->actionInclude('contacts/index.php');
-// 	->action(
-// 		function($params){
-// 			//
-// 		}
-// 	);
+	->get()
+	->action(
+		function($params){
+			session_write_close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('PageController', 'index');
+		}
+	);
 
 $this->create('contacts_jsconfig', 'ajax/config.js')
 	->actionInclude('contacts/js/config.php');
 
-/* TODO: Check what it requires to be a RESTful API. I think maybe {user}
-	shouldn't be in the URI but be authenticated in headers or elsewhere.
-*/
 $this->create('contacts_address_books_for_user', 'addressbooks/')
 	->get()
 	->action(
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'userAddressBooks', $params);
+			$dispatcher->dispatch('AddressBookController', 'userAddressBooks');
 		}
 	);
 
@@ -42,7 +40,7 @@ $this->create('contacts_address_book_add', 'addressbook/{backend}/add')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'addAddressBook', $params);
+			$dispatcher->dispatch('AddressBookController', 'addAddressBook');
 		}
 	)
 	->requirements(array('backend'));
@@ -53,7 +51,7 @@ $this->create('contacts_address_book', 'addressbook/{backend}/{addressBookId}')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'getAddressBook', $params);
+			$dispatcher->dispatch('AddressBookController', 'getAddressBook');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -64,7 +62,7 @@ $this->create('contacts_address_book_update', 'addressbook/{backend}/{addressBoo
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'updateAddressBook', $params);
+			$dispatcher->dispatch('AddressBookController', 'updateAddressBook');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -75,7 +73,7 @@ $this->create('contacts_address_book_delete', 'addressbook/{backend}/{addressBoo
 		function($params) {
 			$dispatcher = new Dispatcher($params);
 			session_write_close();
-			$dispatcher->dispatch('AddressBookController', 'deleteAddressBook', $params);
+			$dispatcher->dispatch('AddressBookController', 'deleteAddressBook');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -86,7 +84,7 @@ $this->create('contacts_address_book_activate', 'addressbook/{backend}/{addressB
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'activateAddressBook', $params);
+			$dispatcher->dispatch('AddressBookController', 'activateAddressBook');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -97,7 +95,7 @@ $this->create('contacts_address_book_add_contact', 'addressbook/{backend}/{addre
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'addChild', $params);
+			$dispatcher->dispatch('AddressBookController', 'addChild');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -108,7 +106,7 @@ $this->create('contacts_address_book_delete_contact', 'addressbook/{backend}/{ad
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'deleteChild', $params);
+			$dispatcher->dispatch('AddressBookController', 'deleteChild');
 		}
 	)
 	->requirements(array('backend', 'addressBookId', 'contactId'));
@@ -119,7 +117,7 @@ $this->create('contacts_address_book_delete_contacts', 'addressbook/{backend}/{a
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'deleteChildren', $params);
+			$dispatcher->dispatch('AddressBookController', 'deleteChildren');
 		}
 	)
 	->requirements(array('backend', 'addressBookId', 'contactId'));
@@ -130,7 +128,7 @@ $this->create('contacts_address_book_move_contact', 'addressbook/{backend}/{addr
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('AddressBookController', 'moveChild', $params);
+			$dispatcher->dispatch('AddressBookController', 'moveChild');
 		}
 	)
 	->requirements(array('backend', 'addressBookId', 'contactId'));
@@ -141,7 +139,7 @@ $this->create('contacts_import_upload', 'addressbook/{backend}/{addressBookId}/i
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ImportController', 'upload', $params);
+			$dispatcher->dispatch('ImportController', 'upload');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -152,7 +150,7 @@ $this->create('contacts_import_prepare', 'addressbook/{backend}/{addressBookId}/
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ImportController', 'prepare', $params);
+			$dispatcher->dispatch('ImportController', 'prepare');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -163,7 +161,7 @@ $this->create('contacts_import_start', 'addressbook/{backend}/{addressBookId}/im
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ImportController', 'start', $params);
+			$dispatcher->dispatch('ImportController', 'start');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -174,7 +172,7 @@ $this->create('contacts_import_status', 'addressbook/{backend}/{addressBookId}/i
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ImportController', 'status', $params);
+			$dispatcher->dispatch('ImportController', 'status');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -185,7 +183,7 @@ $this->create('contacts_address_book_export', 'addressbook/{backend}/{addressBoo
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ExportController', 'exportAddressBook', $params);
+			$dispatcher->dispatch('ExportController', 'exportAddressBook');
 		}
 	)
 	->requirements(array('backend', 'addressBookId'));
@@ -196,7 +194,7 @@ $this->create('contacts_contact_export', 'addressbook/{backend}/{addressBookId}/
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ExportController', 'exportContact', $params);
+			$dispatcher->dispatch('ExportController', 'exportContact');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId'));
@@ -207,7 +205,7 @@ $this->create('contacts_export_selected', 'exportSelected')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ExportController', 'exportSelected', $params);
+			$dispatcher->dispatch('ExportController', 'exportSelected');
 		}
 	);
 
@@ -217,7 +215,7 @@ $this->create('contacts_contact_photo', 'addressbook/{backend}/{addressBookId}/c
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactPhotoController', 'getPhoto', $params);
+			$dispatcher->dispatch('ContactPhotoController', 'getPhoto');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId'));
@@ -228,7 +226,7 @@ $this->create('contacts_upload_contact_photo', 'addressbook/{backend}/{addressBo
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactPhotoController', 'uploadPhoto', $params);
+			$dispatcher->dispatch('ContactPhotoController', 'uploadPhoto');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId'));
@@ -239,7 +237,7 @@ $this->create('contacts_cache_contact_photo', 'addressbook/{backend}/{addressBoo
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactPhotoController', 'cacheCurrentPhoto', $params);
+			$dispatcher->dispatch('ContactPhotoController', 'cacheCurrentPhoto');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId'));
@@ -250,7 +248,7 @@ $this->create('contacts_cache_fs_photo', 'addressbook/{backend}/{addressBookId}/
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactPhotoController', 'cacheFileSystemPhoto', $params);
+			$dispatcher->dispatch('ContactPhotoController', 'cacheFileSystemPhoto');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId'));
@@ -261,7 +259,7 @@ $this->create('contacts_tmp_contact_photo', 'addressbook/{backend}/{addressBookI
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactPhotoController', 'getTempPhoto', $params);
+			$dispatcher->dispatch('ContactPhotoController', 'getTempPhoto');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId', 'key'));
@@ -272,7 +270,7 @@ $this->create('contacts_crop_contact_photo', 'addressbook/{backend}/{addressBook
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactPhotoController', 'cropPhoto', $params);
+			$dispatcher->dispatch('ContactPhotoController', 'cropPhoto');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId', 'key'));
@@ -284,7 +282,7 @@ $this->create('contacts_contact_patch', 'addressbook/{backend}/{addressBookId}/c
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactController', 'patch', $params);
+			$dispatcher->dispatch('ContactController', 'patch');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId'));
@@ -295,7 +293,7 @@ $this->create('contacts_contact_get', 'addressbook/{backend}/{addressBookId}/con
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactController', 'getContact', $params);
+			$dispatcher->dispatch('ContactController', 'getContact');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId'));
@@ -307,7 +305,7 @@ $this->create('contacts_contact_save_all', 'addressbook/{backend}/{addressBookId
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('ContactController', 'saveContact', $params);
+			$dispatcher->dispatch('ContactController', 'saveContact');
 		}
 	)
 	->requirements(array('backend', 'addressbook', 'contactId'));
@@ -318,7 +316,7 @@ $this->create('contacts_categories_list', 'groups/')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('GroupController', 'getGroups', $params);
+			$dispatcher->dispatch('GroupController', 'getGroups');
 		}
 	);
 
@@ -328,7 +326,7 @@ $this->create('contacts_categories_add', 'groups/add')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('GroupController', 'addGroup', $params);
+			$dispatcher->dispatch('GroupController', 'addGroup');
 		}
 	);
 
@@ -338,7 +336,7 @@ $this->create('contacts_categories_delete', 'groups/delete')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('GroupController', 'deleteGroup', $params);
+			$dispatcher->dispatch('GroupController', 'deleteGroup');
 		}
 	);
 
@@ -348,7 +346,7 @@ $this->create('contacts_categories_rename', 'groups/rename')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('GroupController', 'renameGroup', $params);
+			$dispatcher->dispatch('GroupController', 'renameGroup');
 		}
 	);
 
@@ -358,7 +356,7 @@ $this->create('contacts_categories_addto', 'groups/addto/{categoryId}')
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('GroupController', 'addToGroup', $params);
+			$dispatcher->dispatch('GroupController', 'addToGroup');
 		}
 	);
 
@@ -368,7 +366,7 @@ $this->create('contacts_categories_removefrom', 'groups/removefrom/{categoryId}'
 		function($params) {
 			session_write_close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('GroupController', 'removeFromGroup', $params);
+			$dispatcher->dispatch('GroupController', 'removeFromGroup');
 		}
 	)
 	->requirements(array('categoryId'));
