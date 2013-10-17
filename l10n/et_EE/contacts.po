@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-15 21:31-0400\n"
-"PO-Revision-Date: 2013-10-14 06:10+0000\n"
-"Last-Translator: Rivo Zängov <eraser@eraser.ee>\n"
+"POT-Creation-Date: 2013-10-17 12:31-0400\n"
+"PO-Revision-Date: 2013-10-17 16:31+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/projects/p/owncloud/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Language: et_EE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:30
+#: appinfo/app.php:28 lib/app.php:101
 msgid "Contacts"
 msgstr "Kontaktid"
 
@@ -108,62 +108,62 @@ msgstr "Ühendamine ebaõnnestus."
 msgid "Merge failed. Error saving contact."
 msgstr "Ühendamine ebaõnnestus. Viga kontakti salvestamisel."
 
-#: js/app.js:601
+#: js/app.js:602
 msgid "Select photo"
 msgstr "Vali foto"
 
-#: js/app.js:677 js/app.js:1588
+#: js/app.js:678 js/app.js:1589
 msgid "Network or server error. Please inform administrator."
 msgstr "Võrgu või serveri viga. Palun informeeri administraatorit."
 
-#: js/app.js:893
+#: js/app.js:894
 msgid "Error adding to group."
 msgstr "Viga gruppi lisamisel."
 
-#: js/app.js:916
+#: js/app.js:917
 msgid "Error removing from group."
 msgstr "Viga grupist eemaldamisel."
 
-#: js/app.js:1094
+#: js/app.js:1095
 msgid "Error setting {name} as favorite."
 msgstr "Viga {name} lemmikuks määramisel."
 
-#: js/app.js:1233 js/app.js:1237 templates/contacts.php:182
+#: js/app.js:1234 js/app.js:1238 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Ühenda kontaktid"
 
-#: js/app.js:1259 js/app.js:1312 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1260 js/app.js:1313 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Loobu"
 
-#: js/app.js:1286 templates/contacts.php:163
+#: js/app.js:1287 templates/contacts.php:163
 msgid "Add group"
 msgstr "Lisa grupp"
 
-#: js/app.js:1290
+#: js/app.js:1291
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1390
+#: js/app.js:1391
 msgid "Could not find contact: {id}"
 msgstr "Ei leia kontakti: {id}"
 
-#: js/app.js:1436
+#: js/app.js:1437
 msgid "No files selected for upload."
 msgstr "Üleslaadimiseks pole faile valitud."
 
-#: js/app.js:1446
+#: js/app.js:1447
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Fail , mida sa proovid üles laadida ületab sinu serveri poolt määratud maksimaalse üleslaadimise limiidi."
 
-#: js/app.js:1546
+#: js/app.js:1547
 msgid "Edit profile picture"
 msgstr "Muuda profiili pilti"
 
-#: js/app.js:1550
+#: js/app.js:1551
 msgid "Crop photo"
 msgstr "Lõika pilti"
 
@@ -171,29 +171,29 @@ msgstr "Lõika pilti"
 msgid "Is this correct?"
 msgstr "Kas see on õige?"
 
-#: js/contacts.js:857
+#: js/contacts.js:858
 msgid "Error parsing date: {date}"
 msgstr "Viga kuupäeva parsimisel: {date}"
 
-#: js/contacts.js:1054
+#: js/contacts.js:1055
 msgid "# groups"
 msgstr "# grupid"
 
-#: js/contacts.js:1126
+#: js/contacts.js:1127
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Viga sünnipäeva {bday} parsimisel: {error}"
 
-#: js/contacts.js:2163
+#: js/contacts.js:2164
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Mõned kontaktid on märgitud kustutamiseks, aga pole veel kustutatud. Palun oota, kuni need kustutatakse."
 
-#: js/contacts.js:2174
+#: js/contacts.js:2175
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kliki, et tühistada {num} kontakti kustutamine"
 
-#: js/contacts.js:2183
+#: js/contacts.js:2184
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Tühistatud {num} kontakti kustutamine"
 
@@ -380,7 +380,7 @@ msgstr "Sul pole õigusi selle aadressiraamatu uuendamiseks."
 msgid "You don't have permissions to delete the address book."
 msgstr "Sul pole õigusi aadressiraamatu kustutamiseks."
 
-#: lib/app.php:139
+#: lib/app.php:142
 msgid "Address book not found"
 msgstr "Aadressiraamatut ei leitud"
 
@@ -420,74 +420,78 @@ msgstr "{name} sünnipäev"
 msgid "Error creating address book"
 msgstr "Viga aadressiraamatu loomisel"
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:127
 msgid "Error updating address book"
 msgstr "Viga aadressiraamatu uuendamisel"
 
-#: lib/controller/addressbookcontroller.php:161
+#: lib/controller/addressbookcontroller.php:155
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Sul pole õigusi aadressiraamatu \"%s\" kustutamiseks"
 
-#: lib/controller/addressbookcontroller.php:168
+#: lib/controller/addressbookcontroller.php:161
 msgid "Error deleting address book"
 msgstr "Viga aadressiraamatu kustutamisel"
 
-#: lib/controller/addressbookcontroller.php:208
+#: lib/controller/addressbookcontroller.php:199
 msgid "Error creating contact."
 msgstr "Viga kontakti loomisel."
 
-#: lib/controller/addressbookcontroller.php:247
+#: lib/controller/addressbookcontroller.php:235
 msgid "Error deleting contact."
 msgstr "Viga kontakti kustutamisel."
 
-#: lib/controller/addressbookcontroller.php:290
+#: lib/controller/addressbookcontroller.php:275
 msgid "Error retrieving contact."
 msgstr "Viga kontakti hankimisel."
 
-#: lib/controller/addressbookcontroller.php:301
-#: lib/controller/contactphotocontroller.php:338
+#: lib/controller/addressbookcontroller.php:285
+#: lib/controller/contactphotocontroller.php:327
 msgid "Error saving contact."
 msgstr "Viga kontakti salvestamisel."
 
-#: lib/controller/addressbookcontroller.php:306
+#: lib/controller/addressbookcontroller.php:289
 msgid "Error removing contact from other address book."
 msgstr "Viga kontakti eemaldamisel aadressiraamatust."
 
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:61
-#: lib/controller/contactcontroller.php:106
+#: lib/controller/contactcontroller.php:64
+#: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:277
+#: lib/controller/contactphotocontroller.php:271
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
 msgstr "Ei suuda leida kontakti."
 
-#: lib/controller/contactcontroller.php:66
+#: lib/controller/contactcontroller.php:60
+msgid "No contact data in request."
+msgstr ""
+
+#: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
 msgstr "Viga kontaktiks ühendamisel."
 
-#: lib/controller/contactcontroller.php:70
+#: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
 msgstr "Viga kontakti salvestamisel tagarakendisse."
 
-#: lib/controller/contactcontroller.php:111
+#: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
 msgstr "Omaduse nimi pole määratud."
 
-#: lib/controller/contactcontroller.php:116
+#: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
 msgstr "Omaduse kontrollsummat pole määratud."
 
-#: lib/controller/contactcontroller.php:135
+#: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Visiitkaardi info pole korrektne. Palun lae leht uuesti."
 
-#: lib/controller/contactcontroller.php:144
+#: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
 msgstr "Viga kontakti uuendamisel"
 
-#: lib/controller/contactcontroller.php:149
+#: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
 msgstr "Viga kontakti salvestamisel tagarakendisse"
 
@@ -550,27 +554,27 @@ msgid "File doesn't exist:"
 msgstr "Faili pole olemas:"
 
 #: lib/controller/contactphotocontroller.php:200
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image."
 msgstr "Viga pildi laadimisel."
 
-#: lib/controller/contactphotocontroller.php:283
+#: lib/controller/contactphotocontroller.php:276
 msgid "Image has been removed from cache"
 msgstr "Pilt on puhvrist eemaldatud"
 
-#: lib/controller/contactphotocontroller.php:290
+#: lib/controller/contactphotocontroller.php:282
 msgid "Error creating temporary image"
 msgstr "Viga ajutise pildi loomisel"
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:289
 msgid "Error cropping image"
 msgstr "Viga pildi lõikamisel"
 
-#: lib/controller/contactphotocontroller.php:304
+#: lib/controller/contactphotocontroller.php:294
 msgid "Error resizing image"
 msgstr "Viga pildi suuruse muutmisel"
 
-#: lib/controller/contactphotocontroller.php:323
+#: lib/controller/contactphotocontroller.php:312
 msgid "Error getting PHOTO property."
 msgstr "Viga PHOTO omaduse hankimisel."
 

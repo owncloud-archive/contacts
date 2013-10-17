@@ -230,6 +230,7 @@
 "Birthday" => "Verjaardag",
 "Notes go here..." => "Hier de notities...",
 "Export as VCF" => "Exporteren als VCF",
+"Add field..." => "Toevoegen veld...",
 "Phone" => "Telefoon",
 "Email" => "E-mailadres",
 "Instant Messaging" => "Instant Messaging",

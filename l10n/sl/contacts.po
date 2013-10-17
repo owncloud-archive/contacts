@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-15 21:31-0400\n"
-"PO-Revision-Date: 2013-10-14 00:40+0000\n"
+"POT-Creation-Date: 2013-10-17 12:31-0400\n"
+"PO-Revision-Date: 2013-10-17 16:31+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-#: appinfo/app.php:30
+#: appinfo/app.php:28 lib/app.php:101
 msgid "Contacts"
 msgstr "Stiki"
 
@@ -112,62 +112,62 @@ msgstr "Spajanje je spodletelo."
 msgid "Merge failed. Error saving contact."
 msgstr "Spajanje je spodletelo. Stik ni bil shranjen."
 
-#: js/app.js:601
+#: js/app.js:602
 msgid "Select photo"
 msgstr "Izbor slike"
 
-#: js/app.js:677 js/app.js:1588
+#: js/app.js:678 js/app.js:1589
 msgid "Network or server error. Please inform administrator."
 msgstr "Napaka omrežja ali strežnika. Prosimo, če o tem obvestite administratorja."
 
-#: js/app.js:893
+#: js/app.js:894
 msgid "Error adding to group."
 msgstr "Napaka pri dodajanju v skupino."
 
-#: js/app.js:916
+#: js/app.js:917
 msgid "Error removing from group."
 msgstr "Napaka pri odstranjevanju iz skupine."
 
-#: js/app.js:1094
+#: js/app.js:1095
 msgid "Error setting {name} as favorite."
 msgstr "Napaka pri nastavitvi  {name} kot priljubljenega."
 
-#: js/app.js:1233 js/app.js:1237 templates/contacts.php:182
+#: js/app.js:1234 js/app.js:1238 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Spoji stike"
 
-#: js/app.js:1259 js/app.js:1312 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1260 js/app.js:1313 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: js/app.js:1286 templates/contacts.php:163
+#: js/app.js:1287 templates/contacts.php:163
 msgid "Add group"
 msgstr "Dodaj skupino"
 
-#: js/app.js:1290
+#: js/app.js:1291
 msgid "OK"
 msgstr "V redu"
 
-#: js/app.js:1390
+#: js/app.js:1391
 msgid "Could not find contact: {id}"
 msgstr "Stika ni bilo mogoče najti: {id}"
 
-#: js/app.js:1436
+#: js/app.js:1437
 msgid "No files selected for upload."
 msgstr "Ni izbrane datoteke za nalaganje."
 
-#: js/app.js:1446
+#: js/app.js:1447
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Datoteka, ki jo poskušate naložiti, presega največjo dovoljeno velikost za pošiljanje na tem strežniku."
 
-#: js/app.js:1546
+#: js/app.js:1547
 msgid "Edit profile picture"
 msgstr "Uredi fotografijo profila"
 
-#: js/app.js:1550
+#: js/app.js:1551
 msgid "Crop photo"
 msgstr ""
 
@@ -175,29 +175,29 @@ msgstr ""
 msgid "Is this correct?"
 msgstr "Ali je to pravilno?"
 
-#: js/contacts.js:857
+#: js/contacts.js:858
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1054
+#: js/contacts.js:1055
 msgid "# groups"
 msgstr "# skupine"
 
-#: js/contacts.js:1126
+#: js/contacts.js:1127
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2163
+#: js/contacts.js:2164
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Nekateri stiki so označeni za izbris, vendar še niso izbrisani. Počakajte na izbris."
 
-#: js/contacts.js:2174
+#: js/contacts.js:2175
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikni za preklic izbrisa {num} stikov"
 
-#: js/contacts.js:2183
+#: js/contacts.js:2184
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -384,7 +384,7 @@ msgstr "Nimate ustreznih pravic za posodobitev imenika."
 msgid "You don't have permissions to delete the address book."
 msgstr "Nimate ustreznih pravic za brisanje imenika."
 
-#: lib/app.php:139
+#: lib/app.php:142
 msgid "Address book not found"
 msgstr "Imenika ni bilo mogoče najti"
 
@@ -424,74 +424,78 @@ msgstr "{name} - rojstni dan"
 msgid "Error creating address book"
 msgstr "Napaka pri ustvarjanju imenika"
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:127
 msgid "Error updating address book"
 msgstr "Napaka pri posodabljanju imenika"
 
-#: lib/controller/addressbookcontroller.php:161
+#: lib/controller/addressbookcontroller.php:155
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:168
+#: lib/controller/addressbookcontroller.php:161
 msgid "Error deleting address book"
 msgstr "Napaka pri brisanju imenika"
 
-#: lib/controller/addressbookcontroller.php:208
+#: lib/controller/addressbookcontroller.php:199
 msgid "Error creating contact."
 msgstr "Napaka pri ustvarjanju stika."
 
-#: lib/controller/addressbookcontroller.php:247
+#: lib/controller/addressbookcontroller.php:235
 msgid "Error deleting contact."
 msgstr "Napaka pri brisanju stika."
 
-#: lib/controller/addressbookcontroller.php:290
+#: lib/controller/addressbookcontroller.php:275
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:301
-#: lib/controller/contactphotocontroller.php:338
+#: lib/controller/addressbookcontroller.php:285
+#: lib/controller/contactphotocontroller.php:327
 msgid "Error saving contact."
 msgstr "Napaka med shranjevanjem stika."
 
-#: lib/controller/addressbookcontroller.php:306
+#: lib/controller/addressbookcontroller.php:289
 msgid "Error removing contact from other address book."
 msgstr "Napaka pri brisanju stika iz drugega imenika."
 
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:61
-#: lib/controller/contactcontroller.php:106
+#: lib/controller/contactcontroller.php:64
+#: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:277
+#: lib/controller/contactphotocontroller.php:271
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
 msgstr "Stika ni bilo mogoče najti."
 
-#: lib/controller/contactcontroller.php:66
+#: lib/controller/contactcontroller.php:60
+msgid "No contact data in request."
+msgstr ""
+
+#: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
 msgstr "Napaka pri spajanju podatkov v stik."
 
-#: lib/controller/contactcontroller.php:70
+#: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
 msgstr "Napaka pri shranjevanju stika."
 
-#: lib/controller/contactcontroller.php:111
+#: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:116
+#: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:135
+#: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Podrobnosti kartice vCard niso pravilne. Ponovno naložite stran."
 
-#: lib/controller/contactcontroller.php:144
+#: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
 msgstr ""
 
-#: lib/controller/contactcontroller.php:149
+#: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
 msgstr ""
 
@@ -554,27 +558,27 @@ msgid "File doesn't exist:"
 msgstr "Datoteka ne obstaja:"
 
 #: lib/controller/contactphotocontroller.php:200
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image."
 msgstr "Napaka med nalaganjem slike."
 
-#: lib/controller/contactphotocontroller.php:283
+#: lib/controller/contactphotocontroller.php:276
 msgid "Image has been removed from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:290
+#: lib/controller/contactphotocontroller.php:282
 msgid "Error creating temporary image"
 msgstr "Napaka med ustvarjanjem začasne slike"
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:289
 msgid "Error cropping image"
 msgstr "Napaka med obrezovanjem slike"
 
-#: lib/controller/contactphotocontroller.php:304
+#: lib/controller/contactphotocontroller.php:294
 msgid "Error resizing image"
 msgstr "Napaka med spreminjanjem velikosti slike"
 
-#: lib/controller/contactphotocontroller.php:323
+#: lib/controller/contactphotocontroller.php:312
 msgid "Error getting PHOTO property."
 msgstr "Napaka med pridobivanjem lastnosti fotografije."
 

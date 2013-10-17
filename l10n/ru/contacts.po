@@ -30,8 +30,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-15 21:31-0400\n"
-"PO-Revision-Date: 2013-10-14 00:40+0000\n"
+"POT-Creation-Date: 2013-10-17 12:31-0400\n"
+"PO-Revision-Date: 2013-10-17 16:31+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: appinfo/app.php:30
+#: appinfo/app.php:28 lib/app.php:101
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -128,62 +128,62 @@ msgstr "Объединение не удалось."
 msgid "Merge failed. Error saving contact."
 msgstr "Объединение не удалось. Ошибка сохранения контакта."
 
-#: js/app.js:601
+#: js/app.js:602
 msgid "Select photo"
 msgstr "Выберите фото"
 
-#: js/app.js:677 js/app.js:1588
+#: js/app.js:678 js/app.js:1589
 msgid "Network or server error. Please inform administrator."
 msgstr "Ошибка сети или сервера. Пожалуйста, сообщите администратору."
 
-#: js/app.js:893
+#: js/app.js:894
 msgid "Error adding to group."
 msgstr "Ошибка добавления в группу."
 
-#: js/app.js:916
+#: js/app.js:917
 msgid "Error removing from group."
 msgstr "Ошибка удаления из группы."
 
-#: js/app.js:1094
+#: js/app.js:1095
 msgid "Error setting {name} as favorite."
 msgstr "Ошибка установки {name} избранным."
 
-#: js/app.js:1233 js/app.js:1237 templates/contacts.php:182
+#: js/app.js:1234 js/app.js:1238 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Объединить контакты"
 
-#: js/app.js:1259 js/app.js:1312 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1260 js/app.js:1313 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Отменить"
 
-#: js/app.js:1286 templates/contacts.php:163
+#: js/app.js:1287 templates/contacts.php:163
 msgid "Add group"
 msgstr "Добавить группу"
 
-#: js/app.js:1290
+#: js/app.js:1291
 msgid "OK"
 msgstr "ОК"
 
-#: js/app.js:1390
+#: js/app.js:1391
 msgid "Could not find contact: {id}"
 msgstr "Не удалось найти контакт: {id}"
 
-#: js/app.js:1436
+#: js/app.js:1437
 msgid "No files selected for upload."
 msgstr "Нет выбранных файлов для загрузки."
 
-#: js/app.js:1446
+#: js/app.js:1447
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Файл, который вы пытаетесь загрузить превышать максимальный размер загружаемых файлов на этом сервере."
 
-#: js/app.js:1546
+#: js/app.js:1547
 msgid "Edit profile picture"
 msgstr "Редактировать изображение профиля"
 
-#: js/app.js:1550
+#: js/app.js:1551
 msgid "Crop photo"
 msgstr "Обрезать фото"
 
@@ -191,29 +191,29 @@ msgstr "Обрезать фото"
 msgid "Is this correct?"
 msgstr "Это верно?"
 
-#: js/contacts.js:857
+#: js/contacts.js:858
 msgid "Error parsing date: {date}"
 msgstr "Ошибка формата даты: {date}"
 
-#: js/contacts.js:1054
+#: js/contacts.js:1055
 msgid "# groups"
 msgstr "# группы"
 
-#: js/contacts.js:1126
+#: js/contacts.js:1127
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Ошибка добавления дня рождения {bday}: {error}"
 
-#: js/contacts.js:2163
+#: js/contacts.js:2164
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Некоторые контакты помечены на удаление, но ещё не удалены. Подождите, пока они удаляются."
 
-#: js/contacts.js:2174
+#: js/contacts.js:2175
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Нажмите для отмены удаления {num} контактов"
 
-#: js/contacts.js:2183
+#: js/contacts.js:2184
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Отмена удаления {num} контактов"
 
@@ -400,7 +400,7 @@ msgstr "У Вас нет разрешений обновлять эту адре
 msgid "You don't have permissions to delete the address book."
 msgstr "У Вас нет разрешений удалять эту адресную книгу."
 
-#: lib/app.php:139
+#: lib/app.php:142
 msgid "Address book not found"
 msgstr "Адресная книга не найдена"
 
@@ -440,74 +440,78 @@ msgstr "День рождения {name}"
 msgid "Error creating address book"
 msgstr "Ошибка создания адресной книги"
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:127
 msgid "Error updating address book"
 msgstr "Ошибка обновления адресной книги"
 
-#: lib/controller/addressbookcontroller.php:161
+#: lib/controller/addressbookcontroller.php:155
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "У вас нет прав удалять адресную книгу \"%s\""
 
-#: lib/controller/addressbookcontroller.php:168
+#: lib/controller/addressbookcontroller.php:161
 msgid "Error deleting address book"
 msgstr "Ошибка удаления адресной книги"
 
-#: lib/controller/addressbookcontroller.php:208
+#: lib/controller/addressbookcontroller.php:199
 msgid "Error creating contact."
 msgstr "Ошибка создания контакта."
 
-#: lib/controller/addressbookcontroller.php:247
+#: lib/controller/addressbookcontroller.php:235
 msgid "Error deleting contact."
 msgstr "Ошибка удаления контакта."
 
-#: lib/controller/addressbookcontroller.php:290
+#: lib/controller/addressbookcontroller.php:275
 msgid "Error retrieving contact."
 msgstr "Ошибка получения контакта."
 
-#: lib/controller/addressbookcontroller.php:301
-#: lib/controller/contactphotocontroller.php:338
+#: lib/controller/addressbookcontroller.php:285
+#: lib/controller/contactphotocontroller.php:327
 msgid "Error saving contact."
 msgstr "Ошибка при сохранении контактов."
 
-#: lib/controller/addressbookcontroller.php:306
+#: lib/controller/addressbookcontroller.php:289
 msgid "Error removing contact from other address book."
 msgstr "Ошибка удаления контакта из другой адресной книги."
 
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:61
-#: lib/controller/contactcontroller.php:106
+#: lib/controller/contactcontroller.php:64
+#: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:277
+#: lib/controller/contactphotocontroller.php:271
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
 msgstr "Не удалось найти контакт."
 
-#: lib/controller/contactcontroller.php:66
+#: lib/controller/contactcontroller.php:60
+msgid "No contact data in request."
+msgstr ""
+
+#: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
 msgstr "Ошибка объединения в контакт."
 
-#: lib/controller/contactcontroller.php:70
+#: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
 msgstr "Ошибка сохранения контакта в бэкенд."
 
-#: lib/controller/contactcontroller.php:111
+#: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
 msgstr "Не установлено имя свойства."
 
-#: lib/controller/contactcontroller.php:116
+#: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
 msgstr "Не установлена контрольная сумма свойства."
 
-#: lib/controller/contactcontroller.php:135
+#: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Информация о vCard некорректна. Пожалуйста, обновите страницу."
 
-#: lib/controller/contactcontroller.php:144
+#: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
 msgstr "Ошибка при обновлении контакта"
 
-#: lib/controller/contactcontroller.php:149
+#: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
 msgstr "Ошибка сохранения контакта в бэкенд"
 
@@ -570,27 +574,27 @@ msgid "File doesn't exist:"
 msgstr "Файл не существует:"
 
 #: lib/controller/contactphotocontroller.php:200
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image."
 msgstr "Ошибка загрузки картинки."
 
-#: lib/controller/contactphotocontroller.php:283
+#: lib/controller/contactphotocontroller.php:276
 msgid "Image has been removed from cache"
 msgstr "Изображение удалено из кеша"
 
-#: lib/controller/contactphotocontroller.php:290
+#: lib/controller/contactphotocontroller.php:282
 msgid "Error creating temporary image"
 msgstr "Ошибка создания временных изображений"
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:289
 msgid "Error cropping image"
 msgstr "Ошибка обрезки изображений"
 
-#: lib/controller/contactphotocontroller.php:304
+#: lib/controller/contactphotocontroller.php:294
 msgid "Error resizing image"
 msgstr "Ошибка изменения размера изображений"
 
-#: lib/controller/contactphotocontroller.php:323
+#: lib/controller/contactphotocontroller.php:312
 msgid "Error getting PHOTO property."
 msgstr "Ошибка при получении ФОТО."
 

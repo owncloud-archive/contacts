@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-15 21:31-0400\n"
-"PO-Revision-Date: 2013-10-14 00:40+0000\n"
+"POT-Creation-Date: 2013-10-17 12:31-0400\n"
+"PO-Revision-Date: 2013-10-17 16:31+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: appinfo/app.php:30
+#: appinfo/app.php:28 lib/app.php:101
 msgid "Contacts"
 msgstr "جهات الاتصال"
 
@@ -110,62 +110,62 @@ msgstr "علمية الدمج فشلت."
 msgid "Merge failed. Error saving contact."
 msgstr "عملية الدمج فشلت. خطأ في حفظ جهة الاتصال. "
 
-#: js/app.js:601
+#: js/app.js:602
 msgid "Select photo"
 msgstr "اختر صورة"
 
-#: js/app.js:677 js/app.js:1588
+#: js/app.js:678 js/app.js:1589
 msgid "Network or server error. Please inform administrator."
 msgstr "حدث خطأ في شبكة الاتصال أو في الخادم. يرجى إبلاغ المسؤول."
 
-#: js/app.js:893
+#: js/app.js:894
 msgid "Error adding to group."
 msgstr "خطأ في إضافة المجموعة"
 
-#: js/app.js:916
+#: js/app.js:917
 msgid "Error removing from group."
 msgstr "حدث خطأ أثناء الحذف من المجموعة"
 
-#: js/app.js:1094
+#: js/app.js:1095
 msgid "Error setting {name} as favorite."
 msgstr "حدث خطأ أثناء إعداد {name} كمفضلة ."
 
-#: js/app.js:1233 js/app.js:1237 templates/contacts.php:182
+#: js/app.js:1234 js/app.js:1238 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "دمج جهات الاتصال"
 
-#: js/app.js:1259 js/app.js:1312 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1260 js/app.js:1313 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "الغاء"
 
-#: js/app.js:1286 templates/contacts.php:163
+#: js/app.js:1287 templates/contacts.php:163
 msgid "Add group"
 msgstr "إضافة مجموعة"
 
-#: js/app.js:1290
+#: js/app.js:1291
 msgid "OK"
 msgstr "تم"
 
-#: js/app.js:1390
+#: js/app.js:1391
 msgid "Could not find contact: {id}"
 msgstr "تعذر ايجاد جهة الاتصال:  {id}"
 
-#: js/app.js:1436
+#: js/app.js:1437
 msgid "No files selected for upload."
 msgstr "لا يوجد ملفات مختارة لتحميلها"
 
-#: js/app.js:1446
+#: js/app.js:1447
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "الملف الذي تحاول تحميله يتجاوز الحد الأقصى لحجم الملف الذي يمكن تحميله على هذا الخادم."
 
-#: js/app.js:1546
+#: js/app.js:1547
 msgid "Edit profile picture"
 msgstr "تعديل صورة الملف الشخصي"
 
-#: js/app.js:1550
+#: js/app.js:1551
 msgid "Crop photo"
 msgstr "قص الصورة."
 
@@ -173,29 +173,29 @@ msgstr "قص الصورة."
 msgid "Is this correct?"
 msgstr "هل هذا صحيح؟"
 
-#: js/contacts.js:857
+#: js/contacts.js:858
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1054
+#: js/contacts.js:1055
 msgid "# groups"
 msgstr "#المجموعات"
 
-#: js/contacts.js:1126
+#: js/contacts.js:1127
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2163
+#: js/contacts.js:2164
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "بعض جهات الأتصال تم تحديدها للحذف لكن لم يتم حذفها بعد. يرجى الانتظار قليلاً حتى يتم حذفها بالكامل."
 
-#: js/contacts.js:2174
+#: js/contacts.js:2175
 msgid "Click to undo deletion of {num} contacts"
 msgstr "إضغط حتى يتم التراجع عن حذف {أرقام} جهات الاتصال"
 
-#: js/contacts.js:2183
+#: js/contacts.js:2184
 msgid "Cancelled deletion of {num} contacts"
 msgstr "ألغاء حذف {num}  من جهات الاتصال."
 
@@ -382,7 +382,7 @@ msgstr "ليس لديك الصلاحية  لتحديث دفتر العناوين
 msgid "You don't have permissions to delete the address book."
 msgstr "ليس لديك الصلاحية  لحذف دفتر العناوين."
 
-#: lib/app.php:139
+#: lib/app.php:142
 msgid "Address book not found"
 msgstr "تعذر ايجاد دفتر العناوين"
 
@@ -422,74 +422,78 @@ msgstr "يوم ميلاد {name}'s"
 msgid "Error creating address book"
 msgstr "خطأ في إنشاء دفتر العناوين"
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:127
 msgid "Error updating address book"
 msgstr "حدث خطأ في تحديث دفتر العناوين"
 
-#: lib/controller/addressbookcontroller.php:161
+#: lib/controller/addressbookcontroller.php:155
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "ليس لديك الصلاحية لحذف  \"%s\" دفتر العناوين"
 
-#: lib/controller/addressbookcontroller.php:168
+#: lib/controller/addressbookcontroller.php:161
 msgid "Error deleting address book"
 msgstr "حدث خطأ أثناء إزالة دفتر العناوين"
 
-#: lib/controller/addressbookcontroller.php:208
+#: lib/controller/addressbookcontroller.php:199
 msgid "Error creating contact."
 msgstr "حدث خطأ أثناء إنشاء جهة اتصال."
 
-#: lib/controller/addressbookcontroller.php:247
+#: lib/controller/addressbookcontroller.php:235
 msgid "Error deleting contact."
 msgstr "خطأ في حذف جهة الاتصال"
 
-#: lib/controller/addressbookcontroller.php:290
+#: lib/controller/addressbookcontroller.php:275
 msgid "Error retrieving contact."
 msgstr "حدث خطأ أثناء استرداد جهة الاتصال."
 
-#: lib/controller/addressbookcontroller.php:301
-#: lib/controller/contactphotocontroller.php:338
+#: lib/controller/addressbookcontroller.php:285
+#: lib/controller/contactphotocontroller.php:327
 msgid "Error saving contact."
 msgstr "خطأ في حفظ جهة الإتصال."
 
-#: lib/controller/addressbookcontroller.php:306
+#: lib/controller/addressbookcontroller.php:289
 msgid "Error removing contact from other address book."
 msgstr "حدث خطأ أثناء إزالة جهة اتصال من دفتر العناوين."
 
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:61
-#: lib/controller/contactcontroller.php:106
+#: lib/controller/contactcontroller.php:64
+#: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:277
+#: lib/controller/contactphotocontroller.php:271
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
 msgstr "تعذر ايجاد جهة الاتصال"
 
-#: lib/controller/contactcontroller.php:66
+#: lib/controller/contactcontroller.php:60
+msgid "No contact data in request."
+msgstr ""
+
+#: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:70
+#: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:111
+#: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:116
+#: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:135
+#: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "المعلومات الموجودة في ال vCard غير صحيحة. الرجاء إعادة تحديث الصفحة."
 
-#: lib/controller/contactcontroller.php:144
+#: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
 msgstr "خطأ في تحديث جهات الاتصال"
 
-#: lib/controller/contactcontroller.php:149
+#: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
 msgstr "حدث خطأ أثناء حفظ جهات الاتصال في الخلفية."
 
@@ -552,27 +556,27 @@ msgid "File doesn't exist:"
 msgstr "الملف غير موجود"
 
 #: lib/controller/contactphotocontroller.php:200
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image."
 msgstr "خطأ في تحميل الصورة. "
 
-#: lib/controller/contactphotocontroller.php:283
+#: lib/controller/contactphotocontroller.php:276
 msgid "Image has been removed from cache"
 msgstr "تم إزالة الصورة من ذاكرة التخزين المؤقتة. "
 
-#: lib/controller/contactphotocontroller.php:290
+#: lib/controller/contactphotocontroller.php:282
 msgid "Error creating temporary image"
 msgstr "خطأ في إنشاء صورة مؤقتة "
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:289
 msgid "Error cropping image"
 msgstr "خطأ في قص الصورة"
 
-#: lib/controller/contactphotocontroller.php:304
+#: lib/controller/contactphotocontroller.php:294
 msgid "Error resizing image"
 msgstr "خطأ في تغيير حجم الصورة"
 
-#: lib/controller/contactphotocontroller.php:323
+#: lib/controller/contactphotocontroller.php:312
 msgid "Error getting PHOTO property."
 msgstr "خطأ في الحصول على ملكية الصورة."
 
