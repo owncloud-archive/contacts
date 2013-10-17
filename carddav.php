@@ -1,4 +1,5 @@
 <?php
+define("DISABLE_SESSION", 1);
 if(!file_exists('../../lib/base.php')) {
 	die('Please update the path to /lib/base.php in carddav.php or make use of /remote.php/carddav/');
 }
