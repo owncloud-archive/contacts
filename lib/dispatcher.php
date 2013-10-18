@@ -23,6 +23,8 @@ use OCP\AppFramework\App as MainApp,
 
 /**
  * This class manages our app actions
+ *
+ * TODO: Merge with App
  */
 
 class Dispatcher extends MainApp {
@@ -32,18 +34,9 @@ class Dispatcher extends MainApp {
 	protected $app;
 
 	public function __construct($params) {
-		parent::__construct('contacts');
+		parent::__construct('contacts', $params);
 		$this->container = $this->getContainer();
-		$this->container['urlParams'] = $params;
 		$this->container->registerMiddleware(new HttpMiddleware($this->container));
-		// TODO: Remove this once sorted out.
-		// When querying the middleware dispatcher Request gets instantiated
-		// but urlParams isn't set yet
-		//$this->container['urlParams'] = $params;
-		//$this->middleware = $this->container->query('MiddlewareDispatcher');
-		//$this->middleware->registerMiddleware(new HttpMiddleware($this->container->query('API')));
-		//$this->api = $this->container->query('API');
-		//$this->request = $this->container->query('Request');
 		$this->app = new App($this->container->query('API')->getUserId());
 		$this->registerServices();
 	}

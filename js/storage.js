@@ -7,6 +7,7 @@ OC.Contacts = OC.Contacts || {};
 		this.getAllResponseHeaders = jqXHR.getAllResponseHeaders;
 		this.getResponseHeader = jqXHR.getResponseHeader;
 		this.statusCode = jqXHR.status;
+		this.error = false;
 		// 204 == No content
 		// 304 == Not modified
 		if(!response) {
@@ -29,7 +30,6 @@ OC.Contacts = OC.Contacts || {};
 					this.message = t('contacts', 'Server error! Please inform system administator');
 				}
 			} else {
-				this.error = false;
 				this.data = response;
 			}
 		}

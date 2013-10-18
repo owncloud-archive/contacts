@@ -19,6 +19,8 @@ use Sabre\VObject,
 
 /**
  * This class manages our app actions
+ *
+ * TODO: Merge in Dispatcher
  */
 App::$l10n = \OC_L10N::get('contacts');
 
