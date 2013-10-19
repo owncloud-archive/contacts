@@ -105,6 +105,7 @@
 "Error saving contact." => "Erreur de sauvegarde du contact",
 "Error removing contact from other address book." => "Erreur à la suppression du contact d'un autre carnet d'adresses.",
 "Couldn't find contact." => "Impossible de trouver le contact.",
+"No contact data in request." => "Aucune donnée de contact dans la requête.",
 "Error merging into contact." => "Erreur de la fusion du contact.",
 "Error saving contact to backend." => "Erreur d'enregistrement du contact sur l'infrastructure d'arrière-plan.",
 "Property name is not set." => "Le nom de la propriété n'est pas défini.",

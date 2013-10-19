@@ -105,6 +105,7 @@
 "Error saving contact." => "Fout om contact op te slaan",
 "Error removing contact from other address book." => "Fout bij verwijderen contactpersoon uit ander adresboek.",
 "Couldn't find contact." => "Kon contactpersoon niet vinden.",
+"No contact data in request." => "Geen contactgegevens in aanvraag.",
 "Error merging into contact." => "Fout bij samenvoegen bij contactpersoon.",
 "Error saving contact to backend." => "Fout bij bewaren contactpersoon in backend.",
 "Property name is not set." => "Naam van eigenschap niet ingesteld.",

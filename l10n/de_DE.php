@@ -105,6 +105,7 @@
 "Error saving contact." => "Fehler beim Speichern des Kontaktes.",
 "Error removing contact from other address book." => "Fehler beim Entfernen des Kontakts aus einem anderen Adressbuch.",
 "Couldn't find contact." => "Kontakt nicht gefunden.",
+"No contact data in request." => "Keine Kontaktdaten in der Anfrage.",
 "Error merging into contact." => "Fehler beim Zusammenfügen in einen Kontakt. ",
 "Error saving contact to backend." => "Fehler beim Speichern eines Kontakts ins Backend.",
 "Property name is not set." => "Merkmalsname ist nicht angegeben.",

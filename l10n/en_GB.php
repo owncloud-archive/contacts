@@ -105,6 +105,7 @@
 "Error saving contact." => "Error saving contact.",
 "Error removing contact from other address book." => "Error removing contact from other address book.",
 "Couldn't find contact." => "Couldn't find contact.",
+"No contact data in request." => "No contact data in request.",
 "Error merging into contact." => "Error merging into contact.",
 "Error saving contact to backend." => "Error saving contact to backend.",
 "Property name is not set." => "Property name is not set.",

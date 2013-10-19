@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-17 12:31-0400\n"
-"PO-Revision-Date: 2013-10-17 16:31+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-19 08:16-0400\n"
+"PO-Revision-Date: 2013-10-17 21:00+0000\n"
+"Last-Translator: Rivo Zängov <eraser@eraser.ee>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/projects/p/owncloud/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Language: et_EE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:28 lib/app.php:101
+#: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
 msgstr "Kontaktid"
 
@@ -157,7 +157,7 @@ msgstr "Üleslaadimiseks pole faile valitud."
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr "Fail , mida sa proovid üles laadida ületab sinu serveri poolt määratud maksimaalse üleslaadimise limiidi."
+msgstr "Fail, mida sa proovid üles laadida, ületab sinu serveri poolt määratud maksimaalse üleslaadimise limiidi."
 
 #: js/app.js:1547
 msgid "Edit profile picture"
@@ -328,7 +328,7 @@ msgstr "Veel..."
 msgid "Less..."
 msgstr "Vähem..."
 
-#: js/storage.js:29
+#: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr "Serveri viga! Palun teavita süsteemi administraatorit"
 
@@ -380,7 +380,7 @@ msgstr "Sul pole õigusi selle aadressiraamatu uuendamiseks."
 msgid "You don't have permissions to delete the address book."
 msgstr "Sul pole õigusi aadressiraamatu kustutamiseks."
 
-#: lib/app.php:142
+#: lib/app.php:144
 msgid "Address book not found"
 msgstr "Aadressiraamatut ei leitud"
 
@@ -390,7 +390,7 @@ msgstr "Sul pole selle kontakti vaatamiseks õigusi"
 
 #: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
-msgstr "Sul pole selle kontakti uuendamiseks õigusi."
+msgstr "Sul pole õigusi selle kontakti uuendamiseks."
 
 #: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
@@ -465,7 +465,7 @@ msgstr "Ei suuda leida kontakti."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "Päringus pole kontaktinfot."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
@@ -592,7 +592,7 @@ msgstr "Puudub ümbernimetatava grupi nimi."
 
 #: lib/controller/groupcontroller.php:131
 msgid "No group name to rename to given."
-msgstr "Puudub grupi nimi ümbernimetatamiseks"
+msgstr "Puudub grupi nimi ümbernimetatamiseks."
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
@@ -836,11 +836,11 @@ msgstr "Lemmik"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
-msgstr "Ühendus valitud"
+msgstr "Liida valitud"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
-msgstr "Klvaiatuuri otseteed"
+msgstr "Klaviatuuri otseteed"
 
 #: templates/contacts.php:94
 msgid "Navigation"
