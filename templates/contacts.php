@@ -322,7 +322,7 @@
 		<button class="close text tooltipped downwards" title="<?php p($l->t('Close')); ?>"><?php p($l->t('Close')); ?></button>
 		<button class="export action text tooltipped downwards" title="<?php p($l->t('Export as VCF')); ?>"><?php p($l->t('Download')); ?></button>
 		<select class="add action text button" id="addproperty">
-			<option value=""><?php p($l->t('Add')); ?></option>
+			<option value=""><?php p($l->t('Add field...')); ?></option>
 			<option value="ORG"><?php p($l->t('Organization')); ?></option>
 			<option value="TITLE"><?php p($l->t('Title')); ?></option>
 			<option value="NICKNAME"><?php p($l->t('Nickname')); ?></option>

@@ -1,3 +1,8 @@
 <?php $TRANSLATIONS = array(
-"Title" => "Название"
+"Contacts" => "Контакты",
+"Cancel" => "Отмена",
+"OK" => "OK",
+"Error" => "Ошибка",
+"Download" => "Загрузка",
+"Share" => "Сделать общим"
 );

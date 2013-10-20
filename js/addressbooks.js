@@ -384,7 +384,7 @@ OC.Contacts = OC.Contacts || {};
 			};
 			$.when(
 				self.storage.startImport(
-					data.backend, data.addressbookid,
+					data.backend, data.addressBookId,
 					{filename:data.filename, progresskey:data.progresskey}
   				))
 			.then(function(response) {
@@ -393,7 +393,7 @@ OC.Contacts = OC.Contacts || {};
 					console.log('Import done');
 					self.$importStatusText.text(t('contacts', 'Imported {imported} contacts. {failed} failed.',
 													  {imported:response.data.imported, failed: response.data.failed}));
-					var addressBook = self.find({id:response.data.addressbookid, backend: response.data.backend});
+					var addressBook = self.find({id:response.data.addressBookId, backend: response.data.backend});
 					$(document).trigger('status.addressbook.imported', {
 						addressbook: addressBook
 					});
@@ -535,7 +535,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	AddressBookList.prototype.add = function(name, cb) {
 		console.log('AddressBookList.add', name, typeof cb);
-		var defer = $.Deferred;
+		var defer = $.Deferred();
 		// Check for wrong, duplicate or empty name
 		if(typeof name !== 'string') {
 			throw new TypeError('BadArgument: AddressBookList.add() only takes String arguments.');

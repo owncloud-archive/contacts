@@ -3,7 +3,7 @@
 namespace OCA\Contacts;
 use \OC\AppFramework\Core\API;
 
-//require_once __DIR__ . '/../controller/groupcontroller.php';
+//require_once __DIR__ . '/../lib/controller/pagecontroller.php';
 \Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
 \Sabre\VObject\Property::$classMap['CATEGORIES'] = 'OCA\Contacts\VObject\GroupProperty';
 \Sabre\VObject\Property::$classMap['FN']		= '\OC\VObject\StringProperty';
@@ -20,8 +20,6 @@ use \OC\AppFramework\Core\API;
 \Sabre\VObject\Property::$classMap['GEO']		= '\OC\VObject\CompoundProperty';
 \Sabre\VObject\Property::$classMap['ORG']		= '\OC\VObject\CompoundProperty';
 
-$api = new API('contacts');
-
 \OC::$server->getNavigationManager()->add(array(
 	'id' => 'contacts',
 	'order' => 10,
@@ -30,7 +28,8 @@ $api = new API('contacts');
 	'name' => \OCP\Util::getL10N('contacts')->t('Contacts')
 	)
 );
-\OC::$server->getNavigationManager()->setActiveEntry('contacts_index');
+
+$api = new API('contacts');
 
 $api->connectHook('OC_User', 'post_createUser', '\OCA\Contacts\Hooks', 'userCreated');
 $api->connectHook('OC_User', 'post_deleteUser', '\OCA\Contacts\Hooks', 'userDeleted');
