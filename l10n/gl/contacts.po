@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-17 12:31-0400\n"
-"PO-Revision-Date: 2013-10-17 16:31+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-21 11:00-0400\n"
+"PO-Revision-Date: 2013-10-20 13:40+0000\n"
+"Last-Translator: mbouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/owncloud/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:28 lib/app.php:101
+#: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
 msgstr "Contactos"
 
@@ -332,7 +332,7 @@ msgstr "Máis..."
 msgid "Less..."
 msgstr "Menos..."
 
-#: js/storage.js:29
+#: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr "Produciuse un erro no servidor! Informe ao administrador do sistema"
 
@@ -384,7 +384,7 @@ msgstr "Vostede non ten permisos para actualizar o caderno de enderezos"
 msgid "You don't have permissions to delete the address book."
 msgstr "Vostede non ten permisos para eliminar o caderno de enderezos"
 
-#: lib/app.php:142
+#: lib/app.php:144
 msgid "Address book not found"
 msgstr "Non se atoparon cadernos de enderezos"
 
@@ -469,7 +469,7 @@ msgstr "Non foi posíbel atopar o contacto."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "Non hai datos de contacto na petición."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
@@ -605,7 +605,7 @@ msgstr "Produciuse un erro ao renomear o grupo."
 #: lib/controller/groupcontroller.php:175
 #: lib/controller/groupcontroller.php:223
 msgid "Group ID missing from request."
-msgstr "Falta o ID do grupo desde a solicitude."
+msgstr "Falta o ID do grupo desde a petición."
 
 #: lib/controller/groupcontroller.php:180
 msgid "Group name missing from request."
@@ -614,7 +614,7 @@ msgstr "No se atopa o nome do grupo desde a petición."
 #: lib/controller/groupcontroller.php:185
 #: lib/controller/groupcontroller.php:228
 msgid "Contact ID missing from request."
-msgstr "Falta o ID do contacto desde a solicitude."
+msgstr "Falta o ID do contacto desde a petición."
 
 #: lib/controller/importcontroller.php:51
 msgid "Failed to write to disk"
