@@ -125,13 +125,16 @@ class ContactPhotoController extends Controller {
 			return $response;
 		}
 
-		$response->setParams(array(
-			'tmp'=>$tmpkey,
-			'metadata' => array(
-				'contactId'=> $params['contactId'],
-				'addressBookId'=> $params['addressBookId'],
-				'backend'=> $params['backend'],
-			),
+		$response->setData(array(
+			'status' => 'success',
+			'data' => array(
+				'tmp'=>$tmpkey,
+				'metadata' => array(
+					'contactId'=> $params['contactId'],
+					'addressBookId'=> $params['addressBookId'],
+					'backend'=> $params['backend'],
+				),
+			)
 		));
 
 		return $response;
@@ -259,7 +262,7 @@ class ContactPhotoController extends Controller {
 		$w = (isset($this->request->post['w']) && $this->request->post['w']) ? $this->request->post['w'] : -1;
 		$h = (isset($this->request->post['h']) && $this->request->post['h']) ? $this->request->post['h'] : -1;
 		$tmpkey = $params['key'];
-		$maxSize = isset($this->request->get['maxSize']) ? $this->request->post['maxSize'] : 200;
+		$maxSize = isset($this->request->post['maxSize']) ? $this->request->post['maxSize'] : 200;
 
 		$app = new App($this->api->getUserId());
 		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
@@ -322,14 +325,19 @@ class ContactPhotoController extends Controller {
 			$contact->add('PHOTO',
 				strval($image), array('ENCODING' => 'b',
 				'TYPE' => $type));
+			// TODO: Fix this hack
+			$contact->setSaved(false);
 		}
 		if(!$contact->save()) {
 			return $response->bailOut(App::$l10n->t('Error saving contact.'));
 		}
 		$thumbnail = $contact->cacheThumbnail($image);
-		$response->setParams(array(
-			'id' => $params['contactId'],
-			'thumbnail' => $thumbnail,
+		$response->setData(array(
+			'status' => 'success',
+			'data' => array(
+				'id' => $params['contactId'],
+				'thumbnail' => $thumbnail,
+			)
 		));
 
 		$this->server->getCache()->remove($tmpkey);

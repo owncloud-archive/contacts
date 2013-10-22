@@ -105,6 +105,7 @@
 "Error saving contact." => "Error guardando el contacto.",
 "Error removing contact from other address book." => "Error borrando contacto desde otra libreta de direcciones.",
 "Couldn't find contact." => " No se puede encontrar contacto.",
+"No contact data in request." => "No hay información de contacto en la solicitud.",
 "Error merging into contact." => "Error fusionando en contacto.",
 "Error saving contact to backend." => "Error guardando contacto en backend.",
 "Property name is not set." => "Nombre de propiedad no definido.",

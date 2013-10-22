@@ -251,7 +251,7 @@ $this->create('contacts_cache_fs_photo', 'addressbook/{backend}/{addressBookId}/
 			$dispatcher->dispatch('ContactPhotoController', 'cacheFileSystemPhoto');
 		}
 	)
-	->requirements(array('backend', 'addressbook', 'contactId'));
+	->requirements(array('backend', 'addressBookId', 'contactId'));
 
 $this->create('contacts_tmp_contact_photo', 'addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/{key}/tmp')
 	->get()
