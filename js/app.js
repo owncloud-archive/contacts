@@ -744,7 +744,7 @@ OC.Contacts = OC.Contacts || {
 			var form = $('#file_upload_form');
 			var url = OC.Router.generate(
 				'contacts_upload_contact_photo',
-				{backend: metadata.backend, addressbookid: metadata.addressbookid, contactid: metadata.contactid}
+				{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId}
 			);
 			form.attr('action', url);
 		}).on('change', function() {
@@ -1456,11 +1456,12 @@ OC.Contacts = OC.Contacts || {
 		console.log('cloudPhotoSelected', metadata);
 		var url = OC.Router.generate(
 			'contacts_cache_fs_photo',
-			{backend: metadata.backend, addressbookid: metadata.addressbookid, contactid: metadata.contactid, path: path}
+			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId, path: path}
 		);
-		$.getJSON(url, function(response) {
+		var jqXHR = $.getJSON(url, function(response) {
 			console.log('response', response);
-			if(response.status == 'success') {
+			response = self.storage.formatResponse(response, jqXHR);
+			if(!response.error) {
 				self.editPhoto(metadata, response.data.tmp);
 			} else {
 				$(document).trigger('status.contacts.error', response);
@@ -1471,13 +1472,13 @@ OC.Contacts = OC.Contacts || {
 		var self = this;
 		var url = OC.Router.generate(
 			'contacts_cache_contact_photo',
-			{backend: metadata.backend, addressbookid: metadata.addressbookid, contactid: metadata.contactid}
+			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId}
 		);
 		console.log('url', url);
-		$.getJSON(url, function(response) {
-			if(response.status == 'success') {
+		var jqXHR = $.getJSON(url, function(response) {
+			response = self.storage.formatResponse(response, jqXHR)
+			if(!response.error) {
 				self.editPhoto(metadata, response.data.tmp);
-				$('#edit_photo_dialog_img').html(response.data.page);
 			} else {
 				$(document).trigger('status.contacts.error', response);
 			}
@@ -1507,7 +1508,7 @@ OC.Contacts = OC.Contacts || {
 		var $container = $('<div />').appendTo($('body'));
 		var url = OC.Router.generate(
 			'contacts_crop_contact_photo',
-			{backend: metadata.backend, addressbookid: metadata.addressbookid, contactid: metadata.contactid, key: tmpkey}
+			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId, key: tmpkey}
 		);
 		var $dlg = this.$cropBoxTmpl.octemplate(
 			{
@@ -1520,8 +1521,8 @@ OC.Contacts = OC.Contacts || {
 
 		$.when(this.storage.getTempContactPhoto(
 			metadata.backend,
-			metadata.addressbookid,
-			metadata.contactid,
+			metadata.addressBookId,
+			metadata.contactId,
 			tmpkey
 		))
 		.then(function(image) {
@@ -1577,8 +1578,8 @@ OC.Contacts = OC.Contacts || {
 		$target.on('load', function() {
 			console.log('submitted');
 			var response = $.parseJSON($target.contents().text());
+			console.log('response', response);
 			if(response && response.status == 'success') {
-				console.log('response', response);
 				$(document).trigger('status.contact.photoupdated', {
 					id: response.data.id,
 					thumbnail: response.data.thumbnail
