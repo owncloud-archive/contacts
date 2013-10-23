@@ -54,7 +54,9 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 
 		$user_addressbooks = array();
 
-		foreach($this->backend->getAddressBooksForUser($shareWith) as $user_addressbook) {
+		//foreach($this->backend->getAddressBooksForUser($shareWith) as $user_addressbook) {
+		// FIXME: The backend used is for the current user, not the right one
+		foreach($this->backend->getAddressBooksForUser() as $user_addressbook) {
 			$user_addressbooks[] = $user_addressbook['displayname'];
 		}
 		$name = $addressbook['displayname'] . '(' . $addressbook['userid'] . ')';
