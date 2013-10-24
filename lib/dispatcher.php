@@ -42,29 +42,30 @@ class Dispatcher extends MainApp {
 	}
 
 	public function registerServices() {
-		$this->container->registerService('PageController', function(IAppContainer $container) {
-			return new PageController($container, $this->app);
+		$app = $this->app;
+		$this->container->registerService('PageController', function(IAppContainer $container) use($app) {
+			return new PageController($container, $app);
 		});
-		$this->container->registerService('AddressBookController', function(IAppContainer $container) {
-			return new AddressBookController($container, $this->app);
+		$this->container->registerService('AddressBookController', function(IAppContainer $container) use($app) {
+			return new AddressBookController($container, $app);
 		});
-		$this->container->registerService('GroupController', function(IAppContainer $container) {
-			return new GroupController($container, $this->app);
+		$this->container->registerService('GroupController', function(IAppContainer $container) use($app) {
+			return new GroupController($container, $app);
 		});
-		$this->container->registerService('ContactController', function(IAppContainer $container) {
-			return new ContactController($container, $this->app);
+		$this->container->registerService('ContactController', function(IAppContainer $container) use($app) {
+			return new ContactController($container, $app);
 		});
-		$this->container->registerService('ContactPhotoController', function(IAppContainer $container) {
-			return new ContactPhotoController($container, $this->app);
+		$this->container->registerService('ContactPhotoController', function(IAppContainer $container) use($app) {
+			return new ContactPhotoController($container, $app);
 		});
-		$this->container->registerService('SettingsController', function(IAppContainer $container) {
-			return new SettingsController($container, $this->app);
+		$this->container->registerService('SettingsController', function(IAppContainer $container) use($app) {
+			return new SettingsController($container, $app);
 		});
-		$this->container->registerService('ImportController', function(IAppContainer $container) {
-			return new ImportController($container, $this->app);
+		$this->container->registerService('ImportController', function(IAppContainer $container) use($app) {
+			return new ImportController($container, $app);
 		});
-		$this->container->registerService('ExportController', function(IAppContainer $container) {
-			return new ExportController($container, $this->app);
+		$this->container->registerService('ExportController', function(IAppContainer $container) use($app) {
+			return new ExportController($container, $app);
 		});
 	}
 
