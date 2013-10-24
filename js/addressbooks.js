@@ -411,7 +411,7 @@ OC.Contacts = OC.Contacts || {};
 				done = true;
 			});
 			interval = setInterval(function() {
-				getStatus(data.backend, data.addressbookid, data.progresskey, interval, done);
+				getStatus(data.backend, data.addressBookId, data.progresskey, interval, done);
 			}, 1500);
 		} else {
 			defer.reject(response);
