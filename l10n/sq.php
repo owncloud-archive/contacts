@@ -19,6 +19,7 @@
 "Other" => "Të tjera",
 "Work" => "Punë",
 "Text" => "Tekst",
+"Groups" => "Grupet",
 "Title" => "Titulli",
 "Birthday" => "Ditëlindja",
 "Email" => "Email-i",
@@ -26,6 +27,9 @@
 "Active" => "Aktiv",
 "Share" => "Nda",
 "Export" => "Eksporto",
+"more info" => "më shumë info.",
+"Primary address (Kontact et al)" => "Adresa kryesore",
+"iOS/OS X" => "iOS/OS X",
 "Name" => "Emri",
 "Description" => "Përshkrimi"
 );
