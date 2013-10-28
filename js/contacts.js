@@ -2105,7 +2105,6 @@ OC.Contacts = OC.Contacts || {};
 	ContactList.prototype.findById = function(id) {
 		if(!id) {
 			console.warn('ContactList.findById: id missing');
-			console.trace();
 			return false;
 		}
 		id = String(id);
@@ -2136,7 +2135,7 @@ OC.Contacts = OC.Contacts || {};
 			if(data instanceof Contact) {
 				this.deletionQueue.push(data);
 			} else {
-				var contact = this.findById(data.contactid);
+				var contact = this.findById(data.contactId);
 				if(contact instanceof Contact) {
 					this.deletionQueue.push(contact);
 				}
