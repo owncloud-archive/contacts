@@ -684,10 +684,8 @@ OC.Contacts = OC.Contacts || {};
 		$(document).unbind('status.contact.photoupdated');
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
-			this.$fullelem.hide('slide', 500, function() {
-				$(this).remove();
-			});
-			this.getListItemElement().fadeIn();
+			this.$fullelem.hide().remove();
+			this.getListItemElement().show();
 			this.$fullelem = null;
 			return true;
 		} else {
@@ -2070,12 +2068,13 @@ OC.Contacts = OC.Contacts || {};
 
 	ContactList.prototype.contactPos = function(id) {
 		var contact = this.findById(id);
-		if(contact === null) {
+		if(!contact) {
 			return 0;
 		}
 		
 		var $elem = contact.getListItemElement();
-		var pos = $elem.offset().top - this.$contactList.offset().top + this.$contactList.scrollTop();
+		var pos = Math.round($elem.offset().top - (this.$contactList.offset().top + this.$contactList.scrollTop()));
+		console.log('contactPos', pos);
 		return pos;
 	};
 
