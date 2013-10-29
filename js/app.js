@@ -1000,7 +1000,16 @@ OC.Contacts = OC.Contacts || {
 		var addContact = function() {
 			console.log('add');
 			self.$toggleAll.hide();
-			$(this).hide();
+			if(self.currentid) {
+				if(self.currentid === 'new') {
+					return;
+				} else {
+					var contact = self.contacts.findById(self.currentid);
+					if(contact) {
+						contact.close();
+					}
+				}
+			}
 			self.currentid = 'new';
 			// Properties that the contact doesn't know
 			console.log('addContact, groupid', self.currentgroup);
@@ -1348,7 +1357,6 @@ OC.Contacts = OC.Contacts || {
 				this.jumpToContact(id);
 			}
 		}
-		this.$contactList.removeClass('dim');
 		delete this.currentid;
 		this.hideActions();
 		this.$groups.find('optgroup,option:not([value="-1"])').remove();
