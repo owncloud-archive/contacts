@@ -39,8 +39,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-17 12:31-0400\n"
-"PO-Revision-Date: 2013-10-17 16:31+0000\n"
+"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"PO-Revision-Date: 2013-10-28 10:42+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: German (Switzerland) (http://www.transifex.com/projects/p/owncloud/language/de_CH/)\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +49,7 @@ msgstr ""
 "Language: de_CH\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:28 lib/app.php:101
+#: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
 msgstr "Kontakte"
 
@@ -141,7 +141,7 @@ msgstr "Zusammenführung fehlgeschlagen. Fehler beim Speichern des Kontakts."
 msgid "Select photo"
 msgstr "Wählen Sie ein Foto"
 
-#: js/app.js:678 js/app.js:1589
+#: js/app.js:678 js/app.js:1590
 msgid "Network or server error. Please inform administrator."
 msgstr "Netzwerk- oder Serverfehler. Bitte informieren Sie den Administrator."
 
@@ -188,11 +188,11 @@ msgid ""
 "on this server."
 msgstr "Die Datei, die Sie hochladen möchten, überschreitet die maximale Grösse für Datei-Uploads auf diesem Server."
 
-#: js/app.js:1547
+#: js/app.js:1548
 msgid "Edit profile picture"
 msgstr "Profilbild bearbeiten"
 
-#: js/app.js:1551
+#: js/app.js:1552
 msgid "Crop photo"
 msgstr ""
 
@@ -212,17 +212,17 @@ msgstr "# Gruppen"
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2164
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Einige zum Löschen vorgemerkte Kontakte wurden noch nicht gelöscht. Bitte warten."
 
-#: js/contacts.js:2175
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klicken Sie hier um das Löschen von {num} Kontakten rückgängig zu machen"
 
-#: js/contacts.js:2184
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -357,7 +357,7 @@ msgstr "Mehr..."
 msgid "Less..."
 msgstr "Weniger..."
 
-#: js/storage.js:29
+#: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr ""
 
@@ -409,7 +409,7 @@ msgstr "Sie haben nicht die erforderlichen Rechte, dieses Adressbuch zu aktualis
 msgid "You don't have permissions to delete the address book."
 msgstr "Sie haben nicht die erforderlichen Rechte, dieses Adressbuch zu löschen."
 
-#: lib/app.php:142
+#: lib/app.php:144
 msgid "Address book not found"
 msgstr "Adressbuch nicht gefunden"
 
@@ -475,7 +475,7 @@ msgid "Error retrieving contact."
 msgstr "Fehler beim Abruf des Kontakts."
 
 #: lib/controller/addressbookcontroller.php:285
-#: lib/controller/contactphotocontroller.php:327
+#: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Fehler beim Speichern des Kontaktes."
 
@@ -487,7 +487,7 @@ msgstr "Fehler beim Entfernen des Kontakts aus einem anderen Adressbuch."
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:271
+#: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
 msgstr "Kontakt nicht gefunden."
@@ -570,40 +570,40 @@ msgid "Couldn't load temporary image: "
 msgstr "Konnte das temporäre Bild nicht laden:"
 
 #: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:159
+#: lib/controller/contactphotocontroller.php:162
 msgid "Couldn't save temporary image: "
 msgstr "Das temporäre Bild konnte nicht gespeichert werden:"
 
-#: lib/controller/contactphotocontroller.php:188
+#: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
 msgstr "Kein Foto-Pfad angegeben."
 
-#: lib/controller/contactphotocontroller.php:195
+#: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
 msgstr "Die Datei existiert nicht:"
 
-#: lib/controller/contactphotocontroller.php:200
 #: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
 msgstr "Fehler beim Laden des Bildes."
 
-#: lib/controller/contactphotocontroller.php:276
+#: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:282
+#: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
 msgstr "Fehler beim Erstellen des temporären Bildes"
 
-#: lib/controller/contactphotocontroller.php:289
+#: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
 msgstr "Fehler beim Zuschneiden des Bildes"
 
-#: lib/controller/contactphotocontroller.php:294
+#: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
 msgstr "Fehler bei der Grössenänderung des Bildes"
 
-#: lib/controller/contactphotocontroller.php:312
+#: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
 msgstr "Fehler beim Abrufen der PHOTO-Eigenschaft."
 

@@ -32,6 +32,7 @@
 "Video" => "Video",
 "Pager" => "Personsøkjar",
 "Groups" => "Grupper",
+"Select groups" => "Vel grupper",
 "Title" => "Tittel",
 "Organization" => "Organisasjon",
 "Birthday" => "Bursdag",

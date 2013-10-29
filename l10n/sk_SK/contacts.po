@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-27 00:22-0400\n"
-"PO-Revision-Date: 2013-10-23 16:20+0000\n"
+"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"PO-Revision-Date: 2013-10-28 10:42+0000\n"
 "Last-Translator: mhh <marian.hvolka@stuba.sk>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
@@ -188,17 +188,17 @@ msgstr "# skupiny"
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Chyba parsovania narodenín {bday}: {error}"
 
-#: js/contacts.js:2164
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Počkajte prosím do skončenia mazania kontaktov označených na mazanie."
 
-#: js/contacts.js:2175
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kliknite pre odvrátenie operácie zmazania {num} kontaktov."
 
-#: js/contacts.js:2184
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Zrušené vymazanie {num} kontaktov"
 

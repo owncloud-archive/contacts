@@ -10,7 +10,7 @@
 # cronner <cronner@gmail.com>, 2012
 # mikkel_ilu <mikkelbjerglarsen@gmail.com>, 2011
 # Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2011-2012
-# Ole Holm Frandsen <froksen@gmail.com>, 2012
+# Ole Holm Frandsen <froksen@gmail.com>, 2012-2013
 # Pascal d'Hermilly <pascal@dhermilly.dk>, 2011
 # rpaasch <rasmuspaasch@gmail.com>, 2013
 # muunsim <simon@rosmi.dk>, 2012
@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-17 12:31-0400\n"
-"PO-Revision-Date: 2013-10-17 16:31+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"PO-Revision-Date: 2013-10-28 10:42+0000\n"
+"Last-Translator: Ole Holm Frandsen <froksen@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:28 lib/app.php:101
+#: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
 msgstr "Kontakter"
 
@@ -122,7 +122,7 @@ msgstr "Indfletning lykkedes ikke. Fejl ved gemning af kontakt."
 msgid "Select photo"
 msgstr "Vælg foto"
 
-#: js/app.js:678 js/app.js:1589
+#: js/app.js:678 js/app.js:1590
 msgid "Network or server error. Please inform administrator."
 msgstr "Netværks- eller serverfejl: Informér administrator."
 
@@ -169,11 +169,11 @@ msgid ""
 "on this server."
 msgstr "Dr."
 
-#: js/app.js:1547
+#: js/app.js:1548
 msgid "Edit profile picture"
 msgstr "Redigér profilbillede"
 
-#: js/app.js:1551
+#: js/app.js:1552
 msgid "Crop photo"
 msgstr "Beskær billede"
 
@@ -193,17 +193,17 @@ msgstr "# grupper"
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2164
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Nogle kontakter er markeret til sletning, men er endnu ikke slettet. Vent venligst på, at de bliver slettet."
 
-#: js/contacts.js:2175
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik for at fortryde sletning af {num} kontakter"
 
-#: js/contacts.js:2184
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr "annullerede sletning af {num} kontakter"
 
@@ -338,7 +338,7 @@ msgstr "Mere..."
 msgid "Less..."
 msgstr "Mindre..."
 
-#: js/storage.js:29
+#: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr "Server fejl! Informer venligst systemadministratoren."
 
@@ -390,7 +390,7 @@ msgstr "Du har ikke rettigheder til at opdatere denne adressebog"
 msgid "You don't have permissions to delete the address book."
 msgstr "Du har ikke rettigheder til at slette denne adressebog"
 
-#: lib/app.php:142
+#: lib/app.php:144
 msgid "Address book not found"
 msgstr "Adressebog ikke fundet"
 
@@ -456,7 +456,7 @@ msgid "Error retrieving contact."
 msgstr "Fejl ved hentning af kontaktperson."
 
 #: lib/controller/addressbookcontroller.php:285
-#: lib/controller/contactphotocontroller.php:327
+#: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Kunne ikke gemme kontaktpersonen."
 
@@ -468,14 +468,14 @@ msgstr "Fejl ved fjernelse af kontaktperson fra anden adressebog."
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:271
+#: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
 msgstr "Kunne ikke finde kontakt."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "Ingen kontakt oplysninger i anmodningen."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
@@ -551,40 +551,40 @@ msgid "Couldn't load temporary image: "
 msgstr "Kunne ikke indlæse midlertidigt billede"
 
 #: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:159
+#: lib/controller/contactphotocontroller.php:162
 msgid "Couldn't save temporary image: "
 msgstr "Kunne ikke gemme midlertidigt billede: "
 
-#: lib/controller/contactphotocontroller.php:188
+#: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
 msgstr "Der blev ikke medsendt en sti til fotoet."
 
-#: lib/controller/contactphotocontroller.php:195
+#: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
 msgstr "Filen eksisterer ikke:"
 
-#: lib/controller/contactphotocontroller.php:200
 #: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
 msgstr "Kunne ikke indlæse billede."
 
-#: lib/controller/contactphotocontroller.php:276
+#: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
 msgstr "Billedet blev fjernet fra cache"
 
-#: lib/controller/contactphotocontroller.php:282
+#: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
 msgstr "Kunne ikke oprette midlertidigt billede"
 
-#: lib/controller/contactphotocontroller.php:289
+#: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
 msgstr "Kunne ikke beskære billedet"
 
-#: lib/controller/contactphotocontroller.php:294
+#: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
 msgstr "Kunne ikke ændre billedets størrelse"
 
-#: lib/controller/contactphotocontroller.php:312
+#: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
 msgstr "Fejl ved indlæsning af PHOTO feltet."
 
@@ -665,7 +665,7 @@ msgstr "Ingen kontaktpersoner fundet i:"
 
 #: lib/controller/settingscontroller.php:35
 msgid "No key is given."
-msgstr ""
+msgstr "Ingen værdi er givet."
 
 #: lib/controller/settingscontroller.php:39
 msgid "No value is given."
@@ -810,7 +810,7 @@ msgstr "Adressebøger"
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr ""
+msgstr "Vist navn"
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
@@ -1001,7 +1001,7 @@ msgstr "Exporter som VCF"
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr ""
+msgstr "Tilføj felt..."
 
 #: templates/contacts.php:330
 msgid "Phone"

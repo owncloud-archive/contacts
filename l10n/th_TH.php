@@ -125,6 +125,7 @@
 "First name" => "ชื่อจริง",
 "Additional names" => "ชื่ออื่นๆ",
 "Last name" => "นามสกุลจริง",
+"Select groups" => "เลือกกลุ่ม",
 "Nickname" => "ชื่อเล่น",
 "Enter nickname" => "กรอกชื่อเล่น",
 "Title" => "ชื่อ",

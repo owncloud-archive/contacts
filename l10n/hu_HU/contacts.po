@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-19 08:16-0400\n"
-"PO-Revision-Date: 2013-10-18 20:00+0000\n"
-"Last-Translator: sherlock79 <david@interpont.hu>\n"
+"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"PO-Revision-Date: 2013-10-28 10:42+0000\n"
+"Last-Translator: ebela <bela@dandre.hu>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +46,7 @@ msgstr "Importálás..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "Előkészítés..."
 
 #: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
@@ -120,7 +120,7 @@ msgstr "Sikertelen összefűzés. Hiba a kapcsolat mentésekor."
 msgid "Select photo"
 msgstr "Fénykép kiválasztása"
 
-#: js/app.js:678 js/app.js:1589
+#: js/app.js:678 js/app.js:1590
 msgid "Network or server error. Please inform administrator."
 msgstr "Hiba történt a hálózatban vagy a kiszolgálón. Értesítse a rendszergazdát!"
 
@@ -167,11 +167,11 @@ msgid ""
 "on this server."
 msgstr "A feltöltendő fájl mérete meghaladja a kiszolgálón engedélyezett maximális méretet."
 
-#: js/app.js:1547
+#: js/app.js:1548
 msgid "Edit profile picture"
 msgstr "Profilkép szerkesztése"
 
-#: js/app.js:1551
+#: js/app.js:1552
 msgid "Crop photo"
 msgstr ""
 
@@ -191,17 +191,17 @@ msgstr "# csoport"
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2164
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Néhány névjegy ki lett jelölve törlésre, de még nem lett törölve. Várja meg a végleges törlést."
 
-#: js/contacts.js:2175
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kattintson ide {num} névjegy törlésének visszavonásához"
 
-#: js/contacts.js:2184
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -277,11 +277,11 @@ msgstr "Importálás ide:"
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Hiba az importálandó sablon betöltésekor"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "Kapcsolatok importálása"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -289,7 +289,7 @@ msgstr "Importálás"
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr ""
+msgstr "Importálás befejezve"
 
 #: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:322
 msgid "Close"
@@ -338,7 +338,7 @@ msgstr "Kevesebb..."
 
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Kiszolgáló hiba! Értesítse a rendszergazdát!"
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -454,7 +454,7 @@ msgid "Error retrieving contact."
 msgstr "Hiba a névjegy betöltésekor."
 
 #: lib/controller/addressbookcontroller.php:285
-#: lib/controller/contactphotocontroller.php:327
+#: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "A névjegy mentése sikertelen"
 
@@ -466,7 +466,7 @@ msgstr "Hiba a névjegy más címjegyzékből történő törlésekor."
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:271
+#: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
 msgstr "Nem található névjegy."
@@ -497,11 +497,11 @@ msgstr "A vCardról szóló információ helytelen. Töltsd újra az oldalt."
 
 #: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
-msgstr ""
+msgstr "Hiba, a kapcsolat aktualizálásakor"
 
 #: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Hiba a kapcsolat háttérmentésekor."
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
@@ -549,40 +549,40 @@ msgid "Couldn't load temporary image: "
 msgstr "Ideiglenes kép betöltése sikertelen:"
 
 #: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:159
+#: lib/controller/contactphotocontroller.php:162
 msgid "Couldn't save temporary image: "
 msgstr "Ideiglenes kép létrehozása sikertelen:"
 
-#: lib/controller/contactphotocontroller.php:188
+#: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
 msgstr "Nincs fénykép-útvonal megadva"
 
-#: lib/controller/contactphotocontroller.php:195
+#: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
 msgstr "A fájl nem létezik:"
 
-#: lib/controller/contactphotocontroller.php:200
 #: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
 msgstr "Kép betöltése sikertelen"
 
-#: lib/controller/contactphotocontroller.php:276
+#: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "A kép el lett távolítva a gyorsítótárból"
 
-#: lib/controller/contactphotocontroller.php:282
+#: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
 msgstr "Ideiglenes kép létrehozása sikertelen"
 
-#: lib/controller/contactphotocontroller.php:289
+#: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
 msgstr "Képvágás sikertelen"
 
-#: lib/controller/contactphotocontroller.php:294
+#: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
 msgstr "Képméretezés sikertelen"
 
-#: lib/controller/contactphotocontroller.php:312
+#: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
 msgstr "A PHOTO-tulajdonság  feldolgozása sikertelen"
 
@@ -638,7 +638,7 @@ msgstr "Hiba a névjegyek feltöltésekor a tárhelyre."
 
 #: lib/controller/importcontroller.php:137
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Az állomány áthelyezése az importáltak mappába nem sikerült."
 
 #: lib/controller/importcontroller.php:154
 msgid "You do not have permissions to import into this address book."
@@ -860,46 +860,46 @@ msgstr "Következő névjegy a listán"
 
 #: templates/contacts.php:99
 msgid "Previous contact in list"
-msgstr ""
+msgstr "Előző kapcsolat a listán"
 
 #: templates/contacts.php:101
 msgid "Expand/collapse current addressbook"
-msgstr ""
+msgstr "A címlista kinyitása/becsukása"
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr ""
+msgstr "A következő címlista"
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr ""
+msgstr "Az előző címlista"
 
 #: templates/contacts.php:109
 msgid "Actions"
-msgstr ""
+msgstr "Műveletek"
 
 #: templates/contacts.php:112
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "Kapcsolatok lista frissítése"
 
 #: templates/contacts.php:114
 msgid "Add new contact"
-msgstr ""
+msgstr "Új kapcsolat hozzáadása"
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
-msgstr ""
+msgstr "Új címlista létrehozása"
 
 #: templates/contacts.php:118
 msgid "Delete current contact"
-msgstr ""
+msgstr "Jelenlegi kapcsolat törlése"
 
 #: templates/contacts.php:124
 msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>Ebben a címjegyzékben még nincsenek bejegyzések.</h3><p>Hozzon létre egyet, vagy importáljon adatokat egy VCF-állományból.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -907,23 +907,23 @@ msgstr "Kapcsolat hozzáadása"
 
 #: templates/contacts.php:174
 msgid "Delete group"
-msgstr ""
+msgstr "Csoport törlése"
 
 #: templates/contacts.php:175
 msgid "Rename group"
-msgstr ""
+msgstr "Csoport átnevezése"
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "Melyik kapcsolathoz adódjon hozzá az adat?"
 
 #: templates/contacts.php:191
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Sikeres összefűzés után törölje a többit."
 
 #: templates/contacts.php:203
 msgid "Compose mail"
-msgstr ""
+msgstr "Levél írás"
 
 #: templates/contacts.php:225
 msgid "Delete current photo"
@@ -943,7 +943,7 @@ msgstr "Kép kiválasztása ownCloud-ból"
 
 #: templates/contacts.php:239 templates/contacts.php:240
 msgid "First name"
-msgstr ""
+msgstr "Keresztnév"
 
 #: templates/contacts.php:244 templates/contacts.php:245
 msgid "Additional names"
@@ -951,15 +951,15 @@ msgstr "További nevek"
 
 #: templates/contacts.php:249 templates/contacts.php:250
 msgid "Last name"
-msgstr ""
+msgstr "Vezetéknév"
 
 #: templates/contacts.php:257
 msgid "Select groups"
-msgstr ""
+msgstr "Csoportok kiválasztása"
 
 #: templates/contacts.php:260
 msgid "Select address book"
-msgstr ""
+msgstr "Válassza ki a címjegyzéket"
 
 #: templates/contacts.php:264 templates/contacts.php:328
 msgid "Nickname"
@@ -975,7 +975,7 @@ msgstr "Cím"
 
 #: templates/contacts.php:274
 msgid "Enter title"
-msgstr ""
+msgstr "Cím megadása"
 
 #: templates/contacts.php:278 templates/contacts.php:326
 msgid "Organization"
@@ -983,7 +983,7 @@ msgstr "Szervezet"
 
 #: templates/contacts.php:281
 msgid "Enter organization"
-msgstr ""
+msgstr "Szervezet megadása"
 
 #: templates/contacts.php:285 templates/contacts.php:329
 msgid "Birthday"
@@ -991,15 +991,15 @@ msgstr "Születésap"
 
 #: templates/contacts.php:316
 msgid "Notes go here..."
-msgstr ""
+msgstr "Ide jönnek a jegyzetek..."
 
 #: templates/contacts.php:323
 msgid "Export as VCF"
-msgstr ""
+msgstr "Exportálás VCF-ként"
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr ""
+msgstr "Mező hozzáadása..."
 
 #: templates/contacts.php:330
 msgid "Phone"
@@ -1011,7 +1011,7 @@ msgstr "Email"
 
 #: templates/contacts.php:332
 msgid "Instant Messaging"
-msgstr ""
+msgstr "Azonnali üzenetküldés"
 
 #: templates/contacts.php:333
 msgid "Address"
@@ -1023,7 +1023,7 @@ msgstr "Jegyzet"
 
 #: templates/contacts.php:335
 msgid "Web site"
-msgstr ""
+msgstr "Weboldal"
 
 #: templates/contacts.php:337
 msgid "Delete contact"
@@ -1041,7 +1041,7 @@ msgstr "Adjon meg érvényes email címet"
 
 #: templates/contacts.php:353
 msgid "someone@example.com"
-msgstr ""
+msgstr "someone@example.com"
 
 #: templates/contacts.php:355
 msgid "Mail to address"
@@ -1065,7 +1065,7 @@ msgstr "Ugrás a weboldalra"
 
 #: templates/contacts.php:385
 msgid "Delete URL"
-msgstr ""
+msgstr "URL törlése"
 
 #: templates/contacts.php:396
 msgid "View on map"
@@ -1073,27 +1073,27 @@ msgstr "Megtekintés a térképen"
 
 #: templates/contacts.php:397
 msgid "Delete address"
-msgstr ""
+msgstr "Cím törlése"
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "1600 Pennsylvania Avenue, NW"
 
 #: templates/contacts.php:411
 msgid "Street address"
-msgstr ""
+msgstr "Utcacím"
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "20500"
 
 #: templates/contacts.php:416
 msgid "Postal code"
-msgstr ""
+msgstr "Irányítószám"
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "Washington, DC"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1101,15 +1101,15 @@ msgstr "Város"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "District of Columbia"
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr ""
+msgstr "Állam vagy tartomány"
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "USA"
 
 #: templates/contacts.php:429
 msgid "Country"
@@ -1117,11 +1117,11 @@ msgstr "Ország"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
-msgstr ""
+msgstr "Azonnali üzenetküldő"
 
 #: templates/contacts.php:453
 msgid "Delete IM"
-msgstr ""
+msgstr "IM törlése"
 
 #: templates/contacts.php:461
 msgid "Active"
@@ -1137,7 +1137,7 @@ msgstr "Exportálás"
 
 #: templates/contacts.php:466
 msgid "CardDAV link"
-msgstr ""
+msgstr "CardDav hivatkozás"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"

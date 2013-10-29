@@ -12,8 +12,8 @@
 # paszczak000 <paszczak000@gmail.com>, 2013
 # Maciej Tarmas <maciej@tarmas.pl>, 2013
 # Marcin Małecki <gerber@tkdami.net>, 2011-2012
-# emc <mplichta@gmail.com>, 2013
-# emc <mplichta@gmail.com>, 2012
+# Michal Plichta <mplichta@gmail.com>, 2013
+# Michal Plichta <mplichta@gmail.com>, 2012
 # Paweł Ciecierski <pciecierski@gmail.com>, 2012
 # Piotr Sokół <psokol@jabster.pl>, 2012
 # urban <urban@fail.pl>, 2012
@@ -21,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-17 12:31-0400\n"
-"PO-Revision-Date: 2013-10-17 16:31+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"PO-Revision-Date: 2013-10-28 10:42+0000\n"
+"Last-Translator: Cyryl Sochacki <cyrylsochacki@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Language: pl\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: appinfo/app.php:28 lib/app.php:101
+#: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
 msgstr "Kontakty"
 
@@ -123,7 +123,7 @@ msgstr "Złączenie nieudane. Błąd zapisu kontaktu."
 msgid "Select photo"
 msgstr "Wybierz zdjęcie"
 
-#: js/app.js:678 js/app.js:1589
+#: js/app.js:678 js/app.js:1590
 msgid "Network or server error. Please inform administrator."
 msgstr "Błąd połączenia lub serwera. Skontaktuj sie z administratorem."
 
@@ -170,11 +170,11 @@ msgid ""
 "on this server."
 msgstr "Plik, który próbujesz wysłać przekracza maksymalny rozmiar pliku przekazywania na tym serwerze."
 
-#: js/app.js:1547
+#: js/app.js:1548
 msgid "Edit profile picture"
 msgstr "Edytuj zdjęcie profilu"
 
-#: js/app.js:1551
+#: js/app.js:1552
 msgid "Crop photo"
 msgstr "Kadruj zdjęcie"
 
@@ -194,17 +194,17 @@ msgstr "# grupy"
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Błąd przetwarzania urodzin {bday}: {error}"
 
-#: js/contacts.js:2164
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Niektóre kontakty są zaznaczone do usunięcia, ale nie są usunięte jeszcze. Proszę czekać na ich usunięcie."
 
-#: js/contacts.js:2175
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kliknij aby cofnąć usunięcie {num} kontaktów"
 
-#: js/contacts.js:2184
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Usunięcie Anulowane {num} kontaktów"
 
@@ -339,7 +339,7 @@ msgstr "Więcej..."
 msgid "Less..."
 msgstr "Mniej..."
 
-#: js/storage.js:29
+#: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr "Błąd serwera@ Skontaktuj się z administratorem"
 
@@ -391,7 +391,7 @@ msgstr "Nie masz uprawnień do zmiany tej książki adresowej."
 msgid "You don't have permissions to delete the address book."
 msgstr "Nie masz uprawnień do usunięcia tej książki adresowej."
 
-#: lib/app.php:142
+#: lib/app.php:144
 msgid "Address book not found"
 msgstr "Nie znaleziono książki adresowej"
 
@@ -457,7 +457,7 @@ msgid "Error retrieving contact."
 msgstr "Błąd zapisu kontaktu."
 
 #: lib/controller/addressbookcontroller.php:285
-#: lib/controller/contactphotocontroller.php:327
+#: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Błąd zapisu kontaktu."
 
@@ -469,7 +469,7 @@ msgstr "Błąd usuwania kontaktu z innej książki adresowej."
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:271
+#: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
 msgstr "Nie mogę znaleźć kontaktu."
@@ -552,40 +552,40 @@ msgid "Couldn't load temporary image: "
 msgstr "Nie można wczytać obrazu tymczasowego: "
 
 #: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:159
+#: lib/controller/contactphotocontroller.php:162
 msgid "Couldn't save temporary image: "
 msgstr "Nie można zapisać obrazu tymczasowego: "
 
-#: lib/controller/contactphotocontroller.php:188
+#: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
 msgstr "Ścieżka do zdjęcia nie została podana."
 
-#: lib/controller/contactphotocontroller.php:195
+#: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
 msgstr "Plik nie istnieje:"
 
-#: lib/controller/contactphotocontroller.php:200
 #: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
 msgstr "Błąd ładowania obrazu."
 
-#: lib/controller/contactphotocontroller.php:276
+#: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
 msgstr "Obraz został usunięty z pamięci podręcznej"
 
-#: lib/controller/contactphotocontroller.php:282
+#: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
 msgstr "Błąd utworzenia obrazu tymczasowego"
 
-#: lib/controller/contactphotocontroller.php:289
+#: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
 msgstr "Błąd przycinania obrazu"
 
-#: lib/controller/contactphotocontroller.php:294
+#: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
 msgstr "Błąd zmiany rozmiaru obrazu"
 
-#: lib/controller/contactphotocontroller.php:312
+#: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
 msgstr "Błąd uzyskiwania właściwości ZDJĘCIA."
 
@@ -1002,7 +1002,7 @@ msgstr "Eksportuj jako VCF"
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr ""
+msgstr "Dodaj pole..."
 
 #: templates/contacts.php:330
 msgid "Phone"

@@ -126,6 +126,7 @@
 "First name" => "Tên",
 "Additional names" => "Tên bổ sung",
 "Last name" => "Họ",
+"Select groups" => "Chọn nhóm",
 "Nickname" => "Biệt danh",
 "Enter nickname" => "Nhập nickname",
 "Title" => "Tiêu đề",

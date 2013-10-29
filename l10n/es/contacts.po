@@ -33,8 +33,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-27 00:22-0400\n"
-"PO-Revision-Date: 2013-10-24 10:00+0000\n"
+"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"PO-Revision-Date: 2013-10-28 10:42+0000\n"
 "Last-Translator: Rubén del Campo <yo@rubendelcampo.es>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -206,17 +206,17 @@ msgstr "# grupos"
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Error al analizar el cumpleaños {bday}: {error}"
 
-#: js/contacts.js:2164
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Algunos contactos están marcados para su eliminación, pero no eliminados todavía. Por favor, espere a que sean eliminados."
 
-#: js/contacts.js:2175
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Pulse para deshacer la eliminación de {num} contactos"
 
-#: js/contacts.js:2184
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancelada la eliminación de {num} contactos"
 

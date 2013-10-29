@@ -104,6 +104,7 @@
 "Upload new photo" => "새로운 사진 업로드",
 "Select photo from ownCloud" => "ownCloud에서 사진 선택",
 "Additional names" => "추가 이름",
+"Select groups" => "그룹 선택",
 "Nickname" => "별명",
 "Enter nickname" => "별명 입력",
 "Title" => "직위",
