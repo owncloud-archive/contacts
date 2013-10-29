@@ -230,7 +230,7 @@
 				<a class="favorite action {favorite}"></a>
 			</div>
 			<div class="singleproperties">
-			<input data-element="fn" class="fullname value propertycontainer" type="text" name="value" value="{name}" required />
+			<input data-element="fn" class="fullname value propertycontainer" type="text" name="value" value="{name}" placeholder="<?php p($l->t('Name')); ?>" required />
 			<a class="action edit"></a>
  			<fieldset class="n hidden editor propertycontainer" data-element="n">
 			<ul>

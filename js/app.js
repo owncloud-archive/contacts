@@ -1021,7 +1021,7 @@ OC.Contacts = OC.Contacts || {
 			self.$firstRun.hide();
 			self.$contactList.show();
 			self.tmpcontact = self.contacts.addContact(groupprops);
-			self.tmpcontact.prependTo(self.$contactList.find('tbody')).show();
+			self.tmpcontact.prependTo(self.$contactList.find('tbody')).show().find('.fullname').focus();
 			self.$rightContent.scrollTop(0);
 			self.hideActions();
 		};
@@ -1401,7 +1401,7 @@ OC.Contacts = OC.Contacts || {
 		console.log('selected element', $listElement);
 		window.location.hash = this.currentid;
 		self.jumpToContact(self.currentid);
-		$contactelem.insertAfter($listElement).show();
+		$contactelem.insertAfter($listElement).show().find('.fullname').focus();
 		$listElement.hide();
 		setTimeout(function() {
 			$(window).bind('hashchange', self.hashChange);
