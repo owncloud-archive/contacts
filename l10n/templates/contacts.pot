@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"POT-Creation-Date: 2013-10-30 00:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:678 js/app.js:1590
+#: js/app.js:678 js/app.js:1570
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
@@ -121,46 +121,46 @@ msgstr ""
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1095
+#: js/app.js:1104
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1234 js/app.js:1238 templates/contacts.php:182
+#: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1260 js/app.js:1313 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr ""
 
-#: js/app.js:1287 templates/contacts.php:163
+#: js/app.js:1296 templates/contacts.php:163
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1291
+#: js/app.js:1300
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1391
+#: js/app.js:1394
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1437
+#: js/app.js:1417
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1447
+#: js/app.js:1427
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1548
+#: js/app.js:1528
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1552
+#: js/app.js:1532
 msgid "Crop photo"
 msgstr ""
 
@@ -168,29 +168,29 @@ msgstr ""
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:858
+#: js/contacts.js:856
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1055
+#: js/contacts.js:1053
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:1127
+#: js/contacts.js:1125
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2163
+#: js/contacts.js:2162
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2174
+#: js/contacts.js:2173
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2183
+#: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -930,6 +930,10 @@ msgstr ""
 msgid "Select photo from ownCloud"
 msgstr ""
 
+#: templates/contacts.php:233 templates/settings.php:59
+msgid "Name"
+msgstr ""
+
 #: templates/contacts.php:239 templates/contacts.php:240
 msgid "First name"
 msgstr ""
@@ -1150,10 +1154,6 @@ msgstr ""
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr ""
-
-#: templates/settings.php:59
-msgid "Name"
 msgstr ""
 
 #: templates/settings.php:60
