@@ -17,10 +17,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
-"Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-29 04:34-0400\n"
-"PO-Revision-Date: 2013-10-28 10:42+0000\n"
-"Last-Translator: ebela <bela@dandre.hu>\n"
+"Report-Msgid-Bugs-To: translations@owncloud.org\n"
+"POT-Creation-Date: 2013-11-01 14:32-0400\n"
+"PO-Revision-Date: 2013-10-30 19:40+0000\n"
+"Last-Translator: Laszlo Tornoci <torlasz@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -120,7 +120,7 @@ msgstr "Sikertelen összefűzés. Hiba a kapcsolat mentésekor."
 msgid "Select photo"
 msgstr "Fénykép kiválasztása"
 
-#: js/app.js:678 js/app.js:1590
+#: js/app.js:678 js/app.js:1570
 msgid "Network or server error. Please inform administrator."
 msgstr "Hiba történt a hálózatban vagy a kiszolgálón. Értesítse a rendszergazdát!"
 
@@ -132,78 +132,78 @@ msgstr "Hiba a csoporthoz adás közben."
 msgid "Error removing from group."
 msgstr "Hiba a csoportból való eltávolítás közben."
 
-#: js/app.js:1095
+#: js/app.js:1104
 msgid "Error setting {name} as favorite."
 msgstr "Nem sikerült \"{name}\"-t kedvencként beállítani."
 
-#: js/app.js:1234 js/app.js:1238 templates/contacts.php:182
+#: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Névjegyek összefűzése."
 
-#: js/app.js:1260 js/app.js:1313 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Mégsem"
 
-#: js/app.js:1287 templates/contacts.php:163
+#: js/app.js:1296 templates/contacts.php:163
 msgid "Add group"
 msgstr "Csoport hozzáadása"
 
-#: js/app.js:1291
+#: js/app.js:1300
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1391
+#: js/app.js:1394
 msgid "Could not find contact: {id}"
 msgstr "Nem található a névjegy: {id}"
 
-#: js/app.js:1437
+#: js/app.js:1417
 msgid "No files selected for upload."
 msgstr "Nincs kiválasztva feltöltendő fájl."
 
-#: js/app.js:1447
+#: js/app.js:1427
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "A feltöltendő fájl mérete meghaladja a kiszolgálón engedélyezett maximális méretet."
 
-#: js/app.js:1548
+#: js/app.js:1528
 msgid "Edit profile picture"
 msgstr "Profilkép szerkesztése"
 
-#: js/app.js:1552
+#: js/app.js:1532
 msgid "Crop photo"
-msgstr ""
+msgstr "Fénykép vágása"
 
 #: js/contacts.js:589
 msgid "Is this correct?"
 msgstr "Helyes?"
 
-#: js/contacts.js:858
+#: js/contacts.js:856
 msgid "Error parsing date: {date}"
-msgstr ""
+msgstr "Nem sikerült értelmezni ezt a dátumot: {date}"
 
-#: js/contacts.js:1055
+#: js/contacts.js:1053
 msgid "# groups"
 msgstr "# csoport"
 
-#: js/contacts.js:1127
+#: js/contacts.js:1125
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "Nem sikerült értelmezni a {bday} születésnap adatait: {error}"
 
-#: js/contacts.js:2163
+#: js/contacts.js:2162
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Néhány névjegy ki lett jelölve törlésre, de még nem lett törölve. Várja meg a végleges törlést."
 
-#: js/contacts.js:2174
+#: js/contacts.js:2173
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kattintson ide {num} névjegy törlésének visszavonásához"
 
-#: js/contacts.js:2183
+#: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "{num} névjegy törlése visszavonva"
 
 #: js/groups.js:53
 msgid "Add"
@@ -301,7 +301,7 @@ msgstr "Hiba"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr "A megjelenített net ki kell tölteni."
+msgstr "A megjelenített nevet ki kell tölteni."
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
@@ -435,7 +435,7 @@ msgstr "Hiba a címjegyzék frissítésekor"
 #: lib/controller/addressbookcontroller.php:155
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "Önnek nincs jogosultsága ahhoz, hogy törölje ezt a címjegyzéket: \"%s\""
 
 #: lib/controller/addressbookcontroller.php:161
 msgid "Error deleting address book"
@@ -473,7 +473,7 @@ msgstr "Nem található névjegy."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "A kérés nem tartalmaz névjegyet"
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
@@ -505,7 +505,7 @@ msgstr "Hiba a kapcsolat háttérmentésekor."
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
-msgstr ""
+msgstr "Nem sikerült beolvasni a felhasználó fényképét"
 
 #: lib/controller/contactphotocontroller.php:87
 #: lib/controller/importcontroller.php:36
@@ -941,6 +941,10 @@ msgstr "Új kép feltöltése"
 msgid "Select photo from ownCloud"
 msgstr "Kép kiválasztása ownCloud-ból"
 
+#: templates/contacts.php:233 templates/settings.php:59
+msgid "Name"
+msgstr "Név"
+
 #: templates/contacts.php:239 templates/contacts.php:240
 msgid "First name"
 msgstr "Keresztnév"
@@ -1162,10 +1166,6 @@ msgstr "Címlisták"
 #: templates/settings.php:58
 msgid "New Address Book"
 msgstr "Új címlista"
-
-#: templates/settings.php:59
-msgid "Name"
-msgstr "Név"
 
 #: templates/settings.php:60
 msgid "Description"
