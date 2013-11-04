@@ -119,9 +119,15 @@ class Hooks{
 		$contact = $parameters['contact'];
 		Utils\Properties::updateIndex($parameters['id'], $contact);
 		// If updated via CardDAV we don't know if PHOTO has changed
-		if(isset($parameters['carddav']) && $parameters['carddav']
-			&& (isset($contact->PHOTO) || isset($contact->LOGO))) {
-			$contact->cacheThumbnail(null, false, true);
+		if(isset($parameters['carddav']) && $parameters['carddav']) {
+			if(isset($contact->PHOTO) || isset($contact->LOGO)) {
+				$contact->cacheThumbnail(null, false, true);
+			}
+			$tagMgr = \OC::$server->getTagManager()->load('contact');
+			$tagMgr->purgeObjects(array($parameters['id']));
+			if(isset($contact->CATEGORIES)) {
+				$tagMgr->addMultiple($contact->CATEGORIES->getParts(), true, $parameters['id']);
+			}
 		}
 	}
 
