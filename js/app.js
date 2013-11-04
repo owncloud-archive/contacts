@@ -972,7 +972,7 @@ OC.Contacts = OC.Contacts || {
 			}
 			if($(event.target).is('a.delete')) {
 				$(document).trigger('request.contact.delete', {
-					contactid: $(this).data('id')
+					contactId: $(this).data('id')
 				});
 				return;
 			}
