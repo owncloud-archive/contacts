@@ -15,7 +15,7 @@ use OCA\Contacts\App,
 	OCA\Contacts\Utils\JSONSerializer,
 	OCA\Contacts\Utils\Properties,
 	OCA\Contacts\Controller,
-	OCP\AppFramework\Http\Http;
+	OCP\AppFramework\Http;
 
 /**
  * Controller class For Contacts

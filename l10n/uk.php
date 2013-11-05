@@ -126,6 +126,7 @@
 "First name" => "Ім'я",
 "Additional names" => "Додаткові імена",
 "Last name" => "Прізвище",
+"Select groups" => "Оберіть групи",
 "Nickname" => "Прізвисько",
 "Enter nickname" => "Ввести прізвисько",
 "Title" => "Назва",

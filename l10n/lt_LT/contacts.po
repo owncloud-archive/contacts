@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-17 12:31-0400\n"
-"PO-Revision-Date: 2013-10-17 16:31+0000\n"
+"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"PO-Revision-Date: 2013-10-28 10:42+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/projects/p/owncloud/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Language: lt_LT\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: appinfo/app.php:28 lib/app.php:101
+#: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
 msgstr "Kontaktai"
 
@@ -117,7 +117,7 @@ msgstr "Suliejimas nepavyko. Klaida saugant kontaktą."
 msgid "Select photo"
 msgstr "Nurodykite nuotrauką"
 
-#: js/app.js:678 js/app.js:1589
+#: js/app.js:678 js/app.js:1590
 msgid "Network or server error. Please inform administrator."
 msgstr "Tinklo arba serverio klaida. Prašome informuoti administratorių."
 
@@ -164,11 +164,11 @@ msgid ""
 "on this server."
 msgstr "Įkeliamo failo dydis viršijo šio serverio maksimalų leistiną dydį."
 
-#: js/app.js:1547
+#: js/app.js:1548
 msgid "Edit profile picture"
 msgstr "Redaguoti profilio paveikslėlį"
 
-#: js/app.js:1551
+#: js/app.js:1552
 msgid "Crop photo"
 msgstr "Apkirpti nuotrauką"
 
@@ -188,17 +188,17 @@ msgstr "# grupės"
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Klaida nagrinėjant gimtadienį {bday}: {error}"
 
-#: js/contacts.js:2164
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Keletas kontaktų buvo pažymėti ištrinimui, bet dar neištrinti. Prašome palaukti kol jie bus ištrinti."
 
-#: js/contacts.js:2175
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Spauskite, kad atstatyti trynimą {num} kontaktų"
 
-#: js/contacts.js:2184
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Atšauktas {num} kontaktų trynimas"
 
@@ -333,7 +333,7 @@ msgstr "Daugiau..."
 msgid "Less..."
 msgstr "Mažiau..."
 
-#: js/storage.js:29
+#: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr "Serverio klaida! Prašome informuoti administratorių"
 
@@ -385,7 +385,7 @@ msgstr "Jūs neturite leidimo atnaujinti šią adresų knygutę."
 msgid "You don't have permissions to delete the address book."
 msgstr "Jūs neturite leidimo ištrinti šią adresų knygutę."
 
-#: lib/app.php:142
+#: lib/app.php:144
 msgid "Address book not found"
 msgstr "Adresų knygutė nerasta"
 
@@ -451,7 +451,7 @@ msgid "Error retrieving contact."
 msgstr "Klaida gaunant kontaktą."
 
 #: lib/controller/addressbookcontroller.php:285
-#: lib/controller/contactphotocontroller.php:327
+#: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Klaida išsaugant kontaktą."
 
@@ -463,7 +463,7 @@ msgstr "Klaida paralinant kontaktą iš kitos adresų knygutės."
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:271
+#: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
 msgstr "Nepavyko rasti kontakto."
@@ -546,40 +546,40 @@ msgid "Couldn't load temporary image: "
 msgstr "Nepavyko įkelti laikiną paveikslėlį:"
 
 #: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:159
+#: lib/controller/contactphotocontroller.php:162
 msgid "Couldn't save temporary image: "
 msgstr "Nepavyko išsaugoti laikiną paveikslėlį:"
 
-#: lib/controller/contactphotocontroller.php:188
+#: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
 msgstr "Nenurodytas nuotraukos kelias. "
 
-#: lib/controller/contactphotocontroller.php:195
+#: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
 msgstr "Failas neegzistuoja:"
 
-#: lib/controller/contactphotocontroller.php:200
 #: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
 msgstr "Klaida įkeliant nuotrauką."
 
-#: lib/controller/contactphotocontroller.php:276
+#: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
 msgstr "Paveikslėlis pašalintas iš talpyklos"
 
-#: lib/controller/contactphotocontroller.php:282
+#: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
 msgstr "Klaida kuriant laikiną paveikslėlį"
 
-#: lib/controller/contactphotocontroller.php:289
+#: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
 msgstr "Klaida apkerpant paveikslėlį"
 
-#: lib/controller/contactphotocontroller.php:294
+#: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
 msgstr "Klaida keičiant paveikslėlio dydį"
 
-#: lib/controller/contactphotocontroller.php:312
+#: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
 msgstr "Klaida gaunant nuotraukos  savybes."
 

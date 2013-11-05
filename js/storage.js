@@ -584,7 +584,7 @@ OC.Contacts = OC.Contacts || {};
 			'contacts_import_status',
 			'GET',
 			{backend: backend, addressBookId: addressBookId},
-			JSON.stringify(params)
+			params
 		);
 	};
 

@@ -36,6 +36,7 @@
 "Pager" => "pager",
 "Internet" => "internet",
 "Groups" => "Grup",
+"Select groups" => "Pilih grup",
 "Nickname" => "nama panggilan",
 "Enter nickname" => "masukkan nama panggilan",
 "Title" => "Judul",

@@ -9,7 +9,7 @@
 
 namespace OCA\Contacts;
 use OCP\AppFramework\Http\JSONResponse as OriginalResponse,
-	OCP\AppFramework\Http\Http;
+	OCP\AppFramework\Http;
 
 
 /**

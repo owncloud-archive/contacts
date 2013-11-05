@@ -217,6 +217,7 @@
 "Edit current photo" => "Modifica la foto corrente",
 "Upload new photo" => "Invia una nuova foto",
 "Select photo from ownCloud" => "Seleziona la foto da ownCloud",
+"Name" => "Nome",
 "First name" => "Nome",
 "Additional names" => "Nomi aggiuntivi",
 "Last name" => "Cognome",
@@ -272,6 +273,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Rubriche",
 "New Address Book" => "Nuova rubrica",
-"Name" => "Nome",
 "Description" => "Descrizione"
 );

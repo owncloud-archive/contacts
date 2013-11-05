@@ -39,6 +39,7 @@
 "Edit current photo" => "მიმდინარე სურათის რედაქტირება",
 "Upload new photo" => "ახალი სურათის ატვირთვა",
 "Select photo from ownCloud" => "აირჩიე სურათი ownCloud –იდან",
+"Select groups" => "ჯგუფების არჩევა",
 "Nickname" => "ნიკნეიმი",
 "Title" => "სახელი",
 "Organization" => "ორგანიზაცია",

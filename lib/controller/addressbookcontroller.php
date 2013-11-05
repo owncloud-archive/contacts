@@ -13,7 +13,7 @@ use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Utils\JSONSerializer,
 	OCA\Contacts\Controller,
-	OCP\AppFramework\Http\Http;
+	OCP\AppFramework\Http;
 
 /**
  * Controller class For Address Books

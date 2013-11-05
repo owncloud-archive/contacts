@@ -127,6 +127,7 @@
 "First name" => "Izena",
 "Additional names" => "Tarteko izenak",
 "Last name" => "Abizena",
+"Select groups" => "Hautatu taldeak",
 "Nickname" => "Ezizena",
 "Enter nickname" => "Sartu ezizena",
 "Title" => "Izenburua",

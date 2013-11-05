@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-17 12:31-0400\n"
-"PO-Revision-Date: 2013-10-17 16:31+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"PO-Revision-Date: 2013-10-28 10:42+0000\n"
+"Last-Translator: Mariano <mstreet@kde.org.ar>\n"
 "Language-Team: Esperanto (http://www.transifex.com/projects/p/owncloud/language/eo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Language: eo\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:28 lib/app.php:101
+#: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
 msgstr "Kontaktoj"
 
@@ -70,7 +70,7 @@ msgstr ""
 
 #: js/app.js:226
 msgid "Error."
-msgstr ""
+msgstr "Eraro."
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
@@ -86,7 +86,7 @@ msgstr "Aldoni grupon..."
 
 #: js/app.js:468
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "Nevalidas URL-adreso: “{url}”"
 
 #: js/app.js:479
 msgid "There was an error opening a mail composer."
@@ -94,25 +94,25 @@ msgstr "Eraro okazis dum malfermo de retpoŝtomesaĝoredaktilo."
 
 #: js/app.js:484
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "Nevalidas retpoŝtadreso: “{url}”"
 
 #: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "Kunfando malsukcesis. Ne troviĝas kontakto: {id}"
 
 #: js/app.js:575
 msgid "Merge failed."
-msgstr ""
+msgstr "Kunfando malsukcesis."
 
 #: js/app.js:582
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "Kunfando malsukcesis. Eraris konservo de kontakto."
 
 #: js/app.js:602
 msgid "Select photo"
 msgstr "Elekti foton"
 
-#: js/app.js:678 js/app.js:1589
+#: js/app.js:678 js/app.js:1590
 msgid "Network or server error. Please inform administrator."
 msgstr "Reta aŭ servila eraro. Bonvolu sciigi al la administranto."
 
@@ -130,7 +130,7 @@ msgstr ""
 
 #: js/app.js:1234 js/app.js:1238 templates/contacts.php:182
 msgid "Merge contacts"
-msgstr ""
+msgstr "Kunfandi kontaktojn"
 
 #: js/app.js:1260 js/app.js:1313 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
@@ -147,7 +147,7 @@ msgstr "Akcepti"
 
 #: js/app.js:1391
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "Ne troviĝis kontakto: {id}"
 
 #: js/app.js:1437
 msgid "No files selected for upload."
@@ -159,11 +159,11 @@ msgid ""
 "on this server."
 msgstr "La dosiero, kiun vi provas alŝuti, transpasas la maksimuman grandon por dosieraj alŝutoj en ĉi tiu servilo."
 
-#: js/app.js:1547
+#: js/app.js:1548
 msgid "Edit profile picture"
 msgstr "Redakti profilbildon"
 
-#: js/app.js:1551
+#: js/app.js:1552
 msgid "Crop photo"
 msgstr ""
 
@@ -177,25 +177,25 @@ msgstr ""
 
 #: js/contacts.js:1055
 msgid "# groups"
-msgstr ""
+msgstr "# grupoj"
 
 #: js/contacts.js:1127
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2164
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Iuj kontaktoj estas markitaj por forigo, sed ankoraŭ ne forigitaj. Bonvolu atendi ĝis ili foriĝos."
 
-#: js/contacts.js:2175
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klaku por malfari forigon de {num} kontaktoj"
 
-#: js/contacts.js:2184
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "Nuliĝis forigo de {num} kontaktoj"
 
 #: js/groups.js:53
 msgid "Add"
@@ -223,7 +223,7 @@ msgstr "La kontaktoj ne estas en ĉi tiu grupo."
 
 #: js/groups.js:566
 msgid "Failed renaming group: {error}"
-msgstr ""
+msgstr "Malsukcesis alinomigo de grupo: {error}"
 
 #: js/groups.js:597
 msgid "A group named {group} already exists"
@@ -237,7 +237,7 @@ msgstr ""
 
 #: js/groups.js:645
 msgid "Failed adding group: {error}"
-msgstr ""
+msgstr "Malsukcesis aldono de grupo: {error}"
 
 #: js/groups.js:657
 msgid "All"
@@ -253,11 +253,11 @@ msgstr "Kunhavigita de {owner}"
 
 #: js/groups.js:751
 msgid "Not grouped"
-msgstr ""
+msgstr "Ne grupigita"
 
 #: js/groups.js:777
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "Malsukcesis ŝargo de grupoj: {error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
@@ -265,7 +265,7 @@ msgstr "Bonvolu elekti adresaron"
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "Enporti en..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
@@ -273,7 +273,7 @@ msgstr ""
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "Enporti kontaktojn"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -328,13 +328,13 @@ msgstr "Pli..."
 msgid "Less..."
 msgstr "Malpli..."
 
-#: js/storage.js:29
+#: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr ""
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "Malsukcesis ŝargo de foto: {error}"
 
 #: lib/addressbook.php:152
 msgid "You do not have permissions to see this contacts"
@@ -342,7 +342,7 @@ msgstr ""
 
 #: lib/addressbook.php:159
 msgid "Contact not found"
-msgstr ""
+msgstr "La kontakto ne troviĝis"
 
 #: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
@@ -380,9 +380,9 @@ msgstr ""
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
-#: lib/app.php:142
+#: lib/app.php:144
 msgid "Address book not found"
-msgstr ""
+msgstr "La adresaro ne troviĝis"
 
 #: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
@@ -402,7 +402,7 @@ msgstr ""
 
 #: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
-msgstr ""
+msgstr "Eco ne troviĝis"
 
 #: lib/contact.php:467
 msgid " Missing IM parameter for: "
@@ -418,11 +418,11 @@ msgstr "Naskiĝtago de {name}"
 
 #: lib/controller/addressbookcontroller.php:110
 msgid "Error creating address book"
-msgstr ""
+msgstr "Eraris kreo de adresaro"
 
 #: lib/controller/addressbookcontroller.php:127
 msgid "Error updating address book"
-msgstr ""
+msgstr "Eraris alŝuto de adresaro"
 
 #: lib/controller/addressbookcontroller.php:155
 #, php-format
@@ -431,37 +431,37 @@ msgstr ""
 
 #: lib/controller/addressbookcontroller.php:161
 msgid "Error deleting address book"
-msgstr ""
+msgstr "Eraris forigo de adresaro"
 
 #: lib/controller/addressbookcontroller.php:199
 msgid "Error creating contact."
-msgstr ""
+msgstr "Eraris kreo de kontakto."
 
 #: lib/controller/addressbookcontroller.php:235
 msgid "Error deleting contact."
-msgstr ""
+msgstr "Eraris forigo de kontakto."
 
 #: lib/controller/addressbookcontroller.php:275
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "Eraris revenigo de kontakto."
 
 #: lib/controller/addressbookcontroller.php:285
-#: lib/controller/contactphotocontroller.php:327
+#: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Eraro dum konserviĝis kontakto."
 
 #: lib/controller/addressbookcontroller.php:289
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "Eraris forigo de kontakto el aliaj adresaroj."
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:271
+#: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "Ne troviĝis kontakto."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
@@ -469,7 +469,7 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
-msgstr ""
+msgstr "Eraris kunfando en kontakton."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
@@ -489,7 +489,7 @@ msgstr "Informo pri vCard estas malĝusta. Bonvolu reŝargi la paĝon."
 
 #: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
-msgstr ""
+msgstr "Eraris ĝisdatigo de kontakto"
 
 #: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
@@ -497,7 +497,7 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
-msgstr ""
+msgstr "Eraris ekhavo de uzantofoto"
 
 #: lib/controller/contactphotocontroller.php:87
 #: lib/controller/importcontroller.php:36
@@ -541,40 +541,40 @@ msgid "Couldn't load temporary image: "
 msgstr "Ne eblis ŝargi provizoran bildon: "
 
 #: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:159
+#: lib/controller/contactphotocontroller.php:162
 msgid "Couldn't save temporary image: "
 msgstr "Ne eblis konservi provizoran bildon: "
 
-#: lib/controller/contactphotocontroller.php:188
+#: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
 msgstr "Neniu vojo al foto sendiĝis."
 
-#: lib/controller/contactphotocontroller.php:195
+#: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
 msgstr "Dosiero ne ekzistas:"
 
-#: lib/controller/contactphotocontroller.php:200
 #: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
 msgstr "Eraro dum ŝargado de bildo."
 
-#: lib/controller/contactphotocontroller.php:276
+#: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "La bildo foriĝis el kaŝmemoro."
 
-#: lib/controller/contactphotocontroller.php:282
+#: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
 msgstr "Eraro dum kreiĝis provizora bildo."
 
-#: lib/controller/contactphotocontroller.php:289
+#: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
 msgstr "Eraro dum stuciĝis bildo."
 
-#: lib/controller/contactphotocontroller.php:294
+#: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
 msgstr "Eraro dum aligrandiĝis bildo"
 
-#: lib/controller/contactphotocontroller.php:312
+#: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
 msgstr "Eraro dum ekhaviĝis la propraĵon PHOTO."
 
@@ -596,7 +596,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
-msgstr ""
+msgstr "Eraris alinomigo de grupo."
 
 #: lib/controller/groupcontroller.php:175
 #: lib/controller/groupcontroller.php:223
@@ -605,7 +605,7 @@ msgstr "Grupidentigilo mankas en peto."
 
 #: lib/controller/groupcontroller.php:180
 msgid "Group name missing from request."
-msgstr ""
+msgstr "Gruponomo mankas en peto."
 
 #: lib/controller/groupcontroller.php:185
 #: lib/controller/groupcontroller.php:228
@@ -638,12 +638,12 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:162
 msgid "File name missing from request."
-msgstr ""
+msgstr "Dosieronomo mankas en peto."
 
 #: lib/controller/importcontroller.php:167
 #: lib/controller/importcontroller.php:283
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Progresklavo mankas en peto."
 
 #: lib/controller/importcontroller.php:173
 msgid "Attempt to access blacklisted file:"
@@ -651,15 +651,15 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:215
 msgid "No contacts found in: "
-msgstr ""
+msgstr "Neniu kontakto troviĝis en:"
 
 #: lib/controller/settingscontroller.php:35
 msgid "No key is given."
-msgstr ""
+msgstr "Neniu klavo doniĝis."
 
 #: lib/controller/settingscontroller.php:39
 msgid "No value is given."
-msgstr ""
+msgstr "Neniu valoro doniĝis."
 
 #: lib/controller/settingscontroller.php:50
 msgid "Could not set preference: "
@@ -685,7 +685,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
-msgstr ""
+msgstr "Interreta voko"
 
 #: lib/utils/properties.php:76
 msgid "AIM"
@@ -787,7 +787,7 @@ msgstr "Nova kontakto"
 
 #: templates/contacts.php:10
 msgid "Group name"
-msgstr ""
+msgstr "Gruponomo"
 
 #: templates/contacts.php:10
 msgid "New Group"
@@ -795,7 +795,7 @@ msgstr "Nova grupo"
 
 #: templates/contacts.php:19
 msgid "Address books"
-msgstr ""
+msgstr "Adresaroj"
 
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
@@ -804,11 +804,11 @@ msgstr ""
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
-msgstr ""
+msgstr "Aldoni adresaron"
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr ""
+msgstr "Elekti dosieron..."
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
@@ -820,11 +820,11 @@ msgstr ""
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr ""
+msgstr "Persona- FamiliaNomo"
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "Familia-, PersonaNomo"
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
@@ -903,7 +903,7 @@ msgstr "Forigi grupon"
 
 #: templates/contacts.php:175
 msgid "Rename group"
-msgstr ""
+msgstr "Alinomigi grupon"
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
@@ -947,11 +947,11 @@ msgstr "Familia nomo"
 
 #: templates/contacts.php:257
 msgid "Select groups"
-msgstr ""
+msgstr "Elekti grupojn"
 
 #: templates/contacts.php:260
 msgid "Select address book"
-msgstr ""
+msgstr "Elekti adresaron"
 
 #: templates/contacts.php:264 templates/contacts.php:328
 msgid "Nickname"
@@ -987,11 +987,11 @@ msgstr "Notoj iras tie ĉi..."
 
 #: templates/contacts.php:323
 msgid "Export as VCF"
-msgstr ""
+msgstr "Malenporti kiel VCF"
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr ""
+msgstr "Aldoni kampon..."
 
 #: templates/contacts.php:330
 msgid "Phone"
@@ -1101,7 +1101,7 @@ msgstr ""
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "Usono"
 
 #: templates/contacts.php:429
 msgid "Country"

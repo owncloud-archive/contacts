@@ -222,6 +222,7 @@
 "Birthday" => "Urodziny",
 "Notes go here..." => "Notatki kliknij tutaj...",
 "Export as VCF" => "Eksportuj jako VCF",
+"Add field..." => "Dodaj pole...",
 "Phone" => "Telefon",
 "Email" => "Email",
 "Instant Messaging" => "Komunikator",

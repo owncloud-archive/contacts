@@ -357,7 +357,7 @@ OC.Contacts = OC.Contacts || {
 		}
 
 		// This apparently get's called on some weird occasions.
-		$(window).bind('popstate', this.hashChange);
+		//$(window).bind('popstate', this.hashChange);
 		$(window).bind('hashchange', this.hashChange);
 		
 		// App specific events
@@ -972,7 +972,7 @@ OC.Contacts = OC.Contacts || {
 			}
 			if($(event.target).is('a.delete')) {
 				$(document).trigger('request.contact.delete', {
-					contactid: $(this).data('id')
+					contactId: $(this).data('id')
 				});
 				return;
 			}
@@ -1000,7 +1000,16 @@ OC.Contacts = OC.Contacts || {
 		var addContact = function() {
 			console.log('add');
 			self.$toggleAll.hide();
-			$(this).hide();
+			if(self.currentid) {
+				if(self.currentid === 'new') {
+					return;
+				} else {
+					var contact = self.contacts.findById(self.currentid);
+					if(contact) {
+						contact.close();
+					}
+				}
+			}
 			self.currentid = 'new';
 			// Properties that the contact doesn't know
 			console.log('addContact, groupid', self.currentgroup);
@@ -1012,7 +1021,7 @@ OC.Contacts = OC.Contacts || {
 			self.$firstRun.hide();
 			self.$contactList.show();
 			self.tmpcontact = self.contacts.addContact(groupprops);
-			self.tmpcontact.prependTo(self.$contactList.find('tbody')).show();
+			self.tmpcontact.prependTo(self.$contactList.find('tbody')).show().find('.fullname').focus();
 			self.$rightContent.scrollTop(0);
 			self.hideActions();
 		};
@@ -1344,22 +1353,21 @@ OC.Contacts = OC.Contacts || {
 			this.$contactList.show();
 		} else {
 			var contact = this.contacts.findById(id);
-			if(contact && contact.close()) {
-				this.jumpToContact(id);
+			if(contact) {
+				contact.close();
 			}
 		}
-		this.$contactList.removeClass('dim');
 		delete this.currentid;
 		this.hideActions();
 		this.$groups.find('optgroup,option:not([value="-1"])').remove();
 		if(this.contacts.length === 0) {
 			$(document).trigger('status.nomorecontacts');
 		}
-		//$('body').unbind('click', this.bodyListener);
 		window.location.hash = '';
 		$(window).bind('hashchange', this.hashChange);
 	},
 	openContact: function(id) {
+		var self = this;
 		if(typeof id == 'undefined' || id == 'undefined') {
 			console.warn('id is undefined!');
 			console.trace();
@@ -1367,16 +1375,12 @@ OC.Contacts = OC.Contacts || {
 		this.hideActions();
 		console.log('Contacts.openContact', id, typeof id);
 		if(this.currentid && this.currentid !== id) {
-			this.closeContact(this.currentid);
+			this.contacts.closeContact(this.currentid);
 		}
 		$(window).unbind('hashchange', this.hashChange);
 		this.currentid = id;
-		console.log('Contacts.openContact, Favorite', this.currentid, this.groups.isFavorite(this.currentid), this.groups);
 		this.setAllChecked(false);
-		//this.$contactList.hide();
-		//this.$contactList.addClass('dim');
 		console.assert(typeof this.currentid === 'string', 'Current ID not string');
-		this.jumpToContact(this.currentid);
 		// Properties that the contact doesn't know
 		var groupprops = {
 			favorite: this.groups.isFavorite(this.currentid),
@@ -1386,7 +1390,6 @@ OC.Contacts = OC.Contacts || {
 		var contact = this.contacts.findById(this.currentid);
 		if(!contact) {
 			console.warn('Error opening', this.currentid);
-			this.$contactList.removeClass('dim');
 			$(document).trigger('status.contacts.error', {
 				message: t('contacts', 'Could not find contact: {id}', {id:this.currentid})
 			});
@@ -1396,35 +1399,12 @@ OC.Contacts = OC.Contacts || {
 		var $contactelem = contact.renderContact(groupprops);
 		var $listElement = contact.getListItemElement();
 		console.log('selected element', $listElement);
-		var self = this;
-		var adjustElems = function() {
-			var $contact = $contactelem.find('#contact');
-			var maxheight = document.documentElement.clientHeight - 200; // - ($contactelem.offset().top+70);
-			var $footer = $contactelem.find('footer');
-			var minWidth = 0;
-			$.each($footer.children(), function(idx, child) {
-				minWidth += $(child).outerWidth();
-			});
-			$contact.css({'min-width' : Math.round(minWidth), 'max-height': maxheight, 'overflow-y': 'auto', 'overflow-x': 'hidden'});
-		};
-		//$(window).resize(adjustElems);
-		//this.$rightContent.prepend($contactelem);
-		$contactelem.insertAfter($listElement).show();
+		window.location.hash = this.currentid;
+		self.jumpToContact(self.currentid);
+		$contactelem.insertAfter($listElement).show().find('.fullname').focus();
 		$listElement.hide();
-		//adjustElems();
-		/*this.bodyListener = function(e) {
-			if(!self.currentid) {
-				return;
-			}
-			var $contactelem = self.contacts.findById(self.currentid).$fullelem;
-			if($contactelem.find($(e.target)).length === 0) {
-				self.closeContact(self.currentid);
-			}
-		};*/
-		window.location.hash = this.currentid.toString();
 		setTimeout(function() {
-			//$('body').bind('click', self.bodyListener);
-			$(window).bind('hashchange', this.hashChange);
+			$(window).bind('hashchange', self.hashChange);
 		}, 500);
 	},
 	update: function() {

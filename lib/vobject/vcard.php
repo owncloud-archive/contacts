@@ -35,6 +35,9 @@ use Sabre\VObject;
 */
 class VCard extends VObject\Component\VCard {
 
+	const THUMBNAIL_PREFIX = 'contact-thumbnail-';
+	const THUMBNAIL_SIZE = 28;
+
 	/**
 	* The following constants are used by the validate() method.
 	*/
@@ -303,6 +306,49 @@ class VCard extends VObject\Component\VCard {
 			sort($this->groups);
 		}
 		return $this->groups;
+	}
+
+	// TODO: Cleanup these parameters and move method to Utils class
+	public function cacheThumbnail(\OCP\Image $image = null, $remove = false, $update = false) {
+		$key = self::THUMBNAIL_PREFIX . $this->combinedKey();
+		//\OC_Cache::remove($key);
+		if(\OC_Cache::hasKey($key) && $image === null && $remove === false && $update === false) {
+			return \OC_Cache::get($key);
+		}
+		if($remove) {
+			\OC_Cache::remove($key);
+			if(!$update) {
+				return false;
+			}
+		}
+		if(is_null($image)) {
+			$this->retrieve();
+			$image = new \OCP\Image();
+			if(!isset($this->PHOTO) && !isset($this->LOGO)) {
+				return false;
+			}
+			if(!$image->loadFromBase64((string)$this->PHOTO)) {
+				if(!$image->loadFromBase64((string)$this->LOGO)) {
+					return false;
+				}
+			}
+		}
+		if(!$image->centerCrop()) {
+			\OCP\Util::writeLog('contacts',
+				__METHOD__ .'. Couldn\'t crop thumbnail for ID ' . $key,
+				\OCP\Util::ERROR);
+			return false;
+		}
+		if(!$image->resize(self::THUMBNAIL_SIZE)) {
+			\OCP\Util::writeLog('contacts',
+				__METHOD__ . '. Couldn\'t resize thumbnail for ID ' . $key,
+				\OCP\Util::ERROR);
+			return false;
+		}
+		 // Cache as base64 for around a month
+		\OC_Cache::set($key, strval($image), 3000000);
+		\OCP\Util::writeLog('contacts', 'Caching ' . $key, \OCP\Util::DEBUG);
+		return \OC_Cache::get($key);
 	}
 
 }

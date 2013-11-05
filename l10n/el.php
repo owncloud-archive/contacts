@@ -60,6 +60,7 @@
 "Delete" => "Διαγραφή",
 "More..." => "Περισσότερα...",
 "Less..." => "Λιγότερα",
+"Failed loading photo: {error}" => "Αποτυχία φόρτωσης φωτογραφίας: {error}",
 "Contact not found" => "Δεν βρέθηκε επαφή",
 "You do not have permissions to see these contacts" => "Δεν έχετε δικαιώματα για να δείτε αυτές τις επαφές",
 "You do not have permissions add contacts to the address book" => "Δεν έχετε δικαιώματα για να προσθέσετε επαφές σε αυτό το βιβλίο διευθύνσεων.",

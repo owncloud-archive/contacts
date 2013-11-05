@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-17 12:31-0400\n"
-"PO-Revision-Date: 2013-10-17 16:31+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-10-29 04:34-0400\n"
+"PO-Revision-Date: 2013-10-28 10:42+0000\n"
+"Last-Translator: miroj <jmiroslav@softhome.net>\n"
 "Language-Team: Macedonian (http://www.transifex.com/projects/p/owncloud/language/mk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Language: mk\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;\n"
 
-#: appinfo/app.php:28 lib/app.php:101
+#: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
 msgstr "Контакти"
 
@@ -33,7 +33,7 @@ msgstr "Подигнувам..."
 
 #: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
-msgstr ""
+msgstr "Увезувам..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
@@ -73,15 +73,15 @@ msgstr "Грешка."
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr ""
+msgstr "Додади на..."
 
 #: js/app.js:321 js/app.js:333
 msgid "Remove from..."
-msgstr ""
+msgstr "Отстрани од..."
 
 #: js/app.js:338
 msgid "Add group..."
-msgstr ""
+msgstr "Додади група..."
 
 #: js/app.js:468
 msgid "Invalid URL: \"{url}\""
@@ -101,7 +101,7 @@ msgstr ""
 
 #: js/app.js:575
 msgid "Merge failed."
-msgstr ""
+msgstr "Спојувањето не беше успешно."
 
 #: js/app.js:582
 msgid "Merge failed. Error saving contact."
@@ -111,13 +111,13 @@ msgstr ""
 msgid "Select photo"
 msgstr "Одбери фотографија"
 
-#: js/app.js:678 js/app.js:1589
+#: js/app.js:678 js/app.js:1590
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
 #: js/app.js:894
 msgid "Error adding to group."
-msgstr ""
+msgstr "Грешки при додавањето во група."
 
 #: js/app.js:917
 msgid "Error removing from group."
@@ -129,7 +129,7 @@ msgstr ""
 
 #: js/app.js:1234 js/app.js:1238 templates/contacts.php:182
 msgid "Merge contacts"
-msgstr ""
+msgstr "Спои ги контактите"
 
 #: js/app.js:1260 js/app.js:1313 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
@@ -158,17 +158,17 @@ msgid ""
 "on this server."
 msgstr "Датотеката која се обидувате да ја префрлите ја надминува максималната големина дефинирана за пренос на овој сервер."
 
-#: js/app.js:1547
+#: js/app.js:1548
 msgid "Edit profile picture"
-msgstr ""
+msgstr "Уреди ја фотографијата за профилот"
 
-#: js/app.js:1551
+#: js/app.js:1552
 msgid "Crop photo"
 msgstr ""
 
 #: js/contacts.js:589
 msgid "Is this correct?"
-msgstr ""
+msgstr "Дали е ова во ред?"
 
 #: js/contacts.js:858
 msgid "Error parsing date: {date}"
@@ -182,17 +182,17 @@ msgstr ""
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2164
+#: js/contacts.js:2163
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2175
+#: js/contacts.js:2174
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2184
+#: js/contacts.js:2183
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -240,19 +240,19 @@ msgstr ""
 
 #: js/groups.js:657
 msgid "All"
-msgstr ""
+msgstr "Сите"
 
 #: js/groups.js:672 js/groups.js:675
 msgid "Favorites"
-msgstr ""
+msgstr "Омилени"
 
 #: js/groups.js:736
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "Споделени од {owner}"
 
 #: js/groups.js:751
 msgid "Not grouped"
-msgstr ""
+msgstr "Не групирани"
 
 #: js/groups.js:777
 msgid "Failed loading groups: {error}"
@@ -321,13 +321,13 @@ msgstr "Избриши"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr ""
+msgstr "Повеќе..."
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr ""
+msgstr "Помалку..."
 
-#: js/storage.js:29
+#: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr ""
 
@@ -365,7 +365,7 @@ msgstr ""
 
 #: lib/addressbook.php:290
 msgid "Unknown error"
-msgstr ""
+msgstr "Непозната грешка"
 
 #: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
@@ -379,9 +379,9 @@ msgstr ""
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
-#: lib/app.php:142
+#: lib/app.php:144
 msgid "Address book not found"
-msgstr ""
+msgstr "Адресарот не е пронајден"
 
 #: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
@@ -401,15 +401,15 @@ msgstr ""
 
 #: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
-msgstr ""
+msgstr "Вредноста не е пронајдена"
 
 #: lib/contact.php:467
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr " Недостасува IM параметар за: "
 
 #: lib/contact.php:475
 msgid "Unknown IM: "
-msgstr ""
+msgstr "Непознат IM: "
 
 #: lib/contact.php:788
 msgid "{name}'s Birthday"
@@ -417,11 +417,11 @@ msgstr "Роденден на {name}"
 
 #: lib/controller/addressbookcontroller.php:110
 msgid "Error creating address book"
-msgstr ""
+msgstr "Грешка при креирање на адресар."
 
 #: lib/controller/addressbookcontroller.php:127
 msgid "Error updating address book"
-msgstr ""
+msgstr "Грешка при осважување на адресар"
 
 #: lib/controller/addressbookcontroller.php:155
 #, php-format
@@ -430,37 +430,37 @@ msgstr ""
 
 #: lib/controller/addressbookcontroller.php:161
 msgid "Error deleting address book"
-msgstr ""
+msgstr "Грешка при бришење на адресар"
 
 #: lib/controller/addressbookcontroller.php:199
 msgid "Error creating contact."
-msgstr ""
+msgstr "Грешка при креирање на контакт."
 
 #: lib/controller/addressbookcontroller.php:235
 msgid "Error deleting contact."
-msgstr ""
+msgstr "Греш при бришење на контакт."
 
 #: lib/controller/addressbookcontroller.php:275
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "Грешка при повлекување на контакт."
 
 #: lib/controller/addressbookcontroller.php:285
-#: lib/controller/contactphotocontroller.php:327
+#: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Грешка при снимање на контактите."
 
 #: lib/controller/addressbookcontroller.php:289
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "Грешка при бришење на контакт од друг адресар."
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:271
+#: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "Не можев да го пронајдам контактот."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
@@ -468,7 +468,7 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
-msgstr ""
+msgstr "Грешка при спојување на контактите."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
@@ -540,40 +540,40 @@ msgid "Couldn't load temporary image: "
 msgstr "Не можеше да се вчита привремената фотографија:"
 
 #: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:159
+#: lib/controller/contactphotocontroller.php:162
 msgid "Couldn't save temporary image: "
 msgstr "Не можеше да се сними привремената фотографија:"
 
-#: lib/controller/contactphotocontroller.php:188
+#: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
 msgstr "Не беше поднесена патека за фотографија."
 
-#: lib/controller/contactphotocontroller.php:195
+#: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
 msgstr "Не постои датотеката:"
 
-#: lib/controller/contactphotocontroller.php:200
 #: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
 msgstr "Грешка во вчитување на слика."
 
-#: lib/controller/contactphotocontroller.php:276
+#: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:282
+#: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
 msgstr "Грешка при креирањето на привремената фотографија"
 
-#: lib/controller/contactphotocontroller.php:289
+#: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
 msgstr "Грешка при сечење на фотографијата"
 
-#: lib/controller/contactphotocontroller.php:294
+#: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
 msgstr "Грешка при скалирање на фотографијата"
 
-#: lib/controller/contactphotocontroller.php:312
+#: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
 msgstr "Грешка при утврдувањето на карактеристиките на фотографијата."
 
@@ -617,7 +617,7 @@ msgstr "Неуспеав да запишам на диск"
 
 #: lib/controller/importcontroller.php:62
 msgid "Not enough storage available"
-msgstr ""
+msgstr "Нема доволно слободен сториџ"
 
 #: lib/controller/importcontroller.php:70
 msgid "Attempt to upload blacklisted file:"
