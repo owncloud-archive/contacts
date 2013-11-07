@@ -5,14 +5,15 @@
 # Translators:
 # llaera <llaera@outlook.com>, 2013
 # Michel Weimerskirch <michel@weimerskirch.net>, 2013
+# sim0n <sim0n@trypill.org>, 2013
 # sim0n <sim0n@trypill.org>, 2011, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
-"Report-Msgid-Bugs-To: http://bugs.owncloud.org/\n"
-"POT-Creation-Date: 2013-10-29 04:34-0400\n"
-"PO-Revision-Date: 2013-10-28 10:42+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"Report-Msgid-Bugs-To: translations@owncloud.org\n"
+"POT-Creation-Date: 2013-11-06 19:39-0500\n"
+"PO-Revision-Date: 2013-11-03 21:00+0000\n"
+"Last-Translator: sim0n <sim0n@trypill.org>\n"
 "Language-Team: Luxembourgish (http://www.transifex.com/projects/p/owncloud/language/lb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +35,7 @@ msgstr "Upload..."
 
 #: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
-msgstr ""
+msgstr "Gett importéiert..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
@@ -70,7 +71,7 @@ msgstr ""
 
 #: js/app.js:226
 msgid "Error."
-msgstr ""
+msgstr "Fehler."
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
@@ -82,7 +83,7 @@ msgstr ""
 
 #: js/app.js:338
 msgid "Add group..."
-msgstr ""
+msgstr "Grupp bäisetzen..."
 
 #: js/app.js:468
 msgid "Invalid URL: \"{url}\""
@@ -110,9 +111,9 @@ msgstr ""
 
 #: js/app.js:602
 msgid "Select photo"
-msgstr ""
+msgstr "Foto auswielen"
 
-#: js/app.js:678 js/app.js:1590
+#: js/app.js:678 js/app.js:1570
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
@@ -124,46 +125,46 @@ msgstr ""
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1095
+#: js/app.js:1104
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1234 js/app.js:1238 templates/contacts.php:182
+#: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1260 js/app.js:1313 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Ofbriechen"
 
-#: js/app.js:1287 templates/contacts.php:163
+#: js/app.js:1296 templates/contacts.php:163
 msgid "Add group"
-msgstr ""
+msgstr "Grupp bäisetzen"
 
-#: js/app.js:1291
+#: js/app.js:1300
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1391
+#: js/app.js:1394
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1437
+#: js/app.js:1417
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1447
+#: js/app.js:1427
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1548
+#: js/app.js:1528
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1552
+#: js/app.js:1532
 msgid "Crop photo"
 msgstr ""
 
@@ -171,29 +172,29 @@ msgstr ""
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:858
+#: js/contacts.js:856
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1055
+#: js/contacts.js:1053
 msgid "# groups"
-msgstr ""
+msgstr "# Gruppen"
 
-#: js/contacts.js:1127
+#: js/contacts.js:1125
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2163
+#: js/contacts.js:2162
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2174
+#: js/contacts.js:2173
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2183
+#: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -241,11 +242,11 @@ msgstr ""
 
 #: js/groups.js:657
 msgid "All"
-msgstr ""
+msgstr "All"
 
 #: js/groups.js:672 js/groups.js:675
 msgid "Favorites"
-msgstr ""
+msgstr "Favoriten"
 
 #: js/groups.js:736
 msgid "Shared by {owner}"
@@ -322,11 +323,11 @@ msgstr "Läschen"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr ""
+msgstr "Méi..."
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr ""
+msgstr "Manner..."
 
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
@@ -356,7 +357,7 @@ msgstr ""
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:245
 msgid "You do not have permissions to delete this contact"
 msgstr ""
 
@@ -366,7 +367,7 @@ msgstr ""
 
 #: lib/addressbook.php:290
 msgid "Unknown error"
-msgstr ""
+msgstr "Et ass en onbekannte Fehler opgetrueden"
 
 #: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
@@ -384,35 +385,35 @@ msgstr ""
 msgid "Address book not found"
 msgstr ""
 
-#: lib/contact.php:114 lib/contact.php:161
+#: lib/contact.php:111 lib/contact.php:158
 msgid "You do not have permissions to see this contact"
 msgstr ""
 
-#: lib/contact.php:263
+#: lib/contact.php:260
 msgid "You do not have permissions to update this contact"
 msgstr ""
 
-#: lib/contact.php:274
+#: lib/contact.php:271
 msgid "The backend for this contact does not support updating it"
 msgstr ""
 
-#: lib/contact.php:292
+#: lib/contact.php:289
 msgid "This backend not support adding contacts"
 msgstr ""
 
-#: lib/contact.php:402 lib/contact.php:419
+#: lib/contact.php:399 lib/contact.php:416
 msgid "Property not found"
 msgstr ""
 
-#: lib/contact.php:467
+#: lib/contact.php:464
 msgid " Missing IM parameter for: "
 msgstr ""
 
-#: lib/contact.php:475
+#: lib/contact.php:472
 msgid "Unknown IM: "
 msgstr ""
 
-#: lib/contact.php:788
+#: lib/contact.php:742
 msgid "{name}'s Birthday"
 msgstr "{name} säi Gebuertsdag"
 
@@ -448,7 +449,7 @@ msgstr ""
 #: lib/controller/addressbookcontroller.php:285
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
-msgstr ""
+msgstr "Feeler beim Späichere vum Kontakt."
 
 #: lib/controller/addressbookcontroller.php:289
 msgid "Error removing contact from other address book."
@@ -547,7 +548,7 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
-msgstr ""
+msgstr "Et gouf kee Foto-Pfad iwwerdroen."
 
 #: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
@@ -568,15 +569,15 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
-msgstr ""
+msgstr "Feeler beim Schneide vum Bild"
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
-msgstr ""
+msgstr "Feeler beim Redimensionnéiere vum Bild"
 
 #: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "Feeler beim Luede vun der PHOTO-Eegeschaft."
 
 #: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
 msgid "No group name given."
@@ -681,7 +682,7 @@ msgstr ""
 
 #: lib/utils/properties.php:66
 msgid "Jabber"
-msgstr ""
+msgstr "Jabber"
 
 #: lib/utils/properties.php:71
 msgid "Internet call"
@@ -689,47 +690,47 @@ msgstr ""
 
 #: lib/utils/properties.php:76
 msgid "AIM"
-msgstr ""
+msgstr "AIM"
 
 #: lib/utils/properties.php:81
 msgid "MSN"
-msgstr ""
+msgstr "MSN"
 
 #: lib/utils/properties.php:86
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: lib/utils/properties.php:91
 msgid "GoogleTalk"
-msgstr ""
+msgstr "GoogleTalk"
 
 #: lib/utils/properties.php:96
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: lib/utils/properties.php:101
 msgid "XMPP"
-msgstr ""
+msgstr "XMPP"
 
 #: lib/utils/properties.php:106
 msgid "ICQ"
-msgstr ""
+msgstr "ICQ"
 
 #: lib/utils/properties.php:111
 msgid "Yahoo"
-msgstr ""
+msgstr "Yahoo"
 
 #: lib/utils/properties.php:116
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: lib/utils/properties.php:121
 msgid "QQ"
-msgstr ""
+msgstr "QQ"
 
 #: lib/utils/properties.php:126
 msgid "GaduGadu"
-msgstr ""
+msgstr "GaduGadu"
 
 #: lib/utils/properties.php:153 lib/utils/properties.php:161
 #: lib/utils/properties.php:172 lib/utils/properties.php:189
@@ -775,23 +776,23 @@ msgstr "Internet"
 
 #: lib/utils/properties.php:187
 msgid "Friends"
-msgstr ""
+msgstr "Frënn"
 
 #: lib/utils/properties.php:188
 msgid "Family"
-msgstr ""
+msgstr "Famill"
 
 #: templates/contacts.php:6
 msgid "New Contact"
-msgstr ""
+msgstr "Neie Kontakt"
 
 #: templates/contacts.php:10
 msgid "Group name"
-msgstr ""
+msgstr "Gruppe Numm"
 
 #: templates/contacts.php:10
 msgid "New Group"
-msgstr ""
+msgstr "Nei Grupp"
 
 #: templates/contacts.php:19
 msgid "Address books"
@@ -876,7 +877,7 @@ msgstr ""
 
 #: templates/contacts.php:114
 msgid "Add new contact"
-msgstr ""
+msgstr "Neie Kontakt bäisetzen"
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
@@ -895,15 +896,15 @@ msgstr ""
 
 #: templates/contacts.php:127
 msgid "Add contact"
-msgstr ""
+msgstr "Kontakt bäisetzen"
 
 #: templates/contacts.php:174
 msgid "Delete group"
-msgstr ""
+msgstr "D'Grupp läaschen"
 
 #: templates/contacts.php:175
 msgid "Rename group"
-msgstr ""
+msgstr "D'Grupp em-benennen"
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
@@ -933,9 +934,13 @@ msgstr ""
 msgid "Select photo from ownCloud"
 msgstr ""
 
+#: templates/contacts.php:233 templates/settings.php:59
+msgid "Name"
+msgstr "Numm"
+
 #: templates/contacts.php:239 templates/contacts.php:240
 msgid "First name"
-msgstr ""
+msgstr "Virnumm"
 
 #: templates/contacts.php:244 templates/contacts.php:245
 msgid "Additional names"
@@ -943,7 +948,7 @@ msgstr "Weider Nimm"
 
 #: templates/contacts.php:249 templates/contacts.php:250
 msgid "Last name"
-msgstr ""
+msgstr "Famillje Numm"
 
 #: templates/contacts.php:257
 msgid "Select groups"
@@ -1003,7 +1008,7 @@ msgstr "Email"
 
 #: templates/contacts.php:332
 msgid "Instant Messaging"
-msgstr ""
+msgstr "Instant Messaging"
 
 #: templates/contacts.php:333
 msgid "Address"
@@ -1015,7 +1020,7 @@ msgstr "Note"
 
 #: templates/contacts.php:335
 msgid "Web site"
-msgstr ""
+msgstr "Web site"
 
 #: templates/contacts.php:337
 msgid "Delete contact"
@@ -1069,7 +1074,7 @@ msgstr ""
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "1600 Pennsylvania Avenue, NW"
 
 #: templates/contacts.php:411
 msgid "Street address"
@@ -1077,7 +1082,7 @@ msgstr ""
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "20500"
 
 #: templates/contacts.php:416
 msgid "Postal code"
@@ -1085,7 +1090,7 @@ msgstr ""
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "Washington, DC"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1093,7 +1098,7 @@ msgstr "Staat"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "District of Columbia"
 
 #: templates/contacts.php:424
 msgid "State or province"
@@ -1101,7 +1106,7 @@ msgstr ""
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "USA"
 
 #: templates/contacts.php:429
 msgid "Country"
@@ -1129,7 +1134,7 @@ msgstr "Exporteieren"
 
 #: templates/contacts.php:466
 msgid "CardDAV link"
-msgstr ""
+msgstr "CardDav Link"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
@@ -1154,10 +1159,6 @@ msgstr "Adressbicher "
 #: templates/settings.php:58
 msgid "New Address Book"
 msgstr "Neit Adressbuch"
-
-#: templates/settings.php:59
-msgid "Name"
-msgstr "Numm"
 
 #: templates/settings.php:60
 msgid "Description"
