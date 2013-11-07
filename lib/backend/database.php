@@ -554,7 +554,7 @@ class Database extends AbstractBackend {
 
 		$this->touchAddressBook($addressbookid);
 		\OCP\Util::emitHook('OCA\Contacts', 'post_createContact',
-			array('id' => $newid, 'parent' => $addressbookid, 'contact' => $contact)
+			array('id' => $newid, 'parent' => $addressbookid, 'backend' => $this->name, 'contact' => $contact)
 		);
 		return (string)$newid;
 	}
@@ -564,7 +564,7 @@ class Database extends AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param mixed $id Contact ID
-	 * @param mixed $contact
+	 * @param VCard|string $contact
 	 * @param array $options - Optional (backend specific options)
 	 * @see getContact
 	 * @return bool
@@ -639,7 +639,13 @@ class Database extends AbstractBackend {
 		$this->touchAddressBook($addressbookid);
 		if(!$isBatch) {
 			\OCP\Util::emitHook('OCA\Contacts', 'post_updateContact',
-				array('id' => $id, 'parent' => $addressbookid, 'contact' => $contact, 'carddav' => $isCardDAV)
+				array(
+					'backend' => $this->name,
+					'addressBookId' => $addressbookid,
+					'contactId' => $id,
+					'contact' => $contact,
+					'carddav' => $isCardDAV
+				)
 			);
 		}
 		return true;

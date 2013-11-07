@@ -24,7 +24,8 @@
 namespace OCA\Contacts\Utils;
 
 use OCA\Contacts\VObject;
-use OCA\Contacts\Contact;
+use OCA\Contacts\Contact,
+	OCA\Contacts\Utils\Properties;
 
 /**
  * This class serializes properties, components an
@@ -90,7 +91,13 @@ class JSONSerializer {
 		$details = array();
 
 		if(isset($contact->PHOTO) || isset($contact->LOGO)) {
-			$details['thumbnail'] = $contact->cacheThumbnail();
+			$details['thumbnail'] = Properties::cacheThumbnail(
+				$contact->getBackend()->name,
+				$contact->getParent()->getId(),
+				$contact->getId(),
+				null,
+				$contact
+			);
 		}
 
 		foreach($contact->children as $property) {
