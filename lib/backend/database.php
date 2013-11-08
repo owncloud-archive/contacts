@@ -324,7 +324,7 @@ class Database extends AbstractBackend {
 	 * @param integer $id
 	 * @return boolean
 	 */
-	public function touchAddressBook($id) {
+	public function setModifiedAddressBook($id) {
 		$query = 'UPDATE `' . $this->addressBooksTableName
 			. '` SET `ctag` = ? + 1 WHERE `id` = ?';
 		if(!isset(self::$preparedQueries['touchaddressbook'])) {
@@ -552,9 +552,9 @@ class Database extends AbstractBackend {
 		}
 		$newid = \OCP\DB::insertid($this->cardsTableName);
 
-		$this->touchAddressBook($addressbookid);
+		$this->setModifiedAddressBook($addressbookid);
 		\OCP\Util::emitHook('OCA\Contacts', 'post_createContact',
-			array('id' => $newid, 'parent' => $addressbookid, 'contact' => $contact)
+			array('id' => $newid, 'parent' => $addressbookid, 'backend' => $this->name, 'contact' => $contact)
 		);
 		return (string)$newid;
 	}
@@ -564,7 +564,7 @@ class Database extends AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param mixed $id Contact ID
-	 * @param mixed $contact
+	 * @param VCard|string $contact
 	 * @param array $options - Optional (backend specific options)
 	 * @see getContact
 	 * @return bool
@@ -636,10 +636,16 @@ class Database extends AbstractBackend {
 			return false;
 		}
 
-		$this->touchAddressBook($addressbookid);
+		$this->setModifiedAddressBook($addressbookid);
 		if(!$isBatch) {
 			\OCP\Util::emitHook('OCA\Contacts', 'post_updateContact',
-				array('id' => $id, 'parent' => $addressbookid, 'contact' => $contact, 'carddav' => $isCardDAV)
+				array(
+					'backend' => $this->name,
+					'addressBookId' => $addressbookid,
+					'contactId' => $id,
+					'contact' => $contact,
+					'carddav' => $isCardDAV
+				)
 			);
 		}
 		return true;
@@ -708,7 +714,7 @@ class Database extends AbstractBackend {
 				. $id, \OCP\Util::DEBUG);
 			return false;
 		}
-		$this->touchAddressBook($addressbookid);
+		$this->setModifiedAddressBook($addressbookid);
 		return true;
 	}
 

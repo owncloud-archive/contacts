@@ -22,7 +22,8 @@
 
 namespace OCA\Contacts;
 
-use Sabre\VObject\Property;
+use Sabre\VObject\Property,
+	OCA\Contacts\Utils\Properties;
 
 /**
  * Subclass this class or implement IPIMObject interface for PIM objects
@@ -705,7 +706,14 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 		parent::__unset($key);
 		if($key === 'PHOTO') {
-			$this->cacheThumbnail(null, true);
+			Properties::cacheThumbnail(
+				$this->getBackend()->name,
+				$this->getParent()->getId(),
+				$this->getId(),
+				null,
+				null,
+				array('remove' => true)
+			);
 		}
 		$this->setSaved(false);
 	}
@@ -765,4 +773,5 @@ class Contact extends VObject\VCard implements IPIMObject {
 			return $vcal;
 		}
 	}
+
 }
