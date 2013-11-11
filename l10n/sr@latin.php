@@ -24,6 +24,7 @@
 "Video" => "Video",
 "Pager" => "Pejdžer",
 "Groups" => "Grupe",
+"Name" => "Ime",
 "Title" => "Naslov",
 "Organization" => "Organizacija",
 "Birthday" => "Rođendan",
@@ -34,6 +35,5 @@
 "Country" => "Zemlja",
 "Active" => "Aktivan",
 "Share" => "Podeli",
-"Name" => "Ime",
 "Description" => "Opis"
 );

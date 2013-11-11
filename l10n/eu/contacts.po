@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-06 19:39-0500\n"
-"PO-Revision-Date: 2013-11-05 11:00+0000\n"
+"POT-Creation-Date: 2013-11-11 02:53-0500\n"
+"PO-Revision-Date: 2013-11-09 07:00+0000\n"
 "Last-Translator: Debatik mundura!\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -358,7 +358,7 @@ msgstr ""
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:245
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
 msgstr ""
 
@@ -386,35 +386,35 @@ msgstr ""
 msgid "Address book not found"
 msgstr ""
 
-#: lib/contact.php:111 lib/contact.php:158
+#: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
 msgstr ""
 
-#: lib/contact.php:260
+#: lib/contact.php:261
 msgid "You do not have permissions to update this contact"
 msgstr ""
 
-#: lib/contact.php:271
+#: lib/contact.php:272
 msgid "The backend for this contact does not support updating it"
 msgstr ""
 
-#: lib/contact.php:289
+#: lib/contact.php:290
 msgid "This backend not support adding contacts"
 msgstr ""
 
-#: lib/contact.php:399 lib/contact.php:416
+#: lib/contact.php:400 lib/contact.php:417
 msgid "Property not found"
 msgstr ""
 
-#: lib/contact.php:464
+#: lib/contact.php:465
 msgid " Missing IM parameter for: "
 msgstr ""
 
-#: lib/contact.php:472
+#: lib/contact.php:473
 msgid "Unknown IM: "
 msgstr "BM ezezaguna:"
 
-#: lib/contact.php:742
+#: lib/contact.php:750
 msgid "{name}'s Birthday"
 msgstr "{name}ren jaioteguna"
 
@@ -671,115 +671,115 @@ msgstr "Ezin izan da lehentasuna ezarri:"
 msgid "Contact"
 msgstr "Kontaktua"
 
-#: lib/utils/jsonserializer.php:104 lib/utils/properties.php:155
-#: lib/utils/properties.php:168 lib/utils/properties.php:175
-#: lib/utils/properties.php:190
+#: lib/utils/jsonserializer.php:111 lib/utils/properties.php:160
+#: lib/utils/properties.php:173 lib/utils/properties.php:180
+#: lib/utils/properties.php:195
 msgid "Other"
 msgstr "Bestelakoa"
 
-#: lib/utils/jsonserializer.php:107
+#: lib/utils/jsonserializer.php:114
 msgid "HomePage"
 msgstr "WebOrria"
 
-#: lib/utils/properties.php:66
+#: lib/utils/properties.php:71
 msgid "Jabber"
 msgstr "Jabber"
 
-#: lib/utils/properties.php:71
+#: lib/utils/properties.php:76
 msgid "Internet call"
 msgstr ""
 
-#: lib/utils/properties.php:76
+#: lib/utils/properties.php:81
 msgid "AIM"
 msgstr "AIM"
 
-#: lib/utils/properties.php:81
+#: lib/utils/properties.php:86
 msgid "MSN"
 msgstr "MSN"
 
-#: lib/utils/properties.php:86
+#: lib/utils/properties.php:91
 msgid "Twitter"
 msgstr "Twitter"
 
-#: lib/utils/properties.php:91
+#: lib/utils/properties.php:96
 msgid "GoogleTalk"
 msgstr "GoogleTalk"
 
-#: lib/utils/properties.php:96
+#: lib/utils/properties.php:101
 msgid "Facebook"
 msgstr "Facebook"
 
-#: lib/utils/properties.php:101
+#: lib/utils/properties.php:106
 msgid "XMPP"
 msgstr "XMPP"
 
-#: lib/utils/properties.php:106
+#: lib/utils/properties.php:111
 msgid "ICQ"
 msgstr "ICQ"
 
-#: lib/utils/properties.php:111
+#: lib/utils/properties.php:116
 msgid "Yahoo"
 msgstr "Yahoo"
 
-#: lib/utils/properties.php:116
+#: lib/utils/properties.php:121
 msgid "Skype"
 msgstr "Skype"
 
-#: lib/utils/properties.php:121
+#: lib/utils/properties.php:126
 msgid "QQ"
 msgstr "QQ"
 
-#: lib/utils/properties.php:126
+#: lib/utils/properties.php:131
 msgid "GaduGadu"
 msgstr "GaduGadu"
 
-#: lib/utils/properties.php:153 lib/utils/properties.php:161
-#: lib/utils/properties.php:172 lib/utils/properties.php:189
+#: lib/utils/properties.php:158 lib/utils/properties.php:166
+#: lib/utils/properties.php:177 lib/utils/properties.php:194
 msgid "Work"
 msgstr "Lana"
 
-#: lib/utils/properties.php:154 lib/utils/properties.php:159
-#: lib/utils/properties.php:173
+#: lib/utils/properties.php:159 lib/utils/properties.php:164
+#: lib/utils/properties.php:178
 msgid "Home"
 msgstr "Etxea"
 
-#: lib/utils/properties.php:160
+#: lib/utils/properties.php:165
 msgid "Mobile"
 msgstr "Mugikorra"
 
-#: lib/utils/properties.php:162
+#: lib/utils/properties.php:167
 msgid "Text"
 msgstr "Testua"
 
-#: lib/utils/properties.php:163
+#: lib/utils/properties.php:168
 msgid "Voice"
 msgstr "Ahotsa"
 
-#: lib/utils/properties.php:164
+#: lib/utils/properties.php:169
 msgid "Message"
 msgstr "Mezua"
 
-#: lib/utils/properties.php:165
+#: lib/utils/properties.php:170
 msgid "Fax"
 msgstr "Fax-a"
 
-#: lib/utils/properties.php:166
+#: lib/utils/properties.php:171
 msgid "Video"
 msgstr "Bideoa"
 
-#: lib/utils/properties.php:167
+#: lib/utils/properties.php:172
 msgid "Pager"
 msgstr "Bilagailua"
 
-#: lib/utils/properties.php:174
+#: lib/utils/properties.php:179
 msgid "Internet"
 msgstr "Internet"
 
-#: lib/utils/properties.php:187
+#: lib/utils/properties.php:192
 msgid "Friends"
 msgstr "Lagunak"
 
-#: lib/utils/properties.php:188
+#: lib/utils/properties.php:193
 msgid "Family"
 msgstr "Familia"
 

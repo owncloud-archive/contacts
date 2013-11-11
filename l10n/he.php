@@ -50,6 +50,7 @@
 "Edit current photo" => "ערוך תמונה נוכחית",
 "Upload new photo" => "העלה תמונה חדשה",
 "Select photo from ownCloud" => "בחר תמונה מ ownCloud",
+"Name" => "שם",
 "Additional names" => "שמות נוספים",
 "Nickname" => "כינוי",
 "Enter nickname" => "הכנס כינוי",
@@ -79,6 +80,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "פנקסי כתובות",
 "New Address Book" => "פנקס כתובות חדש",
-"Name" => "שם",
 "Description" => "תיאור"
 );

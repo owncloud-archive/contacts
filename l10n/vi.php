@@ -123,6 +123,7 @@
 "Edit current photo" => "Sửa hình ảnh hiện tại",
 "Upload new photo" => "Tải hình ảnh mới",
 "Select photo from ownCloud" => "Chọn hình đã tải lên Kcloud",
+"Name" => "Tên",
 "First name" => "Tên",
 "Additional names" => "Tên bổ sung",
 "Last name" => "Họ",
@@ -166,6 +167,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Sổ địa chỉ",
 "New Address Book" => "Sổ địa chỉ mới",
-"Name" => "Tên",
 "Description" => "Mô tả"
 );

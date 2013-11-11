@@ -23,6 +23,7 @@
 "Work" => "Gwaith",
 "Text" => "Testun",
 "Groups" => "Grwpiau",
+"Name" => "Enw",
 "Title" => "Teitl",
 "Birthday" => "Penblwydd",
 "Email" => "E-bost",
@@ -33,6 +34,5 @@
 "more info" => "mwy o wybodaeth",
 "Primary address (Kontact et al)" => "Prif gyfeiriad (Kontact et al)",
 "iOS/OS X" => "iOS/OS X",
-"Name" => "Enw",
 "Description" => "Disgrifiad"
 );

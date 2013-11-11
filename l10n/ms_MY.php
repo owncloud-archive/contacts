@@ -57,6 +57,7 @@
 "Edit current photo" => "Ubah foto semasa",
 "Upload new photo" => "Muatnaik foto baru",
 "Select photo from ownCloud" => "Pilih foto dari ownCloud",
+"Name" => "Nama",
 "Additional names" => "Nama tambahan",
 "Nickname" => "Nama Samaran",
 "Enter nickname" => "Masukkan nama samaran",
@@ -86,6 +87,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Senarai Buku Alamat",
 "New Address Book" => "Buku Alamat Baru",
-"Name" => "Nama",
 "Description" => "Keterangan"
 );

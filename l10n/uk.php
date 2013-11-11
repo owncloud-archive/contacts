@@ -123,6 +123,7 @@
 "Edit current photo" => "Редагувати поточне фото",
 "Upload new photo" => "Завантажити нове фото",
 "Select photo from ownCloud" => "Обрати фото з ownCloud",
+"Name" => "Ім'я",
 "First name" => "Ім'я",
 "Additional names" => "Додаткові імена",
 "Last name" => "Прізвище",
@@ -166,6 +167,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Адресні книги",
 "New Address Book" => "Нова адресна книга",
-"Name" => "Ім'я",
 "Description" => "Опис"
 );

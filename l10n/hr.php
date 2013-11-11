@@ -50,6 +50,7 @@
 "Delete current photo" => "Izbriši trenutnu sliku",
 "Edit current photo" => "Uredi trenutnu sliku",
 "Upload new photo" => "Učitaj novu sliku",
+"Name" => "Ime",
 "Additional names" => "sredenje ime",
 "Nickname" => "Nadimak",
 "Enter nickname" => "Unesi nadimank",
@@ -76,6 +77,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresari",
 "New Address Book" => "Novi adresar",
-"Name" => "Ime",
 "Description" => "Opis"
 );

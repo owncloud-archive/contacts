@@ -122,6 +122,7 @@
 "Edit current photo" => "แก้ไขรูปภาพปัจจุบัน",
 "Upload new photo" => "อัพโหลดรูปภาพใหม่",
 "Select photo from ownCloud" => "เลือกรูปภาพจาก ownCloud",
+"Name" => "ชื่อ",
 "First name" => "ชื่อจริง",
 "Additional names" => "ชื่ออื่นๆ",
 "Last name" => "นามสกุลจริง",
@@ -165,6 +166,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "สมุดบันทึกที่อยู่",
 "New Address Book" => "สร้างสมุดบันทึกข้อมูลการติดต่อใหม่",
-"Name" => "ชื่อ",
 "Description" => "คำอธิบาย"
 );

@@ -217,6 +217,7 @@
 "Edit current photo" => "Muuda praegust pilti",
 "Upload new photo" => "Lae üles uus foto",
 "Select photo from ownCloud" => "Vali foto ownCloudist",
+"Name" => "Nimi",
 "First name" => "Eesnimi",
 "Additional names" => "Lisanimed",
 "Last name" => "Perekonnanimi",
@@ -272,6 +273,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Aadressiraamatud",
 "New Address Book" => "Uus aadressiraamat",
-"Name" => "Nimi",
 "Description" => "Kirjeldus"
 );

@@ -217,6 +217,7 @@
 "Edit current photo" => "Upraviť súčasnú fotku",
 "Upload new photo" => "Nahrať novú fotku",
 "Select photo from ownCloud" => "Vybrať fotku z ownCloud",
+"Name" => "Názov",
 "First name" => "Krstné meno",
 "Additional names" => "Ďalšie mená",
 "Last name" => "Priezvisko",
@@ -272,6 +273,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresáre",
 "New Address Book" => "Nový adresár",
-"Name" => "Názov",
 "Description" => "Popis"
 );

@@ -25,6 +25,7 @@
 "Home" => "নিবাস",
 "Text" => "টেক্সট",
 "Groups" => "গোষ্ঠীসমূহ",
+"Name" => "রাম",
 "Title" => "শিরোনাম",
 "Birthday" => "জন্মদিন",
 "Email" => "ইমেইল",
@@ -36,6 +37,5 @@
 "more info" => "আরও তথ্য",
 "Primary address (Kontact et al)" => "প্রাথমিক ঠিকানা (Kontact et al)",
 "iOS/OS X" => "iOS/OS X",
-"Name" => "রাম",
 "Description" => "বিবরণ"
 );

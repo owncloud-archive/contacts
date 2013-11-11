@@ -178,6 +178,7 @@
 "Edit current photo" => "Uredi trenutno sliko",
 "Upload new photo" => "Naloži novo sliko",
 "Select photo from ownCloud" => "Izberi sliko iz ownCloud",
+"Name" => "Ime",
 "First name" => "Ime",
 "Additional names" => "Druga imena",
 "Last name" => "Priimek",
@@ -226,6 +227,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Imeniki",
 "New Address Book" => "Nov imenik",
-"Name" => "Ime",
 "Description" => "Opis"
 );

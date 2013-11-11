@@ -172,6 +172,7 @@
 "Edit current photo" => "Επεξεργασία τρέχουσας φωτογραφίας",
 "Upload new photo" => "Ανέβασε νέα φωτογραφία",
 "Select photo from ownCloud" => "Επέλεξε φωτογραφία από το ownCloud",
+"Name" => "Όνομα",
 "First name" => "Όνομα",
 "Additional names" => "Επιπλέον ονόματα",
 "Last name" => "Επώνυμο",
@@ -224,6 +225,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Βιβλία διευθύνσεων",
 "New Address Book" => "Νέο βιβλίο διευθύνσεων",
-"Name" => "Όνομα",
 "Description" => "Περιγραφή"
 );

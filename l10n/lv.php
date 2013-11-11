@@ -32,6 +32,7 @@
 "Home" => "Mājas",
 "Text" => "Teksts",
 "Groups" => "Grupas",
+"Name" => "Nosaukums",
 "Select groups" => "Izvēlieties grupas",
 "Title" => "Nosaukums",
 "Birthday" => "Dzimšanas diena",
@@ -44,6 +45,5 @@
 "more info" => "vairāk informācijas",
 "Primary address (Kontact et al)" => "Primārā adrese",
 "iOS/OS X" => "iOS/OS X",
-"Name" => "Nosaukums",
 "Description" => "Apraksts"
 );

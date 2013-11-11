@@ -103,6 +103,7 @@
 "Edit current photo" => "현재 사진 편집",
 "Upload new photo" => "새로운 사진 업로드",
 "Select photo from ownCloud" => "ownCloud에서 사진 선택",
+"Name" => "이름",
 "Additional names" => "추가 이름",
 "Select groups" => "그룹 선택",
 "Nickname" => "별명",
@@ -140,6 +141,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "주소록",
 "New Address Book" => "새 주소록",
-"Name" => "이름",
 "Description" => "종류"
 );

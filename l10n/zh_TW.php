@@ -206,6 +206,7 @@
 "Edit current photo" => "編輯目前相片",
 "Upload new photo" => "上傳新照片",
 "Select photo from ownCloud" => "從 ownCloud 中挑選相片",
+"Name" => "名稱",
 "First name" => "名子",
 "Additional names" => "額外名",
 "Last name" => "姓氏",
@@ -258,6 +259,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "電話簿",
 "New Address Book" => "新電話簿",
-"Name" => "名稱",
 "Description" => "描述"
 );

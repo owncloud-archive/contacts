@@ -197,6 +197,7 @@
 "Edit current photo" => "Redaguoti šią nuotrauką",
 "Upload new photo" => "Įkelti naują foto",
 "Select photo from ownCloud" => "Pasirinkite nuotrauką iš ownCloud",
+"Name" => "Pavadinimas",
 "First name" => "Vardas",
 "Additional names" => "Papildomi vardai",
 "Last name" => "Pavardė",
@@ -247,6 +248,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresų knygos",
 "New Address Book" => "Nauja adresų knyga",
-"Name" => "Pavadinimas",
 "Description" => "Aprašymas"
 );

@@ -36,6 +36,7 @@
 "Pager" => "pager",
 "Internet" => "internet",
 "Groups" => "Grup",
+"Name" => "Nama",
 "Select groups" => "Pilih grup",
 "Nickname" => "nama panggilan",
 "Enter nickname" => "masukkan nama panggilan",
@@ -56,6 +57,5 @@
 "Primary address (Kontact et al)" => "Alamat utama (Kontak dsb)",
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "buku alamat",
-"Name" => "Nama",
 "Description" => "Deskripsi"
 );
