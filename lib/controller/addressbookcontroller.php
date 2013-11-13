@@ -42,13 +42,15 @@ class AddressBookController extends Controller {
 		);
 
 		$response = new JSONResponse(array(
-				'addressbooks' => $result,
-			));
+			'addressbooks' => $result,
+		));
 
+		/** FIXME: Caching is currently disabled
 		if($lastModified > 0) {
 			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
 			$response->setETag(md5($lastModified));
 		}
+		*/
 
 		return $response;
 	}
