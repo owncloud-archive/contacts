@@ -19,6 +19,7 @@
 "Other" => "Autres",
 "Work" => "Trabalh",
 "Groups" => "Grops",
+"Name" => "Nom",
 "Title" => "Títol",
 "Birthday" => "Anniversari",
 "Email" => "Corrièl",
@@ -28,6 +29,5 @@
 "more info" => "mai d'entresenhes",
 "Primary address (Kontact et al)" => "Adreiças primarias (Kontact et al)",
 "iOS/OS X" => "iOS/OS X",
-"Name" => "Nom",
 "Description" => "Descripcion"
 );

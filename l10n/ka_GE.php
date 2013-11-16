@@ -39,6 +39,7 @@
 "Edit current photo" => "მიმდინარე სურათის რედაქტირება",
 "Upload new photo" => "ახალი სურათის ატვირთვა",
 "Select photo from ownCloud" => "აირჩიე სურათი ownCloud –იდან",
+"Name" => "სახელი",
 "Select groups" => "ჯგუფების არჩევა",
 "Nickname" => "ნიკნეიმი",
 "Title" => "სახელი",
@@ -59,6 +60,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "მისამართის წიგნები",
 "New Address Book" => "ახალი მისამართების წიგნი",
-"Name" => "სახელი",
 "Description" => "გვერდის დახასიათება"
 );

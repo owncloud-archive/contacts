@@ -217,6 +217,7 @@
 "Edit current photo" => "Редактировать текущую фотографию",
 "Upload new photo" => "Загрузить новую фотографию",
 "Select photo from ownCloud" => "Выбрать фотографию из ownCloud",
+"Name" => "Имя",
 "First name" => "Имя",
 "Additional names" => "Отчество",
 "Last name" => "Фамилия",
@@ -272,6 +273,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Адресные книги",
 "New Address Book" => "Новая адресная книга",
-"Name" => "Имя",
 "Description" => "Описание"
 );

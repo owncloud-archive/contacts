@@ -33,6 +33,7 @@
 "Edit current photo" => "Modificar photo currente",
 "Upload new photo" => "Incargar nove photo",
 "Select photo from ownCloud" => "Seliger photo ex ownCloud",
+"Name" => "Nomine",
 "Additional names" => "Nomines additional",
 "Nickname" => "Pseudonymo",
 "Enter nickname" => "Inserer pseudonymo",
@@ -58,6 +59,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adressarios",
 "New Address Book" => "Nove adressario",
-"Name" => "Nomine",
 "Description" => "Description"
 );

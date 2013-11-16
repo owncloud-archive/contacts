@@ -169,6 +169,7 @@
 "Edit current photo" => "Muokkaa nykyistä valokuvaa",
 "Upload new photo" => "Lähetä uusi valokuva",
 "Select photo from ownCloud" => "Valitse valokuva ownCloudista",
+"Name" => "Nimi",
 "First name" => "Etunimi",
 "Additional names" => "Lisänimet",
 "Last name" => "Sukunimi",
@@ -214,6 +215,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Osoitekirjat",
 "New Address Book" => "Uusi osoitekirja",
-"Name" => "Nimi",
 "Description" => "Kuvaus"
 );

@@ -20,6 +20,7 @@
 "Work" => "Punë",
 "Text" => "Tekst",
 "Groups" => "Grupet",
+"Name" => "Emri",
 "Title" => "Titulli",
 "Birthday" => "Ditëlindja",
 "Email" => "Email-i",
@@ -30,6 +31,5 @@
 "more info" => "më shumë info.",
 "Primary address (Kontact et al)" => "Adresa kryesore",
 "iOS/OS X" => "iOS/OS X",
-"Name" => "Emri",
 "Description" => "Përshkrimi"
 );

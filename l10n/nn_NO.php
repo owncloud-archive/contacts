@@ -32,6 +32,7 @@
 "Video" => "Video",
 "Pager" => "Personsøkjar",
 "Groups" => "Grupper",
+"Name" => "Namn",
 "Select groups" => "Vel grupper",
 "Title" => "Tittel",
 "Organization" => "Organisasjon",
@@ -51,6 +52,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adressebøker",
 "New Address Book" => "Ny adressebok",
-"Name" => "Namn",
 "Description" => "Skildring"
 );

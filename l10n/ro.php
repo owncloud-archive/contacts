@@ -75,6 +75,7 @@
 "Edit current photo" => "Editează poza curentă",
 "Upload new photo" => "Încarcă poză nouă",
 "Select photo from ownCloud" => "Selectează poză din ownCloud",
+"Name" => "Nume",
 "Nickname" => "Pseudonim",
 "Enter nickname" => "Introdu pseudonim",
 "Title" => "Titlu",
@@ -106,6 +107,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Agende",
 "New Address Book" => "Agendă nouă",
-"Name" => "Nume",
 "Description" => "Descriere"
 );

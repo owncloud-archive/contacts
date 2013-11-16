@@ -55,6 +55,7 @@
 "Delete current photo" => "වර්තමාන ඡායාරූපය මකන්න",
 "Edit current photo" => "වර්තමාන ඡායාරූපය සංස්කරණය කරන්න",
 "Upload new photo" => "නව ඡායාරූපයක් උඩුගත කරන්න",
+"Name" => "නම",
 "Additional names" => "වෙනත් නම්",
 "Nickname" => "පටබැඳි නම",
 "Enter nickname" => "පටබැඳි නම ඇතුලත් කරන්න",
@@ -85,6 +86,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "ලිපින පොත්",
 "New Address Book" => "නව ලිපින පොතක් ",
-"Name" => "නම",
 "Description" => "විස්තරය"
 );

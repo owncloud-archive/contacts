@@ -217,6 +217,7 @@
 "Edit current photo" => "Wijzig huidige foto",
 "Upload new photo" => "Upload nieuwe foto",
 "Select photo from ownCloud" => "Selecteer foto uit ownCloud",
+"Name" => "Naam",
 "First name" => "Voornaam",
 "Additional names" => "Extra namen",
 "Last name" => "Achternaam",
@@ -272,6 +273,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresboeken",
 "New Address Book" => "Nieuw Adresboek",
-"Name" => "Naam",
 "Description" => "Beschrijving"
 );

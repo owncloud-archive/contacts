@@ -107,6 +107,7 @@
 "Edit current photo" => "Rediger nåværende bilde",
 "Upload new photo" => "Last opp nytt bilde",
 "Select photo from ownCloud" => "Velg bilde fra ownCloud",
+"Name" => "Navn",
 "First name" => "Fornavn",
 "Additional names" => "Ev. mellomnavn",
 "Last name" => "Etternavn",
@@ -143,6 +144,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adressebøker",
 "New Address Book" => "Ny adressebok",
-"Name" => "Navn",
 "Description" => "Beskrivelse"
 );

@@ -33,6 +33,7 @@
 "No files selected for upload." => "Keine Datei(en) zum Hochladen ausgewählt.",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Die Datei, die Sie hochladen möchten, überschreitet die maximale Grösse für Datei-Uploads auf diesem Server.",
 "Edit profile picture" => "Profilbild bearbeiten",
+"Crop photo" => "Foto zuschneiden",
 "Is this correct?" => "Ist das richtig?",
 "Error parsing date: {date}" => "Datum des Fehlers beim Parsen: {date}",
 "# groups" => "# Gruppen",
@@ -67,6 +68,7 @@
 "Less..." => "Weniger...",
 "Failed loading photo: {error}" => "Fehler beim Laden eines Fotos: {error}",
 "You do not have permissions to see this contacts" => "Sie haben nicht die erforderlichen Rechte, diesen Kontakt zu sehen.",
+"Contact not found" => "Kontakt nicht gefunden",
 "You do not have permissions to see these contacts" => "Sie haben nicht die erforderlichen Rechte, diese Kontakte zu sehen.",
 "You do not have permissions add contacts to the address book" => "Sie haben nicht die erforderlichen Rechte, Kontakte zum Adressbuch hinzuzufügen.",
 "The backend for this address book does not support adding contacts" => "Das Backend für dieses Adressbuch unterstützt nicht das Hinzufügen von Kontakten.",
@@ -199,6 +201,7 @@
 "Edit current photo" => "Derzeitiges Foto ändern",
 "Upload new photo" => "Neues Foto hochladen",
 "Select photo from ownCloud" => "Foto aus der ownCloud auswählen",
+"Name" => "Name",
 "First name" => "Vorname",
 "Additional names" => "Zusätzliche Namen",
 "Last name" => "Nachname",
@@ -248,6 +251,5 @@
 "iOS/OS X" => "iOS / OS X",
 "Addressbooks" => "Adressbücher",
 "New Address Book" => "Neues Adressbuch",
-"Name" => "Name",
 "Description" => "Beschreibung"
 );

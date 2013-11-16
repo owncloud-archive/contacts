@@ -21,6 +21,7 @@
 "Other" => "Annað",
 "Text" => "Texti",
 "Groups" => "Hópar",
+"Name" => "Nafn",
 "Title" => "Titill",
 "Birthday" => "Afmælisdagur",
 "Email" => "Netfang",
@@ -28,6 +29,5 @@
 "Share" => "Deila",
 "Export" => "Flytja út",
 "more info" => "fleiri upplýsingar",
-"iOS/OS X" => "iOS/OS X",
-"Name" => "Nafn"
+"iOS/OS X" => "iOS/OS X"
 );

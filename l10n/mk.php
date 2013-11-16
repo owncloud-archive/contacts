@@ -88,6 +88,7 @@
 "Edit current photo" => "Уреди моментална фотографија",
 "Upload new photo" => "Подигни нова фотографија",
 "Select photo from ownCloud" => "Изберете фотографија од ownCloud",
+"Name" => "Име",
 "Additional names" => "Дополнителни имиња",
 "Nickname" => "Прекар",
 "Enter nickname" => "Внеси прекар",
@@ -117,6 +118,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Адресари",
 "New Address Book" => "Нов адресар",
-"Name" => "Име",
 "Description" => "Опис"
 );

@@ -32,6 +32,7 @@
 "Video" => "Видео",
 "Pager" => "Пејџер",
 "Groups" => "Групе",
+"Name" => "Име",
 "Title" => "Наслов",
 "Organization" => "Организација",
 "Birthday" => "Рођендан",
@@ -49,6 +50,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Адресар",
 "New Address Book" => "Нови адресар",
-"Name" => "Име",
 "Description" => "Опис"
 );

@@ -217,6 +217,7 @@
 "Edit current photo" => "Mevcut fotoğrafı düzenle",
 "Upload new photo" => "Yeni fotoğraf yükle",
 "Select photo from ownCloud" => "ownCloud'dan bir fotoğraf seç",
+"Name" => "İsim",
 "First name" => "İsim",
 "Additional names" => "İlave isimler",
 "Last name" => "Soyisim",
@@ -272,6 +273,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adres defterleri",
 "New Address Book" => "Yeni Adres Defteri",
-"Name" => "İsim",
 "Description" => "Tanımlama"
 );
