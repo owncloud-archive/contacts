@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-11 02:53-0500\n"
-"PO-Revision-Date: 2013-11-09 07:00+0000\n"
+"POT-Creation-Date: 2013-11-15 20:06-0500\n"
+"PO-Revision-Date: 2013-11-11 08:11+0000\n"
 "Last-Translator: André Koot <meneer@tken.net>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -426,41 +426,41 @@ msgstr "Onbekende IM:"
 msgid "{name}'s Birthday"
 msgstr "{name}'s verjaardag"
 
-#: lib/controller/addressbookcontroller.php:110
+#: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
 msgstr "Fout bij aanmaken adresboek"
 
-#: lib/controller/addressbookcontroller.php:127
+#: lib/controller/addressbookcontroller.php:129
 msgid "Error updating address book"
 msgstr "Fout bij bijwerken adresboek"
 
-#: lib/controller/addressbookcontroller.php:155
+#: lib/controller/addressbookcontroller.php:157
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "U hebt niet de permissies om het \"%s\" adresboek te verwijderen"
 
-#: lib/controller/addressbookcontroller.php:161
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
 msgstr "Fout bij verwijderen adresboek"
 
-#: lib/controller/addressbookcontroller.php:199
+#: lib/controller/addressbookcontroller.php:201
 msgid "Error creating contact."
 msgstr "Fout bij aanmaken contactpersoon."
 
-#: lib/controller/addressbookcontroller.php:235
+#: lib/controller/addressbookcontroller.php:237
 msgid "Error deleting contact."
 msgstr "Fout bij verwijderen contactpersoon."
 
-#: lib/controller/addressbookcontroller.php:275
+#: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
 msgstr "Fout bij ophalen contactpersonen."
 
-#: lib/controller/addressbookcontroller.php:285
+#: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Fout om contact op te slaan"
 
-#: lib/controller/addressbookcontroller.php:289
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
 msgstr "Fout bij verwijderen contactpersoon uit ander adresboek."
 

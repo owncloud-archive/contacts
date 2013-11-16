@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-11 02:53-0500\n"
-"PO-Revision-Date: 2013-11-09 07:00+0000\n"
+"POT-Creation-Date: 2013-11-15 20:06-0500\n"
+"PO-Revision-Date: 2013-11-13 21:20+0000\n"
 "Last-Translator: Laszlo Tornoci <torlasz@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -424,41 +424,41 @@ msgstr "Ismeretlen Üzenetküldő:"
 msgid "{name}'s Birthday"
 msgstr "{name} születésnapja"
 
-#: lib/controller/addressbookcontroller.php:110
+#: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
 msgstr "Hiba a címjegyzék létrehozásakor"
 
-#: lib/controller/addressbookcontroller.php:127
+#: lib/controller/addressbookcontroller.php:129
 msgid "Error updating address book"
 msgstr "Hiba a címjegyzék frissítésekor"
 
-#: lib/controller/addressbookcontroller.php:155
+#: lib/controller/addressbookcontroller.php:157
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Önnek nincs jogosultsága ahhoz, hogy törölje ezt a címjegyzéket: \"%s\""
 
-#: lib/controller/addressbookcontroller.php:161
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
 msgstr "Hiba a címjegyzék törlésekor"
 
-#: lib/controller/addressbookcontroller.php:199
+#: lib/controller/addressbookcontroller.php:201
 msgid "Error creating contact."
 msgstr "Hiba a névjegy létrehozásakor."
 
-#: lib/controller/addressbookcontroller.php:235
+#: lib/controller/addressbookcontroller.php:237
 msgid "Error deleting contact."
 msgstr "Hiba a névjegy törlésekor."
 
-#: lib/controller/addressbookcontroller.php:275
+#: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
 msgstr "Hiba a névjegy betöltésekor."
 
-#: lib/controller/addressbookcontroller.php:285
+#: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "A névjegy mentése sikertelen"
 
-#: lib/controller/addressbookcontroller.php:289
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
 msgstr "Hiba a névjegy más címjegyzékből történő törlésekor."
 

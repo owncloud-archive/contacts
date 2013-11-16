@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-11 02:53-0500\n"
-"PO-Revision-Date: 2013-11-09 07:00+0000\n"
+"POT-Creation-Date: 2013-11-15 20:06-0500\n"
+"PO-Revision-Date: 2013-11-11 08:11+0000\n"
 "Last-Translator: Cyryl Sochacki <cyrylsochacki@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -427,41 +427,41 @@ msgstr "Nieznany Komunikator"
 msgid "{name}'s Birthday"
 msgstr "{name} Urodzony"
 
-#: lib/controller/addressbookcontroller.php:110
+#: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
 msgstr "Błąd przy tworzeniu książki adresowej"
 
-#: lib/controller/addressbookcontroller.php:127
+#: lib/controller/addressbookcontroller.php:129
 msgid "Error updating address book"
 msgstr "Błąd przy edytowaniu książki adresowej"
 
-#: lib/controller/addressbookcontroller.php:155
+#: lib/controller/addressbookcontroller.php:157
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Nie masz uprawnień do usunięcia \"%s\" książki adresowej."
 
-#: lib/controller/addressbookcontroller.php:161
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
 msgstr "Błąd przy usuwaniu książki adresowej"
 
-#: lib/controller/addressbookcontroller.php:199
+#: lib/controller/addressbookcontroller.php:201
 msgid "Error creating contact."
 msgstr "Błąd przy tworzeniu kontaktu"
 
-#: lib/controller/addressbookcontroller.php:235
+#: lib/controller/addressbookcontroller.php:237
 msgid "Error deleting contact."
 msgstr "Błąd przy usuwaniu kontaktu."
 
-#: lib/controller/addressbookcontroller.php:275
+#: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
 msgstr "Błąd zapisu kontaktu."
 
-#: lib/controller/addressbookcontroller.php:285
+#: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Błąd zapisu kontaktu."
 
-#: lib/controller/addressbookcontroller.php:289
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
 msgstr "Błąd usuwania kontaktu z innej książki adresowej."
 

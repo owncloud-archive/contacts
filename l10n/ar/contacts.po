@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-11 02:53-0500\n"
-"PO-Revision-Date: 2013-11-09 07:00+0000\n"
+"POT-Creation-Date: 2013-11-15 20:06-0500\n"
+"PO-Revision-Date: 2013-11-11 08:11+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -418,41 +418,41 @@ msgstr "جهة تراسل فوري غير معروفة"
 msgid "{name}'s Birthday"
 msgstr "يوم ميلاد {name}'s"
 
-#: lib/controller/addressbookcontroller.php:110
+#: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
 msgstr "خطأ في إنشاء دفتر العناوين"
 
-#: lib/controller/addressbookcontroller.php:127
+#: lib/controller/addressbookcontroller.php:129
 msgid "Error updating address book"
 msgstr "حدث خطأ في تحديث دفتر العناوين"
 
-#: lib/controller/addressbookcontroller.php:155
+#: lib/controller/addressbookcontroller.php:157
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "ليس لديك الصلاحية لحذف  \"%s\" دفتر العناوين"
 
-#: lib/controller/addressbookcontroller.php:161
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
 msgstr "حدث خطأ أثناء إزالة دفتر العناوين"
 
-#: lib/controller/addressbookcontroller.php:199
+#: lib/controller/addressbookcontroller.php:201
 msgid "Error creating contact."
 msgstr "حدث خطأ أثناء إنشاء جهة اتصال."
 
-#: lib/controller/addressbookcontroller.php:235
+#: lib/controller/addressbookcontroller.php:237
 msgid "Error deleting contact."
 msgstr "خطأ في حذف جهة الاتصال"
 
-#: lib/controller/addressbookcontroller.php:275
+#: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
 msgstr "حدث خطأ أثناء استرداد جهة الاتصال."
 
-#: lib/controller/addressbookcontroller.php:285
+#: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "خطأ في حفظ جهة الإتصال."
 
-#: lib/controller/addressbookcontroller.php:289
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
 msgstr "حدث خطأ أثناء إزالة جهة اتصال من دفتر العناوين."
 
