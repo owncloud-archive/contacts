@@ -334,7 +334,7 @@ class ContactPhotoController extends Controller {
 
 		$thumbnail = Properties::cacheThumbnail(
 			$params['backend'],
-			$params['addressBookId']
+			$params['addressBookId'],
 			$params['contactId'],
 			$image
 		);
