@@ -35,6 +35,7 @@
 "Video" => "video",
 "Pager" => "pager",
 "Internet" => "internet",
+"Family" => "Keluarga",
 "Groups" => "Grup",
 "Name" => "Nama",
 "Select groups" => "Pilih grup",

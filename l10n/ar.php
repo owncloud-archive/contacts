@@ -83,6 +83,7 @@
 "Address book not found" => "تعذر ايجاد دفتر العناوين",
 "You do not have permissions to see this contact" => "ليس لديك الصلاحية  لمشاهدة جهة الاتصال ",
 "You do not have permissions to update this contact" => "ليس لديك الصلاحية  لتحديث جهة الاتصال هذه",
+"Property not found" => "لم يتم العثور على الملكية",
 "Unknown IM: " => "جهة تراسل فوري غير معروفة",
 "{name}'s Birthday" => "يوم ميلاد {name}'s",
 "Error creating address book" => "خطأ في إنشاء دفتر العناوين",
