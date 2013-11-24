@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-21 18:16-0500\n"
-"PO-Revision-Date: 2013-11-21 19:20+0000\n"
+"POT-Creation-Date: 2013-11-23 22:08-0500\n"
+"PO-Revision-Date: 2013-11-22 21:50+0000\n"
 "Last-Translator: mateju <>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -215,11 +215,11 @@ msgstr "Stiki so že v tej skupini."
 
 #: js/groups.js:342
 msgid "Couldn't get contact list."
-msgstr "Ne morem dobiti seznama stikov."
+msgstr "Ni mogoče pridobiti seznama stikov."
 
 #: js/groups.js:353
 msgid "Contact is not in this group."
-msgstr "Stik ni v tej skupini"
+msgstr "Stik ni v tej skupini."
 
 #: js/groups.js:367
 msgid "Contacts are not in this group."
@@ -227,7 +227,7 @@ msgstr "Stiki niso v tej skupini."
 
 #: js/groups.js:566
 msgid "Failed renaming group: {error}"
-msgstr "Napaka pri preimenovanju skupine: {error}"
+msgstr "Napaka preimenovanja skupine: {error}"
 
 #: js/groups.js:597
 msgid "A group named {group} already exists"
@@ -241,7 +241,7 @@ msgstr "Skupine je mogoče\nrazvrščati po meri."
 
 #: js/groups.js:645
 msgid "Failed adding group: {error}"
-msgstr "Dodajanje skupine ni uspelo: {error}"
+msgstr "Dodajanje skupine je spodletelo: {error}"
 
 #: js/groups.js:657
 msgid "All"
@@ -386,7 +386,7 @@ msgstr "Nimate ustreznih pravic za brisanje imenika."
 
 #: lib/app.php:144
 msgid "Address book not found"
-msgstr "Imenika ni bilo mogoče najti"
+msgstr "Imenika ni mogoče najti"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
