@@ -37,7 +37,7 @@ class ImportCsvConnector {
 			//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', setting xml config', \OCP\Util::DEBUG);
 			$this->config_content = new \SimpleXMLElement($xml_config);
 		} catch (Exception $e) {
-			\OCP\Util::writeLog('vcard_vcard_connector', __METHOD__.', error in setting xml config', \OCP\Util::DEBUG);
+			\OCP\Util::writeLog('csv_vcard_connector', __METHOD__.', error in setting xml config', \OCP\Util::DEBUG);
 		}
 	}
 	
