@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-15 20:06-0500\n"
-"PO-Revision-Date: 2013-11-15 20:56+0000\n"
+"POT-Creation-Date: 2013-11-23 22:08-0500\n"
+"PO-Revision-Date: 2013-11-22 21:50+0000\n"
 "Last-Translator: mateju <>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -46,11 +46,11 @@ msgstr "Poteka pripravljanje ..."
 
 #: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
-msgstr "Uvoženih je bilo {count} od skupno {total} stikov"
+msgstr "Uvoženih je {count} od skupno {total} stikov"
 
 #: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "Uspešno je uvoženih {imported} stikov, {failed} je izpuščenih."
 
 #: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
@@ -66,11 +66,11 @@ msgstr "Nalaganje imenikov je spodletelo: {error}"
 
 #: js/app.js:215
 msgid "Indexing contacts"
-msgstr "Ustvarjanje kazala stikov"
+msgstr "Ustvarjanje seznama stikov"
 
 #: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr "Prišlo je do nepopravljive napake pri nalaganju imenikov: {msg}"
+msgstr "Prišlo je do nepopravljive napake med nalaganjem imenikov: {msg}"
 
 #: js/app.js:226
 msgid "Error."
@@ -90,7 +90,7 @@ msgstr "Dodaj skupino ..."
 
 #: js/app.js:468
 msgid "Invalid URL: \"{url}\""
-msgstr "Neveljaven internetni naslov: \"{url}\""
+msgstr "Neveljaven naslov URL: \"{url}\""
 
 #: js/app.js:479
 msgid "There was an error opening a mail composer."
@@ -102,15 +102,15 @@ msgstr "Neveljaven elektronski naslov: \"{url}\""
 
 #: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr "Spajanje ni uspelo. Stika ni bilo mogoče najti: {id}"
+msgstr "Združevanje je spodletelo. Stika ni mogoče najti: {id}"
 
 #: js/app.js:575
 msgid "Merge failed."
-msgstr "Spajanje je spodletelo."
+msgstr "Združevanje je spodletelo."
 
 #: js/app.js:582
 msgid "Merge failed. Error saving contact."
-msgstr "Spajanje je spodletelo. Stik ni bil shranjen."
+msgstr "Združevanje je spodletelo. Prišlo je do napake med shranjevanjem stika."
 
 #: js/app.js:602
 msgid "Select photo"
@@ -118,23 +118,23 @@ msgstr "Izbor slike"
 
 #: js/app.js:678 js/app.js:1570
 msgid "Network or server error. Please inform administrator."
-msgstr "Napaka omrežja ali strežnika. Prosimo, če o tem obvestite administratorja."
+msgstr "Napaka omrežja ali strežnika. Pošljite obvestilo skrbniku sistema."
 
 #: js/app.js:894
 msgid "Error adding to group."
-msgstr "Napaka pri dodajanju v skupino."
+msgstr "Napaka med dodajanjem stika v skupino."
 
 #: js/app.js:917
 msgid "Error removing from group."
-msgstr "Napaka pri odstranjevanju iz skupine."
+msgstr "Napaka med odstranjevanjem stika iz skupino."
 
 #: js/app.js:1104
 msgid "Error setting {name} as favorite."
-msgstr "Napaka pri nastavitvi  {name} kot priljubljenega."
+msgstr "Napaka med nastavljanjem {name} kot priljubljenega."
 
 #: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
 msgid "Merge contacts"
-msgstr "Spoji stike"
+msgstr "Združi stike"
 
 #: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
@@ -151,11 +151,11 @@ msgstr "V redu"
 
 #: js/app.js:1394
 msgid "Could not find contact: {id}"
-msgstr "Stika ni bilo mogoče najti: {id}"
+msgstr "Stika ni mogoče najti: {id}"
 
 #: js/app.js:1417
 msgid "No files selected for upload."
-msgstr "Ni izbrane datoteke za nalaganje."
+msgstr "Ni izbrane datoteke za pošiljanje."
 
 #: js/app.js:1427
 msgid ""
@@ -199,7 +199,7 @@ msgstr "Klikni za preklic izbrisa {num} stikov"
 
 #: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "Preklican izbris {num} stikov"
 
 #: js/groups.js:53
 msgid "Add"
@@ -215,11 +215,11 @@ msgstr "Stiki so že v tej skupini."
 
 #: js/groups.js:342
 msgid "Couldn't get contact list."
-msgstr "Ne morem dobiti seznama stikov."
+msgstr "Ni mogoče pridobiti seznama stikov."
 
 #: js/groups.js:353
 msgid "Contact is not in this group."
-msgstr "Stik ni v tej skupini"
+msgstr "Stik ni v tej skupini."
 
 #: js/groups.js:367
 msgid "Contacts are not in this group."
@@ -227,7 +227,7 @@ msgstr "Stiki niso v tej skupini."
 
 #: js/groups.js:566
 msgid "Failed renaming group: {error}"
-msgstr "Napaka pri preimenovanju skupine: {error}"
+msgstr "Napaka preimenovanja skupine: {error}"
 
 #: js/groups.js:597
 msgid "A group named {group} already exists"
@@ -237,11 +237,11 @@ msgstr "Skupina z imenom {group} že obstaja."
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr ""
+msgstr "Skupine je mogoče\nrazvrščati po meri."
 
 #: js/groups.js:645
 msgid "Failed adding group: {error}"
-msgstr "Dodajanje skupine ni uspelo: {error}"
+msgstr "Dodajanje skupine je spodletelo: {error}"
 
 #: js/groups.js:657
 msgid "All"
@@ -249,7 +249,7 @@ msgstr "Vsi"
 
 #: js/groups.js:672 js/groups.js:675
 msgid "Favorites"
-msgstr "Priljubljene"
+msgstr "Priljubljeni"
 
 #: js/groups.js:736
 msgid "Shared by {owner}"
@@ -257,7 +257,7 @@ msgstr "V souporabo dal {owner}"
 
 #: js/groups.js:751
 msgid "Not grouped"
-msgstr ""
+msgstr "Brez skupine"
 
 #: js/groups.js:777
 msgid "Failed loading groups: {error}"
@@ -386,7 +386,7 @@ msgstr "Nimate ustreznih pravic za brisanje imenika."
 
 #: lib/app.php:144
 msgid "Address book not found"
-msgstr "Imenika ni bilo mogoče najti"
+msgstr "Imenika ni mogoče najti"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
@@ -394,15 +394,15 @@ msgstr "Nimate ustreznih pravic za ogled tega stika"
 
 #: lib/contact.php:261
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Ni ustreznih dovoljenj za posodabljanje tega stika"
 
 #: lib/contact.php:272
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "Hrbtišče stika ne omogoča posodabljanja podatkov"
 
 #: lib/contact.php:290
 msgid "This backend not support adding contacts"
-msgstr ""
+msgstr "Hrbtišče ne podpira dodajanja stikov"
 
 #: lib/contact.php:400 lib/contact.php:417
 msgid "Property not found"
@@ -422,11 +422,11 @@ msgstr "{name} - rojstni dan"
 
 #: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
-msgstr "Napaka pri ustvarjanju imenika"
+msgstr "Napaka med ustvarjanjem imenika"
 
 #: lib/controller/addressbookcontroller.php:129
 msgid "Error updating address book"
-msgstr "Napaka pri posodabljanju imenika"
+msgstr "Napaka med posodabljanjem imenika"
 
 #: lib/controller/addressbookcontroller.php:157
 #, php-format
@@ -435,19 +435,19 @@ msgstr "Ni ustreznih dovoljenj za brisanje imenika \"%s\""
 
 #: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
-msgstr "Napaka pri brisanju imenika"
+msgstr "Napaka med brisanjem imenika"
 
 #: lib/controller/addressbookcontroller.php:201
 msgid "Error creating contact."
-msgstr "Napaka pri ustvarjanju stika."
+msgstr "Napaka med ustvarjanjem stika."
 
 #: lib/controller/addressbookcontroller.php:237
 msgid "Error deleting contact."
-msgstr "Napaka pri brisanju stika."
+msgstr "Napaka med brisanjem stika."
 
 #: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
-msgstr "Napaka pridobivanja stika."
+msgstr "Napaka med pridobivanjem stika."
 
 #: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
@@ -465,7 +465,7 @@ msgstr "Napaka pri brisanju stika iz drugega imenika."
 #: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
-msgstr "Stika ni bilo mogoče najti."
+msgstr "Stika ni mogoče najti."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
@@ -485,7 +485,7 @@ msgstr "Ime lastnosti ni nastavljeno."
 
 #: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
-msgstr ""
+msgstr "Lastnost nadzorne vsote ni nastavljena."
 
 #: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
@@ -592,11 +592,11 @@ msgstr "Napaka pri dodajanju skupine."
 
 #: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Ni podanega imena skupine za preimenovanje."
 
 #: lib/controller/groupcontroller.php:131
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Ni imena skupine za preimenovanje podane."
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
@@ -609,7 +609,7 @@ msgstr "V zahtevku manjka ID skupine."
 
 #: lib/controller/groupcontroller.php:180
 msgid "Group name missing from request."
-msgstr ""
+msgstr "Ime skupine manjka iz zahteve."
 
 #: lib/controller/groupcontroller.php:185
 #: lib/controller/groupcontroller.php:228
@@ -626,7 +626,7 @@ msgstr "Na voljo ni dovolj prostora"
 
 #: lib/controller/importcontroller.php:70
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "Poskus pošiljanja datoteke na črnem seznamu:"
 
 #: lib/controller/importcontroller.php:92
 msgid "Error uploading contacts to storage."
@@ -647,11 +647,11 @@ msgstr "V zahtevi manjka ime datoteke."
 #: lib/controller/importcontroller.php:167
 #: lib/controller/importcontroller.php:283
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Ključ napredka manjka iz zahteve."
 
 #: lib/controller/importcontroller.php:173
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "Poskus dostopa do datoteke na črnem seznamu:"
 
 #: lib/controller/importcontroller.php:215
 msgid "No contacts found in: "
@@ -895,7 +895,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>Ali v imeniku ni stikov ali pa je imenik onemogočen.</h3><p>Dodajte nov stik ali pa uvozite stike iz datoteke VCF.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -911,11 +911,11 @@ msgstr "Preimenuj skupino"
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "S katerim stikom naj bodo podatki združeni?"
 
 #: templates/contacts.php:191
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Ali naj bodo izbrisani ostali po uspešnem združevanju?"
 
 #: templates/contacts.php:203
 msgid "Compose mail"
@@ -1105,7 +1105,7 @@ msgstr "District of Columbia"
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr ""
+msgstr "Zvezna država ali provinca"
 
 #: templates/contacts.php:428
 msgid "USA"

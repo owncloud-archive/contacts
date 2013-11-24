@@ -31,6 +31,7 @@
 "Work" => "Darbs",
 "Home" => "Mājas",
 "Text" => "Teksts",
+"Family" => "Ģimene",
 "Groups" => "Grupas",
 "Name" => "Nosaukums",
 "Select groups" => "Izvēlieties grupas",

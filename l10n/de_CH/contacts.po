@@ -40,8 +40,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-15 20:06-0500\n"
-"PO-Revision-Date: 2013-11-11 08:11+0000\n"
+"POT-Creation-Date: 2013-11-21 18:16-0500\n"
+"PO-Revision-Date: 2013-11-18 11:11+0000\n"
 "Last-Translator: kenwood <kenwood@gmx.ch>\n"
 "Language-Team: German (Switzerland) (http://www.transifex.com/projects/p/owncloud/language/de_CH/)\n"
 "MIME-Version: 1.0\n"
@@ -68,7 +68,7 @@ msgstr "Importiere..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "Vorbereiten..."
 
 #: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
@@ -211,7 +211,7 @@ msgstr "# Gruppen"
 
 #: js/contacts.js:1125
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "Fehler beim Auslesen des Geburtstages {bday}: {error}"
 
 #: js/contacts.js:2162
 msgid ""
@@ -225,7 +225,7 @@ msgstr "Klicken Sie hier um das Löschen von {num} Kontakten rückgängig zu mac
 
 #: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "Das Entfernen von {num} Kontakten wurde abgebrochen"
 
 #: js/groups.js:53
 msgid "Add"
@@ -291,7 +291,7 @@ msgstr "Das Laden der Gruppen ist fehlgeschlagen: {error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr ""
+msgstr "Bitte Adressbuch auswählen"
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
@@ -299,11 +299,11 @@ msgstr "Importiere..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Importvorlage konnte nicht geladen werden"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "Kontakte werden importiert"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -311,7 +311,7 @@ msgstr "Importieren"
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr ""
+msgstr "Import ausgeführt"
 
 #: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:322
 msgid "Close"
@@ -360,7 +360,7 @@ msgstr "Weniger..."
 
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Serverfehler! Bitte informieren Sie den System-Administrator"
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -457,7 +457,7 @@ msgstr "Fehler beim aktualisieren des Adressbuchs."
 #: lib/controller/addressbookcontroller.php:157
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "Sie haben nicht die erforderlichen Rechte, das \"%s\" Adressbuch zu löschen"
 
 #: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
@@ -495,7 +495,7 @@ msgstr "Kontakt nicht gefunden."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "Keine Kontaktdaten in der Anfrage."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
@@ -519,15 +519,15 @@ msgstr "Die Information der vCard ist fehlerhaft. Bitte aktualisieren Sie die Se
 
 #: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
-msgstr ""
+msgstr "Fehler beim Aktualisieren eines Kontakts"
 
 #: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Fehler beim Speichern eines Kontakts ins Backend"
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
-msgstr ""
+msgstr "Fehler beim Abrufen des Benutzerfotos"
 
 #: lib/controller/contactphotocontroller.php:87
 #: lib/controller/importcontroller.php:36
@@ -590,7 +590,7 @@ msgstr "Fehler beim Laden des Bildes."
 
 #: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "Das Bild wurde aus dem Zwischenspeicher entfernt"
 
 #: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
@@ -660,7 +660,7 @@ msgstr "Übertragen der Kontakte fehlgeschlagen."
 
 #: lib/controller/importcontroller.php:137
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Fehler beim Verschieben der Datei in den Importordner."
 
 #: lib/controller/importcontroller.php:154
 msgid "You do not have permissions to import into this address book."
@@ -921,7 +921,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>Es befinden sich keine Kontakte in Ihrem Adressbuch oder Ihr Adressbuch íst deaktiviert.</h3><p>Fügen Sie neue hinzu oder importieren Sie existierende Kontakte aus einer VCF-Datei.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -1025,7 +1025,7 @@ msgstr "Als VCF exportieren"
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr ""
+msgstr "Feld hinzufügen..."
 
 #: templates/contacts.php:330
 msgid "Phone"
@@ -1103,7 +1103,7 @@ msgstr "Lösche Adresse"
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "1600 Pennsylvania Avenue, NW"
 
 #: templates/contacts.php:411
 msgid "Street address"
@@ -1111,7 +1111,7 @@ msgstr "Strassenanschrift"
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "20500"
 
 #: templates/contacts.php:416
 msgid "Postal code"
@@ -1119,7 +1119,7 @@ msgstr "Postleitzahl"
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "Washington, DC"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1127,7 +1127,7 @@ msgstr "Stadt"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "District of Columbia"
 
 #: templates/contacts.php:424
 msgid "State or province"
@@ -1135,7 +1135,7 @@ msgstr "Staat oder Provinz"
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "USA"
 
 #: templates/contacts.php:429
 msgid "Country"

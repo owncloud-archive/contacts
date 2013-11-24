@@ -44,6 +44,7 @@
 "Video" => "וידאו",
 "Pager" => "זימונית",
 "Internet" => "אינטרנט",
+"Family" => "משפחה",
 "Groups" => "קבוצות",
 "Add contact" => "הוסף איש קשר",
 "Delete current photo" => "מחק תמונה נוכחית",

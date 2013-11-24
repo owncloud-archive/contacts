@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-15 20:06-0500\n"
-"PO-Revision-Date: 2013-11-11 08:11+0000\n"
+"POT-Creation-Date: 2013-11-21 18:16-0500\n"
+"PO-Revision-Date: 2013-11-16 07:50+0000\n"
 "Last-Translator: masensio <masensio@solidgear.es>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/owncloud/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -317,7 +317,7 @@ msgstr ""
 #: templates/contacts.php:337 templates/contacts.php:468
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -746,7 +746,7 @@ msgstr ""
 
 #: lib/utils/properties.php:167
 msgid "Text"
-msgstr ""
+msgstr "Текст"
 
 #: lib/utils/properties.php:168
 msgid "Voice"
@@ -778,7 +778,7 @@ msgstr ""
 
 #: lib/utils/properties.php:193
 msgid "Family"
-msgstr ""
+msgstr "Семья"
 
 #: templates/contacts.php:6
 msgid "New Contact"

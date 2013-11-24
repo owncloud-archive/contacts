@@ -31,6 +31,7 @@
 "Fax" => "Faks",
 "Video" => "Video",
 "Pager" => "Personsøkjar",
+"Family" => "Familie",
 "Groups" => "Grupper",
 "Name" => "Namn",
 "Select groups" => "Vel grupper",
