@@ -60,7 +60,7 @@ class Addressbook extends AbstractPIMCollection {
 	 * @param array $addressBookInfo
 	 */
 	public function __construct(Backend\AbstractBackend $backend, array $addressBookInfo) {
-		self::$l10n = \OC_L10N::get('contacts');
+		self::$l10n = \OCP\Util::getL10N('contacts');
 		$this->backend = $backend;
 		$this->addressBookInfo = $addressBookInfo;
 		if(is_null($this->getId())) {
@@ -89,6 +89,7 @@ class Addressbook extends AbstractPIMCollection {
 	public function getMetaData() {
 		$metadata = $this->addressBookInfo;
 		$metadata['lastmodified'] = $this->lastModified();
+		$metadata['active'] = $this->isActive();
 		$metadata['backend'] = $this->getBackend()->name;
 		return $metadata;
 	}
@@ -120,7 +121,23 @@ class Addressbook extends AbstractPIMCollection {
 	 */
 	public function getPermissions() {
 		return $this->addressBookInfo['permissions'];
-		//return min($this->addressBookInfo['permissions'], $this->backend->getAddressBookPermissions());
+	}
+
+	/**
+	 * @brief Query whether an address book is active
+	 * @return boolean
+	 */
+	public function isActive() {
+		return $this->backend->isActive($this->getId());
+	}
+
+	/**
+	 * @brief Activate an address book
+	 * @param bool active
+	 * @return void
+	 */
+	public function setActive($active) {
+		$this->backend->setActive($active, $this->getId());
 	}
 
 	/**
@@ -138,6 +155,8 @@ class Addressbook extends AbstractPIMCollection {
 			$contact = $this->backend->getContact($this->getId(), $id);
 			if($contact) {
 				$this->objects[$id] = new Contact($this, $this->backend, $contact);
+			} else {
+				throw new \Exception(self::$l10n->t('Contact not found'), 404);
 			}
 		}
 		// When requesting a single contact we preparse it
@@ -169,7 +188,8 @@ class Addressbook extends AbstractPIMCollection {
 
 		$contacts = array();
 
-		foreach($this->backend->getContacts($this->getId(), $limit, $offset, $omitdata) as $contact) {
+		$options = array('limit' => $limit, 'offset' => $offset, 'omitdata' => $omitdata);
+		foreach($this->backend->getContacts($this->getId(), $options) as $contact) {
 			//\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$contact['id'], \OCP\Util::DEBUG);
 			if(!isset($this->objects[$contact['id']])) {
 				$this->objects[$contact['id']] = new Contact($this, $this->backend, $contact);
@@ -211,16 +231,18 @@ class Addressbook extends AbstractPIMCollection {
 	 * Delete a contact from the address book
 	 *
 	 * @param string $id
+	 * @param array $options
 	 * @return bool
+	 * @throws \Exception on missing permissions
 	 */
-	public function deleteChild($id) {
+	public function deleteChild($id, $options = array()) {
 		if(!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
 			throw new \Exception(self::$l10n->t('You do not have permissions to delete this contact'), 403);
 		}
 		if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_DELETE)) {
 			throw new \Exception(self::$l10n->t('The backend for this address book does not support deleting contacts'), 501);
 		}
-		if($this->backend->deleteContact($this->getId(), $id)) {
+		if($this->backend->deleteContact($this->getId(), $id, $options)) {
 			if(isset($this->objects[$id])) {
 				unset($this->objects[$id]);
 			}
@@ -230,6 +252,58 @@ class Addressbook extends AbstractPIMCollection {
 			return true;
 		}
 		return false;
+	}
+
+	/**
+	 * Delete a list of contacts from the address book
+	 *
+	 * @param array $ids
+	 * @return array containing the status
+	 * @throws \Exception on missing permissions
+	 */
+	public function deleteChildren($ids) {
+		if(!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
+			throw new \Exception(self::$l10n->t('You do not have permissions to delete this contact'), 403);
+		}
+		if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_DELETE)) {
+			throw new \Exception(self::$l10n->t('The backend for this address book does not support deleting contacts'), 501);
+		}
+
+		$response = array();
+
+		\OCP\Util::emitHook('OCA\Contacts', 'pre_deleteContact',
+			array('id' => $ids)
+		);
+
+		foreach($ids as $id) {
+			try {
+				if(!$this->deleteChild($id, array('isBatch' => true))) {
+					\OCP\Util::writeLog(
+						'contacts', __METHOD__.' Error deleting contact: '
+						. $this->getBackend()->name . '::'
+						. $this->getId() . '::' . $id,
+						\OCP\Util::ERROR
+					);
+					$response[] = array(
+						'id' => (string)$id,
+						'status' => 'error',
+						'message' => self::$l10n->t('Unknown error')
+					);
+				} else {
+					$response[] = array(
+						'id' => (string)$id,
+						'status' => 'success'
+					);
+				}
+			} catch(\Exception $e) {
+				$response[] = array(
+					'id' => (string)$id,
+					'status' => 'error',
+					'message' => $e->getMessage()
+				);
+			}
+		}
+		return $response;
 	}
 
 	/**
@@ -280,7 +354,7 @@ class Addressbook extends AbstractPIMCollection {
 	 * @return bool
 	 */
 	public function save() {
-		if(!$this->hasPermission(OCP\PERMISSION_UPDATE)) {
+		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
 			throw new Exception(self::$l10n->t('You don\'t have permissions to update the address book.'), 403);
 		}
 	}
@@ -291,7 +365,7 @@ class Addressbook extends AbstractPIMCollection {
 	 * @return bool
 	 */
 	public function delete() {
-		if(!$this->hasPermission(OCP\PERMISSION_DELETE)) {
+		if(!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
 			throw new Exception(self::$l10n->t('You don\'t have permissions to delete the address book.'), 403);
 		}
 		return $this->backend->deleteAddressBook($this->getId());
@@ -309,4 +383,19 @@ class Addressbook extends AbstractPIMCollection {
 		return $this->backend->lastModifiedAddressBook($this->getId());
 	}
 
+	/**
+	 * Get an array of birthday events for contacts in this address book.
+	 *
+	 * @return \Sabre\VObject\Component\VEvent[]
+	 */
+	public function getBirthdayEvents() {
+
+		$events = array();
+		foreach($this->getChildren() as $contact) {
+			if($event = $contact->getBirthdayEvent()) {
+				$events[] = $event;
+			}
+		}
+		return $events;
+	}
 }

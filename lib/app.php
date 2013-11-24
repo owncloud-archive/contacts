@@ -8,10 +8,19 @@
 
 namespace OCA\Contacts;
 
-use Sabre\VObject;
+use Sabre\VObject,
+	OCP\AppFramework,
+	OCA\Contacts\Controller\AddressBookController,
+	OCA\Contacts\Controller\GroupController,
+	OCA\Contacts\Controller\ContactController,
+	OCA\Contacts\Controller\ContactPhotoController,
+	OCA\Contacts\Controller\SettingsController,
+	OCA\Contacts\Controller\ImportController;
 
 /**
  * This class manages our app actions
+ *
+ * TODO: Merge in Dispatcher
  */
 App::$l10n = \OC_L10N::get('contacts');
 
@@ -42,7 +51,7 @@ class App {
 	* @var array
 	*/
 	public static $backendClasses = array(
-		'ldap' => 'OCA\Contacts\Backend\Ldap',
+		//'ldap' => 'OCA\Contacts\Backend\Ldap',
 		'local' => 'OCA\Contacts\Backend\Database',
 		'shared' => 'OCA\Contacts\Backend\Shared',
 	);
@@ -67,10 +76,10 @@ class App {
 	* @param string $name
 	* @return \Backend\AbstractBackend
 	*/
-	public function getBackend($name, $user = null) {
+	public function getBackend($name) {
 		$name = $name ? $name : 'local';
 		if (isset(self::$backendClasses[$name])) {
-			return new self::$backendClasses[$name]($user);
+			return new self::$backendClasses[$name]($this->user);
 		} else {
 			throw new \Exception('No backend for: ' . $name, '404');
 		}
@@ -91,12 +100,16 @@ class App {
 				$backend = self::getBackend($backendName, $this->user);
 				$addressBooks = $backend->getAddressBooksForUser();
 				if($backendName === 'local' && count($addressBooks) === 0) {
-					$id = $backend->createAddressBook(array('displayname' => 'Contacts'));
+					$id = $backend->createAddressBook(array('displayname' => self::$l10n->t('Contacts')));
 					if($id !== false) {
 						$addressBook = $backend->getAddressBook($id);
 						$addressBooks = array($addressBook);
 					} else {
-						// TODO: Write log
+						\OCP\Util::writeLog(
+							'contacts',
+							__METHOD__ . ', Error creating default address book',
+							\OCP\Util::ERROR
+						);
 					}
 				}
 				foreach($addressBooks as $addressBook) {
@@ -116,16 +129,15 @@ class App {
 	 * @return AddressBook|null
 	 */
 	public function getAddressBook($backendName, $addressbookid) {
-		\OCP\Util::writeLog('contacts', __METHOD__ . ': '. $backendName . ', ' . $addressbookid, \OCP\Util::DEBUG);
+		//\OCP\Util::writeLog('contacts', __METHOD__ . ': '. $backendName . ', ' . $addressbookid, \OCP\Util::DEBUG);
 		foreach(self::$addressBooks as $addressBook) {
 			if($addressBook->getBackend()->name === $backendName
 				&& $addressBook->getId() === $addressbookid
 			) {
-				\OCP\Util::writeLog('contacts', __METHOD__ . ' returning: '. print_r($addressBook, true), \OCP\Util::DEBUG);
 				return $addressBook;
 			}
 		}
-		// TODO: Check for return values
+
 		$backend = self::getBackend($backendName, $this->user);
 		$info = $backend->getAddressBook($addressbookid);
 		if(!$info) {
@@ -147,68 +159,7 @@ class App {
 	 */
 	public function getContact($backendName, $addressbookid, $id) {
 		$addressBook = $this->getAddressBook($backendName, $addressbookid);
-		// TODO: Check for return value
 		return $addressBook->getChild($id);
-	}
-
-	/**
-	* @brief returns the vcategories object of the user
-	* @return (object) $vcategories
-	*/
-	public static function getVCategories() {
-		if (is_null(self::$categories)) {
-			if(\OC_VCategories::isEmpty('contact')) {
-				self::scanCategories();
-			}
-			self::$categories = new \OC_VCategories('contact',
-			null,
-			self::getDefaultCategories());
-		}
-		return self::$categories;
-	}
-	/**
-	 * @brief returns the categories for the user
-	 * @return (Array) $categories
-	 */
-	public static function getCategories($format = null) {
-		$categories = self::getVCategories()->categories($format);
-		return ($categories ? $categories : self::getDefaultCategories());
-	}
-
-	/**
-	 * scan vcards for categories.
-	 * @param $vccontacts VCards to scan. null to check all vcards for the current user.
-	 */
-	public static function scanCategories($vccontacts = null) {
-		if (is_null($vccontacts)) {
-			$vcaddressbooks = Addressbook::all(\OCP\USER::getUser());
-			if(count($vcaddressbooks) > 0) {
-				$vcaddressbookids = array();
-				foreach($vcaddressbooks as $vcaddressbook) {
-					if($vcaddressbook['userid'] === \OCP\User::getUser()) {
-						$vcaddressbookids[] = $vcaddressbook['id'];
-					}
-				}
-				$start = 0;
-				$batchsize = 10;
-				$categories = new \OC_VCategories('contact');
-				while($vccontacts =
-					VCard::all($vcaddressbookids, $start, $batchsize)) {
-					$cards = array();
-					foreach($vccontacts as $vccontact) {
-						$cards[] = array($vccontact['id'], $vccontact['carddata']);
-					}
-					\OCP\Util::writeLog('contacts', __METHOD__
-							.', scanning: '.$batchsize.' starting from '.$start,
-						\OCP\Util::DEBUG);
-					// only reset on first batch.
-					$categories->rescan($cards,
-						true,
-						($start == 0 ? true : false));
-					$start += $batchsize;
-				}
-			}
-		}
 	}
 
 }

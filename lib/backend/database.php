@@ -43,27 +43,26 @@ class Database extends AbstractBackend {
 	*/
 	public function __construct(
 		$userid = null,
-		$addressBooksTableName = '*PREFIX*contacts_addressbooks',
-		$cardsTableName = '*PREFIX*contacts_cards',
-		$indexTableName = '*PREFIX*contacts_cards_properties'
+		$options = array(
+			'addressBooksTableName' => '*PREFIX*contacts_addressbooks',
+			'cardsTableName' => '*PREFIX*contacts_cards',
+			'indexTableName' => '*PREFIX*contacts_cards_properties'
+		)
 	) {
 		$this->userid = $userid ? $userid : \OCP\User::getUser();
-		$this->addressBooksTableName = $addressBooksTableName;
-		$this->cardsTableName = $cardsTableName;
-		$this->indexTableName = $indexTableName;
+		$this->addressBooksTableName = $options['addressBooksTableName'];
+		$this->cardsTableName = $options['cardsTableName'];
+		$this->indexTableName = $options['indexTableName'];
 		$this->addressbooks = array();
 	}
 
 	/**
 	 * Returns the list of addressbooks for a specific user.
 	 *
-	 * TODO: Create default if none exists.
-	 *
-	 * @param string $principaluri
+	 * @see AbstractBackend::getAddressBooksForUser
 	 * @return array
 	 */
-	public function getAddressBooksForUser($userid = null) {
-		$userid = $userid ? $userid : $this->userid;
+	public function getAddressBooksForUser(array $options = array()) {
 
 		try {
 			if(!isset(self::$preparedQueries['addressbooksforuser'])) {
@@ -72,8 +71,8 @@ class Database extends AbstractBackend {
 					. '` WHERE `userid` = ? ORDER BY `displayname`';
 				self::$preparedQueries['addressbooksforuser'] = \OCP\DB::prepare($sql);
 			}
-			$result = self::$preparedQueries['addressbooksforuser']->execute(array($userid));
-			if (\OC_DB::isError($result)) {
+			$result = self::$preparedQueries['addressbooksforuser']->execute(array($this->userid));
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $this->addressbooks;
 			}
@@ -82,14 +81,14 @@ class Database extends AbstractBackend {
 			return $this->addressbooks;
 		}
 
-		while( $row = $result->fetchRow()) {
+		while($row = $result->fetchRow()) {
 			$row['permissions'] = \OCP\PERMISSION_ALL;
 			$this->addressbooks[$row['id']] = $row;
 		}
 		return $this->addressbooks;
 	}
 
-	public function getAddressBook($addressbookid) {
+	public function getAddressBook($addressbookid, array $options = array()) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' id: '
 		//	. $addressbookid, \OCP\Util::DEBUG);
 		if($this->addressbooks && isset($this->addressbooks[$addressbookid])) {
@@ -105,7 +104,7 @@ class Database extends AbstractBackend {
 				self::$preparedQueries['getaddressbook'] = \OCP\DB::prepare($query);
 			}
 			$result = self::$preparedQueries['getaddressbook']->execute(array($addressbookid));
-			if (\OC_DB::isError($result)) {
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::write('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return null;
@@ -126,7 +125,8 @@ class Database extends AbstractBackend {
 		return null;
 	}
 
-	public function hasAddressBook($addressbookid) {
+	public function hasAddressBook($addressbookid, array $options = array()) {
+		// First check if it's already cached
 		if($this->addressbooks && isset($this->addressbooks[$addressbookid])) {
 			return true;
 		}
@@ -140,7 +140,7 @@ class Database extends AbstractBackend {
 	 * @param array $changes
 	 * @return bool
 	 */
-	public function updateAddressBook($addressbookid, array $changes) {
+	public function updateAddressBook($addressbookid, array $changes, array $options = array()) {
 		if(count($changes) === 0) {
 			return false;
 		}
@@ -172,10 +172,10 @@ class Database extends AbstractBackend {
 		try {
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute($updates);
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts',
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts',
 					__METHOD__. 'DB error: '
-					. \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
 		} catch(Exception $e) {
@@ -197,10 +197,11 @@ class Database extends AbstractBackend {
 	 * 'displayname' MUST be present.
 	 *
 	 * @param array $properties
+	 * @param array $options - Optional (backend specific options)
 	 * @return string|false The ID if the newly created AddressBook or false on error.
 	 */
-	public function createAddressBook(array $properties, $userid = null) {
-		$userid = $userid ? $userid : $this->userid;
+	public function createAddressBook(array $properties, array $options = array()) {
+
 		if(count($properties) === 0 || !isset($properties['displayname'])) {
 			return false;
 		}
@@ -208,7 +209,7 @@ class Database extends AbstractBackend {
 		$query = 'INSERT INTO `' . $this->addressBooksTableName . '` '
 			. '(`userid`,`displayname`,`uri`,`description`,`ctag`) VALUES(?,?,?,?,?)';
 
-		$updates = array($userid, $properties['displayname']);
+		$updates = array($this->userid, $properties['displayname']);
 		$updates[] = isset($properties['uri'])
 			? $properties['uri']
 			: $this->createAddressBookURI($properties['displayname']);
@@ -221,8 +222,8 @@ class Database extends AbstractBackend {
 				self::$preparedQueries['createaddressbook'] = \OCP\DB::prepare($query);
 			}
 			$result = self::$preparedQueries['createaddressbook']->execute($updates);
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
 		} catch(Exception $e) {
@@ -235,7 +236,8 @@ class Database extends AbstractBackend {
 			$updates['id'] = $newid;
 			$updates['ctag'] = $ctag;
 			$updates['lastmodified'] = $ctag;
-			$this->addressbooks[$addressbookid] = $updates;
+			$updates['permissions'] = \OCP\PERMISSION_ALL;
+			$this->addressbooks[$newid] = $updates;
 		}
 		return $newid;
 	}
@@ -247,9 +249,10 @@ class Database extends AbstractBackend {
 	 * property indexes and category/group relations by itself.
 	 *
 	 * @param string $addressbookid
+	 * @param array $options - Optional (backend specific options)
 	 * @return bool
 	 */
-	public function deleteAddressBook($addressbookid) {
+	public function deleteAddressBook($addressbookid, array $options = array()) {
 
 		// Get all contact ids for this address book
 		$ids = array();
@@ -258,9 +261,9 @@ class Database extends AbstractBackend {
 					. ' WHERE `addressbookid` = ?');
 		try {
 			$result = $stmt->execute(array($addressbookid));
-			if (\OC_DB::isError($result)) {
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
-					. \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
 		} catch(\Exception $e) {
@@ -275,7 +278,7 @@ class Database extends AbstractBackend {
 			}
 		}
 
-		\OC_Hook::emit('OCA\Contacts', 'pre_deleteAddressBook',
+		\OCP\Util::emitHook('OCA\Contacts', 'pre_deleteAddressBook',
 			array('addressbookid' => $addressbookid, 'contactids' => $ids)
 		);
 
@@ -321,7 +324,7 @@ class Database extends AbstractBackend {
 	 * @param integer $id
 	 * @return boolean
 	 */
-	public function touchAddressBook($id) {
+	public function setModifiedAddressBook($id) {
 		$query = 'UPDATE `' . $this->addressBooksTableName
 			. '` SET `ctag` = ? + 1 WHERE `id` = ?';
 		if(!isset(self::$preparedQueries['touchaddressbook'])) {
@@ -356,8 +359,8 @@ class Database extends AbstractBackend {
 			self::$preparedQueries['count'] = \OCP\DB::prepare($query);
 		}
 		$result = self::$preparedQueries['count']->execute(array($addressbookid));
-		if (\OC_DB::isError($result)) {
-			\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+		if (\OCP\DB::isError($result)) {
+			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 			return null;
 		}
 		return (int)$result->fetchOne();
@@ -367,20 +370,26 @@ class Database extends AbstractBackend {
 	 * Returns all contacts for a specific addressbook id.
 	 *
 	 * @param string $addressbookid
+	 * @param array $options - Optional (backend specific options)
 	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
 	 * @return array
 	 */
-	public function getContacts($addressbookid, $limit = null, $offset = null, $omitdata = false) {
+	public function getContacts($addressbookid, array $options = array() ) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' addressbookid: ' . $addressbookid, \OCP\Util::DEBUG);
 		$cards = array();
 		try {
+			$omitdata = isset($options['omitdata']) ? $options['omitdata'] : false;
 			$qfields = $omitdata ? '`id`, `fullname` AS `displayname`' : '*';
 			$query = 'SELECT ' . $qfields . ' FROM `' . $this->cardsTableName
 				. '` WHERE `addressbookid` = ? ORDER BY `fullname`';
-			$stmt = \OCP\DB::prepare($query, $limit, $offset);
+			$stmt = \OCP\DB::prepare(
+				$query,
+				isset($options['limit']) ? $options['limit'] : null,
+				isset($options['offset']) ? $options['offset'] : null
+			);
 			$result = $stmt->execute(array($addressbookid));
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $cards;
 			}
 		} catch(\Exception $e) {
@@ -412,10 +421,13 @@ class Database extends AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param mixed $id Contact ID
-	 * @return array|false
+	 * @param array $options - Optional (backend specific options)
+	 * @return array|null
 	 */
-	public function getContact($addressbookid, $id, $noCollection = false) {
+	public function getContact($addressbookid, $id, array $options = array()) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' identifier: ' . $addressbookid . ' ' . $id['uri'], \OCP\Util::DEBUG);
+
+		$noCollection = isset($options['noCollection']) ? $options['noCollection'] : false;
 
 		$where_query = '`id` = ?';
 		if(is_array($id)) {
@@ -429,7 +441,7 @@ class Database extends AbstractBackend {
 				throw new \Exception(
 					__METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
 				);
-				return false;
+				return null;
 			}
 		}
 		$ids = array($id);
@@ -444,18 +456,18 @@ class Database extends AbstractBackend {
 				. $this->cardsTableName . '` WHERE ' . $where_query;
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute($ids);
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-				return false;
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+				return null;
 			}
 			if((int)$result->numRows() === 0) {
 				\OCP\Util::writeLog('contacts', __METHOD__.', Not found, id: '. $id, \OCP\Util::DEBUG);
-				return false;
+				return null;
 			}
 		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
 			\OCP\Util::writeLog('contacts', __METHOD__.', id: '. $id, \OCP\Util::DEBUG);
-			return false;
+			return null;
 		}
 
 		$row = $result->fetchRow();
@@ -478,12 +490,16 @@ class Database extends AbstractBackend {
 	 * set, or the contact has a UID. If neither is set, it will fail.
 	 *
 	 * @param string $addressbookid
-	 * @param mixed $contact
+	 * @param VCard|string $contact
+	 * @param array $options - Optional (backend specific options)
 	 * @return string|bool The identifier for the new contact or false on error.
 	 */
-	public function createContact($addressbookid, $contact, $uri = null) {
+	public function createContact($addressbookid, $contact, array $options = array()) {
 
-		if(!$contact instanceof Contact) {
+		$qname = 'createcontact';
+		$uri = isset($options['uri']) ? $options['uri'] : null;
+
+		if(!$contact instanceof VCard) {
 			try {
 				$contact = Reader::read($contact);
 			} catch(\Exception $e) {
@@ -510,13 +526,13 @@ class Database extends AbstractBackend {
 		$contact->PRODID = $prodid;
 
 		$data = $contact->serialize();
-		if(!isset(self::$preparedQueries['createcontact'])) {
-		self::$preparedQueries['createcontact'] = \OCP\DB::prepare('INSERT INTO `'
+		if(!isset(self::$preparedQueries[$qname])) {
+		self::$preparedQueries[$qname] = \OCP\DB::prepare('INSERT INTO `'
 			. $this->cardsTableName
 			. '` (`addressbookid`,`fullname`,`carddata`,`uri`,`lastmodified`) VALUES(?,?,?,?,?)' );
 		}
 		try {
-			$result = self::$preparedQueries['createcontact']
+			$result = self::$preparedQueries[$qname]
 				->execute(
 					array(
 						$addressbookid,
@@ -526,8 +542,8 @@ class Database extends AbstractBackend {
 						time()
 					)
 				);
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
 		} catch(\Exception $e) {
@@ -536,9 +552,9 @@ class Database extends AbstractBackend {
 		}
 		$newid = \OCP\DB::insertid($this->cardsTableName);
 
-		$this->touchAddressBook($addressbookid);
-		\OC_Hook::emit('OCA\Contacts', 'post_createContact',
-			array('id' => $newid, 'parent' => $addressbookid, 'contact' => $contact)
+		$this->setModifiedAddressBook($addressbookid);
+		\OCP\Util::emitHook('OCA\Contacts', 'post_createContact',
+			array('id' => $newid, 'parent' => $addressbookid, 'backend' => $this->name, 'contact' => $contact)
 		);
 		return (string)$newid;
 	}
@@ -548,11 +564,16 @@ class Database extends AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param mixed $id Contact ID
-	 * @param mixed $contact
+	 * @param VCard|string $contact
+	 * @param array $options - Optional (backend specific options)
 	 * @see getContact
 	 * @return bool
 	 */
-	public function updateContact($addressbookid, $id, $contact, $noCollection = false) {
+	public function updateContact($addressbookid, $id, $contact, array $options = array()) {
+		$noCollection = isset($options['noCollection']) ? $options['noCollection'] : false;
+		$isBatch = isset($options['isBatch']) ? $options['isBatch'] : false;
+		$qname = 'updatecontact';
+
 		$updateRevision = true;
 		$isCardDAV = false;
 		if(!$contact instanceof VCard) {
@@ -563,25 +584,24 @@ class Database extends AbstractBackend {
 				return false;
 			}
 		}
-		$where_query = '`id` = ?';
+
 		if(is_array($id)) {
 			$where_query = '';
 			if(isset($id['id'])) {
 				$id = $id['id'];
-				$qname = 'createcontactbyid';
 			} elseif(isset($id['uri'])) {
 				$updateRevision = false;
 				$isCardDAV = true;
-				$where_query = '`id` = ?';
-				$id = $id['uri'];
-				$qname = 'createcontactbyuri';
+				$id = $this->getIdFromUri($id['uri']);
+				if(is_null($id)) {
+					\OCP\Util::writeLog('contacts', __METHOD__ . ' Couldn\'t find contact', \OCP\Util::ERROR);
+					return false;
+				}
 			} else {
 				throw new \Exception(
 					__METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
 				);
 			}
-		} else {
-			$qname = 'createcontactbyid';
 		}
 
 		if($updateRevision || !isset($contact->REV)) {
@@ -591,25 +611,21 @@ class Database extends AbstractBackend {
 
 		$data = $contact->serialize();
 
-		$updates = array($contact->FN, $data, time(), $id);
-
 		if($noCollection) {
-			$me = $this->getContact(null, $id, true);
+			$me = $this->getContact(null, $id, $options);
 			$addressbookid = $me['parent'];
 		}
-		//if(!$noCollection) {
-			$where_query .= ' AND `addressbookid` = ?';
-			$updates[] = $addressbookid;
-		//}
+
+		$updates = array($contact->FN, $data, time(), $id, $addressbookid);
 
 		$query = 'UPDATE `' . $this->cardsTableName
-				. '` SET `fullname` = ?,`carddata` = ?, `lastmodified` = ? WHERE ' . $where_query;
+				. '` SET `fullname` = ?,`carddata` = ?, `lastmodified` = ? WHERE `id` = ? AND `addressbookid` = ?';
 		if(!isset(self::$preparedQueries[$qname])) {
 			self::$preparedQueries[$qname] = \OCP\DB::prepare($query);
 		}
 		try {
 			$result = self::$preparedQueries[$qname]->execute($updates);
-			if (\OC_DB::isError($result)) {
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
@@ -620,10 +636,18 @@ class Database extends AbstractBackend {
 			return false;
 		}
 
-		$this->touchAddressBook($addressbookid);
-		\OC_Hook::emit('OCA\Contacts', 'post_updateContact',
-			array('id' => $id, 'parent' => $addressbookid, 'contact' => $contact, 'carddav' => $isCardDAV)
-		);
+		$this->setModifiedAddressBook($addressbookid);
+		if(!$isBatch) {
+			\OCP\Util::emitHook('OCA\Contacts', 'post_updateContact',
+				array(
+					'backend' => $this->name,
+					'addressBookId' => $addressbookid,
+					'contactId' => $id,
+					'contact' => $contact,
+					'carddav' => $isCardDAV
+				)
+			);
+		}
 		return true;
 	}
 
@@ -632,39 +656,53 @@ class Database extends AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param string $id
+	 * @param array $options - Optional (backend specific options)
 	 * @see getContact
 	 * @return bool
 	 */
-	public function deleteContact($addressbookid, $id) {
-		$where_query = '`id` = ?';
+	public function deleteContact($addressbookid, $id, array $options = array()) {
+		// TODO: pass the uri in $options instead.
+
+		$qname = 'deletecontact';
+		$noCollection = isset($options['noCollection']) ? $options['noCollection'] : false;
+		$isBatch = isset($options['isBatch']) ? $options['isBatch'] : false;
+
 		if(is_array($id)) {
-			$where_query = '';
 			if(isset($id['id'])) {
 				$id = $id['id'];
-				$qname = 'deletecontactsbyid';
 			} elseif(isset($id['uri'])) {
-				$where_query = '`id` = ?';
-				$id = $id['uri'];
-				$qname = 'deletecontactsbyuri';
+				$id = $this->getIdFromUri($id['uri']);
+				if(is_null($id)) {
+					\OCP\Util::writeLog('contacts', __METHOD__ . ' Couldn\'t find contact', \OCP\Util::ERROR);
+					return false;
+				}
 			} else {
 				throw new Exception(
 					__METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
 				);
 			}
-		} else {
-			$qname = 'deletecontactsbyid';
 		}
-		\OC_Hook::emit('OCA\Contacts', 'pre_deleteContact',
-			array('id' => $id)
-		);
+
+		if(!$isBatch) {
+			\OCP\Util::emitHook('OCA\Contacts', 'pre_deleteContact',
+				array('id' => $id)
+			);
+		}
+
+		if($noCollection) {
+			$me = $this->getContact(null, $id, $options);
+			$addressbookid = $me['parent'];
+		}
+
 		if(!isset(self::$preparedQueries[$qname])) {
 			self::$preparedQueries[$qname] = \OCP\DB::prepare('DELETE FROM `'
 				. $this->cardsTableName
-				. '` WHERE ' . $where_query . ' AND `addressbookid` = ?');
+				. '` WHERE `id` = ? AND `addressbookid` = ?');
 		}
+		\OCP\Util::writeLog('contacts', __METHOD__ . ' updates: ' . $id . '/' . $addressbookid, \OCP\Util::DEBUG);
 		try {
 			$result = self::$preparedQueries[$qname]->execute(array($id, $addressbookid));
-			if (\OC_DB::isError($result)) {
+			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
@@ -676,7 +714,7 @@ class Database extends AbstractBackend {
 				. $id, \OCP\Util::DEBUG);
 			return false;
 		}
-		$this->touchAddressBook($addressbookid);
+		$this->setModifiedAddressBook($addressbookid);
 		return true;
 	}
 
@@ -695,14 +733,35 @@ class Database extends AbstractBackend {
 		return ($contact ? $contact['lastmodified'] : null);
 	}
 
+	/**
+	 * @brief Get the contact id from the uri.
+	 *
+	 * @param mixed $id
+	 * @returns int | null
+	 */
+	public function getIdFromUri($uri) {
+		$query =  'SELECT `id` FROM `'. $this->cardsTableName . '` WHERE `uri` = ?';
+		$stmt = \OCP\DB::prepare($query);
+		$result = $stmt->execute(array($uri));
+		if (\OCP\DB::isError($result)) {
+			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			return null;
+		}
+		if((int)$result->numRows() === 0) {
+			\OCP\Util::writeLog('contacts', __METHOD__.', Not found, uri: '. $uri, \OCP\Util::DEBUG);
+			return null;
+		}
+		return $result->fetchOne();
+	}
+
 	private function createAddressBookURI($displayname, $userid = null) {
 		$userid = $userid ? $userid : \OCP\User::getUser();
 		$name = str_replace(' ', '_', strtolower($displayname));
 		try {
 			$stmt = \OCP\DB::prepare('SELECT `uri` FROM `' . $this->addressBooksTableName . '` WHERE `userid` = ? ');
 			$result = $stmt->execute(array($userid));
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OC_Log::ERROR);
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $name;
 			}
 		} catch(Exception $e) {

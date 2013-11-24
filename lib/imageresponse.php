@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Thomas Tanghus, Bart Visscher
+ * @author Thomas Tanghus
  * Copyright (c) 2013 Thomas Tanghus (thomas@tanghus.net)
  * This file is licensed under the Affero General Public License version 3 or
  * later.
@@ -8,7 +8,8 @@
  */
 
 namespace OCA\Contacts;
-use OCA\AppFramework\Http\Response;
+
+use OCP\AppFramework\Http\Response;
 
 
 /**
@@ -16,21 +17,29 @@ use OCA\AppFramework\Http\Response;
  */
 class ImageResponse extends Response {
 	/**
-	 * @var OC_Image
+	 * @var OCP\Image
 	 */
 	protected $image;
 
+	/**
+	 * @param OCP\Image $image
+	 */
 	public function __construct($image = null) {
-		//\OCP\Util::writeLog('contacts', __METHOD__.' request: '.print_r($request, true), \OCP\Util::DEBUG);
-		$this->setImage($image);
+		if(!is_null($image)) {
+			$this->setImage($image);
+		}
 	}
 
-	public function setImage(\OC_Image $image) {
+	/**
+	 * @param OCP\Image $image
+	 */
+	public function setImage(\OCP\Image $image) {
 		if(!$image->valid()) {
-			throw new InvalidArgumentException(__METHOD__. ' The image resource is not valid.');
+			throw new \InvalidArgumentException(__METHOD__. ' The image resource is not valid.');
 		}
 		$this->image = $image;
 		$this->addHeader('Content-Type', $image->mimeType());
+		return $this;
 	}
 
 	/**
@@ -39,7 +48,7 @@ class ImageResponse extends Response {
 	 */
 	public function render() {
 		if(is_null($this->image)) {
-			throw new BadMethodCallException(__METHOD__. ' Image must be set either in constructor or with setImage()');
+			throw new \BadMethodCallException(__METHOD__. ' Image must be set either in constructor or with setImage()');
 		}
 		return $this->image->data();
 	}

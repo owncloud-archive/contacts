@@ -22,16 +22,14 @@
 
 namespace OCA\Contacts;
 
-use Sabre\VObject\Property;
+use Sabre\VObject\Property,
+	OCA\Contacts\Utils\Properties;
 
 /**
  * Subclass this class or implement IPIMObject interface for PIM objects
  */
 
 class Contact extends VObject\VCard implements IPIMObject {
-
-	const THUMBNAIL_PREFIX = 'contact-thumbnail-';
-	const THUMBNAIL_SIZE = 28;
 
 	/**
 	 * The name of the object type in this case VCARD.
@@ -97,6 +95,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 						case 'fullname':
 							$this->props['displayname'] = $value;
 							$this->FN = $value;
+							// Set it to saved again as we're not actually changing anything
+							$this->setSaved();
 							break;
 					}
 				}
@@ -237,6 +237,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 	/**
 	 * Delete the data from backend
 	 *
+	 * FIXME: Should be removed as it could leave the parent with a dataless object.
+	 *
 	 * @return bool
 	 */
 	public function delete() {
@@ -273,7 +275,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				->updateContact(
 					$this->getParent()->getId(),
 					$this->getId(),
-					$this->serialize()
+					$this
 				)
 			) {
 				$this->props['lastmodified'] = time();
@@ -315,13 +317,14 @@ class Contact extends VObject\VCard implements IPIMObject {
 					}
 				}
 				$this->setRetrieved(true);
+				$this->setSaved(true);
 				//$this->children = $this->props['vcard']->children();
 				unset($this->props['vcard']);
 				return true;
 			} elseif(!isset($this->props['carddata'])) {
 				$result = $this->props['backend']->getContact(
 					$this->getParent()->getId(),
-					$this->id
+					$this->getId()
 				);
 				if($result) {
 					if(isset($result['vcard'])
@@ -335,7 +338,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 						// Save internal values
 						$data = $result['carddata'];
 						$this->props['carddata'] = $result['carddata'];
-						$this->props['lastmodified'] = $result['lastmodified'];
+						$this->props['lastmodified'] = isset($result['lastmodified'])
+							? $result['lastmodified']
+							: null;
 						$this->props['displayname'] = $result['displayname'];
 						$this->props['permissions'] = $result['permissions'];
 					} else {
@@ -361,6 +366,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 						$this->add($child);
 					}
 					$this->setRetrieved(true);
+					$this->setSaved(true);
 				} else {
 					\OCP\Util::writeLog('contacts', __METHOD__.' Error reading: ' . print_r($data, true), \OCP\Util::DEBUG);
 					return false;
@@ -569,7 +575,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	public function lastModified() {
-		if(!isset($this->props['lastmodified'])) {
+		if(!isset($this->props['lastmodified']) && !$this->isRetrieved()) {
 			$this->retrieve();
 		}
 		return isset($this->props['lastmodified'])
@@ -581,6 +587,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * Merge in data from a multi-dimentional array
 	 *
 	 * NOTE: The data has actually already been merged client side!
+	 * NOTE: The only properties coming from the web client are the ones
+	 * defined in \OCA\Contacts\Utils\Properties::$index_properties and
+	 * UID is skipped for obvious reasons, and PHOTO is currently not updated.
 	 * The data array has this structure:
 	 *
 	 * array(
@@ -658,82 +667,111 @@ class Contact extends VObject\VCard implements IPIMObject {
 				}
 			}
 		}
-		if($updated) {
-			$this->setSaved(false);
-		}
+
+		$this->setSaved(!$updated);
+
 		return $updated;
 	}
 
-	// TODO: Cleanup these parameters
-	public function cacheThumbnail(\OC_Image $image = null, $remove = false, $update = false) {
-		$key = self::THUMBNAIL_PREFIX . $this->combinedKey();
-		//\OC_Cache::remove($key);
-		if(\OC_Cache::hasKey($key) && $image === null && $remove === false && $update === false) {
-			return \OC_Cache::get($key);
-		}
-		if($remove) {
-			\OC_Cache::remove($key);
-			if(!$update) {
-				return false;
-			}
-		}
-		if(is_null($image)) {
+    public function __get($key) {
+		if(!$this->isRetrieved()) {
 			$this->retrieve();
-			$image = new \OC_Image();
-			if(!isset($this->PHOTO) && !isset($this->LOGO)) {
-				return false;
-			}
-			if(!$image->loadFromBase64((string)$this->PHOTO)) {
-				if(!$image->loadFromBase64((string)$this->LOGO)) {
-					return false;
-				}
-			}
 		}
-		if(!$image->centerCrop()) {
-			\OCP\Util::writeLog('contacts',
-				'thumbnail.php. Couldn\'t crop thumbnail for ID ' . $key,
-				\OCP\Util::ERROR);
-			return false;
+
+		return parent::__get($key);
+	}
+
+    public function __isset($key) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
 		}
-		if(!$image->resize(self::THUMBNAIL_SIZE)) {
-			\OCP\Util::writeLog('contacts',
-				'thumbnail.php. Couldn\'t resize thumbnail for ID ' . $key,
-				\OCP\Util::ERROR);
-			return false;
-		}
-		 // Cache as base64 for around a month
-		\OC_Cache::set($key, strval($image), 3000000);
-		\OCP\Util::writeLog('contacts', 'Caching ' . $key, \OCP\Util::DEBUG);
-		return \OC_Cache::get($key);
+
+		return parent::__isset($key);
 	}
 
 	public function __set($key, $value) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
 		parent::__set($key, $value);
+		if($key === 'FN') {
+			$this->props['displayname'] = $value;
+		}
 		$this->setSaved(false);
 	}
 
 	public function __unset($key) {
+		if(!$this->isRetrieved()) {
+			$this->retrieve();
+		}
 		parent::__unset($key);
 		if($key === 'PHOTO') {
-			$this->cacheThumbnail(null, true);
+			Properties::cacheThumbnail(
+				$this->getBackend()->name,
+				$this->getParent()->getId(),
+				$this->getId(),
+				null,
+				null,
+				array('remove' => true)
+			);
 		}
 		$this->setSaved(false);
 	}
 
-	protected function setRetrieved($state) {
+	public function setRetrieved($state) {
 		$this->props['retrieved'] = $state;
 	}
 
-	protected function isRetrieved() {
+	public function isRetrieved() {
 		return $this->props['retrieved'];
 	}
 
-	protected function setSaved($state) {
+	public function setSaved($state = true) {
 		$this->props['saved'] = $state;
 	}
 
-	protected function isSaved() {
+	public function isSaved() {
 		return $this->props['saved'];
+	}
+
+	/**
+	 * Generate an event to show in the calendar
+	 *
+	 * @return \Sabre\VObject\Component\VCalendar|null
+	 */
+	public function getBirthdayEvent() {
+		if(!isset($this->BDAY)) {
+			return;
+		}
+		$birthday = $this->BDAY;
+		if ((string)$birthday) {
+			$title = str_replace('{name}',
+				strtr((string)$this->FN, array('\,' => ',', '\;' => ';')),
+				App::$l10n->t('{name}\'s Birthday')
+			);
+			try {
+				$date = new \DateTime($birthday);
+			} catch(\Exception $e) {
+				continue;
+			}
+			$vevent = \Sabre\VObject\Component::create('VEVENT');
+			$vevent->add('DTSTART');
+			$vevent->DTSTART->setDateTime(
+				$date,
+				\Sabre\VObject\Property\DateTime::DATE
+			);
+			$vevent->add('DURATION', 'P1D');
+			$vevent->{'UID'} = $this->UID;
+			$vevent->{'RRULE'} = 'FREQ=YEARLY';
+			$vevent->{'SUMMARY'} = $title;
+			$vcal = \Sabre\VObject\Component::create('VCALENDAR');
+			$vcal->VERSION = '2.0';
+			$appinfo = \OCP\App::getAppInfo('contacts');
+			$appversion = \OCP\App::getAppVersion('contacts');
+			$vcal->PRODID = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
+			$vcal->add($vevent);
+			return $vcal;
+		}
 	}
 
 }

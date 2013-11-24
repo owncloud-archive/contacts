@@ -226,4 +226,14 @@ class AddressBook extends \Sabre_CardDAV_AddressBook {
 
 	}
 
+	/**
+	* Returns the last modification date as a unix timestamp.
+	*
+	* @return int|null
+	*/
+	public function getLastModified() {
+
+		return $this->carddavBackend->lastModifiedAddressBook($this->addressBookInfo['id']);
+
+	}
 }

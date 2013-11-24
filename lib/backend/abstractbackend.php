@@ -22,24 +22,26 @@
 
 namespace OCA\Contacts\Backend;
 
+use OCA\Contacts\VObject\VCard;
+
 /**
  * Subclass this class for address book backends
  *
  * The following methods MUST be implemented:
- * @method array getAddressBooksForUser(string $userid) FIXME: I'm not sure about this one.
- * @method array getAddressBook(string $addressbookid)
- * @method array getContacts(string $addressbookid)
- * @method array getContact(string $addressbookid, mixed $id)
+ * @method array getAddressBooksForUser(array $options = array())
+ * @method array|null getAddressBook(string $addressbookid, array $options = array())
+ * @method array getContacts(string $addressbookid, array $options = array())
+ * @method array|null getContact(string $addressbookid, mixed $id, array $options = array())
  * The following methods MAY be implemented:
  * @method bool hasAddressBook(string $addressbookid)
- * @method bool updateAddressBook(string $addressbookid, array $updates)
- * @method string createAddressBook(string $addressbookid, array $properties)
- * @method bool deleteAddressBook(string $addressbookid)
+ * @method bool updateAddressBook(string $addressbookid, array $updates, array $options = array())
+ * @method string createAddressBook(array $properties, array $options = array())
+ * @method bool deleteAddressBook(string $addressbookid, array $options = array())
  * @method int lastModifiedAddressBook(string $addressbookid)
  * @method array numContacts(string $addressbookid)
- * @method bool updateContact(string $addressbookid, string $id, array $updates)
- * @method string createContact(string $addressbookid, string $id, array $properties)
- * @method bool deleteContact(string $addressbookid, string $id)
+ * @method bool updateContact(string $addressbookid, string $id, VCard $contact, array $options = array())
+ * @method string createContact(string $addressbookid, VCard $contact, array $properties)
+ * @method bool deleteContact(string $addressbookid, string $id, array $options = array())
  * @method int lastModifiedContact(string $addressbookid)
  */
 
@@ -51,6 +53,12 @@ abstract class AbstractBackend {
 	 */
 	public $name;
 
+	/**
+	 * The current usert.
+	 * @var string
+	 */
+	public $userid;
+
 	protected $possibleContactPermissions = array(
 		\OCP\PERMISSION_CREATE 	=> 'createContact',
 		\OCP\PERMISSION_READ	=> 'getContact',
@@ -60,25 +68,27 @@ abstract class AbstractBackend {
 
 	protected $possibleAddressBookPermissions = array(
 		\OCP\PERMISSION_CREATE 	=> 'createAddressBook',
-		\OCP\PERMISSION_READ		=> 'getAddressBook',
+		\OCP\PERMISSION_READ	=> 'getAddressBook',
 		\OCP\PERMISSION_UPDATE	=> 'updateAddressBook',
 		\OCP\PERMISSION_DELETE 	=> 'deleteAddressBook',
 	);
 
 	/**
-	* @brief Get all permissions for contacts
+	* Sets up the backend
+	*
+	*/
+	/*public function __construct($userid = null) {
+		$this->userid = $userid ? $userid : \OCP\User::getUser();
+	}*/
+
+	/**
+	* @brief Get all possible permissions for contacts based on what the backend implements.
 	* @returns bitwise-or'ed actions
 	*
-	* Returns the supported actions as int to be
+	* Returns the supported actions as an int to be
 	* compared with \OCP\PERMISSION_CREATE etc.
-	* When getting the permissions we also have to check for
-	* configured permissions and return min() of the two values.
-	* A user can for example configure an address book with a backend
-	* that implements deleteContact() but wants to set it read-only.
-	* This is done in the AddressBook and Contact classes.
-	* NOTE: A more suitable
 	*/
-	public function getContactPermissions() {
+	protected function getContactPermissions() {
 		$permissions = 0;
 		foreach($this->possibleContactPermissions AS $permission => $methodName) {
 			if(method_exists($this, $methodName)) {
@@ -91,13 +101,13 @@ abstract class AbstractBackend {
 	}
 
 	/**
-	* @brief Get all permissions for address book.
+	* @brief Get all permissions for address book based on what the backend implements.
 	* @returns bitwise-or'ed actions
 	*
 	* Returns the supported actions as int to be
 	* compared with \OCP\PERMISSION_CREATE etc.
 	*/
-	public function getAddressBookPermissions() {
+	protected function getAddressBookPermissions() {
 		$permissions = 0;
 		foreach($this->possibleAddressBookPermissions AS $permission => $methodName) {
 			if(method_exists($this, $methodName)) {
@@ -136,6 +146,8 @@ abstract class AbstractBackend {
 	/**
 	 * Check if the backend has the address book
 	 *
+	 * This can be reimplemented in the backend to improve performance.
+	 *
 	 * @param string $addressbookid
 	 * @return bool
 	 */
@@ -163,11 +175,10 @@ abstract class AbstractBackend {
 	 * backend and a 'displayname', and it MAY contain a
 	 * 'description'.
 	 *
-	 * @param string $principaluri
+	 * @param array $options - Optional (backend specific options)
 	 * @return array
 	 */
-	public function getAddressBooksForUser($userid) {
-	}
+	//public abstract function getAddressBooksForUser(array $options = array());
 
 	/**
 	 * Get an addressbook's properties
@@ -179,9 +190,10 @@ abstract class AbstractBackend {
 	 * 'description', but backends can implement additional.
 	 *
 	 * @param string $addressbookid
+	 * @param array $options - Optional (backend specific options)
 	 * @return array|null $properties
 	 */
-	public abstract function getAddressBook($addressbookid);
+	public abstract function getAddressBook($addressbookid, array $options = array());
 
 	/**
 	 * Updates an addressbook's properties
@@ -193,31 +205,35 @@ abstract class AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param array $properties
+	 * @param array $options - Optional (backend specific options)
 	 * @return bool
-	public function updateAddressBook($addressbookid, array $properties) {
-	}
+	public function updateAddressBook($addressbookid, array $properties, array $options = array());
 	 */
 
 	/**
 	 * Creates a new address book
+	 *
+	 * Classes that doesn't support adding address books MUST NOT implement this method.
 	 *
 	 * Currently the only ones supported are 'displayname' and
 	 * 'description', but backends can implement additional.
 	 * 'displayname' MUST be present.
 	 *
 	 * @param array $properties
+	 * @param array $options - Optional (backend specific options)
 	 * @return string|false The ID if the newly created AddressBook or false on error.
-	public function createAddressBook(array $properties) {
-	}
+	public function createAddressBook(array $properties, array $options = array());
 	 */
 
 	/**
-	 * Deletes an entire addressbook and all its contents
+	 * Deletes an entire address book and all its contents
+	 *
+	 * Classes that doesn't support deleting address books MUST NOT implement this method.
 	 *
 	 * @param string $addressbookid
+	 * @param array $options - Optional (backend specific options)
 	 * @return bool
-	public function deleteAddressBook($addressbookid) {
-	}
+	public function deleteAddressBook($addressbookid, array $options = array());
 	 */
 
 	/**
@@ -226,8 +242,6 @@ abstract class AbstractBackend {
 	 * Must return a UNIX time stamp or null if the backend
 	 * doesn't support it.
 	 *
-	 * TODO: Implement default methods get/set for backends that
-	 * don't support.
 	 * @param string $addressbookid
 	 * @returns int | null
 	 */
@@ -235,10 +249,22 @@ abstract class AbstractBackend {
 	}
 
 	/**
+	 * @brief 'touch' an address book.
+	 *
+	 * If implemented this method must mark the address books
+	 * modification date so lastModifiedAddressBook() can be
+	 * used to invalidate the cache.
+	 *
+	 * @param string $addressbookid
+	 */
+	public function setModifiedAddressBook($addressbookid) {
+	}
+
+	/**
 	 * Returns all contacts for a specific addressbook id.
 	 *
-	 * The returned array MUST contain the unique ID of the contact mapped to 'id', a
-	 * displayname mapped to 'displayname' and an integer 'permissions' value using there
+	 * The returned array MUST contain the unique ID a string value 'id', a string
+	 * value 'displayname', a string value 'owner' and an integer 'permissions' value using there
 	 * ownCloud CRUDS constants (which MUST be at least \OCP\PERMISSION_READ), and SHOULD
 	 * contain the properties of the contact formatted as a vCard 3.0
 	 * https://tools.ietf.org/html/rfc2426 mapped to 'carddata' or as an
@@ -247,20 +273,24 @@ abstract class AbstractBackend {
 	 * Example:
 	 *
 	 * array(
-	 *   0 => array('id' => '4e111fef5df', 'permissions' => 1, 'displayname' => 'John Q. Public', 'vcard' => $object),
-	 *   1 => array('id' => 'bbcca2d1535', 'permissions' => 32, 'displayname' => 'Jane Doe', 'carddata' => $data)
+	 *   0 => array('id' => '4e111fef5df', 'owner' => 'foo', 'permissions' => 1, 'displayname' => 'John Q. Public', 'vcard' => $vobject),
+	 *   1 => array('id' => 'bbcca2d1535', 'owner' => 'bar', 'permissions' => 32, 'displayname' => 'Jane Doe', 'carddata' => $data)
 	 * );
 	 *
 	 * For contacts that contain loads of data, the 'carddata' or 'vcard' MAY be omitted
 	 * as it can be fetched later.
 	 *
-	 * TODO: Some sort of ETag?
+	 * The following options are supported in the $options array:
+	 *
+	 * - 'limit': An integer value for the number of contacts to fetch in each call.
+	 * - 'offset': The offset to start at.
+	 * - 'omitdata': Whether to fetch the entire carddata or vcard.
 	 *
 	 * @param string $addressbookid
-	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
+	 * @param array $options - Optional options
 	 * @return array
 	 */
-	public abstract function getContacts($addressbookid, $limit = null, $offset = null, $omitdata = false);
+	public abstract function getContacts($addressbookid, array $options = array());
 
 	/**
 	 * Returns a specfic contact.
@@ -269,39 +299,46 @@ abstract class AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param mixed $id
-	 * @return array|bool
+	 * @param array $options - Optional options
+	 * @return array|null
 	 */
-	public abstract function getContact($addressbookid, $id);
+	public abstract function getContact($addressbookid, $id, array $options = array());
 
 	/**
 	 * Creates a new contact
 	 *
+	 * Classes that doesn't support adding contacts MUST NOT implement this method.
+	 *
 	 * @param string $addressbookid
-	 * @param string $carddata
+	 * @param VCard $contact
+	 * @param array $options - Optional options
 	 * @return string|bool The identifier for the new contact or false on error.
-	public function createContact($addressbookid, $carddata) {
-	}
+	public function createContact($addressbookid, $contact, array $options = array());
 	 */
 
 	/**
 	 * Updates a contact
 	 *
+	 * Classes that doesn't support updating contacts MUST NOT implement this method.
+	 *
 	 * @param string $addressbookid
 	 * @param mixed $id
-	 * @param string $carddata
+	 * @param VCard $contact
+	 * @param array $options - Optional options
 	 * @return bool
-	public function updateContact($addressbookid, $id, $carddata) {
-	}
+	public function updateContact($addressbookid, $id, $carddata, array $options = array());
 	 */
 
 	/**
 	 * Deletes a contact
 	 *
+	 * Classes that doesn't support deleting contacts MUST NOT implement this method.
+	 *
 	 * @param string $addressbookid
 	 * @param mixed $id
+	 * @param array $options - Optional options
 	 * @return bool
-	public function deleteContact($addressbookid, $id) {
-	}
+	public function deleteContact($addressbookid, $id, array $options = array());
 	 */
 
 	/**
@@ -318,111 +355,101 @@ abstract class AbstractBackend {
 	}
 	
 	/**
-	 * Returns the list of active addressbooks for a specific user.
-	 *
-	 * @param string $userid
-	 * @return array
+	 * Creates a unique key for inserting into oc_preferences.
+	 * As IDs can have any length and the key field is limited to 64 chars,
+	 * the IDs are transformed to the first 8 chars of their md5 hash.
+	 * 
+	 * @param string $addressBookId.
+	 * @param string $contactId.
+	 * @return string
 	 */
-	/*public function getAddressBooksForUser($userid = null) {
-		$userid = $userid ? $userid : $this->userid;
-		
-		$sql = "SELECT `configkey`, `configvalue`
-						FROM `*PREFIX*preferences`
-						WHERE `userid`=?
-						AND `appid`='contacts'
-						AND `configkey` like ?";
-						
-		$configkeyPrefix = $this->name . "_%_uri";
-		$prefQuery = \OCP\DB::prepare($sql);
-		$result = $prefQuery->execute(array($this->userid, $configkeyPrefix));
-		if (\OC_DB::isError($result)) {
-			\OCP\Util::write('contacts', __METHOD__. 'DB error: '
-				. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-			return false;
-		}
-		if(!is_null($result)) {
-			$paramsArray = array();
-			while($row = $result->fetchRow()) {
-				$param = substr($row['configkey'], strlen($this->name)+1);
-				$param = substr($param, strpos($param, "_"));
-				$paramsArray[] = $param;
+	protected function combinedKey($addressBookId = null, $contactId = null) {
+		$key = $this->name;
+		if(!is_null($addressBookId)) {
+			$key .= '_' . substr(md5($addressBookId), 0, 8);
+			if(!is_null($contactId)) {
+				$key .= '_' . substr(md5($contactId), 0, 8);
 			}
+		} else if(!is_null($contactId)) {
+			throw new \BadMethodCallException(
+				__METHOD__ . ' cannot be called with a contact ID but no address book ID'
+			);
 		}
-		return $paramsArray;
-	}*/
+		return $key;
+	}
+
+	/**
+	 * @brief Query whether a backend or an address book is active
+	 * @param string $addressbookid If null it checks whether the backend is activated.
+	 * @return boolean
+	 */
+	public function isActive($addressBookId = null) {
+		$key = $this->combinedKey($addressBookId);
+		$key = 'active_' . $key;
+
+		return !!(\OCP\Config::getUserValue($this->userid, 'contacts', $key, 1));
+	}
+
+	/**
+	 * @brief Activate a backend or an address book
+	 * @param bool active
+	 * @param string $addressbookid If null it activates the backend.
+	 * @return boolean
+	 */
+	public function setActive($active, $addressBookId = null) {
+		$key = $this->combinedKey($addressBookId);
+		$key = 'active_' . $key;
+
+		$this->setModifiedAddressBook($addressBookId);
+		return \OCP\Config::setUserValue($this->userid, 'contacts', $key, (int)$active);
+	}
 
 	/**
 	 * @brief get all the preferences for the addressbook
-	 * @param mixed $id
-	 * @return array|false format array('param1' => 'value', 'param2' => 'value')
+	 * @param string $id
+	 * @return array Format array('param1' => 'value', 'param2' => 'value')
 	 */
-	public function getPreferences($addressbookid) {
-		if ($addressbookid != null) {
-			$sql = "SELECT `configkey`, `configvalue`
-								FROM `*PREFIX*preferences`
-								WHERE `userid`=?
-								AND `appid`='contacts'
-								AND `configkey` like ?";
-			$configkeyPrefix = $this->name . "_" . $addressbookid . "_%";
-			$prefQuery = \OCP\DB::prepare($sql);
-			$result = $prefQuery->execute(array($this->userid, $configkeyPrefix));
-			if (\OC_DB::isError($result)) {
-				\OCP\Util::write('contacts', __METHOD__. 'DB error: '
-					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-				return false;
-			}
-			if(!is_null($result)) {
-				$paramsArray = array();
-				while($row = $result->fetchRow()) {
-					$param = substr($row['configkey'], strlen($this->name)+strlen($addressbookid)+2);
-					$value = $row['configvalue'];
-					$paramsArray[$param] = $value;
-				}
-			}
-			return $paramsArray;
-		}
+	public function getPreferences($addressBookId) {
+		$key = $this->combinedKey($addressBookId);
+		$key = 'prefs_' . $key;
+
+		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $key, false);
+		return $data ? (array)json_decode($data) : array();
 	}
 	
 	/**
 	 * @brief sets the preferences for the addressbook given in parameter
-	 * @param mixed $id
+	 * @param string $id
 	 * @param array the preferences, format array('param1' => 'value', 'param2' => 'value')
 	 * @return boolean
 	 */
-	public function setPreferences($addressbookid, $params) {
-		if ($addressbookid != null && $params != null && is_array($params)) {
-			if (!getPreferences($addressbookid)) {
-				// No preferences for this addressbook, inserting new ones
-				$sql = "INSERT INTO `*PREFIX*preferences` (`userid`, `appid`, `configkey`, `configvalue`)
-								values ('?', 'contacts', '?', '?')";
-				foreach ($params as $key => $value) {
-					$query = \OCP\DB::prepare($sql);
-					$sqlParams = array($this->userid, $this->name . "_" . $addressbookid . "_" . $key, $value);
-					$result = $query->execute($sqlParams);
-					if (\OC_DB::isError($result)) {
-						\OCP\Util::write('contacts', __METHOD__. 'DB error: '
-							. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-					}
-				}
-			} else {
-				// Updating existing preferences
-				$sql = "UPDATE `*PREFIX*preferences` 
-								SET `configvalue` = '?')
-								WHERE `userid` = '?'
-								AND `appid` = 'contacts'
-								AND `configkey` = '?'";
-				foreach ($params as $key => $value) {
-					$query = \OCP\DB::prepare($sql);
-					$sqlParams = array($value, $this->userid, $this->name . "_" . $addressbookid . "_" . $key);
-					$result = $query->execute($sqlParams);
-					if (\OC_DB::isError($result)) {
-						\OCP\Util::write('contacts', __METHOD__. 'DB error: '
-							. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-					}
-				}
-			}
-			return true;
+	public function setPreferences($addressbookid, array $params) {
+		$addressbooks = (array)\OCP\Config::getUserValue($this->userid, 'contacts', $this->name, false);
+		if ($addressbooks == null) {
+			$addressbooks = array();
 		}
-		return false;
+		if (!in_array($addressbookid, $addressbooks)) {
+			$addressbooks[] = $addressbookid;
+		}
+		\OCP\Config::setUserValue($this->userid, 'contacts', $this->name, json_encode($addressbooks));
+		
+		$key = $this->combinedKey($addressbookid);
+		$key = 'prefs_' . $key;
+
+		$data = json_encode($params);
+		return $data
+			? \OCP\Config::setUserValue($this->userid, 'contacts', $key, $data)
+			: false;
+	}
+	
+	/**
+	 * Returns the list of active addressbooks for a specific user.
+ 	 *
+	 * @param string $userid
+	 * @return array
+	 */
+	public function getAddressBooksIdsForUser(array $options = array()) {
+		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $this->name, false);
+		return $data ? json_decode($data) : array();
 	}
 }

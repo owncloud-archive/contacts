@@ -13,7 +13,7 @@ class SearchProvider extends \OC_Search_Provider{
 		$results = \OCP\Contacts::search($query, array('N', 'FN', 'EMAIL', 'NICKNAME', 'ORG'));
 		$l = new \OC_l10n('contacts');
 		foreach($results as $result) {
-			$link = \OCP\Util::linkTo('contacts', 'index.php').'/#' . $result['id'];
+			$link = \OCP\Util::linkToRoute('contacts_index').'#' . $result['id'];
 			$props = array();
 			foreach(array('EMAIL', 'NICKNAME', 'ORG') as $searchvar) {
 				if(isset($result[$searchvar]) && count($result[$searchvar]) > 0 && strlen($result[$searchvar][0]) > 3) {

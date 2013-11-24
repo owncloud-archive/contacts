@@ -141,8 +141,8 @@ class AddressbookProvider implements \OCP\IAddressBook {
 
 		$stmt = \OCP\DB::prepare($query);
 		$result = $stmt->execute($params);
-		if (\OC_DB::isError($result)) {
-			\OC_Log::write('contacts', __METHOD__ . 'DB error: ' . \OC_DB::getErrorMessage($result), 
+		if (\OCP\DB::isError($result)) {
+			\OCP\Util::writeLog('contacts', __METHOD__ . 'DB error: ' . \OC_DB::getErrorMessage($result),
 				\OCP\Util::ERROR);
 			return false;
 		}
@@ -158,7 +158,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 				. self::PROPERTY_TABLE . '`.`contactid` = `' . self::CONTACT_TABLE . '`.`id` AND `' 
 				. self::PROPERTY_TABLE . '`.`contactid` IN (' . join(',', array_fill(0, count($ids), '?')) . ')';
 
-			\OC_Log::write('contacts', __METHOD__ . 'DB query: ' . $query, \OCP\Util::DEBUG);
+			\OCP\Util::writeLog('contacts', __METHOD__ . 'DB query: ' . $query, \OCP\Util::DEBUG);
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute($ids);
 		}
@@ -193,7 +193,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			try {
 				$id = VCard::add($this->id, $vcard, null, true);
 			} catch(Exception $e) {
-				\OC_Log::write('contacts', __METHOD__ . ' ' . $e->getMessage(), \OCP\Util::ERROR);
+				\OCP\Util::writeLog('contacts', __METHOD__ . ' ' . $e->getMessage(), \OCP\Util::ERROR);
 				return false;
 			}
 		}
@@ -236,7 +236,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 		try {
 			VCard::edit($id, $vcard);
 		} catch(Exception $e) {
-			\OC_Log::write('contacts', __METHOD__ . ' ' . $e->getMessage(), \OCP\Util::ERROR);
+			\OCP\Util::writeLog('contacts', __METHOD__ . ' ' . $e->getMessage(), \OCP\Util::ERROR);
 			return false;
 		}
 		
@@ -254,13 +254,13 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			$query = 'SELECT * FROM `*PREFIX*contacts_cards` WHERE `id` = ? AND `addressbookid` = ?';
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute(array($id, $this->id));
-			if (\OC_DB::isError($result)) {
-				\OC_Log::write('contacts', __METHOD__ . 'DB error: ' . \OC_DB::getErrorMessage($result), 
+			if (\OCP\DB::isError($result)) {
+				\OCP\Util::writeLog('contacts', __METHOD__ . 'DB error: ' . \OC_DB::getErrorMessage($result),
 					\OCP\Util::ERROR);
 				return false;
 			}
 			if($result->numRows() === 0) {
-				\OC_Log::write('contacts', __METHOD__ 
+				\OCP\Util::writeLog('contacts', __METHOD__
 					. 'Contact with id ' . $id . 'doesn\'t belong to addressbook with id ' . $this->id, 
 					\OCP\Util::ERROR);
 				return false;

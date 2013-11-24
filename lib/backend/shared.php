@@ -39,8 +39,7 @@ class Shared extends Database {
 	 * @param string $principaluri
 	 * @return array
 	 */
-	public function getAddressBooksForUser($userid = null) {
-		$userid = $userid ? $userid : $this->userid;
+	public function getAddressBooksForUser(array $options = array()) {
 
 		// workaround for https://github.com/owncloud/core/issues/2814
 		$maybeSharedAddressBook = \OCP\Share::getItemsSharedWith(
@@ -66,7 +65,7 @@ class Shared extends Database {
 	 * @param mixed $id Contact ID
 	 * @return mixed
 	 */
-	public function getAddressBook($addressbookid) {
+	public function getAddressBook($addressbookid, array $options = array()) {
 		$addressBook = \OCP\Share::getItemSharedWithBySource(
 			'addressbook',
 			$addressbookid,
@@ -86,7 +85,7 @@ class Shared extends Database {
 	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
 	 * @return array
 	 */
-	public function getContacts($addressbookid, $limit = null, $offset = null, $omitdata = false) {
+	public function getContacts($addressbookid, array $options = array()) {
 
 		$addressBook = $this->getAddressBook($addressbookid);
 		if(!$addressBook) {
@@ -94,7 +93,7 @@ class Shared extends Database {
 		}
 		$permissions = $addressBook['permissions'];
 
-		$cards = parent::getContacts($addressbookid, $limit, $offset, $omitdata);
+		$cards = parent::getContacts($addressbookid, $options);
 
 		foreach($cards as &$card) {
 			$card['permissions'] = $permissions;
@@ -115,14 +114,14 @@ class Shared extends Database {
 	 * @param mixed $id Contact ID
 	 * @return array|false
 	 */
-	public function getContact($addressbookid, $id, $noCollection = false) {
+	public function getContact($addressbookid, $id, array $options = array()) {
 		$addressBook = $this->getAddressBook($addressbookid);
 		if(!$addressBook) {
 			throw new \Exception('Shared Address Book not found: ' . $addressbookid, 404);
 		}
 		$permissions = $addressBook['permissions'];
 
-		$card = parent::getContact($addressbookid, $id, $noCollection);
+		$card = parent::getContact($addressbookid, $id, $options);
 		$card['permissions'] = $permissions;
 		return $card;
 	}

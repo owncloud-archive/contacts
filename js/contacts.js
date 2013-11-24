@@ -32,8 +32,8 @@ OC.Contacts = OC.Contacts || {};
 
 	Contact.prototype.metaData = function() {
 		return {
-			contactid: this.id,
-			addressbookid: this.metadata.parent,
+			contactId: this.id,
+			addressBookId: this.metadata.parent,
 			backend: this.metadata.backend
 		}
 	};
@@ -320,9 +320,7 @@ OC.Contacts = OC.Contacts || {};
 		console.log('Contact.deleteProperty, element', element, $container);
 		var params = {
 			name: element,
-			backend: this.metadata.backend,
-			addressbookid: this.metadata.parent,
-			id: this.id
+			value: null
 		};
 		if(this.multi_properties.indexOf(element) !== -1) {
 			params['checksum'] = this.checksumFor(obj);
@@ -338,7 +336,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 		this.setAsSaving(obj, true);
 		var self = this;
-		$.when(this.storage.deleteProperty(this.metadata.backend, this.metadata.parent, this.id, params))
+		$.when(this.storage.patchContact(this.metadata.backend, this.metadata.parent, this.id, params))
 			.then(function(response) {
 			if(!response.error) {
 				if(self.multi_properties.indexOf(element) !== -1) {
@@ -421,7 +419,7 @@ OC.Contacts = OC.Contacts || {};
 		this.setAsSaving(this.$fullelem, true);
 		var data = JSON.stringify(this.data);
 		//console.log('stringified', data);
-		$.when(this.storage.saveAllProperties(this.metadata.backend, this.metadata.parent, this.id, data))
+		$.when(this.storage.saveAllProperties(this.metadata.backend, this.metadata.parent, this.id, {data:this.data}))
 			.then(function(response) {
 			if(!response.error) {
 				self.data = response.data.data;
@@ -480,10 +478,14 @@ OC.Contacts = OC.Contacts || {};
 				? $.param(params.value)
 				: encodeURIComponent(params.value);
 		}
+		if(!args) {
+			console.log('No arguments. returning');
+			return false;
+		}
 		console.log('args', args);
 		var self = this;
 		this.setAsSaving(obj, true);
-		$.when(this.storage.saveProperty(this.metadata.backend, this.metadata.parent, this.id, args))
+		$.when(this.storage.patchContact(this.metadata.backend, this.metadata.parent, this.id, args))
 			.then(function(response) {
 			if(!response.error) {
 				if(!self.data[element]) {
@@ -548,7 +550,7 @@ OC.Contacts = OC.Contacts || {};
 							break;
 						case 'BDAY':
 							// reverse order again.
-							value = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate('dd-mm-yy', value));
+							value = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate(datepickerFormatDate, value));
 							self.data[element][0] = {
 								name: element,
 								value: value,
@@ -596,14 +598,19 @@ OC.Contacts = OC.Contacts || {};
 								// Then it is auto-generated from FN.
 								var $nelems = self.$fullelem.find('.n.editor input');
 								$.each(value, function(idx, val) {
-									self.$fullelem.find('#n_' + idx).val(val);
+									self.$fullelem.find('#n_' + idx).val(val).get(0).defaultValue = val;
 								});
 							}
 							var $fullname = self.$fullelem.find('.fullname'), fullname = '';
 							var update_fn = false;
 							if(!self.data.FN) {
-								self.data.FN = [{name:'N', value:'', parameters:[]}];
+								self.data.FN = [{name:'FN', value:'', parameters:[]}];
 							}
+							/* If FN is empty fill it with the values from N.
+							 * As N consists of several fields which each trigger a change/save
+							 * also check if the contents of FN equals parts of N and fill
+							 * out the rest.
+							 */
 							if(self.data.FN[0]['value'] === '') {
 								self.data.FN[0]['value'] = value[1] + ' ' + value[0];
 								$fullname.val(self.data.FN[0]['value']);
@@ -624,6 +631,11 @@ OC.Contacts = OC.Contacts || {};
 							}
 						case 'NICKNAME':
 						case 'ORG':
+							// Auto-fill FN if empty
+							if(!self.data.FN) {
+								self.data.FN = [{name:'FN', value:value, parameters:[]}];
+								self.$fullelem.find('.fullname').val(value).trigger('change');
+							}
 						case 'TITLE':
 						case 'NOTE':
 							self.data[element][0] = {
@@ -659,13 +671,21 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Show contact list element.
+	 */
+	Contact.prototype.show = function() {
+		this.getListItemElement().show();
+	};
+
+	/**
 	 * Remove any open contact from the DOM.
 	 */
 	Contact.prototype.close = function() {
 		$(document).unbind('status.contact.photoupdated');
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
-			this.$fullelem.remove();
+			this.$fullelem.hide().remove();
+			this.getListItemElement().show();
 			this.$fullelem = null;
 			return true;
 		} else {
@@ -736,8 +756,9 @@ OC.Contacts = OC.Contacts || {};
 				self.data = response.data.data;
 				self.$groupSelect.multiselect('enable');
 				// Add contact to current group
-				if(self.groupprops && self.groupprops.currentgroup.id !== 'all'
-					&& self.groupprops.currentgroup.id !== 'fav') {
+				if(self.groupprops
+					&& ['all', 'fav', 'uncategorized'].indexOf(self.groupprops.currentgroup.id) === -1
+				) {
 					if(!self.data.CATEGORIES) {
 						self.addToGroup(self.groupprops.currentgroup.name);
 						$(document).trigger('request.contact.addtogroup', {
@@ -796,6 +817,7 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	Contact.prototype.argumentsFor = function(obj) {
+		console.log('Contact.argumentsFor', $(obj));
 		var args = {};
 		var ptype = this.propertyTypeFor(obj);
 		args['name'] = ptype;
@@ -823,7 +845,23 @@ OC.Contacts = OC.Contacts || {};
 					//args['value'].push($(e).val());
 				});
 			} else {
-				args['value'] = $elements.val();
+				var value = $elements.val();
+				switch(args['name']) {
+					case 'BDAY':
+						try {
+							args['value'] = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate(datepickerFormatDate, value));
+						} catch(e) {
+							$(document).trigger(
+								'status.contacts.error',
+								{message:t('contacts', 'Error parsing date: {date}', {date:value})}
+							);
+							return false;
+						}
+						break;
+					default:
+						args['value'] = value;
+						break;
+				}
 			}
 		}
 		args['parameters'] = this.parametersFor(obj);
@@ -1075,25 +1113,38 @@ OC.Contacts = OC.Contacts || {};
 			}
 		};
 
-		var n = this.getPreferredValue('N', ['', '', '', '', '']);
-		//console.log('Contact.renderContact', this.data);
-		var values = this.data
-			? {
+		var values;
+		if(this.data) {
+			var n = this.getPreferredValue('N', ['', '', '', '', '']),
+				bday = this.getPreferredValue('BDAY', '');
+			if(bday.length >= 10) {
+				try {
+					bday = $.datepicker.parseDate('yy-mm-dd', bday.substring(0, 10));
+					bday = $.datepicker.formatDate(datepickerFormatDate, bday);
+				} catch (e) {
+					var message = t('contacts', 'Error parsing birthday {bday}: {error}', {bday:bday, error: e});
+					console.warn(message);
+					bday = '';
+					$(document).trigger('status.contacts.error', {
+						status: 'error',
+						message: message
+					});
+				}
+			}
+			values = {
 				id: this.id,
 				favorite:groupprops.favorite ? 'active' : '',
-				name: this.getDisplayName(),
+				name: this.getPreferredValue('FN', ''),
 				n0: n[0]||'', n1: n[1]||'', n2: n[2]||'', n3: n[3]||'', n4: n[4]||'',
 				nickname: this.getPreferredValue('NICKNAME', ''),
 				title: this.getPreferredValue('TITLE', ''),
 				org: this.getPreferredValue('ORG', []).clean('').join(', '), // TODO Add parts if more than one.
-				bday: this.getPreferredValue('BDAY', '').length >= 10
-					? $.datepicker.formatDate('dd-mm-yy',
-						$.datepicker.parseDate('yy-mm-dd',
-							this.getPreferredValue('BDAY', '').substring(0, 10)))
-					: '',
+				bday: bday,
 				note: this.getPreferredValue('NOTE', '')
-				}
-			: {id:'', favorite:'', name:'', nickname:'', title:'', org:'', bday:'', note:'', n0:'', n1:'', n2:'', n3:'', n4:''};
+			}
+		} else {
+			values = {id:'', favorite:'', name:'', nickname:'', title:'', org:'', bday:'', note:'', n0:'', n1:'', n2:'', n3:'', n4:''};
+		}
 		this.$fullelem = this.$fullTemplate.octemplate(values).data('contactobject', this);
 
 		this.$footer = this.$fullelem.find('footer');
@@ -1182,6 +1233,7 @@ OC.Contacts = OC.Contacts || {};
 			if(event.keyCode === 13 && $(this).is('input')) {
 				$(this).trigger('change');
 				// Prevent a second save on blur.
+				this.previousValue = this.defaultValue || '';
 				this.defaultValue = this.value;
 				return false;
 			} else if(event.keyCode === 27) {
@@ -1200,10 +1252,12 @@ OC.Contacts = OC.Contacts || {};
 			self.saveProperty({obj:event.target});
 		});
 
-		this.$fullelem.find('[data-element="bday"]')
-			.find('input').datepicker({
-				dateFormat : 'dd-mm-yy'
+		var $bdayinput = this.$fullelem.find('[data-element="bday"]').find('input');
+		$bdayinput.datepicker({
+				dateFormat : datepickerFormatDate
 		});
+		$bdayinput.attr('placeholder', $.datepicker.formatDate(datepickerFormatDate, new Date()));
+
 		this.$fullelem.find('.favorite').on('click', function () {
 			var state = $(this).hasClass('active');
 			if(!self.data) {
@@ -1720,7 +1774,6 @@ OC.Contacts = OC.Contacts || {};
 				}
 			});
 			if(!found) {
-				console.log('not found');
 				return;
 			}
 			this.data.CATEGORIES[0].value = categories;
@@ -1742,6 +1795,13 @@ OC.Contacts = OC.Contacts || {};
 			pos: Math.round(this.$listelem.position().top),
 			height: Math.round(this.$listelem.height())
 		});
+	};
+
+	Contact.prototype.setSelected = function(state) {
+		//console.log('Selecting', this.getId(), state);
+		var $elem = this.getListItemElement();
+		var $input = $elem.find('input:checkbox');
+		$input.prop('checked', state).trigger('change');
 	};
 
 	Contact.prototype.next = function() {
@@ -1799,7 +1859,7 @@ OC.Contacts = OC.Contacts || {};
 		$(document).bind('status.contact.added', function(e, data) {
 			self.length += 1;
 			self.contacts[String(data.id)] = data.contact;
-			self.insertContact(data.contact.renderListItem(true));
+			//self.insertContact(data.contact.renderListItem(true));
 		});
 		$(document).bind('status.contact.moved', function(e, data) {
 			var contact = data.contact;
@@ -1829,16 +1889,35 @@ OC.Contacts = OC.Contacts || {};
 			var addressBook = data.addressbook;
 			self.purgeFromAddressbook(addressBook);
 			$(document).trigger('request.groups.reload');
+			$(document).trigger('status.contacts.deleted', {
+				numcontacts: self.length
+			});
 		});
 		$(document).bind('status.addressbook.imported', function(e, data) {
 			console.log('status.addressbook.imported', data);
 			var addressBook = data.addressbook;
 			self.purgeFromAddressbook(addressBook);
-			$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId()))
+			$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId(), true))
+			.then(function() {
+				self.setSortOrder();
+				$(document).trigger('request.groups.reload');
+			});
+		});
+		$(document).bind('status.addressbook.activated', function(e, data) {
+			console.log('status.addressbook.activated', data);
+			var addressBook = data.addressbook;
+			if(!data.state) {
+				self.purgeFromAddressbook(addressBook);
+				$(document).trigger('status.contacts.deleted', {
+					numcontacts: self.length
+				});
+			} else {
+				$.when(self.loadContacts(addressBook.getBackend(), addressBook.getId(), true))
 				.then(function() {
 					self.setSortOrder();
 					$(document).trigger('request.groups.reload');
 				});
+			}
 		});
 	};
 
@@ -1989,12 +2068,13 @@ OC.Contacts = OC.Contacts || {};
 
 	ContactList.prototype.contactPos = function(id) {
 		var contact = this.findById(id);
-		if(contact === null) {
+		if(!contact) {
 			return 0;
 		}
 		
 		var $elem = contact.getListItemElement();
-		var pos = $elem.offset().top - this.$contactList.offset().top + this.$contactList.scrollTop();
+		var pos = Math.round($elem.offset().top - (this.$contactList.offset().top + this.$contactList.scrollTop()));
+		console.log('contactPos', pos);
 		return pos;
 	};
 
@@ -2024,7 +2104,6 @@ OC.Contacts = OC.Contacts || {};
 	ContactList.prototype.findById = function(id) {
 		if(!id) {
 			console.warn('ContactList.findById: id missing');
-			console.trace();
 			return false;
 		}
 		id = String(id);
@@ -2055,13 +2134,17 @@ OC.Contacts = OC.Contacts || {};
 			if(data instanceof Contact) {
 				this.deletionQueue.push(data);
 			} else {
-				var contact = this.findById(data.contactid);
-				this.deletionQueue.push(contact);
+				var contact = this.findById(data.contactId);
+				if(contact instanceof Contact) {
+					this.deletionQueue.push(contact);
+				}
 			}
 		} else if(utils.isArray(data)) {
 			$.each(data, function(idx, contact) {
 				//console.log('delayedDelete, meta:', contact);
-				self.deletionQueue.push(contact);
+				if(contact instanceof Contact) {
+					self.deletionQueue.push(contact);
+				}
 			});
 			//$.extend(this.deletionQueue, data);
 		} else {
@@ -2070,7 +2153,7 @@ OC.Contacts = OC.Contacts || {};
 		//console.log('delayedDelete, deletionQueue', this.deletionQueue);
 		$.each(this.deletionQueue, function(idx, contact) {
 			//console.log('delayedDelete', contact);
-			contact.detach().setChecked(false);
+			contact && contact.detach().setChecked(false);
 		});
 		//console.log('deletionQueue', this.deletionQueue);
 		if(!window.onbeforeunload) {
@@ -2091,18 +2174,15 @@ OC.Contacts = OC.Contacts || {};
 			//timeout:5,
 			timeouthandler:function() {
 				//console.log('timeout');
-				// Don't fire all deletes at once
-				self.deletionTimer = setInterval(function() {
-					self.deleteContacts();
-				}, 500);
+				self.deleteContacts();
 			},
 			clickhandler:function() {
 				//console.log('clickhandler');
+				//OC.notify({cancel:true});
+				OC.notify({cancel:true, message:t('contacts', 'Cancelled deletion of {num} contacts', {num: self.deletionQueue.length})});
 				$.each(self.deletionQueue, function(idx, contact) {
 					self.insertContact(contact.getListItemElement());
 				});
-				OC.notify({cancel:true});
-				OC.notify({message:t('contacts', 'Cancelled deletion of {num}', {num: self.deletionQueue.length})});
 				self.deletionQueue = [];
 				window.onbeforeunload = null;
 			}
@@ -2114,54 +2194,81 @@ OC.Contacts = OC.Contacts || {};
 	* TODO: Batch delete contacts instead of sending multiple requests.
 	*/
 	ContactList.prototype.deleteContacts = function() {
-		var self = this;
-		//console.log('ContactList.deleteContacts, deletionQueue', this.deletionQueue);
-		if(typeof this.deletionTimer === 'undefined') {
-			console.log('No deletion timer!');
-			window.onbeforeunload = null;
-			return;
-		}
+		var self = this,
+			contact,
+			contactMap = {};
+		console.log('ContactList.deleteContacts, deletionQueue', this.deletionQueue);
 
-		var contact = this.deletionQueue.shift();
-		if(typeof contact === 'undefined') {
-			clearInterval(this.deletionTimer);
-			delete this.deletionTimer;
-			window.onbeforeunload = null;
-			return;
-		}
-
-		// Let contact remove itself.
-		var id = contact.getId();
-		contact.destroy(function(response) {
-			console.log('deleteContact', response, self.length);
-			if(!response.error) {
-				delete self.contacts[id];
-				$(document).trigger('status.contact.deleted', {
-					id: id
-				});
-				self.length -= 1;
-				if(self.length === 0) {
-					$(document).trigger('status.nomorecontacts');
+		if(this.deletionQueue.length === 1) {
+			contact = this.deletionQueue.shift()
+			// Let contact remove itself.
+			var id = contact.getId();
+			contact.destroy(function(response) {
+				console.log('deleteContact', response, self.length);
+				if(!response.error) {
+					delete self.contacts[id];
+					$(document).trigger('status.contact.deleted', {
+						id: id
+					});
+					self.length -= 1;
+					if(self.length === 0) {
+						$(document).trigger('status.nomorecontacts');
+					}
+				} else {
+					self.insertContact(contact.getListItemElement());
+					OC.notify({message:response.message});
 				}
-			} else {
-				OC.notify({message:response.message});
-			}
-		});
-	};
+			});
+		} else {
 
-	/**
-	* Opens the contact with this id in edit mode
-	* @param id the id of the contact
-	* @returns A jquery object to be inserted in the DOM.
-	*/
-	ContactList.prototype.showContact = function(id, props) {
-		var contact = this.findById(id);
-		if(!contact) {
-			return false;
+			// Make a map of backends, address books and contacts for easier processing.
+			while(contact = this.deletionQueue.shift()) {
+				if(!contactMap[contact.getBackend()]) {
+					contactMap[contact.getBackend()] = {};
+				}
+				if(!contactMap[contact.getBackend()][contact.getParent()]) {
+					contactMap[contact.getBackend()][contact.getParent()] = [];
+				}
+				contactMap[contact.getBackend()][contact.getParent()].push(contact.getId());
+			}
+			console.log('map', contactMap);
+
+			// Call each backend/addressBook to delete contacts.
+			$.each(contactMap, function(backend, addressBooks) {
+				console.log(backend, addressBooks);
+				$.each(addressBooks, function(addressBook, contacts) {
+					console.log(addressBook, contacts);
+					var ab = self.addressBooks.find({backend:backend, id:addressBook});
+					ab.deleteContacts(contacts, function(response) {
+						console.log('response', response);
+						if(!response.error) {
+							// We get a result set back, so process all of them.
+							$.each(response.data.result, function(idx, result) {
+								console.log('deleting', idx, result.id);
+								if(result.status === 'success') {
+									delete self.contacts[result.id];
+									$(document).trigger('status.contact.deleted', {
+										id: result.id
+									});
+									self.length -= 1;
+									if(self.length === 0) {
+										$(document).trigger('status.nomorecontacts');
+									}
+								} else {
+									// Error deleting, so re-insert element.
+									// TODO: Collect errors and display them when done.
+									self.insertContact(self.contacts[result.id].getListItemElement());
+								}
+							});
+						}
+					});
+				});
+			});
 		}
-		this.currentContact = id;
-		console.log('Contacts.showContact', id, contact, this.contacts);
-		return contact.renderContact(props);
+
+		window.onbeforeunload = null;
+		return;
+
 	};
 
 	/**
@@ -2228,14 +2335,14 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * Get contacts selected in list
 	 *
-	 * @returns array of contact ids.
+	 * @returns array of contact objects.
 	 */
 	ContactList.prototype.getSelectedContacts = function() {
 		var contacts = [];
 
 		var self = this;
-		$.each(this.$contactList.find('tr > td > input:checkbox:visible:checked'), function(a, b) {
-			var id = String($(b).parents('tr').first().data('id'));
+		$.each(this.$contactList.find('tr > td > input:checkbox:visible:checked'), function(idx, checkbox) {
+			var id = String($(checkbox).val());
 			contacts.push(self.contacts[id]);
 		});
 		return contacts;
@@ -2253,6 +2360,47 @@ OC.Contacts = OC.Contacts || {};
 			});
 		}
 		this.contacts[String(id)].setCurrent(true);
+	};
+
+	/**
+	 * (De)-select a contact
+	 *
+	 * @param string id
+	 * @param bool state
+	 * @param bool reverseOthers
+	 */
+	ContactList.prototype.setSelected = function(id, state, reverseOthers) {
+		console.log('ContactList.setSelected', id);
+		if(!id) {
+			return;
+		}
+		var self = this;
+		if(reverseOthers === true) {
+			var $rows = this.$contactList.find('tr:visible.contact');
+			$.each($rows, function(idx, row) {
+				self.contacts[$(row).data('id')].setSelected(!state);
+			});
+		}
+		this.contacts[String(id)].setSelected(state);
+	};
+
+	/**
+	 * Select a range of contacts by their id.
+	 *
+	 * @param string from
+	 * @param string to
+	 */
+	ContactList.prototype.selectRange = function(from, to) {
+		var self = this;
+		var $rows = this.$contactList.find('tr:visible.contact');
+		var index1 = $rows.index(this.contacts[String(from)].getListItemElement());
+		var index2 = $rows.index(this.contacts[String(to)].getListItemElement());
+		from = Math.min(index1, index2);
+		to = Math.max(index1, index2)+1;
+		$rows = $rows.slice(from, to);
+		$.each($rows, function(idx, row) {
+			self.contacts[$(row).data('id')].setSelected(true);
+		});
 	};
 
 	ContactList.prototype.setSortOrder = function(order) {
@@ -2285,54 +2433,65 @@ OC.Contacts = OC.Contacts || {};
 		}
 	};
 
+	ContactList.prototype.insertContacts = function(contacts) {
+		var self = this, items = [];
+		$.each(contacts, function(c, contact) {
+			var id = String(contact.metadata.id);
+			self.contacts[id]
+				= new Contact(
+					self,
+					id,
+					contact.metadata,
+					contact.data,
+					self.$contactListItemTemplate,
+					self.$contactDragItemTemplate,
+					self.$contactFullTemplate,
+					self.contactDetailTemplates
+				);
+			self.length +=1;
+			var $item = self.contacts[id].renderListItem();
+			if(!$item) {
+				console.warn('Contact', contact, 'could not be rendered!');
+				return true; // continue
+			}
+			items.push($item.get(0));
+		});
+		if(items.length > 0) {
+			self.$contactList.append(items);
+		}
+		$(document).trigger('status.contacts.count', {
+			count: self.length
+		});
+	}
+
 	/**
 	* Load contacts
 	* @param string backend Name of the backend ('local', 'ldap' etc.)
 	* @param string addressBookId
 	*/
-	ContactList.prototype.loadContacts = function(backend, addressBookId) {
-		var self = this;
-		return $.when(this.storage.getAddressBook(backend, addressBookId)).then(function(response) {
-			var defer = this;
-			//console.log('ContactList.loadContacts', response);
+	ContactList.prototype.loadContacts = function(backend, addressBookId, isActive) {
+		if(!isActive) {
+			return;
+		}
+		var self = this,
+			contacts;
+
+		return $.when(self.storage.getAddressBook(backend, addressBookId, false))
+			.then(function(response) {
+			console.log('ContactList.loadContacts - fetching', response);
 			if(!response.error) {
-				var items = [];
-				$.each(response.data.contacts, function(c, contact) {
-					var id = String(contact.metadata.id);
-					contact.metadata.backend = backend;
-					self.contacts[id]
-						= new Contact(
-							self,
-							id,
-							contact.metadata,
-							contact.data,
-							self.$contactListItemTemplate,
-							self.$contactDragItemTemplate,
-							self.$contactFullTemplate,
-							self.contactDetailTemplates
-						);
-					self.length +=1;
-					var $item = self.contacts[id].renderListItem();
-					if(!$item) {
-						console.warn('Contact', contact, 'could not be rendered!');
-						return true; // continue
-					}
-					items.push($item.get(0));
-				});
-				if(items.length > 0) {
-					self.$contactList.append(items);
+				if(response.data) {
+					self.insertContacts(response.data.contacts);
 				}
-				$(document).trigger('status.contacts.count', {
-					count: self.length
-				});
 			} else {
-				defer.reject(response);
+				console.warn('ContactList.loadContacts - no data!!');
 			}
 		})
 		.fail(function(response) {
 			console.warn('Request Failed:', response.message);
-			this.reject({error: true, message: response.message});
+			defer.reject({error: true, message: response.message});
 		});
+
 	};
 
 	OC.Contacts.ContactList = ContactList;

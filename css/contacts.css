@@ -60,7 +60,7 @@
 	border: 1px solid #1d2d44; 
 	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; outline:none; 
 }
-#contact input:invalid, #contact input:hover:not([type="checkbox"]), #contact input:active:not([type="checkbox"]), #contact input:focus:not([type="checkbox"]), #contact input.active, #contact textarea:focus, #contact textarea:hover {
+#contact input:invalid, #contact input:hover:not([type="checkbox"]), #contact input:active:not([type="checkbox"]), #contact input:focus:not([type="checkbox"]), #contact input.active, #contact textarea:focus, #contact textarea {
 	border: 1px solid silver !important; 
 	-moz-border-radius:.3em; -webkit-border-radius:.3em; border-radius:.3em; 
 	outline:none; float: left;
@@ -77,37 +77,12 @@
 }
 
 
-#app-navigation > ul > li.group.editing {
-	height: 40px;
-}
 #app-navigation a.unshare {
 	float: right;
 }
 
-#app-navigation .utils {
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-#app-navigation .utils > * {
-    float: right;
-	margin: 6px 2px;
-}
 /*#app-navigation img.shared { float: right; opacity: 0.4; margin: 0 .5em; }
 #app-navigation img.shared:hover { opacity: 1; }*/
-#app-navigation li.editing .checked {
-	margin: 10px 0 0 -27px;
-	opacity: 1;
-	display: inline-block;
-	float: left;
-	cursor: pointer;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size:contain;
-	width: 18px; height: 18px;
-}
-#app-navigation li.editing .checked.disabled { opacity: .5 }
 #app-navigation input[type="text"] {
 	display: block;
 	width: 200px;
@@ -115,33 +90,62 @@
 	margin: 5px 0 5px .3em;
 }
 
+#app-navigation .utils {
+    bottom: 0; right: 0;
+    top: 0;
+	position: absolute;
+	padding: 0; margin: 0;
+}
+#app-navigation li > .utils > *:not(.numcontacts) {
+	display: none;
+}
+#app-navigation li > .utils > * {
+	line-height: 44px;
+	width: 44px; height: 44px;
+	background-size: auto;
+}
+#app-navigation li.active[data-type="category"] > .utils > * {
+	display: inline-block;
+	float: left;
+}
+#app-navigation li > .utils > .numcontacts {
+	padding-right: 5px;
+	text-align: right;
+}
 #grouplist { z-index: 100; }
-#grouplist .oc-addnew-init { padding: 0 16px; }
+#grouplist .oc-addnew-init {
+	padding: 0 12px;
+}
 #grouplist .add-contact:before {
 	content: '+';
 	font-weight: bold;
 	font-size: 180%;
-	padding-right: 5px;
+	padding-right: 2px;
 }
-#grouplist li .action:not(.starred):not(.checked):not(.favorite):not([class^="add-"]) { display: none; padding: 0; }
-#grouplist li:not([data-type="shared"]):not(.editing):hover .action.numcontacts,
-#grouplist li:not([data-type="shared"]):not(.editing) .active.action.numcontacts { display: inline-block; }
-.action.numcontacts { width: 6em; }
-#grouplist li.active[data-type="category"]:not(.editing):hover .action.delete { display: inline-block; width: 20px; height: 20px; }
-#grouplist li.active[data-type="category"]:not(.editing):hover .action.edit { display: inline-block; width: 20px; height: 20px; }
-/*#grouplist li:not(.editing) .action.delete { width: 20px; height: 20px; }*/
-#grouplist .group span.numcontacts { width: 30px; text-align: right; margin-right: 10px !important; }
-#grouplist li.special { height: 40px; }
+#grouplist > li {
+	height: 44px;
+}
 
 /* First run */
 
-#firstrun { position: relative; top: 25%; left: 20%; right: 20%; width: 50%; font-weight:bold; text-align: center; color: #777; }
+#firstrun {
+	 height: 100%;
+}
+#firstrun > div {
+	position:relative;
+	left:50%; top:40%;
+	width: 80%;
+	transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%);
+	color:white; font-weight:bold; text-align: center; color: #777;
+}
 #firstrun li { font-size:1.5em; text-align: center; margin-bottom: 1em; }
 #firstrun p { font-size:1.2em; text-align:center; }
 #firstrun #selections { font-size:0.8em; margin: 2em auto auto auto; clear: both; }
 
-#contact { margin: 1em; }
-#contact textarea { min-height: 5em; width: 100%; margin: 0 !important; padding: 0 !important; outline: 0 !important;}
+#contact textarea {
+	min-height: 5em; width: 300px;
+	margin: 0 !important; padding: 0 !important; outline: 0 !important;
+}
 #contact footer {
 	padding: 5px;
 	width: 100%;
@@ -152,6 +156,7 @@
 #contact footer > * {
 	display: inline-block;
 	float: left;
+	opacity: 1;
 }
 #contact footer > .delete {
 	display: inline-block;
@@ -165,12 +170,16 @@
 
 /* override the default margin on share dropdown */
 #dropdown {
-	margin: 0;
+	margin: 0; padding: 0;
 	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 	width: 100%;
 }
-#dropdown label { display: list-item; }
-#dropdown input[type="text"] { width: 90%; }
+#shareWithList {
+	width: 100%;
+}
+#shareWithList .cruds > label {
+	display: list-item;
+}
 /* reset box-sizing for multiSelect */
 #content div.multiselect, #content div.multiselect > * { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
 
@@ -472,7 +481,10 @@ dt[data-element="org"] { margin-top: 4px; }
 .import-status {
 	display: none;
 }
-
+#import-status-text {
+	white-space: nowrap;
+	overflow: hidden;
+}
 input:not([type="checkbox"]).propertytype { 
 	float: left; font-size: .8em; 
 	max-width: 100px; 
@@ -640,8 +652,15 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 #contactlist td {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
-#contactlist > tbody > tr.contact { height: 3em; display: none; }
-#contactlist > tbody > tr.contact.active, #contactlist tr:hover { background-color: #eee; }
+/* Override default style for an open cpntact */
+tbody tr, tbody tr.hover {
+	background-color: #fff !important;
+}
+tbody tr.contact.active, tbody tr.contact:hover {
+	background-color: #f8f8f8 !important;
+}
+#contactlist > tbody > tr { height: 3em; display: none; }
+#contactlist > tbody > tr.contact.active, #contactlist  > tbody > tr.contact:hover { background-color: #eee; }
 #contactlist > tbody > tr > td {
 	border-bottom: 1px solid #DDDDDD;
 	font-weight: normal;
@@ -651,12 +670,12 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	vertical-align: middle;
 	white-space: nowrap;
 }
-#contactlist tr > td:not(.name) {
+#contactlist tr.contact > td:not(.name) {
 	padding-left:10px;
 }
 #contactlist tr > td:not(.tel):not(.adr):not(.actions) {
 	max-width: 270px;
-	min-width: 270px;
+	min-width: 200px;
 }
 #contactlist tr > td.tel {
 	max-width: 180px;
@@ -679,7 +698,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	font-weight: bold; text-indent: 1.6em;
 	-webkit-transition:background-image 500ms; -moz-transition:background-image 500ms; -o-transition:background-image 500ms;  transition:background-image 500ms;
 	background-repeat:no-repeat !important;
-	position:relative; background-position: 10px center !important;
+	background-position: 10px center !important;
 }
 #contactlist tbody > tr > td a.mailto {
 	position: absolute; float: right;  clear: none;
@@ -690,7 +709,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactlist tbody > tr > td a.mailto:hover { opacity: 0.8; }
 
-#contactlist tbody > tr > td a.delete {
+#contactlist tbody > tr > td > a.delete {
 	position: absolute;
 	right: 20px; clear: none;
 	cursor:pointer;
@@ -699,14 +718,14 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contact {
 	background-color: white; color: #333333;
-	border-radius: 3px; box-shadow: 0 0 10px #888888; 
+	/*border-radius: 3px; box-shadow: 0 0 10px #888888;
 	padding: 10px; 
 	position: fixed !important; 
 	z-index: 101;
 	top: 8em; left: 28em;
-	width: 490px;
+	width: 490px;*/
 }
-#contact .arrow { 
+#contact .arrow {
 	border-bottom: 20px solid white; 
 	border-left: 20px solid transparent; 
 	border-right: 20px solid transparent; 

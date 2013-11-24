@@ -9,21 +9,18 @@
 
 namespace OCA\Contacts\Controller;
 
-use OCA\Contacts\App;
-use OCA\Contacts\JSONResponse;
-use OCA\AppFramework\Controller\Controller as BaseController;
-use OCA\AppFramework\Core\API;
-use Sabre\VObject;
+use OCA\Contacts\App,
+	OCA\Contacts\JSONResponse,
+	OCA\Contacts\Controller,
+	Sabre\VObject;
 
 /**
  * Controller importing contacts
  */
-class ImportController extends BaseController {
+class ImportController extends Controller {
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function upload() {
 		$request = $this->request;
@@ -74,7 +71,10 @@ class ImportController extends BaseController {
 			return $response;
 			}
 			$content = file_get_contents($tmpname);
+			$proxyStatus = \OC_FileProxy::$enabled;
+			\OC_FileProxy::$enabled = false;
 			if($view->file_put_contents('/imports/'.$filename, $content)) {
+				\OC_FileProxy::$enabled = $proxyStatus;
 				$count = substr_count($content, 'BEGIN:');
 				$progresskey = 'contacts-import-' . rand();
 				$response->setParams(
@@ -83,11 +83,12 @@ class ImportController extends BaseController {
 						'count' => $count,
 						'progresskey' => $progresskey,
 						'backend' => $params['backend'],
-						'addressbookid' => $params['addressbookid']
+						'addressBookId' => $params['addressBookId']
 					)
 				);
 				\OC_Cache::set($progresskey, '10', 300);
 			} else {
+				\OC_FileProxy::$enabled = $proxyStatus;
 				$response->bailOut(App::$l10n->t('Error uploading contacts to storage.'));
 			return $response;
 			}
@@ -99,10 +100,47 @@ class ImportController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
-	 * @API
+	 * @NoAdminRequired
+	 */
+	public function prepare() {
+		$request = $this->request;
+		$params = $this->request->urlParams;
+		$response = new JSONResponse();
+		$filename = $request->post['filename'];
+		$path = $request->post['path'];
+
+		$view = \OCP\Files::getStorage('contacts');
+		if(!$view->file_exists('imports')) {
+			$view->mkdir('imports');
+		}
+
+		$proxyStatus = \OC_FileProxy::$enabled;
+		\OC_FileProxy::$enabled = false;
+		//$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
+		$content = file_get_contents('oc://' . $path . '/' . $filename);
+		if($view->file_put_contents('/imports/' . $filename, $content)) {
+			\OC_FileProxy::$enabled = $proxyStatus;
+			$count = substr_count($content, 'BEGIN:');
+			$progresskey = 'contacts-import-' . rand();
+			$response->setParams(
+				array(
+					'filename'=>$filename,
+					'count' => $count,
+					'progresskey' => $progresskey,
+					'backend' => $params['backend'],
+					'addressBookId' => $params['addressBookId']
+				)
+			);
+			\OC_Cache::set($progresskey, '10', 300);
+		} else {
+			\OC_FileProxy::$enabled = $proxyStatus;
+			$response->bailOut(App::$l10n->t('Error moving file to imports folder.'));
+		}
+		return $response;
+	}
+
+	/**
+	 * @NoAdminRequired
 	 */
 	public function start() {
 		$request = $this->request;
@@ -110,7 +148,7 @@ class ImportController extends BaseController {
 		$params = $this->request->urlParams;
 		$app = new App($this->api->getUserId());
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressbookid']);
+		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
 		if(!$addressBook->hasPermission(\OCP\PERMISSION_CREATE)) {
 			$response->setStatus('403');
 			$response->bailOut(App::$l10n->t('You do not have permissions to import into this address book.'));
@@ -136,7 +174,10 @@ class ImportController extends BaseController {
 			return $response;
 		}
 		$view = \OCP\Files::getStorage('contacts');
+		$proxyStatus = \OC_FileProxy::$enabled;
+		\OC_FileProxy::$enabled = false;
 		$file = $view->file_get_contents('/imports/' . $filename);
+		\OC_FileProxy::$enabled = $proxyStatus;
 
 		$writeProgress = function($pct) use ($progresskey) {
 			\OC_Cache::set($progresskey, $pct, 300);
@@ -176,10 +217,10 @@ class ImportController extends BaseController {
 			return $response;
 		}
 		//import the contacts
-		$writeProgress('40');
 		$imported = 0;
 		$failed = 0;
 		$partially = 0;
+		$processed = 0;
 
 		// TODO: Add a new group: "Imported at {date}"
 		foreach($parts as $part) {
@@ -196,10 +237,16 @@ class ImportController extends BaseController {
 					continue; // Ditch cards that can't be parsed by Sabre.
 				}
 			}
+			/**
+			 * TODO
+			 * - Check if a contact with identical UID exists.
+			 * - If so, fetch that contact and call $contact->mergeFromVCard($vcard);
+			 * - Increment $updated var (not present yet.)
+			 * - continue
+			 */
 			try {
 				if($addressBook->addChild($vcard)) {
 					$imported += 1;
-					$writeProgress($imported);
 				} else {
 					$failed += 1;
 				}
@@ -207,13 +254,15 @@ class ImportController extends BaseController {
 				$response->debug('Error importing vcard: ' . $e->getMessage() . $nl . $vcard->serialize());
 				$failed += 1;
 			}
+			$processed += 1;
+			$writeProgress($processed);
 		}
 		//done the import
 		sleep(3); // Give client side a chance to read the progress.
 		$response->setParams(
 			array(
 				'backend' => $params['backend'],
-				'addressbookid' => $params['addressbookid'],
+				'addressBookId' => $params['addressBookId'],
 				'imported' => $imported,
 				'partially' => $partially,
 				'failed' => $failed,
@@ -223,9 +272,7 @@ class ImportController extends BaseController {
 	}
 
 	/**
-	 * @IsAdminExemption
-	 * @IsSubAdminExemption
-	 * @Ajax
+	 * @NoAdminRequired
 	 */
 	public function status() {
 		$request = $this->request;

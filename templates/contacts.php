@@ -123,17 +123,15 @@
 			</div>
 		</div>
 		<div id="firstrun" class="hidden">
-			<?php print_unescaped($l->t('<h3>You have no contacts in your addressbook.</h3>'
+			<div>
+			<?php print_unescaped($l->t('<h3>You have no contacts in your address book or your address book is disabled.</h3>'
 				. '<p>Add a new contact or import existing contacts from a VCF file.</p>')) ?>
 			<div id="selections">
 				<button class="add-contact icon-plus text"><?php p($l->t('Add contact')) ?></button>
-				<button class="import icon text"><?php p($l->t('Import')) ?></button>
+			</div>
 			</div>
 		</div>
 		<form class="float" id="file_upload_form" action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'ajax/uploadphoto.php')); ?>" method="post" enctype="multipart/form-data" target="file_upload_target">
-			<input type="hidden" name="contactid" value="">
-			<input type="hidden" name="addressbookid" value="">
-			<input type="hidden" name="backend" value="">
 			<input type="hidden" name="requesttoken" value="<?php p($_['requesttoken']) ?>">
 			<input type="hidden" name="MAX_FILE_SIZE" value="<?php p($_['uploadMaxFilesize']) ?>" id="max_upload">
 			<input type="hidden" class="max_human_file_size" value="(max <?php p($_['uploadMaxHumanFilesize']); ?>)">
@@ -148,20 +146,20 @@
 		method="post"
 		enctype="multipart/form-data"
 		target="crop_target"
-		action="<?php print_unescaped(OCP\Util::linkToAbsolute('contacts', 'ajax/savecrop.php')); ?>">
+		action="{action}"
+		>
 		<input type="hidden" id="contactid" name="contactid" value="{contactid}" />
 		<input type="hidden" id="addressbookid" name="addressbookid" value="{addressbookid}" />
 		<input type="hidden" id="backend" name="backend" value="{backend}" />
 		<input type="hidden" id="tmpkey" name="tmpkey" value="{tmpkey}" />
 		<fieldset id="coords">
-		<input type="hidden" id="x1" name="x1" value="" />
-		<input type="hidden" id="y1" name="y1" value="" />
-		<input type="hidden" id="x2" name="x2" value="" />
-		<input type="hidden" id="y2" name="y2" value="" />
+		<input type="hidden" id="x" name="x" value="" />
+		<input type="hidden" id="y" name="y" value="" />
 		<input type="hidden" id="w" name="w" value="" />
 		<input type="hidden" id="h" name="h" value="" />
 		</fieldset>
 	</form>
+	<iframe name="crop_target" id="crop_target" src=""></iframe>
 </script>
 
 <script id="addGroupTemplate" type="text/template">
@@ -201,7 +199,7 @@
 <script id="contactListItemTemplate" type="text/template">
 	<tr class="contact" data-id="{id}" data-parent="{parent}" data-backend="{backend}">
 		<td class="name thumbnail">
-			<input type="checkbox" name="id" value="{id}" /><span class="nametext">{name}</span>
+			<input type="checkbox" name="id" value="{id}" /><a href="#{id}" class="nametext">{name}</a>
 		</td>
 		<td class="email">
 			<a href="mailto:{email}">{email}</a>
@@ -220,9 +218,9 @@
 </script>
 
 <script id="contactFullTemplate" type="text/template">
-<form action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'index.php')); ?>" method="post" enctype="multipart/form-data">
+	<tr><td colspan="6">
+	<form action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'index.php')); ?>" method="post" enctype="multipart/form-data">
 	<section id="contact" data-id="{id}">
-	<span class="arrow"></span>
 	<ul>
 		<li>
 			<div id="photowrapper" class="propertycontainer" data-element="photo">
@@ -235,7 +233,7 @@
 				<a class="favorite action {favorite}"></a>
 			</div>
 			<div class="singleproperties">
-			<input data-element="fn" class="fullname value propertycontainer" type="text" name="value" value="{name}" required />
+			<input data-element="fn" class="fullname value propertycontainer" type="text" name="value" value="{name}" placeholder="<?php p($l->t('Name')); ?>" required />
 			<a class="action edit"></a>
  			<fieldset class="n hidden editor propertycontainer" data-element="n">
 			<ul>
@@ -327,7 +325,7 @@
 		<button class="close text tooltipped downwards" title="<?php p($l->t('Close')); ?>"><?php p($l->t('Close')); ?></button>
 		<button class="export action text tooltipped downwards" title="<?php p($l->t('Export as VCF')); ?>"><?php p($l->t('Download')); ?></button>
 		<select class="add action text button" id="addproperty">
-			<option value=""><?php p($l->t('Add')); ?></option>
+			<option value=""><?php p($l->t('Add field...')); ?></option>
 			<option value="ORG"><?php p($l->t('Organization')); ?></option>
 			<option value="TITLE"><?php p($l->t('Title')); ?></option>
 			<option value="NICKNAME"><?php p($l->t('Nickname')); ?></option>
@@ -342,7 +340,8 @@
 		<button class="delete action text float right tooltipped downwards" title="<?php p($l->t('Delete contact')); ?>"><?php p($l->t('Delete')); ?></button>
 	</footer>
 	</section>
-</form>
+	</form>
+	</td></tr>
 </script>
 
 <script id="contactDetailsTemplate" class="hidden" type="text/template">
@@ -408,27 +407,28 @@
 					</select>
 					<input type="checkbox" id="adr_pref_{idx}" class="parameter tooltipped downwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" /><label for="adr_pref_{idx}"><?php p($l->t('Preferred')); ?></label>
 				</li>
-				<li>
+				<li><!-- Note to translators: The placeholders for address properties should be a well known address
+						so users can see where the data belongs according to https://tools.ietf.org/html/rfc2426#section-3.2.1 -->
 					<input class="value stradr tooltipped rightwards onfocus" type="text" id="adr_2" name="value[2]" value="{adr2}" 
-					placeholder="<?php p($l->t('1 Main Street')); ?>"
+					placeholder="<?php p($l->t('1600 Pennsylvania Avenue, NW')); ?>"
 					title="<?php p($l->t('Street address')); ?>" />
 				</li>
 				<li>
 					<input class="value zip tooltipped rightwards onfocus" type="text" id="adr_5" name="value[5]" value="{adr5}" 
-						placeholder="<?php p($l->t('12345')); ?>"
+						placeholder="<?php p($l->t('20500')); ?>"
 						title="<?php p($l->t('Postal code')); ?>" />
 					<input class="value city tooltipped rightwards onfocus" type="text" id="adr_3" name="value[3]" value="{adr3}" 
-						placeholder="<?php p($l->t('Your city')); ?>"
+						placeholder="<?php p($l->t('Washington, DC')); ?>"
 						title="<?php p($l->t('City')); ?>" />
 				</li>
 				<li>
 					<input class="value region tooltipped rightwards onfocus" type="text" id="adr_4" name="value[4]" value="{adr4}" 
-						placeholder="<?php p($l->t('Some region')); ?>"
+						placeholder="<?php p($l->t('District of Columbia')); ?>"
 						title="<?php p($l->t('State or province')); ?>" />
 				</li>
 				<li>
 					<input class="value country tooltipped rightwards onfocus" type="text" id="adr_6" name="value[6]" value="{adr6}" 
-						placeholder="<?php p($l->t('Your country')); ?>"
+						placeholder="<?php p($l->t('USA')); ?>"
 						title="<?php p($l->t('Country')); ?>" />
 				</li>
 			</ul>
@@ -461,6 +461,7 @@
 
 <script id="addressBookTemplate" class="hidden" type="text/template">
 <li data-id="{id}" data-backend="{backend}" data-permissions="{permissions}">
+	<input type="checkbox" name="active" checked="checked" title="<?php p($l->t('Active')); ?>" />
 	<label>{displayname}</label>
 	<span class="actions">
 		<a title="<?php p($l->t('Share')); ?>" class="share action" data-possible-permissions="{permissions}" data-item="{id}" data-item-type="addressbook"></a>

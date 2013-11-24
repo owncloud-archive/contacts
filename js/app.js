@@ -98,17 +98,18 @@ var wrongKey = function(event) {
 /**
  * Simply notifier
  * Arguments:
- * @param message The text message to show.
- * @param timeout The timeout in seconds before the notification disappears. Default 10.
- * @param timeouthandler A function to run on timeout.
- * @param clickhandler A function to run on click. If a timeouthandler is given it will be cancelled on click.
- * @param data An object that will be passed as argument to the timeouthandler and clickhandler functions.
- * @param cancel If set cancel all ongoing timer events and hide the notification.
+ * @param string message - The text message to show.
+ * @param int timeout - The timeout in seconds before the notification disappears. Default 10.
+ * @param function timeouthandler - A function to run on timeout.
+ * @param function clickhandler - A function to run on click. If a timeouthandler is given it will be cancelled on click.
+ * @param object data - An object that will be passed as argument to the timeouthandler and clickhandler functions.
+ * @param bool cancel - If set cancel all ongoing timer events and hide the notification.
  */
 OC.notify = function(params) {
 	var self = this;
 	if(!self.notifier) {
 		self.notifier = $('#notification');
+		self.notifier.on('click', function() { $(this).fadeOut();});
 	}
 	if(params.cancel) {
 		self.notifier.off('click');
@@ -118,11 +119,11 @@ OC.notify = function(params) {
 			}
 		}
 		self.notifier.text('').fadeOut().removeData();
-		return;
 	}
-	self.notifier.text(params.message);
-	self.notifier.fadeIn().css('display', 'inline');
-	self.notifier.on('click', function() { $(this).fadeOut();});
+	if(params.message) {
+		self.notifier.text(params.message).fadeIn().css('display', 'inline');
+	}
+
 	var timer = setTimeout(function() {
 		self.notifier.fadeOut();
 		if(params.timeouthandler && $.isFunction(params.timeouthandler)) {
@@ -153,6 +154,7 @@ OC.Contacts = OC.Contacts || {
 		}
 		var self = this;
 
+		this.lastSelectedContacts = [];
 		this.scrollTimeoutMiliSecs = 100;
 		this.isScrolling = false;
 		this.cacheElements();
@@ -184,7 +186,7 @@ OC.Contacts = OC.Contacts || {
 		$.when(this.addressBooks.loadAddressBooks()).then(function(addressBooks) {
 			var num = addressBooks.length;
 			var deferreds = $(addressBooks).map(function(i, elem) {
-				return self.contacts.loadContacts(this.getBackend(), this.getId());
+				return self.contacts.loadContacts(this.getBackend(), this.getId(), this.isActive());
 			});
 			// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
 			$.when.apply(null, deferreds.get()).then(function(response) {
@@ -227,9 +229,7 @@ OC.Contacts = OC.Contacts || {
 			console.log(response.message);
 			$(document).trigger('status.contacts.error', response);
 		});
-		OCCategories.changed = this.groups.categoriesChanged;
-		OCCategories.app = 'contacts';
-		OCCategories.type = 'contact';
+		$(OC.Tags).on('change', this.groups.categoriesChanged)
 		this.bindEvents();
 		this.$toggleAll.show();
 		this.hideActions();
@@ -357,7 +357,7 @@ OC.Contacts = OC.Contacts || {
 		}
 
 		// This apparently get's called on some weird occasions.
-		$(window).bind('popstate', this.hashChange);
+		//$(window).bind('popstate', this.hashChange);
 		$(window).bind('hashchange', this.hashChange);
 		
 		// App specific events
@@ -368,7 +368,7 @@ OC.Contacts = OC.Contacts || {
 			}
 			console.log('contact', data.id, 'deleted');
 			// update counts on group lists
-			self.groups.removeFromAll(data.id, true);
+			self.groups.removeFromAll(data.id, true, true);
 		});
 
 		$(document).bind('status.contact.added', function(e, data) {
@@ -379,9 +379,10 @@ OC.Contacts = OC.Contacts || {
 
 		// Keep error messaging at one place to be able to replace it.
 		$(document).bind('status.contacts.error', function(e, data) {
-			console.warn(data.message);
+			var message = data.message || data;
+			console.warn(message);
 			//console.trace();
-			OC.notify({message:data.message});
+			OC.notify({message:message});
 		});
 
 		$(document).bind('status.contact.enabled', function(e, enabled) {
@@ -401,18 +402,26 @@ OC.Contacts = OC.Contacts || {
 			}
 		});
 
-		$(document).bind('status.contacts.loaded', function(e, response) {
+		$(document).bind('status.contacts.loaded status.contacts.deleted', function(e, response) {
 			console.log('status.contacts.loaded', response);
 			if(response.error) {
 				$(document).trigger('status.contacts.error', response);
 				console.log('Error loading contacts!');
 			} else {
 				if(response.numcontacts === 0) {
+					self.$contactListHeader.hide();
 					self.$contactList.hide();
 					self.$firstRun.show();
 				} else {
+					self.$contactListHeader.show();
 					self.$contactList.show();
 					self.$firstRun.hide();
+				$.each(self.addressBooks.addressBooks, function(idx, addressBook) {
+					console.log('addressBook', addressBook);
+					if(!addressBook.isActive()) {
+						self.contacts.showFromAddressbook(addressBook.getId(), false);
+					}
+				});
 				}
 			}
 		});
@@ -577,6 +586,7 @@ OC.Contacts = OC.Contacts || {
 					if(data.deleteOther) {
 						self.contacts.delayedDelete(mergees);
 					}
+					console.log('merger', merger);
 					self.openContact(merger.getId());
 				}
 			});
@@ -599,24 +609,11 @@ OC.Contacts = OC.Contacts || {
 			self.editCurrentPhoto(metadata);
 		});
 
-		$(document).bind('request.addressbook.activate', function(e, result) {
-			console.log('request.addressbook.activate', result);
-			self.contacts.showFromAddressbook(result.id, result.activate);
-		});
-
 		$(document).bind('request.groups.reload', function(e, result) {
 			console.log('request.groups.reload', result);
 			self.groups.loadGroups(function() {
 				self.groups.triggerLastGroup();
 			});
-		});
-
-		$(document).bind('status.contact.removedfromgroup', function(e, result) {
-			console.log('status.contact.removedfromgroup', result);
-			if(self.currentgroup == result.groupid) {
-				self.contacts.hideContact(result.contactid);
-				self.closeContact(result.contactid);
-			}
 		});
 
 		$(document).bind('status.group.groupremoved', function(e, result) {
@@ -637,20 +634,39 @@ OC.Contacts = OC.Contacts || {
 			$.each(result.contacts, function(idx, contactid) {
 				var contact = self.contacts.findById(contactid);
 				if(!contact) {
-					console.log('Couldn\'t find contact', contactid)
+					console.warn('Couldn\'t find contact', contactid)
 					return true; // continue
 				}
 				contact.renameGroup(result.from, result.to);
 			});
 		});
 
+		$(document).bind('status.group.contactremoved', function(e, result) {
+			console.log('status.group.contactremoved', result, self.currentgroup, result.groupid);
+			var contact = self.contacts.findById(result.contactid);
+			if(contact) {
+				if(contact.inGroup(result.groupname)) {
+					contact.removeFromGroup(result.groupname);
+				}
+				if(parseInt(self.currentgroup) === parseInt(result.groupid)) {
+					console.log('Hiding', contact.getId());
+					contact.hide();
+				}
+			}
+		});
+
 		$(document).bind('status.group.contactadded', function(e, result) {
 			console.log('status.group.contactadded', result);
 			var contact = self.contacts.findById(result.contactid);
-			if(!contact) {
-				return false;
+			if(contact) {
+				if(!contact.inGroup(result.groupname)) {
+					contact.addToGroup(result.groupname);
+				}
+				if(parseInt(self.currentgroup) === parseInt(result.groupid)) {
+					console.log('Showing', contact.getId());
+					contact.show();
+				}
 			}
-			contact.addToGroup(result.groupname);
 		});
 
 		// Group sorted, save the sort order
@@ -726,9 +742,11 @@ OC.Contacts = OC.Contacts || {
 		});*/
 		$('#contactphoto_fileupload').on('click', function(event, metadata) {
 			var form = $('#file_upload_form');
-			form.find('input[name="contactid"]').val(metadata.contactid);
-			form.find('input[name="addressbookid"]').val(metadata.addressbookid);
-			form.find('input[name="backend"]').val(metadata.backend);
+			var url = OC.Router.generate(
+				'contacts_upload_contact_photo',
+				{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId}
+			);
+			form.attr('action', url);
 		}).on('change', function() {
 			console.log('#contactphoto_fileupload, change');
 			self.uploadPhoto(this.files);
@@ -740,7 +758,7 @@ OC.Contacts = OC.Contacts || {
 			if(response && response.status == 'success') {
 				console.log('response', response);
 				self.editPhoto(
-					response.metadata,
+					response.data.metadata,
 					response.data.tmp
 				);
 				//alert('File: ' + file.tmp + ' ' + file.name + ' ' + file.mime);
@@ -773,7 +791,12 @@ OC.Contacts = OC.Contacts || {
 
 		this.$contactList.on('change', 'input:checkbox', function(event) {
 			var selected = self.contacts.getSelectedContacts();
-			console.log('selected', selected.length);
+			var id = String($(this).val());
+			// Save list of last selected contact to be able to select range
+			($(this).is(':checked') && self.lastSelectedContacts.indexOf(id) === -1)
+				? self.lastSelectedContacts.push(id)
+				: self.lastSelectedContacts.splice(self.lastSelectedContacts.indexOf(id), 1);
+
 			if(selected.length > 0 && self.$groups.find('option').length === 1) {
 				self.buildGroupSelect();
 			}
@@ -832,11 +855,6 @@ OC.Contacts = OC.Contacts || {
 										if(buildnow) {
 											self.buildGroupSelect();
 										}
-										$(document).trigger('status.contact.addedtogroup', {
-											contactid: id,
-											groupid: groupId,
-											groupname: groupName
-										});
 									}, 1000);
 								});
 							} else {
@@ -870,11 +888,6 @@ OC.Contacts = OC.Contacts || {
 								if(buildnow) {
 									self.buildGroupSelect();
 								}
-								$(document).trigger('status.contact.addedtogroup', {
-									contactid: id,
-									groupid: groupId,
-									groupname: groupName
-								});
 							}, 1000);
 						});
 					} else {
@@ -886,7 +899,7 @@ OC.Contacts = OC.Contacts || {
 					self.$groups.val(-1).hide().find('optgroup,option:not([value="-1"])').remove();
 				}
 			} else if(action === 'remove') {
-				self.groups.removeFrom(ids, $opt.val(), function(result) {
+				self.groups.removeFrom(ids, $opt.val(), false, function(result) {
 					console.log('after remove', result);
 					if(!result.error) {
 						var groupname = $opt.text(), groupid = $opt.val();
@@ -899,12 +912,6 @@ OC.Contacts = OC.Contacts || {
 							if(buildnow) {
 								self.buildGroupSelect();
 							}
-							// If a group is selected the contact has to be removed from the list
-							$(document).trigger('status.contact.removedfromgroup', {
-								contactid: id,
-								groupid: groupId,
-								groupname: groupName
-							});
 						});
 					} else {
 						var msg = result.message ? result.message : t('contacts', 'Error removing from group.');
@@ -927,16 +934,33 @@ OC.Contacts = OC.Contacts || {
 			$(this).find('a.delete').remove();
 		});
 
+		// Prevent Firefox from selecting the table-cell
+		this.$contactList.mousedown(function (event) {
+			if (event.ctrlKey || event.metaKey || event.shiftKey) {
+				event.preventDefault();
+			}
+		});
+
 		// Contact list. Either open a contact or perform an action (mailto etc.)
 		this.$contactList.on('click', 'tr.contact', function(event) {
 			if($(event.target).is('input')) {
 				return;
 			}
-			if(event.ctrlKey || event.metaKey) {
+			// Select a single contact or a range of contacts.
+			if(event.ctrlKey || event.metaKey || event.shiftKey) {
 				event.stopPropagation();
 				event.preventDefault();
 				self.dontScroll = true;
-				self.contacts.select($(this).data('id'), true);
+				var $input = $(this).find('input:checkbox');
+				var index = self.$contactList.find('tr.contact:visible').index($(this));
+				if(event.shiftKey && self.lastSelectedContacts.length > 0) {
+					self.contacts.selectRange(
+						$(this).data('id'),
+						self.lastSelectedContacts[self.lastSelectedContacts.length-1]
+					);
+				} else {
+					self.contacts.setSelected($(this).data('id'), !$input.prop('checked'));
+				}
 				return;
 			}
 			if($(event.target).is('a.mailto')) {
@@ -948,7 +972,7 @@ OC.Contacts = OC.Contacts || {
 			}
 			if($(event.target).is('a.delete')) {
 				$(document).trigger('request.contact.delete', {
-					contactid: $(this).data('id')
+					contactId: $(this).data('id')
 				});
 				return;
 			}
@@ -976,11 +1000,19 @@ OC.Contacts = OC.Contacts || {
 		var addContact = function() {
 			console.log('add');
 			self.$toggleAll.hide();
-			$(this).hide();
+			if(self.currentid) {
+				if(self.currentid === 'new') {
+					return;
+				} else {
+					var contact = self.contacts.findById(self.currentid);
+					if(contact) {
+						contact.close();
+					}
+				}
+			}
 			self.currentid = 'new';
 			// Properties that the contact doesn't know
 			console.log('addContact, groupid', self.currentgroup);
-			self.$contactList.addClass('dim');
 			var groupprops = {
 				favorite: false,
 				groups: self.groups.categories,
@@ -988,9 +1020,9 @@ OC.Contacts = OC.Contacts || {
 			};
 			self.$firstRun.hide();
 			self.$contactList.show();
-			self.$contactList.addClass('dim');
 			self.tmpcontact = self.contacts.addContact(groupprops);
-			self.$rightContent.prepend(self.tmpcontact);
+			self.tmpcontact.prependTo(self.$contactList.find('tbody')).show().find('.fullname').focus();
+			self.$rightContent.scrollTop(0);
 			self.hideActions();
 		};
 
@@ -1035,9 +1067,11 @@ OC.Contacts = OC.Contacts || {
 			}
 			console.log('download');
 			var contacts = self.contacts.getSelectedContacts();
-			var ids = $.map(contacts, function(c) {return c.getId();});
-			document.location.href = OC.linkTo('contacts', 'export.php')
-				+ '?selectedids=' + ids.join(',');
+			// Only get backend, addressbookid and contactid
+			contacts = $.map(contacts, function(c) {return c.metaData();});
+			var url = OC.Router.generate('contacts_export_selected', {contacts:contacts});
+			console.log('export url', url);
+			document.location.href = url;
 		});
 
 		this.$contactListHeader.on('click keydown', '.merge', function(event) {
@@ -1307,6 +1341,7 @@ OC.Contacts = OC.Contacts || {
 		$.each(this.$contactList.find(selector), function() {
 			$(this).prop('checked', checked);
 		});
+		this.lastSelectedContacts = [];
 	},
 	jumpToContact: function(id) {
 		this.$rightContent.scrollTop(this.contacts.contactPos(id)-30);
@@ -1314,26 +1349,25 @@ OC.Contacts = OC.Contacts || {
 	closeContact: function(id) {
 		$(window).unbind('hashchange', this.hashChange);
 		if(this.currentid === 'new') {
-			this.tmpcontact.remove();
+			this.tmpcontact.slideUp().remove();
 			this.$contactList.show();
 		} else {
 			var contact = this.contacts.findById(id);
-			if(contact && contact.close()) {
-				this.jumpToContact(id);
+			if(contact) {
+				contact.close();
 			}
 		}
-		this.$contactList.removeClass('dim');
 		delete this.currentid;
 		this.hideActions();
 		this.$groups.find('optgroup,option:not([value="-1"])').remove();
 		if(this.contacts.length === 0) {
 			$(document).trigger('status.nomorecontacts');
 		}
-		//$('body').unbind('click', this.bodyListener);
 		window.location.hash = '';
 		$(window).bind('hashchange', this.hashChange);
 	},
 	openContact: function(id) {
+		var self = this;
 		if(typeof id == 'undefined' || id == 'undefined') {
 			console.warn('id is undefined!');
 			console.trace();
@@ -1341,60 +1375,36 @@ OC.Contacts = OC.Contacts || {
 		this.hideActions();
 		console.log('Contacts.openContact', id, typeof id);
 		if(this.currentid && this.currentid !== id) {
-			this.closeContact(this.currentid);
+			this.contacts.closeContact(this.currentid);
 		}
 		$(window).unbind('hashchange', this.hashChange);
 		this.currentid = id;
-		console.log('Contacts.openContact, Favorite', this.currentid, this.groups.isFavorite(this.currentid), this.groups);
 		this.setAllChecked(false);
-		//this.$contactList.hide();
-		this.$contactList.addClass('dim');
 		console.assert(typeof this.currentid === 'string', 'Current ID not string');
-		this.jumpToContact(this.currentid);
 		// Properties that the contact doesn't know
 		var groupprops = {
 			favorite: this.groups.isFavorite(this.currentid),
 			groups: this.groups.categories,
 			currentgroup: {id:this.currentgroup, name:this.groups.nameById(this.currentgroup)}
 		};
-		var $contactelem = this.contacts.showContact(this.currentid, groupprops);
-		if(!$contactelem) {
+		var contact = this.contacts.findById(this.currentid);
+		if(!contact) {
 			console.warn('Error opening', this.currentid);
-			this.$contactList.removeClass('dim');
 			$(document).trigger('status.contacts.error', {
 				message: t('contacts', 'Could not find contact: {id}', {id:this.currentid})
 			});
 			this.currentid = null;
 			return;
 		}
-		var self = this;
-		var adjustElems = function() {
-			var $contact = $contactelem.find('#contact');
-			var maxheight = document.documentElement.clientHeight - 200; // - ($contactelem.offset().top+70);
-			var $footer = $contactelem.find('footer');
-			var minWidth = 0;
-			$.each($footer.children(), function(idx, child) {
-				minWidth += $(child).outerWidth();
-			});
-			$contact.css({'min-width' : Math.round(minWidth), 'max-height': maxheight, 'overflow-y': 'auto', 'overflow-x': 'hidden'});
-		};
-		$(window).resize(adjustElems);
-		//$contact.resizable({ minWidth: 400, minHeight: 400, maxHeight: maxheight});
-		this.$rightContent.prepend($contactelem);
-		adjustElems();
-		/*this.bodyListener = function(e) {
-			if(!self.currentid) {
-				return;
-			}
-			var $contactelem = self.contacts.findById(self.currentid).$fullelem;
-			if($contactelem.find($(e.target)).length === 0) {
-				self.closeContact(self.currentid);
-			}
-		};*/
-		window.location.hash = this.currentid.toString();
+		var $contactelem = contact.renderContact(groupprops);
+		var $listElement = contact.getListItemElement();
+		console.log('selected element', $listElement);
+		window.location.hash = this.currentid;
+		self.jumpToContact(self.currentid);
+		$contactelem.insertAfter($listElement).show().find('.fullname').focus();
+		$listElement.hide();
 		setTimeout(function() {
-			//$('body').bind('click', self.bodyListener);
-			$(window).bind('hashchange', this.hashChange);
+			$(window).bind('hashchange', self.hashChange);
 		}, 500);
 	},
 	update: function() {
@@ -1424,41 +1434,45 @@ OC.Contacts = OC.Contacts || {
 	cloudPhotoSelected:function(metadata, path) {
 		var self = this;
 		console.log('cloudPhotoSelected', metadata);
-		$.getJSON(OC.filePath('contacts', 'ajax', 'oc_photo.php'),
-				  {path: path, contact: metadata},function(response) {
-			if(response.status == 'success') {
-				//alert(jsondata.data.page);
+		var url = OC.Router.generate(
+			'contacts_cache_fs_photo',
+			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId, path: path}
+		);
+		var jqXHR = $.getJSON(url, function(response) {
+			console.log('response', response);
+			response = self.storage.formatResponse(response, jqXHR);
+			if(!response.error) {
 				self.editPhoto(metadata, response.data.tmp);
-				//$('#edit_photo_dialog_img').html(jsondata.data.page);
-			}
-			else{
+			} else {
 				$(document).trigger('status.contacts.error', response);
 			}
 		});
 	},
 	editCurrentPhoto:function(metadata) {
 		var self = this;
-		$.getJSON(OC.filePath('contacts', 'ajax', 'currentphoto.php'), metadata,
-			function(response) {
-			if(response.status == 'success') {
-				//alert(jsondata.data.page);
+		var url = OC.Router.generate(
+			'contacts_cache_contact_photo',
+			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId}
+		);
+		console.log('url', url);
+		var jqXHR = $.getJSON(url, function(response) {
+			response = self.storage.formatResponse(response, jqXHR)
+			if(!response.error) {
 				self.editPhoto(metadata, response.data.tmp);
-				$('#edit_photo_dialog_img').html(response.data.page);
 			} else {
 				$(document).trigger('status.contacts.error', response);
 			}
 		});
 	},
 	editPhoto:function(metadata, tmpkey) {
+		var $x, $y, $w, $h;
 		console.log('editPhoto', metadata, tmpkey);
 		$('.tipsy').remove();
 		// Simple event handler, called from onChange and onSelect
-		// event handlers, as per the Jcrop invocation above
+		// event handlers, as per the Jcrop invocation below
 		var showCoords = function(c) {
-			$('#x1').val(c.x);
-			$('#y1').val(c.y);
-			$('#x2').val(c.x2);
-			$('#y2').val(c.y2);
+			$('#x').val(c.x);
+			$('#y').val(c.y);
 			$('#w').val(c.w);
 			$('#h').val(c.h);
 		};
@@ -1471,66 +1485,81 @@ OC.Contacts = OC.Contacts || {
 		if(!this.$cropBoxTmpl) {
 			this.$cropBoxTmpl = $('#cropBoxTemplate');
 		}
-		//$('body').append('<div id="edit_photo_dialog"></div>');
 		var $container = $('<div />').appendTo($('body'));
+		var url = OC.Router.generate(
+			'contacts_crop_contact_photo',
+			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId, key: tmpkey}
+		);
 		var $dlg = this.$cropBoxTmpl.octemplate(
 			{
+				action: url,
 				backend: metadata.backend,
 				addressbookid: metadata.addressbookid,
 				contactid: metadata.contactid,
 				tmpkey: tmpkey
-			});
+			}).prependTo($container);
 
-		var cropphoto = new Image();
-		$(cropphoto).load(function () {
-			var x = 5, y = 5, w = this.width-10, h = this.height-10;
-			$(this).attr('id', 'cropbox');
-			$(this).prependTo($dlg).fadeIn();
-			$(this).Jcrop({
+		$.when(this.storage.getTempContactPhoto(
+			metadata.backend,
+			metadata.addressBookId,
+			metadata.contactId,
+			tmpkey
+		))
+		.then(function(image) {
+			var x = 5, y = 5, w = h = Math.min(image.width, image.height);
+			//$dlg.css({'min-width': w, 'min-height': h});
+			console.log(x,y,w,h);
+			$(image).attr('id', 'cropbox').prependTo($dlg).show()
+			.Jcrop({
 				onChange:	showCoords,
 				onSelect:	showCoords,
 				onRelease:	clearCoords,
-				maxSize:	[399, 399],
+				//maxSize:	[w, h],
 				bgColor:	'black',
 				bgOpacity:	.4,
 				boxWidth:	400,
 				boxHeight:	400,
-				setSelect:	[ w, h, x, y ]//,
-				//aspectRatio: 0.8
+				setSelect:	[ x, y, w-10, h-10 ],
+				aspectRatio: 1
 			});
-			$container.html($dlg).dialog({
-							modal: true,
-							closeOnEscape: true,
-							title:  t('contacts', 'Edit profile picture'),
-							height: 'auto', width: 'auto',
-							buttons: {
-								'Ok':function() {
-									self.savePhoto($(this));
-									$(this).dialog('close');
-								},
-								'Cancel':function() { $(this).dialog('close'); }
-							},
-							close: function(event, ui) {
-								$(this).dialog('destroy').remove();
-								$container.remove();
-							},
-							open: function(event, ui) {
-								showCoords({x:x,y:y,w:w,h:h});
-							}
-						});
-		}).error(function () {
-			$(document).trigger('status.contacts.error', {message:t('contacts','Error loading profile picture.')});
-		}).attr('src', OC.linkTo('contacts', 'tmpphoto.php')+'?tmpkey='+tmpkey+'&refresh='+Math.random());
+			$container.ocdialog({
+				modal: true,
+				closeOnEscape: true,
+				title:  t('contacts', 'Edit profile picture'),
+				height: image.height+100, width: image.width+20,
+				buttons: [
+					{
+						text: t('contacts', 'Crop photo'),
+						click:function() {
+							self.savePhoto($(this), function() {
+								$container.ocdialog('close');
+							});
+						},
+						defaultButton: true
+					}
+				],
+				close: function(event, ui) {
+					$(this).ocdialog('destroy').remove();
+					$container.remove();
+				},
+				open: function(event, ui) {
+					showCoords({x:x,y:y,w:w-10,h:h-10});
+				}
+			});
+		})
+		.fail(function() {
+			console.warn('Error getting temporary photo');
+		});
 	},
-	savePhoto:function($dlg) {
-		var form = $dlg.find('#cropform');
-		q = form.serialize();
-		console.log('savePhoto', q);
-		$.post(OC.filePath('contacts', 'ajax', 'savecrop.php'), q, function(response) {
-			//var jsondata = $.parseJSON(response);
-			console.log('savePhoto, response', typeof response);
-			if(response && response.status === 'success') {
-				// load cropped photo.
+	savePhoto:function($dlg, cb) {
+		var $form = $dlg.find('#cropform');
+		var $target = $dlg.find('#crop_target');
+		console.log('target', $target);
+		$target.on('load', function() {
+			console.log('submitted');
+			var response = $.parseJSON($target.contents().text());
+			console.log('response', response);
+			if(response && response.status == 'success') {
 				$(document).trigger('status.contact.photoupdated', {
 					id: response.data.id,
 					thumbnail: response.data.thumbnail
@@ -1544,7 +1573,9 @@ OC.Contacts = OC.Contacts || {
 					$(document).trigger('status.contacts.error', response);
 				}
 			}
+			cb();
 		});
+		$form.submit();
 	},
 };
 

@@ -7,17 +7,19 @@
  */
 
 namespace OCA\Contacts\Share;
-use OCA\Contacts\Backend\Database;
+use OCA\Contacts\App;
 
 class Addressbook implements \OCP\Share_Backend_Collection {
 	const FORMAT_ADDRESSBOOKS = 1;
 	const FORMAT_COLLECTION = 2;
 
-	public $backend;
+	/**
+	 * @var \OCA\Contacts\App;
+	 */
+	public $app;
 
 	public function __construct() {
-		// Currently only share
-		$this->backend = new Database();
+		$this->app = new App(\OCP\User::getUser());
 	}
 
 	/**
@@ -32,8 +34,11 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 	* The formatItems() function will translate the source returned back into the item
 	*/
 	public function isValidSource($itemSource, $uidOwner) {
-		$addressbook = $this->backend->getAddressBook($itemSource);
-		if(!$addressbook || $addressbook['owner'] !== $uidOwner) {
+		$app = new App($uidOwner);
+
+		try {
+			$app->getAddressBook('local', $itemSource);
+		} catch(\Exception $e) {
 			return false;
 		}
 		return true;
@@ -50,16 +55,21 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 	* If it does generate a new name e.g. name_#
 	*/
 	public function generateTarget($itemSource, $shareWith, $exclude = null) {
-		$addressbook = $this->backend->getAddressBook($itemSource);
+		// Get app for the sharee
+		$app = new App($shareWith);
+		$backend = $app->getBackend('local');
 
-		$user_addressbooks = array();
+		// Get address book for the owner
+		$addressBook = $this->app->getBackend('local')->getAddressBook($itemSource);
 
-		foreach($this->backend->getAddressBooksForUser($shareWith) as $user_addressbook) {
-			$user_addressbooks[] = $user_addressbook['displayname'];
+		$userAddressBooks = array();
+
+		foreach($backend->getAddressBooksForUser() as $userAddressBook) {
+			$userAddressBooks[] = $userAddressBook['displayname'];
 		}
-		$name = $addressbook['displayname'] . '(' . $addressbook['userid'] . ')';
+		$name = $addressBook['displayname'] . '(' . $addressBook['userid'] . ')';
 		$suffix = '';
-		while (in_array($name.$suffix, $user_addressbooks)) {
+		while (in_array($name.$suffix, $userAddressBooks)) {
 			$suffix++;
 		}
 
@@ -83,31 +93,33 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 	public function formatItems($items, $format, $parameters = null, $include = false) {
 		//\OCP\Util::writeLog('contacts', __METHOD__
 		//	. ' ' . $include . ' ' . print_r($items, true), \OCP\Util::DEBUG);
-		$addressbooks = array();
+		$addressBooks = array();
+		$backend = $this->app->getBackend('local');
+
 		if ($format === self::FORMAT_ADDRESSBOOKS) {
 			foreach ($items as $item) {
 				//\OCP\Util::writeLog('contacts', __METHOD__.' item_source: ' . $item['item_source'] . ' include: '
 				//	. (int)$include, \OCP\Util::DEBUG);
-				$addressbook = $this->backend->getAddressBook($item['item_source']);
-				if ($addressbook) {
-					$addressbook['displayname'] = $addressbook['displayname'] . ' (' . $addressbook['owner'] . ')';
-					$addressbook['permissions'] = $item['permissions'];
-					$addressbooks[] = $addressbook;
+				$addressBook = $backend->getAddressBook($item['item_source']);
+				if ($addressBook) {
+					$addressBook['displayname'] = $addressBook['displayname'] . ' (' . $addressBook['owner'] . ')';
+					$addressBook['permissions'] = $item['permissions'];
+					$addressBooks[] = $addressBook;
 				}
 			}
 		} elseif ($format === self::FORMAT_COLLECTION) {
 			foreach ($items as $item) {
 			}
 		}
-		return $addressbooks;
+		return $addressBooks;
 	}
 
 	public function getChildren($itemSource) {
 		\OCP\Util::writeLog('contacts', __METHOD__.' item_source: ' . $itemSource, \OCP\Util::DEBUG);
-		$contacts = $this->backend->getContacts($itemSource, null, null, true);
+		$contacts = $this->app->getBackend('local')->getContacts($itemSource);
 		$children = array();
 		foreach($contacts as $contact) {
-			$children[] = array('source' => $contact['id'], 'target' => $contact['fullname']);
+			$children[] = array('source' => $contact['id'], 'target' => $contact['displayname']);
 		}
 		return $children;
 	}

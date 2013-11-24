@@ -82,7 +82,7 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	 * @param string $id
 	 * @return bool
 	 */
-	public abstract function deleteChild($id);
+	public abstract function deleteChild($id, $options = array());
 
     // Iterator methods
 

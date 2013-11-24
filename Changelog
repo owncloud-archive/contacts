@@ -11,9 +11,16 @@ ownCloud Contacts Changelog
  - Abstraction layer for address books and contacts.
  - Partially ported to App Framework.
  - Use updated app styles.
+ - Select single contacts by Ctrl/Cmd-click, or a range of contacts by Shift-click.
  - Experimental contacts merge. Might eat kittens!
  - Regression fixed: Address book rename added again.
  - Regression fixed: Contacts can be moved between address books again; also with different backends. contacts#57
+
+5.0.8
+ - Regression fix: It is again possible to select which address book a new contact should
+   be saved in.
+ - Regression fix: It is again possible to move contacts between address books.
+ - Fix: When users where deleted, any address books shared with them would also deleted.
 
 5.0.7:
  - Feature: Delete button for single contacts in list. contacts#101
