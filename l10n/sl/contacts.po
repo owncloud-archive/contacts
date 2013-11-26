@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-23 22:08-0500\n"
-"PO-Revision-Date: 2013-11-22 21:50+0000\n"
+"POT-Creation-Date: 2013-11-26 01:20-0500\n"
+"PO-Revision-Date: 2013-11-25 18:56+0000\n"
 "Last-Translator: mateju <>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -161,7 +161,7 @@ msgstr "Ni izbrane datoteke za pošiljanje."
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr "Datoteka, ki jo poskušate naložiti, presega največjo dovoljeno velikost za pošiljanje na tem strežniku."
+msgstr "Datoteka, ki jo poskušate naložiti, presega dovoljeno velikost za pošiljanje na ta strežnik."
 
 #: js/app.js:1528
 msgid "Edit profile picture"
@@ -191,11 +191,11 @@ msgstr "Napaka razčlenjevanja datuma rojstva {bday}: {error}"
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr "Nekateri stiki so označeni za izbris, vendar še niso izbrisani. Počakajte na izbris."
+msgstr "Nekateri stiki so označeni za izbris, vendar še niso izbrisani. Počakajte na dokončanje opravila."
 
 #: js/contacts.js:2173
 msgid "Click to undo deletion of {num} contacts"
-msgstr "Klikni za preklic izbrisa {num} stikov"
+msgstr "S klikom bodo povrnjeni izbrisani stiki ({num})"
 
 #: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
@@ -253,7 +253,7 @@ msgstr "Priljubljeni"
 
 #: js/groups.js:736
 msgid "Shared by {owner}"
-msgstr "V souporabo dal {owner}"
+msgstr "Souporabo omogoča {owner}"
 
 #: js/groups.js:751
 msgid "Not grouped"
@@ -261,7 +261,7 @@ msgstr "Brez skupine"
 
 #: js/groups.js:777
 msgid "Failed loading groups: {error}"
-msgstr "Nalaganje skupine ni uspelo: {error}"
+msgstr "Nalaganje skupin je spodletelo: {error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
@@ -269,7 +269,7 @@ msgstr "Izberite imenik"
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
-msgstr "Uvozi v..."
+msgstr "Uvozi v ..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
@@ -338,11 +338,11 @@ msgstr "Napaka strežnika! Stopite v stik s skrbnikom sistema."
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
-msgstr "Napaka pri nalaganju slike: {error}"
+msgstr "Nalaganje slike je spodletelo: {error}"
 
 #: lib/addressbook.php:152
 msgid "You do not have permissions to see this contacts"
-msgstr "Nimate pravic za ogled teh stikov."
+msgstr "Ni ustreznih dovoljenj za ogled teh stikov."
 
 #: lib/addressbook.php:159
 msgid "Contact not found"
@@ -350,11 +350,11 @@ msgstr "Stika ni mogoče najti"
 
 #: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
-msgstr "Nimate ustreznih pravic za ogled teh stikov."
+msgstr "Ni ustreznih dovoljenj za ogled teh stikov."
 
 #: lib/addressbook.php:213
 msgid "You do not have permissions add contacts to the address book"
-msgstr "Nimate ustreznih pravic za dodajanje stikov v imenik."
+msgstr "Ni ustreznih dovoljenj za dodajanje stikov v imenik."
 
 #: lib/addressbook.php:216
 msgid "The backend for this address book does not support adding contacts"
@@ -362,7 +362,7 @@ msgstr "Zaledje tega imenika ne omogoča dodajanja stikov."
 
 #: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
-msgstr "Nimate ustreznih pravic za brisanje tega stika"
+msgstr "Ni ustreznih dovoljenj za brisanje tega stika"
 
 #: lib/addressbook.php:243 lib/addressbook.php:269
 msgid "The backend for this address book does not support deleting contacts"
@@ -378,11 +378,11 @@ msgstr "Zaledje tega imenika ne omogoča posodobitev"
 
 #: lib/addressbook.php:358
 msgid "You don't have permissions to update the address book."
-msgstr "Nimate ustreznih pravic za posodobitev imenika."
+msgstr "Ni ustreznih dovoljenj za posodobitev imenika."
 
 #: lib/addressbook.php:369
 msgid "You don't have permissions to delete the address book."
-msgstr "Nimate ustreznih pravic za brisanje imenika."
+msgstr "Ni ustreznih dovoljenj za brisanje imenika."
 
 #: lib/app.php:144
 msgid "Address book not found"
@@ -390,7 +390,7 @@ msgstr "Imenika ni mogoče najti"
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr "Nimate ustreznih pravic za ogled tega stika"
+msgstr "Ni ustreznih dovoljenj za ogled tega stika"
 
 #: lib/contact.php:261
 msgid "You do not have permissions to update this contact"
@@ -456,7 +456,7 @@ msgstr "Napaka med shranjevanjem stika."
 
 #: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
-msgstr "Napaka pri brisanju stika iz drugega imenika."
+msgstr "Prišlo je do napake med odstranjevanjem stika iz drugega imenika."
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
@@ -473,11 +473,11 @@ msgstr "Ni zahtevanih podatkov stika."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
-msgstr "Napaka pri spajanju podatkov v stik."
+msgstr "Napaka med združevanjem v stik."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
-msgstr "Napaka pri shranjevanju stika."
+msgstr "Napaka shranjevanja stika."
 
 #: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
@@ -584,11 +584,11 @@ msgstr "Napaka med pridobivanjem lastnosti fotografije."
 
 #: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
 msgid "No group name given."
-msgstr "Niste navedli imena skupine."
+msgstr "Ni podanega imena skupine."
 
 #: lib/controller/groupcontroller.php:64
 msgid "Error adding group."
-msgstr "Napaka pri dodajanju skupine."
+msgstr "Napaka dodajanja skupine."
 
 #: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
@@ -600,12 +600,12 @@ msgstr "Ni imena skupine za preimenovanje podane."
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
-msgstr "Napaka pri preimenovanju skupine."
+msgstr "Napaka preimenovanja skupine."
 
 #: lib/controller/groupcontroller.php:175
 #: lib/controller/groupcontroller.php:223
 msgid "Group ID missing from request."
-msgstr "V zahtevku manjka ID skupine."
+msgstr "V zahtevi manjka ID skupine."
 
 #: lib/controller/groupcontroller.php:180
 msgid "Group name missing from request."
@@ -614,7 +614,7 @@ msgstr "Ime skupine manjka iz zahteve."
 #: lib/controller/groupcontroller.php:185
 #: lib/controller/groupcontroller.php:228
 msgid "Contact ID missing from request."
-msgstr "V zahtevku manjka ID stika."
+msgstr "V zahtevi manjka ID stika."
 
 #: lib/controller/importcontroller.php:51
 msgid "Failed to write to disk"
@@ -638,7 +638,7 @@ msgstr "Napaka premikanja datoteke v mapo uvoza."
 
 #: lib/controller/importcontroller.php:154
 msgid "You do not have permissions to import into this address book."
-msgstr "Nimate ustreznih pravic za uvoz v ta imenik."
+msgstr "Ni ustreznih dovoljenj za uvoz v ta imenik."
 
 #: lib/controller/importcontroller.php:162
 msgid "File name missing from request."
@@ -655,11 +655,11 @@ msgstr "Poskus dostopa do datoteke na črnem seznamu:"
 
 #: lib/controller/importcontroller.php:215
 msgid "No contacts found in: "
-msgstr "Nobenega stika ni bilo mogoče najti v:"
+msgstr "Ni stikov v:"
 
 #: lib/controller/settingscontroller.php:35
 msgid "No key is given."
-msgstr "Ni podanega ključe."
+msgstr "Ni podanega ključa."
 
 #: lib/controller/settingscontroller.php:39
 msgid "No value is given."
@@ -738,12 +738,12 @@ msgstr "GaduGadu"
 #: lib/utils/properties.php:158 lib/utils/properties.php:166
 #: lib/utils/properties.php:177 lib/utils/properties.php:194
 msgid "Work"
-msgstr "Delo"
+msgstr "Služba"
 
 #: lib/utils/properties.php:159 lib/utils/properties.php:164
 #: lib/utils/properties.php:178
 msgid "Home"
-msgstr "Osebna mapa"
+msgstr "Doma"
 
 #: lib/utils/properties.php:165
 msgid "Mobile"
@@ -812,11 +812,11 @@ msgstr "Dodaj imenik"
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr "Izberi dokument..."
+msgstr "Izbor datoteke ..."
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
-msgstr "(Od-)izberi vse"
+msgstr "Preklopi izbor vsega"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
@@ -824,11 +824,11 @@ msgstr "Vrstni red razvrščanja"
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr "Ime-Priimek"
+msgstr "Ime- Priimek"
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr "Ime,Priimek"
+msgstr "Priimek-, Ime"
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
@@ -836,7 +836,7 @@ msgstr "Skupine"
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
-msgstr "Priljubljen"
+msgstr "Priljubljeno"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
@@ -844,7 +844,7 @@ msgstr "Združi izbrano"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
-msgstr "Bližnjice na tipkovnici"
+msgstr "Tipkovne bližnjice"
 
 #: templates/contacts.php:94
 msgid "Navigation"
@@ -860,7 +860,7 @@ msgstr "Predhodni stik na seznamu"
 
 #: templates/contacts.php:101
 msgid "Expand/collapse current addressbook"
-msgstr "Razširi/Skrči trenutni imenik"
+msgstr "Razširi/Zloži trenutni imenik"
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
@@ -915,11 +915,11 @@ msgstr "S katerim stikom naj bodo podatki združeni?"
 
 #: templates/contacts.php:191
 msgid "Delete the other(s) after successful merge?"
-msgstr "Ali naj bodo izbrisani ostali po uspešnem združevanju?"
+msgstr "Ali naj bodo ostali izbrisani po uspešnem združevanju?"
 
 #: templates/contacts.php:203
 msgid "Compose mail"
-msgstr "Sestavi mail"
+msgstr "Sestavi sporočilo"
 
 #: templates/contacts.php:225
 msgid "Delete current photo"
@@ -931,11 +931,11 @@ msgstr "Uredi trenutno sliko"
 
 #: templates/contacts.php:227
 msgid "Upload new photo"
-msgstr "Naloži novo sliko"
+msgstr "Pošlji novo sliko"
 
 #: templates/contacts.php:228
 msgid "Select photo from ownCloud"
-msgstr "Izberi sliko iz ownCloud"
+msgstr "Izberi sliko v oblaku ownCloud"
 
 #: templates/contacts.php:233 templates/settings.php:59
 msgid "Name"
@@ -955,11 +955,11 @@ msgstr "Priimek"
 
 #: templates/contacts.php:257
 msgid "Select groups"
-msgstr "Izberi skupine"
+msgstr "Izbor skupin"
 
 #: templates/contacts.php:260
 msgid "Select address book"
-msgstr "Izberi imenik"
+msgstr "Izbor imenika"
 
 #: templates/contacts.php:264 templates/contacts.php:328
 msgid "Nickname"
@@ -975,7 +975,7 @@ msgstr "Naslov"
 
 #: templates/contacts.php:274
 msgid "Enter title"
-msgstr "Vnesi naziv"
+msgstr "Vnos naziva"
 
 #: templates/contacts.php:278 templates/contacts.php:326
 msgid "Organization"
@@ -983,7 +983,7 @@ msgstr "Ustanova"
 
 #: templates/contacts.php:281
 msgid "Enter organization"
-msgstr "Vnesi organizacijo"
+msgstr "Vnos ustanove"
 
 #: templates/contacts.php:285 templates/contacts.php:329
 msgid "Birthday"
@@ -1065,7 +1065,7 @@ msgstr "Pojdi na spletno stran"
 
 #: templates/contacts.php:385
 msgid "Delete URL"
-msgstr "Izbriši URL"
+msgstr "Izbriši naslov URL"
 
 #: templates/contacts.php:396
 msgid "View on map"
