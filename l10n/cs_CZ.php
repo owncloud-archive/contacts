@@ -105,6 +105,7 @@
 "Error saving contact." => "Chyba při ukládání kontaktu.",
 "Error removing contact from other address book." => "Chyba při odebírání kontaktu z jiného adresáře kontaktů.",
 "Couldn't find contact." => "Kontakt se nepodařilo nalézt",
+"No contact data in request." => "Žádná data kontaktu v požadavku.",
 "Error merging into contact." => "Chyba při slučování do kontaktu.",
 "Error saving contact to backend." => "Chyba při zápisu kontaktu do úložiště.",
 "Property name is not set." => "Název vlastnosti není nastaven.",

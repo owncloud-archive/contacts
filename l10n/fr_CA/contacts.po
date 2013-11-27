@@ -3,71 +3,63 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Dr. ROX <to.dr.rox@gmail.com>, 2011-2012
-# Dr. ROX <to.dr.rox@gmail.com>, 2011, 2012
-# fizikiukas <fizikiukas@gmail.com>, 2013
-# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2013
-# Liudas <liudas@aksioma.lt>, 2013
-# mambuta <vspyshkin@gmail.com>, 2013
-# mambuta <vspyshkin@gmail.com>, 2013
-# fizikiukas <fizikiukas@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
 "POT-Creation-Date: 2013-11-27 09:17-0500\n"
-"PO-Revision-Date: 2013-11-27 11:10+0000\n"
-"Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
-"Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/projects/p/owncloud/language/lt_LT/)\n"
+"PO-Revision-Date: 2013-11-26 21:30+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"Language-Team: French (Canada) (http://www.transifex.com/projects/p/owncloud/language/fr_CA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lt_LT\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: fr_CA\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
-msgstr "Kontaktai"
+msgstr ""
 
 #: js/addressbooks.js:83 js/groups.js:518 templates/settings.php:61
 msgid "Save"
-msgstr "Išsaugoti"
+msgstr ""
 
 #: js/addressbooks.js:298
 msgid "Uploading..."
-msgstr "Įkeliama..."
+msgstr ""
 
 #: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
-msgstr "Importuojama..."
+msgstr ""
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr "Ruošiama..."
+msgstr ""
 
 #: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
-msgstr "Importuota {count} iš {total} kontaktų"
+msgstr ""
 
 #: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr "Importuota {imported} kontaktų. {failed} nepavyko."
+msgstr ""
 
 #: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
-msgstr "Adresų knyga pavadinimu {group} jau egzistuoja"
+msgstr ""
 
 #: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
-msgstr "Nepavyko pridėti adresų knygos: {error}"
+msgstr ""
 
 #: js/addressbooks.js:626
 msgid "Failed loading address books: {error}"
-msgstr "Nepavyko įkelti adresų knygų: {error}"
+msgstr ""
 
 #: js/app.js:215
 msgid "Indexing contacts"
-msgstr "Indeksuojami kontaktai"
+msgstr ""
 
 #: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
@@ -75,247 +67,247 @@ msgstr ""
 
 #: js/app.js:226
 msgid "Error."
-msgstr "Klaida."
+msgstr ""
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr "Pridėti į..."
+msgstr ""
 
 #: js/app.js:321 js/app.js:333
 msgid "Remove from..."
-msgstr "Pašalinti iš..."
+msgstr ""
 
 #: js/app.js:338
 msgid "Add group..."
-msgstr "Pridėti grupę..."
+msgstr ""
 
 #: js/app.js:468
 msgid "Invalid URL: \"{url}\""
-msgstr "Netinkamas URL\" „{url}“"
+msgstr ""
 
 #: js/app.js:479
 msgid "There was an error opening a mail composer."
-msgstr "Buvo klaida atveriant el. laiško redaktorių."
+msgstr ""
 
 #: js/app.js:484
 msgid "Invalid email: \"{url}\""
-msgstr "Netinkamas el. paštas"
+msgstr ""
 
 #: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr "Suliejimas nepavyko. Nepavyksta rasti kontakto: {id}"
+msgstr ""
 
 #: js/app.js:575
 msgid "Merge failed."
-msgstr "Sulieti nepavyko."
+msgstr ""
 
 #: js/app.js:582
 msgid "Merge failed. Error saving contact."
-msgstr "Suliejimas nepavyko. Klaida saugant kontaktą."
+msgstr ""
 
 #: js/app.js:602
 msgid "Select photo"
-msgstr "Nurodykite nuotrauką"
+msgstr ""
 
 #: js/app.js:678 js/app.js:1570
 msgid "Network or server error. Please inform administrator."
-msgstr "Tinklo arba serverio klaida. Prašome informuoti administratorių."
+msgstr ""
 
 #: js/app.js:894
 msgid "Error adding to group."
-msgstr "Klaida pridedant į grupę."
+msgstr ""
 
 #: js/app.js:917
 msgid "Error removing from group."
-msgstr "Klaida pašalinant iš grupės."
+msgstr ""
 
 #: js/app.js:1104
 msgid "Error setting {name} as favorite."
-msgstr "Klaida nustatant {name} mėgstamu."
+msgstr ""
 
 #: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
 msgid "Merge contacts"
-msgstr "Sulieti kontaktus"
+msgstr ""
 
 #: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "Atšaukti"
+msgstr ""
 
 #: js/app.js:1296 templates/contacts.php:163
 msgid "Add group"
-msgstr "Pridėti grupę"
+msgstr ""
 
 #: js/app.js:1300
 msgid "OK"
-msgstr "Gerai"
+msgstr ""
 
 #: js/app.js:1394
 msgid "Could not find contact: {id}"
-msgstr "Nepavyko rasti kontakto: {id}"
+msgstr ""
 
 #: js/app.js:1417
 msgid "No files selected for upload."
-msgstr "Nepažymėta jokių failų įkėlimui."
+msgstr ""
 
 #: js/app.js:1427
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr "Įkeliamo failo dydis viršijo šio serverio maksimalų leistiną dydį."
+msgstr ""
 
 #: js/app.js:1528
 msgid "Edit profile picture"
-msgstr "Redaguoti profilio paveikslėlį"
+msgstr ""
 
 #: js/app.js:1532
 msgid "Crop photo"
-msgstr "Apkirpti nuotrauką"
+msgstr ""
 
 #: js/contacts.js:589
 msgid "Is this correct?"
-msgstr "Teisinga?"
+msgstr ""
 
 #: js/contacts.js:856
 msgid "Error parsing date: {date}"
-msgstr "Klaida apdorojant datą: {date}"
+msgstr ""
 
 #: js/contacts.js:1053
 msgid "# groups"
-msgstr "# grupės"
+msgstr ""
 
 #: js/contacts.js:1125
 msgid "Error parsing birthday {bday}: {error}"
-msgstr "Klaida nagrinėjant gimtadienį {bday}: {error}"
+msgstr ""
 
 #: js/contacts.js:2162
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr "Keletas kontaktų buvo pažymėti ištrinimui, bet dar neištrinti. Prašome palaukti kol jie bus ištrinti."
+msgstr ""
 
 #: js/contacts.js:2173
 msgid "Click to undo deletion of {num} contacts"
-msgstr "Spauskite, kad atstatyti trynimą {num} kontaktų"
+msgstr ""
 
 #: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
-msgstr "Atšauktas {num} kontaktų trynimas"
+msgstr ""
 
 #: js/groups.js:53
 msgid "Add"
-msgstr "Pridėti"
+msgstr ""
 
 #: js/groups.js:263
 msgid "Contact is already in this group."
-msgstr "Kontaktas jau yra grupėje."
+msgstr ""
 
 #: js/groups.js:276
 msgid "Contacts are already in this group."
-msgstr "Kontaktai jau yra grupėje."
+msgstr ""
 
 #: js/groups.js:342
 msgid "Couldn't get contact list."
-msgstr "Nepavyko gauti kontaktų sąrašo."
+msgstr ""
 
 #: js/groups.js:353
 msgid "Contact is not in this group."
-msgstr "Kontaktas nėra šioje grupėje."
+msgstr ""
 
 #: js/groups.js:367
 msgid "Contacts are not in this group."
-msgstr "KontaktaI nėra šioje grupėje."
+msgstr ""
 
 #: js/groups.js:566
 msgid "Failed renaming group: {error}"
-msgstr "Nepavyko pervadinti grupės: {error}"
+msgstr ""
 
 #: js/groups.js:597
 msgid "A group named {group} already exists"
-msgstr "Grupė pavadinimu {group} jau egzistuoja"
+msgstr ""
 
 #: js/groups.js:632
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr "Galite tempti grupes, kad\nišrikiuoti jas kaip Jums reikia."
+msgstr ""
 
 #: js/groups.js:645
 msgid "Failed adding group: {error}"
-msgstr "Nepavyko pridėti grupės: {error}"
+msgstr ""
 
 #: js/groups.js:657
 msgid "All"
-msgstr "Viskas"
+msgstr ""
 
 #: js/groups.js:672 js/groups.js:675
 msgid "Favorites"
-msgstr "Mėgstamiausi"
+msgstr ""
 
 #: js/groups.js:736
 msgid "Shared by {owner}"
-msgstr "Bendrina {owner}"
+msgstr ""
 
 #: js/groups.js:751
 msgid "Not grouped"
-msgstr "Nesugrupuotas"
+msgstr ""
 
 #: js/groups.js:777
 msgid "Failed loading groups: {error}"
-msgstr "Nepavyko įkelti grupių: {error}"
+msgstr ""
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr "Prašome pasirinkti adresų knygą"
+msgstr ""
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
-msgstr "Importuoti į..."
+msgstr ""
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr "Klaida įkeliant importavimo ruošinį"
+msgstr ""
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr "Importuoti kontaktus"
+msgstr ""
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
-msgstr "Importuoti"
+msgstr ""
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr "Importas baigas"
+msgstr ""
 
 #: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:322
 msgid "Close"
-msgstr "Užverti"
+msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr "Klaida"
+msgstr ""
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr "Rodomas vardas negali būti tuščias."
+msgstr ""
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
-msgstr "Rodyti CardDAV nuorodą"
+msgstr ""
 
 #: js/settings.js:98 templates/settings.php:29
 msgid "Show read-only VCF link"
-msgstr "Rodyti tik skaitymui VCF nuorodą"
+msgstr ""
 
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:323 templates/settings.php:40
 msgid "Download"
-msgstr "Atsisiųsti"
+msgstr ""
 
 #: js/settings.js:101 templates/contacts.php:467 templates/settings.php:45
 msgid "Edit"
-msgstr "Redaguoti"
+msgstr ""
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:268 templates/contacts.php:275
@@ -323,39 +315,39 @@ msgstr "Redaguoti"
 #: templates/contacts.php:337 templates/contacts.php:468
 #: templates/settings.php:50
 msgid "Delete"
-msgstr "Ištrinti"
+msgstr ""
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr "Daugiau..."
+msgstr ""
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr "Mažiau..."
+msgstr ""
 
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
-msgstr "Serverio klaida! Prašome informuoti administratorių"
+msgstr ""
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
-msgstr "Nepavyko įkelti nuotraukos: {error}"
+msgstr ""
 
 #: lib/addressbook.php:152
 msgid "You do not have permissions to see this contacts"
-msgstr "Jūs neturite leidimo matyti šių kontaktų"
+msgstr ""
 
 #: lib/addressbook.php:159
 msgid "Contact not found"
-msgstr "Kontaktas nerastas"
+msgstr ""
 
 #: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
-msgstr "Jūs neturite leidimo matyti šiuos kontaktus"
+msgstr ""
 
 #: lib/addressbook.php:213
 msgid "You do not have permissions add contacts to the address book"
-msgstr "Jūs neturite leidimų pridėti kontaktų į šią adresų knygutę"
+msgstr ""
 
 #: lib/addressbook.php:216
 msgid "The backend for this address book does not support adding contacts"
@@ -363,7 +355,7 @@ msgstr ""
 
 #: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
-msgstr "Jūs neturite leidimų ištrinti šį kontaktą"
+msgstr ""
 
 #: lib/addressbook.php:243 lib/addressbook.php:269
 msgid "The backend for this address book does not support deleting contacts"
@@ -371,7 +363,7 @@ msgstr ""
 
 #: lib/addressbook.php:290
 msgid "Unknown error"
-msgstr "Neatpažinta klaida"
+msgstr ""
 
 #: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
@@ -379,23 +371,23 @@ msgstr ""
 
 #: lib/addressbook.php:358
 msgid "You don't have permissions to update the address book."
-msgstr "Jūs neturite leidimo atnaujinti šią adresų knygutę."
+msgstr ""
 
 #: lib/addressbook.php:369
 msgid "You don't have permissions to delete the address book."
-msgstr "Jūs neturite leidimo ištrinti šią adresų knygutę."
+msgstr ""
 
 #: lib/app.php:144
 msgid "Address book not found"
-msgstr "Adresų knygutė nerasta"
+msgstr ""
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr "Jūs neturite leidimo matyti šį kontaktą"
+msgstr ""
 
 #: lib/contact.php:261
 msgid "You do not have permissions to update this contact"
-msgstr "Jūs neturite leidimo atnaujinti šį kontaktą"
+msgstr ""
 
 #: lib/contact.php:272
 msgid "The backend for this contact does not support updating it"
@@ -407,7 +399,7 @@ msgstr ""
 
 #: lib/contact.php:400 lib/contact.php:417
 msgid "Property not found"
-msgstr "Savybė nerasta"
+msgstr ""
 
 #: lib/contact.php:465
 msgid " Missing IM parameter for: "
@@ -415,49 +407,49 @@ msgstr ""
 
 #: lib/contact.php:473
 msgid "Unknown IM: "
-msgstr "Nežinomas IM:"
+msgstr ""
 
 #: lib/contact.php:750
 msgid "{name}'s Birthday"
-msgstr "{name} gimtadienis"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
-msgstr "Klaida kuriant adresų knygutę"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:129
 msgid "Error updating address book"
-msgstr "Klaida atnaujinant adresų knygutę"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:157
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr "Jūs neturite leidimo ištrinti „%s“ adresų knygos"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
-msgstr "Klaida trinant adresų knygutę"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:201
 msgid "Error creating contact."
-msgstr "Klaida kuriant kontaktą."
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:237
 msgid "Error deleting contact."
-msgstr "Klaida trinant kontaktą."
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
-msgstr "Klaida gaunant kontaktą."
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
-msgstr "Klaida išsaugant kontaktą."
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
-msgstr "Klaida paralinant kontaktą iš kitos adresų knygutės."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
@@ -466,7 +458,7 @@ msgstr "Klaida paralinant kontaktą iš kitos adresų knygutės."
 #: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
-msgstr "Nepavyko rasti kontakto."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
@@ -482,19 +474,19 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
-msgstr "Nenustatytas savybės pavadinimas."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
-msgstr "Nenustatyta savybės kontrolinė suma."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr "Informacija apie vCard yra neteisinga. "
+msgstr ""
 
 #: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
-msgstr "Klaida atnaujinant kontaktą"
+msgstr ""
 
 #: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
@@ -502,94 +494,94 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
-msgstr "Klaida gaunant naudotojo nuotrauką"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:87
 #: lib/controller/importcontroller.php:36
 msgid "No file was uploaded. Unknown error"
-msgstr "Failai nebuvo įkelti dėl nežinomos priežasties"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:95
 #: lib/controller/importcontroller.php:44
 msgid "There is no error, the file uploaded with success"
-msgstr "Failas įkeltas sėkmingai, be klaidų"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:96
 #: lib/controller/importcontroller.php:45
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Įkeliamo failo dydis viršija upload_max_filesize nustatymą php.ini"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:97
 #: lib/controller/importcontroller.php:47
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Įkeliamo failo dydis viršija MAX_FILE_SIZE nustatymą, kuris naudojamas HTML formoje."
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:98
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file was only partially uploaded"
-msgstr "Failas buvo įkeltas tik dalinai"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:99
 #: lib/controller/importcontroller.php:49
 msgid "No file was uploaded"
-msgstr "Nebuvo įkeltas joks failas"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:100
 #: lib/controller/importcontroller.php:50
 msgid "Missing a temporary folder"
-msgstr "Nėra laikinojo katalogo"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:115
 msgid "Couldn't load temporary image: "
-msgstr "Nepavyko įkelti laikiną paveikslėlį:"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:124
 #: lib/controller/contactphotocontroller.php:162
 msgid "Couldn't save temporary image: "
-msgstr "Nepavyko išsaugoti laikiną paveikslėlį:"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
-msgstr "Nenurodytas nuotraukos kelias. "
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
-msgstr "Failas neegzistuoja:"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:203
 #: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
-msgstr "Klaida įkeliant nuotrauką."
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
-msgstr "Paveikslėlis pašalintas iš talpyklos"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
-msgstr "Klaida kuriant laikiną paveikslėlį"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
-msgstr "Klaida apkerpant paveikslėlį"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
-msgstr "Klaida keičiant paveikslėlio dydį"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
-msgstr "Klaida gaunant nuotraukos  savybes."
+msgstr ""
 
 #: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
 msgid "No group name given."
-msgstr "Nepateiktas grupės pavadinimas."
+msgstr ""
 
 #: lib/controller/groupcontroller.php:64
 msgid "Error adding group."
-msgstr "Klaida pridedant grupę."
+msgstr ""
 
 #: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
@@ -601,7 +593,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
-msgstr "Klaida pervadinant grupę."
+msgstr ""
 
 #: lib/controller/groupcontroller.php:175
 #: lib/controller/groupcontroller.php:223
@@ -619,31 +611,31 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:51
 msgid "Failed to write to disk"
-msgstr "Nepavyko įrašyti į diską"
+msgstr ""
 
 #: lib/controller/importcontroller.php:62
 msgid "Not enough storage available"
-msgstr "Nepakanka vietos serveryje"
+msgstr ""
 
 #: lib/controller/importcontroller.php:70
 msgid "Attempt to upload blacklisted file:"
-msgstr "Bandymas įkelti draudžiamą failą:"
+msgstr ""
 
 #: lib/controller/importcontroller.php:92
 msgid "Error uploading contacts to storage."
-msgstr "Klaida siunčiant kontaktus į saugyklą."
+msgstr ""
 
 #: lib/controller/importcontroller.php:137
 msgid "Error moving file to imports folder."
-msgstr "Klaida perkeliant failą į importavimų aplanką."
+msgstr ""
 
 #: lib/controller/importcontroller.php:154
 msgid "You do not have permissions to import into this address book."
-msgstr "Jūs neturite leidimo importuoti į šią adresų knygutę."
+msgstr ""
 
 #: lib/controller/importcontroller.php:162
 msgid "File name missing from request."
-msgstr "Užklausoje trūksta failo pavadinimo."
+msgstr ""
 
 #: lib/controller/importcontroller.php:167
 #: lib/controller/importcontroller.php:283
@@ -652,263 +644,263 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:173
 msgid "Attempt to access blacklisted file:"
-msgstr "bandymas pasiekti draudžiamą failą:"
+msgstr ""
 
 #: lib/controller/importcontroller.php:215
 msgid "No contacts found in: "
-msgstr "Kontaktų nerasta:"
+msgstr ""
 
 #: lib/controller/settingscontroller.php:35
 msgid "No key is given."
-msgstr "Nepateiktas raktas."
+msgstr ""
 
 #: lib/controller/settingscontroller.php:39
 msgid "No value is given."
-msgstr "Nepateikta vertė."
+msgstr ""
 
 #: lib/controller/settingscontroller.php:50
 msgid "Could not set preference: "
-msgstr "Nepavyko nustatyti:"
+msgstr ""
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr "Kontaktas"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:160
 #: lib/utils/properties.php:173 lib/utils/properties.php:180
 #: lib/utils/properties.php:195
 msgid "Other"
-msgstr "Kita"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
-msgstr "Namų puslapis"
+msgstr ""
 
 #: lib/utils/properties.php:71
 msgid "Jabber"
-msgstr "Jabber"
+msgstr ""
 
 #: lib/utils/properties.php:76
 msgid "Internet call"
-msgstr "Internetinis skambutis"
+msgstr ""
 
 #: lib/utils/properties.php:81
 msgid "AIM"
-msgstr "AIM"
+msgstr ""
 
 #: lib/utils/properties.php:86
 msgid "MSN"
-msgstr "MSN"
+msgstr ""
 
 #: lib/utils/properties.php:91
 msgid "Twitter"
-msgstr "Twitter"
+msgstr ""
 
 #: lib/utils/properties.php:96
 msgid "GoogleTalk"
-msgstr "GoogleTalk"
+msgstr ""
 
 #: lib/utils/properties.php:101
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #: lib/utils/properties.php:106
 msgid "XMPP"
-msgstr "XMPP"
+msgstr ""
 
 #: lib/utils/properties.php:111
 msgid "ICQ"
-msgstr "ICQ"
+msgstr ""
 
 #: lib/utils/properties.php:116
 msgid "Yahoo"
-msgstr "Yahoo"
+msgstr ""
 
 #: lib/utils/properties.php:121
 msgid "Skype"
-msgstr "Skype"
+msgstr ""
 
 #: lib/utils/properties.php:126
 msgid "QQ"
-msgstr "QQ"
+msgstr ""
 
 #: lib/utils/properties.php:131
 msgid "GaduGadu"
-msgstr "GaduGadu"
+msgstr ""
 
 #: lib/utils/properties.php:158 lib/utils/properties.php:166
 #: lib/utils/properties.php:177 lib/utils/properties.php:194
 msgid "Work"
-msgstr "Darbas"
+msgstr ""
 
 #: lib/utils/properties.php:159 lib/utils/properties.php:164
 #: lib/utils/properties.php:178
 msgid "Home"
-msgstr "Namų"
+msgstr ""
 
 #: lib/utils/properties.php:165
 msgid "Mobile"
-msgstr "Mobilusis"
+msgstr ""
 
 #: lib/utils/properties.php:167
 msgid "Text"
-msgstr "Žinučių"
+msgstr ""
 
 #: lib/utils/properties.php:168
 msgid "Voice"
-msgstr "Balso"
+msgstr ""
 
 #: lib/utils/properties.php:169
 msgid "Message"
-msgstr "Žinutė"
+msgstr ""
 
 #: lib/utils/properties.php:170
 msgid "Fax"
-msgstr "Faksas"
+msgstr ""
 
 #: lib/utils/properties.php:171
 msgid "Video"
-msgstr "Vaizdo"
+msgstr ""
 
 #: lib/utils/properties.php:172
 msgid "Pager"
-msgstr "Pranešimų gaviklis"
+msgstr ""
 
 #: lib/utils/properties.php:179
 msgid "Internet"
-msgstr "Internetas"
+msgstr ""
 
 #: lib/utils/properties.php:192
 msgid "Friends"
-msgstr "Draugai"
+msgstr ""
 
 #: lib/utils/properties.php:193
 msgid "Family"
-msgstr "Šeima"
+msgstr ""
 
 #: templates/contacts.php:6
 msgid "New Contact"
-msgstr "Naujas kontaktas"
+msgstr ""
 
 #: templates/contacts.php:10
 msgid "Group name"
-msgstr "Grupės pavadinimas"
+msgstr ""
 
 #: templates/contacts.php:10
 msgid "New Group"
-msgstr "Nauja grupė"
+msgstr ""
 
 #: templates/contacts.php:19
 msgid "Address books"
-msgstr "Adresų knygos"
+msgstr ""
 
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr "Rodyti vardą"
+msgstr ""
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
-msgstr "Pridėti adresų knygą"
+msgstr ""
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr "Pasirinkti failą..."
+msgstr ""
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
-msgstr "Nuimti pažymėjimą"
+msgstr ""
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr "Išdėstymo tvarka"
+msgstr ""
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr "Vardas- Pavardė"
+msgstr ""
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr "Pavardė-, Vardas"
+msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr "Grupės"
+msgstr ""
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
-msgstr "Mėgiamas"
+msgstr ""
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
-msgstr "Suliejimas pažymėtas"
+msgstr ""
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
-msgstr "Klaviatūros spartieji klavišai"
+msgstr ""
 
 #: templates/contacts.php:94
 msgid "Navigation"
-msgstr "Navigacija"
+msgstr ""
 
 #: templates/contacts.php:97
 msgid "Next contact in list"
-msgstr "Kitas kontaktas sąraše"
+msgstr ""
 
 #: templates/contacts.php:99
 msgid "Previous contact in list"
-msgstr "Ankstesnis kontaktas sąraše"
+msgstr ""
 
 #: templates/contacts.php:101
 msgid "Expand/collapse current addressbook"
-msgstr "Išskleisti/sutraukti šią adresų knygutę"
+msgstr ""
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr "Kita adresų knygutė"
+msgstr ""
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr "Ankstesnė adresų knygutė"
+msgstr ""
 
 #: templates/contacts.php:109
 msgid "Actions"
-msgstr "Veiksmai"
+msgstr ""
 
 #: templates/contacts.php:112
 msgid "Refresh contacts list"
-msgstr "Atnaujinti kontaktų sąrašą"
+msgstr ""
 
 #: templates/contacts.php:114
 msgid "Add new contact"
-msgstr "Pridėti naują kontaktą"
+msgstr ""
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
-msgstr "Pridėti naują adresų knygą"
+msgstr ""
 
 #: templates/contacts.php:118
 msgid "Delete current contact"
-msgstr "Ištrinti šį kontaktą"
+msgstr ""
 
 #: templates/contacts.php:124
 msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr "<h3>Jūs neturite kontaktų savo adresų knygoje, arba adresų knyga yra išjungta.</h3><p>Pridėkite naują kontaktą, arba importuokite turimus kontaktus iš VCF failo.</p>"
+msgstr ""
 
 #: templates/contacts.php:127
 msgid "Add contact"
-msgstr "Pridėti kontaktą"
+msgstr ""
 
 #: templates/contacts.php:174
 msgid "Delete group"
-msgstr "Trinti grupę"
+msgstr ""
 
 #: templates/contacts.php:175
 msgid "Rename group"
-msgstr "Pervadinti grupę"
+msgstr ""
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
@@ -920,161 +912,161 @@ msgstr ""
 
 #: templates/contacts.php:203
 msgid "Compose mail"
-msgstr "Sukurti el. laišką"
+msgstr ""
 
 #: templates/contacts.php:225
 msgid "Delete current photo"
-msgstr "Ištrinti šią nuotrauką"
+msgstr ""
 
 #: templates/contacts.php:226
 msgid "Edit current photo"
-msgstr "Redaguoti šią nuotrauką"
+msgstr ""
 
 #: templates/contacts.php:227
 msgid "Upload new photo"
-msgstr "Įkelti naują foto"
+msgstr ""
 
 #: templates/contacts.php:228
 msgid "Select photo from ownCloud"
-msgstr "Pasirinkite nuotrauką iš ownCloud"
+msgstr ""
 
 #: templates/contacts.php:233 templates/settings.php:59
 msgid "Name"
-msgstr "Pavadinimas"
+msgstr ""
 
 #: templates/contacts.php:239 templates/contacts.php:240
 msgid "First name"
-msgstr "Vardas"
+msgstr ""
 
 #: templates/contacts.php:244 templates/contacts.php:245
 msgid "Additional names"
-msgstr "Papildomi vardai"
+msgstr ""
 
 #: templates/contacts.php:249 templates/contacts.php:250
 msgid "Last name"
-msgstr "Pavardė"
+msgstr ""
 
 #: templates/contacts.php:257
 msgid "Select groups"
-msgstr "Pasirinkti grupes"
+msgstr ""
 
 #: templates/contacts.php:260
 msgid "Select address book"
-msgstr "Parinkti adresų knygą"
+msgstr ""
 
 #: templates/contacts.php:264 templates/contacts.php:328
 msgid "Nickname"
-msgstr "Slapyvardis"
+msgstr ""
 
 #: templates/contacts.php:267
 msgid "Enter nickname"
-msgstr "Įveskite slapyvardį"
+msgstr ""
 
 #: templates/contacts.php:271 templates/contacts.php:327
 msgid "Title"
-msgstr "Pavadinimas"
+msgstr ""
 
 #: templates/contacts.php:274
 msgid "Enter title"
-msgstr "Įveskite pavadinimą"
+msgstr ""
 
 #: templates/contacts.php:278 templates/contacts.php:326
 msgid "Organization"
-msgstr "Organizacija"
+msgstr ""
 
 #: templates/contacts.php:281
 msgid "Enter organization"
-msgstr "Įveskite organizaciją"
+msgstr ""
 
 #: templates/contacts.php:285 templates/contacts.php:329
 msgid "Birthday"
-msgstr "Gimtadienis"
+msgstr ""
 
 #: templates/contacts.php:316
 msgid "Notes go here..."
-msgstr "Pastabos rašomo čia..."
+msgstr ""
 
 #: templates/contacts.php:323
 msgid "Export as VCF"
-msgstr "Eksportuoti kaip VCF"
+msgstr ""
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr "Pridėti lauką..."
+msgstr ""
 
 #: templates/contacts.php:330
 msgid "Phone"
-msgstr "Telefonas"
+msgstr ""
 
 #: templates/contacts.php:331
 msgid "Email"
-msgstr "El. Paštas"
+msgstr ""
 
 #: templates/contacts.php:332
 msgid "Instant Messaging"
-msgstr "Tikralaikiai pokalbiai"
+msgstr ""
 
 #: templates/contacts.php:333
 msgid "Address"
-msgstr "Adresas"
+msgstr ""
 
 #: templates/contacts.php:334
 msgid "Note"
-msgstr "Pastaba"
+msgstr ""
 
 #: templates/contacts.php:335
 msgid "Web site"
-msgstr "Svetainė"
+msgstr ""
 
 #: templates/contacts.php:337
 msgid "Delete contact"
-msgstr "Ištrinti kontaktą"
+msgstr ""
 
 #: templates/contacts.php:351 templates/contacts.php:366
 #: templates/contacts.php:380 templates/contacts.php:405
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr "Pageidautinas"
+msgstr ""
 
 #: templates/contacts.php:353
 msgid "Please specify a valid email address."
-msgstr "Prašome nurodyti tinkamą el. pašto adresą."
+msgstr ""
 
 #: templates/contacts.php:353
 msgid "someone@example.com"
-msgstr "kasnors@pavyzdys.lt"
+msgstr ""
 
 #: templates/contacts.php:355
 msgid "Mail to address"
-msgstr "Gavėjo el. pašto adresas"
+msgstr ""
 
 #: templates/contacts.php:356
 msgid "Delete email address"
-msgstr "Ištrinti el. pašto adresus"
+msgstr ""
 
 #: templates/contacts.php:368
 msgid "Enter phone number"
-msgstr "Įveskite telefono numerį"
+msgstr ""
 
 #: templates/contacts.php:370
 msgid "Delete phone number"
-msgstr "Ištrinti telefono numerį"
+msgstr ""
 
 #: templates/contacts.php:384
 msgid "Go to web site"
-msgstr "Eiti į svetainę"
+msgstr ""
 
 #: templates/contacts.php:385
 msgid "Delete URL"
-msgstr "Ištrinti URL"
+msgstr ""
 
 #: templates/contacts.php:396
 msgid "View on map"
-msgstr "Žiūrėti žemėlapyje"
+msgstr ""
 
 #: templates/contacts.php:397
 msgid "Delete address"
-msgstr "Pašalinti adresą"
+msgstr ""
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
@@ -1082,7 +1074,7 @@ msgstr ""
 
 #: templates/contacts.php:411
 msgid "Street address"
-msgstr "Gatvės adresas"
+msgstr ""
 
 #: templates/contacts.php:415
 msgid "20500"
@@ -1090,15 +1082,15 @@ msgstr ""
 
 #: templates/contacts.php:416
 msgid "Postal code"
-msgstr "Pašto kodas"
+msgstr ""
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr "Vašingtono apygarda"
+msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr "Miestas"
+msgstr ""
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
@@ -1106,64 +1098,64 @@ msgstr ""
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr "Šalis ar provincija"
+msgstr ""
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr "JAV"
+msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr "Šalis"
+msgstr ""
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
-msgstr "Momentinių žinučių klientas"
+msgstr ""
 
 #: templates/contacts.php:453
 msgid "Delete IM"
-msgstr "Ištrinti IM"
+msgstr ""
 
 #: templates/contacts.php:461
 msgid "Active"
-msgstr "Aktyvus"
+msgstr ""
 
 #: templates/contacts.php:464 templates/settings.php:36
 msgid "Share"
-msgstr "Dalintis"
+msgstr ""
 
 #: templates/contacts.php:465
 msgid "Export"
-msgstr "Eksportuoti"
+msgstr ""
 
 #: templates/contacts.php:466
 msgid "CardDAV link"
-msgstr "CardDAV nuoroda"
+msgstr ""
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr "CardDAV sinchronizavimo adresai"
+msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "daugiau informacijos"
+msgstr ""
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr "Pirminis adresas"
+msgstr ""
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr "iOS/OS X"
+msgstr ""
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr "Adresų knygos"
+msgstr ""
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr "Nauja adresų knyga"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "Aprašymas"
+msgstr ""
