@@ -67,7 +67,7 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 		foreach($backend->getAddressBooksForUser() as $userAddressBook) {
 			$userAddressBooks[] = $userAddressBook['displayname'];
 		}
-		$name = $addressBook['displayname'] . '(' . $addressBook['userid'] . ')';
+		$name = $addressBook['displayname'] . '(' . $addressBook['owner'] . ')';
 		$suffix = '';
 		while (in_array($name.$suffix, $userAddressBooks)) {
 			$suffix++;
