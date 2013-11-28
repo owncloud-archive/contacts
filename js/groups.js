@@ -756,7 +756,10 @@ OC.Contacts = OC.Contacts || {};
 						console.log('stop sorting', $(this));
 						var ids = [];
 						$.each($(this).children('li[data-type="category"]'), function(i, elem) {
-							ids.push($(elem).data('id'));
+							var id = $(elem).data('id');
+							if(typeof id === 'number' && id % 1 == 0) {
+								ids.push(id);
+							}
 						});
 						self.sortorder = ids;
 						$(document).trigger('status.groups.sorted', {
