@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-21 18:16-0500\n"
-"PO-Revision-Date: 2013-11-16 07:41+0000\n"
+"POT-Creation-Date: 2013-12-04 18:12-0500\n"
+"PO-Revision-Date: 2013-12-03 14:00+0000\n"
 "Last-Translator: PapiMigas Migas <papimigas@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -265,7 +265,7 @@ msgstr "Partilhado por {owner}"
 msgid "Not grouped"
 msgstr "Não agrupados"
 
-#: js/groups.js:777
+#: js/groups.js:780
 msgid "Failed loading groups: {error}"
 msgstr "Erro ao carregar grupos: {error}"
 
@@ -491,7 +491,7 @@ msgstr "O nome da propriedade não está definido,"
 
 #: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
-msgstr ""
+msgstr "A propriedade checksum não está configurada."
 
 #: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
@@ -632,7 +632,7 @@ msgstr "Não há espaço suficiente em disco"
 
 #: lib/controller/importcontroller.php:70
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "Tentativa de envio de ficheiro bloqueado:"
 
 #: lib/controller/importcontroller.php:92
 msgid "Error uploading contacts to storage."
