@@ -25,8 +25,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-21 18:16-0500\n"
-"PO-Revision-Date: 2013-11-16 07:41+0000\n"
+"POT-Creation-Date: 2013-12-04 18:12-0500\n"
+"PO-Revision-Date: 2013-12-02 20:40+0000\n"
 "Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -270,7 +270,7 @@ msgstr "由{owner}共享"
 msgid "Not grouped"
 msgstr "未分组"
 
-#: js/groups.js:777
+#: js/groups.js:780
 msgid "Failed loading groups: {error}"
 msgstr "加载分组失败:{error}"
 

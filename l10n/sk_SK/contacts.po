@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-21 18:16-0500\n"
-"PO-Revision-Date: 2013-11-16 07:41+0000\n"
+"POT-Creation-Date: 2013-12-04 18:12-0500\n"
+"PO-Revision-Date: 2013-12-02 20:40+0000\n"
 "Last-Translator: mhh <marian.hvolka@stuba.sk>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
@@ -260,7 +260,7 @@ msgstr "Zdieľa {owner}"
 msgid "Not grouped"
 msgstr "Bez skupiny"
 
-#: js/groups.js:777
+#: js/groups.js:780
 msgid "Failed loading groups: {error}"
 msgstr "Načítanie skupín sa nepodarilo: {error}"
 

@@ -22,9 +22,10 @@
 
 namespace OCA\Contacts\Backend;
 
-use OCA\Contacts\Contact;
-use OCA\Contacts\VObject\VCard;
-use Sabre\VObject\Reader;
+use OCA\Contacts\Contact,
+	OCA\Contacts\VObject\VCard,
+	OCA\Contacts\Utils\Properties,
+	Sabre\VObject\Reader;
 
 /**
  * Subclass this class for Cantacts backends
@@ -516,7 +517,7 @@ class Database extends AbstractBackend {
 			return false;
 		}
 
-		$uri = is_null($uri) ? $contact->UID . '.vcf' : $uri;
+		$uri = is_null($uri) ? $this->uniqueURI($addressbookid, $contact->UID . '.vcf') : $uri;
 		$now = new \DateTime;
 		$contact->REV = $now->format(\DateTime::W3C);
 
@@ -782,4 +783,29 @@ class Database extends AbstractBackend {
 		return $newname;
 	}
 
+	/**
+	* @brief Checks if a contact with the same URI already exist in the address book.
+	* @param string $addressBookId Address book ID.
+	* @param string $uri
+	* @returns string Unique URI
+	*/
+	protected function uniqueURI($addressBookId, $uri) {
+		$stmt = \OCP\DB::prepare( 'SELECT * FROM `' . $this->cardsTableName . '` WHERE `addressbookid` = ? AND `uri` = ?' );
+
+		$result = $stmt->execute(array($addressBookId, $uri));
+
+		if($result->numRows() > 0) {
+			while(true) {
+				$uri = Properties::generateUID() . '.vcf';
+				$result = $stmt->execute(array($addressBookId, $uri));
+				if($result->numRows() > 0) {
+					continue;
+				} else {
+					return $uri;
+				}
+			}
+		} else {
+			return $uri;
+		}
+	}
 }

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-21 18:16-0500\n"
-"PO-Revision-Date: 2013-11-16 07:50+0000\n"
+"POT-Creation-Date: 2013-12-04 18:12-0500\n"
+"PO-Revision-Date: 2013-12-02 20:50+0000\n"
 "Last-Translator: masensio <masensio@solidgear.es>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/owncloud/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -254,7 +254,7 @@ msgstr ""
 msgid "Not grouped"
 msgstr ""
 
-#: js/groups.js:777
+#: js/groups.js:780
 msgid "Failed loading groups: {error}"
 msgstr ""
 
@@ -309,7 +309,7 @@ msgstr "Загрузка"
 
 #: js/settings.js:101 templates/contacts.php:467 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:268 templates/contacts.php:275

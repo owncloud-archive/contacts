@@ -9,7 +9,7 @@
 # alpere <info@beyboo.de>, 2012
 # ismail yenigül <ismail.yenigul@surgate.com>, 2013
 # mesutgungor <mesutgungor@iyte.edu.tr>, 2012
-# Murat Bişkin <mbiskin@gmail.com>, 2012
+# Murat Bişkin <murat@muratbiskin.com.tr>, 2012
 # tridinebandim, 2013
 # Necdet Yücel <necdetyucel@gmail.com>, 2012
 # volkangezer <volkangezer@gmail.com>, 2013
@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-21 18:16-0500\n"
-"PO-Revision-Date: 2013-11-16 07:41+0000\n"
+"POT-Creation-Date: 2013-12-04 18:12-0500\n"
+"PO-Revision-Date: 2013-12-02 20:40+0000\n"
 "Last-Translator: volkangezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -263,7 +263,7 @@ msgstr "{owner} tarafından paylaşılmış"
 msgid "Not grouped"
 msgstr "Gruplanmadı"
 
-#: js/groups.js:777
+#: js/groups.js:780
 msgid "Failed loading groups: {error}"
 msgstr "Grup yüklemesi başarısız: {error}"
 
@@ -588,7 +588,7 @@ msgstr "Resim özelleğini alırken hata oluştu."
 
 #: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
 msgid "No group name given."
-msgstr "Grup adı belirtilmedi"
+msgstr "Grup adı belirtilmedi."
 
 #: lib/controller/groupcontroller.php:64
 msgid "Error adding group."
@@ -600,7 +600,7 @@ msgstr "Değiştirmek için bir grup adı belirtilmedi."
 
 #: lib/controller/groupcontroller.php:131
 msgid "No group name to rename to given."
-msgstr "Değiştimek için bir grup adı verilmedi"
+msgstr "Değiştirmek için bir grup adı belirtilmedi."
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
@@ -613,12 +613,12 @@ msgstr "İstekde grup IS eksik."
 
 #: lib/controller/groupcontroller.php:180
 msgid "Group name missing from request."
-msgstr "İstekde grup adı belirtilmedi."
+msgstr "İstekte grup adı yok."
 
 #: lib/controller/groupcontroller.php:185
 #: lib/controller/groupcontroller.php:228
 msgid "Contact ID missing from request."
-msgstr "İstekde Contact ID yok."
+msgstr "İstekte kişi kimliği yok."
 
 #: lib/controller/importcontroller.php:51
 msgid "Failed to write to disk"

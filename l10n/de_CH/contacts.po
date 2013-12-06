@@ -35,13 +35,13 @@
 # Susi  <>, 2012
 # Thomas Müller <>, 2012
 # toolking, 2013
-# traductor <transifex-2.7.mensaje@spamgourmet.com>, 2012-2013
+# traductor <transifex-3.7.mensaje@spamgourmet.com>, 2012-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-21 18:16-0500\n"
-"PO-Revision-Date: 2013-11-18 11:11+0000\n"
+"POT-Creation-Date: 2013-12-04 18:12-0500\n"
+"PO-Revision-Date: 2013-12-02 20:40+0000\n"
 "Last-Translator: kenwood <kenwood@gmx.ch>\n"
 "Language-Team: German (Switzerland) (http://www.transifex.com/projects/p/owncloud/language/de_CH/)\n"
 "MIME-Version: 1.0\n"
@@ -285,7 +285,7 @@ msgstr "Geteilt von {owner}"
 msgid "Not grouped"
 msgstr "Nicht gruppiert"
 
-#: js/groups.js:777
+#: js/groups.js:780
 msgid "Failed loading groups: {error}"
 msgstr "Das Laden der Gruppen ist fehlgeschlagen: {error}"
 

@@ -35,17 +35,17 @@
 # Susi  <>, 2012
 # I Robot <owncloud-bot@tmit.eu>, 2012
 # Thomas Müller <>, 2012
-# traductor <transifex-2.7.mensaje@spamgourmet.com>, 2013
-# traductor <transifex-2.7.mensaje@spamgourmet.com>, 2012
+# traductor <transifex-3.7.mensaje@spamgourmet.com>, 2013
+# traductor <transifex-3.7.mensaje@spamgourmet.com>, 2012
 # noxin <transifex.com@davidmainzer.com>, 2013
 # Mirodin <blobbyjj@ymail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-11-21 18:16-0500\n"
-"PO-Revision-Date: 2013-11-16 07:41+0000\n"
-"Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
+"POT-Creation-Date: 2013-12-04 18:12-0500\n"
+"PO-Revision-Date: 2013-12-02 20:40+0000\n"
+"Last-Translator: traductor <transifex-3.7.mensaje@spamgourmet.com>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/owncloud/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,7 +127,7 @@ msgstr "Fehler beim Öffnen des Mail-Editors"
 
 #: js/app.js:484
 msgid "Invalid email: \"{url}\""
-msgstr "Ungültige E-Mail Adresse: \"{url}\""
+msgstr "Ungültige E-Mail-Adresse: \"{url}\""
 
 #: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
@@ -155,7 +155,7 @@ msgstr "Fehler beim Hinzufügen zur Gruppe."
 
 #: js/app.js:917
 msgid "Error removing from group."
-msgstr "Fehler beim Löschen aus der Gruppe."
+msgstr "Fehler beim Entfernen aus der Gruppe."
 
 #: js/app.js:1104
 msgid "Error setting {name} as favorite."
@@ -180,7 +180,7 @@ msgstr "OK"
 
 #: js/app.js:1394
 msgid "Could not find contact: {id}"
-msgstr "Kontakt {id} nicht gefunden"
+msgstr "Der Kontakt {id} wurde nicht gefunden"
 
 #: js/app.js:1417
 msgid "No files selected for upload."
@@ -202,7 +202,7 @@ msgstr "Foto zuschneiden"
 
 #: js/contacts.js:589
 msgid "Is this correct?"
-msgstr "Ist das richtig?"
+msgstr "Ist dies richtig?"
 
 #: js/contacts.js:856
 msgid "Error parsing date: {date}"
@@ -288,7 +288,7 @@ msgstr "Geteilt von {owner}"
 msgid "Not grouped"
 msgstr "Nicht gruppiert"
 
-#: js/groups.js:777
+#: js/groups.js:780
 msgid "Failed loading groups: {error}"
 msgstr "Das Laden der Gruppen ist fehlgeschlagen: {error}"
 
@@ -415,7 +415,7 @@ msgstr "Sie haben nicht die erforderlichen Rechte, dieses Adressbuch zu löschen
 
 #: lib/app.php:144
 msgid "Address book not found"
-msgstr "Adressbuch nicht gefunden"
+msgstr "Das Adressbuch wurde nicht gefunden."
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
@@ -535,7 +535,7 @@ msgstr "Fehler beim Abrufen des Benutzerfotos"
 #: lib/controller/contactphotocontroller.php:87
 #: lib/controller/importcontroller.php:36
 msgid "No file was uploaded. Unknown error"
-msgstr "Keine Datei hochgeladen. Unbekannter Fehler"
+msgstr "Es wurde keine Datei hochgeladen. Unbekannter Fehler"
 
 #: lib/controller/contactphotocontroller.php:95
 #: lib/controller/importcontroller.php:44
@@ -571,7 +571,7 @@ msgstr "Kein temporärer Ordner vorhanden"
 
 #: lib/controller/contactphotocontroller.php:115
 msgid "Couldn't load temporary image: "
-msgstr "Konnte das temporäre Bild nicht laden:"
+msgstr "Das temporäre Bild konnte nicht geladen werden:"
 
 #: lib/controller/contactphotocontroller.php:124
 #: lib/controller/contactphotocontroller.php:162
@@ -580,7 +580,7 @@ msgstr "Das temporäre Bild konnte nicht gespeichert werden:"
 
 #: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
-msgstr "Kein Foto-Pfad angegeben."
+msgstr "Es wurde kein Foto-Pfad angegeben."
 
 #: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
