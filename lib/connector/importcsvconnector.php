@@ -23,21 +23,75 @@
 namespace OCA\Contacts\Connector;
 use Sabre\VObject\Component;
 
-class ImportCsvConnector {
-	
-	public function __construct() {
+class ImportCsvConnector extends ImportConnector {
+
+	/**
+	 * @brief separates elements from the input stream according to the entry_separator value in config
+	 * ignoring the first line if mentionned in the config
+	 * @param $input the input stream to import
+	 * @param $limit the number of elements to return (-1 = no limit)
+	 * @return array of strings
+	 */
+	public getElementsFromInput($input, $limit=-1) {
+		$elements = array();
+		
+		if (($limit > -1) && ($this->configContent->import_entries->import_core->ignore_first_line['enabled'] == 'true')) {
+			$limit++;
+		}
+		
+		// for every new line
+		$elements = split("\n", $input, $limit);
+		
+		if ($this->configContent->import_entries->import_core->ignore_first_line['enabled'] == 'true') {
+			unset($elemets[0]);
+		}
+		
+		return array_values($elements);
 	}
 	
-	public function __construct($xml_config) {
-		$this->setConfig($xml_config);
+	/**
+	 * @brief converts a unique element into a owncloud VCard
+	 * @param $element the element to convert
+	 * @return VCard, all unconverted elements are stored in X-Unknown-Element parameters
+	 */
+	public convertElementToVCard($element) {
+		$vcard = \Sabre\VObject\Component::create('VCARD');
+		
+		$fields = split($this->configContent->import_entries->import_core->entry_separator['value'], $element);
+		for ($i=0; $i < count($fields); $i++) {
+			// Look for the right import_entry
+			$importEntry = getImportEntry((String)$i);
+			if ($importEntry) {
+				$properties = $vcard->select($importEntry->vcard_entry['property']);
+				if (count($properties) == 0) {
+					// Create a new property and attach it to the vcard
+					$property = $this->getOrCreateVCardProperty($vcard, $importEntry)
+					$property = \Sabre\VObject\Property::create($importEntry->vcard_entry['property']);
+					updateProperty($property, $importEntry, $fields[$i]);
+					$vcard->add($property);
+				} else {
+					for ($j=0; $j < count($properties); $j++) {
+					}
+				}
+			} else {
+				$property = \Sabre\VObject\Property::create("X-Unknown-Element", $fields[$i]);
+				$vcard->add($property);
+			}
+		}
 	}
 	
-	public function setConfig($xml_config) {
-		try {
-			//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', setting xml config', \OCP\Util::DEBUG);
-			$this->config_content = new \SimpleXMLElement($xml_config);
-		} catch (Exception $e) {
-			\OCP\Util::writeLog('csv_vcard_connector', __METHOD__.', error in setting xml config', \OCP\Util::DEBUG);
+	private getImportEntry($position) {
+		for ($i=0; $i < count($this->configContent->import_entries->import_entry); $i++) {
+			if ($this->configContent->import_entries->import_entry[$i]['position'] == $position) {
+				return $this->configContent->import_entries->import_entry[$i];
+			}
+		}
+		return false;
+	}
+	
+	private updateProperty(&$property, $importEntry, $value) {
+		if (is_set($importEntry->vcard_entry['type'])) {
+			$property->add('TYPE', $importEntry->vcard_entry['type']);
 		}
 	}
 	
@@ -103,12 +157,11 @@ class ImportCsvConnector {
 	 * @param $v_param the parameter the find
 	 * @param $index the position of the property in the vcard to find
 	 */
-	public function getOrCreateVCardProperty(&$vcard, $v_param, $index) {
+	public function getOrCreateVCardProperty(&$vcard, $v_param) {
 		
 		// looking for one
 		//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' entering '.$vcard->serialize(), \OCP\Util::DEBUG);
 		$properties = $vcard->select($v_param['property']);
-		$counter = 0;
 		foreach ($properties as $property) {
 			if ($v_param['type'] == null) {
 				//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' property '.$v_param['type'].' found', \OCP\Util::DEBUG);
@@ -118,10 +171,7 @@ class ImportCsvConnector {
 				//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' <> '.$v_param['type'], \OCP\Util::DEBUG);
 				if (!strcmp($parameter->value, $v_param['type'])) {
 					//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' found', \OCP\Util::DEBUG);
-					if ($counter==$index) {
-						return $property;
-					}
-					$counter++;
+					return $property;
 				}
 			}
 		}
@@ -161,25 +211,6 @@ class ImportCsvConnector {
 			} else {
 				$v_property[$i]->setValue($ldap_entry);
 			}
-		}
-	}
-	
-	/**
-	 * @brief modifies a vcard property array with the image
-	 */
-	public function updateVCardImageProperty(&$v_property, $ldap_entry, $version) {
-		for ($i=0; $i<count($v_property); $i++) {
-			$image = new \OC_Image();
-			$image->loadFromData($ldap_entry);
-			if (strcmp($version, '4.0') == 0) {
-				$type = $image->mimeType();
-			} else {
-				$arrayType = explode('/', $image->mimeType());
-				$type = strtoupper(array_pop($arrayType));
-			}
-			$v_property[$i]->add('ENCODING', 'b');
-			$v_property[$i]->add('TYPE', $type);
-			$v_property[$i]->setValue($image->__toString());
 		}
 	}
 	
