@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-04 18:12-0500\n"
-"PO-Revision-Date: 2013-12-02 20:40+0000\n"
+"POT-Creation-Date: 2013-12-07 20:23-0500\n"
+"PO-Revision-Date: 2013-12-07 14:40+0000\n"
 "Last-Translator: asieriko <asieriko@gmail.com>\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -100,15 +100,15 @@ msgstr "e-posta ez egokia: \"{url}\""
 
 #: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "Bateratzeak huts egin du. Ezin izan da kontaktua aurkitu: {id}"
 
 #: js/app.js:575
 msgid "Merge failed."
-msgstr ""
+msgstr "Bateratzeak huts egin du."
 
 #: js/app.js:582
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "Bateratzeak huts egin du. Errorea kontaktua gordetzerakoan."
 
 #: js/app.js:602
 msgid "Select photo"
@@ -128,7 +128,7 @@ msgstr "Errore bat izan da taldetik kentzean."
 
 #: js/app.js:1104
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "Errorea {name} gogokoetara gehitzerakoan."
 
 #: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
 msgid "Merge contacts"
@@ -183,7 +183,7 @@ msgstr "# taldeak"
 
 #: js/contacts.js:1125
 msgid "Error parsing birthday {bday}: {error}"
-msgstr ""
+msgstr "Errorea {bday} urtebetetzea aztertzerakoan: {error}"
 
 #: js/contacts.js:2162
 msgid ""
@@ -197,7 +197,7 @@ msgstr "Klikatu {num} kontaktuen ezabaketa desegiteko"
 
 #: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "{num} kontaktuen ezabaketa ezeztatuta"
 
 #: js/groups.js:53
 msgid "Add"
@@ -235,7 +235,7 @@ msgstr "{group} izeneko taldea dagoeneko existitzen da"
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr ""
+msgstr "Taldeak arrastra ditzakezu\nnahi duzun moduan antolatzeko."
 
 #: js/groups.js:645
 msgid "Failed adding group: {error}"
@@ -271,7 +271,7 @@ msgstr "Inportatu hemen..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Errorea inportazio txantiloiak kargatzerakoan"
 
 #: js/loader.js:48
 msgid "Import contacts"
@@ -332,7 +332,7 @@ msgstr "Gutxiago..."
 
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Errore bat izan da zerbitzaria! Mesedez abisatu administradorea."
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -340,7 +340,7 @@ msgstr "Argazkia kargatzeak huts egin du: {error}"
 
 #: lib/addressbook.php:152
 msgid "You do not have permissions to see this contacts"
-msgstr ""
+msgstr "Ez duzu kontaktu hau ikusteko baimenik."
 
 #: lib/addressbook.php:159
 msgid "Contact not found"
@@ -348,11 +348,11 @@ msgstr "Ez da kontaktua aurkitu"
 
 #: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "Ez duzu kontaktu hauek ikusteko baimenik."
 
 #: lib/addressbook.php:213
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "Ez duzu helbide-liburu honetara kontaktuak gehitzeko baimenik"
 
 #: lib/addressbook.php:216
 msgid "The backend for this address book does not support adding contacts"
@@ -360,7 +360,7 @@ msgstr ""
 
 #: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "Ez duzu kontaktu hau ezabatzeko baimenik"
 
 #: lib/addressbook.php:243 lib/addressbook.php:269
 msgid "The backend for this address book does not support deleting contacts"
@@ -376,11 +376,11 @@ msgstr ""
 
 #: lib/addressbook.php:358
 msgid "You don't have permissions to update the address book."
-msgstr ""
+msgstr "Ez duzu helbide-liburu hau eguneratzeko baimenik"
 
 #: lib/addressbook.php:369
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "Ez duzu helbide-liburu hau ezabatzeko baimenik"
 
 #: lib/app.php:144
 msgid "Address book not found"
@@ -388,11 +388,11 @@ msgstr "Ez da helbide liburua aurkitu."
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "Ez duzu kontaktu hau ikusteko baimenik"
 
 #: lib/contact.php:261
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Ez duzu kontaktu hau eguneraktzeko baimenik"
 
 #: lib/contact.php:272
 msgid "The backend for this contact does not support updating it"
@@ -408,7 +408,7 @@ msgstr "Propietatea ez da aurkitu"
 
 #: lib/contact.php:465
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "BM parametroa falta da honentzat:"
 
 #: lib/contact.php:473
 msgid "Unknown IM: "
@@ -420,11 +420,11 @@ msgstr "{name}ren jaioteguna"
 
 #: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
-msgstr ""
+msgstr "Errorea helbide-liburua sortzerakoan"
 
 #: lib/controller/addressbookcontroller.php:129
 msgid "Error updating address book"
-msgstr ""
+msgstr "Errorea helbide-liburua eguneratzerakoan"
 
 #: lib/controller/addressbookcontroller.php:157
 #, php-format
@@ -433,7 +433,7 @@ msgstr "Ez duzu \"%s\" helbide-liburua ezabatzeko baimenik"
 
 #: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
-msgstr ""
+msgstr "Errorea helbide-liburua ezabatzerakoan"
 
 #: lib/controller/addressbookcontroller.php:201
 msgid "Error creating contact."
@@ -445,7 +445,7 @@ msgstr "Errorea bat izan da kontaktua ezabatzean."
 
 #: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
-msgstr ""
+msgstr "Errorea kontaktua eskuratzerakoan."
 
 #: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
@@ -454,7 +454,7 @@ msgstr "Errore bat izan da kontaktua gordetzean."
 
 #: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "Errorea konkatua beste helbide-liburutik ezabatzerakoan."
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
@@ -467,11 +467,11 @@ msgstr "Ezin izan da kontaktua aurkitu."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "Ez dago kontaktu daturik eskarian."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
-msgstr ""
+msgstr "Errorea kontaktuarekin bateratzerakoan."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
@@ -479,11 +479,11 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
-msgstr ""
+msgstr "Izena propietatea ez da ezarri."
 
 #: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
-msgstr ""
+msgstr "kontrol-batura propietatea ez da ezarri."
 
 #: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
@@ -499,7 +499,7 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
-msgstr ""
+msgstr "Errorea erabiltzailearen argazkia eskuratzerakoan"
 
 #: lib/controller/contactphotocontroller.php:87
 #: lib/controller/importcontroller.php:36
@@ -562,7 +562,7 @@ msgstr "Errore bat izan da irudia kargatzearkoan."
 
 #: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "Irudia katxetik ezabatu egin da"
 
 #: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
@@ -582,7 +582,7 @@ msgstr "Errore bat izan da PHOTO propietatea lortzean."
 
 #: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
 msgid "No group name given."
-msgstr ""
+msgstr "Ez da talde izenik eman."
 
 #: lib/controller/groupcontroller.php:64
 msgid "Error adding group."
@@ -590,11 +590,11 @@ msgstr "Errore bat izan da taldea gehitzean."
 
 #: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Ez dago talde izenik emandakotik berrizendatzeko."
 
 #: lib/controller/groupcontroller.php:131
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Ez dago talde izenik emandakoa berrizendatzeko."
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
@@ -607,7 +607,7 @@ msgstr "Taldearen IDa falta da eskarian."
 
 #: lib/controller/groupcontroller.php:180
 msgid "Group name missing from request."
-msgstr ""
+msgstr "Taldearen izena falta da eskarian."
 
 #: lib/controller/groupcontroller.php:185
 #: lib/controller/groupcontroller.php:228
@@ -632,15 +632,15 @@ msgstr "Errore bat egon da kontaktuak biltegira igotzerakoan."
 
 #: lib/controller/importcontroller.php:137
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Errorea fitxategia inportatze karpetara mugitzearkoan."
 
 #: lib/controller/importcontroller.php:154
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "Ez duzu helbide-liburu honetara inportatzeko baimenik."
 
 #: lib/controller/importcontroller.php:162
 msgid "File name missing from request."
-msgstr ""
+msgstr "Fitxategiaren izena falta da eskarian."
 
 #: lib/controller/importcontroller.php:167
 #: lib/controller/importcontroller.php:283
@@ -657,7 +657,7 @@ msgstr "Ez da kontakturik aurkitu hemen:"
 
 #: lib/controller/settingscontroller.php:35
 msgid "No key is given."
-msgstr ""
+msgstr "Ez da giltzik eman."
 
 #: lib/controller/settingscontroller.php:39
 msgid "No value is given."
@@ -818,7 +818,7 @@ msgstr "(Ez-)Hautatu dena"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr ""
+msgstr "Antolatzeko ordena"
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
@@ -838,7 +838,7 @@ msgstr "Gogokoa"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
-msgstr ""
+msgstr "Bateratu hautatutakoak"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -909,11 +909,11 @@ msgstr "Berrizendatu taldea"
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "Ze kontaktura bateratu beharko dira datuak?"
 
 #: templates/contacts.php:191
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Ezabatu besteak bateratze arrakastatsu baten ondoren?"
 
 #: templates/contacts.php:203
 msgid "Compose mail"
