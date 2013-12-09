@@ -48,7 +48,7 @@ OC.Contacts = OC.Contacts || {};
 				}
 			}
 		});
-		var $addInput = this.$groupList.find('.add-group');
+		var $addInput = $('#controls').find('.add-group');
 		$addInput.addnew({
 			addText: t('core', 'Add'),
 			ok: function(event, name) {
@@ -606,7 +606,7 @@ OC.Contacts = OC.Contacts || {};
 				var $elem = (tmpl).octemplate({
 						id: id,
 						type: 'category',
-						num: (contacts.length > 0 && contacts.length || ''),
+						num: 0+contacts.length,
 						name: escapeHTML(name)
 					});
 				self.categories.push({id: id, name: name});
@@ -668,7 +668,7 @@ OC.Contacts = OC.Contacts || {};
 				$elem = $elem.length ? $elem : tmpl.octemplate({
 					id: 'fav',
 					type: 'fav',
-					num: contacts.length > 0 && contacts.length || '',
+					num: '(' + contacts.length + ')',
 					name: t('contacts', 'Favorites')
 				}).appendTo($groupList);
 				$elem.data('obj', self);
@@ -699,7 +699,7 @@ OC.Contacts = OC.Contacts || {};
 						$elem = $elem.length ? $elem : (tmpl).octemplate({
 							id: category.id,
 							type: 'category',
-							num: contacts.length > 0 && contacts.length || '',
+							num: '(' + contacts.length + ')',
 							name: category.name
 						});
 						self.categories.push({id: category.id, name: category.name});

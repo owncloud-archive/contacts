@@ -233,6 +233,7 @@ OC.Contacts = OC.Contacts || {
 		this.bindEvents();
 		this.$toggleAll.show();
 		this.hideActions();
+		$('.hidden-on-load').removeClass('hidden-on-load');
 	},
 	loading:function(obj, state) {
 		$(obj).toggleClass('loading', state);
@@ -250,12 +251,10 @@ OC.Contacts = OC.Contacts || {
 		this.$headeractions.children().hide();
 		if(act && act.length > 0) {
 			this.$contactList.addClass('multiselect');
-			this.$contactListHeader.find('.actions').show();
-			this.$contactListHeader.find('.info').hide();
+			this.$controls.find('.contact-actions').show();
 			this.$headeractions.children('.'+act.join(',.')).show();
 		} else {
-			this.$contactListHeader.find('.actions').hide();
-			this.$contactListHeader.find('.info').show();
+			this.$controls.find('.contact-actions').hide();
 			this.$contactList.removeClass('multiselect');
 		}
 	},
@@ -284,11 +283,12 @@ OC.Contacts = OC.Contacts || {
 		this.$navigation = $('#app-navigation');
 		//this.$header = $('#contactsheader');
 		this.$groupList = $('#grouplist');
+		this.$controls = $('#controls');
 		this.$contactList = $('#contactlist');
 		this.$contactListHeader = $('#contactsHeader');
 		this.$sortOrder = this.$contactListHeader.find('.action.sort');
 		this.$sortOrder.val(contacts_sortby||'fn');
-		this.$headeractions = this.$contactListHeader.find('.actions');
+		this.$headeractions = this.$controls.find('.contact-actions');
 		this.$toggleAll = this.$contactListHeader.find('.toggle');
 		this.$groups = this.$headeractions.find('.groups');
 		this.$ninjahelp = $('#ninjahelp');
@@ -1039,14 +1039,14 @@ OC.Contacts = OC.Contacts || {
 			addContact();
 		});
 
-		this.$groupList.on('click keydown', '.add-contact', function(event) {
+		this.$controls.on('click keydown', '.add-contact', function(event) {
 			if(wrongKey(event)) {
 				return;
 			}
 			addContact();
 		});
 
-		this.$contactListHeader.on('click keydown', '.delete', function(event) {
+		this.$controls.on('click keydown', '.delete', function(event) {
 			if(wrongKey(event)) {
 				return;
 			}
@@ -1061,7 +1061,7 @@ OC.Contacts = OC.Contacts || {
 			self.hideActions();
 		});
 
-		this.$contactListHeader.on('click keydown', '.download', function(event) {
+		this.$controls.on('click keydown', '.download', function(event) {
 			if(wrongKey(event)) {
 				return;
 			}

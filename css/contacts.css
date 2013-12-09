@@ -76,6 +76,12 @@
 	border-bottom: 1px solid silver;
 }
 
+#app-navigation {
+	width: 250px;
+}
+#app-settings {
+	width: 249px;
+}
 
 #app-navigation a.unshare {
 	float: right;
@@ -85,9 +91,10 @@
 #app-navigation img.shared:hover { opacity: 1; }*/
 #app-navigation input[type="text"] {
 	display: block;
-	width: 200px;
+	width: 200px !important;
+	height: 34px !important;
 	float: left;
-	margin: 5px 0 5px .3em;
+	padding-left: 12px !important;
 }
 
 #app-navigation .utils {
@@ -95,6 +102,9 @@
     top: 0;
 	position: absolute;
 	padding: 0; margin: 0;
+}
+#app-navigation .active {
+	font-weight: bold;
 }
 #app-navigation li > .utils > *:not(.numcontacts) {
 	display: none;
@@ -112,7 +122,10 @@
 	padding-right: 5px;
 	text-align: right;
 }
-#grouplist { z-index: 100; }
+#grouplist {
+	z-index: 100;
+	margin-top: 44px;
+}
 #grouplist .oc-addnew-init {
 	padding: 0 12px;
 }
@@ -124,6 +137,25 @@
 }
 #grouplist > li {
 	height: 44px;
+}
+#grouplist .open {
+	margin-top: 5px !important;
+}
+
+.hidden-on-load {
+	display: none;
+}
+
+/* Controls */
+.new {
+	padding: 0px !important;
+}
+.new a {
+	padding: 14px 10px;
+	line-height: 34px;
+}
+.actions {
+	padding-left: 4px !important;
 }
 
 /* First run */
@@ -231,6 +263,7 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 .no-svg .mail { background-image:url('%webroot%/core/img/actions/mail.png'); }
 .no-svg .import, .no-svg .upload { background-image:url('%webroot%/core/img/actions/upload.png'); }
 .no-svg .export, .no-svg .download { background-image:url('%webroot%/core/img/actions/download.png'); }
+.no-svg .export, .no-svg .shared { background-image:url('%webroot%/core/img/actions/shared.png'); }
 .no-svg .globe { background-image:url('%webroot%/core/img/actions/public.png'); }
 .no-svg .settings { background-image:url('%webroot%/core/img/actions/settings.svg'); }
 .no-svg .starred { background-image:url('%appswebroot%/contacts/img/starred.png'); background-size: contain; }
@@ -251,6 +284,7 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 .svg .mail { background-image:url('%webroot%/core/img/actions/mail.svg'); }
 .svg .import,.svg .upload { background-image:url('%webroot%/core/img/actions/upload.svg'); }
 .svg .export,.svg .download { background-image:url('%webroot%/core/img/actions/download.svg'); }
+.svg .export,.svg .shared { background-image:url('%webroot%/core/img/actions/shared.svg'); }
 .svg .globe { background-image:url('%webroot%/core/img/actions/public.svg'); }
 .svg .settings { background-image:url('%webroot%/core/img/actions/settings.svg'); }
 .svg .starred { background-image:url('%appswebroot%/contacts/img/starred.svg'); background-size: contain; }
@@ -553,6 +587,7 @@ input[type="checkbox"].propertytype { width: 10px; }
 .svg .favorite.inactive { background-image:url('%appswebroot%/contacts/img/inactive_star.svg'); background-size:contain; }
 
 #app-content {
+	top: 44px;
 	padding-bottom: 50px;
 }
 
@@ -595,21 +630,20 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 /* contact list */
 
 #contactsHeader {
-	top: 46px;
-	position: fixed;
-	height: 20px;
-	background: none repeat scroll 0 0 rgba(230,230,230,.95);
+	height: 51px;
 	color: #999;
 	z-index: 2;
 	width: 100%;
+	line-height: 51px;
 }
 #contactsHeader > tr {
 }
 #contactsHeader > td {
 	z-index: 300;
+	border-bottom: 1px solid rgb(221, 221, 221);
 }
 #contactsHeader > td.actions {
-	left: 600px; right: 15px; top: 45px;
+	left: 600px; right: 15px;
 	position: fixed;
 	height: 20px;
 	font-weight: bold;
@@ -628,6 +662,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactsHeader select {
 	width: auto;
+	height: 22px;
 	font-size: 90%;
 	padding: 0; margin: 0 10px;
 }
@@ -636,19 +671,24 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactsHeader .action {
 	margin: 0;
-	padding: 0 5px;
+	padding: 0 0px;
 }
 #contactsHeader .actions > .toggle {
 	float: left;
 }
-#contactlist {  }
+#contactlist {
+	top: 44px;
+}
 #contactlist > tbody {
 	position: relative;
  	padding-bottom: 300px;
 	width: 100%;
 	z-index: 1;
 }
-#contactlist { margin-top:20px; position: relative; width: 100%; }
+#contactlist {
+	position: relative;
+	width: 100%;
+}
 #contactlist td {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
@@ -659,7 +699,7 @@ tbody tr, tbody tr.hover {
 tbody tr.contact.active, tbody tr.contact:hover {
 	background-color: #f8f8f8 !important;
 }
-#contactlist > tbody > tr { height: 3em; display: none; }
+#contactlist > tbody > tr { height: 51px; display: none; }
 #contactlist > tbody > tr.contact.active, #contactlist  > tbody > tr.contact:hover { background-color: #eee; }
 #contactlist > tbody > tr > td {
 	border-bottom: 1px solid #DDDDDD;
@@ -670,18 +710,16 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	vertical-align: middle;
 	white-space: nowrap;
 }
-#contactlist tr.contact > td:not(.name) {
-	padding-left:10px;
+#contactlist tr > td {
+	max-width: 250px;
+	min-width: 80px;
 }
-#contactlist tr > td:not(.tel):not(.adr):not(.actions) {
-	max-width: 270px;
-	min-width: 200px;
+#contactlist tr > td.adr {
+	min-width: 80px;
 }
-#contactlist tr > td.tel {
-	max-width: 180px;
-	min-width: 180px;
+#contactlist tr > td.adr {
+	min-width: 80px;
 }
-#contactlist tbody > tr > td.adr { width: 100%; max-width:300px; }
 #contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
 	-webkit-transition:opacity 200ms; -moz-transition:opacity 200ms; -o-transition:opacity 200ms; transition:opacity 200ms;
@@ -785,18 +823,15 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	}
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1400px) {
 	#contactlist tr td.categories { display: none; }
 }
-@media screen and (max-width: 1400px) {
-	#contactlist tr td.adr { display: none; }
-	#contactlist tr td.tel { width:100%; }
-}
 @media screen and (max-width: 1200px) {
-	#contactlist tr td.tel { display: none; }
-	#contactlist tr td.email { width:100%; }
+	#contactlist tr td.adr { display: none; }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+	#contactlist tr td.tel { display: none; }
+}
+@media screen and (max-width: 800px) {
 	#contactlist tr td.email { display: none; }
-	#contactlist tr td.name { width:100%; max-width: auto;}
 }
