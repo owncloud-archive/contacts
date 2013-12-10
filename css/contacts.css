@@ -6,33 +6,14 @@
 	clear: both;
 }
 #content li { cursor: default; }
-#content input[type=checkbox] { 
-	height: 14px; width: 14px; 
-	border: 0px solid #fff; 
-	background-color: white;
-	-moz-appearance:none; -webkit-appearance: none; 
-	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; 
-	-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; 
+#contactsHeader input[type=checkbox] {
+	margin-top: 4px;
+	margin-left: 17px;
+	margin-right: 25px;
 }
 #content input[type=radio] { 
 	width: 12px; height: 12px; 
 	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; 
-}
-#content input[type=checkbox]:hover { border: 1px solid #D4D4D4 !important; }
-#content input[type=checkbox]:checked::after {
-  content: url('%appswebroot%/contacts/img/checkmark.png');
-  display: block;
-  position: relative;
-  top: -2px;
-  left: -1px;
-}
-#content input[type=radio]:checked::after {
-  content: url('%appswebroot%/contacts/img/checkmark.png');
-  margin: 0; padding: 0;
-  display: inline-block;
-  position: relative;
-  top: -8px;
-  left: -6px;
 }
 #contact textarea { font-family: inherit; }
 
@@ -41,12 +22,8 @@
 	text-overflow: ellipsis;
 }
 
-#contact input:not([type="checkbox"]), #contact select:not(.button), #contact textarea {
-	background-color: #fefefe; border: 1px solid #fff !important; 
-	-moz-appearance:none  !important; -webkit-appearance: none !important; 
-	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; 
-	-moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; 
-	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
+#contact input:not([type=checkbox]), #contact select:not(.button), #contact textarea {
+	-moz-appearance:none  !important; -webkit-appearance: none !important;
 	float: left;
 	padding: .6em .5em .4em;
 }
@@ -60,10 +37,8 @@
 	border: 1px solid #1d2d44; 
 	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; outline:none; 
 }
-#contact input:invalid, #contact input:hover:not([type="checkbox"]), #contact input:active:not([type="checkbox"]), #contact input:focus:not([type="checkbox"]), #contact input.active, #contact textarea:focus, #contact textarea {
-	border: 1px solid silver !important; 
-	-moz-border-radius:.3em; -webkit-border-radius:.3em; border-radius:.3em; 
-	outline:none; float: left;
+#contact input:invalid, #contact input:hover:not([type=checkbox]), #contact input:active:not([type=checkbox]), #contact input:focus:not([type=checkbox]), #contact input.active, #contact textarea:focus, #contact textarea {
+	float: left;
 }
 
 /* Left content */
@@ -195,7 +170,7 @@
 	float: right;
 }
 
-#contact input[type="checkbox"] { margin: 3px; padding:1px; vertical-align: bottom; float: left; }
+#contact input[type=checkbox] { margin: 3px; padding:1px; vertical-align: bottom; float: left; }
 /*dl.form { display: block; width: auto; margin: 0; padding: 0; cursor: normal; }*/
 .form dt { display: inline-block; clear: left; float: left; width: 7em; margin: 0; padding: 0.8em 0.5em 0 0; text-align:right; text-overflow:ellipsis; o-text-overflow: ellipsis; vertical-align: text-bottom; color: #bbb;/* white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap;*/ }
 .form dd { display: inline-block; clear: right; float: left; margin: 0; padding: 0; white-space: nowrap; vertical-align: text-bottom; }
@@ -226,7 +201,7 @@
 	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 }
 .ui-multiselect-checkboxes label > span {color: #333 !important; font-size: 100% !important; }
-.ui-multiselect-checkboxes input[type="checkbox"] { margin: 3px !important; }
+.ui-multiselect-checkboxes input[type=checkbox] { margin: 3px !important; }
 button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 
 #content .multiselectoptions > li > * { 
@@ -377,10 +352,10 @@ ul.propertylist { width: 450px; }
 
 .propertylist { float: left; }
 /*.propertylist li > a { display: block; }}*/
-.propertylist li > input[type="checkbox"],input[type="radio"] { display: inline-block; }
-.propertylist input.value:not([type="checkbox"]) { width: 16em; display: inline-block; font-weight: bold; }
-.propertylist input.value:not([type="checkbox"]).new { border: 3px solid #1d2d44;}
-.propertylist input.value:not([type="checkbox"]).error { border: 3px solid red;}
+.propertylist li > input[type=checkbox],input[type="radio"] { display: inline-block; }
+.propertylist input.value:not([type=checkbox]) { width: 16em; display: inline-block; font-weight: bold; }
+.propertylist input.value:not([type=checkbox]).new { border: 3px solid #1d2d44;}
+.propertylist input.value:not([type=checkbox]).error { border: 3px solid red;}
 .propertylist li > select { float: left; max-width: 8em; }
 .select_wrapper { float: left; overflow: hidden; color: #bbb; font-size: 0.8em; }
 .select_wrapper select { float: left; overflow: hidden; text-overflow: ellipsis; color: #bbb; width: 8em; }
@@ -389,7 +364,7 @@ ul.propertylist { width: 450px; }
 .select_wrapper select:hover,.propertylist li > select:focus,.propertylist li > select:active { color: #777; }
 .select_wrapper select.rtl { margin-left: -24px; text-align: right; }
 .select_wrapper select.ltr { margin-right: -23px; }
-.propertylist li > input[type="checkbox"].impp { clear: none; }
+.propertylist li > input[type=checkbox].impp { clear: none; }
 .propertylist li > label.xab { display: block; color: #bbb; float:left; clear: both; padding: 0.5em 0 0 2.5em; }
 .propertylist li > label.xab:hover { color: #777; }
 #contact label, #contact dt, #contact th, #contact .label {
@@ -519,7 +494,7 @@ dt[data-element="org"] { margin-top: 4px; }
 	white-space: nowrap;
 	overflow: hidden;
 }
-input:not([type="checkbox"]).propertytype { 
+input:not([type=checkbox]).propertytype { 
 	float: left; font-size: .8em; 
 	max-width: 100px; 
 	text-align: right; 
@@ -529,7 +504,7 @@ input:not([type="checkbox"]).propertytype {
 .thumbnail {
 	background-image:url('%appswebroot%/contacts/img/person.png');
 }
-input[type="checkbox"].propertytype { width: 10px; }
+input[type=checkbox].propertytype { width: 10px; }
 .contactphoto { 
 	float: left; display: inline-block; 
 	border-radius: 0.3em; border: thin solid #bbb; 
@@ -690,6 +665,9 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 #contactlist td {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
+#contactlist .nametext {
+	margin-left: 10px;
+}
 /* Override default style for an open cpntact */
 tbody tr, tbody tr.hover {
 	background-color: #fff !important;
@@ -711,22 +689,21 @@ tbody tr.contact.active, tbody tr.contact:hover {
 #contactlist tr > td {
 	max-width: 250px;
 	min-width: 80px;
+	line-height: 50px;
 }
 #contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
-	-webkit-transition:opacity 200ms; -moz-transition:opacity 200ms; -o-transition:opacity 200ms; transition:opacity 200ms;
 	float:left;
-	margin:.5em 0 0 15px;
+	margin: 32px 0 4px 32px;
 }
-#contactlist tbody > tr > td.name > input[type="checkbox"]:hover:first-child {
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter:alpha(opacity=80); opacity:.8;
+#contactlist tbody > tr:hover > td.name > input[type=checkbox]:first-child {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter:alpha(opacity=100); opacity:1;
 }
-#contactlist tbody > tr > td.name > input[type="checkbox"]:checked:first-child {
+#contactlist tbody > tr > td.name > input[type=checkbox]:checked:first-child {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter:alpha(opacity=100); opacity:1;
 }
 #contactlist tbody > tr > td.name {
-	font-weight: bold; text-indent: 1.6em;
-	-webkit-transition:background-image 500ms; -moz-transition:background-image 500ms; -o-transition:background-image 500ms;  transition:background-image 500ms;
+	font-weight: bold;
 	background-repeat:no-repeat !important;
 	background-position: 10px center !important;
 }
@@ -734,16 +711,16 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	position: absolute; float: right;  clear: none;
 	cursor:pointer;
 	width:16px; height:16px;
-	margin: 2px 0 2px 5px; z-index: 200;
+	margin: 18px 0 2px 5px; z-index: 200;
 	opacity: 0.6; background-image:url('%webroot%/core/img/actions/mail.svg');
 }
 #contactlist tbody > tr > td a.mailto:hover { opacity: 0.8; }
 
 #contactlist tbody > tr > td > a.delete {
 	position: absolute;
-	right: 20px; clear: none;
+	margin-top: 17px;
+	right: 17px; clear: none;
 	cursor:pointer;
-	width:16px; height:16px;
 	z-index: 200;
 }
 #contact {
