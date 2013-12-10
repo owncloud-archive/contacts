@@ -91,7 +91,7 @@
 #app-navigation img.shared:hover { opacity: 1; }*/
 #app-navigation input[type="text"] {
 	display: block;
-	width: 200px !important;
+	width: 200px;
 	height: 34px !important;
 	float: left;
 	padding-left: 12px !important;
@@ -139,7 +139,7 @@
 	height: 44px;
 }
 #grouplist .open {
-	margin-top: 5px !important;
+	margin-top: 5px;
 }
 
 .hidden-on-load {
@@ -148,14 +148,14 @@
 
 /* Controls */
 .new {
-	padding: 0px !important;
+	padding: 0 !important;
 }
 .new a {
 	padding: 14px 10px;
 	line-height: 34px;
 }
 .actions {
-	padding-left: 4px !important;
+	padding-left: 4px;
 }
 
 /* First run */
@@ -671,13 +671,10 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactsHeader .action {
 	margin: 0;
-	padding: 0 0px;
+	padding: 0;
 }
 #contactsHeader .actions > .toggle {
 	float: left;
-}
-#contactlist {
-	top: 44px;
 }
 #contactlist > tbody {
 	position: relative;
@@ -686,6 +683,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	z-index: 1;
 }
 #contactlist {
+	top: 44px;
 	position: relative;
 	width: 100%;
 }
@@ -712,12 +710,6 @@ tbody tr.contact.active, tbody tr.contact:hover {
 }
 #contactlist tr > td {
 	max-width: 250px;
-	min-width: 80px;
-}
-#contactlist tr > td.adr {
-	min-width: 80px;
-}
-#contactlist tr > td.adr {
 	min-width: 80px;
 }
 #contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {

@@ -2281,7 +2281,7 @@ OC.Contacts = OC.Contacts || {};
 			revert: 'invalid',
 			//containment: '#content',
 			helper: function (e,ui) {
-				return true;
+				return $(this).clone().appendTo('body').css('zIndex', 5).show();
 			},
 			opacity: 0.8,
 			scope: 'contacts'

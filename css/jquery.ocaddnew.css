@@ -19,27 +19,19 @@
  *
  */
 
-.oc-addnew {
-	background-image: none !important;
-}
-
-.oc-addnew li[display=list-item] {
-}
-
 .oc-addnew input[type=text] {
-	width: 200px !important;
-	margin: 0px !important;
+	width: 200px;
+	margin: 0px;
 	border-width: 0px;
-	height: 34px !important;
+	height: 34px;
 }
-
 .oc-addnew button {
-	height: 34px !important;
-	margin: 0px !important;
+	height: 34px;
+	margin: 0px;
 	border-width: 0px;
 }
 .oc-addnew button:hover {
-	height: 34px !important;
-	margin: 0px !important;
+	height: 34px;
+	margin: 0px;
 	border-width: 0px;
 }
