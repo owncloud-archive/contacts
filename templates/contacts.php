@@ -311,7 +311,7 @@
 		</li>
 	</ul>
 	<footer>
-		<button class="cancel action text tooltipped downwards" title="<?php p($l->t('Cancel')); ?>"><?php p($l->t('Cancel')); ?></button>
+		<button class="cancel text tooltipped downwards" title="<?php p($l->t('Cancel')); ?>"><?php p($l->t('Cancel')); ?></button>
 		<button class="close text tooltipped downwards" title="<?php p($l->t('Close')); ?>"><?php p($l->t('Close')); ?></button>
 		<button class="export action text tooltipped downwards" title="<?php p($l->t('Export as VCF')); ?>"><?php p($l->t('Download')); ?></button>
 		<select class="add action text button" id="addproperty">
