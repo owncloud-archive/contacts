@@ -545,7 +545,7 @@ OC.Contacts = OC.Contacts || {
 		});
 
 		$(document).bind('request.contact.delete', function(e, data) {
-			var id = String(data.contactid);
+			var id = String(data.contactId);
 			console.log('contact', data, 'request.contact.delete');
 			self.closeContact(id);
 			self.contacts.delayedDelete(data);
