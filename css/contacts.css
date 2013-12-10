@@ -224,7 +224,8 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 }
 
 .action:not(.add):not(.groups).text, .icon:not(.add):not(.groups).text {
-	background-position: left;
+	background-position: left; 
+	text-indent: 18px;
 }
 
 /* TODO: Use @import url('%appswebroot%/contacts/css/[no-]svg.css); instead. */
