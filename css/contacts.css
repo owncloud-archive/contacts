@@ -23,9 +23,7 @@
 }
 
 #contact input:not([type=checkbox]), #contact select:not(.button), #contact textarea {
-	-moz-appearance:none  !important; -webkit-appearance: none !important;
 	float: left;
-	padding: .6em .5em .4em;
 }
 #contact input[type="button"]:hover, #contact select:hover, #contact select:focus, #contact select:active, #contact input[type="button"]:focus, #contact .button:hover, button:hover { background-color:#fff; color:#333; }
 
@@ -154,20 +152,13 @@
 	margin: 0 !important; padding: 0 !important; outline: 0 !important;
 }
 #contact footer {
-	padding: 5px;
-	width: 100%;
-	-moz-box-sizing: border-box; box-sizing: border-box;
-	clear: both;
-	white-space: nowrap;
+	float: left;
+	margin-left: 240px;
 }
 #contact footer > * {
 	display: inline-block;
 	float: left;
 	opacity: 1;
-}
-#contact footer > .delete {
-	display: inline-block;
-	float: right;
 }
 
 #contact input[type=checkbox] { margin: 3px; padding:1px; vertical-align: bottom; float: left; }
@@ -306,9 +297,15 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 .ui-state-hover { border: 1px solid dashed; z-index: 1; }
 
 /* Properties */
-
-.singleproperties { display: inline-block; float: left; width: 270px; }
-.singleproperties .fullname { font-weight:bold; font-size:1.5em; width: 250px; margin: 5px 0; }
+.propertyname {
+	width: 100px;
+	padding-right: 7px;
+	margin-top: 8px;
+	font-weight: bold;
+	text-align: right;
+}
+.singleproperties { margin-left: 195px; float: left; }
+.singleproperties .fullname { font-weight:bold; width: 225px; }
 .singleproperties .n.editor { width: 270px; padding: 3px; }
 .singleproperties .n.editor input { width: 95%; }
 .singleproperties .propertycontainer input.value { font-weight: bold; }
@@ -319,16 +316,19 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 	width: 20px; height: 20px;
 	opacity: 0;
 }
-.singleproperties .groupscontainer { display: block; clear: left; }
+.singleproperties .groupscontainer { display: block; }
 .singleproperties .propertycontainer:hover .action { opacity: 1; }
 .singleproperties dl { width: 280px;}
+.singleproperties > a { margin-top: 10px !important; }
 
-.parameters { 
-	width: 120px; 
+.parameters {
 	float: left; 
 	text-align: right; 
 	box-sizing: border-box;
 	display: inline-block;
+}
+.parameters [data-parameter="TYPE"] {
+	font-size: initial;
 }
 
 div.email li .parameters .label, div.url li .parameters .label { margin-top: 7px !important; }
@@ -337,7 +337,7 @@ div.url li .parameters .label, div.impp li .parameters .label { margin-top: 6px 
 div.tel li input, div.url li input { margin-left: 3px; font-size: 1em; }
 div.impp li .select_wrapper select { margin-top: 6px; }
 
-ul.propertylist { width: 450px; }
+ul.propertylist { margin-left: 195px; width: 450px; line-height: 34px; }
 .propertylist li.propertycontainer { white-space: nowrap; min-width: 38em; display: block; clear: both; }
 .propertylist li.propertycontainer > .listactions { 
 	display: inline-block; 
@@ -348,18 +348,19 @@ ul.propertylist { width: 450px; }
 	display: inline-block; 
 	clear: none; 
 	width: 16px; height: 16px; 
+	vertical-align: middle;
 }
 
 .propertylist { float: left; }
 /*.propertylist li > a { display: block; }}*/
 .propertylist li > input[type=checkbox],input[type="radio"] { display: inline-block; }
-.propertylist input.value:not([type=checkbox]) { width: 16em; display: inline-block; font-weight: bold; }
+.propertylist input.value:not([type=checkbox]) { width: 225px; display: inline-block; font-weight: bold; }
 .propertylist input.value:not([type=checkbox]).new { border: 3px solid #1d2d44;}
 .propertylist input.value:not([type=checkbox]).error { border: 3px solid red;}
 .propertylist li > select { float: left; max-width: 8em; }
 .select_wrapper { float: left; overflow: hidden; color: #bbb; font-size: 0.8em; }
 .select_wrapper select { float: left; overflow: hidden; text-overflow: ellipsis; color: #bbb; width: 8em; }
-.select_wrapper select:hover { overflow: inherit; text-overflow: inherit; }
+
 .select_wrapper select option { color: #777; }
 .select_wrapper select:hover,.propertylist li > select:focus,.propertylist li > select:active { color: #777; }
 .select_wrapper select.rtl { margin-left: -24px; text-align: right; }
@@ -369,7 +370,7 @@ ul.propertylist { width: 450px; }
 .propertylist li > label.xab:hover { color: #777; }
 #contact label, #contact dt, #contact th, #contact .label {
 	float: left; 
-	font-size: 0.7em; font-weight: bold; 
+	font-size: 100%; font-weight: bold; 
 	color: #bbb !important; 
 	border: 0; 
 	display: inline-block;
@@ -377,7 +378,6 @@ ul.propertylist { width: 450px; }
 	-moz-box-sizing: border-box;
 }
 #contact label:hover, #contact dt:hover, #contact input.label:hover { color: #777 !important; }
-#contact input.label, #contact input.label { margin:-2px; }
 #contact input.label:hover, #contact input.label:active { border: 0 none !important; border-radius: 0; cursor: pointer; }
 dt[data-element="nickname"], dt[data-element="bday"], dt[data-element="title"] { margin-top: 5px; }
 dt[data-element="org"] { margin-top: 4px; }
@@ -506,18 +506,16 @@ input:not([type=checkbox]).propertytype {
 }
 input[type=checkbox].propertytype { width: 10px; }
 .contactphoto { 
-	float: left; display: inline-block; 
-	border-radius: 0.3em; border: thin solid #bbb; 
-	margin: 0.5em; -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; 
-	opacity: 1; 
+	border: 1px solid #bbb; 
+	-moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; 
 }
 .contactphoto:hover { background: #fff; cursor: default; }
 #photowrapper { 
-	display: inline-block; 
-	position: relative;
+	position: absolute;
 	float: left; 
 	width: 170px; height: 200px;
-	margin: 5px;
+	margin-top: 5px;
+	margin-left: 10px;
 }
 
 #photowrapper .favorite {
@@ -582,7 +580,7 @@ input[type=checkbox].propertytype { width: 10px; }
 }
 
 .display .meta { text-align: right; margin-left: -30px; }
-.display .adr { cursor: pointer; margin-left: 30px; }
+.display .adr { cursor: pointer; margin-left: 10px; }
 .adr.editor {
 	width: 20em;
 	margin-left: 120px;
@@ -724,13 +722,14 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	z-index: 200;
 }
 #contact {
-	background-color: white; color: #333333;
-	/*border-radius: 3px; box-shadow: 0 0 10px #888888;
-	padding: 10px; 
-	position: fixed !important; 
-	z-index: 101;
-	top: 8em; left: 28em;
-	width: 490px;*/
+	padding-top: 5px;
+	max-width: 700px;
+	background-color: white;
+	color: #333333;
+	line-height: normal;
+}
+#contact > ul {
+	min-height: 150px;
 }
 #contact .arrow {
 	border-bottom: 20px solid white; 
@@ -748,12 +747,15 @@ tbody tr.contact.active, tbody tr.contact:hover {
 
 #contact figure img { -moz-border-radius:.3em; -webkit-border-radius:.3em; border-radius:.3em; border: thin solid #bbb; margin: 0.3em; background-image: url('%webroot%/core/img/loading.gif'); -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; opacity: 1; }
 
+#contact .adr li {
+	padding-bottom: 3px;
+	padding-left: 86px;
+}
 
 #contact span.adr { 
 	font-weight: bold;
 	float: left; 
-	width: 20em; 
-	padding-top: .5em; 
+	width: 232px;
 	overflow: hidden; text-overflow: ellipsis; text-align: bottom; white-space: nowrap; 
 }
 #contact span.adr:hover { /*overflow: inherit;*/ /*white-space: pre-wrap;*/ }

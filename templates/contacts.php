@@ -64,7 +64,7 @@
 			<thead>
 				<tr id="contactsHeader" class="hidden-on-load">
 					<td class="name">
-						<input type="checkbox" class="toggle" title="<?php p($l->t('(De-)select all')); ?>" />
+						<input type="checkbox" title="<?php p($l->t('(De-)select all')); ?>" />
 						<select class="action sort permanent" name="sort" title="<?php p($l->t('Sort order')); ?>">
 							<option value="fn"><?php p($l->t('Display name')); ?></option>
 							<option value="fl"><?php p($l->t('First- Lastname')); ?></option>
@@ -220,34 +220,39 @@
 					<li><a class="action upload" title="<?php echo $l->t('Upload new photo'); ?>"></a></li>
 					<li><a class="action cloud icon-cloud" title="<?php echo $l->t('Select photo from ownCloud'); ?>"></a></li>
 				</ul>
-				<a class="favorite action {favorite}"></a>
+				<a class="favorite {favorite}"></a>
 			</div>
 			<div class="singleproperties">
-			<input data-element="fn" class="fullname value propertycontainer" type="text" name="value" value="{name}" placeholder="<?php p($l->t('Name')); ?>" required />
-			<a class="action edit"></a>
- 			<fieldset class="n hidden editor propertycontainer" data-element="n">
-			<ul>
-				<li>
-					<input class="value tooltipped rightwards onfocus" type="text" id="n_1" name="value[1]" value="{n1}" 
-						placeholder="<?php p($l->t('First name')); ?>" 
-						title="<?php p($l->t('First name')); ?>" />
-				</li>
-				<li>
-					<input class="value tooltipped rightwards onfocus" type="text" id="n_2" name="value[2]" value="{n2}" 
-						placeholder="<?php p($l->t('Additional names')); ?>" 
-						title="<?php p($l->t('Additional names')); ?>" />
-				</li>
-				<li>
-					<input class="value tooltipped rightwards onfocus" type="text" id="n_0" name="value[0]" value="{n0}" 
-						placeholder="<?php p($l->t('Last name')); ?>" 
-						title="<?php p($l->t('Last name')); ?>" />
-				</li>
-			</ul>
-			<input class="value" type="hidden" id="n_3" name="value[3]" value="{n3}" />
-			<input class="value" type="hidden" id="n_4" name="value[4]" value="{n4}" />
-			</fieldset>
-			<div class="groupscontainer propertycontainer" data-element="categories">
-				<select class="hidden" id="contactgroups" title="<?php p($l->t('Select groups')); ?>" name="value" multiple></select>
+				<label class="propertyname"><?php p($l->t('Name')); ?></label>
+				<input data-element="fn" class="fullname value propertycontainer" type="text" name="value" value="{name}" placeholder="<?php p($l->t('Name')); ?>" required />
+				<a class="action edit"></a>
+				<fieldset class="n hidden editor propertycontainer" data-element="n">
+					<ul>
+						<li>
+							<input class="value tooltipped rightwards onfocus" type="text" id="n_1" name="value[1]" value="{n1}" 
+								placeholder="<?php p($l->t('First name')); ?>" 
+								title="<?php p($l->t('First name')); ?>" />
+						</li>
+						<li>
+							<input class="value tooltipped rightwards onfocus" type="text" id="n_2" name="value[2]" value="{n2}" 
+								placeholder="<?php p($l->t('Additional names')); ?>" 
+								title="<?php p($l->t('Additional names')); ?>" />
+						</li>
+						<li>
+							<input class="value tooltipped rightwards onfocus" type="text" id="n_0" name="value[0]" value="{n0}" 
+								placeholder="<?php p($l->t('Last name')); ?>" 
+								title="<?php p($l->t('Last name')); ?>" />
+						</li>
+					</ul>
+					<input class="value" type="hidden" id="n_3" name="value[3]" value="{n3}" />
+					<input class="value" type="hidden" id="n_4" name="value[4]" value="{n4}" />
+				</fieldset>
+			</div>
+			<div class="singleproperties">
+				<label class="propertyname"><?php p($l->t('Groups')); ?></label>
+				<div class="groupscontainer propertycontainer" data-element="categories">
+					<select class="hidden" id="contactgroups" title="<?php p($l->t('Select groups')); ?>" name="value" multiple></select>
+				</div>
 			</div>
 			<div>
 				<select class="hidden" id="contactaddressbooks" title="<?php p($l->t('Select address book')); ?>" name="value"></select>
@@ -282,7 +287,6 @@
 					<a role="button" class="action delete" title="<?php p($l->t('Delete')); ?>"></a>
 				</dd>
 			</dl>
-			</div>
 		</li>
 		<li>
 			<ul class="email propertylist hidden">
@@ -358,7 +362,7 @@
 				</select>
 				<input type="checkbox" class="parameter tooltipped rightwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
 			</span>
-			<input type="tel" class="nonempty value" name="value" value="{value}" placeholder="<?php p($l->t('Enter phone number')); ?>" required />
+			<input type="text" class="nonempty value" name="value" value="{value}" placeholder="<?php p($l->t('Enter phone number')); ?>" required />
 			<span class="listactions">
 				<a role="button" class="action delete tooltipped leftwards" title="<?php p($l->t('Delete phone number')); ?>"></a>
 			</span>

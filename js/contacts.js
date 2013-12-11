@@ -1173,11 +1173,6 @@ OC.Contacts = OC.Contacts || {};
 			$(this).val('');
 		});
 		var $fullname = this.$fullelem.find('.fullname');
-		this.$fullelem.find('.singleproperties').on('mouseenter', function() {
-			$fullname.next('.edit').css('opacity', '1');
-		}).on('mouseleave', function() {
-			$fullname.next('.edit').css('opacity', '0');
-		});
 		$fullname.next('.edit').on('click keydown', function(event) {
 			//console.log('edit name', event);
 			$('.tipsy').remove();
