@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-07 20:23-0500\n"
-"PO-Revision-Date: 2013-12-07 14:40+0000\n"
+"POT-Creation-Date: 2013-12-11 10:37-0500\n"
+"PO-Revision-Date: 2013-12-10 21:40+0000\n"
 "Last-Translator: asieriko <asieriko@gmail.com>\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -48,19 +48,19 @@ msgstr "{total} kontaktuetatik {count} inportatuak"
 
 #: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "{imported} kontaktu inportatu dira. {failed}k huts eginda."
 
 #: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "{name} izeneko helbide-liburu bat dagoeneko existitzen da"
 
 #: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "Helbide-liburua gehitzeak huts egin du: {error}"
 
 #: js/addressbooks.js:626
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "Helbide-liburua kargatzeak huts egin du: {error}"
 
 #: js/app.js:215
 msgid "Indexing contacts"
@@ -68,7 +68,7 @@ msgstr "Kontaktuak indexatzen"
 
 #: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "Errorea izan da helbide-liburua kargatzerakoan : {msg}"
 
 #: js/app.js:226
 msgid "Error."
@@ -624,7 +624,7 @@ msgstr "Ez dago behar aina leku erabilgarri,"
 
 #: lib/controller/importcontroller.php:70
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "Zerrenda beltzeko fitxategi baten igotzearen saiakuntza:"
 
 #: lib/controller/importcontroller.php:92
 msgid "Error uploading contacts to storage."
@@ -645,7 +645,7 @@ msgstr "Fitxategiaren izena falta da eskarian."
 #: lib/controller/importcontroller.php:167
 #: lib/controller/importcontroller.php:283
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Garapen gakoa falta da eskarian."
 
 #: lib/controller/importcontroller.php:173
 msgid "Attempt to access blacklisted file:"
@@ -893,7 +893,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>Ez duzu kontakturik helbide-liburuan edo helbide-liburua desgaituta dago.</h3><p>Gehitu kontaktu berri bat edo inportatu VCF fitxategi batetatik.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -1075,7 +1075,7 @@ msgstr "Ezabatu helbidea"
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr ""
+msgstr "Nafarroako Etorbidea 16"
 
 #: templates/contacts.php:411
 msgid "Street address"
@@ -1083,7 +1083,7 @@ msgstr "Kalearen helbidea"
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr ""
+msgstr "31012"
 
 #: templates/contacts.php:416
 msgid "Postal code"
@@ -1091,7 +1091,7 @@ msgstr "Posta kodea"
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr ""
+msgstr "Iruñea"
 
 #: templates/contacts.php:419
 msgid "City"
@@ -1099,7 +1099,7 @@ msgstr "Hiria"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "Nafarroa"
 
 #: templates/contacts.php:424
 msgid "State or province"
@@ -1107,7 +1107,7 @@ msgstr "Estatu edo probintzia"
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr ""
+msgstr "Espaina"
 
 #: templates/contacts.php:429
 msgid "Country"

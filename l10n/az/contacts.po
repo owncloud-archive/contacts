@@ -3,176 +3,170 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# minion, 2013
-# elmakong <mr.pige_ina@yahoo.co.id>, 2012
-# minion, 2013
-# elmakong <mr.pige_ina@yahoo.co.id>, 2012
-# rodin <romihardiyanto@gmail.com>, 2013
-# rodin <romihardiyanto@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
 "POT-Creation-Date: 2013-12-11 10:37-0500\n"
-"PO-Revision-Date: 2013-12-10 16:20+0000\n"
-"Last-Translator: arifpedia <arifpedia@gmail.com>\n"
-"Language-Team: Indonesian (http://www.transifex.com/projects/p/owncloud/language/id/)\n"
+"PO-Revision-Date: 2013-12-09 11:10+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"Language-Team: Azerbaijani (http://www.transifex.com/projects/p/owncloud/language/az/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: id\n"
+"Language: az\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: appinfo/app.php:28 lib/app.php:103
 msgid "Contacts"
-msgstr "Kontak"
+msgstr ""
 
 #: js/addressbooks.js:83 js/groups.js:518 templates/settings.php:61
 msgid "Save"
-msgstr "Simpan"
+msgstr ""
 
 #: js/addressbooks.js:298
 msgid "Uploading..."
-msgstr "Mengunggah..."
+msgstr ""
 
 #: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
-msgstr "Mengimpor..."
+msgstr ""
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr "Mempersiapkan..."
+msgstr ""
 
 #: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
-msgstr "Terimpor {count} dari {total} kontak"
+msgstr ""
 
 #: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr "{imported} kontak penting. {failed} gagal."
+msgstr ""
 
 #: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
-msgstr "Buku alamat yang bernama {name} sudah ada"
+msgstr ""
 
 #: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
-msgstr "Gagal menambahkan buku alamat: {error}"
+msgstr ""
 
 #: js/addressbooks.js:626
 msgid "Failed loading address books: {error}"
-msgstr "Gagal memuat buku alamat: {error}"
+msgstr ""
 
 #: js/app.js:215
 msgid "Indexing contacts"
-msgstr "Mengindeks kontak"
+msgstr ""
 
 #: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr "Galat yang tidak diketahui ketika memuat buku alamat: {msg}"
+msgstr ""
 
 #: js/app.js:226
 msgid "Error."
-msgstr "Galat."
+msgstr ""
 
 #: js/app.js:317 js/app.js:331
 msgid "Add to..."
-msgstr "Tambah ke..."
+msgstr ""
 
 #: js/app.js:321 js/app.js:333
 msgid "Remove from..."
-msgstr "Hapus dari..."
+msgstr ""
 
 #: js/app.js:338
 msgid "Add group..."
-msgstr "Tambah grup..."
+msgstr ""
 
 #: js/app.js:468
 msgid "Invalid URL: \"{url}\""
-msgstr "URL salah: \"{url}\""
+msgstr ""
 
 #: js/app.js:479
 msgid "There was an error opening a mail composer."
-msgstr "Terjadi galat saat membuka pembuat mail."
+msgstr ""
 
 #: js/app.js:484
 msgid "Invalid email: \"{url}\""
-msgstr "Surel salah: \"{url}\""
+msgstr ""
 
 #: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr "Gagal gabung. Tidak dapat menemukan kontak: {id}"
+msgstr ""
 
 #: js/app.js:575
 msgid "Merge failed."
-msgstr "Gagal gabung."
+msgstr ""
 
 #: js/app.js:582
 msgid "Merge failed. Error saving contact."
-msgstr "Gagal gabung. Galat menyimpan kontak."
+msgstr ""
 
 #: js/app.js:602
 msgid "Select photo"
-msgstr "Pilih foto"
+msgstr ""
 
 #: js/app.js:678 js/app.js:1570
 msgid "Network or server error. Please inform administrator."
-msgstr "Jaringan atau server galat. Silahkan menginformasikan administrator."
+msgstr ""
 
 #: js/app.js:894
 msgid "Error adding to group."
-msgstr "Galat menambahkan ke grup."
+msgstr ""
 
 #: js/app.js:917
 msgid "Error removing from group."
-msgstr "Galat menghapus dari grup."
+msgstr ""
 
 #: js/app.js:1104
 msgid "Error setting {name} as favorite."
-msgstr "Galat mengatur {name} sebagai favorit"
+msgstr ""
 
 #: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
 msgid "Merge contacts"
-msgstr "Gabung kontak"
+msgstr ""
 
 #: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
-msgstr "Batal"
+msgstr ""
 
 #: js/app.js:1296 templates/contacts.php:163
 msgid "Add group"
-msgstr "Tambah grup"
+msgstr ""
 
 #: js/app.js:1300
 msgid "OK"
-msgstr "Oke"
+msgstr ""
 
 #: js/app.js:1394
 msgid "Could not find contact: {id}"
-msgstr "Tidak menemukan kontak: {id}"
+msgstr ""
 
 #: js/app.js:1417
 msgid "No files selected for upload."
-msgstr "Tidak ada berkas yang dipilih untuk diunggah."
+msgstr ""
 
 #: js/app.js:1427
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr "Berkas yang Anda coba unggah melebihi ukuran maksimum pada server ini."
+msgstr ""
 
 #: js/app.js:1528
 msgid "Edit profile picture"
-msgstr "Sunting gambar profil"
+msgstr ""
 
 #: js/app.js:1532
 msgid "Crop photo"
-msgstr "Gunting foto"
+msgstr ""
 
 #: js/contacts.js:589
 msgid "Is this correct?"
-msgstr "Apakah sesuai?"
+msgstr ""
 
 #: js/contacts.js:856
 msgid "Error parsing date: {date}"
@@ -180,7 +174,7 @@ msgstr ""
 
 #: js/contacts.js:1053
 msgid "# groups"
-msgstr "# grup"
+msgstr ""
 
 #: js/contacts.js:1125
 msgid "Error parsing birthday {bday}: {error}"
@@ -190,130 +184,130 @@ msgstr ""
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr "Beberapa kontak telah ditandai untuk dihapus, tetapi belum selesai dihapus. Mohon tunggu."
+msgstr ""
 
 #: js/contacts.js:2173
 msgid "Click to undo deletion of {num} contacts"
-msgstr "Klik untuk membatalkan penghapusan {num} kontak"
+msgstr ""
 
 #: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
-msgstr "Penghapusan dibatalkan  {num} kontak"
+msgstr ""
 
 #: js/groups.js:53
 msgid "Add"
-msgstr "Tambah"
+msgstr ""
 
 #: js/groups.js:263
 msgid "Contact is already in this group."
-msgstr "Kontak sudah ada di grup ini."
+msgstr ""
 
 #: js/groups.js:276
 msgid "Contacts are already in this group."
-msgstr "Kontak sudah ada di grup ini."
+msgstr ""
 
 #: js/groups.js:342
 msgid "Couldn't get contact list."
-msgstr "Tidak bisa mendapatkan daftar kontak."
+msgstr ""
 
 #: js/groups.js:353
 msgid "Contact is not in this group."
-msgstr "Kontak tidak di dalam grup ini."
+msgstr ""
 
 #: js/groups.js:367
 msgid "Contacts are not in this group."
-msgstr "Kontak tidak di dalam grup ini."
+msgstr ""
 
 #: js/groups.js:566
 msgid "Failed renaming group: {error}"
-msgstr "Gagal menamai grup: {error}"
+msgstr ""
 
 #: js/groups.js:597
 msgid "A group named {group} already exists"
-msgstr "Grup yang bernama {group} sudah ada"
+msgstr ""
 
 #: js/groups.js:632
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr "Anda bisa seret grup untuk\nmenyusunnya seperti yang Anda inginkan."
+msgstr ""
 
 #: js/groups.js:645
 msgid "Failed adding group: {error}"
-msgstr "Gagal menambahkan grup: {error}"
+msgstr ""
 
 #: js/groups.js:657
 msgid "All"
-msgstr "Semua"
+msgstr ""
 
 #: js/groups.js:672 js/groups.js:675
 msgid "Favorites"
-msgstr "Favorit"
+msgstr ""
 
 #: js/groups.js:736
 msgid "Shared by {owner}"
-msgstr "Dibagikan oleh {owner}"
+msgstr ""
 
 #: js/groups.js:751
 msgid "Not grouped"
-msgstr "Tidak dikelompokkan"
+msgstr ""
 
 #: js/groups.js:780
 msgid "Failed loading groups: {error}"
-msgstr "Gagal memuat grup: {error}"
+msgstr ""
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr "Silakan pilih buku alamat"
+msgstr ""
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
-msgstr "Impor ke dalam..."
+msgstr ""
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr "Galat memuat templat impor"
+msgstr ""
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr "Impor kontak"
+msgstr ""
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
-msgstr "Impor"
+msgstr ""
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr "Impor selesai"
+msgstr ""
 
 #: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:322
 msgid "Close"
-msgstr "Tutup"
+msgstr ""
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr "Galat"
+msgstr ""
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr "Nama tampilan tidak boleh kosong."
+msgstr ""
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
-msgstr "Tampilkan tautan CardDav"
+msgstr ""
 
 #: js/settings.js:98 templates/settings.php:29
 msgid "Show read-only VCF link"
-msgstr "Tampilkan hanya-baca tautan VCF"
+msgstr ""
 
 #: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
 #: templates/contacts.php:323 templates/settings.php:40
 msgid "Download"
-msgstr "Unduh"
+msgstr ""
 
 #: js/settings.js:101 templates/contacts.php:467 templates/settings.php:45
 msgid "Edit"
-msgstr "Edit"
+msgstr ""
 
 #: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
 #: templates/contacts.php:268 templates/contacts.php:275
@@ -321,39 +315,39 @@ msgstr "Edit"
 #: templates/contacts.php:337 templates/contacts.php:468
 #: templates/settings.php:50
 msgid "Delete"
-msgstr "Hapus"
+msgstr ""
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
-msgstr "Lebih banyak..."
+msgstr ""
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr "Sedikitkan..."
+msgstr ""
 
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
-msgstr "Server galat! Silakan menginformasikan administrator sistem."
+msgstr ""
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
-msgstr "Gagal memuat foto: {error}"
+msgstr ""
 
 #: lib/addressbook.php:152
 msgid "You do not have permissions to see this contacts"
-msgstr "Anda tidak memiliki akses untuk melihat kontak ini"
+msgstr ""
 
 #: lib/addressbook.php:159
 msgid "Contact not found"
-msgstr "Kontak tidak ditemukan"
+msgstr ""
 
 #: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
-msgstr "Anda tidak memiliki akses untuk melihat kontak ini"
+msgstr ""
 
 #: lib/addressbook.php:213
 msgid "You do not have permissions add contacts to the address book"
-msgstr "Anda tidak memiliki akses untuk menambah kontak untuk buku alamat"
+msgstr ""
 
 #: lib/addressbook.php:216
 msgid "The backend for this address book does not support adding contacts"
@@ -361,7 +355,7 @@ msgstr ""
 
 #: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
 msgid "You do not have permissions to delete this contact"
-msgstr "Anda tidak memiliki akses untuk menghapus kontak ini"
+msgstr ""
 
 #: lib/addressbook.php:243 lib/addressbook.php:269
 msgid "The backend for this address book does not support deleting contacts"
@@ -369,7 +363,7 @@ msgstr ""
 
 #: lib/addressbook.php:290
 msgid "Unknown error"
-msgstr "Galat tidak diketahui"
+msgstr ""
 
 #: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
@@ -377,23 +371,23 @@ msgstr ""
 
 #: lib/addressbook.php:358
 msgid "You don't have permissions to update the address book."
-msgstr "Anda tidak memiliki akses untuk memperbaharui buku alamat"
+msgstr ""
 
 #: lib/addressbook.php:369
 msgid "You don't have permissions to delete the address book."
-msgstr "Anda tidak memiliki akses untuk menghapus buku alamat"
+msgstr ""
 
 #: lib/app.php:144
 msgid "Address book not found"
-msgstr "Alamat tidak ditemukan"
+msgstr ""
 
 #: lib/contact.php:112 lib/contact.php:159
 msgid "You do not have permissions to see this contact"
-msgstr "Anda tidak memiliki akses untuk melihat kontak ini"
+msgstr ""
 
 #: lib/contact.php:261
 msgid "You do not have permissions to update this contact"
-msgstr "Anda tidak memiliki akses untuk memperbahui kontak ini"
+msgstr ""
 
 #: lib/contact.php:272
 msgid "The backend for this contact does not support updating it"
@@ -405,57 +399,57 @@ msgstr ""
 
 #: lib/contact.php:400 lib/contact.php:417
 msgid "Property not found"
-msgstr "Properti tidak ditemukan"
+msgstr ""
 
 #: lib/contact.php:465
 msgid " Missing IM parameter for: "
-msgstr " Hilangkan parameter IM untuk:"
+msgstr ""
 
 #: lib/contact.php:473
 msgid "Unknown IM: "
-msgstr "IM tidak diketahui"
+msgstr ""
 
 #: lib/contact.php:750
 msgid "{name}'s Birthday"
-msgstr "Ulang tahun {name}"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
-msgstr "Galat membuat buku alamat"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:129
 msgid "Error updating address book"
-msgstr "Galat memperbarui buku alamat"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:157
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr "Anda tidak memiliki izin untuk menghapus buku alamat \"%s\""
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
-msgstr "Galat menghapus buku alamat"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:201
 msgid "Error creating contact."
-msgstr "Galat membuat kontak"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:237
 msgid "Error deleting contact."
-msgstr "Galat menghapus kontak"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
-msgstr "Galat menerima kontak."
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
-msgstr "Galat menyimpan kontak."
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
-msgstr "Galat menghapus kontak dari buku alamat lainnya."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
@@ -464,15 +458,15 @@ msgstr "Galat menghapus kontak dari buku alamat lainnya."
 #: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
-msgstr "Tidak menemukan kontak."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr "Tidak ada data kontak yang diminta."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
-msgstr "Galat menggabungkan kedalam kontak."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
@@ -480,19 +474,19 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
-msgstr "Nama properti belum diatur."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
-msgstr "Properti ceksum tidak diatur."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr "Informasi tentang VCard salah. Silakan memuat ulang halaman."
+msgstr ""
 
 #: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
-msgstr "Galat memperbarui kontak"
+msgstr ""
 
 #: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
@@ -500,94 +494,94 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
-msgstr "Galat mendapatkan foto pengguna"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:87
 #: lib/controller/importcontroller.php:36
 msgid "No file was uploaded. Unknown error"
-msgstr "Tidak ada berkas yang diunggah. Galat tidak dikenal."
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:95
 #: lib/controller/importcontroller.php:44
 msgid "There is no error, the file uploaded with success"
-msgstr "Tidak ada galat, berkas sukses diunggah"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:96
 #: lib/controller/importcontroller.php:45
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "File yang diunggah melampaui directive upload_max_filesize di php.ini"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:97
 #: lib/controller/importcontroller.php:47
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Berkas yang diunggah melampaui direktif MAX_FILE_SIZE yang ditentukan dalam formulir HTML."
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:98
 #: lib/controller/importcontroller.php:48
 msgid "The uploaded file was only partially uploaded"
-msgstr "Berkas hanya diunggah sebagian"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:99
 #: lib/controller/importcontroller.php:49
 msgid "No file was uploaded"
-msgstr "Tidak ada berkas yang diunggah"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:100
 #: lib/controller/importcontroller.php:50
 msgid "Missing a temporary folder"
-msgstr "Folder sementara tidak ada"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:115
 msgid "Couldn't load temporary image: "
-msgstr "Tidak dapat memuat gambar sementara:"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:124
 #: lib/controller/contactphotocontroller.php:162
 msgid "Couldn't save temporary image: "
-msgstr "Tidak dapat menyimpan gambar sementara:"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
-msgstr "Tidak ada foto yang ditambahkan."
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
-msgstr "Berkas tidak ditemukan:"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:203
 #: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
-msgstr "Galat memuat gambar."
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
-msgstr "Gambar sudah dihapus dari cache"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
-msgstr "Galat mmbuat gambar sementara"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
-msgstr "Galat memotong gambar"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
-msgstr "Galat mengubah ukuran gambar"
+msgstr ""
 
 #: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
-msgstr "Galat mendapatkan properti FOTO."
+msgstr ""
 
 #: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
 msgid "No group name given."
-msgstr "Tidak ada nama grup yang diberikan."
+msgstr ""
 
 #: lib/controller/groupcontroller.php:64
 msgid "Error adding group."
-msgstr "Galat menambahkan grup."
+msgstr ""
 
 #: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
@@ -599,7 +593,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
-msgstr "Galat mengubah nama grup"
+msgstr ""
 
 #: lib/controller/groupcontroller.php:175
 #: lib/controller/groupcontroller.php:223
@@ -617,11 +611,11 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:51
 msgid "Failed to write to disk"
-msgstr "Gagal menulis ke disk"
+msgstr ""
 
 #: lib/controller/importcontroller.php:62
 msgid "Not enough storage available"
-msgstr "Ruang penyimpanan tidak mencukupi"
+msgstr ""
 
 #: lib/controller/importcontroller.php:70
 msgid "Attempt to upload blacklisted file:"
@@ -629,15 +623,15 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:92
 msgid "Error uploading contacts to storage."
-msgstr "Galat mengunggah kontak ke penyimpanan"
+msgstr ""
 
 #: lib/controller/importcontroller.php:137
 msgid "Error moving file to imports folder."
-msgstr "Galat memindahkan berkas ke folder impor."
+msgstr ""
 
 #: lib/controller/importcontroller.php:154
 msgid "You do not have permissions to import into this address book."
-msgstr "Anda tidak memiliki izin untuk mengimpor ke buku alamat ini"
+msgstr ""
 
 #: lib/controller/importcontroller.php:162
 msgid "File name missing from request."
@@ -654,188 +648,188 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:215
 msgid "No contacts found in: "
-msgstr "Tidak ada kontak yang ditemukan di:"
+msgstr ""
 
 #: lib/controller/settingscontroller.php:35
 msgid "No key is given."
-msgstr "Tidak ada kunci yang diberikan"
+msgstr ""
 
 #: lib/controller/settingscontroller.php:39
 msgid "No value is given."
-msgstr "Tidak ada nilai yang diberikan"
+msgstr ""
 
 #: lib/controller/settingscontroller.php:50
 msgid "Could not set preference: "
-msgstr "Tidak dapat menetapkan preferensi:"
+msgstr ""
 
 #: lib/searchprovider.php:24
 msgid "Contact"
-msgstr "Kontak"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:160
 #: lib/utils/properties.php:173 lib/utils/properties.php:180
 #: lib/utils/properties.php:195
 msgid "Other"
-msgstr "Lainnya"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
-msgstr "Halaman depan"
+msgstr ""
 
 #: lib/utils/properties.php:71
 msgid "Jabber"
-msgstr "Jabber"
+msgstr ""
 
 #: lib/utils/properties.php:76
 msgid "Internet call"
-msgstr "Panggilan Internet"
+msgstr ""
 
 #: lib/utils/properties.php:81
 msgid "AIM"
-msgstr "AIM"
+msgstr ""
 
 #: lib/utils/properties.php:86
 msgid "MSN"
-msgstr "MSN"
+msgstr ""
 
 #: lib/utils/properties.php:91
 msgid "Twitter"
-msgstr "Twitter"
+msgstr ""
 
 #: lib/utils/properties.php:96
 msgid "GoogleTalk"
-msgstr "GoogleTalk"
+msgstr ""
 
 #: lib/utils/properties.php:101
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #: lib/utils/properties.php:106
 msgid "XMPP"
-msgstr "XMPP"
+msgstr ""
 
 #: lib/utils/properties.php:111
 msgid "ICQ"
-msgstr "ICQ"
+msgstr ""
 
 #: lib/utils/properties.php:116
 msgid "Yahoo"
-msgstr "Yahoo"
+msgstr ""
 
 #: lib/utils/properties.php:121
 msgid "Skype"
-msgstr "Skype"
+msgstr ""
 
 #: lib/utils/properties.php:126
 msgid "QQ"
-msgstr "QQ"
+msgstr ""
 
 #: lib/utils/properties.php:131
 msgid "GaduGadu"
-msgstr "GaduGadu"
+msgstr ""
 
 #: lib/utils/properties.php:158 lib/utils/properties.php:166
 #: lib/utils/properties.php:177 lib/utils/properties.php:194
 msgid "Work"
-msgstr "Kantor"
+msgstr ""
 
 #: lib/utils/properties.php:159 lib/utils/properties.php:164
 #: lib/utils/properties.php:178
 msgid "Home"
-msgstr "Rumah"
+msgstr ""
 
 #: lib/utils/properties.php:165
 msgid "Mobile"
-msgstr "Ponsel"
+msgstr ""
 
 #: lib/utils/properties.php:167
 msgid "Text"
-msgstr "Teks"
+msgstr ""
 
 #: lib/utils/properties.php:168
 msgid "Voice"
-msgstr "Suara"
+msgstr ""
 
 #: lib/utils/properties.php:169
 msgid "Message"
-msgstr "Pesan"
+msgstr ""
 
 #: lib/utils/properties.php:170
 msgid "Fax"
-msgstr "Fax"
+msgstr ""
 
 #: lib/utils/properties.php:171
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #: lib/utils/properties.php:172
 msgid "Pager"
-msgstr "Pager"
+msgstr ""
 
 #: lib/utils/properties.php:179
 msgid "Internet"
-msgstr "Internet"
+msgstr ""
 
 #: lib/utils/properties.php:192
 msgid "Friends"
-msgstr "Teman"
+msgstr ""
 
 #: lib/utils/properties.php:193
 msgid "Family"
-msgstr "Keluarga"
+msgstr ""
 
 #: templates/contacts.php:6
 msgid "New Contact"
-msgstr "Kontak Baru"
+msgstr ""
 
 #: templates/contacts.php:10
 msgid "Group name"
-msgstr "Nama grup"
+msgstr ""
 
 #: templates/contacts.php:10
 msgid "New Group"
-msgstr "Grup Baru"
+msgstr ""
 
 #: templates/contacts.php:19
 msgid "Address books"
-msgstr "Buku alamat"
+msgstr ""
 
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr "Nama tampilan"
+msgstr ""
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
-msgstr "Tambah Buku Alamat"
+msgstr ""
 
 #: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
-msgstr "Pilih berkas..."
+msgstr ""
 
 #: templates/contacts.php:45 templates/contacts.php:65
 msgid "(De-)select all"
-msgstr "Batal pilih semua"
+msgstr ""
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr "Urutkan bardasarkan"
+msgstr ""
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr "Nama Depan-Nama Belakang"
+msgstr ""
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr "Nama Belakang-,Nama Depan"
+msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
-msgstr "Grup"
+msgstr ""
 
 #: templates/contacts.php:55 templates/contacts.php:82
 msgid "Favorite"
-msgstr "Favorit"
+msgstr ""
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
@@ -843,19 +837,19 @@ msgstr ""
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
-msgstr "Jalan pintas keyboard"
+msgstr ""
 
 #: templates/contacts.php:94
 msgid "Navigation"
-msgstr "Navigasi"
+msgstr ""
 
 #: templates/contacts.php:97
 msgid "Next contact in list"
-msgstr "Kontak selanjutnya"
+msgstr ""
 
 #: templates/contacts.php:99
 msgid "Previous contact in list"
-msgstr "Kontak sebelumnya"
+msgstr ""
 
 #: templates/contacts.php:101
 msgid "Expand/collapse current addressbook"
@@ -863,50 +857,50 @@ msgstr ""
 
 #: templates/contacts.php:103
 msgid "Next addressbook"
-msgstr "Buku alamat selanjutnya"
+msgstr ""
 
 #: templates/contacts.php:105
 msgid "Previous addressbook"
-msgstr "Buku alamat sebelumnya"
+msgstr ""
 
 #: templates/contacts.php:109
 msgid "Actions"
-msgstr "Tindakan"
+msgstr ""
 
 #: templates/contacts.php:112
 msgid "Refresh contacts list"
-msgstr "Segarkan daftar kontak"
+msgstr ""
 
 #: templates/contacts.php:114
 msgid "Add new contact"
-msgstr "Tambah kontak baru"
+msgstr ""
 
 #: templates/contacts.php:116
 msgid "Add new addressbook"
-msgstr "Tambah buku alamat baru"
+msgstr ""
 
 #: templates/contacts.php:118
 msgid "Delete current contact"
-msgstr "Hapus kontak tarbaru"
+msgstr ""
 
 #: templates/contacts.php:124
 msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr "<h3>Anda tidak memiliki kontak dalam buku alamat atau buku alamat dinonaktifkan.</h3><p>Tambah kontak baru atau impor kontak yang sudah ada dari berkas VCF.</p>"
+msgstr ""
 
 #: templates/contacts.php:127
 msgid "Add contact"
-msgstr "Tambah kontak"
+msgstr ""
 
 #: templates/contacts.php:174
 msgid "Delete group"
-msgstr "Hapus grup"
+msgstr ""
 
 #: templates/contacts.php:175
 msgid "Rename group"
-msgstr "Ubah nama grup"
+msgstr ""
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
@@ -918,250 +912,250 @@ msgstr ""
 
 #: templates/contacts.php:203
 msgid "Compose mail"
-msgstr "Buat surat"
+msgstr ""
 
 #: templates/contacts.php:225
 msgid "Delete current photo"
-msgstr "Hapus foto saat ini"
+msgstr ""
 
 #: templates/contacts.php:226
 msgid "Edit current photo"
-msgstr "Sunting foto saat ini"
+msgstr ""
 
 #: templates/contacts.php:227
 msgid "Upload new photo"
-msgstr "Unggah foto baru"
+msgstr ""
 
 #: templates/contacts.php:228
 msgid "Select photo from ownCloud"
-msgstr "Pilih foto dari ownCloud"
+msgstr ""
 
 #: templates/contacts.php:233 templates/settings.php:59
 msgid "Name"
-msgstr "Nama"
+msgstr ""
 
 #: templates/contacts.php:239 templates/contacts.php:240
 msgid "First name"
-msgstr "Nama depan"
+msgstr ""
 
 #: templates/contacts.php:244 templates/contacts.php:245
 msgid "Additional names"
-msgstr "Nama tambahan"
+msgstr ""
 
 #: templates/contacts.php:249 templates/contacts.php:250
 msgid "Last name"
-msgstr "Nama belakang"
+msgstr ""
 
 #: templates/contacts.php:257
 msgid "Select groups"
-msgstr "Pilih grup"
+msgstr ""
 
 #: templates/contacts.php:260
 msgid "Select address book"
-msgstr "Pilih buku alamat"
+msgstr ""
 
 #: templates/contacts.php:264 templates/contacts.php:328
 msgid "Nickname"
-msgstr "Nama panggilan"
+msgstr ""
 
 #: templates/contacts.php:267
 msgid "Enter nickname"
-msgstr "Masukkan nama panggilan"
+msgstr ""
 
 #: templates/contacts.php:271 templates/contacts.php:327
 msgid "Title"
-msgstr "Judul"
+msgstr ""
 
 #: templates/contacts.php:274
 msgid "Enter title"
-msgstr "Masukkan judul"
+msgstr ""
 
 #: templates/contacts.php:278 templates/contacts.php:326
 msgid "Organization"
-msgstr "Organisasi"
+msgstr ""
 
 #: templates/contacts.php:281
 msgid "Enter organization"
-msgstr "Masukkan nama organisasi"
+msgstr ""
 
 #: templates/contacts.php:285 templates/contacts.php:329
 msgid "Birthday"
-msgstr "Tanggal lahir"
+msgstr ""
 
 #: templates/contacts.php:316
 msgid "Notes go here..."
-msgstr "Beri catatan disini..."
+msgstr ""
 
 #: templates/contacts.php:323
 msgid "Export as VCF"
-msgstr "Ekspor sebagai VCF"
+msgstr ""
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr "Tambah kolom..."
+msgstr ""
 
 #: templates/contacts.php:330
 msgid "Phone"
-msgstr "Telpon"
+msgstr ""
 
 #: templates/contacts.php:331
 msgid "Email"
-msgstr "Surel"
+msgstr ""
 
 #: templates/contacts.php:332
 msgid "Instant Messaging"
-msgstr "Perpesanan Instan"
+msgstr ""
 
 #: templates/contacts.php:333
 msgid "Address"
-msgstr "Alamat"
+msgstr ""
 
 #: templates/contacts.php:334
 msgid "Note"
-msgstr "Catatan"
+msgstr ""
 
 #: templates/contacts.php:335
 msgid "Web site"
-msgstr "Situs web"
+msgstr ""
 
 #: templates/contacts.php:337
 msgid "Delete contact"
-msgstr "Hapus kontak"
+msgstr ""
 
 #: templates/contacts.php:351 templates/contacts.php:366
 #: templates/contacts.php:380 templates/contacts.php:405
 #: templates/contacts.php:443
 msgid "Preferred"
-msgstr "Disarankan"
+msgstr ""
 
 #: templates/contacts.php:353
 msgid "Please specify a valid email address."
-msgstr "Silakan tentukan alamat email yang valid."
+msgstr ""
 
 #: templates/contacts.php:353
 msgid "someone@example.com"
-msgstr "seseorang@contoh.com"
+msgstr ""
 
 #: templates/contacts.php:355
 msgid "Mail to address"
-msgstr "Surel ke alamat"
+msgstr ""
 
 #: templates/contacts.php:356
 msgid "Delete email address"
-msgstr "Hapus alamat surel"
+msgstr ""
 
 #: templates/contacts.php:368
 msgid "Enter phone number"
-msgstr "Masukkan nomor telpon"
+msgstr ""
 
 #: templates/contacts.php:370
 msgid "Delete phone number"
-msgstr "Hapus nomor telpon"
+msgstr ""
 
 #: templates/contacts.php:384
 msgid "Go to web site"
-msgstr "Pergi ke situs web"
+msgstr ""
 
 #: templates/contacts.php:385
 msgid "Delete URL"
-msgstr "Hapus Tautan"
+msgstr ""
 
 #: templates/contacts.php:396
 msgid "View on map"
-msgstr "Lihat pada peta"
+msgstr ""
 
 #: templates/contacts.php:397
 msgid "Delete address"
-msgstr "Hapus alamat"
+msgstr ""
 
 #: templates/contacts.php:410
 msgid "1600 Pennsylvania Avenue, NW"
-msgstr "1600 Pennsylvania Avenue, NW"
+msgstr ""
 
 #: templates/contacts.php:411
 msgid "Street address"
-msgstr "Alamat jalan"
+msgstr ""
 
 #: templates/contacts.php:415
 msgid "20500"
-msgstr "20500"
+msgstr ""
 
 #: templates/contacts.php:416
 msgid "Postal code"
-msgstr "Kode pos"
+msgstr ""
 
 #: templates/contacts.php:418
 msgid "Washington, DC"
-msgstr "Washington, DC"
+msgstr ""
 
 #: templates/contacts.php:419
 msgid "City"
-msgstr "Kota"
+msgstr ""
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr "District of Columbia"
+msgstr ""
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr "Provinsi"
+msgstr ""
 
 #: templates/contacts.php:428
 msgid "USA"
-msgstr "USA"
+msgstr ""
 
 #: templates/contacts.php:429
 msgid "Country"
-msgstr "Negara"
+msgstr ""
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
-msgstr "Perpesanan Instan"
+msgstr ""
 
 #: templates/contacts.php:453
 msgid "Delete IM"
-msgstr "Hapus IM"
+msgstr ""
 
 #: templates/contacts.php:461
 msgid "Active"
-msgstr "Aktif"
+msgstr ""
 
 #: templates/contacts.php:464 templates/settings.php:36
 msgid "Share"
-msgstr "Bagikan"
+msgstr ""
 
 #: templates/contacts.php:465
 msgid "Export"
-msgstr "Ekspor"
+msgstr ""
 
 #: templates/contacts.php:466
 msgid "CardDAV link"
-msgstr "Tautan CardDAV"
+msgstr ""
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr "CardDAV menyelaraskan alamat"
+msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "lebih lanjut"
+msgstr ""
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr "Alamat utama (Kontak dsb)"
+msgstr ""
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr "iOS/OS X"
+msgstr ""
 
 #: templates/settings.php:11
 msgid "Addressbooks"
-msgstr "Buku alamat"
+msgstr ""
 
 #: templates/settings.php:58
 msgid "New Address Book"
-msgstr "Buku Alamat Baru"
+msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr "Penjelasan"
+msgstr ""

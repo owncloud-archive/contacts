@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-04 18:12-0500\n"
-"PO-Revision-Date: 2013-12-02 20:40+0000\n"
+"POT-Creation-Date: 2013-12-11 10:37-0500\n"
+"PO-Revision-Date: 2013-12-08 20:41+0000\n"
 "Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -188,7 +188,7 @@ msgstr "# gruppi"
 
 #: js/contacts.js:1125
 msgid "Error parsing birthday {bday}: {error}"
-msgstr "Errore durante l'elaborazione della data di nascita {bday}: {error}"
+msgstr "Errore durante l'elaborazione del compleanno {bday}: {error}"
 
 #: js/contacts.js:2162
 msgid ""
@@ -421,7 +421,7 @@ msgstr "IM sconosciuto:"
 
 #: lib/contact.php:750
 msgid "{name}'s Birthday"
-msgstr "Data di nascita di {name}"
+msgstr "Compleanno di {name}"
 
 #: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
