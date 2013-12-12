@@ -15,7 +15,6 @@
 	width: 12px; height: 12px; 
 	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; 
 }
-#contact textarea { font-family: inherit; }
 
 #contact ::-moz-placeholder, #contact input:-moz-placeholder, #contact input[placeholder], #contact input:placeholder, #contact input:-ms-input-placeholder, #contact input::-webkit-input-placeholder, #contact input:-moz-placeholder {
 	color: #bbb; 
@@ -25,15 +24,23 @@
 #contact input:not([type=checkbox]), #contact select:not(.button), #contact textarea {
 	float: left;
 }
+#contact .label {
+	float: right !important;
+}
+#contact .parameter {
+	float: right !important;
+}
 #contact input[type="button"]:hover, #contact select:hover, #contact select:focus, #contact select:active, #contact input[type="button"]:focus, #contact .button:hover, button:hover { background-color:#fff; color:#333; }
 
 #contact fieldset, #contact div, #contact span, #contact section {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
 }
 #contact fieldset.editor {
-	padding:4px;
-	border: 1px solid #1d2d44; 
-	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; outline:none; 
+	padding: 0;
+	margin-left: 110px;
+}
+#contact fieldset.adr {
+	margin-left: 0;
 }
 #contact input:invalid, #contact input:hover:not([type=checkbox]), #contact input:active:not([type=checkbox]), #contact input:focus:not([type=checkbox]), #contact input.active, #contact textarea:focus, #contact textarea {
 	float: left;
@@ -119,14 +126,6 @@
 	display: none;
 }
 
-/* Controls */
-.new {
-	padding: 0 !important;
-}
-.new a {
-	padding: 14px 10px;
-	line-height: 34px;
-}
 .actions {
 	padding-left: 4px;
 }
@@ -148,12 +147,15 @@
 #firstrun #selections { font-size:0.8em; margin: 2em auto auto auto; clear: both; }
 
 #contact textarea {
-	min-height: 5em; width: 300px;
-	margin: 0 !important; padding: 0 !important; outline: 0 !important;
+	margin-left: 104px;
+	min-height: 5em;
+	min-width: 307px;
+	font-family: inherit;
 }
 #contact footer {
+	margin-bottom: 3px;
 	float: left;
-	margin-left: 240px;
+	margin-left: 100px;
 }
 #contact footer > * {
 	display: inline-block;
@@ -161,7 +163,7 @@
 	opacity: 1;
 }
 
-#contact input[type=checkbox] { margin: 3px; padding:1px; vertical-align: bottom; float: left; }
+#contact input[type=checkbox] { margin-top: 11px; margin-right: 6px; padding:1px; vertical-align: bottom; float: left; }
 /*dl.form { display: block; width: auto; margin: 0; padding: 0; cursor: normal; }*/
 .form dt { display: inline-block; clear: left; float: left; width: 7em; margin: 0; padding: 0.8em 0.5em 0 0; text-align:right; text-overflow:ellipsis; o-text-overflow: ellipsis; vertical-align: text-bottom; color: #bbb;/* white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap;*/ }
 .form dd { display: inline-block; clear: right; float: left; margin: 0; padding: 0; white-space: nowrap; vertical-align: text-bottom; }
@@ -193,7 +195,8 @@
 }
 .ui-multiselect-checkboxes label > span {color: #333 !important; font-size: 100% !important; }
 .ui-multiselect-checkboxes input[type=checkbox] { margin: 3px !important; }
-button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
+button.ui-multiselect { padding: 6px 0 0 6px; height: 30px; font-weight: normal; } /* No idea why this is needed? */
+span.ui-icon { margin: 1px 3px 10px 0px; }
 
 #content .multiselectoptions > li > * { 
 	-webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; 
@@ -301,27 +304,29 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 	width: 100px;
 	padding-right: 7px;
 	margin-top: 8px;
+	margin-bottom: 8px;
 	font-weight: bold;
 	text-align: right;
 }
-.singleproperties { margin-left: 195px; float: left; }
-.singleproperties .fullname { font-weight:bold; width: 225px; }
+.singleproperties { float: left; }
+.singleproperties .fullname { width: 225px; }
+.singleproperties input { width: 225px; }
+.singleproperties dd { float:left; }
+.singleproperties dd .listactions a { margin-top: 10px; }
 .singleproperties .n.editor { width: 270px; padding: 3px; }
-.singleproperties .n.editor input { width: 95%; }
-.singleproperties .propertycontainer input.value { font-weight: bold; }
+.singleproperties .n.editor input { width: 215px; }
 .singleproperties .propertycontainer input.value.new { border: 3px solid #1d2d44;}
 .singleproperties .propertycontainer input.value.error { border: 3px solid red;}
-.singleproperties .propertycontainer .action { 
-	float: left; 
-	width: 20px; height: 20px;
+.singleproperties .propertycontainer .action {
 	opacity: 0;
 }
-.singleproperties .groupscontainer { display: block; }
+.singleproperties .groupscontainer { float:left; display: inline; }
 .singleproperties .propertycontainer:hover .action { opacity: 1; }
 .singleproperties dl { width: 280px;}
 .singleproperties > a { margin-top: 10px !important; }
 
 .parameters {
+	width: 100px;
 	float: left; 
 	text-align: right; 
 	box-sizing: border-box;
@@ -337,7 +342,7 @@ div.url li .parameters .label, div.impp li .parameters .label { margin-top: 6px 
 div.tel li input, div.url li input { margin-left: 3px; font-size: 1em; }
 div.impp li .select_wrapper select { margin-top: 6px; }
 
-ul.propertylist { margin-left: 195px; width: 450px; line-height: 34px; }
+ul.propertylist { width: 450px; line-height: 34px; }
 .propertylist li.propertycontainer { white-space: nowrap; min-width: 38em; display: block; clear: both; }
 .propertylist li.propertycontainer > .listactions { 
 	display: inline-block; 
@@ -354,9 +359,8 @@ ul.propertylist { margin-left: 195px; width: 450px; line-height: 34px; }
 .propertylist { float: left; }
 /*.propertylist li > a { display: block; }}*/
 .propertylist li > input[type=checkbox],input[type="radio"] { display: inline-block; }
-.propertylist input.value:not([type=checkbox]) { width: 225px; display: inline-block; font-weight: bold; }
-.propertylist input.value:not([type=checkbox]).new { border: 3px solid #1d2d44;}
-.propertylist input.value:not([type=checkbox]).error { border: 3px solid red;}
+.propertylist input.value:not([type=checkbox]) { width: 225px; display: inline-block; }
+.propertylist input.value:not([type=checkbox]).error { border: 2px solid red;}
 .propertylist li > select { float: left; max-width: 8em; }
 .select_wrapper { float: left; overflow: hidden; color: #bbb; font-size: 0.8em; }
 .select_wrapper select { float: left; overflow: hidden; text-overflow: ellipsis; color: #bbb; width: 8em; }
@@ -495,8 +499,9 @@ dt[data-element="org"] { margin-top: 4px; }
 	overflow: hidden;
 }
 input:not([type=checkbox]).propertytype { 
-	float: left; font-size: .8em; 
-	max-width: 100px; 
+	float: right;
+	font-size: .8em; 
+	max-width: 80px; 
 	text-align: right; 
 	margin: 0;
 }
@@ -513,9 +518,9 @@ input[type=checkbox].propertytype { width: 10px; }
 #photowrapper { 
 	position: absolute;
 	float: left; 
-	width: 170px; height: 200px;
-	margin-top: 5px;
-	margin-left: 10px;
+	width: 180px; height: 180px;
+	margin-top: 10px;
+	margin-left: -145px;
 }
 
 #photowrapper .favorite {
@@ -580,7 +585,15 @@ input[type=checkbox].propertytype { width: 10px; }
 }
 
 .display .meta { text-align: right; margin-left: -30px; }
-.display .adr { cursor: pointer; margin-left: 10px; }
+.display .adr {
+	margin: .3em;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	border: 1px solid rgb(221, 221, 221);
+	border-radius: 3px;
+	line-height: 28px;
+}
 .adr.editor {
 	width: 20em;
 	margin-left: 120px;
@@ -592,13 +605,9 @@ input[type=checkbox].propertytype { width: 10px; }
 	columns: 1;
 }
 fieldset.adr ul li input.label { margin-top: -4px !important; }
-.adr.editor input.value { border: none; }
-.adr.editor input.value:hover { border: none; }
 .adr.editor input.value.street, ul.adr.edit input.value.country, ul.adr.edit input.value.region { width: 19em;}
 .adr.editor input.value.zip { width: 5em; }
-.adr.editor input.value.city { width: 10em; margin:4px; }
-
-.note { margin-left: 120px; }
+.adr.editor input.value.city { width: 153px; margin:4px; }
 
 /* contact list */
 
@@ -722,14 +731,23 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	z-index: 200;
 }
 #contact {
-	padding-top: 5px;
+	padding-left: 155px;
 	max-width: 700px;
 	background-color: white;
 	color: #333333;
 	line-height: normal;
 }
 #contact > ul {
-	min-height: 150px;
+	min-height: 146px;
+	min-width: 530px;
+}
+#contact h3 {
+	margin-left: 105px;
+	margin-top: 7px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 14px;
 }
 #contact .arrow {
 	border-bottom: 20px solid white; 
@@ -747,15 +765,10 @@ tbody tr.contact.active, tbody tr.contact:hover {
 
 #contact figure img { -moz-border-radius:.3em; -webkit-border-radius:.3em; border-radius:.3em; border: thin solid #bbb; margin: 0.3em; background-image: url('%webroot%/core/img/loading.gif'); -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; opacity: 1; }
 
-#contact .adr li {
-	padding-bottom: 3px;
-	padding-left: 86px;
-}
-
-#contact span.adr { 
-	font-weight: bold;
+#contact span.adr {
 	float: left; 
-	width: 232px;
+	width: 225px;
+	height: 30px;
 	overflow: hidden; text-overflow: ellipsis; text-align: bottom; white-space: nowrap; 
 }
 #contact span.adr:hover { /*overflow: inherit;*/ /*white-space: pre-wrap;*/ }

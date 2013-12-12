@@ -260,6 +260,8 @@ OC.Contacts = OC.Contacts || {};
 			case 'NOTE':
 				$elem = this.$fullelem.find('[data-element="' + name.toLowerCase() + '"]');
 				$elem.addClass('new').show();
+				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$list.show();
 				$elem.find('input:not(:checkbox),textarea').first().focus();
 				$option.prop('disabled', true);
 				break;
@@ -326,9 +328,16 @@ OC.Contacts = OC.Contacts || {};
 			params['checksum'] = this.checksumFor(obj);
 			if(params['checksum'] === 'new' && $.trim(this.valueFor(obj)) === '') {
 				// If there's only one property of this type enable setting as preferred.
-				if(this.data[element].length === 1) {
+				if((undefined !== this.data[element] && this.data[element].length) && (this.data[element].length === 1)) {
 					var selector = 'li[data-element="' + element.toLowerCase() + '"]';
 					this.$fullelem.find(selector).find('input.parameter[value="PREF"]').hide();
+				}
+				// Hide propertygroup if there are no properties in it
+				if(!(undefined !== this.data[element] && this.data[element].length)) {
+					$(obj).parent().parent().parent().hide();
+				}
+				else if(this.data[element].length === 0) {
+					$(obj).parent().parent().parent().hide();
 				}
 				$container.remove();
 				return;
@@ -358,9 +367,16 @@ OC.Contacts = OC.Contacts || {};
 						}
 					}
 					// If there's only one property of this type enable setting as preferred.
-					if(self.data[element].length === 1) {
+					if((undefined !== self.data[element] && self.data[element].length) && (self.data[element].length === 1)) {
 						var selector = 'li[data-element="' + element.toLowerCase() + '"]';
 						self.$fullelem.find(selector).find('input.parameter[value="PREF"]').hide();
+					}
+					// Hide propertygroup if there are no properties in it
+					if(!(undefined !== self.data[element] && self.data[element].length)) {
+						$(obj).parent().parent().parent().hide();
+					}
+					else if(self.data[element].length === 0) {
+						$(obj).parent().parent().parent().hide();
 					}
 					$container.remove();
 				} else {
@@ -1173,6 +1189,11 @@ OC.Contacts = OC.Contacts || {};
 			$(this).val('');
 		});
 		var $fullname = this.$fullelem.find('.fullname');
+		this.$fullelem.find('.singleproperties').on('mouseenter', function() {
+			$fullname.next('.edit').css('opacity', '1');
+		}).on('mouseleave', function() {
+			$fullname.next('.edit').css('opacity', '0');
+		});
 		$fullname.next('.edit').on('click keydown', function(event) {
 			//console.log('edit name', event);
 			$('.tipsy').remove();
@@ -1293,7 +1314,7 @@ OC.Contacts = OC.Contacts || {};
 		$.each(this.multi_properties, function(idx, name) {
 			if(self.data[name]) {
 				var $list = self.$fullelem.find('ul.' + name.toLowerCase());
-				$list.show();
+				$list.removeClass('hidden');
 				for(var p in self.data[name]) {
 					if(typeof self.data[name][p] === 'object') {
 						var property = self.data[name][p];
@@ -1358,7 +1379,7 @@ OC.Contacts = OC.Contacts || {};
 							}
 							else if(param.toUpperCase() == 'X-SERVICE-TYPE') {
 								//console.log('setting', $property.find('select.impp'), 'to', property.parameters[param].toLowerCase());
-								$property.find('select.impp').val(property.parameters[param].toLowerCase());
+								$property.find('select.rtl').val(property.parameters[param].toLowerCase());
 							}
 						}
 						var $meta = $property.find('.meta');
@@ -1452,7 +1473,7 @@ OC.Contacts = OC.Contacts || {};
 			var bodyListener = function(e) {
 				if($editor.find($(e.target)).length == 0) {
 					$editor.toggle('blind');
-					$viewer.slideDown(400, function() {
+					$viewer.slideDown(550, function() {
 						var input = $editor.find('input').first();
 						var val = self.valueFor(input);
 						var params = self.parametersFor(input, true);
@@ -1463,7 +1484,7 @@ OC.Contacts = OC.Contacts || {};
 					});
 				}
 			};
-			$viewer.slideUp();
+			$viewer.slideUp(100);
 			$editor.toggle('blind', function() {
 				$('body').bind('click', bodyListener);
 			});
