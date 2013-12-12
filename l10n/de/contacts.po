@@ -39,9 +39,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-04 18:12-0500\n"
-"PO-Revision-Date: 2013-12-02 20:40+0000\n"
-"Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
+"POT-Creation-Date: 2013-12-07 20:23-0500\n"
+"PO-Revision-Date: 2013-12-06 10:30+0000\n"
+"Last-Translator: Mirodin <blobbyjj@ymail.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/owncloud/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -302,7 +302,7 @@ msgstr "Importvorlage konnte nicht geladen werden"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr "Kontakte werden importiert"
+msgstr "Kontakte importieren"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -920,7 +920,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr "<h3>Du hast keine Kontakte in deinem Adressbuch oder dein Adressbuch ist deaktiviert.</h3><p>Füge einen neuen Kontakt hinzu oder importiere existierende Kontakte aus einer VCF-Datei.</p>"
+msgstr "<h3>Du hast keine Kontakte in Deinem Adressbuch oder Dein Adressbuch ist deaktiviert.</h3><p>Füge einen neuen Kontakt hinzu oder importiere existierende Kontakte aus einer VCF-Datei.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
