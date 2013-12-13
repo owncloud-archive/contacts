@@ -40,6 +40,7 @@ class ImportController extends Controller {
 		$file=$request->files['file'];
 
 		if($file['error'] !== UPLOAD_ERR_OK) {
+			$error = $file['error'];
 			$errors = array(
 				UPLOAD_ERR_OK			=> App::$l10n->t("There is no error, the file uploaded with success"),
 				UPLOAD_ERR_INI_SIZE		=> App::$l10n->t("The uploaded file exceeds the upload_max_filesize directive in php.ini")
