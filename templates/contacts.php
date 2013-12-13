@@ -64,7 +64,7 @@
 			<thead>
 				<tr id="contactsHeader" class="hidden-on-load">
 					<td class="name">
-						<input type="checkbox" title="<?php p($l->t('(De-)select all')); ?>" />
+						<input type="checkbox" class="toggle" title="<?php p($l->t('(De-)select all')); ?>" />
 						<select class="action sort permanent" name="sort" title="<?php p($l->t('Sort order')); ?>">
 							<option value="fn"><?php p($l->t('Display name')); ?></option>
 							<option value="fl"><?php p($l->t('First- Lastname')); ?></option>
@@ -192,12 +192,12 @@
 			<input type="checkbox" name="id" value="{id}" /><a href="#{id}" class="nametext">{name}</a>
 		</td>
 		<td class="email">
-			<a href="mailto:{email}">{email}</a>
+			<a href="mailto:{email}">{email}&nbsp;</a>
 			<a class="svg mailto hidden" title="<?php p($l->t('Compose mail')); ?>"></a>
 		</td>
-		<td class="tel">{tel}</td>
-		<td class="adr">{adr}</td>
-		<td class="categories">{categories}</td>
+		<td class="tel">{tel}&nbsp;</td>
+		<td class="adr">{adr}&nbsp;</td>
+		<td class="categories">{categories}&nbsp;</td>
 	</tr>
 </script>
 
@@ -211,6 +211,12 @@
 	<tr><td colspan="6">
 	<form action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'index.php')); ?>" method="post" enctype="multipart/form-data">
 	<section id="contact" data-id="{id}">
+	<header>
+		<a class="delete text tooltipped downwards" title="<?php p($l->t('Delete')); ?>">
+			<?php p($l->t('Delete')); ?>
+			<img class="svg" alt="<?php p($l->t('Delete'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/delete.svg")); ?>" />
+		</a>
+	</header>
 	<ul>
 		<li>
 			<div id="photowrapper" class="propertycontainer" data-element="photo">
@@ -334,9 +340,6 @@
 		</li>
 	</ul>
 	<footer>
-		<button class="cancel text tooltipped downwards" title="<?php p($l->t('Cancel')); ?>"><?php p($l->t('Cancel')); ?></button>
-		<button class="close text tooltipped downwards" title="<?php p($l->t('Close')); ?>"><?php p($l->t('Close')); ?></button>
-		<button class="export action text tooltipped downwards" title="<?php p($l->t('Export as VCF')); ?>"><?php p($l->t('Download')); ?></button>
 		<select class="add action text button" id="addproperty">
 			<option value=""><?php p($l->t('Add field...')); ?></option>
 			<option value="ORG"><?php p($l->t('Organization')); ?></option>
@@ -350,7 +353,15 @@
 			<option value="NOTE"><?php p($l->t('Note')); ?></option>
 			<option value="URL"><?php p($l->t('Web site')); ?></option>
 		</select>
-		<button class="delete action text float right tooltipped downwards" title="<?php p($l->t('Delete contact')); ?>"><?php p($l->t('Delete')); ?></button>
+		<button class="cancel text tooltipped downwards" title="<?php p($l->t('Cancel')); ?>"><?php p($l->t('Cancel')); ?></button>
+		<a class="close text tooltipped downwards" title="<?php p($l->t('Close')); ?>">
+			<?php p($l->t('Close')); ?>
+			<img class="svg" alt="<?php p($l->t('Close'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/checkmark.svg")); ?>" />
+		</a>
+		<a class="export text tooltipped downwards" title="<?php p($l->t('Download')); ?>">
+			<?php p($l->t('Download')); ?>
+			<img class="svg" alt="<?php p($l->t('Download'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/download.svg")); ?>" />
+		</a>
 	</footer>
 	</section>
 	</form>

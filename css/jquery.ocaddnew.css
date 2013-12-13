@@ -21,17 +21,17 @@
 
 .oc-addnew input[type=text] {
 	width: 200px;
-	margin: 0px;
-	border-width: 0px;
+	margin: 0;
+	border-width: 0;
 	height: 34px;
 }
 .oc-addnew button {
 	height: 34px;
-	margin: 0px;
-	border-width: 0px;
+	margin: 0;
+	border-width: 0;
 }
 .oc-addnew button:hover {
 	height: 34px;
-	margin: 0px;
-	border-width: 0px;
+	margin: 0;
+	border-width: 0;
 }

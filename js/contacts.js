@@ -304,7 +304,7 @@ OC.Contacts = OC.Contacts || {};
 			} else if(this.multi_properties.indexOf(name) !== -1) {
 				$elem.find('input.parameter[value="PREF"]').hide();
 			}
-			$elem.find('select.type[name="parameters[TYPE][]"]')
+			$elem.find('select.type[name="parameters[TYPE][]"], select.type[name="parameters[X-SERVICE-TYPE]"]')
 				.combobox({
 					singleclick: true,
 					classes: ['propertytype', 'float', 'label'],
@@ -1066,7 +1066,8 @@ OC.Contacts = OC.Contacts || {};
 				header: false,
 				selectedList: 3,
 				noneSelectedText: self.$groupSelect.attr('title'),
-				selectedText: t('contacts', '# groups')
+				selectedText: t('contacts', '# groups'),
+				minWidth: 300
 			});
 			self.$groupSelect.bind('multiselectclick', function(event, ui) {
 				var action = ui.checked ? 'addtogroup' : 'removefromgroup';
@@ -1163,6 +1164,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 		this.$fullelem = this.$fullTemplate.octemplate(values).data('contactobject', this);
 
+		this.$header = this.$fullelem.find('header');
 		this.$footer = this.$fullelem.find('footer');
 
 		this.$fullelem.find('.tooltipped.rightwards.onfocus').tipsy({trigger: 'focus', gravity: 'w'});
@@ -1229,7 +1231,7 @@ OC.Contacts = OC.Contacts || {};
 			self.handleURL(event.target);
 		});
 
-		this.$footer.on('click keydown', 'button', function(event) {
+		var buttonHandler =  function(event) {
 			$('.tipsy').remove();
 			if(wrongKey(event)) {
 				return;
@@ -1244,7 +1246,10 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('request.contact.delete', self.metaData());
 			}
 			return false;
-		});
+		};
+		this.$header.on('click keydown', 'button, a', buttonHandler);
+		this.$footer.on('click keydown', 'button, a', buttonHandler);
+		
 		this.$fullelem.on('keypress', '.value,.parameter', function(event) {
 			if(event.keyCode === 13 && $(this).is('input')) {
 				$(this).trigger('change');
@@ -1389,7 +1394,7 @@ OC.Contacts = OC.Contacts || {};
 						if(self.metadata.owner === OC.currentUser
 								|| self.metadata.permissions & OC.PERMISSION_UPDATE
 								|| self.metadata.permissions & OC.PERMISSION_DELETE) {
-							$property.find('select.type[name="parameters[TYPE][]"]')
+							$property.find('select.type[name="parameters[TYPE][]"], select.type[name="parameters[X-SERVICE-TYPE]"]')
 								.combobox({
 									singleclick: true,
 									classes: ['propertytype', 'float', 'label']

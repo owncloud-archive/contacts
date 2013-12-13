@@ -24,6 +24,9 @@
 #contact input:not([type=checkbox]), #contact select:not(.button), #contact textarea {
 	float: left;
 }
+#contact #contact select {
+	width: 250px;
+}
 #contact .label {
 	float: right !important;
 }
@@ -149,15 +152,48 @@
 #contact textarea {
 	margin-left: 104px;
 	min-height: 5em;
-	min-width: 307px;
+	min-width: 300px;
 	font-family: inherit;
 }
-#contact footer {
-	margin-bottom: 3px;
-	float: left;
-	margin-left: 100px;
+#contact header {
+	margin-top: 8px;
 }
-#contact footer > * {
+#contact footer {
+	float: left;
+	width: 100%;
+	margin-bottom: 8px;
+	padding-left: 100px;
+}
+#contact footer .action {
+	height: 30px;
+}
+#contact footer .add {
+	width: 300px;
+}
+#contact footer .close, #contact footer .export, #contact header .delete {
+	float: right;
+	background-image: none;
+}
+#contact footer a, #contact header a {
+	float: right;
+	opacity: .5;
+	font-weight: bold;
+}
+#contact footer a {
+	padding: 8px 17px 8px 0;
+}
+#contact header a {
+	padding: 8px 17px 0 0;
+}
+#contact footer a:hover, #contact header a:hover {
+	opacity: 1;
+}
+#contact footer .close img, #contact footer .export img, #contact header .delete img {
+	vertical-align: middle;
+	margin-bottom: 2px;
+	margin-bottom: 2px;
+}
+#contact footer > *, #contact header > * {
 	display: inline-block;
 	float: left;
 	opacity: 1;
@@ -195,7 +231,7 @@
 }
 .ui-multiselect-checkboxes label > span {color: #333 !important; font-size: 100% !important; }
 .ui-multiselect-checkboxes input[type=checkbox] { margin: 3px !important; }
-button.ui-multiselect { padding: 6px 0 0 6px; height: 30px; font-weight: normal; } /* No idea why this is needed? */
+button.ui-multiselect { width: 250px; padding: 6px 0 0 6px; height: 30px; font-weight: normal; } /* No idea why this is needed? */
 span.ui-icon { margin: 1px 3px 10px 0px; }
 
 #content .multiselectoptions > li > * { 
@@ -308,9 +344,9 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	font-weight: bold;
 	text-align: right;
 }
-.singleproperties { float: left; }
-.singleproperties .fullname { width: 225px; font-size: 20px; }
-.singleproperties input { width: 225px; }
+.singleproperties { float: left; width: 100%; }
+.singleproperties .fullname { width: 300px; font-size: 20px; }
+.singleproperties input { width: 300px; }
 .singleproperties dd { float:left; }
 .singleproperties dd .listactions a { margin-top: 10px; }
 .singleproperties .n.editor { width: 270px; padding: 3px; }
@@ -332,8 +368,16 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	box-sizing: border-box;
 	display: inline-block;
 }
-.parameters [data-parameter="TYPE"] {
-	font-size: initial;
+.parameters select {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+	background-color: white;
+}
+.parameters input[type=text] {
+	padding-left: 0;
 }
 
 div.email li .parameters .label, div.url li .parameters .label { margin-top: 7px !important; }
@@ -342,7 +386,7 @@ div.url li .parameters .label, div.impp li .parameters .label { margin-top: 6px 
 div.tel li input, div.url li input { margin-left: 3px; font-size: 1em; }
 div.impp li .select_wrapper select { margin-top: 6px; }
 
-ul.propertylist { width: 450px; line-height: 34px; }
+ul.propertylist { width: 100%; line-height: 34px; }
 .propertylist li.propertycontainer { white-space: nowrap; min-width: 38em; display: block; clear: both; }
 .propertylist li.propertycontainer > .listactions { 
 	display: inline-block; 
@@ -359,7 +403,7 @@ ul.propertylist { width: 450px; line-height: 34px; }
 .propertylist { float: left; }
 /*.propertylist li > a { display: block; }}*/
 .propertylist li > input[type=checkbox],input[type="radio"] { display: inline-block; }
-.propertylist input.value:not([type=checkbox]) { width: 225px; display: inline-block; }
+.propertylist input.value:not([type=checkbox]) { width: 300px; display: inline-block; }
 .propertylist input.value:not([type=checkbox]).error { border: 2px solid red;}
 .propertylist li > select { float: left; max-width: 8em; }
 .select_wrapper { float: left; overflow: hidden; color: #bbb; font-size: 0.8em; }
@@ -389,6 +433,12 @@ dt[data-element="org"] { margin-top: 4px; }
 .typelist[type="button"] { float: left; max-width: 8em; border: 0; background-color: #fff; color: #bbb; box-shadow: none; } /* for multiselect */
 .typelist[type="button"]:hover { color: #777; } /* for multiselect */
 .addresslist { clear: both; font-weight: bold; }
+
+/* Overrule default jQuery multiselect style */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background: 0;
+	border-radius: 3px;
+}
 
 /* Help section */
 
@@ -571,7 +621,7 @@ input[type=checkbox].propertytype { width: 10px; }
 
 /* Contact layout */
 
-#contact > ul > li { white-space: nowrap; }
+#contact > ul > li { white-space: nowrap; margin-right: 100px; }
 #contact > ul.propertylist {
 	font-size: 10px;
 	/*display: table;
@@ -732,7 +782,6 @@ tbody tr.contact.active, tbody tr.contact:hover {
 }
 #contact {
 	padding-left: 155px;
-	max-width: 700px;
 	background-color: white;
 	color: #333333;
 	line-height: normal;
@@ -740,6 +789,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 #contact > ul {
 	min-height: 146px;
 	min-width: 530px;
+	max-width: 700px;
 }
 #contact h3 {
 	margin-left: 105px;
@@ -766,7 +816,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 
 #contact span.adr {
 	float: left; 
-	width: 225px;
+	width: 300px;
 	height: 30px;
 	overflow: hidden; text-overflow: ellipsis; text-align: bottom; white-space: nowrap; 
 }
