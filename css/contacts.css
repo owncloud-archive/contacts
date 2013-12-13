@@ -24,9 +24,6 @@
 #contact input:not([type=checkbox]), #contact select:not(.button), #contact textarea {
 	float: left;
 }
-#contact #contact select {
-	width: 250px;
-}
 #contact .label {
 	float: right !important;
 }
