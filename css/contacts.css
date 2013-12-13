@@ -309,7 +309,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	text-align: right;
 }
 .singleproperties { float: left; }
-.singleproperties .fullname { width: 225px; }
+.singleproperties .fullname { width: 225px; font-size: 20px; }
 .singleproperties input { width: 225px; }
 .singleproperties dd { float:left; }
 .singleproperties dd .listactions a { margin-top: 10px; }
@@ -746,7 +746,6 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	margin-top: 7px;
 	margin-bottom: 0px;
 	font-size: 12px;
-	font-weight: bold;
 	line-height: 14px;
 }
 #contact .arrow {
