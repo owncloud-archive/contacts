@@ -194,12 +194,12 @@
 			<a href="#{id}" class="nametext">{name}</a>
 		</td>
 		<td class="email">
-			<a href="mailto:{email}">{email}&nbsp;</a>
+			<a href="mailto:{email}">{email}</a>
 			<a class="svg mailto hidden" title="<?php p($l->t('Compose mail')); ?>"></a>
 		</td>
-		<td class="tel">{tel}&nbsp;</td>
-		<td class="adr">{adr}&nbsp;</td>
-		<td class="categories">{categories}&nbsp;</td>
+		<td class="tel">{tel}</td>
+		<td class="adr">{adr}</td>
+		<td class="categories">{categories}</td>
 	</tr>
 </script>
 

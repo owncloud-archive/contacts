@@ -740,7 +740,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	text-align: left;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	vertical-align: middle;
+	vertical-align: top;
 	white-space: nowrap;
 }
 #contactlist tr > td {
