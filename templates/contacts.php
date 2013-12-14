@@ -189,7 +189,9 @@
 <script id="contactListItemTemplate" type="text/template">
 	<tr class="contact" data-id="{id}" data-parent="{parent}" data-backend="{backend}">
 		<td class="name thumbnail">
-			<input type="checkbox" name="id" value="{id}" /><a href="#{id}" class="nametext">{name}</a>
+			<input type="checkbox" name="id" value="{id}" />
+			<div class="avatar"></div>
+			<a href="#{id}" class="nametext">{name}</a>
 		</td>
 		<td class="email">
 			<a href="mailto:{email}">{email}&nbsp;</a>

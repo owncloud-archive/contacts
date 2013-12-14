@@ -1576,6 +1576,8 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Contact.prototype.setThumbnail = function($elem, refresh) {
 		if(!this.data.thumbnail && !refresh) {
+			this.getListItemElement().find('.avatar').css('height', '32px');
+			this.getListItemElement().find('.avatar').imageplaceholder(this.getDisplayName());
 			return;
 		}
 		if(!$elem) {

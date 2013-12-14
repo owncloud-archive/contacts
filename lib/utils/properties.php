@@ -29,7 +29,7 @@ Properties::$l10n = \OCP\Util::getL10N('contacts');
 Class Properties {
 
 	const THUMBNAIL_PREFIX = 'contact-thumbnail-';
-	const THUMBNAIL_SIZE = 28;
+	const THUMBNAIL_SIZE = 32;
 
 	private static $deleteindexstmt;
 	private static $updateindexstmt;

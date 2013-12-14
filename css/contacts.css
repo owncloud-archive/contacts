@@ -552,10 +552,6 @@ input:not([type=checkbox]).propertytype {
 	text-align: right; 
 	margin: 0;
 }
-
-.thumbnail {
-	background-image:url('%appswebroot%/contacts/img/person.png');
-}
 input[type=checkbox].propertytype { width: 10px; }
 .contactphoto { 
 	border: 1px solid #bbb; 
@@ -720,7 +716,14 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 #contactlist .nametext {
-	margin-left: 10px;
+	margin-left: 55px;
+}
+#contactlist .avatar {
+	position: absolute;
+	margin-top: 10px;
+	height: 32px;
+	width: 32px;
+ 	margin-left: 10px;
 }
 /* Override default style for an open cpntact */
 tbody tr, tbody tr.hover {
@@ -749,6 +752,8 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
 	float:left;
 	margin: 32px 0 4px 32px;
+	position: absolute;
+	z-index: 1;
 }
 #contactlist tbody > tr:hover > td.name > input[type=checkbox]:first-child {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter:alpha(opacity=100); opacity:1;
