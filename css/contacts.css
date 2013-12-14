@@ -347,7 +347,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 .singleproperties dd { float:left; }
 .singleproperties dd .listactions a { margin-top: 10px; }
 .singleproperties .n.editor { width: 270px; padding: 3px; }
-.singleproperties .n.editor input { width: 215px; }
+.singleproperties .n.editor input { width: 292px; }
 .singleproperties .propertycontainer input.value.new { border: 3px solid #1d2d44;}
 .singleproperties .propertycontainer input.value.error { border: 3px solid red;}
 .singleproperties .propertycontainer .action {
@@ -649,8 +649,8 @@ input[type=checkbox].propertytype { width: 10px; }
 }
 fieldset.adr ul li input.label { margin-top: -4px !important; }
 .adr.editor input.value.street, ul.adr.edit input.value.country, ul.adr.edit input.value.region { width: 19em;}
-.adr.editor input.value.zip { width: 5em; }
-.adr.editor input.value.city { width: 153px; margin:4px; }
+.adr.editor input.value.zip { width: 100px; }
+.adr.editor input.value.city { width: 192px; margin:4px; }
 
 /* contact list */
 
