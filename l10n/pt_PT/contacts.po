@@ -4,6 +4,7 @@
 # 
 # Translators:
 # carlosamp <carlos.am.pereira@hotmail.com>, 2013
+# Carlos <crolidge@gmail.com>, 2013
 # Mouxy <daniel@mouxy.net>, 2012-2013
 # Mouxy <daniel@mouxy.net>, 2013
 # Duarte Velez Grilo <duartegrilo@gmail.com>, 2013
@@ -20,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-13 12:43-0500\n"
-"PO-Revision-Date: 2013-12-12 10:40+0000\n"
-"Last-Translator: Helder Meneses <helder.meneses@gmail.com>\n"
+"POT-Creation-Date: 2013-12-17 03:50-0500\n"
+"PO-Revision-Date: 2013-12-16 04:00+0000\n"
+"Last-Translator: Carlos <crolidge@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -183,7 +184,7 @@ msgstr "Isto está correcto?"
 
 #: js/contacts.js:856
 msgid "Error parsing date: {date}"
-msgstr ""
+msgstr "Erro ao processar data: {date}"
 
 #: js/contacts.js:1053
 msgid "# groups"
@@ -475,7 +476,7 @@ msgstr "Não é possível encontrar o contacto."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "Não há dados de contacto no pedido."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
@@ -1107,7 +1108,7 @@ msgstr "Cidade"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "District of Columbia"
 
 #: templates/contacts.php:424
 msgid "State or province"
