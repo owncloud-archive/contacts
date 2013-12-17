@@ -754,7 +754,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			try {
 				$date = new \DateTime($birthday);
 			} catch(\Exception $e) {
-				continue;
+				return;
 			}
 			$vevent = \Sabre\VObject\Component::create('VEVENT');
 			$vevent->add('DTSTART');
