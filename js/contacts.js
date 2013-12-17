@@ -50,6 +50,7 @@ OC.Contacts = OC.Contacts || {};
 		// ~30% faster than jQuery.
 		try {
 			this.$listelem.get(0).firstElementChild.getElementsByClassName('nametext')[0].innerHTML = escapeHTML(this.displayNames[method]);
+			this.setThumbnail();
 		} catch(e) {
 			var $elem = this.$listelem.find('.nametext').text(escapeHTML(this.displayNames[method]));
 			$elem.text(escapeHTML(this.displayNames[method]));
@@ -1577,7 +1578,7 @@ OC.Contacts = OC.Contacts || {};
 	Contact.prototype.setThumbnail = function($elem, refresh) {
 		if(!this.data.thumbnail && !refresh) {
 			this.getListItemElement().find('.avatar').css('height', '32px');
-			this.getListItemElement().find('.avatar').imageplaceholder(this.getDisplayName());
+			this.getListItemElement().find('.avatar').imageplaceholder(this.getDisplayName()[0] || '#');
 			return;
 		}
 		if(!$elem) {
