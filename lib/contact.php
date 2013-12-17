@@ -93,11 +93,12 @@ class Contact extends VObject\VCard implements IPIMObject {
 							break;
 						case 'displayname':
 						case 'fullname':
-							if(!$value) $value = '';
-							$this->props['displayname'] = $value;
-							$this->FN = $value;
-							// Set it to saved again as we're not actually changing anything
-							$this->setSaved();
+							if($value) {
+								$this->props['displayname'] = $value;
+								$this->FN = $value;
+								// Set it to saved again as we're not actually changing anything
+								$this->setSaved();
+							}
 							break;
 					}
 				}
