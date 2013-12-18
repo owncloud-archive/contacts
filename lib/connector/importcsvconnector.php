@@ -28,22 +28,25 @@ class ImportCsvConnector extends ImportConnector {
 	/**
 	 * @brief separates elements from the input stream according to the entry_separator value in config
 	 * ignoring the first line if mentionned in the config
-	 * @param $input the input stream to import
+	 * @param $input the input file to import
 	 * @param $limit the number of elements to return (-1 = no limit)
 	 * @return array of strings
 	 */
 	public getElementsFromInput($input, $limit=-1) {
+		$csv = new SplFileObject($input, 'r');
+		$csv->setFlags(SplFileObject::READ_CSV);
+		$csv->setCsvControl($this->configContent->import_entries->import_core->control['separator'], $this->configContent->import_entries->import_core->control['enclosure'], $this->configContent->import_entries->import_core->control['enclosure']);
+		
+		$elements = array();
+		
+		foreach($csv as $line)
+		{
+			$elements[] = convertElementToVCard($line);
+		}
 		$elements = array();
 		
 		if (($limit > -1) && ($this->configContent->import_entries->import_core->ignore_first_line['enabled'] == 'true')) {
 			$limit++;
-		}
-		
-		// for every new line
-		$elements = split("\n", $input, $limit);
-		
-		if ($this->configContent->import_entries->import_core->ignore_first_line['enabled'] == 'true') {
-			unset($elemets[0]);
 		}
 		
 		return array_values($elements);
@@ -57,8 +60,7 @@ class ImportCsvConnector extends ImportConnector {
 	public convertElementToVCard($element) {
 		$vcard = \Sabre\VObject\Component::create('VCARD');
 		
-		$fields = split($this->configContent->import_entries->import_core->entry_separator['value'], $element);
-		for ($i=0; $i < count($fields); $i++) {
+		for ($i=0; $i < count($element); $i++) {
 			// Look for the right import_entry
 			$importEntry = getImportEntry((String)$i);
 			if ($importEntry) {
@@ -67,14 +69,14 @@ class ImportCsvConnector extends ImportConnector {
 					// Create a new property and attach it to the vcard
 					$property = $this->getOrCreateVCardProperty($vcard, $importEntry)
 					$property = \Sabre\VObject\Property::create($importEntry->vcard_entry['property']);
-					updateProperty($property, $importEntry, $fields[$i]);
+					updateProperty($property, $importEntry, $element[$i]);
 					$vcard->add($property);
 				} else {
 					for ($j=0; $j < count($properties); $j++) {
 					}
 				}
 			} else {
-				$property = \Sabre\VObject\Property::create("X-Unknown-Element", $fields[$i]);
+				$property = \Sabre\VObject\Property::create("X-Unknown-Element", $element[$i]);
 				$vcard->add($property);
 			}
 		}
