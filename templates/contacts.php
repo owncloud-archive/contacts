@@ -2,12 +2,6 @@
 	<!--
 	<div id="controls">
 		<div class="actions creatable hidden-on-load">
-			<div class="button new">
-				<a class="add-contact"><?php p($l->t('New Contact')); ?></a>
-			</div>
-			<div class="button new">
-				<input class="add-group hidden" type="text" tabindex="0" autofocus placeholder="<?php p($l->t('Group name')); ?>" title="<?php p($l->t('New Group')); ?>" />
-			</div>
 			<div class="button contact-actions">
 				<a class="delete svg action text permanent"><?php p($l->t('Delete')); ?></a>
 			</div>
@@ -27,7 +21,15 @@
 	-->
 	
 	<div id="app-navigation" class="loading">
-		<ul id="grouplist">
+		<ul id="grouplist" class="hidden-on-load">
+			<li class="special">
+				<a role="button" class="add-contact">
+				  <?php p($l->t('New contact')); ?>
+				</a>
+			</li>
+			<li class="special">
+				<input class="add-group hidden" type="text" tabindex="0" autofocus placeholder="<?php p($l->t('Group name')); ?>" title="<?php p($l->t('New group')); ?>" />
+			</li>
 		</ul>
 		<div id="app-settings">
 			<div id="app-settings-header">

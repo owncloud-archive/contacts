@@ -106,19 +106,20 @@
 	z-index: 100;
 }
 #grouplist .oc-addnew-init {
-	padding: 0 12px;
+	padding: 0 31px;
 }
 #grouplist .add-contact:before {
+	position: absolute;
 	content: '+';
 	font-weight: bold;
-	font-size: 180%;
-	padding-right: 2px;
+	font-size: 160%;
+	left: 12px;
+}
+#grouplist .add-contact {
+	padding: 0 31px;
 }
 #grouplist > li {
 	height: 44px;
-}
-#grouplist .open {
-	margin-top: 5px;
 }
 
 .hidden-on-load {

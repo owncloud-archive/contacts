@@ -287,12 +287,11 @@ OC.Contacts = OC.Contacts || {
 		this.$navigation = $('#app-navigation');
 		//this.$header = $('#contactsheader');
 		this.$groupList = $('#grouplist');
-		this.$controls = $('#controls');
 		this.$contactList = $('#contactlist');
 		this.$contactListHeader = $('#contactsHeader');
 		this.$sortOrder = this.$contactListHeader.find('.action.sort');
 		this.$sortOrder.val(contacts_sortby||'fn');
-		this.$headeractions = this.$controls.find('.contact-actions');
+		this.$headeractions = this.$groupList.find('.contact-actions');
 		this.$toggleAll = this.$contactListHeader.find('.toggle');
 		this.$groups = this.$contactListHeader.find('.groups');
 		this.$ninjahelp = $('#ninjahelp');
@@ -1003,7 +1002,6 @@ OC.Contacts = OC.Contacts || {
 
 		var addContact = function() {
 			console.log('add');
-			self.$toggleAll.hide();
 			if(self.currentid) {
 				if(self.currentid === 'new') {
 					return;
@@ -1043,7 +1041,7 @@ OC.Contacts = OC.Contacts || {
 			addContact();
 		});
 
-		this.$controls.on('click keydown', '.add-contact', function(event) {
+		this.$groupList.on('click keydown', '.add-contact', function(event) {
 			if(wrongKey(event)) {
 				return;
 			}
