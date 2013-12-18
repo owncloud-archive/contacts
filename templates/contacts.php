@@ -1,5 +1,5 @@
 <div id="app">
-	
+	<!--
 	<div id="controls">
 		<div class="actions creatable hidden-on-load">
 			<div class="button new">
@@ -18,13 +18,13 @@
 						<select class="groups action text permanent" name="groups">
 							<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
 						</select>
-						<!--a class="favorite action svg inactive control permanent" title="<?php p($l->t('Favorite')); ?>"></a -->
+						<!a class="favorite action svg inactive control permanent" title="<?php p($l->t('Favorite')); ?>"></a >
 			</div>
 				<a class="shared svg action text permanent merge button contact-actions"><?php p($l->t('Merge selected')); ?></a>
 			
 		</div>
 	</div>
-	
+	-->
 	
 	<div id="app-navigation" class="loading">
 		<ul id="grouplist">
@@ -70,11 +70,23 @@
 							<option value="fl"><?php p($l->t('First- Lastname')); ?></option>
 							<option value="lf"><?php p($l->t('Last-, Firstname')); ?></option>
 						</select>
+						
+						<span class="actions">
+							<a class="delete svg action text permanent">
+								<?php p($l->t('Delete')); ?>
+								<img class="svg" alt="<?php p($l->t('Delete'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/delete.svg")); ?>" />
+							</a>
+							<select class="groups svg action text permanent share" name="groups">
+								<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
+							</select>
+							<a class="action svg text permanent merge shared"><?php p($l->t('Merge')); ?></a>
+							<a class="download svg action text permanent"><?php p($l->t('Download')); ?></a>
+						</span>
 					</td>
-					<td class="info email">Email</td>
-					<td class="info tel">Phone</td>
-					<td class="info adr">Address</td>
-					<td class="info categories">Group</td>
+					<td class="info email"><?php p($l->t('Email')); ?></td>
+					<td class="info tel"><?php p($l->t('Phone')); ?></td>
+					<td class="info adr"><?php p($l->t('Address')); ?></td>
+					<td class="info categories"><?php p($l->t('Group')); ?></td>
 				</tr>
 			</thead>
 			<tbody>

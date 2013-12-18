@@ -251,10 +251,14 @@ OC.Contacts = OC.Contacts || {
 		this.$headeractions.children().hide();
 		if(act && act.length > 0) {
 			this.$contactList.addClass('multiselect');
-			this.$controls.find('.contact-actions').show();
+			this.$contactListHeader.find('.actions').css('display', '');
+			this.$contactListHeader.find('.name').attr('colspan', '100%');
+			this.$contactListHeader.find('.info').css('display', 'none');
 			this.$headeractions.children('.'+act.join(',.')).show();
 		} else {
-			this.$controls.find('.contact-actions').hide();
+			this.$contactListHeader.find('.actions').css('display', 'none');
+			this.$contactListHeader.find('.name').attr('colspan', '1');
+			this.$contactListHeader.find('.info').css('display', '');
 			this.$contactList.removeClass('multiselect');
 		}
 	},
@@ -290,7 +294,7 @@ OC.Contacts = OC.Contacts || {
 		this.$sortOrder.val(contacts_sortby||'fn');
 		this.$headeractions = this.$controls.find('.contact-actions');
 		this.$toggleAll = this.$contactListHeader.find('.toggle');
-		this.$groups = this.$headeractions.find('.groups');
+		this.$groups = this.$contactListHeader.find('.groups');
 		this.$ninjahelp = $('#ninjahelp');
 		this.$firstRun = $('#firstrun');
 		this.$settings = $('#app-settings');
@@ -1046,7 +1050,7 @@ OC.Contacts = OC.Contacts || {
 			addContact();
 		});
 
-		this.$controls.on('click keydown', '.delete', function(event) {
+		this.$contactListHeader.on('click keydown', '.delete', function(event) {
 			if(wrongKey(event)) {
 				return;
 			}
@@ -1061,7 +1065,7 @@ OC.Contacts = OC.Contacts || {
 			self.hideActions();
 		});
 
-		this.$controls.on('click keydown', '.download', function(event) {
+		this.$contactListHeader.on('click keydown', '.download', function(event) {
 			if(wrongKey(event)) {
 				return;
 			}

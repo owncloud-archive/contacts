@@ -9,7 +9,7 @@
 #contactsHeader input[type=checkbox] {
 	margin-top: 4px;
 	margin-left: 17px;
-	margin-right: 25px;
+	margin-right: 18px;
 }
 #content input[type=radio] { 
 	width: 12px; height: 12px; 
@@ -104,7 +104,6 @@
 }
 #grouplist {
 	z-index: 100;
-	margin-top: 44px;
 }
 #grouplist .oc-addnew-init {
 	padding: 0 12px;
@@ -124,10 +123,6 @@
 
 .hidden-on-load {
 	display: none;
-}
-
-.actions {
-	padding-left: 4px;
 }
 
 /* First run */
@@ -250,7 +245,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	background-size:contain;
 }
 
-.action:not(.add):not(.groups).text, .icon:not(.add):not(.groups).text {
+.action:not(.add):not(.sort).text, .icon:not(.add):not(.sort).text {
 	background-position: left; 
 	text-indent: 18px;
 }
@@ -665,21 +660,17 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactsHeader > td {
 	z-index: 300;
-	border-bottom: 1px solid rgb(221, 221, 221);
+	border-bottom: 1px solid rgb(221, 221, 221);	
 }
-#contactsHeader > td.actions {
-	left: 600px; right: 15px;
-	position: fixed;
-	height: 20px;
-	font-weight: bold;
-	opacity: 1;
-	padding: 0; margin: 0 10px;
-	float: right;
+#contactsHeader > td.name {
+	padding-right: 9px;
 }
-#contactsHeader > td > * {
-	/*-webkit-box-sizing: border-box;  -moz-box-sizing: border-box; box-sizing: border-box;*/
-	display: inline-block;
-	float: left;
+#contactsHeader .delete {
+	background-image: none;
+}
+#contactsHeader .delete img {
+	vertical-align: middle;
+	margin-bottom: 2px;
 }
 #contactsHeader .toggle {
 	margin: 0 15px;
@@ -687,19 +678,42 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactsHeader select {
 	width: auto;
+	max-width: 110px;
 	height: 22px;
-	font-size: 90%;
-	padding: 0; margin: 0 10px;
+	font-weight: normal;
+	color: black;
+	border: 0;
+	background-color: rgba(255,255,255,0);
+	-webkit-appearance: none;
+}
+#contactsHeader select .sort {
+	opacity: 1;
+	color: rgb(153, 153, 153);
 }
 #contactsHeader .actions > * {
+	padding-left: 8px;
+	padding-right: 8px;
+	font-weight: bold;
 	float: right;
 }
-#contactsHeader .action {
+#contactsHeader .action.a {
 	margin: 0;
 	padding: 0;
 }
 #contactsHeader .actions > .toggle {
 	float: left;
+}
+#contactsHeader .actions > select {
+	float: right;
+	width: auto;
+	height: 22px;
+	padding-left: 4px;
+	padding-right: 8px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	font-weight: bold;	
 }
 #contactlist > tbody {
 	position: relative;
@@ -708,9 +722,9 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	z-index: 1;
 }
 #contactlist {
-	top: 44px;
 	position: relative;
 	width: 100%;
+	min-width: 502px;
 }
 #contactlist td {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -860,13 +874,27 @@ tbody tr.contact.active, tbody tr.contact:hover {
 
 @media screen and (max-width: 1400px) {
 	#contactlist tr td.categories { display: none; }
+	#contactsHeader tr td.categories { display: none; }
 }
 @media screen and (max-width: 1200px) {
 	#contactlist tr td.adr { display: none; }
+	#contactsHeader tr td.adr { display: none; }
+	#app-navigation { width: 220px; }
+	#app-settings { width: 219px; }
 }
 @media screen and (max-width: 1000px) {
 	#contactlist tr td.tel { display: none; }
+	#contactsHeader tr td.tel { display: none; }
+	#app-navigation { width: 200px; }
+	#app-settings { width: 199px; }
+}
+@media screen and (max-width: 900px) {
+	#contactsHeader .delete { display: none; }
 }
 @media screen and (max-width: 800px) {
 	#contactlist tr td.email { display: none; }
+	#contactlist tr { width: 100%; }
+	#contactsHeader tr td.email { display: none; }
+	#app-navigation { width: 170px; }
+	#app-settings { width: 169px; }
 }
