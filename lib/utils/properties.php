@@ -57,7 +57,7 @@ Class Properties {
 	 */
 	public static $index_properties = array(
 		'BDAY', 'UID', 'N', 'FN', 'TITLE', 'ROLE', 'NOTE', 'NICKNAME',
-		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO', 'PHOTO');
+		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO');
 
 	/**
 	 * Get options for IMPP properties
@@ -266,7 +266,7 @@ Class Properties {
 						\OCP\User::getUser(),
 						$contactid,
 						$property->name,
-						$property->value,
+						substr($property->value, 0, 254),
 						$preferred,
 					)
 				);

@@ -1000,7 +1000,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Contact.prototype.renderListItem = function(isnew) {
 		this.displayNames.fn = this.getPreferredValue('FN')
-			|| this.getPreferredValue('ORG')
+			|| this.getPreferredValue('ORG', []).pop()
 			|| this.getPreferredValue('EMAIL')
 			|| this.getPreferredValue('TEL');
 
