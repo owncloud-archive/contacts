@@ -56,6 +56,7 @@
 "Share" => "Compartir",
 "Export" => "Exportar",
 "more info" => "plus info",
+"Primary address (Kontact et al)" => "Adresse primari (Kontact e alia)",
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adressarios",
 "New Address Book" => "Nove adressario",

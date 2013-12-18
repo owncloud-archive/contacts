@@ -93,10 +93,12 @@ class Contact extends VObject\VCard implements IPIMObject {
 							break;
 						case 'displayname':
 						case 'fullname':
-							$this->props['displayname'] = $value;
-							$this->FN = $value;
-							// Set it to saved again as we're not actually changing anything
-							$this->setSaved();
+							if(!is_null($value)) {
+								$this->props['displayname'] = $value;
+								$this->FN = $value;
+								// Set it to saved again as we're not actually changing anything
+								$this->setSaved();
+							}
 							break;
 					}
 				}
@@ -752,7 +754,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			try {
 				$date = new \DateTime($birthday);
 			} catch(\Exception $e) {
-				continue;
+				return;
 			}
 			$vevent = \Sabre\VObject\Component::create('VEVENT');
 			$vevent->add('DTSTART');

@@ -4,6 +4,7 @@
 # 
 # Translators:
 # carlosamp <carlos.am.pereira@hotmail.com>, 2013
+# Carlos <crolidge@gmail.com>, 2013
 # Mouxy <daniel@mouxy.net>, 2012-2013
 # Mouxy <daniel@mouxy.net>, 2013
 # Duarte Velez Grilo <duartegrilo@gmail.com>, 2013
@@ -20,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-04 18:12-0500\n"
-"PO-Revision-Date: 2013-12-03 14:00+0000\n"
-"Last-Translator: PapiMigas Migas <papimigas@gmail.com>\n"
+"POT-Creation-Date: 2013-12-17 03:50-0500\n"
+"PO-Revision-Date: 2013-12-16 04:00+0000\n"
+"Last-Translator: Carlos <crolidge@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,7 +49,7 @@ msgstr "A importar..."
 
 #: js/addressbooks.js:324
 msgid "Preparing..."
-msgstr ""
+msgstr "A preparar..."
 
 #: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
@@ -183,7 +184,7 @@ msgstr "Isto está correcto?"
 
 #: js/contacts.js:856
 msgid "Error parsing date: {date}"
-msgstr ""
+msgstr "Erro ao processar data: {date}"
 
 #: js/contacts.js:1053
 msgid "# groups"
@@ -275,7 +276,7 @@ msgstr "Por favor seleccione o livro de endereços"
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
-msgstr ""
+msgstr "Importar para..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
@@ -283,7 +284,7 @@ msgstr ""
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "Importar contactos"
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
@@ -366,7 +367,7 @@ msgstr "Não tem permissões para adicionar contactos ao livro de endereços"
 msgid "The backend for this address book does not support adding contacts"
 msgstr "O bastidor para este livro de endereços não suporta o adicionar de contactos"
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Não tem permissões para apagar este contacto."
 
@@ -394,35 +395,35 @@ msgstr "Não tem permissões para apagar este livro de endereços."
 msgid "Address book not found"
 msgstr "Nenhum livro de endereços encontrado."
 
-#: lib/contact.php:112 lib/contact.php:159
+#: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
 msgstr "Não tem permissões para ver este contacto"
 
-#: lib/contact.php:261
+#: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
 msgstr "Não tem permissões para atualizar este contacto"
 
-#: lib/contact.php:272
+#: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
 msgstr "O suporte deste contacto não suporta atualizações"
 
-#: lib/contact.php:290
+#: lib/contact.php:292
 msgid "This backend not support adding contacts"
 msgstr "O suporte não aceita contactos adicionais"
 
-#: lib/contact.php:400 lib/contact.php:417
+#: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
 msgstr "Propriedade não encontrada"
 
-#: lib/contact.php:465
+#: lib/contact.php:467
 msgid " Missing IM parameter for: "
 msgstr "Falta o parâmetro de mensagens instantâneas para:"
 
-#: lib/contact.php:473
+#: lib/contact.php:475
 msgid "Unknown IM: "
 msgstr "Mensagens instantâneas desconhecida (IM)"
 
-#: lib/contact.php:750
+#: lib/contact.php:752
 msgid "{name}'s Birthday"
 msgstr "Aniversário de {name}"
 
@@ -475,7 +476,7 @@ msgstr "Não é possível encontrar o contacto."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "Não há dados de contacto no pedido."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
@@ -515,34 +516,34 @@ msgid "No file was uploaded. Unknown error"
 msgstr "Nenhum ficheiro foi carregado. Erro desconhecido"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:44
+#: lib/controller/importcontroller.php:45
 msgid "There is no error, the file uploaded with success"
 msgstr "Não ocorreram erros, o ficheiro foi submetido com sucesso"
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "O ficheiro enviado excede a directiva upload_max_filesize no php. ini\n "
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "O tamanho do ficheiro carregado ultrapassa o valor MAX_FILE_SIZE definido no formulário HTML"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "The uploaded file was only partially uploaded"
 msgstr "O ficheiro selecionado  foi apenas carregado parcialmente"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded"
 msgstr "Nenhum ficheiro foi submetido"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "Missing a temporary folder"
 msgstr "Está a faltar a pasta temporária"
 
@@ -570,7 +571,7 @@ msgstr "Erro a carregar a imagem."
 
 #: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
-msgstr ""
+msgstr "A imagem foi retirada do cache"
 
 #: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
@@ -622,54 +623,54 @@ msgstr "Nome de grupo em falta."
 msgid "Contact ID missing from request."
 msgstr "Falta o ID do contacto no pedido"
 
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Failed to write to disk"
 msgstr "Falhou a escrita no disco"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Not enough storage available"
 msgstr "Não há espaço suficiente em disco"
 
-#: lib/controller/importcontroller.php:70
+#: lib/controller/importcontroller.php:71
 msgid "Attempt to upload blacklisted file:"
 msgstr "Tentativa de envio de ficheiro bloqueado:"
 
-#: lib/controller/importcontroller.php:92
+#: lib/controller/importcontroller.php:93
 msgid "Error uploading contacts to storage."
 msgstr "Erro a carregar os contactos para o armazenamento."
 
-#: lib/controller/importcontroller.php:137
+#: lib/controller/importcontroller.php:138
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:154
+#: lib/controller/importcontroller.php:155
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "Não tem permissões para importar para este livro de endereços."
 
-#: lib/controller/importcontroller.php:162
+#: lib/controller/importcontroller.php:163
 msgid "File name missing from request."
-msgstr ""
+msgstr "O nome do ficheiro está em falta."
 
-#: lib/controller/importcontroller.php:167
-#: lib/controller/importcontroller.php:283
+#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:284
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:173
+#: lib/controller/importcontroller.php:174
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:215
+#: lib/controller/importcontroller.php:216
 msgid "No contacts found in: "
 msgstr "Nenhum contacto encontrado em:"
 
 #: lib/controller/settingscontroller.php:35
 msgid "No key is given."
-msgstr ""
+msgstr "A chave não foi fornecida."
 
 #: lib/controller/settingscontroller.php:39
 msgid "No value is given."
-msgstr ""
+msgstr "Não foi fornecido qualquer valor."
 
 #: lib/controller/settingscontroller.php:50
 msgid "Could not set preference: "
@@ -695,7 +696,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:76
 msgid "Internet call"
-msgstr ""
+msgstr "Chamada através da Internet"
 
 #: lib/utils/properties.php:81
 msgid "AIM"
@@ -826,15 +827,15 @@ msgstr "(Des)seleccionar todos"
 
 #: templates/contacts.php:46 templates/contacts.php:66
 msgid "Sort order"
-msgstr ""
+msgstr "Ordem da ordenação"
 
 #: templates/contacts.php:48 templates/contacts.php:68
 msgid "First- Lastname"
-msgstr ""
+msgstr "Primeiro- Último Nome"
 
 #: templates/contacts.php:49 templates/contacts.php:69
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "Último-, Primeiro Nome"
 
 #: templates/contacts.php:53 templates/contacts.php:80
 msgid "Groups"
@@ -965,7 +966,7 @@ msgstr "Seleccionar grupos"
 
 #: templates/contacts.php:260
 msgid "Select address book"
-msgstr ""
+msgstr "Seleccionar o livro de endereços"
 
 #: templates/contacts.php:264 templates/contacts.php:328
 msgid "Nickname"
@@ -1005,7 +1006,7 @@ msgstr "Exportar como VCF"
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr ""
+msgstr "Adicionar campo..."
 
 #: templates/contacts.php:330
 msgid "Phone"
@@ -1107,11 +1108,11 @@ msgstr "Cidade"
 
 #: templates/contacts.php:423
 msgid "District of Columbia"
-msgstr ""
+msgstr "District of Columbia"
 
 #: templates/contacts.php:424
 msgid "State or province"
-msgstr ""
+msgstr "Distrito"
 
 #: templates/contacts.php:428
 msgid "USA"

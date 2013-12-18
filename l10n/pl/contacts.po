@@ -10,6 +10,7 @@
 # czarnystokrotek <czarnystokrotek@mailoo.org>, 2012
 # orcio6 <orcio6@o2.pl>, 2013
 # paszczak000 <paszczak000@gmail.com>, 2013
+# bobie <maciej.przybecki@gmail.com>, 2013
 # Maciej Tarmas <maciej@tarmas.pl>, 2013
 # Marcin Małecki <gerber@tkdami.net>, 2011-2012
 # Michal Plichta <mplichta@gmail.com>, 2013
@@ -21,9 +22,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-04 18:12-0500\n"
-"PO-Revision-Date: 2013-12-02 20:40+0000\n"
-"Last-Translator: Cyryl Sochacki <cyrylsochacki@gmail.com>\n"
+"POT-Creation-Date: 2013-12-13 12:43-0500\n"
+"PO-Revision-Date: 2013-12-13 14:32+0000\n"
+"Last-Translator: bobie <maciej.przybecki@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -367,7 +368,7 @@ msgstr "Nie masz uprawnień do dodawania kontaktów do tej książki adresowej"
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Zaplecze dla tej książki nie obsługuje dodawanie kontaktów"
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Nie masz uprawnień do usunięcia tego kontaktu"
 
@@ -395,35 +396,35 @@ msgstr "Nie masz uprawnień do usunięcia tej książki adresowej."
 msgid "Address book not found"
 msgstr "Nie znaleziono książki adresowej"
 
-#: lib/contact.php:112 lib/contact.php:159
+#: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
 msgstr "Nie masz uprawnień do podglądania tego kontaktu"
 
-#: lib/contact.php:261
+#: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
 msgstr "Nie masz uprawnień edytowania tego kontaktu."
 
-#: lib/contact.php:272
+#: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
 msgstr "Zaplecze dla tego kontaktu nie obsługuje aktualizacji"
 
-#: lib/contact.php:290
+#: lib/contact.php:292
 msgid "This backend not support adding contacts"
 msgstr "Te zaplecze nie obsługuje dodawania kontaktów"
 
-#: lib/contact.php:400 lib/contact.php:417
+#: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
 msgstr "Nie znaleziono właściwości"
 
-#: lib/contact.php:465
+#: lib/contact.php:467
 msgid " Missing IM parameter for: "
 msgstr "Brak parametru komunikator dla:"
 
-#: lib/contact.php:473
+#: lib/contact.php:475
 msgid "Unknown IM: "
 msgstr "Nieznany Komunikator"
 
-#: lib/contact.php:750
+#: lib/contact.php:752
 msgid "{name}'s Birthday"
 msgstr "{name} Urodzony"
 
@@ -476,7 +477,7 @@ msgstr "Nie mogę znaleźć kontaktu."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "Brak danych kontaktu w zapytaniu"
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
@@ -504,7 +505,7 @@ msgstr "Błąd uaktualnienia kontaktu"
 
 #: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Błąd podczas zapisywania kontaktu do bazy"
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
@@ -516,34 +517,34 @@ msgid "No file was uploaded. Unknown error"
 msgstr "Żaden plik nie został załadowany. Nieznany błąd"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:44
+#: lib/controller/importcontroller.php:45
 msgid "There is no error, the file uploaded with success"
 msgstr "Nie było błędów, plik wysłano poprawnie."
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Załadowany plik przekracza wielkość upload_max_filesize w php.ini "
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Wysłany plik przekracza wielkość dyrektywy MAX_FILE_SIZE określonej w formularzu HTML"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "The uploaded file was only partially uploaded"
 msgstr "Załadowany plik został wysłany tylko częściowo."
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded"
 msgstr "Nie wysłano żadnego pliku"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "Missing a temporary folder"
 msgstr "Brak folderu tymczasowego"
 
@@ -599,11 +600,11 @@ msgstr "Błąd dodania grupy."
 
 #: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Nie podano nazwy grupy do zmiany."
 
 #: lib/controller/groupcontroller.php:131
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Nie podano nowej nazwy grupy."
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
@@ -623,44 +624,44 @@ msgstr "Brakuje wymaganej nazwy grupy"
 msgid "Contact ID missing from request."
 msgstr "Brakuje wymaganego ID kontaktu "
 
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Failed to write to disk"
 msgstr "Błąd zapisu na dysk"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Not enough storage available"
 msgstr "Za mało dostępnego miejsca"
 
-#: lib/controller/importcontroller.php:70
+#: lib/controller/importcontroller.php:71
 msgid "Attempt to upload blacklisted file:"
 msgstr "Próba wgrania pliku na czarną listę:"
 
-#: lib/controller/importcontroller.php:92
+#: lib/controller/importcontroller.php:93
 msgid "Error uploading contacts to storage."
 msgstr "Wystąpił błąd podczas wysyłania kontaktów do magazynu."
 
-#: lib/controller/importcontroller.php:137
+#: lib/controller/importcontroller.php:138
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Błąd podczas przenoszenia pliku do folderu importów."
 
-#: lib/controller/importcontroller.php:154
+#: lib/controller/importcontroller.php:155
 msgid "You do not have permissions to import into this address book."
 msgstr "Nie masz uprawnień do importu do tej książki adresowej."
 
-#: lib/controller/importcontroller.php:162
+#: lib/controller/importcontroller.php:163
 msgid "File name missing from request."
 msgstr "Brakuje wymaganej nazwy pliku kontaktu "
 
-#: lib/controller/importcontroller.php:167
-#: lib/controller/importcontroller.php:283
+#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:284
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Brak klucz postępu w zapytaniu"
 
-#: lib/controller/importcontroller.php:173
+#: lib/controller/importcontroller.php:174
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "Próba dostępu do pliku z czarnej listy:"
 
-#: lib/controller/importcontroller.php:215
+#: lib/controller/importcontroller.php:216
 msgid "No contacts found in: "
 msgstr "Nie znaleziono kontaktów w:"
 
@@ -902,7 +903,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr ""
+msgstr "<h3>Nie masz żadnych kontaktów w swojej książce adresowej lub jest ona zablokowana.</h3><p>Dodaj nowy kontakt lub zaimportuj istniejący z pliku VCF.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -918,7 +919,7 @@ msgstr "Zmień nazwę grupy"
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "Do jakiego kontaktu dołączyć te dane?"
 
 #: templates/contacts.php:191
 msgid "Delete the other(s) after successful merge?"
