@@ -78,20 +78,7 @@ class ExportController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function exportSelected() {
-		$contacts = $this->request['contacts'];
-
-		// First sort the contacts by backend and address book.
-		$targets = array();
-
-		foreach($contacts as $contact) {
-			if(!isset($targets[$contact['backend']])) {
-				$targets[$contact['backend']] = array();
-			}
-			if(!isset($targets[$contact['backend']][$contact['addressBookId']])) {
-				$targets[$contact['backend']][$contact['addressBookId']] = array();
-			}
-			$targets[$contact['backend']][$contact['addressBookId']][] = $contact['contactId'];
-		}
+		$targets = $this->request['t'];
 
 		$exports = '';
 		foreach($targets as $backend => $addressBooks) {

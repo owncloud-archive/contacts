@@ -1069,7 +1069,18 @@ OC.Contacts = OC.Contacts || {
 			var contacts = self.contacts.getSelectedContacts();
 			// Only get backend, addressbookid and contactid
 			contacts = $.map(contacts, function(c) {return c.metaData();});
-			var url = OC.Router.generate('contacts_export_selected', {contacts:contacts});
+			var targets = {};
+			// Try to shorten request URI
+			$.each(contacts, function(idx, contact) {
+				if(!targets[contact.backend]) {
+					targets[contact.backend] = {};
+				}
+				if(!targets[contact.backend][contact.addressBookId]) {
+					targets[contact.backend][contact.addressBookId] = [];
+				}
+				targets[contact.backend][contact.addressBookId].push(contact.contactId);
+			});
+			var url = OC.Router.generate('contacts_export_selected', {t:targets});
 			console.log('export url', url);
 			document.location.href = url;
 		});
