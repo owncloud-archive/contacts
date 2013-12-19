@@ -2341,7 +2341,7 @@ OC.Contacts = OC.Contacts || {};
 		var contacts = [];
 
 		var self = this;
-		$.each(this.$contactList.find('tr > td > input:checkbox:visible:checked'), function(idx, checkbox) {
+		$.each(this.$contactList.find('tbody > tr > td > input:checkbox:visible:checked'), function(idx, checkbox) {
 			var id = String($(checkbox).val());
 			var contact = self.contacts[id];
 			if(contact) {
