@@ -183,6 +183,13 @@
 			<length>4</length>
 		</field>
 
+		<index>
+			<name>c_addressbook_userid_index</name>
+			<field>
+				<name>userid</name>
+				<sorting>ascending</sorting>
+			</field>
+		</index>
 		</declaration>
 
 	</table>
@@ -243,6 +250,14 @@
 			<length>4</length>
 		</field>
 
+
+		<index>
+			<name>c_addressbookid_index</name>
+			<field>
+				<name>addressbookid</name>
+				<sorting>ascending</sorting>
+			</field>
+		</index>
 		</declaration>
 
 	</table>
@@ -303,6 +318,14 @@
 			<notnull>true</notnull>
 			<length>4</length>
 		</field>
+
+		<index>
+			<name>cp_contactid_index</name>
+			<field>
+				<name>contactid</name>
+				<sorting>ascending</sorting>
+			</field>
+		</index>
 
 		<index>
 			<name>cp_name_index</name>
