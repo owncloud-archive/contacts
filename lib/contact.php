@@ -93,7 +93,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 							break;
 						case 'displayname':
 						case 'fullname':
-							if(!is_null($value)) {
+							if(is_string($value)) {
 								$this->props['displayname'] = $value;
 								$this->FN = $value;
 								// Set it to saved again as we're not actually changing anything

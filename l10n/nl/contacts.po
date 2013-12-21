@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-04 18:12-0500\n"
-"PO-Revision-Date: 2013-12-02 20:40+0000\n"
-"Last-Translator: André Koot <meneer@tken.net>\n"
+"POT-Creation-Date: 2013-12-21 00:49-0500\n"
+"PO-Revision-Date: 2013-12-20 06:21+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -122,7 +122,7 @@ msgstr "Samenvoegen mislukt. Fout bij opslaan contactpersoon."
 msgid "Select photo"
 msgstr "Selecteer een foto"
 
-#: js/app.js:678 js/app.js:1570
+#: js/app.js:678 js/app.js:1598
 msgid "Network or server error. Please inform administrator."
 msgstr "Netwerk- of serverfout. Neem contact op met de beheerder."
 
@@ -134,46 +134,52 @@ msgstr "Fout bij het toevoegen aan de groep."
 msgid "Error removing from group."
 msgstr "Fout bij het verwijderen uit de groep."
 
-#: js/app.js:1104
+#: js/app.js:1094
+msgid ""
+"You have selected over 300 contacts.\n"
+"This will most likely fail! Click here to try anyway."
+msgstr ""
+
+#: js/app.js:1132
 msgid "Error setting {name} as favorite."
 msgstr "Fout bij instellen {name} als favoriet"
 
-#: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
+#: js/app.js:1271 js/app.js:1275 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Samenvoegen contactgegevens"
 
-#: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1297 js/app.js:1350 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Annuleer"
 
-#: js/app.js:1296 templates/contacts.php:163
+#: js/app.js:1324 templates/contacts.php:163
 msgid "Add group"
 msgstr "Toevoegen groep"
 
-#: js/app.js:1300
+#: js/app.js:1328
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1394
+#: js/app.js:1422
 msgid "Could not find contact: {id}"
 msgstr "Kon contactpersoon niet vinden: {id}"
 
-#: js/app.js:1417
+#: js/app.js:1445
 msgid "No files selected for upload."
 msgstr "Geen bestanden geselecteerd voor upload."
 
-#: js/app.js:1427
+#: js/app.js:1455
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Het bestand dat u probeert te uploaden overschrijdt de maximale bestand grootte voor bestand uploads voor deze server."
 
-#: js/app.js:1528
+#: js/app.js:1556
 msgid "Edit profile picture"
 msgstr "Bewerk profielafbeelding"
 
-#: js/app.js:1532
+#: js/app.js:1560
 msgid "Crop photo"
 msgstr "Bijsnijden foto"
 
@@ -366,7 +372,7 @@ msgstr "U heeft geen permissie om contactpersonen toe te voegen aan het adresboe
 msgid "The backend for this address book does not support adding contacts"
 msgstr "De backend voor dit adresboek heeft geen ondersteuning voor het toevoegen van contactpersonen"
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "U heeft geen permissie om dit contact te verwijderen"
 
@@ -394,35 +400,35 @@ msgstr "U heeft geen permissie om dit adresboek te verwijderen."
 msgid "Address book not found"
 msgstr "Adresboek niet gevonden"
 
-#: lib/contact.php:112 lib/contact.php:159
+#: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
 msgstr "U heeft geen permissie om deze contactpersoon te bekijken"
 
-#: lib/contact.php:261
+#: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
 msgstr "U heeft geen permissie om deze contactpersoon te bewerken"
 
-#: lib/contact.php:272
+#: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
 msgstr "De backend voor deze contactpersoon heeft geen ondersteuning voor bewerk acties"
 
-#: lib/contact.php:290
+#: lib/contact.php:292
 msgid "This backend not support adding contacts"
 msgstr "De backend heeft geen ondersteuning voor het toevoegen van contactpersonen"
 
-#: lib/contact.php:400 lib/contact.php:417
+#: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
 msgstr "Eigenschap niet gevonden"
 
-#: lib/contact.php:465
+#: lib/contact.php:467
 msgid " Missing IM parameter for: "
 msgstr "Ontbrekende IM parameter voor:"
 
-#: lib/contact.php:473
+#: lib/contact.php:475
 msgid "Unknown IM: "
 msgstr "Onbekende IM:"
 
-#: lib/contact.php:750
+#: lib/contact.php:752
 msgid "{name}'s Birthday"
 msgstr "{name}'s verjaardag"
 
@@ -515,34 +521,34 @@ msgid "No file was uploaded. Unknown error"
 msgstr "Er was geen bestand geladen.  Onbekende fout"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:44
+#: lib/controller/importcontroller.php:45
 msgid "There is no error, the file uploaded with success"
 msgstr "De upload van het bestand is goedgegaan."
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Het bestand overschrijdt de upload_max_filesize instelling in php.ini"
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Het bestand overschrijdt de MAX_FILE_SIZE instelling dat is opgegeven in het HTML formulier"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "The uploaded file was only partially uploaded"
 msgstr "Het bestand is gedeeltelijk geüpload"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded"
 msgstr "Er is geen bestand geüpload"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "Missing a temporary folder"
 msgstr "Er ontbreekt een tijdelijke map"
 
@@ -622,44 +628,44 @@ msgstr "Groepsnaam niet aanwezig bij aanvraag."
 msgid "Contact ID missing from request."
 msgstr "Contact ID niet opgegeven"
 
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Failed to write to disk"
 msgstr "Schrijven naar schijf mislukt"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Not enough storage available"
 msgstr "Niet genoeg opslagruimte beschikbaar"
 
-#: lib/controller/importcontroller.php:70
+#: lib/controller/importcontroller.php:71
 msgid "Attempt to upload blacklisted file:"
 msgstr "Poging om geblacklist bestand te uploaden:"
 
-#: lib/controller/importcontroller.php:92
+#: lib/controller/importcontroller.php:93
 msgid "Error uploading contacts to storage."
 msgstr "Fout bij opslaan van contacten."
 
-#: lib/controller/importcontroller.php:137
+#: lib/controller/importcontroller.php:138
 msgid "Error moving file to imports folder."
 msgstr "Fout bij verplaatsen bestand naar importmap."
 
-#: lib/controller/importcontroller.php:154
+#: lib/controller/importcontroller.php:155
 msgid "You do not have permissions to import into this address book."
 msgstr "U heeft geen permissie om te importeren naar dit adresboek."
 
-#: lib/controller/importcontroller.php:162
+#: lib/controller/importcontroller.php:163
 msgid "File name missing from request."
 msgstr "Bestandsnaam ontbreekt in aanvraag."
 
-#: lib/controller/importcontroller.php:167
-#: lib/controller/importcontroller.php:283
+#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:284
 msgid "Progress key missing from request."
 msgstr "Voortgangssleutel ontbreekt in aanvraag."
 
-#: lib/controller/importcontroller.php:173
+#: lib/controller/importcontroller.php:174
 msgid "Attempt to access blacklisted file:"
 msgstr "Poging om geblacklist bestand te openen:"
 
-#: lib/controller/importcontroller.php:215
+#: lib/controller/importcontroller.php:216
 msgid "No contacts found in: "
 msgstr "Geen contactpersonen gevonden in:"
 

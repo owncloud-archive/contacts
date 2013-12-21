@@ -1,7 +1,7 @@
 <?php
 namespace OCA\Contacts;
 
-class MigrationProvider extends OC_Migration_Provider{
+class MigrationProvider extends \OC_Migration_Provider{
 
 	// Create the xml for the user supplied
 	function export( ) {

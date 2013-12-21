@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Netværks- eller serverfejl: Informér administrator.",
 "Error adding to group." => "Fejl ved tilføjelse til gruppe.",
 "Error removing from group." => "Fejl ved fjernelse fra gruppe.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Du har markeret mere end 300 kontakter.\nDet vil sandsynligvis fejle! Klik her hvis du vil prøve alligevel.",
 "Error setting {name} as favorite." => "Kunne ikke indstille {name} som favorit.",
 "Merge contacts" => "Sammenlæg kontakter",
 "Cancel" => "Annuller",

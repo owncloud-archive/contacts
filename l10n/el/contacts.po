@@ -32,9 +32,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-04 18:12-0500\n"
-"PO-Revision-Date: 2013-12-02 20:40+0000\n"
-"Last-Translator: Marios Bekatoros <>\n"
+"POT-Creation-Date: 2013-12-21 00:49-0500\n"
+"PO-Revision-Date: 2013-12-20 06:21+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,7 +134,7 @@ msgstr "Αποτυχία συγχώνευσης. Σφάλμα αποθήκευσ
 msgid "Select photo"
 msgstr "Επέλεξε φωτογραφία"
 
-#: js/app.js:678 js/app.js:1570
+#: js/app.js:678 js/app.js:1598
 msgid "Network or server error. Please inform administrator."
 msgstr "Σφάλμα δικτύου ή διακομιστή. Παρακαλώ ενημερώστε το διαχειριστή."
 
@@ -146,46 +146,52 @@ msgstr "Σφάλμα κατά την προσθήκη σε ομάδα."
 msgid "Error removing from group."
 msgstr "Σφάλμα κατά την αφαίρεση από ομάδα."
 
-#: js/app.js:1104
+#: js/app.js:1094
+msgid ""
+"You have selected over 300 contacts.\n"
+"This will most likely fail! Click here to try anyway."
+msgstr ""
+
+#: js/app.js:1132
 msgid "Error setting {name} as favorite."
 msgstr "Σφάλμα κατά τον ορισμό του {name} σαν αγαπημένο"
 
-#: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
+#: js/app.js:1271 js/app.js:1275 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Συγχώνευση επαφών"
 
-#: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1297 js/app.js:1350 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#: js/app.js:1296 templates/contacts.php:163
+#: js/app.js:1324 templates/contacts.php:163
 msgid "Add group"
 msgstr "Προσθήκη ομάδας"
 
-#: js/app.js:1300
+#: js/app.js:1328
 msgid "OK"
 msgstr "ΟΚ"
 
-#: js/app.js:1394
+#: js/app.js:1422
 msgid "Could not find contact: {id}"
 msgstr "Αδυναμία εύρεσης επαφής: {id}"
 
-#: js/app.js:1417
+#: js/app.js:1445
 msgid "No files selected for upload."
 msgstr "Δεν επιλέχτηκαν αρχεία για μεταφόρτωση"
 
-#: js/app.js:1427
+#: js/app.js:1455
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Το αρχείο που προσπαθείτε να ανεβάσετε υπερβαίνει το μέγιστο μέγεθος για τις προσθήκες αρχείων σε αυτόν τον server."
 
-#: js/app.js:1528
+#: js/app.js:1556
 msgid "Edit profile picture"
 msgstr "Επεξεργασία εικόνας προφίλ"
 
-#: js/app.js:1532
+#: js/app.js:1560
 msgid "Crop photo"
 msgstr "Περικοπή φωτογραφίας"
 
@@ -378,7 +384,7 @@ msgstr "Δεν έχετε δικαιώματα για να προσθέσετε 
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Το σύστημα, για αυτό το βιβλίο διευθύνσεων, δεν υποστηρίζει προσθήκη επαφών. "
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Δεν διαθέτε επαρκή δικαιώματα για την διαγραφή αυτής της επαφής."
 
@@ -406,35 +412,35 @@ msgstr "Δεν έχετε δικαιώματα να διαγράψετε αυτ�
 msgid "Address book not found"
 msgstr "Δε βρέθηκε βιβλίο διευθύνσεων"
 
-#: lib/contact.php:112 lib/contact.php:159
+#: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
 msgstr "Δεν έχετε δικαιώματα να δείτε αυτή την επαφή"
 
-#: lib/contact.php:261
+#: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
 msgstr "Δεν έχετε δικαιώματα για να ενημερώσετε αυτή την επαφή"
 
-#: lib/contact.php:272
+#: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
 msgstr "Το σύστημα δεν υποστηρίζει  την ενημέρωση για αυτή την επαφή "
 
-#: lib/contact.php:290
+#: lib/contact.php:292
 msgid "This backend not support adding contacts"
 msgstr "Αυτό το σύστημα δεν υποστηρίζει προσθήκη επαφών"
 
-#: lib/contact.php:400 lib/contact.php:417
+#: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
 msgstr "Δεν βρέθηκε ιδιότητα"
 
-#: lib/contact.php:465
+#: lib/contact.php:467
 msgid " Missing IM parameter for: "
 msgstr "Λείπει IM παράμετρος για:"
 
-#: lib/contact.php:473
+#: lib/contact.php:475
 msgid "Unknown IM: "
 msgstr "Άγνωστο IM:"
 
-#: lib/contact.php:750
+#: lib/contact.php:752
 msgid "{name}'s Birthday"
 msgstr "Τα Γεννέθλια του/της {name}"
 
@@ -527,34 +533,34 @@ msgid "No file was uploaded. Unknown error"
 msgstr "Δεν ανέβηκε κάποιο αρχείο. Άγνωστο σφάλμα"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:44
+#: lib/controller/importcontroller.php:45
 msgid "There is no error, the file uploaded with success"
 msgstr "Δεν υπάρχει σφάλμα, το αρχείο εστάλει επιτυχώς"
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Το αρχείο που εστάλει υπερβαίνει την οδηγία μέγιστου επιτρεπτού μεγέθους \"upload_max_filesize\" του php.ini"
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Το ανεβασμένο αρχείο υπερβαίνει το MAX_FILE_SIZE που ορίζεται στην  HTML φόρμα"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "The uploaded file was only partially uploaded"
 msgstr "Το αρχείο εστάλει μόνο εν μέρει"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded"
 msgstr "Κανένα αρχείο δεν στάλθηκε"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "Missing a temporary folder"
 msgstr "Λείπει ο προσωρινός φάκελος"
 
@@ -634,44 +640,44 @@ msgstr "Το όνομα ομάδας λείπει από το αίτημα."
 msgid "Contact ID missing from request."
 msgstr "Το ID επαφής λείπει από το αίτημα."
 
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Failed to write to disk"
 msgstr "Αποτυχία εγγραφής στο δίσκο"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Not enough storage available"
 msgstr "Μη επαρκής διαθέσιμος αποθηκευτικός χώρος"
 
-#: lib/controller/importcontroller.php:70
+#: lib/controller/importcontroller.php:71
 msgid "Attempt to upload blacklisted file:"
 msgstr "Προσπάθεια ανεβάσματος αρχείου που βρίσκεται στη μαύρη λίστα:"
 
-#: lib/controller/importcontroller.php:92
+#: lib/controller/importcontroller.php:93
 msgid "Error uploading contacts to storage."
 msgstr "Σφάλμα κατά την αποθήκευση επαφών"
 
-#: lib/controller/importcontroller.php:137
+#: lib/controller/importcontroller.php:138
 msgid "Error moving file to imports folder."
 msgstr "Σφάλμα μετακίνησης αρχείου σε φάκελο εισαγωγών."
 
-#: lib/controller/importcontroller.php:154
+#: lib/controller/importcontroller.php:155
 msgid "You do not have permissions to import into this address book."
 msgstr "Δεν έχετε δικαιώματα για εισαγωγή σε αυτό το βιβλίο διευθύνσεων."
 
-#: lib/controller/importcontroller.php:162
+#: lib/controller/importcontroller.php:163
 msgid "File name missing from request."
 msgstr "Το όνομα αρχείου λείπει από το αίτημα."
 
-#: lib/controller/importcontroller.php:167
-#: lib/controller/importcontroller.php:283
+#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:284
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:173
+#: lib/controller/importcontroller.php:174
 msgid "Attempt to access blacklisted file:"
 msgstr "Προσπάθεια πρόσβασης αρχείου που βρίσκεται στη μαύρη λίστα:"
 
-#: lib/controller/importcontroller.php:215
+#: lib/controller/importcontroller.php:216
 msgid "No contacts found in: "
 msgstr "Δεν βρέθηκαν επαφές στο: "
 
