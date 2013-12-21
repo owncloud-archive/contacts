@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Erro no servidor ou rede. Por favor, informe o administrador.",
 "Error adding to group." => "Erro ao adicionar ao grupo.",
 "Error removing from group." => "Erro ao remover do grupo.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Você selecionou mais de 300 contatos.\nIsso provavelmente irá falhar! Clique aqui para tentar de qualquer maneira.",
 "Error setting {name} as favorite." => "Erro configurando {name} como favorito.",
 "Merge contacts" => "Mesclar contatos",
 "Cancel" => "Cancelar",
