@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Ağ veya sunucu hatası. Lütfen sistem yöneticisini bilgilendirin.",
 "Error adding to group." => "Gruba eklerken hata.",
 "Error removing from group." => "Gruptan çıkarırken hata.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "300'den fazla kişi seçtiniz.\nBüyük olasılıkla başarısız olacak! Denemek için buraya tıklayın.",
 "Error setting {name} as favorite." => "{name} favori olarak ayarlanırken hata oluştu.",
 "Merge contacts" => "Kişileri birleştir",
 "Cancel" => "İptal",
