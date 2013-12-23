@@ -66,12 +66,14 @@
 			<thead>
 				<tr id="contactsHeader" class="hidden-on-load">
 					<td class="name">
+						<span class="actions_left">
 						<input type="checkbox" class="toggle" title="<?php p($l->t('(De-)select all')); ?>" />
 						<select class="action sort permanent" name="sort" title="<?php p($l->t('Sort order')); ?>">
 							<option value="fn"><?php p($l->t('Display name')); ?></option>
 							<option value="fl"><?php p($l->t('First- Lastname')); ?></option>
 							<option value="lf"><?php p($l->t('Last-, Firstname')); ?></option>
 						</select>
+						</span>
 						
 						<span class="actions">
 							<a class="delete svg action text permanent">

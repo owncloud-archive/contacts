@@ -224,7 +224,7 @@
 }
 .ui-multiselect-checkboxes label > span {color: #333 !important; font-size: 100% !important; }
 .ui-multiselect-checkboxes input[type=checkbox] { margin: 3px !important; }
-button.ui-multiselect { width: 250px; padding: 6px 0 0 6px; height: 30px; font-weight: normal; } /* No idea why this is needed? */
+button.ui-multiselect { width: 300px !important; padding: 6px 0 0 6px; height: 30px; font-weight: normal; } /* No idea why this is needed? */
 span.ui-icon { margin: 1px 3px 10px 0px; }
 
 #content .multiselectoptions > li > * { 
@@ -679,13 +679,16 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactsHeader select {
 	width: auto;
-	max-width: 110px;
+	max-width: 120px;
 	height: 22px;
 	font-weight: normal;
 	color: black;
 	border: 0;
 	background-color: rgba(255,255,255,0);
 	-webkit-appearance: none;
+	-moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
 }
 #contactsHeader select .sort {
 	opacity: 1;
@@ -707,14 +710,18 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 #contactsHeader .actions > select {
 	float: right;
 	width: auto;
-	height: 22px;
-	padding-left: 4px;
+	height: 19px;
+	padding-left: 18px;
 	padding-right: 8px;
-	padding-top: 0px;
+	padding-top: 2px;
 	padding-bottom: 0px;
 	margin-top: 14px;
 	margin-bottom: 14px;
-	font-weight: bold;	
+	font-weight: bold;
+	background-position: -13px;
+}
+#contactsHeader .actions_left {
+	float: left;
 }
 #contactlist > tbody {
 	position: relative;
