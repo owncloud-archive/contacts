@@ -24,6 +24,7 @@
 # Teogramm <theodorewii121@hotmail.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012
+# vkehayas <vkehayas@gmail.com>, 2013
 # Wasilis <inactive+Wasilis@transifex.com>, 2013
 # Wasilis <inactive+Wasilis@transifex.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012-2013
@@ -32,9 +33,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-21 00:49-0500\n"
-"PO-Revision-Date: 2013-12-20 06:21+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-12-24 00:48-0500\n"
+"PO-Revision-Date: 2013-12-23 19:00+0000\n"
+"Last-Translator: vkehayas <vkehayas@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,7 +151,7 @@ msgstr "Σφάλμα κατά την αφαίρεση από ομάδα."
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "Έχετε επιλέξει πάνω από 300 επαφές.\nΑυτό μάλλον θα αποτύχει! Κλικάρετε εδώ για να δοκιμάσετε ούτως ή άλλως."
 
 #: js/app.js:1132
 msgid "Error setting {name} as favorite."
@@ -616,11 +617,11 @@ msgstr "Σφάλμα κατά την προσθήκη ομάδας."
 
 #: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Κανένα όνομα ομάδας για μετονομασία από το δοθέν."
 
 #: lib/controller/groupcontroller.php:131
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Κανένα όνομα ομάδας για μετονομασία στο δοθέν."
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
@@ -671,7 +672,7 @@ msgstr "Το όνομα αρχείου λείπει από το αίτημα."
 #: lib/controller/importcontroller.php:168
 #: lib/controller/importcontroller.php:284
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Το κλειδί προόδου λείπει από το αίτημα."
 
 #: lib/controller/importcontroller.php:174
 msgid "Attempt to access blacklisted file:"

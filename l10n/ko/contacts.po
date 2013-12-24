@@ -7,9 +7,11 @@
 # aoiob4305 <aoiob4305@gmail.com>, 2013
 # 남자사람 <cessnagi@gmail.com>, 2012
 # 남자사람 <cessnagi@gmail.com>, 2012
+# chohy <chohy@yahoo.com>, 2013
 # Daisuke Deguchi <ddeguchi@is.nagoya-u.ac.jp>, 2012
 # madeng <jongyoul@gmail.com>, 2013
 # yunhye <limonade83@gmail.com>, 2012
+# madeng <jongyoul@gmail.com>, 2013
 # chohy <chohy@yahoo.com>, 2013
 # Shinjo Park <kde@peremen.name>, 2013
 # Shinjo Park <kde@peremen.name>, 2012-2013
@@ -17,14 +19,15 @@
 # ujuc Gang <potopro@gmail.com>, 2013
 # tt yn <tetuyano+transi@gmail.com>, 2012
 # tt yn <tetuyano+transi@gmail.com>, 2012
+# ujuc Gang <potopro@gmail.com>, 2013
 # yunhye <limonade83@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-21 00:49-0500\n"
-"PO-Revision-Date: 2013-12-20 06:21+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-12-24 00:48-0500\n"
+"PO-Revision-Date: 2013-12-22 13:40+0000\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -574,7 +577,7 @@ msgstr "파일이 존재하지 않습니다:"
 #: lib/controller/contactphotocontroller.php:203
 #: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
-msgstr "로딩 이미지 오류입니다."
+msgstr "그림을 불러올 수 없습니다."
 
 #: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
@@ -586,15 +589,15 @@ msgstr "임시 이미지를 생성 중 오류가 발생했습니다."
 
 #: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
-msgstr "이미지를 자르던 중 오류가 발생했습니다."
+msgstr "그림을 자르는 중 오류가 발생했습니다."
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
-msgstr "이미지 크기 조정 중 오류가 발생했습니다."
+msgstr "그림 크기 조정 중 오류가 발생했습니다."
 
 #: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
-msgstr "사진 속성을 가져오는 중 오류가 발생했습니다. "
+msgstr "PHOTO 속성을 가져오는 중 오류가 발생했습니다. "
 
 #: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
 msgid "No group name given."
