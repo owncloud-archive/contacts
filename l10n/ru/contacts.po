@@ -7,6 +7,7 @@
 # Alexander Shashkevych <alex@stunpix.com>, 2013
 # Denis <reg.transifex.net@demitel.ru>, 2012
 # Dmitry <linuxsquirrel.dev@gmail.com>, 2013
+# Evgeniy Spitsyn <evgeniy@spitsyn.net>, 2013
 # ideamk <ideamk@gmail.com>, 2012
 # jekader <jekader@gmail.com>, 2013
 # jekader <jekader@gmail.com>, 2012
@@ -31,9 +32,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-04 18:12-0500\n"
-"PO-Revision-Date: 2013-12-02 20:40+0000\n"
-"Last-Translator: not_your_conscience <hex.void@gmail.com>\n"
+"POT-Creation-Date: 2013-12-24 00:48-0500\n"
+"PO-Revision-Date: 2013-12-22 21:00+0000\n"
+"Last-Translator: Evgeniy Spitsyn <evgeniy@spitsyn.net>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -133,7 +134,7 @@ msgstr "Объединение не удалось. Ошибка сохране�
 msgid "Select photo"
 msgstr "Выберите фото"
 
-#: js/app.js:678 js/app.js:1570
+#: js/app.js:678 js/app.js:1598
 msgid "Network or server error. Please inform administrator."
 msgstr "Ошибка сети или сервера. Пожалуйста, сообщите администратору."
 
@@ -145,46 +146,52 @@ msgstr "Ошибка добавления в группу."
 msgid "Error removing from group."
 msgstr "Ошибка удаления из группы."
 
-#: js/app.js:1104
+#: js/app.js:1094
+msgid ""
+"You have selected over 300 contacts.\n"
+"This will most likely fail! Click here to try anyway."
+msgstr "Вы выбрали более 300 контактов.\nCкорее всего, это действие закончится неудачей! Нажмите сюда, чтобы в любом случае попробовать."
+
+#: js/app.js:1132
 msgid "Error setting {name} as favorite."
 msgstr "Ошибка установки {name} избранным."
 
-#: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
+#: js/app.js:1271 js/app.js:1275 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Объединить контакты"
 
-#: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1297 js/app.js:1350 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "Отменить"
 
-#: js/app.js:1296 templates/contacts.php:163
+#: js/app.js:1324 templates/contacts.php:163
 msgid "Add group"
 msgstr "Добавить группу"
 
-#: js/app.js:1300
+#: js/app.js:1328
 msgid "OK"
 msgstr "ОК"
 
-#: js/app.js:1394
+#: js/app.js:1422
 msgid "Could not find contact: {id}"
 msgstr "Не удалось найти контакт: {id}"
 
-#: js/app.js:1417
+#: js/app.js:1445
 msgid "No files selected for upload."
 msgstr "Нет выбранных файлов для загрузки."
 
-#: js/app.js:1427
+#: js/app.js:1455
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Файл, который вы пытаетесь загрузить превышать максимальный размер загружаемых файлов на этом сервере."
 
-#: js/app.js:1528
+#: js/app.js:1556
 msgid "Edit profile picture"
 msgstr "Редактировать изображение профиля"
 
-#: js/app.js:1532
+#: js/app.js:1560
 msgid "Crop photo"
 msgstr "Обрезать фото"
 
@@ -377,7 +384,7 @@ msgstr "У Вас нет разрешений добавлять контакт�
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Реализация этой адресной книги не поддерживает добавление контактов."
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "У Вас нет разрешений удалять этот контакт."
 
@@ -405,35 +412,35 @@ msgstr "У Вас нет разрешений удалять эту адресн
 msgid "Address book not found"
 msgstr "Адресная книга не найдена"
 
-#: lib/contact.php:112 lib/contact.php:159
+#: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
 msgstr "У Вас нет разрешений просматривать этот контакт"
 
-#: lib/contact.php:261
+#: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
 msgstr "У Вас нет разрешений обновлять этот контакт"
 
-#: lib/contact.php:272
+#: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
 msgstr "Реализация этого контакта не поддерживает обновления"
 
-#: lib/contact.php:290
+#: lib/contact.php:292
 msgid "This backend not support adding contacts"
 msgstr "Реализация не поддерживает добавление контактов"
 
-#: lib/contact.php:400 lib/contact.php:417
+#: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
 msgstr "Свойство не найдено"
 
-#: lib/contact.php:465
+#: lib/contact.php:467
 msgid " Missing IM parameter for: "
 msgstr "Отсутствует параметр IM для:"
 
-#: lib/contact.php:473
+#: lib/contact.php:475
 msgid "Unknown IM: "
 msgstr "Неизвестный IM:"
 
-#: lib/contact.php:750
+#: lib/contact.php:752
 msgid "{name}'s Birthday"
 msgstr "День рождения {name}"
 
@@ -526,34 +533,34 @@ msgid "No file was uploaded. Unknown error"
 msgstr "Файл не был загружен. Неизвестная ошибка"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:44
+#: lib/controller/importcontroller.php:45
 msgid "There is no error, the file uploaded with success"
 msgstr "Файл загружен успешно."
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Загружаемый файл первосходит значение переменной upload_max_filesize, установленно в php.ini"
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Загружаемый файл превосходит значение переменной MAX_FILE_SIZE, указанной в форме HTML"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "The uploaded file was only partially uploaded"
 msgstr "Файл загружен частично"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded"
 msgstr "Файл не был загружен"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "Missing a temporary folder"
 msgstr "Отсутствует временная папка"
 
@@ -633,44 +640,44 @@ msgstr "Имя группы отсутствует в запросе."
 msgid "Contact ID missing from request."
 msgstr "ID контакта из запроса отсутствует."
 
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Failed to write to disk"
 msgstr "Ошибка записи на диск"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Not enough storage available"
 msgstr "Недостаточно доступного места в хранилище"
 
-#: lib/controller/importcontroller.php:70
+#: lib/controller/importcontroller.php:71
 msgid "Attempt to upload blacklisted file:"
 msgstr "Попытка загрузки файла черного списка:"
 
-#: lib/controller/importcontroller.php:92
+#: lib/controller/importcontroller.php:93
 msgid "Error uploading contacts to storage."
 msgstr "Ошибка загрузки контактов в хранилище."
 
-#: lib/controller/importcontroller.php:137
+#: lib/controller/importcontroller.php:138
 msgid "Error moving file to imports folder."
 msgstr "Ошибка перемещения файла в папку импорта"
 
-#: lib/controller/importcontroller.php:154
+#: lib/controller/importcontroller.php:155
 msgid "You do not have permissions to import into this address book."
 msgstr "У Вас нет разрешений импортировать в эту адресную книгу."
 
-#: lib/controller/importcontroller.php:162
+#: lib/controller/importcontroller.php:163
 msgid "File name missing from request."
 msgstr "Имя файла из запроса отсутствует."
 
-#: lib/controller/importcontroller.php:167
-#: lib/controller/importcontroller.php:283
+#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:284
 msgid "Progress key missing from request."
 msgstr "Ключ прогреса из запроса отсутствует."
 
-#: lib/controller/importcontroller.php:173
+#: lib/controller/importcontroller.php:174
 msgid "Attempt to access blacklisted file:"
 msgstr "Попытка доступа к файлу черного списка:"
 
-#: lib/controller/importcontroller.php:215
+#: lib/controller/importcontroller.php:216
 msgid "No contacts found in: "
 msgstr "Не найдено ни одного контакта:"
 

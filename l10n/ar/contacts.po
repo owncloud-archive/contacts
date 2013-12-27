@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-04 18:12-0500\n"
-"PO-Revision-Date: 2013-12-02 20:40+0000\n"
-"Last-Translator: TheHiter <magicreative.fr@gmail.com>\n"
+"POT-Creation-Date: 2013-12-21 00:49-0500\n"
+"PO-Revision-Date: 2013-12-20 06:21+0000\n"
+"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,7 +115,7 @@ msgstr "عملية الدمج فشلت. خطأ في حفظ جهة الاتصال
 msgid "Select photo"
 msgstr "اختر صورة"
 
-#: js/app.js:678 js/app.js:1570
+#: js/app.js:678 js/app.js:1598
 msgid "Network or server error. Please inform administrator."
 msgstr "حدث خطأ في شبكة الاتصال أو في الخادم. يرجى إبلاغ المسؤول."
 
@@ -127,46 +127,52 @@ msgstr "خطأ في إضافة المجموعة"
 msgid "Error removing from group."
 msgstr "حدث خطأ أثناء الحذف من المجموعة"
 
-#: js/app.js:1104
+#: js/app.js:1094
+msgid ""
+"You have selected over 300 contacts.\n"
+"This will most likely fail! Click here to try anyway."
+msgstr ""
+
+#: js/app.js:1132
 msgid "Error setting {name} as favorite."
 msgstr "حدث خطأ أثناء إعداد {name} كمفضلة ."
 
-#: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
+#: js/app.js:1271 js/app.js:1275 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "دمج جهات الاتصال"
 
-#: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1297 js/app.js:1350 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "الغاء"
 
-#: js/app.js:1296 templates/contacts.php:163
+#: js/app.js:1324 templates/contacts.php:163
 msgid "Add group"
 msgstr "إضافة مجموعة"
 
-#: js/app.js:1300
+#: js/app.js:1328
 msgid "OK"
 msgstr "تم"
 
-#: js/app.js:1394
+#: js/app.js:1422
 msgid "Could not find contact: {id}"
 msgstr "تعذر ايجاد جهة الاتصال:  {id}"
 
-#: js/app.js:1417
+#: js/app.js:1445
 msgid "No files selected for upload."
 msgstr "لا يوجد ملفات مختارة لتحميلها"
 
-#: js/app.js:1427
+#: js/app.js:1455
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "الملف الذي تحاول تحميله يتجاوز الحد الأقصى لحجم الملف الذي يمكن تحميله على هذا الخادم."
 
-#: js/app.js:1528
+#: js/app.js:1556
 msgid "Edit profile picture"
 msgstr "تعديل صورة الملف الشخصي"
 
-#: js/app.js:1532
+#: js/app.js:1560
 msgid "Crop photo"
 msgstr "قص الصورة."
 
@@ -359,7 +365,7 @@ msgstr "ليس لديك الصلاحية  لإضافة جهات اتصال لد�
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:246
+#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "ليس لديك الصلاحية  لحذف جهة الاتصال"
 
@@ -387,35 +393,35 @@ msgstr "ليس لديك الصلاحية  لحذف دفتر العناوين."
 msgid "Address book not found"
 msgstr "تعذر ايجاد دفتر العناوين"
 
-#: lib/contact.php:112 lib/contact.php:159
+#: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
 msgstr "ليس لديك الصلاحية  لمشاهدة جهة الاتصال "
 
-#: lib/contact.php:261
+#: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
 msgstr "ليس لديك الصلاحية  لتحديث جهة الاتصال هذه"
 
-#: lib/contact.php:272
+#: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
 msgstr ""
 
-#: lib/contact.php:290
+#: lib/contact.php:292
 msgid "This backend not support adding contacts"
 msgstr ""
 
-#: lib/contact.php:400 lib/contact.php:417
+#: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
 msgstr "لم يتم العثور على الملكية"
 
-#: lib/contact.php:465
+#: lib/contact.php:467
 msgid " Missing IM parameter for: "
 msgstr ""
 
-#: lib/contact.php:473
+#: lib/contact.php:475
 msgid "Unknown IM: "
 msgstr "جهة تراسل فوري غير معروفة"
 
-#: lib/contact.php:750
+#: lib/contact.php:752
 msgid "{name}'s Birthday"
 msgstr "يوم ميلاد {name}'s"
 
@@ -508,34 +514,34 @@ msgid "No file was uploaded. Unknown error"
 msgstr "لم يتم رفع أي ملف , خطأ غير معروف"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:44
+#: lib/controller/importcontroller.php:45
 msgid "There is no error, the file uploaded with success"
 msgstr "تم ترفيع الملفات بنجاح."
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "حجم الملف الذي تريد ترفيعه أعلى مما upload_max_filesize يسمح به في ملف php.ini"
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "حجم الملف الذي تريد ترفيعه أعلى مما MAX_FILE_SIZE يسمح به في واجهة ال HTML."
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "The uploaded file was only partially uploaded"
 msgstr "تم ترفيع جزء من الملفات الذي تريد ترفيعها فقط"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded"
 msgstr "لم يتم ترفيع أي من الملفات"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "Missing a temporary folder"
 msgstr "المجلد المؤقت غير موجود"
 
@@ -615,44 +621,44 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Failed to write to disk"
 msgstr "خطأ في الكتابة على القرص الصلب"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Not enough storage available"
 msgstr "لا يوجد مساحة تخزينية كافية"
 
-#: lib/controller/importcontroller.php:70
+#: lib/controller/importcontroller.php:71
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:92
+#: lib/controller/importcontroller.php:93
 msgid "Error uploading contacts to storage."
 msgstr "خطأ في رفع جهات الإتصال للمخزن,"
 
-#: lib/controller/importcontroller.php:137
+#: lib/controller/importcontroller.php:138
 msgid "Error moving file to imports folder."
 msgstr "خطأ في نقل الملف إلى مجلد الاستيراد."
 
-#: lib/controller/importcontroller.php:154
+#: lib/controller/importcontroller.php:155
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:162
+#: lib/controller/importcontroller.php:163
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:167
-#: lib/controller/importcontroller.php:283
+#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:284
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:173
+#: lib/controller/importcontroller.php:174
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:215
+#: lib/controller/importcontroller.php:216
 msgid "No contacts found in: "
 msgstr "لم يتم إيجاد جهات اتصال في:"
 

@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Aranel Surion <aranel@aranelsurion.org>, 2011, 2012
-# Caner BAŞARAN <basaran.caner@gmail.com>, 2012
+# Caner BAŞARAN <basaran.caner@gmail.com>, 2012-2013
 # otefenli <otefenli@gmail.com>, 2013
 # alpere <info@beyboo.de>, 2012
 # ismail yenigül <ismail.yenigul@surgate.com>, 2013
@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-17 03:50-0500\n"
-"PO-Revision-Date: 2013-12-15 13:10+0000\n"
+"POT-Creation-Date: 2013-12-24 00:48-0500\n"
+"PO-Revision-Date: 2013-12-23 00:40+0000\n"
 "Last-Translator: volkangezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -120,7 +120,7 @@ msgstr "Birleştirme başarısız. Kişi kaydedilirken hata oluştu."
 msgid "Select photo"
 msgstr "Fotograf seç"
 
-#: js/app.js:678 js/app.js:1570
+#: js/app.js:678 js/app.js:1598
 msgid "Network or server error. Please inform administrator."
 msgstr "Ağ veya sunucu hatası. Lütfen sistem yöneticisini bilgilendirin."
 
@@ -132,46 +132,52 @@ msgstr "Gruba eklerken hata."
 msgid "Error removing from group."
 msgstr "Gruptan çıkarırken hata."
 
-#: js/app.js:1104
+#: js/app.js:1094
+msgid ""
+"You have selected over 300 contacts.\n"
+"This will most likely fail! Click here to try anyway."
+msgstr "300'den fazla kişi seçtiniz.\nBüyük olasılıkla başarısız olacak! Denemek için buraya tıklayın."
+
+#: js/app.js:1132
 msgid "Error setting {name} as favorite."
 msgstr "{name} favori olarak ayarlanırken hata oluştu."
 
-#: js/app.js:1243 js/app.js:1247 templates/contacts.php:182
+#: js/app.js:1271 js/app.js:1275 templates/contacts.php:182
 msgid "Merge contacts"
 msgstr "Kişileri birleştir"
 
-#: js/app.js:1269 js/app.js:1322 js/settings.js:120 templates/contacts.php:321
+#: js/app.js:1297 js/app.js:1350 js/settings.js:120 templates/contacts.php:321
 #: templates/settings.php:62
 msgid "Cancel"
 msgstr "İptal"
 
-#: js/app.js:1296 templates/contacts.php:163
+#: js/app.js:1324 templates/contacts.php:163
 msgid "Add group"
 msgstr "Grup ekle"
 
-#: js/app.js:1300
+#: js/app.js:1328
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1394
+#: js/app.js:1422
 msgid "Could not find contact: {id}"
 msgstr "Kişi bulunamadı: {id}"
 
-#: js/app.js:1417
+#: js/app.js:1445
 msgid "No files selected for upload."
 msgstr "Yükleme için dosya seçilmedi."
 
-#: js/app.js:1427
+#: js/app.js:1455
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Yüklemeye çalıştığınız dosya sunucudaki dosya yükleme maksimum boyutunu aşmaktadır. "
 
-#: js/app.js:1528
+#: js/app.js:1556
 msgid "Edit profile picture"
 msgstr "Profil fotografını düzenle"
 
-#: js/app.js:1532
+#: js/app.js:1560
 msgid "Crop photo"
 msgstr "Fotoğrafı kırp"
 
@@ -634,7 +640,7 @@ msgstr "Karalistede bulunan dosya yükleme girişimi:"
 
 #: lib/controller/importcontroller.php:93
 msgid "Error uploading contacts to storage."
-msgstr "Bağlantıları depoya yükleme hatası"
+msgstr "Bağlantılar depoya yüklenirken hata."
 
 #: lib/controller/importcontroller.php:138
 msgid "Error moving file to imports folder."
@@ -1041,7 +1047,7 @@ msgstr "Tercih edilen"
 
 #: templates/contacts.php:353
 msgid "Please specify a valid email address."
-msgstr "Lütfen geçerli bir eposta adresi belirtin."
+msgstr "Lütfen geçerli bir e-posta adresi belirtin."
 
 #: templates/contacts.php:353
 msgid "someone@example.com"

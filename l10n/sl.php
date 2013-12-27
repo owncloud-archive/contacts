@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Napaka omrežja ali strežnika. Pošljite obvestilo skrbniku sistema.",
 "Error adding to group." => "Napaka med dodajanjem stika v skupino.",
 "Error removing from group." => "Napaka med odstranjevanjem stika iz skupino.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Izbranih je več kot 300 stikov.\nOpravilo bo najverjetneje spodletelo. Kliknite, če želite vseeno poskusiti.",
 "Error setting {name} as favorite." => "Napaka med nastavljanjem {name} kot priljubljenega.",
 "Merge contacts" => "Združi stike",
 "Cancel" => "Prekliči",

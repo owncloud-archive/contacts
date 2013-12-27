@@ -1065,13 +1065,41 @@ OC.Contacts = OC.Contacts || {
 			if(wrongKey(event)) {
 				return;
 			}
-			console.log('download');
+
+			var doDownload = function(contacts) {
+				// Only get backend, addressbookid and contactid
+				contacts = $.map(contacts, function(c) {return c.metaData();});
+				var targets = {};
+				// Try to shorten request URI
+				$.each(contacts, function(idx, contact) {
+					if(!targets[contact.backend]) {
+						targets[contact.backend] = {};
+					}
+					if(!targets[contact.backend][contact.addressBookId]) {
+						targets[contact.backend][contact.addressBookId] = [];
+					}
+					targets[contact.backend][contact.addressBookId].push(contact.contactId);
+				});
+				var url = OC.Router.generate('contacts_export_selected', {t:targets});
+				//console.log('export url', url);
+				document.location.href = url;
+			};
 			var contacts = self.contacts.getSelectedContacts();
-			// Only get backend, addressbookid and contactid
-			contacts = $.map(contacts, function(c) {return c.metaData();});
-			var url = OC.Router.generate('contacts_export_selected', {contacts:contacts});
-			console.log('export url', url);
-			document.location.href = url;
+			console.log('download', contacts.length);
+
+			// The 300 is just based on my little testing with Apache2
+			// Other web servers may fail before.
+			if(contacts.length > 300) {
+				OC.notify({
+					message:t('contacts',"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway."),
+					timeout:5,
+					clickhandler:function() {
+						doDownload(contacts);
+					}
+				});
+			} else {
+				doDownload(contacts);
+			}
 		});
 
 		this.$contactListHeader.on('click keydown', '.merge', function(event) {

@@ -23,6 +23,7 @@
 "Network or server error. Please inform administrator." => "Verkko- tai palvelinvirhe. Ilmoita asiasta pääkäyttäjälle.",
 "Error adding to group." => "Virhe ryhmään lisättäessä.",
 "Error removing from group." => "Virhe poistaessa ryhmästä.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Olet valinnut yli 300 yhteystietoa.\nTämä johtaa mitä luultavimmin epäonnistumiseen! Napsauta tästä yrittääksesi silti.",
 "Merge contacts" => "Yhdistä yhteystiedot",
 "Cancel" => "Peru",
 "Add group" => "Lisää ryhmä",
