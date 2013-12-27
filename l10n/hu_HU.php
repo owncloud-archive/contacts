@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Hiba történt a hálózatban vagy a kiszolgálón. Értesítse a rendszergazdát!",
 "Error adding to group." => "Hiba a csoporthoz adás közben.",
 "Error removing from group." => "Hiba a csoportból való eltávolítás közben.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "300-nál több adatot választott a címjegyzékből. Ez valószínűleg hibát fog okozni. Kattintson ide, ha mégis meg akarja próbálni!",
 "Error setting {name} as favorite." => "Nem sikerült \"{name}\"-t kedvencként beállítani.",
 "Merge contacts" => "Névjegyek összefűzése.",
 "Cancel" => "Mégsem",
