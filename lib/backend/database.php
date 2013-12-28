@@ -22,9 +22,10 @@
 
 namespace OCA\Contacts\Backend;
 
-use OCA\Contacts\Contact;
-use OCA\Contacts\VObject\VCard;
-use Sabre\VObject\Reader;
+use OCA\Contacts\Contact,
+	OCA\Contacts\VObject\VCard,
+	OCA\Contacts\Utils\Properties,
+	Sabre\VObject\Reader;
 
 /**
  * Subclass this class for Cantacts backends
@@ -324,7 +325,7 @@ class Database extends AbstractBackend {
 	 * @param integer $id
 	 * @return boolean
 	 */
-	public function touchAddressBook($id) {
+	public function setModifiedAddressBook($id) {
 		$query = 'UPDATE `' . $this->addressBooksTableName
 			. '` SET `ctag` = ? + 1 WHERE `id` = ?';
 		if(!isset(self::$preparedQueries['touchaddressbook'])) {
@@ -516,7 +517,7 @@ class Database extends AbstractBackend {
 			return false;
 		}
 
-		$uri = is_null($uri) ? $contact->UID . '.vcf' : $uri;
+		$uri = is_null($uri) ? $this->uniqueURI($addressbookid, $contact->UID . '.vcf') : $uri;
 		$now = new \DateTime;
 		$contact->REV = $now->format(\DateTime::W3C);
 
@@ -552,9 +553,9 @@ class Database extends AbstractBackend {
 		}
 		$newid = \OCP\DB::insertid($this->cardsTableName);
 
-		$this->touchAddressBook($addressbookid);
+		$this->setModifiedAddressBook($addressbookid);
 		\OCP\Util::emitHook('OCA\Contacts', 'post_createContact',
-			array('id' => $newid, 'parent' => $addressbookid, 'contact' => $contact)
+			array('id' => $newid, 'parent' => $addressbookid, 'backend' => $this->name, 'contact' => $contact)
 		);
 		return (string)$newid;
 	}
@@ -564,7 +565,7 @@ class Database extends AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param mixed $id Contact ID
-	 * @param mixed $contact
+	 * @param VCard|string $contact
 	 * @param array $options - Optional (backend specific options)
 	 * @see getContact
 	 * @return bool
@@ -636,10 +637,16 @@ class Database extends AbstractBackend {
 			return false;
 		}
 
-		$this->touchAddressBook($addressbookid);
+		$this->setModifiedAddressBook($addressbookid);
 		if(!$isBatch) {
 			\OCP\Util::emitHook('OCA\Contacts', 'post_updateContact',
-				array('id' => $id, 'parent' => $addressbookid, 'contact' => $contact, 'carddav' => $isCardDAV)
+				array(
+					'backend' => $this->name,
+					'addressBookId' => $addressbookid,
+					'contactId' => $id,
+					'contact' => $contact,
+					'carddav' => $isCardDAV
+				)
 			);
 		}
 		return true;
@@ -708,7 +715,7 @@ class Database extends AbstractBackend {
 				. $id, \OCP\Util::DEBUG);
 			return false;
 		}
-		$this->touchAddressBook($addressbookid);
+		$this->setModifiedAddressBook($addressbookid);
 		return true;
 	}
 
@@ -776,4 +783,29 @@ class Database extends AbstractBackend {
 		return $newname;
 	}
 
+	/**
+	* @brief Checks if a contact with the same URI already exist in the address book.
+	* @param string $addressBookId Address book ID.
+	* @param string $uri
+	* @returns string Unique URI
+	*/
+	protected function uniqueURI($addressBookId, $uri) {
+		$stmt = \OCP\DB::prepare( 'SELECT * FROM `' . $this->cardsTableName . '` WHERE `addressbookid` = ? AND `uri` = ?' );
+
+		$result = $stmt->execute(array($addressBookId, $uri));
+
+		if($result->numRows() > 0) {
+			while(true) {
+				$uri = Properties::generateUID() . '.vcf';
+				$result = $stmt->execute(array($addressBookId, $uri));
+				if($result->numRows() > 0) {
+					continue;
+				} else {
+					return $uri;
+				}
+			}
+		} else {
+			return $uri;
+		}
+	}
 }

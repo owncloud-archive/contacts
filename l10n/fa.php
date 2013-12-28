@@ -51,12 +51,14 @@
 "Video" => "رسانه تصویری",
 "Pager" => "صفحه",
 "Internet" => "اینترنت",
+"Family" => "خانواده",
 "Groups" => "گروه ها",
 "Add contact" => "افزودن اطلاعات شخص مورد نظر",
 "Delete current photo" => "پاک کردن تصویر کنونی",
 "Edit current photo" => "ویرایش تصویر کنونی",
 "Upload new photo" => "بار گذاری یک تصویر جدید",
 "Select photo from ownCloud" => "انتخاب یک تصویر از ابر های شما",
+"Name" => "نام",
 "Additional names" => "نام های دیگر",
 "Nickname" => "نام مستعار",
 "Enter nickname" => "یک نام مستعار وارد کنید",
@@ -86,6 +88,5 @@
 "iOS/OS X" => "iOS/OS X ",
 "Addressbooks" => "کتابچه ی نشانی ها",
 "New Address Book" => "کتابچه نشانه های جدید",
-"Name" => "نام",
 "Description" => "توضیحات"
 );

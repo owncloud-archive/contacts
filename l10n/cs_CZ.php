@@ -105,6 +105,7 @@
 "Error saving contact." => "Chyba při ukládání kontaktu.",
 "Error removing contact from other address book." => "Chyba při odebírání kontaktu z jiného adresáře kontaktů.",
 "Couldn't find contact." => "Kontakt se nepodařilo nalézt",
+"No contact data in request." => "Žádná data kontaktu v požadavku.",
 "Error merging into contact." => "Chyba při slučování do kontaktu.",
 "Error saving contact to backend." => "Chyba při zápisu kontaktu do úložiště.",
 "Property name is not set." => "Název vlastnosti není nastaven.",
@@ -216,6 +217,7 @@
 "Edit current photo" => "Upravit současnou fotku",
 "Upload new photo" => "Nahrát novou fotku",
 "Select photo from ownCloud" => "Vybrat fotku z ownCloudu",
+"Name" => "Název",
 "First name" => "Křestní jméno",
 "Additional names" => "Další jména",
 "Last name" => "Příjmení",
@@ -271,6 +273,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresáře kontaktů",
 "New Address Book" => "Nový adresář kontaktů",
-"Name" => "Název",
 "Description" => "Popis"
 );

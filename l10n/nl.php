@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Netwerk- of serverfout. Neem contact op met de beheerder.",
 "Error adding to group." => "Fout bij het toevoegen aan de groep.",
 "Error removing from group." => "Fout bij het verwijderen uit de groep.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "U hebt meer dan300 contactpersonen geselecteerd.\nDat gaat waarschijnlijk niet lukken! Klik hier om het toch te proberen.",
 "Error setting {name} as favorite." => "Fout bij instellen {name} als favoriet",
 "Merge contacts" => "Samenvoegen contactgegevens",
 "Cancel" => "Annuleer",
@@ -217,6 +218,7 @@
 "Edit current photo" => "Wijzig huidige foto",
 "Upload new photo" => "Upload nieuwe foto",
 "Select photo from ownCloud" => "Selecteer foto uit ownCloud",
+"Name" => "Naam",
 "First name" => "Voornaam",
 "Additional names" => "Extra namen",
 "Last name" => "Achternaam",
@@ -272,6 +274,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresboeken",
 "New Address Book" => "Nieuw Adresboek",
-"Name" => "Naam",
 "Description" => "Beschrijving"
 );

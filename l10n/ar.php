@@ -83,6 +83,7 @@
 "Address book not found" => "تعذر ايجاد دفتر العناوين",
 "You do not have permissions to see this contact" => "ليس لديك الصلاحية  لمشاهدة جهة الاتصال ",
 "You do not have permissions to update this contact" => "ليس لديك الصلاحية  لتحديث جهة الاتصال هذه",
+"Property not found" => "لم يتم العثور على الملكية",
 "Unknown IM: " => "جهة تراسل فوري غير معروفة",
 "{name}'s Birthday" => "يوم ميلاد {name}'s",
 "Error creating address book" => "خطأ في إنشاء دفتر العناوين",
@@ -187,6 +188,7 @@
 "Edit current photo" => "تحرير الصورة الحالية",
 "Upload new photo" => "رفع صورة جديدة",
 "Select photo from ownCloud" => "إختيار صورة من ownCloud",
+"Name" => "اسم",
 "First name" => "الاسم الأول",
 "Additional names" => "الاسماء الإضافية",
 "Last name" => "اسم العائلة",
@@ -241,6 +243,5 @@
 "iOS/OS X" => "ط ن ت/ ن ت 10",
 "Addressbooks" => "كتب العناوين",
 "New Address Book" => "كتاب عناوين جديد",
-"Name" => "اسم",
 "Description" => "مواصفات"
 );

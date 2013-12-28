@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Ошибка сети или сервера. Пожалуйста, сообщите администратору.",
 "Error adding to group." => "Ошибка добавления в группу.",
 "Error removing from group." => "Ошибка удаления из группы.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Вы выбрали более 300 контактов.\nCкорее всего, это действие закончится неудачей! Нажмите сюда, чтобы в любом случае попробовать.",
 "Error setting {name} as favorite." => "Ошибка установки {name} избранным.",
 "Merge contacts" => "Объединить контакты",
 "Cancel" => "Отменить",
@@ -217,6 +218,7 @@
 "Edit current photo" => "Редактировать текущую фотографию",
 "Upload new photo" => "Загрузить новую фотографию",
 "Select photo from ownCloud" => "Выбрать фотографию из ownCloud",
+"Name" => "Имя",
 "First name" => "Имя",
 "Additional names" => "Отчество",
 "Last name" => "Фамилия",
@@ -272,6 +274,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Адресные книги",
 "New Address Book" => "Новая адресная книга",
-"Name" => "Имя",
 "Description" => "Описание"
 );

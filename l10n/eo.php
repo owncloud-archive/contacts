@@ -170,6 +170,7 @@
 "Edit current photo" => "Redakti nunan foton",
 "Upload new photo" => "Alŝuti novan foton",
 "Select photo from ownCloud" => "Elekti foton el ownCloud",
+"Name" => "Nomo",
 "First name" => "Persona nomo",
 "Additional names" => "Pliaj nomoj",
 "Last name" => "Familia nomo",
@@ -217,6 +218,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresaroj",
 "New Address Book" => "Nova adresaro",
-"Name" => "Nomo",
 "Description" => "Priskribo"
 );

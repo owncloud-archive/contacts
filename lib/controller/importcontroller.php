@@ -40,6 +40,7 @@ class ImportController extends Controller {
 		$file=$request->files['file'];
 
 		if($file['error'] !== UPLOAD_ERR_OK) {
+			$error = $file['error'];
 			$errors = array(
 				UPLOAD_ERR_OK			=> App::$l10n->t("There is no error, the file uploaded with success"),
 				UPLOAD_ERR_INI_SIZE		=> App::$l10n->t("The uploaded file exceeds the upload_max_filesize directive in php.ini")
@@ -116,8 +117,8 @@ class ImportController extends Controller {
 
 		$proxyStatus = \OC_FileProxy::$enabled;
 		\OC_FileProxy::$enabled = false;
-		//$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
-		$content = file_get_contents('oc://' . $path . '/' . $filename);
+		$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
+		//$content = file_get_contents('oc://' . $path . '/' . $filename);
 		if($view->file_put_contents('/imports/' . $filename, $content)) {
 			\OC_FileProxy::$enabled = $proxyStatus;
 			$count = substr_count($content, 'BEGIN:');

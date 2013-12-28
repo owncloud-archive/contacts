@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Network or server error. Please inform administrator.",
 "Error adding to group." => "Error adding to group.",
 "Error removing from group." => "Error removing from group.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway.",
 "Error setting {name} as favorite." => "Error setting {name} as favourite.",
 "Merge contacts" => "Merge contacts",
 "Cancel" => "Cancel",
@@ -217,6 +218,7 @@
 "Edit current photo" => "Edit current photo",
 "Upload new photo" => "Upload new photo",
 "Select photo from ownCloud" => "Select photo from ownCloud",
+"Name" => "Name",
 "First name" => "First-name",
 "Additional names" => "Middle names",
 "Last name" => "Surname",
@@ -272,6 +274,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Address books",
 "New Address Book" => "New Address Book",
-"Name" => "Name",
 "Description" => "Description"
 );

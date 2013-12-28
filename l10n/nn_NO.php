@@ -31,7 +31,9 @@
 "Fax" => "Faks",
 "Video" => "Video",
 "Pager" => "Personsøkjar",
+"Family" => "Familie",
 "Groups" => "Grupper",
+"Name" => "Namn",
 "Select groups" => "Vel grupper",
 "Title" => "Tittel",
 "Organization" => "Organisasjon",
@@ -51,6 +53,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adressebøker",
 "New Address Book" => "Ny adressebok",
-"Name" => "Namn",
 "Description" => "Skildring"
 );

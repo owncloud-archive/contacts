@@ -117,11 +117,24 @@ class Hooks{
 	public static function contactUpdated($parameters) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
 		$contact = $parameters['contact'];
-		Utils\Properties::updateIndex($parameters['id'], $contact);
+		Utils\Properties::updateIndex($parameters['contactId'], $contact);
 		// If updated via CardDAV we don't know if PHOTO has changed
-		if(isset($parameters['carddav']) && $parameters['carddav']
-			&& (isset($contact->PHOTO) || isset($contact->LOGO))) {
-			$contact->cacheThumbnail(null, false, true);
+		if(isset($parameters['carddav']) && $parameters['carddav']) {
+			if(isset($contact->PHOTO) || isset($contact->LOGO)) {
+				Utils\Properties::cacheThumbnail(
+					$parameters['backend'],
+					$parameters['addressBookId'],
+					$parameters['contactId'],
+					null,
+					$contact,
+					array('update' => true)
+				);
+			}
+			$tagMgr = \OC::$server->getTagManager()->load('contact');
+			$tagMgr->purgeObjects(array($parameters['contactId']));
+			if(isset($contact->CATEGORIES)) {
+				$tagMgr->addMultiple($contact->CATEGORIES->getParts(), true, $parameters['contactId']);
+			}
 		}
 	}
 

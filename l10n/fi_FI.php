@@ -23,6 +23,7 @@
 "Network or server error. Please inform administrator." => "Verkko- tai palvelinvirhe. Ilmoita asiasta pääkäyttäjälle.",
 "Error adding to group." => "Virhe ryhmään lisättäessä.",
 "Error removing from group." => "Virhe poistaessa ryhmästä.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Olet valinnut yli 300 yhteystietoa.\nTämä johtaa mitä luultavimmin epäonnistumiseen! Napsauta tästä yrittääksesi silti.",
 "Merge contacts" => "Yhdistä yhteystiedot",
 "Cancel" => "Peru",
 "Add group" => "Lisää ryhmä",
@@ -169,6 +170,7 @@
 "Edit current photo" => "Muokkaa nykyistä valokuvaa",
 "Upload new photo" => "Lähetä uusi valokuva",
 "Select photo from ownCloud" => "Valitse valokuva ownCloudista",
+"Name" => "Nimi",
 "First name" => "Etunimi",
 "Additional names" => "Lisänimet",
 "Last name" => "Sukunimi",
@@ -214,6 +216,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Osoitekirjat",
 "New Address Book" => "Uusi osoitekirja",
-"Name" => "Nimi",
 "Description" => "Kuvaus"
 );

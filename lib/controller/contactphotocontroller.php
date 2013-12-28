@@ -331,7 +331,14 @@ class ContactPhotoController extends Controller {
 		if(!$contact->save()) {
 			return $response->bailOut(App::$l10n->t('Error saving contact.'));
 		}
-		$thumbnail = $contact->cacheThumbnail($image);
+
+		$thumbnail = Properties::cacheThumbnail(
+			$params['backend'],
+			$params['addressBookId'],
+			$params['contactId'],
+			$image
+		);
+
 		$response->setData(array(
 			'status' => 'success',
 			'data' => array(

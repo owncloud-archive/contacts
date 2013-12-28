@@ -22,16 +22,14 @@
 
 namespace OCA\Contacts;
 
-use Sabre\VObject\Property;
+use Sabre\VObject\Property,
+	OCA\Contacts\Utils\Properties;
 
 /**
  * Subclass this class or implement IPIMObject interface for PIM objects
  */
 
 class Contact extends VObject\VCard implements IPIMObject {
-
-	const THUMBNAIL_PREFIX = 'contact-thumbnail-';
-	const THUMBNAIL_SIZE = 28;
 
 	/**
 	 * The name of the object type in this case VCARD.
@@ -95,10 +93,12 @@ class Contact extends VObject\VCard implements IPIMObject {
 							break;
 						case 'displayname':
 						case 'fullname':
-							$this->props['displayname'] = $value;
-							$this->FN = $value;
-							// Set it to saved again as we're not actually changing anything
-							$this->setSaved();
+							if(is_string($value)) {
+								$this->props['displayname'] = $value;
+								$this->FN = $value;
+								// Set it to saved again as we're not actually changing anything
+								$this->setSaved();
+							}
 							break;
 					}
 				}
@@ -675,49 +675,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return $updated;
 	}
 
-	// TODO: Cleanup these parameters
-	public function cacheThumbnail(\OCP\Image $image = null, $remove = false, $update = false) {
-		$key = self::THUMBNAIL_PREFIX . $this->combinedKey();
-		//\OC_Cache::remove($key);
-		if(\OC_Cache::hasKey($key) && $image === null && $remove === false && $update === false) {
-			return \OC_Cache::get($key);
-		}
-		if($remove) {
-			\OC_Cache::remove($key);
-			if(!$update) {
-				return false;
-			}
-		}
-		if(is_null($image)) {
-			$this->retrieve();
-			$image = new \OCP\Image();
-			if(!isset($this->PHOTO) && !isset($this->LOGO)) {
-				return false;
-			}
-			if(!$image->loadFromBase64((string)$this->PHOTO)) {
-				if(!$image->loadFromBase64((string)$this->LOGO)) {
-					return false;
-				}
-			}
-		}
-		if(!$image->centerCrop()) {
-			\OCP\Util::writeLog('contacts',
-				__METHOD__ .'. Couldn\'t crop thumbnail for ID ' . $key,
-				\OCP\Util::ERROR);
-			return false;
-		}
-		if(!$image->resize(self::THUMBNAIL_SIZE)) {
-			\OCP\Util::writeLog('contacts',
-				__METHOD__ . '. Couldn\'t resize thumbnail for ID ' . $key,
-				\OCP\Util::ERROR);
-			return false;
-		}
-		 // Cache as base64 for around a month
-		\OC_Cache::set($key, strval($image), 3000000);
-		\OCP\Util::writeLog('contacts', 'Caching ' . $key, \OCP\Util::DEBUG);
-		return \OC_Cache::get($key);
-	}
-
     public function __get($key) {
 		if(!$this->isRetrieved()) {
 			$this->retrieve();
@@ -751,7 +708,14 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 		parent::__unset($key);
 		if($key === 'PHOTO') {
-			$this->cacheThumbnail(null, true);
+			Properties::cacheThumbnail(
+				$this->getBackend()->name,
+				$this->getParent()->getId(),
+				$this->getId(),
+				null,
+				null,
+				array('remove' => true)
+			);
 		}
 		$this->setSaved(false);
 	}
@@ -790,7 +754,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			try {
 				$date = new \DateTime($birthday);
 			} catch(\Exception $e) {
-				continue;
+				return;
 			}
 			$vevent = \Sabre\VObject\Component::create('VEVENT');
 			$vevent->add('DTSTART');
@@ -811,4 +775,5 @@ class Contact extends VObject\VCard implements IPIMObject {
 			return $vcal;
 		}
 	}
+
 }

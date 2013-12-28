@@ -119,6 +119,7 @@
 "Edit current photo" => "தற்போதைய படத்தை தொகுக்க",
 "Upload new photo" => "புதிய படத்தை பதிவேற்றுக",
 "Select photo from ownCloud" => "ownCloud இலிருந்து படத்தை தெரிவுசெய்க",
+"Name" => "பெயர்",
 "First name" => "முதல் பெயர்",
 "Additional names" => "மேலதிக பெயர்கள்",
 "Last name" => "கடைசிப் பெயர்",
@@ -161,6 +162,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "முகவரி புத்தகங்கள்",
 "New Address Book" => "புதிய முகவரி புத்தகம்",
-"Name" => "பெயர்",
 "Description" => "விவரிப்பு"
 );

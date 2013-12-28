@@ -249,6 +249,18 @@ abstract class AbstractBackend {
 	}
 
 	/**
+	 * @brief 'touch' an address book.
+	 *
+	 * If implemented this method must mark the address books
+	 * modification date so lastModifiedAddressBook() can be
+	 * used to invalidate the cache.
+	 *
+	 * @param string $addressbookid
+	 */
+	public function setModifiedAddressBook($addressbookid) {
+	}
+
+	/**
 	 * Returns all contacts for a specific addressbook id.
 	 *
 	 * The returned array MUST contain the unique ID a string value 'id', a string
@@ -375,7 +387,7 @@ abstract class AbstractBackend {
 		$key = $this->combinedKey($addressBookId);
 		$key = 'active_' . $key;
 
-		return (\OCP\Config::getUserValue($this->userid, 'contacts', $key, 'true') === 'true');
+		return !!(\OCP\Config::getUserValue($this->userid, 'contacts', $key, 1));
 	}
 
 	/**
@@ -388,7 +400,8 @@ abstract class AbstractBackend {
 		$key = $this->combinedKey($addressBookId);
 		$key = 'active_' . $key;
 
-		return \OCP\Config::setUserValue($this->userid, 'contacts', $key, $active);
+		$this->setModifiedAddressBook($addressBookId);
+		return \OCP\Config::setUserValue($this->userid, 'contacts', $key, (int)$active);
 	}
 
 	/**

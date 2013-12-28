@@ -14,6 +14,7 @@
 "Home" => "主頁",
 "Text" => "文字",
 "Groups" => "群組",
+"Name" => "名稱",
 "Title" => "標題",
 "Birthday" => "生日",
 "Email" => "電郵",
@@ -21,6 +22,5 @@
 "Share" => "分享",
 "more info" => "更多",
 "Primary address (Kontact et al)" => "主要地址",
-"iOS/OS X" => "iOS/OSX",
-"Name" => "名稱"
+"iOS/OS X" => "iOS/OSX"
 );

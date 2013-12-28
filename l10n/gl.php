@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Produciuse un erro na rede ou no servidor. Informe ao administrador.",
 "Error adding to group." => "Produciuse un erro ao engadir ao grupo.",
 "Error removing from group." => "Produciuse un erro ao retirar do grupo.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Seleccionou máis de 300 contactos.\nIsto probabelmente fallará! Prema aquí para tentalo aínda así.",
 "Error setting {name} as favorite." => "Produciuse un erro ao estabelecer {name} como favorito.",
 "Merge contacts" => "Misturar os contactos",
 "Cancel" => "Cancelar",
@@ -217,6 +218,7 @@
 "Edit current photo" => "Editar a foto actual",
 "Upload new photo" => "Enviar unha nova foto",
 "Select photo from ownCloud" => "Escoller foto desde ownCloud",
+"Name" => "Nome",
 "First name" => "Nome",
 "Additional names" => "Nomes adicionais",
 "Last name" => "Apelidos",
@@ -272,6 +274,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Caderno de enderezos",
 "New Address Book" => "Novo caderno de enderezos",
-"Name" => "Nome",
 "Description" => "Descrición"
 );

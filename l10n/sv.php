@@ -217,6 +217,7 @@
 "Edit current photo" => "Redigera aktuellt foto",
 "Upload new photo" => "Ladda upp ett nytt foto",
 "Select photo from ownCloud" => "Välj foto från ownCloud",
+"Name" => "Namn",
 "First name" => "Förnamn",
 "Additional names" => "Mellannamn",
 "Last name" => "Efternamn",
@@ -272,6 +273,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adressböcker",
 "New Address Book" => "Ny adressbok",
-"Name" => "Namn",
 "Description" => "Beskrivning"
 );

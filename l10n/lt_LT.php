@@ -129,6 +129,7 @@
 "Error uploading contacts to storage." => "Klaida siunčiant kontaktus į saugyklą.",
 "Error moving file to imports folder." => "Klaida perkeliant failą į importavimų aplanką.",
 "You do not have permissions to import into this address book." => "Jūs neturite leidimo importuoti į šią adresų knygutę.",
+"File name missing from request." => "Užklausoje trūksta failo pavadinimo.",
 "Attempt to access blacklisted file:" => "bandymas pasiekti draudžiamą failą:",
 "No contacts found in: " => "Kontaktų nerasta:",
 "No key is given." => "Nepateiktas raktas.",
@@ -197,6 +198,7 @@
 "Edit current photo" => "Redaguoti šią nuotrauką",
 "Upload new photo" => "Įkelti naują foto",
 "Select photo from ownCloud" => "Pasirinkite nuotrauką iš ownCloud",
+"Name" => "Pavadinimas",
 "First name" => "Vardas",
 "Additional names" => "Papildomi vardai",
 "Last name" => "Pavardė",
@@ -211,6 +213,7 @@
 "Birthday" => "Gimtadienis",
 "Notes go here..." => "Pastabos rašomo čia...",
 "Export as VCF" => "Eksportuoti kaip VCF",
+"Add field..." => "Pridėti lauką...",
 "Phone" => "Telefonas",
 "Email" => "El. Paštas",
 "Instant Messaging" => "Tikralaikiai pokalbiai",
@@ -221,6 +224,7 @@
 "Preferred" => "Pageidautinas",
 "Please specify a valid email address." => "Prašome nurodyti tinkamą el. pašto adresą.",
 "someone@example.com" => "kasnors@pavyzdys.lt",
+"Mail to address" => "Gavėjo el. pašto adresas",
 "Delete email address" => "Ištrinti el. pašto adresus",
 "Enter phone number" => "Įveskite telefono numerį",
 "Delete phone number" => "Ištrinti telefono numerį",
@@ -247,6 +251,5 @@
 "iOS/OS X" => "iOS/OS X",
 "Addressbooks" => "Adresų knygos",
 "New Address Book" => "Nauja adresų knyga",
-"Name" => "Pavadinimas",
 "Description" => "Aprašymas"
 );
