@@ -53,6 +53,7 @@ OC.Contacts = OC.Contacts || {};
 			addText: t('core', 'Add'),
 			ok: function(event, name) {
 				$addInput.addClass('loading');
+				name = escapeHTML(name);
 				self.addGroup({name:name}, function(response) {
 					if(response.error) {
 						$(document).trigger('status.contacts.error', response);
