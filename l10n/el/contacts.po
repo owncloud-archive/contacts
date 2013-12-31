@@ -24,6 +24,7 @@
 # Teogramm <theodorewii121@hotmail.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012
+# vkehayas <vkehayas@gmail.com>, 2013
 # Wasilis <inactive+Wasilis@transifex.com>, 2013
 # Wasilis <inactive+Wasilis@transifex.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012-2013
@@ -32,9 +33,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-21 00:49-0500\n"
-"PO-Revision-Date: 2013-12-20 06:21+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2013-12-29 00:48-0500\n"
+"PO-Revision-Date: 2013-12-28 23:10+0000\n"
+"Last-Translator: vkehayas <vkehayas@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,15 +65,15 @@ msgstr "Προετοιμασία..."
 
 #: js/addressbooks.js:372
 msgid "Imported {count} of {total} contacts"
-msgstr "Εισήχθησαν επαφές {count} από {total}"
+msgstr "Εισήχθησαν {count} από {total} επαφές"
 
 #: js/addressbooks.js:394
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr "Οι εισαγώμενες {imported} επαφές. {failed} απέτυχαν."
+msgstr "Εισήχθησαν {imported} επαφές. {failed} απέτυχαν."
 
 #: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
-msgstr "Το βιβλίο διευθύνσεων  με το όνομα  {name} υπάρχει ήδη "
+msgstr "Το βιβλίο διευθύνσεων με το όνομα {name} υπάρχει ήδη "
 
 #: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
@@ -80,7 +81,7 @@ msgstr "Αποτυχία πρόσθεσης βιβλίου διευθύνσεω�
 
 #: js/addressbooks.js:626
 msgid "Failed loading address books: {error}"
-msgstr "Αποτυχία πρόσθεσης βιβλίων διευθύνσεων: {error}"
+msgstr "Αποτυχία φόρτωσης βιβλίων διευθύνσεων: {error}"
 
 #: js/app.js:215
 msgid "Indexing contacts"
@@ -88,7 +89,7 @@ msgstr "Ευρετηρίαση επαφών"
 
 #: js/app.js:225
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr "Σφάλμα κατά τη φόρτωση των βιβλίων διευθύνσεων: {msg}"
+msgstr "Ανεπανόρθωτο σφάλμα κατά τη φόρτωση των βιβλίων διευθύνσεων: {msg}"
 
 #: js/app.js:226
 msgid "Error."
@@ -112,7 +113,7 @@ msgstr "Μη έγκυρη URL: \"{url}\""
 
 #: js/app.js:479
 msgid "There was an error opening a mail composer."
-msgstr "Υπήρχε ένα σφάλμα στο άνοιγμα μίας σύνθεσης μηνύματος."
+msgstr "Υπήρχε ένα σφάλμα στο άνοιγμα του επεξεργαστή μηνυμάτων."
 
 #: js/app.js:484
 msgid "Invalid email: \"{url}\""
@@ -150,11 +151,11 @@ msgstr "Σφάλμα κατά την αφαίρεση από ομάδα."
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "Έχετε επιλέξει πάνω από 300 επαφές.\nΑυτό μάλλον θα αποτύχει! Κλικάρετε εδώ για να δοκιμάσετε ούτως ή άλλως."
 
 #: js/app.js:1132
 msgid "Error setting {name} as favorite."
-msgstr "Σφάλμα κατά τον ορισμό του {name} σαν αγαπημένο"
+msgstr "Σφάλμα κατά τον ορισμό του {name} σαν αγαπημένο."
 
 #: js/app.js:1271 js/app.js:1275 templates/contacts.php:182
 msgid "Merge contacts"
@@ -179,13 +180,13 @@ msgstr "Αδυναμία εύρεσης επαφής: {id}"
 
 #: js/app.js:1445
 msgid "No files selected for upload."
-msgstr "Δεν επιλέχτηκαν αρχεία για μεταφόρτωση"
+msgstr "Δεν επιλέχτηκαν αρχεία για μεταφόρτωση."
 
 #: js/app.js:1455
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr "Το αρχείο που προσπαθείτε να ανεβάσετε υπερβαίνει το μέγιστο μέγεθος για τις προσθήκες αρχείων σε αυτόν τον server."
+msgstr "Το αρχείο που προσπαθείτε να μεταφορτώσετε υπερβαίνει το μέγιστο μέγεθος μεταφόρτωσης αρχείων σε αυτόν το διακομιστή."
 
 #: js/app.js:1556
 msgid "Edit profile picture"
@@ -201,11 +202,11 @@ msgstr "Είναι σωστό;"
 
 #: js/contacts.js:856
 msgid "Error parsing date: {date}"
-msgstr "Σφάλμα κατά την ανάλυση της ημερομηνίας : {date}"
+msgstr "Σφάλμα κατά την ανάλυση της ημερομηνίας: {date}"
 
 #: js/contacts.js:1053
 msgid "# groups"
-msgstr "# ομάδες"
+msgstr "# ομάδων"
 
 #: js/contacts.js:1125
 msgid "Error parsing birthday {bday}: {error}"
@@ -215,11 +216,11 @@ msgstr "Σφάλμα κατά την ανάλυση των γενεθλίων {b
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή,δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
+msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή αλλά δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
 #: js/contacts.js:2173
 msgid "Click to undo deletion of {num} contacts"
-msgstr "Κλικ για να αναιρέσετε τη διαγραφή {num} επαφών"
+msgstr "Επιλέξτε για να αναιρέσετε τη διαγραφή {num} επαφών"
 
 #: js/contacts.js:2182
 msgid "Cancelled deletion of {num} contacts"
@@ -243,11 +244,11 @@ msgstr "Αδυναμία λήψης λίστας επαφών."
 
 #: js/groups.js:353
 msgid "Contact is not in this group."
-msgstr "Η επαφή δεν είναι σε αυτή την ομάδα"
+msgstr "Η επαφή δεν είναι σε αυτή την ομάδα."
 
 #: js/groups.js:367
 msgid "Contacts are not in this group."
-msgstr "Οι επαφές δεν είναι σε αυτή την ομάδα."
+msgstr "Οι επαφές δεν είναι σε αυτήν την ομάδα."
 
 #: js/groups.js:566
 msgid "Failed renaming group: {error}"
@@ -265,7 +266,7 @@ msgstr "Μπορείτε να σύρετε τις ομάδες για να\nτι
 
 #: js/groups.js:645
 msgid "Failed adding group: {error}"
-msgstr "Σφάλμα προσθήκη της ομάδας: {error}"
+msgstr "Σφάλμα προσθήκης της ομάδας: {error}"
 
 #: js/groups.js:657
 msgid "All"
@@ -289,7 +290,7 @@ msgstr "Σφάλμα φόρτωσης της ομάδας: {error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr "Παρακαλώ επέλεξε βιβλίο διευθύνσεων"
+msgstr "Παρακαλώ επιλέξτε το βιβλίο διευθύνσεων"
 
 #: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
@@ -321,7 +322,7 @@ msgstr "Σφάλμα"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
-msgstr "Το όνομα προβολής δεν μπορεί να είναι κενό. "
+msgstr "Το προβαλλόμενο όνομα δεν μπορεί να είναι κενό."
 
 #: js/settings.js:97 templates/settings.php:26
 msgid "Show CardDav link"
@@ -354,11 +355,11 @@ msgstr "Περισσότερα..."
 
 #: js/settings.js:162
 msgid "Less..."
-msgstr "Λιγότερα"
+msgstr "Λιγότερα..."
 
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
-msgstr "Σφάλμα διακομιστή. Παρακαλώ ενημερώστε το διαχειριστή."
+msgstr "Σφάλμα διακομιστή! Παρακαλώ ενημερώστε το διαχειριστή"
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -366,7 +367,7 @@ msgstr "Αποτυχία φόρτωσης φωτογραφίας: {error}"
 
 #: lib/addressbook.php:152
 msgid "You do not have permissions to see this contacts"
-msgstr "Δεν έχετε δικαιώματα να δείτε αυτή την επαφή"
+msgstr "Δεν έχετε άδεια για να δείτε αυτήν την επαφή"
 
 #: lib/addressbook.php:159
 msgid "Contact not found"
@@ -374,23 +375,23 @@ msgstr "Δεν βρέθηκε επαφή"
 
 #: lib/addressbook.php:186
 msgid "You do not have permissions to see these contacts"
-msgstr "Δεν έχετε δικαιώματα για να δείτε αυτές τις επαφές"
+msgstr "Δεν έχετε άδεια για να δείτε αυτές τις επαφές"
 
 #: lib/addressbook.php:213
 msgid "You do not have permissions add contacts to the address book"
-msgstr "Δεν έχετε δικαιώματα για να προσθέσετε επαφές σε αυτό το βιβλίο διευθύνσεων."
+msgstr "Δεν έχετε άδεια για να προσθέσετε επαφές σε αυτό το βιβλίο διευθύνσεων."
 
 #: lib/addressbook.php:216
 msgid "The backend for this address book does not support adding contacts"
-msgstr "Το σύστημα, για αυτό το βιβλίο διευθύνσεων, δεν υποστηρίζει προσθήκη επαφών. "
+msgstr "Το σύστημα για αυτό το βιβλίο διευθύνσεων δεν υποστηρίζει την προσθήκη επαφών."
 
 #: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
-msgstr "Δεν διαθέτε επαρκή δικαιώματα για την διαγραφή αυτής της επαφής."
+msgstr "Δεν έχετε άδεια για τη διαγραφή αυτής της επαφής"
 
 #: lib/addressbook.php:243 lib/addressbook.php:269
 msgid "The backend for this address book does not support deleting contacts"
-msgstr "Το σύστημα, για αυτό το βιβλίο διευθύνσεων, δεν υποστηρίζει διαγραφή επαφών. "
+msgstr "Το σύστημα για αυτό το βιβλίο διευθύνσεων δεν υποστηρίζει τη διαγραφή επαφών"
 
 #: lib/addressbook.php:290
 msgid "Unknown error"
@@ -398,15 +399,15 @@ msgstr "Άγνωστο σφάλμα"
 
 #: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
-msgstr "Το σύστημα, για αυτό το βιβλίο διευθύνσεων, δεν υποστηρίζει ενημέρωση "
+msgstr "Το σύστημα για αυτό το βιβλίο διευθύνσεων δεν υποστηρίζει ενημέρωση "
 
 #: lib/addressbook.php:358
 msgid "You don't have permissions to update the address book."
-msgstr "Δεν έχετε δικαιώματα ενημέρωσης αυτού του βιβλίου διευθύνσεων."
+msgstr "Δεν έχετε άδεια ενημέρωσης το βιβλίου διευθύνσεων."
 
 #: lib/addressbook.php:369
 msgid "You don't have permissions to delete the address book."
-msgstr "Δεν έχετε δικαιώματα να διαγράψετε αυτό το βιβλίο διευθύνσεων."
+msgstr "Δεν έχετε άδεια να διαγράψετε το βιβλίο διευθύνσεων."
 
 #: lib/app.php:144
 msgid "Address book not found"
@@ -414,15 +415,15 @@ msgstr "Δε βρέθηκε βιβλίο διευθύνσεων"
 
 #: lib/contact.php:114 lib/contact.php:161
 msgid "You do not have permissions to see this contact"
-msgstr "Δεν έχετε δικαιώματα να δείτε αυτή την επαφή"
+msgstr "Δεν έχετε άδεια να δείτε αυτή την επαφή"
 
 #: lib/contact.php:263
 msgid "You do not have permissions to update this contact"
-msgstr "Δεν έχετε δικαιώματα για να ενημερώσετε αυτή την επαφή"
+msgstr "Δεν έχετε άδεια για να ενημερώσετε αυτή την επαφή"
 
 #: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
-msgstr "Το σύστημα δεν υποστηρίζει  την ενημέρωση για αυτή την επαφή "
+msgstr "Το σύστημα για αυτή την επαφή δεν υποστηρίζει την ενημέρωσή της"
 
 #: lib/contact.php:292
 msgid "This backend not support adding contacts"
@@ -430,19 +431,19 @@ msgstr "Αυτό το σύστημα δεν υποστηρίζει προσθή�
 
 #: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
-msgstr "Δεν βρέθηκε ιδιότητα"
+msgstr "H ιδιότητα δεν βρέθηκε"
 
 #: lib/contact.php:467
 msgid " Missing IM parameter for: "
-msgstr "Λείπει IM παράμετρος για:"
+msgstr "Λείπει παράμετρος AM για:"
 
 #: lib/contact.php:475
 msgid "Unknown IM: "
-msgstr "Άγνωστο IM:"
+msgstr "Άγνωστο AM:"
 
 #: lib/contact.php:752
 msgid "{name}'s Birthday"
-msgstr "Τα Γεννέθλια του/της {name}"
+msgstr "Τα γενέθλια του/της {name}"
 
 #: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
@@ -455,7 +456,7 @@ msgstr "Σφάλμα κατά την ενημέρωση του βιβλίου δ
 #: lib/controller/addressbookcontroller.php:157
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr "Δεν έχετε δικαιώματα να διαγράψετε  το \"%s\" βιβλίο διευθύνσεων"
+msgstr "Δεν έχετε άδεια να διαγράψετε το βιβλίο διευθύνσεων \"%s\""
 
 #: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
@@ -471,7 +472,7 @@ msgstr "Σφάλμα διαγραφής επαφής."
 
 #: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
-msgstr "Σφάλμα κατά την ανάκτηση της επαφής"
+msgstr "Σφάλμα κατά την ανάκτηση της επαφής."
 
 #: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
@@ -480,7 +481,7 @@ msgstr "Σφάλμα κατά την αποθήκευση επαφής."
 
 #: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
-msgstr "Σφάλμα διαγραφής επαφής από το βιβλίο διευθύνσεων"
+msgstr "Σφάλμα διαγραφής επαφής από άλλο βιβλίο διευθύνσεων."
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
@@ -489,15 +490,15 @@ msgstr "Σφάλμα διαγραφής επαφής από το βιβλίο δ
 #: lib/controller/contactphotocontroller.php:274
 #: lib/controller/exportcontroller.php:66
 msgid "Couldn't find contact."
-msgstr "Η επαφή δεν μπόρεσε να βρεθεί."
+msgstr "Αδυναμία εύρεσης επαφής."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr "Δεν υπάρχουν δεδομένα επαφής στο αίτημα"
+msgstr "Δεν υπάρχουν δεδομένα επαφής στο αίτημα."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
-msgstr "Σφάλμα κατά την ενσωμάτωση επαφής "
+msgstr "Σφάλμα κατά τη συγχώνευση με επαφή. "
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
@@ -509,11 +510,11 @@ msgstr "Δεν ορίστηκε η ιδιότητα όνομα. "
 
 #: lib/controller/contactcontroller.php:107
 msgid "Property checksum is not set."
-msgstr "Δε ορίστηκε η ιδιότητα checksum. "
+msgstr "Δεν ορίστηκε η ιδιότητα άθροισμα ελέγχου."
 
 #: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr "Οι πληροφορίες σχετικά με vCard είναι εσφαλμένες. Παρακαλώ επαναφορτώστε τη σελίδα."
+msgstr "Οι πληροφορίες σχετικά με τη vCard είναι εσφαλμένες. Παρακαλώ επαναφορτώστε τη σελίδα."
 
 #: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
@@ -530,39 +531,39 @@ msgstr "Σφάλμα κατά την λήψη φωτογραφίας χρήστ�
 #: lib/controller/contactphotocontroller.php:87
 #: lib/controller/importcontroller.php:36
 msgid "No file was uploaded. Unknown error"
-msgstr "Δεν ανέβηκε κάποιο αρχείο. Άγνωστο σφάλμα"
+msgstr "Δεν μεταφορτώθηκε κάποιο αρχείο. Άγνωστο σφάλμα"
 
 #: lib/controller/contactphotocontroller.php:95
 #: lib/controller/importcontroller.php:45
 msgid "There is no error, the file uploaded with success"
-msgstr "Δεν υπάρχει σφάλμα, το αρχείο εστάλει επιτυχώς"
+msgstr "Δεν υπάρχει σφάλμα, το αρχείο μεταφορτώθηκε επιτυχώς"
 
 #: lib/controller/contactphotocontroller.php:96
 #: lib/controller/importcontroller.php:46
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Το αρχείο που εστάλει υπερβαίνει την οδηγία μέγιστου επιτρεπτού μεγέθους \"upload_max_filesize\" του php.ini"
+msgstr "Το αρχείο που μεταφορτώθηκε υπερβαίνει την οδηγία μέγιστου επιτρεπτού μεγέθους \"upload_max_filesize\" του php.ini"
 
 #: lib/controller/contactphotocontroller.php:97
 #: lib/controller/importcontroller.php:48
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "Το ανεβασμένο αρχείο υπερβαίνει το MAX_FILE_SIZE που ορίζεται στην  HTML φόρμα"
+msgstr "Το αρχείο που μεταφορτώθηκε υπερβαίνει την οδηγία MAX_FILE_SIZE που ορίζεται στην φόρμα HTML"
 
 #: lib/controller/contactphotocontroller.php:98
 #: lib/controller/importcontroller.php:49
 msgid "The uploaded file was only partially uploaded"
-msgstr "Το αρχείο εστάλει μόνο εν μέρει"
+msgstr "Το αρχείο μεταφορτώθηκε μόνο εν μέρει"
 
 #: lib/controller/contactphotocontroller.php:99
 #: lib/controller/importcontroller.php:50
 msgid "No file was uploaded"
-msgstr "Κανένα αρχείο δεν στάλθηκε"
+msgstr "Κανένα αρχείο δεν μεταφορτώθηκε"
 
 #: lib/controller/contactphotocontroller.php:100
 #: lib/controller/importcontroller.php:51
 msgid "Missing a temporary folder"
-msgstr "Λείπει ο προσωρινός φάκελος"
+msgstr "Λείπει ένας προσωρινός φάκελος"
 
 #: lib/controller/contactphotocontroller.php:115
 msgid "Couldn't load temporary image: "
@@ -575,24 +576,24 @@ msgstr "Δεν ήταν δυνατή η αποθήκευση της προσωρ
 
 #: lib/controller/contactphotocontroller.php:191
 msgid "No photo path was submitted."
-msgstr "Δε δόθηκε διαδρομή εικόνας"
+msgstr "Δεν δόθηκε διαδρομή εικόνας"
 
 #: lib/controller/contactphotocontroller.php:198
 msgid "File doesn't exist:"
-msgstr "Το αρχείο δεν υπάρχει"
+msgstr "Το αρχείο δεν υπάρχει:"
 
 #: lib/controller/contactphotocontroller.php:203
 #: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
-msgstr "Σφάλμα φόρτωσης εικόνας"
+msgstr "Σφάλμα φόρτωσης εικόνας."
 
 #: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
-msgstr "Η εικόνα αφαιρέθηκε από τη κρυφή μνήμη"
+msgstr "Η εικόνα αφαιρέθηκε από τη προσωρινή μνήμη"
 
 #: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
-msgstr "Σφάλμα κατά την δημιουργία προσωρινής εικόνας"
+msgstr "Σφάλμα κατά τη δημιουργία προσωρινής εικόνας"
 
 #: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
@@ -616,11 +617,11 @@ msgstr "Σφάλμα κατά την προσθήκη ομάδας."
 
 #: lib/controller/groupcontroller.php:127
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Κανένα όνομα ομάδας για μετονομασία από το δοθέν."
 
 #: lib/controller/groupcontroller.php:131
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Κανένα όνομα ομάδας για μετονομασία στο δοθέν."
 
 #: lib/controller/groupcontroller.php:137
 msgid "Error renaming group."
@@ -650,19 +651,19 @@ msgstr "Μη επαρκής διαθέσιμος αποθηκευτικός χώ
 
 #: lib/controller/importcontroller.php:71
 msgid "Attempt to upload blacklisted file:"
-msgstr "Προσπάθεια ανεβάσματος αρχείου που βρίσκεται στη μαύρη λίστα:"
+msgstr "Προσπάθεια μεταφόρτωσης αρχείου που βρίσκεται στη μαύρη λίστα:"
 
 #: lib/controller/importcontroller.php:93
 msgid "Error uploading contacts to storage."
-msgstr "Σφάλμα κατά την αποθήκευση επαφών"
+msgstr "Σφάλμα κατά την μεταφόρτωση επαφών"
 
 #: lib/controller/importcontroller.php:138
 msgid "Error moving file to imports folder."
-msgstr "Σφάλμα μετακίνησης αρχείου σε φάκελο εισαγωγών."
+msgstr "Σφάλμα μετακίνησης αρχείου στο φάκελο εισαγωγών."
 
 #: lib/controller/importcontroller.php:155
 msgid "You do not have permissions to import into this address book."
-msgstr "Δεν έχετε δικαιώματα για εισαγωγή σε αυτό το βιβλίο διευθύνσεων."
+msgstr "Δεν έχετε άδεια για εισαγωγή σε αυτό το βιβλίο διευθύνσεων."
 
 #: lib/controller/importcontroller.php:163
 msgid "File name missing from request."
@@ -671,7 +672,7 @@ msgstr "Το όνομα αρχείου λείπει από το αίτημα."
 #: lib/controller/importcontroller.php:168
 #: lib/controller/importcontroller.php:284
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Το κλειδί προόδου λείπει από το αίτημα."
 
 #: lib/controller/importcontroller.php:174
 msgid "Attempt to access blacklisted file:"
@@ -683,11 +684,11 @@ msgstr "Δεν βρέθηκαν επαφές στο: "
 
 #: lib/controller/settingscontroller.php:35
 msgid "No key is given."
-msgstr "Δεν δόθηκε κλειδί "
+msgstr "Δεν δόθηκε κλειδί."
 
 #: lib/controller/settingscontroller.php:39
 msgid "No value is given."
-msgstr "Δεν δόθηκε τιμή "
+msgstr "Δεν δόθηκε τιμή."
 
 #: lib/controller/settingscontroller.php:50
 msgid "Could not set preference: "
@@ -705,7 +706,7 @@ msgstr "Άλλο"
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
-msgstr "Ιστοσελίδα"
+msgstr "Αρχική Σελίδα"
 
 #: lib/utils/properties.php:71
 msgid "Jabber"
@@ -828,7 +829,7 @@ msgstr "Βιβλία Διευθύνσεων"
 #: templates/contacts.php:22 templates/contacts.php:47
 #: templates/contacts.php:67
 msgid "Display name"
-msgstr "Όνομα εμφάνισης"
+msgstr "Προβαλλόμενο όνομα"
 
 #: templates/contacts.php:22
 msgid "Add Address Book"
@@ -864,7 +865,7 @@ msgstr "Αγαπημένο"
 
 #: templates/contacts.php:56 templates/contacts.php:83
 msgid "Merge selected"
-msgstr "Συγχώνευση επιλέχτηκε"
+msgstr "Συγχώνευση επιλεχθέντων"
 
 #: templates/contacts.php:92
 msgid "Keyboard shortcuts"
@@ -900,7 +901,7 @@ msgstr "Ενέργειες"
 
 #: templates/contacts.php:112
 msgid "Refresh contacts list"
-msgstr "Ανανέωσε τη λίστα επαφών"
+msgstr "Ανανέωση λίστας επαφών"
 
 #: templates/contacts.php:114
 msgid "Add new contact"
@@ -919,7 +920,7 @@ msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
-msgstr "<h3>Δεν έχετε επαφές στο βιβλίο διευθύνσεων.</h3><p>Προσθέστε μία νέα επαφή ή εισάγετε τις υπάρχουσες επαφές σας από ένα αρχείο VCF.</p>"
+msgstr "<h3>Δεν έχετε επαφές στο βιβλίο διευθύνσεων ή το βιβλίο διευθύνσεών σας είναι απενεργοποιημένο.</h3><p>Προσθέστε μία νέα επαφή ή εισάγετε τις υπάρχουσες επαφές σας από ένα αρχείο VCF.</p>"
 
 #: templates/contacts.php:127
 msgid "Add contact"
@@ -935,11 +936,11 @@ msgstr "Μετονομασία ομάδας"
 
 #: templates/contacts.php:183
 msgid "Which contact should the data be merged into?"
-msgstr "Σε ποιά διεύθυνση επικοινωνίας πρέπει να συνδεθούν τα δεδομένα?"
+msgstr "Με ποιά επαφή θα θέλατε να συγχωνευτούν τα δεδομένα?"
 
 #: templates/contacts.php:191
 msgid "Delete the other(s) after successful merge?"
-msgstr "Διαγραφή των άλλων μετά την επιτυχή σύνδεση?"
+msgstr "Διαγραφή του(ων) άλλου(ων) μετά την επιτυχή συγχώνευση?"
 
 #: templates/contacts.php:203
 msgid "Compose mail"
@@ -955,11 +956,11 @@ msgstr "Επεξεργασία τρέχουσας φωτογραφίας"
 
 #: templates/contacts.php:227
 msgid "Upload new photo"
-msgstr "Ανέβασε νέα φωτογραφία"
+msgstr "Μεταφόρτωση νέας φωτογραφίας"
 
 #: templates/contacts.php:228
 msgid "Select photo from ownCloud"
-msgstr "Επέλεξε φωτογραφία από το ownCloud"
+msgstr "Επιλογή φωτογραφίας από το ownCloud"
 
 #: templates/contacts.php:233 templates/settings.php:59
 msgid "Name"
@@ -979,11 +980,11 @@ msgstr "Επώνυμο"
 
 #: templates/contacts.php:257
 msgid "Select groups"
-msgstr "Επιλέξτε ομάδες"
+msgstr "Επιλογή ομάδων"
 
 #: templates/contacts.php:260
 msgid "Select address book"
-msgstr "Επέλεξε βιβλίο διευθύνσεων"
+msgstr "Επιλογή βιβλίου διευθύνσεων"
 
 #: templates/contacts.php:264 templates/contacts.php:328
 msgid "Nickname"
@@ -1023,7 +1024,7 @@ msgstr "Εξαγωγή ως VCF"
 
 #: templates/contacts.php:325
 msgid "Add field..."
-msgstr "Προσθήκη πεδίου"
+msgstr "Προσθήκη πεδίου..."
 
 #: templates/contacts.php:330
 msgid "Phone"
@@ -1035,7 +1036,7 @@ msgstr "Ηλ. ταχυδρομείο"
 
 #: templates/contacts.php:332
 msgid "Instant Messaging"
-msgstr "Άμεσα μυνήματα"
+msgstr "Άμεσα μηνύματα"
 
 #: templates/contacts.php:333
 msgid "Address"
@@ -1061,7 +1062,7 @@ msgstr "Προτιμώμενο"
 
 #: templates/contacts.php:353
 msgid "Please specify a valid email address."
-msgstr "Παρακαλώ εισήγαγε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου"
+msgstr "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου"
 
 #: templates/contacts.php:353
 msgid "someone@example.com"
@@ -1073,15 +1074,15 @@ msgstr "Αποστολή σε διεύθυνση"
 
 #: templates/contacts.php:356
 msgid "Delete email address"
-msgstr "Διαγραφή διεύθυνση email"
+msgstr "Διαγραφή διεύθυνσης ηλ. ταχυδρομείου"
 
 #: templates/contacts.php:368
 msgid "Enter phone number"
-msgstr "Εισήγαγε αριθμό τηλεφώνου"
+msgstr "Εισάγετε αριθμό τηλεφώνου"
 
 #: templates/contacts.php:370
 msgid "Delete phone number"
-msgstr "Διέγραψε αριθμό τηλεφώνου"
+msgstr "Διαγράψτε αριθμό τηλεφώνου"
 
 #: templates/contacts.php:384
 msgid "Go to web site"
@@ -1141,11 +1142,11 @@ msgstr "Χώρα"
 
 #: templates/contacts.php:451
 msgid "Instant Messenger"
-msgstr "Instant Messenger"
+msgstr "Εφαρμογή Άμεσων Μηνυμάτων"
 
 #: templates/contacts.php:453
 msgid "Delete IM"
-msgstr "Διαγραφή IM"
+msgstr "Διαγραφή ΑΜ"
 
 #: templates/contacts.php:461
 msgid "Active"
@@ -1165,15 +1166,15 @@ msgstr "Σύνδεσμος CardDAV"
 
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
-msgstr "συγχρονισμός διευθύνσεων μέσω CardDAV "
+msgstr "Διευθύνσεις συγχρονισμού μέσω CardDAV "
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr "περισσότερες πλροφορίες"
+msgstr "περισσότερες πληροφορίες"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr "Κύρια Διεύθυνση(Επαφή και άλλα)"
+msgstr "Κύρια Διεύθυνση (Επαφή και άλλα)"
 
 #: templates/settings.php:7
 msgid "iOS/OS X"

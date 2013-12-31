@@ -101,7 +101,7 @@ class AddressBookController extends Controller {
 
 		$backend = $this->app->getBackend($params['backend']);
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_CREATE)) {
-			throw new \Exception('Not implemented');
+			throw new \Exception('This backend does not support adding address books', 501);
 		}
 		try {
 			$id = $backend->createAddressBook($this->request->post);

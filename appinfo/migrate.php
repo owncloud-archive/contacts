@@ -32,12 +32,13 @@ class MigrationProvider extends \OC_Migration_Provider{
 		switch($this->appinfo->version) {
 			default:
 				// All versions of the app have had the same db structure, so all can use the same import function
-				$query = $this->content->prepare('SELECT * FROM `contacts_addressbooks` WHERE `userid` = ?');
+				$query = $this->content->prepare('SELECT * FROM contacts_addressbooks WHERE userid = ?');
 				$results = $query->execute(array($this->olduid));
 				$idmap = array();
+				$app = new \OCA\Contacts\App($this->uid);
 				while($row = $results->fetchRow()) {
 					// Import each addressbook
-					$addressbookquery = OCP\DB::prepare('INSERT INTO `*PREFIX*contacts_addressbooks` '
+					$addressbookquery = \OCP\DB::prepare('INSERT INTO `*PREFIX*contacts_addressbooks` '
 						. '(`userid`, `displayname`, `uri`, `description`, `ctag`) VALUES (?, ?, ?, ?, ?)');
 					$addressbookquery->execute(
 						array(
@@ -49,18 +50,19 @@ class MigrationProvider extends \OC_Migration_Provider{
 						)
 					);
 					// Map the id
-					$idmap[$row['id']] = OCP\DB::insertid('*PREFIX*contacts_addressbooks');
+					$idmap[$row['id']] = \OCP\DB::insertid('*PREFIX*contacts_addressbooks');
 					// Make the addressbook active
-					OCA\Contacts\Addressbook::setActive($idmap[$row['id']], true);
+					$addressbook = $app->getAddressBook('local', $idmap[$row['id']]);
+					$addressbook->setActive(true);
 				}
 				// Now tags
 				foreach($idmap as $oldid => $newid) {
 
-					$query = $this->content->prepare('SELECT * FROM `contacts_cards` WHERE `addressbookid` = ?');
+					$query = $this->content->prepare('SELECT * FROM contacts_cards WHERE addressbookid = ?');
 					$results = $query->execute(array($oldid));
 					while($row = $results->fetchRow()) {
 						// Import the contacts
-						$contactquery = OCP\DB::prepare('INSERT INTO `*PREFIX*contacts_cards` '
+						$contactquery = \OCP\DB::prepare('INSERT INTO `*PREFIX*contacts_cards` '
 							. '(`addressbookid`, `fullname`, `carddata`, `uri`, `lastmodified`) VALUES (?, ?, ?, ?, ?)');
 						$contactquery->execute(
 							array(
