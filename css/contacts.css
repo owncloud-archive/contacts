@@ -143,7 +143,7 @@
 #firstrun #selections { font-size:0.8em; margin: 2em auto auto auto; clear: both; }
 
 #contact textarea {
-	margin-left: 104px;
+	margin-left: 114px;
 	min-height: 5em;
 	min-width: 300px;
 	font-family: inherit;
@@ -155,7 +155,7 @@
 	float: left;
 	width: 100%;
 	margin-bottom: 8px;
-	padding-left: 100px;
+	padding-left: 110px;
 }
 #contact footer .action {
 	height: 30px;
@@ -192,7 +192,7 @@
 	opacity: 1;
 }
 
-#contact input[type=checkbox] { margin-top: 11px; margin-right: 6px; padding:1px; vertical-align: bottom; float: left; }
+#contact input[type=checkbox] { margin-top: 11px; margin-right: 4px; vertical-align: bottom; float: left; }
 /*dl.form { display: block; width: auto; margin: 0; padding: 0; cursor: normal; }*/
 .form dt { display: inline-block; clear: left; float: left; width: 7em; margin: 0; padding: 0.8em 0.5em 0 0; text-align:right; text-overflow:ellipsis; o-text-overflow: ellipsis; vertical-align: text-bottom; color: #bbb;/* white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap;*/ }
 .form dd { display: inline-block; clear: right; float: left; margin: 0; padding: 0; white-space: nowrap; vertical-align: text-bottom; }
@@ -330,7 +330,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 
 /* Properties */
 .propertyname {
-	width: 100px;
+	width: 110px;
 	padding-right: 7px;
 	margin-top: 1px;
 	font-weight: bold;
@@ -354,7 +354,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 .singleproperties > a { margin-top: 10px !important; }
 
 .parameters {
-	width: 100px;
+	width: 110px;
 	float: left; 
 	text-align: right; 
 	box-sizing: border-box;
@@ -546,6 +546,7 @@ input:not([type=checkbox]).propertytype {
 	max-width: 80px; 
 	text-align: right; 
 	margin: 0;
+	padding-top: 8px;
 }
 input[type=checkbox].propertytype { width: 10px; }
 .contactphoto { 
@@ -609,7 +610,7 @@ input[type=checkbox].propertytype { width: 10px; }
 
 /* Contact layout */
 
-#contact > ul > li { white-space: nowrap; margin-right: 100px; }
+#contact > ul > li { white-space: nowrap; margin-right: 110px; }
 #contact > ul.propertylist {
 	font-size: 10px;
 	/*display: table;
@@ -815,7 +816,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	max-width: 700px;
 }
 #contact h3 {
-	margin-left: 105px;
+	margin-left: 115px;
 	margin-top: 7px;
 	margin-bottom: 0px;
 	font-size: 12px;
