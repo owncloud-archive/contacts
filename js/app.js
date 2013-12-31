@@ -252,6 +252,7 @@ OC.Contacts = OC.Contacts || {
 		if(act && act.length > 0) {
 			this.$contactList.addClass('multiselect');
 			this.$contactListHeader.find('.actions').css('display', '');
+			this.$contactListHeader.find('.action').css('display', '');
 			this.$contactListHeader.find('.name').attr('colspan', '100%');
 			this.$contactListHeader.find('.info').css('display', 'none');
 			this.$headeractions.children('.'+act.join(',.')).show();
