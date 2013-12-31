@@ -80,10 +80,10 @@
 								<?php p($l->t('Delete')); ?>
 								<img class="svg" alt="<?php p($l->t('Delete'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/delete.svg")); ?>" />
 							</a>
-							<select class="groups svg action text permanent share" name="groups">
+							<select class="groups svg action text permanent shared" name="groups">
 								<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
 							</select>
-							<a class="action svg text permanent merge shared"><?php p($l->t('Merge')); ?></a>
+							<a class="action svg text permanent merge edit"><?php p($l->t('Merge')); ?></a>
 							<a class="download svg action text permanent"><?php p($l->t('Download')); ?></a>
 						</span>
 					</td>
@@ -280,7 +280,8 @@
 					<select class="hidden" id="contactgroups" title="<?php p($l->t('Select groups')); ?>" name="value" multiple></select>
 				</div>
 			</div>
-			<div>
+			<div class="singleproperties">
+				<label class="propertyname"></label>
 				<select class="hidden" id="contactaddressbooks" title="<?php p($l->t('Select address book')); ?>" name="value"></select>
 			</div>
 			<div class="singleproperties">

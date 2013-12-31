@@ -23,8 +23,18 @@
 		position: absolute;
         content: '+';
         font-weight: bold;
-        font-size: 160%;
+        font-size: 150%;
 		left: 12px;
+}
+#app-settings .oc-addnew > li > a.oc-addnew-init:before {
+		position: absolute;
+        content: '+';
+        font-weight: bold;
+        font-size: 150%;
+		left: 0;
+}
+#app-settings .oc-addnew > li > a.oc-addnew-init {
+		padding-left: 17px;
 }
 
 .oc-addnew input[type=text] {

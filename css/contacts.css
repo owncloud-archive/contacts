@@ -112,7 +112,7 @@
 	position: absolute;
 	content: '+';
 	font-weight: bold;
-	font-size: 160%;
+	font-size: 150%;
 	left: 12px;
 }
 #grouplist .add-contact {
@@ -332,8 +332,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 .propertyname {
 	width: 100px;
 	padding-right: 7px;
-	margin-top: 8px;
-	margin-bottom: 8px;
+	margin-top: 1px;
 	font-weight: bold;
 	text-align: right;
 }
@@ -493,7 +492,7 @@ dt[data-element="org"] { margin-top: 4px; }
 #contacts-settings li,#contacts-settings li:hover { background-color: transparent; white-space: nowrap; }
 #contacts-settings a.action:not(.settings) { width: 16px; height: 16px; }
 */
-.addressbooklist .actions { position: absolute; right: 5px; }
+.addressbooklist .actions { position: absolute; right: 0px; }
 .addressbooklist .actions > a { width: 20px; height: 20px; }
 .addressbooklist > li > div {
 	display: inline-block;
@@ -528,7 +527,7 @@ dt[data-element="org"] { margin-top: 4px; }
 }
 
 .import-upload, .import-status {
-	height: 60px;
+	height: 40px;
 }
 .import-upload select {
 	width: 80%; height: 30px;
