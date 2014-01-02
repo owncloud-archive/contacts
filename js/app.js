@@ -809,6 +809,12 @@ OC.Contacts = OC.Contacts || {
 				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite', 'merge']);
 			}
 		});
+		
+		this.$contactList.on('click', 'label', function(event) {
+			var id = $(this).attr('for');
+			$(id).prop('checked', !checkBoxes.prop('checked'));
+			return false; // Prevent opening contact
+		});
 
 		this.$sortOrder.on('change', function() {
 			$(this).blur().addClass('loading');
