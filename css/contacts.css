@@ -677,7 +677,6 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	width: auto;
 	max-width: 120px;
 	height: 22px;
-	margin-left: 50px;
 	font-weight: normal;
 	color: black;
 	border: 0;
@@ -687,7 +686,8 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
     text-indent: 0.01px;
     text-overflow: '';
 }
-#contactsHeader select .sort {
+#contactsHeader select.sort {
+	margin-left: 50px;
 	opacity: 1;
 	color: rgb(153, 153, 153);
 }
