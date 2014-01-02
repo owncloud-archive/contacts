@@ -67,7 +67,8 @@
 				<tr id="contactsHeader" class="hidden-on-load">
 					<td class="name">
 						<span class="actions_left">
-						<input type="checkbox" class="toggle" title="<?php p($l->t('(De-)select all')); ?>" />
+						<input type="checkbox" class="toggle" id="select_all" title="<?php p($l->t('(De-)select all')); ?>" />
+						<label for="select_all"></label>
 						<select class="action sort permanent" name="sort" title="<?php p($l->t('Sort order')); ?>">
 							<option value="fn"><?php p($l->t('Display name')); ?></option>
 							<option value="fl"><?php p($l->t('First- Lastname')); ?></option>
@@ -205,7 +206,8 @@
 <script id="contactListItemTemplate" type="text/template">
 	<tr class="contact" data-id="{id}" data-parent="{parent}" data-backend="{backend}">
 		<td class="name thumbnail">
-			<input type="checkbox" name="id" value="{id}" />
+			<input type="checkbox" id="select-{id}" name="id" value="{id}" />
+			<label for="select-{id}"></label>
 			<div class="avatar"></div>
 			<a href="#{id}" class="nametext">{name}</a>
 		</td>
