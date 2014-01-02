@@ -700,7 +700,7 @@ OC.Contacts = OC.Contacts || {};
 						$elem = $elem.length ? $elem : (tmpl).octemplate({
 							id: category.id,
 							type: 'category',
-							num: '(' + contacts.length + ')',
+							num: contacts.length,
 							name: category.name
 						});
 						self.categories.push({id: category.id, name: category.name});
