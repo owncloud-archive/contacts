@@ -181,8 +181,8 @@
 	<li class="group" data-type="{type}" data-id="{id}">
 		<a class="name" role="button">{name}</a>
 		<span class="utils">
-			<a class="action delete tooltipped rightwards" title="<?php p($l->t('Delete group')); ?>"></a>
-			<a class="action edit tooltipped rightwards" title="<?php p($l->t('Rename group')); ?>"></a>
+			<a class="action delete tooltipped rightwards"></a>
+			<a class="action edit tooltipped rightwards"></a>
 			<span class="action numcontacts">{num}</span>
 		</span>
 	</li>
@@ -232,7 +232,7 @@
 	<form action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'index.php')); ?>" method="post" enctype="multipart/form-data">
 	<section id="contact" data-id="{id}">
 	<header>
-		<a class="delete text tooltipped downwards" title="<?php p($l->t('Delete')); ?>">
+		<a class="delete text tooltipped downwards">
 			<?php p($l->t('Delete')); ?>
 			<img class="svg" alt="<?php p($l->t('Delete'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/delete.svg")); ?>" />
 		</a>
@@ -257,18 +257,15 @@
 					<ul>
 						<li>
 							<input class="value rightwards onfocus" type="text" id="n_1" name="value[1]" value="{n1}" 
-								placeholder="<?php p($l->t('First name')); ?>" 
-								title="<?php p($l->t('First name')); ?>" />
+								placeholder="<?php p($l->t('First name')); ?>" />
 						</li>
 						<li>
 							<input class="value rightwards onfocus" type="text" id="n_2" name="value[2]" value="{n2}" 
-								placeholder="<?php p($l->t('Additional names')); ?>" 
-								title="<?php p($l->t('Additional names')); ?>" />
+								placeholder="<?php p($l->t('Additional names')); ?>" />
 						</li>
 						<li>
 							<input class="value rightwards onfocus" type="text" id="n_0" name="value[0]" value="{n0}" 
-								placeholder="<?php p($l->t('Last name')); ?>" 
-								title="<?php p($l->t('Last name')); ?>" />
+								placeholder="<?php p($l->t('Last name')); ?>" />
 						</li>
 					</ul>
 					<input class="value" type="hidden" id="n_3" name="value[3]" value="{n3}" />
@@ -279,20 +276,20 @@
 				<h3><?php p($l->t('Groups')); ?></h3>
 				<label class="propertyname"></label>
 				<div class="groupscontainer propertycontainer" data-element="categories">
-					<select class="hidden" id="contactgroups" title="<?php p($l->t('Select groups')); ?>" name="value" multiple></select>
+					<select class="hidden" id="contactgroups" name="value" multiple></select>
 				</div>
 			</div>
 			<div class="singleproperties">
 				<label class="propertyname"></label>
-				<select class="hidden" id="contactaddressbooks" title="<?php p($l->t('Select address book')); ?>" name="value"></select>
+				<select class="hidden" id="contactaddressbooks" name="value"></select>
 			</div>
 			<div class="singleproperties">
 				<dd data-element="nickname" class="propertycontainer">
 					<h3><?php p($l->t('Nickname')); ?></h3>
 					<label class="propertyname"></label>
-					<input class="value rightwards onfocus" type="text" name="value" value="{nickname}" title="<?php p($l->t('Enter nickname')); ?>" required />
+					<input class="value rightwards onfocus" type="text" name="value" value="{nickname}" required />
 					<span class="listactions">
-						<a role="button" class="action delete" title="<?php p($l->t('Delete')); ?>"></a>
+						<a role="button" class="action delete"></a>
 					</span>
 				</dd>
 			</div>
@@ -300,9 +297,9 @@
 				<dd data-element="title" class="propertycontainer">
 					<h3><?php p($l->t('Title')); ?></h3>
 					<label class="propertyname"></label>
-					<input class="value rightwards onfocus" type="text" name="value" value="{title}" title="<?php p($l->t('Enter title')); ?>" required />
+					<input class="value rightwards onfocus" type="text" name="value" value="{title}" required />
 					<span class="listactions">
-						<a role="button" class="action delete" title="<?php p($l->t('Delete')); ?>"></a>
+						<a role="button" class="action delete"></a>
 					</span>
 				</dd>
 			</div>
@@ -310,9 +307,9 @@
 				<dd data-element="org" class="propertycontainer">
 					<h3><?php p($l->t('Organization')); ?></h3>
 					<label class="propertyname"></label>
-					<input class="value rightwards onfocus" type="text" name="value" value="{org}" title="<?php p($l->t('Enter organization')); ?>" required />
+					<input class="value rightwards onfocus" type="text" name="value" value="{org}" required />
 					<span class="listactions">
-						<a role="button" class="action delete" title="<?php p($l->t('Delete')); ?>"></a>
+						<a role="button" class="action delete"></a>
 					</span>
 				</dd>
 			</div>
@@ -322,7 +319,7 @@
 					<label class="propertyname"></label>
 					<input class="value rightwards onfocus" type="text" name="value" value="{bday}" required />
 					<span class="listactions">
-						<a role="button" class="action delete" title="<?php p($l->t('Delete')); ?>"></a>
+						<a role="button" class="action delete"></a>
 					</span>
 				</dd>
 			</d>
@@ -374,12 +371,12 @@
 			<option value="NOTE"><?php p($l->t('Note')); ?></option>
 			<option value="URL"><?php p($l->t('Web site')); ?></option>
 		</select>
-		<button class="cancel text tooltipped downwards" title="<?php p($l->t('Cancel')); ?>"><?php p($l->t('Cancel')); ?></button>
-		<a class="close text tooltipped downwards" title="<?php p($l->t('Close')); ?>">
+		<button class="cancel text tooltipped downwards"><?php p($l->t('Cancel')); ?></button>
+		<a class="close text tooltipped downwards">
 			<?php p($l->t('Close')); ?>
 			<img class="svg" alt="<?php p($l->t('Close'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/checkmark.svg")); ?>" />
 		</a>
-		<a class="export text tooltipped downwards" title="<?php p($l->t('Download')); ?>">
+		<a class="export text tooltipped downwards">
 			<?php p($l->t('Download')); ?>
 			<img class="svg" alt="<?php p($l->t('Download'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/download.svg")); ?>" />
 		</a>
@@ -415,7 +412,7 @@
 			</span>
 			<input type="text" class="nonempty value" name="value" value="{value}" placeholder="<?php p($l->t('Enter phone number')); ?>" required />
 			<span class="listactions">
-				<a role="button" class="action delete tooltipped leftwards" title="<?php p($l->t('Delete phone number')); ?>"></a>
+				<a role="button" class="action delete tooltipped leftwards"></a>
 			</span>
 		</li>
 	</div>
@@ -430,7 +427,7 @@
 			<input type="url" class="nonempty value" name="value" value="{value}" placeholder="http://www.example.com/" required />
 			<span class="listactions">
 				<a role="button" class="action globe tooltipped leftwards" title="<?php p($l->t('Go to web site')); ?>">
-				<a role="button" class="action delete tooltipped leftwards" title="<?php p($l->t('Delete URL')); ?>"></a>
+				<a role="button" class="action delete tooltipped leftwards"></a>
 			</span>
 		</li>
 	</div>
@@ -447,7 +444,7 @@
 			</span>
 			<span class="listactions">
 				<a class="action globe tooltipped leftwards" title="<?php p($l->t('View on map')); ?>"></a>
-				<a class="action delete tooltipped leftwards" title="<?php p($l->t('Delete address')); ?>"></a>
+				<a class="action delete tooltipped leftwards"></a>
 			</span>
 			<fieldset class="adr hidden editor">
 				<ul>
@@ -497,7 +494,7 @@
 			<input type="text" class="nonempty value" name="value" value="{value}"
 					placeholder="<?php p($l->t('Instant Messenger')); ?>" required />
 			<span class="listactions">
-				<a role="button" class="action delete tooltipped leftwards" title="<?php p($l->t('Delete IM')); ?>"></a>
+				<a role="button" class="action delete tooltipped leftwards"></a>
 			</span>
 		</li>
 	</div>
