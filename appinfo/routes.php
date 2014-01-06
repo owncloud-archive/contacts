@@ -56,6 +56,17 @@ $this->create('contacts_address_book', 'addressbook/{backend}/{addressBookId}')
 	)
 	->requirements(array('backend', 'addressBookId'));
 
+$this->create('contacts_address_book_page', 'addressbook/{backend}/{addressBookId}/{page}')
+	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('AddressBookController', 'getAddressBook');
+		}
+	)
+	->requirements(array('backend', 'addressBookId'));
+
 $this->create('contacts_address_book_update', 'addressbook/{backend}/{addressBookId}')
 	->post()
 	->action(

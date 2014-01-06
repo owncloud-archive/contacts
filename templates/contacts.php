@@ -37,6 +37,11 @@
 						</li>
 					</ul>
 				</div>
+				<div id="paging-limit">
+					<h2 data-id="paging-limit" tabindex="0" role="button"><?php p($l->t('Paging Limit')); ?></h2>
+					<input type="text" tabindex="0" autofocus id="set-paging-limit" title="<?php p($l->t('Contacts to load per addressbook')); ?>" value="<?php p($_['paging_limit']); ?>" />
+					<button class="primary"><?php p($l->t('Save')) ?></button>
+				</div>
 			</div> <!-- app-settings-content -->
 		</div>
 	</div>
@@ -87,6 +92,7 @@
 			<tbody>
 			</tbody>
 		</table>
+		<input type="button" id="contact-load-more" value="Load more" />
 		<div class="hidden popup" id="ninjahelp">
 			<a class="close" tabindex="0" role="button" title="<?php p($l->t('Close')); ?>"></a>
 			<h2><?php p($l->t('Keyboard shortcuts')); ?></h2>

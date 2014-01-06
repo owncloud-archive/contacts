@@ -68,6 +68,7 @@ class PageController extends Controller {
 			'adr_types' => $adr_types,
 			'impp_types' => $impp_types,
 			'im_protocols' => $im_protocols,
+            'paging_limit' => $this->app->getPagingLimit(),
 		));
 
 		return $response;

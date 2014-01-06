@@ -184,14 +184,29 @@ OC.Contacts = OC.Contacts || {
 		// Hide the list while populating it.
 		this.$contactList.hide();
 		$.when(this.addressBooks.loadAddressBooks()).then(function(addressBooks) {
-			var num = addressBooks.length;
+		self.loadContacts(addressBooks);
+	    })
+		.fail(function(response) {
+		    console.log(response.message);
+		    $(document).trigger('status.contacts.error', response);
+		});
+		$(OC.Tags).on('change', this.groups.categoriesChanged)
+		this.bindEvents();
+		this.$toggleAll.show();
+		this.hideActions();
+	},
+    loadContacts:function(addressBooks) {
+	var self = this;
 			var deferreds = $(addressBooks).map(function(i, elem) {
-				return self.contacts.loadContacts(this.getBackend(), this.getId(), this.isActive());
+	    var result = self.contacts.loadContacts(this.getBackend(), this.getId(), this.isActive(), this.getNextPage());
+	    this.incrementNextPage();
+	    return result;
 			});
 			// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
 			$.when.apply(null, deferreds.get()).then(function(response) {
 				self.contacts.setSortOrder(contacts_sortby);
 				self.$contactList.show();
+	    $('#contact-load-more').show().removeClass('loading');
 				$(document).trigger('status.contacts.loaded', {
 					numcontacts: self.contacts.length
 				});
@@ -225,14 +240,6 @@ OC.Contacts = OC.Contacts || {
 				message = t('contacts', 'Unrecoverable error loading address books: {msg}', {msg:response.message});
 				OC.dialogs.alert(message, t('contacts', 'Error.'));
 			});
-		}).fail(function(response) {
-			console.log(response.message);
-			$(document).trigger('status.contacts.error', response);
-		});
-		$(OC.Tags).on('change', this.groups.categoriesChanged)
-		this.bindEvents();
-		this.$toggleAll.show();
-		this.hideActions();
 	},
 	loading:function(obj, state) {
 		$(obj).toggleClass('loading', state);
@@ -688,6 +695,7 @@ OC.Contacts = OC.Contacts || {
 		// Group selected, only show contacts from that group
 		$(document).bind('status.group.selected', function(e, result) {
 			console.log('status.group.selected', result);
+		    var same_group = self.currentgroup == result.id;
 			self.currentgroup = result.id;
 			// Close any open contact.
 			if(self.currentid) {
@@ -717,7 +725,9 @@ OC.Contacts = OC.Contacts || {
 				$(document).trigger('status.contacts.error', response);
 				done = true;
 			});
+		    if (!same_group) {
 			self.$rightContent.scrollTop(0);
+		    }
 		});
 		// mark items whose title was hid under the top edge as read
 		/*this.$rightContent.scroll(function() {
@@ -766,6 +776,11 @@ OC.Contacts = OC.Contacts || {
 				$(document).trigger('status.contacts.error', response);
 			}
 		});
+
+	    $('#contact-load-more').on('click', function(event) {
+		$(this).addClass('loading');
+		self.loadContacts(self.addressBooks.addressBooks);
+	    });
 
 		this.$ninjahelp.find('.close').on('click keydown',function(event) {
 			if(wrongKey(event)) {
@@ -979,10 +994,7 @@ OC.Contacts = OC.Contacts || {
 			self.openContact(String($(this).data('id')));
 		});
 
-		this.$settings.find('#app-settings-header').on('click keydown',function(event) {
-			if(wrongKey(event)) {
-				return;
-			}
+		function toggleSettings() {
 			var bodyListener = function(e) {
 				if(self.$settings.find($(e.target)).length == 0) {
 					self.$settings.switchClass('open', '');
@@ -995,6 +1007,27 @@ OC.Contacts = OC.Contacts || {
 				self.$settings.switchClass('', 'open');
 				$('body').bind('click', bodyListener);
 			}
+		}
+
+		this.$settings.find('#app-settings-header').on('click keydown',function(event) {
+			if(wrongKey(event)) {
+				return;
+			}
+		    	toggleSettings();
+		});
+
+		this.$settings.find('#paging-limit button').on('click keydown',function(event) {
+			if(wrongKey(event)) {
+				return;
+			}
+		    	var limit = parseInt(self.$settings.find('input#set-paging-limit').val());
+			// Validate limit to be a valid, positive integer.
+			if (isNaN(limit) || limit < 1) {
+				$(document).trigger('status.contacts.error', {message:'Paging limit must be a positive integer.'});
+				return;
+			}
+			self.storage.setPreference('paging_limit', limit);
+		    	toggleSettings();
 		});
 
 		var addContact = function() {

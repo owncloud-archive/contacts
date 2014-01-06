@@ -2471,15 +2471,20 @@ OC.Contacts = OC.Contacts || {};
 	* Load contacts
 	* @param string backend Name of the backend ('local', 'ldap' etc.)
 	* @param string addressBookId
+	* @param boolean isActive
+	* @param integer page
 	*/
-	ContactList.prototype.loadContacts = function(backend, addressBookId, isActive) {
+    ContactList.prototype.loadContacts = function(backend, addressBookId, isActive, page) {
 		if(!isActive) {
 			return;
 		}
 		var self = this,
 			contacts;
+	if (!page || isNaN(page)) {
+	    page = 1;
+	}
 
-		return $.when(self.storage.getAddressBook(backend, addressBookId, false))
+		return $.when(self.storage.getAddressBook(backend, addressBookId, page))
 			.then(function(response) {
 			console.log('ContactList.loadContacts - fetching', response);
 			if(!response.error) {
