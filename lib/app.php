@@ -167,8 +167,8 @@ class App {
 	 * @return boolean
 	 */
 	public function getPagingLimit() {
-        $default_limit = 15;
-        $limit = \OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'paging_limit', $default_limit);
-        return (is_numeric($limit) && $limit > 0) ? round($limit) : $default_limit;
+		$default_limit = 15;
+		$limit = \OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'paging_limit', $default_limit);
+		return (is_numeric($limit) && $limit > 0) ? round($limit) : $default_limit;
 	}
 }

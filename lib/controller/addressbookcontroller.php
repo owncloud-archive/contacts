@@ -63,17 +63,17 @@ class AddressBookController extends Controller {
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$lastModified = $addressBook->lastModified();
-        $paging_limit = $this->app->getPagingLimit();
+		$paging_limit = $this->app->getPagingLimit();
 		$etag = null;
 		$response = new JSONResponse();
 
 		if(!is_null($lastModified)) {
 			//$response->addHeader('Cache-Control', 'private, must-revalidate');
 			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
-            $to_hash = $lastModified;
-            if (isset($params['page'])) {
-                $to_hash .= '_' . $params['page'] . '_' . $paging_limit;
-            }
+			$to_hash = $lastModified;
+			if (isset($params['page'])) {
+				$to_hash .= '_' . $params['page'] . '_' . $paging_limit;
+			}
 			$etag = md5($to_hash);
 			$response->setETag($etag);
 		}
@@ -85,13 +85,13 @@ class AddressBookController extends Controller {
 			return $response->setStatus(Http::STATUS_NOT_MODIFIED);
 		} else {
 			$contacts = array();
-            if (isset($params['page']) && is_numeric($params['page'])) {
-                $offset = ((int)$params['page'] - 1) * $paging_limit;
-                $rawContacts = $addressBook->getChildren($paging_limit, $offset);
-            }
-            else {
-                $rawContacts = $addressBook->getChildren();
-            }
+			if (isset($params['page']) && is_numeric($params['page'])) {
+				$offset = ((int)$params['page'] - 1) * $paging_limit;
+				$rawContacts = $addressBook->getChildren($paging_limit, $offset);
+			}
+			else {
+				$rawContacts = $addressBook->getChildren();
+			}
 			foreach($rawContacts as $i => $contact) {
 				$result = JSONSerializer::serializeContact($contact);
 				if($result !== null) {

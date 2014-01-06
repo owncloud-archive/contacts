@@ -2474,15 +2474,15 @@ OC.Contacts = OC.Contacts || {};
 	* @param boolean isActive
 	* @param integer page
 	*/
-    ContactList.prototype.loadContacts = function(backend, addressBookId, isActive, page) {
+	ContactList.prototype.loadContacts = function(backend, addressBookId, isActive, page) {
 		if(!isActive) {
 			return;
 		}
 		var self = this,
 			contacts;
-	if (!page || isNaN(page)) {
-	    page = 1;
-	}
+		if (!page || isNaN(page)) {
+			page = 1;
+		}
 
 		return $.when(self.storage.getAddressBook(backend, addressBookId, page))
 			.then(function(response) {

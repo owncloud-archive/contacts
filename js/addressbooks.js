@@ -9,7 +9,7 @@ OC.Contacts = OC.Contacts || {};
 		this.storage = storage;
 		this.book = book;
 		this.$template = template;
-	        this.nextPage = 1;
+		this.nextPage = 1;
 	}
 
 	AddressBook.prototype.render = function() {
@@ -165,8 +165,8 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 
-        AddressBook.prototype.getNextPage = function() {
-	    return this.nextPage;
+	AddressBook.prototype.getNextPage = function() {
+		return this.nextPage;
 	}
 
 	/**
@@ -231,9 +231,9 @@ OC.Contacts = OC.Contacts || {};
 		});
 	};
 
-    AddressBook.prototype.incrementNextPage = function() {
-	++this.nextPage;
-    }
+	AddressBook.prototype.incrementNextPage = function() {
+		++this.nextPage;
+	}
 
 	/**
 	 * Controls access to address books

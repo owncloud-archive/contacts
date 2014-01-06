@@ -184,62 +184,62 @@ OC.Contacts = OC.Contacts || {
 		// Hide the list while populating it.
 		this.$contactList.hide();
 		$.when(this.addressBooks.loadAddressBooks()).then(function(addressBooks) {
-		self.loadContacts(addressBooks);
-	    })
+			self.loadContacts(addressBooks);
+		})
 		.fail(function(response) {
-		    console.log(response.message);
-		    $(document).trigger('status.contacts.error', response);
+			console.log(response.message);
+			$(document).trigger('status.contacts.error', response);
 		});
 		$(OC.Tags).on('change', this.groups.categoriesChanged)
 		this.bindEvents();
 		this.$toggleAll.show();
 		this.hideActions();
 	},
-    loadContacts:function(addressBooks) {
-	var self = this;
-			var deferreds = $(addressBooks).map(function(i, elem) {
-	    var result = self.contacts.loadContacts(this.getBackend(), this.getId(), this.isActive(), this.getNextPage());
-	    this.incrementNextPage();
-	    return result;
+	loadContacts:function(addressBooks) {
+		var self = this;
+		var deferreds = $(addressBooks).map(function(i, elem) {
+			var result = self.contacts.loadContacts(this.getBackend(), this.getId(), this.isActive(), this.getNextPage());
+			this.incrementNextPage();
+			return result;
+		});
+		// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
+		$.when.apply(null, deferreds.get()).then(function(response) {
+			self.contacts.setSortOrder(contacts_sortby);
+			self.$contactList.show();
+			$('#contact-load-more').show().removeClass('loading');
+			$(document).trigger('status.contacts.loaded', {
+				numcontacts: self.contacts.length
 			});
-			// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
-			$.when.apply(null, deferreds.get()).then(function(response) {
-				self.contacts.setSortOrder(contacts_sortby);
-				self.$contactList.show();
-	    $('#contact-load-more').show().removeClass('loading');
-				$(document).trigger('status.contacts.loaded', {
-					numcontacts: self.contacts.length
-				});
-				self.loading(self.$rightContent, false);
-				// TODO: Move this to event handler
-				self.groups.selectGroup({id:contacts_lastgroup});
-				var id = $.QueryString['id']; // Keep for backwards compatible links.
-				if(!id) {
-					id = window.location.hash.substr(1);
-				}
-				console.log('Groups loaded, id from url:', id);
-				if(id) {
-					self.openContact(id);
-				}
-				if(!contacts_properties_indexed) {
-					// Wait a couple of mins then check if contacts are indexed.
-					setTimeout(function() {
-							$.when($.post(OC.Router.generate('contacts_index_properties')))
-								.then(function(response) {
-									if(!response.isIndexed) {
-										OC.notify({message:t('contacts', 'Indexing contacts'), timeout:20});
-									}
-								});
-					}, 10000);
-				} else {
-					console.log('contacts are indexed.');
-				}
-			}).fail(function(response) {
-				console.warn(response);
-				self.$rightContent.removeClass('loading');
-				message = t('contacts', 'Unrecoverable error loading address books: {msg}', {msg:response.message});
-				OC.dialogs.alert(message, t('contacts', 'Error.'));
-			});
+			self.loading(self.$rightContent, false);
+			// TODO: Move this to event handler
+			self.groups.selectGroup({id:contacts_lastgroup});
+			var id = $.QueryString['id']; // Keep for backwards compatible links.
+			if(!id) {
+				id = window.location.hash.substr(1);
+			}
+			console.log('Groups loaded, id from url:', id);
+			if(id) {
+				self.openContact(id);
+			}
+			if(!contacts_properties_indexed) {
+				// Wait a couple of mins then check if contacts are indexed.
+				setTimeout(function() {
+					$.when($.post(OC.Router.generate('contacts_index_properties')))
+						.then(function(response) {
+							if(!response.isIndexed) {
+								OC.notify({message:t('contacts', 'Indexing contacts'), timeout:20});
+							}
+						});
+				}, 10000);
+			} else {
+				console.log('contacts are indexed.');
+			}
+		}).fail(function(response) {
+			console.warn(response);
+			self.$rightContent.removeClass('loading');
+			message = t('contacts', 'Unrecoverable error loading address books: {msg}', {msg:response.message});
+			OC.dialogs.alert(message, t('contacts', 'Error.'));
+		});
 	},
 	loading:function(obj, state) {
 		$(obj).toggleClass('loading', state);
@@ -695,7 +695,7 @@ OC.Contacts = OC.Contacts || {
 		// Group selected, only show contacts from that group
 		$(document).bind('status.group.selected', function(e, result) {
 			console.log('status.group.selected', result);
-		    var same_group = self.currentgroup == result.id;
+			var same_group = self.currentgroup == result.id;
 			self.currentgroup = result.id;
 			// Close any open contact.
 			if(self.currentid) {
@@ -725,9 +725,9 @@ OC.Contacts = OC.Contacts || {
 				$(document).trigger('status.contacts.error', response);
 				done = true;
 			});
-		    if (!same_group) {
-			self.$rightContent.scrollTop(0);
-		    }
+			if (!same_group) {
+				self.$rightContent.scrollTop(0);
+		    	}
 		});
 		// mark items whose title was hid under the top edge as read
 		/*this.$rightContent.scroll(function() {
@@ -777,10 +777,10 @@ OC.Contacts = OC.Contacts || {
 			}
 		});
 
-	    $('#contact-load-more').on('click', function(event) {
-		$(this).addClass('loading');
-		self.loadContacts(self.addressBooks.addressBooks);
-	    });
+		$('#contact-load-more').on('click', function(event) {
+			$(this).addClass('loading');
+			self.loadContacts(self.addressBooks.addressBooks);
+		});
 
 		this.$ninjahelp.find('.close').on('click keydown',function(event) {
 			if(wrongKey(event)) {
@@ -1027,7 +1027,7 @@ OC.Contacts = OC.Contacts || {
 				return;
 			}
 			self.storage.setPreference('paging_limit', limit);
-		    	toggleSettings();
+			toggleSettings();
 		});
 
 		var addContact = function() {
