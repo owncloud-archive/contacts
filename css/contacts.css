@@ -760,19 +760,19 @@ tbody tr.contact.active, tbody tr.contact:hover {
 }
 
 #contact-load-more {
-    height: 3em;
-    width: 100%;
-    border-radius: 0;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #DDD;
-    outline: none;
-    display: none;
+	height: 3em;
+	width: 100%;
+	-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; 
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: #DDD;
+	outline: none;
+	display: none;
 }
 
 #contact-load-more.loading {
-    text-indent: -3000px;
-    overflow: hidden;
+	text-indent: -3000px;
+	overflow: hidden;
 }
 
 @media screen and (min-width: 1400px) {

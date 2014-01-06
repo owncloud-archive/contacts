@@ -727,7 +727,7 @@ OC.Contacts = OC.Contacts || {
 			});
 			if (!same_group) {
 				self.$rightContent.scrollTop(0);
-		    	}
+			}
 		});
 		// mark items whose title was hid under the top edge as read
 		/*this.$rightContent.scroll(function() {
@@ -1013,14 +1013,14 @@ OC.Contacts = OC.Contacts || {
 			if(wrongKey(event)) {
 				return;
 			}
-		    	toggleSettings();
+			toggleSettings();
 		});
 
 		this.$settings.find('#paging-limit button').on('click keydown',function(event) {
 			if(wrongKey(event)) {
 				return;
 			}
-		    	var limit = parseInt(self.$settings.find('input#set-paging-limit').val());
+			var limit = parseInt(self.$settings.find('input#set-paging-limit').val());
 			// Validate limit to be a valid, positive integer.
 			if (isNaN(limit) || limit < 1) {
 				$(document).trigger('status.contacts.error', {message:'Paging limit must be a positive integer.'});
