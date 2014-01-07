@@ -675,7 +675,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 }
 #contactlist tr > td:not(.tel):not(.adr):not(.actions) {
 	max-width: 270px;
-	min-width: 200px;
+	min-width: 220px;
 }
 #contactlist tr > td.tel {
 	max-width: 180px;
