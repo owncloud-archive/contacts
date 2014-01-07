@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Chyba sítě či serveru. Kontaktujte prosím správce.",
 "Error adding to group." => "Chyba při přidávání do skupiny",
 "Error removing from group." => "Chyba při odebírání ze skupiny",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Je označeno více než 300 kontaktů.\nToto pravděpodobně selže. Klikněte zde, pokud chcete přesto pokračovat.",
 "Error setting {name} as favorite." => "Chyba při nastavování {name} jako oblíbený.",
 "Merge contacts" => "Sloučit kontakty",
 "Cancel" => "Zrušit",

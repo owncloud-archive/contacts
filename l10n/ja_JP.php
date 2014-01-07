@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "ネットワークもしくはサーバエラーです。管理者に連絡してください。",
 "Error adding to group." => "グループの追加時にエラー発生。",
 "Error removing from group." => "グループからの削除でエラーが発生。",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "300 以上の連絡先が洗濯されています。",
 "Error setting {name} as favorite." => "{name} をお気に入りにする際にエラーが発生しました。",
 "Merge contacts" => "連絡先をマージ",
 "Cancel" => "キャンセル",

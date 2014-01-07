@@ -12,14 +12,14 @@
 # Murat Bişkin <murat@muratbiskin.com.tr>, 2012
 # tridinebandim, 2013
 # Necdet Yücel <necdetyucel@gmail.com>, 2012
-# volkangezer <volkangezer@gmail.com>, 2013
+# volkangezer <volkangezer@gmail.com>, 2013-2014
 # KAT.RAT12 <spanish.katerina@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-24 00:48-0500\n"
-"PO-Revision-Date: 2013-12-23 00:40+0000\n"
+"POT-Creation-Date: 2014-01-04 00:49-0500\n"
+"PO-Revision-Date: 2014-01-03 14:10+0000\n"
 "Last-Translator: volkangezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Contacts"
 msgstr "Kişiler"
 
-#: js/addressbooks.js:83 js/groups.js:518 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
 msgid "Save"
 msgstr "Kaydet"
 
@@ -102,7 +102,7 @@ msgstr "Bir posta düzenleyicisi açarken hata oluştu."
 
 #: js/app.js:484
 msgid "Invalid email: \"{url}\""
-msgstr "Geçersiz eposta: \"{url}\""
+msgstr "Geçersiz e-posta: \"{url}\""
 
 #: js/app.js:562
 msgid "Merge failed. Cannot find contact: {id}"
@@ -215,61 +215,61 @@ msgstr "{num} kişinin silinmesi iptal edildi"
 msgid "Add"
 msgstr "Ekle"
 
-#: js/groups.js:263
+#: js/groups.js:264
 msgid "Contact is already in this group."
 msgstr "Kişi zaten bu grupta."
 
-#: js/groups.js:276
+#: js/groups.js:277
 msgid "Contacts are already in this group."
 msgstr "Kişiler zaten bu gruptalar."
 
-#: js/groups.js:342
+#: js/groups.js:343
 msgid "Couldn't get contact list."
 msgstr "Kişi listesi alınamadı."
 
-#: js/groups.js:353
+#: js/groups.js:354
 msgid "Contact is not in this group."
 msgstr "Kişi bu grupta değil."
 
-#: js/groups.js:367
+#: js/groups.js:368
 msgid "Contacts are not in this group."
 msgstr "Kişiler bu grupta değiller."
 
-#: js/groups.js:566
+#: js/groups.js:567
 msgid "Failed renaming group: {error}"
 msgstr "Grup adını değiştirme başarısız: {error}"
 
-#: js/groups.js:597
+#: js/groups.js:598
 msgid "A group named {group} already exists"
 msgstr "{group} isimli bir grup zaten var"
 
-#: js/groups.js:632
+#: js/groups.js:633
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Groupları sürükleyerek\nistediğiniz gibi düzenleyebilirsiniz"
 
-#: js/groups.js:645
+#: js/groups.js:646
 msgid "Failed adding group: {error}"
 msgstr "Grup ekleme başarısız: {error}"
 
-#: js/groups.js:657
+#: js/groups.js:658
 msgid "All"
 msgstr "Tümü"
 
-#: js/groups.js:672 js/groups.js:675
+#: js/groups.js:673 js/groups.js:676
 msgid "Favorites"
 msgstr "Favoriler"
 
-#: js/groups.js:736
+#: js/groups.js:737
 msgid "Shared by {owner}"
 msgstr "{owner} tarafından paylaşılmış"
 
-#: js/groups.js:751
+#: js/groups.js:752
 msgid "Not grouped"
 msgstr "Gruplanmamış"
 
-#: js/groups.js:780
+#: js/groups.js:781
 msgid "Failed loading groups: {error}"
 msgstr "Grup yüklemesi başarısız: {error}"
 

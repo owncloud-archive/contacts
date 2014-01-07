@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Võrgu või serveri viga. Palun informeeri administraatorit.",
 "Error adding to group." => "Viga gruppi lisamisel.",
 "Error removing from group." => "Viga grupist eemaldamisel.",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Oled valinud üle 300 kontakti.\nTõenäoliselt see ebaõnnestub. Kliki siia jätkamaks ikkagi.",
 "Error setting {name} as favorite." => "Viga {name} lemmikuks määramisel.",
 "Merge contacts" => "Ühenda kontaktid",
 "Cancel" => "Loobu",
