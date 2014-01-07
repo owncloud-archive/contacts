@@ -1,7 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakte",
 "Save" => "Speichern",
-"Uploading..." => "Lade hoch ...",
+"Uploading..." => "Lade hoch...",
 "Importing..." => "Importiere...",
 "Preparing..." => "Vorbereiten...",
 "Imported {count} of {total} contacts" => "Es wurden {count} von {total} Kontakten importiert",
