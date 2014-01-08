@@ -69,9 +69,9 @@
 							<option value="lf"><?php p($l->t('Last-, Firstname')); ?></option>
 						</select>
 					</td>
-					<td class="info email">Email</td>
-					<td class="info tel">Phone</td>
-					<td class="info adr">Address</td>
+					<td class="info email"><?php p($l->t('Email')); ?></td>
+					<td class="info tel"><?php p($l->t('Phone')); ?></td>
+					<td class="info adr"><?php p($l->t('Address')); ?></td>
 					<td class="info categories"></td>
 					<td colspan="4" class="actions">
 						<a class="delete action permanent" title="<?php p($l->t('Delete')); ?>"></a>
