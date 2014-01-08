@@ -371,7 +371,6 @@
 			<option value="NOTE"><?php p($l->t('Note')); ?></option>
 			<option value="URL"><?php p($l->t('Web site')); ?></option>
 		</select>
-		<button class="cancel text tooltipped downwards"><?php p($l->t('Cancel')); ?></button>
 		<a class="close text tooltipped downwards">
 			<?php p($l->t('Close')); ?>
 			<img class="svg" alt="<?php p($l->t('Close'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/checkmark.svg")); ?>" />
