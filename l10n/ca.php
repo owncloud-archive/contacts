@@ -25,6 +25,7 @@
 "Network or server error. Please inform administrator." => "Error de xarxa o del servidor. Informeu a l'administrador.",
 "Error adding to group." => "Error en afegir grup",
 "Error removing from group." => "Error en eliminar del grup",
+"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Heu seleccionat més de 300 contactes.\nAixò segurament fallarà!  Feu clic aquí per provar-ho igualment.",
 "Error setting {name} as favorite." => "Error en establir {name} com a preferit.",
 "Merge contacts" => "Combina contactes",
 "Cancel" => "Cancel·la",

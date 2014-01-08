@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-21 00:49-0500\n"
-"PO-Revision-Date: 2013-12-20 06:21+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2014-01-08 00:48-0500\n"
+"PO-Revision-Date: 2014-01-07 08:10+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/owncloud/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Contacts"
 msgstr "Kontak"
 
-#: js/addressbooks.js:83 js/groups.js:518 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
 msgid "Save"
 msgstr "Simpan"
 
@@ -210,61 +210,61 @@ msgstr "Penghapusan dibatalkan  {num} kontak"
 msgid "Add"
 msgstr "Tambah"
 
-#: js/groups.js:263
+#: js/groups.js:264
 msgid "Contact is already in this group."
 msgstr "Kontak sudah ada di grup ini."
 
-#: js/groups.js:276
+#: js/groups.js:277
 msgid "Contacts are already in this group."
 msgstr "Kontak sudah ada di grup ini."
 
-#: js/groups.js:342
+#: js/groups.js:343
 msgid "Couldn't get contact list."
 msgstr "Tidak bisa mendapatkan daftar kontak."
 
-#: js/groups.js:353
+#: js/groups.js:354
 msgid "Contact is not in this group."
 msgstr "Kontak tidak di dalam grup ini."
 
-#: js/groups.js:367
+#: js/groups.js:368
 msgid "Contacts are not in this group."
 msgstr "Kontak tidak di dalam grup ini."
 
-#: js/groups.js:566
+#: js/groups.js:567
 msgid "Failed renaming group: {error}"
 msgstr "Gagal menamai grup: {error}"
 
-#: js/groups.js:597
+#: js/groups.js:598
 msgid "A group named {group} already exists"
 msgstr "Grup yang bernama {group} sudah ada"
 
-#: js/groups.js:632
+#: js/groups.js:633
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Anda bisa seret grup untuk\nmenyusunnya seperti yang Anda inginkan."
 
-#: js/groups.js:645
+#: js/groups.js:646
 msgid "Failed adding group: {error}"
 msgstr "Gagal menambahkan grup: {error}"
 
-#: js/groups.js:657
+#: js/groups.js:658
 msgid "All"
 msgstr "Semua"
 
-#: js/groups.js:672 js/groups.js:675
+#: js/groups.js:673 js/groups.js:676
 msgid "Favorites"
 msgstr "Favorit"
 
-#: js/groups.js:736
+#: js/groups.js:737
 msgid "Shared by {owner}"
 msgstr "Dibagikan oleh {owner}"
 
-#: js/groups.js:751
+#: js/groups.js:752
 msgid "Not grouped"
 msgstr "Tidak dikelompokkan"
 
-#: js/groups.js:780
+#: js/groups.js:781
 msgid "Failed loading groups: {error}"
 msgstr "Gagal memuat grup: {error}"
 
