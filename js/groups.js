@@ -669,7 +669,7 @@ OC.Contacts = OC.Contacts || {};
 				$elem = $elem.length ? $elem : tmpl.octemplate({
 					id: 'fav',
 					type: 'fav',
-					num: '(' + contacts.length + ')',
+					num: contacts.length,
 					name: t('contacts', 'Favorites')
 				}).appendTo($groupList);
 				$elem.data('obj', self);
