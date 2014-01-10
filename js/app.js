@@ -233,6 +233,7 @@ OC.Contacts = OC.Contacts || {
 		this.bindEvents();
 		this.$toggleAll.show();
 		this.hideActions();
+		$('.hidden-on-load').removeClass('hidden-on-load');
 	},
 	loading:function(obj, state) {
 		$(obj).toggleClass('loading', state);
@@ -250,12 +251,15 @@ OC.Contacts = OC.Contacts || {
 		this.$headeractions.children().hide();
 		if(act && act.length > 0) {
 			this.$contactList.addClass('multiselect');
-			this.$contactListHeader.find('.actions').show();
-			this.$contactListHeader.find('.info').hide();
+			this.$contactListHeader.find('.actions').css('display', '');
+			this.$contactListHeader.find('.action').css('display', '');
+			this.$contactListHeader.find('.name').attr('colspan', '100%');
+			this.$contactListHeader.find('.info').css('display', 'none');
 			this.$headeractions.children('.'+act.join(',.')).show();
 		} else {
-			this.$contactListHeader.find('.actions').hide();
-			this.$contactListHeader.find('.info').show();
+			this.$contactListHeader.find('.actions').css('display', 'none');
+			this.$contactListHeader.find('.name').attr('colspan', '1');
+			this.$contactListHeader.find('.info').css('display', '');
 			this.$contactList.removeClass('multiselect');
 		}
 	},
@@ -288,9 +292,9 @@ OC.Contacts = OC.Contacts || {
 		this.$contactListHeader = $('#contactsHeader');
 		this.$sortOrder = this.$contactListHeader.find('.action.sort');
 		this.$sortOrder.val(contacts_sortby||'fn');
-		this.$headeractions = this.$contactListHeader.find('.actions');
+		this.$headeractions = this.$groupList.find('.contact-actions');
 		this.$toggleAll = this.$contactListHeader.find('.toggle');
-		this.$groups = this.$headeractions.find('.groups');
+		this.$groups = this.$contactListHeader.find('.groups');
 		this.$ninjahelp = $('#ninjahelp');
 		this.$firstRun = $('#firstrun');
 		this.$settings = $('#app-settings');
@@ -409,11 +413,9 @@ OC.Contacts = OC.Contacts || {
 				console.log('Error loading contacts!');
 			} else {
 				if(response.numcontacts === 0) {
-					self.$contactListHeader.hide();
 					self.$contactList.hide();
 					self.$firstRun.show();
 				} else {
-					self.$contactListHeader.show();
 					self.$contactList.show();
 					self.$firstRun.hide();
 				$.each(self.addressBooks.addressBooks, function(idx, addressBook) {
@@ -695,7 +697,6 @@ OC.Contacts = OC.Contacts || {
 				self.closeContact(id);
 				self.jumpToContact(id);
 			}
-			self.$contactList.show();
 			self.$toggleAll.show();
 			self.hideActions();
 			if(result.type === 'category' ||  result.type === 'fav') {
@@ -807,6 +808,12 @@ OC.Contacts = OC.Contacts || {
 			} else {
 				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite', 'merge']);
 			}
+		});
+		
+		this.$contactList.on('click', 'label', function(event) {
+			var id = $(this).attr('for');
+			$(id).prop('checked', !checkBoxes.prop('checked'));
+			return false; // Prevent opening contact
 		});
 
 		this.$sortOrder.on('change', function() {
@@ -999,7 +1006,6 @@ OC.Contacts = OC.Contacts || {
 
 		var addContact = function() {
 			console.log('add');
-			self.$toggleAll.hide();
 			if(self.currentid) {
 				if(self.currentid === 'new') {
 					return;
