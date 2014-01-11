@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-08 00:48-0500\n"
-"PO-Revision-Date: 2014-01-07 08:10+0000\n"
+"POT-Creation-Date: 2014-01-11 00:49-0500\n"
+"PO-Revision-Date: 2014-01-11 05:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/owncloud/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -75,134 +75,133 @@ msgstr "Galat yang tidak diketahui ketika memuat buku alamat: {msg}"
 msgid "Error."
 msgstr "Galat."
 
-#: js/app.js:317 js/app.js:331
+#: js/app.js:321 js/app.js:335
 msgid "Add to..."
 msgstr "Tambah ke..."
 
-#: js/app.js:321 js/app.js:333
+#: js/app.js:325 js/app.js:337
 msgid "Remove from..."
 msgstr "Hapus dari..."
 
-#: js/app.js:338
+#: js/app.js:342
 msgid "Add group..."
 msgstr "Tambah grup..."
 
-#: js/app.js:468
+#: js/app.js:470
 msgid "Invalid URL: \"{url}\""
 msgstr "URL salah: \"{url}\""
 
-#: js/app.js:479
+#: js/app.js:481
 msgid "There was an error opening a mail composer."
 msgstr "Terjadi galat saat membuka pembuat mail."
 
-#: js/app.js:484
+#: js/app.js:486
 msgid "Invalid email: \"{url}\""
 msgstr "Surel salah: \"{url}\""
 
-#: js/app.js:562
+#: js/app.js:564
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Gagal gabung. Tidak dapat menemukan kontak: {id}"
 
-#: js/app.js:575
+#: js/app.js:577
 msgid "Merge failed."
 msgstr "Gagal gabung."
 
-#: js/app.js:582
+#: js/app.js:584
 msgid "Merge failed. Error saving contact."
 msgstr "Gagal gabung. Galat menyimpan kontak."
 
-#: js/app.js:602
+#: js/app.js:604
 msgid "Select photo"
 msgstr "Pilih foto"
 
-#: js/app.js:678 js/app.js:1598
+#: js/app.js:680 js/app.js:1604
 msgid "Network or server error. Please inform administrator."
 msgstr "Jaringan atau server galat. Silahkan menginformasikan administrator."
 
-#: js/app.js:894
+#: js/app.js:901
 msgid "Error adding to group."
 msgstr "Galat menambahkan ke grup."
 
-#: js/app.js:917
+#: js/app.js:924
 msgid "Error removing from group."
 msgstr "Galat menghapus dari grup."
 
-#: js/app.js:1094
+#: js/app.js:1100
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1132
+#: js/app.js:1138
 msgid "Error setting {name} as favorite."
 msgstr "Galat mengatur {name} sebagai favorit"
 
-#: js/app.js:1271 js/app.js:1275 templates/contacts.php:182
+#: js/app.js:1277 js/app.js:1281 templates/contacts.php:192
 msgid "Merge contacts"
 msgstr "Gabung kontak"
 
-#: js/app.js:1297 js/app.js:1350 js/settings.js:120 templates/contacts.php:321
-#: templates/settings.php:62
+#: js/app.js:1303 js/app.js:1356 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
 msgstr "Batal"
 
-#: js/app.js:1324 templates/contacts.php:163
+#: js/app.js:1330 templates/contacts.php:173
 msgid "Add group"
 msgstr "Tambah grup"
 
-#: js/app.js:1328
+#: js/app.js:1334
 msgid "OK"
 msgstr "Oke"
 
-#: js/app.js:1422
+#: js/app.js:1428
 msgid "Could not find contact: {id}"
 msgstr "Tidak menemukan kontak: {id}"
 
-#: js/app.js:1445
+#: js/app.js:1451
 msgid "No files selected for upload."
 msgstr "Tidak ada berkas yang dipilih untuk diunggah."
 
-#: js/app.js:1455
+#: js/app.js:1461
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Berkas yang Anda coba unggah melebihi ukuran maksimum pada server ini."
 
-#: js/app.js:1556
+#: js/app.js:1562
 msgid "Edit profile picture"
 msgstr "Sunting gambar profil"
 
-#: js/app.js:1560
+#: js/app.js:1566
 msgid "Crop photo"
 msgstr "Gunting foto"
 
-#: js/contacts.js:589
+#: js/contacts.js:606
 msgid "Is this correct?"
 msgstr "Apakah sesuai?"
 
-#: js/contacts.js:856
+#: js/contacts.js:873
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1053
+#: js/contacts.js:1070
 msgid "# groups"
 msgstr "# grup"
 
-#: js/contacts.js:1125
+#: js/contacts.js:1144
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2162
+#: js/contacts.js:2187
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Beberapa kontak telah ditandai untuk dihapus, tetapi belum selesai dihapus. Mohon tunggu."
 
-#: js/contacts.js:2173
+#: js/contacts.js:2198
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik untuk membatalkan penghapusan {num} kontak"
 
-#: js/contacts.js:2182
+#: js/contacts.js:2207
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Penghapusan dibatalkan  {num} kontak"
 
@@ -272,7 +271,7 @@ msgstr "Gagal memuat grup: {error}"
 msgid "Please choose the addressbook"
 msgstr "Silakan pilih buku alamat"
 
-#: js/loader.js:22 templates/contacts.php:29
+#: js/loader.js:22 templates/contacts.php:50
 msgid "Import into..."
 msgstr "Impor ke dalam..."
 
@@ -284,7 +283,7 @@ msgstr "Galat memuat templat impor"
 msgid "Import contacts"
 msgstr "Impor kontak"
 
-#: js/loader.js:61 templates/contacts.php:25
+#: js/loader.js:61 templates/contacts.php:46
 msgid "Import"
 msgstr "Impor"
 
@@ -292,7 +291,8 @@ msgstr "Impor"
 msgid "Import done"
 msgstr "Impor selesai"
 
-#: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:322
+#: js/loader.js:95 templates/contacts.php:101 templates/contacts.php:375
+#: templates/contacts.php:376
 msgid "Close"
 msgstr "Tutup"
 
@@ -312,19 +312,19 @@ msgstr "Tampilkan tautan CardDav"
 msgid "Show read-only VCF link"
 msgstr "Tampilkan hanya-baca tautan VCF"
 
-#: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
-#: templates/contacts.php:323 templates/settings.php:40
+#: js/settings.js:99 templates/contacts.php:9 templates/contacts.php:88
+#: templates/contacts.php:379 templates/contacts.php:380
+#: templates/settings.php:40
 msgid "Download"
 msgstr "Unduh"
 
-#: js/settings.js:101 templates/contacts.php:467 templates/settings.php:45
+#: js/settings.js:101 templates/contacts.php:513 templates/settings.php:45
 msgid "Edit"
 msgstr "Edit"
 
-#: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
-#: templates/contacts.php:268 templates/contacts.php:275
-#: templates/contacts.php:282 templates/contacts.php:289
-#: templates/contacts.php:337 templates/contacts.php:468
+#: js/settings.js:102 templates/contacts.php:6 templates/contacts.php:81
+#: templates/contacts.php:82 templates/contacts.php:236
+#: templates/contacts.php:237 templates/contacts.php:514
 #: templates/settings.php:50
 msgid "Delete"
 msgstr "Hapus"
@@ -790,357 +790,294 @@ msgstr "Teman"
 msgid "Family"
 msgstr "Keluarga"
 
-#: templates/contacts.php:6
-msgid "New Contact"
-msgstr "Kontak Baru"
-
-#: templates/contacts.php:10
-msgid "Group name"
-msgstr "Nama grup"
-
-#: templates/contacts.php:10
-msgid "New Group"
-msgstr "Grup Baru"
-
-#: templates/contacts.php:19
-msgid "Address books"
-msgstr "Buku alamat"
-
-#: templates/contacts.php:22 templates/contacts.php:47
-#: templates/contacts.php:67
-msgid "Display name"
-msgstr "Nama tampilan"
-
-#: templates/contacts.php:22
-msgid "Add Address Book"
-msgstr "Tambah Buku Alamat"
-
-#: templates/contacts.php:31 templates/contacts.php:32
-msgid "Select file..."
-msgstr "Pilih berkas..."
-
-#: templates/contacts.php:45 templates/contacts.php:65
-msgid "(De-)select all"
-msgstr "Batal pilih semua"
-
-#: templates/contacts.php:46 templates/contacts.php:66
-msgid "Sort order"
-msgstr "Urutkan bardasarkan"
-
-#: templates/contacts.php:48 templates/contacts.php:68
-msgid "First- Lastname"
-msgstr "Nama Depan-Nama Belakang"
-
-#: templates/contacts.php:49 templates/contacts.php:69
-msgid "Last-, Firstname"
-msgstr "Nama Belakang-,Nama Depan"
-
-#: templates/contacts.php:53 templates/contacts.php:80
+#: templates/contacts.php:13 templates/contacts.php:85
+#: templates/contacts.php:276
 msgid "Groups"
 msgstr "Grup"
 
-#: templates/contacts.php:55 templates/contacts.php:82
+#: templates/contacts.php:15
 msgid "Favorite"
 msgstr "Favorit"
 
-#: templates/contacts.php:56 templates/contacts.php:83
+#: templates/contacts.php:17
 msgid "Merge selected"
 msgstr ""
 
-#: templates/contacts.php:92
+#: templates/contacts.php:27
+msgid "New contact"
+msgstr ""
+
+#: templates/contacts.php:31
+msgid "Group name"
+msgstr "Nama grup"
+
+#: templates/contacts.php:31
+msgid "New group"
+msgstr ""
+
+#: templates/contacts.php:40
+msgid "Address books"
+msgstr "Buku alamat"
+
+#: templates/contacts.php:43 templates/contacts.php:73
+msgid "Display name"
+msgstr "Nama tampilan"
+
+#: templates/contacts.php:43
+msgid "Add Address Book"
+msgstr "Tambah Buku Alamat"
+
+#: templates/contacts.php:52 templates/contacts.php:53
+msgid "Select file..."
+msgstr "Pilih berkas..."
+
+#: templates/contacts.php:70
+msgid "(De-)select all"
+msgstr "Batal pilih semua"
+
+#: templates/contacts.php:72
+msgid "Sort order"
+msgstr "Urutkan bardasarkan"
+
+#: templates/contacts.php:74
+msgid "First- Lastname"
+msgstr "Nama Depan-Nama Belakang"
+
+#: templates/contacts.php:75
+msgid "Last-, Firstname"
+msgstr "Nama Belakang-,Nama Depan"
+
+#: templates/contacts.php:87
+msgid "Merge"
+msgstr ""
+
+#: templates/contacts.php:91 templates/contacts.php:368
+msgid "Email"
+msgstr "Surel"
+
+#: templates/contacts.php:92 templates/contacts.php:367
+msgid "Phone"
+msgstr "Telpon"
+
+#: templates/contacts.php:93 templates/contacts.php:370
+msgid "Address"
+msgstr "Alamat"
+
+#: templates/contacts.php:94
+msgid "Group"
+msgstr ""
+
+#: templates/contacts.php:102
 msgid "Keyboard shortcuts"
 msgstr "Jalan pintas keyboard"
 
-#: templates/contacts.php:94
+#: templates/contacts.php:104
 msgid "Navigation"
 msgstr "Navigasi"
 
-#: templates/contacts.php:97
+#: templates/contacts.php:107
 msgid "Next contact in list"
 msgstr "Kontak selanjutnya"
 
-#: templates/contacts.php:99
+#: templates/contacts.php:109
 msgid "Previous contact in list"
 msgstr "Kontak sebelumnya"
 
-#: templates/contacts.php:101
+#: templates/contacts.php:111
 msgid "Expand/collapse current addressbook"
 msgstr ""
 
-#: templates/contacts.php:103
+#: templates/contacts.php:113
 msgid "Next addressbook"
 msgstr "Buku alamat selanjutnya"
 
-#: templates/contacts.php:105
+#: templates/contacts.php:115
 msgid "Previous addressbook"
 msgstr "Buku alamat sebelumnya"
 
-#: templates/contacts.php:109
+#: templates/contacts.php:119
 msgid "Actions"
 msgstr "Tindakan"
 
-#: templates/contacts.php:112
+#: templates/contacts.php:122
 msgid "Refresh contacts list"
 msgstr "Segarkan daftar kontak"
 
-#: templates/contacts.php:114
+#: templates/contacts.php:124
 msgid "Add new contact"
 msgstr "Tambah kontak baru"
 
-#: templates/contacts.php:116
+#: templates/contacts.php:126
 msgid "Add new addressbook"
 msgstr "Tambah buku alamat baru"
 
-#: templates/contacts.php:118
+#: templates/contacts.php:128
 msgid "Delete current contact"
 msgstr "Hapus kontak tarbaru"
 
-#: templates/contacts.php:124
+#: templates/contacts.php:134
 msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
 msgstr "<h3>Anda tidak memiliki kontak dalam buku alamat atau buku alamat dinonaktifkan.</h3><p>Tambah kontak baru atau impor kontak yang sudah ada dari berkas VCF.</p>"
 
-#: templates/contacts.php:127
+#: templates/contacts.php:137
 msgid "Add contact"
 msgstr "Tambah kontak"
 
-#: templates/contacts.php:174
-msgid "Delete group"
-msgstr "Hapus grup"
-
-#: templates/contacts.php:175
-msgid "Rename group"
-msgstr "Ubah nama grup"
-
-#: templates/contacts.php:183
+#: templates/contacts.php:193
 msgid "Which contact should the data be merged into?"
 msgstr ""
 
-#: templates/contacts.php:191
+#: templates/contacts.php:201
 msgid "Delete the other(s) after successful merge?"
 msgstr ""
 
-#: templates/contacts.php:203
+#: templates/contacts.php:216
 msgid "Compose mail"
 msgstr "Buat surat"
 
-#: templates/contacts.php:225
+#: templates/contacts.php:244
 msgid "Delete current photo"
 msgstr "Hapus foto saat ini"
 
-#: templates/contacts.php:226
+#: templates/contacts.php:245
 msgid "Edit current photo"
 msgstr "Sunting foto saat ini"
 
-#: templates/contacts.php:227
+#: templates/contacts.php:246
 msgid "Upload new photo"
 msgstr "Unggah foto baru"
 
-#: templates/contacts.php:228
+#: templates/contacts.php:247
 msgid "Select photo from ownCloud"
 msgstr "Pilih foto dari ownCloud"
 
-#: templates/contacts.php:233 templates/settings.php:59
+#: templates/contacts.php:252 templates/contacts.php:254
+#: templates/settings.php:59
 msgid "Name"
 msgstr "Nama"
 
-#: templates/contacts.php:239 templates/contacts.php:240
+#: templates/contacts.php:260
 msgid "First name"
 msgstr "Nama depan"
 
-#: templates/contacts.php:244 templates/contacts.php:245
+#: templates/contacts.php:264
 msgid "Additional names"
 msgstr "Nama tambahan"
 
-#: templates/contacts.php:249 templates/contacts.php:250
+#: templates/contacts.php:268
 msgid "Last name"
 msgstr "Nama belakang"
 
-#: templates/contacts.php:257
-msgid "Select groups"
-msgstr "Pilih grup"
-
-#: templates/contacts.php:260
-msgid "Select address book"
-msgstr "Pilih buku alamat"
-
-#: templates/contacts.php:264 templates/contacts.php:328
+#: templates/contacts.php:288 templates/contacts.php:365
 msgid "Nickname"
 msgstr "Nama panggilan"
 
-#: templates/contacts.php:267
-msgid "Enter nickname"
-msgstr "Masukkan nama panggilan"
-
-#: templates/contacts.php:271 templates/contacts.php:327
+#: templates/contacts.php:298 templates/contacts.php:364
 msgid "Title"
 msgstr "Judul"
 
-#: templates/contacts.php:274
-msgid "Enter title"
-msgstr "Masukkan judul"
-
-#: templates/contacts.php:278 templates/contacts.php:326
+#: templates/contacts.php:308 templates/contacts.php:363
 msgid "Organization"
 msgstr "Organisasi"
 
-#: templates/contacts.php:281
-msgid "Enter organization"
-msgstr "Masukkan nama organisasi"
-
-#: templates/contacts.php:285 templates/contacts.php:329
+#: templates/contacts.php:318 templates/contacts.php:366
 msgid "Birthday"
 msgstr "Tanggal lahir"
 
-#: templates/contacts.php:316
+#: templates/contacts.php:355
 msgid "Notes go here..."
 msgstr "Beri catatan disini..."
 
-#: templates/contacts.php:323
-msgid "Export as VCF"
-msgstr "Ekspor sebagai VCF"
-
-#: templates/contacts.php:325
+#: templates/contacts.php:362
 msgid "Add field..."
 msgstr "Tambah kolom..."
 
-#: templates/contacts.php:330
-msgid "Phone"
-msgstr "Telpon"
-
-#: templates/contacts.php:331
-msgid "Email"
-msgstr "Surel"
-
-#: templates/contacts.php:332
+#: templates/contacts.php:369
 msgid "Instant Messaging"
 msgstr "Perpesanan Instan"
 
-#: templates/contacts.php:333
-msgid "Address"
-msgstr "Alamat"
-
-#: templates/contacts.php:334
+#: templates/contacts.php:371
 msgid "Note"
 msgstr "Catatan"
 
-#: templates/contacts.php:335
+#: templates/contacts.php:372
 msgid "Web site"
 msgstr "Situs web"
 
-#: templates/contacts.php:337
-msgid "Delete contact"
-msgstr "Hapus kontak"
-
-#: templates/contacts.php:351 templates/contacts.php:366
-#: templates/contacts.php:380 templates/contacts.php:405
-#: templates/contacts.php:443
+#: templates/contacts.php:392 templates/contacts.php:407
+#: templates/contacts.php:421 templates/contacts.php:436
+#: templates/contacts.php:478 templates/contacts.php:488
 msgid "Preferred"
 msgstr "Disarankan"
 
-#: templates/contacts.php:353
+#: templates/contacts.php:397
 msgid "Please specify a valid email address."
 msgstr "Silakan tentukan alamat email yang valid."
 
-#: templates/contacts.php:353
+#: templates/contacts.php:397
 msgid "someone@example.com"
 msgstr "seseorang@contoh.com"
 
-#: templates/contacts.php:355
+#: templates/contacts.php:399
 msgid "Mail to address"
 msgstr "Surel ke alamat"
 
-#: templates/contacts.php:356
+#: templates/contacts.php:400
 msgid "Delete email address"
 msgstr "Hapus alamat surel"
 
-#: templates/contacts.php:368
+#: templates/contacts.php:412
 msgid "Enter phone number"
 msgstr "Masukkan nomor telpon"
 
-#: templates/contacts.php:370
-msgid "Delete phone number"
-msgstr "Hapus nomor telpon"
-
-#: templates/contacts.php:384
+#: templates/contacts.php:428
 msgid "Go to web site"
 msgstr "Pergi ke situs web"
 
-#: templates/contacts.php:385
-msgid "Delete URL"
-msgstr "Hapus Tautan"
-
-#: templates/contacts.php:396
+#: templates/contacts.php:445
 msgid "View on map"
 msgstr "Lihat pada peta"
 
-#: templates/contacts.php:397
-msgid "Delete address"
-msgstr "Hapus alamat"
-
-#: templates/contacts.php:410
-msgid "1600 Pennsylvania Avenue, NW"
-msgstr "1600 Pennsylvania Avenue, NW"
-
-#: templates/contacts.php:411
+#: templates/contacts.php:453
 msgid "Street address"
 msgstr "Alamat jalan"
 
-#: templates/contacts.php:415
-msgid "20500"
-msgstr "20500"
-
-#: templates/contacts.php:416
+#: templates/contacts.php:457
 msgid "Postal code"
 msgstr "Kode pos"
 
-#: templates/contacts.php:418
-msgid "Washington, DC"
-msgstr "Washington, DC"
-
-#: templates/contacts.php:419
+#: templates/contacts.php:459
 msgid "City"
 msgstr "Kota"
 
-#: templates/contacts.php:423
-msgid "District of Columbia"
-msgstr "District of Columbia"
-
-#: templates/contacts.php:424
+#: templates/contacts.php:463
 msgid "State or province"
 msgstr "Provinsi"
 
-#: templates/contacts.php:428
-msgid "USA"
-msgstr "USA"
-
-#: templates/contacts.php:429
+#: templates/contacts.php:467
 msgid "Country"
 msgstr "Negara"
 
-#: templates/contacts.php:451
+#: templates/contacts.php:494
 msgid "Instant Messenger"
 msgstr "Perpesanan Instan"
 
-#: templates/contacts.php:453
-msgid "Delete IM"
-msgstr "Hapus IM"
-
-#: templates/contacts.php:461
+#: templates/contacts.php:507
 msgid "Active"
 msgstr "Aktif"
 
-#: templates/contacts.php:464 templates/settings.php:36
+#: templates/contacts.php:510 templates/settings.php:36
 msgid "Share"
 msgstr "Bagikan"
 
-#: templates/contacts.php:465
+#: templates/contacts.php:511
 msgid "Export"
 msgstr "Ekspor"
 
-#: templates/contacts.php:466
+#: templates/contacts.php:512
 msgid "CardDAV link"
 msgstr "Tautan CardDAV"
 
