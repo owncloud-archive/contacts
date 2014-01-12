@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# arifpedia <arifpedia@gmail.com>, 2014
 # minion, 2013
 # elmakong <mr.pige_ina@yahoo.co.id>, 2012
 # minion, 2013
@@ -13,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-11 00:49-0500\n"
-"PO-Revision-Date: 2014-01-11 05:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-01-12 00:48-0500\n"
+"PO-Revision-Date: 2014-01-12 03:43+0000\n"
+"Last-Translator: arifpedia <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/owncloud/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -427,11 +428,11 @@ msgstr "Ulang tahun {name}"
 
 #: lib/controller/addressbookcontroller.php:112
 msgid "Error creating address book"
-msgstr "Galat membuat buku alamat"
+msgstr "Kesalahan saat membuat buku alamat"
 
 #: lib/controller/addressbookcontroller.php:129
 msgid "Error updating address book"
-msgstr "Galat memperbarui buku alamat"
+msgstr "Kesalahan saat memperbarui buku alamat"
 
 #: lib/controller/addressbookcontroller.php:157
 #, php-format
@@ -440,28 +441,28 @@ msgstr "Anda tidak memiliki izin untuk menghapus buku alamat \"%s\""
 
 #: lib/controller/addressbookcontroller.php:163
 msgid "Error deleting address book"
-msgstr "Galat menghapus buku alamat"
+msgstr "Kesalahan saat menghapus buku alamat"
 
 #: lib/controller/addressbookcontroller.php:201
 msgid "Error creating contact."
-msgstr "Galat membuat kontak"
+msgstr "Kesalahan saat membuat kontak"
 
 #: lib/controller/addressbookcontroller.php:237
 msgid "Error deleting contact."
-msgstr "Galat menghapus kontak"
+msgstr "Kesalahan saat menghapus kontak"
 
 #: lib/controller/addressbookcontroller.php:277
 msgid "Error retrieving contact."
-msgstr "Galat menerima kontak."
+msgstr "Kesalahan saat menerima kontak."
 
 #: lib/controller/addressbookcontroller.php:287
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
-msgstr "Galat menyimpan kontak."
+msgstr "Kesalahan saat menyimpan kontak."
 
 #: lib/controller/addressbookcontroller.php:291
 msgid "Error removing contact from other address book."
-msgstr "Galat menghapus kontak dari buku alamat lainnya."
+msgstr "Kesalahan saat menghapus kontak dari buku alamat lainnya."
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
@@ -478,7 +479,7 @@ msgstr "Tidak ada data kontak yang diminta."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
-msgstr "Galat menggabungkan kedalam kontak."
+msgstr "Kesalahan saat menggabungkan kedalam kontak."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
@@ -498,7 +499,7 @@ msgstr "Informasi tentang VCard salah. Silakan memuat ulang halaman."
 
 #: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
-msgstr "Galat memperbarui kontak"
+msgstr "Kesalahan saat memperbarui kontak"
 
 #: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
@@ -516,7 +517,7 @@ msgstr "Tidak ada berkas yang diunggah. Galat tidak dikenal."
 #: lib/controller/contactphotocontroller.php:95
 #: lib/controller/importcontroller.php:45
 msgid "There is no error, the file uploaded with success"
-msgstr "Tidak ada galat, berkas sukses diunggah"
+msgstr "Tidak ada kesalahan, berkas sukses diunggah"
 
 #: lib/controller/contactphotocontroller.php:96
 #: lib/controller/importcontroller.php:46
@@ -565,7 +566,7 @@ msgstr "Berkas tidak ditemukan:"
 #: lib/controller/contactphotocontroller.php:203
 #: lib/controller/contactphotocontroller.php:206
 msgid "Error loading image."
-msgstr "Galat memuat gambar."
+msgstr "Kesalahan saat memuat gambar."
 
 #: lib/controller/contactphotocontroller.php:279
 msgid "Image has been removed from cache"
@@ -573,19 +574,19 @@ msgstr "Gambar sudah dihapus dari cache"
 
 #: lib/controller/contactphotocontroller.php:285
 msgid "Error creating temporary image"
-msgstr "Galat mmbuat gambar sementara"
+msgstr "Kesalahan saat membuat gambar sementara"
 
 #: lib/controller/contactphotocontroller.php:292
 msgid "Error cropping image"
-msgstr "Galat memotong gambar"
+msgstr "Kesalahan saat memotong gambar"
 
 #: lib/controller/contactphotocontroller.php:297
 msgid "Error resizing image"
-msgstr "Galat mengubah ukuran gambar"
+msgstr "Kesalahan saat mengubah ukuran gambar"
 
 #: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
-msgstr "Galat mendapatkan properti FOTO."
+msgstr "Kesalahan saat mengambil properti FOTO."
 
 #: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
 msgid "No group name given."
@@ -635,11 +636,11 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:93
 msgid "Error uploading contacts to storage."
-msgstr "Galat mengunggah kontak ke penyimpanan"
+msgstr "Kesalahan saat mengunggah kontak ke penyimpanan"
 
 #: lib/controller/importcontroller.php:138
 msgid "Error moving file to imports folder."
-msgstr "Galat memindahkan berkas ke folder impor."
+msgstr "Kesalahan saat memindahkan berkas ke folder impor."
 
 #: lib/controller/importcontroller.php:155
 msgid "You do not have permissions to import into this address book."
@@ -805,7 +806,7 @@ msgstr ""
 
 #: templates/contacts.php:27
 msgid "New contact"
-msgstr ""
+msgstr "Kontak baru"
 
 #: templates/contacts.php:31
 msgid "Group name"
@@ -813,7 +814,7 @@ msgstr "Nama grup"
 
 #: templates/contacts.php:31
 msgid "New group"
-msgstr ""
+msgstr "Grup baru"
 
 #: templates/contacts.php:40
 msgid "Address books"
@@ -865,7 +866,7 @@ msgstr "Alamat"
 
 #: templates/contacts.php:94
 msgid "Group"
-msgstr ""
+msgstr "Grup"
 
 #: templates/contacts.php:102
 msgid "Keyboard shortcuts"

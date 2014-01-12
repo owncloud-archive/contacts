@@ -195,6 +195,7 @@
 "Email" => "E-post",
 "Phone" => "Telefon",
 "Address" => "Adress",
+"Group" => "Grupp",
 "Keyboard shortcuts" => "Kortkommandon",
 "Navigation" => "Navigering",
 "Next contact in list" => "Nästa kontakt i listan",

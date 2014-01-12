@@ -69,6 +69,7 @@
 "Email" => "Email",
 "Phone" => "Telefon",
 "Address" => "Adress",
+"Group" => "Grupp",
 "Add new contact" => "Neie Kontakt bäisetzen",
 "Add contact" => "Kontakt bäisetzen",
 "Name" => "Numm",

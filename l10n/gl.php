@@ -196,6 +196,7 @@
 "Email" => "Correo",
 "Phone" => "Teléfono",
 "Address" => "Enderezo",
+"Group" => "Grupo",
 "Keyboard shortcuts" => "Atallos de teclado",
 "Navigation" => "Navegación",
 "Next contact in list" => "Seguinte contacto na lista",

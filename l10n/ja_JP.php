@@ -196,6 +196,7 @@
 "Email" => "メール",
 "Phone" => "電話番号",
 "Address" => "アドレス",
+"Group" => "グループ",
 "Keyboard shortcuts" => "キーボードショートカット",
 "Navigation" => "ナビゲーション",
 "Next contact in list" => "リスト内の次の連絡先",

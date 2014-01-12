@@ -196,6 +196,7 @@
 "Email" => "Correu electrònic",
 "Phone" => "Telèfon",
 "Address" => "Adreça",
+"Group" => "Grup",
 "Keyboard shortcuts" => "Dreceres de teclat",
 "Navigation" => "Navegació",
 "Next contact in list" => "Següent contacte de la llista",

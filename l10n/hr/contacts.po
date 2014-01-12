@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-11 00:49-0500\n"
-"PO-Revision-Date: 2014-01-11 05:49+0000\n"
+"POT-Creation-Date: 2014-01-12 00:48-0500\n"
+"PO-Revision-Date: 2014-01-11 06:00+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/owncloud/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -862,7 +862,7 @@ msgstr "Adresa"
 
 #: templates/contacts.php:94
 msgid "Group"
-msgstr ""
+msgstr "Grupa"
 
 #: templates/contacts.php:102
 msgid "Keyboard shortcuts"

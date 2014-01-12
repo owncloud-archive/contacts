@@ -178,6 +178,7 @@
 "Email" => "El. Paštas",
 "Phone" => "Telefonas",
 "Address" => "Adresas",
+"Group" => "Grupė",
 "Keyboard shortcuts" => "Klaviatūros spartieji klavišai",
 "Navigation" => "Navigacija",
 "Next contact in list" => "Kitas kontaktas sąraše",

@@ -190,6 +190,7 @@
 "Email" => "Email",
 "Phone" => "Telefone",
 "Address" => "Endereço",
+"Group" => "Grupo",
 "Keyboard shortcuts" => "Atalhos de teclado",
 "Navigation" => "Navegação",
 "Next contact in list" => "Próximo contacto na lista",

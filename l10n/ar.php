@@ -166,6 +166,7 @@
 "Email" => "البريد الإلكترونى",
 "Phone" => "الهاتف",
 "Address" => "عنوان",
+"Group" => "مجموعة",
 "Keyboard shortcuts" => "اختصارات لوحة المفاتيح",
 "Navigation" => "تصفح",
 "Next contact in list" => "جهة الاتصال التالية في القائمة ",

@@ -8,6 +8,7 @@
 # Bui <bui@g.pl>, 2012
 # VaCi0 <cvargas@linuxmail.org>, 2013
 # telco2011 <davidlopez.david@gmail.com>, 2012
+# Dominique Couot <dcouot@hotmail.com>, 2014
 # Francisco Losada, 2013
 # ggam <ggam@brainleakage.com>, 2013
 # eSSeneX <israel@expander.es>, 2013
@@ -33,9 +34,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-11 00:49-0500\n"
-"PO-Revision-Date: 2014-01-11 05:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-01-12 00:48-0500\n"
+"PO-Revision-Date: 2014-01-11 20:06+0000\n"
+"Last-Translator: Dominique Couot <dcouot@hotmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -825,7 +826,7 @@ msgstr "Combinar seleccionados"
 
 #: templates/contacts.php:27
 msgid "New contact"
-msgstr ""
+msgstr "Nuevo contacto"
 
 #: templates/contacts.php:31
 msgid "Group name"
@@ -833,7 +834,7 @@ msgstr "Nombre de grupo"
 
 #: templates/contacts.php:31
 msgid "New group"
-msgstr ""
+msgstr "Nuevo grupo"
 
 #: templates/contacts.php:40
 msgid "Address books"
@@ -869,7 +870,7 @@ msgstr "Apellido, Nombre"
 
 #: templates/contacts.php:87
 msgid "Merge"
-msgstr ""
+msgstr "Fusionar"
 
 #: templates/contacts.php:91 templates/contacts.php:368
 msgid "Email"
@@ -885,7 +886,7 @@ msgstr "Dirección"
 
 #: templates/contacts.php:94
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 #: templates/contacts.php:102
 msgid "Keyboard shortcuts"

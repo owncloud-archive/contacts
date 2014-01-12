@@ -196,6 +196,7 @@
 "Email" => "E-mail",
 "Phone" => "Телефон",
 "Address" => "Адрес",
+"Group" => "Группа",
 "Keyboard shortcuts" => "Горячие клавиши",
 "Navigation" => "Навигация",
 "Next contact in list" => "Следующий контакт в списке",

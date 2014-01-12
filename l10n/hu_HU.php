@@ -196,6 +196,7 @@
 "Email" => "Email",
 "Phone" => "Telefonszám",
 "Address" => "Cím",
+"Group" => "Csoport",
 "Keyboard shortcuts" => "Gyorsbillentyűk",
 "Navigation" => "Navigáció",
 "Next contact in list" => "Következő névjegy a listán",

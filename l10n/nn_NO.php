@@ -36,6 +36,7 @@
 "Email" => "E-post",
 "Phone" => "Telefonnummer",
 "Address" => "Adresse",
+"Group" => "Gruppe",
 "Name" => "Namn",
 "Title" => "Tittel",
 "Organization" => "Organisasjon",

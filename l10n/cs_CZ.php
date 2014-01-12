@@ -196,6 +196,7 @@
 "Email" => "E-mail",
 "Phone" => "Telefon",
 "Address" => "Adresa",
+"Group" => "Skupina",
 "Keyboard shortcuts" => "Klávesové zkratky",
 "Navigation" => "Navigace",
 "Next contact in list" => "Následující kontakt v seznamu",

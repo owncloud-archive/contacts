@@ -66,6 +66,7 @@
 "Email" => "Email",
 "Phone" => "Telefon",
 "Address" => "Adresă",
+"Group" => "Grup",
 "Keyboard shortcuts" => "Scurtături din tastatură",
 "Navigation" => "Navigare",
 "Next contact in list" => "Următorul contact din listă",

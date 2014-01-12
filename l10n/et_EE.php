@@ -196,6 +196,7 @@
 "Email" => "E-post",
 "Phone" => "Telefon",
 "Address" => "Aadress",
+"Group" => "Grupp",
 "Keyboard shortcuts" => "Klaviatuuri otseteed",
 "Navigation" => "Navigeerimine",
 "Next contact in list" => "Järgmine kontakt nimekirjas",

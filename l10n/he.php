@@ -49,6 +49,7 @@
 "Email" => "דואר אלקטרוני",
 "Phone" => "טלפון",
 "Address" => "כתובת",
+"Group" => "קבוצה",
 "Add contact" => "הוסף איש קשר",
 "Delete current photo" => "מחק תמונה נוכחית",
 "Edit current photo" => "ערוך תמונה נוכחית",

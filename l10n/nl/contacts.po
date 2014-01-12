@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# André Koot <meneer@tken.net>, 2012-2013
+# André Koot <meneer@tken.net>, 2012-2014
 # isama <bart.formosus@gmail.com>, 2011
 # bartv <transifex@thisnet.nl>, 2011
 # diederikdehaas <didi.debian@cknow.org>, 2012
@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-11 00:49-0500\n"
-"PO-Revision-Date: 2014-01-11 05:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-01-12 00:48-0500\n"
+"PO-Revision-Date: 2014-01-11 07:20+0000\n"
+"Last-Translator: André Koot <meneer@tken.net>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -812,7 +812,7 @@ msgstr "Geselecteerde items samenvoegen"
 
 #: templates/contacts.php:27
 msgid "New contact"
-msgstr ""
+msgstr "Nieuwe contactpersoon"
 
 #: templates/contacts.php:31
 msgid "Group name"
@@ -820,7 +820,7 @@ msgstr "Groepsnaam"
 
 #: templates/contacts.php:31
 msgid "New group"
-msgstr ""
+msgstr "Nieuwe groep"
 
 #: templates/contacts.php:40
 msgid "Address books"
@@ -856,7 +856,7 @@ msgstr "Achter-, Voornaam"
 
 #: templates/contacts.php:87
 msgid "Merge"
-msgstr ""
+msgstr "Samenvoegen"
 
 #: templates/contacts.php:91 templates/contacts.php:368
 msgid "Email"
@@ -872,7 +872,7 @@ msgstr "Adres"
 
 #: templates/contacts.php:94
 msgid "Group"
-msgstr ""
+msgstr "Groep"
 
 #: templates/contacts.php:102
 msgid "Keyboard shortcuts"

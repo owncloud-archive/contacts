@@ -27,6 +27,7 @@
 "Email" => "E-mail",
 "Phone" => "Telefon",
 "Address" => "Adresa",
+"Group" => "Grupa",
 "Name" => "Ime",
 "Title" => "Naslov",
 "Organization" => "Organizacija",

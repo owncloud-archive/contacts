@@ -151,6 +151,7 @@
 "Email" => "Retpoŝto",
 "Phone" => "Telefono",
 "Address" => "Adreso",
+"Group" => "Grupo",
 "Keyboard shortcuts" => "Fulmoklavoj",
 "Navigation" => "Navigado",
 "Next contact in list" => "Jena kontakto en la listo",

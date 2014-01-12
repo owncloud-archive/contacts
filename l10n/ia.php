@@ -31,6 +31,7 @@
 "Email" => "E-posta",
 "Phone" => "Phono",
 "Address" => "Adresse",
+"Group" => "Gruppo",
 "Add contact" => "Adder adressario",
 "Delete current photo" => "Deler photo currente",
 "Edit current photo" => "Modificar photo currente",

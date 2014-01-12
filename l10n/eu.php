@@ -188,6 +188,7 @@
 "Email" => "E-posta",
 "Phone" => "Telefonoa",
 "Address" => "Helbidea",
+"Group" => "Taldea",
 "Keyboard shortcuts" => "Teklatuaren lasterbideak",
 "Navigation" => "Nabigazioa",
 "Next contact in list" => "Hurrengoa kontaktua zerrendan",

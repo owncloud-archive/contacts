@@ -186,6 +186,7 @@
 "Email" => "电子邮件",
 "Phone" => "电话",
 "Address" => "地址",
+"Group" => "分组",
 "Keyboard shortcuts" => "快捷键",
 "Navigation" => "导航",
 "Next contact in list" => "列表中的下一个联系人",
