@@ -195,7 +195,7 @@
 "Sort order" => "Ordenar",
 "First- Lastname" => "Nombre, Apellido",
 "Last-, Firstname" => "Apellido, Nombre",
-"Merge" => "Fusionar",
+"Merge" => "Unir",
 "Email" => "E-mail",
 "Phone" => "Teléfono",
 "Address" => "Dirección",
