@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-11 00:49-0500\n"
-"PO-Revision-Date: 2014-01-11 05:49+0000\n"
+"POT-Creation-Date: 2014-01-18 00:48-0500\n"
+"PO-Revision-Date: 2014-01-17 14:10+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Albanian (http://www.transifex.com/projects/p/owncloud/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Language: sq\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:28 lib/app.php:103
+#: appinfo/app.php:29 lib/app.php:103
 msgid "Contacts"
 msgstr "Kontake"
 
@@ -146,7 +146,7 @@ msgstr ""
 
 #: js/app.js:1334
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 #: js/app.js:1428
 msgid "Could not find contact: {id}"
@@ -289,7 +289,7 @@ msgstr ""
 #: js/loader.js:95 templates/contacts.php:101 templates/contacts.php:375
 #: templates/contacts.php:376
 msgid "Close"
-msgstr ""
+msgstr "Mbyll"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
@@ -370,7 +370,7 @@ msgstr ""
 
 #: lib/addressbook.php:290
 msgid "Unknown error"
-msgstr ""
+msgstr "Gabim panjohur"
 
 #: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
