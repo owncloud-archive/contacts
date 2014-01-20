@@ -22,9 +22,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2013-12-21 00:49-0500\n"
-"PO-Revision-Date: 2013-12-20 06:21+0000\n"
-"Last-Translator: I Robot <owncloud-bot@tmit.eu>\n"
+"POT-Creation-Date: 2014-01-12 00:48-0500\n"
+"PO-Revision-Date: 2014-01-11 06:00+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: js/addressbooks.js:83 js/groups.js:518 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
 msgid "Save"
 msgstr "Spara"
 
@@ -84,134 +84,133 @@ msgstr "Irreparabelt fel när adressböckerna skulle laddas: {msg}"
 msgid "Error."
 msgstr "Fel."
 
-#: js/app.js:317 js/app.js:331
+#: js/app.js:321 js/app.js:335
 msgid "Add to..."
 msgstr "Lägga till..."
 
-#: js/app.js:321 js/app.js:333
+#: js/app.js:325 js/app.js:337
 msgid "Remove from..."
 msgstr "Ta bort från..."
 
-#: js/app.js:338
+#: js/app.js:342
 msgid "Add group..."
 msgstr "Lägg till grupp..."
 
-#: js/app.js:468
+#: js/app.js:470
 msgid "Invalid URL: \"{url}\""
 msgstr "Felaktig URL: \"{url}\""
 
-#: js/app.js:479
+#: js/app.js:481
 msgid "There was an error opening a mail composer."
 msgstr "Fel uppstod när e-postklient skulle öppnas."
 
-#: js/app.js:484
+#: js/app.js:486
 msgid "Invalid email: \"{url}\""
 msgstr "Felaktig e-post: \"{url}\""
 
-#: js/app.js:562
+#: js/app.js:564
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Sammanslagning misslyckades. Kan inte hitta kontakt: {id}"
 
-#: js/app.js:575
+#: js/app.js:577
 msgid "Merge failed."
 msgstr "Sammanslagning misslyckades."
 
-#: js/app.js:582
+#: js/app.js:584
 msgid "Merge failed. Error saving contact."
 msgstr "Sammanslagning misslyckades: Fel vid sparande av kontakt."
 
-#: js/app.js:602
+#: js/app.js:604
 msgid "Select photo"
 msgstr "Välj foto"
 
-#: js/app.js:678 js/app.js:1598
+#: js/app.js:680 js/app.js:1604
 msgid "Network or server error. Please inform administrator."
 msgstr "Nätverk eller serverfel. Informera administratören."
 
-#: js/app.js:894
+#: js/app.js:901
 msgid "Error adding to group."
 msgstr "Fel vid tillägg i grupp."
 
-#: js/app.js:917
+#: js/app.js:924
 msgid "Error removing from group."
 msgstr "Fel vid radering från grupp."
 
-#: js/app.js:1094
+#: js/app.js:1100
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1132
+#: js/app.js:1138
 msgid "Error setting {name} as favorite."
 msgstr "Fel när {name} skulle läggas till favoriter."
 
-#: js/app.js:1271 js/app.js:1275 templates/contacts.php:182
+#: js/app.js:1277 js/app.js:1281 templates/contacts.php:192
 msgid "Merge contacts"
 msgstr "Sammanfoga kontakter"
 
-#: js/app.js:1297 js/app.js:1350 js/settings.js:120 templates/contacts.php:321
-#: templates/settings.php:62
+#: js/app.js:1303 js/app.js:1356 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: js/app.js:1324 templates/contacts.php:163
+#: js/app.js:1330 templates/contacts.php:173
 msgid "Add group"
 msgstr "Lägg till grupp"
 
-#: js/app.js:1328
+#: js/app.js:1334
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1422
+#: js/app.js:1428
 msgid "Could not find contact: {id}"
 msgstr "Kunde inte hitta kontakt: {id}"
 
-#: js/app.js:1445
+#: js/app.js:1451
 msgid "No files selected for upload."
 msgstr "Inga filer valda för uppladdning"
 
-#: js/app.js:1455
+#: js/app.js:1461
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Filen du försöker ladda upp är större än den maximala storleken för filöverföring på denna server."
 
-#: js/app.js:1556
+#: js/app.js:1562
 msgid "Edit profile picture"
 msgstr "Anpassa profilbild"
 
-#: js/app.js:1560
+#: js/app.js:1566
 msgid "Crop photo"
 msgstr "Beskär bild"
 
-#: js/contacts.js:589
+#: js/contacts.js:606
 msgid "Is this correct?"
 msgstr "Är detta korrekt?"
 
-#: js/contacts.js:856
+#: js/contacts.js:873
 msgid "Error parsing date: {date}"
 msgstr "Fel vid läsning av datum: {date}"
 
-#: js/contacts.js:1053
+#: js/contacts.js:1070
 msgid "# groups"
 msgstr "# grupper"
 
-#: js/contacts.js:1125
+#: js/contacts.js:1144
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Fel uppstod under inläsning av födelsedag {bday}: {error}"
 
-#: js/contacts.js:2162
+#: js/contacts.js:2187
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Vissa kontakter är markerade för radering, men är inte raderade än. Vänta tills att de har raderats."
 
-#: js/contacts.js:2173
+#: js/contacts.js:2198
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klicka för att ångra radering av {num} kontakter"
 
-#: js/contacts.js:2182
+#: js/contacts.js:2207
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Avbruten radering av {num} kontakter"
 
@@ -219,61 +218,61 @@ msgstr "Avbruten radering av {num} kontakter"
 msgid "Add"
 msgstr "Lägg till"
 
-#: js/groups.js:263
+#: js/groups.js:264
 msgid "Contact is already in this group."
 msgstr "Kontakten finns redan i denna grupp."
 
-#: js/groups.js:276
+#: js/groups.js:277
 msgid "Contacts are already in this group."
 msgstr "Kontakterna finns redan i denna grupp."
 
-#: js/groups.js:342
+#: js/groups.js:343
 msgid "Couldn't get contact list."
 msgstr "Kunde inte hämta kontaktlista."
 
-#: js/groups.js:353
+#: js/groups.js:354
 msgid "Contact is not in this group."
 msgstr "Kontakten är inte i denna grupp."
 
-#: js/groups.js:367
+#: js/groups.js:368
 msgid "Contacts are not in this group."
 msgstr "Kontakterna är inte i denna grupp."
 
-#: js/groups.js:566
+#: js/groups.js:567
 msgid "Failed renaming group: {error}"
 msgstr "Det gick inte att ändra namn på gruppen: {error}"
 
-#: js/groups.js:597
+#: js/groups.js:598
 msgid "A group named {group} already exists"
 msgstr "En grupp men namnet {group} finns redan"
 
-#: js/groups.js:632
+#: js/groups.js:633
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Du kan dra och släppa grupper⏎\nför att arrangera dem som du vill."
 
-#: js/groups.js:645
+#: js/groups.js:646
 msgid "Failed adding group: {error}"
 msgstr "Det gick inte att lägga till gruppen :{error}"
 
-#: js/groups.js:657
+#: js/groups.js:658
 msgid "All"
 msgstr "Alla"
 
-#: js/groups.js:672 js/groups.js:675
+#: js/groups.js:673 js/groups.js:676
 msgid "Favorites"
 msgstr "Favoriter"
 
-#: js/groups.js:736
+#: js/groups.js:737
 msgid "Shared by {owner}"
 msgstr "Delad av {owner}"
 
-#: js/groups.js:751
+#: js/groups.js:752
 msgid "Not grouped"
 msgstr "Inte grupperad."
 
-#: js/groups.js:780
+#: js/groups.js:781
 msgid "Failed loading groups: {error}"
 msgstr "Kan inte ladda grupper: {error}"
 
@@ -281,7 +280,7 @@ msgstr "Kan inte ladda grupper: {error}"
 msgid "Please choose the addressbook"
 msgstr "Vänligen välj adressboken"
 
-#: js/loader.js:22 templates/contacts.php:29
+#: js/loader.js:22 templates/contacts.php:50
 msgid "Import into..."
 msgstr "Importera till..."
 
@@ -293,7 +292,7 @@ msgstr "Fel uppstod under import av mall"
 msgid "Import contacts"
 msgstr "Importera kontakter"
 
-#: js/loader.js:61 templates/contacts.php:25
+#: js/loader.js:61 templates/contacts.php:46
 msgid "Import"
 msgstr "Importera"
 
@@ -301,7 +300,8 @@ msgstr "Importera"
 msgid "Import done"
 msgstr "Import klar"
 
-#: js/loader.js:95 templates/contacts.php:91 templates/contacts.php:322
+#: js/loader.js:95 templates/contacts.php:101 templates/contacts.php:375
+#: templates/contacts.php:376
 msgid "Close"
 msgstr "Stäng"
 
@@ -321,19 +321,19 @@ msgstr "Visa CardDav-länk"
 msgid "Show read-only VCF link"
 msgstr "Visa skrivskyddad VCF-länk"
 
-#: js/settings.js:99 templates/contacts.php:57 templates/contacts.php:78
-#: templates/contacts.php:323 templates/settings.php:40
+#: js/settings.js:99 templates/contacts.php:9 templates/contacts.php:88
+#: templates/contacts.php:379 templates/contacts.php:380
+#: templates/settings.php:40
 msgid "Download"
 msgstr "Ladda ner"
 
-#: js/settings.js:101 templates/contacts.php:467 templates/settings.php:45
+#: js/settings.js:101 templates/contacts.php:513 templates/settings.php:45
 msgid "Edit"
 msgstr "Redigera"
 
-#: js/settings.js:102 templates/contacts.php:58 templates/contacts.php:77
-#: templates/contacts.php:268 templates/contacts.php:275
-#: templates/contacts.php:282 templates/contacts.php:289
-#: templates/contacts.php:337 templates/contacts.php:468
+#: js/settings.js:102 templates/contacts.php:6 templates/contacts.php:81
+#: templates/contacts.php:82 templates/contacts.php:236
+#: templates/contacts.php:237 templates/contacts.php:514
 #: templates/settings.php:50
 msgid "Delete"
 msgstr "Radera"
@@ -799,357 +799,294 @@ msgstr "Vänner"
 msgid "Family"
 msgstr "Familj"
 
-#: templates/contacts.php:6
-msgid "New Contact"
-msgstr "Ny kontakt"
-
-#: templates/contacts.php:10
-msgid "Group name"
-msgstr "Gruppnamn"
-
-#: templates/contacts.php:10
-msgid "New Group"
-msgstr "Ny grupp"
-
-#: templates/contacts.php:19
-msgid "Address books"
-msgstr "Adressböcker"
-
-#: templates/contacts.php:22 templates/contacts.php:47
-#: templates/contacts.php:67
-msgid "Display name"
-msgstr "Visningsnamn"
-
-#: templates/contacts.php:22
-msgid "Add Address Book"
-msgstr "Lägg till adressbok"
-
-#: templates/contacts.php:31 templates/contacts.php:32
-msgid "Select file..."
-msgstr "Välj fil..."
-
-#: templates/contacts.php:45 templates/contacts.php:65
-msgid "(De-)select all"
-msgstr "(Av-)markera alla"
-
-#: templates/contacts.php:46 templates/contacts.php:66
-msgid "Sort order"
-msgstr "Sorteringsordning"
-
-#: templates/contacts.php:48 templates/contacts.php:68
-msgid "First- Lastname"
-msgstr "För- Efternamn"
-
-#: templates/contacts.php:49 templates/contacts.php:69
-msgid "Last-, Firstname"
-msgstr "Efter-, Förnamn"
-
-#: templates/contacts.php:53 templates/contacts.php:80
+#: templates/contacts.php:13 templates/contacts.php:85
+#: templates/contacts.php:276
 msgid "Groups"
 msgstr "Grupper"
 
-#: templates/contacts.php:55 templates/contacts.php:82
+#: templates/contacts.php:15
 msgid "Favorite"
 msgstr "Favorit"
 
-#: templates/contacts.php:56 templates/contacts.php:83
+#: templates/contacts.php:17
 msgid "Merge selected"
 msgstr "Slå ihop valda"
 
-#: templates/contacts.php:92
+#: templates/contacts.php:27
+msgid "New contact"
+msgstr ""
+
+#: templates/contacts.php:31
+msgid "Group name"
+msgstr "Gruppnamn"
+
+#: templates/contacts.php:31
+msgid "New group"
+msgstr ""
+
+#: templates/contacts.php:40
+msgid "Address books"
+msgstr "Adressböcker"
+
+#: templates/contacts.php:43 templates/contacts.php:73
+msgid "Display name"
+msgstr "Visningsnamn"
+
+#: templates/contacts.php:43
+msgid "Add Address Book"
+msgstr "Lägg till adressbok"
+
+#: templates/contacts.php:52 templates/contacts.php:53
+msgid "Select file..."
+msgstr "Välj fil..."
+
+#: templates/contacts.php:70
+msgid "(De-)select all"
+msgstr "(Av-)markera alla"
+
+#: templates/contacts.php:72
+msgid "Sort order"
+msgstr "Sorteringsordning"
+
+#: templates/contacts.php:74
+msgid "First- Lastname"
+msgstr "För- Efternamn"
+
+#: templates/contacts.php:75
+msgid "Last-, Firstname"
+msgstr "Efter-, Förnamn"
+
+#: templates/contacts.php:87
+msgid "Merge"
+msgstr ""
+
+#: templates/contacts.php:91 templates/contacts.php:368
+msgid "Email"
+msgstr "E-post"
+
+#: templates/contacts.php:92 templates/contacts.php:367
+msgid "Phone"
+msgstr "Telefon"
+
+#: templates/contacts.php:93 templates/contacts.php:370
+msgid "Address"
+msgstr "Adress"
+
+#: templates/contacts.php:94
+msgid "Group"
+msgstr "Grupp"
+
+#: templates/contacts.php:102
 msgid "Keyboard shortcuts"
 msgstr "Kortkommandon"
 
-#: templates/contacts.php:94
+#: templates/contacts.php:104
 msgid "Navigation"
 msgstr "Navigering"
 
-#: templates/contacts.php:97
+#: templates/contacts.php:107
 msgid "Next contact in list"
 msgstr "Nästa kontakt i listan"
 
-#: templates/contacts.php:99
+#: templates/contacts.php:109
 msgid "Previous contact in list"
 msgstr "Föregående kontakt i listan"
 
-#: templates/contacts.php:101
+#: templates/contacts.php:111
 msgid "Expand/collapse current addressbook"
 msgstr "Visa/dölj aktuell adressbok"
 
-#: templates/contacts.php:103
+#: templates/contacts.php:113
 msgid "Next addressbook"
 msgstr "Nästa adressbok"
 
-#: templates/contacts.php:105
+#: templates/contacts.php:115
 msgid "Previous addressbook"
 msgstr "Föregående adressbok"
 
-#: templates/contacts.php:109
+#: templates/contacts.php:119
 msgid "Actions"
 msgstr "Åtgärder"
 
-#: templates/contacts.php:112
+#: templates/contacts.php:122
 msgid "Refresh contacts list"
 msgstr "Uppdatera kontaktlistan"
 
-#: templates/contacts.php:114
+#: templates/contacts.php:124
 msgid "Add new contact"
 msgstr "Lägg till ny kontakt"
 
-#: templates/contacts.php:116
+#: templates/contacts.php:126
 msgid "Add new addressbook"
 msgstr "Lägg till ny adressbok"
 
-#: templates/contacts.php:118
+#: templates/contacts.php:128
 msgid "Delete current contact"
 msgstr "Radera denna kontakt"
 
-#: templates/contacts.php:124
+#: templates/contacts.php:134
 msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
 msgstr "<h3>Du har antingen inga kontakter i din adressbok eller så är din adressboken inaktiverad.</h3><p>Lägg till en ny kontakt eller importera befintliga kontakter från en VCF-fil.</p>"
 
-#: templates/contacts.php:127
+#: templates/contacts.php:137
 msgid "Add contact"
 msgstr "Lägg till en kontakt"
 
-#: templates/contacts.php:174
-msgid "Delete group"
-msgstr "Radera grupp"
-
-#: templates/contacts.php:175
-msgid "Rename group"
-msgstr "Döp om grupp"
-
-#: templates/contacts.php:183
+#: templates/contacts.php:193
 msgid "Which contact should the data be merged into?"
 msgstr "Vilken kontakt ska informationen slås ihop med?"
 
-#: templates/contacts.php:191
+#: templates/contacts.php:201
 msgid "Delete the other(s) after successful merge?"
 msgstr "Radera dom andra efter lyckad sammanslagning?"
 
-#: templates/contacts.php:203
+#: templates/contacts.php:216
 msgid "Compose mail"
 msgstr "Skapa e-post"
 
-#: templates/contacts.php:225
+#: templates/contacts.php:244
 msgid "Delete current photo"
 msgstr "Ta bort aktuellt foto"
 
-#: templates/contacts.php:226
+#: templates/contacts.php:245
 msgid "Edit current photo"
 msgstr "Redigera aktuellt foto"
 
-#: templates/contacts.php:227
+#: templates/contacts.php:246
 msgid "Upload new photo"
 msgstr "Ladda upp ett nytt foto"
 
-#: templates/contacts.php:228
+#: templates/contacts.php:247
 msgid "Select photo from ownCloud"
 msgstr "Välj foto från ownCloud"
 
-#: templates/contacts.php:233 templates/settings.php:59
+#: templates/contacts.php:252 templates/contacts.php:254
+#: templates/settings.php:59
 msgid "Name"
 msgstr "Namn"
 
-#: templates/contacts.php:239 templates/contacts.php:240
+#: templates/contacts.php:260
 msgid "First name"
 msgstr "Förnamn"
 
-#: templates/contacts.php:244 templates/contacts.php:245
+#: templates/contacts.php:264
 msgid "Additional names"
 msgstr "Mellannamn"
 
-#: templates/contacts.php:249 templates/contacts.php:250
+#: templates/contacts.php:268
 msgid "Last name"
 msgstr "Efternamn"
 
-#: templates/contacts.php:257
-msgid "Select groups"
-msgstr "Välj grupper"
-
-#: templates/contacts.php:260
-msgid "Select address book"
-msgstr "Välj adressbok"
-
-#: templates/contacts.php:264 templates/contacts.php:328
+#: templates/contacts.php:288 templates/contacts.php:365
 msgid "Nickname"
 msgstr "Smeknamn"
 
-#: templates/contacts.php:267
-msgid "Enter nickname"
-msgstr "Ange smeknamn"
-
-#: templates/contacts.php:271 templates/contacts.php:327
+#: templates/contacts.php:298 templates/contacts.php:364
 msgid "Title"
 msgstr "Rubrik"
 
-#: templates/contacts.php:274
-msgid "Enter title"
-msgstr "Ange titel"
-
-#: templates/contacts.php:278 templates/contacts.php:326
+#: templates/contacts.php:308 templates/contacts.php:363
 msgid "Organization"
 msgstr "Organisation"
 
-#: templates/contacts.php:281
-msgid "Enter organization"
-msgstr "Ange organisation"
-
-#: templates/contacts.php:285 templates/contacts.php:329
+#: templates/contacts.php:318 templates/contacts.php:366
 msgid "Birthday"
 msgstr "Födelsedag"
 
-#: templates/contacts.php:316
+#: templates/contacts.php:355
 msgid "Notes go here..."
 msgstr "Noteringar här..."
 
-#: templates/contacts.php:323
-msgid "Export as VCF"
-msgstr "Exportera som VCF"
-
-#: templates/contacts.php:325
+#: templates/contacts.php:362
 msgid "Add field..."
 msgstr "Lägg till fält..."
 
-#: templates/contacts.php:330
-msgid "Phone"
-msgstr "Telefon"
-
-#: templates/contacts.php:331
-msgid "Email"
-msgstr "E-post"
-
-#: templates/contacts.php:332
+#: templates/contacts.php:369
 msgid "Instant Messaging"
 msgstr "Instant Messaging"
 
-#: templates/contacts.php:333
-msgid "Address"
-msgstr "Adress"
-
-#: templates/contacts.php:334
+#: templates/contacts.php:371
 msgid "Note"
 msgstr "Notering"
 
-#: templates/contacts.php:335
+#: templates/contacts.php:372
 msgid "Web site"
 msgstr "Webbplats"
 
-#: templates/contacts.php:337
-msgid "Delete contact"
-msgstr "Radera kontakt"
-
-#: templates/contacts.php:351 templates/contacts.php:366
-#: templates/contacts.php:380 templates/contacts.php:405
-#: templates/contacts.php:443
+#: templates/contacts.php:392 templates/contacts.php:407
+#: templates/contacts.php:421 templates/contacts.php:436
+#: templates/contacts.php:478 templates/contacts.php:488
 msgid "Preferred"
 msgstr "Föredragen"
 
-#: templates/contacts.php:353
+#: templates/contacts.php:397
 msgid "Please specify a valid email address."
 msgstr "Vänligen ange en giltig e-postadress."
 
-#: templates/contacts.php:353
+#: templates/contacts.php:397
 msgid "someone@example.com"
 msgstr "någon@exempel.com"
 
-#: templates/contacts.php:355
+#: templates/contacts.php:399
 msgid "Mail to address"
 msgstr "Posta till adress."
 
-#: templates/contacts.php:356
+#: templates/contacts.php:400
 msgid "Delete email address"
 msgstr "Ta bort e-postadress"
 
-#: templates/contacts.php:368
+#: templates/contacts.php:412
 msgid "Enter phone number"
 msgstr "Ange telefonnummer"
 
-#: templates/contacts.php:370
-msgid "Delete phone number"
-msgstr "Ta bort telefonnummer"
-
-#: templates/contacts.php:384
+#: templates/contacts.php:428
 msgid "Go to web site"
 msgstr "Gå till webbplats"
 
-#: templates/contacts.php:385
-msgid "Delete URL"
-msgstr "Radera URL"
-
-#: templates/contacts.php:396
+#: templates/contacts.php:445
 msgid "View on map"
 msgstr "Visa på karta"
 
-#: templates/contacts.php:397
-msgid "Delete address"
-msgstr "Radera adress"
-
-#: templates/contacts.php:410
-msgid "1600 Pennsylvania Avenue, NW"
-msgstr "1600 Pennsylvania Avenue, NW"
-
-#: templates/contacts.php:411
+#: templates/contacts.php:453
 msgid "Street address"
 msgstr "Gatuadress"
 
-#: templates/contacts.php:415
-msgid "20500"
-msgstr "20500"
-
-#: templates/contacts.php:416
+#: templates/contacts.php:457
 msgid "Postal code"
 msgstr "Postnummer"
 
-#: templates/contacts.php:418
-msgid "Washington, DC"
-msgstr "Washington, DC"
-
-#: templates/contacts.php:419
+#: templates/contacts.php:459
 msgid "City"
 msgstr "Stad"
 
-#: templates/contacts.php:423
-msgid "District of Columbia"
-msgstr "District of Columbia"
-
-#: templates/contacts.php:424
+#: templates/contacts.php:463
 msgid "State or province"
 msgstr "Stat eller provins"
 
-#: templates/contacts.php:428
-msgid "USA"
-msgstr "USA"
-
-#: templates/contacts.php:429
+#: templates/contacts.php:467
 msgid "Country"
 msgstr "Land"
 
-#: templates/contacts.php:451
+#: templates/contacts.php:494
 msgid "Instant Messenger"
 msgstr "Instant Messenger"
 
-#: templates/contacts.php:453
-msgid "Delete IM"
-msgstr "Radera IM"
-
-#: templates/contacts.php:461
+#: templates/contacts.php:507
 msgid "Active"
 msgstr "Aktiv"
 
-#: templates/contacts.php:464 templates/settings.php:36
+#: templates/contacts.php:510 templates/settings.php:36
 msgid "Share"
 msgstr "Dela"
 
-#: templates/contacts.php:465
+#: templates/contacts.php:511
 msgid "Export"
 msgstr "Exportera"
 
-#: templates/contacts.php:466
+#: templates/contacts.php:512
 msgid "CardDAV link"
 msgstr "CardDAV-länk"
 

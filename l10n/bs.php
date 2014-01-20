@@ -2,7 +2,7 @@
 "Save" => "Spasi",
 "Add" => "Dodaj",
 "Close" => "Zatvori",
-"Name" => "Ime",
 "Address" => "Adresa",
+"Name" => "Ime",
 "Share" => "Podijeli"
 );

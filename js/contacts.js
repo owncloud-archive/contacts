@@ -50,6 +50,7 @@ OC.Contacts = OC.Contacts || {};
 		// ~30% faster than jQuery.
 		try {
 			this.$listelem.get(0).firstElementChild.getElementsByClassName('nametext')[0].innerHTML = escapeHTML(this.displayNames[method]);
+			this.setThumbnail();
 		} catch(e) {
 			var $elem = this.$listelem.find('.nametext').text(escapeHTML(this.displayNames[method]));
 			$elem.text(escapeHTML(this.displayNames[method]));
@@ -260,6 +261,8 @@ OC.Contacts = OC.Contacts || {};
 			case 'NOTE':
 				$elem = this.$fullelem.find('[data-element="' + name.toLowerCase() + '"]');
 				$elem.addClass('new').show();
+				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$list.show();
 				$elem.find('input:not(:checkbox),textarea').first().focus();
 				$option.prop('disabled', true);
 				break;
@@ -302,7 +305,7 @@ OC.Contacts = OC.Contacts || {};
 			} else if(this.multi_properties.indexOf(name) !== -1) {
 				$elem.find('input.parameter[value="PREF"]').hide();
 			}
-			$elem.find('select.type[name="parameters[TYPE][]"]')
+			$elem.find('select.type[name="parameters[TYPE][]"], select.type[name="parameters[X-SERVICE-TYPE]"]')
 				.combobox({
 					singleclick: true,
 					classes: ['propertytype', 'float', 'label'],
@@ -326,9 +329,16 @@ OC.Contacts = OC.Contacts || {};
 			params['checksum'] = this.checksumFor(obj);
 			if(params['checksum'] === 'new' && $.trim(this.valueFor(obj)) === '') {
 				// If there's only one property of this type enable setting as preferred.
-				if(this.data[element].length === 1) {
+				if((undefined !== this.data[element] && this.data[element].length) && (this.data[element].length === 1)) {
 					var selector = 'li[data-element="' + element.toLowerCase() + '"]';
 					this.$fullelem.find(selector).find('input.parameter[value="PREF"]').hide();
+				}
+				// Hide propertygroup if there are no properties in it
+				if(!(undefined !== this.data[element] && this.data[element].length)) {
+					$(obj).parent().parent().parent().hide();
+				}
+				else if(this.data[element].length === 0) {
+					$(obj).parent().parent().parent().hide();
 				}
 				$container.remove();
 				return;
@@ -358,9 +368,16 @@ OC.Contacts = OC.Contacts || {};
 						}
 					}
 					// If there's only one property of this type enable setting as preferred.
-					if(self.data[element].length === 1) {
+					if((undefined !== self.data[element] && self.data[element].length) && (self.data[element].length === 1)) {
 						var selector = 'li[data-element="' + element.toLowerCase() + '"]';
 						self.$fullelem.find(selector).find('input.parameter[value="PREF"]').hide();
+					}
+					// Hide propertygroup if there are no properties in it
+					if(!(undefined !== self.data[element] && self.data[element].length)) {
+						$(obj).parent().parent().parent().hide();
+					}
+					else if(self.data[element].length === 0) {
+						$(obj).parent().parent().parent().hide();
 					}
 					$container.remove();
 				} else {
@@ -1050,7 +1067,8 @@ OC.Contacts = OC.Contacts || {};
 				header: false,
 				selectedList: 3,
 				noneSelectedText: self.$groupSelect.attr('title'),
-				selectedText: t('contacts', '# groups')
+				selectedText: t('contacts', '# groups'),
+				minWidth: 300
 			});
 			self.$groupSelect.bind('multiselectclick', function(event, ui) {
 				var action = ui.checked ? 'addtogroup' : 'removefromgroup';
@@ -1089,7 +1107,8 @@ OC.Contacts = OC.Contacts || {};
 				header: false,
 				multiple: false,
 				selectedList: 3,
-				noneSelectedText: self.$addressBookSelect.attr('title')
+				noneSelectedText: self.$addressBookSelect.attr('title'),
+				minWidth: 300
 			});
 			self.$addressBookSelect.on('multiselectclick', function(event, ui) {
 				console.log('AddressBook select', ui);
@@ -1147,6 +1166,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 		this.$fullelem = this.$fullTemplate.octemplate(values).data('contactobject', this);
 
+		this.$header = this.$fullelem.find('header');
 		this.$footer = this.$fullelem.find('footer');
 
 		this.$fullelem.find('.tooltipped.rightwards.onfocus').tipsy({trigger: 'focus', gravity: 'w'});
@@ -1213,7 +1233,7 @@ OC.Contacts = OC.Contacts || {};
 			self.handleURL(event.target);
 		});
 
-		this.$footer.on('click keydown', 'button', function(event) {
+		var buttonHandler =  function(event) {
 			$('.tipsy').remove();
 			if(wrongKey(event)) {
 				return;
@@ -1228,7 +1248,10 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('request.contact.delete', self.metaData());
 			}
 			return false;
-		});
+		};
+		this.$header.on('click keydown', 'button, a', buttonHandler);
+		this.$footer.on('click keydown', 'button, a', buttonHandler);
+		
 		this.$fullelem.on('keypress', '.value,.parameter', function(event) {
 			if(event.keyCode === 13 && $(this).is('input')) {
 				$(this).trigger('change');
@@ -1298,7 +1321,7 @@ OC.Contacts = OC.Contacts || {};
 		$.each(this.multi_properties, function(idx, name) {
 			if(self.data[name]) {
 				var $list = self.$fullelem.find('ul.' + name.toLowerCase());
-				$list.show();
+				$list.removeClass('hidden');
 				for(var p in self.data[name]) {
 					if(typeof self.data[name][p] === 'object') {
 						var property = self.data[name][p];
@@ -1363,7 +1386,7 @@ OC.Contacts = OC.Contacts || {};
 							}
 							else if(param.toUpperCase() == 'X-SERVICE-TYPE') {
 								//console.log('setting', $property.find('select.impp'), 'to', property.parameters[param].toLowerCase());
-								$property.find('select.impp').val(property.parameters[param].toLowerCase());
+								$property.find('select.rtl').val(property.parameters[param].toLowerCase());
 							}
 						}
 						var $meta = $property.find('.meta');
@@ -1373,7 +1396,7 @@ OC.Contacts = OC.Contacts || {};
 						if(self.metadata.owner === OC.currentUser
 								|| self.metadata.permissions & OC.PERMISSION_UPDATE
 								|| self.metadata.permissions & OC.PERMISSION_DELETE) {
-							$property.find('select.type[name="parameters[TYPE][]"]')
+							$property.find('select.type[name="parameters[TYPE][]"], select.type[name="parameters[X-SERVICE-TYPE]"]')
 								.combobox({
 									singleclick: true,
 									classes: ['propertytype', 'float', 'label']
@@ -1457,7 +1480,7 @@ OC.Contacts = OC.Contacts || {};
 			var bodyListener = function(e) {
 				if($editor.find($(e.target)).length == 0) {
 					$editor.toggle('blind');
-					$viewer.slideDown(400, function() {
+					$viewer.slideDown(550, function() {
 						var input = $editor.find('input').first();
 						var val = self.valueFor(input);
 						var params = self.parametersFor(input, true);
@@ -1468,7 +1491,7 @@ OC.Contacts = OC.Contacts || {};
 					});
 				}
 			};
-			$viewer.slideUp();
+			$viewer.slideUp(100);
 			$editor.toggle('blind', function() {
 				$('body').bind('click', bodyListener);
 			});
@@ -1555,6 +1578,8 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Contact.prototype.setThumbnail = function($elem, refresh) {
 		if(!this.data.thumbnail && !refresh) {
+			this.getListItemElement().find('.avatar').css('height', '32px');
+			this.getListItemElement().find('.avatar').imageplaceholder(String(this.getDisplayName()) || '#');
 			return;
 		}
 		if(!$elem) {
