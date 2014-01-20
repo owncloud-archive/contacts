@@ -1,6 +1,8 @@
 <?php $TRANSLATIONS = array(
 "Save" => "پاشکه‌وتکردن",
 "Importing..." => "ده‌هێنرێت...",
+"Cancel" => "لابردن",
+"OK" => "باشە",
 "Add" => "زیادکردن",
 "Import" => "هێنان",
 "Close" => "داخستن",
