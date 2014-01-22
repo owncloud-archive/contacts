@@ -512,7 +512,7 @@ class Database extends AbstractBackend {
 		try {
 			$contact->validate(VCard::REPAIR|VCard::UPGRADE);
 		} catch (\Exception $e) {
-			OCP\Util::writeLog('contacts', __METHOD__ . ' ' .
+			\OCP\Util::writeLog('contacts', __METHOD__ . ' ' .
 				'Error validating vcard: ' . $e->getMessage(), \OCP\Util::ERROR);
 			return false;
 		}
