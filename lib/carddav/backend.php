@@ -198,7 +198,11 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 */
 	public function getCard($addressbookid, $carduri) {
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
-		$contact = $backend->getContact($id, array('uri' => urldecode($carduri)));
+		try {
+			$contact = $backend->getContact($id, array('uri' => urldecode($carduri)));
+		} catch(\Exception $e) {
+			throw new \Sabre_DAV_Exception_NotFound($e->getMessage());
+		}
 		return ($contact ? $contact : false);
 
 	}
