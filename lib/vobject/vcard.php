@@ -221,17 +221,21 @@ class VCard extends VObject\Component\VCard {
 			}
 
 		}
+
 		$fn = $this->select('FN');
-		if (count($fn) !== 1) {
+		if (count($fn) !== 1 || trim((string)$this->FN) === '') {
 			$warnings[] = array(
 				'level' => 1,
 				'message' => 'The FN property must appear in the VCARD component exactly 1 time',
 				'node' => $this,
 			);
-			if (($options & self::REPAIR) && count($fn) === 0) {
+			if ($options & self::REPAIR) {
 				// We're going to try to see if we can use the contents of the
 				// N property.
-				if (isset($this->N)) {
+				if (isset($this->N)
+					&& substr((string)$this->N, 2) !== ';;'
+					&& (string)$this->N !== ''
+				) {
 					$value = explode(';', (string)$this->N);
 					if (isset($value[1]) && $value[1]) {
 						$this->FN = $value[1] . ' ' . $value[0];

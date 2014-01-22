@@ -12,6 +12,7 @@ namespace OCA\Contacts\Controller;
 use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Controller,
+	OCA\Contacts\VObject\VCard as MyVCard,
 	Sabre\VObject;
 
 /**
@@ -237,6 +238,13 @@ class ImportController extends Controller {
 					$response->debug('Import: skipping card. Error parsing VCard: ' . $e->getMessage());
 					continue; // Ditch cards that can't be parsed by Sabre.
 				}
+			}
+			try {
+				$vcard->validate(MyVCard::REPAIR|MyVCard::UPGRADE);
+			} catch (\Exception $e) {
+				\OCP\Util::writeLog('contacts', __METHOD__ . ' ' .
+					'Error validating vcard: ' . $e->getMessage(), \OCP\Util::ERROR);
+				$failed += 1;
 			}
 			/**
 			 * TODO
