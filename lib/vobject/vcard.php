@@ -270,7 +270,7 @@ class VCard extends VObject\Component\VCard {
 			}
 		}
 
-		if (!isset($this->UID)) {
+		if (!isset($this->UID) || trim((string)$this->UID) === '') {
 			$warnings[] = array(
 				'level' => 1,
 				'message' => 'Every vCard must have a UID',
