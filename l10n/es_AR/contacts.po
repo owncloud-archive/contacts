@@ -7,6 +7,7 @@
 # Agustin Ferrario <agustin.ferrario@hotmail.com.ar>, 2012-2013
 # cjtess <claudio.tessone@gmail.com>, 2013
 # cjtess <claudio.tessone@gmail.com>, 2012
+# cnngimenez, 2014
 # gmoriello <gmoriello@gmail.com>, 2013
 # Javierkaiser <javierkaiser@gmail.com>, 2012
 # juliabis, 2013
@@ -14,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-11 00:49-0500\n"
-"PO-Revision-Date: 2014-01-11 05:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-01-23 00:49-0500\n"
+"PO-Revision-Date: 2014-01-23 00:50+0000\n"
+"Last-Translator: cnngimenez\n"
 "Language-Team: Spanish (Argentina) (http://www.transifex.com/projects/p/owncloud/language/es_AR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +25,7 @@ msgstr ""
 "Language: es_AR\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:28 lib/app.php:103
+#: appinfo/app.php:29 lib/app.php:103
 msgid "Contacts"
 msgstr "Contactos"
 
@@ -132,7 +133,7 @@ msgstr "Error al borrar del grupo."
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "Has seleccionado más de 300 contactos.\n¡Esto puede fallar! Clic aquí para intentarlo a pesar de todo."
 
 #: js/app.js:1138
 msgid "Error setting {name} as favorite."
@@ -510,39 +511,39 @@ msgid "Error getting user photo"
 msgstr "Error obteniendo la imagen de usuario"
 
 #: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:36
+#: lib/controller/importcontroller.php:37
 msgid "No file was uploaded. Unknown error"
 msgstr "El archivo no fue subido. Error desconocido"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "There is no error, the file uploaded with success"
 msgstr "No hay errores, el archivo fue subido con éxito"
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:46
+#: lib/controller/importcontroller.php:47
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "El archivo subido excede el valor 'upload_max_filesize' del archivo de configuración php.ini"
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "El archivo subido sobrepasa el valor MAX_FILE_SIZE especificada en el formulario HTML"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "The uploaded file was only partially uploaded"
 msgstr "El archivo fue subido parcialmente"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "No file was uploaded"
 msgstr "No se subió ningún archivo "
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Missing a temporary folder"
 msgstr "Falta un directorio temporal"
 
@@ -622,44 +623,44 @@ msgstr "Falte nombre del grupo en el pedido"
 msgid "Contact ID missing from request."
 msgstr "Falta ID de contacto en la solicitud"
 
-#: lib/controller/importcontroller.php:52
+#: lib/controller/importcontroller.php:53
 msgid "Failed to write to disk"
 msgstr "Error al escribir en el disco"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Not enough storage available"
 msgstr "No hay suficiente almacenamiento"
 
-#: lib/controller/importcontroller.php:71
+#: lib/controller/importcontroller.php:72
 msgid "Attempt to upload blacklisted file:"
 msgstr "Intento de subida de un archivo en la lista negra:"
 
-#: lib/controller/importcontroller.php:93
+#: lib/controller/importcontroller.php:94
 msgid "Error uploading contacts to storage."
 msgstr "Error al subir contactos al almacenamiento."
 
-#: lib/controller/importcontroller.php:138
+#: lib/controller/importcontroller.php:139
 msgid "Error moving file to imports folder."
 msgstr "Error moviendo archivos al directorio con importaciones"
 
-#: lib/controller/importcontroller.php:155
+#: lib/controller/importcontroller.php:156
 msgid "You do not have permissions to import into this address book."
 msgstr "No tenés permisos para importar a esta libreta de direcciones."
 
-#: lib/controller/importcontroller.php:163
+#: lib/controller/importcontroller.php:164
 msgid "File name missing from request."
 msgstr "Falta el nombre del archivo en la petición"
 
-#: lib/controller/importcontroller.php:168
-#: lib/controller/importcontroller.php:284
+#: lib/controller/importcontroller.php:169
+#: lib/controller/importcontroller.php:292
 msgid "Progress key missing from request."
 msgstr "Falta la clave de progreso en el pedido"
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "Attempt to access blacklisted file:"
 msgstr "Intento de acceso a un archivo de la lista negra:"
 
-#: lib/controller/importcontroller.php:216
+#: lib/controller/importcontroller.php:217
 msgid "No contacts found in: "
 msgstr "No se encontraron contactos en:"
 
@@ -806,7 +807,7 @@ msgstr "Fusionar seleccionados"
 
 #: templates/contacts.php:27
 msgid "New contact"
-msgstr ""
+msgstr "Nuevo contacto"
 
 #: templates/contacts.php:31
 msgid "Group name"
@@ -814,7 +815,7 @@ msgstr "Nombre de grupo"
 
 #: templates/contacts.php:31
 msgid "New group"
-msgstr ""
+msgstr "Nuevo grupo"
 
 #: templates/contacts.php:40
 msgid "Address books"
@@ -850,7 +851,7 @@ msgstr "Apellido, Nombre"
 
 #: templates/contacts.php:87
 msgid "Merge"
-msgstr ""
+msgstr "Mezclar"
 
 #: templates/contacts.php:91 templates/contacts.php:368
 msgid "Email"
@@ -866,7 +867,7 @@ msgstr "Dirección"
 
 #: templates/contacts.php:94
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 #: templates/contacts.php:102
 msgid "Keyboard shortcuts"
