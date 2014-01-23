@@ -810,9 +810,9 @@ OC.Contacts = OC.Contacts || {
 			}
 		});
 		
-		this.$contactList.on('click', 'label', function(event) {
-			var id = '#' + $(this).attr('for');
-			$(id).prop('checked', !$(id).prop('checked'));
+		this.$contactList.on('click', 'label:not[for=select_all]', function(event) {
+			var $input = $(this).prev('input');
+			$input.prop('checked', !$input.prop('checked'));
 			return false; // Prevent opening contact
 		});
 
