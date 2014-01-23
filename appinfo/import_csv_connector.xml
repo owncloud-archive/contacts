@@ -6,34 +6,35 @@
 	<import_core>
 		<card_separator value="\n"/>
 		<entry_separator value=","/>
+		<ignore_first_line enabled="true"/>
 	</import_core>
 	
-	<import_entry position="4" enabled="true">
+	<import_entry position="0" enabled="true">
+		<vcard_entry property="N" position="1">
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry position="1" enabled="true">
+		<vcard_entry property="N" position="0">
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry position="2" enabled="true">
 		<vcard_entry property="FN" >
 		</vcard_entry>
 	</import_entry>
 	
-	<import_entry position="6" enabled="true">
-		<vcard_entry property="N" >
-		</vcard_entry>
-	</import_entry>
-	
-	<import_entry position="7" enabled="true">
-		<vcard_entry property="PHOTO" image="true">
-		</vcard_entry>
-	</import_entry>
-	
-	<import_entry position="8" enabled="true">
+	<import_entry position="4" enabled="true">
 		<vcard_entry property="EMAIL" type="HOME">
 		</vcard_entry>
 	</import_entry>
 	
-	<import_entry position="9" enabled="true">
+	<import_entry position="11" enabled="true">
 		<vcard_entry property="TEL" type="CELL" >
 		</vcard_entry>
 	</import_entry>
 	
-	<import_entry position="12" enabled="true">
+	<import_entry position="8" enabled="true">
 		<vcard_entry property="TEL" type="HOME" >
 		</vcard_entry>
 	</import_entry>

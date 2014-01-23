@@ -12,7 +12,8 @@ namespace OCA\Contacts\Controller;
 use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Controller,
-	Sabre\VObject;
+	Sabre\VObject,
+	OCA\Contacts\ImportManager;
 
 /**
  * Controller importing contacts
@@ -69,7 +70,7 @@ class ImportController extends Controller {
 		if(is_uploaded_file($tmpname)) {
 			if(\OC\Files\Filesystem::isFileBlacklisted($filename)) {
 				$response->bailOut(App::$l10n->t('Attempt to upload blacklisted file:') . $filename);
-			return $response;
+				return $response;
 			}
 			$content = file_get_contents($tmpname);
 			$proxyStatus = \OC_FileProxy::$enabled;
@@ -190,33 +191,12 @@ class ImportController extends Controller {
 			}
 			\OC_Cache::remove($progresskey);
 		};
-
-		$writeProgress('20');
-		$nl = "\n";
+		
+		$importManager = new ImportManager();
 		$file = str_replace(array("\r","\n\n"), array("\n","\n"), $file);
-		$lines = explode($nl, $file);
-
-		$inelement = false;
-		$parts = array();
-		$card = array();
-		foreach($lines as $line) {
-			if(strtoupper(trim($line)) == 'BEGIN:VCARD') {
-				$inelement = true;
-			} elseif (strtoupper(trim($line)) == 'END:VCARD') {
-				$card[] = $line;
-				$parts[] = implode($nl, $card);
-				$card = array();
-				$inelement = false;
-			}
-			if ($inelement === true && trim($line) != '') {
-				$card[] = $line;
-			}
-		}
-		if(count($parts) === 0) {
-			$response->bailOut(App::$l10n->t('No contacts found in: ') . $filename);
-			$cleanup();
-			return $response;
-		}
+		$parts = $importManager->importFile($view->getLocalFile('/imports/' . $filename), "csv_thunderbird");
+		//error_log("importing en cours kwa ".count($parts));
+		
 		//import the contacts
 		$imported = 0;
 		$failed = 0;
@@ -225,34 +205,21 @@ class ImportController extends Controller {
 
 		// TODO: Add a new group: "Imported at {date}"
 		foreach($parts as $part) {
-			try {
-				$vcard = VObject\Reader::read($part);
-			} catch (VObject\ParseException $e) {
-				try {
-					$vcard = VObject\Reader::read($part, VObject\Reader::OPTION_IGNORE_INVALID_LINES);
-					$partially += 1;
-					$response->debug('Import: Retrying reading card. Error parsing VCard: ' . $e->getMessage());
-				} catch (\Exception $e) {
-					$failed += 1;
-					$response->debug('Import: skipping card. Error parsing VCard: ' . $e->getMessage());
-					continue; // Ditch cards that can't be parsed by Sabre.
-				}
-			}
 			/**
 			 * TODO
 			 * - Check if a contact with identical UID exists.
-			 * - If so, fetch that contact and call $contact->mergeFromVCard($vcard);
+			 * - If so, fetch that contact and call $contact->mergeFromVCard($part);
 			 * - Increment $updated var (not present yet.)
 			 * - continue
 			 */
 			try {
-				if($addressBook->addChild($vcard)) {
+				if($addressBook->addChild($part)) {
 					$imported += 1;
 				} else {
 					$failed += 1;
 				}
 			} catch (\Exception $e) {
-				$response->debug('Error importing vcard: ' . $e->getMessage() . $nl . $vcard->serialize());
+				$response->debug('Error importing vcard: ' . $e->getMessage() . $nl . $part->serialize());
 				$failed += 1;
 			}
 			$processed += 1;
