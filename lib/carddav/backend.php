@@ -119,7 +119,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 		$properties = array();
 		$userid = $this->userIDByPrincipal($principaluri);
 
-		foreach($properties as $property=>$newvalue) {
+		foreach($properties as $property => $newvalue) {
 
 			switch($property) {
 				case '{DAV:}displayname' :
@@ -138,8 +138,10 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 
 		$properties['uri'] = $uri;
 
-		list(,$backend) = $this->getBackendForAddressBook($addressbookid);
-		$backend->createAddressBook($properties, $userid);
+		$app = new Contacts\App();
+		$backend = $app->getBackend('local');
+
+		$backend->createAddressBook($properties);
 	}
 
 	/**
