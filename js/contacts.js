@@ -94,6 +94,10 @@ OC.Contacts = OC.Contacts || {};
 		this.metadata.backend = backend;
 	};
 
+	Contact.prototype.isOpen = function() {
+		return this.$fullelem !== null;
+	};
+
 	Contact.prototype.reload = function(data) {
 		console.log('Contact.reload', data);
 		this.id = data.metadata.id;
@@ -2323,7 +2327,11 @@ OC.Contacts = OC.Contacts || {};
 		if(!added) {
 			this.$contactList.append($contact);
 		}
-		$contact.show();
+		if($contact.data('obj').isOpen()) {
+			$contact.hide();
+		} else {
+			$contact.show();
+		}
 		return $contact;
 	};
 
