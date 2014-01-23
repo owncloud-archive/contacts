@@ -602,7 +602,7 @@ OC.Contacts = OC.Contacts || {};
 		var self = this;
 		if(this.hasGroup(name)) {
 			if(typeof cb === 'function') {
-				cb({error:true, message:t('contacts', 'A group named "{group} a"lready exists', {group: escapeHTML(name)})});
+				cb({error:true, message:t('contacts', 'A group named "{group}" already exists', {group: escapeHTML(name)})});
 			}
 			return;
 		}
