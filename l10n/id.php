@@ -47,7 +47,6 @@
 "Contact is not in this group." => "Kontak tidak di dalam grup ini.",
 "Contacts are not in this group." => "Kontak tidak di dalam grup ini.",
 "Failed renaming group: {error}" => "Gagal menamai grup: {error}",
-"A group named {group} already exists" => "Grup yang bernama {group} sudah ada",
 "You can drag groups to\narrange them as you like." => "Anda bisa seret grup untuk\nmenyusunnya seperti yang Anda inginkan.",
 "Failed adding group: {error}" => "Gagal menambahkan grup: {error}",
 "All" => "Semua",

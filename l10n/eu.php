@@ -49,7 +49,6 @@
 "Contact is not in this group." => "Kontaktua ez dago talde honetan.",
 "Contacts are not in this group." => "Kontaktuak ez daude talde honetan.",
 "Failed renaming group: {error}" => "Talderan izena aldatzen huts egin dugu: {error}",
-"A group named {group} already exists" => "{group} izeneko taldea dagoeneko existitzen da",
 "You can drag groups to\narrange them as you like." => "Taldeak arrastra ditzakezu\nnahi duzun moduan antolatzeko.",
 "Failed adding group: {error}" => "Ezin izan dugu taldea gehitu: {error}",
 "All" => "Denak",

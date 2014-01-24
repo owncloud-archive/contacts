@@ -38,7 +38,6 @@
 "Contact is not in this group." => "La kontakto ne estas en ĉi tiu grupo.",
 "Contacts are not in this group." => "La kontaktoj ne estas en ĉi tiu grupo.",
 "Failed renaming group: {error}" => "Malsukcesis alinomigo de grupo: {error}",
-"A group named {group} already exists" => "Grupo nomata {group} jam ekzistas",
 "Failed adding group: {error}" => "Malsukcesis aldono de grupo: {error}",
 "All" => "Ĉio",
 "Favorites" => "Favoratoj",

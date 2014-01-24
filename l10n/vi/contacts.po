@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-22 00:49-0500\n"
-"PO-Revision-Date: 2014-01-21 08:20+0000\n"
-"Last-Translator: Sơn Nguyễn <sonnghit@gmail.com>\n"
+"POT-Creation-Date: 2014-01-24 00:50-0500\n"
+"PO-Revision-Date: 2014-01-24 05:50+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Vietnamese (http://www.transifex.com/projects/p/owncloud/language/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -176,33 +176,33 @@ msgstr "Chỉnh sửa hồ sơ ảnh"
 msgid "Crop photo"
 msgstr "Cắt "
 
-#: js/contacts.js:606
+#: js/contacts.js:611
 msgid "Is this correct?"
 msgstr "Bạn có chắc điều này là đúng không?"
 
-#: js/contacts.js:873
+#: js/contacts.js:879
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1070
+#: js/contacts.js:1076
 msgid "# groups"
 msgstr "# nhóm"
 
-#: js/contacts.js:1144
+#: js/contacts.js:1150
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2187
+#: js/contacts.js:2193
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Một số địa chỉ liên lạc được đánh dấu để xóa, nhưng chưa bị xóa . Hãy đợi đến khi họ xóa."
 
-#: js/contacts.js:2198
+#: js/contacts.js:2204
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Nhấn vào đây để  quay lại thao tác xóa {num} địa chỉ liên lạc"
 
-#: js/contacts.js:2207
+#: js/contacts.js:2213
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -230,41 +230,41 @@ msgstr "Không có Liên hệ trong nhóm này"
 msgid "Contacts are not in this group."
 msgstr "Thông tin liên lạc không có trong nhóm"
 
-#: js/groups.js:567
+#: js/groups.js:525 js/groups.js:605
+msgid "A group named \"{group}\" already exists"
+msgstr ""
+
+#: js/groups.js:574
 msgid "Failed renaming group: {error}"
 msgstr "Đổi tên nhóm thất bại : {error}"
 
-#: js/groups.js:598
-msgid "A group named {group} already exists"
-msgstr "Tên nhóm {group} đã tồn tại"
-
-#: js/groups.js:633
+#: js/groups.js:640
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Bạn có thể kéo nhóm\nĐể sắp xếp như ý b."
 
-#: js/groups.js:646
+#: js/groups.js:653
 msgid "Failed adding group: {error}"
 msgstr "Không thêm được nh: {error}"
 
-#: js/groups.js:658
+#: js/groups.js:665
 msgid "All"
 msgstr "Tất cả"
 
-#: js/groups.js:673 js/groups.js:676
+#: js/groups.js:680 js/groups.js:683
 msgid "Favorites"
 msgstr "Ưa thích"
 
-#: js/groups.js:737
+#: js/groups.js:744
 msgid "Shared by {owner}"
 msgstr "Được chia sẽ bởi {owner}"
 
-#: js/groups.js:752
+#: js/groups.js:759
 msgid "Not grouped"
 msgstr "Không  nhóm"
 
-#: js/groups.js:781
+#: js/groups.js:788
 msgid "Failed loading groups: {error}"
 msgstr "Tải nhóm thất b: {error}"
 
@@ -510,39 +510,39 @@ msgid "Error getting user photo"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:36
+#: lib/controller/importcontroller.php:37
 msgid "No file was uploaded. Unknown error"
 msgstr "Không có tập tin nào được tải lên. Lỗi không xác định"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "There is no error, the file uploaded with success"
 msgstr "Không có lỗi, các tập tin đã được tải lên thành công"
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:46
+#: lib/controller/importcontroller.php:47
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Dung lượng file tải lên vượt quá giới hạn upload_max_filesize cho phép."
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Tập tin được tải lên vượt quá MAX_FILE_SIZE được quy định trong mẫu HTML"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "The uploaded file was only partially uploaded"
 msgstr "Các tập tin được tải lên chỉ tải lên được một phần"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "No file was uploaded"
 msgstr "Chưa có file nào được tải lên"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Missing a temporary folder"
 msgstr "Không tìm thấy thư mục tạm"
 
@@ -622,44 +622,44 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr "ID liên lạc không tìm thấy."
 
-#: lib/controller/importcontroller.php:52
+#: lib/controller/importcontroller.php:53
 msgid "Failed to write to disk"
 msgstr "Không thể ghi "
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Not enough storage available"
 msgstr "Không đủ không gian lưu trữ"
 
-#: lib/controller/importcontroller.php:71
+#: lib/controller/importcontroller.php:72
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:93
+#: lib/controller/importcontroller.php:94
 msgid "Error uploading contacts to storage."
 msgstr "Lỗi tải lên danh sách địa chỉ để lưu trữ."
 
-#: lib/controller/importcontroller.php:138
+#: lib/controller/importcontroller.php:139
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:155
+#: lib/controller/importcontroller.php:156
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:163
+#: lib/controller/importcontroller.php:164
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:168
-#: lib/controller/importcontroller.php:284
+#: lib/controller/importcontroller.php:169
+#: lib/controller/importcontroller.php:292
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:216
+#: lib/controller/importcontroller.php:217
 msgid "No contacts found in: "
 msgstr "Không có danh sách nào được tìm thấy trong :"
 

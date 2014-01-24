@@ -26,7 +26,6 @@
 "Couldn't get contact list." => "தொடர்பு பட்டியலை பெறமுடியாதுள்ளது.",
 "Contact is not in this group." => "தொடர்பு இந்த குழுவில் இல்லை.",
 "Contacts are not in this group." => "தொடர்புகள் இந்த குழுவில் இல்லை",
-"A group named {group} already exists" => "ஒரு குழு பெயர் {குழு} ஏற்கனவே உள்ளது",
 "All" => "எல்லாம்",
 "Favorites" => "விருப்பங்கள்",
 "Shared by {owner}" => "பகிரப்பட்டது {சொந்தகாரர்}",

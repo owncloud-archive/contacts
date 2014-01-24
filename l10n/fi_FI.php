@@ -39,7 +39,6 @@
 "Contacts are already in this group." => "Yhteystiedot ovat jo tässä ryhmässä.",
 "Contact is not in this group." => "Yhteystieto ei ole tässä ryhmässä.",
 "Failed renaming group: {error}" => "Ryhmän nimen muuttaminen epäonnistui: {error}",
-"A group named {group} already exists" => "Ryhmä nimeltä {group} on jo olemassa",
 "You can drag groups to\narrange them as you like." => "Voit raahata ryhmiä järjestääksesi\nne haluamallasi tavalla.",
 "Failed adding group: {error}" => "Virhe ryhmää lisätessä: {error}",
 "All" => "Kaikki",

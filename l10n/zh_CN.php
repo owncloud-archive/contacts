@@ -45,7 +45,6 @@
 "Contact is not in this group." => "联系人不在此分组中。",
 "Contacts are not in this group." => "联系人都不在此分组中。",
 "Failed renaming group: {error}" => "重命名分组失败：{error}",
-"A group named {group} already exists" => "分组{group}已存在。",
 "You can drag groups to\narrange them as you like." => "您可以通过拖拽分组的方式来按您喜欢的方式摆放他们。",
 "Failed adding group: {error}" => "添加分组失败：{error}",
 "All" => "全部",

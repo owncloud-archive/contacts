@@ -50,7 +50,6 @@
 "Contact is not in this group." => "Η επαφή δεν είναι σε αυτή την ομάδα.",
 "Contacts are not in this group." => "Οι επαφές δεν είναι σε αυτήν την ομάδα.",
 "Failed renaming group: {error}" => "Σφάλμα μετονομασίας της ομάδας: {error}",
-"A group named {group} already exists" => "Υπάρχει ήδη μια ομάδα με όνομα {group}",
 "You can drag groups to\narrange them as you like." => "Μπορείτε να σύρετε τις ομάδες για να\nτις τακτοποιήσετε όπως θέλετε.",
 "Failed adding group: {error}" => "Σφάλμα προσθήκης της ομάδας: {error}",
 "All" => "Όλες",

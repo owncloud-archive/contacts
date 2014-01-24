@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-11 00:49-0500\n"
-"PO-Revision-Date: 2014-01-11 05:49+0000\n"
+"POT-Creation-Date: 2014-01-24 00:50-0500\n"
+"PO-Revision-Date: 2014-01-24 05:50+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/owncloud/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: appinfo/app.php:28 lib/app.php:103
+#: appinfo/app.php:29 lib/app.php:103
 msgid "Contacts"
 msgstr "Контакти"
 
@@ -174,33 +174,33 @@ msgstr "Редагувати зображення облікового запи�
 msgid "Crop photo"
 msgstr ""
 
-#: js/contacts.js:606
+#: js/contacts.js:611
 msgid "Is this correct?"
 msgstr "Це вірно?"
 
-#: js/contacts.js:873
+#: js/contacts.js:879
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1070
+#: js/contacts.js:1076
 msgid "# groups"
 msgstr "# groups"
 
-#: js/contacts.js:1144
+#: js/contacts.js:1150
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2187
+#: js/contacts.js:2193
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Деякі контакти помічено для видалення, але ще не видалені. Будь ласка, зачекайте, доки вони будуть видалені."
 
-#: js/contacts.js:2198
+#: js/contacts.js:2204
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Натисніть для відміни видалення {num} контактів"
 
-#: js/contacts.js:2207
+#: js/contacts.js:2213
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -228,41 +228,41 @@ msgstr "Контакт не в даній групі."
 msgid "Contacts are not in this group."
 msgstr "Контакти не в даній групі."
 
-#: js/groups.js:567
+#: js/groups.js:525 js/groups.js:605
+msgid "A group named \"{group}\" already exists"
+msgstr ""
+
+#: js/groups.js:574
 msgid "Failed renaming group: {error}"
 msgstr "Не вдалося перейменувати групу: {error}"
 
-#: js/groups.js:598
-msgid "A group named {group} already exists"
-msgstr "Група з назвою {group} вже існує"
-
-#: js/groups.js:633
+#: js/groups.js:640
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Ви можете перетягнути групи для того,\nщоб організувати їх, як вам заманеться."
 
-#: js/groups.js:646
+#: js/groups.js:653
 msgid "Failed adding group: {error}"
 msgstr "Не вдалося додати групу: {error}"
 
-#: js/groups.js:658
+#: js/groups.js:665
 msgid "All"
 msgstr "Всі"
 
-#: js/groups.js:673 js/groups.js:676
+#: js/groups.js:680 js/groups.js:683
 msgid "Favorites"
 msgstr "Улюблені"
 
-#: js/groups.js:737
+#: js/groups.js:744
 msgid "Shared by {owner}"
 msgstr "Опублікував {owner}"
 
-#: js/groups.js:752
+#: js/groups.js:759
 msgid "Not grouped"
 msgstr "Не згруповані"
 
-#: js/groups.js:781
+#: js/groups.js:788
 msgid "Failed loading groups: {error}"
 msgstr "Не вдалося завантажити групи: {error}"
 
@@ -508,39 +508,39 @@ msgid "Error getting user photo"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:36
+#: lib/controller/importcontroller.php:37
 msgid "No file was uploaded. Unknown error"
 msgstr "Не завантажено жодного файлу. Невідома помилка"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "There is no error, the file uploaded with success"
 msgstr "Файл успішно вивантажено без помилок."
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:46
+#: lib/controller/importcontroller.php:47
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Розмір відвантаженого файлу перевищує директиву upload_max_filesize в php.ini"
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Розмір відвантаженого файлу перевищує директиву MAX_FILE_SIZE вказану в HTML формі"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "The uploaded file was only partially uploaded"
 msgstr "Файл відвантажено лише частково"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "No file was uploaded"
 msgstr "Не відвантажено жодного файлу"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Missing a temporary folder"
 msgstr "Відсутній тимчасовий каталог"
 
@@ -620,44 +620,44 @@ msgstr "В запиті відсутнє ім'я групи."
 msgid "Contact ID missing from request."
 msgstr "В запиті відсутній ID контакту."
 
-#: lib/controller/importcontroller.php:52
+#: lib/controller/importcontroller.php:53
 msgid "Failed to write to disk"
 msgstr "Невдалося записати на диск"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Not enough storage available"
 msgstr "Місця більше немає"
 
-#: lib/controller/importcontroller.php:71
+#: lib/controller/importcontroller.php:72
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:93
+#: lib/controller/importcontroller.php:94
 msgid "Error uploading contacts to storage."
 msgstr "Помилка завантаження контактів у сховище."
 
-#: lib/controller/importcontroller.php:138
+#: lib/controller/importcontroller.php:139
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:155
+#: lib/controller/importcontroller.php:156
 msgid "You do not have permissions to import into this address book."
 msgstr "У вас немає дозволу імпортувати щось у цю адресну книгу."
 
-#: lib/controller/importcontroller.php:163
+#: lib/controller/importcontroller.php:164
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:168
-#: lib/controller/importcontroller.php:284
+#: lib/controller/importcontroller.php:169
+#: lib/controller/importcontroller.php:292
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:216
+#: lib/controller/importcontroller.php:217
 msgid "No contacts found in: "
 msgstr ""
 

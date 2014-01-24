@@ -50,7 +50,6 @@
 "Contact is not in this group." => "El contacte no és en aquest grup.",
 "Contacts are not in this group." => "Els contactes no són en aquest grup.",
 "Failed renaming group: {error}" => "Ha fallat en canviar el nom del grup: {error}",
-"A group named {group} already exists" => "Un grup anomenat {group} ja existeix",
 "You can drag groups to\narrange them as you like." => "Podeu arrossegar grups per\norganitzar-los com volgueu.",
 "Failed adding group: {error}" => "Ha fallat en afegir el grup: {error}",
 "All" => "Tots",

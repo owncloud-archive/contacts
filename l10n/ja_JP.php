@@ -50,7 +50,6 @@
 "Contact is not in this group." => "連絡先はこのグループに存在しません。",
 "Contacts are not in this group." => "連絡先はこのグループに存在しません。",
 "Failed renaming group: {error}" => "グループの名前の変更に失敗: {error}",
-"A group named {group} already exists" => "{group} のグループはすでに存在します",
 "You can drag groups to\narrange them as you like." => "グループをドラックすることで好きな\nように並べ替えることができます。",
 "Failed adding group: {error}" => "グループの追加に失敗: {error}",
 "All" => "すべて",

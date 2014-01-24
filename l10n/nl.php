@@ -50,7 +50,6 @@
 "Contact is not in this group." => "De contactpersoon bevindt zich niet in deze groep",
 "Contacts are not in this group." => "De contactpersonen bevinden zich niet in deze groep",
 "Failed renaming group: {error}" => "Mislukt: hernoemen van groep: {error}",
-"A group named {group} already exists" => "Er bestaat al een groep {group}",
 "You can drag groups to\narrange them as you like." => "U kunt groepen slepen\nom ze naar wens te rangschikken.",
 "Failed adding group: {error}" => "Mislukt: toevoegen groep: {error}",
 "All" => "Alle",

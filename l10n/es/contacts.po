@@ -35,9 +35,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-15 01:03-0500\n"
-"PO-Revision-Date: 2014-01-14 14:12+0000\n"
-"Last-Translator: victormce <victormce@gmail.com>\n"
+"POT-Creation-Date: 2014-01-24 00:50-0500\n"
+"PO-Revision-Date: 2014-01-24 05:50+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -45,7 +45,7 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:28 lib/app.php:103
+#: appinfo/app.php:29 lib/app.php:103
 msgid "Contacts"
 msgstr "Contactos"
 
@@ -197,33 +197,33 @@ msgstr "Editar imagen de perfil."
 msgid "Crop photo"
 msgstr "Recortar imagen"
 
-#: js/contacts.js:606
+#: js/contacts.js:611
 msgid "Is this correct?"
 msgstr "¿Es esto correcto?"
 
-#: js/contacts.js:873
+#: js/contacts.js:879
 msgid "Error parsing date: {date}"
 msgstr "Error al analizar la fecha: {date}"
 
-#: js/contacts.js:1070
+#: js/contacts.js:1076
 msgid "# groups"
 msgstr "# grupos"
 
-#: js/contacts.js:1144
+#: js/contacts.js:1150
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Error al analizar el cumpleaños {bday}: {error}"
 
-#: js/contacts.js:2187
+#: js/contacts.js:2193
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Algunos contactos están marcados para su eliminación, pero no eliminados todavía. Por favor, espere a que sean eliminados."
 
-#: js/contacts.js:2198
+#: js/contacts.js:2204
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Pulse para deshacer la eliminación de {num} contactos"
 
-#: js/contacts.js:2207
+#: js/contacts.js:2213
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancelada la eliminación de {num} contactos"
 
@@ -251,41 +251,41 @@ msgstr "El contacto no se encuentra en este grupo."
 msgid "Contacts are not in this group."
 msgstr "Los contactos no se encuentran en este grupo."
 
-#: js/groups.js:567
+#: js/groups.js:525 js/groups.js:605
+msgid "A group named \"{group}\" already exists"
+msgstr ""
+
+#: js/groups.js:574
 msgid "Failed renaming group: {error}"
 msgstr "Error renombrando el grupo: {error}"
 
-#: js/groups.js:598
-msgid "A group named {group} already exists"
-msgstr "Ya existe un grupo llamado {group}"
-
-#: js/groups.js:633
+#: js/groups.js:640
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Puedes arrastrar grupos para\ncolocarlos como usted quiera."
 
-#: js/groups.js:646
+#: js/groups.js:653
 msgid "Failed adding group: {error}"
 msgstr "Error añadiendo el grupo: {error}"
 
-#: js/groups.js:658
+#: js/groups.js:665
 msgid "All"
 msgstr "Todos"
 
-#: js/groups.js:673 js/groups.js:676
+#: js/groups.js:680 js/groups.js:683
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: js/groups.js:737
+#: js/groups.js:744
 msgid "Shared by {owner}"
 msgstr "Compartido por {owner}"
 
-#: js/groups.js:752
+#: js/groups.js:759
 msgid "Not grouped"
 msgstr "No agrupado"
 
-#: js/groups.js:781
+#: js/groups.js:788
 msgid "Failed loading groups: {error}"
 msgstr "Error cargando grupos: {error} "
 
@@ -531,39 +531,39 @@ msgid "Error getting user photo"
 msgstr "Error obteniendo la imagen de usuario"
 
 #: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:36
+#: lib/controller/importcontroller.php:37
 msgid "No file was uploaded. Unknown error"
 msgstr "No se subió ningún archivo. Error desconocido"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "There is no error, the file uploaded with success"
 msgstr "No hay ningún error, el archivo se ha subido con éxito"
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:46
+#: lib/controller/importcontroller.php:47
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "El archivo subido sobrepasa la directiva \"upload_max_filesize\" del archivo PHP.ini"
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "El archivo subido sobrepasa la directiva \"MAX_FILE_SIZE\" especificada en el formulario HTML"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "The uploaded file was only partially uploaded"
 msgstr "El archivo ha sido subido parcialmente"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "No file was uploaded"
 msgstr "No se subió ningún archivo"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Missing a temporary folder"
 msgstr "Falta una carpeta temporal"
 
@@ -643,44 +643,44 @@ msgstr "Falta el nombre del grupo en la petición."
 msgid "Contact ID missing from request."
 msgstr "Falta el ID de contacto en la solicitud."
 
-#: lib/controller/importcontroller.php:52
+#: lib/controller/importcontroller.php:53
 msgid "Failed to write to disk"
 msgstr "Error al escribir al disco"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Not enough storage available"
 msgstr "No hay suficiente espacio disponible"
 
-#: lib/controller/importcontroller.php:71
+#: lib/controller/importcontroller.php:72
 msgid "Attempt to upload blacklisted file:"
 msgstr "Intentó subir un fichero en lista negra:"
 
-#: lib/controller/importcontroller.php:93
+#: lib/controller/importcontroller.php:94
 msgid "Error uploading contacts to storage."
 msgstr "Error subiendo contactos al almacenamiento."
 
-#: lib/controller/importcontroller.php:138
+#: lib/controller/importcontroller.php:139
 msgid "Error moving file to imports folder."
 msgstr "Error moviendo ficheros a la carpeta de importaciones."
 
-#: lib/controller/importcontroller.php:155
+#: lib/controller/importcontroller.php:156
 msgid "You do not have permissions to import into this address book."
 msgstr "No tiene permiso para importar en esta libreta de direcciones."
 
-#: lib/controller/importcontroller.php:163
+#: lib/controller/importcontroller.php:164
 msgid "File name missing from request."
 msgstr "Falta el nombre del fichero en la petición."
 
-#: lib/controller/importcontroller.php:168
-#: lib/controller/importcontroller.php:284
+#: lib/controller/importcontroller.php:169
+#: lib/controller/importcontroller.php:292
 msgid "Progress key missing from request."
 msgstr "Falta la clave de progreso en la petición."
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "Attempt to access blacklisted file:"
 msgstr "Intentó acceder a un fichero en la lista negra:"
 
-#: lib/controller/importcontroller.php:216
+#: lib/controller/importcontroller.php:217
 msgid "No contacts found in: "
 msgstr "No se encontraron contactos en:"
 
