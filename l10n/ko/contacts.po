@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-11 00:49-0500\n"
-"PO-Revision-Date: 2014-01-11 05:49+0000\n"
+"POT-Creation-Date: 2014-01-24 00:50-0500\n"
+"PO-Revision-Date: 2014-01-24 05:50+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: appinfo/app.php:28 lib/app.php:103
+#: appinfo/app.php:29 lib/app.php:103
 msgid "Contacts"
 msgstr "연락처"
 
@@ -188,33 +188,33 @@ msgstr "프로필 사진 편집"
 msgid "Crop photo"
 msgstr "사진 자르기"
 
-#: js/contacts.js:606
+#: js/contacts.js:611
 msgid "Is this correct?"
 msgstr "정확합니까?"
 
-#: js/contacts.js:873
+#: js/contacts.js:879
 msgid "Error parsing date: {date}"
 msgstr "날짜 처리 중 오류 발생: {date}"
 
-#: js/contacts.js:1070
+#: js/contacts.js:1076
 msgid "# groups"
 msgstr "그룹 수"
 
-#: js/contacts.js:1144
+#: js/contacts.js:1150
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "생일 {bday} 처리 오류: {error}"
 
-#: js/contacts.js:2187
+#: js/contacts.js:2193
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "일부 연락처가 삭제할 것으로 표시되었으나 아직 삭제되지 않았습니다. 삭제가 끝날 때까지 기다려 주십시오."
 
-#: js/contacts.js:2198
+#: js/contacts.js:2204
 msgid "Click to undo deletion of {num} contacts"
 msgstr "연락처 {num}명 삭제를 취소하려면 누르십시오"
 
-#: js/contacts.js:2207
+#: js/contacts.js:2213
 msgid "Cancelled deletion of {num} contacts"
 msgstr "연락처 {num}명 삭제가 취소됨"
 
@@ -242,41 +242,41 @@ msgstr "연락처가 이 그룹에 없습니다."
 msgid "Contacts are not in this group."
 msgstr "연락처가 이 그룹에 없습니다."
 
-#: js/groups.js:567
+#: js/groups.js:525 js/groups.js:605
+msgid "A group named \"{group}\" already exists"
+msgstr ""
+
+#: js/groups.js:574
 msgid "Failed renaming group: {error}"
 msgstr "그룹 이름 변경 오류: {error}"
 
-#: js/groups.js:598
-msgid "A group named {group} already exists"
-msgstr "이름이 {group}인 그룹이 이미 존재함"
-
-#: js/groups.js:633
+#: js/groups.js:640
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "그룹을 드래그하여\n순서를 변경할 수 있습니다."
 
-#: js/groups.js:646
+#: js/groups.js:653
 msgid "Failed adding group: {error}"
 msgstr "그룹 추가 오류: {error}"
 
-#: js/groups.js:658
+#: js/groups.js:665
 msgid "All"
 msgstr "모두"
 
-#: js/groups.js:673 js/groups.js:676
+#: js/groups.js:680 js/groups.js:683
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-#: js/groups.js:737
+#: js/groups.js:744
 msgid "Shared by {owner}"
 msgstr "{owner} 님이 공유함"
 
-#: js/groups.js:752
+#: js/groups.js:759
 msgid "Not grouped"
 msgstr "그룹에 없음"
 
-#: js/groups.js:781
+#: js/groups.js:788
 msgid "Failed loading groups: {error}"
 msgstr "그룹 불러오기 오류: {error}"
 
@@ -522,39 +522,39 @@ msgid "Error getting user photo"
 msgstr "사용자 사진 가져오기 오류"
 
 #: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:36
+#: lib/controller/importcontroller.php:37
 msgid "No file was uploaded. Unknown error"
 msgstr "파일이 업로드되지 않았습니다. 알 수 없는 오류입니다"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:45
+#: lib/controller/importcontroller.php:46
 msgid "There is no error, the file uploaded with success"
 msgstr "파일 업로드에 성공하였습니다."
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:46
+#: lib/controller/importcontroller.php:47
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "업로드된 파일이 php.ini의 upload_max_filesize보다 큼"
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "업로드한 파일 크기가 HTML 양식의 MAX_FILE_SIZE보다 큼"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "The uploaded file was only partially uploaded"
 msgstr "파일의 일부분만 업로드됨"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "No file was uploaded"
 msgstr "파일이 업로드되지 않았음"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "Missing a temporary folder"
 msgstr "임시 폴더가 없음"
 
@@ -634,44 +634,44 @@ msgstr "요청에 그룹 이름이 없습니다."
 msgid "Contact ID missing from request."
 msgstr "요청에 연락처 ID가 없습니다."
 
-#: lib/controller/importcontroller.php:52
+#: lib/controller/importcontroller.php:53
 msgid "Failed to write to disk"
 msgstr "디스크에 쓸 수 없음"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Not enough storage available"
 msgstr "저장소 용량이 충분하지 않음"
 
-#: lib/controller/importcontroller.php:71
+#: lib/controller/importcontroller.php:72
 msgid "Attempt to upload blacklisted file:"
 msgstr "허용되지 않은 파일을 업로드하려고 함:"
 
-#: lib/controller/importcontroller.php:93
+#: lib/controller/importcontroller.php:94
 msgid "Error uploading contacts to storage."
 msgstr "연락처를 저장소에 업로드할 수 없습니다."
 
-#: lib/controller/importcontroller.php:138
+#: lib/controller/importcontroller.php:139
 msgid "Error moving file to imports folder."
 msgstr "가져오기 폴더로 파일을 이동할 수 없습니다."
 
-#: lib/controller/importcontroller.php:155
+#: lib/controller/importcontroller.php:156
 msgid "You do not have permissions to import into this address book."
 msgstr "이 주소록으로 가져올 수 있는 권한이 없습니다."
 
-#: lib/controller/importcontroller.php:163
+#: lib/controller/importcontroller.php:164
 msgid "File name missing from request."
 msgstr "요청에 파일 이름이 없습니다."
 
-#: lib/controller/importcontroller.php:168
-#: lib/controller/importcontroller.php:284
+#: lib/controller/importcontroller.php:169
+#: lib/controller/importcontroller.php:292
 msgid "Progress key missing from request."
 msgstr "요청에 진행 키가 없습니다."
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "Attempt to access blacklisted file:"
 msgstr "허용되지 않은 파일에 접근하려고 함:"
 
-#: lib/controller/importcontroller.php:216
+#: lib/controller/importcontroller.php:217
 msgid "No contacts found in: "
 msgstr "다음에서 연락처를 찾을 수 없음: "
 

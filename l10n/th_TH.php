@@ -27,7 +27,6 @@
 "Couldn't get contact list." => "ไม่สามารถดึงรายชื่อผู้ติดต่อได้",
 "Contact is not in this group." => "รายชื่อผู้ติดต่อไม่มีอยู่ในกลุ่มนี้",
 "Contacts are not in this group." => "รายชื่อผู้ติดต่อดังกล่าวไม่มีอยู่ในกลุ่มนี้",
-"A group named {group} already exists" => "ชื่อกลุ่มดังกล่าว {group} มีอยู่แล้ว",
 "All" => "ทั้งหมด",
 "Favorites" => "รายการโปรด",
 "Shared by {owner}" => "ถูกแชร์โดย {owner}",

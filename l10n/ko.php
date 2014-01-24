@@ -50,7 +50,6 @@
 "Contact is not in this group." => "연락처가 이 그룹에 없습니다.",
 "Contacts are not in this group." => "연락처가 이 그룹에 없습니다.",
 "Failed renaming group: {error}" => "그룹 이름 변경 오류: {error}",
-"A group named {group} already exists" => "이름이 {group}인 그룹이 이미 존재함",
 "You can drag groups to\narrange them as you like." => "그룹을 드래그하여\n순서를 변경할 수 있습니다.",
 "Failed adding group: {error}" => "그룹 추가 오류: {error}",
 "All" => "모두",

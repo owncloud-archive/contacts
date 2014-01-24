@@ -50,7 +50,6 @@
 "Contact is not in this group." => "Kontakt pole selles grupis.",
 "Contacts are not in this group." => "Kontaktid pole selles grupis.",
 "Failed renaming group: {error}" => "Grupi ümber nimetamine ebaõnnestus: {error}",
-"A group named {group} already exists" => "Grupp nimega {group} on juba olemas",
 "You can drag groups to\narrange them as you like." => "Pukseeri gruppe märgile ⏎\nsobivamaks reastuseks",
 "Failed adding group: {error}" => "Grupi lisamine ebaõnnestus: {error}",
 "All" => "Kõik",

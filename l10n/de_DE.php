@@ -50,7 +50,6 @@
 "Contact is not in this group." => "Kontakt ist nicht in der Gruppe.",
 "Contacts are not in this group." => "Kontakte sind nicht in der Gruppe.",
 "Failed renaming group: {error}" => "Das Umbenennen der Gruppe ist fehlgeschlagen: {error}",
-"A group named {group} already exists" => "Eine Gruppe mit dem Namen {group} ist schon vorhanden.",
 "You can drag groups to\narrange them as you like." => "Per \"Drag & Drop\" können Sie Gruppen\nnach Ihren Wünschen anordnen.",
 "Failed adding group: {error}" => "Fehler beim Hinzufügen einer Gruppe: {error}",
 "All" => "Alle",

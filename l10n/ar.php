@@ -47,7 +47,6 @@
 "Contact is not in this group." => "جهة الاتصال غير موجودة في هذه المجموعة. ",
 "Contacts are not in this group." => "جهات الاتصال غير موجودة في هذه المجموعة. ",
 "Failed renaming group: {error}" => "{خطأ}: فشلت مهمة تغيير اسم المجموعة",
-"A group named {group} already exists" => "اسم المجموعة { مجموعة } موجود مسبقاً.",
 "You can drag groups to\narrange them as you like." => "يمكنك سحب المجموعات إلى⏎\nو من ثم ترتيبها كما تريد.",
 "Failed adding group: {error}" => "{خطأ}: فشلت مهمة إضافة مجموعة. ",
 "All" => "الكل",

@@ -49,7 +49,6 @@
 "Contact is not in this group." => "Kontakten är inte i denna grupp.",
 "Contacts are not in this group." => "Kontakterna är inte i denna grupp.",
 "Failed renaming group: {error}" => "Det gick inte att ändra namn på gruppen: {error}",
-"A group named {group} already exists" => "En grupp men namnet {group} finns redan",
 "You can drag groups to\narrange them as you like." => "Du kan dra och släppa grupper⏎\nför att arrangera dem som du vill.",
 "Failed adding group: {error}" => "Det gick inte att lägga till gruppen :{error}",
 "All" => "Alla",

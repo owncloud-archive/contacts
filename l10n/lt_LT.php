@@ -48,7 +48,6 @@
 "Contact is not in this group." => "Kontaktas nėra šioje grupėje.",
 "Contacts are not in this group." => "KontaktaI nėra šioje grupėje.",
 "Failed renaming group: {error}" => "Nepavyko pervadinti grupės: {error}",
-"A group named {group} already exists" => "Grupė pavadinimu {group} jau egzistuoja",
 "You can drag groups to\narrange them as you like." => "Galite tempti grupes, kad\nišrikiuoti jas kaip Jums reikia.",
 "Failed adding group: {error}" => "Nepavyko pridėti grupės: {error}",
 "All" => "Viskas",
