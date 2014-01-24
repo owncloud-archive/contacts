@@ -485,6 +485,11 @@ OC.Contacts = OC.Contacts || {
 						});
 					}
 					break;
+				case 'adr':
+					address = data.url.filter(function(n){return n});
+					var newWindow = window.open('http://open.mapquest.com/?q='+address, '_blank');
+					newWindow.focus();
+					break;
 			}
 		});
 
