@@ -36,19 +36,28 @@ class ImportVCardConnector extends ImportConnector{
 	 * @return array of strings
 	 */
 	public function getElementsFromInput($input, $limit=-1) {
-		$csv = new SplFileObject($input, 'r');
-		$csv->setFlags(SplFileObject::READ_CSV);
-		
-		//echo "elements: ".var_dump($this->configContent)."\n";
-		//echo "exemple: ".$this->configContent->import_entry[2]->vcard_entry['property']."\n";
-		//echo "settings : ".$this->configContent->import_core->card_separator['value']." - ".$this->configContent->import_core->entry_separator['value'];
-		//$csv->setCsvControl($this->configContent->import_core->card_separator['value'], $this->configContent->import_core->entry_separator['value']);
-		
-		$ignore_first_line = (isset($this->configContent->import_core->ignore_first_line) && $this->configContent->import_core->ignore_first_line['enabled'] == 'true');
-		
-		$titles = null;
-		
-		$elements = array();
+
+		$file = file_get_contents($input);
+
+		$nl = "\n";
+		$file = str_replace(array("\r","\n\n"), array("\n","\n"), $file);
+		$lines = explode($nl, $file);
+		$inelement = false;
+		$parts = array();
+		$card = array();
+		foreach($lines as $line) {
+				if(strtoupper(trim($line)) == $this->configContent->import_core->card_begin['value']) {
+						$inelement = true;
+				} elseif (strtoupper(trim($line)) == $this->configContent->import_core->card_end['value']) {
+						$card[] = $line;
+						$parts[] = implode($nl, $card);
+						$card = array();
+						$inelement = false;
+				}
+				if ($inelement === true && trim($line) != '') {
+						$card[] = $line;
+				}
+		}
 		
 		$index = 0;
 		foreach($csv as $line)

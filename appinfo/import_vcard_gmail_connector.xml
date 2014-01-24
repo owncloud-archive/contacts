@@ -8,13 +8,23 @@
 		<card_end value="END:VCARD"/>
 	</import_core>
 	
+	<import_entry property="item1.URL" enabled="true">
+		<vcard_entry property="URL" type="HOME">
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry property="X-GTALK" enabled="true">
+		<vcard_entry property="IMPP" prefix="" position="" image="">
+		</vcard_entry>
+	</import_entry>
+	
 	<import_entry property="" type="" prefix="" position="" enabled="true">
 		<vcard_entry property="" type="" prefix="" position="" image="">
 		</vcard_entry>
 	</import_entry>
 	
 	<!--<import_entry property="" type="" prefix="" position="" enabled="true">
-		<vcard_entry property="" type="" prefix="" position="" image="">
+		<vcard_entry property="" type="" prefix="" position="">
 		</vcard_entry>
 	</import_entry>-->
 	
