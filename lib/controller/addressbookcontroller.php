@@ -22,6 +22,7 @@ class AddressBookController extends Controller {
 
 	/**
 	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function userAddressBooks() {
 		$addressBooks = $this->app->getAddressBooksForUser();
@@ -57,6 +58,7 @@ class AddressBookController extends Controller {
 
 	/**
 	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function getAddressBook() {
 		$params = $this->request->urlParams;
@@ -92,7 +94,6 @@ class AddressBookController extends Controller {
 
 	/**
 	 * @NoAdminRequired
-	 * @NoCSRFRequired
 	 */
 	public function addAddressBook() {
 		$params = $this->request->urlParams;
