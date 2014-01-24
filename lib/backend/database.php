@@ -28,7 +28,7 @@ use OCA\Contacts\Contact,
 	Sabre\VObject\Reader;
 
 /**
- * Subclass this class for Cantacts backends
+ * Subclass this class for Contacts backends
  */
 
 class Database extends AbstractBackend {
@@ -74,7 +74,7 @@ class Database extends AbstractBackend {
 			}
 			$result = self::$preparedQueries['addressbooksforuser']->execute(array($this->userid));
 			if (\OCP\DB::isError($result)) {
-				\OCP\Util::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $this->addressbooks;
 			}
 		} catch(\Exception $e) {
@@ -106,14 +106,14 @@ class Database extends AbstractBackend {
 			}
 			$result = self::$preparedQueries['getaddressbook']->execute(array($addressbookid));
 			if (\OCP\DB::isError($result)) {
-				\OCP\Util::write('contacts', __METHOD__. 'DB error: '
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return null;
 			}
-			if((int)$result->numRows() === 0) {
+			$row = $result->fetchRow();
+			if (!$row) {
 				throw new \Exception('Address Book not found', 404);
 			}
-			$row = $result->fetchRow();
 			$row['permissions'] = \OCP\PERMISSION_ALL;
 			$row['backend'] = $this->name;
 			$this->addressbooks[$addressbookid] = $row;
@@ -179,7 +179,7 @@ class Database extends AbstractBackend {
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
-		} catch(Exception $e) {
+		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts',
 				__METHOD__ . ', exception: '
 				. $e->getMessage(), \OCP\Util::ERROR);
@@ -227,7 +227,7 @@ class Database extends AbstractBackend {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
-		} catch(Exception $e) {
+		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__ . ', exception: ' . $e->getMessage(), \OCP\Util::ERROR);
 			return false;
 		}
@@ -461,10 +461,6 @@ class Database extends AbstractBackend {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return null;
 			}
-			if((int)$result->numRows() === 0) {
-				\OCP\Util::writeLog('contacts', __METHOD__.', Not found, id: '. $id, \OCP\Util::DEBUG);
-				return null;
-			}
 		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
 			\OCP\Util::writeLog('contacts', __METHOD__.', id: '. $id, \OCP\Util::DEBUG);
@@ -472,6 +468,10 @@ class Database extends AbstractBackend {
 		}
 
 		$row = $result->fetchRow();
+		if (!$row) {
+			\OCP\Util::writeLog('contacts', __METHOD__.', Not found, id: '. $id, \OCP\Util::DEBUG);
+			return null;
+		}
 		$row['permissions'] = \OCP\PERMISSION_ALL;
 		return $row;
 	}
@@ -512,7 +512,7 @@ class Database extends AbstractBackend {
 		try {
 			$contact->validate(VCard::REPAIR|VCard::UPGRADE);
 		} catch (\Exception $e) {
-			OCP\Util::writeLog('contacts', __METHOD__ . ' ' .
+			\OCP\Util::writeLog('contacts', __METHOD__ . ' ' .
 				'Error validating vcard: ' . $e->getMessage(), \OCP\Util::ERROR);
 			return false;
 		}
@@ -526,7 +526,6 @@ class Database extends AbstractBackend {
 		$prodid = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
 		$contact->PRODID = $prodid;
 
-		$data = $contact->serialize();
 		if(!isset(self::$preparedQueries[$qname])) {
 		self::$preparedQueries[$qname] = \OCP\DB::prepare('INSERT INTO `'
 			. $this->cardsTableName
@@ -678,7 +677,7 @@ class Database extends AbstractBackend {
 					return false;
 				}
 			} else {
-				throw new Exception(
+				throw new \Exception(
 					__METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
 				);
 			}
@@ -748,11 +747,13 @@ class Database extends AbstractBackend {
 			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 			return null;
 		}
-		if((int)$result->numRows() === 0) {
+		$one = $result->fetchOne();
+		if (!$one) {
 			\OCP\Util::writeLog('contacts', __METHOD__.', Not found, uri: '. $uri, \OCP\Util::DEBUG);
 			return null;
 		}
-		return $result->fetchOne();
+
+		return $one;
 	}
 
 	private function createAddressBookURI($displayname, $userid = null) {
@@ -765,7 +766,7 @@ class Database extends AbstractBackend {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $name;
 			}
-		} catch(Exception $e) {
+		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__ . ' exception: ' . $e->getMessage(), \OCP\Util::ERROR);
 			return $name;
 		}
@@ -790,22 +791,23 @@ class Database extends AbstractBackend {
 	* @returns string Unique URI
 	*/
 	protected function uniqueURI($addressBookId, $uri) {
-		$stmt = \OCP\DB::prepare( 'SELECT * FROM `' . $this->cardsTableName . '` WHERE `addressbookid` = ? AND `uri` = ?' );
+		$stmt = \OCP\DB::prepare( 'SELECT COUNT(*) FROM `' . $this->cardsTableName . '` as `count` WHERE `addressbookid` = ? AND `uri` = ?' );
 
 		$result = $stmt->execute(array($addressBookId, $uri));
+		$result = $result->fetchRow();
 
-		if($result->numRows() > 0) {
+		if($result['count'] > 0) {
 			while(true) {
 				$uri = Properties::generateUID() . '.vcf';
 				$result = $stmt->execute(array($addressBookId, $uri));
-				if($result->numRows() > 0) {
+				if($result['count'] > 0) {
 					continue;
 				} else {
 					return $uri;
 				}
 			}
-		} else {
-			return $uri;
 		}
+
+		return $uri;
 	}
 }

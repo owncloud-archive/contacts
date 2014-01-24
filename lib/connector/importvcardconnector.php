@@ -3,7 +3,7 @@
  * ownCloud - CSV Import connector
  *
  * @author Nicolas Mora
- * @copyright 2013-2014 Nicolas Mora mail@babelouest.org
+ * @copyright 2014 Nicolas Mora mail@babelouest.org
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -26,7 +26,7 @@ use Sabre\VObject\Component,
 	Sabre\VObject\StringUtil,
 	\SplFileObject as SplFileObject;
 
-class ImportCsvConnector extends ImportConnector{
+class ImportVCardConnector extends ImportConnector{
 
 	/**
 	 * @brief separates elements from the input stream according to the entry_separator value in config
@@ -39,6 +39,9 @@ class ImportCsvConnector extends ImportConnector{
 		$csv = new SplFileObject($input, 'r');
 		$csv->setFlags(SplFileObject::READ_CSV);
 		
+		//echo "elements: ".var_dump($this->configContent)."\n";
+		//echo "exemple: ".$this->configContent->import_entry[2]->vcard_entry['property']."\n";
+		//echo "settings : ".$this->configContent->import_core->card_separator['value']." - ".$this->configContent->import_core->entry_separator['value'];
 		//$csv->setCsvControl($this->configContent->import_core->card_separator['value'], $this->configContent->import_core->entry_separator['value']);
 		
 		$ignore_first_line = (isset($this->configContent->import_core->ignore_first_line) && $this->configContent->import_core->ignore_first_line['enabled'] == 'true');
@@ -79,12 +82,22 @@ class ImportCsvConnector extends ImportConnector{
 				// Look for the right import_entry
 				$importEntry = $this->getImportEntry((String)$i);
 				if ($importEntry) {
-					// Create a new property and attach it to the vcard
-					$property = $this->getOrCreateVCardProperty($vcard, $importEntry->vcard_entry);
-					$this->updateProperty($property, $importEntry, $element[$i]);
+					//$properties = $vcard->select($importEntry->vcard_entry['property']);
+					//if (count($properties) == 0) {
+						// Create a new property and attach it to the vcard
+						$property = $this->getOrCreateVCardProperty($vcard, $importEntry->vcard_entry);
+						//$property = \Sabre\VObject\Property::create($importEntry->vcard_entry['property']);
+						$this->updateProperty($property, $importEntry, $element[$i]);
+						//echo "property : ".$property->serialize();
+						//$vcard->add($property);
+					/*} else {
+						for ($j=0; $j < count($properties); $j++) {
+							$this->updateProperty($properties[$j], $importEntry, $element[$i]);
+						}
+					}*/
 				} else {
 					$property = \Sabre\VObject\Property::create("X-Unknown-Element", $element[$i]);
-					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($title[$i]));
+					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.$title[$i]);
 					$vcard->add($property);
 				}
 			}

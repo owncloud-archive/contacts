@@ -1,0 +1,21 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!-- XML connector for Gmail Vcard csv export -->
+<import_entries>
+	
+	<import_core>
+		<card_begin value="BEGIN:VCARD"/>
+		<card_end value="END:VCARD"/>
+	</import_core>
+	
+	<import_entry property="" type="" prefix="" position="" enabled="true">
+		<vcard_entry property="" type="" prefix="" position="" image="">
+		</vcard_entry>
+	</import_entry>
+	
+	<!--<import_entry property="" type="" prefix="" position="" enabled="true">
+		<vcard_entry property="" type="" prefix="" position="" image="">
+		</vcard_entry>
+	</import_entry>-->
+	
+</import_entries>

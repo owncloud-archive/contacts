@@ -94,6 +94,10 @@ OC.Contacts = OC.Contacts || {};
 		this.metadata.backend = backend;
 	};
 
+	Contact.prototype.isOpen = function() {
+		return this.$fullelem !== null;
+	};
+
 	Contact.prototype.reload = function(data) {
 		console.log('Contact.reload', data);
 		this.id = data.metadata.id;
@@ -601,10 +605,12 @@ OC.Contacts = OC.Contacts || {};
 								self.data.N[0]['value'][2] = nvalue.length > 2 && nvalue.slice(1, nvalue.length-1).join(' ') || '';
 								setTimeout(function() {
 									self.saveProperty({name:'N', value:self.data.N[0].value.join(';')});
-									setTimeout(function() {
-										self.$fullelem.find('.fullname').next('.action.edit').trigger('click');
-										OC.notify({message:t('contacts', 'Is this correct?')});
-									}, 1000);
+									if(nvalue.length > 1) {
+										setTimeout(function() {
+											self.$fullelem.find('.fullname').next('.action.edit').trigger('click');
+											OC.notify({message:t('contacts', 'Is this correct?')});
+										}, 1000);
+									}
 								}
 								, 500);
 							}
@@ -2323,7 +2329,11 @@ OC.Contacts = OC.Contacts || {};
 		if(!added) {
 			this.$contactList.append($contact);
 		}
-		$contact.show();
+		if($contact.data('obj').isOpen()) {
+			$contact.hide();
+		} else {
+			$contact.show();
+		}
 		return $contact;
 	};
 

@@ -811,8 +811,8 @@ OC.Contacts = OC.Contacts || {
 		});
 		
 		this.$contactList.on('click', 'label', function(event) {
-			var id = $(this).attr('for');
-			$(id).prop('checked', !checkBoxes.prop('checked'));
+			var id = '#' + $(this).attr('for');
+			$(id).prop('checked', !$(id).prop('checked'));
 			return false; // Prevent opening contact
 		});
 

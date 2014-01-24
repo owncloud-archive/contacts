@@ -13,6 +13,7 @@ use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Controller,
 	Sabre\VObject,
+	OCA\Contacts\VObject\VCard as MyVCard,
 	OCA\Contacts\ImportManager;
 
 /**
