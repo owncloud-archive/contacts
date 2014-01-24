@@ -26,7 +26,18 @@ OCP\JSON::checkAppEnabled('contacts');
 
 $user = OCP\User::getUser();
 
-echo 'var contacts_groups_sortorder=[' . OCP\Config::getUserValue($user, 'contacts', 'groupsort', '') . '],';
+$groupsort = OCP\Config::getUserValue($user, 'contacts', 'groupsort', '');
+$groupsort = explode(',', $groupsort);
+$tmp = array();
+foreach($groupsort as $group) {
+	if(is_int($group)) {
+		$tmp[] = $group;
+	}
+}
+
+$groupsort = implode(',', $tmp);
+
+echo 'var contacts_groups_sortorder=[' . $groupsort . '],';
 echo 'contacts_lastgroup=\'' . OCP\Config::getUserValue($user, 'contacts', 'lastgroup', 'all') . '\',';
 echo 'contacts_sortby=\'' . OCP\Config::getUserValue($user, 'contacts', 'sortby', 'fn') . '\',';
 echo 'contacts_properties_indexed = '
