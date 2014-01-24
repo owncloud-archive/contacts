@@ -2014,6 +2014,7 @@ OC.Contacts = OC.Contacts || {};
 		for(var contact in this.contacts) {
 			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).length === 0) {
 				this.contacts[contact].getListItemElement().show();
+				this.contacts[contact].setThumbnail();
 			} else {
 				this.contacts[contact].getListItemElement().hide();
 			}
