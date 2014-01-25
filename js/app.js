@@ -666,6 +666,10 @@ OC.Contacts = OC.Contacts || {
 					console.log('Showing', contact.getId());
 					contact.show();
 				}
+				if(self.currentgroup === 'uncategorized') {
+					console.log('Hiding', contact.getId());
+					contact.hide();
+				}
 			}
 		});
 

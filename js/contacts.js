@@ -1983,7 +1983,7 @@ OC.Contacts = OC.Contacts || {};
 	ContactList.prototype.showUncategorized = function() {
 		console.log('ContactList.showUncategorized');
 		for(var contact in this.contacts) {
-			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).length === 0) {
+			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).clean('').length === 0) {
 				this.contacts[contact].getListItemElement().show();
 			} else {
 				this.contacts[contact].getListItemElement().hide();

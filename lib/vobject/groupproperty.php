@@ -37,15 +37,19 @@ class GroupProperty extends CompoundProperty {
 	* \Sabre\VObject\Property
 	*
 	* @param string $name
+	* @return bool
 	*/
 	public function addGroup($name) {
 		$name = trim($name);
 		if($this->hasGroup($name)) {
-			return;
+			return false;
 		}
 		$groups = $this->getParts();
+		// Remove empty elements
+		$groups = array_filter($groups, 'strlen');
 		$groups[] = $name;
 		$this->setParts($groups);
+		return true;
 	}
 
 	/**

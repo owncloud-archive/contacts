@@ -96,10 +96,10 @@ class GroupController extends Controller {
 					\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
 				);
 				if($obj) {
-					if(!isset($obj->CATEGORIES)) {
+					if(!$obj->inGroup($name)) {
 						continue;
 					}
-					if($obj->CATEGORIES->removeGroup($name)) {
+					if($obj->removeFromGroup($name)) {
 						$backend->updateContact(null, $id, $obj, array('noCollection' => true, 'isBatch' => true));
 					}
 				} else {
@@ -195,11 +195,9 @@ class GroupController extends Controller {
 				\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
 			);
 			if($obj) {
-				if(!isset($obj->CATEGORIES)) {
-					$obj->add('CATEGORIES');
+				if($obj->addToGroup($categoryname)) {
+					$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
 				}
-				$obj->CATEGORIES->addGroup($categoryname);
-				$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
 			}
 			$response->debug('contactId: ' . $contactId . ', categoryId: ' . $categoryId);
 			$tagMgr->tagAs($contactId, $categoryId);
@@ -243,10 +241,11 @@ class GroupController extends Controller {
 			);
 			if($obj) {
 				if(!isset($obj->CATEGORIES)) {
-					$obj->add('CATEGORIES');
+					return $response;
 				}
-				$obj->CATEGORIES->removeGroup($categoryname);
-				$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
+				if($obj->removeFromGroup($categoryname)) {
+					$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
+				}
 			} else {
 				$response->debug('Error parsing contact: ' . $contactId);
 			}
