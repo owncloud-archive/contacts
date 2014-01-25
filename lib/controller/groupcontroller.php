@@ -26,8 +26,8 @@ class GroupController extends Controller {
 		$tags = $tagMgr->getTags();
 		foreach($tags as &$tag) {
 			try {
-			$ids = $tagMgr->getIdsForTag($tag['name']);
-			$tag['contacts'] = $ids;
+				$ids = $tagMgr->getIdsForTag($tag['name']);
+				$tag['contacts'] = $ids;
 			} catch(\Exception $e) {
 				$this->api->log(__METHOD__ . ' ' . $e->getMessage());
 			}
