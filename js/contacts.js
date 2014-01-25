@@ -590,8 +590,7 @@ OC.Contacts = OC.Contacts || {};
 											OC.notify({message:t('contacts', 'Is this correct?')});
 										}, 1000);
 									}
-									, 500);
-								}
+								}, 500);
 							}
 							break;
 						case 'N':
