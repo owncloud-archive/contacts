@@ -7,6 +7,7 @@
  *
  * @author Thomas Tanghus
  * @author Evert Pot (http://www.rooftopsolutions.nl/)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE

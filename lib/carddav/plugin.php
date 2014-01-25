@@ -5,7 +5,7 @@
  * The CardDAV plugin adds CardDAV functionality to the WebDAV server
  *
  * @author Thomas Tanghus
- * @copyright 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
