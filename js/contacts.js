@@ -703,12 +703,14 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * Remove any open contact from the DOM.
 	 */
-	Contact.prototype.close = function() {
+	Contact.prototype.close = function(showListElement) {
 		$(document).unbind('status.contact.photoupdated');
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
 			this.$fullelem.hide().remove();
-			this.getListItemElement().show();
+			if(showListElement) {
+				this.getListItemElement().show();
+			}
 			this.$fullelem = null;
 			return true;
 		} else {
@@ -1745,12 +1747,23 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Returns an array with the names of the groups the contact is in
+	 *
+	 * @return Array
+	 */
+	Contact.prototype.groups = function() {
+		return this.getPreferredValue('CATEGORIES', []).clean('');
+	};
+
+
+	/**
 	 * Returns true/false depending on the contact being in the
 	 * specified group.
 	 * @param String name The group name (not case-sensitive)
-	 * @returns Boolean
+	 * @return Boolean
 	 */
 	Contact.prototype.inGroup = function(name) {
+		console.log('inGroup', name);
 		var categories = this.getPreferredValue('CATEGORIES', []);
 		var found = false;
 
