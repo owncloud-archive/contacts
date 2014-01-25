@@ -1386,7 +1386,11 @@ OC.Contacts = OC.Contacts || {
 		} else {
 			var contact = this.contacts.findById(id);
 			if(contact) {
-				contact.close();
+				// Only show the list element if contact is in current group
+				var showListElement = contact.inGroup(this.groups.nameById(this.currentgroup))
+					|| this.currentgroup === 'all'
+					|| (this.currentgroup === 'uncategorized' && contact.groups().length === 0);
+				contact.close(showListElement);
 			}
 		}
 		delete this.currentid;
