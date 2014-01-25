@@ -295,6 +295,9 @@ class VCard extends VObject\Component\VCard {
 
 	/**
 	 * Get all group names in the vCards properties
+	 *
+	 * NOTE: Not to confuse with CATEGORIES groups
+	 *
 	 * @return array
 	 */
 	public function propertyGroups() {
@@ -308,5 +311,64 @@ class VCard extends VObject\Component\VCard {
 		}
 		return $this->groups;
 	}
+
+	/**
+	* Test if vcard has group (CATEGORIES) $name
+	*
+	* @param string $name
+	* @return bool
+	*/
+	public function inGroup($name) {
+		if(!isset($this->CATEGORIES)) {
+			false;
+		}
+
+		return $this->CATEGORIES->hasGroup($name);
+	}
+
+	/**
+	* Add group (CATEGORIES) $name to vcard
+	*
+	* Return true if contact wasn't already in group
+	*
+	* @param string $name
+	* @return bool
+	*/
+	public function addToGroup($name) {
+		if(!isset($this->CATEGORIES)) {
+			$this->add('CATEGORIES');
+		}
+
+		return $this->CATEGORIES->addGroup($name);
+	}
+
+	/**
+	* Remove group (CATEGORIES) $name from vcard
+	*
+	* Return true if vcard has been updated.
+	*
+	* @param string $name
+	* @return bool
+	*/
+	public function removeFromGroup($name) {
+
+		if(!isset($this->CATEGORIES)) {
+			return false;
+		}
+
+		$updated = $this->CATEGORIES->removeGroup($name);
+		// getParts() returns an array with an empty element if
+		// CATEGORIES is empty
+		$groups = $this->CATEGORIES->getParts();
+		// Remove empty elements
+		$groups = array_filter($groups, 'strlen');
+		if(count($groups) === 0) {
+			unset($this->{'CATEGORIES'});
+			$updated = true;
+		}
+
+		return $updated;
+	}
+
 
 }
