@@ -9,7 +9,7 @@ Build status
 
 
 ##Maintainer:
-- [Thomas Tanghus](https://github.com/tanghus)
+- [Thomas Tanghus](https://github.com/tanghus) - Back- and front-end code
 
 ###Additional maintainers:
 - [Bart Visscher](https://github.com/bartv2)
@@ -27,5 +27,5 @@ Any issues should be posted in [this repository](https://github.com/owncloud/con
 ### Master branch:
 This branch is still in development. Do not use it in a production environment.
 To test it you will need the master branch of [owncloud/core](https://github.com/owncloud/core) and
-[owncloud/3rdparty](https://github.com/owncloud/3rdparty).
+remember to [update the 3rdparty submodule](http://blog.jacius.info/git-submodule-cheat-sheet/)
 
