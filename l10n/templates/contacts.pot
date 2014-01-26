@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-24 00:50-0500\n"
+"POT-Creation-Date: 2014-01-26 01:19-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: appinfo/app.php:29 lib/app.php:103
+#: appinfo/app.php:36 lib/app.php:105
 msgid "Contacts"
 msgstr ""
 
@@ -93,109 +93,109 @@ msgstr ""
 msgid "Invalid email: \"{url}\""
 msgstr ""
 
-#: js/app.js:564
+#: js/app.js:569
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr ""
 
-#: js/app.js:577
+#: js/app.js:582
 msgid "Merge failed."
 msgstr ""
 
-#: js/app.js:584
+#: js/app.js:589
 msgid "Merge failed. Error saving contact."
 msgstr ""
 
-#: js/app.js:604
+#: js/app.js:609
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:680 js/app.js:1604
+#: js/app.js:689 js/app.js:1622
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
-#: js/app.js:901
+#: js/app.js:911
 msgid "Error adding to group."
 msgstr ""
 
-#: js/app.js:924
+#: js/app.js:934
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1100
+#: js/app.js:1110
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1138
+#: js/app.js:1148
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1277 js/app.js:1281 templates/contacts.php:192
+#: js/app.js:1287 js/app.js:1291 templates/contacts.php:192
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1303 js/app.js:1356 js/settings.js:120 templates/settings.php:62
+#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
 msgstr ""
 
-#: js/app.js:1330 templates/contacts.php:173
+#: js/app.js:1340 templates/contacts.php:173
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1334
+#: js/app.js:1344
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1428
+#: js/app.js:1446
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1451
+#: js/app.js:1469
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1461
+#: js/app.js:1479
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1562
+#: js/app.js:1580
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1566
+#: js/app.js:1584
 msgid "Crop photo"
 msgstr ""
 
-#: js/contacts.js:611
+#: js/contacts.js:615
 msgid "Is this correct?"
 msgstr ""
 
-#: js/contacts.js:879
+#: js/contacts.js:885
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1076
+#: js/contacts.js:1082
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:1150
+#: js/contacts.js:1156
 msgid "Error parsing birthday {bday}: {error}"
 msgstr ""
 
-#: js/contacts.js:2193
+#: js/contacts.js:2212
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2204
+#: js/contacts.js:2223
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2213
+#: js/contacts.js:2232
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -383,7 +383,7 @@ msgstr ""
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
-#: lib/app.php:144
+#: lib/app.php:146
 msgid "Address book not found"
 msgstr ""
 
@@ -419,41 +419,41 @@ msgstr ""
 msgid "{name}'s Birthday"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:112
+#: lib/controller/addressbookcontroller.php:113
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:129
+#: lib/controller/addressbookcontroller.php:130
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:157
+#: lib/controller/addressbookcontroller.php:158
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:163
+#: lib/controller/addressbookcontroller.php:164
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:201
+#: lib/controller/addressbookcontroller.php:202
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:237
+#: lib/controller/addressbookcontroller.php:238
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:277
+#: lib/controller/addressbookcontroller.php:278
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:287
+#: lib/controller/addressbookcontroller.php:288
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:291
+#: lib/controller/addressbookcontroller.php:292
 msgid "Error removing contact from other address book."
 msgstr ""
 
@@ -462,7 +462,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
 #: lib/controller/contactphotocontroller.php:274
-#: lib/controller/exportcontroller.php:66
+#: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr ""
 
@@ -503,39 +503,39 @@ msgid "Error getting user photo"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:37
+#: lib/controller/importcontroller.php:38
 msgid "No file was uploaded. Unknown error"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:46
+#: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:52
+#: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
 msgstr ""
 
@@ -581,94 +581,94 @@ msgstr ""
 msgid "Error getting PHOTO property."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
+#: lib/controller/groupcontroller.php:58 lib/controller/groupcontroller.php:80
 msgid "No group name given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:64
+#: lib/controller/groupcontroller.php:65
 msgid "Error adding group."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:127
+#: lib/controller/groupcontroller.php:128
 msgid "No group name to rename from given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:131
+#: lib/controller/groupcontroller.php:132
 msgid "No group name to rename to given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:137
+#: lib/controller/groupcontroller.php:138
 msgid "Error renaming group."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:175
-#: lib/controller/groupcontroller.php:223
+#: lib/controller/groupcontroller.php:176
+#: lib/controller/groupcontroller.php:222
 msgid "Group ID missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:180
+#: lib/controller/groupcontroller.php:181
 msgid "Group name missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:185
-#: lib/controller/groupcontroller.php:228
+#: lib/controller/groupcontroller.php:186
+#: lib/controller/groupcontroller.php:227
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:53
+#: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
 msgstr ""
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
 msgstr ""
 
-#: lib/controller/importcontroller.php:72
+#: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:94
+#: lib/controller/importcontroller.php:95
 msgid "Error uploading contacts to storage."
 msgstr ""
 
-#: lib/controller/importcontroller.php:139
+#: lib/controller/importcontroller.php:140
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:156
+#: lib/controller/importcontroller.php:157
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:164
+#: lib/controller/importcontroller.php:165
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:169
-#: lib/controller/importcontroller.php:292
+#: lib/controller/importcontroller.php:170
+#: lib/controller/importcontroller.php:293
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:176
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:217
+#: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
 msgstr ""
 
-#: lib/controller/settingscontroller.php:35
+#: lib/controller/settingscontroller.php:36
 msgid "No key is given."
 msgstr ""
 
-#: lib/controller/settingscontroller.php:39
+#: lib/controller/settingscontroller.php:40
 msgid "No value is given."
 msgstr ""
 
-#: lib/controller/settingscontroller.php:50
+#: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
 msgstr ""
 
-#: lib/searchprovider.php:24
+#: lib/searchprovider.php:32
 msgid "Contact"
 msgstr ""
 

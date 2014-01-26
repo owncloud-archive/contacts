@@ -49,6 +49,7 @@
 "Couldn't get contact list." => "Couldn't get contact list.",
 "Contact is not in this group." => "Contact is not in this group.",
 "Contacts are not in this group." => "Contacts are not in this group.",
+"A group named \"{group}\" already exists" => "A group named \"{group}\" already exists",
 "Failed renaming group: {error}" => "Failed renaming group: {error}",
 "You can drag groups to\narrange them as you like." => "You can drag groups to\narrange them as you like.",
 "Failed adding group: {error}" => "Failed adding group: {error}",

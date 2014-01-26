@@ -49,6 +49,7 @@
 "Couldn't get contact list." => "Ni mogoče pridobiti seznama stikov.",
 "Contact is not in this group." => "Stik ni v tej skupini.",
 "Contacts are not in this group." => "Stiki niso v tej skupini.",
+"A group named \"{group}\" already exists" => "Skupina z imenom \"{group}\" že obstaja.",
 "Failed renaming group: {error}" => "Napaka preimenovanja skupine: {error}",
 "You can drag groups to\narrange them as you like." => "Skupine je mogoče\nrazvrščati po meri.",
 "Failed adding group: {error}" => "Dodajanje skupine je spodletelo: {error}",

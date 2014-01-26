@@ -49,6 +49,7 @@
 "Couldn't get contact list." => "Kontaktliste konnte nicht ermittelt werden.",
 "Contact is not in this group." => "Kontakt ist nicht in der Gruppe.",
 "Contacts are not in this group." => "Kontakte sind nicht in der Gruppe.",
+"A group named \"{group}\" already exists" => "Eine Gruppe namens \"{group}\" existiert bereits",
 "Failed renaming group: {error}" => "Das Umbenennen der Gruppe ist fehlgeschlagen: {error}",
 "You can drag groups to\narrange them as you like." => "Per \"Drag & Drop\" können Sie Gruppen\nnach Ihren Wünschen anordnen.",
 "Failed adding group: {error}" => "Fehler beim Hinzufügen einer Gruppe: {error}",
