@@ -94,6 +94,10 @@ OC.Contacts = OC.Contacts || {};
 		this.metadata.backend = backend;
 	};
 
+	Contact.prototype.hasPhoto = function() {
+		return this.data.photo;
+	};
+
 	Contact.prototype.isOpen = function() {
 		return this.$fullelem !== null;
 	};
@@ -1629,7 +1633,8 @@ OC.Contacts = OC.Contacts || {};
 		};
 
 		this.$photowrapper.addClass('loading').addClass('wait');
-		if(this.getPreferredValue('PHOTO', null) === null) {
+		console.log('hasPhoto', this.hasPhoto());
+		if(!this.hasPhoto()) {
 			$.when(this.storage.getDefaultPhoto())
 				.then(function(image) {
 					$('img.contactphoto').detach();
