@@ -1422,11 +1422,16 @@ OC.Contacts = OC.Contacts || {
 		}
 		this.hideActions();
 		console.log('Contacts.openContact', id, typeof id);
+		this.currentid = id;
+		var contact = this.contacts.findById(this.currentid);
+		// If opened from search we can't be sure the contact is in currentgroup
+		if(!contact.inGroup(this.groups.nameById(this.currentgroup)) && this.currentgroup !== 'all') {
+			this.groups.selectGroup({id:'all'});
+		}
 		if(this.currentid && this.currentid !== id) {
 			this.contacts.closeContact(this.currentid);
 		}
 		$(window).unbind('hashchange', this.hashChange);
-		this.currentid = id;
 		this.setAllChecked(false);
 		console.assert(typeof this.currentid === 'string', 'Current ID not string');
 		// Properties that the contact doesn't know
@@ -1435,7 +1440,6 @@ OC.Contacts = OC.Contacts || {
 			groups: this.groups.categories,
 			currentgroup: {id:this.currentgroup, name:this.groups.nameById(this.currentgroup)}
 		};
-		var contact = this.contacts.findById(this.currentid);
 		if(!contact) {
 			console.warn('Error opening', this.currentid);
 			$(document).trigger('status.contacts.error', {
