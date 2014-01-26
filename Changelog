@@ -1,5 +1,12 @@
 ownCloud Contacts Changelog
 
+6.0.2
+- Many improvements for groups both front- and back-end.
+- Fix unusable app after import of contact with no name.
+
+6.0.1
+- Closed potential XSS issue with group name.
+
 6.0
  - Don't fire a request for every contacts when mass adding to/removing from groups.
  - Don't have a request for each thumbnail.
