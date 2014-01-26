@@ -207,8 +207,11 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 		} catch(\Exception $e) {
 			throw new \Sabre_DAV_Exception_NotFound($e->getMessage());
 		}
-		return ($contact ? $contact : false);
-
+		if(is_array($contact) ) {
+			$contact['etag'] = '"' . md5($contact['carddata']) . '"';
+			return $contact;
+		}
+		throw new \Sabre_DAV_Exception('Error retrieving the card');
 	}
 
 	/**
