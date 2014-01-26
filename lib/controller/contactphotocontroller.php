@@ -30,6 +30,10 @@ class ContactPhotoController extends Controller {
 		$etag = null;
 		//$maxSize = isset($this->request['maxSize']) ? $this->request['maxSize'] : 170;
 
+		\OCP\Util::writeLog('contacts',
+			__METHOD__.' backend: '.$params['backend'].', ab; '.$params['addressBookId'].', contact: '.$params['contactId'],
+			\OCP\Util::DEBUG
+		);
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contact = $addressBook->getChild($params['contactId']);
 

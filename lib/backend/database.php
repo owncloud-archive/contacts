@@ -74,7 +74,7 @@ class Database extends AbstractBackend {
 			}
 			$result = self::$preparedQueries['addressbooksforuser']->execute(array($this->userid));
 			if (\OCP\DB::isError($result)) {
-				\OCP\Util::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $this->addressbooks;
 			}
 		} catch(\Exception $e) {
@@ -106,7 +106,7 @@ class Database extends AbstractBackend {
 			}
 			$result = self::$preparedQueries['getaddressbook']->execute(array($addressbookid));
 			if (\OCP\DB::isError($result)) {
-				\OCP\Util::write('contacts', __METHOD__. 'DB error: '
+				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return null;
 			}
@@ -179,7 +179,7 @@ class Database extends AbstractBackend {
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
-		} catch(Exception $e) {
+		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts',
 				__METHOD__ . ', exception: '
 				. $e->getMessage(), \OCP\Util::ERROR);
@@ -227,7 +227,7 @@ class Database extends AbstractBackend {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return false;
 			}
-		} catch(Exception $e) {
+		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__ . ', exception: ' . $e->getMessage(), \OCP\Util::ERROR);
 			return false;
 		}
@@ -461,10 +461,6 @@ class Database extends AbstractBackend {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return null;
 			}
-			if((int)$result->numRows() === 0) {
-				\OCP\Util::writeLog('contacts', __METHOD__.', Not found, id: '. $id, \OCP\Util::DEBUG);
-				return null;
-			}
 		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
 			\OCP\Util::writeLog('contacts', __METHOD__.', id: '. $id, \OCP\Util::DEBUG);
@@ -472,6 +468,10 @@ class Database extends AbstractBackend {
 		}
 
 		$row = $result->fetchRow();
+		if(!$row) {
+			\OCP\Util::writeLog('contacts', __METHOD__.', Not found, id: '. $id, \OCP\Util::DEBUG);
+			return null;
+		}
 		$row['permissions'] = \OCP\PERMISSION_ALL;
 		return $row;
 	}
@@ -748,11 +748,12 @@ class Database extends AbstractBackend {
 			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 			return null;
 		}
-		if((int)$result->numRows() === 0) {
+		$one = $result->fetchOne();
+		if(!$one) {
 			\OCP\Util::writeLog('contacts', __METHOD__.', Not found, uri: '. $uri, \OCP\Util::DEBUG);
 			return null;
 		}
-		return $result->fetchOne();
+		return $one;
 	}
 
 	private function createAddressBookURI($displayname, $userid = null) {
@@ -765,7 +766,7 @@ class Database extends AbstractBackend {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 				return $name;
 			}
-		} catch(Exception $e) {
+		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__ . ' exception: ' . $e->getMessage(), \OCP\Util::ERROR);
 			return $name;
 		}
