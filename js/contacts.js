@@ -588,12 +588,6 @@ OC.Contacts = OC.Contacts || {};
 								self.data.N[0]['value'][2] = nvalue.length > 2 && nvalue.slice(1, nvalue.length-1).join(' ') || '';
 								setTimeout(function() {
 									self.saveProperty({name:'N', value:self.data.N[0].value.join(';')});
-									if(nvalue.length > 1) {
-										setTimeout(function() {
-											self.$fullelem.find('.fullname').next('.action.edit').trigger('click');
-											OC.notify({message:t('contacts', 'Is this correct?')});
-										}, 1000);
-									}
 								}, 500);
 							}
 							break;
