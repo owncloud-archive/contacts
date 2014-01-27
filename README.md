@@ -11,6 +11,9 @@ Build status
 ##Maintainer:
 - [Thomas Tanghus](https://github.com/tanghus) - Back- and front-end code
 
+###Design / front-end:
+- [Jan ten Bokkel](https://github.com/jbtbnl)
+
 ###Additional maintainers:
 - [Bart Visscher](https://github.com/bartv2)
  
