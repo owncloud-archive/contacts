@@ -86,7 +86,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 		foreach($mutations as $property=>$newvalue) {
 			switch($property) {
 				case '{DAV:}displayname' :
-					$changes['name'] = $newvalue;
+					$changes['displayname'] = $newvalue;
 					break;
 				case '{' . \Sabre_CardDAV_Plugin::NS_CARDDAV
 						. '}addressbook-description' :
