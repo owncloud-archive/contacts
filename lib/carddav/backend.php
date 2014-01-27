@@ -116,8 +116,6 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 */
 	public function createAddressBook($principaluri, $uri, array $properties) {
 
-		$properties = array();
-
 		foreach($properties as $property => $newvalue) {
 
 			switch($property) {
