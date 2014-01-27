@@ -83,8 +83,6 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 * @return bool|array
 	 */
 	public function updateAddressBook($addressbookid, array $mutations) {
-		$name = null;
-		$description = null;
 		$changes = array();
 
 		foreach($mutations as $property=>$newvalue) {
@@ -119,7 +117,6 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	public function createAddressBook($principaluri, $uri, array $properties) {
 
 		$properties = array();
-		$userid = $this->userIDByPrincipal($principaluri);
 
 		foreach($properties as $property => $newvalue) {
 
@@ -175,7 +172,6 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 * @return array
 	 */
 	public function getCards($addressbookid) {
-		$contacts = array();
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
 		$contacts = $backend->getContacts($id);
 
