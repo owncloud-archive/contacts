@@ -23,6 +23,7 @@
 namespace OCA\Contacts;
 use Sabre\VObject\Component;
 use OCA\Contacts\Connector\ImportCsvConnector;
+use OCA\Contacts\Connector\ImportVCardConnector;
 use OCA\Contacts\Addressbook;
 
 /**
@@ -36,11 +37,27 @@ class ImportManager {
 	}
 	
 	public function getTypes() {
-		$key = 'import_types';
-		
-		
-		$data = \OCP\Config::getAppValue('contacts', $key, false);
-		return $data ? (array)json_decode($data) : array();
+		$prefix = "import_";
+		$suffix = ".xml";
+		$path = __DIR__ . "/../formats/";
+		$files = scandir($path);
+		$formats = array();
+		foreach ($files as $file) {
+			if (!strncmp($file, $prefix, strlen($prefix)) && substr($file, - strlen($suffix)) === $suffix) {
+				$format = simplexml_load_file ( $path . $file );
+				if ($format) {
+					if (isset($format->import_core)
+					&& isset($format->import_core->name)
+					&& isset($format->import_core->display_name)
+					&& isset($format->import_core->type)
+					&& isset($format->import_core->active)
+					&& $format->import_core->active == '1') {
+						$formats[(string)$format->import_core->name] = (string)$format->import_core->display_name;
+					}
+				}
+			}
+		}
+		return $formats;
 	}
 	
 	/**
@@ -49,10 +66,21 @@ class ImportManager {
 	 * @return array Format array('param1' => 'value', 'param2' => 'value')
 	 */
 	public function getType($typeName) {
-		$key = 'import_' . $typeName;
-
-		$data = \OCP\Config::getAppValue('contacts', $key, false);
-		return $data ? (array)json_decode($data) : array();
+		$path = __DIR__ . "/../formats/import_" . $typeName . "_connector.xml";
+		if (file_exists($path)) {
+			$format = simplexml_load_file ( $path );
+			if ($format) {
+				if (isset($format->import_core)
+				&& isset($format->import_core->name)
+				&& isset($format->import_core->display_name)
+				&& isset($format->import_core->type)
+				&& isset($format->import_core->active)
+				&& $format->import_core->active == '1') {
+					return $format;
+				}
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -60,7 +88,7 @@ class ImportManager {
 	 * @param string $id
 	 * @param array $settings the preferences, format array('param1' => 'value', 'param2' => 'value')
 	 * @return boolean
-	 */
+	 
 	public function setType($typeName, $settings) {
 		$types = (array)$this->getTypes();
 
@@ -78,7 +106,7 @@ class ImportManager {
 		return $data
 			? \OCP\Config::setAppValue('contacts', $key, $data)
 			: false;
-	}
+	}*/
 	
 	/**
 	 * @brief imports the file with the selected type, and converts into VCards
@@ -90,9 +118,13 @@ class ImportManager {
 	public function importFile($file, $typeName, $limit=-1) {
 		$importType = $this->getType($typeName);
 		$elements = array();
-		if ($importType['type'] == 'csv') {
+		if ((string)$importType->import_core->type == 'csv') {
 			// use class ImportCsvConnector
-			$connector = new ImportCsvConnector($importType['connector']);
+			$connector = new ImportCsvConnector($importType);
+			$elements = $connector->getElementsFromInput($file, $limit);
+		} else if ((string)$importType->import_core->type == 'vcard') {
+			// use class importVcardConnector
+			$connector = new ImportVCardConnector($importType);
 			$elements = $connector->getElementsFromInput($file, $limit);
 		}
 		if (count($elements) > 0) {
@@ -110,48 +142,31 @@ class ImportManager {
 	 * @return the corresponding type|false
 	 */
 	public function detectFileType($file) {
-		$toReturn = false;
-		$curUnkownParams=0;
-		
-		$types = $this-getTypes();
-		
-		foreach ($types as $type) {
-			$elements = $this->importFile($file, $type, 1);
-			if ($elements && count($elements)>0) {
-				$unknownParams = $elements[0]->select("X-Unknown-Element");
-				
-				if (!$toReturn || count($unknownParams) < $curUnkownParams) {
-					$toReturn = $type;
-					$curUnkownParams = count($unknownParams);
-				}
-			}
-		}
-		return $toReturn;
 	}
 	
 	/**
 	 * @brief Query whether a backend or an address book is active
 	 * @param string $addressbookid If null it checks whether the backend is activated.
 	 * @return boolean
-	 */
+	 
 	public function isActive($typeName = null) {
 		$key = 'active_import_' . $typeName;
 
 		return !!(\OCP\Config::getAppValue('contacts', $key, 1));
-	}
+	}*/
 
 	/**
 	 * @brief Activate a backend or an address book
 	 * @param bool active
 	 * @param string $addressbookid If null it activates the backend.
 	 * @return boolean
-	 */
+	 
 	public function setActive($active, $typeName = null) {
 		$key = 'active_import_' . $typeName;
 
 		$this->setModifiedAddressBook($typeName);
 		return \OCP\Config::getAppValue('contacts', $key, (int)$active);
-	}
+	}*/
 	
 }
 

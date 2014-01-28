@@ -102,6 +102,18 @@ class ImportCsvConnector extends ImportConnector{
 		return false;
 	}
 	
+	/**
+	 * @brief calculates a percentage of the correspondance of the current format with the given element.
+	 * @param $element the element to calculate
+	 * @return number between 0 and 1, result of the formula (number of fields-number of X-Unkown-Element)/number of fields
+	 */
+	public function getFormatMatch($element) {
+		$fieldsNumber = count($element->getChildren);
+		$unkownNumber = count($element->select("X-Unknown-Element"));
+		
+		return (($fieldsNumber-$unkownNumber)/$fieldsNumber);
+	}
+	
 }
 
 ?>

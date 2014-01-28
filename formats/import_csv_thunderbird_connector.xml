@@ -4,6 +4,10 @@
 <import_entries>
 	
 	<import_core>
+		<name>csv_thunderbird</name>
+		<display_name>Thunderbird CSV</display_name>
+		<type>csv</type>
+		<active>1</active>
 		<card_separator value="\n"/>
 		<entry_separator value=","/>
 		<ignore_first_line enabled="true"/>

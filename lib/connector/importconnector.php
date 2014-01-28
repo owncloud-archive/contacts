@@ -41,18 +41,23 @@ abstract class ImportConnector {
 	
 	abstract function convertElementToVCard($element);
 	
+	abstract function getFormatMatch($elements);
+	
 	public function setConfig($xml_config) {
-		try {
-			//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', setting xml config', \OCP\Util::DEBUG);
-			$this->configContent = new \SimpleXMLElement($xml_config);
-		} catch (Exception $e) {
-			\OCP\Util::writeLog('csv_vcard_connector', __METHOD__.', error in setting xml config', \OCP\Util::DEBUG);
-		}
+		$this->configContent = $xml_config;
 	}
 	
 	protected function updateProperty(&$property, $importEntry, $value) {
 		if (isset($importEntry->vcard_entry['type'])) {
 			$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($importEntry->vcard_entry['type']));
+		}
+		if (isset($importEntry->vcard_entry->additional_property)) {
+			foreach ($importEntry->vcard_entry->additional_property as $additionalProperty) {
+				$property->parameters[] = new \Sabre\VObject\Parameter(''.$additionalProperty['name'], ''.$additionalProperty['value']);
+			}
+		}
+		if (isset($importEntry->vcard_entry['prefix'])) {
+			$value = $importEntry->vcard_entry['prefix'].$value;
 		}
 		if (isset($importEntry->vcard_entry['position'])) {
 			$position = $importEntry->vcard_entry['position'];
@@ -77,7 +82,7 @@ abstract class ImportConnector {
 		$properties = $vcard->select($v_param['property']);
 		foreach ($properties as $property) {
 			//echo "update prop ".$v_param['property']."\n";
-			if ($v_param['type'] == null) {
+			if ($v_param['type'] == null && !isset($v_param->additional_property)) {
 				//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' property '.$v_param['type'].' found', \OCP\Util::DEBUG);
 				return $property;
 			}
@@ -85,6 +90,17 @@ abstract class ImportConnector {
 				//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' <> '.$v_param['type'], \OCP\Util::DEBUG);
 				if (!strcmp($parameter->value, $v_param['type'])) {
 					//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' found', \OCP\Util::DEBUG);
+					$found=0;
+					if (isset($v_param->additional_property)) {
+						foreach($v_param->additional_property as $additional_property) {
+							if ((string)$parameter->name == $additional_property['name']) {
+								$found++;
+							}
+						}
+						if ($found == count($v_param->additional_property)) {
+							return $property;
+						}
+					}
 					return $property;
 				}
 			}

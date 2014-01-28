@@ -195,7 +195,7 @@ class ImportController extends Controller {
 		
 		$importManager = new ImportManager();
 		$file = str_replace(array("\r","\n\n"), array("\n","\n"), $file);
-		$parts = $importManager->importFile($view->getLocalFile('/imports/' . $filename), "csv_thunderbird");
+		$parts = $importManager->importFile($view->getLocalFile('/imports/' . $filename), "vcard_gmail");
 		//error_log("importing en cours kwa ".count($parts));
 		
 		//import the contacts

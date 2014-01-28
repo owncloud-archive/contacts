@@ -1,0 +1,80 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!-- XML connector for Gmail Vcard csv export -->
+<import_entries>
+	
+	<import_core>
+		<name>vcard_gmail</name>
+		<display_name>Gmail VCard</display_name>
+		<type>vcard</type>
+		<active>1</active>
+		<card_begin value="BEGIN:VCARD"/>
+		<card_end value="END:VCARD"/>
+		<replace from="http\://" to="http://" />
+		<replace from="https\://" to="https://" />
+	</import_core>
+	
+	<import_entry property="URL" enabled="true">
+		<group_entry property="X-ABLabel" value="_$!&lt;HomePage&gt;!$_">
+		</group_entry>
+		<vcard_entry property="URL" type="HOME">
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry property="X-GTALK" enabled="true">
+		<vcard_entry property="IMPP" prefix="xmpp:">
+			<additional_property name="X-SERVICE-TYPE" value="googletalk" />
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry property="X-AIM" enabled="true">
+		<vcard_entry property="IMPP" prefix="aim:">
+			<additional_property name="X-SERVICE-TYPE" value="aim" />
+		</vcard_entry>
+	</import_entry>
+	
+	<import_entry property="X-YAHOO" enabled="true">
+		<vcard_entry property="IMPP" prefix="ymsgr:">
+			<additional_property name="X-SERVICE-TYPE" value="yahoo" />
+		</vcard_entry>
+	</import_entry>
+
+	<import_entry property="X-SKYPE" enabled="true">
+		<vcard_entry property="IMPP" prefix="skype:">
+			<additional_property name="X-SERVICE-TYPE" value="skype" />
+		</vcard_entry>
+	</import_entry>
+
+	<import_entry property="X-QQ" enabled="true">
+		<vcard_entry property="IMPP" prefix="x-apple:">
+			<additional_property name="X-SERVICE-TYPE" value="qq" />
+		</vcard_entry>
+	</import_entry>
+
+	<import_entry property="X-MSN" enabled="true">
+		<vcard_entry property="IMPP" prefix="msn:">
+			<additional_property name="X-SERVICE-TYPE" value="msn" />
+		</vcard_entry>
+	</import_entry>
+
+	<import_entry property="X-ICQ" enabled="true">
+		<vcard_entry property="IMPP" prefix="icq:">
+			<additional_property name="X-SERVICE-TYPE" value="icq" />
+		</vcard_entry>
+	</import_entry>
+
+	<import_entry property="X-JABBER" enabled="true">
+		<vcard_entry property="IMPP" prefix="xmpp:">
+			<additional_property name="X-SERVICE-TYPE" value="jabber" />
+		</vcard_entry>
+	</import_entry>
+	
+	<!--<import_entry property="" type="" prefix="" position="" enabled="true">
+		<group_entry property="" value="">
+		</group_entry>
+		<vcard_entry property="" type="" prefix="" position="" image="">
+			<additional_property name="" value="" />
+		</vcard_entry>
+	</import_entry>-->
+		
+</import_entries>

@@ -24,7 +24,8 @@ namespace OCA\Contacts\Connector;
 
 use Sabre\VObject\Component,
 	Sabre\VObject\StringUtil,
-	\SplFileObject as SplFileObject;
+	\SplFileObject as SplFileObject,
+	Sabre\VObject;
 
 class ImportVCardConnector extends ImportConnector{
 
@@ -40,11 +41,22 @@ class ImportVCardConnector extends ImportConnector{
 		$file = file_get_contents($input);
 
 		$nl = "\n";
-		$file = str_replace(array("\r","\n\n"), array("\n","\n"), $file);
+		$replace_from = array("\r","\n\n");
+		$replace_to = array("\n","\n");
+		foreach ($this->configContent->import_core->replace as $replace) {
+			if (isset($replace['from']) && isset($replace['to'])) {
+				$replace_from[] = $replace['from'];
+				$replace_to[] = $replace['to'];
+			}
+		}
+		
+		$file = str_replace($replace_from, $replace_to, $file);
+		
 		$lines = explode($nl, $file);
 		$inelement = false;
 		$parts = array();
 		$card = array();
+		$numParts = 0;
 		foreach($lines as $line) {
 				if(strtoupper(trim($line)) == $this->configContent->import_core->card_begin['value']) {
 						$inelement = true;
@@ -53,6 +65,10 @@ class ImportVCardConnector extends ImportConnector{
 						$parts[] = implode($nl, $card);
 						$card = array();
 						$inelement = false;
+						$numParts++;
+						if ($numParts == $limit) {
+							break;
+						}
 				}
 				if ($inelement === true && trim($line) != '') {
 						$card[] = $line;
@@ -60,68 +76,72 @@ class ImportVCardConnector extends ImportConnector{
 		}
 		
 		$index = 0;
-		foreach($csv as $line)
+		$elements = array();
+		foreach($parts as $part)
 		{
-			if (!($ignore_first_line && $index == 0) && count($line) > 1) { // Ignore first line
-				
-				$elements[] = $this->convertElementToVCard($line, $titles);
-				
-				if (count($elements) == $limit) {
-					break;
-				}
-			} else if ($ignore_first_line && $index == 0) {
-				$titles = $line;
-			}
-			$index++;
+			$elements[] = $this->convertElementToVCard($part);
 		}
 		
 		return array_values($elements);
 	}
 	
 	/**
-	 * @brief converts a unique element into a owncloud VCard
-	 * @param $element the element to convert
-	 * @return VCard, all unconverted elements are stored in X-Unknown-Element parameters
+	 * @brief converts a VCard into a owncloud VCard
+	 * @param $element the VCard element to convert
+	 * @return VCard
 	 */
-	public function convertElementToVCard($element, $title = null) {
-		$vcard = \Sabre\VObject\Component::create('VCARD');
+	public function convertElementToVCard($element) {
+		$source = VObject\Reader::read($element);
+		$dest = \Sabre\VObject\Component::create('VCARD');
 		
-		for ($i=0; $i < count($element); $i++) {
-			if ($element[$i] != '') {
-				// Look for the right import_entry
-				$importEntry = $this->getImportEntry((String)$i);
-				if ($importEntry) {
-					//$properties = $vcard->select($importEntry->vcard_entry['property']);
-					//if (count($properties) == 0) {
-						// Create a new property and attach it to the vcard
-						$property = $this->getOrCreateVCardProperty($vcard, $importEntry->vcard_entry);
-						//$property = \Sabre\VObject\Property::create($importEntry->vcard_entry['property']);
-						$this->updateProperty($property, $importEntry, $element[$i]);
-						//echo "property : ".$property->serialize();
-						//$vcard->add($property);
-					/*} else {
-						for ($j=0; $j < count($properties); $j++) {
-							$this->updateProperty($properties[$j], $importEntry, $element[$i]);
+		foreach ($source->children() as $sourceProperty) {
+			$importEntry = $this->getImportEntry($sourceProperty, $source);
+			if ($importEntry) {
+				$property = $this->getOrCreateVCardProperty($dest, $importEntry->vcard_entry);
+				$this->updateProperty($property, $importEntry, $sourceProperty->value);
+			} else {
+				$property = clone $sourceProperty;
+				$dest->add($property);
+			}
+		}
+		
+		$dest->validate(\Sabre\VObject\Component\VCard::REPAIR);
+		return $dest;
+	}
+	
+	/**
+	 * @brief tests if the property has to be translated by looking for its signature in the xml configuration
+	 * @param $property Sabre VObject Property too look
+	 * @param $vcard the parent Sabre VCard object to look for a 
+	 */
+	private function getImportEntry($property, $vcard) {
+		for ($i=0; $i < $this->configContent->import_entry->count(); $i++) {
+			if ($this->configContent->import_entry[$i]['property'] == $property->name && $this->configContent->import_entry[$i]['enabled'] == 'true') {
+				if (isset($this->configContent->import_entry[$i]->group_entry)) {
+					$toUnset = array();
+					$numElt = 0;
+					foreach($this->configContent->import_entry[$i]->group_entry as $groupEntry) {
+						$sourceGroupList = $vcard->select($groupEntry['property']);
+						if (count($sourceGroupList>0)) {
+							foreach ($sourceGroupList as $oneSourceGroup) {
+								if ($oneSourceGroup->value == $groupEntry['value'] && isset($oneSourceGroup->group) && isset($property->group) && $oneSourceGroup->group == $property->group) {
+									$numElt++;
+								}
+							}
 						}
-					}*/
+					}
+					if ($numElt == count($this->configContent->import_entry[$i]->group_entry)) {
+						return $this->configContent->import_entry[$i];
+					}
 				} else {
-					$property = \Sabre\VObject\Property::create("X-Unknown-Element", $element[$i]);
-					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.$title[$i]);
-					$vcard->add($property);
+					return $this->configContent->import_entry[$i];
 				}
 			}
 		}
-		$vcard->validate(\Sabre\VObject\Component\VCard::REPAIR);
-		return $vcard;
+		return false;
 	}
 	
-	private function getImportEntry($position) {
-		for ($i=0; $i < $this->configContent->import_entry->count(); $i++) {
-			if ($this->configContent->import_entry[$i]['position'] == $position && $this->configContent->import_entry[$i]['enabled'] == 'true') {
-				return $this->configContent->import_entry[$i];
-			}
-		}
-		return false;
+	public function getFormatMatch($elements) {
 	}
 	
 }
