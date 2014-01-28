@@ -1422,14 +1422,14 @@ OC.Contacts = OC.Contacts || {
 		}
 		this.hideActions();
 		console.log('Contacts.openContact', id, typeof id);
+		if(this.currentid && this.currentid !== id) {
+			this.contacts.closeContact(this.currentid);
+		}
 		this.currentid = id;
 		var contact = this.contacts.findById(this.currentid);
 		// If opened from search we can't be sure the contact is in currentgroup
 		if(!contact.inGroup(this.groups.nameById(this.currentgroup)) && this.currentgroup !== 'all') {
 			this.groups.selectGroup({id:'all'});
-		}
-		if(this.currentid && this.currentid !== id) {
-			this.contacts.closeContact(this.currentid);
 		}
 		$(window).unbind('hashchange', this.hashChange);
 		this.setAllChecked(false);
