@@ -1423,7 +1423,14 @@ OC.Contacts = OC.Contacts || {
 		this.hideActions();
 		console.log('Contacts.openContact', id, typeof id);
 		if(this.currentid && this.currentid !== id) {
-			this.contacts.closeContact(this.currentid);
+			var contact = this.contacts.findById(this.currentid);
+			if(contact) {
+				// Only show the list element if contact is in current group
+				var showListElement = contact.inGroup(this.groups.nameById(this.currentgroup))
+					|| this.currentgroup === 'all'
+					|| (this.currentgroup === 'uncategorized' && contact.groups().length === 0);
+				contact.close(showListElement);
+			}
 		}
 		this.currentid = id;
 		var contact = this.contacts.findById(this.currentid);
