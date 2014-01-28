@@ -1013,7 +1013,14 @@ OC.Contacts = OC.Contacts || {};
 			.slice(0, 2).reverse().join(' ');
 
 		this.displayNames.lf = this.getPreferredValue('N', [this.displayNames.fn])
-			.slice(0, 2).join(', ');
+			.slice(0, 2).join(', ').trim();
+		// Fix misplaced comma if either first or last name is missing
+		if(this.displayNames.lf[0] === ',') {
+			this.displayNames.lf = this.displayNames.lf.substr(1);
+		}
+		if(this.displayNames.lf[this.displayNames.lf.length-1] === ',') {
+			this.displayNames.lf = this.displayNames.lf.substr(0, this.displayNames.lf.length-1);
+		}
 
 		this.$listelem = this.$listTemplate.octemplate({
 			id: this.id,
