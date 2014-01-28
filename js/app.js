@@ -1388,7 +1388,7 @@ OC.Contacts = OC.Contacts || {
 		this.lastSelectedContacts = [];
 	},
 	jumpToContact: function(id) {
-		this.$rightContent.scrollTop(this.contacts.contactPos(id)-30);
+		this.$rightContent.scrollTop(this.contacts.contactPos(id));
 	},
 	closeContact: function(id) {
 		$(window).unbind('hashchange', this.hashChange);
