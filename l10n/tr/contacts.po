@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-26 01:19-0500\n"
-"PO-Revision-Date: 2014-01-24 10:20+0000\n"
-"Last-Translator: volkangezer <volkangezer@gmail.com>\n"
+"POT-Creation-Date: 2014-01-28 01:25-0500\n"
+"PO-Revision-Date: 2014-01-28 06:25+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -180,11 +180,7 @@ msgstr "Profil fotografını düzenle"
 msgid "Crop photo"
 msgstr "Fotoğrafı kırp"
 
-#: js/contacts.js:615
-msgid "Is this correct?"
-msgstr "Doğru mu?"
-
-#: js/contacts.js:885
+#: js/contacts.js:878
 msgid "Error parsing date: {date}"
 msgstr "Tarih ayıklanırken hata: {date}"
 

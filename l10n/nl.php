@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Het bestand dat u probeert te uploaden overschrijdt de maximale bestand grootte voor bestand uploads voor deze server.",
 "Edit profile picture" => "Bewerk profielafbeelding",
 "Crop photo" => "Bijsnijden foto",
-"Is this correct?" => "Is dit correct?",
 "Error parsing date: {date}" => "Fout bij lezen datum: {date}",
 "# groups" => "# groepen",
 "Error parsing birthday {bday}: {error}" => "Fout bij interpreteren verjaardag {bday}: {error}",

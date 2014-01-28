@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Yüklemeye çalıştığınız dosya sunucudaki dosya yükleme maksimum boyutunu aşmaktadır. ",
 "Edit profile picture" => "Profil fotografını düzenle",
 "Crop photo" => "Fotoğrafı kırp",
-"Is this correct?" => "Doğru mu?",
 "Error parsing date: {date}" => "Tarih ayıklanırken hata: {date}",
 "# groups" => "# gruplar",
 "Error parsing birthday {bday}: {error}" => "{bday} doğum günü ayıklanırken hata: {error}",

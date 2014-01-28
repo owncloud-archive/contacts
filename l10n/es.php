@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "El fichero que quieres subir excede el tamaño máximo permitido en este servidor.",
 "Edit profile picture" => "Editar imagen de perfil.",
 "Crop photo" => "Recortar imagen",
-"Is this correct?" => "¿Es esto correcto?",
 "Error parsing date: {date}" => "Error al analizar la fecha: {date}",
 "# groups" => "# grupos",
 "Error parsing birthday {bday}: {error}" => "Error al analizar el cumpleaños {bday}: {error}",

@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Dr.",
 "Edit profile picture" => "Redigér profilbillede",
 "Crop photo" => "Beskær billede",
-"Is this correct?" => "Er dette korrekt?",
 "Error parsing date: {date}" => "Fejl under læsning af dato: {date}",
 "# groups" => "# grupper",
 "Error parsing birthday {bday}: {error}" => "Fejl under læsning af fødselsdato: {bday}: {error}",

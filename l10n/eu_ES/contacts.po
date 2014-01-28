@@ -10,12 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2014-01-28 01:25-0500\n"
 "PO-Revision-Date: 2014-01-28 06:25+0000\n"
 "Last-Translator: I Robot\n"
-"Language-Team: Akan (http://www.transifex.com/projects/p/owncloud/language/ak/)\n"
+"Language-Team: Basque (Spain) (http://www.transifex.com/projects/p/owncloud/language/eu_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ak\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Language: eu_ES\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: appinfo/app.php:36 lib/app.php:105
 msgid "Contacts"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "Gorde"
 
 #: js/addressbooks.js:298
 msgid "Uploading..."
@@ -137,7 +137,7 @@ msgstr ""
 
 #: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "Ezeztatu"
 
 #: js/app.js:1340 templates/contacts.php:173
 msgid "Add group"
@@ -306,18 +306,18 @@ msgstr ""
 #: templates/contacts.php:379 templates/contacts.php:380
 #: templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "Deskargatu"
 
 #: js/settings.js:101 templates/contacts.php:513 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "Aldatu"
 
 #: js/settings.js:102 templates/contacts.php:6 templates/contacts.php:81
 #: templates/contacts.php:82 templates/contacts.php:236
 #: templates/contacts.php:237 templates/contacts.php:514
 #: templates/settings.php:50
 msgid "Delete"
-msgstr ""
+msgstr "Ezabatu"
 
 #: js/settings.js:159 templates/settings.php:66
 msgid "More..."
@@ -672,7 +672,7 @@ msgstr ""
 #: lib/utils/properties.php:173 lib/utils/properties.php:180
 #: lib/utils/properties.php:195
 msgid "Other"
-msgstr ""
+msgstr "Bestea"
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
@@ -733,7 +733,7 @@ msgstr ""
 #: lib/utils/properties.php:158 lib/utils/properties.php:166
 #: lib/utils/properties.php:177 lib/utils/properties.php:194
 msgid "Work"
-msgstr ""
+msgstr "Lana"
 
 #: lib/utils/properties.php:159 lib/utils/properties.php:164
 #: lib/utils/properties.php:178
@@ -967,7 +967,7 @@ msgstr ""
 
 #: templates/contacts.php:298 templates/contacts.php:364
 msgid "Title"
-msgstr ""
+msgstr "titulua"
 
 #: templates/contacts.php:308 templates/contacts.php:363
 msgid "Organization"
@@ -975,7 +975,7 @@ msgstr ""
 
 #: templates/contacts.php:318 templates/contacts.php:366
 msgid "Birthday"
-msgstr ""
+msgstr "Urtebetetze"
 
 #: templates/contacts.php:355
 msgid "Notes go here..."
@@ -1065,7 +1065,7 @@ msgstr ""
 
 #: templates/contacts.php:511
 msgid "Export"
-msgstr ""
+msgstr "Esportazio"
 
 #: templates/contacts.php:512
 msgid "CardDAV link"
@@ -1097,4 +1097,4 @@ msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr ""
+msgstr "Deskripzioa"

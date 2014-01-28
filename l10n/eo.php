@@ -26,7 +26,6 @@
 "No files selected for upload." => "Neniu dosiero elektita por alŝuto.",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "La dosiero, kiun vi provas alŝuti, transpasas la maksimuman grandon por dosieraj alŝutoj en ĉi tiu servilo.",
 "Edit profile picture" => "Redakti profilbildon",
-"Is this correct?" => "Ĉu ĉi tio ĝustas?",
 "# groups" => "# grupoj",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Iuj kontaktoj estas markitaj por forigo, sed ankoraŭ ne forigitaj. Bonvolu atendi ĝis ili foriĝos.",
 "Click to undo deletion of {num} contacts" => "Klaku por malfari forigon de {num} kontaktoj",

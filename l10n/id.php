@@ -35,7 +35,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Berkas yang Anda coba unggah melebihi ukuran maksimum pada server ini.",
 "Edit profile picture" => "Sunting gambar profil",
 "Crop photo" => "Gunting foto",
-"Is this correct?" => "Apakah sesuai?",
 "# groups" => "# grup",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Beberapa kontak telah ditandai untuk dihapus, tetapi belum selesai dihapus. Mohon tunggu.",
 "Click to undo deletion of {num} contacts" => "Klik untuk membatalkan penghapusan {num} kontak",

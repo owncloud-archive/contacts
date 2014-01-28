@@ -21,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-26 01:19-0500\n"
-"PO-Revision-Date: 2014-01-25 14:50+0000\n"
-"Last-Translator: Carlos <crolidge@gmail.com>\n"
+"POT-Creation-Date: 2014-01-28 01:25-0500\n"
+"PO-Revision-Date: 2014-01-28 06:25+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -183,11 +183,7 @@ msgstr "Editar a fotografia de perfil."
 msgid "Crop photo"
 msgstr "Cortar foto"
 
-#: js/contacts.js:615
-msgid "Is this correct?"
-msgstr "Isto está correcto?"
-
-#: js/contacts.js:885
+#: js/contacts.js:878
 msgid "Error parsing date: {date}"
 msgstr "Erro ao processar data: {date}"
 

@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Igo nahi duzun fitxategia zerbitzariak onartzen duen tamaina baino handiagoa da.",
 "Edit profile picture" => "Editatu profilaren argazkia",
 "Crop photo" => "Moztu argazkia",
-"Is this correct?" => "Hau zuzena al da?",
 "Error parsing date: {date}" => "Errorea data aztertzerakoan: {date}",
 "# groups" => "# taldeak",
 "Error parsing birthday {bday}: {error}" => "Errorea {bday} urtebetetzea aztertzerakoan: {error}",

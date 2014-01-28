@@ -22,7 +22,6 @@
 "No files selected for upload." => "Ingen filer valgt for opplasting.",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Filen du prøver å laste opp er for stor.",
 "Edit profile picture" => "Rediger profilbilde",
-"Is this correct?" => "Er dette korrekt?",
 "# groups" => "Ant. grupper",
 "Add" => "Legg til",
 "All" => "Alle",

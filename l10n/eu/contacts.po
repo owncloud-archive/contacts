@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-27 01:25-0500\n"
-"PO-Revision-Date: 2014-01-26 21:30+0000\n"
-"Last-Translator: asieriko <asieriko@gmail.com>\n"
+"POT-Creation-Date: 2014-01-28 01:25-0500\n"
+"PO-Revision-Date: 2014-01-28 06:25+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -174,11 +174,7 @@ msgstr "Editatu profilaren argazkia"
 msgid "Crop photo"
 msgstr "Moztu argazkia"
 
-#: js/contacts.js:615
-msgid "Is this correct?"
-msgstr "Hau zuzena al da?"
-
-#: js/contacts.js:885
+#: js/contacts.js:878
 msgid "Error parsing date: {date}"
 msgstr "Errorea data aztertzerakoan: {date}"
 

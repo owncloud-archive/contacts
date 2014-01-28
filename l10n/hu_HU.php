@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "A feltöltendő fájl mérete meghaladja a kiszolgálón engedélyezett maximális méretet.",
 "Edit profile picture" => "Profilkép szerkesztése",
 "Crop photo" => "Fénykép vágása",
-"Is this correct?" => "Helyes?",
 "Error parsing date: {date}" => "Nem sikerült értelmezni ezt a dátumot: {date}",
 "# groups" => "# csoport",
 "Error parsing birthday {bday}: {error}" => "Nem sikerült értelmezni a {bday} születésnap adatait: {error}",

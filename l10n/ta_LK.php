@@ -17,7 +17,6 @@
 "No files selected for upload." => "பதிவேற்றுவதற்கு கோப்புகள் தெரிவுசெய்யப்படவில்லை",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "நீங்கள் பதிவேற்ற முயற்சிக்கும் கோப்பானது இந்த சேவையகத்தில் பதிவேற்றக்கூடிய கோப்பின் ஆகக்கூடிய அளவைவிட கூடியது. ",
 "Edit profile picture" => "விபரக்கோவை படத்தை தொகுக்க ",
-"Is this correct?" => "இது சரியா?",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "சில தொடர்புகள் அழிப்பதற்காக அடையாளப்படுத்தப்பட்டுள்ளது, ஆனால் இன்னும் அழிக்கவில்லை. தயவுசெய்து அது அழியும் வரை காத்திருக்கவும்.",
 "Click to undo deletion of {num} contacts" => "தொடர்புகள் நீக்கியதை முன் செயல் நீக்கம் {num} செய்வதற்கு சொடக்குக",
 "Add" => "சேர்க்க",

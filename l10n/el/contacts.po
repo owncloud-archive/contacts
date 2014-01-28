@@ -33,8 +33,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-24 00:50-0500\n"
-"PO-Revision-Date: 2014-01-24 05:50+0000\n"
+"POT-Creation-Date: 2014-01-28 01:25-0500\n"
+"PO-Revision-Date: 2014-01-28 06:25+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr ""
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:29 lib/app.php:103
+#: appinfo/app.php:36 lib/app.php:105
 msgid "Contacts"
 msgstr "Επαφές"
 
@@ -119,109 +119,105 @@ msgstr "Υπήρχε ένα σφάλμα στο άνοιγμα του επεξε
 msgid "Invalid email: \"{url}\""
 msgstr "Μη έγκυρο email: \"{url}\""
 
-#: js/app.js:564
+#: js/app.js:569
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Αποτυχία συγχώνευσης. Αδυναμία εύρεσης επαφής: {id}"
 
-#: js/app.js:577
+#: js/app.js:582
 msgid "Merge failed."
 msgstr "Η συγχώνευση απέτυχε. "
 
-#: js/app.js:584
+#: js/app.js:589
 msgid "Merge failed. Error saving contact."
 msgstr "Αποτυχία συγχώνευσης. Σφάλμα αποθήκευσης επαφής."
 
-#: js/app.js:604
+#: js/app.js:609
 msgid "Select photo"
 msgstr "Επέλεξε φωτογραφία"
 
-#: js/app.js:680 js/app.js:1604
+#: js/app.js:689 js/app.js:1622
 msgid "Network or server error. Please inform administrator."
 msgstr "Σφάλμα δικτύου ή διακομιστή. Παρακαλώ ενημερώστε το διαχειριστή."
 
-#: js/app.js:901
+#: js/app.js:911
 msgid "Error adding to group."
 msgstr "Σφάλμα κατά την προσθήκη σε ομάδα."
 
-#: js/app.js:924
+#: js/app.js:934
 msgid "Error removing from group."
 msgstr "Σφάλμα κατά την αφαίρεση από ομάδα."
 
-#: js/app.js:1100
+#: js/app.js:1110
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Έχετε επιλέξει πάνω από 300 επαφές.\nΑυτό μάλλον θα αποτύχει! Κλικάρετε εδώ για να δοκιμάσετε ούτως ή άλλως."
 
-#: js/app.js:1138
+#: js/app.js:1148
 msgid "Error setting {name} as favorite."
 msgstr "Σφάλμα κατά τον ορισμό του {name} σαν αγαπημένο."
 
-#: js/app.js:1277 js/app.js:1281 templates/contacts.php:192
+#: js/app.js:1287 js/app.js:1291 templates/contacts.php:192
 msgid "Merge contacts"
 msgstr "Συγχώνευση επαφών"
 
-#: js/app.js:1303 js/app.js:1356 js/settings.js:120 templates/settings.php:62
+#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#: js/app.js:1330 templates/contacts.php:173
+#: js/app.js:1340 templates/contacts.php:173
 msgid "Add group"
 msgstr "Προσθήκη ομάδας"
 
-#: js/app.js:1334
+#: js/app.js:1344
 msgid "OK"
 msgstr "ΟΚ"
 
-#: js/app.js:1428
+#: js/app.js:1446
 msgid "Could not find contact: {id}"
 msgstr "Αδυναμία εύρεσης επαφής: {id}"
 
-#: js/app.js:1451
+#: js/app.js:1469
 msgid "No files selected for upload."
 msgstr "Δεν επιλέχτηκαν αρχεία για μεταφόρτωση."
 
-#: js/app.js:1461
+#: js/app.js:1479
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Το αρχείο που προσπαθείτε να μεταφορτώσετε υπερβαίνει το μέγιστο μέγεθος μεταφόρτωσης αρχείων σε αυτόν το διακομιστή."
 
-#: js/app.js:1562
+#: js/app.js:1580
 msgid "Edit profile picture"
 msgstr "Επεξεργασία εικόνας προφίλ"
 
-#: js/app.js:1566
+#: js/app.js:1584
 msgid "Crop photo"
 msgstr "Περικοπή φωτογραφίας"
 
-#: js/contacts.js:611
-msgid "Is this correct?"
-msgstr "Είναι σωστό;"
-
-#: js/contacts.js:879
+#: js/contacts.js:878
 msgid "Error parsing date: {date}"
 msgstr "Σφάλμα κατά την ανάλυση της ημερομηνίας: {date}"
 
-#: js/contacts.js:1076
+#: js/contacts.js:1082
 msgid "# groups"
 msgstr "# ομάδων"
 
-#: js/contacts.js:1150
+#: js/contacts.js:1156
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "Σφάλμα κατά την ανάλυση των γενεθλίων {bday}: {error}"
 
-#: js/contacts.js:2193
+#: js/contacts.js:2212
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή αλλά δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
-#: js/contacts.js:2204
+#: js/contacts.js:2223
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Επιλέξτε για να αναιρέσετε τη διαγραφή {num} επαφών"
 
-#: js/contacts.js:2213
+#: js/contacts.js:2232
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Αναιρέθηκε η διαγραφή {num} επαφών"
 
@@ -409,7 +405,7 @@ msgstr "Δεν έχετε άδεια ενημέρωσης το βιβλίου δ
 msgid "You don't have permissions to delete the address book."
 msgstr "Δεν έχετε άδεια να διαγράψετε το βιβλίο διευθύνσεων."
 
-#: lib/app.php:144
+#: lib/app.php:146
 msgid "Address book not found"
 msgstr "Δε βρέθηκε βιβλίο διευθύνσεων"
 
@@ -445,41 +441,41 @@ msgstr "Άγνωστο AM:"
 msgid "{name}'s Birthday"
 msgstr "Τα γενέθλια του/της {name}"
 
-#: lib/controller/addressbookcontroller.php:112
+#: lib/controller/addressbookcontroller.php:113
 msgid "Error creating address book"
 msgstr "Σφάλμα κατά την δημιουργία βιβλίου διευθύνσεων "
 
-#: lib/controller/addressbookcontroller.php:129
+#: lib/controller/addressbookcontroller.php:130
 msgid "Error updating address book"
 msgstr "Σφάλμα κατά την ενημέρωση του βιβλίου διευθύνσεων"
 
-#: lib/controller/addressbookcontroller.php:157
+#: lib/controller/addressbookcontroller.php:158
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Δεν έχετε άδεια να διαγράψετε το βιβλίο διευθύνσεων \"%s\""
 
-#: lib/controller/addressbookcontroller.php:163
+#: lib/controller/addressbookcontroller.php:164
 msgid "Error deleting address book"
 msgstr "Σφάλμα κατά την διαγραφή βιβλίου διεευθύνσεων "
 
-#: lib/controller/addressbookcontroller.php:201
+#: lib/controller/addressbookcontroller.php:202
 msgid "Error creating contact."
 msgstr "Σφάλμα δημιουργίας επαφής."
 
-#: lib/controller/addressbookcontroller.php:237
+#: lib/controller/addressbookcontroller.php:238
 msgid "Error deleting contact."
 msgstr "Σφάλμα διαγραφής επαφής."
 
-#: lib/controller/addressbookcontroller.php:277
+#: lib/controller/addressbookcontroller.php:278
 msgid "Error retrieving contact."
 msgstr "Σφάλμα κατά την ανάκτηση της επαφής."
 
-#: lib/controller/addressbookcontroller.php:287
+#: lib/controller/addressbookcontroller.php:288
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Σφάλμα κατά την αποθήκευση επαφής."
 
-#: lib/controller/addressbookcontroller.php:291
+#: lib/controller/addressbookcontroller.php:292
 msgid "Error removing contact from other address book."
 msgstr "Σφάλμα διαγραφής επαφής από άλλο βιβλίο διευθύνσεων."
 
@@ -488,7 +484,7 @@ msgstr "Σφάλμα διαγραφής επαφής από άλλο βιβλί�
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:38
 #: lib/controller/contactphotocontroller.php:274
-#: lib/controller/exportcontroller.php:66
+#: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "Αδυναμία εύρεσης επαφής."
 
@@ -529,39 +525,39 @@ msgid "Error getting user photo"
 msgstr "Σφάλμα κατά την λήψη φωτογραφίας χρήστη"
 
 #: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:37
+#: lib/controller/importcontroller.php:38
 msgid "No file was uploaded. Unknown error"
 msgstr "Δεν μεταφορτώθηκε κάποιο αρχείο. Άγνωστο σφάλμα"
 
 #: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:46
+#: lib/controller/importcontroller.php:47
 msgid "There is no error, the file uploaded with success"
 msgstr "Δεν υπάρχει σφάλμα, το αρχείο μεταφορτώθηκε επιτυχώς"
 
 #: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Το αρχείο που μεταφορτώθηκε υπερβαίνει την οδηγία μέγιστου επιτρεπτού μεγέθους \"upload_max_filesize\" του php.ini"
 
 #: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Το αρχείο που μεταφορτώθηκε υπερβαίνει την οδηγία MAX_FILE_SIZE που ορίζεται στην φόρμα HTML"
 
 #: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:51
 msgid "The uploaded file was only partially uploaded"
 msgstr "Το αρχείο μεταφορτώθηκε μόνο εν μέρει"
 
 #: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:52
 msgid "No file was uploaded"
 msgstr "Κανένα αρχείο δεν μεταφορτώθηκε"
 
 #: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:52
+#: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
 msgstr "Λείπει ένας προσωρινός φάκελος"
 
@@ -607,94 +603,94 @@ msgstr "Σφάλμα κατά την αλλαγή μεγέθους εικόνα�
 msgid "Error getting PHOTO property."
 msgstr "Σφάλμα κατά τη λήψη ιδιοτήτων ΦΩΤΟΓΡΑΦΙΑΣ."
 
-#: lib/controller/groupcontroller.php:57 lib/controller/groupcontroller.php:79
+#: lib/controller/groupcontroller.php:58 lib/controller/groupcontroller.php:80
 msgid "No group name given."
 msgstr "Δεν δόθηκε όνομα ομάδας."
 
-#: lib/controller/groupcontroller.php:64
+#: lib/controller/groupcontroller.php:65
 msgid "Error adding group."
 msgstr "Σφάλμα κατά την προσθήκη ομάδας."
 
-#: lib/controller/groupcontroller.php:127
+#: lib/controller/groupcontroller.php:128
 msgid "No group name to rename from given."
 msgstr "Κανένα όνομα ομάδας για μετονομασία από το δοθέν."
 
-#: lib/controller/groupcontroller.php:131
+#: lib/controller/groupcontroller.php:132
 msgid "No group name to rename to given."
 msgstr "Κανένα όνομα ομάδας για μετονομασία στο δοθέν."
 
-#: lib/controller/groupcontroller.php:137
+#: lib/controller/groupcontroller.php:138
 msgid "Error renaming group."
 msgstr "Σφάλμα κατά τη μετονομασία της ομάδας"
 
-#: lib/controller/groupcontroller.php:175
-#: lib/controller/groupcontroller.php:223
+#: lib/controller/groupcontroller.php:176
+#: lib/controller/groupcontroller.php:222
 msgid "Group ID missing from request."
 msgstr "Το ID ομάδας λείπει από το αίτημα."
 
-#: lib/controller/groupcontroller.php:180
+#: lib/controller/groupcontroller.php:181
 msgid "Group name missing from request."
 msgstr "Το όνομα ομάδας λείπει από το αίτημα."
 
-#: lib/controller/groupcontroller.php:185
-#: lib/controller/groupcontroller.php:228
+#: lib/controller/groupcontroller.php:186
+#: lib/controller/groupcontroller.php:227
 msgid "Contact ID missing from request."
 msgstr "Το ID επαφής λείπει από το αίτημα."
 
-#: lib/controller/importcontroller.php:53
+#: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
 msgstr "Αποτυχία εγγραφής στο δίσκο"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Not enough storage available"
 msgstr "Μη επαρκής διαθέσιμος αποθηκευτικός χώρος"
 
-#: lib/controller/importcontroller.php:72
+#: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
 msgstr "Προσπάθεια μεταφόρτωσης αρχείου που βρίσκεται στη μαύρη λίστα:"
 
-#: lib/controller/importcontroller.php:94
+#: lib/controller/importcontroller.php:95
 msgid "Error uploading contacts to storage."
 msgstr "Σφάλμα κατά την μεταφόρτωση επαφών"
 
-#: lib/controller/importcontroller.php:139
+#: lib/controller/importcontroller.php:140
 msgid "Error moving file to imports folder."
 msgstr "Σφάλμα μετακίνησης αρχείου στο φάκελο εισαγωγών."
 
-#: lib/controller/importcontroller.php:156
+#: lib/controller/importcontroller.php:157
 msgid "You do not have permissions to import into this address book."
 msgstr "Δεν έχετε άδεια για εισαγωγή σε αυτό το βιβλίο διευθύνσεων."
 
-#: lib/controller/importcontroller.php:164
+#: lib/controller/importcontroller.php:165
 msgid "File name missing from request."
 msgstr "Το όνομα αρχείου λείπει από το αίτημα."
 
-#: lib/controller/importcontroller.php:169
-#: lib/controller/importcontroller.php:292
+#: lib/controller/importcontroller.php:170
+#: lib/controller/importcontroller.php:293
 msgid "Progress key missing from request."
 msgstr "Το κλειδί προόδου λείπει από το αίτημα."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:176
 msgid "Attempt to access blacklisted file:"
 msgstr "Προσπάθεια πρόσβασης αρχείου που βρίσκεται στη μαύρη λίστα:"
 
-#: lib/controller/importcontroller.php:217
+#: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
 msgstr "Δεν βρέθηκαν επαφές στο: "
 
-#: lib/controller/settingscontroller.php:35
+#: lib/controller/settingscontroller.php:36
 msgid "No key is given."
 msgstr "Δεν δόθηκε κλειδί."
 
-#: lib/controller/settingscontroller.php:39
+#: lib/controller/settingscontroller.php:40
 msgid "No value is given."
 msgstr "Δεν δόθηκε τιμή."
 
-#: lib/controller/settingscontroller.php:50
+#: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
 msgstr "Αδυναμία ορισμού προτίμησης:"
 
-#: lib/searchprovider.php:24
+#: lib/searchprovider.php:32
 msgid "Contact"
 msgstr "Επαφή"
 

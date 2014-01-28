@@ -33,7 +33,6 @@
 "No files selected for upload." => "Не обрано файлів для завантаження.",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Файл, який Ви намагаєтесь завантажити перевищує максимальний розмір файлу, що дозволено завантажувати на даний сервер.",
 "Edit profile picture" => "Редагувати зображення облікового запису",
-"Is this correct?" => "Це вірно?",
 "# groups" => "# groups",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Деякі контакти помічено для видалення, але ще не видалені. Будь ласка, зачекайте, доки вони будуть видалені.",
 "Click to undo deletion of {num} contacts" => "Натисніть для відміни видалення {num} контактів",

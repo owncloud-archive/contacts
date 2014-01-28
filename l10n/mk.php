@@ -18,7 +18,6 @@
 "No files selected for upload." => "Ниту еден фајл не е избран за вчитување.",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Датотеката која се обидувате да ја префрлите ја надминува максималната големина дефинирана за пренос на овој сервер.",
 "Edit profile picture" => "Уреди ја фотографијата за профилот",
-"Is this correct?" => "Дали е ова во ред?",
 "Add" => "Додади",
 "All" => "Сите",
 "Favorites" => "Омилени",

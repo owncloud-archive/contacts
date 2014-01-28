@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Datoteka, ki jo poskušate naložiti, presega dovoljeno velikost za pošiljanje na ta strežnik.",
 "Edit profile picture" => "Uredi fotografijo profila",
 "Crop photo" => "Obreži sliko",
-"Is this correct?" => "Ali je to pravilno?",
 "Error parsing date: {date}" => "Napaka razčlenjevanja datuma: {date}",
 "# groups" => "# skupine",
 "Error parsing birthday {bday}: {error}" => "Napaka razčlenjevanja datuma rojstva {bday}: {error}",
