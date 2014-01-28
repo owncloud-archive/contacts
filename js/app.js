@@ -229,11 +229,15 @@ OC.Contacts = OC.Contacts || {
 			console.log(response.message);
 			$(document).trigger('status.contacts.error', response);
 		});
-		$(OC.Tags).on('change', this.groups.categoriesChanged)
+		$(OC.Tags).on('change', this.groups.categoriesChanged);
 		this.bindEvents();
 		this.$toggleAll.show();
 		this.hideActions();
 		$('.hidden-on-load').removeClass('hidden-on-load');
+	},
+	setFavorites: function(favorites) {
+		// NOTE: All contacts has to be loaded first
+		console.log('setFavorites', favorites);
 	},
 	loading:function(obj, state) {
 		$(obj).toggleClass('loading', state);
@@ -365,6 +369,11 @@ OC.Contacts = OC.Contacts || {
 		$(window).bind('hashchange', this.hashChange);
 		
 		// App specific events
+		$(document).bind('status.contacts.favoritesLoaded', function(e, data) {
+			console.log('status.contacts.favoritesLoaded', data.favorites);
+			self.setFavorites(data.favorites);
+		});
+
 		$(document).bind('status.contact.deleted', function(e, data) {
 			var id = String(data.id);
 			if(id == self.currentid) {

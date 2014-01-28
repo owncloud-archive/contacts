@@ -672,6 +672,9 @@ OC.Contacts = OC.Contacts || {};
 				// Favorites
 				// Map to strings to easier lookup in contacts list.
 				var contacts = $.map(response.data.favorites, function(c) {return String(c);});
+				$(document).trigger('status.contacts.favoritesLoaded', {
+					favorites: contacts
+				});
 				var $elem = self.findById('fav');
 				$elem = $elem.length ? $elem : tmpl.octemplate({
 					id: 'fav',
