@@ -63,7 +63,7 @@ class ImportManager {
 	/**
 	 * @brief get all the preferences for the addressbook
 	 * @param string $id
-	 * @return array Format array('param1' => 'value', 'param2' => 'value')
+	 * @return SimpleXml
 	 */
 	public function getType($typeName) {
 		$path = __DIR__ . "/../formats/import_" . $typeName . "_connector.xml";
@@ -82,32 +82,7 @@ class ImportManager {
 		}
 		return false;
 	}
-	
-	/**
-	 * @brief sets the preferences for the addressbook given in parameter
-	 * @param string $id
-	 * @param array $settings the preferences, format array('param1' => 'value', 'param2' => 'value')
-	 * @return boolean
-	 
-	public function setType($typeName, $settings) {
-		$types = (array)$this->getTypes();
-
-		if (!in_array($typeName, $types)) {
-			$types[] = $typeName;
-		}
-		$encodedTypes = json_encode($types);
 		
-		\OCP\Config::setAppValue('contacts', 'import_types', $encodedTypes);
-		
-		$key = 'import_' . $typeName;
-
-		$data = json_encode($settings);
-		//echo "types : $encodedTypes\ndata : $data\n";
-		return $data
-			? \OCP\Config::setAppValue('contacts', $key, $data)
-			: false;
-	}*/
-	
 	/**
 	 * @brief imports the file with the selected type, and converts into VCards
 	 * @param $file the path to the file
@@ -116,22 +91,34 @@ class ImportManager {
 	 * @return an array containing VCard elements|false if empty of error
 	 */
 	public function importFile($file, $typeName, $limit=-1) {
-		$importType = $this->getType($typeName);
-		$elements = array();
-		if ((string)$importType->import_core->type == 'csv') {
-			// use class ImportCsvConnector
-			$connector = new ImportCsvConnector($importType);
+		$connector = $this->getConnector($typeName);
+		if ($connector) {
 			$elements = $connector->getElementsFromInput($file, $limit);
-		} else if ((string)$importType->import_core->type == 'vcard') {
-			// use class importVcardConnector
-			$connector = new ImportVCardConnector($importType);
-			$elements = $connector->getElementsFromInput($file, $limit);
-		}
-		if (count($elements) > 0) {
-			return $elements;
+			if (count($elements) > 0) {
+				return $elements;
+			} else {
+				return false;
+			}
 		} else {
 			return false;
 		}
+	}
+	
+	public function getConnector($type) {
+		$importType = $this->getType($type);
+		$elements = array();
+		if (!$importType) {
+			return false;
+		}
+		if ((string)$importType->import_core->type == 'csv') {
+			// use class ImportCsvConnector
+			return new ImportCsvConnector($importType);
+		} else if ((string)$importType->import_core->type == 'vcard') {
+			// use class importVcardConnector
+			return new ImportVCardConnector($importType);
+			$elements = $connector->getElementsFromInput($file, $limit);
+		}
+		return false;
 	}
 	
 	/**
@@ -139,35 +126,19 @@ class ImportManager {
 	 * detects wich imported type has the least elements "X-Unknown-Element"
 	 * then returns the corresponding type
 	 * @param $file the path to the file
-	 * @return the corresponding type|false
+	 * @return array containing the probability for each format
 	 */
 	public function detectFileType($file) {
-	}
-	
-	/**
-	 * @brief Query whether a backend or an address book is active
-	 * @param string $addressbookid If null it checks whether the backend is activated.
-	 * @return boolean
-	 
-	public function isActive($typeName = null) {
-		$key = 'active_import_' . $typeName;
-
-		return !!(\OCP\Config::getAppValue('contacts', $key, 1));
-	}*/
-
-	/**
-	 * @brief Activate a backend or an address book
-	 * @param bool active
-	 * @param string $addressbookid If null it activates the backend.
-	 * @return boolean
-	 
-	public function setActive($active, $typeName = null) {
-		$key = 'active_import_' . $typeName;
-
-		$this->setModifiedAddressBook($typeName);
-		return \OCP\Config::getAppValue('contacts', $key, (int)$active);
-	}*/
-	
+		$types = $this->getTypes();
+		$probability = array();
+		foreach ($types as $type => $description) {
+			$connector = $this->getConnector($type);
+				if ($connector) {
+					$probability[$type] = $connector->getFormatMatch($file);
+				}
+		}
+		return $probability;
+	}	
 }
 
 ?>

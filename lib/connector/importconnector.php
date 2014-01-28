@@ -41,7 +41,7 @@ abstract class ImportConnector {
 	
 	abstract function convertElementToVCard($element);
 	
-	abstract function getFormatMatch($elements);
+	abstract function getFormatMatch($file);
 	
 	public function setConfig($xml_config) {
 		$this->configContent = $xml_config;

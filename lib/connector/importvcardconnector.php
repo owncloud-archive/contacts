@@ -36,9 +36,21 @@ class ImportVCardConnector extends ImportConnector{
 	 * @param $limit the number of elements to return (-1 = no limit)
 	 * @return array of strings
 	 */
-	public function getElementsFromInput($input, $limit=-1) {
+	public function getElementsFromInput($file, $limit=-1) {
 
-		$file = file_get_contents($input);
+		$parts = $this->getSourceElementsFromFile($file, $limit);
+		
+		$elements = array();
+		foreach($parts as $part)
+		{
+			$elements[] = $this->convertElementToVCard($part);
+		}
+		
+		return array_values($elements);
+	}
+	
+	private function getSourceElementsFromFile($file, $limit=-1) {
+		$file = file_get_contents($file);
 
 		$nl = "\n";
 		$replace_from = array("\r","\n\n");
@@ -74,15 +86,7 @@ class ImportVCardConnector extends ImportConnector{
 						$card[] = $line;
 				}
 		}
-		
-		$index = 0;
-		$elements = array();
-		foreach($parts as $part)
-		{
-			$elements[] = $this->convertElementToVCard($part);
-		}
-		
-		return array_values($elements);
+		return $parts;
 	}
 	
 	/**
@@ -141,7 +145,37 @@ class ImportVCardConnector extends ImportConnector{
 		return false;
 	}
 	
-	public function getFormatMatch($elements) {
+	/**
+	 * @brief returns the probability that the first element is a match for this format
+	 * @param $file the file to examine
+	 * @return 0 if not a valid vcard
+	 *         1-0.5^(number of translated elements+1)
+	 * The more the first element has parameters to translate, the more the result is close to 1
+	 */
+	public function getFormatMatch($file) {
+		// Examining the first element only
+		$parts = $this->getSourceElementsFromFile($file, 1);
+		
+		if (!$parts || ($parts && count($parts) == 0)) {
+			// Doesn't look like a vcf file
+			return 0;
+		} else {
+			try {
+				$vcard = VObject\Reader::read($parts[0]);
+			} catch (VObject\ParseException $e) {
+				// error while parsing, doesn't look like a vcard
+				return 0;
+			}
+			$toTranslate=1;
+			foreach ($vcard->children() as $vcardProperty) {
+				$importEntry = $this->getImportEntry($vcardProperty, $vcard);
+				if ($importEntry) {
+					$toTranslate++;
+				}
+			}
+			echo "vcard: $toTranslate\n";
+			return (1 - pow(0.5, $toTranslate));
+		}
 	}
 	
 }

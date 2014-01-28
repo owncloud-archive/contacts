@@ -22,11 +22,10 @@
  
 namespace OCA\Contacts\Connector;
 
-use Sabre\VObject\Component,
-	Sabre\VObject\StringUtil,
-	\SplFileObject as SplFileObject;
+use Sabre\VObject\Component;
+use \SplFileObject as SplFileObject;
 
-class ImportCsvConnector extends ImportConnector{
+class ImportCsvConnector extends ImportConnector {
 
 	/**
 	 * @brief separates elements from the input stream according to the entry_separator value in config
@@ -35,26 +34,37 @@ class ImportCsvConnector extends ImportConnector{
 	 * @param $limit the number of elements to return (-1 = no limit)
 	 * @return array of strings
 	 */
-	public function getElementsFromInput($input, $limit=-1) {
-		$csv = new SplFileObject($input, 'r');
-		$csv->setFlags(SplFileObject::READ_CSV);
+	public function getElementsFromInput($file, $limit=-1) {
 		
-		//$csv->setCsvControl($this->configContent->import_core->card_separator['value'], $this->configContent->import_core->entry_separator['value']);
+		$linesAndTitles = $this->getSourceElementsFromFile($file, $limit);
+		$lines = $linesAndTitles[0];
+		$titles = $linesAndTitles[1];
+		$elements = array();
+		foreach ($lines as $line) {
+			$elements[] = $this->convertElementToVCard($line, $titles);
+		}
+		
+		return array_values($elements);
+	}
+	
+	private function getSourceElementsFromFile($file, $limit=-1) {
+		$csv = new SplFileObject($file, 'r');
+		$csv->setFlags(SplFileObject::READ_CSV);
 		
 		$ignore_first_line = (isset($this->configContent->import_core->ignore_first_line) && $this->configContent->import_core->ignore_first_line['enabled'] == 'true');
 		
-		$titles = null;
+		$titles = false;
 		
-		$elements = array();
+		$lines = array();
 		
 		$index = 0;
 		foreach($csv as $line)
 		{
 			if (!($ignore_first_line && $index == 0) && count($line) > 1) { // Ignore first line
 				
-				$elements[] = $this->convertElementToVCard($line, $titles);
+				$lines[] = $line;
 				
-				if (count($elements) == $limit) {
+				if (count($lines) == $limit) {
 					break;
 				}
 			} else if ($ignore_first_line && $index == 0) {
@@ -63,7 +73,7 @@ class ImportCsvConnector extends ImportConnector{
 			$index++;
 		}
 		
-		return array_values($elements);
+		return array($lines, $titles);
 	}
 	
 	/**
@@ -84,7 +94,7 @@ class ImportCsvConnector extends ImportConnector{
 					$this->updateProperty($property, $importEntry, $element[$i]);
 				} else {
 					$property = \Sabre\VObject\Property::create("X-Unknown-Element", $element[$i]);
-					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($title[$i]));
+					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.$title[$i]);
 					$vcard->add($property);
 				}
 			}
@@ -103,17 +113,81 @@ class ImportCsvConnector extends ImportConnector{
 	}
 	
 	/**
-	 * @brief calculates a percentage of the correspondance of the current format with the given element.
-	 * @param $element the element to calculate
-	 * @return number between 0 and 1, result of the formula (number of fields-number of X-Unkown-Element)/number of fields
+	 * @brief returns the vcard property corresponding to the ldif parameter
+	 * creates the property if it doesn't exists yet
+	 * @param $vcard the vcard to get or create the properties with
+	 * @param $v_param the parameter the find
 	 */
-	public function getFormatMatch($element) {
-		$fieldsNumber = count($element->getChildren);
-		$unkownNumber = count($element->select("X-Unknown-Element"));
+	public function getOrCreateVCardProperty(&$vcard, $v_param) {
 		
-		return (($fieldsNumber-$unkownNumber)/$fieldsNumber);
+		// looking for one
+		//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' entering '.$vcard->serialize(), \OCP\Util::DEBUG);
+		$properties = $vcard->select($v_param['property']);
+		foreach ($properties as $property) {
+			//echo "update prop ".$v_param['property']."\n";
+			if ($v_param['type'] == null) {
+				//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' property '.$v_param['type'].' found', \OCP\Util::DEBUG);
+				return $property;
+			}
+			foreach ($property->parameters as $parameter) {
+				//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' <> '.$v_param['type'], \OCP\Util::DEBUG);
+				if (!strcmp($parameter->value, $v_param['type'])) {
+					//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' found', \OCP\Util::DEBUG);
+					return $property;
+				}
+			}
+		}
+		//echo "create prop ".$v_param['property']."\n";
+		
+		
+		// Property not found, creating one
+		//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', create one '.$v_param['property'].';TYPE='.$v_param['type'], \OCP\Util::DEBUG);
+		$line = count($vcard->children) - 1;
+		$property = \Sabre\VObject\Property::create($v_param['property']);
+		$vcard->add($property);
+		if ($v_param['type']!=null) {
+			//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', creating one '.$v_param['property'].';TYPE='.$v_param['type'], \OCP\Util::DEBUG);
+			//\OC_Log::write('ldapconnector', __METHOD__.', creating one '.$v_param['property'].';TYPE='.$v_param['type'], \OC_Log::DEBUG);
+			$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.$v_param['type']);
+			switch ($v_param['property']) {
+				case "ADR":
+					//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', we have an address '.$v_param['property'].';TYPE='.$v_param['type'], \OCP\Util::DEBUG);
+					$property->setValue(";;;;;;");
+					break;
+				case "FN":
+					$property->setValue(";;;;");
+					break;
+			}
+		}
+		//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' exiting '.$vcard->serialize(), \OCP\Util::DEBUG);
+		return $property;
 	}
 	
+	/**
+	 * @brief returns the probability that the first element is a match for this format
+	 * @param $file the file to examine
+	 * @return 0 if not a valid csv file
+	 *         0.5^(number of untranslated elements)
+	 * The more the first element has parameters to translate, the more the result is close to 1
+	 */
+	public function getFormatMatch($file) {
+		// Examining the first element only
+		$partsAndTitle = $this->getSourceElementsFromFile($file, 1);
+		$parts = $partsAndTitle[0];
+		$titles = $partsAndTitle[1];
+
+		if (!$parts || ($parts && count($parts) == 0)) {
+			// Doesn't look like a csv file
+			return 0;
+		} else {
+			$element = $this->convertElementToVCard($parts[0], $titles);
+
+			$toTranslate=0;
+			$unknownElements = $element->select("X-Unknown-Element");
+			echo "csv: $toTranslate\n";
+			return (pow(0.5, $toTranslate));
+		}
+	}
 }
 
 ?>
