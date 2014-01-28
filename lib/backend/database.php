@@ -796,11 +796,11 @@ class Database extends AbstractBackend {
 		$result = $stmt->execute(array($addressBookId, $uri));
 		$result = $result->fetchRow();
 
-		if($result['count'] > 0) {
+		if(is_array($result) && count($result) > 0 && $result['count'] > 0) {
 			while(true) {
 				$uri = Properties::generateUID() . '.vcf';
 				$result = $stmt->execute(array($addressBookId, $uri));
-				if($result['count'] > 0) {
+				if(is_array($result) && count($result) > 0 && $result['count'] > 0) {
 					continue;
 				} else {
 					return $uri;

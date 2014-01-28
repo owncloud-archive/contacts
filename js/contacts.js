@@ -95,7 +95,7 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	Contact.prototype.hasPhoto = function() {
-		return (this.data && this.data.photo) || false;
+		return (this.getId() !== 'new' && this.data && this.data.photo) || false;
 	};
 
 	Contact.prototype.isOpen = function() {
