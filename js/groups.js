@@ -622,6 +622,12 @@ OC.Contacts = OC.Contacts || {};
 				$elem.data('contacts', contacts);
 				$elem.data('rawname', name);
 				$elem.data('id', id);
+				$elem.droppable({
+					drop: self.contactDropped,
+					activeClass: 'ui-state-active',
+					hoverClass: 'ui-state-hover',
+					scope: 'contacts'
+				});
 				var added = false;
 				self.$groupList.find('li.group[data-type="category"]').each(function() {
 					if ($(this).data('rawname').toLowerCase().localeCompare(name.toLowerCase()) > 0) {
