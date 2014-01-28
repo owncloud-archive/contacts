@@ -238,6 +238,7 @@ OC.Contacts = OC.Contacts || {
 	setFavorites: function(favorites) {
 		// NOTE: All contacts has to be loaded first
 		console.log('setFavorites', favorites);
+		this.favorites = favorites;
 	},
 	loading:function(obj, state) {
 		$(obj).toggleClass('loading', state);
@@ -416,11 +417,17 @@ OC.Contacts = OC.Contacts || {
 		});
 
 		$(document).bind('status.contacts.loaded status.contacts.deleted', function(e, response) {
-			console.log('status.contacts.loaded', response);
+			console.log('status.contacts.loaded', e, response);
 			if(response.error) {
 				$(document).trigger('status.contacts.error', response);
 				console.log('Error loading contacts!');
 			} else {
+				if(e.namespace === 'contacts.loaded') {
+					$.each(self.favorites, function(idx, fav) {
+						console.log('fav', fav);
+						self.$contactList.find('tbody>tr[data-id="'+fav+'"]').addClass('fav');
+					});
+				}
 				if(response.numcontacts === 0) {
 					self.$contactList.hide();
 					self.$firstRun.show();
