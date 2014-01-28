@@ -35,7 +35,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "الملف الذي تحاول تحميله يتجاوز الحد الأقصى لحجم الملف الذي يمكن تحميله على هذا الخادم.",
 "Edit profile picture" => "تعديل صورة الملف الشخصي",
 "Crop photo" => "قص الصورة.",
-"Is this correct?" => "هل هذا صحيح؟",
 "# groups" => "#المجموعات",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "بعض جهات الأتصال تم تحديدها للحذف لكن لم يتم حذفها بعد. يرجى الانتظار قليلاً حتى يتم حذفها بالكامل.",
 "Click to undo deletion of {num} contacts" => "إضغط حتى يتم التراجع عن حذف {أرقام} جهات الاتصال",

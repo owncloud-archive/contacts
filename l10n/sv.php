@@ -35,7 +35,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Filen du försöker ladda upp är större än den maximala storleken för filöverföring på denna server.",
 "Edit profile picture" => "Anpassa profilbild",
 "Crop photo" => "Beskär bild",
-"Is this correct?" => "Är detta korrekt?",
 "Error parsing date: {date}" => "Fel vid läsning av datum: {date}",
 "# groups" => "# grupper",
 "Error parsing birthday {bday}: {error}" => "Fel uppstod under inläsning av födelsedag {bday}: {error}",

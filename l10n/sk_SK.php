@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Súbor, ktorý sa pokúšate nahrať, presahuje maximálnu povolenú veľkosť.",
 "Edit profile picture" => "Upraviť profilový avatar",
 "Crop photo" => "Orezať fotku",
-"Is this correct?" => "Je to správne?",
 "Error parsing date: {date}" => "Chyba pri parsovaní dátumu: {date}",
 "# groups" => "# skupiny",
 "Error parsing birthday {bday}: {error}" => "Chyba parsovania narodenín {bday}: {error}",

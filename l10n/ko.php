@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "업로드할 파일 크기가 서버의 최대 허용 용량을 초과합니다.",
 "Edit profile picture" => "프로필 사진 편집",
 "Crop photo" => "사진 자르기",
-"Is this correct?" => "정확합니까?",
 "Error parsing date: {date}" => "날짜 처리 중 오류 발생: {date}",
 "# groups" => "그룹 수",
 "Error parsing birthday {bday}: {error}" => "생일 {bday} 처리 오류: {error}",

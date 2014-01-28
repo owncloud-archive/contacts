@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "アップロードしようとしているファイルは、このサーバの最大ファイルアップロードサイズを超えています。",
 "Edit profile picture" => "プロフィール写真を編集",
 "Crop photo" => "フォトをトリミング",
-"Is this correct?" => "これは正しいですか？",
 "Error parsing date: {date}" => "日付の読み取りでエラー発生: {date}",
 "# groups" => "グループ数",
 "Error parsing birthday {bday}: {error}" => "誕生日 {bday} の解析エラー: {error}",

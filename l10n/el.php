@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Το αρχείο που προσπαθείτε να μεταφορτώσετε υπερβαίνει το μέγιστο μέγεθος μεταφόρτωσης αρχείων σε αυτόν το διακομιστή.",
 "Edit profile picture" => "Επεξεργασία εικόνας προφίλ",
 "Crop photo" => "Περικοπή φωτογραφίας",
-"Is this correct?" => "Είναι σωστό;",
 "Error parsing date: {date}" => "Σφάλμα κατά την ανάλυση της ημερομηνίας: {date}",
 "# groups" => "# ομάδων",
 "Error parsing birthday {bday}: {error}" => "Σφάλμα κατά την ανάλυση των γενεθλίων {bday}: {error}",

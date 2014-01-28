@@ -1,6 +1,9 @@
 <?php
 /**
- * Copyright (c) 2012 Bart Visscher <bartv@thisnet.nl>
+ * @author Bart Visscher
+ * @copyright 2012 Bart Visscher <bartv@thisnet.nl>
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
+ *
  * This file is licensed under the Affero General Public License version 3 or
  * later.
  * See the COPYING-README file.

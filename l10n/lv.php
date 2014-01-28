@@ -11,7 +11,6 @@
 "Cancel" => "Atcelt",
 "Add group" => "Pievienot grupu",
 "OK" => "Labi",
-"Is this correct?" => "Vai tas ir pareizi?",
 "# groups" => "# grupas",
 "Add" => "Pievienot",
 "All" => "Visi",

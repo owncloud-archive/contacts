@@ -34,7 +34,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Įkeliamo failo dydis viršijo šio serverio maksimalų leistiną dydį.",
 "Edit profile picture" => "Redaguoti profilio paveikslėlį",
 "Crop photo" => "Apkirpti nuotrauką",
-"Is this correct?" => "Teisinga?",
 "Error parsing date: {date}" => "Klaida apdorojant datą: {date}",
 "# groups" => "# grupės",
 "Error parsing birthday {bday}: {error}" => "Klaida nagrinėjant gimtadienį {bday}: {error}",

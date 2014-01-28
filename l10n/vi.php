@@ -35,7 +35,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Các tập tin bạn đang cố gắng tải lên vượt quá kích thước tối đa cho tập tin tải lên trên máy chủ.",
 "Edit profile picture" => "Chỉnh sửa hồ sơ ảnh",
 "Crop photo" => "Cắt ",
-"Is this correct?" => "Bạn có chắc điều này là đúng không?",
 "# groups" => "# nhóm",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Một số địa chỉ liên lạc được đánh dấu để xóa, nhưng chưa bị xóa . Hãy đợi đến khi họ xóa.",
 "Click to undo deletion of {num} contacts" => "Nhấn vào đây để  quay lại thao tác xóa {num} địa chỉ liên lạc",

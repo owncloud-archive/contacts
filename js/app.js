@@ -673,6 +673,10 @@ OC.Contacts = OC.Contacts || {
 					console.log('Showing', contact.getId());
 					contact.show();
 				}
+				if(self.currentgroup === 'uncategorized') {
+					console.log('Hiding', contact.getId());
+					contact.hide();
+				}
 			}
 		});
 
@@ -818,6 +822,7 @@ OC.Contacts = OC.Contacts || {
 		this.$contactList.on('click', 'label:not([for=select_all])', function(event) {
 			var $input = $(this).prev('input');
 			$input.prop('checked', !$input.prop('checked'));
+			$input.trigger('change');
 			return false; // Prevent opening contact
 		});
 
@@ -1383,7 +1388,7 @@ OC.Contacts = OC.Contacts || {
 		this.lastSelectedContacts = [];
 	},
 	jumpToContact: function(id) {
-		this.$rightContent.scrollTop(this.contacts.contactPos(id)-30);
+		this.$rightContent.scrollTop(this.contacts.contactPos(id));
 	},
 	closeContact: function(id) {
 		$(window).unbind('hashchange', this.hashChange);
@@ -1393,7 +1398,11 @@ OC.Contacts = OC.Contacts || {
 		} else {
 			var contact = this.contacts.findById(id);
 			if(contact) {
-				contact.close();
+				// Only show the list element if contact is in current group
+				var showListElement = contact.inGroup(this.groups.nameById(this.currentgroup))
+					|| this.currentgroup === 'all'
+					|| (this.currentgroup === 'uncategorized' && contact.groups().length === 0);
+				contact.close(showListElement);
 			}
 		}
 		delete this.currentid;
@@ -1414,10 +1423,22 @@ OC.Contacts = OC.Contacts || {
 		this.hideActions();
 		console.log('Contacts.openContact', id, typeof id);
 		if(this.currentid && this.currentid !== id) {
-			this.contacts.closeContact(this.currentid);
+			var contact = this.contacts.findById(this.currentid);
+			if(contact) {
+				// Only show the list element if contact is in current group
+				var showListElement = contact.inGroup(this.groups.nameById(this.currentgroup))
+					|| this.currentgroup === 'all'
+					|| (this.currentgroup === 'uncategorized' && contact.groups().length === 0);
+				contact.close(showListElement);
+			}
+		}
+		this.currentid = id;
+		var contact = this.contacts.findById(this.currentid);
+		// If opened from search we can't be sure the contact is in currentgroup
+		if(!contact.inGroup(this.groups.nameById(this.currentgroup)) && this.currentgroup !== 'all') {
+			this.groups.selectGroup({id:'all'});
 		}
 		$(window).unbind('hashchange', this.hashChange);
-		this.currentid = id;
 		this.setAllChecked(false);
 		console.assert(typeof this.currentid === 'string', 'Current ID not string');
 		// Properties that the contact doesn't know
@@ -1426,7 +1447,6 @@ OC.Contacts = OC.Contacts || {
 			groups: this.groups.categories,
 			currentgroup: {id:this.currentgroup, name:this.groups.nameById(this.currentgroup)}
 		};
-		var contact = this.contacts.findById(this.currentid);
 		if(!contact) {
 			console.warn('Error opening', this.currentid);
 			$(document).trigger('status.contacts.error', {

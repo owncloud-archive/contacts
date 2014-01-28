@@ -3,7 +3,7 @@
  * ownCloud - Database backend for Contacts
  *
  * @author Thomas Tanghus
- * @copyright 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -796,11 +796,11 @@ class Database extends AbstractBackend {
 		$result = $stmt->execute(array($addressBookId, $uri));
 		$result = $result->fetchRow();
 
-		if($result['count'] > 0) {
+		if(is_array($result) && count($result) > 0 && $result['count'] > 0) {
 			while(true) {
 				$uri = Properties::generateUID() . '.vcf';
 				$result = $stmt->execute(array($addressBookId, $uri));
-				if($result['count'] > 0) {
+				if(is_array($result) && count($result) > 0 && $result['count'] > 0) {
 					continue;
 				} else {
 					return $uri;

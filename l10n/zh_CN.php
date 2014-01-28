@@ -33,7 +33,6 @@
 "No files selected for upload." => "没有选择文件以上传",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "您试图上传的文件超出了该服务器的最大文件限制",
 "Edit profile picture" => "编辑配置图片",
-"Is this correct?" => "这正确吗？",
 "Error parsing date: {date}" => "解析日期出错：{date}",
 "# groups" => "#群组",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "一些联系人已被标注为删除，但是尚未完成，请稍候。",

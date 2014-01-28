@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Файл, который вы пытаетесь загрузить превышать максимальный размер загружаемых файлов на этом сервере.",
 "Edit profile picture" => "Редактировать изображение профиля",
 "Crop photo" => "Обрезать фото",
-"Is this correct?" => "Это верно?",
 "Error parsing date: {date}" => "Ошибка формата даты: {date}",
 "# groups" => "# группы",
 "Error parsing birthday {bday}: {error}" => "Ошибка добавления дня рождения {bday}: {error}",

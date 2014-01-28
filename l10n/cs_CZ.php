@@ -36,7 +36,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "Soubor, který se pokoušíte odeslat, přesahuje maximální velikost povolenou na serveru.",
 "Edit profile picture" => "Upravit obrázek profilu",
 "Crop photo" => "Oříznout fotku",
-"Is this correct?" => "Je to správně?",
 "Error parsing date: {date}" => "Chyba při parsování data: {date}",
 "# groups" => "počet skupin",
 "Error parsing birthday {bday}: {error}" => "Chyba parsování narozenin {bday}: {error}",

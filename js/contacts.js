@@ -94,6 +94,10 @@ OC.Contacts = OC.Contacts || {};
 		this.metadata.backend = backend;
 	};
 
+	Contact.prototype.hasPhoto = function() {
+		return (this.getId() !== 'new' && this.data && this.data.photo) || false;
+	};
+
 	Contact.prototype.isOpen = function() {
 		return this.$fullelem !== null;
 	};
@@ -605,14 +609,7 @@ OC.Contacts = OC.Contacts || {};
 								self.data.N[0]['value'][2] = nvalue.length > 2 && nvalue.slice(1, nvalue.length-1).join(' ') || '';
 								setTimeout(function() {
 									self.saveProperty({name:'N', value:self.data.N[0].value.join(';')});
-									if(nvalue.length > 1) {
-										setTimeout(function() {
-											self.$fullelem.find('.fullname').next('.action.edit').trigger('click');
-											OC.notify({message:t('contacts', 'Is this correct?')});
-										}, 1000);
-									}
-								}
-								, 500);
+								}, 500);
 							}
 							break;
 						case 'N':
@@ -703,12 +700,14 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * Remove any open contact from the DOM.
 	 */
-	Contact.prototype.close = function() {
+	Contact.prototype.close = function(showListElement) {
 		$(document).unbind('status.contact.photoupdated');
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
 			this.$fullelem.hide().remove();
-			this.getListItemElement().show();
+			if(showListElement) {
+				this.getListItemElement().show();
+			}
 			this.$fullelem = null;
 			return true;
 		} else {
@@ -1014,7 +1013,14 @@ OC.Contacts = OC.Contacts || {};
 			.slice(0, 2).reverse().join(' ');
 
 		this.displayNames.lf = this.getPreferredValue('N', [this.displayNames.fn])
-			.slice(0, 2).join(', ');
+			.slice(0, 2).join(', ').trim();
+		// Fix misplaced comma if either first or last name is missing
+		if(this.displayNames.lf[0] === ',') {
+			this.displayNames.lf = this.displayNames.lf.substr(1);
+		}
+		if(this.displayNames.lf[this.displayNames.lf.length-1] === ',') {
+			this.displayNames.lf = this.displayNames.lf.substr(0, this.displayNames.lf.length-1);
+		}
 
 		this.$listelem = this.$listTemplate.octemplate({
 			id: this.id,
@@ -1585,7 +1591,8 @@ OC.Contacts = OC.Contacts || {};
 	Contact.prototype.setThumbnail = function($elem, refresh) {
 		if(!this.data.thumbnail && !refresh) {
 			this.getListItemElement().find('.avatar').css('height', '32px');
-			this.getListItemElement().find('.avatar').imageplaceholder(String(this.getDisplayName()) || '#');
+			var name = String(this.getDisplayName()).replace(' ', '').replace(',', '');
+			this.getListItemElement().find('.avatar').imageplaceholder(name || '#');
 			return;
 		}
 		if(!$elem) {
@@ -1627,7 +1634,8 @@ OC.Contacts = OC.Contacts || {};
 		};
 
 		this.$photowrapper.addClass('loading').addClass('wait');
-		if(this.getPreferredValue('PHOTO', null) === null) {
+		console.log('hasPhoto', this.hasPhoto());
+		if(!this.hasPhoto()) {
 			$.when(this.storage.getDefaultPhoto())
 				.then(function(image) {
 					$('img.contactphoto').detach();
@@ -1745,12 +1753,23 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Returns an array with the names of the groups the contact is in
+	 *
+	 * @return Array
+	 */
+	Contact.prototype.groups = function() {
+		return this.getPreferredValue('CATEGORIES', []).clean('');
+	};
+
+
+	/**
 	 * Returns true/false depending on the contact being in the
 	 * specified group.
 	 * @param String name The group name (not case-sensitive)
-	 * @returns Boolean
+	 * @return Boolean
 	 */
 	Contact.prototype.inGroup = function(name) {
+		console.log('inGroup', name);
 		var categories = this.getPreferredValue('CATEGORIES', []);
 		var found = false;
 
@@ -2012,7 +2031,7 @@ OC.Contacts = OC.Contacts || {};
 	ContactList.prototype.showUncategorized = function() {
 		console.log('ContactList.showUncategorized');
 		for(var contact in this.contacts) {
-			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).length === 0) {
+			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).clean('').length === 0) {
 				this.contacts[contact].getListItemElement().show();
 				this.contacts[contact].setThumbnail();
 			} else {

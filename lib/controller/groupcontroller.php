@@ -1,7 +1,8 @@
 <?php
 /**
  * @author Thomas Tanghus
- * Copyright (c) 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
+ *
  * This file is licensed under the Affero General Public License version 3 or
  * later.
  * See the COPYING-README file.
@@ -26,8 +27,8 @@ class GroupController extends Controller {
 		$tags = $tagMgr->getTags();
 		foreach($tags as &$tag) {
 			try {
-			$ids = $tagMgr->getIdsForTag($tag['name']);
-			$tag['contacts'] = $ids;
+				$ids = $tagMgr->getIdsForTag($tag['name']);
+				$tag['contacts'] = $ids;
 			} catch(\Exception $e) {
 				$this->api->log(__METHOD__ . ' ' . $e->getMessage());
 			}
@@ -96,10 +97,10 @@ class GroupController extends Controller {
 					\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
 				);
 				if($obj) {
-					if(!isset($obj->CATEGORIES)) {
+					if(!$obj->inGroup($name)) {
 						continue;
 					}
-					if($obj->CATEGORIES->removeGroup($name)) {
+					if($obj->removeFromGroup($name)) {
 						$backend->updateContact(null, $id, $obj, array('noCollection' => true, 'isBatch' => true));
 					}
 				} else {
@@ -195,11 +196,9 @@ class GroupController extends Controller {
 				\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
 			);
 			if($obj) {
-				if(!isset($obj->CATEGORIES)) {
-					$obj->add('CATEGORIES');
+				if($obj->addToGroup($categoryname)) {
+					$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
 				}
-				$obj->CATEGORIES->addGroup($categoryname);
-				$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
 			}
 			$response->debug('contactId: ' . $contactId . ', categoryId: ' . $categoryId);
 			$tagMgr->tagAs($contactId, $categoryId);
@@ -243,10 +242,11 @@ class GroupController extends Controller {
 			);
 			if($obj) {
 				if(!isset($obj->CATEGORIES)) {
-					$obj->add('CATEGORIES');
+					return $response;
 				}
-				$obj->CATEGORIES->removeGroup($categoryname);
-				$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
+				if($obj->removeFromGroup($categoryname)) {
+					$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
+				}
 			} else {
 				$response->debug('Error parsing contact: ' . $contactId);
 			}

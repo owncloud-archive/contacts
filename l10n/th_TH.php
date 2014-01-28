@@ -18,7 +18,6 @@
 "No files selected for upload." => "ยังไม่ได้เลือกไฟล์ำสำหรับอัพโหลด",
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "ไฟล์ที่คุณกำลังพยายามที่จะอัพโหลดมีขนาดเกินจำนวนสูงสุดที่สามารถอัพโหลดได้สำหรับเซิร์ฟเวอร์นี้",
 "Edit profile picture" => "แก้ไขรูปภาพหน้าโปรไฟล์",
-"Is this correct?" => "คุณแน่ใจแล้วหรือว่าถูกต้อง?",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "ข้อมูลผู้ติดต่อบางรายการได้ถูกทำเครื่องหมายสำหรับลบทิ้งเอาไว้, แต่ยังไม่ได้ถูกลบทิ้ง, กรุณารอให้รายการดังกล่าวถูกลบทิ้งเสียก่อน",
 "Click to undo deletion of {num} contacts" => "คลิกเพื่อเลิกทำ การลบรายชื่อผู้ติดต่อ {num} รายการ",
 "Add" => "เพิ่ม",

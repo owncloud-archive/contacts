@@ -2,9 +2,8 @@
 /**
  * ownCloud - JSONSerializer
  *
- * @author Thomas Tanghus, Jakob Sack
- * @copyright 2011 Jakob Sack mail@jakobsack.de
- * @copyright 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @author Thomas Tanghus
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -91,6 +90,7 @@ class JSONSerializer {
 		$details = array();
 
 		if(isset($contact->PHOTO) || isset($contact->LOGO)) {
+			$details['photo'] = true;
 			$details['thumbnail'] = Properties::cacheThumbnail(
 				$contact->getBackend()->name,
 				$contact->getParent()->getId(),

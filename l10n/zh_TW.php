@@ -35,7 +35,6 @@
 "The file you are trying to upload exceed the maximum size for file uploads on this server." => "您想要上傳的檔案大小超過伺服器限制。",
 "Edit profile picture" => "編輯大頭貼照",
 "Crop photo" => "裁切相片",
-"Is this correct?" => "是否正確?",
 "Error parsing date: {date}" => "錯誤的解析日期:{date}",
 "# groups" => "# groups",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "有一些聯絡人被標記為將刪除但是尚未刪除，稍等一下就會刪除了。",

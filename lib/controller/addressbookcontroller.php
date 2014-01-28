@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Thomas Tanghus
- * Copyright (c) 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  * This file is licensed under the Affero General Public License version 3 or
  * later.
  * See the COPYING-README file.
@@ -22,6 +22,7 @@ class AddressBookController extends Controller {
 
 	/**
 	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function userAddressBooks() {
 		$addressBooks = $this->app->getAddressBooksForUser();
@@ -57,6 +58,7 @@ class AddressBookController extends Controller {
 
 	/**
 	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function getAddressBook() {
 		$params = $this->request->urlParams;
@@ -92,7 +94,6 @@ class AddressBookController extends Controller {
 
 	/**
 	 * @NoAdminRequired
-	 * @NoCSRFRequired
 	 */
 	public function addAddressBook() {
 		$params = $this->request->urlParams;
