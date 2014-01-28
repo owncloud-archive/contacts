@@ -1591,7 +1591,8 @@ OC.Contacts = OC.Contacts || {};
 	Contact.prototype.setThumbnail = function($elem, refresh) {
 		if(!this.data.thumbnail && !refresh) {
 			this.getListItemElement().find('.avatar').css('height', '32px');
-			this.getListItemElement().find('.avatar').imageplaceholder(String(this.getDisplayName()) || '#');
+			var name = String(this.getDisplayName()).replace(' ', '').replace(',', '');
+			this.getListItemElement().find('.avatar').imageplaceholder(name || '#');
 			return;
 		}
 		if(!$elem) {
