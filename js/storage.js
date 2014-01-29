@@ -171,6 +171,7 @@ OC.Contacts = OC.Contacts || {};
 	 *
 	 * @param string backend
 	 * @param string addressBookId Address book ID
+	 * @param string page Contacts page number
 	 * @return
 	 * An array containing contact data e.g.:
 	 * {
@@ -185,20 +186,26 @@ OC.Contacts = OC.Contacts || {};
 	 * 	data: //array of VCard data
 	 * }
 	 */
-	Storage.prototype.getAddressBook = function(backend, addressBookId) {
+	Storage.prototype.getAddressBook = function(backend, addressBookId, page) {
 		var headers = {},
 			data,
 			key = 'contacts::' + backend + '::' + addressBookId,
-			defer = $.Deferred();
+			defer = $.Deferred(),
+			route = 'contacts_address_book',
+			params = {backend: backend, addressBookId: addressBookId};
 
 		if(OC.localStorage.hasItem(key)) {
 			data = OC.localStorage.getItem(key);
 			headers['If-None-Match'] = data.Etag;
 		}
+		if (page) {
+			route += '_page';
+			params['page'] = page;
+		}
 		$.when(this.requestRoute(
-			'contacts_address_book',
+			route,
 			'GET',
-			{backend: backend, addressBookId: addressBookId},
+			params,
 			'',
 			headers
 		))

@@ -9,6 +9,7 @@ OC.Contacts = OC.Contacts || {};
 		this.storage = storage;
 		this.book = book;
 		this.$template = template;
+		this.nextPage = 1;
 	}
 
 	AddressBook.prototype.render = function() {
@@ -163,6 +164,11 @@ OC.Contacts = OC.Contacts || {};
 		return this.book.active;
 	};
 
+
+	AddressBook.prototype.getNextPage = function() {
+		return this.nextPage;
+	}
+
 	/**
 	 * Save an address books active state to data store.
 	 * @param bool state
@@ -224,6 +230,10 @@ OC.Contacts = OC.Contacts || {};
 			$(document).trigger('status.contacts.error', response);
 		});
 	};
+
+	AddressBook.prototype.incrementNextPage = function() {
+		++this.nextPage;
+	}
 
 	/**
 	 * Controls access to address books
