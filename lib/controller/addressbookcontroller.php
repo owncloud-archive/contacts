@@ -81,14 +81,36 @@ class AddressBookController extends Controller {
 		{
 			return $response->setStatus(Http::STATUS_NOT_MODIFIED);
 		} else {
-			$contacts = array();
-			foreach($addressBook->getChildren() as $i => $contact) {
-				$result = JSONSerializer::serializeContact($contact);
-				if($result !== null) {
-					$contacts[] = $result;
-				}
+			switch($this->request->method) {
+				case 'OPTIONS':
+					$options = array('GET', 'HEAD', 'OPTIONS');
+					if($addressBook->hasPermission(\OCP\PERMISSION_DELETE)
+						&& $addressBook->getBackend()->hasAddressBookMethodFor(\OCP\PERMISSION_DELETE))
+					{
+						$options[] = 'DELETE';
+					}
+					if($addressBook->hasPermission(\OCP\PERMISSION_UPDATE)
+						&& $addressBook->getBackend()->hasAddressBookMethodFor(\OCP\PERMISSION_UPDATE))
+					{
+						$options[] = 'POST';
+					}
+					$response->addHeader('Allow' , implode(',', $options));
+					return $response;
+					break;
+				case 'HEAD':
+					return $response;
+					break;
+				case 'GET':
+					$contacts = array();
+					foreach($addressBook->getChildren() as $i => $contact) {
+						$result = JSONSerializer::serializeContact($contact);
+						if($result !== null) {
+							$contacts[] = $result;
+						}
+					}
+					return $response->setData(array('contacts' => $contacts));
+					break;
 			}
-			return $response->setData(array('contacts' => $contacts));
 		}
 	}
 
