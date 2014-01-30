@@ -8,9 +8,8 @@
 		<display_name>Thunderbird CSV</display_name>
 		<type>csv</type>
 		<active>1</active>
-		<card_separator value="\n"/>
-		<entry_separator value=","/>
 		<ignore_first_line enabled="true"/>
+		<expected_columns>38</expected_columns>
 	</import_core>
 	
 	<import_entry position="0" enabled="true">

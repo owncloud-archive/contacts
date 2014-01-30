@@ -176,16 +176,14 @@ class ImportCsvConnector extends ImportConnector {
 		$parts = $partsAndTitle[0];
 		$titles = $partsAndTitle[1];
 
-		if (!$parts || ($parts && count($parts) == 0)) {
+		if (!$parts || ($parts && count($parts[0]) != (string)$this->configContent->import_core->expected_columns)) {
 			// Doesn't look like a csv file
 			return 0;
 		} else {
 			$element = $this->convertElementToVCard($parts[0], $titles);
 
-			$toTranslate=0;
 			$unknownElements = $element->select("X-Unknown-Element");
-			echo "csv: $toTranslate\n";
-			return (pow(0.5, $toTranslate));
+			return (0.5 + (0.5 * count($unknownElements)/count($parts[0])));
 		}
 	}
 }

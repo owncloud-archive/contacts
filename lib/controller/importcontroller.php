@@ -28,6 +28,7 @@ class ImportController extends Controller {
 	public function upload() {
 		$request = $this->request;
 		$params = $this->request->urlParams;
+		list($addressBookId, $format) = explode(",", $params['addressBookId']);
 		$response = new JSONResponse();
 
 		$view = \OCP\Files::getStorage('contacts');
@@ -109,6 +110,7 @@ class ImportController extends Controller {
 	public function prepare() {
 		$request = $this->request;
 		$params = $this->request->urlParams;
+		list($addressBookId, $format) = explode(",", $params['addressBookId']);
 		$response = new JSONResponse();
 		$filename = $request->post['filename'];
 		$path = $request->post['path'];
@@ -151,8 +153,9 @@ class ImportController extends Controller {
 		$response = new JSONResponse();
 		$params = $this->request->urlParams;
 		$app = new App($this->api->getUserId());
+		list($addressBookId, $format) = explode(",", $params['addressBookId']);
 
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
+		$addressBook = $app->getAddressBook($params['backend'], $addressBookId);
 		if(!$addressBook->hasPermission(\OCP\PERMISSION_CREATE)) {
 			$response->setStatus('403');
 			$response->bailOut(App::$l10n->t('You do not have permissions to import into this address book.'));
@@ -196,8 +199,34 @@ class ImportController extends Controller {
 		
 		$importManager = new ImportManager();
 		$file = str_replace(array("\r","\n\n"), array("\n","\n"), $file);
-		$parts = $importManager->importFile($view->getLocalFile('/imports/' . $filename), "vcard_gmail");
-		//error_log("importing en cours kwa ".count($parts));
+		$formatList = $importManager->getTypes();
+		
+		$found = false;
+		$parts = array();
+		foreach ($formatList as $formatName => $formatDisplayName) {
+			if ($formatName == $format) {
+				$parts = $importManager->importFile($view->getLocalFile('/imports/' . $filename), $formatName);
+				$found = true;
+			}
+		}
+		
+		if (!$found) {
+			// detect file type
+			$mostLikelyName = "";
+			$mostLikelyValue = 0;
+			$probability = $importManager->detectFileType($view->getLocalFile('/imports/' . $filename));
+			foreach ($probability as $probName => $probValue) {
+				if ($probValue > $mostLikelyValue) {
+					$mostLikelyName = $probName;
+					$mostLikelyValue = $probValue;
+				}
+			}
+			
+			if ($mostLikelyValue > 0) {
+				// found one (most likely...)
+				$parts = $importManager->importFile($view->getLocalFile('/imports/' . $filename), $mostLikelyName);
+			}
+		}
 		
 		//import the contacts
 		$imported = 0;

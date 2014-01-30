@@ -173,7 +173,6 @@ class ImportVCardConnector extends ImportConnector{
 					$toTranslate++;
 				}
 			}
-			echo "vcard: $toTranslate\n";
 			return (1 - pow(0.5, $toTranslate));
 		}
 	}

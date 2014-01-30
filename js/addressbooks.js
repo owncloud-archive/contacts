@@ -241,6 +241,7 @@ OC.Contacts = OC.Contacts || {};
 		this.$bookList = this.$bookTemplate.find('.addressbooklist');
 		this.$bookItemTemplate = bookItemTemplate;
 		this.$importIntoSelect = this.$bookTemplate.find('#import_into');
+		this.$importFormatSelect = this.$bookTemplate.find('#import_format');
 		this.$importProgress = this.$bookTemplate.find('#import-status-progress');
 		this.$importStatusText = this.$bookTemplate.find('#import-status-text');
 		this.addressBooks = [];
@@ -273,6 +274,9 @@ OC.Contacts = OC.Contacts || {};
 		});
 		$(document).bind('status.addressbook.added', function(e) {
 			self.buildImportSelect();
+		})
+		this.$importFormatSelect.on('change', function() {
+			self.$importIntoSelect.trigger('change');
 		});
 		this.$importIntoSelect.on('change', function() {
 			// Disable file input if no address book selected
@@ -281,7 +285,7 @@ OC.Contacts = OC.Contacts || {};
 			if(value !== '-1') {
 				var url = OC.Router.generate(
 					'contacts_import_upload',
-					{addressBookId:value, backend: $(this).find('option:selected').data('backend')}
+					{addressBookId:value+","+self.$importFormatSelect.find('option:selected').val(), backend: $(this).find('option:selected').data('backend')}
 				);
 				self.$importFileInput.fileupload('option', 'url', url);
 				//self.$importFileInput.attr('data-url', url);
