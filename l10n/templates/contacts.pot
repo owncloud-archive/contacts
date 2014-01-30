@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-29 00:49-0500\n"
+"POT-Creation-Date: 2014-01-30 00:49-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -415,41 +415,41 @@ msgstr ""
 msgid "{name}'s Birthday"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:113
+#: lib/controller/addressbookcontroller.php:135
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:152
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:180
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:164
+#: lib/controller/addressbookcontroller.php:186
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:202
+#: lib/controller/addressbookcontroller.php:224
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:238
+#: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:300
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:288
+#: lib/controller/addressbookcontroller.php:310
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:292
+#: lib/controller/addressbookcontroller.php:314
 msgid "Error removing contact from other address book."
 msgstr ""
 
