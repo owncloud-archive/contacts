@@ -65,6 +65,7 @@ $server->addPlugin(new OCA\Contacts\CardDAV\Plugin());
 $server->addPlugin(new Sabre_DAVACL_Plugin());
 $server->addPlugin(new Sabre_DAV_Browser_Plugin(false)); // Show something in the Browser, but no upload
 $server->addPlugin(new Sabre_CardDAV_VCFExportPlugin());
+$server->addPlugin(new OC_Connector_Sabre_ExceptionLoggerPlugin('carddav'));
 
 if(defined('DEBUG') && DEBUG) {
 	$server->debugExceptions = true;
