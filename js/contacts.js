@@ -2236,7 +2236,7 @@ OC.Contacts = OC.Contacts || {};
 					}
 				} else {
 					self.insertContact(contact.getListItemElement());
-					OC.notify({message:response.message});
+					$(document).trigger('status.contacts.error', response);
 				}
 			});
 		} else {
@@ -2259,6 +2259,13 @@ OC.Contacts = OC.Contacts || {};
 				$.each(addressBooks, function(addressBook, contacts) {
 					console.log(addressBook, contacts);
 					var ab = self.addressBooks.find({backend:backend, id:addressBook});
+					if(!ab) {
+						console.warn('Could not find address book!', addressBook);
+						$(document).trigger('status.contacts.error', {
+							message: t('contacts', 'Could not find address book!')
+						});
+						return true; // continue
+					}
 					ab.deleteContacts(contacts, function(response) {
 						console.log('response', response);
 						if(!response.error) {
