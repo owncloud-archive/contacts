@@ -116,7 +116,6 @@ class ImportManager {
 		} else if ((string)$importType->import_core->type == 'vcard') {
 			// use class importVcardConnector
 			return new ImportVCardConnector($importType);
-			$elements = $connector->getElementsFromInput($file, $limit);
 		}
 		return false;
 	}
@@ -137,6 +136,7 @@ class ImportManager {
 					$probability[$type] = $connector->getFormatMatch($file);
 				}
 		}
+		error_log(print_r($probability, 1));
 		return $probability;
 	}	
 }

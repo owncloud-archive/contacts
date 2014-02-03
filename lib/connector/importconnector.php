@@ -48,24 +48,40 @@ abstract class ImportConnector {
 	}
 	
 	protected function updateProperty(&$property, $importEntry, $value) {
-		if (isset($importEntry->vcard_entry['type'])) {
-			$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($importEntry->vcard_entry['type']));
-		}
-		if (isset($importEntry->vcard_entry->additional_property)) {
-			foreach ($importEntry->vcard_entry->additional_property as $additionalProperty) {
-				$property->parameters[] = new \Sabre\VObject\Parameter(''.$additionalProperty['name'], ''.$additionalProperty['value']);
+		if (isset($importEntry->vcard_entry)) {
+			if (isset($importEntry->vcard_entry['type'])) {
+				$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($importEntry->vcard_entry['type']));
+			}
+			if (isset($importEntry->vcard_entry->additional_property)) {
+				foreach ($importEntry->vcard_entry->additional_property as $additionalProperty) {
+					$property->parameters[] = new \Sabre\VObject\Parameter(''.$additionalProperty['name'], ''.$additionalProperty['value']);
+				}
+			}
+			if (isset($importEntry->vcard_entry['prefix'])) {
+				$value = $importEntry->vcard_entry['prefix'].$value;
+			}
+			if (isset($importEntry->vcard_entry['group'])) {
+				$property->group = $importEntry->vcard_entry['group'];
+			}
+			if (isset($importEntry->vcard_entry['position'])) {
+				$separator=";";
+				if (isset($importEntry->vcard_entry['separator'])) {
+					$separator=$importEntry->vcard_entry['separator'];
+				}
+				$position = $importEntry->vcard_entry['position'];
+				$v_array = explode($separator, $property);
+				$v_array[intval($position)] = StringUtil::convertToUTF8($value);
+				$property->setValue(implode($separator, $v_array));
+			} else {
+				if (isset($importEntry->vcard_entry['value'])) {
+					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($value));
+				} else {
+					$property->setValue(StringUtil::convertToUTF8($value));
+				}
 			}
 		}
-		if (isset($importEntry->vcard_entry['prefix'])) {
-			$value = $importEntry->vcard_entry['prefix'].$value;
-		}
-		if (isset($importEntry->vcard_entry['position'])) {
-			$position = $importEntry->vcard_entry['position'];
-			$v_array = explode(";", $property);
-			$v_array[intval($position)] = StringUtil::convertToUTF8($value);
-			$property->setValue(implode(";", $v_array));
-		} else {
-			$property->setValue(StringUtil::convertToUTF8($value));
+		if (isset($importEntry->vcard_parameter)) {
+			$property->parameters[] = new \Sabre\VObject\Parameter($importEntry->vcard_parameter['parameter'], ''.StringUtil::convertToUTF8($value));
 		}
 	}
 	
@@ -88,7 +104,7 @@ abstract class ImportConnector {
 			}
 			foreach ($property->parameters as $parameter) {
 				//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' <> '.$v_param['type'], \OCP\Util::DEBUG);
-				if (!strcmp($parameter->value, $v_param['type'])) {
+				if ($parameter->name == 'TYPE' && !strcmp($parameter->value, $v_param['type'])) {
 					//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' found', \OCP\Util::DEBUG);
 					$found=0;
 					if (isset($v_param->additional_property)) {
@@ -103,6 +119,10 @@ abstract class ImportConnector {
 					}
 					return $property;
 				}
+			}
+			
+			if (isset($v_param['group']) && $property->group == $v_param['group']) {
+				return $property;
 			}
 		}		
 		
@@ -125,6 +145,10 @@ abstract class ImportConnector {
 					break;
 			}
 		}
+		if ($v_param['group']!=null) {
+			$property->group = $v_param['group'];
+		}
+		
 		//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' exiting '.$vcard->serialize(), \OCP\Util::DEBUG);
 		return $property;
 	}
