@@ -132,6 +132,11 @@ Class Properties {
 					'xname' => 'X-SKYPE',
 					'protocol' => 'x-apple',
 				),
+				'owncloud_handle' => array(
+				    'displayname' => (string)$l10n->t('ownCloud handle'),
+				    'xname' => null,
+				    'protocol' => 'owncloud_handle'
+				),
 		);
 		if(is_null($im)) {
 			return $ims;
