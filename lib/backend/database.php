@@ -791,7 +791,7 @@ class Database extends AbstractBackend {
 	* @returns string Unique URI
 	*/
 	protected function uniqueURI($addressBookId, $uri) {
-		$stmt = \OCP\DB::prepare( 'SELECT COUNT(*) FROM `' . $this->cardsTableName . '` as `count` WHERE `addressbookid` = ? AND `uri` = ?' );
+		$stmt = \OCP\DB::prepare( 'SELECT COUNT(*) AS `count` FROM `' . $this->cardsTableName . '` WHERE `addressbookid` = ? AND `uri` = ?' );
 
 		$result = $stmt->execute(array($addressBookId, $uri));
 		$result = $result->fetchRow();
