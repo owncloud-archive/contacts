@@ -199,13 +199,16 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 		try {
 			$contact = $backend->getContact($id, array('uri' => urldecode($carduri)));
 		} catch(\Exception $e) {
-			throw new \Sabre_DAV_Exception_NotFound($e->getMessage());
+			//throw new \Sabre_DAV_Exception_NotFound($e->getMessage());
+			\OCP\Util::writeLog('contacts', __METHOD__.', Exception: '. $e->getMessage(), \OCP\Util::DEBUG);
+			return false;
 		}
 		if(is_array($contact) ) {
 			$contact['etag'] = '"' . md5($contact['carddata']) . '"';
 			return $contact;
 		}
-		throw new \Sabre_DAV_Exception('Error retrieving the card');
+		//throw new \Sabre_DAV_Exception('Error retrieving the card');
+		return false;
 	}
 
 	/**

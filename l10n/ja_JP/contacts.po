@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-28 01:25-0500\n"
-"PO-Revision-Date: 2014-01-28 06:25+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-02 00:49-0500\n"
+"PO-Revision-Date: 2014-02-01 15:10+0000\n"
+"Last-Translator: tt yn <tetuyano+transi@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,7 +116,7 @@ msgstr "マージに失敗しました。連絡先の保存エラー。"
 msgid "Select photo"
 msgstr "写真を選択"
 
-#: js/app.js:689 js/app.js:1622
+#: js/app.js:689 js/app.js:1629
 msgid "Network or server error. Please inform administrator."
 msgstr "ネットワークもしくはサーバエラーです。管理者に連絡してください。"
 
@@ -154,25 +154,25 @@ msgstr "グループを追加"
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1446
+#: js/app.js:1453
 msgid "Could not find contact: {id}"
 msgstr "連絡先が見つかりませんでした: {id}"
 
-#: js/app.js:1469
+#: js/app.js:1476
 msgid "No files selected for upload."
 msgstr "アップロードするファイルが選択されていません。"
 
-#: js/app.js:1479
+#: js/app.js:1486
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "アップロードしようとしているファイルは、このサーバの最大ファイルアップロードサイズを超えています。"
 
-#: js/app.js:1580
+#: js/app.js:1587
 msgid "Edit profile picture"
 msgstr "プロフィール写真を編集"
 
-#: js/app.js:1584
+#: js/app.js:1591
 msgid "Crop photo"
 msgstr "フォトをトリミング"
 
@@ -188,17 +188,17 @@ msgstr "グループ数"
 msgid "Error parsing birthday {bday}: {error}"
 msgstr "誕生日 {bday} の解析エラー: {error}"
 
-#: js/contacts.js:2212
+#: js/contacts.js:2213
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "いくつかの連絡先が削除対象としてマークされていますが、まだ削除されていません。削除には今しばらく時間がかかります。"
 
-#: js/contacts.js:2223
+#: js/contacts.js:2224
 msgid "Click to undo deletion of {num} contacts"
 msgstr "クリックして {num} 個の連絡先の削除を取り消す"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2233
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num}件の連絡先の削除がキャンセルされました"
 
@@ -228,39 +228,39 @@ msgstr "連絡先はこのグループに存在しません。"
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "\"{group}\" のグループはすでに存在します"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
 msgstr "グループの名前の変更に失敗: {error}"
 
-#: js/groups.js:640
+#: js/groups.js:646
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "グループをドラックすることで好きな\nように並べ替えることができます。"
 
-#: js/groups.js:653
+#: js/groups.js:659
 msgid "Failed adding group: {error}"
 msgstr "グループの追加に失敗: {error}"
 
-#: js/groups.js:665
+#: js/groups.js:671
 msgid "All"
 msgstr "すべて"
 
-#: js/groups.js:680 js/groups.js:683
+#: js/groups.js:686 js/groups.js:689
 msgid "Favorites"
 msgstr "お気に入り"
 
-#: js/groups.js:744
+#: js/groups.js:750
 msgid "Shared by {owner}"
 msgstr "{owner} と共有中"
 
-#: js/groups.js:759
+#: js/groups.js:765
 msgid "Not grouped"
 msgstr "グループ化されていません"
 
-#: js/groups.js:788
+#: js/groups.js:794
 msgid "Failed loading groups: {error}"
 msgstr "グループの読み込みに失敗: {error}"
 
@@ -422,41 +422,41 @@ msgstr "不明なIM:"
 msgid "{name}'s Birthday"
 msgstr "{name}の誕生日"
 
-#: lib/controller/addressbookcontroller.php:113
+#: lib/controller/addressbookcontroller.php:135
 msgid "Error creating address book"
 msgstr "アドレス帳の作成エラー"
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:152
 msgid "Error updating address book"
 msgstr "アドレス帳の更新エラー"
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:180
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "アドレス帳 \"%s\" を削除する権限がありません"
 
-#: lib/controller/addressbookcontroller.php:164
+#: lib/controller/addressbookcontroller.php:186
 msgid "Error deleting address book"
 msgstr "アドレス帳の削除エラー"
 
-#: lib/controller/addressbookcontroller.php:202
+#: lib/controller/addressbookcontroller.php:224
 msgid "Error creating contact."
 msgstr "連絡先の作成エラー。"
 
-#: lib/controller/addressbookcontroller.php:238
+#: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
 msgstr "連絡先の削除エラー。"
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:300
 msgid "Error retrieving contact."
 msgstr "連絡先の取得エラー"
 
-#: lib/controller/addressbookcontroller.php:288
+#: lib/controller/addressbookcontroller.php:310
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "連絡先の保存エラー。"
 
-#: lib/controller/addressbookcontroller.php:292
+#: lib/controller/addressbookcontroller.php:314
 msgid "Error removing contact from other address book."
 msgstr "他のアドレス帳からの連絡先の削除エラー"
 
