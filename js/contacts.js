@@ -375,7 +375,7 @@ OC.Contacts = OC.Contacts || {};
 					});
 					self.setAsSaving(obj, false);
 					if(element === 'PHOTO') {
-						self.data.PHOTO[0].value = false;
+						self.data.photo = false;
 						self.data.thumbnail = null;
 					} else {
 						self.$fullelem.find('[data-element="' + element.toLowerCase() + '"]').hide();
@@ -1653,7 +1653,7 @@ OC.Contacts = OC.Contacts || {};
 			$phototools.find('.upload').on('click', function() {
 				$(document).trigger('request.select.contactphoto.fromlocal', self.metaData());
 			});
-			if(this.getPreferredValue('PHOTO', false)) {
+			if(this.hasPhoto()) {
 				$phototools.find('.delete').show();
 				$phototools.find('.edit').show();
 			} else {
@@ -1662,15 +1662,15 @@ OC.Contacts = OC.Contacts || {};
 			}
 			$(document).bind('status.contact.photoupdated', function(e, data) {
 				console.log('status.contact.photoupdated', data);
-				if(!self.data.PHOTO) {
+				if(!self.hasPhoto()) {
 					self.data.PHOTO = [];
 				}
 				if(data.thumbnail) {
 					self.data.thumbnail = data.thumbnail;
-					self.data.PHOTO[0] = {value:true};
+					self.data.photo = true;
 				} else {
 					self.data.thumbnail = null;
-					self.data.PHOTO[0] = {value:false};
+					self.data.photo = false;
 				}
 				self.loadPhoto(true);
 				self.setThumbnail(null, true);
