@@ -61,8 +61,8 @@ if(\OCP\User::isLoggedIn()) {
 	$app = new App($api->getUserId());
 	$addressBooks = $app->getAddressBooksForUser();
 	foreach($addressBooks as $addressBook)  {
-		if($addressBook->getBackend()->name === 'local') {
+		//if($addressBook->getBackend()->name === 'local') {
 			\OCP\Contacts::registerAddressBook(new AddressbookProvider($addressBook));
-		}
+		//}
 	}
 }
