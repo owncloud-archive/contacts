@@ -90,7 +90,7 @@
 
 .oc-addnew .create-button {
         border-radius: 0;
-        background-image: url('%appswebroot%/contacts/img/checkmark-gray.svg');
+        background-image: url('../img/checkmark-gray.svg');
         border-top-right-radius: 5px; 
         border-bottom-right-radius: 5px; 
 }

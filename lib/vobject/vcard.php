@@ -253,6 +253,30 @@ class VCard extends VObject\Component\VCard {
 			}
 		}
 
+		if(isset($this->BDAY)) {
+			if ($options & self::REPAIR) {
+				// If the BDAY has a format of e.g. 19960401
+				$bday = (string)$this->BDAY;
+				if(strlen($bday) >= 8
+					&& is_int(substr($bday, 0, 4))
+					&& is_int(substr($bday, 4, 2))
+					&& is_int(substr($bday, 6, 2))) {
+					$this->BDAY = substr($bday, 0, 4).'-'.substr($bday, 4, 2).'-'.substr($bday, 6, 2);
+					$this->BDAY->VALUE = 'DATE';
+				} else if($bday[5] !== '-' || $bday[7] !== '-') {
+					try {
+						// Skype exports as e.g. Jan 14, 1996
+						$date = new \DateTime($bday);
+						$this->BDAY = $date->format('Y-m-d');
+						$this->BDAY->VALUE = 'DATE';
+					} catch(\Exception $e) {
+						\OCP\Util::writeLog('contacts', __METHOD__.' Removing invalid BDAY: ' . $bday, \OCP\Util::DEBUG);
+						unset($this->BDAY);
+					}
+				}
+			}
+		}
+
 		$n = $this->select('N');
 		if (count($n) !== 1) {
 			$warnings[] = array(
