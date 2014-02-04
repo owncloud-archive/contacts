@@ -91,6 +91,7 @@ class ImportManager {
 	 * @return an array containing VCard elements|false if empty of error
 	 */
 	public function importFile($file, $typeName, $limit=-1) {
+		\OCP\Util::writeLog('contacts import manager', __METHOD__.' importing as '.$typeName, \OCP\Util::DEBUG);
 		$connector = $this->getConnector($typeName);
 		if ($connector) {
 			$elements = $connector->getElementsFromInput($file, $limit);
@@ -136,7 +137,6 @@ class ImportManager {
 					$probability[$type] = $connector->getFormatMatch($file);
 				}
 		}
-		error_log(print_r($probability, 1));
 		return $probability;
 	}	
 }

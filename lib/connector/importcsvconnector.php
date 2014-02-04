@@ -24,6 +24,7 @@ namespace OCA\Contacts\Connector;
 
 use Sabre\VObject\Component;
 use \SplFileObject as SplFileObject;
+use Sabre\VObject\StringUtil;
 
 class ImportCsvConnector extends ImportConnector {
 
@@ -103,8 +104,8 @@ class ImportCsvConnector extends ImportConnector {
 					$property = $this->getOrCreateVCardProperty($vcard, $importEntry->vcard_entry);
 					$this->updateProperty($property, $importEntry, $element[$i]);
 				} else {
-					$property = \Sabre\VObject\Property::create("X-Unknown-Element", $element[$i]);
-					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.$title[$i]);
+					$property = \Sabre\VObject\Property::create("X-Unknown-Element", StringUtil::convertToUTF8($element[$i]));
+					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($title[$i]));
 					$vcard->add($property);
 				}
 			}
@@ -124,8 +125,15 @@ class ImportCsvConnector extends ImportConnector {
 	
 	private function getImportEntryFromName($name) {
 		for ($i=0; $i < $this->configContent->import_entry->count(); $i++) {
-			if ($this->configContent->import_entry[$i]['name'] == $name && $this->configContent->import_entry[$i]['enabled'] == 'true') {
+			if ($this->configContent->import_entry[$i]['name'] == StringUtil::convertToUTF8($name) && $this->configContent->import_entry[$i]['enabled'] == 'true') {
 				return $this->configContent->import_entry[$i];
+			}
+			if (isset($this->configContent->import_entry[$i]->altname)) {
+				foreach ($this->configContent->import_entry[$i]->altname as $altname) {
+					if ($altname == StringUtil::convertToUTF8($name) && $this->configContent->import_entry[$i]['enabled'] == 'true') {
+						return $this->configContent->import_entry[$i];
+					}
+				}
 			}
 		}
 		return false;
@@ -135,8 +143,8 @@ class ImportCsvConnector extends ImportConnector {
 	 * @brief returns the probability that the first element is a match for this format
 	 * @param $file the file to examine
 	 * @return 0 if not a valid csv file
-	 *         0.5^(number of untranslated elements)
-	 * The more the first element has parameters to translate, the more the result is close to 1
+	 *         1 - 0.5*(number of untranslated elements/total number of elements)
+	 * The more the first element has untranslated elements, the more the result is close to 0.5
 	 */
 	public function getFormatMatch($file) {
 		// Examining the first element only
@@ -151,7 +159,8 @@ class ImportCsvConnector extends ImportConnector {
 			$element = $this->convertElementToVCard($parts[0], $titles);
 
 			$unknownElements = $element->select("X-Unknown-Element");
-			return (0.5 + (0.5 * count($unknownElements)/count($parts[0])));
+			//error_log($this->configContent->import_core->name." - ".count($unknownElements)."/".count($parts[0]));
+			return (1 - (0.5 * count($unknownElements)/count($parts[0])));
 		}
 	}
 }
