@@ -1153,8 +1153,8 @@ OC.Contacts = OC.Contacts || {};
 					bday = $.datepicker.parseDate('yy-mm-dd', bday.substring(0, 10));
 					bday = $.datepicker.formatDate(datepickerFormatDate, bday);
 				} catch (e) {
-					var message = t('contacts', 'Error parsing birthday {bday}: {error}', {bday:bday, error: e});
-					console.warn(message);
+					var message = t('contacts', 'Error parsing birthday {bday}', {bday:bday});
+					console.warn('Error parsing birthday', bday, e);
 					bday = '';
 					$(document).trigger('status.contacts.error', {
 						status: 'error',
