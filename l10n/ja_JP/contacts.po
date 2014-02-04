@@ -7,6 +7,7 @@
 # Daisuke Deguchi <ddeguchi@nagoya-u.jp>, 2012-2013
 # plazmism <gomidori@live.jp>, 2013
 # Koichi MATSUMOTO <mzch@me.com>, 2013-2014
+# kuromabo <md81bird@hitaki.net>, 2014
 # pabook <pabook.32@gmail.com>, 2013
 # tt yn <tetuyano+transi@gmail.com>, 2012
 # tt yn <tetuyano+transi@gmail.com>, 2013-2014
@@ -14,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-02 00:49-0500\n"
-"PO-Revision-Date: 2014-02-01 15:10+0000\n"
-"Last-Translator: tt yn <tetuyano+transi@gmail.com>\n"
+"POT-Creation-Date: 2014-02-04 00:48-0500\n"
+"PO-Revision-Date: 2014-02-03 17:40+0000\n"
+"Last-Translator: kuromabo <md81bird@hitaki.net>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -118,7 +119,7 @@ msgstr "写真を選択"
 
 #: js/app.js:689 js/app.js:1629
 msgid "Network or server error. Please inform administrator."
-msgstr "ネットワークもしくはサーバエラーです。管理者に連絡してください。"
+msgstr "ネットワークもしくはサーバーエラーです。管理者に連絡してください。"
 
 #: js/app.js:911
 msgid "Error adding to group."
@@ -166,7 +167,7 @@ msgstr "アップロードするファイルが選択されていません。"
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
-msgstr "アップロードしようとしているファイルは、このサーバの最大ファイルアップロードサイズを超えています。"
+msgstr "アップロードしようとしているファイルは、このサーバーの最大ファイルアップロードサイズを超えています。"
 
 #: js/app.js:1587
 msgid "Edit profile picture"
@@ -336,7 +337,7 @@ msgstr "閉じる..."
 
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
-msgstr "サーバエラー！システム管理者にお知らせください"
+msgstr "サーバーエラー！システム管理者に知らせてください。"
 
 #: js/storage.js:335 js/storage.js:374
 msgid "Failed loading photo: {error}"
@@ -491,7 +492,7 @@ msgstr "プロパティのチェックサムが設定されていません。"
 
 #: lib/controller/contactcontroller.php:126
 msgid "Information about vCard is incorrect. Please reload the page."
-msgstr "vCardの情報に誤りがあります。ページをリロードして下さい。"
+msgstr "vCardの情報に誤りがあります。ページをリロードしてください。"
 
 #: lib/controller/contactcontroller.php:135
 msgid "Error updating contact"
@@ -669,7 +670,7 @@ msgstr "値が指定されていません。"
 
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr "優先度を設定出来ません: "
+msgstr "優先度を設定できません: "
 
 #: lib/searchprovider.php:32
 msgid "Contact"
