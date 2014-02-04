@@ -149,13 +149,23 @@ class JSONSerializer {
 			$value = array_map('trim', $value);
 		}
 		elseif($property->name == 'BDAY') {
-			if(strpos($value, '-') === false) {
-				if(strlen($value) >= 8) {
-					$value = substr($value, 0, 4).'-'.substr($value, 4, 2).'-'.substr($value, 6, 2);
-				} else {
-					return null; // Badly malformed :-(
+			// If the BDAY has a format of e.g. 19960401
+			if(strlen($value) >= 8
+				&& is_int(substr($value, 0, 4))
+				&& is_int(substr($value, 4, 2))
+				&& is_int(substr($value, 6, 2))) {
+				$value = substr($value, 0, 4).'-'.substr($value, 4, 2).'-'.substr($value, 6, 2);
+			} else if($value[5] !== '-' || $value[7] !== '-') {
+				try {
+					// Skype exports as e.g. Jan 14, 1996
+					$date = new \DateTime($value);
+					$value = $date->format('Y-m-d');
+				} catch(\Exception $e) {
+					\OCP\Util::writeLog('contacts', __METHOD__.' Error parsing date: ' . $value, \OCP\Util::DEBUG);
+					return;
 				}
 			}
+			// Otherwise we assume it's OK.
 		} elseif($property->name == 'PHOTO') {
 			$value = true;
 		}
