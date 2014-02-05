@@ -38,7 +38,6 @@
 "Crop photo" => "Beskær billede",
 "Error parsing date: {date}" => "Fejl under læsning af dato: {date}",
 "# groups" => "# grupper",
-"Error parsing birthday {bday}: {error}" => "Fejl under læsning af fødselsdato: {bday}: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Nogle kontakter er markeret til sletning, men er endnu ikke slettet. Vent venligst på, at de bliver slettet.",
 "Click to undo deletion of {num} contacts" => "Klik for at fortryde sletning af {num} kontakter",
 "Cancelled deletion of {num} contacts" => "annullerede sletning af {num} kontakter",

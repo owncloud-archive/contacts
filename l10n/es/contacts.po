@@ -35,9 +35,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-29 00:49-0500\n"
-"PO-Revision-Date: 2014-01-28 07:24+0000\n"
-"Last-Translator: victormce <victormce@gmail.com>\n"
+"POT-Creation-Date: 2014-02-05 01:02-0500\n"
+"PO-Revision-Date: 2014-02-05 06:02+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -206,8 +206,8 @@ msgid "# groups"
 msgstr "# grupos"
 
 #: js/contacts.js:1156
-msgid "Error parsing birthday {bday}: {error}"
-msgstr "Error al analizar el cumpleaños {bday}: {error}"
+msgid "Error parsing birthday {bday}"
+msgstr ""
 
 #: js/contacts.js:2213
 msgid ""
@@ -443,41 +443,41 @@ msgstr "Servicio IM desconocido:"
 msgid "{name}'s Birthday"
 msgstr "Cumpleaños de {name}"
 
-#: lib/controller/addressbookcontroller.php:113
+#: lib/controller/addressbookcontroller.php:135
 msgid "Error creating address book"
 msgstr "Error creando libreta de direcciones"
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:152
 msgid "Error updating address book"
 msgstr "Error actualizando libreta de direcciones"
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:180
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "No tiene los permisos requeridos para eliminar la libreta de direcciones \"%s\""
 
-#: lib/controller/addressbookcontroller.php:164
+#: lib/controller/addressbookcontroller.php:186
 msgid "Error deleting address book"
 msgstr "Error borrando libreta de direcciones"
 
-#: lib/controller/addressbookcontroller.php:202
+#: lib/controller/addressbookcontroller.php:224
 msgid "Error creating contact."
 msgstr "Error creando contacto."
 
-#: lib/controller/addressbookcontroller.php:238
+#: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
 msgstr "Error borrando contacto."
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:300
 msgid "Error retrieving contact."
 msgstr "Error obteniendo contacto."
 
-#: lib/controller/addressbookcontroller.php:288
+#: lib/controller/addressbookcontroller.php:310
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Error guardando el contacto."
 
-#: lib/controller/addressbookcontroller.php:292
+#: lib/controller/addressbookcontroller.php:314
 msgid "Error removing contact from other address book."
 msgstr "Error borrando contacto desde otra libreta de direcciones."
 

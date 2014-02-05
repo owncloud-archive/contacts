@@ -38,7 +38,6 @@
 "Crop photo" => "Обрезать фото",
 "Error parsing date: {date}" => "Ошибка формата даты: {date}",
 "# groups" => "# группы",
-"Error parsing birthday {bday}: {error}" => "Ошибка добавления дня рождения {bday}: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Некоторые контакты помечены на удаление, но ещё не удалены. Подождите, пока они удаляются.",
 "Click to undo deletion of {num} contacts" => "Нажмите для отмены удаления {num} контактов",
 "Cancelled deletion of {num} contacts" => "Отмена удаления {num} контактов",

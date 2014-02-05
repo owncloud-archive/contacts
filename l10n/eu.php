@@ -38,7 +38,6 @@
 "Crop photo" => "Moztu argazkia",
 "Error parsing date: {date}" => "Errorea data aztertzerakoan: {date}",
 "# groups" => "# taldeak",
-"Error parsing birthday {bday}: {error}" => "Errorea {bday} urtebetetzea aztertzerakoan: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Kontaktu batzuk ezabatzeko markatuta daude, baina oraindik ez dira ezabatu. Mesedez itxoin ezabatu arte.",
 "Click to undo deletion of {num} contacts" => "Klikatu {num} kontaktuen ezabaketa desegiteko",
 "Cancelled deletion of {num} contacts" => "{num} kontaktuen ezabaketa ezeztatuta",

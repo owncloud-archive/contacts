@@ -38,7 +38,6 @@
 "Crop photo" => "Lõika pilti",
 "Error parsing date: {date}" => "Viga kuupäeva parsimisel: {date}",
 "# groups" => "# grupid",
-"Error parsing birthday {bday}: {error}" => "Viga sünnipäeva {bday} parsimisel: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Mõned kontaktid on märgitud kustutamiseks, aga pole veel kustutatud. Palun oota, kuni need kustutatakse.",
 "Click to undo deletion of {num} contacts" => "Kliki, et tühistada {num} kontakti kustutamine",
 "Cancelled deletion of {num} contacts" => "Tühistatud {num} kontakti kustutamine",

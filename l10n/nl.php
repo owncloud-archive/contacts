@@ -38,7 +38,6 @@
 "Crop photo" => "Bijsnijden foto",
 "Error parsing date: {date}" => "Fout bij lezen datum: {date}",
 "# groups" => "# groepen",
-"Error parsing birthday {bday}: {error}" => "Fout bij interpreteren verjaardag {bday}: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd.",
 "Click to undo deletion of {num} contacts" => "Klik om het verwijderen van {num} contactpersonen ongedaan te maken.",
 "Cancelled deletion of {num} contacts" => "Verwijderen van {num} contacten geannuleerd",

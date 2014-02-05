@@ -33,8 +33,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-28 01:25-0500\n"
-"PO-Revision-Date: 2014-01-28 06:25+0000\n"
+"POT-Creation-Date: 2014-02-05 01:02-0500\n"
+"PO-Revision-Date: 2014-02-05 06:02+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -135,7 +135,7 @@ msgstr "Αποτυχία συγχώνευσης. Σφάλμα αποθήκευσ
 msgid "Select photo"
 msgstr "Επέλεξε φωτογραφία"
 
-#: js/app.js:689 js/app.js:1622
+#: js/app.js:689 js/app.js:1629
 msgid "Network or server error. Please inform administrator."
 msgstr "Σφάλμα δικτύου ή διακομιστή. Παρακαλώ ενημερώστε το διαχειριστή."
 
@@ -173,25 +173,25 @@ msgstr "Προσθήκη ομάδας"
 msgid "OK"
 msgstr "ΟΚ"
 
-#: js/app.js:1446
+#: js/app.js:1453
 msgid "Could not find contact: {id}"
 msgstr "Αδυναμία εύρεσης επαφής: {id}"
 
-#: js/app.js:1469
+#: js/app.js:1476
 msgid "No files selected for upload."
 msgstr "Δεν επιλέχτηκαν αρχεία για μεταφόρτωση."
 
-#: js/app.js:1479
+#: js/app.js:1486
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Το αρχείο που προσπαθείτε να μεταφορτώσετε υπερβαίνει το μέγιστο μέγεθος μεταφόρτωσης αρχείων σε αυτόν το διακομιστή."
 
-#: js/app.js:1580
+#: js/app.js:1587
 msgid "Edit profile picture"
 msgstr "Επεξεργασία εικόνας προφίλ"
 
-#: js/app.js:1584
+#: js/app.js:1591
 msgid "Crop photo"
 msgstr "Περικοπή φωτογραφίας"
 
@@ -204,20 +204,20 @@ msgid "# groups"
 msgstr "# ομάδων"
 
 #: js/contacts.js:1156
-msgid "Error parsing birthday {bday}: {error}"
-msgstr "Σφάλμα κατά την ανάλυση των γενεθλίων {bday}: {error}"
+msgid "Error parsing birthday {bday}"
+msgstr ""
 
-#: js/contacts.js:2212
+#: js/contacts.js:2213
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή αλλά δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
-#: js/contacts.js:2223
+#: js/contacts.js:2224
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Επιλέξτε για να αναιρέσετε τη διαγραφή {num} επαφών"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2233
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Αναιρέθηκε η διαγραφή {num} επαφών"
 
@@ -253,33 +253,33 @@ msgstr ""
 msgid "Failed renaming group: {error}"
 msgstr "Σφάλμα μετονομασίας της ομάδας: {error}"
 
-#: js/groups.js:640
+#: js/groups.js:646
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "Μπορείτε να σύρετε τις ομάδες για να\nτις τακτοποιήσετε όπως θέλετε."
 
-#: js/groups.js:653
+#: js/groups.js:659
 msgid "Failed adding group: {error}"
 msgstr "Σφάλμα προσθήκης της ομάδας: {error}"
 
-#: js/groups.js:665
+#: js/groups.js:671
 msgid "All"
 msgstr "Όλες"
 
-#: js/groups.js:680 js/groups.js:683
+#: js/groups.js:686 js/groups.js:689
 msgid "Favorites"
 msgstr "Αγαπημένες"
 
-#: js/groups.js:744
+#: js/groups.js:750
 msgid "Shared by {owner}"
 msgstr "Διαμοιράστηκε από τον {owner}"
 
-#: js/groups.js:759
+#: js/groups.js:765
 msgid "Not grouped"
 msgstr "Οχι ομαδοποιημένα"
 
-#: js/groups.js:788
+#: js/groups.js:794
 msgid "Failed loading groups: {error}"
 msgstr "Σφάλμα φόρτωσης της ομάδας: {error}"
 
@@ -441,41 +441,41 @@ msgstr "Άγνωστο AM:"
 msgid "{name}'s Birthday"
 msgstr "Τα γενέθλια του/της {name}"
 
-#: lib/controller/addressbookcontroller.php:113
+#: lib/controller/addressbookcontroller.php:135
 msgid "Error creating address book"
 msgstr "Σφάλμα κατά την δημιουργία βιβλίου διευθύνσεων "
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:152
 msgid "Error updating address book"
 msgstr "Σφάλμα κατά την ενημέρωση του βιβλίου διευθύνσεων"
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:180
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Δεν έχετε άδεια να διαγράψετε το βιβλίο διευθύνσεων \"%s\""
 
-#: lib/controller/addressbookcontroller.php:164
+#: lib/controller/addressbookcontroller.php:186
 msgid "Error deleting address book"
 msgstr "Σφάλμα κατά την διαγραφή βιβλίου διεευθύνσεων "
 
-#: lib/controller/addressbookcontroller.php:202
+#: lib/controller/addressbookcontroller.php:224
 msgid "Error creating contact."
 msgstr "Σφάλμα δημιουργίας επαφής."
 
-#: lib/controller/addressbookcontroller.php:238
+#: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
 msgstr "Σφάλμα διαγραφής επαφής."
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:300
 msgid "Error retrieving contact."
 msgstr "Σφάλμα κατά την ανάκτηση της επαφής."
 
-#: lib/controller/addressbookcontroller.php:288
+#: lib/controller/addressbookcontroller.php:310
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Σφάλμα κατά την αποθήκευση επαφής."
 
-#: lib/controller/addressbookcontroller.php:292
+#: lib/controller/addressbookcontroller.php:314
 msgid "Error removing contact from other address book."
 msgstr "Σφάλμα διαγραφής επαφής από άλλο βιβλίο διευθύνσεων."
 

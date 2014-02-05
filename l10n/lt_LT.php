@@ -36,7 +36,6 @@
 "Crop photo" => "Apkirpti nuotrauką",
 "Error parsing date: {date}" => "Klaida apdorojant datą: {date}",
 "# groups" => "# grupės",
-"Error parsing birthday {bday}: {error}" => "Klaida nagrinėjant gimtadienį {bday}: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Keletas kontaktų buvo pažymėti ištrinimui, bet dar neištrinti. Prašome palaukti kol jie bus ištrinti.",
 "Click to undo deletion of {num} contacts" => "Spauskite, kad atstatyti trynimą {num} kontaktų",
 "Cancelled deletion of {num} contacts" => "Atšauktas {num} kontaktų trynimas",

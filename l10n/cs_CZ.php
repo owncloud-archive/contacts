@@ -38,7 +38,6 @@
 "Crop photo" => "Oříznout fotku",
 "Error parsing date: {date}" => "Chyba při parsování data: {date}",
 "# groups" => "počet skupin",
-"Error parsing birthday {bday}: {error}" => "Chyba parsování narozenin {bday}: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Některé kontakty jsou označeny ke smazání, ale ještě smazány nejsou. Počkejte, prosím, na dokončení operace.",
 "Click to undo deletion of {num} contacts" => "Klikněte pro navrácení smazání {num} kontaktů",
 "Cancelled deletion of {num} contacts" => "Smazání {num} kontaktů zrušeno",

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-02 00:49-0500\n"
-"PO-Revision-Date: 2014-01-31 07:18+0000\n"
+"POT-Creation-Date: 2014-02-05 01:02-0500\n"
+"PO-Revision-Date: 2014-02-05 06:02+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Malayalam (http://www.transifex.com/projects/p/owncloud/language/ml/)\n"
 "MIME-Version: 1.0\n"
@@ -178,7 +178,7 @@ msgid "# groups"
 msgstr ""
 
 #: js/contacts.js:1156
-msgid "Error parsing birthday {bday}: {error}"
+msgid "Error parsing birthday {bday}"
 msgstr ""
 
 #: js/contacts.js:2213

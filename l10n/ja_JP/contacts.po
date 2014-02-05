@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-04 00:48-0500\n"
-"PO-Revision-Date: 2014-02-03 17:40+0000\n"
-"Last-Translator: kuromabo <md81bird@hitaki.net>\n"
+"POT-Creation-Date: 2014-02-05 01:02-0500\n"
+"PO-Revision-Date: 2014-02-05 06:02+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -186,14 +186,14 @@ msgid "# groups"
 msgstr "グループ数"
 
 #: js/contacts.js:1156
-msgid "Error parsing birthday {bday}: {error}"
-msgstr "誕生日 {bday} の解析エラー: {error}"
+msgid "Error parsing birthday {bday}"
+msgstr ""
 
 #: js/contacts.js:2213
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr "いくつかの連絡先が削除対象としてマークされていますが、まだ削除されていません。削除には今しばらく時間がかかります。"
+msgstr "一部の連絡先が削除対象としてマークされていますが、まだ削除されていません。削除されるまでお待ちください。"
 
 #: js/contacts.js:2224
 msgid "Click to undo deletion of {num} contacts"
@@ -541,7 +541,7 @@ msgstr "アップロードされたファイルはありません"
 #: lib/controller/contactphotocontroller.php:100
 #: lib/controller/importcontroller.php:53
 msgid "Missing a temporary folder"
-msgstr "一時保存フォルダが見つかりません"
+msgstr "一時保存フォルダーが見つかりません"
 
 #: lib/controller/contactphotocontroller.php:115
 msgid "Couldn't load temporary image: "
@@ -637,7 +637,7 @@ msgstr "ストレージへの連絡先のアップロードエラー。"
 
 #: lib/controller/importcontroller.php:140
 msgid "Error moving file to imports folder."
-msgstr "ファイルのインポートフォルダへの移動エラー。"
+msgstr "ファイルのインポートフォルダーへの移動エラー。"
 
 #: lib/controller/importcontroller.php:157
 msgid "You do not have permissions to import into this address book."

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-28 01:25-0500\n"
-"PO-Revision-Date: 2014-01-28 06:25+0000\n"
+"POT-Creation-Date: 2014-02-05 01:02-0500\n"
+"PO-Revision-Date: 2014-02-05 06:02+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Tamil (Sri-Lanka) (http://www.transifex.com/projects/p/owncloud/language/ta_LK/)\n"
 "MIME-Version: 1.0\n"
@@ -110,7 +110,7 @@ msgstr ""
 msgid "Select photo"
 msgstr "படத்தை தெரிக"
 
-#: js/app.js:689 js/app.js:1622
+#: js/app.js:689 js/app.js:1629
 msgid "Network or server error. Please inform administrator."
 msgstr "வ​லைய​மைப்பு அல்லது சேவையக வழு. தயவுசெய்து நிர்வாகிக்கு தெரியப்படுத்தவும்."
 
@@ -148,25 +148,25 @@ msgstr "குழுவில் சேர்க்க"
 msgid "OK"
 msgstr "சரி "
 
-#: js/app.js:1446
+#: js/app.js:1453
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1469
+#: js/app.js:1476
 msgid "No files selected for upload."
 msgstr "பதிவேற்றுவதற்கு கோப்புகள் தெரிவுசெய்யப்படவில்லை"
 
-#: js/app.js:1479
+#: js/app.js:1486
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "நீங்கள் பதிவேற்ற முயற்சிக்கும் கோப்பானது இந்த சேவையகத்தில் பதிவேற்றக்கூடிய கோப்பின் ஆகக்கூடிய அளவைவிட கூடியது. "
 
-#: js/app.js:1580
+#: js/app.js:1587
 msgid "Edit profile picture"
 msgstr "விபரக்கோவை படத்தை தொகுக்க "
 
-#: js/app.js:1584
+#: js/app.js:1591
 msgid "Crop photo"
 msgstr ""
 
@@ -179,20 +179,20 @@ msgid "# groups"
 msgstr ""
 
 #: js/contacts.js:1156
-msgid "Error parsing birthday {bday}: {error}"
+msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2212
+#: js/contacts.js:2213
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "சில தொடர்புகள் அழிப்பதற்காக அடையாளப்படுத்தப்பட்டுள்ளது, ஆனால் இன்னும் அழிக்கவில்லை. தயவுசெய்து அது அழியும் வரை காத்திருக்கவும்."
 
-#: js/contacts.js:2223
+#: js/contacts.js:2224
 msgid "Click to undo deletion of {num} contacts"
 msgstr "தொடர்புகள் நீக்கியதை முன் செயல் நீக்கம் {num} செய்வதற்கு சொடக்குக"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2233
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -228,33 +228,33 @@ msgstr ""
 msgid "Failed renaming group: {error}"
 msgstr ""
 
-#: js/groups.js:640
+#: js/groups.js:646
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr ""
 
-#: js/groups.js:653
+#: js/groups.js:659
 msgid "Failed adding group: {error}"
 msgstr ""
 
-#: js/groups.js:665
+#: js/groups.js:671
 msgid "All"
 msgstr "எல்லாம்"
 
-#: js/groups.js:680 js/groups.js:683
+#: js/groups.js:686 js/groups.js:689
 msgid "Favorites"
 msgstr "விருப்பங்கள்"
 
-#: js/groups.js:744
+#: js/groups.js:750
 msgid "Shared by {owner}"
 msgstr "பகிரப்பட்டது {சொந்தகாரர்}"
 
-#: js/groups.js:759
+#: js/groups.js:765
 msgid "Not grouped"
 msgstr ""
 
-#: js/groups.js:788
+#: js/groups.js:794
 msgid "Failed loading groups: {error}"
 msgstr ""
 
@@ -416,41 +416,41 @@ msgstr "அறியப்படாத IM"
 msgid "{name}'s Birthday"
 msgstr "{பெயர்} இன் பிறந்தநாள்"
 
-#: lib/controller/addressbookcontroller.php:113
+#: lib/controller/addressbookcontroller.php:135
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:152
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:180
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:164
+#: lib/controller/addressbookcontroller.php:186
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:202
+#: lib/controller/addressbookcontroller.php:224
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:238
+#: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:300
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:288
+#: lib/controller/addressbookcontroller.php:310
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "தொடர்பை சேமிப்பதில் வழு"
 
-#: lib/controller/addressbookcontroller.php:292
+#: lib/controller/addressbookcontroller.php:314
 msgid "Error removing contact from other address book."
 msgstr ""
 

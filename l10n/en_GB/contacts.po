@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-28 01:25-0500\n"
-"PO-Revision-Date: 2014-01-28 06:25+0000\n"
+"POT-Creation-Date: 2014-02-05 01:02-0500\n"
+"PO-Revision-Date: 2014-02-05 06:02+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/owncloud/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -110,7 +110,7 @@ msgstr "Merge failed. Error saving contact."
 msgid "Select photo"
 msgstr "Select photo"
 
-#: js/app.js:689 js/app.js:1622
+#: js/app.js:689 js/app.js:1629
 msgid "Network or server error. Please inform administrator."
 msgstr "Network or server error. Please inform administrator."
 
@@ -148,25 +148,25 @@ msgstr "Add group"
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1446
+#: js/app.js:1453
 msgid "Could not find contact: {id}"
 msgstr "Could not find contact: {id}"
 
-#: js/app.js:1469
+#: js/app.js:1476
 msgid "No files selected for upload."
 msgstr "No files selected for upload."
 
-#: js/app.js:1479
+#: js/app.js:1486
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "The file you are trying to upload exceeds the maximum size for file uploads on this server."
 
-#: js/app.js:1580
+#: js/app.js:1587
 msgid "Edit profile picture"
 msgstr "Edit profile picture"
 
-#: js/app.js:1584
+#: js/app.js:1591
 msgid "Crop photo"
 msgstr "Crop photo"
 
@@ -179,20 +179,20 @@ msgid "# groups"
 msgstr "# groups"
 
 #: js/contacts.js:1156
-msgid "Error parsing birthday {bday}: {error}"
-msgstr "Error parsing birthday {bday}: {error}"
+msgid "Error parsing birthday {bday}"
+msgstr ""
 
-#: js/contacts.js:2212
+#: js/contacts.js:2213
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted."
 
-#: js/contacts.js:2223
+#: js/contacts.js:2224
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Click to undo deletion of {num} contacts"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2233
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancelled deletion of {num} contacts"
 
@@ -228,33 +228,33 @@ msgstr "A group named \"{group}\" already exists"
 msgid "Failed renaming group: {error}"
 msgstr "Failed renaming group: {error}"
 
-#: js/groups.js:640
+#: js/groups.js:646
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "You can drag groups to\narrange them as you like."
 
-#: js/groups.js:653
+#: js/groups.js:659
 msgid "Failed adding group: {error}"
 msgstr "Failed adding group: {error}"
 
-#: js/groups.js:665
+#: js/groups.js:671
 msgid "All"
 msgstr "All"
 
-#: js/groups.js:680 js/groups.js:683
+#: js/groups.js:686 js/groups.js:689
 msgid "Favorites"
 msgstr "Favourites"
 
-#: js/groups.js:744
+#: js/groups.js:750
 msgid "Shared by {owner}"
 msgstr "Shared by {owner}"
 
-#: js/groups.js:759
+#: js/groups.js:765
 msgid "Not grouped"
 msgstr "Not grouped"
 
-#: js/groups.js:788
+#: js/groups.js:794
 msgid "Failed loading groups: {error}"
 msgstr "Failed loading groups: {error}"
 
@@ -416,41 +416,41 @@ msgstr "Unknown IM: "
 msgid "{name}'s Birthday"
 msgstr "{name}'s Birthday"
 
-#: lib/controller/addressbookcontroller.php:113
+#: lib/controller/addressbookcontroller.php:135
 msgid "Error creating address book"
 msgstr "Error creating address book"
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:152
 msgid "Error updating address book"
 msgstr "Error updating address book"
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:180
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "You do not have permission to delete the \"%s\" address book"
 
-#: lib/controller/addressbookcontroller.php:164
+#: lib/controller/addressbookcontroller.php:186
 msgid "Error deleting address book"
 msgstr "Error deleting address book"
 
-#: lib/controller/addressbookcontroller.php:202
+#: lib/controller/addressbookcontroller.php:224
 msgid "Error creating contact."
 msgstr "Error creating contact."
 
-#: lib/controller/addressbookcontroller.php:238
+#: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
 msgstr "Error deleting contact."
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:300
 msgid "Error retrieving contact."
 msgstr "Error retrieving contact."
 
-#: lib/controller/addressbookcontroller.php:288
+#: lib/controller/addressbookcontroller.php:310
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Error saving contact."
 
-#: lib/controller/addressbookcontroller.php:292
+#: lib/controller/addressbookcontroller.php:314
 msgid "Error removing contact from other address book."
 msgstr "Error removing contact from other address book."
 

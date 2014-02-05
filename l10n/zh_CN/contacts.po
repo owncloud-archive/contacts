@@ -20,13 +20,13 @@
 # modokwang <modokwang@gmail.com>, 2013
 # Xuetian Weng <wengxt@gmail.com>, 2013
 # Xuetian Weng <wengxt@gmail.com>, 2011, 2012
-# zhangmin <zm1990s@gmail.com>, 2013
+# MinZhang <zm1990s@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-28 01:25-0500\n"
-"PO-Revision-Date: 2014-01-28 06:25+0000\n"
+"POT-Creation-Date: 2014-02-05 01:02-0500\n"
+"PO-Revision-Date: 2014-02-05 06:02+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -127,7 +127,7 @@ msgstr "合并失败。保存联系人出错。"
 msgid "Select photo"
 msgstr "选择图片"
 
-#: js/app.js:689 js/app.js:1622
+#: js/app.js:689 js/app.js:1629
 msgid "Network or server error. Please inform administrator."
 msgstr "网络或服务器错误。请通知管理员。"
 
@@ -165,25 +165,25 @@ msgstr "添加分组"
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1446
+#: js/app.js:1453
 msgid "Could not find contact: {id}"
 msgstr "不能找到联系人: {id}"
 
-#: js/app.js:1469
+#: js/app.js:1476
 msgid "No files selected for upload."
 msgstr "没有选择文件以上传"
 
-#: js/app.js:1479
+#: js/app.js:1486
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "您试图上传的文件超出了该服务器的最大文件限制"
 
-#: js/app.js:1580
+#: js/app.js:1587
 msgid "Edit profile picture"
 msgstr "编辑配置图片"
 
-#: js/app.js:1584
+#: js/app.js:1591
 msgid "Crop photo"
 msgstr ""
 
@@ -196,20 +196,20 @@ msgid "# groups"
 msgstr "#群组"
 
 #: js/contacts.js:1156
-msgid "Error parsing birthday {bday}: {error}"
+msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2212
+#: js/contacts.js:2213
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一些联系人已被标注为删除，但是尚未完成，请稍候。"
 
-#: js/contacts.js:2223
+#: js/contacts.js:2224
 msgid "Click to undo deletion of {num} contacts"
 msgstr "点击以撤销删除这{num}个联系人"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2233
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -245,33 +245,33 @@ msgstr ""
 msgid "Failed renaming group: {error}"
 msgstr "重命名分组失败：{error}"
 
-#: js/groups.js:640
+#: js/groups.js:646
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr "您可以通过拖拽分组的方式来按您喜欢的方式摆放他们。"
 
-#: js/groups.js:653
+#: js/groups.js:659
 msgid "Failed adding group: {error}"
 msgstr "添加分组失败：{error}"
 
-#: js/groups.js:665
+#: js/groups.js:671
 msgid "All"
 msgstr "全部"
 
-#: js/groups.js:680 js/groups.js:683
+#: js/groups.js:686 js/groups.js:689
 msgid "Favorites"
 msgstr "收藏"
 
-#: js/groups.js:744
+#: js/groups.js:750
 msgid "Shared by {owner}"
 msgstr "由{owner}共享"
 
-#: js/groups.js:759
+#: js/groups.js:765
 msgid "Not grouped"
 msgstr "未分组"
 
-#: js/groups.js:788
+#: js/groups.js:794
 msgid "Failed loading groups: {error}"
 msgstr "加载分组失败:{error}"
 
@@ -433,41 +433,41 @@ msgstr "未知即时通讯服务："
 msgid "{name}'s Birthday"
 msgstr "{name} 的生日"
 
-#: lib/controller/addressbookcontroller.php:113
+#: lib/controller/addressbookcontroller.php:135
 msgid "Error creating address book"
 msgstr "创建地址薄出错"
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:152
 msgid "Error updating address book"
 msgstr "更新地址簿出错"
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:180
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "你没有权限删除地址簿“%s”"
 
-#: lib/controller/addressbookcontroller.php:164
+#: lib/controller/addressbookcontroller.php:186
 msgid "Error deleting address book"
 msgstr "删除地址薄出错"
 
-#: lib/controller/addressbookcontroller.php:202
+#: lib/controller/addressbookcontroller.php:224
 msgid "Error creating contact."
 msgstr "创建联系人出错。"
 
-#: lib/controller/addressbookcontroller.php:238
+#: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
 msgstr "删除联系人出错。"
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:300
 msgid "Error retrieving contact."
 msgstr "检索联系人出错。"
 
-#: lib/controller/addressbookcontroller.php:288
+#: lib/controller/addressbookcontroller.php:310
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "保存联系人时出错。"
 
-#: lib/controller/addressbookcontroller.php:292
+#: lib/controller/addressbookcontroller.php:314
 msgid "Error removing contact from other address book."
 msgstr "从其他地址簿移除联系人出错。"
 

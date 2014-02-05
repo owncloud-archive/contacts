@@ -38,7 +38,6 @@
 "Crop photo" => "Περικοπή φωτογραφίας",
 "Error parsing date: {date}" => "Σφάλμα κατά την ανάλυση της ημερομηνίας: {date}",
 "# groups" => "# ομάδων",
-"Error parsing birthday {bday}: {error}" => "Σφάλμα κατά την ανάλυση των γενεθλίων {bday}: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Κάποιες επαφές σημειώθηκαν προς διαγραφή αλλά δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν.",
 "Click to undo deletion of {num} contacts" => "Επιλέξτε για να αναιρέσετε τη διαγραφή {num} επαφών",
 "Cancelled deletion of {num} contacts" => "Αναιρέθηκε η διαγραφή {num} επαφών",

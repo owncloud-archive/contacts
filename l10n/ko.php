@@ -38,7 +38,6 @@
 "Crop photo" => "사진 자르기",
 "Error parsing date: {date}" => "날짜 처리 중 오류 발생: {date}",
 "# groups" => "그룹 수",
-"Error parsing birthday {bday}: {error}" => "생일 {bday} 처리 오류: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "일부 연락처가 삭제할 것으로 표시되었으나 아직 삭제되지 않았습니다. 삭제가 끝날 때까지 기다려 주십시오.",
 "Click to undo deletion of {num} contacts" => "연락처 {num}명 삭제를 취소하려면 누르십시오",
 "Cancelled deletion of {num} contacts" => "연락처 {num}명 삭제가 취소됨",
