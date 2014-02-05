@@ -1435,12 +1435,14 @@ OC.Contacts = OC.Contacts || {
 		this.currentid = id;
 		var contact = this.contacts.findById(this.currentid);
 		// If opened from search we can't be sure the contact is in currentgroup
-		if(!contact.inGroup(this.groups.nameById(this.currentgroup)) && this.currentgroup !== 'all') {
+		if(!contact.inGroup(this.groups.nameById(this.currentgroup))
+			&& ['all', 'fav', 'uncategorized'].indexOf(this.currentgroup) === -1
+		) {
 			this.groups.selectGroup({id:'all'});
 		}
 		$(window).unbind('hashchange', this.hashChange);
 		this.setAllChecked(false);
-		console.assert(typeof this.currentid === 'string', 'Current ID not string');
+		console.assert(typeof this.currentid === 'string', 'Current ID not string:' + this.currentid);
 		// Properties that the contact doesn't know
 		var groupprops = {
 			favorite: this.groups.isFavorite(this.currentid),
