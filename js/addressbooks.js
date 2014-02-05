@@ -106,7 +106,7 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	AddressBook.prototype.getId = function() {
-		return this.book.id;
+		return String(this.book.id);
 	};
 
 	AddressBook.prototype.getBackend = function() {
@@ -475,7 +475,7 @@ OC.Contacts = OC.Contacts || {};
 		console.log('AddressBookList.find', info);
 		var addressBook = null;
 		$.each(this.addressBooks, function(idx, book) {
-			if(book.getId() === info.id && book.getBackend() === info.backend) {
+			if(book.getId() === String(info.id) && book.getBackend() === info.backend) {
 				addressBook = book;
 				return false; // break loop
 			}
