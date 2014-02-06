@@ -656,6 +656,14 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	width: 100%;
 	line-height: 51px;
 }
+.multiselect #contactsHeader {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    left: 0;
+    top: 44px;
+    margin-left: 330px; padding-right: 330px;
+    position: fixed;
+    z-index: 10;
+}
 #contactsHeader > tr {
 }
 #contactsHeader > td {
@@ -664,6 +672,12 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactsHeader > td.name {
 	padding-right: 9px;
+}
+.multiselect #contactsHeader > td.name {
+	width: 100%;
+	display: inline-block;
+	background-color: white;
+	opacity: 1;
 }
 #contactsHeader .delete {
 	background-image: none;
@@ -725,6 +739,9 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	width: 100%;
 	z-index: 1;
 }
+#contactlist.multiselect {
+	top: 51px;
+}
 #contactlist {
 	position: relative;
 	width: 100%;
@@ -762,9 +779,11 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	white-space: nowrap;
 }
 #contactlist tr > td {
-	max-width: 250px;
 	min-width: 80px;
 	line-height: 50px;
+}
+#contactlist:not(.multiselect) tr > td {
+	max-width: 250px;
 }
 #contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
