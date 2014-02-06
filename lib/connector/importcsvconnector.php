@@ -26,14 +26,18 @@ use Sabre\VObject\Component;
 use \SplFileObject as SplFileObject;
 use Sabre\VObject\StringUtil;
 
+/**
+ * @brief Implementation of the Import class for CSV format
+ * Doesn't really like csv that has fields with new lines in it, beware !
+ */
 class ImportCsvConnector extends ImportConnector {
 
 	/**
 	 * @brief separates elements from the input stream according to the entry_separator value in config
 	 * ignoring the first line if mentionned in the config
-	 * @param $input the input file to import
+	 * @param $file the input file to import
 	 * @param $limit the number of elements to return (-1 = no limit)
-	 * @return array of strings
+	 * @return array(array(data), array(titles))
 	 */
 	public function getElementsFromInput($file, $limit=-1) {
 		
@@ -48,16 +52,43 @@ class ImportCsvConnector extends ImportConnector {
 		return array_values($elements);
 	}
 	
+	/**
+	 * @brief parses the file in csv format
+	 * @param $file the input file to import
+	 * @param $limit the number of elements to return (-1 = no limit)
+	 * @return array(array(data), array(titles))
+	 */
 	private function getSourceElementsFromFile($file, $limit=-1) {
 		$csv = new SplFileObject($file, 'r');
 		$csv->setFlags(SplFileObject::READ_CSV);
 		
 		if (isset($this->configContent->import_core->delimiter)) {
 			$csv->setCsvControl((string)$this->configContent->import_core->delimiter);
+		} else {
+			// Look for the delimiter in the first line, should be the most present character between ',', ';' and '\t'
+			$firstLine = (new SplFileObject($file))->fgets();
+			$nbComma = substr_count($firstLine, ',');
+			$nbSemicolon = substr_count($firstLine, ';');
+			$nbTab = substr_count($firstLine, "\t");
+			if ($nbComma > $nbSemicolon && $nbComma > $nbTab) {
+				// Comma it is
+				$csv->setCsvControl(',');
+			} else if ($nbSemicolon > $nbComma && $nbSemicolon > $nbTab) {
+				// Semicolon it is
+				$csv->setCsvControl(';');
+			} else if ($nbTab > $nbComma && $nbTab > $nbSemicolon) {
+				// Tab it is
+				$csv->setCsvControl("\t");
+			} else if ($nbTab == 0 && $nbComma == 0 && $nbSemicolon == 0) {
+				// We have a problem, no delimiter found
+				return array(array(), array());
+			}
 		}
 		
-		$ignore_first_line = (isset($this->configContent->import_core->ignore_first_line) && $this->configContent->import_core->ignore_first_line['enabled'] == 'true');
-		
+		$ignore_first_line = (isset($this->configContent->import_core->ignore_first_line)
+								&& (((string)$this->configContent->import_core->ignore_first_line) == 'true') 
+									|| ((string)$this->configContent->import_core->ignore_first_line) == '1');
+
 		$titles = false;
 		
 		$lines = array();
@@ -114,6 +145,11 @@ class ImportCsvConnector extends ImportConnector {
 		return $vcard;
 	}
 	
+	/**
+	 * @brief gets the import entry corresponding to the position given in parameter
+	 * @param $position the position to look for in the connector
+	 * @return int|false
+	 */
 	private function getImportEntryFromPosition($position) {
 		for ($i=0; $i < $this->configContent->import_entry->count(); $i++) {
 			if ($this->configContent->import_entry[$i]['position'] == $position && $this->configContent->import_entry[$i]['enabled'] == 'true') {
@@ -123,6 +159,11 @@ class ImportCsvConnector extends ImportConnector {
 		return false;
 	}
 	
+	/**
+	 * @brief gets the import entry corresponding to the name given in parameter
+	 * @param $name the parameter name to look for in the connector
+	 * @return string|false
+	 */
 	private function getImportEntryFromName($name) {
 		for ($i=0; $i < $this->configContent->import_entry->count(); $i++) {
 			if ($this->configContent->import_entry[$i]['name'] == StringUtil::convertToUTF8($name) && $this->configContent->import_entry[$i]['enabled'] == 'true') {
@@ -157,9 +198,7 @@ class ImportCsvConnector extends ImportConnector {
 			return 0;
 		} else {
 			$element = $this->convertElementToVCard($parts[0], $titles);
-
 			$unknownElements = $element->select("X-Unknown-Element");
-			//error_log($this->configContent->import_core->name." - ".count($unknownElements)."/".count($parts[0]));
 			return (1 - (0.5 * count($unknownElements)/count($parts[0])));
 		}
 	}

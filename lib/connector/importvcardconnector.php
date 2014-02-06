@@ -27,6 +27,9 @@ use Sabre\VObject\Component,
 	\SplFileObject as SplFileObject,
 	Sabre\VObject;
 
+/**
+ * @brief Implementation of the VCard import format
+ */
 class ImportVCardConnector extends ImportConnector{
 
 	/**
@@ -49,6 +52,12 @@ class ImportVCardConnector extends ImportConnector{
 		return array_values($elements);
 	}
 	
+	/**
+	 * @brief parses the file in vcard format
+	 * @param $file the input file to import
+	 * @param $limit the number of elements to return (-1 = no limit)
+	 * @return array()
+	 */
 	private function getSourceElementsFromFile($file, $limit=-1) {
 		$file = file_get_contents($file);
 
@@ -70,9 +79,9 @@ class ImportVCardConnector extends ImportConnector{
 		$card = array();
 		$numParts = 0;
 		foreach($lines as $line) {
-				if(strtoupper(trim($line)) == $this->configContent->import_core->card_begin['value']) {
+				if(strtoupper(trim($line)) == (string)$this->configContent->import_core->card_begin) {
 						$inelement = true;
-				} elseif (strtoupper(trim($line)) == $this->configContent->import_core->card_end['value']) {
+				} elseif (strtoupper(trim($line)) == (string)$this->configContent->import_core->card_end) {
 						$card[] = $line;
 						$parts[] = implode($nl, $card);
 						$card = array();

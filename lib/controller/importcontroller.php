@@ -231,8 +231,8 @@ class ImportController extends Controller {
 		//import the contacts
 		$imported = 0;
 		$failed = 0;
-		$partially = 0;
 		$processed = 0;
+		$total = count($parts);
 
 		// TODO: Add a new group: "Imported at {date}"
 		foreach($parts as $part) {
@@ -253,9 +253,10 @@ class ImportController extends Controller {
 				$response->debug('Error importing vcard: ' . $e->getMessage() . $nl . $part->serialize());
 				$failed += 1;
 			}
-			$processed += 1;
+			$processed++;
 			$writeProgress($processed);
 		}
+		$cleanup();
 		//done the import
 		sleep(3); // Give client side a chance to read the progress.
 		$response->setParams(
@@ -263,7 +264,6 @@ class ImportController extends Controller {
 				'backend' => $params['backend'],
 				'addressBookId' => $params['addressBookId'],
 				'imported' => $imported,
-				'partially' => $partially,
 				'failed' => $failed,
 			)
 		);

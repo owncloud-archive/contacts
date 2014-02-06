@@ -31,42 +31,10 @@ use OCA\Contacts\Addressbook;
  */
 class ImportManager {
 	
-	private $importTypes;
-	
 	public function __construct() {
 	}
 	
-	public function getTypes() {
-		$prefix = "import_";
-		$suffix = ".xml";
-		$path = __DIR__ . "/../formats/";
-		$files = scandir($path);
-		$formats = array();
-		foreach ($files as $file) {
-			if (!strncmp($file, $prefix, strlen($prefix)) && substr($file, - strlen($suffix)) === $suffix) {
-				$format = simplexml_load_file ( $path . $file );
-				if ($format) {
-					if (isset($format->import_core)
-					&& isset($format->import_core->name)
-					&& isset($format->import_core->display_name)
-					&& isset($format->import_core->type)
-					&& isset($format->import_core->active)
-					&& $format->import_core->active == '1') {
-						$formats[(string)$format->import_core->name] = (string)$format->import_core->display_name;
-					}
-				}
-			}
-		}
-		return $formats;
-	}
-	
-	/**
-	 * @brief get all the preferences for the addressbook
-	 * @param string $id
-	 * @return SimpleXml
-	 */
-	public function getType($typeName) {
-		$path = __DIR__ . "/../formats/import_" . $typeName . "_connector.xml";
+	private function loadXmlFile($path) {
 		if (file_exists($path)) {
 			$format = simplexml_load_file ( $path );
 			if ($format) {
@@ -81,6 +49,37 @@ class ImportManager {
 			}
 		}
 		return false;
+	}
+	
+	/**
+	 * @brief return the different import formats available by scanning the contacts/formats folder
+	 * @return array(string, string)
+	 */
+	public function getTypes() {
+		$prefix = "import_";
+		$suffix = "_connector.xml";
+		$path = __DIR__ . "/../formats/";
+		$files = scandir($path);
+		$formats = array();
+		foreach ($files as $file) {
+			if (!strncmp($file, $prefix, strlen($prefix)) && substr($file, - strlen($suffix)) === $suffix) {
+				$format = $this->loadXmlFile($path.$file);
+				if ($format) {
+					$formats[(string)$format->import_core->name] = (string)$format->import_core->display_name;
+				}
+			}
+		}
+		return $formats;
+	}
+	
+	/**
+	 * @brief get all the preferences for the addressbook
+	 * @param string $id
+	 * @return SimpleXml
+	 */
+	public function getType($typeName) {
+		$path = __DIR__ . "/../formats/import_" . $typeName . "_connector.xml";
+		return $this->loadXmlFile($path);
 	}
 		
 	/**

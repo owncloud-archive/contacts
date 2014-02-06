@@ -1,6 +1,69 @@
 <?xml version='1.0' standalone='yes'?>
 
-<!-- XML connector for phpldapadmin csv export -->
+<!--
+	Parameters available
+	<import_core>
+	@brief: main parameters
+		<name></name>
+		@brief: Internal name
+		must match the xml file name with the pattern import_<name>_connector.xml
+		
+		<display_name></display_name>
+		@brief: Display name
+		
+		<type></type>
+		@brief: type (csv,vcard,ldif,...)
+		
+		<active></active>
+		@brief: if 0, will not be used
+		
+		<ignore_first_line><ignore_first_line/>
+		@brief: If the first line has titles (1 or true)
+		
+		<delimiter></delimiter>
+		@brief: if empty, automatic search between ',', ';' and '\t'
+		
+		<base_parsing></base_parsing>
+		@brief: parse by column name or column position
+		
+		<expected_columns></expected_columns>
+		@brief: if parse by column position, how many columns are expected (use for automatic import)
+	</import_core>
+
+	<import_entry property="" position="" enabled="">
+	@brief: csv entry to look for
+	property: property name (if base_parsing is name)
+	position: property position (if base_parsing is position)
+	enabled: import_entry used or not
+		
+		<altname lang=""></altname>
+		@brief: alternate property name
+		lang: language
+		value: other property name (if base_parsing is name)
+			
+		<vcard_entry property="" type="" prefix="" position="" group="" value="" separator="">
+		</vcard_entry>
+		@brief: VCard entry to add
+		property: VCard property name
+		type: VCard property type
+		prefix: prefix to add to the value
+		position: position of the element in the value
+		group: VCard group value
+		value: forced value
+		separator: separator string if position is set
+		
+		<vcard_parameter property="" parameter="">
+		</vcard_parameter>
+		@brief: additional parameter for the VCard property
+		property: property name to add parameter to
+		parameter: parameter name
+		
+	</import_entry>
+-->
+<!--
+XML connector for gmail csv import
+author: Nicolas Mora mail@babelouest.org
+-->
 <import_entries>
 	
 	<import_core>
@@ -8,7 +71,7 @@
 		<display_name>Gmail CSV</display_name>
 		<type>csv</type>
 		<active>1</active>
-		<ignore_first_line enabled="true"/>
+		<ignore_first_line>1</ignore_first_line>
 		<base_parsing>name</base_parsing>
 	</import_core>
 	
