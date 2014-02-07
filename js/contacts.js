@@ -2476,8 +2476,8 @@ OC.Contacts = OC.Contacts || {};
 			if(rows[0].firstElementChild && rows[0].firstElementChild.textContent) {
 				rows.sort(function(a, b) {
 					// 10 (TEN!) times faster than using jQuery!
-					return a.firstElementChild.textContent.trim().toUpperCase()
-						.localeCompare(b.firstElementChild.textContent.trim().toUpperCase());
+					return a.firstElementChild.lastElementChild.textContent.trim().toUpperCase()
+						.localeCompare(b.firstElementChild.lastElementChild.textContent.trim().toUpperCase());
 				});
 			} else {
 				// IE8 doesn't support firstElementChild or textContent
