@@ -676,8 +676,9 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 .multiselect #contactsHeader > td.name {
 	width: 100%;
 	display: inline-block;
-	background-color: white;
-	opacity: 1;
+	color: #000;
+	background-color: rgba(220, 220, 220, 0.8);
+	opacity: 0.9;
 }
 #contactsHeader .delete {
 	background-image: none;
