@@ -779,12 +779,10 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	vertical-align: top;
 	white-space: nowrap;
 }
-#contactlist tr > td {
+#contactlist tbody > tr > td {
 	min-width: 80px;
-	line-height: 50px;
-}
-#contactlist:not(.multiselect) tr > td {
 	max-width: 250px;
+	line-height: 50px;
 }
 #contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
