@@ -676,8 +676,9 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 .multiselect #contactsHeader > td.name {
 	width: 100%;
 	display: inline-block;
-	background-color: white;
-	opacity: 1;
+	color: #000;
+	background-color: rgba(220, 220, 220, 0.8);
+	opacity: 0.9;
 }
 #contactsHeader .delete {
 	background-image: none;
@@ -778,12 +779,10 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	vertical-align: top;
 	white-space: nowrap;
 }
-#contactlist tr > td {
+#contactlist tbody > tr > td {
 	min-width: 80px;
-	line-height: 50px;
-}
-#contactlist:not(.multiselect) tr > td {
 	max-width: 250px;
+	line-height: 50px;
 }
 #contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
@@ -916,6 +915,9 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	#contactsHeader tr td.tel { display: none; }
 	#app-navigation { width: 200px; }
 	#app-settings { width: 199px; }
+	.multiselect #contactsHeader {
+		margin-left: 280px; padding-right: 280px;
+	}
 }
 @media screen and (max-width: 900px) {
 	#contactsHeader .delete { display: none; }
