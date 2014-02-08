@@ -17,13 +17,14 @@
 # amgomesdionisio, 2013
 # PapiMigas Migas <papimigas@gmail.com>, 2013
 # rjgpp1994 <rjgpp.1994@gmail.com>, 2012
+# rtbfreitas, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-05 01:02-0500\n"
-"PO-Revision-Date: 2014-02-05 06:02+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-08 01:15-0500\n"
+"PO-Revision-Date: 2014-02-05 11:26+0000\n"
+"Last-Translator: rtbfreitas\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -123,7 +124,7 @@ msgstr "Junção falhou. Erro ao guardar contacto."
 msgid "Select photo"
 msgstr "Selecione uma fotografia"
 
-#: js/app.js:689 js/app.js:1629
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr "Erro de rede ou do servidor. Por favor, informe o administrador."
 
@@ -161,25 +162,25 @@ msgstr "Adicionar grupo"
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1453
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr "Não foi possível encontrar o contacto: {id}"
 
-#: js/app.js:1476
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr "Nenhum ficheiro selecionado para enviar."
 
-#: js/app.js:1486
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "O tamanho do ficheiro que está a tentar carregar ultrapassa o limite máximo definido para ficheiros no servidor."
 
-#: js/app.js:1587
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr "Editar a fotografia de perfil."
 
-#: js/app.js:1591
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr "Cortar foto"
 
@@ -193,7 +194,7 @@ msgstr "# grupos"
 
 #: js/contacts.js:1156
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Erro ao analisar aniversário {bday}"
 
 #: js/contacts.js:2213
 msgid ""
@@ -599,29 +600,29 @@ msgstr "Grupo sem nome."
 msgid "Error adding group."
 msgstr "Erro a adicionar o grupo"
 
-#: lib/controller/groupcontroller.php:128
+#: lib/controller/groupcontroller.php:130
 msgid "No group name to rename from given."
 msgstr "Não foi dado um novo nome ao grupo recebido."
 
-#: lib/controller/groupcontroller.php:132
+#: lib/controller/groupcontroller.php:134
 msgid "No group name to rename to given."
 msgstr "Não foi dado um novo nome ao grupo dado."
 
-#: lib/controller/groupcontroller.php:138
+#: lib/controller/groupcontroller.php:140
 msgid "Error renaming group."
 msgstr "Erro ao renomear grupo."
 
-#: lib/controller/groupcontroller.php:176
-#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:178
+#: lib/controller/groupcontroller.php:224
 msgid "Group ID missing from request."
 msgstr "Falta o ID do grupo no pedido"
 
-#: lib/controller/groupcontroller.php:181
+#: lib/controller/groupcontroller.php:183
 msgid "Group name missing from request."
 msgstr "Nome de grupo em falta."
 
-#: lib/controller/groupcontroller.php:186
-#: lib/controller/groupcontroller.php:227
+#: lib/controller/groupcontroller.php:188
+#: lib/controller/groupcontroller.php:229
 msgid "Contact ID missing from request."
 msgstr "Falta o ID do contacto no pedido"
 

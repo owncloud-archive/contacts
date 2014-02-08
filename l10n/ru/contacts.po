@@ -5,10 +5,11 @@
 # Translators:
 # Alexander Savchenko <>, 2013
 # Alexander Shashkevych <alex@stunpix.com>, 2013
+# Denis <reg.transifex.net@demitel.ru>, 2014
 # Denis <reg.transifex.net@demitel.ru>, 2012
 # Dmitry <linuxsquirrel.dev@gmail.com>, 2013
 # Evgeniy Spitsyn <evgeniy@spitsyn.net>, 2013
-# Дмитрий Куренков <ideamk@gmail.com>, 2012
+# Dmitry Kurenkov <ideamk@gmail.com>, 2012
 # jekader <jekader@gmail.com>, 2013
 # jekader <jekader@gmail.com>, 2012
 # Yaroslav Petrov <lankme@gmail.com>, 2012
@@ -33,9 +34,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-05 01:02-0500\n"
-"PO-Revision-Date: 2014-02-05 06:02+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-08 01:15-0500\n"
+"PO-Revision-Date: 2014-02-05 17:21+0000\n"
+"Last-Translator: Denis <reg.transifex.net@demitel.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -135,7 +136,7 @@ msgstr "Объединение не удалось. Ошибка сохране�
 msgid "Select photo"
 msgstr "Выберите фото"
 
-#: js/app.js:689 js/app.js:1629
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr "Ошибка сети или сервера. Пожалуйста, сообщите администратору."
 
@@ -173,25 +174,25 @@ msgstr "Добавить группу"
 msgid "OK"
 msgstr "ОК"
 
-#: js/app.js:1453
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr "Не удалось найти контакт: {id}"
 
-#: js/app.js:1476
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr "Нет выбранных файлов для загрузки."
 
-#: js/app.js:1486
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Файл, который вы пытаетесь загрузить превышать максимальный размер загружаемых файлов на этом сервере."
 
-#: js/app.js:1587
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr "Редактировать изображение профиля"
 
-#: js/app.js:1591
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr "Обрезать фото"
 
@@ -205,7 +206,7 @@ msgstr "# группы"
 
 #: js/contacts.js:1156
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Ошибка анализа даты рождения {bday}"
 
 #: js/contacts.js:2213
 msgid ""
@@ -247,7 +248,7 @@ msgstr "Контакты не в этой группе."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "Группа с именем \"{group}\" уже существует"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -611,29 +612,29 @@ msgstr "Не задано имя группы."
 msgid "Error adding group."
 msgstr "Ошибка добавления группы."
 
-#: lib/controller/groupcontroller.php:128
+#: lib/controller/groupcontroller.php:130
 msgid "No group name to rename from given."
 msgstr "Не указано имя группы для переименования из выбранного."
 
-#: lib/controller/groupcontroller.php:132
+#: lib/controller/groupcontroller.php:134
 msgid "No group name to rename to given."
 msgstr "Не указано имя группы для переименования в выбранное."
 
-#: lib/controller/groupcontroller.php:138
+#: lib/controller/groupcontroller.php:140
 msgid "Error renaming group."
 msgstr "Ошибка переименования группы."
 
-#: lib/controller/groupcontroller.php:176
-#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:178
+#: lib/controller/groupcontroller.php:224
 msgid "Group ID missing from request."
 msgstr "В запросе отсутствует ID группы."
 
-#: lib/controller/groupcontroller.php:181
+#: lib/controller/groupcontroller.php:183
 msgid "Group name missing from request."
 msgstr "Имя группы отсутствует в запросе."
 
-#: lib/controller/groupcontroller.php:186
-#: lib/controller/groupcontroller.php:227
+#: lib/controller/groupcontroller.php:188
+#: lib/controller/groupcontroller.php:229
 msgid "Contact ID missing from request."
 msgstr "ID контакта из запроса отсутствует."
 

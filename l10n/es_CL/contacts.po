@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-05 01:02-0500\n"
-"PO-Revision-Date: 2014-02-05 06:02+0000\n"
+"POT-Creation-Date: 2014-02-08 01:15-0500\n"
+"PO-Revision-Date: 2014-02-07 18:00+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Spanish (Chile) (http://www.transifex.com/projects/p/owncloud/language/es_CL/)\n"
 "MIME-Version: 1.0\n"
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:689 js/app.js:1629
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
@@ -147,25 +147,25 @@ msgstr ""
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1453
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1476
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1486
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1587
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1591
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr ""
 
@@ -585,29 +585,29 @@ msgstr ""
 msgid "Error adding group."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:128
+#: lib/controller/groupcontroller.php:130
 msgid "No group name to rename from given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:132
+#: lib/controller/groupcontroller.php:134
 msgid "No group name to rename to given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:138
+#: lib/controller/groupcontroller.php:140
 msgid "Error renaming group."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:176
-#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:178
+#: lib/controller/groupcontroller.php:224
 msgid "Group ID missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:181
+#: lib/controller/groupcontroller.php:183
 msgid "Group name missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:186
-#: lib/controller/groupcontroller.php:227
+#: lib/controller/groupcontroller.php:188
+#: lib/controller/groupcontroller.php:229
 msgid "Contact ID missing from request."
 msgstr ""
 
@@ -1061,7 +1061,7 @@ msgstr ""
 
 #: templates/contacts.php:510 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "Compartir"
 
 #: templates/contacts.php:511
 msgid "Export"

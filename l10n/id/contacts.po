@@ -10,13 +10,14 @@
 # elmakong <mr.pige_ina@yahoo.co.id>, 2012
 # rodin <romihardiyanto@gmail.com>, 2013
 # rodin <romihardiyanto@gmail.com>, 2013
+# Sugeng Tigefa <tigefa@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-05 01:02-0500\n"
-"PO-Revision-Date: 2014-02-05 06:02+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-08 01:15-0500\n"
+"PO-Revision-Date: 2014-02-05 20:40+0000\n"
+"Last-Translator: Sugeng Tigefa <tigefa@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/owncloud/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,7 +117,7 @@ msgstr "Gagal gabung. Galat menyimpan kontak."
 msgid "Select photo"
 msgstr "Pilih foto"
 
-#: js/app.js:689 js/app.js:1629
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr "Jaringan atau server galat. Silahkan menginformasikan administrator."
 
@@ -132,7 +133,7 @@ msgstr "Galat menghapus dari grup."
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "Anda telah memilih lebih dari 300 kontak.\nIni kemungkinan besar akan gagal! Klik di sini untuk mencoba."
 
 #: js/app.js:1148
 msgid "Error setting {name} as favorite."
@@ -154,31 +155,31 @@ msgstr "Tambah grup"
 msgid "OK"
 msgstr "Oke"
 
-#: js/app.js:1453
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr "Tidak menemukan kontak: {id}"
 
-#: js/app.js:1476
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr "Tidak ada berkas yang dipilih untuk diunggah."
 
-#: js/app.js:1486
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Berkas yang Anda coba unggah melebihi ukuran maksimum pada server ini."
 
-#: js/app.js:1587
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr "Sunting gambar profil"
 
-#: js/app.js:1591
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr "Gunting foto"
 
 #: js/contacts.js:878
 msgid "Error parsing date: {date}"
-msgstr ""
+msgstr "Galat tanggal penguraian: {date}"
 
 #: js/contacts.js:1082
 msgid "# groups"
@@ -186,7 +187,7 @@ msgstr "# grup"
 
 #: js/contacts.js:1156
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Hari ulang tahun Kesalahan penguraian {bday}"
 
 #: js/contacts.js:2213
 msgid ""
@@ -228,7 +229,7 @@ msgstr "Kontak tidak di dalam grup ini."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "Sebuah kelompok bernama \"{group}\" sudah ada"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -360,7 +361,7 @@ msgstr "Anda tidak memiliki akses untuk menambah kontak untuk buku alamat"
 
 #: lib/addressbook.php:216
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "Backend untuk buku alamat ini tidak mendukung menambahkan kontak"
 
 #: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
@@ -368,7 +369,7 @@ msgstr "Anda tidak memiliki akses untuk menghapus kontak ini"
 
 #: lib/addressbook.php:243 lib/addressbook.php:269
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "Backend untuk buku alamat ini tidak mendukung menghapus kontak"
 
 #: lib/addressbook.php:290
 msgid "Unknown error"
@@ -376,7 +377,7 @@ msgstr "Galat tidak diketahui"
 
 #: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "Backend untuk buku alamat ini tidak mendukung memperbarui"
 
 #: lib/addressbook.php:358
 msgid "You don't have permissions to update the address book."
@@ -400,11 +401,11 @@ msgstr "Anda tidak memiliki akses untuk memperbahui kontak ini"
 
 #: lib/contact.php:274
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "Backend untuk kontak ini tidak mendukung memperbarui"
 
 #: lib/contact.php:292
 msgid "This backend not support adding contacts"
-msgstr ""
+msgstr "Backend ini tidak mendukung menambahkan kontak"
 
 #: lib/contact.php:402 lib/contact.php:419
 msgid "Property not found"
@@ -479,7 +480,7 @@ msgstr "Kesalahan saat menggabungkan kedalam kontak."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
-msgstr ""
+msgstr "Kesalahan menyimpan kontak ke backend."
 
 #: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
@@ -499,7 +500,7 @@ msgstr "Kesalahan saat memperbarui kontak"
 
 #: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Kesalahan saat menyimpan kontak ke backend"
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
@@ -592,31 +593,31 @@ msgstr "Tidak ada nama grup yang diberikan."
 msgid "Error adding group."
 msgstr "Galat menambahkan grup."
 
-#: lib/controller/groupcontroller.php:128
+#: lib/controller/groupcontroller.php:130
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Tidak ada nama grup untuk mengubah nama dari yang diberikan."
 
-#: lib/controller/groupcontroller.php:132
+#: lib/controller/groupcontroller.php:134
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Tidak ada nama grup untuk mengubah nama untuk diberikan."
 
-#: lib/controller/groupcontroller.php:138
+#: lib/controller/groupcontroller.php:140
 msgid "Error renaming group."
 msgstr "Galat mengubah nama grup"
 
-#: lib/controller/groupcontroller.php:176
-#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:178
+#: lib/controller/groupcontroller.php:224
 msgid "Group ID missing from request."
-msgstr ""
+msgstr "Group ID hilang dari permintaan."
 
-#: lib/controller/groupcontroller.php:181
+#: lib/controller/groupcontroller.php:183
 msgid "Group name missing from request."
-msgstr ""
+msgstr "Nama grup hilang dari permintaan."
 
-#: lib/controller/groupcontroller.php:186
-#: lib/controller/groupcontroller.php:227
+#: lib/controller/groupcontroller.php:188
+#: lib/controller/groupcontroller.php:229
 msgid "Contact ID missing from request."
-msgstr ""
+msgstr "ID kontak hilang dari permintaan."
 
 #: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
@@ -628,7 +629,7 @@ msgstr "Ruang penyimpanan tidak mencukupi"
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "Mencoba untuk mengupload file daftar hitam:"
 
 #: lib/controller/importcontroller.php:95
 msgid "Error uploading contacts to storage."
@@ -644,16 +645,16 @@ msgstr "Anda tidak memiliki izin untuk mengimpor ke buku alamat ini"
 
 #: lib/controller/importcontroller.php:165
 msgid "File name missing from request."
-msgstr ""
+msgstr "Nama berkas hilang dari permintaan."
 
 #: lib/controller/importcontroller.php:170
 #: lib/controller/importcontroller.php:293
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Kunci Perkembangan hilang dari permintaan."
 
 #: lib/controller/importcontroller.php:176
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "Mencoba untuk mengakses berkas daftar hitam:"
 
 #: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
@@ -798,7 +799,7 @@ msgstr "Favorit"
 
 #: templates/contacts.php:17
 msgid "Merge selected"
-msgstr ""
+msgstr "Merge dipilih"
 
 #: templates/contacts.php:27
 msgid "New contact"
@@ -846,7 +847,7 @@ msgstr "Nama Belakang-,Nama Depan"
 
 #: templates/contacts.php:87
 msgid "Merge"
-msgstr ""
+msgstr "Menggabungkan"
 
 #: templates/contacts.php:91 templates/contacts.php:368
 msgid "Email"
@@ -882,7 +883,7 @@ msgstr "Kontak sebelumnya"
 
 #: templates/contacts.php:111
 msgid "Expand/collapse current addressbook"
-msgstr ""
+msgstr "Memperluas / runtuh buku alamat saat ini"
 
 #: templates/contacts.php:113
 msgid "Next addressbook"
@@ -925,11 +926,11 @@ msgstr "Tambah kontak"
 
 #: templates/contacts.php:193
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "Yang kontak harus data digabung menjadi?"
 
 #: templates/contacts.php:201
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Hapus lainnya (s) setelah sukses merge?"
 
 #: templates/contacts.php:216
 msgid "Compose mail"

@@ -39,9 +39,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-05 01:02-0500\n"
-"PO-Revision-Date: 2014-02-05 06:02+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-08 01:15-0500\n"
+"PO-Revision-Date: 2014-02-05 15:40+0000\n"
+"Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/owncloud/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -141,7 +141,7 @@ msgstr "Zusammenführung fehlgeschlagen. Fehler beim Speichern des Kontakts. "
 msgid "Select photo"
 msgstr "Wähle  ein Foto"
 
-#: js/app.js:689 js/app.js:1629
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr "Netzwerk- oder Serverfehler. Bitte Administrator informieren."
 
@@ -179,25 +179,25 @@ msgstr "Gruppe hinzufügen"
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1453
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr "Kontakt nicht gefunden: {id}"
 
-#: js/app.js:1476
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr "Keine Datei(en) zum Hochladen ausgewählt."
 
-#: js/app.js:1486
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Die Datei, die Du hochladen möchtest, überschreitet die maximale Größe für Datei-Uploads auf diesem Server."
 
-#: js/app.js:1587
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr "Profilbild bearbeiten"
 
-#: js/app.js:1591
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr "Foto zuschneiden"
 
@@ -211,7 +211,7 @@ msgstr "# Gruppen"
 
 #: js/contacts.js:1156
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Fehler beim Auslesen des Geburtstages {bday}"
 
 #: js/contacts.js:2213
 msgid ""
@@ -617,29 +617,29 @@ msgstr "Kein Gruppenname angegeben."
 msgid "Error adding group."
 msgstr "Fehler beim Hinzufügen einer Gruppe."
 
-#: lib/controller/groupcontroller.php:128
+#: lib/controller/groupcontroller.php:130
 msgid "No group name to rename from given."
 msgstr "Kein Gruppenname zum Umbenennen angegeben."
 
-#: lib/controller/groupcontroller.php:132
+#: lib/controller/groupcontroller.php:134
 msgid "No group name to rename to given."
 msgstr "Kein Gruppenname zum Umbenennen zu angegeben."
 
-#: lib/controller/groupcontroller.php:138
+#: lib/controller/groupcontroller.php:140
 msgid "Error renaming group."
 msgstr "Fehler beim Umbenennen einer Gruppe."
 
-#: lib/controller/groupcontroller.php:176
-#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:178
+#: lib/controller/groupcontroller.php:224
 msgid "Group ID missing from request."
 msgstr "Bei der Anfrage fehlt die Gruppen-ID."
 
-#: lib/controller/groupcontroller.php:181
+#: lib/controller/groupcontroller.php:183
 msgid "Group name missing from request."
 msgstr "Gruppenname fehlt in der Anfrage."
 
-#: lib/controller/groupcontroller.php:186
-#: lib/controller/groupcontroller.php:227
+#: lib/controller/groupcontroller.php:188
+#: lib/controller/groupcontroller.php:229
 msgid "Contact ID missing from request."
 msgstr "Bei der Anfrage fehlt die Kontakt-ID."
 

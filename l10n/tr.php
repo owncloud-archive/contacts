@@ -38,6 +38,7 @@
 "Crop photo" => "Fotoğrafı kırp",
 "Error parsing date: {date}" => "Tarih ayıklanırken hata: {date}",
 "# groups" => "# gruplar",
+"Error parsing birthday {bday}" => "{bday} doğum günü ayıklanırken hata",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Bazı kişiler silinmek için işaretlendi, hala silinmedi. Silinmesi için bekleyin.",
 "Click to undo deletion of {num} contacts" => "{num} kişinin silinmesini geri almak için tıklayın",
 "Cancelled deletion of {num} contacts" => "{num} kişinin silinmesi iptal edildi",
