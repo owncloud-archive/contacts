@@ -135,7 +135,7 @@ Class Properties {
 				'owncloud-handle' => array(
 				    'displayname' => (string)$l10n->t('ownCloud handle'),
 				    'xname' => null,
-				    'protocol' => 'owncloud-handle'
+				    'protocol' => 'x-owncloud-handle'
 				),
 		);
 		if(is_null($im)) {
