@@ -1414,6 +1414,9 @@ OC.Contacts = OC.Contacts || {
 			console.trace();
 		}
 		this.hideActions();
+		if(this.currentid) {
+			this.closeContact(this.currentid);
+		}
 		console.log('Contacts.openContact', id, typeof id);
 		this.currentid = id;
 		var contact = this.contacts.findById(this.currentid);
