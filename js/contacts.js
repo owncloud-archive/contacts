@@ -1604,7 +1604,7 @@ OC.Contacts = OC.Contacts || {};
 		};
 
 		this.$photowrapper.addClass('loading').addClass('wait');
-		if(this.hasPhoto()) {
+		if(!this.hasPhoto()) {
 			$.when(this.storage.getDefaultPhoto())
 				.then(function(image) {
 					$('img.contactphoto').detach();
