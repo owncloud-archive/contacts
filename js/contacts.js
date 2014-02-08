@@ -1602,7 +1602,7 @@ OC.Contacts = OC.Contacts || {};
 			return;
 		}
 		if(this.data.thumbnail) {
-			$elem.removeClass('thumbnail');
+			$elem.removeClass('thumbnail').find('.avatar').remove();
 			$elem.css('background-image', 'url(data:image/png;base64,' + this.data.thumbnail + ')');
 		} else {
 			$elem.addClass('thumbnail');
