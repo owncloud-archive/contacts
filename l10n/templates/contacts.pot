@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-08 01:15-0500\n"
+"POT-Creation-Date: 2014-02-09 03:24-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -181,17 +181,17 @@ msgstr ""
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2213
+#: js/contacts.js:2211
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2224
+#: js/contacts.js:2222
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2233
+#: js/contacts.js:2231
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -668,9 +668,9 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: lib/utils/jsonserializer.php:111 lib/utils/properties.php:160
-#: lib/utils/properties.php:173 lib/utils/properties.php:180
-#: lib/utils/properties.php:195
+#: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
+#: lib/utils/properties.php:178 lib/utils/properties.php:185
+#: lib/utils/properties.php:200
 msgid "Other"
 msgstr ""
 
@@ -730,53 +730,57 @@ msgstr ""
 msgid "GaduGadu"
 msgstr ""
 
-#: lib/utils/properties.php:158 lib/utils/properties.php:166
-#: lib/utils/properties.php:177 lib/utils/properties.php:194
+#: lib/utils/properties.php:136
+msgid "ownCloud handle"
+msgstr ""
+
+#: lib/utils/properties.php:163 lib/utils/properties.php:171
+#: lib/utils/properties.php:182 lib/utils/properties.php:199
 msgid "Work"
 msgstr ""
 
-#: lib/utils/properties.php:159 lib/utils/properties.php:164
-#: lib/utils/properties.php:178
+#: lib/utils/properties.php:164 lib/utils/properties.php:169
+#: lib/utils/properties.php:183
 msgid "Home"
 msgstr ""
 
-#: lib/utils/properties.php:165
+#: lib/utils/properties.php:170
 msgid "Mobile"
 msgstr ""
 
-#: lib/utils/properties.php:167
+#: lib/utils/properties.php:172
 msgid "Text"
 msgstr ""
 
-#: lib/utils/properties.php:168
+#: lib/utils/properties.php:173
 msgid "Voice"
 msgstr ""
 
-#: lib/utils/properties.php:169
+#: lib/utils/properties.php:174
 msgid "Message"
 msgstr ""
 
-#: lib/utils/properties.php:170
+#: lib/utils/properties.php:175
 msgid "Fax"
 msgstr ""
 
-#: lib/utils/properties.php:171
+#: lib/utils/properties.php:176
 msgid "Video"
 msgstr ""
 
-#: lib/utils/properties.php:172
+#: lib/utils/properties.php:177
 msgid "Pager"
 msgstr ""
 
-#: lib/utils/properties.php:179
+#: lib/utils/properties.php:184
 msgid "Internet"
 msgstr ""
 
-#: lib/utils/properties.php:192
+#: lib/utils/properties.php:197
 msgid "Friends"
 msgstr ""
 
-#: lib/utils/properties.php:193
+#: lib/utils/properties.php:198
 msgid "Family"
 msgstr ""
 

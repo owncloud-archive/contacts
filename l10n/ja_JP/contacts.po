@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-05 01:02-0500\n"
-"PO-Revision-Date: 2014-02-05 06:02+0000\n"
+"POT-Creation-Date: 2014-02-09 03:24-0500\n"
+"PO-Revision-Date: 2014-02-09 08:25+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -117,7 +117,7 @@ msgstr "マージに失敗しました。連絡先の保存エラー。"
 msgid "Select photo"
 msgstr "写真を選択"
 
-#: js/app.js:689 js/app.js:1629
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr "ネットワークもしくはサーバーエラーです。管理者に連絡してください。"
 
@@ -155,25 +155,25 @@ msgstr "グループを追加"
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1453
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr "連絡先が見つかりませんでした: {id}"
 
-#: js/app.js:1476
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr "アップロードするファイルが選択されていません。"
 
-#: js/app.js:1486
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "アップロードしようとしているファイルは、このサーバーの最大ファイルアップロードサイズを超えています。"
 
-#: js/app.js:1587
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr "プロフィール写真を編集"
 
-#: js/app.js:1591
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr "フォトをトリミング"
 
@@ -189,17 +189,17 @@ msgstr "グループ数"
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2213
+#: js/contacts.js:2211
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一部の連絡先が削除対象としてマークされていますが、まだ削除されていません。削除されるまでお待ちください。"
 
-#: js/contacts.js:2224
+#: js/contacts.js:2222
 msgid "Click to undo deletion of {num} contacts"
 msgstr "クリックして {num} 個の連絡先の削除を取り消す"
 
-#: js/contacts.js:2233
+#: js/contacts.js:2231
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num}件の連絡先の削除がキャンセルされました"
 
@@ -593,29 +593,29 @@ msgstr "グループ名が指定されていません。"
 msgid "Error adding group."
 msgstr "グループの追加エラー。"
 
-#: lib/controller/groupcontroller.php:128
+#: lib/controller/groupcontroller.php:130
 msgid "No group name to rename from given."
 msgstr "名前変更元のグループ名が指定されていません。"
 
-#: lib/controller/groupcontroller.php:132
+#: lib/controller/groupcontroller.php:134
 msgid "No group name to rename to given."
 msgstr "名前変更先のグループ名が指定されていません。"
 
-#: lib/controller/groupcontroller.php:138
+#: lib/controller/groupcontroller.php:140
 msgid "Error renaming group."
 msgstr "グループの名前変更エラー"
 
-#: lib/controller/groupcontroller.php:176
-#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:178
+#: lib/controller/groupcontroller.php:224
 msgid "Group ID missing from request."
 msgstr "リクエストにはグループIDがありません。"
 
-#: lib/controller/groupcontroller.php:181
+#: lib/controller/groupcontroller.php:183
 msgid "Group name missing from request."
 msgstr "リクエストにはグループ名が不足しています。"
 
-#: lib/controller/groupcontroller.php:186
-#: lib/controller/groupcontroller.php:227
+#: lib/controller/groupcontroller.php:188
+#: lib/controller/groupcontroller.php:229
 msgid "Contact ID missing from request."
 msgstr "リクエストには連絡先IDがありません。"
 
@@ -676,9 +676,9 @@ msgstr "優先度を設定できません: "
 msgid "Contact"
 msgstr "連絡先"
 
-#: lib/utils/jsonserializer.php:111 lib/utils/properties.php:160
-#: lib/utils/properties.php:173 lib/utils/properties.php:180
-#: lib/utils/properties.php:195
+#: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
+#: lib/utils/properties.php:178 lib/utils/properties.php:185
+#: lib/utils/properties.php:200
 msgid "Other"
 msgstr "その他"
 
@@ -738,53 +738,57 @@ msgstr "QQ"
 msgid "GaduGadu"
 msgstr "GaduGadu"
 
-#: lib/utils/properties.php:158 lib/utils/properties.php:166
-#: lib/utils/properties.php:177 lib/utils/properties.php:194
+#: lib/utils/properties.php:136
+msgid "ownCloud handle"
+msgstr ""
+
+#: lib/utils/properties.php:163 lib/utils/properties.php:171
+#: lib/utils/properties.php:182 lib/utils/properties.php:199
 msgid "Work"
 msgstr "週の始まり"
 
-#: lib/utils/properties.php:159 lib/utils/properties.php:164
-#: lib/utils/properties.php:178
+#: lib/utils/properties.php:164 lib/utils/properties.php:169
+#: lib/utils/properties.php:183
 msgid "Home"
 msgstr "住居"
 
-#: lib/utils/properties.php:165
+#: lib/utils/properties.php:170
 msgid "Mobile"
 msgstr "携帯電話"
 
-#: lib/utils/properties.php:167
+#: lib/utils/properties.php:172
 msgid "Text"
 msgstr "TTY TDD"
 
-#: lib/utils/properties.php:168
+#: lib/utils/properties.php:173
 msgid "Voice"
 msgstr "音声番号"
 
-#: lib/utils/properties.php:169
+#: lib/utils/properties.php:174
 msgid "Message"
 msgstr "メッセージ"
 
-#: lib/utils/properties.php:170
+#: lib/utils/properties.php:175
 msgid "Fax"
 msgstr "FAX"
 
-#: lib/utils/properties.php:171
+#: lib/utils/properties.php:176
 msgid "Video"
 msgstr "テレビ電話"
 
-#: lib/utils/properties.php:172
+#: lib/utils/properties.php:177
 msgid "Pager"
 msgstr "ポケベル"
 
-#: lib/utils/properties.php:179
+#: lib/utils/properties.php:184
 msgid "Internet"
 msgstr "インターネット"
 
-#: lib/utils/properties.php:192
+#: lib/utils/properties.php:197
 msgid "Friends"
 msgstr "友達"
 
-#: lib/utils/properties.php:193
+#: lib/utils/properties.php:198
 msgid "Family"
 msgstr "家族"
 
