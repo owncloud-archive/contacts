@@ -533,6 +533,7 @@ class Ldap extends AbstractBackend {
 	 * @return string|bool The identifier for the new contact or false on error.
 	 */
 	public function createContact($addressbookid, $contact, array $options = array()) {
+		error_log("access create"+$this->debug_string_backtrace());
 
 		$uri = isset($options['uri']) ? $options['uri'] : null;
 
@@ -584,8 +585,16 @@ class Ldap extends AbstractBackend {
 	 * @return bool
 	 */
 	public function updateContact($addressbookid, $id, $carddata, array $options = array()) {
-		error_log("goat power ! $addressbookid, $id, $carddata");
-		$vcard = \Sabre\VObject\Reader::read($carddata);
+		if(!$carddata instanceof VCard) {
+			try {
+				$vcard = \Sabre\VObject\Reader::read($carddata->serialize());
+			} catch(\Exception $e) {
+				\OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
+				return false;
+			}
+		} else {
+			$vcard = $carddata;
+		}
 		
 		if (!is_array($id)) {
 			$a_ids = array($id);
@@ -651,4 +660,20 @@ class Ldap extends AbstractBackend {
 		}
 	}
 	
+	// Please remove this
+    public function debug_string_backtrace() {
+        ob_start();
+        debug_print_backtrace();
+        $trace = ob_get_contents();
+        ob_end_clean();
+
+        // Remove first item from backtrace as it's this function which
+        // is redundant.
+        $trace = preg_replace ('/^#0\s+' . __FUNCTION__ . "[^\n]*\n/", '', $trace, 1);
+
+        // Renumber backtrace items.
+        $trace = preg_replace ('/^#(\d+)/me', '\'#\' . ($1 - 1)', $trace);
+
+        return $trace;
+    } 
 }

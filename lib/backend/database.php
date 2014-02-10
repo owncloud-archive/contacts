@@ -496,6 +496,7 @@ class Database extends AbstractBackend {
 	 * @return string|bool The identifier for the new contact or false on error.
 	 */
 	public function createContact($addressbookid, $contact, array $options = array()) {
+		error_log("db create power ! $addressbookid - " . $contact->serialize());
 
 		$qname = 'createcontact';
 		$uri = isset($options['uri']) ? $options['uri'] : null;
@@ -570,6 +571,7 @@ class Database extends AbstractBackend {
 	 * @return bool
 	 */
 	public function updateContact($addressbookid, $id, $contact, array $options = array()) {
+		error_log("db update power ! $addressbookid, $id - " . $contact->serialize());
 		$noCollection = isset($options['noCollection']) ? $options['noCollection'] : false;
 		$isBatch = isset($options['isBatch']) ? $options['isBatch'] : false;
 		$qname = 'updatecontact';
