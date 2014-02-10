@@ -1286,6 +1286,19 @@ OC.Contacts = OC.Contacts || {};
 			// A new contact
 			this.setEnabled(true);
 			this.showActions(['cancel']);
+			// Show some default properties
+			$.each(['email', 'tel'], function(idx, name) {
+				var $list = self.$fullelem.find('ul.' + name);
+				$list.removeClass('hidden');
+				var $property = self.renderStandardProperty(name);
+				$list.append($property);
+			});
+
+			// Hide some of the values
+			$.each(['bday', 'nickname', 'title'], function(idx, name) {
+				self.$fullelem.find('[data-element="' + name + '"]').hide();
+			});
+
 			return this.$fullelem;
 		}
 		// Loop thru all single occurrence values. If not set hide the
