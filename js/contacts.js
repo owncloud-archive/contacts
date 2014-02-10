@@ -1293,6 +1293,10 @@ OC.Contacts = OC.Contacts || {};
 				var $property = self.renderStandardProperty(name);
 				$list.append($property);
 			});
+			var $list = self.$fullelem.find('ul.adr');
+			$list.removeClass('hidden');
+			var $property = self.renderAddressProperty(name);
+			$list.append($property);
 
 			// Hide some of the values
 			$.each(['bday', 'nickname', 'title'], function(idx, name) {
