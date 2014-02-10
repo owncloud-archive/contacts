@@ -765,7 +765,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vevent->add('DURATION', 'P1D');
 			$vevent->{'UID'} = $this->UID;
 			$vevent->{'RRULE'} = 'FREQ=YEARLY';
-			$vevent->{'SUMMARY'} = $title;
+			$vevent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
 			$vcal = \Sabre\VObject\Component::create('VCALENDAR');
 			$vcal->VERSION = '2.0';
 			$appinfo = \OCP\App::getAppInfo('contacts');

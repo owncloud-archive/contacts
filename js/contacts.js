@@ -1313,6 +1313,23 @@ OC.Contacts = OC.Contacts || {};
 			// A new contact
 			this.setEnabled(true);
 			this.showActions(['cancel']);
+			// Show some default properties
+			$.each(['email', 'tel'], function(idx, name) {
+				var $list = self.$fullelem.find('ul.' + name);
+				$list.removeClass('hidden');
+				var $property = self.renderStandardProperty(name);
+				$list.append($property);
+			});
+			var $list = self.$fullelem.find('ul.adr');
+			$list.removeClass('hidden');
+			var $property = self.renderAddressProperty(name);
+			$list.append($property);
+
+			// Hide some of the values
+			$.each(['bday', 'nickname', 'title'], function(idx, name) {
+				self.$fullelem.find('[data-element="' + name + '"]').hide();
+			});
+
 			return this.$fullelem;
 		}
 		// Loop thru all single occurrence values. If not set hide the
@@ -1602,7 +1619,7 @@ OC.Contacts = OC.Contacts || {};
 			return;
 		}
 		if(this.data.thumbnail) {
-			$elem.removeClass('thumbnail');
+			$elem.removeClass('thumbnail').find('.avatar').remove();
 			$elem.css('background-image', 'url(data:image/png;base64,' + this.data.thumbnail + ')');
 		} else {
 			$elem.addClass('thumbnail');
@@ -1621,19 +1638,17 @@ OC.Contacts = OC.Contacts || {};
 			src;
 
 		var $phototools = this.$fullelem.find('#phototools');
-		if(!this.$photowrapper) {
-			this.$photowrapper = this.$fullelem.find('#photowrapper');
-		}
+		var $photowrapper = this.$fullelem.find('#photowrapper');
 
 		var finishLoad = function(image) {
 			console.log('finishLoad', self.getDisplayName(), image.width, image.height);
 			$(image).addClass('contactphoto');
-			self.$photowrapper.removeClass('loading wait');
-			self.$photowrapper.css({width: image.width + 10, height: image.height + 10});
+			$photowrapper.removeClass('loading wait');
+			$photowrapper.css({width: image.width + 10, height: image.height + 10});
 			$(image).insertAfter($phototools).fadeIn();
 		};
 
-		this.$photowrapper.addClass('loading').addClass('wait');
+		$photowrapper.addClass('loading').addClass('wait');
 		console.log('hasPhoto', this.hasPhoto());
 		if(!this.hasPhoto()) {
 			$.when(this.storage.getDefaultPhoto())
@@ -1659,7 +1674,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 
 		if(this.isEditable()) {
-			this.$photowrapper.on('mouseenter', function(event) {
+			$photowrapper.on('mouseenter', function(event) {
 				if($(event.target).is('.favorite') || !self.data) {
 					return;
 				}
