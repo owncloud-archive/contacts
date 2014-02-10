@@ -168,6 +168,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud handle" => "ownCloud-Handhabung",
 "Work" => "Arbeit",
 "Home" => "Home",
 "Mobile" => "Mobil",

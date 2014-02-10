@@ -44,9 +44,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-09 03:24-0500\n"
-"PO-Revision-Date: 2014-02-09 08:25+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-10 06:12-0500\n"
+"PO-Revision-Date: 2014-02-09 11:40+0000\n"
+"Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/owncloud/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -769,7 +769,7 @@ msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
 msgid "ownCloud handle"
-msgstr ""
+msgstr "ownCloud-Handhabung"
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
