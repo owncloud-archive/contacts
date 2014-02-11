@@ -97,7 +97,24 @@ abstract class ImportConnector {
 			}
 		}
 	}
-	
+		
+	/**
+	 * @brief modifies a vcard property array with the image
+	 */
+	public function updateImageProperty(&$property, $entry, $version=null) {
+		$image = new \OC_Image();
+		$image->loadFromData($entry);
+		if (strcmp($version, '4.0') == 0) {
+			$type = $image->mimeType();
+		} else {
+			$arrayType = explode('/', $image->mimeType());
+			$type = strtoupper(array_pop($arrayType));
+		}
+		$property->add('ENCODING', 'b');
+		$property->add('TYPE', $type);
+		$property->setValue($image->__toString());
+	}
+
 	/**
 	 * @brief returns the vcard property corresponding to the parameter
 	 * creates the property if it doesn't exists yet

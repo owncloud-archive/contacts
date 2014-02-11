@@ -24,6 +24,7 @@ namespace OCA\Contacts;
 use Sabre\VObject\Component;
 use OCA\Contacts\Connector\ImportCsvConnector;
 use OCA\Contacts\Connector\ImportVCardConnector;
+use OCA\Contacts\Connector\ImportLdifConnector;
 use OCA\Contacts\Addressbook;
 
 /**
@@ -116,6 +117,9 @@ class ImportManager {
 		} else if ((string)$importType->import_core->type == 'vcard') {
 			// use class importVcardConnector
 			return new ImportVCardConnector($importType);
+		} else if ((string)$importType->import_core->type == 'ldif') {
+			// use class importVcardConnector
+			return new ImportLdifConnector($importType);
 		}
 		return false;
 	}
