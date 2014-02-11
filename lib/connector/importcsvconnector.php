@@ -126,7 +126,7 @@ class ImportCsvConnector extends ImportConnector {
 				if (isset($this->configContent->import_core->base_parsing)) {
 					if (strcasecmp((string)$this->configContent->import_core->base_parsing, 'position') == 0) {
 						$importEntry = $this->getImportEntryFromPosition((String)$i);
-					} else if (strcasecmp((string)$this->configContent->import_core->base_parsing, 'name') == 0) {
+					} else if (strcasecmp((string)$this->configContent->import_core->base_parsing, 'name') == 0 && isset($title[$i])) {
 						$importEntry = $this->getImportEntryFromName($title[$i]);
 					}
 				}
@@ -134,7 +134,7 @@ class ImportCsvConnector extends ImportConnector {
 					// Create a new property and attach it to the vcard
 					$property = $this->getOrCreateVCardProperty($vcard, $importEntry->vcard_entry);
 					$this->updateProperty($property, $importEntry, $element[$i]);
-				} else {
+				} else if (isset($element[$i]) && isset($title[$i])) {
 					$property = \Sabre\VObject\Property::create("X-Unknown-Element", StringUtil::convertToUTF8($element[$i]));
 					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($title[$i]));
 					$vcard->add($property);

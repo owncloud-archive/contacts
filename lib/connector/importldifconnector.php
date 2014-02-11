@@ -61,8 +61,8 @@ class ImportLdifConnector extends ImportConnector{
 		$file = file_get_contents($file);
 
 		$nl = "\n";
-		$replace_from = array("\r","\n\n","\n ");
-		$replace_to = array("\n","\n","");
+		$replace_from = array("\r","\n ");
+		$replace_to = array("\n","");
 		foreach ($this->configContent->import_core->replace as $replace) {
 			if (isset($replace['from']) && isset($replace['to'])) {
 				$replace_from[] = $replace['from'];
@@ -77,7 +77,7 @@ class ImportLdifConnector extends ImportConnector{
 		$card = array();
 		$numParts = 0;
 		foreach($lines as $line) {
-			if (!preg_match("/^# /", $line)) { // Ignore comment line
+			if (!preg_match("/^#/", $line)) { // Ignore comment line
 				if(preg_match("/^\w+:: /",$line)) {
 					$kv = explode(':: ', $line, 2);
 					$key = $kv[0];
@@ -93,19 +93,19 @@ class ImportLdifConnector extends ImportConnector{
 				}
 				if ($key == "dn") {
 					if (count($card) > 0) {
-						$parts[] = $card;
 						$numParts++;
-						if ($numParts == $limit) {
+						if ($numParts > $limit) {
 							break;
 						}
+						$parts[] = $card;
 					}
 					$card = array(array($key, $value));
-				} else if ($key != "") {
+				} else if ($key != "" && $key != "version" && $value != "") {
 					$card[] = array($key, $value);
 				}
 			}
 		}
-		if ($numParts != $limit) {
+		if ($numParts <= $limit && count($card) > 0) {
 			$parts[] = $card;
 		}
 		return $parts;
@@ -168,7 +168,7 @@ class ImportLdifConnector extends ImportConnector{
 			// Doesn't look like a ldif file
 			return 0;
 		} else {
-			$element = $this->convertElementToVCard($parts);
+			$element = $this->convertElementToVCard($parts[0]);
 			$unknownElements = $element->select("X-Unknown-Element");
 			return (1 - (0.5 * count($unknownElements)/count($parts[0])));
 		}
