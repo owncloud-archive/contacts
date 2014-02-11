@@ -5,6 +5,7 @@
 # Translators:
 # Sappe, 2013
 # Bawl <transifex@bawl.dk>, 2013
+# cnovrup <christian@novrup.com>, 2014
 # claus_chr <claus_chr@webspeed.dk>, 2013
 # claus_chr <claus_chr@webspeed.dk>, 2012
 # cronner <cronner@gmail.com>, 2012
@@ -22,9 +23,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-09 03:24-0500\n"
-"PO-Revision-Date: 2014-02-09 08:25+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-11 01:03-0500\n"
+"PO-Revision-Date: 2014-02-10 18:20+0000\n"
+"Last-Translator: cnovrup <christian@novrup.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -196,17 +197,17 @@ msgstr "# grupper"
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2211
+#: js/contacts.js:2228
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Nogle kontakter er markeret til sletning, men er endnu ikke slettet. Vent venligst på, at de bliver slettet."
 
-#: js/contacts.js:2222
+#: js/contacts.js:2239
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik for at fortryde sletning af {num} kontakter"
 
-#: js/contacts.js:2231
+#: js/contacts.js:2248
 msgid "Cancelled deletion of {num} contacts"
 msgstr "annullerede sletning af {num} kontakter"
 
@@ -236,7 +237,7 @@ msgstr "Kontakterpersoner er ikke i denne gruppe."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "En gruppe ved navnet \"{group}\", eksisterer allerede"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
