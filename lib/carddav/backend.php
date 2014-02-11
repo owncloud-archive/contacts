@@ -26,6 +26,13 @@ namespace OCA\Contacts\CardDAV;
 
 use OCA\Contacts;
 
+/**
+ * This class exchanges data between SabreDav and the Address book backends.
+ *
+ * Address book IDs are a combination of the backend name and the ID it has
+ * in that backend. For your own address books it can be e.g 'local::1' for
+ * an address book shared with you it could be 'shared::2' an so forth.
+ */
 class Backend extends \Sabre_CardDAV_Backend_Abstract {
 
 	public function __construct($backends) {

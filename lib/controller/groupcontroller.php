@@ -86,6 +86,7 @@ class GroupController extends Controller {
 			$ids = $tagMgr->getIdsForTag($name);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
+			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
 			return $response;
 		}
 		if($ids !== false) {
@@ -112,6 +113,7 @@ class GroupController extends Controller {
 			$tagMgr->delete($name);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
+			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
 		}
 		return $response;
 	}

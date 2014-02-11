@@ -38,7 +38,6 @@
 "Crop photo" => "Fénykép vágása",
 "Error parsing date: {date}" => "Nem sikerült értelmezni ezt a dátumot: {date}",
 "# groups" => "# csoport",
-"Error parsing birthday {bday}: {error}" => "Nem sikerült értelmezni a {bday} születésnap adatait: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Néhány névjegy ki lett jelölve törlésre, de még nem lett törölve. Várja meg a végleges törlést.",
 "Click to undo deletion of {num} contacts" => "Kattintson ide {num} névjegy törlésének visszavonásához",
 "Cancelled deletion of {num} contacts" => "{num} névjegy törlése visszavonva",

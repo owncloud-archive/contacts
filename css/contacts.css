@@ -656,6 +656,14 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	width: 100%;
 	line-height: 51px;
 }
+.multiselect #contactsHeader {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    left: 0;
+    top: 44px;
+    margin-left: 330px; padding-right: 330px;
+    position: fixed;
+    z-index: 10;
+}
 #contactsHeader > tr {
 }
 #contactsHeader > td {
@@ -664,6 +672,13 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 }
 #contactsHeader > td.name {
 	padding-right: 9px;
+}
+.multiselect #contactsHeader > td.name {
+	width: 100%;
+	display: inline-block;
+	color: #000;
+	background-color: rgba(220, 220, 220, 0.8);
+	opacity: 0.9;
 }
 #contactsHeader .delete {
 	background-image: none;
@@ -725,6 +740,9 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	width: 100%;
 	z-index: 1;
 }
+#contactlist.multiselect {
+	top: 51px;
+}
 #contactlist {
 	position: relative;
 	width: 100%;
@@ -761,9 +779,9 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	vertical-align: top;
 	white-space: nowrap;
 }
-#contactlist tr > td {
-	max-width: 250px;
+#contactlist tbody > tr > td {
 	min-width: 80px;
+	max-width: 250px;
 	line-height: 50px;
 }
 #contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {
@@ -897,6 +915,9 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	#contactsHeader tr td.tel { display: none; }
 	#app-navigation { width: 200px; }
 	#app-settings { width: 199px; }
+	.multiselect #contactsHeader {
+		margin-left: 280px; padding-right: 280px;
+	}
 }
 @media screen and (max-width: 900px) {
 	#contactsHeader .delete { display: none; }

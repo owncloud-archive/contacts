@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-01-28 01:25-0500\n"
-"PO-Revision-Date: 2014-01-28 06:25+0000\n"
+"POT-Creation-Date: 2014-02-09 03:24-0500\n"
+"PO-Revision-Date: 2014-02-09 08:24+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Nepali (http://www.transifex.com/projects/p/owncloud/language/ne/)\n"
 "MIME-Version: 1.0\n"
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:689 js/app.js:1622
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
@@ -147,25 +147,25 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1446
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1469
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1479
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1580
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1584
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr ""
 
@@ -178,20 +178,20 @@ msgid "# groups"
 msgstr ""
 
 #: js/contacts.js:1156
-msgid "Error parsing birthday {bday}: {error}"
+msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2212
+#: js/contacts.js:2211
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2223
+#: js/contacts.js:2222
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2231
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -227,33 +227,33 @@ msgstr ""
 msgid "Failed renaming group: {error}"
 msgstr ""
 
-#: js/groups.js:640
+#: js/groups.js:646
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
 msgstr ""
 
-#: js/groups.js:653
+#: js/groups.js:659
 msgid "Failed adding group: {error}"
 msgstr ""
 
-#: js/groups.js:665
+#: js/groups.js:671
 msgid "All"
 msgstr ""
 
-#: js/groups.js:680 js/groups.js:683
+#: js/groups.js:686 js/groups.js:689
 msgid "Favorites"
 msgstr ""
 
-#: js/groups.js:744
+#: js/groups.js:750
 msgid "Shared by {owner}"
 msgstr ""
 
-#: js/groups.js:759
+#: js/groups.js:765
 msgid "Not grouped"
 msgstr ""
 
-#: js/groups.js:788
+#: js/groups.js:794
 msgid "Failed loading groups: {error}"
 msgstr ""
 
@@ -415,41 +415,41 @@ msgstr ""
 msgid "{name}'s Birthday"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:113
+#: lib/controller/addressbookcontroller.php:135
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:130
+#: lib/controller/addressbookcontroller.php:152
 msgid "Error updating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:158
+#: lib/controller/addressbookcontroller.php:180
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:164
+#: lib/controller/addressbookcontroller.php:186
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:202
+#: lib/controller/addressbookcontroller.php:224
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:238
+#: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:278
+#: lib/controller/addressbookcontroller.php:300
 msgid "Error retrieving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:288
+#: lib/controller/addressbookcontroller.php:310
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:292
+#: lib/controller/addressbookcontroller.php:314
 msgid "Error removing contact from other address book."
 msgstr ""
 
@@ -585,29 +585,29 @@ msgstr ""
 msgid "Error adding group."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:128
+#: lib/controller/groupcontroller.php:130
 msgid "No group name to rename from given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:132
+#: lib/controller/groupcontroller.php:134
 msgid "No group name to rename to given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:138
+#: lib/controller/groupcontroller.php:140
 msgid "Error renaming group."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:176
-#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:178
+#: lib/controller/groupcontroller.php:224
 msgid "Group ID missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:181
+#: lib/controller/groupcontroller.php:183
 msgid "Group name missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:186
-#: lib/controller/groupcontroller.php:227
+#: lib/controller/groupcontroller.php:188
+#: lib/controller/groupcontroller.php:229
 msgid "Contact ID missing from request."
 msgstr ""
 
@@ -668,9 +668,9 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: lib/utils/jsonserializer.php:111 lib/utils/properties.php:160
-#: lib/utils/properties.php:173 lib/utils/properties.php:180
-#: lib/utils/properties.php:195
+#: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
+#: lib/utils/properties.php:178 lib/utils/properties.php:185
+#: lib/utils/properties.php:200
 msgid "Other"
 msgstr ""
 
@@ -730,53 +730,57 @@ msgstr ""
 msgid "GaduGadu"
 msgstr ""
 
-#: lib/utils/properties.php:158 lib/utils/properties.php:166
-#: lib/utils/properties.php:177 lib/utils/properties.php:194
+#: lib/utils/properties.php:136
+msgid "ownCloud handle"
+msgstr ""
+
+#: lib/utils/properties.php:163 lib/utils/properties.php:171
+#: lib/utils/properties.php:182 lib/utils/properties.php:199
 msgid "Work"
 msgstr ""
 
-#: lib/utils/properties.php:159 lib/utils/properties.php:164
-#: lib/utils/properties.php:178
+#: lib/utils/properties.php:164 lib/utils/properties.php:169
+#: lib/utils/properties.php:183
 msgid "Home"
 msgstr ""
 
-#: lib/utils/properties.php:165
+#: lib/utils/properties.php:170
 msgid "Mobile"
 msgstr ""
 
-#: lib/utils/properties.php:167
+#: lib/utils/properties.php:172
 msgid "Text"
 msgstr ""
 
-#: lib/utils/properties.php:168
+#: lib/utils/properties.php:173
 msgid "Voice"
 msgstr ""
 
-#: lib/utils/properties.php:169
+#: lib/utils/properties.php:174
 msgid "Message"
 msgstr ""
 
-#: lib/utils/properties.php:170
+#: lib/utils/properties.php:175
 msgid "Fax"
 msgstr ""
 
-#: lib/utils/properties.php:171
+#: lib/utils/properties.php:176
 msgid "Video"
 msgstr ""
 
-#: lib/utils/properties.php:172
+#: lib/utils/properties.php:177
 msgid "Pager"
 msgstr ""
 
-#: lib/utils/properties.php:179
+#: lib/utils/properties.php:184
 msgid "Internet"
 msgstr ""
 
-#: lib/utils/properties.php:192
+#: lib/utils/properties.php:197
 msgid "Friends"
 msgstr ""
 
-#: lib/utils/properties.php:193
+#: lib/utils/properties.php:198
 msgid "Family"
 msgstr ""
 

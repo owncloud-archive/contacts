@@ -38,7 +38,7 @@
 "Crop photo" => "Obreži sliko",
 "Error parsing date: {date}" => "Napaka razčlenjevanja datuma: {date}",
 "# groups" => "# skupine",
-"Error parsing birthday {bday}: {error}" => "Napaka razčlenjevanja datuma rojstva {bday}: {error}",
+"Error parsing birthday {bday}" => "Ni mogoče razčleniti rojstnega dne {bday}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Nekateri stiki so označeni za izbris, vendar še niso izbrisani. Počakajte na dokončanje opravila.",
 "Click to undo deletion of {num} contacts" => "S klikom bodo povrnjeni izbrisani stiki ({num})",
 "Cancelled deletion of {num} contacts" => "Preklican izbris {num} stikov",

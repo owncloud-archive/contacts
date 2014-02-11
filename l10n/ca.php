@@ -38,7 +38,6 @@
 "Crop photo" => "Talla la fotografia",
 "Error parsing date: {date}" => "Error en processar la data: {date}",
 "# groups" => "# grups",
-"Error parsing birthday {bday}: {error}" => "Error en processar l'aniversari {bday}: {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Heu marcat eliminar alguns contactes, però encara no s'han eliminat. Espereu mentre s'esborren.",
 "Click to undo deletion of {num} contacts" => "Feu clic a desfés eliminació de {num} contactes",
 "Cancelled deletion of {num} contacts" => "Cancel·la l'eliminació de {num} contactes",

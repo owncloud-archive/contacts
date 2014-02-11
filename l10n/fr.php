@@ -38,7 +38,6 @@
 "Crop photo" => "Recadrer la photo",
 "Error parsing date: {date}" => "Erreur lors de l'analyse de la date : {date}",
 "# groups" => "# groupes",
-"Error parsing birthday {bday}: {error}" => "Erreur lors de l'analyse de l'anniversaire {bday} : {error}",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Certains contacts sont marqués pour être supprimés, mais ne le sont pas encore. Veuillez attendre que l'opération se termine.",
 "Click to undo deletion of {num} contacts" => "Cliquer pour annuler la suppression de {num} contacts",
 "Cancelled deletion of {num} contacts" => "Suppression annulée pour {num} contacts",

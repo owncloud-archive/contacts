@@ -18,7 +18,7 @@ use OCP\AppFramework\Http\JSONResponse as OriginalResponse,
  */
 class JSONResponse extends OriginalResponse {
 
-	public function __construct($params = null, $statusCode = Http::STATUS_OK) {
+	public function __construct($params = array(), $statusCode = Http::STATUS_OK) {
 		parent::__construct(array(), $statusCode);
 		$this->data = $params;
 	}
