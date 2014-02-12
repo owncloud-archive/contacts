@@ -3,6 +3,7 @@
 "Save" => "保存",
 "Uploading..." => "上传中……",
 "Importing..." => "导入中",
+"Preparing..." => "准备...",
 "Imported {count} of {total} contacts" => "已从{total}个联系人导入{count}个",
 "Imported {imported} contacts. {failed} failed." => "已导入{imported}联系人。{failed}失败。",
 "An address book called {name} already exists" => "名为{name}的地址薄已存在",

@@ -12,7 +12,7 @@
 # kaffeldt <kasper.affeldt@gmail.com>, 2013
 # lodahl <leiflodahl@gmail.com>, 2013-2014
 # mikkel_ilu <mikkelbjerglarsen@gmail.com>, 2011
-# Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2011-2012
+# Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2011-2012,2014
 # Ole Holm Frandsen <froksen@gmail.com>, 2012-2013
 # Pascal d'Hermilly <pascal@dhermilly.dk>, 2011
 # rpaasch <rasmuspaasch@gmail.com>, 2013
@@ -23,8 +23,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-11 01:03-0500\n"
-"PO-Revision-Date: 2014-02-10 18:20+0000\n"
+"POT-Creation-Date: 2014-02-12 01:11-0500\n"
+"PO-Revision-Date: 2014-02-11 20:10+0000\n"
 "Last-Translator: cnovrup <christian@novrup.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -195,7 +195,7 @@ msgstr "# grupper"
 
 #: js/contacts.js:1156
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Fejl ved indlæsning af fødselsdag {bday}"
 
 #: js/contacts.js:2228
 msgid ""
@@ -748,7 +748,7 @@ msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
 msgid "ownCloud handle"
-msgstr ""
+msgstr "ownCloud håndtag"
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
