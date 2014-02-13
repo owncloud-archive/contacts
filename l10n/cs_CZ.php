@@ -168,6 +168,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud handle" => "ownCloud identifikátor",
 "Work" => "Práce",
 "Home" => "Domů",
 "Mobile" => "Mobil",

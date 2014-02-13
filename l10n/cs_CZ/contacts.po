@@ -10,15 +10,15 @@
 # Martin <fireball@atlas.cz>, 2013
 # Martin <fireball@atlas.cz>, 2011-2012
 # Michal Hrušecký <Michal@hrusecky.net>, 2012-2013
-# pstast <petr@stastny.eu>, 2013
+# pstast <petr@stastny.eu>, 2013-2014
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-09 03:24-0500\n"
-"PO-Revision-Date: 2014-02-09 08:25+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-13 02:14-0500\n"
+"PO-Revision-Date: 2014-02-12 20:00+0000\n"
+"Last-Translator: pstast <petr@stastny.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -190,17 +190,17 @@ msgstr "počet skupin"
 msgid "Error parsing birthday {bday}"
 msgstr "Chyba parsování narozenin {bday}"
 
-#: js/contacts.js:2211
+#: js/contacts.js:2228
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Některé kontakty jsou označeny ke smazání, ale ještě smazány nejsou. Počkejte, prosím, na dokončení operace."
 
-#: js/contacts.js:2222
+#: js/contacts.js:2239
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikněte pro navrácení smazání {num} kontaktů"
 
-#: js/contacts.js:2231
+#: js/contacts.js:2248
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Smazání {num} kontaktů zrušeno"
 
@@ -741,7 +741,7 @@ msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
 msgid "ownCloud handle"
-msgstr ""
+msgstr "ownCloud identifikátor"
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
