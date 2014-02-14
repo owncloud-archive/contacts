@@ -255,6 +255,8 @@ OC.Contacts = OC.Contacts || {
 			this.$contactListHeader.find('.action').css('display', '');
 			this.$contactListHeader.find('.name').attr('colspan', '5');
 			this.$contactListHeader.find('.info').css('display', 'none');
+			if($.inArray('merge', act) !== -1) this.$contactListHeader.find('.merge').css('display', '');
+			else this.$contactListHeader.find('.merge').css('display', 'none');
 			this.$headeractions.children('.'+act.join(',.')).show();
 		} else {
 			this.$contactListHeader.find('.actions').css('display', 'none');

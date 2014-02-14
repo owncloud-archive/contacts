@@ -1,25 +1,4 @@
-<div id="app">
-	<!--
-	<div id="controls">
-		<div class="actions creatable hidden-on-load">
-			<div class="button contact-actions">
-				<a class="delete svg action text permanent"><?php p($l->t('Delete')); ?></a>
-			</div>
-			<div class="button contact-actions">
-				<a class="download svg action text permanent"><?php p($l->t('Download')); ?></a>
-			</div>
-			<div class="button contact-actions" style="border:0;padding:0;margin:0;">
-						<select class="groups action text permanent" name="groups">
-							<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
-						</select>
-						<!a class="favorite action svg inactive control permanent" title="<?php p($l->t('Favorite')); ?>"></a >
-			</div>
-				<a class="shared svg action text permanent merge button contact-actions"><?php p($l->t('Merge selected')); ?></a>
-			
-		</div>
-	</div>
-	-->
-	
+<div id="app">	
 	<div id="app-navigation" class="loading">
 		<ul id="grouplist" class="hidden-on-load">
 			<li class="special">
@@ -84,8 +63,8 @@
 							<select class="groups svg action text permanent shared" name="groups">
 								<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
 							</select>
-							<a class="action svg text permanent merge edit"><?php p($l->t('Merge')); ?></a>
 							<a class="download svg action text permanent"><?php p($l->t('Download')); ?></a>
+							<a class="action svg text permanent merge edit"><?php p($l->t('Merge')); ?></a>
 						</span>
 					</td>
 					<td class="info email"><?php p($l->t('Email')); ?></td>
