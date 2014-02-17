@@ -7,6 +7,7 @@
 "Delete" => "Löschen",
 "Other" => "Anderes",
 "Work" => "Arbeit",
+"Email" => "E-Mail",
 "Title" => "Titel",
 "Birthday" => "Geburtstag",
 "Share" => "Freigeben",
