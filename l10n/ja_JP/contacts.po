@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-09 03:24-0500\n"
-"PO-Revision-Date: 2014-02-09 08:25+0000\n"
+"POT-Creation-Date: 2014-02-16 01:13-0500\n"
+"PO-Revision-Date: 2014-02-15 11:30+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -77,103 +77,103 @@ msgstr "アドレス帳の読み込み時に回復不能なエラーが発生: {
 msgid "Error."
 msgstr "エラー"
 
-#: js/app.js:321 js/app.js:335
+#: js/app.js:323 js/app.js:337
 msgid "Add to..."
 msgstr "追加..."
 
-#: js/app.js:325 js/app.js:337
+#: js/app.js:327 js/app.js:339
 msgid "Remove from..."
 msgstr "削除..."
 
-#: js/app.js:342
+#: js/app.js:344
 msgid "Add group..."
 msgstr "グループを追加..."
 
-#: js/app.js:470
+#: js/app.js:472
 msgid "Invalid URL: \"{url}\""
 msgstr "無効なURL: \"{url}\""
 
-#: js/app.js:481
+#: js/app.js:483
 msgid "There was an error opening a mail composer."
 msgstr "メールコンポーザを起動する際にエラーが発生しました。"
 
-#: js/app.js:486
+#: js/app.js:488
 msgid "Invalid email: \"{url}\""
 msgstr "無効なメールアドレス: \"{url}\""
 
-#: js/app.js:569
+#: js/app.js:571
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "マージに失敗しました。 連絡先が見つかりません: {id}"
 
-#: js/app.js:582
+#: js/app.js:584
 msgid "Merge failed."
 msgstr "マージに失敗しました。"
 
-#: js/app.js:589
+#: js/app.js:591
 msgid "Merge failed. Error saving contact."
 msgstr "マージに失敗しました。連絡先の保存エラー。"
 
-#: js/app.js:609
+#: js/app.js:611
 msgid "Select photo"
 msgstr "写真を選択"
 
-#: js/app.js:689 js/app.js:1631
+#: js/app.js:691 js/app.js:1633
 msgid "Network or server error. Please inform administrator."
 msgstr "ネットワークもしくはサーバーエラーです。管理者に連絡してください。"
 
-#: js/app.js:911
+#: js/app.js:913
 msgid "Error adding to group."
 msgstr "グループの追加時にエラー発生。"
 
-#: js/app.js:934
+#: js/app.js:936
 msgid "Error removing from group."
 msgstr "グループからの削除でエラーが発生。"
 
-#: js/app.js:1110
+#: js/app.js:1112
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300 以上の連絡先が洗濯されています。"
 
-#: js/app.js:1148
+#: js/app.js:1150
 msgid "Error setting {name} as favorite."
 msgstr "{name} をお気に入りにする際にエラーが発生しました。"
 
-#: js/app.js:1287 js/app.js:1291 templates/contacts.php:192
+#: js/app.js:1289 js/app.js:1293 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "連絡先をマージ"
 
-#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
+#: js/app.js:1315 js/app.js:1368 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: js/app.js:1340 templates/contacts.php:173
+#: js/app.js:1342 templates/contacts.php:152
 msgid "Add group"
 msgstr "グループを追加"
 
-#: js/app.js:1344
+#: js/app.js:1346
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1455
+#: js/app.js:1457
 msgid "Could not find contact: {id}"
 msgstr "連絡先が見つかりませんでした: {id}"
 
-#: js/app.js:1478
+#: js/app.js:1480
 msgid "No files selected for upload."
 msgstr "アップロードするファイルが選択されていません。"
 
-#: js/app.js:1488
+#: js/app.js:1490
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "アップロードしようとしているファイルは、このサーバーの最大ファイルアップロードサイズを超えています。"
 
-#: js/app.js:1589
+#: js/app.js:1591
 msgid "Edit profile picture"
 msgstr "プロフィール写真を編集"
 
-#: js/app.js:1593
+#: js/app.js:1595
 msgid "Crop photo"
 msgstr "フォトをトリミング"
 
@@ -187,19 +187,19 @@ msgstr "グループ数"
 
 #: js/contacts.js:1156
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "誕生日 {bday} の解析エラー"
 
-#: js/contacts.js:2211
+#: js/contacts.js:2228
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一部の連絡先が削除対象としてマークされていますが、まだ削除されていません。削除されるまでお待ちください。"
 
-#: js/contacts.js:2222
+#: js/contacts.js:2239
 msgid "Click to undo deletion of {num} contacts"
 msgstr "クリックして {num} 個の連絡先の削除を取り消す"
 
-#: js/contacts.js:2231
+#: js/contacts.js:2248
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num}件の連絡先の削除がキャンセルされました"
 
@@ -269,7 +269,7 @@ msgstr "グループの読み込みに失敗: {error}"
 msgid "Please choose the addressbook"
 msgstr "アドレス帳を選択してください"
 
-#: js/loader.js:22 templates/contacts.php:50
+#: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
 msgstr "インポート ..."
 
@@ -281,7 +281,7 @@ msgstr "インポートのテンプレートの読み込みエラー"
 msgid "Import contacts"
 msgstr "連絡先をインポート"
 
-#: js/loader.js:61 templates/contacts.php:46
+#: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
 msgstr "インポート"
 
@@ -289,8 +289,8 @@ msgstr "インポート"
 msgid "Import done"
 msgstr "インポート完了"
 
-#: js/loader.js:95 templates/contacts.php:101 templates/contacts.php:375
-#: templates/contacts.php:376
+#: js/loader.js:95 templates/contacts.php:80 templates/contacts.php:354
+#: templates/contacts.php:355
 msgid "Close"
 msgstr "閉じる"
 
@@ -310,20 +310,18 @@ msgstr "CardDavリンクを表示"
 msgid "Show read-only VCF link"
 msgstr "読み取り専用のVCFリンクを表示"
 
-#: js/settings.js:99 templates/contacts.php:9 templates/contacts.php:88
-#: templates/contacts.php:379 templates/contacts.php:380
-#: templates/settings.php:40
+#: js/settings.js:99 templates/contacts.php:66 templates/contacts.php:358
+#: templates/contacts.php:359 templates/settings.php:40
 msgid "Download"
 msgstr "ダウンロード"
 
-#: js/settings.js:101 templates/contacts.php:513 templates/settings.php:45
+#: js/settings.js:101 templates/contacts.php:492 templates/settings.php:45
 msgid "Edit"
 msgstr "編集"
 
-#: js/settings.js:102 templates/contacts.php:6 templates/contacts.php:81
-#: templates/contacts.php:82 templates/contacts.php:236
-#: templates/contacts.php:237 templates/contacts.php:514
-#: templates/settings.php:50
+#: js/settings.js:102 templates/contacts.php:60 templates/contacts.php:61
+#: templates/contacts.php:215 templates/contacts.php:216
+#: templates/contacts.php:493 templates/settings.php:50
 msgid "Delete"
 msgstr "削除"
 
@@ -792,294 +790,285 @@ msgstr "友達"
 msgid "Family"
 msgstr "家族"
 
-#: templates/contacts.php:13 templates/contacts.php:85
-#: templates/contacts.php:276
-msgid "Groups"
-msgstr "グループ"
-
-#: templates/contacts.php:15
-msgid "Favorite"
-msgstr "お気に入り"
-
-#: templates/contacts.php:17
-msgid "Merge selected"
-msgstr "選択をマージ"
-
-#: templates/contacts.php:27
+#: templates/contacts.php:6
 msgid "New contact"
 msgstr "新しい連絡先"
 
-#: templates/contacts.php:31
+#: templates/contacts.php:10
 msgid "Group name"
 msgstr "グループ名"
 
-#: templates/contacts.php:31
+#: templates/contacts.php:10
 msgid "New group"
 msgstr "新しいグループ"
 
-#: templates/contacts.php:40
+#: templates/contacts.php:19
 msgid "Address books"
 msgstr "アドレス帳"
 
-#: templates/contacts.php:43 templates/contacts.php:73
+#: templates/contacts.php:22 templates/contacts.php:52
 msgid "Display name"
 msgstr "表示名"
 
-#: templates/contacts.php:43
+#: templates/contacts.php:22
 msgid "Add Address Book"
 msgstr "アドレス帳を追加"
 
-#: templates/contacts.php:52 templates/contacts.php:53
+#: templates/contacts.php:31 templates/contacts.php:32
 msgid "Select file..."
 msgstr "ファイルを選択..."
 
-#: templates/contacts.php:70
+#: templates/contacts.php:49
 msgid "(De-)select all"
 msgstr "すべての選択を解除"
 
-#: templates/contacts.php:72
+#: templates/contacts.php:51
 msgid "Sort order"
 msgstr "ソート順"
 
-#: templates/contacts.php:74
+#: templates/contacts.php:53
 msgid "First- Lastname"
 msgstr "名 姓"
 
-#: templates/contacts.php:75
+#: templates/contacts.php:54
 msgid "Last-, Firstname"
 msgstr "姓, 名"
 
-#: templates/contacts.php:87
+#: templates/contacts.php:64 templates/contacts.php:255
+msgid "Groups"
+msgstr "グループ"
+
+#: templates/contacts.php:67
 msgid "Merge"
 msgstr "まとめる"
 
-#: templates/contacts.php:91 templates/contacts.php:368
+#: templates/contacts.php:70 templates/contacts.php:347
 msgid "Email"
 msgstr "メール"
 
-#: templates/contacts.php:92 templates/contacts.php:367
+#: templates/contacts.php:71 templates/contacts.php:346
 msgid "Phone"
 msgstr "電話番号"
 
-#: templates/contacts.php:93 templates/contacts.php:370
+#: templates/contacts.php:72 templates/contacts.php:349
 msgid "Address"
 msgstr "アドレス"
 
-#: templates/contacts.php:94
+#: templates/contacts.php:73
 msgid "Group"
 msgstr "グループ"
 
-#: templates/contacts.php:102
+#: templates/contacts.php:81
 msgid "Keyboard shortcuts"
 msgstr "キーボードショートカット"
 
-#: templates/contacts.php:104
+#: templates/contacts.php:83
 msgid "Navigation"
 msgstr "ナビゲーション"
 
-#: templates/contacts.php:107
+#: templates/contacts.php:86
 msgid "Next contact in list"
 msgstr "リスト内の次の連絡先"
 
-#: templates/contacts.php:109
+#: templates/contacts.php:88
 msgid "Previous contact in list"
 msgstr "リスト内の前の連絡先"
 
-#: templates/contacts.php:111
+#: templates/contacts.php:90
 msgid "Expand/collapse current addressbook"
 msgstr "現在のアドレス帳を展開する／折りたたむ"
 
-#: templates/contacts.php:113
+#: templates/contacts.php:92
 msgid "Next addressbook"
 msgstr "次のアドレス帳"
 
-#: templates/contacts.php:115
+#: templates/contacts.php:94
 msgid "Previous addressbook"
 msgstr "前のアドレス帳"
 
-#: templates/contacts.php:119
+#: templates/contacts.php:98
 msgid "Actions"
 msgstr "アクション"
 
-#: templates/contacts.php:122
+#: templates/contacts.php:101
 msgid "Refresh contacts list"
 msgstr "連絡先リストを再読込する"
 
-#: templates/contacts.php:124
+#: templates/contacts.php:103
 msgid "Add new contact"
 msgstr "新しい連絡先を追加"
 
-#: templates/contacts.php:126
+#: templates/contacts.php:105
 msgid "Add new addressbook"
 msgstr "新しいアドレス帳を追加"
 
-#: templates/contacts.php:128
+#: templates/contacts.php:107
 msgid "Delete current contact"
 msgstr "現在の連絡先を削除"
 
-#: templates/contacts.php:134
+#: templates/contacts.php:113
 msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
 msgstr "<h3>アドレスブックに連絡先が存在しない、もしくはアドレスブックが無効になっています。</h3><p>新しい連絡先を追加するか、VCFファイルから既存の連絡先をインポートしてください。</p>"
 
-#: templates/contacts.php:137
+#: templates/contacts.php:116
 msgid "Add contact"
 msgstr "連絡先を追加"
 
-#: templates/contacts.php:193
+#: templates/contacts.php:172
 msgid "Which contact should the data be merged into?"
 msgstr "どの連絡先のデータをマージしますか？"
 
-#: templates/contacts.php:201
+#: templates/contacts.php:180
 msgid "Delete the other(s) after successful merge?"
 msgstr "マージが成功した後に他を削除しますか？"
 
-#: templates/contacts.php:216
+#: templates/contacts.php:195
 msgid "Compose mail"
 msgstr "メールを作成"
 
-#: templates/contacts.php:244
+#: templates/contacts.php:223
 msgid "Delete current photo"
 msgstr "現在の写真を削除"
 
-#: templates/contacts.php:245
+#: templates/contacts.php:224
 msgid "Edit current photo"
 msgstr "現在の写真を編集"
 
-#: templates/contacts.php:246
+#: templates/contacts.php:225
 msgid "Upload new photo"
 msgstr "新しい写真をアップロード"
 
-#: templates/contacts.php:247
+#: templates/contacts.php:226
 msgid "Select photo from ownCloud"
 msgstr "ownCloudから写真を選択"
 
-#: templates/contacts.php:252 templates/contacts.php:254
+#: templates/contacts.php:231 templates/contacts.php:233
 #: templates/settings.php:59
 msgid "Name"
 msgstr "名前"
 
-#: templates/contacts.php:260
+#: templates/contacts.php:239
 msgid "First name"
 msgstr "名"
 
-#: templates/contacts.php:264
+#: templates/contacts.php:243
 msgid "Additional names"
 msgstr "ミドルネーム"
 
-#: templates/contacts.php:268
+#: templates/contacts.php:247
 msgid "Last name"
 msgstr "姓"
 
-#: templates/contacts.php:288 templates/contacts.php:365
+#: templates/contacts.php:267 templates/contacts.php:344
 msgid "Nickname"
 msgstr "ニックネーム"
 
-#: templates/contacts.php:298 templates/contacts.php:364
+#: templates/contacts.php:277 templates/contacts.php:343
 msgid "Title"
 msgstr "タイトル"
 
-#: templates/contacts.php:308 templates/contacts.php:363
+#: templates/contacts.php:287 templates/contacts.php:342
 msgid "Organization"
 msgstr "所属"
 
-#: templates/contacts.php:318 templates/contacts.php:366
+#: templates/contacts.php:297 templates/contacts.php:345
 msgid "Birthday"
 msgstr "誕生日"
 
-#: templates/contacts.php:355
+#: templates/contacts.php:334
 msgid "Notes go here..."
 msgstr "メモはここに..."
 
-#: templates/contacts.php:362
+#: templates/contacts.php:341
 msgid "Add field..."
 msgstr "フィールドを追加..."
 
-#: templates/contacts.php:369
+#: templates/contacts.php:348
 msgid "Instant Messaging"
 msgstr "インスタントメッセージ"
 
-#: templates/contacts.php:371
+#: templates/contacts.php:350
 msgid "Note"
 msgstr "メモ"
 
-#: templates/contacts.php:372
+#: templates/contacts.php:351
 msgid "Web site"
 msgstr "ウェブサイト"
 
-#: templates/contacts.php:392 templates/contacts.php:407
-#: templates/contacts.php:421 templates/contacts.php:436
-#: templates/contacts.php:478 templates/contacts.php:488
+#: templates/contacts.php:371 templates/contacts.php:386
+#: templates/contacts.php:400 templates/contacts.php:415
+#: templates/contacts.php:457 templates/contacts.php:467
 msgid "Preferred"
 msgstr "推奨"
 
-#: templates/contacts.php:397
+#: templates/contacts.php:376
 msgid "Please specify a valid email address."
 msgstr "連絡先を追加"
 
-#: templates/contacts.php:397
+#: templates/contacts.php:376
 msgid "someone@example.com"
 msgstr "someone@example.com"
 
-#: templates/contacts.php:399
+#: templates/contacts.php:378
 msgid "Mail to address"
 msgstr "アドレスへメールを送る"
 
-#: templates/contacts.php:400
+#: templates/contacts.php:379
 msgid "Delete email address"
 msgstr "メールアドレスを削除"
 
-#: templates/contacts.php:412
+#: templates/contacts.php:391
 msgid "Enter phone number"
 msgstr "電話番号を入力"
 
-#: templates/contacts.php:428
+#: templates/contacts.php:407
 msgid "Go to web site"
 msgstr "Webサイトへ移動"
 
-#: templates/contacts.php:445
+#: templates/contacts.php:424
 msgid "View on map"
 msgstr "地図で表示"
 
-#: templates/contacts.php:453
+#: templates/contacts.php:432
 msgid "Street address"
 msgstr "住所1"
 
-#: templates/contacts.php:457
+#: templates/contacts.php:436
 msgid "Postal code"
 msgstr "郵便番号"
 
-#: templates/contacts.php:459
+#: templates/contacts.php:438
 msgid "City"
 msgstr "都市"
 
-#: templates/contacts.php:463
+#: templates/contacts.php:442
 msgid "State or province"
 msgstr "州／県"
 
-#: templates/contacts.php:467
+#: templates/contacts.php:446
 msgid "Country"
 msgstr "国名"
 
-#: templates/contacts.php:494
+#: templates/contacts.php:473
 msgid "Instant Messenger"
 msgstr "インスタントメッセンジャー"
 
-#: templates/contacts.php:507
+#: templates/contacts.php:486
 msgid "Active"
 msgstr "アクティブ"
 
-#: templates/contacts.php:510 templates/settings.php:36
+#: templates/contacts.php:489 templates/settings.php:36
 msgid "Share"
 msgstr "共有"
 
-#: templates/contacts.php:511
+#: templates/contacts.php:490
 msgid "Export"
 msgstr "エクスポート"
 
-#: templates/contacts.php:512
+#: templates/contacts.php:491
 msgid "CardDAV link"
 msgstr "CardDAVリンク"
 
