@@ -37,11 +37,9 @@
 		padding-left: 17px;
 }
 
-.oc-addnew input[type=text] {
-        width: 198px !important;
+#app-navigation .oc-addnew input[type=text] {
         margin-top: 5px;
         margin-left: 6px;
-        height: 30px !important;
 }
 
 .oc-addnew select {
@@ -81,11 +79,17 @@
         background-image: url('%webroot%/core/img/actions/delete.svg');
 }
 
-.oc-addnew .new-button {
-        border-radius: 0;
-        background-image: url('%webroot%/core/img/add.svg');
-        border-top-right-radius: 5px; 
-        border-bottom-right-radius: 5px; 
+#app-navigation .oc-addnew .new-button {
+		width: 32px;
+		background-position: center;
+		background-repeat: no-repeat;
+}
+
+#app-navigation .oc-addnew .new-button { background-image: url('%webroot%/core/img/actions/checkmark-white.svg'); }
+#app-navigation .oc-addnew .new-button .no-svg { background-image: url('%webroot%/core/img/actions/checkmark-white.png'); }
+#app-navigation .oc-addnew .new-button:hover .no-svg { background-image: url('%webroot%/core/img/actions/checkmark-white.png'); }
+#app-settings .oc-addnew .new-button {
+		margin-left: -8px;
 }
 
 .oc-addnew .create-button {
