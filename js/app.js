@@ -383,7 +383,7 @@ OC.Contacts = OC.Contacts || {
 
 		// Keep error messaging at one place to be able to replace it.
 		$(document).bind('status.contacts.error', function(e, data) {
-			var message = data.message || data;
+			var message = data.message;
 			console.warn(message);
 			//console.trace();
 			OC.notify({message:message});
