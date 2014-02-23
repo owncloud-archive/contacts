@@ -175,7 +175,7 @@ class Ldap extends AbstractBackend {
 			if ($num==null) {
 				$num=PHP_INT_MAX;
 			}
-			\OC_Log::write('contacts_ldap', __METHOD__." - search what $ldapbasedn, $bindsearch ", \OC_Log::DEBUG);
+			\OC_Log::write('contacts_ldap', __METHOD__." - search $ldapbasedn, $bindsearch ", \OC_Log::DEBUG);
 
 			$ldap_results = @ldap_search ($this->ldapConnection, $ldapbasedn, $bindsearch, $entries);
 			if ($ldap_results) {
@@ -256,23 +256,6 @@ class Ldap extends AbstractBackend {
 	 * @return array
 	 */
 	public function getAddressBooksForUser(array $options = array()) {
-
-		/*try {
-			if(!isset(self::$preparedQueries['addressbooksforuser'])) {
-				$sql = 'SELECT `configkey` from *PREFIX*preferences where `configkey` like ?';
-				$configkeyPrefix = $this->name . "_%_uri";
-				self::$preparedQueries['addressbooksforuser'] = \OCP\DB::prepare($sql);
-				error_log("ca farte ? ".$sql." ".$configkeyPrefix);
-				$result = self::$preparedQueries['addressbooksforuser']->execute(array($configkeyPrefix));
-				if (\OC_DB::isError($result)) {
-					\OCP\Util::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-					return $this->addressbooks;
-				}
-			}
-		} catch(\Exception $e) {
-			\OC_Log::write('contacts', __METHOD__.' exception: ' . $e->getMessage(), \OCP\Util::ERROR);
-			return $this->addressbooks;
-		}*/
 		$addressbookidList = $this->getAddressbookList();
 		$this->addressbooks = array();
 		foreach($addressbookidList as $addressbookid) {
@@ -533,9 +516,26 @@ class Ldap extends AbstractBackend {
 	 * @return string|bool The identifier for the new contact or false on error.
 	 */
 	public function createContact($addressbookid, $contact, array $options = array()) {
-		error_log("access create"+$this->debug_string_backtrace());
+		$backtrace = debug_backtrace();
+		$trace=array();
+		foreach ($backtrace as $elt) {
+			foreach ($elt as $key => $line) {
+				if ($key == "file" || $key == "line") {
+					$trace[] = $line;
+				}
+			}
+		}
+		//error_log("stay added ".print_r($trace,1));
 
 		$uri = isset($options['uri']) ? $options['uri'] : null;
+		
+		// 2014/02/13 Sometimes, a card is created without a name (I don't like that)...
+		if (!isset($contact->N)) {
+			$generated = "gruik".rand(0, 65535);
+			$contact->N = $generated;
+			$contact->FN = $generated;
+			error_log("Generated name: $generated");
+		}
 
 		if(!$contact instanceof VCard) {
 			try {
@@ -545,6 +545,7 @@ class Ldap extends AbstractBackend {
 				return false;
 			}
 		}
+		error_log("adding ".$contact->serialize());
 
 		try {
 			$contact->validate(VCard::REPAIR|VCard::UPGRADE);
@@ -561,6 +562,8 @@ class Ldap extends AbstractBackend {
 		$contact->{'X-LDAP-DN'} = base64_encode($newDN);
 		if ($uri!=null) {
 			$contact->{'X-URI'} = $uri;
+		} else {
+			$contact->{'X-URI'} = $contact->{'UID'}.".vcf";
 		}
 				
 		$ldifEntries = $this->connector->VCardToLdap($contact);
@@ -585,9 +588,19 @@ class Ldap extends AbstractBackend {
 	 * @return bool
 	 */
 	public function updateContact($addressbookid, $id, $carddata, array $options = array()) {
+		$backtrace = debug_backtrace();
+		$trace=array();
+		foreach ($backtrace as $elt) {
+			foreach ($elt as $key => $line) {
+				if ($key == "file" || $key == "line") {
+					$trace[] = $line;
+				}
+			}
+		}
+		//error_log("stay modified ".print_r($trace,1));
 		if(!$carddata instanceof VCard) {
 			try {
-				$vcard = \Sabre\VObject\Reader::read($carddata->serialize());
+				$vcard = \Sabre\VObject\Reader::read($carddata);
 			} catch(\Exception $e) {
 				\OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
 				return false;
@@ -595,6 +608,8 @@ class Ldap extends AbstractBackend {
 		} else {
 			$vcard = $carddata;
 		}
+		
+		//error_log("updating ".$vcard->serialize());
 		
 		if (!is_array($id)) {
 			$a_ids = array($id);
@@ -630,15 +645,34 @@ class Ldap extends AbstractBackend {
 	 * @return bool
 	 */
 	public function deleteContact($addressbookid, $id, array $options = array()) {
+		$backtrace = debug_backtrace();
+		$trace=array();
+		foreach ($backtrace as $elt) {
+			foreach ($elt as $key => $line) {
+				if ($key == "file" || $key == "line") {
+					$trace[] = $line;
+				}
+			}
+		}
+		//error_log("stay dead ".print_r($trace, 1));
 		self::setLdapParams($addressbookid);
 		self::ldapCreateAndBindConnection();
-		$card = self::getContact($addressbookid, array($id));
-		$vcard = \Sabre\VObject\Reader::read($card['carddata']);
-		$decodedId = base64_decode($vcard->{'X-LDAP-DN'});
-		// Deletes the existing card
-		$result = self::ldapDelete($decodedId);
-		self::ldapCloseConnection();
-		return $result;
+		$card=null;
+		if (is_array($id)) {
+			$card = self::getContact($addressbookid, $id);
+		} else {
+			$card = self::getContact($addressbookid, array($id));
+		}
+		if ($card) {
+			$vcard = \Sabre\VObject\Reader::read($card['carddata']);
+			$decodedId = base64_decode($vcard->{'X-LDAP-DN'});
+			// Deletes the existing card
+			$result = self::ldapDelete($decodedId);
+			self::ldapCloseConnection();
+			return $result;
+		} else {
+			return false;
+		}
 	}
 
 	/**
