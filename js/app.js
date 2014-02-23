@@ -252,10 +252,10 @@ OC.Contacts = OC.Contacts || {
 		if(act && act.length > 0) {
 			this.$contactList.addClass('multiselect');
 			this.$contactListHeader.find('.actions').css('display', '');
-			this.$contactListHeader.find('.action').css('display', '');
+			this.$contactListHeader.find('.action').css('display', 'none');
 			this.$contactListHeader.find('.name').attr('colspan', '5');
 			this.$contactListHeader.find('.info').css('display', 'none');
-			this.$headeractions.children('.'+act.join(',.')).show();
+			this.$contactListHeader.find('.'+act.join(',.')).css('display', '');
 		} else {
 			this.$contactListHeader.find('.actions').css('display', 'none');
 			this.$contactListHeader.find('.name').attr('colspan', '1');
@@ -264,7 +264,7 @@ OC.Contacts = OC.Contacts || {
 		}
 	},
 	showAction:function(act, show) {
-		this.$headeractions.find('.' + act).toggle(show);
+		this.$contactListHeader.find('.' + act).toggle(show);
 	},
 	cacheElements: function() {
 		var self = this;
@@ -383,7 +383,7 @@ OC.Contacts = OC.Contacts || {
 
 		// Keep error messaging at one place to be able to replace it.
 		$(document).bind('status.contacts.error', function(e, data) {
-			var message = data.message || data;
+			var message = data.message;
 			console.warn(message);
 			//console.trace();
 			OC.notify({message:message});
