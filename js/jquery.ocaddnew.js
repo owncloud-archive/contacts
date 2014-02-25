@@ -5,8 +5,7 @@
 			height: 'auto',
 			closeOnEscape: true,
 			autoOpen: false,
-			autoClose: true,
-			addText: 'Add'
+			autoClose: true
 		},
 		_create: function() {
 			//console.log('ocaddnew._create', this);
@@ -15,7 +14,7 @@
 			this.originalCss = {
 				display: this.element[0].style.display,
 				width: this.element[0].style.width,
-				height: this.element[0].style.height,
+				height: this.element[0].style.height
 			};
 
 			this.originalTitle = this.element.attr('title') || this.element.attr('original-title');
@@ -29,7 +28,7 @@
 			this.element.addClass('oc-addnew-name').removeAttr('original-title').appendTo(this.$ul).wrap('<li />');
 			//console.log('li', $li.parent());
 			//$li.appendTo(this.$ul);
-			$('<button />').addClass('primary').text(this.options.addText).insertAfter(this.element).hide();
+			$('<button />').addClass('new-button primary').insertAfter(this.element).hide();
 			this.element.on('input', function() {
 				// Enable button when input is non-empty
 				$(this).next('button').prop('disabled', $(this).val().trim().length === 0);
