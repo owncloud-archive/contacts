@@ -28,7 +28,8 @@ class ImportController extends Controller {
 	public function upload() {
 		$request = $this->request;
 		$params = $this->request->urlParams;
-		list($addressBookId, $format) = explode(",", $params['addressBookId']);
+                $addressBookId = $params['addressBookId'];
+                $format = $params['importType'];
 		$response = new JSONResponse();
 
 		$view = \OCP\Files::getStorage('contacts');
@@ -91,7 +92,7 @@ class ImportController extends Controller {
 						'addressBookId' => $params['addressBookId']
 					)
 				);
-				\OC_Cache::set($progresskey, '10', 300);
+				\OC_Cache::set($progresskey, '0', 300);
 			} else {
 				\OC_FileProxy::$enabled = $proxyStatus;
 				$response->bailOut(App::$l10n->t('Error uploading contacts to storage.'));
@@ -110,7 +111,8 @@ class ImportController extends Controller {
 	public function prepare() {
 		$request = $this->request;
 		$params = $this->request->urlParams;
-		list($addressBookId, $format) = explode(",", $params['addressBookId']);
+		$addressBookId = $params['addressBookId'];
+		$format = $params['importType'];
 		$response = new JSONResponse();
 		$filename = $request->post['filename'];
 		$path = $request->post['path'];
@@ -134,10 +136,11 @@ class ImportController extends Controller {
 					'count' => $count,
 					'progresskey' => $progresskey,
 					'backend' => $params['backend'],
-					'addressBookId' => $params['addressBookId']
+					'addressBookId' => $params['addressBookId'],
+					'importType' => $params['importType']
 				)
 			);
-			\OC_Cache::set($progresskey, '10', 300);
+			\OC_Cache::set($progresskey, '0', 300);
 		} else {
 			\OC_FileProxy::$enabled = $proxyStatus;
 			$response->bailOut(App::$l10n->t('Error moving file to imports folder.'));
@@ -153,7 +156,8 @@ class ImportController extends Controller {
 		$response = new JSONResponse();
 		$params = $this->request->urlParams;
 		$app = new App($this->api->getUserId());
-		list($addressBookId, $format) = explode(",", $params['addressBookId']);
+		$addressBookId = $params['addressBookId'];
+		$format = $params['importType'];
 
 		$addressBook = $app->getAddressBook($params['backend'], $addressBookId);
 		if(!$addressBook->hasPermission(\OCP\PERMISSION_CREATE)) {
@@ -228,33 +232,39 @@ class ImportController extends Controller {
 			}
 		}
 		
-		//import the contacts
-		$imported = 0;
-		$failed = 0;
-		$processed = 0;
-		$total = count($parts);
+		if ($parts) {
+			//import the contacts
+			$imported = 0;
+			$failed = 0;
+			$processed = 0;
+			$total = count($parts);
 
-		// TODO: Add a new group: "Imported at {date}"
-		foreach($parts as $part) {
-			/**
-			 * TODO
-			 * - Check if a contact with identical UID exists.
-			 * - If so, fetch that contact and call $contact->mergeFromVCard($part);
-			 * - Increment $updated var (not present yet.)
-			 * - continue
-			 */
-			try {
-				if($addressBook->addChild($part)) {
-					$imported += 1;
-				} else {
-					$failed += 1;
+			foreach($parts as $part) {
+				/**
+				 * TODO
+				 * - Check if a contact with identical UID exists.
+				 * - If so, fetch that contact and call $contact->mergeFromVCard($part);
+				 * - Increment $updated var (not present yet.)
+				 * - continue
+				 */
+				try {
+					if($addressBook->addChild($part)) {
+						$imported++;
+					} else {
+						$failed++;
+					}
+				} catch (\Exception $e) {
+					$response->debug('Error importing vcard: ' . $e->getMessage() . $nl . $part->serialize());
+					$failed++;
 				}
-			} catch (\Exception $e) {
-				$response->debug('Error importing vcard: ' . $e->getMessage() . $nl . $part->serialize());
-				$failed += 1;
+				$processed++;
+				$writeProgress($processed);
 			}
-			$processed++;
-			$writeProgress($processed);
+		} else {
+			$imported = 0;
+			$failed = 0;
+			$processed = 0;
+			$total = 0;
 		}
 		$cleanup();
 		//done the import
@@ -263,7 +273,10 @@ class ImportController extends Controller {
 			array(
 				'backend' => $params['backend'],
 				'addressBookId' => $params['addressBookId'],
+				'importType' => $params['importType'],
 				'imported' => $imported,
+				'count' => $processed,
+				'total' => $total,
 				'failed' => $failed,
 			)
 		);

@@ -94,7 +94,7 @@ class ImportLdifConnector extends ImportConnector{
 				if ($key == "dn") {
 					if (count($card) > 0) {
 						$numParts++;
-						if ($numParts > $limit) {
+						if ($limit > -1 && count($card) == $limit) {
 							break;
 						}
 						$parts[] = $card;

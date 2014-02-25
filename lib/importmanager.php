@@ -141,7 +141,17 @@ class ImportManager {
 				}
 		}
 		return $probability;
-	}	
+	}
+	
+	/**
+	 * @brief get the raw entries from the input file
+	 * @param $file the path to the file
+	 * @param $limit the maximum number of entries to return (-1: no limit)
+	 * @return array|false
+	 */
+	public function getEntries($file, $limit=-1) {
+		return $connector->getElementsFromInput($file, $limit);
+	}
 }
 
 ?>
