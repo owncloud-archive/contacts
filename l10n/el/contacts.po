@@ -33,8 +33,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-16 01:13-0500\n"
-"PO-Revision-Date: 2014-02-15 11:30+0000\n"
+"POT-Creation-Date: 2014-02-25 00:49-0500\n"
+"PO-Revision-Date: 2014-02-24 23:30+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -95,103 +95,103 @@ msgstr "Ανεπανόρθωτο σφάλμα κατά τη φόρτωση τω�
 msgid "Error."
 msgstr "Σφάλμα."
 
-#: js/app.js:323 js/app.js:337
+#: js/app.js:321 js/app.js:335
 msgid "Add to..."
 msgstr "Προσθήκη στο..."
 
-#: js/app.js:327 js/app.js:339
+#: js/app.js:325 js/app.js:337
 msgid "Remove from..."
 msgstr "Αφαίρεση από το..."
 
-#: js/app.js:344
+#: js/app.js:342
 msgid "Add group..."
 msgstr "Προσθήκη ομάδας..."
 
-#: js/app.js:472
+#: js/app.js:470
 msgid "Invalid URL: \"{url}\""
 msgstr "Μη έγκυρη URL: \"{url}\""
 
-#: js/app.js:483
+#: js/app.js:481
 msgid "There was an error opening a mail composer."
 msgstr "Υπήρχε ένα σφάλμα στο άνοιγμα του επεξεργαστή μηνυμάτων."
 
-#: js/app.js:488
+#: js/app.js:486
 msgid "Invalid email: \"{url}\""
 msgstr "Μη έγκυρο email: \"{url}\""
 
-#: js/app.js:571
+#: js/app.js:569
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Αποτυχία συγχώνευσης. Αδυναμία εύρεσης επαφής: {id}"
 
-#: js/app.js:584
+#: js/app.js:582
 msgid "Merge failed."
 msgstr "Η συγχώνευση απέτυχε. "
 
-#: js/app.js:591
+#: js/app.js:589
 msgid "Merge failed. Error saving contact."
 msgstr "Αποτυχία συγχώνευσης. Σφάλμα αποθήκευσης επαφής."
 
-#: js/app.js:611
+#: js/app.js:609
 msgid "Select photo"
 msgstr "Επέλεξε φωτογραφία"
 
-#: js/app.js:691 js/app.js:1633
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr "Σφάλμα δικτύου ή διακομιστή. Παρακαλώ ενημερώστε το διαχειριστή."
 
-#: js/app.js:913
+#: js/app.js:911
 msgid "Error adding to group."
 msgstr "Σφάλμα κατά την προσθήκη σε ομάδα."
 
-#: js/app.js:936
+#: js/app.js:934
 msgid "Error removing from group."
 msgstr "Σφάλμα κατά την αφαίρεση από ομάδα."
 
-#: js/app.js:1112
+#: js/app.js:1110
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Έχετε επιλέξει πάνω από 300 επαφές.\nΑυτό μάλλον θα αποτύχει! Κλικάρετε εδώ για να δοκιμάσετε ούτως ή άλλως."
 
-#: js/app.js:1150
+#: js/app.js:1148
 msgid "Error setting {name} as favorite."
 msgstr "Σφάλμα κατά τον ορισμό του {name} σαν αγαπημένο."
 
-#: js/app.js:1289 js/app.js:1293 templates/contacts.php:171
+#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Συγχώνευση επαφών"
 
-#: js/app.js:1315 js/app.js:1368 js/settings.js:120 templates/settings.php:62
+#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#: js/app.js:1342 templates/contacts.php:152
+#: js/app.js:1340 templates/contacts.php:152
 msgid "Add group"
 msgstr "Προσθήκη ομάδας"
 
-#: js/app.js:1346
+#: js/app.js:1344
 msgid "OK"
 msgstr "ΟΚ"
 
-#: js/app.js:1457
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr "Αδυναμία εύρεσης επαφής: {id}"
 
-#: js/app.js:1480
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr "Δεν επιλέχτηκαν αρχεία για μεταφόρτωση."
 
-#: js/app.js:1490
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Το αρχείο που προσπαθείτε να μεταφορτώσετε υπερβαίνει το μέγιστο μέγεθος μεταφόρτωσης αρχείων σε αυτόν το διακομιστή."
 
-#: js/app.js:1591
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr "Επεξεργασία εικόνας προφίλ"
 
-#: js/app.js:1595
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr "Περικοπή φωτογραφίας"
 

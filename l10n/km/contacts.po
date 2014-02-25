@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-15 06:12-0500\n"
-"PO-Revision-Date: 2014-02-15 11:12+0000\n"
+"POT-Creation-Date: 2014-02-25 00:49-0500\n"
+"PO-Revision-Date: 2014-02-24 12:10+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Khmer (http://www.transifex.com/projects/p/owncloud/language/km/)\n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
 msgid "Save"
-msgstr ""
+msgstr "រក្សាទុក"
 
 #: js/addressbooks.js:298
 msgid "Uploading..."
-msgstr ""
+msgstr "កំពុងដាក់បញ្ចូល..."
 
 #: js/addressbooks.js:301 js/loader.js:68
 msgid "Importing..."
@@ -69,103 +69,103 @@ msgstr ""
 msgid "Error."
 msgstr ""
 
-#: js/app.js:323 js/app.js:337
+#: js/app.js:321 js/app.js:335
 msgid "Add to..."
 msgstr ""
 
-#: js/app.js:327 js/app.js:339
+#: js/app.js:325 js/app.js:337
 msgid "Remove from..."
 msgstr ""
 
-#: js/app.js:344
+#: js/app.js:342
 msgid "Add group..."
 msgstr ""
 
-#: js/app.js:472
+#: js/app.js:470
 msgid "Invalid URL: \"{url}\""
 msgstr ""
 
-#: js/app.js:483
+#: js/app.js:481
 msgid "There was an error opening a mail composer."
 msgstr ""
 
-#: js/app.js:488
+#: js/app.js:486
 msgid "Invalid email: \"{url}\""
 msgstr ""
 
-#: js/app.js:571
+#: js/app.js:569
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr ""
 
-#: js/app.js:584
+#: js/app.js:582
 msgid "Merge failed."
 msgstr ""
 
-#: js/app.js:591
+#: js/app.js:589
 msgid "Merge failed. Error saving contact."
 msgstr ""
 
-#: js/app.js:611
+#: js/app.js:609
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:691 js/app.js:1633
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
-#: js/app.js:913
+#: js/app.js:911
 msgid "Error adding to group."
 msgstr ""
 
-#: js/app.js:936
+#: js/app.js:934
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1112
+#: js/app.js:1110
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1150
+#: js/app.js:1148
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1289 js/app.js:1293 templates/contacts.php:171
+#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1315 js/app.js:1368 js/settings.js:120 templates/settings.php:62
+#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
-msgstr ""
+msgstr "លើកលែង"
 
-#: js/app.js:1342 templates/contacts.php:152
+#: js/app.js:1340 templates/contacts.php:152
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1346
+#: js/app.js:1344
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1457
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1480
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1490
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1591
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1595
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr ""
 
@@ -197,7 +197,7 @@ msgstr ""
 
 #: js/groups.js:53
 msgid "Add"
-msgstr ""
+msgstr "បញ្ចូល"
 
 #: js/groups.js:264
 msgid "Contact is already in this group."
@@ -275,7 +275,7 @@ msgstr ""
 
 #: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
-msgstr ""
+msgstr "នាំយកចូល"
 
 #: js/loader.js:92
 msgid "Import done"
@@ -284,11 +284,11 @@ msgstr ""
 #: js/loader.js:95 templates/contacts.php:80 templates/contacts.php:354
 #: templates/contacts.php:355
 msgid "Close"
-msgstr ""
+msgstr "បិទ"
 
 #: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
 msgid "Error"
-msgstr ""
+msgstr "កំហុស"
 
 #: js/settings.js:75
 msgid "Displayname cannot be empty."
@@ -305,11 +305,11 @@ msgstr ""
 #: js/settings.js:99 templates/contacts.php:66 templates/contacts.php:358
 #: templates/contacts.php:359 templates/settings.php:40
 msgid "Download"
-msgstr ""
+msgstr "ទាញយក"
 
 #: js/settings.js:101 templates/contacts.php:492 templates/settings.php:45
 msgid "Edit"
-msgstr ""
+msgstr "កែ"
 
 #: js/settings.js:102 templates/contacts.php:60 templates/contacts.php:61
 #: templates/contacts.php:215 templates/contacts.php:216
@@ -670,7 +670,7 @@ msgstr ""
 #: lib/utils/properties.php:178 lib/utils/properties.php:185
 #: lib/utils/properties.php:200
 msgid "Other"
-msgstr ""
+msgstr "ផ្សេងៗ"
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
@@ -735,7 +735,7 @@ msgstr ""
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
 msgid "Work"
-msgstr ""
+msgstr "ធ្វើការ"
 
 #: lib/utils/properties.php:164 lib/utils/properties.php:169
 #: lib/utils/properties.php:183
@@ -844,7 +844,7 @@ msgstr ""
 
 #: templates/contacts.php:72 templates/contacts.php:349
 msgid "Address"
-msgstr ""
+msgstr "អាសយដ្ឋាន"
 
 #: templates/contacts.php:73
 msgid "Group"
@@ -960,7 +960,7 @@ msgstr ""
 
 #: templates/contacts.php:277 templates/contacts.php:343
 msgid "Title"
-msgstr ""
+msgstr "ចំណងជើង"
 
 #: templates/contacts.php:287 templates/contacts.php:342
 msgid "Organization"
@@ -968,7 +968,7 @@ msgstr ""
 
 #: templates/contacts.php:297 templates/contacts.php:345
 msgid "Birthday"
-msgstr ""
+msgstr "ថ្ងៃ​កំណើត"
 
 #: templates/contacts.php:334
 msgid "Notes go here..."
@@ -1054,11 +1054,11 @@ msgstr ""
 
 #: templates/contacts.php:489 templates/settings.php:36
 msgid "Share"
-msgstr ""
+msgstr "ចែក​រំលែក"
 
 #: templates/contacts.php:490
 msgid "Export"
-msgstr ""
+msgstr "នាំចេញ"
 
 #: templates/contacts.php:491
 msgid "CardDAV link"
@@ -1070,15 +1070,15 @@ msgstr ""
 
 #: templates/settings.php:3
 msgid "more info"
-msgstr ""
+msgstr "ព័ត៌មាន​បន្ថែម"
 
 #: templates/settings.php:5
 msgid "Primary address (Kontact et al)"
-msgstr ""
+msgstr "អាសយដ្ឋាន​ចម្បង"
 
 #: templates/settings.php:7
 msgid "iOS/OS X"
-msgstr ""
+msgstr "iOS/OS X"
 
 #: templates/settings.php:11
 msgid "Addressbooks"
@@ -1090,4 +1090,4 @@ msgstr ""
 
 #: templates/settings.php:60
 msgid "Description"
-msgstr ""
+msgstr "ការ​អធិប្បាយ"

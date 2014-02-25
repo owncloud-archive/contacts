@@ -1,3 +1,23 @@
 <?php $TRANSLATIONS = array(
-"Delete" => "លុប"
+"Save" => "រក្សាទុក",
+"Uploading..." => "កំពុងដាក់បញ្ចូល...",
+"Cancel" => "លើកលែង",
+"Add" => "បញ្ចូល",
+"Import" => "នាំយកចូល",
+"Close" => "បិទ",
+"Error" => "កំហុស",
+"Download" => "ទាញយក",
+"Edit" => "កែ",
+"Delete" => "លុប",
+"Other" => "ផ្សេងៗ",
+"Work" => "ធ្វើការ",
+"Address" => "អាសយដ្ឋាន",
+"Title" => "ចំណងជើង",
+"Birthday" => "ថ្ងៃ​កំណើត",
+"Share" => "ចែក​រំលែក",
+"Export" => "នាំចេញ",
+"more info" => "ព័ត៌មាន​បន្ថែម",
+"Primary address (Kontact et al)" => "អាសយដ្ឋាន​ចម្បង",
+"iOS/OS X" => "iOS/OS X",
+"Description" => "ការ​អធិប្បាយ"
 );
