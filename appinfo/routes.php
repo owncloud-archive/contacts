@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Thomas Tanghus
- * Copyright (c) 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  * This file is licensed under the Affero General Public License version 3 or
  * later.
  * See the COPYING-README file.
@@ -47,6 +47,28 @@ $this->create('contacts_address_book_add', 'addressbook/{backend}/add')
 
 $this->create('contacts_address_book', 'addressbook/{backend}/{addressBookId}')
 	->get()
+	->action(
+		function($params) {
+			session_write_close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('AddressBookController', 'getAddressBook');
+		}
+	)
+	->requirements(array('backend', 'addressBookId'));
+
+$this->create('contacts_address_book_headers', 'addressbook/{backend}/{addressBookId}')
+	->method('HEAD')
+	->action(
+		function($params) {
+			session_write_close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('AddressBookController', 'getAddressBook');
+		}
+	)
+	->requirements(array('backend', 'addressBookId'));
+
+$this->create('contacts_address_book_options', 'addressbook/{backend}/{addressBookId}')
+	->method('OPTIONS')
 	->action(
 		function($params) {
 			session_write_close();

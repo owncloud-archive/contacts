@@ -1,4 +1,11 @@
 <?php
+/**
+ * @author Thomas Tanghus
+ * @copyright 2012-2014 Thomas Tanghus (thomas@tanghus.net)
+ * This file is licensed under the Affero General Public License version 3 or
+ * later.
+ * See the COPYING-README file.
+ */
 
 $installedVersion=OCP\Config::getAppValue('contacts', 'installed_version');
 if (version_compare($installedVersion, '0.2.5', '>=')) {

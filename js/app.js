@@ -233,6 +233,7 @@ OC.Contacts = OC.Contacts || {
 		this.bindEvents();
 		this.$toggleAll.show();
 		this.hideActions();
+		$('.hidden-on-load').removeClass('hidden-on-load');
 	},
 	loading:function(obj, state) {
 		$(obj).toggleClass('loading', state);
@@ -250,17 +251,20 @@ OC.Contacts = OC.Contacts || {
 		this.$headeractions.children().hide();
 		if(act && act.length > 0) {
 			this.$contactList.addClass('multiselect');
-			this.$contactListHeader.find('.actions').show();
-			this.$contactListHeader.find('.info').hide();
-			this.$headeractions.children('.'+act.join(',.')).show();
+			this.$contactListHeader.find('.actions').css('display', '');
+			this.$contactListHeader.find('.action').css('display', 'none');
+			this.$contactListHeader.find('.name').attr('colspan', '5');
+			this.$contactListHeader.find('.info').css('display', 'none');
+			this.$contactListHeader.find('.'+act.join(',.')).css('display', '');
 		} else {
-			this.$contactListHeader.find('.actions').hide();
-			this.$contactListHeader.find('.info').show();
+			this.$contactListHeader.find('.actions').css('display', 'none');
+			this.$contactListHeader.find('.name').attr('colspan', '1');
+			this.$contactListHeader.find('.info').css('display', '');
 			this.$contactList.removeClass('multiselect');
 		}
 	},
 	showAction:function(act, show) {
-		this.$headeractions.find('.' + act).toggle(show);
+		this.$contactListHeader.find('.' + act).toggle(show);
 	},
 	cacheElements: function() {
 		var self = this;
@@ -288,9 +292,9 @@ OC.Contacts = OC.Contacts || {
 		this.$contactListHeader = $('#contactsHeader');
 		this.$sortOrder = this.$contactListHeader.find('.action.sort');
 		this.$sortOrder.val(contacts_sortby||'fn');
-		this.$headeractions = this.$contactListHeader.find('.actions');
+		this.$headeractions = this.$groupList.find('.contact-actions');
 		this.$toggleAll = this.$contactListHeader.find('.toggle');
-		this.$groups = this.$headeractions.find('.groups');
+		this.$groups = this.$contactListHeader.find('.groups');
 		this.$ninjahelp = $('#ninjahelp');
 		this.$firstRun = $('#firstrun');
 		this.$settings = $('#app-settings');
@@ -379,7 +383,7 @@ OC.Contacts = OC.Contacts || {
 
 		// Keep error messaging at one place to be able to replace it.
 		$(document).bind('status.contacts.error', function(e, data) {
-			var message = data.message || data;
+			var message = data.message;
 			console.warn(message);
 			//console.trace();
 			OC.notify({message:message});
@@ -409,11 +413,9 @@ OC.Contacts = OC.Contacts || {
 				console.log('Error loading contacts!');
 			} else {
 				if(response.numcontacts === 0) {
-					self.$contactListHeader.hide();
 					self.$contactList.hide();
 					self.$firstRun.show();
 				} else {
-					self.$contactListHeader.show();
 					self.$contactList.show();
 					self.$firstRun.hide();
 				$.each(self.addressBooks.addressBooks, function(idx, addressBook) {
@@ -485,6 +487,11 @@ OC.Contacts = OC.Contacts || {
 						});
 					}
 					break;
+				case 'adr':
+					address = data.url.filter(function(n){return n});
+					var newWindow = window.open('http://open.mapquest.com/?q='+address, '_blank');
+					newWindow.focus();
+					break;
 			}
 		});
 
@@ -545,7 +552,7 @@ OC.Contacts = OC.Contacts || {
 		});
 
 		$(document).bind('request.contact.delete', function(e, data) {
-			var id = String(data.contactid);
+			var id = String(data.contactId);
 			console.log('contact', data, 'request.contact.delete');
 			self.closeContact(id);
 			self.contacts.delayedDelete(data);
@@ -666,6 +673,10 @@ OC.Contacts = OC.Contacts || {
 					console.log('Showing', contact.getId());
 					contact.show();
 				}
+				if(self.currentgroup === 'uncategorized') {
+					console.log('Hiding', contact.getId());
+					contact.hide();
+				}
 			}
 		});
 
@@ -695,7 +706,6 @@ OC.Contacts = OC.Contacts || {
 				self.closeContact(id);
 				self.jumpToContact(id);
 			}
-			self.$contactList.show();
 			self.$toggleAll.show();
 			self.hideActions();
 			if(result.type === 'category' ||  result.type === 'fav') {
@@ -807,6 +817,13 @@ OC.Contacts = OC.Contacts || {
 			} else {
 				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite', 'merge']);
 			}
+		});
+		
+		this.$contactList.on('click', 'label:not([for=select_all])', function(event) {
+			var $input = $(this).prev('input');
+			$input.prop('checked', !$input.prop('checked'));
+			$input.trigger('change');
+			return false; // Prevent opening contact
 		});
 
 		this.$sortOrder.on('change', function() {
@@ -999,7 +1016,6 @@ OC.Contacts = OC.Contacts || {
 
 		var addContact = function() {
 			console.log('add');
-			self.$toggleAll.hide();
 			if(self.currentid) {
 				if(self.currentid === 'new') {
 					return;
@@ -1065,13 +1081,41 @@ OC.Contacts = OC.Contacts || {
 			if(wrongKey(event)) {
 				return;
 			}
-			console.log('download');
+
+			var doDownload = function(contacts) {
+				// Only get backend, addressbookid and contactid
+				contacts = $.map(contacts, function(c) {return c.metaData();});
+				var targets = {};
+				// Try to shorten request URI
+				$.each(contacts, function(idx, contact) {
+					if(!targets[contact.backend]) {
+						targets[contact.backend] = {};
+					}
+					if(!targets[contact.backend][contact.addressBookId]) {
+						targets[contact.backend][contact.addressBookId] = [];
+					}
+					targets[contact.backend][contact.addressBookId].push(contact.contactId);
+				});
+				var url = OC.Router.generate('contacts_export_selected', {t:targets});
+				//console.log('export url', url);
+				document.location.href = url;
+			};
 			var contacts = self.contacts.getSelectedContacts();
-			// Only get backend, addressbookid and contactid
-			contacts = $.map(contacts, function(c) {return c.metaData();});
-			var url = OC.Router.generate('contacts_export_selected', {contacts:contacts});
-			console.log('export url', url);
-			document.location.href = url;
+			console.log('download', contacts.length);
+
+			// The 300 is just based on my little testing with Apache2
+			// Other web servers may fail before.
+			if(contacts.length > 300) {
+				OC.notify({
+					message:t('contacts',"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway."),
+					timeout:5,
+					clickhandler:function() {
+						doDownload(contacts);
+					}
+				});
+			} else {
+				doDownload(contacts);
+			}
 		});
 
 		this.$contactListHeader.on('click keydown', '.merge', function(event) {
@@ -1344,7 +1388,7 @@ OC.Contacts = OC.Contacts || {
 		this.lastSelectedContacts = [];
 	},
 	jumpToContact: function(id) {
-		this.$rightContent.scrollTop(this.contacts.contactPos(id)-30);
+		this.$rightContent.scrollTop(this.contacts.contactPos(id));
 	},
 	closeContact: function(id) {
 		$(window).unbind('hashchange', this.hashChange);
@@ -1354,7 +1398,11 @@ OC.Contacts = OC.Contacts || {
 		} else {
 			var contact = this.contacts.findById(id);
 			if(contact) {
-				contact.close();
+				// Only show the list element if contact is in current group
+				var showListElement = contact.inGroup(this.groups.nameById(this.currentgroup))
+					|| this.currentgroup === 'all'
+					|| (this.currentgroup === 'uncategorized' && contact.groups().length === 0);
+				contact.close(showListElement);
 			}
 		}
 		delete this.currentid;
@@ -1375,19 +1423,32 @@ OC.Contacts = OC.Contacts || {
 		this.hideActions();
 		console.log('Contacts.openContact', id, typeof id);
 		if(this.currentid && this.currentid !== id) {
-			this.contacts.closeContact(this.currentid);
+			var contact = this.contacts.findById(this.currentid);
+			if(contact) {
+				// Only show the list element if contact is in current group
+				var showListElement = contact.inGroup(this.groups.nameById(this.currentgroup))
+					|| this.currentgroup === 'all'
+					|| (this.currentgroup === 'uncategorized' && contact.groups().length === 0);
+				contact.close(showListElement);
+			}
+		}
+		this.currentid = id;
+		var contact = this.contacts.findById(this.currentid);
+		// If opened from search we can't be sure the contact is in currentgroup
+		if(!contact.inGroup(this.groups.nameById(this.currentgroup))
+			&& ['all', 'fav', 'uncategorized'].indexOf(this.currentgroup) === -1
+		) {
+			this.groups.selectGroup({id:'all'});
 		}
 		$(window).unbind('hashchange', this.hashChange);
-		this.currentid = id;
 		this.setAllChecked(false);
-		console.assert(typeof this.currentid === 'string', 'Current ID not string');
+		console.assert(typeof this.currentid === 'string', 'Current ID not string:' + this.currentid);
 		// Properties that the contact doesn't know
 		var groupprops = {
 			favorite: this.groups.isFavorite(this.currentid),
 			groups: this.groups.categories,
 			currentgroup: {id:this.currentgroup, name:this.groups.nameById(this.currentgroup)}
 		};
-		var contact = this.contacts.findById(this.currentid);
 		if(!contact) {
 			console.warn('Error opening', this.currentid);
 			$(document).trigger('status.contacts.error', {

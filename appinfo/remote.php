@@ -3,7 +3,9 @@
  * ownCloud - Addressbook
  *
  * @author Jakob Sack
+ * @author Thomas Tanghus
  * @copyright 2011 Jakob Sack mail@jakobsack.de
+ * @copyright 2011-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -63,6 +65,7 @@ $server->addPlugin(new OCA\Contacts\CardDAV\Plugin());
 $server->addPlugin(new Sabre_DAVACL_Plugin());
 $server->addPlugin(new Sabre_DAV_Browser_Plugin(false)); // Show something in the Browser, but no upload
 $server->addPlugin(new Sabre_CardDAV_VCFExportPlugin());
+$server->addPlugin(new OC_Connector_Sabre_ExceptionLoggerPlugin('carddav'));
 
 if(defined('DEBUG') && DEBUG) {
 	$server->debugExceptions = true;

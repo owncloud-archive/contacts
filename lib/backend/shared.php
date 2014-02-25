@@ -3,7 +3,7 @@
  * ownCloud - Backend for Shared contacts
  *
  * @author Thomas Tanghus
- * @copyright 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -122,6 +122,9 @@ class Shared extends Database {
 		$permissions = $addressBook['permissions'];
 
 		$card = parent::getContact($addressbookid, $id, $options);
+		if(!$card) {
+			throw new \Exception('Shared Contact not found: ' . implode(',', $id), 404);
+		}
 		$card['permissions'] = $permissions;
 		return $card;
 	}

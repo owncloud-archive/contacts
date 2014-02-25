@@ -3,7 +3,9 @@
  * ownCloud - Addressbook
  *
  * @author Jakob Sack
+ * @author Thomas Tanghus
  * @copyright 2011 Jakob Sack mail@jakobsack.de
+ * @copyright 2012-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -24,6 +26,13 @@ namespace OCA\Contacts\CardDAV;
 
 use OCA\Contacts;
 
+/**
+ * This class exchanges data between SabreDav and the Address book backends.
+ *
+ * Address book IDs are a combination of the backend name and the ID it has
+ * in that backend. For your own address books it can be e.g 'local::1' for
+ * an address book shared with you it could be 'shared::2' an so forth.
+ */
 class Backend extends \Sabre_CardDAV_Backend_Abstract {
 
 	public function __construct($backends) {
@@ -81,14 +90,12 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 * @return bool|array
 	 */
 	public function updateAddressBook($addressbookid, array $mutations) {
-		$name = null;
-		$description = null;
 		$changes = array();
 
 		foreach($mutations as $property=>$newvalue) {
 			switch($property) {
 				case '{DAV:}displayname' :
-					$changes['name'] = $newvalue;
+					$changes['displayname'] = $newvalue;
 					break;
 				case '{' . \Sabre_CardDAV_Plugin::NS_CARDDAV
 						. '}addressbook-description' :
@@ -116,10 +123,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 */
 	public function createAddressBook($principaluri, $uri, array $properties) {
 
-		$properties = array();
-		$userid = $this->userIDByPrincipal($principaluri);
-
-		foreach($properties as $property=>$newvalue) {
+		foreach($properties as $property => $newvalue) {
 
 			switch($property) {
 				case '{DAV:}displayname' :
@@ -138,8 +142,10 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 
 		$properties['uri'] = $uri;
 
-		list(,$backend) = $this->getBackendForAddressBook($addressbookid);
-		$backend->createAddressBook($properties, $userid);
+		$app = new Contacts\App();
+		$backend = $app->getBackend('local');
+
+		$backend->createAddressBook($properties);
 	}
 
 	/**
@@ -171,7 +177,6 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 * @return array
 	 */
 	public function getCards($addressbookid) {
-		$contacts = array();
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
 		$contacts = $backend->getContacts($id);
 
@@ -198,9 +203,19 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 */
 	public function getCard($addressbookid, $carduri) {
 		list($id, $backend) = $this->getBackendForAddressBook($addressbookid);
-		$contact = $backend->getContact($id, array('uri' => urldecode($carduri)));
-		return ($contact ? $contact : false);
-
+		try {
+			$contact = $backend->getContact($id, array('uri' => urldecode($carduri)));
+		} catch(\Exception $e) {
+			//throw new \Sabre_DAV_Exception_NotFound($e->getMessage());
+			\OCP\Util::writeLog('contacts', __METHOD__.', Exception: '. $e->getMessage(), \OCP\Util::DEBUG);
+			return false;
+		}
+		if(is_array($contact) ) {
+			$contact['etag'] = '"' . md5($contact['carddata']) . '"';
+			return $contact;
+		}
+		//throw new \Sabre_DAV_Exception('Error retrieving the card');
+		return false;
 	}
 
 	/**

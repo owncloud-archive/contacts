@@ -50,6 +50,7 @@ OC.Contacts = OC.Contacts || {};
 		// ~30% faster than jQuery.
 		try {
 			this.$listelem.get(0).firstElementChild.getElementsByClassName('nametext')[0].innerHTML = escapeHTML(this.displayNames[method]);
+			this.setThumbnail();
 		} catch(e) {
 			var $elem = this.$listelem.find('.nametext').text(escapeHTML(this.displayNames[method]));
 			$elem.text(escapeHTML(this.displayNames[method]));
@@ -91,6 +92,14 @@ OC.Contacts = OC.Contacts || {};
 
 	Contact.prototype.setBackend = function(backend) {
 		this.metadata.backend = backend;
+	};
+
+	Contact.prototype.hasPhoto = function() {
+		return (this.getId() !== 'new' && this.data && this.data.photo) || false;
+	};
+
+	Contact.prototype.isOpen = function() {
+		return this.$fullelem !== null;
 	};
 
 	Contact.prototype.reload = function(data) {
@@ -260,6 +269,8 @@ OC.Contacts = OC.Contacts || {};
 			case 'NOTE':
 				$elem = this.$fullelem.find('[data-element="' + name.toLowerCase() + '"]');
 				$elem.addClass('new').show();
+				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$list.show();
 				$elem.find('input:not(:checkbox),textarea').first().focus();
 				$option.prop('disabled', true);
 				break;
@@ -302,7 +313,7 @@ OC.Contacts = OC.Contacts || {};
 			} else if(this.multi_properties.indexOf(name) !== -1) {
 				$elem.find('input.parameter[value="PREF"]').hide();
 			}
-			$elem.find('select.type[name="parameters[TYPE][]"]')
+			$elem.find('select.type[name="parameters[TYPE][]"], select.type[name="parameters[X-SERVICE-TYPE]"]')
 				.combobox({
 					singleclick: true,
 					classes: ['propertytype', 'float', 'label'],
@@ -326,9 +337,16 @@ OC.Contacts = OC.Contacts || {};
 			params['checksum'] = this.checksumFor(obj);
 			if(params['checksum'] === 'new' && $.trim(this.valueFor(obj)) === '') {
 				// If there's only one property of this type enable setting as preferred.
-				if(this.data[element].length === 1) {
+				if((undefined !== this.data[element] && this.data[element].length) && (this.data[element].length === 1)) {
 					var selector = 'li[data-element="' + element.toLowerCase() + '"]';
 					this.$fullelem.find(selector).find('input.parameter[value="PREF"]').hide();
+				}
+				// Hide propertygroup if there are no properties in it
+				if(!(undefined !== this.data[element] && this.data[element].length)) {
+					$(obj).parent().parent().parent().hide();
+				}
+				else if(this.data[element].length === 0) {
+					$(obj).parent().parent().parent().hide();
 				}
 				$container.remove();
 				return;
@@ -358,9 +376,16 @@ OC.Contacts = OC.Contacts || {};
 						}
 					}
 					// If there's only one property of this type enable setting as preferred.
-					if(self.data[element].length === 1) {
+					if((undefined !== self.data[element] && self.data[element].length) && (self.data[element].length === 1)) {
 						var selector = 'li[data-element="' + element.toLowerCase() + '"]';
 						self.$fullelem.find(selector).find('input.parameter[value="PREF"]').hide();
+					}
+					// Hide propertygroup if there are no properties in it
+					if(!(undefined !== self.data[element] && self.data[element].length)) {
+						$(obj).parent().parent().parent().hide();
+					}
+					else if(self.data[element].length === 0) {
+						$(obj).parent().parent().parent().hide();
 					}
 					$container.remove();
 				} else {
@@ -371,7 +396,7 @@ OC.Contacts = OC.Contacts || {};
 					});
 					self.setAsSaving(obj, false);
 					if(element === 'PHOTO') {
-						self.data.PHOTO[0].value = false;
+						self.data.photo = false;
 						self.data.thumbnail = null;
 					} else {
 						self.$fullelem.find('[data-element="' + element.toLowerCase() + '"]').hide();
@@ -584,12 +609,7 @@ OC.Contacts = OC.Contacts || {};
 								self.data.N[0]['value'][2] = nvalue.length > 2 && nvalue.slice(1, nvalue.length-1).join(' ') || '';
 								setTimeout(function() {
 									self.saveProperty({name:'N', value:self.data.N[0].value.join(';')});
-									setTimeout(function() {
-										self.$fullelem.find('.fullname').next('.action.edit').trigger('click');
-										OC.notify({message:t('contacts', 'Is this correct?')});
-									}, 1000);
-								}
-								, 500);
+								}, 500);
 							}
 							break;
 						case 'N':
@@ -680,12 +700,14 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * Remove any open contact from the DOM.
 	 */
-	Contact.prototype.close = function() {
+	Contact.prototype.close = function(showListElement) {
 		$(document).unbind('status.contact.photoupdated');
 		console.log('Contact.close', this);
 		if(this.$fullelem) {
 			this.$fullelem.hide().remove();
-			this.getListItemElement().show();
+			if(showListElement) {
+				this.getListItemElement().show();
+			}
 			this.$fullelem = null;
 			return true;
 		} else {
@@ -983,7 +1005,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Contact.prototype.renderListItem = function(isnew) {
 		this.displayNames.fn = this.getPreferredValue('FN')
-			|| this.getPreferredValue('ORG')
+			|| this.getPreferredValue('ORG', []).pop()
 			|| this.getPreferredValue('EMAIL')
 			|| this.getPreferredValue('TEL');
 
@@ -991,7 +1013,14 @@ OC.Contacts = OC.Contacts || {};
 			.slice(0, 2).reverse().join(' ');
 
 		this.displayNames.lf = this.getPreferredValue('N', [this.displayNames.fn])
-			.slice(0, 2).join(', ');
+			.slice(0, 2).join(', ').trim();
+		// Fix misplaced comma if either first or last name is missing
+		if(this.displayNames.lf[0] === ',') {
+			this.displayNames.lf = this.displayNames.lf.substr(1);
+		}
+		if(this.displayNames.lf[this.displayNames.lf.length-1] === ',') {
+			this.displayNames.lf = this.displayNames.lf.substr(0, this.displayNames.lf.length-1);
+		}
 
 		this.$listelem = this.$listTemplate.octemplate({
 			id: this.id,
@@ -1050,7 +1079,8 @@ OC.Contacts = OC.Contacts || {};
 				header: false,
 				selectedList: 3,
 				noneSelectedText: self.$groupSelect.attr('title'),
-				selectedText: t('contacts', '# groups')
+				selectedText: t('contacts', '# groups'),
+				minWidth: 300
 			});
 			self.$groupSelect.bind('multiselectclick', function(event, ui) {
 				var action = ui.checked ? 'addtogroup' : 'removefromgroup';
@@ -1089,7 +1119,8 @@ OC.Contacts = OC.Contacts || {};
 				header: false,
 				multiple: false,
 				selectedList: 3,
-				noneSelectedText: self.$addressBookSelect.attr('title')
+				noneSelectedText: self.$addressBookSelect.attr('title'),
+				minWidth: 300
 			});
 			self.$addressBookSelect.on('multiselectclick', function(event, ui) {
 				console.log('AddressBook select', ui);
@@ -1122,8 +1153,8 @@ OC.Contacts = OC.Contacts || {};
 					bday = $.datepicker.parseDate('yy-mm-dd', bday.substring(0, 10));
 					bday = $.datepicker.formatDate(datepickerFormatDate, bday);
 				} catch (e) {
-					var message = t('contacts', 'Error parsing birthday {bday}: {error}', {bday:bday, error: e});
-					console.warn(message);
+					var message = t('contacts', 'Error parsing birthday {bday}', {bday:bday});
+					console.warn('Error parsing birthday', bday, e);
 					bday = '';
 					$(document).trigger('status.contacts.error', {
 						status: 'error',
@@ -1147,6 +1178,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 		this.$fullelem = this.$fullTemplate.octemplate(values).data('contactobject', this);
 
+		this.$header = this.$fullelem.find('header');
 		this.$footer = this.$fullelem.find('footer');
 
 		this.$fullelem.find('.tooltipped.rightwards.onfocus').tipsy({trigger: 'focus', gravity: 'w'});
@@ -1213,7 +1245,7 @@ OC.Contacts = OC.Contacts || {};
 			self.handleURL(event.target);
 		});
 
-		this.$footer.on('click keydown', 'button', function(event) {
+		var buttonHandler =  function(event) {
 			$('.tipsy').remove();
 			if(wrongKey(event)) {
 				return;
@@ -1228,7 +1260,10 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('request.contact.delete', self.metaData());
 			}
 			return false;
-		});
+		};
+		this.$header.on('click keydown', 'button, a', buttonHandler);
+		this.$footer.on('click keydown', 'button, a', buttonHandler);
+		
 		this.$fullelem.on('keypress', '.value,.parameter', function(event) {
 			if(event.keyCode === 13 && $(this).is('input')) {
 				$(this).trigger('change');
@@ -1278,6 +1313,23 @@ OC.Contacts = OC.Contacts || {};
 			// A new contact
 			this.setEnabled(true);
 			this.showActions(['cancel']);
+			// Show some default properties
+			$.each(['email', 'tel'], function(idx, name) {
+				var $list = self.$fullelem.find('ul.' + name);
+				$list.removeClass('hidden');
+				var $property = self.renderStandardProperty(name);
+				$list.append($property);
+			});
+			var $list = self.$fullelem.find('ul.adr');
+			$list.removeClass('hidden');
+			var $property = self.renderAddressProperty(name);
+			$list.append($property);
+
+			// Hide some of the values
+			$.each(['bday', 'nickname', 'title'], function(idx, name) {
+				self.$fullelem.find('[data-element="' + name + '"]').hide();
+			});
+
 			return this.$fullelem;
 		}
 		// Loop thru all single occurrence values. If not set hide the
@@ -1298,7 +1350,7 @@ OC.Contacts = OC.Contacts || {};
 		$.each(this.multi_properties, function(idx, name) {
 			if(self.data[name]) {
 				var $list = self.$fullelem.find('ul.' + name.toLowerCase());
-				$list.show();
+				$list.removeClass('hidden');
 				for(var p in self.data[name]) {
 					if(typeof self.data[name][p] === 'object') {
 						var property = self.data[name][p];
@@ -1363,7 +1415,7 @@ OC.Contacts = OC.Contacts || {};
 							}
 							else if(param.toUpperCase() == 'X-SERVICE-TYPE') {
 								//console.log('setting', $property.find('select.impp'), 'to', property.parameters[param].toLowerCase());
-								$property.find('select.impp').val(property.parameters[param].toLowerCase());
+								$property.find('select.rtl').val(property.parameters[param].toLowerCase());
 							}
 						}
 						var $meta = $property.find('.meta');
@@ -1373,7 +1425,7 @@ OC.Contacts = OC.Contacts || {};
 						if(self.metadata.owner === OC.currentUser
 								|| self.metadata.permissions & OC.PERMISSION_UPDATE
 								|| self.metadata.permissions & OC.PERMISSION_DELETE) {
-							$property.find('select.type[name="parameters[TYPE][]"]')
+							$property.find('select.type[name="parameters[TYPE][]"], select.type[name="parameters[X-SERVICE-TYPE]"]')
 								.combobox({
 									singleclick: true,
 									classes: ['propertytype', 'float', 'label']
@@ -1457,7 +1509,7 @@ OC.Contacts = OC.Contacts || {};
 			var bodyListener = function(e) {
 				if($editor.find($(e.target)).length == 0) {
 					$editor.toggle('blind');
-					$viewer.slideDown(400, function() {
+					$viewer.slideDown(550, function() {
 						var input = $editor.find('input').first();
 						var val = self.valueFor(input);
 						var params = self.parametersFor(input, true);
@@ -1468,7 +1520,7 @@ OC.Contacts = OC.Contacts || {};
 					});
 				}
 			};
-			$viewer.slideUp();
+			$viewer.slideUp(100);
 			$editor.toggle('blind', function() {
 				$('body').bind('click', bodyListener);
 			});
@@ -1555,6 +1607,9 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Contact.prototype.setThumbnail = function($elem, refresh) {
 		if(!this.data.thumbnail && !refresh) {
+			this.getListItemElement().find('.avatar').css('height', '32px');
+			var name = String(this.getDisplayName()).replace(' ', '').replace(',', '');
+			this.getListItemElement().find('.avatar').imageplaceholder(name || '#');
 			return;
 		}
 		if(!$elem) {
@@ -1564,7 +1619,7 @@ OC.Contacts = OC.Contacts || {};
 			return;
 		}
 		if(this.data.thumbnail) {
-			$elem.removeClass('thumbnail');
+			$elem.removeClass('thumbnail').find('.avatar').remove();
 			$elem.css('background-image', 'url(data:image/png;base64,' + this.data.thumbnail + ')');
 		} else {
 			$elem.addClass('thumbnail');
@@ -1583,20 +1638,19 @@ OC.Contacts = OC.Contacts || {};
 			src;
 
 		var $phototools = this.$fullelem.find('#phototools');
-		if(!this.$photowrapper) {
-			this.$photowrapper = this.$fullelem.find('#photowrapper');
-		}
+		var $photowrapper = this.$fullelem.find('#photowrapper');
 
 		var finishLoad = function(image) {
 			console.log('finishLoad', self.getDisplayName(), image.width, image.height);
 			$(image).addClass('contactphoto');
-			self.$photowrapper.removeClass('loading wait');
-			self.$photowrapper.css({width: image.width + 10, height: image.height + 10});
+			$photowrapper.removeClass('loading wait');
+			$photowrapper.css({width: image.width + 10, height: image.height + 10});
 			$(image).insertAfter($phototools).fadeIn();
 		};
 
-		this.$photowrapper.addClass('loading').addClass('wait');
-		if(this.getPreferredValue('PHOTO', null) === null) {
+		$photowrapper.addClass('loading').addClass('wait');
+		console.log('hasPhoto', this.hasPhoto());
+		if(!this.hasPhoto()) {
 			$.when(this.storage.getDefaultPhoto())
 				.then(function(image) {
 					$('img.contactphoto').detach();
@@ -1620,7 +1674,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 
 		if(this.isEditable()) {
-			this.$photowrapper.on('mouseenter', function(event) {
+			$photowrapper.on('mouseenter', function(event) {
 				if($(event.target).is('.favorite') || !self.data) {
 					return;
 				}
@@ -1645,7 +1699,7 @@ OC.Contacts = OC.Contacts || {};
 			$phototools.find('.upload').on('click', function() {
 				$(document).trigger('request.select.contactphoto.fromlocal', self.metaData());
 			});
-			if(this.getPreferredValue('PHOTO', false)) {
+			if(this.hasPhoto()) {
 				$phototools.find('.delete').show();
 				$phototools.find('.edit').show();
 			} else {
@@ -1654,15 +1708,15 @@ OC.Contacts = OC.Contacts || {};
 			}
 			$(document).bind('status.contact.photoupdated', function(e, data) {
 				console.log('status.contact.photoupdated', data);
-				if(!self.data.PHOTO) {
+				if(!self.hasPhoto()) {
 					self.data.PHOTO = [];
 				}
 				if(data.thumbnail) {
 					self.data.thumbnail = data.thumbnail;
-					self.data.PHOTO[0] = {value:true};
+					self.data.photo = true;
 				} else {
 					self.data.thumbnail = null;
-					self.data.PHOTO[0] = {value:false};
+					self.data.photo = false;
 				}
 				self.loadPhoto(true);
 				self.setThumbnail(null, true);
@@ -1714,12 +1768,23 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Returns an array with the names of the groups the contact is in
+	 *
+	 * @return Array
+	 */
+	Contact.prototype.groups = function() {
+		return this.getPreferredValue('CATEGORIES', []).clean('');
+	};
+
+
+	/**
 	 * Returns true/false depending on the contact being in the
 	 * specified group.
 	 * @param String name The group name (not case-sensitive)
-	 * @returns Boolean
+	 * @return Boolean
 	 */
 	Contact.prototype.inGroup = function(name) {
+		console.log('inGroup', name);
 		var categories = this.getPreferredValue('CATEGORIES', []);
 		var found = false;
 
@@ -1981,8 +2046,9 @@ OC.Contacts = OC.Contacts || {};
 	ContactList.prototype.showUncategorized = function() {
 		console.log('ContactList.showUncategorized');
 		for(var contact in this.contacts) {
-			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).length === 0) {
+			if(this.contacts[contact].getPreferredValue('CATEGORIES', []).clean('').length === 0) {
 				this.contacts[contact].getListItemElement().show();
+				this.contacts[contact].setThumbnail();
 			} else {
 				this.contacts[contact].getListItemElement().hide();
 			}
@@ -2298,7 +2364,11 @@ OC.Contacts = OC.Contacts || {};
 		if(!added) {
 			this.$contactList.append($contact);
 		}
-		$contact.show();
+		if($contact.data('obj').isOpen()) {
+			$contact.hide();
+		} else {
+			$contact.show();
+		}
 		return $contact;
 	};
 
@@ -2341,9 +2411,12 @@ OC.Contacts = OC.Contacts || {};
 		var contacts = [];
 
 		var self = this;
-		$.each(this.$contactList.find('tr > td > input:checkbox:visible:checked'), function(idx, checkbox) {
+		$.each(this.$contactList.find('tbody > tr > td > input:checkbox:visible:checked'), function(idx, checkbox) {
 			var id = String($(checkbox).val());
-			contacts.push(self.contacts[id]);
+			var contact = self.contacts[id];
+			if(contact) {
+				contacts.push(contact);
+			}
 		});
 		return contacts;
 	};
@@ -2418,8 +2491,8 @@ OC.Contacts = OC.Contacts || {};
 			if(rows[0].firstElementChild && rows[0].firstElementChild.textContent) {
 				rows.sort(function(a, b) {
 					// 10 (TEN!) times faster than using jQuery!
-					return a.firstElementChild.textContent.trim().toUpperCase()
-						.localeCompare(b.firstElementChild.textContent.trim().toUpperCase());
+					return a.firstElementChild.lastElementChild.textContent.trim().toUpperCase()
+						.localeCompare(b.firstElementChild.lastElementChild.textContent.trim().toUpperCase());
 				});
 			} else {
 				// IE8 doesn't support firstElementChild or textContent

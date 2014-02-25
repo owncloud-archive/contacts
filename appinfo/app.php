@@ -1,4 +1,11 @@
 <?php
+/**
+ * @author Thomas Tanghus
+ * @copyright 2011-2014 Thomas Tanghus (thomas@tanghus.net)
+ * This file is licensed under the Affero General Public License version 3 or
+ * later.
+ * See the COPYING-README file.
+ */
 
 namespace OCA\Contacts;
 use \OC\AppFramework\Core\API;
@@ -15,6 +22,7 @@ use \OC\AppFramework\Core\API;
 \Sabre\VObject\Property::$classMap['TEL']		= '\OC\VObject\StringProperty';
 \Sabre\VObject\Property::$classMap['IMPP']		= '\OC\VObject\StringProperty';
 \Sabre\VObject\Property::$classMap['URL']		= '\OC\VObject\StringProperty';
+\Sabre\VObject\Property::$classMap['X-EVOLUTION-FILE-AS'] = '\OC\VObject\StringProperty';
 \Sabre\VObject\Property::$classMap['N']			= '\OC\VObject\CompoundProperty';
 \Sabre\VObject\Property::$classMap['ADR']		= '\OC\VObject\CompoundProperty';
 \Sabre\VObject\Property::$classMap['GEO']		= '\OC\VObject\CompoundProperty';
@@ -53,8 +61,8 @@ if(\OCP\User::isLoggedIn()) {
 	$app = new App($api->getUserId());
 	$addressBooks = $app->getAddressBooksForUser();
 	foreach($addressBooks as $addressBook)  {
-		if($addressBook->getBackend()->name === 'local') {
+		//if($addressBook->getBackend()->name === 'local') {
 			\OCP\Contacts::registerAddressBook(new AddressbookProvider($addressBook));
-		}
+		//}
 	}
 }

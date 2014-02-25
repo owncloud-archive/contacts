@@ -6,49 +6,29 @@
 	clear: both;
 }
 #content li { cursor: default; }
-#content input[type=checkbox] { 
-	height: 14px; width: 14px; 
-	border: 0px solid #fff; 
-	background-color: white;
-	-moz-appearance:none; -webkit-appearance: none; 
-	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; 
-	-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; 
+#contactsHeader input[type=checkbox] {
+	position: absolute;
+	top: 18px;
+	left: 18px;
 }
 #content input[type=radio] { 
 	width: 12px; height: 12px; 
 	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; 
 }
-#content input[type=checkbox]:hover { border: 1px solid #D4D4D4 !important; }
-#content input[type=checkbox]:checked::after {
-  content: url('%appswebroot%/contacts/img/checkmark.png');
-  display: block;
-  position: relative;
-  top: -2px;
-  left: -1px;
-}
-#content input[type=radio]:checked::after {
-  content: url('%appswebroot%/contacts/img/checkmark.png');
-  margin: 0; padding: 0;
-  display: inline-block;
-  position: relative;
-  top: -8px;
-  left: -6px;
-}
-#contact textarea { font-family: inherit; }
 
 #contact ::-moz-placeholder, #contact input:-moz-placeholder, #contact input[placeholder], #contact input:placeholder, #contact input:-ms-input-placeholder, #contact input::-webkit-input-placeholder, #contact input:-moz-placeholder {
 	color: #bbb; 
 	text-overflow: ellipsis;
 }
 
-#contact input:not([type="checkbox"]), #contact select:not(.button), #contact textarea {
-	background-color: #fefefe; border: 1px solid #fff !important; 
-	-moz-appearance:none  !important; -webkit-appearance: none !important; 
-	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; 
-	-moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; 
-	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
+#contact input:not([type=checkbox]), #contact select:not(.button), #contact textarea {
 	float: left;
-	padding: .6em .5em .4em;
+}
+#contact .label {
+	float: right !important;
+}
+#contact .parameter {
+	float: right !important;
 }
 #contact input[type="button"]:hover, #contact select:hover, #contact select:focus, #contact select:active, #contact input[type="button"]:focus, #contact .button:hover, button:hover { background-color:#fff; color:#333; }
 
@@ -56,14 +36,14 @@
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
 }
 #contact fieldset.editor {
-	padding:4px;
-	border: 1px solid #1d2d44; 
-	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; outline:none; 
+	padding: 0;
+	margin-left: 110px;
 }
-#contact input:invalid, #contact input:hover:not([type="checkbox"]), #contact input:active:not([type="checkbox"]), #contact input:focus:not([type="checkbox"]), #contact input.active, #contact textarea:focus, #contact textarea {
-	border: 1px solid silver !important; 
-	-moz-border-radius:.3em; -webkit-border-radius:.3em; border-radius:.3em; 
-	outline:none; float: left;
+#contact fieldset.adr {
+	margin-left: 0;
+}
+#contact input:invalid, #contact input:hover:not([type=checkbox]), #contact input:active:not([type=checkbox]), #contact input:focus:not([type=checkbox]), #contact input.active, #contact textarea:focus, #contact textarea {
+	float: left;
 }
 
 /* Left content */
@@ -76,6 +56,12 @@
 	border-bottom: 1px solid silver;
 }
 
+#app-navigation {
+	width: 250px;
+}
+#app-settings {
+	width: 249px;
+}
 
 #app-navigation a.unshare {
 	float: right;
@@ -85,9 +71,9 @@
 #app-navigation img.shared:hover { opacity: 1; }*/
 #app-navigation input[type="text"] {
 	display: block;
-	width: 200px;
+	width: 204px;
+	height: 34px !important;
 	float: left;
-	margin: 5px 0 5px .3em;
 }
 
 #app-navigation .utils {
@@ -95,6 +81,9 @@
     top: 0;
 	position: absolute;
 	padding: 0; margin: 0;
+}
+#app-navigation .active {
+	font-weight: bold;
 }
 #app-navigation li > .utils > *:not(.numcontacts) {
 	display: none;
@@ -112,18 +101,28 @@
 	padding-right: 5px;
 	text-align: right;
 }
-#grouplist { z-index: 100; }
+#grouplist {
+	z-index: 100;
+}
 #grouplist .oc-addnew-init {
-	padding: 0 12px;
+	padding: 0 31px;
 }
 #grouplist .add-contact:before {
+	position: absolute;
 	content: '+';
 	font-weight: bold;
-	font-size: 180%;
-	padding-right: 2px;
+	font-size: 150%;
+	left: 12px;
+}
+#grouplist .add-contact {
+	padding: 0 31px;
 }
 #grouplist > li {
 	height: 44px;
+}
+
+.hidden-on-load {
+	display: none;
 }
 
 /* First run */
@@ -143,27 +142,56 @@
 #firstrun #selections { font-size:0.8em; margin: 2em auto auto auto; clear: both; }
 
 #contact textarea {
-	min-height: 5em; width: 300px;
-	margin: 0 !important; padding: 0 !important; outline: 0 !important;
+	margin-left: 114px;
+	min-height: 5em;
+	min-width: 300px;
+	font-family: inherit;
+}
+#contact header {
+	margin-top: 8px;
 }
 #contact footer {
-	padding: 5px;
+	float: left;
 	width: 100%;
-	-moz-box-sizing: border-box; box-sizing: border-box;
-	clear: both;
-	white-space: nowrap;
+	margin-bottom: 8px;
+	padding-left: 110px;
 }
-#contact footer > * {
+#contact footer .action {
+	height: 30px;
+}
+#contact footer .add {
+	width: 300px;
+}
+#contact footer .close, #contact footer .export, #contact header .delete {
+	float: right;
+	background-image: none;
+}
+#contact footer a, #contact header a {
+	float: right;
+	opacity: .5;
+	font-weight: bold;
+}
+#contact footer a {
+	padding: 8px 17px 8px 0;
+}
+#contact header a {
+	padding: 8px 17px 0 0;
+}
+#contact footer a:hover, #contact header a:hover {
+	opacity: 1;
+}
+#contact footer .close img, #contact footer .export img, #contact header .delete img {
+	vertical-align: middle;
+	margin-bottom: 2px;
+	margin-bottom: 2px;
+}
+#contact footer > *, #contact header > * {
 	display: inline-block;
 	float: left;
 	opacity: 1;
 }
-#contact footer > .delete {
-	display: inline-block;
-	float: right;
-}
 
-#contact input[type="checkbox"] { margin: 3px; padding:1px; vertical-align: bottom; float: left; }
+#contact input[type=checkbox] { margin-top: 11px; margin-right: 4px; vertical-align: bottom; float: left; }
 /*dl.form { display: block; width: auto; margin: 0; padding: 0; cursor: normal; }*/
 .form dt { display: inline-block; clear: left; float: left; width: 7em; margin: 0; padding: 0.8em 0.5em 0 0; text-align:right; text-overflow:ellipsis; o-text-overflow: ellipsis; vertical-align: text-bottom; color: #bbb;/* white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap;*/ }
 .form dd { display: inline-block; clear: right; float: left; margin: 0; padding: 0; white-space: nowrap; vertical-align: text-bottom; }
@@ -194,8 +222,9 @@
 	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 }
 .ui-multiselect-checkboxes label > span {color: #333 !important; font-size: 100% !important; }
-.ui-multiselect-checkboxes input[type="checkbox"] { margin: 3px !important; }
-button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
+.ui-multiselect-checkboxes input[type=checkbox] { margin: 3px !important; }
+button.ui-multiselect { width: 300px !important; padding: 6px 0 0 6px; height: 30px; font-weight: normal; } /* No idea why this is needed? */
+span.ui-icon { margin: 1px 3px 10px 0px; }
 
 #content .multiselectoptions > li > * { 
 	-webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; 
@@ -216,12 +245,12 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 	background-size:contain;
 }
 
-.action:not(.add):not(.groups).text, .icon:not(.add):not(.groups).text {
+.action:not(.add):not(.sort).text, .icon:not(.add):not(.sort).text {
 	background-position: left; 
 	text-indent: 18px;
 }
 
-/* TODO: Use @import url('%appswebroot%/contacts/css/[no-]svg.css); instead. */
+/* TODO: Use @import url('../css/[no-]svg.css); instead. */
 
 /*.no-svg .add { background-image:url('%webroot%/core/img/actions/add.png'); }*/
 .no-svg .delete { background-image:url('%webroot%/core/img/actions/delete.png'); }
@@ -231,11 +260,12 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 .no-svg .mail { background-image:url('%webroot%/core/img/actions/mail.png'); }
 .no-svg .import, .no-svg .upload { background-image:url('%webroot%/core/img/actions/upload.png'); }
 .no-svg .export, .no-svg .download { background-image:url('%webroot%/core/img/actions/download.png'); }
+.no-svg .export, .no-svg .shared { background-image:url('%webroot%/core/img/actions/shared.png'); }
 .no-svg .globe { background-image:url('%webroot%/core/img/actions/public.png'); }
 .no-svg .settings { background-image:url('%webroot%/core/img/actions/settings.svg'); }
-.no-svg .starred { background-image:url('%appswebroot%/contacts/img/starred.png'); background-size: contain; }
-.no-svg .checked { background-image:url('%appswebroot%/contacts/img/checkmark-green.png'); }
-.no-svg .checked.disabled { background-image:url('%appswebroot%/contacts/img/checkmark-gray.png'); cursor: default; }
+.no-svg .starred { background-image:url('../img/starred.png'); background-size: contain; }
+.no-svg .checked { background-image:url('../img/checkmark-green.png'); }
+.no-svg .checked.disabled { background-image:url('../img/checkmark-gray.png'); cursor: default; }
 
 .svg .action.text, .svg .icon.text, .svg .svg.text {
 	background-size: 16px 16px;
@@ -251,11 +281,12 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 .svg .mail { background-image:url('%webroot%/core/img/actions/mail.svg'); }
 .svg .import,.svg .upload { background-image:url('%webroot%/core/img/actions/upload.svg'); }
 .svg .export,.svg .download { background-image:url('%webroot%/core/img/actions/download.svg'); }
+.svg .export,.svg .shared { background-image:url('%webroot%/core/img/actions/shared.svg'); }
 .svg .globe { background-image:url('%webroot%/core/img/actions/public.svg'); }
 .svg .settings { background-image:url('%webroot%/core/img/actions/settings.svg'); }
-.svg .starred { background-image:url('%appswebroot%/contacts/img/starred.svg'); background-size: contain; }
-.svg .checked { background-image:url('%appswebroot%/contacts/img/checkmark-green.svg'); }
-.svg .checked.disabled { background-image:url('%appswebroot%/contacts/img/checkmark-gray.svg'); cursor: default; }
+.svg .starred { background-image:url('../img/starred.svg'); background-size: contain; }
+.svg .checked { background-image:url('../img/checkmark-green.svg'); }
+.svg .checked.disabled { background-image:url('../img/checkmark-gray.svg'); cursor: default; }
 
 .transparent{ opacity: 0.6; }
 .float { float: left; display: inline-block; width: auto; }
@@ -297,29 +328,47 @@ button.ui-multiselect { height: 25px; } /* No idea why this is needed? */
 .ui-state-hover { border: 1px solid dashed; z-index: 1; }
 
 /* Properties */
-
-.singleproperties { display: inline-block; float: left; width: 270px; }
-.singleproperties .fullname { font-weight:bold; font-size:1.5em; width: 250px; margin: 5px 0; }
+.propertyname {
+	width: 110px;
+	padding-right: 7px;
+	margin-top: 1px;
+	font-weight: bold;
+	text-align: right;
+}
+.singleproperties { float: left; width: 100%; }
+.singleproperties .fullname { width: 300px; font-size: 20px; }
+.singleproperties input { width: 300px; }
+.singleproperties dd { float:left; }
+.singleproperties dd .listactions a { margin-top: 10px; }
 .singleproperties .n.editor { width: 270px; padding: 3px; }
-.singleproperties .n.editor input { width: 95%; }
-.singleproperties .propertycontainer input.value { font-weight: bold; }
+.singleproperties .n.editor input { width: 292px; }
 .singleproperties .propertycontainer input.value.new { border: 3px solid #1d2d44;}
 .singleproperties .propertycontainer input.value.error { border: 3px solid red;}
-.singleproperties .propertycontainer .action { 
-	float: left; 
-	width: 20px; height: 20px;
+.singleproperties .propertycontainer .action {
 	opacity: 0;
 }
-.singleproperties .groupscontainer { display: block; clear: left; }
+.singleproperties .groupscontainer { float:left; display: inline; }
 .singleproperties .propertycontainer:hover .action { opacity: 1; }
 .singleproperties dl { width: 280px;}
+.singleproperties > a { margin-top: 10px !important; }
 
-.parameters { 
-	width: 120px; 
+.parameters {
+	width: 110px;
 	float: left; 
 	text-align: right; 
 	box-sizing: border-box;
 	display: inline-block;
+}
+.parameters select {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+	background-color: white;
+}
+.parameters input[type=text] {
+	padding-left: 0;
 }
 
 div.email li .parameters .label, div.url li .parameters .label { margin-top: 7px !important; }
@@ -328,7 +377,7 @@ div.url li .parameters .label, div.impp li .parameters .label { margin-top: 6px 
 div.tel li input, div.url li input { margin-left: 3px; font-size: 1em; }
 div.impp li .select_wrapper select { margin-top: 6px; }
 
-ul.propertylist { width: 450px; }
+ul.propertylist { width: 100%; line-height: 34px; }
 .propertylist li.propertycontainer { white-space: nowrap; min-width: 38em; display: block; clear: both; }
 .propertylist li.propertycontainer > .listactions { 
 	display: inline-block; 
@@ -339,28 +388,28 @@ ul.propertylist { width: 450px; }
 	display: inline-block; 
 	clear: none; 
 	width: 16px; height: 16px; 
+	vertical-align: middle;
 }
 
 .propertylist { float: left; }
 /*.propertylist li > a { display: block; }}*/
-.propertylist li > input[type="checkbox"],input[type="radio"] { display: inline-block; }
-.propertylist input.value:not([type="checkbox"]) { width: 16em; display: inline-block; font-weight: bold; }
-.propertylist input.value:not([type="checkbox"]).new { border: 3px solid #1d2d44;}
-.propertylist input.value:not([type="checkbox"]).error { border: 3px solid red;}
+.propertylist li > input[type=checkbox],input[type="radio"] { display: inline-block; }
+.propertylist input.value:not([type=checkbox]) { width: 300px; display: inline-block; }
+.propertylist input.value:not([type=checkbox]).error { border: 2px solid red;}
 .propertylist li > select { float: left; max-width: 8em; }
 .select_wrapper { float: left; overflow: hidden; color: #bbb; font-size: 0.8em; }
 .select_wrapper select { float: left; overflow: hidden; text-overflow: ellipsis; color: #bbb; width: 8em; }
-.select_wrapper select:hover { overflow: inherit; text-overflow: inherit; }
+
 .select_wrapper select option { color: #777; }
 .select_wrapper select:hover,.propertylist li > select:focus,.propertylist li > select:active { color: #777; }
 .select_wrapper select.rtl { margin-left: -24px; text-align: right; }
 .select_wrapper select.ltr { margin-right: -23px; }
-.propertylist li > input[type="checkbox"].impp { clear: none; }
+.propertylist li > input[type=checkbox].impp { clear: none; }
 .propertylist li > label.xab { display: block; color: #bbb; float:left; clear: both; padding: 0.5em 0 0 2.5em; }
 .propertylist li > label.xab:hover { color: #777; }
 #contact label, #contact dt, #contact th, #contact .label {
 	float: left; 
-	font-size: 0.7em; font-weight: bold; 
+	font-size: 100%; font-weight: bold; 
 	color: #bbb !important; 
 	border: 0; 
 	display: inline-block;
@@ -368,7 +417,6 @@ ul.propertylist { width: 450px; }
 	-moz-box-sizing: border-box;
 }
 #contact label:hover, #contact dt:hover, #contact input.label:hover { color: #777 !important; }
-#contact input.label, #contact input.label { margin:-2px; }
 #contact input.label:hover, #contact input.label:active { border: 0 none !important; border-radius: 0; cursor: pointer; }
 dt[data-element="nickname"], dt[data-element="bday"], dt[data-element="title"] { margin-top: 5px; }
 dt[data-element="org"] { margin-top: 4px; }
@@ -376,6 +424,12 @@ dt[data-element="org"] { margin-top: 4px; }
 .typelist[type="button"] { float: left; max-width: 8em; border: 0; background-color: #fff; color: #bbb; box-shadow: none; } /* for multiselect */
 .typelist[type="button"]:hover { color: #777; } /* for multiselect */
 .addresslist { clear: both; font-weight: bold; }
+
+/* Overrule default jQuery multiselect style */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background: 0;
+	border-radius: 3px;
+}
 
 /* Help section */
 
@@ -437,7 +491,7 @@ dt[data-element="org"] { margin-top: 4px; }
 #contacts-settings li,#contacts-settings li:hover { background-color: transparent; white-space: nowrap; }
 #contacts-settings a.action:not(.settings) { width: 16px; height: 16px; }
 */
-.addressbooklist .actions { position: absolute; right: 5px; }
+.addressbooklist .actions { position: absolute; right: 0px; }
 .addressbooklist .actions > a { width: 20px; height: 20px; }
 .addressbooklist > li > div {
 	display: inline-block;
@@ -472,7 +526,7 @@ dt[data-element="org"] { margin-top: 4px; }
 }
 
 .import-upload, .import-status {
-	height: 60px;
+	height: 40px;
 }
 .import-upload select {
 	width: 80%; height: 30px;
@@ -485,30 +539,26 @@ dt[data-element="org"] { margin-top: 4px; }
 	white-space: nowrap;
 	overflow: hidden;
 }
-input:not([type="checkbox"]).propertytype { 
-	float: left; font-size: .8em; 
-	max-width: 100px; 
+input:not([type=checkbox]).propertytype { 
+	float: right;
+	font-size: .8em; 
+	max-width: 80px; 
 	text-align: right; 
 	margin: 0;
+	padding-top: 8px;
 }
-
-.thumbnail {
-	background-image:url('%appswebroot%/contacts/img/person.png');
-}
-input[type="checkbox"].propertytype { width: 10px; }
+input[type=checkbox].propertytype { width: 10px; }
 .contactphoto { 
-	float: left; display: inline-block; 
-	border-radius: 0.3em; border: thin solid #bbb; 
-	margin: 0.5em; -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; 
-	opacity: 1; 
+	border: 1px solid #bbb; 
+	-moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; 
 }
 .contactphoto:hover { background: #fff; cursor: default; }
 #photowrapper { 
-	display: inline-block; 
-	position: relative;
+	position: absolute;
 	float: left; 
-	width: 170px; height: 200px;
-	margin: 5px;
+	width: 180px; height: 180px;
+	margin-top: 10px;
+	margin-left: -145px;
 }
 
 #photowrapper .favorite {
@@ -544,21 +594,21 @@ input[type="checkbox"].propertytype { width: 10px; }
 	padding-left: 20px;
 	font-weight: normal;
 }
-.no-svg .favorite { display: inline-block; float: left; height: 20px; width: 20px; background-image:url('%appswebroot%/contacts/img/inactive_star.png'); }
-.no-svg .favorite.active, .favorite:hover { background-image:url('%appswebroot%/contacts/img/active_star.png'); }
-.no-svg .favorite.inactive { background-image:url('%appswebroot%/contacts/img/inactive_star.png'); }
+.no-svg .favorite { display: inline-block; float: left; height: 20px; width: 20px; background-image:url('../img/inactive_star.png'); }
+.no-svg .favorite.active, .favorite:hover { background-image:url('../img/active_star.png'); }
+.no-svg .favorite.inactive { background-image:url('../img/inactive_star.png'); }
 
-.svg .favorite { display: inline-block; float: left; height: 20px; width: 20px; background-image:url('%appswebroot%/contacts/img/inactive_star.svg'); background-size:contain; }
-.svg .favorite.active, .favorite:hover { background-image:url('%appswebroot%/contacts/img/active_star.svg');	}
-.svg .favorite.inactive { background-image:url('%appswebroot%/contacts/img/inactive_star.svg'); background-size:contain; }
+.svg .favorite { display: inline-block; float: left; height: 20px; width: 20px; background-image:url('../img/inactive_star.svg'); background-size:contain; }
+.svg .favorite.active, .favorite:hover { background-image:url('../img/active_star.svg');	}
+.svg .favorite.inactive { background-image:url('../img/inactive_star.svg'); background-size:contain; }
 
 #app-content {
-	padding-bottom: 50px;
+	top: 44px;
 }
 
 /* Contact layout */
 
-#contact > ul > li { white-space: nowrap; }
+#contact > ul > li { white-space: nowrap; margin-right: 110px; }
 #contact > ul.propertylist {
 	font-size: 10px;
 	/*display: table;
@@ -572,7 +622,15 @@ input[type="checkbox"].propertytype { width: 10px; }
 }
 
 .display .meta { text-align: right; margin-left: -30px; }
-.display .adr { cursor: pointer; margin-left: 30px; }
+.display .adr {
+	margin: .3em;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	border: 1px solid rgb(221, 221, 221);
+	border-radius: 3px;
+	line-height: 28px;
+}
 .adr.editor {
 	width: 20em;
 	margin-left: 120px;
@@ -584,73 +642,123 @@ input[type="checkbox"].propertytype { width: 10px; }
 	columns: 1;
 }
 fieldset.adr ul li input.label { margin-top: -4px !important; }
-.adr.editor input.value { border: none; }
-.adr.editor input.value:hover { border: none; }
 .adr.editor input.value.street, ul.adr.edit input.value.country, ul.adr.edit input.value.region { width: 19em;}
-.adr.editor input.value.zip { width: 5em; }
-.adr.editor input.value.city { width: 10em; margin:4px; }
-
-.note { margin-left: 120px; }
+.adr.editor input.value.zip { width: 100px; }
+.adr.editor input.value.city { width: 192px; margin:4px; }
 
 /* contact list */
 
 #contactsHeader {
-	top: 46px;
-	position: fixed;
-	height: 20px;
-	background: none repeat scroll 0 0 rgba(230,230,230,.95);
+	height: 51px;
 	color: #999;
 	z-index: 2;
 	width: 100%;
+	line-height: 51px;
+}
+.multiselect #contactsHeader {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    left: 0;
+    top: 44px;
+    margin-left: 330px; padding-right: 330px;
+    position: fixed;
+    z-index: 10;
 }
 #contactsHeader > tr {
 }
 #contactsHeader > td {
 	z-index: 300;
+	border-bottom: 1px solid rgb(221, 221, 221);	
 }
-#contactsHeader > td.actions {
-	left: 600px; right: 15px; top: 45px;
-	position: fixed;
-	height: 20px;
-	font-weight: bold;
-	opacity: 1;
-	padding: 0; margin: 0 10px;
-	float: right;
+#contactsHeader > td.name {
+	padding-right: 9px;
 }
-#contactsHeader > td > * {
-	/*-webkit-box-sizing: border-box;  -moz-box-sizing: border-box; box-sizing: border-box;*/
+.multiselect #contactsHeader > td.name {
+	width: 100%;
 	display: inline-block;
-	float: left;
+	color: #000;
+	background-color: rgba(220, 220, 220, 0.8);
+	opacity: 0.9;
 }
-#contactsHeader .toggle {
-	margin: 0 15px;
-	opacity: 1;
+#contactsHeader .delete {
+	background-image: none;
+}
+#contactsHeader .delete img {
+	vertical-align: middle;
+	margin-bottom: 2px;
 }
 #contactsHeader select {
 	width: auto;
-	font-size: 90%;
-	padding: 0; margin: 0 10px;
+	max-width: 120px;
+	height: 22px;
+	font-weight: normal;
+	color: black;
+	border: 0;
+	background-color: rgba(255,255,255,0);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+#contactsHeader select.sort {
+	margin-left: 50px;
+	opacity: 1;
+	color: rgb(153, 153, 153);
 }
 #contactsHeader .actions > * {
+	padding-left: 8px;
+	padding-right: 8px;
+	font-weight: bold;
 	float: right;
 }
-#contactsHeader .action {
+#contactsHeader .action.a {
 	margin: 0;
-	padding: 0 5px;
+	padding: 0;
 }
 #contactsHeader .actions > .toggle {
 	float: left;
 }
-#contactlist {  }
+#contactsHeader .actions > select {
+	float: right;
+	width: auto;
+	height: 19px;
+	padding-left: 18px;
+	padding-right: 8px;
+	padding-top: 2px;
+	padding-bottom: 0px;
+	margin-top: 14px;
+	margin-bottom: 14px;
+	font-weight: bold;
+	background-position: -13px;
+}
+#contactsHeader .actions_left {
+	float: left;
+}
 #contactlist > tbody {
 	position: relative;
  	padding-bottom: 300px;
 	width: 100%;
 	z-index: 1;
 }
-#contactlist { margin-top:20px; position: relative; width: 100%; }
+#contactlist.multiselect {
+	top: 51px;
+}
+#contactlist {
+	position: relative;
+	width: 100%;
+	min-width: 502px;
+}
 #contactlist td {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+#contactlist .nametext {
+	margin-left: 55px;
+}
+#contactlist .avatar {
+	position: absolute;
+	margin-top: 10px;
+	height: 32px;
+	width: 32px;
+ 	margin-left: 10px;
 }
 /* Override default style for an open cpntact */
 tbody tr, tbody tr.hover {
@@ -659,7 +767,7 @@ tbody tr, tbody tr.hover {
 tbody tr.contact.active, tbody tr.contact:hover {
 	background-color: #f8f8f8 !important;
 }
-#contactlist > tbody > tr { height: 3em; display: none; }
+#contactlist > tbody > tr { height: 51px; display: none; }
 #contactlist > tbody > tr.contact.active, #contactlist  > tbody > tr.contact:hover { background-color: #eee; }
 #contactlist > tbody > tr > td {
 	border-bottom: 1px solid #DDDDDD;
@@ -667,36 +775,35 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	text-align: left;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	vertical-align: middle;
+	vertical-align: top;
 	white-space: nowrap;
 }
-#contactlist tr.contact > td:not(.name) {
-	padding-left:10px;
+#contactlist tbody > tr > td {
+	min-width: 80px;
+	max-width: 250px;
+	line-height: 50px;
 }
-#contactlist tr > td:not(.tel):not(.adr):not(.actions) {
-	max-width: 270px;
-	min-width: 200px;
-}
-#contactlist tr > td.tel {
-	max-width: 180px;
-	min-width: 180px;
-}
-#contactlist tbody > tr > td.adr { width: 100%; max-width:300px; }
 #contactlist tbody > tr > td.name > input[type=checkbox]:first-child:not(.toggle) {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0;
-	-webkit-transition:opacity 200ms; -moz-transition:opacity 200ms; -o-transition:opacity 200ms; transition:opacity 200ms;
 	float:left;
-	margin:.5em 0 0 15px;
+	margin: 32px 0 4px 32px;
+	position: absolute;
+	z-index: 1;
 }
-#contactlist tbody > tr > td.name > input[type="checkbox"]:hover:first-child {
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter:alpha(opacity=80); opacity:.8;
+#contactlist tbody > tr > td.name > input[type=checkbox] + label, #select_all + label {
+	height: 50px;
+	position: absolute;
+	width: 50px;
+	z-index: 5;
 }
-#contactlist tbody > tr > td.name > input[type="checkbox"]:checked:first-child {
+#contactlist tbody > tr:hover > td.name > input[type=checkbox]:first-child {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter:alpha(opacity=100); opacity:1;
+}
+#contactlist tbody > tr > td.name > input[type=checkbox]:checked:first-child {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter:alpha(opacity=100); opacity:1;
 }
 #contactlist tbody > tr > td.name {
-	font-weight: bold; text-indent: 1.6em;
-	-webkit-transition:background-image 500ms; -moz-transition:background-image 500ms; -o-transition:background-image 500ms;  transition:background-image 500ms;
+	font-weight: bold;
 	background-repeat:no-repeat !important;
 	background-position: 10px center !important;
 }
@@ -704,26 +811,35 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	position: absolute; float: right;  clear: none;
 	cursor:pointer;
 	width:16px; height:16px;
-	margin: 2px 0 2px 5px; z-index: 200;
+	margin: 18px 0 2px 5px; z-index: 200;
 	opacity: 0.6; background-image:url('%webroot%/core/img/actions/mail.svg');
 }
 #contactlist tbody > tr > td a.mailto:hover { opacity: 0.8; }
 
 #contactlist tbody > tr > td > a.delete {
 	position: absolute;
-	right: 20px; clear: none;
+	margin-top: 17px;
+	right: 17px; clear: none;
 	cursor:pointer;
-	width:16px; height:16px;
 	z-index: 200;
 }
 #contact {
-	background-color: white; color: #333333;
-	/*border-radius: 3px; box-shadow: 0 0 10px #888888;
-	padding: 10px; 
-	position: fixed !important; 
-	z-index: 101;
-	top: 8em; left: 28em;
-	width: 490px;*/
+	padding-left: 155px;
+	background-color: white;
+	color: #333333;
+	line-height: normal;
+}
+#contact > ul {
+	min-height: 146px;
+	min-width: 530px;
+	max-width: 700px;
+}
+#contact h3 {
+	margin-left: 115px;
+	margin-top: 7px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	line-height: 14px;
 }
 #contact .arrow {
 	border-bottom: 20px solid white; 
@@ -741,12 +857,10 @@ tbody tr.contact.active, tbody tr.contact:hover {
 
 #contact figure img { -moz-border-radius:.3em; -webkit-border-radius:.3em; border-radius:.3em; border: thin solid #bbb; margin: 0.3em; background-image: url('%webroot%/core/img/loading.gif'); -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; opacity: 1; }
 
-
-#contact span.adr { 
-	font-weight: bold;
+#contact span.adr {
 	float: left; 
-	width: 20em; 
-	padding-top: .5em; 
+	width: 300px;
+	height: 30px;
 	overflow: hidden; text-overflow: ellipsis; text-align: bottom; white-space: nowrap; 
 }
 #contact span.adr:hover { /*overflow: inherit;*/ /*white-space: pre-wrap;*/ }
@@ -785,18 +899,36 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	}
 }
 
-@media screen and (max-width: 1500px) {
-	#contactlist tr td.categories { display: none; }
-}
 @media screen and (max-width: 1400px) {
-	#contactlist tr td.adr { display: none; }
-	#contactlist tr td.tel { width:100%; }
+	#contactlist tr td.categories { display: none; }
+	#contactsHeader tr td.categories { display: none; }
+	#app-navigation .oc-addnew input[type=text] { width: 204px; }
 }
 @media screen and (max-width: 1200px) {
+	#contactlist tr td.adr { display: none; }
+	#contactsHeader tr td.adr { display: none; }
+	#app-navigation { width: 220px; }
+	#app-navigation .oc-addnew input[type=text] { width: 174px; }
+	#app-settings { width: 219px; }
+}
+@media screen and (max-width: 1000px) {
 	#contactlist tr td.tel { display: none; }
-	#contactlist tr td.email { width:100%; }
+	#contactsHeader tr td.tel { display: none; }
+	#app-navigation { width: 200px; }
+	#app-navigation .oc-addnew input[type=text] { width: 154px; }
+	#app-settings { width: 199px; }
+	.multiselect #contactsHeader {
+		margin-left: 280px; padding-right: 280px;
+	}
 }
 @media screen and (max-width: 900px) {
+	#contactsHeader .delete { display: none; }
+}
+@media screen and (max-width: 800px) {
 	#contactlist tr td.email { display: none; }
-	#contactlist tr td.name { width:100%; max-width: auto;}
+	#contactlist tr { width: 100%; }
+	#contactsHeader tr td.email { display: none; }
+	#app-navigation { width: 170px; }
+	#app-navigation .oc-addnew input[type=text] { width: 124px; }
+	#app-settings { width: 169px; }
 }

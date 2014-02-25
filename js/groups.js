@@ -53,6 +53,7 @@ OC.Contacts = OC.Contacts || {};
 			addText: t('core', 'Add'),
 			ok: function(event, name) {
 				$addInput.addClass('loading');
+				name = escapeHTML(name);
 				self.addGroup({name:name}, function(response) {
 					if(response.error) {
 						$(document).trigger('status.contacts.error', response);
@@ -518,6 +519,13 @@ OC.Contacts = OC.Contacts || {};
 			addText: t('contacts', 'Save'),
 			ok: function(event, newname) {
 				console.log('New name', newname);
+				if(self.hasGroup(newname)) {
+					$(document).trigger('status.contacts.error', {
+						error: true,
+						message: t('contacts', 'A group named "{group}" already exists', {group: escapeHTML(newname)})
+					});
+					return;
+				}
 				$editInput.addClass('loading');
 				self.renameGroup(oldname, newname, function(response) {
 					if(response.error) {
@@ -594,7 +602,7 @@ OC.Contacts = OC.Contacts || {};
 		var self = this;
 		if(this.hasGroup(name)) {
 			if(typeof cb === 'function') {
-				cb({error:true, message:t('contacts', 'A group named {group} already exists', {group: escapeHTML(name)})});
+				cb({error:true, message:t('contacts', 'A group named "{group}" already exists', {group: escapeHTML(name)})});
 			}
 			return;
 		}
@@ -606,7 +614,7 @@ OC.Contacts = OC.Contacts || {};
 				var $elem = (tmpl).octemplate({
 						id: id,
 						type: 'category',
-						num: (contacts.length > 0 && contacts.length || ''),
+						num: 0+contacts.length,
 						name: escapeHTML(name)
 					});
 				self.categories.push({id: id, name: name});
@@ -614,6 +622,12 @@ OC.Contacts = OC.Contacts || {};
 				$elem.data('contacts', contacts);
 				$elem.data('rawname', name);
 				$elem.data('id', id);
+				$elem.droppable({
+					drop: self.contactDropped,
+					activeClass: 'ui-state-active',
+					hoverClass: 'ui-state-hover',
+					scope: 'contacts'
+				});
 				var added = false;
 				self.$groupList.find('li.group[data-type="category"]').each(function() {
 					if ($(this).data('rawname').toLowerCase().localeCompare(name.toLowerCase()) > 0) {
@@ -668,7 +682,7 @@ OC.Contacts = OC.Contacts || {};
 				$elem = $elem.length ? $elem : tmpl.octemplate({
 					id: 'fav',
 					type: 'fav',
-					num: contacts.length > 0 && contacts.length || '',
+					num: contacts.length,
 					name: t('contacts', 'Favorites')
 				}).appendTo($groupList);
 				$elem.data('obj', self);
@@ -699,7 +713,7 @@ OC.Contacts = OC.Contacts || {};
 						$elem = $elem.length ? $elem : (tmpl).octemplate({
 							id: category.id,
 							type: 'category',
-							num: contacts.length > 0 && contacts.length || '',
+							num: contacts.length,
 							name: category.name
 						});
 						self.categories.push({id: category.id, name: category.name});
@@ -756,7 +770,10 @@ OC.Contacts = OC.Contacts || {};
 						console.log('stop sorting', $(this));
 						var ids = [];
 						$.each($(this).children('li[data-type="category"]'), function(i, elem) {
-							ids.push($(elem).data('id'));
+							var id = $(elem).data('id');
+							if(typeof id === 'number' && id % 1 == 0) {
+								ids.push(id);
+							}
 						});
 						self.sortorder = ids;
 						$(document).trigger('status.groups.sorted', {

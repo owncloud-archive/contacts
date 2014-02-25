@@ -1,7 +1,8 @@
 <?php
 /**
  * @author Thomas Tanghus
- * Copyright (c) 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
+ *
  * This file is licensed under the Affero General Public License version 3 or
  * later.
  * See the COPYING-README file.
@@ -12,6 +13,7 @@ namespace OCA\Contacts\Controller;
 use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Controller,
+	OCA\Contacts\VObject\VCard as MyVCard,
 	Sabre\VObject;
 
 /**
@@ -40,6 +42,7 @@ class ImportController extends Controller {
 		$file=$request->files['file'];
 
 		if($file['error'] !== UPLOAD_ERR_OK) {
+			$error = $file['error'];
 			$errors = array(
 				UPLOAD_ERR_OK			=> App::$l10n->t("There is no error, the file uploaded with success"),
 				UPLOAD_ERR_INI_SIZE		=> App::$l10n->t("The uploaded file exceeds the upload_max_filesize directive in php.ini")
@@ -116,8 +119,8 @@ class ImportController extends Controller {
 
 		$proxyStatus = \OC_FileProxy::$enabled;
 		\OC_FileProxy::$enabled = false;
-		//$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
-		$content = file_get_contents('oc://' . $path . '/' . $filename);
+		$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
+		//$content = file_get_contents('oc://' . $path . '/' . $filename);
 		if($view->file_put_contents('/imports/' . $filename, $content)) {
 			\OC_FileProxy::$enabled = $proxyStatus;
 			$count = substr_count($content, 'BEGIN:');
@@ -236,6 +239,13 @@ class ImportController extends Controller {
 					$response->debug('Import: skipping card. Error parsing VCard: ' . $e->getMessage());
 					continue; // Ditch cards that can't be parsed by Sabre.
 				}
+			}
+			try {
+				$vcard->validate(MyVCard::REPAIR|MyVCard::UPGRADE);
+			} catch (\Exception $e) {
+				\OCP\Util::writeLog('contacts', __METHOD__ . ' ' .
+					'Error validating vcard: ' . $e->getMessage(), \OCP\Util::ERROR);
+				$failed += 1;
 			}
 			/**
 			 * TODO

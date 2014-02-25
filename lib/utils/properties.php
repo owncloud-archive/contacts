@@ -1,9 +1,9 @@
 <?php
 /**
- * ownCloud - Interface for PIM object
+ * ownCloud - Utility class for VObject properties
  *
  * @author Thomas Tanghus
- * @copyright 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -29,7 +29,7 @@ Properties::$l10n = \OCP\Util::getL10N('contacts');
 Class Properties {
 
 	const THUMBNAIL_PREFIX = 'contact-thumbnail-';
-	const THUMBNAIL_SIZE = 28;
+	const THUMBNAIL_SIZE = 32;
 
 	private static $deleteindexstmt;
 	private static $updateindexstmt;
@@ -57,7 +57,7 @@ Class Properties {
 	 */
 	public static $index_properties = array(
 		'BDAY', 'UID', 'N', 'FN', 'TITLE', 'ROLE', 'NOTE', 'NICKNAME',
-		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO', 'PHOTO');
+		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO');
 
 	/**
 	 * Get options for IMPP properties
@@ -132,6 +132,11 @@ Class Properties {
 					'xname' => 'X-SKYPE',
 					'protocol' => 'x-apple',
 				),
+				'owncloud-handle' => array(
+				    'displayname' => (string)$l10n->t('ownCloud handle'),
+				    'xname' => null,
+				    'protocol' => 'x-owncloud-handle'
+				),
 		);
 		if(is_null($im)) {
 			return $ims;
@@ -197,7 +202,7 @@ Class Properties {
 	}
 
 	public static function generateUID($app = 'contacts') {
-		return date('Ymd\\THis') . '.' . time(). '@' . \OCP\Util::getServerHostName();
+		return date('Ymd\\THis') . '.' . substr(md5(rand().time()), 0, 10). '@' . \OCP\Util::getServerHostName();
 	}
 
 	/**
@@ -266,7 +271,7 @@ Class Properties {
 						\OCP\User::getUser(),
 						$contactid,
 						$property->name,
-						$property->value,
+						substr($property->value, 0, 254),
 						$preferred,
 					)
 				);

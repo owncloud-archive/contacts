@@ -3,7 +3,7 @@
  * ownCloud - Contact object
  *
  * @author Thomas Tanghus
- * @copyright 2012 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2012-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -93,10 +93,12 @@ class Contact extends VObject\VCard implements IPIMObject {
 							break;
 						case 'displayname':
 						case 'fullname':
-							$this->props['displayname'] = $value;
-							$this->FN = $value;
-							// Set it to saved again as we're not actually changing anything
-							$this->setSaved();
+							if(is_string($value)) {
+								$this->props['displayname'] = $value;
+								$this->FN = $value;
+								// Set it to saved again as we're not actually changing anything
+								$this->setSaved();
+							}
 							break;
 					}
 				}
@@ -752,7 +754,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			try {
 				$date = new \DateTime($birthday);
 			} catch(\Exception $e) {
-				continue;
+				return;
 			}
 			$vevent = \Sabre\VObject\Component::create('VEVENT');
 			$vevent->add('DTSTART');
@@ -763,7 +765,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vevent->add('DURATION', 'P1D');
 			$vevent->{'UID'} = $this->UID;
 			$vevent->{'RRULE'} = 'FREQ=YEARLY';
-			$vevent->{'SUMMARY'} = $title;
+			$vevent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
 			$vcal = \Sabre\VObject\Component::create('VCALENDAR');
 			$vcal->VERSION = '2.0';
 			$appinfo = \OCP\App::getAppInfo('contacts');

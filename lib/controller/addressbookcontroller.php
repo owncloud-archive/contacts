@@ -1,7 +1,7 @@
 <?php
 /**
  * @author Thomas Tanghus
- * Copyright (c) 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  * This file is licensed under the Affero General Public License version 3 or
  * later.
  * See the COPYING-README file.
@@ -22,6 +22,7 @@ class AddressBookController extends Controller {
 
 	/**
 	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function userAddressBooks() {
 		$addressBooks = $this->app->getAddressBooksForUser();
@@ -57,6 +58,7 @@ class AddressBookController extends Controller {
 
 	/**
 	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function getAddressBook() {
 		$params = $this->request->urlParams;
@@ -79,20 +81,41 @@ class AddressBookController extends Controller {
 		{
 			return $response->setStatus(Http::STATUS_NOT_MODIFIED);
 		} else {
-			$contacts = array();
-			foreach($addressBook->getChildren() as $i => $contact) {
-				$result = JSONSerializer::serializeContact($contact);
-				if($result !== null) {
-					$contacts[] = $result;
-				}
+			switch($this->request->method) {
+				case 'OPTIONS':
+					$options = array('GET', 'HEAD', 'OPTIONS');
+					if($addressBook->hasPermission(\OCP\PERMISSION_DELETE)
+						&& $addressBook->getBackend()->hasAddressBookMethodFor(\OCP\PERMISSION_DELETE))
+					{
+						$options[] = 'DELETE';
+					}
+					if($addressBook->hasPermission(\OCP\PERMISSION_UPDATE)
+						&& $addressBook->getBackend()->hasAddressBookMethodFor(\OCP\PERMISSION_UPDATE))
+					{
+						$options[] = 'POST';
+					}
+					$response->addHeader('Allow' , implode(',', $options));
+					return $response;
+					break;
+				case 'HEAD':
+					return $response;
+					break;
+				case 'GET':
+					$contacts = array();
+					foreach($addressBook->getChildren() as $i => $contact) {
+						$result = JSONSerializer::serializeContact($contact);
+						if($result !== null) {
+							$contacts[] = $result;
+						}
+					}
+					return $response->setData(array('contacts' => $contacts));
+					break;
 			}
-			return $response->setData(array('contacts' => $contacts));
 		}
 	}
 
 	/**
 	 * @NoAdminRequired
-	 * @NoCSRFRequired
 	 */
 	public function addAddressBook() {
 		$params = $this->request->urlParams;
@@ -101,7 +124,7 @@ class AddressBookController extends Controller {
 
 		$backend = $this->app->getBackend($params['backend']);
 		if(!$backend->hasAddressBookMethodFor(\OCP\PERMISSION_CREATE)) {
-			throw new \Exception('Not implemented');
+			throw new \Exception('This backend does not support adding address books', 501);
 		}
 		try {
 			$id = $backend->createAddressBook($this->request->post);

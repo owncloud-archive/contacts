@@ -1,7 +1,8 @@
 <?php
 /**
  * @author Thomas Tanghus
- * Copyright (c) 2013 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
+ *
  * This file is licensed under the Affero General Public License version 3 or
  * later.
  * See the COPYING-README file.
@@ -78,20 +79,7 @@ class ExportController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function exportSelected() {
-		$contacts = $this->request['contacts'];
-
-		// First sort the contacts by backend and address book.
-		$targets = array();
-
-		foreach($contacts as $contact) {
-			if(!isset($targets[$contact['backend']])) {
-				$targets[$contact['backend']] = array();
-			}
-			if(!isset($targets[$contact['backend']][$contact['addressBookId']])) {
-				$targets[$contact['backend']][$contact['addressBookId']] = array();
-			}
-			$targets[$contact['backend']][$contact['addressBookId']][] = $contact['contactId'];
-		}
+		$targets = $this->request['t'];
 
 		$exports = '';
 		foreach($targets as $backend => $addressBooks) {

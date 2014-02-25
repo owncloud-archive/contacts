@@ -3,6 +3,7 @@
  * ownCloud - VObject Group Property
  *
  * @author Thomas Tanghus
+ * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
@@ -37,15 +38,19 @@ class GroupProperty extends CompoundProperty {
 	* \Sabre\VObject\Property
 	*
 	* @param string $name
+	* @return bool
 	*/
 	public function addGroup($name) {
 		$name = trim($name);
 		if($this->hasGroup($name)) {
-			return;
+			return false;
 		}
 		$groups = $this->getParts();
+		// Remove empty elements
+		$groups = array_filter($groups, 'strlen');
 		$groups[] = $name;
 		$this->setParts($groups);
+		return true;
 	}
 
 	/**
