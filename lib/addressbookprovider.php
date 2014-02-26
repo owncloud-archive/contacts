@@ -158,7 +158,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 				. self::PROPERTY_TABLE . '`.`contactid` = `' . self::CONTACT_TABLE . '`.`id` AND `' 
 				. self::PROPERTY_TABLE . '`.`contactid` IN (' . join(',', array_fill(0, count($ids), '?')) . ')';
 
-			\OCP\Util::writeLog('contacts', __METHOD__ . 'DB query: ' . $query, \OCP\Util::DEBUG);
+			//\OCP\Util::writeLog('contacts', __METHOD__ . 'DB query: ' . $query, \OCP\Util::DEBUG);
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute($ids);
 		}
