@@ -252,17 +252,6 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 
 /* TODO: Use @import url('../css/[no-]svg.css); instead. */
 
-/*.no-svg .add { background-image:url('%webroot%/core/img/actions/add.png'); }*/
-.no-svg .delete { background-image:url('%webroot%/core/img/actions/delete.png'); }
-.no-svg .edit { background-image:url('%webroot%/core/img/actions/rename.png'); }
-.no-svg .share { background-image:url('%webroot%/core/img/actions/share.png'); }
-/*.no-svg .groups { background-image:url('%webroot%/core/img/actions/shared.png'); }*/
-.no-svg .mail { background-image:url('%webroot%/core/img/actions/mail.png'); }
-.no-svg .import, .no-svg .upload { background-image:url('%webroot%/core/img/actions/upload.png'); }
-.no-svg .export, .no-svg .download { background-image:url('%webroot%/core/img/actions/download.png'); }
-.no-svg .export, .no-svg .shared { background-image:url('%webroot%/core/img/actions/shared.png'); }
-.no-svg .globe { background-image:url('%webroot%/core/img/actions/public.png'); }
-.no-svg .settings { background-image:url('%webroot%/core/img/actions/settings.svg'); }
 .no-svg .starred { background-image:url('../img/starred.png'); background-size: contain; }
 .no-svg .checked { background-image:url('../img/checkmark-green.png'); }
 .no-svg .checked.disabled { background-image:url('../img/checkmark-gray.png'); cursor: default; }
@@ -273,17 +262,6 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	background-repeat: no-repeat;
 	width: auto; height: auto;
 }
-/*.svg .add { background-image:url('%webroot%/core/img/actions/add.svg'); }*/
-.svg .delete { background-image:url('%webroot%/core/img/actions/delete.svg'); }
-.svg .edit { background-image:url('%webroot%/core/img/actions/rename.svg'); }
-.svg .share { background-image:url('%webroot%/core/img/actions/share.svg'); }
-/*.svg .groups { background-image:url('%webroot%/core/img/actions/shared.svg'); }*/
-.svg .mail { background-image:url('%webroot%/core/img/actions/mail.svg'); }
-.svg .import,.svg .upload { background-image:url('%webroot%/core/img/actions/upload.svg'); }
-.svg .export,.svg .download { background-image:url('%webroot%/core/img/actions/download.svg'); }
-.svg .export,.svg .shared { background-image:url('%webroot%/core/img/actions/shared.svg'); }
-.svg .globe { background-image:url('%webroot%/core/img/actions/public.svg'); }
-.svg .settings { background-image:url('%webroot%/core/img/actions/settings.svg'); }
 .svg .starred { background-image:url('../img/starred.svg'); background-size: contain; }
 .svg .checked { background-image:url('../img/checkmark-green.svg'); }
 .svg .checked.disabled { background-image:url('../img/checkmark-gray.svg'); cursor: default; }
@@ -292,8 +270,6 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 .float { float: left; display: inline-block; width: auto; }
 .float.right { float: right; }
 .break { clear: both; }
-.loading { background: url('%webroot%/core/img/loading.gif') no-repeat center !important; cursor: wait; }
-.wait { opacity: cursor: wait; }
 .control {
     border: 1px solid #DDDDDD;
     border-radius: 0.3em;
@@ -506,11 +482,11 @@ dt[data-element="org"] { margin-top: 4px; }
 /* Single elements */
 #file_upload_form, #file_upload_target, #import_upload_target, #crop_target { display:none; }
 #import_upload_start, .import-upload-button {
-    width: 30px; height: 30px;
+    width: 30px !important; height: 30px !important;
 	display:block;
 	position: absolute;
 	right: 0; top: 0;
-	margin: 5px;
+	margin: 5px !important;
 	cursor: pointer;
 }
 #import_upload_start {
@@ -518,7 +494,6 @@ dt[data-element="org"] { margin-top: 4px; }
 	z-index: 1001;
 }
 .import-upload-button {
-	background-image: url("%webroot%/core/img/actions/upload.svg");
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -568,7 +543,7 @@ input[type=checkbox].propertytype { width: 10px; }
 	right: -6px; top: -6px;
 	width: 25px; height: 25px;
 }
-#photowrapper.wait { opacity: 0.6; filter:alpha(opacity=0.6); z-index:1000; background-image: url('%webroot%/core/img/loading.gif'); cursor: wait; }
+#photowrapper.wait { opacity: 0.6; filter:alpha(opacity=0.6); z-index:1000; cursor: wait; }
 #phototools { position:absolute; margin: 5px 0 0 10px; width:auto; height:20px; padding:2px; background-color:#fff; list-style-type:none; border-radius: 0.3em; -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; }
 #phototools li { display: inline; }
 #phototools li a { float:left; opacity: 0.6; }
@@ -812,9 +787,8 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	cursor:pointer;
 	width:16px; height:16px;
 	margin: 18px 0 2px 5px; z-index: 200;
-	opacity: 0.6; background-image:url('%webroot%/core/img/actions/mail.svg');
+	display: none; opacity: 0.8;
 }
-#contactlist tbody > tr > td a.mailto:hover { opacity: 0.8; }
 
 #contactlist tbody > tr > td > a.delete {
 	position: absolute;
@@ -854,8 +828,6 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	-webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -o-transform: rotate(270deg); 
 	-ms-transform: rotate(270deg); transform: rotate(270deg);
 }
-
-#contact figure img { -moz-border-radius:.3em; -webkit-border-radius:.3em; border-radius:.3em; border: thin solid #bbb; margin: 0.3em; background-image: url('%webroot%/core/img/loading.gif'); -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; opacity: 1; }
 
 #contact span.adr {
 	float: left; 

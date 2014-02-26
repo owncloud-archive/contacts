@@ -1653,7 +1653,7 @@ OC.Contacts = OC.Contacts || {};
 		var finishLoad = function(image) {
 			console.log('finishLoad', self.getDisplayName(), image.width, image.height);
 			$(image).addClass('contactphoto');
-			$photowrapper.removeClass('loading wait');
+			$photowrapper.removeClass('loading');
 			$photowrapper.css({width: image.width + 10, height: image.height + 10});
 			$(image).insertAfter($phototools).fadeIn();
 		};
@@ -1668,9 +1668,9 @@ OC.Contacts = OC.Contacts || {};
 				.imageplaceholder(name || '#');
 		};
 
-		$photowrapper.addClass('loading').addClass('wait');
+		$photowrapper.addClass('loading');
 		if(!this.hasPhoto()) {
-			$photowrapper.removeClass('loading wait');
+			$photowrapper.removeClass('loading');
 			addAvatar();
 		} else {
 			$.when(this.storage.getContactPhoto(backend, parent, id))
