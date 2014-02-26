@@ -378,32 +378,6 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
-	 * Get Image instance for default profile picture
-	 *
-	 * This method loads the default picture only once and caches it.
-	 *
-	 * @return Image
-	 */
-	Storage.prototype.getDefaultPhoto = function() {
-		console.log('Storage.getDefaultPhoto');
-		if(!this.defaultPhoto) {
-			var defer = $.Deferred();
-			var url = OC.imagePath('contacts', 'person_large.png');
-			this.defaultPhoto = new Image();
-			var self = this;
-			$(this.defaultPhoto)
-				.load(function() {
-					defer.resolve(this);
-				}).error(function(event) {
-					defer.reject();
-				}).attr('src', url)
-			return defer.promise();
-		} else {
-			return this.defaultPhoto;
-		}
-	};
-
-	/**
 	 * Update a contact.
 	 *
 	 * @param string backend

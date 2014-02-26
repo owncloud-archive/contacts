@@ -588,6 +588,7 @@ OC.Contacts = OC.Contacts || {};
 								self.data.FN = [{name:'FN', value:'', parameters:[]}];
 							}
 							self.data.FN[0]['value'] = value;
+							self.displayNames.fn = value;
 							var nempty = true;
 							if(!self.data.N) {
 								// TODO: Maybe add a method for constructing new elements?
@@ -611,6 +612,10 @@ OC.Contacts = OC.Contacts || {};
 									self.saveProperty({name:'N', value:self.data.N[0].value.join(';')});
 								}, 500);
 							}
+							// If contacts doesn't have a photo load new avatar
+							if(!self.hasPhoto() && self.sortOrder === 'fn') {
+								self.loadAvatar();
+							}
 							break;
 						case 'N':
 							if(!utils.isArray(value)) {
@@ -621,6 +626,9 @@ OC.Contacts = OC.Contacts || {};
 									self.$fullelem.find('#n_' + idx).val(val).get(0).defaultValue = val;
 								});
 							}
+							self.displayNames.fl = value.slice(0, 2).reverse().join(' ');
+
+							self.displayNames.lf = value.slice(0, 2).join(', ').trim();
 							var $fullname = self.$fullelem.find('.fullname'), fullname = '';
 							var update_fn = false;
 							if(!self.data.FN) {
@@ -648,6 +656,9 @@ OC.Contacts = OC.Contacts || {};
 								setTimeout(function() {
 									self.saveProperty({name:'FN', value:self.data.FN[0]['value']});
 								}, 1000);
+							}
+							if(!self.hasPhoto() && self.sortOrder !== 'fn') {
+								self.loadAvatar();
 							}
 						case 'NICKNAME':
 						case 'ORG':
@@ -1308,7 +1319,7 @@ OC.Contacts = OC.Contacts || {};
 				state: !state
 			});
 		});
-		this.loadPhoto();
+		this.loadAvatar();
 		if(!this.data) {
 			// A new contact
 			this.setEnabled(true);
@@ -1630,12 +1641,11 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * Render the PHOTO property.
 	 */
-	Contact.prototype.loadPhoto = function() {
+	Contact.prototype.loadAvatar = function() {
 		var self = this;
 		var id = this.id || 'new',
 			backend = this.metadata.backend,
-			parent = this.metadata.parent,
-			src;
+			parent = this.metadata.parent;
 
 		var $phototools = this.$fullelem.find('#phototools');
 		var $photowrapper = this.$fullelem.find('#photowrapper');
@@ -1648,28 +1658,30 @@ OC.Contacts = OC.Contacts || {};
 			$(image).insertAfter($phototools).fadeIn();
 		};
 
+		var addAvatar = function() {
+			console.log('adding avatar for', self.getDisplayName());
+			$photowrapper.find('.contactphoto').remove();
+			var name = String(self.getDisplayName()).replace(' ', '').replace(',', '');
+			$('<div />').appendTo($photowrapper)
+				.css({width: $photowrapper.width()-10, height: $photowrapper.height()-10})
+				.addClass('contactphoto')
+				.imageplaceholder(name || '#');
+		};
+
 		$photowrapper.addClass('loading').addClass('wait');
-		console.log('hasPhoto', this.hasPhoto());
 		if(!this.hasPhoto()) {
-			$.when(this.storage.getDefaultPhoto())
-				.then(function(image) {
-					$('img.contactphoto').detach();
-					finishLoad(image);
-				});
+			$photowrapper.removeClass('loading wait');
+			addAvatar();
 		} else {
 			$.when(this.storage.getContactPhoto(backend, parent, id))
 				.then(function(image) {
-					$('img.contactphoto').remove();
+					$photowrapper.find('.contactphoto').remove();
 					finishLoad(image);
 				})
 				.fail(function() {
-					console.log('Error getting photo, trying default image');
-					$('img.contactphoto').remove();
-					$.when(self.storage.getDefaultPhoto())
-						.then(function(image) {
-							$('img.contactphoto').detach();
-							finishLoad(image);
-						});
+					console.log('Error getting photo.');
+					$photowrapper.find('.contactphoto').remove();
+					addAvatar();
 				});
 		}
 
@@ -1718,7 +1730,7 @@ OC.Contacts = OC.Contacts || {};
 					self.data.thumbnail = null;
 					self.data.photo = false;
 				}
-				self.loadPhoto(true);
+				self.loadAvatar(true);
 				self.setThumbnail(null, true);
 			});
 		}
