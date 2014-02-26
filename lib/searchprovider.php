@@ -16,8 +16,7 @@ class SearchProvider extends \OC_Search_Provider{
 			return strtr($value, array('\,' => ',', '\;' => ';'));
 		};
 
-		$app = new App();
-		$searchresults = array(	);
+		$searchresults = array();
 		$results = \OCP\Contacts::search($query, array('N', 'FN', 'EMAIL', 'NICKNAME', 'ORG'));
 		$l = new \OC_l10n('contacts');
 		foreach($results as $result) {
