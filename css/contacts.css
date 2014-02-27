@@ -524,8 +524,8 @@ input:not([type=checkbox]).propertytype {
 }
 input[type=checkbox].propertytype { width: 10px; }
 .contactphoto { 
-	border: 1px solid #bbb; 
-	-moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; 
+	border: 1px solid #bbb; border-radius: 3px;
+	-moz-box-shadow: 0 1px 2px #777; -webkit-box-shadow: 0 1px 2px #777; box-shadow: 0 1px 2px #777;
 }
 .contactphoto:hover { background: #fff; cursor: default; }
 #photowrapper { 
@@ -551,7 +551,8 @@ input[type=checkbox].propertytype { width: 10px; }
 	width:auto; height: auto;
 	background-color:#fff;
 	list-style-type:none; border-radius: 3px;
-	-moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777;
+	border: 1px solid #DDDDDD;
+	/*-moz-box-shadow: 0 1px 2px #777; -webkit-box-shadow: 0 1px 2px #777; box-shadow: 0 1px 2px #777;*/
 }
 #phototools li { display: inline-block; }
 #phototools li a {
@@ -559,7 +560,7 @@ input[type=checkbox].propertytype { width: 10px; }
 	opacity: 0.6;
 	width: 40px; height: 40px;
 	background-position: center;
-	background-size: 90%;
+	background-size: 80%;
 }
 #phototools li a:hover { opacity: 0.8; }
 #contactphoto_fileupload, #import_upload_start { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0; z-index:1001; }
