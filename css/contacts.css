@@ -233,19 +233,19 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	margin: 0; padding: .2em;
 }
 
-.action, .icon {
+[class^="icon-"], [class*=" icon-"], .action, .icon {
 	display: inline-block; 
 	cursor: pointer;
 	background-repeat: no-repeat;
 }
-.action:not(.text), .icon:not(.text) { 
+.action:not(.text), .icon:not(.text), [class^="icon-"]:not(.text), [class*=" icon-"]:not(.text) {
 	width: 16px; height: 16px; 
 	padding: 0; margin: 0; 
 	background-position: center;
 	background-size:contain;
 }
 
-.action:not(.add):not(.sort).text, .icon:not(.add):not(.sort).text {
+.action:not(.add):not(.sort).text, .icon:not(.add):not(.sort).text, [class^="icon-"]:not(.add):not(.sort).text, [class*=" icon-"]:not(.add):not(.sort).text {
 	background-position: left; 
 	text-indent: 18px;
 }
@@ -544,9 +544,23 @@ input[type=checkbox].propertytype { width: 10px; }
 	width: 25px; height: 25px;
 }
 #photowrapper.wait { opacity: 0.6; filter:alpha(opacity=0.6); z-index:1000; cursor: wait; }
-#phototools { position:absolute; margin: 5px 0 0 10px; width:auto; height:20px; padding:2px; background-color:#fff; list-style-type:none; border-radius: 0.3em; -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; }
-#phototools li { display: inline; }
-#phototools li a { float:left; opacity: 0.6; }
+#phototools {
+	position:absolute;
+	bottom: 10px;
+	margin: 0;
+	width:auto; height: auto;
+	background-color:#fff;
+	list-style-type:none; border-radius: 3px;
+	-moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777;
+}
+#phototools li { display: inline-block; }
+#phototools li a {
+	float:left;
+	opacity: 0.6;
+	width: 40px; height: 40px;
+	background-position: center;
+	background-size: 90%;
+}
 #phototools li a:hover { opacity: 0.8; }
 #contactphoto_fileupload, #import_upload_start { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0; z-index:1001; }
 

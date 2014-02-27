@@ -223,7 +223,7 @@
 					<li><a class="icon icon-delete action delete" title="<?php echo $l->t('Delete current photo'); ?>"></a></li>
 					<li><a class="icon icon-rename action edit" title="<?php echo $l->t('Edit current photo'); ?>"></a></li>
 					<li><a class="icon icon-upload action upload" title="<?php echo $l->t('Upload new photo'); ?>"></a></li>
-					<li><a class="action cloud icon-cloud" title="<?php echo $l->t('Select photo from ownCloud'); ?>"></a></li>
+					<li><a class="icon icon-folder action cloud icon-cloud" title="<?php echo $l->t('Select photo from Files'); ?>"></a></li>
 				</ul>
 				<a class="favorite {favorite}"></a>
 			</div>
