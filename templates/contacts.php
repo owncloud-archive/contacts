@@ -28,7 +28,7 @@
 							<select id="import_into">
 								<option value="-1"><?php p($l->t('Import into...')); ?></option>
 							</select>
-							<button class="svg tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
+							<button class="icon icon-upload svg tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
 							<input id="import_upload_start" class="tooltipped rightwards" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
 						</li>
 						<li class="import-status">
@@ -56,15 +56,15 @@
 						</span>
 						
 						<span class="actions">
-							<a class="delete svg action text permanent">
+							<a class="icon icon-delete delete svg action text permanent">
 								<?php p($l->t('Delete')); ?>
 								<img class="svg" alt="<?php p($l->t('Delete'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/delete.svg")); ?>" />
 							</a>
 							<select class="groups svg action text permanent shared" name="groups">
 								<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
 							</select>
-							<a class="download svg action text permanent"><?php p($l->t('Download')); ?></a>
-							<a class="action svg text permanent merge edit"><?php p($l->t('Merge')); ?></a>
+							<a class="icon icon-download download svg action text permanent"><?php p($l->t('Download')); ?></a>
+							<a class="icon icon-rename action svg text permanent merge edit"><?php p($l->t('Merge')); ?></a>
 						</span>
 					</td>
 					<td class="info email"><?php p($l->t('Email')); ?></td>
@@ -160,8 +160,8 @@
 	<li class="group" data-type="{type}" data-id="{id}">
 		<a class="name" role="button">{name}</a>
 		<span class="utils">
-			<a class="action delete tooltipped rightwards"></a>
-			<a class="action edit tooltipped rightwards"></a>
+			<a class="icon icon-delete action delete tooltipped rightwards"></a>
+			<a class="icon icon-rename action edit tooltipped rightwards"></a>
 			<span class="action numcontacts">{num}</span>
 		</span>
 	</li>
@@ -192,7 +192,7 @@
 		</td>
 		<td class="email">
 			<a href="mailto:{email}">{email}</a>
-			<a class="svg mailto hidden" title="<?php p($l->t('Compose mail')); ?>"></a>
+			<a class="icon icon-mail svg mailto hidden" title="<?php p($l->t('Compose mail')); ?>"></a>
 		</td>
 		<td class="tel">{tel}</td>
 		<td class="adr">{adr}</td>
@@ -220,10 +220,10 @@
 		<li>
 			<div id="photowrapper" class="propertycontainer" data-element="photo">
 				<ul id="phototools" class="transparent hidden">
-					<li><a class="action delete" title="<?php echo $l->t('Delete current photo'); ?>"></a></li>
-					<li><a class="action edit" title="<?php echo $l->t('Edit current photo'); ?>"></a></li>
-					<li><a class="action upload" title="<?php echo $l->t('Upload new photo'); ?>"></a></li>
-					<li><a class="action cloud icon-cloud" title="<?php echo $l->t('Select photo from ownCloud'); ?>"></a></li>
+					<li><a class="icon icon-delete action delete" title="<?php echo $l->t('Delete current photo'); ?>"></a></li>
+					<li><a class="icon icon-rename action edit" title="<?php echo $l->t('Edit current photo'); ?>"></a></li>
+					<li><a class="icon icon-upload action upload" title="<?php echo $l->t('Upload new photo'); ?>"></a></li>
+					<li><a class="icon icon-folder action cloud icon-cloud" title="<?php echo $l->t('Select photo from Files'); ?>"></a></li>
 				</ul>
 				<a class="favorite {favorite}"></a>
 			</div>
@@ -268,7 +268,7 @@
 					<label class="propertyname"></label>
 					<input class="value rightwards onfocus" type="text" name="value" value="{nickname}" required />
 					<span class="listactions">
-						<a role="button" class="action delete"></a>
+						<a role="button" class="icon icon-delete action delete"></a>
 					</span>
 				</dd>
 			</div>
@@ -278,7 +278,7 @@
 					<label class="propertyname"></label>
 					<input class="value rightwards onfocus" type="text" name="value" value="{title}" required />
 					<span class="listactions">
-						<a role="button" class="action delete"></a>
+						<a role="button" class="icon icon-delete action delete"></a>
 					</span>
 				</dd>
 			</div>
@@ -288,7 +288,7 @@
 					<label class="propertyname"></label>
 					<input class="value rightwards onfocus" type="text" name="value" value="{org}" required />
 					<span class="listactions">
-						<a role="button" class="action delete"></a>
+						<a role="button" class="icon icon-delete action delete"></a>
 					</span>
 				</dd>
 			</div>
@@ -298,7 +298,7 @@
 					<label class="propertyname"></label>
 					<input class="value rightwards onfocus" type="text" name="value" value="{bday}" required />
 					<span class="listactions">
-						<a role="button" class="action delete"></a>
+						<a role="button" class="icon icon-delete action delete"></a>
 					</span>
 				</dd>
 			</d>
@@ -375,8 +375,8 @@
 			</span>
 			<input type="email" class="nonempty value" name="value" value="{value}" x-moz-errormessage="<?php p($l->t('Please specify a valid email address.')); ?>" placeholder="<?php p($l->t('someone@example.com')); ?>" required />
 			<span class="listactions">
-				<a class="action mail tooltipped leftwards" title="<?php p($l->t('Mail to address')); ?>"></a>
-				<a role="button" class="action delete tooltipped leftwards" title="<?php p($l->t('Delete email address')); ?>"></a>
+				<a class="icon icon-mail action mail tooltipped leftwards" title="<?php p($l->t('Mail to address')); ?>"></a>
+				<a role="button" class="icon icon-delete action delete tooltipped leftwards" title="<?php p($l->t('Delete email address')); ?>"></a>
 			</span>
 		</li>
 	</div>
@@ -390,7 +390,7 @@
 			</span>
 			<input type="text" class="nonempty value" name="value" value="{value}" placeholder="<?php p($l->t('Enter phone number')); ?>" required />
 			<span class="listactions">
-				<a role="button" class="action delete tooltipped leftwards"></a>
+				<a role="button" class="icon icon-delete action delete tooltipped leftwards"></a>
 			</span>
 		</li>
 	</div>
@@ -404,8 +404,8 @@
 			</span>
 			<input type="url" class="nonempty value" name="value" value="{value}" placeholder="http://www.example.com/" required />
 			<span class="listactions">
-				<a role="button" class="action globe tooltipped leftwards" title="<?php p($l->t('Go to web site')); ?>">
-				<a role="button" class="action delete tooltipped leftwards"></a>
+				<a role="button" class="icon icon-public action globe tooltipped leftwards" title="<?php p($l->t('Go to web site')); ?>">
+				<a role="button" class="icon icon-delete action delete tooltipped leftwards"></a>
 			</span>
 		</li>
 	</div>
@@ -421,8 +421,8 @@
 				<span class="adr">{value}</span>
 			</span>
 			<span class="listactions">
-				<a class="action globe tooltipped leftwards" title="<?php p($l->t('View on map')); ?>"></a>
-				<a class="action delete tooltipped leftwards"></a>
+				<a class="icon icon-public action globe tooltipped leftwards" title="<?php p($l->t('View on map')); ?>"></a>
+				<a class="icon icon-delete action delete tooltipped leftwards"></a>
 			</span>
 			<fieldset class="adr hidden editor">
 				<ul>
@@ -472,7 +472,7 @@
 			<input type="text" class="nonempty value" name="value" value="{value}"
 					placeholder="<?php p($l->t('Instant Messenger')); ?>" required />
 			<span class="listactions">
-				<a role="button" class="action delete tooltipped leftwards"></a>
+				<a role="button" class="icon icon-delete action delete tooltipped leftwards"></a>
 			</span>
 		</li>
 	</div>
@@ -486,11 +486,11 @@
 	<input type="checkbox" name="active" checked="checked" title="<?php p($l->t('Active')); ?>" />
 	<label>{displayname}</label>
 	<span class="actions">
-		<a title="<?php p($l->t('Share')); ?>" class="share action" data-possible-permissions="{permissions}" data-item="{id}" data-item-type="addressbook"></a>
-		<a title="<?php p($l->t('Export')); ?>" class="download action"></a>
-		<a title="<?php p($l->t('CardDAV link')); ?>" class="globe action"></a>
-		<a title="<?php p($l->t('Edit')); ?>" class="edit action"></a>
-		<a title="<?php p($l->t('Delete')); ?>" class="delete action"></a>
+		<a title="<?php p($l->t('Share')); ?>" class="icon icon-share share action" data-possible-permissions="{permissions}" data-item="{id}" data-item-type="addressbook"></a>
+		<a title="<?php p($l->t('Export')); ?>" class="icon icon-download download action"></a>
+		<a title="<?php p($l->t('CardDAV link')); ?>" class="icon icon-public globe action"></a>
+		<a title="<?php p($l->t('Edit')); ?>" class="icon icon-rename edit action"></a>
+		<a title="<?php p($l->t('Delete')); ?>" class="icon icon-delete delete action"></a>
 	</span>
 </li>
 </script>

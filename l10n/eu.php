@@ -184,6 +184,7 @@
 "First- Lastname" => "Izena, Abizena",
 "Last-, Firstname" => "Abizena, Izena",
 "Groups" => "Taldeak",
+"Merge" => "Elkartu",
 "Email" => "E-posta",
 "Phone" => "Telefonoa",
 "Address" => "Helbidea",

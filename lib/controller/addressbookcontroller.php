@@ -75,7 +75,7 @@ class AddressBookController extends Controller {
 			$response->setETag($etag);
 		}
 
-		//$response->debug('comparing: "' . $etag . '" to ' . $this->request->getHeader('If-None-Match'));
+		error_log('comparing: "' . $etag . '" to ' . $this->request->getHeader('If-None-Match'));
 		if(!is_null($etag)
 			&& $this->request->getHeader('If-None-Match') === '"'.$etag.'"')
 		{

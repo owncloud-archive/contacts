@@ -189,6 +189,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 				'etag' => '"' . md5($contact['carddata']) . '"',
 				'uri' => urlencode($contact['uri']),
 				'lastmodified' => $contact['lastmodified'] );
+				error_log("backend.getCards(".urlencode($contact['uri'])."): ".md5($contact['carddata'])." - ".$contact['carddata']);
 		}
 
 		return $cards;
@@ -212,6 +213,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 		}
 		if(is_array($contact) ) {
 			$contact['etag'] = '"' . md5($contact['carddata']) . '"';
+			error_log("backend.getCard($carduri): ".$contact['etag']." - ".$contact['carddata']);
 			return $contact;
 		}
 		//throw new \Sabre_DAV_Exception('Error retrieving the card');

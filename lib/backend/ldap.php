@@ -294,7 +294,7 @@ class Ldap extends AbstractBackend {
 			$current['owner'] = $this->userid;
 			$current['uri'] = (string)$preferences['uri'];
 			$current['permissions'] = \OCP\PERMISSION_ALL;
-      $current['lastmodified'] = self::lastModifiedAddressBook($addressbookid);
+			$current['lastmodified'] = self::lastModifiedAddressBook($addressbookid);
 			return $current;
 		} else {
 			return array();
