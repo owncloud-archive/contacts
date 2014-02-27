@@ -6,7 +6,7 @@
 # Dr. ROX <to.dr.rox@gmail.com>, 2011-2012
 # Dr. ROX <to.dr.rox@gmail.com>, 2011, 2012
 # fizikiukas <fizikiukas@gmail.com>, 2013
-# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2013
+# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2013-2014
 # Liudas <liudas@aksioma.lt>, 2013
 # mambuta <vspyshkin@gmail.com>, 2013
 # mambuta <vspyshkin@gmail.com>, 2013
@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-16 01:13-0500\n"
-"PO-Revision-Date: 2014-02-15 11:30+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-27 00:49-0500\n"
+"PO-Revision-Date: 2014-02-26 12:00+0000\n"
+"Last-Translator: Liudas Ališauskas <liudas.alisauskas@gmail.com>\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/projects/p/owncloud/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,129 +77,129 @@ msgstr ""
 msgid "Error."
 msgstr "Klaida."
 
-#: js/app.js:323 js/app.js:337
+#: js/app.js:321 js/app.js:335
 msgid "Add to..."
 msgstr "Pridėti į..."
 
-#: js/app.js:327 js/app.js:339
+#: js/app.js:325 js/app.js:337
 msgid "Remove from..."
 msgstr "Pašalinti iš..."
 
-#: js/app.js:344
+#: js/app.js:342
 msgid "Add group..."
 msgstr "Pridėti grupę..."
 
-#: js/app.js:472
+#: js/app.js:470
 msgid "Invalid URL: \"{url}\""
 msgstr "Netinkamas URL\" „{url}“"
 
-#: js/app.js:483
+#: js/app.js:481
 msgid "There was an error opening a mail composer."
 msgstr "Buvo klaida atveriant el. laiško redaktorių."
 
-#: js/app.js:488
+#: js/app.js:486
 msgid "Invalid email: \"{url}\""
 msgstr "Netinkamas el. paštas"
 
-#: js/app.js:571
+#: js/app.js:569
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Suliejimas nepavyko. Nepavyksta rasti kontakto: {id}"
 
-#: js/app.js:584
+#: js/app.js:582
 msgid "Merge failed."
 msgstr "Sulieti nepavyko."
 
-#: js/app.js:591
+#: js/app.js:589
 msgid "Merge failed. Error saving contact."
 msgstr "Suliejimas nepavyko. Klaida saugant kontaktą."
 
-#: js/app.js:611
+#: js/app.js:609
 msgid "Select photo"
 msgstr "Nurodykite nuotrauką"
 
-#: js/app.js:691 js/app.js:1633
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr "Tinklo arba serverio klaida. Prašome informuoti administratorių."
 
-#: js/app.js:913
+#: js/app.js:911
 msgid "Error adding to group."
 msgstr "Klaida pridedant į grupę."
 
-#: js/app.js:936
+#: js/app.js:934
 msgid "Error removing from group."
 msgstr "Klaida pašalinant iš grupės."
 
-#: js/app.js:1112
+#: js/app.js:1110
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "Jūs pažymėjote daugiau nei 300 kontaktų.\nTai greičiausiai nepavyks! Spauskite, kad vis tiek bandyti."
 
-#: js/app.js:1150
+#: js/app.js:1148
 msgid "Error setting {name} as favorite."
 msgstr "Klaida nustatant {name} mėgstamu."
 
-#: js/app.js:1289 js/app.js:1293 templates/contacts.php:171
+#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Sulieti kontaktus"
 
-#: js/app.js:1315 js/app.js:1368 js/settings.js:120 templates/settings.php:62
+#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
 msgstr "Atšaukti"
 
-#: js/app.js:1342 templates/contacts.php:152
+#: js/app.js:1340 templates/contacts.php:152
 msgid "Add group"
 msgstr "Pridėti grupę"
 
-#: js/app.js:1346
+#: js/app.js:1344
 msgid "OK"
 msgstr "Gerai"
 
-#: js/app.js:1457
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr "Nepavyko rasti kontakto: {id}"
 
-#: js/app.js:1480
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr "Nepažymėta jokių failų įkėlimui."
 
-#: js/app.js:1490
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Įkeliamo failo dydis viršijo šio serverio maksimalų leistiną dydį."
 
-#: js/app.js:1591
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr "Redaguoti profilio paveikslėlį"
 
-#: js/app.js:1595
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr "Apkirpti nuotrauką"
 
-#: js/contacts.js:878
+#: js/contacts.js:889
 msgid "Error parsing date: {date}"
 msgstr "Klaida apdorojant datą: {date}"
 
-#: js/contacts.js:1082
+#: js/contacts.js:1093
 msgid "# groups"
 msgstr "# grupės"
 
-#: js/contacts.js:1156
+#: js/contacts.js:1167
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Klaida apdorojant gimtadienį {bday}"
 
-#: js/contacts.js:2228
+#: js/contacts.js:2240
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Keletas kontaktų buvo pažymėti ištrinimui, bet dar neištrinti. Prašome palaukti kol jie bus ištrinti."
 
-#: js/contacts.js:2239
+#: js/contacts.js:2251
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Spauskite, kad atstatyti trynimą {num} kontaktų"
 
-#: js/contacts.js:2248
+#: js/contacts.js:2260
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Atšauktas {num} kontaktų trynimas"
 
@@ -229,7 +229,7 @@ msgstr "KontaktaI nėra šioje grupėje."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "Grupė pavadinimu „{group}“ jau egzistuoja"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -470,15 +470,15 @@ msgstr "Nepavyko rasti kontakto."
 
 #: lib/controller/contactcontroller.php:60
 msgid "No contact data in request."
-msgstr ""
+msgstr "Nėra kontakto duomenų užklausoje."
 
 #: lib/controller/contactcontroller.php:68
 msgid "Error merging into contact."
-msgstr ""
+msgstr "Klaida suliejant į kontaktą."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
-msgstr ""
+msgstr "Klaida išsaugant kontaktą sistemoje."
 
 #: lib/controller/contactcontroller.php:102
 msgid "Property name is not set."
@@ -498,7 +498,7 @@ msgstr "Klaida atnaujinant kontaktą"
 
 #: lib/controller/contactcontroller.php:140
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Klaida išsaugant kontaktą į sistemą."
 
 #: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
@@ -593,11 +593,11 @@ msgstr "Klaida pridedant grupę."
 
 #: lib/controller/groupcontroller.php:130
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Nėra grupės pavadinimo, kad pervadinti iš pateikto."
 
 #: lib/controller/groupcontroller.php:134
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Nėra grupės pavadinimo, kad pervadinti į pateiktą."
 
 #: lib/controller/groupcontroller.php:140
 msgid "Error renaming group."
@@ -606,16 +606,16 @@ msgstr "Klaida pervadinant grupę."
 #: lib/controller/groupcontroller.php:178
 #: lib/controller/groupcontroller.php:224
 msgid "Group ID missing from request."
-msgstr ""
+msgstr "Užklausoje trūksta grupės ID."
 
 #: lib/controller/groupcontroller.php:183
 msgid "Group name missing from request."
-msgstr ""
+msgstr "Užklausoje trūksta grupės pavadinimo."
 
 #: lib/controller/groupcontroller.php:188
 #: lib/controller/groupcontroller.php:229
 msgid "Contact ID missing from request."
-msgstr ""
+msgstr "Užklausoje trūksta kontakto ID."
 
 #: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
@@ -648,7 +648,7 @@ msgstr "Užklausoje trūksta failo pavadinimo."
 #: lib/controller/importcontroller.php:170
 #: lib/controller/importcontroller.php:293
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "Užklausoje trūksta eigos rakto."
 
 #: lib/controller/importcontroller.php:176
 msgid "Attempt to access blacklisted file:"
@@ -670,7 +670,7 @@ msgstr "Nepateikta vertė."
 msgid "Could not set preference: "
 msgstr "Nepavyko nustatyti:"
 
-#: lib/searchprovider.php:32
+#: lib/searchprovider.php:37
 msgid "Contact"
 msgstr "Kontaktas"
 
@@ -792,7 +792,7 @@ msgstr "Šeima"
 
 #: templates/contacts.php:6
 msgid "New contact"
-msgstr ""
+msgstr "Naujas kontaktas"
 
 #: templates/contacts.php:10
 msgid "Group name"
@@ -800,7 +800,7 @@ msgstr "Grupės pavadinimas"
 
 #: templates/contacts.php:10
 msgid "New group"
-msgstr ""
+msgstr "Nauja grupė"
 
 #: templates/contacts.php:19
 msgid "Address books"
@@ -840,7 +840,7 @@ msgstr "Grupės"
 
 #: templates/contacts.php:67
 msgid "Merge"
-msgstr ""
+msgstr "Sulieti"
 
 #: templates/contacts.php:70 templates/contacts.php:347
 msgid "Email"
@@ -919,11 +919,11 @@ msgstr "Pridėti kontaktą"
 
 #: templates/contacts.php:172
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "Į kurį kontaktą sulieti duomenis?"
 
 #: templates/contacts.php:180
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Ištrinti kitą(-us) sėkmingai suliejus?"
 
 #: templates/contacts.php:195
 msgid "Compose mail"

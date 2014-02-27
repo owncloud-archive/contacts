@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-16 01:13-0500\n"
-"PO-Revision-Date: 2014-02-15 11:30+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-02-27 00:49-0500\n"
+"PO-Revision-Date: 2014-02-26 18:40+0000\n"
+"Last-Translator: asieriko <asieriko@gmail.com>\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,129 +74,129 @@ msgstr "Errorea izan da helbide-liburua kargatzerakoan : {msg}"
 msgid "Error."
 msgstr "Akatsa."
 
-#: js/app.js:323 js/app.js:337
+#: js/app.js:321 js/app.js:335
 msgid "Add to..."
 msgstr "Gehitu hemen..."
 
-#: js/app.js:327 js/app.js:339
+#: js/app.js:325 js/app.js:337
 msgid "Remove from..."
 msgstr "Ezabatu hemendik..."
 
-#: js/app.js:344
+#: js/app.js:342
 msgid "Add group..."
 msgstr "Gehitu taldea..."
 
-#: js/app.js:472
+#: js/app.js:470
 msgid "Invalid URL: \"{url}\""
 msgstr "URL ez-egokia: \"{url}\""
 
-#: js/app.js:483
+#: js/app.js:481
 msgid "There was an error opening a mail composer."
 msgstr "Errore bat izan da posta editorea abiaraztean."
 
-#: js/app.js:488
+#: js/app.js:486
 msgid "Invalid email: \"{url}\""
 msgstr "e-posta ez egokia: \"{url}\""
 
-#: js/app.js:571
+#: js/app.js:569
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Bateratzeak huts egin du. Ezin izan da kontaktua aurkitu: {id}"
 
-#: js/app.js:584
+#: js/app.js:582
 msgid "Merge failed."
 msgstr "Bateratzeak huts egin du."
 
-#: js/app.js:591
+#: js/app.js:589
 msgid "Merge failed. Error saving contact."
 msgstr "Bateratzeak huts egin du. Errorea kontaktua gordetzerakoan."
 
-#: js/app.js:611
+#: js/app.js:609
 msgid "Select photo"
 msgstr "Hautatu argazkia"
 
-#: js/app.js:691 js/app.js:1633
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr "Errore bat izan da sare edo zerbitzarian. Mesedez abisatu administradorea."
 
-#: js/app.js:913
+#: js/app.js:911
 msgid "Error adding to group."
 msgstr "Errore bat izan da taldera gehitzean."
 
-#: js/app.js:936
+#: js/app.js:934
 msgid "Error removing from group."
 msgstr "Errore bat izan da taldetik kentzean."
 
-#: js/app.js:1112
+#: js/app.js:1110
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300 kontaktu baino gehiago hautatu dituzu.\nHonek ziurasko huts egingo du! Sakatu hemen hala ere jarraitzeko."
 
-#: js/app.js:1150
+#: js/app.js:1148
 msgid "Error setting {name} as favorite."
 msgstr "Errorea {name} gogokoetara gehitzerakoan."
 
-#: js/app.js:1289 js/app.js:1293 templates/contacts.php:171
+#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Kontaktuak batu"
 
-#: js/app.js:1315 js/app.js:1368 js/settings.js:120 templates/settings.php:62
+#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
 msgstr "Ezeztatu"
 
-#: js/app.js:1342 templates/contacts.php:152
+#: js/app.js:1340 templates/contacts.php:152
 msgid "Add group"
 msgstr "Gehitu taldea"
 
-#: js/app.js:1346
+#: js/app.js:1344
 msgid "OK"
 msgstr "Ados"
 
-#: js/app.js:1457
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr "Ezin izan dugu kontaktua topatu:  {id}"
 
-#: js/app.js:1480
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr "Ez duzu igotzeko fitxategirik hautatu."
 
-#: js/app.js:1490
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Igo nahi duzun fitxategia zerbitzariak onartzen duen tamaina baino handiagoa da."
 
-#: js/app.js:1591
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr "Editatu profilaren argazkia"
 
-#: js/app.js:1595
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr "Moztu argazkia"
 
-#: js/contacts.js:878
+#: js/contacts.js:889
 msgid "Error parsing date: {date}"
 msgstr "Errorea data aztertzerakoan: {date}"
 
-#: js/contacts.js:1082
+#: js/contacts.js:1093
 msgid "# groups"
 msgstr "# taldeak"
 
-#: js/contacts.js:1156
+#: js/contacts.js:1167
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2228
+#: js/contacts.js:2240
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Kontaktu batzuk ezabatzeko markatuta daude, baina oraindik ez dira ezabatu. Mesedez itxoin ezabatu arte."
 
-#: js/contacts.js:2239
+#: js/contacts.js:2251
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikatu {num} kontaktuen ezabaketa desegiteko"
 
-#: js/contacts.js:2248
+#: js/contacts.js:2260
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num} kontaktuen ezabaketa ezeztatuta"
 
@@ -667,7 +667,7 @@ msgstr "Ez da baliorik eman."
 msgid "Could not set preference: "
 msgstr "Ezin izan da lehentasuna ezarri:"
 
-#: lib/searchprovider.php:32
+#: lib/searchprovider.php:37
 msgid "Contact"
 msgstr "Kontaktua"
 
@@ -837,7 +837,7 @@ msgstr "Taldeak"
 
 #: templates/contacts.php:67
 msgid "Merge"
-msgstr ""
+msgstr "Elkartu"
 
 #: templates/contacts.php:70 templates/contacts.php:347
 msgid "Email"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-25 00:49-0500\n"
-"PO-Revision-Date: 2014-02-24 12:10+0000\n"
+"POT-Creation-Date: 2014-02-27 00:49-0500\n"
+"PO-Revision-Date: 2014-02-26 13:00+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Khmer (http://www.transifex.com/projects/p/owncloud/language/km/)\n"
 "MIME-Version: 1.0\n"
@@ -169,29 +169,29 @@ msgstr ""
 msgid "Crop photo"
 msgstr ""
 
-#: js/contacts.js:878
+#: js/contacts.js:889
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1082
+#: js/contacts.js:1093
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:1156
+#: js/contacts.js:1167
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2228
+#: js/contacts.js:2240
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2239
+#: js/contacts.js:2251
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2248
+#: js/contacts.js:2260
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -363,7 +363,7 @@ msgstr ""
 
 #: lib/addressbook.php:290
 msgid "Unknown error"
-msgstr ""
+msgstr "មិន​ស្គាល់​កំហុស"
 
 #: lib/addressbook.php:332
 msgid "The backend for this address book does not support updating"
@@ -662,7 +662,7 @@ msgstr ""
 msgid "Could not set preference: "
 msgstr ""
 
-#: lib/searchprovider.php:32
+#: lib/searchprovider.php:37
 msgid "Contact"
 msgstr ""
 
@@ -748,7 +748,7 @@ msgstr ""
 
 #: lib/utils/properties.php:172
 msgid "Text"
-msgstr ""
+msgstr "អត្ថបទ"
 
 #: lib/utils/properties.php:173
 msgid "Voice"
@@ -828,7 +828,7 @@ msgstr ""
 
 #: templates/contacts.php:64 templates/contacts.php:255
 msgid "Groups"
-msgstr ""
+msgstr "ក្រុ"
 
 #: templates/contacts.php:67
 msgid "Merge"
@@ -836,7 +836,7 @@ msgstr ""
 
 #: templates/contacts.php:70 templates/contacts.php:347
 msgid "Email"
-msgstr ""
+msgstr "អ៊ីមែល"
 
 #: templates/contacts.php:71 templates/contacts.php:346
 msgid "Phone"
@@ -940,7 +940,7 @@ msgstr ""
 #: templates/contacts.php:231 templates/contacts.php:233
 #: templates/settings.php:59
 msgid "Name"
-msgstr ""
+msgstr "ឈ្មោះ"
 
 #: templates/contacts.php:239
 msgid "First name"
