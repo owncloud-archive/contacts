@@ -944,7 +944,7 @@ OC.Contacts = OC.Contacts || {
 
 		this.$contactList.on('mouseenter', 'tr.contact', function(event) {
 			var $td = $(this).find('td').filter(':visible').last();
-			$('<a />').addClass('svg delete action').appendTo($td);
+			$('<a />').addClass('icon-delete svg delete action').appendTo($td);
 		});
 
 		this.$contactList.on('mouseleave', 'tr.contact', function(event) {
