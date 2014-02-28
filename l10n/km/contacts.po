@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-27 00:49-0500\n"
-"PO-Revision-Date: 2014-02-26 13:00+0000\n"
+"POT-Creation-Date: 2014-02-28 00:49-0500\n"
+"PO-Revision-Date: 2014-02-28 05:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Khmer (http://www.transifex.com/projects/p/owncloud/language/km/)\n"
 "MIME-Version: 1.0\n"
@@ -454,8 +454,8 @@ msgstr ""
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:274
+#: lib/controller/contactphotocontroller.php:37
+#: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr ""
@@ -492,7 +492,7 @@ msgstr ""
 msgid "Error saving contact to backend"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:69
+#: lib/controller/contactphotocontroller.php:68
 msgid "Error getting user photo"
 msgstr ""
 
@@ -537,38 +537,38 @@ msgstr ""
 msgid "Couldn't load temporary image: "
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:162
+#: lib/controller/contactphotocontroller.php:128
+msgid "Uploaded image is invalid"
+msgstr ""
+
+#: lib/controller/contactphotocontroller.php:132
+#: lib/controller/contactphotocontroller.php:172
 msgid "Couldn't save temporary image: "
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:191
+#: lib/controller/contactphotocontroller.php:202
 msgid "No photo path was submitted."
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:198
+#: lib/controller/contactphotocontroller.php:209
 msgid "File doesn't exist:"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:203
-#: lib/controller/contactphotocontroller.php:206
+#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error loading image."
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:279
+#: lib/controller/contactphotocontroller.php:285
 msgid "Image has been removed from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:285
+#: lib/controller/contactphotocontroller.php:291
 msgid "Error creating temporary image"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:292
+#: lib/controller/contactphotocontroller.php:298
 msgid "Error cropping image"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:297
-msgid "Error resizing image"
 msgstr ""
 
 #: lib/controller/contactphotocontroller.php:315
@@ -934,7 +934,7 @@ msgid "Upload new photo"
 msgstr ""
 
 #: templates/contacts.php:226
-msgid "Select photo from ownCloud"
+msgid "Select photo from Files"
 msgstr ""
 
 #: templates/contacts.php:231 templates/contacts.php:233

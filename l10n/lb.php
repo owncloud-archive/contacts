@@ -35,7 +35,6 @@
 "File doesn't exist:" => "Fichier existéiert net:",
 "Error loading image." => "Fehler beim lueden vum Bild.",
 "Error cropping image" => "Feeler beim Schneide vum Bild",
-"Error resizing image" => "Feeler beim Redimensionnéiere vum Bild",
 "Error getting PHOTO property." => "Feeler beim Luede vun der PHOTO-Eegeschaft.",
 "Failed to write to disk" => "Konnt net op den Disk schreiwen",
 "Contact" => "Kontakt",
