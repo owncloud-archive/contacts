@@ -21,9 +21,6 @@
 	text-overflow: ellipsis;
 }
 
-#contact input:not([type=checkbox]), #contact select:not(.button), #contact textarea {
-	float: left;
-}
 #contact .label {
 	float: right !important;
 }
