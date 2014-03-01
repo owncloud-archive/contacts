@@ -1662,8 +1662,9 @@ OC.Contacts = OC.Contacts || {};
 			console.log('adding avatar for', self.getDisplayName());
 			$photowrapper.find('.contactphoto').remove();
 			var name = String(self.getDisplayName()).replace(' ', '').replace(',', '');
+			console.log('height', $photowrapper.height());
 			$('<div />').appendTo($photowrapper)
-				.css({width: $photowrapper.width()-10, height: $photowrapper.height()-10})
+				.css({width: '170', height: '170'})
 				.addClass('contactphoto')
 				.imageplaceholder(name || '#');
 		};
