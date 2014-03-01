@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-28 00:49-0500\n"
-"PO-Revision-Date: 2014-02-28 05:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-01 00:48-0500\n"
+"PO-Revision-Date: 2014-03-01 01:30+0000\n"
+"Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -191,17 +191,17 @@ msgstr "# gruppi"
 msgid "Error parsing birthday {bday}"
 msgstr "Errore durante l'elaborazione della data di nascita {bday}"
 
-#: js/contacts.js:2240
+#: js/contacts.js:2241
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alcuni contatti sono marcati per l'eliminazione, ma non sono stati ancora rimossi. Attendi fino al completamento dell'operazione."
 
-#: js/contacts.js:2251
+#: js/contacts.js:2252
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Un clic per annullare l'eliminazione di {num} contatti"
 
-#: js/contacts.js:2260
+#: js/contacts.js:2261
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Eliminazione di {num} contatti annullata"
 
@@ -549,7 +549,7 @@ msgstr "Impossibile caricare l'immagine temporanea: "
 
 #: lib/controller/contactphotocontroller.php:128
 msgid "Uploaded image is invalid"
-msgstr ""
+msgstr "L'immagine caricata non è valida"
 
 #: lib/controller/contactphotocontroller.php:132
 #: lib/controller/contactphotocontroller.php:172
@@ -945,7 +945,7 @@ msgstr "Invia una nuova foto"
 
 #: templates/contacts.php:226
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Seleziona foto da File"
 
 #: templates/contacts.php:231 templates/contacts.php:233
 #: templates/settings.php:59

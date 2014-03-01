@@ -22,9 +22,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-28 00:49-0500\n"
-"PO-Revision-Date: 2014-02-28 05:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-01 00:48-0500\n"
+"PO-Revision-Date: 2014-02-28 16:31+0000\n"
+"Last-Translator: Helder Meneses <helder.meneses@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -196,17 +196,17 @@ msgstr "# grupos"
 msgid "Error parsing birthday {bday}"
 msgstr "Erro ao analisar aniversário {bday}"
 
-#: js/contacts.js:2240
+#: js/contacts.js:2241
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alguns contactos forma marcados para apagar, mas ainda não foram apagados. Por favor espere que ele sejam apagados."
 
-#: js/contacts.js:2251
+#: js/contacts.js:2252
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Clique para desfazer a eliminar de {num} contactos"
 
-#: js/contacts.js:2260
+#: js/contacts.js:2261
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancelada a eliminação de {num} contactos"
 
@@ -554,7 +554,7 @@ msgstr "Não é possível carregar a imagem temporária: "
 
 #: lib/controller/contactphotocontroller.php:128
 msgid "Uploaded image is invalid"
-msgstr ""
+msgstr "A imagem carregada é invalida"
 
 #: lib/controller/contactphotocontroller.php:132
 #: lib/controller/contactphotocontroller.php:172
@@ -950,7 +950,7 @@ msgstr "Carregar nova foto"
 
 #: templates/contacts.php:226
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Seleccione a foto a partir dos ficheiros"
 
 #: templates/contacts.php:231 templates/contacts.php:233
 #: templates/settings.php:59
