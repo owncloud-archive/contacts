@@ -209,7 +209,7 @@ OC.Contacts = OC.Contacts || {
 				if(!contacts_properties_indexed) {
 					// Wait a couple of mins then check if contacts are indexed.
 					setTimeout(function() {
-							$.when($.post(OC.Router.generate('contacts_index_properties')))
+							$.when($.post(OC.generateUrl('indexproperties/{user}/')))
 								.then(function(response) {
 									if(!response.isIndexed) {
 										OC.notify({message:t('contacts', 'Indexing contacts'), timeout:20});
@@ -536,7 +536,7 @@ OC.Contacts = OC.Contacts || {
 
 		$(document).bind('request.contact.export', function(e, data) {
 			console.log('request.contact.export', data);
-			document.location.href = OC.Router.generate('contacts_contact_export', data);
+			document.location.href = OC.generateUrl('addressbook/{backend}/{addressBookId}/contact/{contactId}/export', data);
 		});
 
 		$(document).bind('request.contact.close', function(e, data) {
@@ -752,8 +752,8 @@ OC.Contacts = OC.Contacts || {
 		});*/
 		$('#contactphoto_fileupload').on('click', function(event, metadata) {
 			var form = $('#file_upload_form');
-			var url = OC.Router.generate(
-				'contacts_upload_contact_photo',
+			var url = OC.generateUrl(
+				'addressbook/{backend}/{addressBookId}/contact/{contactId}/photo',
 				{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId}
 			);
 			form.attr('action', url);
@@ -1096,7 +1096,7 @@ OC.Contacts = OC.Contacts || {
 					}
 					targets[contact.backend][contact.addressBookId].push(contact.contactId);
 				});
-				var url = OC.Router.generate('contacts_export_selected', {t:targets});
+				var url = OC.generateUrl('exportSelected', {t:targets});
 				//console.log('export url', url);
 				document.location.href = url;
 			};
@@ -1495,8 +1495,8 @@ OC.Contacts = OC.Contacts || {
 	cloudPhotoSelected:function(metadata, path) {
 		var self = this;
 		console.log('cloudPhotoSelected', metadata);
-		var url = OC.Router.generate(
-			'contacts_cache_fs_photo',
+		var url = OC.generateUrl(
+			'addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/cacheFS',
 			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId, path: path}
 		);
 		var jqXHR = $.getJSON(url, function(response) {
@@ -1511,8 +1511,8 @@ OC.Contacts = OC.Contacts || {
 	},
 	editCurrentPhoto:function(metadata) {
 		var self = this;
-		var url = OC.Router.generate(
-			'contacts_cache_contact_photo',
+		var url = OC.generateUrl(
+			'addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/cacheCurrent',
 			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId}
 		);
 		console.log('url', url);
@@ -1547,8 +1547,8 @@ OC.Contacts = OC.Contacts || {
 			this.$cropBoxTmpl = $('#cropBoxTemplate');
 		}
 		var $container = $('<div />').appendTo($('body'));
-		var url = OC.Router.generate(
-			'contacts_crop_contact_photo',
+		var url = OC.generateUrl(
+			'addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/{key}/crop',
 			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId, key: tmpkey}
 		);
 		var $dlg = this.$cropBoxTmpl.octemplate(
@@ -1642,14 +1642,12 @@ OC.Contacts = OC.Contacts || {
 
 $(document).ready(function() {
 
-	OC.Router.registerLoadedCallback(function() {
-		$.getScript(OC.Router.generate('contacts_jsconfig'))
-		.done(function() {
-			OC.Contacts.init();
-		})
-		.fail(function(jqxhr, settings, exception) {
-			console.log('Failed loading settings.', jqxhr, settings, exception);
-		});
+	$.getScript(OC.generateUrl('ajax/config.js'))
+	.done(function() {
+		OC.Contacts.init();
+	})
+	.fail(function(jqxhr, settings, exception) {
+		console.log('Failed loading settings.', jqxhr, settings, exception);
 	});
 
 });
