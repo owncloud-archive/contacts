@@ -42,7 +42,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 		this.$li.find('a.action.download')
 			.attr('href', OC.generateUrl(
-				'addressbook/{backend}/{addressBookId}/export',
+				'apps/contacts/addressbook/{backend}/{addressBookId}/export',
 				{
 					backend: this.getBackend(),
 					addressBookId: this.getId()
@@ -280,7 +280,7 @@ OC.Contacts = OC.Contacts || {};
 			self.$importFileInput.prop('disabled', value === '-1' );
 			if(value !== '-1') {
 				var url = OC.generateUrl(
-					'addressbook/{backend}/{addressBookId}/import/upload',
+					'apps/contacts/addressbook/{backend}/{addressBookId}/import/upload',
 					{addressBookId:value, backend: $(this).find('option:selected').data('backend')}
 				);
 				self.$importFileInput.fileupload('option', 'url', url);

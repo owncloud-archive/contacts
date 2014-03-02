@@ -312,7 +312,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.getContactPhoto = function(backend, addressBookId, contactId) {
 		var photo = new Image();
 		var url = OC.generateUrl(
-			'addressbook/{backend}/{addressBookId}/contact/{contactId}/photo',
+			'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo',
 			{backend: backend, addressBookId: addressBookId, contactId: contactId}
 		);
 		var defer = $.Deferred();
@@ -350,7 +350,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.getTempContactPhoto = function(backend, addressBookId, contactId, key) {
 		var photo = new Image();
 		var url = OC.generateUrl(
-			'addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/{key}/tmp',
+			'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/{key}/tmp',
 			{backend: backend, addressBookId: addressBookId, contactId: contactId, key: key, refresh: Math.random()}
 		);
 		console.log('url', url);
@@ -570,7 +570,7 @@ OC.Contacts = OC.Contacts || {};
 		var processData = !isJSON;
 		contentType += '; charset=UTF-8';
 		var self = this;
-		var url = OC.generateUrl(route, routeParams);
+		var url = OC.generateUrl('apps/contacts/' + route, routeParams);
 		var headers = {
 			Accept : 'application/json; charset=utf-8'
 		};
