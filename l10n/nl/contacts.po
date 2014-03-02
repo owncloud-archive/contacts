@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-27 00:49-0500\n"
-"PO-Revision-Date: 2014-02-26 21:30+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-01 00:48-0500\n"
+"PO-Revision-Date: 2014-02-28 21:56+0000\n"
+"Last-Translator: André Koot <meneer@tken.net>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -194,17 +194,17 @@ msgstr "# groepen"
 msgid "Error parsing birthday {bday}"
 msgstr "Error bij interpreteren geboortedatum {bday}"
 
-#: js/contacts.js:2240
+#: js/contacts.js:2241
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd."
 
-#: js/contacts.js:2251
+#: js/contacts.js:2252
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik om het verwijderen van {num} contactpersonen ongedaan te maken."
 
-#: js/contacts.js:2260
+#: js/contacts.js:2261
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Verwijderen van {num} contacten geannuleerd"
 
@@ -467,8 +467,8 @@ msgstr "Fout bij verwijderen contactpersoon uit ander adresboek."
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:274
+#: lib/controller/contactphotocontroller.php:37
+#: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "Kon contactpersoon niet vinden."
@@ -505,7 +505,7 @@ msgstr "Fout bij bijwerken contactpersoon"
 msgid "Error saving contact to backend"
 msgstr "Fout bij opslaan contactpersoongegevens baar backend"
 
-#: lib/controller/contactphotocontroller.php:69
+#: lib/controller/contactphotocontroller.php:68
 msgid "Error getting user photo"
 msgstr "Fout bij ophalen gebruikersfoto"
 
@@ -550,38 +550,38 @@ msgstr "Er ontbreekt een tijdelijke map"
 msgid "Couldn't load temporary image: "
 msgstr "Kan tijdelijk plaatje niet op laden:"
 
-#: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:162
+#: lib/controller/contactphotocontroller.php:128
+msgid "Uploaded image is invalid"
+msgstr "Ge-uploade afbeelding is ongeldig"
+
+#: lib/controller/contactphotocontroller.php:132
+#: lib/controller/contactphotocontroller.php:172
 msgid "Couldn't save temporary image: "
 msgstr "Kan tijdelijk plaatje niet op slaan:"
 
-#: lib/controller/contactphotocontroller.php:191
+#: lib/controller/contactphotocontroller.php:202
 msgid "No photo path was submitted."
 msgstr "Geen fotopad opgestuurd."
 
-#: lib/controller/contactphotocontroller.php:198
+#: lib/controller/contactphotocontroller.php:209
 msgid "File doesn't exist:"
 msgstr "Bestand bestaat niet: "
 
-#: lib/controller/contactphotocontroller.php:203
-#: lib/controller/contactphotocontroller.php:206
+#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error loading image."
 msgstr "Fout bij laden plaatje."
 
-#: lib/controller/contactphotocontroller.php:279
+#: lib/controller/contactphotocontroller.php:285
 msgid "Image has been removed from cache"
 msgstr "Afbeelding is verwijderd uit de cache"
 
-#: lib/controller/contactphotocontroller.php:285
+#: lib/controller/contactphotocontroller.php:291
 msgid "Error creating temporary image"
 msgstr "Fout om een tijdelijk plaatje te maken"
 
-#: lib/controller/contactphotocontroller.php:292
+#: lib/controller/contactphotocontroller.php:298
 msgid "Error cropping image"
-msgstr "Fout tijdens aanpassen plaatje"
-
-#: lib/controller/contactphotocontroller.php:297
-msgid "Error resizing image"
 msgstr "Fout tijdens aanpassen plaatje"
 
 #: lib/controller/contactphotocontroller.php:315
@@ -947,8 +947,8 @@ msgid "Upload new photo"
 msgstr "Upload nieuwe foto"
 
 #: templates/contacts.php:226
-msgid "Select photo from ownCloud"
-msgstr "Selecteer foto uit ownCloud"
+msgid "Select photo from Files"
+msgstr "Kies foto uit Bestanden"
 
 #: templates/contacts.php:231 templates/contacts.php:233
 #: templates/settings.php:59

@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-02-16 01:13-0500\n"
-"PO-Revision-Date: 2014-02-15 11:30+0000\n"
+"POT-Creation-Date: 2014-02-28 00:49-0500\n"
+"PO-Revision-Date: 2014-02-28 05:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -77,129 +77,129 @@ msgstr "アドレス帳の読み込み時に回復不能なエラーが発生: {
 msgid "Error."
 msgstr "エラー"
 
-#: js/app.js:323 js/app.js:337
+#: js/app.js:321 js/app.js:335
 msgid "Add to..."
 msgstr "追加..."
 
-#: js/app.js:327 js/app.js:339
+#: js/app.js:325 js/app.js:337
 msgid "Remove from..."
 msgstr "削除..."
 
-#: js/app.js:344
+#: js/app.js:342
 msgid "Add group..."
 msgstr "グループを追加..."
 
-#: js/app.js:472
+#: js/app.js:470
 msgid "Invalid URL: \"{url}\""
 msgstr "無効なURL: \"{url}\""
 
-#: js/app.js:483
+#: js/app.js:481
 msgid "There was an error opening a mail composer."
 msgstr "メールコンポーザを起動する際にエラーが発生しました。"
 
-#: js/app.js:488
+#: js/app.js:486
 msgid "Invalid email: \"{url}\""
 msgstr "無効なメールアドレス: \"{url}\""
 
-#: js/app.js:571
+#: js/app.js:569
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "マージに失敗しました。 連絡先が見つかりません: {id}"
 
-#: js/app.js:584
+#: js/app.js:582
 msgid "Merge failed."
 msgstr "マージに失敗しました。"
 
-#: js/app.js:591
+#: js/app.js:589
 msgid "Merge failed. Error saving contact."
 msgstr "マージに失敗しました。連絡先の保存エラー。"
 
-#: js/app.js:611
+#: js/app.js:609
 msgid "Select photo"
 msgstr "写真を選択"
 
-#: js/app.js:691 js/app.js:1633
+#: js/app.js:689 js/app.js:1631
 msgid "Network or server error. Please inform administrator."
 msgstr "ネットワークもしくはサーバーエラーです。管理者に連絡してください。"
 
-#: js/app.js:913
+#: js/app.js:911
 msgid "Error adding to group."
 msgstr "グループの追加時にエラー発生。"
 
-#: js/app.js:936
+#: js/app.js:934
 msgid "Error removing from group."
 msgstr "グループからの削除でエラーが発生。"
 
-#: js/app.js:1112
+#: js/app.js:1110
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300 以上の連絡先が洗濯されています。"
 
-#: js/app.js:1150
+#: js/app.js:1148
 msgid "Error setting {name} as favorite."
 msgstr "{name} をお気に入りにする際にエラーが発生しました。"
 
-#: js/app.js:1289 js/app.js:1293 templates/contacts.php:171
+#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "連絡先をマージ"
 
-#: js/app.js:1315 js/app.js:1368 js/settings.js:120 templates/settings.php:62
+#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: js/app.js:1342 templates/contacts.php:152
+#: js/app.js:1340 templates/contacts.php:152
 msgid "Add group"
 msgstr "グループを追加"
 
-#: js/app.js:1346
+#: js/app.js:1344
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1457
+#: js/app.js:1455
 msgid "Could not find contact: {id}"
 msgstr "連絡先が見つかりませんでした: {id}"
 
-#: js/app.js:1480
+#: js/app.js:1478
 msgid "No files selected for upload."
 msgstr "アップロードするファイルが選択されていません。"
 
-#: js/app.js:1490
+#: js/app.js:1488
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "アップロードしようとしているファイルは、このサーバーの最大ファイルアップロードサイズを超えています。"
 
-#: js/app.js:1591
+#: js/app.js:1589
 msgid "Edit profile picture"
 msgstr "プロフィール写真を編集"
 
-#: js/app.js:1595
+#: js/app.js:1593
 msgid "Crop photo"
 msgstr "フォトをトリミング"
 
-#: js/contacts.js:878
+#: js/contacts.js:889
 msgid "Error parsing date: {date}"
 msgstr "日付の読み取りでエラー発生: {date}"
 
-#: js/contacts.js:1082
+#: js/contacts.js:1093
 msgid "# groups"
 msgstr "グループ数"
 
-#: js/contacts.js:1156
+#: js/contacts.js:1167
 msgid "Error parsing birthday {bday}"
 msgstr "誕生日 {bday} の解析エラー"
 
-#: js/contacts.js:2228
+#: js/contacts.js:2240
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一部の連絡先が削除対象としてマークされていますが、まだ削除されていません。削除されるまでお待ちください。"
 
-#: js/contacts.js:2239
+#: js/contacts.js:2251
 msgid "Click to undo deletion of {num} contacts"
 msgstr "クリックして {num} 個の連絡先の削除を取り消す"
 
-#: js/contacts.js:2248
+#: js/contacts.js:2260
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num}件の連絡先の削除がキャンセルされました"
 
@@ -462,8 +462,8 @@ msgstr "他のアドレス帳からの連絡先の削除エラー"
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:274
+#: lib/controller/contactphotocontroller.php:37
+#: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "連絡先が見つかりませんでした。"
@@ -500,7 +500,7 @@ msgstr "連絡先の更新エラー"
 msgid "Error saving contact to backend"
 msgstr "バックエンドへの連絡先の保存エラー"
 
-#: lib/controller/contactphotocontroller.php:69
+#: lib/controller/contactphotocontroller.php:68
 msgid "Error getting user photo"
 msgstr "ユーザーフォト取得エラー"
 
@@ -545,39 +545,39 @@ msgstr "一時保存フォルダーが見つかりません"
 msgid "Couldn't load temporary image: "
 msgstr "一時的な画像の読み込みができませんでした: "
 
-#: lib/controller/contactphotocontroller.php:124
-#: lib/controller/contactphotocontroller.php:162
+#: lib/controller/contactphotocontroller.php:128
+msgid "Uploaded image is invalid"
+msgstr ""
+
+#: lib/controller/contactphotocontroller.php:132
+#: lib/controller/contactphotocontroller.php:172
 msgid "Couldn't save temporary image: "
 msgstr "一時的な画像の保存ができませんでした: "
 
-#: lib/controller/contactphotocontroller.php:191
+#: lib/controller/contactphotocontroller.php:202
 msgid "No photo path was submitted."
 msgstr "写真のパスが登録されていません。"
 
-#: lib/controller/contactphotocontroller.php:198
+#: lib/controller/contactphotocontroller.php:209
 msgid "File doesn't exist:"
 msgstr "ファイルが存在しません:"
 
-#: lib/controller/contactphotocontroller.php:203
-#: lib/controller/contactphotocontroller.php:206
+#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error loading image."
 msgstr "画像の読み込みエラー。"
 
-#: lib/controller/contactphotocontroller.php:279
+#: lib/controller/contactphotocontroller.php:285
 msgid "Image has been removed from cache"
 msgstr "画像はキャッシュから削除されました。"
 
-#: lib/controller/contactphotocontroller.php:285
+#: lib/controller/contactphotocontroller.php:291
 msgid "Error creating temporary image"
 msgstr "一時画像の生成エラー"
 
-#: lib/controller/contactphotocontroller.php:292
+#: lib/controller/contactphotocontroller.php:298
 msgid "Error cropping image"
 msgstr "画像の切り抜きエラー"
-
-#: lib/controller/contactphotocontroller.php:297
-msgid "Error resizing image"
-msgstr "画像のリサイズエラー"
 
 #: lib/controller/contactphotocontroller.php:315
 msgid "Error getting PHOTO property."
@@ -670,7 +670,7 @@ msgstr "値が指定されていません。"
 msgid "Could not set preference: "
 msgstr "優先度を設定できません: "
 
-#: lib/searchprovider.php:32
+#: lib/searchprovider.php:37
 msgid "Contact"
 msgstr "連絡先"
 
@@ -942,8 +942,8 @@ msgid "Upload new photo"
 msgstr "新しい写真をアップロード"
 
 #: templates/contacts.php:226
-msgid "Select photo from ownCloud"
-msgstr "ownCloudから写真を選択"
+msgid "Select photo from Files"
+msgstr ""
 
 #: templates/contacts.php:231 templates/contacts.php:233
 #: templates/settings.php:59

@@ -42,7 +42,6 @@
 "Delete current photo" => "მიმდინარე სურათის წაშლა",
 "Edit current photo" => "მიმდინარე სურათის რედაქტირება",
 "Upload new photo" => "ახალი სურათის ატვირთვა",
-"Select photo from ownCloud" => "აირჩიე სურათი ownCloud –იდან",
 "Name" => "სახელი",
 "Nickname" => "ნიკნეიმი",
 "Title" => "სახელი",

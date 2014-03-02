@@ -36,7 +36,6 @@
 "Delete current photo" => "Deler photo currente",
 "Edit current photo" => "Modificar photo currente",
 "Upload new photo" => "Incargar nove photo",
-"Select photo from ownCloud" => "Seliger photo ex ownCloud",
 "Name" => "Nomine",
 "Additional names" => "Nomines additional",
 "Nickname" => "Pseudonymo",
