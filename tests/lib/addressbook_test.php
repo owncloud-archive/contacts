@@ -6,7 +6,7 @@
  * See the COPYING-README file.
  */
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Model;
 
 use Sabre\VObject\Reader;
 
@@ -19,7 +19,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 	*/
 	protected $abinfo;
 	/**
-	* @var OCA\Contacts\AddressBook
+	* @var OCA\Contacts\Model\AddressBook
 	*/
 	protected $ab;
 	/**

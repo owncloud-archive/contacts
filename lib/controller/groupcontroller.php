@@ -11,7 +11,7 @@
 namespace OCA\Contacts\Controller;
 
 use OCA\Contacts\App,
-	OCA\Contacts\JSONResponse,
+	OCA\Contacts\Service\JSONResponse,
 	OCA\Contacts\Controller;
 
 /**

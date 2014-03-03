@@ -20,7 +20,9 @@
  *
  */
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Interfaces;
+
+use	OCA\Contacts\Interfaces\AbstractPIMObject;
 
 /**
  * Subclass this for PIM collections

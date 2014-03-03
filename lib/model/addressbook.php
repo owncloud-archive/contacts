@@ -20,8 +20,10 @@
  *
  */
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Model;
 
+use	OCA\Contacts\Interfaces\AbstractPIMCollection;
+	
 /**
  * This class manages our addressbooks.
  */

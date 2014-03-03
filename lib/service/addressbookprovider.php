@@ -20,8 +20,9 @@
  *
  */
 
-namespace OCA\Contacts;
-use OCA\Contacts\Utils\Properties;
+namespace OCA\Contacts\Service;
+use OCA\Contacts\Utils\Properties,
+	OCA\Contacts\Model\Addressbook;
 
 /**
  * This class manages our addressbooks.

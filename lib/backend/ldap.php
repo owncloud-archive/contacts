@@ -22,7 +22,7 @@
 
 namespace OCA\Contacts\Backend;
 
-use OCA\Contacts\Contact;
+use OCA\Contacts\Model\Contact;
 use OCA\Contacts\VObject\VCard;
 use Sabre\VObject\Reader;
 use OCA\Contacts\Connector\LdapConnector;

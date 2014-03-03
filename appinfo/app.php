@@ -8,7 +8,8 @@
  */
 
 namespace OCA\Contacts;
-use \OC\AppFramework\Core\API;
+use \OC\AppFramework\Core\API,
+	\OCA\Contacts\Service\AddressbookProvider;
 
 //require_once __DIR__ . '/../lib/controller/pagecontroller.php';
 \Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
@@ -39,20 +40,20 @@ use \OC\AppFramework\Core\API;
 
 $api = new API('contacts');
 
-$api->connectHook('OC_User', 'post_createUser', '\OCA\Contacts\Hooks', 'userCreated');
-$api->connectHook('OC_User', 'post_deleteUser', '\OCA\Contacts\Hooks', 'userDeleted');
-$api->connectHook('OCA\Contacts', 'pre_deleteAddressBook', '\OCA\Contacts\Hooks', 'addressBookDeletion');
-$api->connectHook('OCA\Contacts', 'pre_deleteContact', '\OCA\Contacts\Hooks', 'contactDeletion');
-$api->connectHook('OCA\Contacts', 'post_createContact', 'OCA\Contacts\Hooks', 'contactAdded');
-$api->connectHook('OCA\Contacts', 'post_updateContact', '\OCA\Contacts\Hooks', 'contactUpdated');
-$api->connectHook('OCA\Contacts', 'scanCategories', '\OCA\Contacts\Hooks', 'scanCategories');
-$api->connectHook('OCA\Contacts', 'indexProperties', '\OCA\Contacts\Hooks', 'indexProperties');
+$api->connectHook('OC_User', 'post_createUser', '\OCA\Contacts\Service\Hooks', 'userCreated');
+$api->connectHook('OC_User', 'post_deleteUser', '\OCA\Contacts\Service\Hooks', 'userDeleted');
+$api->connectHook('OCA\Contacts\Service', 'pre_deleteAddressBook', '\OCA\Contacts\Service\Hooks', 'addressBookDeletion');
+$api->connectHook('OCA\Contacts\Service', 'pre_deleteContact', '\OCA\Contacts\Service\Hooks', 'contactDeletion');
+$api->connectHook('OCA\Contacts\Service', 'post_createContact', 'OCA\Contacts\Service\Hooks', 'contactAdded');
+$api->connectHook('OCA\Contacts\Service', 'post_updateContact', '\OCA\Contacts\Service\Hooks', 'contactUpdated');
+$api->connectHook('OCA\Contacts\Service', 'scanCategories', '\OCA\Contacts\Service\Hooks', 'scanCategories');
+$api->connectHook('OCA\Contacts\Service', 'indexProperties', '\OCA\Contacts\Service\Hooks', 'indexProperties');
 $api->connectHook('OC_Calendar', 'getEvents', 'OCA\Contacts\Hooks', 'getBirthdayEvents');
 $api->connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Hooks', 'getCalenderSources');
 
 \OCP\Util::addscript('contacts', 'loader');
 
-\OC_Search::registerProvider('OCA\Contacts\SearchProvider');
+\OC_Search::registerProvider('OCA\Contacts\Service\SearchProvider');
 //\OCP\Share::registerBackend('contact', 'OCA\Contacts\Share_Backend_Contact');
 \OCP\Share::registerBackend('addressbook', 'OCA\Contacts\Share\Addressbook', 'contact');
 //\OCP\App::registerPersonal('contacts','personalsettings');

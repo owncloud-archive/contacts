@@ -8,7 +8,7 @@
  * See the COPYING-README file.
  */
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Service;
 
 use OCP\AppFramework\App as MainApp,
 	OCP\AppFramework\IAppContainer,

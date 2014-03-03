@@ -6,7 +6,7 @@
  * See the COPYING-README file.
  */
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Model;
 
 use Sabre\VObject\Reader;
 use OCA\Contacts\Utils\JSONSerializer;
@@ -20,11 +20,11 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 	*/
 	protected $abinfo;
 	/**
-	* @var OCA\Contacts\AddressBook
+	* @var OCA\Contacts\Model\AddressBook
 	*/
 	protected $ab;
 	/**
-	* @var OCA\Contacts\Contact
+	* @var OCA\Contacts\Model\Contact
 	*/
 	protected $contact;
 	/**

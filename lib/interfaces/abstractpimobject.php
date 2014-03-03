@@ -20,7 +20,9 @@
  *
  */
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Interfaces;
+
+use	OCA\Contacts\Interfaces\IPIMObject;
 
 /**
  * Subclass this class or implement IPIMObject interface for PIM objects

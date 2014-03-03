@@ -23,7 +23,7 @@
 namespace OCA\Contacts\Utils;
 
 use OCA\Contacts\VObject;
-use OCA\Contacts\Contact,
+use OCA\Contacts\Model\Contact,
 	OCA\Contacts\Utils\Properties;
 
 /**

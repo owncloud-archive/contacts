@@ -22,7 +22,7 @@
  */
 
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Service;
 
 use OC\AppFramework\Http\DownloadResponse;
 

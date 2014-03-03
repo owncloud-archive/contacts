@@ -87,7 +87,7 @@ class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
 	}
 
 	public function xtestAddressBook() {
-		$addressBook = new OCA\Contacts\AddressBook(
+		$addressBook = new OCA\Contacts\Model\AddressBook(
 			self::$backend,
 			array(
 				'displayname' => 'Contacts',

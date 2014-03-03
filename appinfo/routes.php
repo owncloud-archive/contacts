@@ -8,7 +8,7 @@
  */
 namespace OCA\Contacts;
 
-use OCA\Contacts\Dispatcher;
+use OCA\Contacts\Service\Dispatcher;
 
 //define the routes
 $this->create('contacts_index', '/')

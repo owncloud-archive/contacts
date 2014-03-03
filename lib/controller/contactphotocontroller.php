@@ -10,8 +10,8 @@
 namespace OCA\Contacts\Controller;
 
 use OCA\Contacts\App,
-	OCA\Contacts\JSONResponse,
-	OCA\Contacts\ImageResponse,
+	OCA\Contacts\Service\JSONResponse,
+	OCA\Contacts\Service\ImageResponse,
 	OCA\Contacts\Utils\Properties,
 	OCA\Contacts\Controller;
 

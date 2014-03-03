@@ -20,16 +20,18 @@
  *
  */
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Model;
 
 use Sabre\VObject\Property,
-	OCA\Contacts\Utils\Properties;
+	OCA\Contacts\Utils\Properties,
+	OCA\Contacts\Interfaces\IPIMObject,
+	OCA\Contacts\Model\Addressbook;
 
 /**
  * Subclass this class or implement IPIMObject interface for PIM objects
  */
 
-class Contact extends VObject\VCard implements IPIMObject {
+class Contact extends \OCA\Contacts\VObject\VCard implements IPIMObject {
 
 	/**
 	 * The name of the object type in this case VCARD.

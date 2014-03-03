@@ -31,7 +31,7 @@
  * OCA\Contacts\VCard::post_createVCard($newid)
  */
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Service;
 
 use \Sabre\VObject;
 

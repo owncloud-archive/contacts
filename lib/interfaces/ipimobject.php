@@ -20,7 +20,7 @@
  *
  */
 
-namespace OCA\Contacts;
+namespace OCA\Contacts\Interfaces;
 
 /**
  * Implement this interface for PIM objects
