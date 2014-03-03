@@ -48,8 +48,8 @@ $api->connectHook('OCA\Contacts\Service', 'post_createContact', 'OCA\Contacts\Se
 $api->connectHook('OCA\Contacts\Service', 'post_updateContact', '\OCA\Contacts\Service\Hooks', 'contactUpdated');
 $api->connectHook('OCA\Contacts\Service', 'scanCategories', '\OCA\Contacts\Service\Hooks', 'scanCategories');
 $api->connectHook('OCA\Contacts\Service', 'indexProperties', '\OCA\Contacts\Service\Hooks', 'indexProperties');
-$api->connectHook('OC_Calendar', 'getEvents', 'OCA\Contacts\Hooks', 'getBirthdayEvents');
-$api->connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Hooks', 'getCalenderSources');
+$api->connectHook('OC_Calendar', 'getEvents', 'OCA\Contacts\Service\Hooks', 'getBirthdayEvents');
+$api->connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Service\Hooks', 'getCalenderSources');
 
 \OCP\Util::addscript('contacts', 'loader');
 
