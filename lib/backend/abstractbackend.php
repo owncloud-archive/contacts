@@ -77,9 +77,9 @@ abstract class AbstractBackend {
 	* Sets up the backend
 	*
 	*/
-	/*public function __construct($userid = null) {
+	public function __construct($userid = null) {
 		$this->userid = $userid ? $userid : \OCP\User::getUser();
-	}*/
+	}
 
 	/**
 	* @brief Get all possible permissions for contacts based on what the backend implements.
@@ -178,7 +178,7 @@ abstract class AbstractBackend {
 	 * @param array $options - Optional (backend specific options)
 	 * @return array
 	 */
-	//public abstract function getAddressBooksForUser(array $options = array());
+	public abstract function getAddressBooksForUser(array $options = array());
 
 	/**
 	 * Get an addressbook's properties
@@ -414,7 +414,7 @@ abstract class AbstractBackend {
 		$key = 'prefs_' . $key;
 
 		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $key, false);
-		return $data ? (array)json_decode($data) : array();
+		return $data ? json_decode($data) : array();
 	}
 	
 	/**
@@ -424,32 +424,12 @@ abstract class AbstractBackend {
 	 * @return boolean
 	 */
 	public function setPreferences($addressbookid, array $params) {
-		$addressbooks = (array)\OCP\Config::getUserValue($this->userid, 'contacts', $this->name, false);
-		if ($addressbooks == null) {
-			$addressbooks = array();
-		}
-		if (!in_array($addressbookid, $addressbooks)) {
-			$addressbooks[] = $addressbookid;
-		}
-		\OCP\Config::setUserValue($this->userid, 'contacts', $this->name, json_encode($addressbooks));
-		
-		$key = $this->combinedKey($addressbookid);
+		$key = $this->combinedKey($addressBookId);
 		$key = 'prefs_' . $key;
 
 		$data = json_encode($params);
 		return $data
 			? \OCP\Config::setUserValue($this->userid, 'contacts', $key, $data)
 			: false;
-	}
-	
-	/**
-	 * Returns the list of active addressbooks for a specific user.
- 	 *
-	 * @param string $userid
-	 * @return array
-	 */
-	public function getAddressBooksIdsForUser(array $options = array()) {
-		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $this->name, false);
-		return $data ? json_decode($data) : array();
 	}
 }

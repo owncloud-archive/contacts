@@ -42,12 +42,6 @@ class Ldap extends AbstractBackend {
 	private $ldapConnection = null;
 	private $connector = null;
 	
-	public function __construct(
-		$userid = null,
-		$options = array()
-	) {
-		$this->userid = $userid ? $userid : \OCP\User::getUser();
-	}
 	/**
 	* @brief validates and sets the ldap parameters
 	* @param $ldapParams array containing the parameters
@@ -246,14 +240,14 @@ class Ldap extends AbstractBackend {
 	* Sets up the backend
 	*
 	* @param string $cardsTableName
-	
+	*/
 	public function __construct(
 		$userid = null,
 		$addressBooksTableName = '*PREFIX*contacts_ldap_addressbooks'
 	) {
 		$this->userid = $userid ? $userid : \OCP\User::getUser();
 		$this->addressbooks = array();
-	}*/
+	}
 
 	/**
 	 * Returns the list of active addressbooks for a specific user.
@@ -264,26 +258,22 @@ class Ldap extends AbstractBackend {
 	public function getAddressBooksForUser(array $options = array()) {
 
 		try {
-			$addressbooksIds = $this->getAddressBooksIdsForUser();
-			$this->addressbooks = array();
-			foreach($addressbooksIds as $addressBookId) {
-				$this->addressbooks[] = $this->getAddressBook($addressBookId);
-			}
-			/*if(!isset(self::$preparedQueries['addressbooksforuser'])) {
-				$sql = 'SELECT `configvalue` from *PREFIX*preferences where `configkey` like ? and `userid` = ?';
-				$configkeyPrefix = "prefs_ldap_%";
+			if(!isset(self::$preparedQueries['addressbooksforuser'])) {
+				$sql = 'SELECT `configkey` from *PREFIX*preferences where `configkey` like ?';
+				$configkeyPrefix = $this->name . "_%_uri";
 				self::$preparedQueries['addressbooksforuser'] = \OCP\DB::prepare($sql);
-				$result = self::$preparedQueries['addressbooksforuser']->execute(array($configkeyPrefix, $this->userid));
+				$result = self::$preparedQueries['addressbooksforuser']->execute(array($configkeyPrefix));
 				if (\OC_DB::isError($result)) {
 					\OCP\Util::write('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 					return $this->addressbooks;
 				}
+				$this->addressbooks = array();
 				while($row = $result->fetchRow()) {
-					$data = json_decode($row['configvalue']);
-					$this->addressbooks[] = $data['uri'];
+					$id = str_replace("_uri", "", str_replace($this->name."_", "", $row['configkey']));
+					$this->addressbooks[] = self::getAddressBook($id);
 				}
-			}*/
-			return $this->addressbooks;
+				return $this->addressbooks;
+			}
 		} catch(\Exception $e) {
 			\OC_Log::write('contacts', __METHOD__.' exception: ' . $e->getMessage(), \OCP\Util::ERROR);
 			return $this->addressbooks;
@@ -306,7 +296,7 @@ class Ldap extends AbstractBackend {
 	public function getAddressBook($addressbookid, array $options = array()) {
 		//\OC_Log::write('contacts', __METHOD__.' id: '
 		//	. $addressbookid, \OC_Log::DEBUG);
-		if(isset($this->addressbooks) && $this->addressbooks && isset($this->addressbooks[$addressbookid])) {
+		if($this->addressbooks && isset($this->addressbooks[$addressbookid])) {
 			//print(__METHOD__ . ' ' . __LINE__ .' addressBookInfo: ' . print_r($this->addressbooks[$addressbookid], true));
 			return $this->addressbooks[$addressbookid];
 		}
@@ -320,7 +310,6 @@ class Ldap extends AbstractBackend {
 			$current['owner'] = $this->userid;
 			$current['uri'] = $preferences['uri'];
 			$current['permissions'] = \OCP\PERMISSION_ALL;
-			$current['backend'] = $this->name;
       $current['lastmodified'] = self::lastModifiedAddressBook($addressbookid);
 			return $current;
 		} else {
