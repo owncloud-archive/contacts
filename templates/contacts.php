@@ -252,15 +252,18 @@
 				</fieldset>
 			</div>
 			<div class="singleproperties">
-				<h3><?php p($l->t('Groups')); ?></h3>
-				<label class="propertyname"></label>
 				<div class="groupscontainer propertycontainer" data-element="categories">
+					<h3><?php p($l->t('Groups')); ?></h3>
+					<label class="propertyname"></label>
 					<select class="hidden" id="contactgroups" name="value" multiple></select>
 				</div>
 			</div>
 			<div class="singleproperties">
-				<label class="propertyname"></label>
-				<select class="hidden" id="contactaddressbooks" name="value"></select>
+				<div class="addressbookcontainer propertycontainer" data-element="categories">
+					<h3><?php p($l->t('Address book')); ?></h3>
+					<label class="propertyname"></label>
+					<select class="hidden" id="contactaddressbooks" name="value"></select>
+				</div>
 			</div>
 			<div class="singleproperties">
 				<dd data-element="nickname" class="propertycontainer">

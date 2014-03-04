@@ -1197,15 +1197,19 @@ OC.Contacts = OC.Contacts || {};
 			return false;
 		});
 		
-		if(this.getOwner() === OC.currentUser) {
+		if(this.getOwner() === OC.currentUser && groupprops.groups.length > 0) {
 			this.$groupSelect = this.$fullelem.find('#contactgroups');
 			buildGroupSelect(groupprops.groups);
+		} else {
+			this.$fullelem.find('.groupscontainer').hide();
 		}
 		
 		var writeableAddressBooks = this.parent.addressBooks.selectByPermission(OC.PERMISSION_CREATE);
 		if(writeableAddressBooks.length > 1 && this.hasPermission(OC.PERMISSION_DELETE)) {
 			this.$addressBookSelect = this.$fullelem.find('#contactaddressbooks');
 			buildAddressBookSelect(writeableAddressBooks);
+		} else {
+			this.$fullelem.find('.addressbookcontainer').hide();
 		}
 
 		this.$addMenu = this.$fullelem.find('#addproperty');
