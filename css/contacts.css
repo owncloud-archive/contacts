@@ -21,6 +21,9 @@
 	text-overflow: ellipsis;
 }
 
+#contact input:not([type=checkbox]), #contact select:not(.button), #contact textarea {
+	float: left;
+}
 #contact .label {
 	float: right !important;
 }
@@ -309,12 +312,12 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	text-align: right;
 }
 .singleproperties { float: left; width: 100%; }
-.singleproperties .fullname { width: 300px; font-size: 20px; }
+.singleproperties .fullname { float: none !important; margin-left: 4px; width: 300px; font-size: 20px; }
 .singleproperties input { width: 300px; }
 .singleproperties dd { float:left; }
 .singleproperties dd .listactions a { margin-top: 10px; }
 .singleproperties .n.editor { width: 270px; padding: 3px; }
-.singleproperties .n.editor input { width: 292px; }
+.singleproperties .n.editor input { width: 292px; margin-left: 12px; }
 .singleproperties .propertycontainer input.value.new { border: 3px solid #1d2d44;}
 .singleproperties .propertycontainer input.value.error { border: 3px solid red;}
 .singleproperties .propertycontainer .action {
