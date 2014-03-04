@@ -1015,7 +1015,7 @@ OC.Contacts = OC.Contacts || {
 				} else {
 					var contact = self.contacts.findById(self.currentid);
 					if(contact) {
-						contact.close();
+						contact.close(true);
 					}
 				}
 			}
