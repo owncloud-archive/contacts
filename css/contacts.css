@@ -70,10 +70,10 @@
 /*#app-navigation img.shared { float: right; opacity: 0.4; margin: 0 .5em; }
 #app-navigation img.shared:hover { opacity: 1; }*/
 #app-navigation input[type="text"] {
-	display: block;
-	width: 204px;
-	height: 34px !important;
-	float: left;
+	width: 180px;
+}
+
+#app-navigation .oc-addnew input[type="text"] {
 }
 
 #app-navigation .utils {
