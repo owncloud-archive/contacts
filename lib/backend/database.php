@@ -473,7 +473,7 @@ class Database extends AbstractBackend {
 			return null;
 		}
 		$row['permissions'] = \OCP\PERMISSION_ALL;
-		return $row;
+		$end = microtime(true);
 	}
 
 	public function hasContact($addressbookid, $id) {
@@ -648,7 +648,7 @@ class Database extends AbstractBackend {
 				)
 			);
 		}
-		return true;
+		$end = microtime(true);
 	}
 
 	/**

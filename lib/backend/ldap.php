@@ -213,12 +213,7 @@ class Ldap extends AbstractBackend {
 	 */
 	public function ldapUpdate($ldapDN, $ldapValues) {
 		if (self::ldapIsConnected()) {
-			$result = @ldap_modify($this->ldapConnection, $ldapDN, $ldapValues);
-			if (!$result) {
-				self::ldapDelete($ldapDN);
-				return self::ldapAdd($ldapDN, $ldapValues);
-			}
-			return true;
+			return @ldap_modify($this->ldapConnection, $ldapDN, $ldapValues);
 		}
 		return false;
 	}
@@ -262,7 +257,6 @@ class Ldap extends AbstractBackend {
 			$this->addressbooks[] = self::getAddressBook($addressbookid);
 		}
 		return $this->addressbooks;
-		
 	}
 
 	/**
@@ -529,12 +523,14 @@ class Ldap extends AbstractBackend {
 
 		$uri = isset($options['uri']) ? $options['uri'] : null;
 		
+		$contact->REV = (new \DateTime)->format(\DateTime::W3C);
+		
 		// 2014/02/13 Sometimes, a card is created without a name (I don't like that)...
 		if (!isset($contact->N)) {
-			$generated = "gruik".rand(0, 65535);
+			$generated = "nocn-".rand(0, 65535);
 			$contact->N = $generated;
 			$contact->FN = $generated;
-			error_log("Generated name: $generated");
+			//error_log("Generated name: $generated");
 		}
 
 		if(!$contact instanceof VCard) {
@@ -545,7 +541,7 @@ class Ldap extends AbstractBackend {
 				return false;
 			}
 		}
-		error_log("adding ".$contact->serialize());
+		//error_log("adding ".$contact->serialize());
 
 		try {
 			$contact->validate(VCard::REPAIR|VCard::UPGRADE);
@@ -588,16 +584,7 @@ class Ldap extends AbstractBackend {
 	 * @return bool
 	 */
 	public function updateContact($addressbookid, $id, $carddata, array $options = array()) {
-		$backtrace = debug_backtrace();
-		$trace=array();
-		foreach ($backtrace as $elt) {
-			foreach ($elt as $key => $line) {
-				if ($key == "file" || $key == "line") {
-					$trace[] = $line;
-				}
-			}
-		}
-		//error_log("stay modified ".print_r($trace,1));
+		error_log(__FUNCTION__." call : ".$begin);
 		if(!$carddata instanceof VCard) {
 			try {
 				$vcard = \Sabre\VObject\Reader::read($carddata);
@@ -609,7 +596,14 @@ class Ldap extends AbstractBackend {
 			$vcard = $carddata;
 		}
 		
-		//error_log("updating ".$vcard->serialize());
+		try {
+			$vcard->validate(VCard::REPAIR|VCard::UPGRADE);
+		} catch (\Exception $e) {
+			OCP\Util::writeLog('contacts', __METHOD__ . ' ' .
+				'Error validating vcard: ' . $e->getMessage(), \OCP\Util::ERROR);
+			return false;
+		}
+		//$vcard->REV = (new \DateTime)->format(\DateTime::W3C);
 		
 		if (!is_array($id)) {
 			$a_ids = array($id);
@@ -631,9 +625,12 @@ class Ldap extends AbstractBackend {
 				$dn = base64_decode($tmpVCard->{'X-LDAP-DN'});
 			}
 			// Updates the existing card
+			$ldifSource = self::ldapFindOne($dn, $this->ldapParams['ldapfilter'], $this->connector->getLdapEntries());
+			$this->connector->insertEmptyEntries($ldifSource, $ldifEntries);
 			$result = self::ldapUpdate($dn, $ldifEntries);
 		}
 		self::ldapCloseConnection();
+		error_log(__FUNCTION__." end call : ".$end.", duration: ".($end-$begin));
 		return $result;
 	}
 
