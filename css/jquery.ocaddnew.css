@@ -40,6 +40,7 @@
 #app-navigation .oc-addnew input[type=text] {
         margin-top: 5px;
         margin-left: 6px;
+        height: 34px !important;
 }
 
 .oc-addnew select {
