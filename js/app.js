@@ -1434,7 +1434,6 @@ OC.Contacts = OC.Contacts || {
 			this.groups.selectGroup({id:'all'});
 		}
 		$(window).unbind('hashchange', this.hashChange);
-		this.setAllChecked(false);
 		console.assert(typeof this.currentid === 'string', 'Current ID not string:' + this.currentid);
 		// Properties that the contact doesn't know
 		var groupprops = {
