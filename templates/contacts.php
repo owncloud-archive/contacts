@@ -231,7 +231,7 @@
 				<h3><?php p($l->t('Name')); ?></h3>
 				<label class="propertyname"></label>
 				<input data-element="fn" class="fullname value propertycontainer" type="text" name="value" value="{name}" placeholder="<?php p($l->t('Name')); ?>" required />
-				<a class="action edit"></a>
+				<a class="icon-rename action edit"></a>
 				<fieldset class="n hidden editor propertycontainer" data-element="n">
 					<ul>
 						<li>
