@@ -181,10 +181,17 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	Contact.prototype.showActions = function(act) {
-		this.$footer.children().hide();
-		if(act && act.length > 0) {
-			this.$footer.children('.'+act.join(',.')).show();
-		}
+		// non-destructive merge.
+		var $actions = $.merge($.merge([], this.$footer.children()), this.$header.children());
+		$.each($actions, function(idx, action) {
+			$(action).hide();
+			$.each(act, function(i, a) {
+				if($(action).hasClass(a)) {
+					$(action).show();
+					return false; // break
+				}
+			});
+		});
 	};
 
 	Contact.prototype.setAsSaving = function(obj, state) {

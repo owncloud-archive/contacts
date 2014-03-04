@@ -162,7 +162,7 @@
 #contact footer .add {
 	width: 300px;
 }
-#contact footer .close, #contact footer .export, #contact header .delete {
+#contact footer .cancel, #contact footer .close, #contact footer .export, #contact header .delete {
 	float: right;
 	background-image: none;
 }

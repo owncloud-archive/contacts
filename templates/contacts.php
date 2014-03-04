@@ -211,7 +211,7 @@
 	<form action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'index.php')); ?>" method="post" enctype="multipart/form-data">
 	<section id="contact" data-id="{id}">
 	<header>
-		<a class="delete text tooltipped downwards">
+		<a class="delete">
 			<?php p($l->t('Delete')); ?>
 			<img class="svg" alt="<?php p($l->t('Delete'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/delete.svg")); ?>" />
 		</a>
@@ -353,11 +353,15 @@
 			<option value="NOTE"><?php p($l->t('Note')); ?></option>
 			<option value="URL"><?php p($l->t('Web site')); ?></option>
 		</select>
-		<a class="close text tooltipped downwards">
+		<a class="cancel">
+			<?php p($l->t('Cancel')); ?>
+			<img class="svg" alt="<?php p($l->t('Cancel'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/close.svg")); ?>" />
+		</a>
+		<a class="close">
 			<?php p($l->t('Close')); ?>
 			<img class="svg" alt="<?php p($l->t('Close'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/checkmark.svg")); ?>" />
 		</a>
-		<a class="export text tooltipped downwards">
+		<a class="export">
 			<?php p($l->t('Download')); ?>
 			<img class="svg" alt="<?php p($l->t('Download'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/download.svg")); ?>" />
 		</a>
