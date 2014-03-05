@@ -784,7 +784,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vEvent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
 			$vEvent->{'TRANSP'} = 'TRANSPARENT';
 			$alarm = \Sabre\Vobject\Component::create('VALARM');
-			$alarm->TRIGGER = '-PT0M'; //is there a way to make this configurable?
+			$alarm->TRIGGER = '-PT0M';
+			$alarm->{'ACTION'} = 'DISPLAY';
+			$alarm->{'DESCRIPTION'} = $vevent->{'SUMMARY'};
 			$vEvent->add($alarm);
 			$appInfo = \OCP\App::getAppInfo('contacts');
 			$appVersion = \OCP\App::getAppVersion('contacts');
