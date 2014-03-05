@@ -70,10 +70,10 @@
 /*#app-navigation img.shared { float: right; opacity: 0.4; margin: 0 .5em; }
 #app-navigation img.shared:hover { opacity: 1; }*/
 #app-navigation input[type="text"] {
-	display: block;
-	width: 204px;
-	height: 34px !important;
-	float: left;
+	width: 180px;
+}
+
+#app-navigation .oc-addnew input[type="text"] {
 }
 
 #app-navigation .utils {
@@ -162,7 +162,7 @@
 #contact footer .add {
 	width: 300px;
 }
-#contact footer .close, #contact footer .export, #contact header .delete {
+#contact footer .cancel, #contact footer .close, #contact footer .export, #contact header .delete {
 	float: right;
 	background-image: none;
 }
@@ -233,36 +233,25 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	margin: 0; padding: .2em;
 }
 
-.action, .icon {
+[class^="icon-"], [class*=" icon-"], .action, .icon {
 	display: inline-block; 
 	cursor: pointer;
 	background-repeat: no-repeat;
 }
-.action:not(.text), .icon:not(.text) { 
+.action:not(.text), .icon:not(.text), [class^="icon-"]:not(.text), [class*=" icon-"]:not(.text) {
 	width: 16px; height: 16px; 
 	padding: 0; margin: 0; 
 	background-position: center;
 	background-size:contain;
 }
 
-.action:not(.add):not(.sort).text, .icon:not(.add):not(.sort).text {
+.action:not(.add):not(.sort).text, .icon:not(.add):not(.sort).text, [class^="icon-"]:not(.add):not(.sort).text, [class*=" icon-"]:not(.add):not(.sort).text {
 	background-position: left; 
 	text-indent: 18px;
 }
 
 /* TODO: Use @import url('../css/[no-]svg.css); instead. */
 
-/*.no-svg .add { background-image:url('%webroot%/core/img/actions/add.png'); }*/
-.no-svg .delete { background-image:url('%webroot%/core/img/actions/delete.png'); }
-.no-svg .edit { background-image:url('%webroot%/core/img/actions/rename.png'); }
-.no-svg .share { background-image:url('%webroot%/core/img/actions/share.png'); }
-/*.no-svg .groups { background-image:url('%webroot%/core/img/actions/shared.png'); }*/
-.no-svg .mail { background-image:url('%webroot%/core/img/actions/mail.png'); }
-.no-svg .import, .no-svg .upload { background-image:url('%webroot%/core/img/actions/upload.png'); }
-.no-svg .export, .no-svg .download { background-image:url('%webroot%/core/img/actions/download.png'); }
-.no-svg .export, .no-svg .shared { background-image:url('%webroot%/core/img/actions/shared.png'); }
-.no-svg .globe { background-image:url('%webroot%/core/img/actions/public.png'); }
-.no-svg .settings { background-image:url('%webroot%/core/img/actions/settings.svg'); }
 .no-svg .starred { background-image:url('../img/starred.png'); background-size: contain; }
 .no-svg .checked { background-image:url('../img/checkmark-green.png'); }
 .no-svg .checked.disabled { background-image:url('../img/checkmark-gray.png'); cursor: default; }
@@ -273,17 +262,6 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	background-repeat: no-repeat;
 	width: auto; height: auto;
 }
-/*.svg .add { background-image:url('%webroot%/core/img/actions/add.svg'); }*/
-.svg .delete { background-image:url('%webroot%/core/img/actions/delete.svg'); }
-.svg .edit { background-image:url('%webroot%/core/img/actions/rename.svg'); }
-.svg .share { background-image:url('%webroot%/core/img/actions/share.svg'); }
-/*.svg .groups { background-image:url('%webroot%/core/img/actions/shared.svg'); }*/
-.svg .mail { background-image:url('%webroot%/core/img/actions/mail.svg'); }
-.svg .import,.svg .upload { background-image:url('%webroot%/core/img/actions/upload.svg'); }
-.svg .export,.svg .download { background-image:url('%webroot%/core/img/actions/download.svg'); }
-.svg .export,.svg .shared { background-image:url('%webroot%/core/img/actions/shared.svg'); }
-.svg .globe { background-image:url('%webroot%/core/img/actions/public.svg'); }
-.svg .settings { background-image:url('%webroot%/core/img/actions/settings.svg'); }
 .svg .starred { background-image:url('../img/starred.svg'); background-size: contain; }
 .svg .checked { background-image:url('../img/checkmark-green.svg'); }
 .svg .checked.disabled { background-image:url('../img/checkmark-gray.svg'); cursor: default; }
@@ -292,8 +270,6 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 .float { float: left; display: inline-block; width: auto; }
 .float.right { float: right; }
 .break { clear: both; }
-.loading { background: url('%webroot%/core/img/loading.gif') no-repeat center !important; cursor: wait; }
-.wait { opacity: cursor: wait; }
 .control {
     border: 1px solid #DDDDDD;
     border-radius: 0.3em;
@@ -336,12 +312,12 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	text-align: right;
 }
 .singleproperties { float: left; width: 100%; }
-.singleproperties .fullname { width: 300px; font-size: 20px; }
+.singleproperties .fullname { float: none !important; margin-left: 4px; width: 300px; font-size: 20px; }
 .singleproperties input { width: 300px; }
 .singleproperties dd { float:left; }
 .singleproperties dd .listactions a { margin-top: 10px; }
 .singleproperties .n.editor { width: 270px; padding: 3px; }
-.singleproperties .n.editor input { width: 292px; }
+.singleproperties .n.editor input { width: 292px; margin-left: 12px; }
 .singleproperties .propertycontainer input.value.new { border: 3px solid #1d2d44;}
 .singleproperties .propertycontainer input.value.error { border: 3px solid red;}
 .singleproperties .propertycontainer .action {
@@ -506,11 +482,11 @@ dt[data-element="org"] { margin-top: 4px; }
 /* Single elements */
 #file_upload_form, #file_upload_target, #import_upload_target, #crop_target { display:none; }
 #import_upload_start, .import-upload-button {
-    width: 30px; height: 30px;
+    width: 30px !important; height: 30px !important;
 	display:block;
 	position: absolute;
 	right: 0; top: 0;
-	margin: 5px;
+	margin: 5px !important;
 	cursor: pointer;
 }
 #import_upload_start {
@@ -518,7 +494,6 @@ dt[data-element="org"] { margin-top: 4px; }
 	z-index: 1001;
 }
 .import-upload-button {
-	background-image: url("%webroot%/core/img/actions/upload.svg");
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -549,8 +524,8 @@ input:not([type=checkbox]).propertytype {
 }
 input[type=checkbox].propertytype { width: 10px; }
 .contactphoto { 
-	border: 1px solid #bbb; 
-	-moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; 
+	border: 1px solid #bbb; border-radius: 3px;
+	-moz-box-shadow: 0 1px 2px #777; -webkit-box-shadow: 0 1px 2px #777; box-shadow: 0 1px 2px #777;
 }
 .contactphoto:hover { background: #fff; cursor: default; }
 #photowrapper { 
@@ -568,10 +543,25 @@ input[type=checkbox].propertytype { width: 10px; }
 	right: -6px; top: -6px;
 	width: 25px; height: 25px;
 }
-#photowrapper.wait { opacity: 0.6; filter:alpha(opacity=0.6); z-index:1000; background-image: url('%webroot%/core/img/loading.gif'); cursor: wait; }
-#phototools { position:absolute; margin: 5px 0 0 10px; width:auto; height:20px; padding:2px; background-color:#fff; list-style-type:none; border-radius: 0.3em; -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; }
-#phototools li { display: inline; }
-#phototools li a { float:left; opacity: 0.6; }
+#photowrapper.wait { opacity: 0.6; filter:alpha(opacity=0.6); z-index:1000; cursor: wait; }
+#phototools {
+	position:absolute;
+	bottom: 10px;
+	margin: 0;
+	width:auto; height: auto;
+	background-color:#fff;
+	list-style-type:none; border-radius: 3px;
+	border: 1px solid #DDDDDD;
+	/*-moz-box-shadow: 0 1px 2px #777; -webkit-box-shadow: 0 1px 2px #777; box-shadow: 0 1px 2px #777;*/
+}
+#phototools li { display: inline-block; }
+#phototools li a {
+	float:left;
+	opacity: 0.6;
+	width: 40px; height: 40px;
+	background-position: center;
+	background-size: 80%;
+}
 #phototools li a:hover { opacity: 0.8; }
 #contactphoto_fileupload, #import_upload_start { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0; z-index:1001; }
 
@@ -812,9 +802,8 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	cursor:pointer;
 	width:16px; height:16px;
 	margin: 18px 0 2px 5px; z-index: 200;
-	opacity: 0.6; background-image:url('%webroot%/core/img/actions/mail.svg');
+	display: none; opacity: 0.8;
 }
-#contactlist tbody > tr > td a.mailto:hover { opacity: 0.8; }
 
 #contactlist tbody > tr > td > a.delete {
 	position: absolute;
@@ -854,8 +843,6 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	-webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -o-transform: rotate(270deg); 
 	-ms-transform: rotate(270deg); transform: rotate(270deg);
 }
-
-#contact figure img { -moz-border-radius:.3em; -webkit-border-radius:.3em; border-radius:.3em; border: thin solid #bbb; margin: 0.3em; background-image: url('%webroot%/core/img/loading.gif'); -moz-box-shadow: 0 1px 3px #777; -webkit-box-shadow: 0 1px 3px #777; box-shadow: 0 1px 3px #777; opacity: 1; }
 
 #contact span.adr {
 	float: left; 
@@ -910,6 +897,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	#app-navigation { width: 220px; }
 	#app-navigation .oc-addnew input[type=text] { width: 174px; }
 	#app-settings { width: 219px; }
+	.multiselect #contactsHeader { margin-left: 300px; padding-right: 300px; }
 }
 @media screen and (max-width: 1000px) {
 	#contactlist tr td.tel { display: none; }
@@ -917,9 +905,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	#app-navigation { width: 200px; }
 	#app-navigation .oc-addnew input[type=text] { width: 154px; }
 	#app-settings { width: 199px; }
-	.multiselect #contactsHeader {
-		margin-left: 280px; padding-right: 280px;
-	}
+	.multiselect #contactsHeader { margin-left: 280px; padding-right: 280px; }
 }
 @media screen and (max-width: 900px) {
 	#contactsHeader .delete { display: none; }
@@ -931,4 +917,5 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	#app-navigation { width: 170px; }
 	#app-navigation .oc-addnew input[type=text] { width: 124px; }
 	#app-settings { width: 169px; }
+	.multiselect #contactsHeader { margin-left: 250px; padding-right: 250px; }
 }

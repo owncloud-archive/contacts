@@ -42,12 +42,12 @@ $api = new API('contacts');
 
 $api->connectHook('OC_User', 'post_createUser', '\OCA\Contacts\Service\Hooks', 'userCreated');
 $api->connectHook('OC_User', 'post_deleteUser', '\OCA\Contacts\Service\Hooks', 'userDeleted');
-$api->connectHook('OCA\Contacts\Service', 'pre_deleteAddressBook', '\OCA\Contacts\Service\Hooks', 'addressBookDeletion');
-$api->connectHook('OCA\Contacts\Service', 'pre_deleteContact', '\OCA\Contacts\Service\Hooks', 'contactDeletion');
-$api->connectHook('OCA\Contacts\Service', 'post_createContact', 'OCA\Contacts\Service\Hooks', 'contactAdded');
-$api->connectHook('OCA\Contacts\Service', 'post_updateContact', '\OCA\Contacts\Service\Hooks', 'contactUpdated');
-$api->connectHook('OCA\Contacts\Service', 'scanCategories', '\OCA\Contacts\Service\Hooks', 'scanCategories');
-$api->connectHook('OCA\Contacts\Service', 'indexProperties', '\OCA\Contacts\Service\Hooks', 'indexProperties');
+$api->connectHook('OCA\Contacts', 'pre_deleteAddressBook', '\OCA\Contacts\Service\Hooks', 'addressBookDeletion');
+$api->connectHook('OCA\Contacts', 'pre_deleteContact', '\OCA\Contacts\Service\Hooks', 'contactDeletion');
+$api->connectHook('OCA\Contacts', 'post_createContact', 'OCA\Contacts\Service\Hooks', 'contactAdded');
+$api->connectHook('OCA\Contacts', 'post_updateContact', '\OCA\Contacts\Service\Hooks', 'contactUpdated');
+$api->connectHook('OCA\Contacts', 'scanCategories', '\OCA\Contacts\Service\Hooks', 'scanCategories');
+$api->connectHook('OCA\Contacts', 'indexProperties', '\OCA\Contacts\Service\Hooks', 'indexProperties');
 $api->connectHook('OC_Calendar', 'getEvents', 'OCA\Contacts\Service\Hooks', 'getBirthdayEvents');
 $api->connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Service\Hooks', 'getCalenderSources');
 

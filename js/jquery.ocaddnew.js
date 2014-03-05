@@ -28,7 +28,7 @@
 			this.element.addClass('oc-addnew-name').removeAttr('original-title').appendTo(this.$ul).wrap('<li />');
 			//console.log('li', $li.parent());
 			//$li.appendTo(this.$ul);
-			$('<button />').addClass('new-button primary').insertAfter(this.element).hide();
+			$('<button />').addClass('new-button primary icon-checkmark-white').insertAfter(this.element).hide();
 			this.element.on('input', function() {
 				// Enable button when input is non-empty
 				$(this).next('button').prop('disabled', $(this).val().trim().length === 0);

@@ -77,7 +77,7 @@ class Hooks{
 			$tagMgr->purgeObjects($parameters['contactids']);
 
 			// Purge property indexes
-			Utils\Properties::purgeIndexes($parameters['contactids']);
+			\OCA\Contacts\Utils\Properties::purgeIndexes($parameters['contactids']);
 		}
 	}
 
@@ -96,7 +96,7 @@ class Hooks{
 		$ids = is_array($parameters['id']) ? $parameters['id'] : array($parameters['id']);
 		$tagMgr = \OC::$server->getTagManager()->load('contact');
 		$tagMgr->purgeObjects($ids);
-		Utils\Properties::purgeIndexes($ids);
+		\OCA\Contacts\Utils\Properties::purgeIndexes($ids);
 
 		// Contact sharing not implemented, but keep for future.
 		//\OCP\Share::unshareAll('contact', $id);
@@ -113,17 +113,17 @@ class Hooks{
 				$tagMgr->tagAs($parameters['id'], $group);
 			}
 		}
-		Utils\Properties::updateIndex($parameters['id'], $contact);
+		\OCA\Contacts\Utils\Properties::updateIndex($parameters['id'], $contact);
 	}
 
 	public static function contactUpdated($parameters) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
 		$contact = $parameters['contact'];
-		Utils\Properties::updateIndex($parameters['contactId'], $contact);
+		\OCA\Contacts\Utils\Properties::updateIndex($parameters['contactId'], $contact);
 		// If updated via CardDAV we don't know if PHOTO has changed
 		if(isset($parameters['carddav']) && $parameters['carddav']) {
 			if(isset($contact->PHOTO) || isset($contact->LOGO)) {
-				Utils\Properties::cacheThumbnail(
+				\OCA\Contacts\Utils\Properties::cacheThumbnail(
 					$parameters['backend'],
 					$parameters['addressBookId'],
 					$parameters['contactId'],

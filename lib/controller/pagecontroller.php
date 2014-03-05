@@ -52,8 +52,6 @@ class PageController extends Controller {
 		\OCP\Util::addScript('contacts', 'jquery.ocaddnew');
 		\OCP\Util::addScript('files', 'jquery.fileupload');
 		\OCP\Util::addScript('3rdparty/Jcrop', 'jquery.Jcrop');
-		\OCP\Util::addStyle('3rdparty/fontawesome', 'font-awesome');
-		\OCP\Util::addStyle('contacts', 'font-awesome');
 		\OCP\Util::addStyle('', 'jquery.multiselect');
 		\OCP\Util::addStyle('contacts', 'jquery.combobox');
 		\OCP\Util::addStyle('contacts', 'jquery.ocaddnew');

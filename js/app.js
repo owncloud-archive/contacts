@@ -944,7 +944,7 @@ OC.Contacts = OC.Contacts || {
 
 		this.$contactList.on('mouseenter', 'tr.contact', function(event) {
 			var $td = $(this).find('td').filter(':visible').last();
-			$('<a />').addClass('svg delete action').appendTo($td);
+			$('<a />').addClass('icon-delete svg delete action').appendTo($td);
 		});
 
 		this.$contactList.on('mouseleave', 'tr.contact', function(event) {
@@ -1022,7 +1022,7 @@ OC.Contacts = OC.Contacts || {
 				} else {
 					var contact = self.contacts.findById(self.currentid);
 					if(contact) {
-						contact.close();
+						contact.close(true);
 					}
 				}
 			}
@@ -1423,14 +1423,7 @@ OC.Contacts = OC.Contacts || {
 		this.hideActions();
 		console.log('Contacts.openContact', id, typeof id);
 		if(this.currentid && this.currentid !== id) {
-			var contact = this.contacts.findById(this.currentid);
-			if(contact) {
-				// Only show the list element if contact is in current group
-				var showListElement = contact.inGroup(this.groups.nameById(this.currentgroup))
-					|| this.currentgroup === 'all'
-					|| (this.currentgroup === 'uncategorized' && contact.groups().length === 0);
-				contact.close(showListElement);
-			}
+			this.closeContact(this.currentid);
 		}
 		this.currentid = id;
 		var contact = this.contacts.findById(this.currentid);
@@ -1441,7 +1434,6 @@ OC.Contacts = OC.Contacts || {
 			this.groups.selectGroup({id:'all'});
 		}
 		$(window).unbind('hashchange', this.hashChange);
-		this.setAllChecked(false);
 		console.assert(typeof this.currentid === 'string', 'Current ID not string:' + this.currentid);
 		// Properties that the contact doesn't know
 		var groupprops = {

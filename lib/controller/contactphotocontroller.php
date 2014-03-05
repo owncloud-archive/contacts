@@ -28,7 +28,6 @@ class ContactPhotoController extends Controller {
 		// TODO: Cache resized photo
 		$params = $this->request->urlParams;
 		$etag = null;
-		//$maxSize = isset($this->request['maxSize']) ? $this->request['maxSize'] : 170;
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contact = $addressBook->getChild($params['contactId']);
@@ -80,6 +79,7 @@ class ContactPhotoController extends Controller {
 	 */
 	public function uploadPhoto() {
 		$params = $this->request->urlParams;
+		$maxSize = isset($this->request->post['maxSize']) ? $this->request->post['maxSize'] : 400;
 
 		$response = new JSONResponse();
 
@@ -120,6 +120,14 @@ class ContactPhotoController extends Controller {
 			$response->debug('Couldn\'t save correct image orientation: '.$tmpkey);
 		}
 
+		if($image->valid()) {
+			if($image->height() > $maxSize || $image->width() > $maxSize) {
+				$image->resize($maxSize);
+			}
+		} else {
+			$response->bailOut(App::$l10n->t('Uploaded image is invalid'));
+		}
+
 		if(!$this->server->getCache()->set($tmpkey, $image->data(), 600)) {
 			$response->bailOut(App::$l10n->t('Couldn\'t save temporary image: ').$tmpkey);
 			return $response;
@@ -150,7 +158,9 @@ class ContactPhotoController extends Controller {
 	public function cacheCurrentPhoto() {
 		$params = $this->request->urlParams;
 		$response = new JSONResponse();
-		$photoResponse = $this->getPhoto($maxSize = 400);
+		$maxSize = isset($this->request->get['maxSize']) ? $this->request->get['maxSize'] : 400;
+
+		$photoResponse = $this->getPhoto($maxSize);
 
 		if(!$photoResponse instanceof ImageResponse) {
 			return $photoResponse;
@@ -185,6 +195,7 @@ class ContactPhotoController extends Controller {
 	 */
 	public function cacheFileSystemPhoto() {
 		$params = $this->request->urlParams;
+		$maxSize = isset($this->request->get['maxSize']) ? $this->request->get['maxSize'] : 400;
 		$response = new JSONResponse();
 
 		if(!isset($this->request->get['path'])) {
@@ -205,8 +216,8 @@ class ContactPhotoController extends Controller {
 		if(!$image->loadFromFile($localpath)) {
 			return $response->bailOut(App::$l10n->t('Error loading image.'));
 		}
-		if($image->width() > 400 || $image->height() > 400) {
-			$image->resize(400); // Prettier resizing than with browser and saves bandwidth.
+		if($image->width() > $maxSize || $image->height() > $maxSize) {
+			$image->resize($maxSize); // Prettier resizing than with browser and saves bandwidth.
 		}
 		if(!$image->fixOrientation()) { // No fatal error so we don't bail out.
 			$response->debug('Couldn\'t save correct image orientation: '.$localpath);
@@ -234,14 +245,10 @@ class ContactPhotoController extends Controller {
 	public function getTempPhoto() {
 		$params = $this->request->urlParams;
 		$tmpkey = $params['key'];
-		$maxSize = isset($this->request->get['maxSize']) ? $this->request->get['maxSize'] : 400;
 
 		$image = new \OCP\Image();
 		$image->loadFromData($this->server->getCache()->get($tmpkey));
 		if($image->valid()) {
-			if($image->height() > $maxSize || $image->width() > $maxSize) {
-				$image->resize($maxSize);
-			}
 			$response = new ImageResponse($image);
 			return $response;
 		} else {
@@ -262,7 +269,6 @@ class ContactPhotoController extends Controller {
 		$w = (isset($this->request->post['w']) && $this->request->post['w']) ? $this->request->post['w'] : -1;
 		$h = (isset($this->request->post['h']) && $this->request->post['h']) ? $this->request->post['h'] : -1;
 		$tmpkey = $params['key'];
-		$maxSize = isset($this->request->post['maxSize']) ? $this->request->post['maxSize'] : 200;
 
 		$app = new App($this->api->getUserId());
 		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
@@ -290,12 +296,6 @@ class ContactPhotoController extends Controller {
 
 		if(!$image->crop($x, $y, $w, $h)) {
 			return $response->bailOut(App::$l10n->t('Error cropping image'));
-		}
-
-		if($image->width() < $maxSize || $image->height() < $maxSize) {
-			if(!$image->resize(200)) {
-				return $response->bailOut(App::$l10n->t('Error resizing image'));
-			}
 		}
 
 		// For vCard 3.0 the type must be e.g. JPEG or PNG
