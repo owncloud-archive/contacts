@@ -767,7 +767,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vevent->{'RRULE'} = 'FREQ=YEARLY';
 			$vevent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
 			$alarm = \Sabre\Vobject\Component::create('VALARM');
-			$alarm->TRIGGER = '-PT0M'; //is there a way to make this configurable?
+			$alarm->{'TRIGGER'} = '-PT0M';
+			$alarm->{'ACTION'} = 'DISPLAY';
+			$alarm->{'DESCRIPTION'} = $vevent->{'SUMMARY'};
 			$vevent->add($alarm);
 			$vcal = \Sabre\VObject\Component::create('VCALENDAR');
 			$vcal->VERSION = '2.0';
