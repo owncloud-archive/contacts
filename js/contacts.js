@@ -1182,7 +1182,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 			values = {
 				id: this.id,
-				favorite:groupprops.favorite ? 'active' : '',
+				favorite:groupprops.favorite ? 'icon-starred' : 'icon-star',
 				name: this.getPreferredValue('FN', ''),
 				n0: n[0]||'', n1: n[1]||'', n2: n[2]||'', n3: n[3]||'', n4: n[4]||'',
 				nickname: this.getPreferredValue('NICKNAME', ''),
@@ -1259,7 +1259,7 @@ OC.Contacts = OC.Contacts || {};
 			self.deleteProperty({obj:event.target});
 		});
 
-		this.$fullelem.on('click keydown', '.globe,.mail', function(event) {
+		this.$fullelem.on('click keydown', '.globe,.mail,.favorite', function(event) {
 			$('.tipsy').remove();
 			if(wrongKey(event)) {
 				return;
@@ -1316,20 +1316,20 @@ OC.Contacts = OC.Contacts || {};
 		$bdayinput.attr('placeholder', $.datepicker.formatDate(datepickerFormatDate, new Date()));
 
 		this.$fullelem.find('.favorite').on('click', function () {
-			var state = $(this).hasClass('active');
+			var state = $(this).hasClass('icon-starred');
 			if(!self.data) {
 				return;
 			}
 			if(state) {
-				$(this).switchClass('active', 'inactive');
+				$(this).switchClass('icon-starred', 'icon-star');
 			} else {
-				$(this).switchClass('inactive', 'active');
+				$(this).switchClass('icon-star', 'icon-starred');
 			}
 			$(document).trigger('request.contact.setasfavorite', {
 				id: self.id,
 				state: !state
 			});
-		});
+		}).tipsy();
 		this.loadAvatar();
 		if(!this.data) {
 			// A new contact
