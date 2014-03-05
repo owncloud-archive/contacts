@@ -783,6 +783,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vEvent->{'RRULE'} = 'FREQ=YEARLY';
 			$vEvent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
 			$vEvent->{'TRANSP'} = 'TRANSPARENT';
+			$alarm = \Sabre\Vobject\Component::create('VALARM');
+			$alarm->TRIGGER = '-PT0M'; //is there a way to make this configurable?
+			$vEvent->add($alarm);
 			$appInfo = \OCP\App::getAppInfo('contacts');
 			$appVersion = \OCP\App::getAppVersion('contacts');
 			$vCal->PRODID = '-//ownCloud//NONSGML '.$appInfo['name'].' '.$appVersion.'//EN';
