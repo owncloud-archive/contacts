@@ -57,7 +57,8 @@ Class Properties {
 	 */
 	public static $index_properties = array(
 		'BDAY', 'UID', 'N', 'FN', 'TITLE', 'ROLE', 'NOTE', 'NICKNAME',
-		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO');
+		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO',
+		'X-DAVDROID-STARRED');
 
 	/**
 	 * Get options for IMPP properties
