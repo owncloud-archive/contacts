@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-05 00:49-0500\n"
+"POT-Creation-Date: 2014-03-06 00:49-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -936,6 +936,10 @@ msgstr ""
 
 #: templates/contacts.php:226
 msgid "Select photo from Files"
+msgstr ""
+
+#: templates/contacts.php:228
+msgid "Favorite"
 msgstr ""
 
 #: templates/contacts.php:231 templates/contacts.php:233

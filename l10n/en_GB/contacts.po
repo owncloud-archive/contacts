@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-05 00:49-0500\n"
-"PO-Revision-Date: 2014-03-05 05:49+0000\n"
+"POT-Creation-Date: 2014-03-06 00:49-0500\n"
+"PO-Revision-Date: 2014-03-06 05:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/owncloud/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
@@ -939,6 +939,10 @@ msgstr "Upload new photo"
 msgid "Select photo from Files"
 msgstr "Select photo from Files"
 
+#: templates/contacts.php:228
+msgid "Favorite"
+msgstr ""
+
 #: templates/contacts.php:231 templates/contacts.php:233
 #: templates/settings.php:59
 msgid "Name"
@@ -958,7 +962,7 @@ msgstr "Surname"
 
 #: templates/contacts.php:263
 msgid "Address book"
-msgstr ""
+msgstr "Address book"
 
 #: templates/contacts.php:270 templates/contacts.php:347
 msgid "Nickname"

@@ -180,6 +180,7 @@
 "First name" => "Etunimi",
 "Additional names" => "Lisänimet",
 "Last name" => "Sukunimi",
+"Address book" => "Osoitekirja",
 "Nickname" => "Kutsumanimi",
 "Title" => "Otsikko",
 "Organization" => "Organisaatio",

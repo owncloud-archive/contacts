@@ -5,13 +5,14 @@
 # Translators:
 # CPDZ <aldis@udris.lv>, 2013
 # jeanmarcgailis <jeanmarc.gailis@gmail.com>, 2013
+# jeanmarcgailis <jeanmarc.gailis@gmail.com>, 2014
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-05 00:49-0500\n"
-"PO-Revision-Date: 2014-03-05 05:49+0000\n"
+"POT-Creation-Date: 2014-03-06 00:49-0500\n"
+"PO-Revision-Date: 2014-03-06 05:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Latvian (http://www.transifex.com/projects/p/owncloud/language/lv/)\n"
 "MIME-Version: 1.0\n"
@@ -70,7 +71,7 @@ msgstr ""
 
 #: js/app.js:226
 msgid "Error."
-msgstr ""
+msgstr "Kļūda."
 
 #: js/app.js:321 js/app.js:335
 msgid "Add to..."
@@ -78,7 +79,7 @@ msgstr ""
 
 #: js/app.js:325 js/app.js:337
 msgid "Remove from..."
-msgstr ""
+msgstr "Izņemt no..."
 
 #: js/app.js:342
 msgid "Add group..."
@@ -419,7 +420,7 @@ msgstr ""
 
 #: lib/controller/addressbookcontroller.php:135
 msgid "Error creating address book"
-msgstr ""
+msgstr "Kļūda veidojot "
 
 #: lib/controller/addressbookcontroller.php:152
 msgid "Error updating address book"
@@ -436,7 +437,7 @@ msgstr ""
 
 #: lib/controller/addressbookcontroller.php:224
 msgid "Error creating contact."
-msgstr ""
+msgstr "Kļūda, veidojot kontaktu."
 
 #: lib/controller/addressbookcontroller.php:260
 msgid "Error deleting contact."
@@ -939,6 +940,10 @@ msgstr "Augšupielādēt jaunu fotogrāfiju"
 
 #: templates/contacts.php:226
 msgid "Select photo from Files"
+msgstr ""
+
+#: templates/contacts.php:228
+msgid "Favorite"
 msgstr ""
 
 #: templates/contacts.php:231 templates/contacts.php:233

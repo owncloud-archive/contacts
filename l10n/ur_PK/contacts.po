@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-05 00:49-0500\n"
-"PO-Revision-Date: 2014-03-05 05:49+0000\n"
+"POT-Creation-Date: 2014-03-06 00:49-0500\n"
+"PO-Revision-Date: 2014-03-06 05:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Urdu (Pakistan) (http://www.transifex.com/projects/p/owncloud/language/ur_PK/)\n"
 "MIME-Version: 1.0\n"
@@ -936,6 +936,10 @@ msgstr ""
 
 #: templates/contacts.php:226
 msgid "Select photo from Files"
+msgstr ""
+
+#: templates/contacts.php:228
+msgid "Favorite"
 msgstr ""
 
 #: templates/contacts.php:231 templates/contacts.php:233

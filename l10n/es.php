@@ -223,6 +223,7 @@
 "First name" => "Nombre",
 "Additional names" => "Nombres adicionales",
 "Last name" => "Apellido",
+"Address book" => "Libreta de direcciones",
 "Nickname" => "Alias",
 "Title" => "Título",
 "Organization" => "Organización",
