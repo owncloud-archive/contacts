@@ -8,6 +8,6 @@
   "unused": true,
   "jquery": true,
   "browser": true,
-  "devel" true,
+  "devel": true,
   "globals": { "OC": false }
 }
