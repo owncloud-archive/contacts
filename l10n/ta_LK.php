@@ -114,6 +114,7 @@
 "Delete current photo" => "தற்போதைய படத்தை நீக்குக",
 "Edit current photo" => "தற்போதைய படத்தை தொகுக்க",
 "Upload new photo" => "புதிய படத்தை பதிவேற்றுக",
+"Favorite" => "விருப்பமான",
 "Name" => "பெயர்",
 "First name" => "முதல் பெயர்",
 "Additional names" => "மேலதிக பெயர்கள்",

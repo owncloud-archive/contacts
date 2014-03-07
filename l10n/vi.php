@@ -180,6 +180,7 @@
 "Delete current photo" => "Xóa hình ảnh hiện tại",
 "Edit current photo" => "Sửa hình ảnh hiện tại",
 "Upload new photo" => "Tải hình mới",
+"Favorite" => "Ưu thích",
 "Name" => "Tên",
 "First name" => "Tên",
 "Additional names" => "Tên bổ sung",

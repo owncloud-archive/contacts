@@ -53,6 +53,7 @@
 "Delete current photo" => "מחק תמונה נוכחית",
 "Edit current photo" => "ערוך תמונה נוכחית",
 "Upload new photo" => "העלה תמונה חדשה",
+"Favorite" => "מועדף",
 "Name" => "שם",
 "Additional names" => "שמות נוספים",
 "Nickname" => "כינוי",

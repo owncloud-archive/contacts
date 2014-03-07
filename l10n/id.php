@@ -216,6 +216,7 @@
 "Delete current photo" => "Hapus foto saat ini",
 "Edit current photo" => "Sunting foto saat ini",
 "Upload new photo" => "Unggah foto baru",
+"Favorite" => "Favorit",
 "Name" => "Nama",
 "First name" => "Nama depan",
 "Additional names" => "Nama tambahan",

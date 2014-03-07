@@ -216,6 +216,7 @@
 "Delete current photo" => "Διαγραφή τρέχουσας φωτογραφίας",
 "Edit current photo" => "Επεξεργασία τρέχουσας φωτογραφίας",
 "Upload new photo" => "Μεταφόρτωση νέας φωτογραφίας",
+"Favorite" => "Αγαπημένο",
 "Name" => "Όνομα",
 "First name" => "Όνομα",
 "Additional names" => "Επιπλέον ονόματα",

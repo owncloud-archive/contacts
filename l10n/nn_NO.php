@@ -37,6 +37,7 @@
 "Phone" => "Telefonnummer",
 "Address" => "Adresse",
 "Group" => "Gruppe",
+"Favorite" => "Favoritt",
 "Name" => "Namn",
 "Title" => "Tittel",
 "Organization" => "Organisasjon",

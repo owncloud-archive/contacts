@@ -200,6 +200,7 @@
 "Delete current photo" => "刪除這張相片",
 "Edit current photo" => "編輯目前相片",
 "Upload new photo" => "上傳新照片",
+"Favorite" => "我的最愛",
 "Name" => "名稱",
 "First name" => "名子",
 "Additional names" => "額外名",

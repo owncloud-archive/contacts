@@ -217,6 +217,7 @@
 "Delete current photo" => "Smazat současnou fotku",
 "Edit current photo" => "Upravit současnou fotku",
 "Upload new photo" => "Nahrát novou fotku",
+"Favorite" => "Oblíbit",
 "Name" => "Název",
 "First name" => "Křestní jméno",
 "Additional names" => "Další jména",

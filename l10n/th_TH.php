@@ -132,6 +132,7 @@
 "Delete current photo" => "ลบรูปภาพปัจจุบัน",
 "Edit current photo" => "แก้ไขรูปภาพปัจจุบัน",
 "Upload new photo" => "อัพโหลดรูปภาพใหม่",
+"Favorite" => "รายการโปรด",
 "Name" => "ชื่อ",
 "First name" => "ชื่อจริง",
 "Additional names" => "ชื่ออื่นๆ",

@@ -210,6 +210,7 @@
 "Delete current photo" => "Ta bort aktuellt foto",
 "Edit current photo" => "Redigera aktuellt foto",
 "Upload new photo" => "Ladda upp ett nytt foto",
+"Favorite" => "Favorit",
 "Name" => "Namn",
 "First name" => "Förnamn",
 "Additional names" => "Mellannamn",

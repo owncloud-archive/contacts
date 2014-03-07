@@ -216,6 +216,7 @@
 "Delete current photo" => "Удалить текущую фотографию",
 "Edit current photo" => "Редактировать текущую фотографию",
 "Upload new photo" => "Загрузить новую фотографию",
+"Favorite" => "Избранное",
 "Name" => "Имя",
 "First name" => "Имя",
 "Additional names" => "Отчество",

@@ -182,6 +182,7 @@
 "Delete current photo" => "إزالة الصورة الحالية",
 "Edit current photo" => "تحرير الصورة الحالية",
 "Upload new photo" => "رفع صورة جديدة",
+"Favorite" => "المفضلة",
 "Name" => "اسم",
 "First name" => "الاسم الأول",
 "Additional names" => "الاسماء الإضافية",

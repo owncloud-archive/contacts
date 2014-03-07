@@ -42,6 +42,7 @@
 "Delete current photo" => "მიმდინარე სურათის წაშლა",
 "Edit current photo" => "მიმდინარე სურათის რედაქტირება",
 "Upload new photo" => "ახალი სურათის ატვირთვა",
+"Favorite" => "ფავორიტი",
 "Name" => "სახელი",
 "Nickname" => "ნიკნეიმი",
 "Title" => "სახელი",

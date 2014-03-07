@@ -214,6 +214,7 @@
 "Delete current photo" => "Eliminar imagen actual",
 "Edit current photo" => "Editar imagen actual",
 "Upload new photo" => "Subir nueva imagen",
+"Favorite" => "Favorito",
 "Name" => "Nombre",
 "First name" => "Nombre",
 "Additional names" => "Segundo nombre",

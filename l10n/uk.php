@@ -166,6 +166,7 @@
 "Delete current photo" => "Видалити поточне фото",
 "Edit current photo" => "Редагувати поточне фото",
 "Upload new photo" => "Завантажити нове фото",
+"Favorite" => "Улюблений",
 "Name" => "Ім'я",
 "First name" => "Ім'я",
 "Additional names" => "Додаткові імена",

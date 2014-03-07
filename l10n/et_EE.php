@@ -216,6 +216,7 @@
 "Delete current photo" => "Kustuta praegune foto",
 "Edit current photo" => "Muuda praegust pilti",
 "Upload new photo" => "Lae üles uus foto",
+"Favorite" => "Lemmik",
 "Name" => "Nimi",
 "First name" => "Eesnimi",
 "Additional names" => "Lisanimed",

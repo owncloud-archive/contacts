@@ -209,6 +209,7 @@
 "Delete current photo" => "Ištrinti šią nuotrauką",
 "Edit current photo" => "Redaguoti šią nuotrauką",
 "Upload new photo" => "Įkelti naują foto",
+"Favorite" => "Mėgiamas",
 "Name" => "Pavadinimas",
 "First name" => "Vardas",
 "Additional names" => "Papildomi vardai",

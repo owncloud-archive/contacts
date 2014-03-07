@@ -219,6 +219,7 @@
 "Edit current photo" => "Editar imagem atual",
 "Upload new photo" => "Carregar nova foto",
 "Select photo from Files" => "Selecionar foto dos arquivos",
+"Favorite" => "Favorito",
 "Name" => "Nome",
 "First name" => "Primeiro nome",
 "Additional names" => "Segundo Nome",

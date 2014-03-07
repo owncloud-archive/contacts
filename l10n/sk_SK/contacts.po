@@ -7,6 +7,7 @@
 # Lubbzor <l.grejtak@gmail.com>, 2013
 # mhh <marian.hvolka@stuba.sk>, 2013-2014
 # martinb <martin.babik@gmail.com>, 2012
+# mehturt <mehturt@gmail.com>, 2014
 # Roman Priesol <roman@priesol.net>, 2012
 # martin, 2013
 # martin, 2012-2013
@@ -15,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-06 00:49-0500\n"
-"PO-Revision-Date: 2014-03-06 05:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-07 00:49-0500\n"
+"PO-Revision-Date: 2014-03-06 14:20+0000\n"
+"Last-Translator: mehturt <mehturt@gmail.com>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -188,7 +189,7 @@ msgstr "# skupiny"
 
 #: js/contacts.js:1174
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Chyba parsovania narodenín {bday}"
 
 #: js/contacts.js:2252
 msgid ""
@@ -230,7 +231,7 @@ msgstr "Kontakty nie sú v danej skupine."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "Skupina pomenovaná ako \"{group}\" už existuje"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -548,7 +549,7 @@ msgstr "Nemôžem načítať dočasný obrázok: "
 
 #: lib/controller/contactphotocontroller.php:128
 msgid "Uploaded image is invalid"
-msgstr ""
+msgstr "Nahratý súbor je neplatný"
 
 #: lib/controller/contactphotocontroller.php:132
 #: lib/controller/contactphotocontroller.php:172
@@ -739,7 +740,7 @@ msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
 msgid "ownCloud handle"
-msgstr ""
+msgstr "ownCloud identifikátor"
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
@@ -944,11 +945,11 @@ msgstr "Nahrať novú fotku"
 
 #: templates/contacts.php:226
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Vybrať fotku zo súborov"
 
 #: templates/contacts.php:228
 msgid "Favorite"
-msgstr ""
+msgstr "Obľúbené"
 
 #: templates/contacts.php:231 templates/contacts.php:233
 #: templates/settings.php:59
@@ -969,7 +970,7 @@ msgstr "Priezvisko"
 
 #: templates/contacts.php:263
 msgid "Address book"
-msgstr ""
+msgstr "Adresár kontaktov"
 
 #: templates/contacts.php:270 templates/contacts.php:347
 msgid "Nickname"

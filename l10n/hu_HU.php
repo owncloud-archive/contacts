@@ -217,6 +217,7 @@
 "Delete current photo" => "Aktuális kép törlése",
 "Edit current photo" => "Aktuális kép szerkesztése",
 "Upload new photo" => "Új kép feltöltése",
+"Favorite" => "Kedvenc",
 "Name" => "Név",
 "First name" => "Keresztnév",
 "Additional names" => "További nevek",

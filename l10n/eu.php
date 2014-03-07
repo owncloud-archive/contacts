@@ -208,6 +208,7 @@
 "Delete current photo" => "Ezabatu oraingo argazkia",
 "Edit current photo" => "Editatu oraingo argazkia",
 "Upload new photo" => "Igo argazki berria",
+"Favorite" => "Gogokoa",
 "Name" => "Izena",
 "First name" => "Izena",
 "Additional names" => "Tarteko izenak",

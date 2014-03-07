@@ -219,6 +219,7 @@
 "Edit current photo" => "Wijzig huidige foto",
 "Upload new photo" => "Upload nieuwe foto",
 "Select photo from Files" => "Kies foto uit Bestanden",
+"Favorite" => "Favoriet",
 "Name" => "Naam",
 "First name" => "Voornaam",
 "Additional names" => "Extra namen",

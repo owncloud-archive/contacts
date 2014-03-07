@@ -217,6 +217,7 @@
 "Delete current photo" => "Izbriši trenutno sliko",
 "Edit current photo" => "Uredi trenutno sliko",
 "Upload new photo" => "Pošlji novo sliko",
+"Favorite" => "Priljubljeno",
 "Name" => "Ime",
 "First name" => "Ime",
 "Additional names" => "Druga imena",

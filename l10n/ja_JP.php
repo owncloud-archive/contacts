@@ -219,6 +219,7 @@
 "Edit current photo" => "現在の写真を編集",
 "Upload new photo" => "新しい写真をアップロード",
 "Select photo from Files" => "ファイルから写真を選択",
+"Favorite" => "お気に入り",
 "Name" => "名前",
 "First name" => "名",
 "Additional names" => "ミドルネーム",

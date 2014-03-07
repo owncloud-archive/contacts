@@ -204,6 +204,7 @@
 "Delete current photo" => "删除当前照片",
 "Edit current photo" => "编辑当前照片",
 "Upload new photo" => "上传新照片",
+"Favorite" => "收藏",
 "Name" => "名称",
 "First name" => "名",
 "Additional names" => "其他名称",

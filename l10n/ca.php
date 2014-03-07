@@ -217,6 +217,7 @@
 "Delete current photo" => "Elimina la foto actual",
 "Edit current photo" => "Edita la foto actual",
 "Upload new photo" => "Carrega una foto nova",
+"Favorite" => "Preferits",
 "Name" => "Nom",
 "First name" => "Nom",
 "Additional names" => "Noms addicionals",

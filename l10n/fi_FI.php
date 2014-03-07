@@ -176,6 +176,7 @@
 "Edit current photo" => "Muokkaa nykyistä valokuvaa",
 "Upload new photo" => "Lähetä uusi valokuva",
 "Select photo from Files" => "Valitse kuva tiedostoista",
+"Favorite" => "Suosikki",
 "Name" => "Nimi",
 "First name" => "Etunimi",
 "Additional names" => "Lisänimet",

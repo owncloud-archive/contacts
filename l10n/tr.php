@@ -219,6 +219,7 @@
 "Edit current photo" => "Mevcut fotoğrafı düzenle",
 "Upload new photo" => "Yeni fotoğraf yükle",
 "Select photo from Files" => "Dosyalardan bir fotoğraf seçin",
+"Favorite" => "Sık Kullanılanlar",
 "Name" => "İsim",
 "First name" => "İsim",
 "Additional names" => "İlave isimler",

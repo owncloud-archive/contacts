@@ -165,6 +165,7 @@
 "Delete current photo" => "Forigi nunan foton",
 "Edit current photo" => "Redakti nunan foton",
 "Upload new photo" => "Alŝuti novan foton",
+"Favorite" => "Favorato",
 "Name" => "Nomo",
 "First name" => "Persona nomo",
 "Additional names" => "Pliaj nomoj",

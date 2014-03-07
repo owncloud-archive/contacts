@@ -85,6 +85,7 @@
 "Delete current photo" => "Dzēst pašreizējo fotogrāfiju",
 "Edit current photo" => "Rediģēt pašreizējo fotogrāfiju",
 "Upload new photo" => "Augšupielādēt jaunu fotogrāfiju",
+"Favorite" => "Iecienītais",
 "Name" => "Nosaukums",
 "First name" => "Vārds",
 "Additional names" => "Papildu vārdi",

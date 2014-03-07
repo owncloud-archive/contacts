@@ -210,6 +210,7 @@
 "Delete current photo" => "현재 사진 삭제",
 "Edit current photo" => "현재 사진 편집",
 "Upload new photo" => "새 사진 업로드",
+"Favorite" => "즐겨찾기",
 "Name" => "이름",
 "First name" => "이름",
 "Additional names" => "추가 이름",
