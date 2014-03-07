@@ -41,8 +41,8 @@ OC.Contacts = OC.Contacts || {};
 			});
 		});
 		this.$li.find('a.action.download')
-			.attr('href', OC.Router.generate(
-				'contacts_address_book_export',
+			.attr('href', OC.generateUrl(
+				'apps/contacts/addressbook/{backend}/{addressBookId}/export',
 				{
 					backend: this.getBackend(),
 					addressBookId: this.getId()
@@ -279,8 +279,8 @@ OC.Contacts = OC.Contacts || {};
 			var value = $(this).val();
 			self.$importFileInput.prop('disabled', value === '-1' );
 			if(value !== '-1') {
-				var url = OC.Router.generate(
-					'contacts_import_upload',
+				var url = OC.generateUrl(
+					'apps/contacts/addressbook/{backend}/{addressBookId}/import/upload',
 					{addressBookId:value, backend: $(this).find('option:selected').data('backend')}
 				);
 				self.$importFileInput.fileupload('option', 'url', url);
