@@ -132,8 +132,10 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 
 		$properties['uri'] = $uri;
 
-		list(,$backend) = $this->getBackendForAddressBook($addressbookid);
-		$backend->createAddressBook($properties, $userid);
+		$app = new Contacts\App();
+		$backend = $app->getBackend('local');
+
+		$backend->createAddressBook($properties);
 	}
 
 	/**
