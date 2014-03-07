@@ -2,7 +2,7 @@
   "laxbreak": true,
   "curly": true,
   "eqeqeq": true,
-  "newcap": true
+  "newcap": true,
   "forin": true,
   "quotmark": "single",
   "unused": true,
