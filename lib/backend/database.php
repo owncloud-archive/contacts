@@ -577,14 +577,12 @@ class Database extends AbstractBackend {
 		$uri = isset($options['uri']) ? $options['uri'] : null;
 
 		if (!$contact instanceof VCard) {
-
 			try {
 				$contact = Reader::read($contact);
 			} catch(\Exception $e) {
 				\OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
 				return false;
 			}
-
 		}
 
 		try {
