@@ -355,7 +355,7 @@ OC.Contacts = OC.Contacts || {};
 		);
 		console.log('url', url);
 		var defer = $.Deferred();
-		var self = this;
+
 		$.when(
 			$(photo).on('load', function() {
 				defer.resolve(photo);
@@ -569,7 +569,6 @@ OC.Contacts = OC.Contacts || {};
 			: 'application/x-www-form-urlencoded';
 		var processData = !isJSON;
 		contentType += '; charset=UTF-8';
-		var self = this;
 		var url = OC.generateUrl('apps/contacts/' + route, routeParams);
 		var headers = {
 			Accept : 'application/json; charset=utf-8'
@@ -593,7 +592,7 @@ OC.Contacts = OC.Contacts || {};
 			.done(function(response, textStatus, jqXHR) {
 				defer.resolve(new JSONResponse(response, jqXHR));
 			})
-			.fail(function(jqXHR, textStatus, error) {
+			.fail(function(jqXHR/*, textStatus, error*/) {
 				console.log(jqXHR);
 				var response = jqXHR.responseText ? $.parseJSON(jqXHR.responseText) : null;
 				console.log('response', response);

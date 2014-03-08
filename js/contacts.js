@@ -446,9 +446,9 @@ OC.Contacts = OC.Contacts || {};
 			});
 			return;
 		}
+
 		this.setAsSaving(this.$fullelem, true);
-		var data = JSON.stringify(this.data);
-		//console.log('stringified', data);
+
 		$.when(this.storage.saveAllProperties(this.metadata.backend, this.metadata.parent, this.id, {data:this.data}))
 			.then(function(response) {
 			if(!response.error) {
@@ -497,6 +497,7 @@ OC.Contacts = OC.Contacts || {};
 		var obj = null;
 		var element = null;
 		var args = [];
+
 		if(params.obj) {
 			obj = params.obj;
 			args = this.argumentsFor(obj);
@@ -505,10 +506,8 @@ OC.Contacts = OC.Contacts || {};
 		} else {
 			args = params;
 			element = params.name;
-			var value = utils.isArray(params.value)
-				? $.param(params.value)
-				: encodeURIComponent(params.value);
 		}
+
 		if(!args) {
 			console.log('No arguments. returning');
 			return false;
@@ -594,6 +593,7 @@ OC.Contacts = OC.Contacts || {};
 								self.data.FN = [{name:'FN', value:'', parameters:[]}];
 							}
 							self.data.FN[0]['value'] = value;
+							// Used for sorting list elements
 							self.displayNames.fn = value;
 							var nempty = true;
 							if(!self.data.N) {
@@ -625,17 +625,19 @@ OC.Contacts = OC.Contacts || {};
 							break;
 						case 'N':
 							if(!utils.isArray(value)) {
-								value = value.split(';');
 								// Then it is auto-generated from FN.
-								var $nelems = self.$fullelem.find('.n.editor input');
+								value = value.split(';');
+
 								$.each(value, function(idx, val) {
 									self.$fullelem.find('#n_' + idx).val(val).get(0).defaultValue = val;
 								});
 							}
-							self.displayNames.fl = value.slice(0, 2).reverse().join(' ');
 
+							// Used for sorting list elements
+							self.displayNames.fl = value.slice(0, 2).reverse().join(' ');
 							self.displayNames.lf = value.slice(0, 2).join(', ').trim();
-							var $fullname = self.$fullelem.find('.fullname'), fullname = '';
+
+							var $fullname = self.$fullelem.find('.fullname');
 							var update_fn = false;
 							if(!self.data.FN) {
 								self.data.FN = [{name:'FN', value:'', parameters:[]}];
@@ -859,36 +861,36 @@ OC.Contacts = OC.Contacts || {};
 		console.log('Contact.argumentsFor', $(obj));
 		var args = {};
 		var ptype = this.propertyTypeFor(obj);
-		args['name'] = ptype;
+		args.name = ptype;
 
 		if(this.multi_properties.indexOf(ptype) !== -1) {
-			args['checksum'] = this.checksumFor(obj);
+			args.checksum = this.checksumFor(obj);
 		}
 
 		if($(obj).hasClass('propertycontainer')) {
 			if($(obj).is('select[data-element="categories"]')) {
-				args['value'] = [];
+				args.value = [];
 				$.each($(obj).find(':selected'), function(idx, e) {
-					args['value'].push($(e).text());
+					args.value.push($(e).text());
 				});
 			} else {
-				args['value'] = $(obj).val();
+				args.value = $(obj).val();
 			}
 		} else {
 			var $elements = this.propertyContainerFor(obj)
 				.find('input.value,select.value,textarea.value');
 			if($elements.length > 1) {
-				args['value'] = [];
+				args.value = [];
 				$.each($elements, function(idx, e) {
-					args['value'][parseInt($(e).attr('name').substr(6,1))] = $(e).val();
+					args.value[parseInt($(e).attr('name').substr(6,1))] = $(e).val();
 					//args['value'].push($(e).val());
 				});
 			} else {
 				var value = $elements.val();
-				switch(args['name']) {
+				switch(args.name) {
 					case 'BDAY':
 						try {
-							args['value'] = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate(datepickerFormatDate, value));
+							args.value = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate(datepickerFormatDate, value));
 						} catch(e) {
 							$(document).trigger(
 								'status.contacts.error',
@@ -898,12 +900,12 @@ OC.Contacts = OC.Contacts || {};
 						}
 						break;
 					default:
-						args['value'] = value;
+						args.value = value;
 						break;
 				}
 			}
 		}
-		args['parameters'] = this.parametersFor(obj);
+		args.parameters = this.parametersFor(obj);
 		console.log('Contact.argumentsFor', args);
 		return args;
 	};
@@ -970,8 +972,7 @@ OC.Contacts = OC.Contacts || {};
 	Contact.prototype.parametersFor = function(obj, asText) {
 		var parameters = {};
 		$.each(this.propertyContainerFor(obj)
-			.find('select.parameter,input:checkbox:checked.parameter'),
-			   function(i, elem) {
+			.find('select.parameter,input:checkbox:checked.parameter'), function(i, elem) {
 			var $elem = $(elem);
 			var paramname = $elem.data('parameter');
 			if(!parameters[paramname]) {
@@ -1014,7 +1015,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 		this.setThumbnail(this.$dragelem);
 		return this.$dragelem;
-	}
+	};
 
 	/**
 	 * Render the list item
@@ -1061,7 +1062,7 @@ OC.Contacts = OC.Contacts || {};
 					cursor: 'move',
 					distance: 10,
 					revert: 'invalid',
-					helper: function (e,ui) {
+					helper: function(/*event, ui*/) {
 						return self.renderDragItem().appendTo('body');
 					},
 					opacity: 1,
@@ -1101,7 +1102,7 @@ OC.Contacts = OC.Contacts || {};
 			});
 			self.$groupSelect.bind('multiselectclick', function(event, ui) {
 				var action = ui.checked ? 'addtogroup' : 'removefromgroup';
-				console.assert(typeof self.id === 'string', 'ID is not a string')
+				console.assert(typeof self.id === 'string', 'ID is not a string');
 				$(document).trigger('request.contact.' + action, {
 					id: self.id,
 					groupid: parseInt(ui.value)
@@ -1189,7 +1190,7 @@ OC.Contacts = OC.Contacts || {};
 				org: this.getPreferredValue('ORG', []).clean('').join(', '), // TODO Add parts if more than one.
 				bday: bday,
 				note: this.getPreferredValue('NOTE', '')
-			}
+			};
 		} else {
 			values = {id:'', favorite:'', name:'', nickname:'', title:'', org:'', bday:'', note:'', n0:'', n1:'', n2:'', n3:'', n4:''};
 		}
@@ -1219,8 +1220,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 
 		this.$addMenu = this.$fullelem.find('#addproperty');
-		this.$addMenu.on('change', function(event) {
-			//console.log('add', $(this).val());
+		this.$addMenu.on('change', function(/*event*/) {
 			var $opt = $(this).find('option:selected');
 			self.addProperty($opt, $(this).val());
 			$(this).val('');
@@ -1240,7 +1240,7 @@ OC.Contacts = OC.Contacts || {};
 			$(this).css('opacity', '0');
 			var $editor = $(this).next('.n.editor').first();
 			var bodyListener = function(e) {
-				if($editor.find($(e.target)).length == 0) {
+				if($editor.find($(e.target)).length === 0) {
 					$editor.toggle('blind');
 					$('body').unbind('click', bodyListener);
 				}
@@ -1402,20 +1402,23 @@ OC.Contacts = OC.Contacts || {};
 						//console.log('$property', $property);
 						var meta = [];
 						if(property.label) {
-							if(!property.parameters['TYPE']) {
-								property.parameters['TYPE'] = [];
+							if(!property.parameters.TYPE) {
+								property.parameters.TYPE = [];
 							}
-							property.parameters['TYPE'].push(property.label);
+							property.parameters.TYPE.push(property.label);
 							meta.push(property.label);
 						}
 						for(var param in property.parameters) {
+							if(!property.parameters.hasOwnProperty(param)) {
+								continue;
+							}
 							//console.log('param', param);
-							if(param.toUpperCase() == 'PREF') {
+							if(param.toUpperCase() === 'PREF') {
 								var $cb = $property.find('input[type="checkbox"]');
 								$cb.attr('checked', 'checked');
 								meta.push($cb.attr('title'));
 							}
-							else if(param.toUpperCase() == 'TYPE') {
+							else if(param.toUpperCase() === 'TYPE') {
 								for(var etype in property.parameters[param]) {
 									var found = false;
 									var et = property.parameters[param][etype];
@@ -1434,7 +1437,7 @@ OC.Contacts = OC.Contacts || {};
 									}
 								}
 							}
-							else if(param.toUpperCase() == 'X-SERVICE-TYPE') {
+							else if(param.toUpperCase() === 'X-SERVICE-TYPE') {
 								//console.log('setting', $property.find('select.impp'), 'to', property.parameters[param].toLowerCase());
 								$property.find('select.rtl').val(property.parameters[param].toLowerCase());
 							}
@@ -1495,7 +1498,7 @@ OC.Contacts = OC.Contacts || {};
 	 * @return A jquery object to be injected in the DOM
 	 */
 	Contact.prototype.renderAddressProperty = function(idx, property) {
-		if(!this.detailTemplates['adr']) {
+		if(!this.detailTemplates.adr) {
 			console.warn('No template for adr', this.detailTemplates);
 			return;
 		}
@@ -1519,7 +1522,7 @@ OC.Contacts = OC.Contacts || {};
 				idx: idx
 			}
 			: {value:'', checksum:'new', adr0:'', adr1:'', adr2:'', adr3:'', adr4:'', adr5:'', adr6:'', idx: idx};
-		var $elem = this.detailTemplates['adr'].octemplate(values);
+		var $elem = this.detailTemplates.adr.octemplate(values);
 		var self = this;
 		$elem.find('.tooltipped.downwards:not(.onfocus)').tipsy({gravity: 'n'});
 		$elem.find('.tooltipped.rightwards.onfocus').tipsy({trigger: 'focus', gravity: 'w'});
@@ -1528,13 +1531,12 @@ OC.Contacts = OC.Contacts || {};
 			var $editor = $(this).siblings('.adr.editor').first();
 			var $viewer = $(this);
 			var bodyListener = function(e) {
-				if($editor.find($(e.target)).length == 0) {
+				if($editor.find($(e.target)).length === 0) {
 					$editor.toggle('blind');
 					$viewer.slideDown(550, function() {
 						var input = $editor.find('input').first();
-						var val = self.valueFor(input);
 						var params = self.parametersFor(input, true);
-						$(this).find('.meta').html(params['TYPE'].join('/'));
+						$(this).find('.meta').html(params.TYPE.join('/'));
 						$(this).find('.adr').html(self.valueFor($editor.find('input').first()).clean('').join(', '));
 						$(this).next('.listactions').css('display', 'inline-block');
 						$('body').unbind('click', bodyListener);
@@ -1550,11 +1552,11 @@ OC.Contacts = OC.Contacts || {};
 			.autocomplete({
 				source: function( request, response ) {
 					$.ajax({
-						url: "http://ws.geonames.org/searchJSON",
-						dataType: "jsonp",
+						url: 'http://ws.geonames.org/searchJSON',
+						dataType: 'jsonp',
 						data: {
-							featureClass: "P",
-							style: "full",
+							featureClass: 'P',
+							style: 'full',
 							maxRows: 12,
 							lang: $elem.data('lang'),
 							name_startsWith: request.term
@@ -1562,7 +1564,7 @@ OC.Contacts = OC.Contacts || {};
 						success: function( data ) {
 							response( $.map( data.geonames, function( item ) {
 								return {
-									label: item.name + (item.adminName1 ? ", " + item.adminName1 : "") + ", " + item.countryName,
+									label: item.name + (item.adminName1 ? ", " + item.adminName1 : '') + ', ' + item.countryName,
 									value: item.name,
 									country: item.countryName
 								};
@@ -1572,20 +1574,20 @@ OC.Contacts = OC.Contacts || {};
 				},
 				minLength: 2,
 				select: function( event, ui ) {
-					if(ui.item && $.trim($elem.find('.value.country').val()).length == 0) {
+					if(ui.item && $.trim($elem.find('.value.country').val()).length === 0) {
 						$elem.find('.value.country').val(ui.item.country);
 					}
 				}
 			});
 		$elem.find('.value.country')
 			.autocomplete({
-				source: function( request, response ) {
+				source: function(request, response) {
 					$.ajax({
-						url: "http://ws.geonames.org/searchJSON",
-						dataType: "jsonp",
+						url: 'http://ws.geonames.org/searchJSON',
+						dataType: 'jsonp',
 						data: {
 							/*featureClass: "A",*/
-							featureCode: "PCLI",
+							featureCode: 'PCLI',
 							/*countryBias: "true",*/
 							/*style: "full",*/
 							lang: lang,
@@ -1612,7 +1614,7 @@ OC.Contacts = OC.Contacts || {};
 	 * @return A jquery object to be injected in the DOM
 	 */
 	Contact.prototype.renderIMProperty = function(property) {
-		if(!this.detailTemplates['impp']) {
+		if(!this.detailTemplates.impp) {
 			console.warn('No template for impp', this.detailTemplates);
 			return;
 		}
@@ -1620,7 +1622,7 @@ OC.Contacts = OC.Contacts || {};
 			value: property.value,
 			checksum: property.checksum
 		} : {value: '', checksum: 'new'};
-		return this.detailTemplates['impp'].octemplate(values);
+		return this.detailTemplates.impp.octemplate(values);
 	};
 
 	/**
@@ -1646,10 +1648,10 @@ OC.Contacts = OC.Contacts || {};
 			$elem.addClass('thumbnail');
 			$elem.removeAttr('style');
 		}
-	}
+	};
 
 	/**
-	 * Render the PHOTO property.
+	 * Render the PHOTO property or a generated avatar.
 	 */
 	Contact.prototype.loadAvatar = function() {
 		var self = this;
@@ -1774,7 +1776,7 @@ OC.Contacts = OC.Contacts || {};
 					pref = prop.value;
 				}
 				for(var param in prop.parameters) {
-					if(param.toUpperCase() == 'PREF') {
+					if(param.toUpperCase() === 'PREF') {
 						found = true; //
 						break;
 					}
@@ -1813,7 +1815,7 @@ OC.Contacts = OC.Contacts || {};
 
 		$.each(categories, function(idx, category) {
 			if(name.toLowerCase() == $.trim(category).toLowerCase()) {
-				found = true
+				found = true;
 				return false;
 			}
 		});
@@ -1951,7 +1953,6 @@ OC.Contacts = OC.Contacts || {};
 		});
 		$(document).bind('status.contact.moved', function(e, data) {
 			var contact = data.contact;
-			var oldid = contact.getId();
 			contact.close();
 			contact.reload(data.data);
 			self.contacts[contact.getId()] = contact;
@@ -2014,7 +2015,7 @@ OC.Contacts = OC.Contacts || {};
 	 * @return integer
 	 */
 	ContactList.prototype.count = function() {
-		return Object.keys(this.contacts.contacts).length
+		return Object.keys(this.contacts.contacts).length;
 	};
 
 	/**
@@ -2039,7 +2040,7 @@ OC.Contacts = OC.Contacts || {};
 		$(document).trigger('status.contacts.count', {
 			count: self.length
 		});
-	}
+	};
 
 	/**
 	* Show/hide contacts belonging to an addressbook.
@@ -2081,7 +2082,7 @@ OC.Contacts = OC.Contacts || {};
 
 	/**
 	* Show/hide contacts belonging to shared addressbooks.
-	* @param boolean show. Whether to show or hide.
+	* @param Boolean show. Whether to show or hide.
 	*/
 	ContactList.prototype.showSharedAddressbooks = function(show) {
 		console.log('ContactList.showSharedAddressbooks', show);
@@ -2099,7 +2100,7 @@ OC.Contacts = OC.Contacts || {};
 
 	/**
 	* Show contacts in list
-	* @param Array contacts. A list of contact ids.
+	* @param String[] contacts. A list of contact ids.
 	*/
 	ContactList.prototype.showContacts = function(contacts) {
 		console.log('showContacts', contacts);
@@ -2127,7 +2128,7 @@ OC.Contacts = OC.Contacts || {};
 		console.time('show');
 		$('tr.contact').filter(':visible').hide();
 		$.each(contacts, function(idx, id) {
-			var contact =  self.findById(id);
+			var contact = self.findById(id);
 			if(contact === null) {
 				return true; // continue
 			}
@@ -2139,15 +2140,17 @@ OC.Contacts = OC.Contacts || {};
 		// Amazingly this is slightly faster
 		//console.time('show');
 		for(var id in this.contacts) {
-			var contact = this.findById(id);
-			if(contact === null) {
-				continue;
-			}
-			if(contacts.indexOf(String(id)) === -1) {
-				contact.getListItemElement().hide();
-			} else {
-				contact.getListItemElement().show();
-				contact.setThumbnail();
+			if(this.contacts.hasOwnProperty(id)) {
+				var contact = this.findById(id);
+				if(contact === null) {
+					continue;
+				}
+				if(contacts.indexOf(String(id)) === -1) {
+					contact.getListItemElement().hide();
+				} else {
+					contact.getListItemElement().show();
+					contact.setThumbnail();
+				}
 			}
 		}
 		//console.timeEnd('show');*/
@@ -2205,15 +2208,15 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
-	 * TODO: Instead of having a timeout the contacts should be moved to a "Trash" backend/address book
-	 * https://github.com/owncloud/contacts/issues/107
-	 * @param object|object[] data An object or array of objects containing contact identification
-	 * {
-	 * 	contactid: '1234',
-	 * 	addressbookid: '4321',
-	 * 	backend: 'local'
-	 * }
-	 */
+	* TODO: Instead of having a timeout the contacts should be moved to a "Trash" backend/address book
+	* https://github.com/owncloud/contacts/issues/107
+	* @param Object|Object[] data An object or array of objects containing contact identification
+	* {
+	* 	contactid: '1234',
+	* 	addressbookid: '4321',
+	* 	backend: 'local'
+	* }
+	*/
 	ContactList.prototype.delayedDelete = function(data) {
 		console.log('delayedDelete, data:', typeof data, data);
 		var self = this;
@@ -2289,7 +2292,7 @@ OC.Contacts = OC.Contacts || {};
 		console.log('ContactList.deleteContacts, deletionQueue', this.deletionQueue);
 
 		if(this.deletionQueue.length === 1) {
-			contact = this.deletionQueue.shift()
+			contact = this.deletionQueue.shift();
 			// Let contact remove itself.
 			var id = contact.getId();
 			contact.destroy(function(response) {
@@ -2311,7 +2314,8 @@ OC.Contacts = OC.Contacts || {};
 		} else {
 
 			// Make a map of backends, address books and contacts for easier processing.
-			while(contact = this.deletionQueue.shift()) {
+			do {
+				contact = this.deletionQueue.shift();
 				if(!contactMap[contact.getBackend()]) {
 					contactMap[contact.getBackend()] = {};
 				}
@@ -2319,7 +2323,7 @@ OC.Contacts = OC.Contacts || {};
 					contactMap[contact.getBackend()][contact.getParent()] = [];
 				}
 				contactMap[contact.getBackend()][contact.getParent()].push(contact.getId());
-			}
+			} while(this.deletionQueue.length > 0);
 			console.log('map', contactMap);
 
 			// Call each backend/addressBook to delete contacts.
@@ -2558,7 +2562,7 @@ OC.Contacts = OC.Contacts || {};
 		$(document).trigger('status.contacts.count', {
 			count: self.length
 		});
-	}
+	};
 
 	/**
 	* Load contacts

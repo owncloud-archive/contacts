@@ -1311,17 +1311,17 @@ OC.Contacts = OC.Contacts || {
 				},
 				{
 					text: t('contacts', 'Cancel'),
-					click:function(dlg) {
+					click:function() {
 						$(this).ocdialog('close');
 						return false;
 					}
 				}
 			],
-			close: function(event, ui) {
+			close: function(/*event, ui*/) {
 				$(this).ocdialog('destroy').remove();
 				$('#add_group_dialog').remove();
 			},
-			open: function(event, ui) {
+			open: function(/*event, ui*/) {
 				$dlg.find('input').focus();
 			}
 		});
@@ -1364,18 +1364,18 @@ OC.Contacts = OC.Contacts || {
 				},
 				{
 					text: t('contacts', 'Cancel'),
-					click:function(dlg) {
+					click:function() {
 						$(this).ocdialog('close');
 						return false;
 					}
 				}
 			],
-			close: function(event, ui) {
+			close: function(/*event, ui*/) {
 				$(this).ocdialog('destroy').remove();
 				$('#add_group_dialog').remove();
 				self.$contactList.removeClass('dim');
 			},
-			open: function(event, ui) {
+			open: function(/*event, ui*/) {
 				$dlg.find('input').focus();
 			}
 		});
@@ -1465,14 +1465,13 @@ OC.Contacts = OC.Contacts || {
 	},
 	uploadPhoto:function(filelist) {
 		console.log('uploadPhoto');
-		var self = this;
 		if(!filelist) {
 			$(document).trigger('status.contacts.error', {message:t('contacts','No files selected for upload.')});
 			return;
 		}
 		var file = filelist[0];
 		var form = $('#file_upload_form');
-		var totalSize=0;
+
 		if(file.size > $('#max_upload').val()) {
 			$(document).trigger('status.contacts.error', {
 				message:t(
@@ -1518,7 +1517,6 @@ OC.Contacts = OC.Contacts || {
 		});
 	},
 	editPhoto:function(metadata, tmpkey) {
-		var $x, $y, $w, $h;
 		console.log('editPhoto', metadata, tmpkey);
 		$('.tipsy').remove();
 		// Simple event handler, called from onChange and onSelect
@@ -1591,11 +1589,11 @@ OC.Contacts = OC.Contacts || {
 						defaultButton: true
 					}
 				],
-				close: function(event, ui) {
+				close: function(/*event, ui*/) {
 					$(this).ocdialog('destroy').remove();
 					$container.remove();
 				},
-				open: function(event, ui) {
+				open: function(/*event, ui*/) {
 					showCoords({x:x,y:y,w:w-10,h:h-10});
 				}
 			});
