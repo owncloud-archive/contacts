@@ -75,7 +75,7 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	 */
 	public abstract function deleteChild($id, $options = array());
 
-    // Iterator methods
+	// Iterator methods
 
 	public function rewind() {
 		$this->counter = 0;

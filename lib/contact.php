@@ -53,7 +53,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * Create a new Contact object
 	 *
 	 * @param AddressBook $parent
-	 * @param AbstractBackend $backend
+	 * @param Backend\AbstractBackend $backend
 	 * @param mixed $data
 	 */
 	public function __construct($parent, $backend, $data = null) {

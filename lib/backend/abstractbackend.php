@@ -94,7 +94,6 @@ abstract class AbstractBackend {
 		$permissions = 0;
 
 		foreach ($this->possibleContactPermissions as $permission => $methodName) {
-
 			if(method_exists($this, $methodName)) {
 				$permissions |= $permission;
 			}
@@ -117,7 +116,6 @@ abstract class AbstractBackend {
 		$permissions = 0;
 
 		foreach ($this->possibleAddressBookPermissions as $permission => $methodName) {
-
 			if (method_exists($this, $methodName)) {
 				$permissions |= $permission;
 			}

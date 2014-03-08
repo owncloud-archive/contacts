@@ -159,7 +159,6 @@ class Database extends AbstractBackend {
 			return null;
 		}
 
-		return null;
 	}
 
 	public function hasAddressBook($addressbookid, array $options = array()) {
@@ -190,7 +189,6 @@ class Database extends AbstractBackend {
 		$updates = array();
 
 		if (isset($changes['displayname'])) {
-
 			$query .= '`displayname` = ?, ';
 			$updates[] = $changes['displayname'];
 
@@ -331,7 +329,6 @@ class Database extends AbstractBackend {
 		}
 
 		if (!is_null($result)) {
-
 			while ($id = $result->fetchOne()) {
 				$ids[] = $id;
 			}
