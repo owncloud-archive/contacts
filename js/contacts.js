@@ -267,7 +267,7 @@ OC.Contacts = OC.Contacts || {};
 	
 	Contact.prototype.addProperty = function($option, name) {
 		console.log('Contact.addProperty', name)
-		var $elem;
+		var $elem, $list;
 		switch(name) {
 			case 'NICKNAME':
 			case 'TITLE':
@@ -276,7 +276,7 @@ OC.Contacts = OC.Contacts || {};
 			case 'NOTE':
 				$elem = this.$fullelem.find('[data-element="' + name.toLowerCase() + '"]');
 				$elem.addClass('new').show();
-				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$list = this.$fullelem.find('ul.' + name.toLowerCase());
 				$list.show();
 				$elem.find('input:not(:checkbox),textarea').first().focus();
 				$option.prop('disabled', true);
@@ -284,16 +284,16 @@ OC.Contacts = OC.Contacts || {};
 			case 'TEL':
 			case 'URL':
 			case 'EMAIL':
-				var $elem = this.renderStandardProperty(name.toLowerCase());
-				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$elem = this.renderStandardProperty(name.toLowerCase());
+				$list = this.$fullelem.find('ul.' + name.toLowerCase());
 				$list.show();
 				$list.append($elem);
 				$elem.find('input.value').addClass('new');
 				$elem.find('input:not(:checkbox)').first().focus();
 				break;
 			case 'ADR':
-				var $elem = this.renderAddressProperty();
-				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$elem = this.renderAddressProperty();
+				$list = this.$fullelem.find('ul.' + name.toLowerCase());
 				$list.show();
 				$list.append($elem);
 				$elem.find('.display').trigger('click');
@@ -301,8 +301,8 @@ OC.Contacts = OC.Contacts || {};
 				$elem.find('input:not(:checkbox)').first().focus();
 				break;
 			case 'IMPP':
-				var $elem = this.renderIMProperty();
-				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$elem = this.renderIMProperty();
+				$list = this.$fullelem.find('ul.' + name.toLowerCase());
 				$list.show();
 				$list.append($elem);
 				$elem.find('input.value').addClass('new');
@@ -336,10 +336,9 @@ OC.Contacts = OC.Contacts || {};
 		var element = this.propertyTypeFor(obj);
 		var $container = this.propertyContainerFor(obj);
 		console.log('Contact.deleteProperty, element', element, $container);
-		var params = {
-			name: element,
-			value: null
-		};
+		params.name = element;
+		params.value = null;
+
 		if(this.multi_properties.indexOf(element) !== -1) {
 			params['checksum'] = this.checksumFor(obj);
 			if(params['checksum'] === 'new' && $.trim(this.valueFor(obj)) === '') {
@@ -436,8 +435,8 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Contact.prototype.saveAll = function(cb) {
 		console.log('Contact.saveAll');
+		var self = this;
 		if(!this.id) {
-			var self = this;
 			this.add({isnew:true}, function(response) {
 				if(response.error) {
 					console.warn('No response object');
@@ -447,7 +446,6 @@ OC.Contacts = OC.Contacts || {};
 			});
 			return;
 		}
-		var self = this;
 		this.setAsSaving(this.$fullelem, true);
 		var data = JSON.stringify(this.data);
 		//console.log('stringified', data);
@@ -483,8 +481,9 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Contact.prototype.saveProperty = function(params) {
 		console.log('Contact.saveProperty', params);
+		var self = this;
+
 		if(!this.id) {
-			var self = this;
 			this.add({isnew:true}, function(response) {
 				if(!response || response.status === 'error') {
 					console.warn('No response object');
@@ -515,7 +514,7 @@ OC.Contacts = OC.Contacts || {};
 			return false;
 		}
 		console.log('args', args);
-		var self = this;
+
 		this.setAsSaving(obj, true);
 		$.when(this.storage.patchContact(this.metadata.backend, this.metadata.parent, this.id, args))
 			.then(function(response) {

@@ -666,6 +666,7 @@ OC.Contacts = OC.Contacts || {};
 		var acceptdrop = '.dragContact';
 		var $groupList = this.$groupList;
 		var tmpl = this.$groupListItemTemplate;
+		var $elem;
 
 		if(!this.findById('all').length) {
 			tmpl.octemplate({id: 'all', type: 'all', num: '', name: t('contacts', 'All')}).appendTo($groupList);
@@ -678,7 +679,7 @@ OC.Contacts = OC.Contacts || {};
 				// Favorites
 				// Map to strings to easier lookup in contacts list.
 				var contacts = $.map(response.data.favorites, function(c) {return String(c);});
-				var $elem = self.findById('fav');
+				$elem = self.findById('fav');
 				$elem = $elem.length ? $elem : tmpl.octemplate({
 					id: 'fav',
 					type: 'fav',
@@ -706,7 +707,7 @@ OC.Contacts = OC.Contacts || {};
 				// Normal groups
 				$.each(response.data.categories, function(c, category) {
 					var contacts = $.map(category.contacts, function(c) {return String(c);});
-					var $elem = self.findById(category.id);
+					$elem = self.findById(category.id);
 					if($elem.length) {
 						$elem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
 					} else {
@@ -748,7 +749,7 @@ OC.Contacts = OC.Contacts || {};
 				$.each(response.data.shared, function(c, shared) {
 					var sharedindicator = '<img class="shared svg" src="' + OC.imagePath('core', 'actions/shared') + '"'
 						+ 'title="' + t('contacts', 'Shared by {owner}', {owner:shared.owner}) + '" />';
-					var $elem = self.findById(shared.id);
+					$elem = self.findById(shared.id);
 					$elem = $elem.length ? $elem : (tmpl).octemplate({
 						id: shared.id,
 						type: 'shared',
@@ -781,7 +782,7 @@ OC.Contacts = OC.Contacts || {};
 						});
 					}
 				});
-				var $elem = self.findById(self.lastgroup);
+				$elem = self.findById(self.lastgroup);
 				$elem.addClass('active');
 				self.loaded = true;
 			} // TODO: else

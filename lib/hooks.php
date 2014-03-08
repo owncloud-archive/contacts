@@ -157,7 +157,8 @@ class Hooks{
 		// reset tags
 		$tagMgr->delete($tags);
 
-		$backend = $this->app->getBackend('local');
+		$app = new App();
+		$backend = $app->getBackend('local');
 		$addressBookInfos = $backend->getAddressBooksForUser();
 
 		foreach($addressBookInfos as $addressBookInfo) {
