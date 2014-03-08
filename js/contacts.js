@@ -35,7 +35,7 @@ OC.Contacts = OC.Contacts || {};
 			contactId: this.id,
 			addressBookId: this.metadata.parent,
 			backend: this.metadata.backend
-		}
+		};
 	};
 
 	Contact.prototype.getDisplayName = function() {
@@ -263,10 +263,10 @@ OC.Contacts = OC.Contacts || {};
 			oldvalue: params.oldvalue
 		});
 		//console.log('undoQueue', this.undoQueue);
-	}
+	};
 	
 	Contact.prototype.addProperty = function($option, name) {
-		console.log('Contact.addProperty', name)
+		console.log('Contact.addProperty', name);
 		var $elem, $list;
 		switch(name) {
 			case 'NICKNAME':
@@ -340,8 +340,8 @@ OC.Contacts = OC.Contacts || {};
 		params.value = null;
 
 		if(this.multi_properties.indexOf(element) !== -1) {
-			params['checksum'] = this.checksumFor(obj);
-			if(params['checksum'] === 'new' && $.trim(this.valueFor(obj)) === '') {
+			params.checksum = this.checksumFor(obj);
+			if(params.checksum === 'new' && $.trim(this.valueFor(obj)) === '') {
 				// If there's only one property of this type enable setting as preferred.
 				if((undefined !== this.data[element] && this.data[element].length) && (this.data[element].length === 1)) {
 					var selector = 'li[data-element="' + element.toLowerCase() + '"]';
@@ -425,7 +425,6 @@ OC.Contacts = OC.Contacts || {};
 			console.log(response.message);
 			$(document).trigger('status.contacts.error', response);
 		});
-;
 	};
 
 	/**
@@ -467,7 +466,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 			self.setAsSaving(self.$fullelem, false);
 		});
-	}
+	};
 
 	/**
 	 * @brief Act on change of a property.
@@ -526,9 +525,9 @@ OC.Contacts = OC.Contacts || {};
 					var checksum = self.checksumFor(obj);
 					var value = self.valueFor(obj);
 					var parameters = self.parametersFor(obj);
-					if(parameters['TYPE'] && parameters['TYPE'].indexOf('PREF') !== -1) {
-						parameters['PREF'] = 1;
-						parameters['TYPE'].splice(parameters['TYPE'].indexOf('PREF', 1));
+					if(parameters.TYPE && parameters.TYPE.indexOf('PREF') !== -1) {
+						parameters.PREF = 1;
+						parameters.TYPE.splice(parameters.TYPE.indexOf('PREF', 1));
 					}
 					if(checksum && checksum !== 'new') {
 						self.pushToUndo({
@@ -600,20 +599,20 @@ OC.Contacts = OC.Contacts || {};
 								// TODO: Maybe add a method for constructing new elements?
 								self.data.N = [{name:'N',value:['', '', '', '', ''],parameters:[]}];
 							}
-							$.each(self.data.N[0]['value'], function(idx, val) {
+							$.each(self.data.N[0].value, function(idx, val) {
 								if(val) {
 									nempty = false;
 									return false;
 								}
 							});
 							if(nempty) {
-								self.data.N[0]['value'] = ['', '', '', '', ''];
+								self.data.N[0].value = ['', '', '', '', ''];
 								var nvalue = value.split(' ');
 								// Very basic western style parsing. I'm not gonna implement
 								// https://github.com/android/platform_packages_providers_contactsprovider/blob/master/src/com/android/providers/contacts/NameSplitter.java ;)
-								self.data.N[0]['value'][0] = nvalue.length > 2 && nvalue.slice(nvalue.length-1).toString() || nvalue[1] || '';
-								self.data.N[0]['value'][1] = nvalue[0] || '';
-								self.data.N[0]['value'][2] = nvalue.length > 2 && nvalue.slice(1, nvalue.length-1).join(' ') || '';
+								self.data.N[0].value[0] = nvalue.length > 2 && nvalue.slice(nvalue.length-1).toString() || nvalue[1] || '';
+								self.data.N[0].value[1] = nvalue[0] || '';
+								self.data.N[0].value[2] = nvalue.length > 2 && nvalue.slice(1, nvalue.length-1).join(' ') || '';
 								setTimeout(function() {
 									self.saveProperty({name:'N', value:self.data.N[0].value.join(';')});
 								}, 500);
@@ -647,28 +646,29 @@ OC.Contacts = OC.Contacts || {};
 							 * also check if the contents of FN equals parts of N and fill
 							 * out the rest.
 							 */
-							if(self.data.FN[0]['value'] === '') {
-								self.data.FN[0]['value'] = value[1] + ' ' + value[0];
-								$fullname.val(self.data.FN[0]['value']);
+							if(self.data.FN[0].value === '') {
+								self.data.FN[0].value = value[1] + ' ' + value[0];
+								$fullname.val(self.data.FN[0].value);
 								update_fn = true;
-							} else if($fullname.val() == value[1] + ' ') {
-								self.data.FN[0]['value'] = value[1] + ' ' + value[0];
-								$fullname.val(self.data.FN[0]['value']);
+							} else if($fullname.val() === value[1] + ' ') {
+								self.data.FN[0].value = value[1] + ' ' + value[0];
+								$fullname.val(self.data.FN[0].value);
 								update_fn = true;
-							} else if($fullname.val() == ' ' + value[0]) {
-								self.data.FN[0]['value'] = value[1] + ' ' + value[0];
-								$fullname.val(self.data.FN[0]['value']);
+							} else if($fullname.val() === ' ' + value[0]) {
+								self.data.FN[0].value = value[1] + ' ' + value[0];
+								$fullname.val(self.data.FN[0].value);
 								update_fn = true;
 							}
 							if(update_fn) {
 								setTimeout(function() {
-									self.saveProperty({name:'FN', value:self.data.FN[0]['value']});
+									self.saveProperty({name:'FN', value:self.data.FN[0].value});
 								}, 1000);
 							}
 							if(!self.hasPhoto() && self.sortOrder !== 'fn') {
 								self.loadAvatar();
 							}
 						case 'NICKNAME':
+							/* falls through */
 						case 'ORG':
 							// Auto-fill FN if empty
 							if(!self.data.FN) {
@@ -676,6 +676,7 @@ OC.Contacts = OC.Contacts || {};
 								self.$fullelem.find('.fullname').val(value).trigger('change');
 							}
 						case 'TITLE':
+							/* falls through */
 						case 'NOTE':
 							self.data[element][0] = {
 								name: element,
@@ -819,7 +820,7 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('status.contacts.error', response);
 				return false;
 			}
-			if(typeof cb == 'function') {
+			if(typeof cb === 'function') {
 				cb(response);
 			}
 		});
@@ -837,8 +838,6 @@ OC.Contacts = OC.Contacts || {};
 			this.metadata.parent,
 			this.id)
 		).then(function(response) {
-		//$.post(OC.filePath('contacts', 'ajax', 'contact/delete.php'),
-		//	   {id: this.id}, function(response) {
 			if(!response.error) {
 				if(self.$listelem) {
 					self.$listelem.remove();
@@ -847,7 +846,7 @@ OC.Contacts = OC.Contacts || {};
 					self.$fullelem.remove();
 				}
 			}
-			if(typeof cb == 'function') {
+			if(typeof cb === 'function') {
 				if(response.error) {
 					cb(response);
 				} else {
@@ -1409,37 +1408,38 @@ OC.Contacts = OC.Contacts || {};
 							meta.push(property.label);
 						}
 						for(var param in property.parameters) {
-							if(!property.parameters.hasOwnProperty(param)) {
-								continue;
-							}
-							//console.log('param', param);
-							if(param.toUpperCase() === 'PREF') {
-								var $cb = $property.find('input[type="checkbox"]');
-								$cb.attr('checked', 'checked');
-								meta.push($cb.attr('title'));
-							}
-							else if(param.toUpperCase() === 'TYPE') {
-								for(var etype in property.parameters[param]) {
-									var found = false;
-									var et = property.parameters[param][etype];
-									if(typeof et !== 'string') {
-										continue;
-									}
-									$property.find('select.type option').each(function() {
-										if($(this).val().toUpperCase() === et.toUpperCase()) {
-											$(this).attr('selected', 'selected');
-											meta.push($(this).text());
-											found = true;
+							if(property.parameters.hasOwnProperty(param)) {
+								//console.log('param', param);
+								if(param.toUpperCase() === 'PREF') {
+									var $cb = $property.find('input[type="checkbox"]');
+									$cb.attr('checked', 'checked');
+									meta.push($cb.attr('title'));
+								}
+								else if(param.toUpperCase() === 'TYPE') {
+									for(var etype in property.parameters[param]) {
+										if(!property.parameters[param].hasOwnProperty(etype)) {
+											var found = false;
+											var et = property.parameters[param][etype];
+											if(typeof et !== 'string') {
+												continue;
+											}
+											$property.find('select.type option').each(function() {
+												if($(this).val().toUpperCase() === et.toUpperCase()) {
+													$(this).attr('selected', 'selected');
+													meta.push($(this).text());
+													found = true;
+												}
+											});
+											if(!found) {
+												$property.find('select.type option:last-child').after('<option value="'+et+'" selected="selected">'+et+'</option>');
+											}
 										}
-									});
-									if(!found) {
-										$property.find('select.type option:last-child').after('<option value="'+et+'" selected="selected">'+et+'</option>');
 									}
 								}
-							}
-							else if(param.toUpperCase() === 'X-SERVICE-TYPE') {
-								//console.log('setting', $property.find('select.impp'), 'to', property.parameters[param].toLowerCase());
-								$property.find('select.rtl').val(property.parameters[param].toLowerCase());
+								else if(param.toUpperCase() === 'X-SERVICE-TYPE') {
+									//console.log('setting', $property.find('select.impp'), 'to', property.parameters[param].toLowerCase());
+									$property.find('select.rtl').val(property.parameters[param].toLowerCase());
+								}
 							}
 						}
 						var $meta = $property.find('.meta');
@@ -1564,7 +1564,7 @@ OC.Contacts = OC.Contacts || {};
 						success: function( data ) {
 							response( $.map( data.geonames, function( item ) {
 								return {
-									label: item.name + (item.adminName1 ? ", " + item.adminName1 : '') + ', ' + item.countryName,
+									label: item.name + (item.adminName1 ? ', ' + item.adminName1 : '') + ', ' + item.countryName,
 									value: item.name,
 									country: item.countryName
 								};
@@ -1814,7 +1814,7 @@ OC.Contacts = OC.Contacts || {};
 		var found = false;
 
 		$.each(categories, function(idx, category) {
-			if(name.toLowerCase() == $.trim(category).toLowerCase()) {
+			if(name.toLowerCase() === $.trim(category).toLowerCase()) {
 				found = true;
 				return false;
 			}
@@ -1961,7 +1961,7 @@ OC.Contacts = OC.Contacts || {};
 			});
 			console.log('status.contact.moved', data);
 		});
-		$(document).bind('request.contact.close', function(e, data) {
+		$(document).bind('request.contact.close', function(/*e, data*/) {
 			self.currentContact = null;
 		});
 		$(document).bind('status.contact.updated', function(e, data) {
@@ -2373,7 +2373,7 @@ OC.Contacts = OC.Contacts || {};
 			distance: 10,
 			revert: 'invalid',
 			//containment: '#content',
-			helper: function (e,ui) {
+			helper: function (/*event, ui*/) {
 				return $(this).clone().appendTo('body').css('zIndex', 5).show();
 			},
 			opacity: 0.8,
@@ -2573,8 +2573,7 @@ OC.Contacts = OC.Contacts || {};
 		if(!isActive) {
 			return;
 		}
-		var self = this,
-			contacts;
+		var self = this;
 
 		return $.when(self.storage.getAddressBook(backend, addressBookId, false))
 			.then(function(response) {

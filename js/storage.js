@@ -265,7 +265,7 @@ OC.Contacts = OC.Contacts || {};
 			'DELETE',
 			{backend: backend, addressBookId: addressBookId, contactId: contactId}
 		);
-	}
+	};
 
 	/**
 	 * Delete a list of contacts from an address book from a specific backend
@@ -316,13 +316,13 @@ OC.Contacts = OC.Contacts || {};
 			{backend: backend, addressBookId: addressBookId, contactId: contactId}
 		);
 		var defer = $.Deferred();
-		var self = this;
+
 		$.when(
 			$(photo).on('load', function() {
 				defer.resolve(photo);
 			})
 			.error(function() {
-				console.log('Error loading contact photo')
+				console.log('Error loading contact photo');
 				defer.reject();
 			})
 			.attr('src', url + '?refresh=' + Math.random())
@@ -330,16 +330,16 @@ OC.Contacts = OC.Contacts || {};
 		.fail(function(jqxhr, textStatus, error) {
 			defer.reject();
 			var err = textStatus + ', ' + error;
-			console.log( "Request Failed: " + err);
+			console.warn('Request Failed:', + err);
 			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed loading photo: {error}', {error:err})
+				message: t('contacts', 'Failed loading photo: {error}', {error:err});
 			});
 		});
 		return defer.promise();
 	};
 
 	/**
-	 * Get Image instance for a contacts profile picture
+	 * Get Image instance for cropping contacts profile picture
 	 *
 	 * @param string backend
 	 * @param string addressBookId Address book ID
@@ -369,9 +369,9 @@ OC.Contacts = OC.Contacts || {};
 		.fail(function(jqxhr, textStatus, error) {
 			defer.reject();
 			var err = textStatus + ', ' + error;
-			console.log( "Request Failed: " + err);
+			console.warn('Request Failed:' err);
 			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed loading photo: {error}', {error:err})
+				message: t('contacts', 'Failed loading photo: {error}', {error:err});
 			});
 		});
 		return defer.promise();

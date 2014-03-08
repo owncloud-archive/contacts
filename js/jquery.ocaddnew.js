@@ -97,8 +97,6 @@
 			}
 		},
 		_setOption: function(key, value) {
-			//console.log('ocaddnew._setOption', key, value);
-			var self = this;
 			switch(key) {
 				case 'width':
 					this.$ul.css('width', value);
@@ -110,7 +108,7 @@
 			//this._super(key, value);
 			$.Widget.prototype._setOption.apply(this, arguments );
 		},
-		_setOptions: function(options) {
+		_setOptions: function() {
 			//console.log('_setOptions', options);
 			//this._super(options);
 			$.Widget.prototype._setOptions.apply(this, arguments);

@@ -119,7 +119,7 @@ OC.Contacts = OC.Contacts || {};
 
 	GroupList.prototype.triggerLastGroup = function() {
 		this.selectGroup({id:this.lastgroup});
-	}
+	};
 
 	/**
 	 * Test if a group with this name exists (case-insensitive)
@@ -129,7 +129,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	GroupList.prototype.hasGroup = function(name) {
 		return (this.findByName(name) !== null);
-	}
+	};
 
 	/**
 	 * Get the group name by id.
@@ -260,7 +260,7 @@ OC.Contacts = OC.Contacts || {};
 				ids.push(contactid);
 				doPost = true;
 			} else {
-				if(typeof cb == 'function') {
+				if(typeof cb === 'function') {
 					cb({error:true, message:t('contacts', 'Contact is already in this group.')});
 				}
 			}
@@ -273,7 +273,7 @@ OC.Contacts = OC.Contacts || {};
 			if(ids.length > 0) {
 				doPost = true;
 			} else {
-				if(typeof cb == 'function') {
+				if(typeof cb === 'function') {
 					cb({error:true, message:t('contacts', 'Contacts are already in this group.')});
 				}
 			}
@@ -302,7 +302,7 @@ OC.Contacts = OC.Contacts || {};
 						});
 					});
 				} else {
-					if(typeof cb == 'function') {
+					if(typeof cb === 'function') {
 						cb({error:true, message:response.message});
 					}
 				}
@@ -350,7 +350,7 @@ OC.Contacts = OC.Contacts || {};
 				ids.push(contactid);
 				doPost = true;
 			} else {
-				if(typeof cb == 'function') {
+				if(typeof cb === 'function') {
 					cb({error:true, message:t('contacts', 'Contact is not in this group.')});
 				}
 			}
@@ -364,7 +364,7 @@ OC.Contacts = OC.Contacts || {};
 				doPost = true;
 			} else {
 				console.log(contactid, 'not in', contacts);
-				if(typeof cb == 'function') {
+				if(typeof cb === 'function') {
 					cb({error:true, message:t('contacts', 'Contacts are not in this group.')});
 				}
 			}
@@ -431,7 +431,7 @@ OC.Contacts = OC.Contacts || {};
 	 * during drag, and the drop target is hard to hit.
 	 */
 	GroupList.prototype.contactDropped = function(event, ui) {
-		var dragitem = ui.draggable, droptarget = $(this);
+		var dragitem = ui.draggable;
 		console.log('dropped', dragitem);
 		if(dragitem.is('.name')) {
 			var id = String(dragitem.parent().data('id'));
@@ -492,7 +492,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 		})
 		.fail(function(response) {
-			console.log( "Request Failed: " + response.message);
+			console.log('Request Failed:', response);
 			$(document).trigger('status.contacts.error', response);
 		});
 	};
@@ -569,7 +569,7 @@ OC.Contacts = OC.Contacts || {};
 			cb({error:false});
 		})
 		.fail(function(response) {
-			console.log( "Request Failed: " + response);
+			console.log('Request Failed:', response);
 			cb({error:true});
 			response.message = t('contacts', 'Failed renaming group: {error}', {error:response.message});
 			$(document).trigger('status.contacts.error', response);
@@ -655,8 +655,8 @@ OC.Contacts = OC.Contacts || {};
 			}
 		})
 		.fail(function(response) {
-			console.log( "Request Failed: " + response);
-			response.message = t('contacts', 'Failed adding group: {error}', {error:response.message})
+			console.log('Request Failed:', response);
+			response.message = t('contacts', 'Failed adding group: {error}', {error:response.message});
 			$(document).trigger('status.contacts.error', response);
 		});
 	};
@@ -772,7 +772,7 @@ OC.Contacts = OC.Contacts || {};
 						var ids = [];
 						$.each($(this).children('li[data-type="category"]'), function(i, elem) {
 							var id = $(elem).data('id');
-							if(typeof id === 'number' && id % 1 == 0) {
+							if(typeof id === 'number' && id % 1 === 0) {
 								ids.push(id);
 							}
 						});
@@ -791,7 +791,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 		})
 		.fail(function(response) {
-			console.log( "Request Failed:", response);
+			console.log('Request Failed:', response);
 			response.message = t('contacts', 'Failed loading groups: {error}', {error:response.message});
 			$(document).trigger('status.contacts.error', response);
 		});

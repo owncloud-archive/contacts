@@ -8,16 +8,16 @@ Modernizr.load({
 
 (function($) {
 	$.QueryString = (function(a) {
-		if (a == "") return {};
+		if (a === '') {return {};}
 		var b = {};
 		for (var i = 0; i < a.length; ++i)
 		{
 			var p=a[i].split('=');
-			if (p.length != 2) continue;
-			b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+			if (p.length !== 2) continue;
+			b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, ' '));
 		}
 		return b;
-	})(window.location.search.substr(1).split('&'))
+	})(window.location.search.substr(1).split('&'));
 })(jQuery);
 
 var utils = {};
@@ -81,7 +81,7 @@ Array.prototype.clone = function() {
 Array.prototype.clean = function(deleteValue) {
 	var arr = this.clone();
 	for (var i = 0; i < arr.length; i++) {
-		if (arr[i] == deleteValue) {
+		if (arr[i] === deleteValue) {
 			arr.splice(i, 1);
 			i--;
 		}
@@ -184,12 +184,11 @@ OC.Contacts = OC.Contacts || {
 		// Hide the list while populating it.
 		this.$contactList.hide();
 		$.when(this.addressBooks.loadAddressBooks()).then(function(addressBooks) {
-			var num = addressBooks.length;
-			var deferreds = $(addressBooks).map(function(i, elem) {
+			var deferreds = $(addressBooks).map(function(/*i, elem*/) {
 				return self.contacts.loadContacts(this.getBackend(), this.getId(), this.isActive());
 			});
 			// This little beauty is from http://stackoverflow.com/a/6162959/373007 ;)
-			$.when.apply(null, deferreds.get()).then(function(response) {
+			$.when.apply(null, deferreds.get()).then(function() {
 				self.contacts.setSortOrder(contacts_sortby);
 				self.$contactList.show();
 				$(document).trigger('status.contacts.loaded', {
@@ -198,7 +197,7 @@ OC.Contacts = OC.Contacts || {
 				self.loading(self.$rightContent, false);
 				// TODO: Move this to event handler
 				self.groups.selectGroup({id:contacts_lastgroup});
-				var id = $.QueryString['id']; // Keep for backwards compatible links.
+				var id = $.QueryString.id; // Keep for backwards compatible links.
 				if(!id) {
 					id = window.location.hash.substr(1);
 				}
@@ -229,7 +228,7 @@ OC.Contacts = OC.Contacts || {
 			console.log(response.message);
 			$(document).trigger('status.contacts.error', response);
 		});
-		$(OC.Tags).on('change', this.groups.categoriesChanged)
+		$(OC.Tags).on('change', this.groups.categoriesChanged);
 		this.bindEvents();
 		this.$toggleAll.show();
 		this.hideActions();
@@ -351,14 +350,14 @@ OC.Contacts = OC.Contacts || {
 		});
 
 		this.hashChange = function() {
-			console.log('hashchange', window.location.hash)
+			console.log('hashchange', window.location.hash);
 			var id = String(window.location.hash.substr(1));
-			if(id && id != self.currentid && self.contacts.findById(id) !== null) {
+			if(id && id !== self.currentid && self.contacts.findById(id) !== null) {
 				self.openContact(id);
 			} else if(!id && self.currentid) {
 				self.closeContact(self.currentid);
 			}
-		}
+		};
 
 		// This apparently get's called on some weird occasions.
 		//$(window).bind('popstate', this.hashChange);
@@ -367,7 +366,7 @@ OC.Contacts = OC.Contacts || {
 		// App specific events
 		$(document).bind('status.contact.deleted', function(e, data) {
 			var id = String(data.id);
-			if(id == self.currentid) {
+			if(id === self.currentid) {
 				delete self.currentid;
 			}
 			console.log('contact', data.id, 'deleted');
@@ -488,7 +487,9 @@ OC.Contacts = OC.Contacts || {
 					}
 					break;
 				case 'adr':
-					address = data.url.filter(function(n){return n});
+					address = data.url.filter(function(n) {
+						return n;
+					});
 					var newWindow = window.open('http://open.mapquest.com/?q='+address, '_blank');
 					newWindow.focus();
 					break;
@@ -513,8 +514,6 @@ OC.Contacts = OC.Contacts || {
 
 		$(document).bind('request.contact.move', function(e, data) {
 			console.log('contact', data, 'request.contact.move');
-			var from = self.addressBooks.find(data.from);
-			var to = self.addressBooks.find(data.target);
 			self.addressBooks.moveContact(data.contact, data.from, data.target);
 		});
 
@@ -641,7 +640,7 @@ OC.Contacts = OC.Contacts || {
 			$.each(result.contacts, function(idx, contactid) {
 				var contact = self.contacts.findById(contactid);
 				if(!contact) {
-					console.warn('Couldn\'t find contact', contactid)
+					console.warn('Couldn\'t find contact', contactid);
 					return true; // continue
 				}
 				contact.renameGroup(result.from, result.to);
@@ -765,7 +764,7 @@ OC.Contacts = OC.Contacts || {
 		var target = $('#file_upload_target');
 		target.load(function() {
 			var response = $.parseJSON(target.contents().text());
-			if(response && response.status == 'success') {
+			if(response && response.status === 'success') {
 				console.log('response', response);
 				self.editPhoto(
 					response.data.metadata,
@@ -799,11 +798,11 @@ OC.Contacts = OC.Contacts || {
 			}
 		});
 
-		this.$contactList.on('change', 'input:checkbox', function(event) {
+		this.$contactList.on('change', 'input:checkbox', function(/*event*/) {
 			var selected = self.contacts.getSelectedContacts();
 			var id = String($(this).val());
 			// Save list of last selected contact to be able to select range
-			($(this).is(':checked') && self.lastSelectedContacts.indexOf(id) === -1)
+			$(this).is(':checked') && self.lastSelectedContacts.indexOf(id) === -1
 				? self.lastSelectedContacts.push(id)
 				: self.lastSelectedContacts.splice(self.lastSelectedContacts.indexOf(id), 1);
 
@@ -819,7 +818,7 @@ OC.Contacts = OC.Contacts || {
 			}
 		});
 		
-		this.$contactList.on('click', 'label:not([for=select_all])', function(event) {
+		this.$contactList.on('click', 'label:not([for=select_all])', function(/*event*/) {
 			var $input = $(this).prev('input');
 			$input.prop('checked', !$input.prop('checked'));
 			$input.trigger('change');
@@ -1001,7 +1000,7 @@ OC.Contacts = OC.Contacts || {
 				return;
 			}
 			var bodyListener = function(e) {
-				if(self.$settings.find($(e.target)).length == 0) {
+				if(self.$settings.find($(e.target)).length === 0) {
 					self.$settings.switchClass('open', '');
 				}
 			};
@@ -1107,7 +1106,7 @@ OC.Contacts = OC.Contacts || {
 			// Other web servers may fail before.
 			if(contacts.length > 300) {
 				OC.notify({
-					message:t('contacts',"You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway."),
+					message:t('contacts', 'You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway.'),
 					timeout:5,
 					clickhandler:function() {
 						doDownload(contacts);
@@ -1213,7 +1212,7 @@ OC.Contacts = OC.Contacts || {
 						console.log('add group?');
 						break;
 					}
-					self.addContact();
+					addContact();
 					break;
 				case 38: // up
 				case 75: // k
@@ -1244,7 +1243,7 @@ OC.Contacts = OC.Contacts || {
 					break;
 				case 171: // ? Danish
 				case 191: // ? Standard qwerty
-					self.$ninjahelp.toggle('fast').position({my: "center",at: "center",of: "#content"});
+					self.$ninjahelp.toggle('fast').position({my: 'center', at: 'center', of: '#content'});
 					break;
 			}
 
@@ -1260,7 +1259,6 @@ OC.Contacts = OC.Contacts || {
 	},
 	mergeSelectedContacts: function() {
 		var contacts = this.contacts.getSelectedContacts();
-		var self = this;
 		this.$rightContent.append('<div id="merge_contacts_dialog"></div>');
 		if(!this.$mergeContactsTmpl) {
 			this.$mergeContactsTmpl = $('#mergeContactsTemplate');
@@ -1319,7 +1317,7 @@ OC.Contacts = OC.Contacts || {
 			],
 			close: function(/*event, ui*/) {
 				$(this).ocdialog('destroy').remove();
-				$('#add_group_dialog').remove();
+				$('#merge_contacts_dialog').remove();
 			},
 			open: function(/*event, ui*/) {
 				$dlg.find('input').focus();
@@ -1416,7 +1414,7 @@ OC.Contacts = OC.Contacts || {
 	},
 	openContact: function(id) {
 		var self = this;
-		if(typeof id == 'undefined' || id == 'undefined') {
+		if(typeof id === 'undefined' || id === 'undefined') {
 			console.warn('id is undefined!');
 			console.trace();
 		}
@@ -1508,7 +1506,7 @@ OC.Contacts = OC.Contacts || {
 		);
 		console.log('url', url);
 		var jqXHR = $.getJSON(url, function(response) {
-			response = self.storage.formatResponse(response, jqXHR)
+			response = self.storage.formatResponse(response, jqXHR);
 			if(!response.error) {
 				self.editPhoto(metadata, response.data.tmp);
 			} else {
@@ -1610,7 +1608,7 @@ OC.Contacts = OC.Contacts || {
 			console.log('submitted');
 			var response = $.parseJSON($target.contents().text());
 			console.log('response', response);
-			if(response && response.status == 'success') {
+			if(response && response.status === 'success') {
 				$(document).trigger('status.contact.photoupdated', {
 					id: response.data.id,
 					thumbnail: response.data.thumbnail
