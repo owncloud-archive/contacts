@@ -28,13 +28,37 @@ use OCA\Contacts\Contact,
 	Sabre\VObject\Reader;
 
 /**
- * Subclass this class for Contacts backends
+ * Subclass this class for Contacts backends.
  */
 
 class Database extends AbstractBackend {
 
 	public $name = 'local';
 	static private $preparedQueries = array();
+
+	/**
+	 * The cached address books.
+	 * @var array[]
+	 */
+	public $addressbooks;
+
+	/**
+	 * The table that holds the address books.
+	 * @var string
+	 */
+	public $addressBooksTableName;
+
+	/**
+	 * The table that holds the contact vCards.
+	 * @var string
+	 */
+	public $cardsTableName;
+
+	/**
+	 * The table that holds the indexed vCard properties.
+	 * @var string
+	 */
+	public $indexTableName;
 
 	/**
 	* Sets up the backend
@@ -123,6 +147,7 @@ class Database extends AbstractBackend {
 			if (!$row) {
 				throw new \Exception('Address Book not found', 404);
 			}
+
 			$row['permissions'] = \OCP\PERMISSION_ALL;
 			$row['backend'] = $this->name;
 			$this->addressbooks[$addressbookid] = $row;
@@ -478,31 +503,30 @@ class Database extends AbstractBackend {
 
 		$noCollection = isset($options['noCollection']) ? $options['noCollection'] : false;
 
-		$where_query = '`id` = ?';
+		$whereQuery = '`id` = ?';
 		if (is_array($id)) {
-			$where_query = '';
+			$whereQuery = '';
 			if (isset($id['id'])) {
 				$id = $id['id'];
 			} elseif (isset($id['uri'])) {
-				$where_query = '`uri` = ?';
+				$whereQuery = '`uri` = ?';
 				$id = $id['uri'];
 			} else {
 				throw new \Exception(
 					__METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
 				);
-				return null;
 			}
 		}
 		$ids = array($id);
 
 		if (!$noCollection) {
-			$where_query .= ' AND `addressbookid` = ?';
+			$whereQuery .= ' AND `addressbookid` = ?';
 			$ids[] = $addressbookid;
 		}
 
 		try {
-			$query =  'SELECT `id`, `uri`, `carddata`, `lastmodified`, `addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
-				. $this->cardsTableName . '` WHERE ' . $where_query;
+			$query = 'SELECT `id`, `uri`, `carddata`, `lastmodified`, `addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
+				. $this->cardsTableName . '` WHERE ' . $whereQuery;
 			$stmt = \OCP\DB::prepare($query);
 			$result = $stmt->execute($ids);
 

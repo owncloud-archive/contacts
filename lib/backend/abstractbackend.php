@@ -25,27 +25,29 @@ namespace OCA\Contacts\Backend;
 use OCA\Contacts\VObject\VCard;
 
 /**
- * Subclass this class for address book backends
- *
- * The following methods MUST be implemented:
- * @method array getAddressBooksForUser(array $options = array())
- * @method array|null getAddressBook(string $addressbookid, array $options = array())
- * @method array getContacts(string $addressbookid, array $options = array())
- * @method array|null getContact(string $addressbookid, mixed $id, array $options = array())
- * The following methods MAY be implemented:
- * @method bool hasAddressBook(string $addressbookid)
- * @method bool updateAddressBook(string $addressbookid, array $updates, array $options = array())
- * @method string createAddressBook(array $properties, array $options = array())
- * @method bool deleteAddressBook(string $addressbookid, array $options = array())
- * @method int lastModifiedAddressBook(string $addressbookid)
- * @method array numContacts(string $addressbookid)
- * @method bool updateContact(string $addressbookid, string $id, VCard $contact, array $options = array())
- * @method string createContact(string $addressbookid, VCard $contact, array $properties)
- * @method bool deleteContact(string $addressbookid, string $id, array $options = array())
- * @method int lastModifiedContact(string $addressbookid)
+ * Subclass this class for address book backends.
  */
-
 abstract class AbstractBackend {
+
+	/**
+	* The following methods MUST be implemented:
+	*
+	* @method array getAddressBooksForUser(array $options = array())
+	* @method array|null getAddressBook(string $addressbookid, array $options = array())
+	* @method array getContacts(string $addressbookid, array $options = array())
+	* @method array|null getContact(string $addressbookid, mixed $id, array $options = array())
+	* The following methods MAY be implemented:
+	* @method bool hasAddressBook(string $addressbookid)
+	* @method bool updateAddressBook(string $addressbookid, array $updates, array $options = array())
+	* @method string createAddressBook(array $properties, array $options = array())
+	* @method bool deleteAddressBook(string $addressbookid, array $options = array())
+	* @method int lastModifiedAddressBook(string $addressbookid)
+	* @method array numContacts(string $addressbookid)
+	* @method bool updateContact(string $addressbookid, string $id, VCard $contact, array $options = array())
+	* @method string createContact(string $addressbookid, VCard $contact, array $properties)
+	* @method bool deleteContact(string $addressbookid, string $id, array $options = array())
+	* @method int lastModifiedContact(string $addressbookid)
+	*/
 
 	/**
 	 * The name of the backend.
@@ -376,6 +378,7 @@ abstract class AbstractBackend {
 	 * 
 	 * @param string $addressBookId.
 	 * @param string $contactId.
+	 * @throws \BadMethodCallException
 	 * @return string
 	 */
 	protected function combinedKey($addressBookId = null, $contactId = null) {
@@ -446,8 +449,8 @@ abstract class AbstractBackend {
 	 * @param array the preferences, format array('param1' => 'value', 'param2' => 'value')
 	 * @return boolean
 	 */
-	public function setPreferences($addressbookid, array $params) {
-		
+	public function setPreferences($addressBookId, array $params) {
+
 		$key = $this->combinedKey($addressBookId);
 		$key = 'prefs_' . $key;
 
