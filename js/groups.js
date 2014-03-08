@@ -20,7 +20,7 @@ OC.Contacts = OC.Contacts || {};
 		this.storage = storage;
 		this.$groupList = groupList;
 		var self = this;
-		var numtypes = ['category', 'fav', 'all'];
+
 		this.$groupList.on('click', 'li.group', function(event) {
 			$('.tipsy').remove();
 			if(wrongKey(event)) {
@@ -391,7 +391,7 @@ OC.Contacts = OC.Contacts || {};
 							cb({ids:ids});
 						}
 					} else {
-						if(typeof cb == 'function') {
+						if(typeof cb === 'function') {
 							cb({error:true, message:response.message});
 						}
 					}
@@ -411,7 +411,7 @@ OC.Contacts = OC.Contacts || {};
 	GroupList.prototype.removeFromAll = function(contactid, alsoSpecial, onlyInternal) {
 		var self = this;
 		var selector = alsoSpecial ? 'li' : 'li[data-type="category"]';
-		$.each(this.$groupList.find(selector), function(i, group) {
+		$.each(this.$groupList.find(selector), function() {
 			self.removeFrom(contactid, $(this).data('id'), onlyInternal);
 		});
 	};
@@ -422,7 +422,7 @@ OC.Contacts = OC.Contacts || {};
 	 * dialog, and will probably not be used in this app.
 	 */
 	GroupList.prototype.categoriesChanged = function(newcategories) {
-		console.log('GroupList.categoriesChanged, I should do something');
+		console.log('GroupList.categoriesChanged, I should do something with them:', newcategories);
 	};
 
 	/**

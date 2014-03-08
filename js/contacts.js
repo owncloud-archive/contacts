@@ -149,7 +149,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 			// Not found, so adding it.
 			self.data[name].push(newproperty);
-		}
+		};
 
 		var self = this;
 		$.each(mergees, function(idx, mergee) {
@@ -591,7 +591,7 @@ OC.Contacts = OC.Contacts || {};
 							if(!self.data.FN || !self.data.FN.length) {
 								self.data.FN = [{name:'FN', value:'', parameters:[]}];
 							}
-							self.data.FN[0]['value'] = value;
+							self.data.FN[0].value = value;
 							// Used for sorting list elements
 							self.displayNames.fn = value;
 							var nempty = true;

@@ -8,6 +8,7 @@
  */
 
 namespace OCA\Contacts;
+
 use \OC\AppFramework\Core\API;
 
 //require_once __DIR__ . '/../lib/controller/pagecontroller.php';
@@ -58,11 +59,11 @@ $api->connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Hooks', 'getCalende
 \OCP\Share::registerBackend('addressbook', 'OCA\Contacts\Share\Addressbook', 'contact');
 //\OCP\App::registerPersonal('contacts','personalsettings');
 
-if(\OCP\User::isLoggedIn()) {
+if (\OCP\User::isLoggedIn()) {
 	$app = new App($api->getUserId());
 	$addressBooks = $app->getAddressBooksForUser();
-	foreach($addressBooks as $addressBook)  {
-		if($addressBook->isActive()) {
+	foreach ($addressBooks as $addressBook)  {
+		if ($addressBook->isActive()) {
 			\OCP\Contacts::registerAddressBook(new AddressbookProvider($addressBook));
 		}
 	}

@@ -36,6 +36,7 @@ class Addressbook extends AbstractPIMCollection {
 	public static $l10n;
 
 	protected $_count;
+
 	/**
 	 * @var Backend\AbstractBackend
 	 */
@@ -69,9 +70,15 @@ class Addressbook extends AbstractPIMCollection {
 				throw new \Exception('Error creating address book.', 500);
 			}
 			$this->addressBookInfo = $this->backend->getAddressBook($id);
-			//print(__METHOD__. ' '. __LINE__ . ' addressBookInfo: ' . print_r($this->backend->getAddressBook($id), true));
 		}
 		//\OCP\Util::writeLog('contacts', __METHOD__.' backend: ' . print_r($this->backend, true), \OCP\Util::DEBUG);
+	}
+
+	/**
+	 * @return AbstractBackend
+	 */
+	public function getBackend() {
+		return $this->backend;
 	}
 
 	/**
@@ -345,18 +352,6 @@ class Addressbook extends AbstractPIMCollection {
 			}
 		}
 		return $this->backend->updateAddressBook($this->getId(), $data);
-	}
-
-	/**
-	 * Save the address book data to backend
-	 * NOTE: @see IPIMObject::update for consistency considerations.
-	 *
-	 * @return bool
-	 */
-	public function save() {
-		if(!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
-			throw new Exception(self::$l10n->t('You don\'t have permissions to update the address book.'), 403);
-		}
 	}
 
 	/**

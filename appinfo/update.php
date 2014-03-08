@@ -7,13 +7,12 @@
  * See the COPYING-README file.
  */
 
-$installedVersion=OCP\Config::getAppValue('contacts', 'installed_version');
+$installedVersion = OCP\Config::getAppValue('contacts', 'installed_version');
 if (version_compare($installedVersion, '0.2.5', '>=')) {
 	// Set all address books active as (de)activating went awol at rewrite.
 	$stmt = OCP\DB::prepare( 'UPDATE `*PREFIX*contacts_addressbooks` SET `active`= 1' );
 	$result = $stmt->execute(array());
-}
-elseif (version_compare($installedVersion, '0.2.4', '==')) {
+} elseif (version_compare($installedVersion, '0.2.4', '==')) {
 	// First set all address books in-active.
 	$stmt = OCP\DB::prepare( 'UPDATE `*PREFIX*contacts_addressbooks` SET `active`=0' );
 	$result = $stmt->execute(array());
@@ -24,9 +23,9 @@ elseif (version_compare($installedVersion, '0.2.4', '==')) {
 
 	// Prepare statement for updating the new 'active' field.
 	$stmt = OCP\DB::prepare( 'UPDATE `*PREFIX*contacts_addressbooks` SET `active`=? WHERE `id`=? AND `userid`=?' );
-	while( $row = $result->fetchRow()) {
+	while ($row = $result->fetchRow()) {
 		$ids = explode(';', $row['configvalue']);
-		foreach($ids as $id) {
+		foreach ($ids as $id) {
 			$r = $stmt->execute(array(1, $id, $row['userid']));
 		}
 	}

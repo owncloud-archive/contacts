@@ -90,13 +90,16 @@ abstract class AbstractBackend {
 	*/
 	protected function getContactPermissions() {
 		$permissions = 0;
-		foreach($this->possibleContactPermissions AS $permission => $methodName) {
+
+		foreach ($this->possibleContactPermissions as $permission => $methodName) {
+
 			if(method_exists($this, $methodName)) {
 				$permissions |= $permission;
 			}
+
 		}
 
-		\OCP\Util::writeLog('contacts', __METHOD__.', permissions' . $permissions, \OCP\Util::DEBUG);
+		//\OCP\Util::writeLog('contacts', __METHOD__.', permissions' . $permissions, \OCP\Util::DEBUG);
 		return $permissions;
 	}
 
@@ -108,14 +111,18 @@ abstract class AbstractBackend {
 	* compared with \OCP\PERMISSION_CREATE etc.
 	*/
 	protected function getAddressBookPermissions() {
+
 		$permissions = 0;
-		foreach($this->possibleAddressBookPermissions AS $permission => $methodName) {
-			if(method_exists($this, $methodName)) {
+
+		foreach ($this->possibleAddressBookPermissions as $permission => $methodName) {
+
+			if (method_exists($this, $methodName)) {
 				$permissions |= $permission;
 			}
+
 		}
 
-		\OCP\Util::writeLog('contacts', __METHOD__.', permissions' . $permissions, \OCP\Util::DEBUG);
+		//\OCP\Util::writeLog('contacts', __METHOD__.', permissions' . $permissions, \OCP\Util::DEBUG);
 		return $permissions;
 	}
 
@@ -128,7 +135,9 @@ abstract class AbstractBackend {
 	* compared with \OCP\PERMISSION_CREATE etc.
 	*/
 	public function hasContactMethodFor($permission) {
+
 		return (bool)($this->getContactPermissions() & $permission);
+
 	}
 
 	/**
@@ -140,7 +149,9 @@ abstract class AbstractBackend {
 	* compared with \OCP\PERMISSION_CREATE etc.
 	*/
 	public function hasAddressBookMethodFor($permission) {
+
 		return (bool)($this->getAddressBookPermissions() & $permission);
+
 	}
 
 	/**
@@ -152,7 +163,9 @@ abstract class AbstractBackend {
 	 * @return bool
 	 */
 	public function hasAddressBook($addressbookid) {
+
 		return count($this->getAddressBook($addressbookid)) > 0;
+
 	}
 
 	/**
@@ -165,7 +178,9 @@ abstract class AbstractBackend {
 	 * @return integer|null
 	 */
 	public function numContacts($addressbookid) {
+
 		return count($this->getContacts($addressbookid));
+
 	}
 
 	/**
@@ -365,15 +380,20 @@ abstract class AbstractBackend {
 	 */
 	protected function combinedKey($addressBookId = null, $contactId = null) {
 		$key = $this->name;
-		if(!is_null($addressBookId)) {
+		if (!is_null($addressBookId)) {
+
 			$key .= '_' . substr(md5($addressBookId), 0, 8);
-			if(!is_null($contactId)) {
+
+			if (!is_null($contactId)) {
 				$key .= '_' . substr(md5($contactId), 0, 8);
 			}
-		} else if(!is_null($contactId)) {
+
+		} else if (!is_null($contactId)) {
+
 			throw new \BadMethodCallException(
 				__METHOD__ . ' cannot be called with a contact ID but no address book ID'
 			);
+
 		}
 		return $key;
 	}
@@ -384,6 +404,7 @@ abstract class AbstractBackend {
 	 * @return boolean
 	 */
 	public function isActive($addressBookId = null) {
+
 		$key = $this->combinedKey($addressBookId);
 		$key = 'active_' . $key;
 
@@ -397,6 +418,7 @@ abstract class AbstractBackend {
 	 * @return boolean
 	 */
 	public function setActive($active, $addressBookId = null) {
+
 		$key = $this->combinedKey($addressBookId);
 		$key = 'active_' . $key;
 
@@ -410,6 +432,7 @@ abstract class AbstractBackend {
 	 * @return array Format array('param1' => 'value', 'param2' => 'value')
 	 */
 	public function getPreferences($addressBookId) {
+
 		$key = $this->combinedKey($addressBookId);
 		$key = 'prefs_' . $key;
 
@@ -424,6 +447,7 @@ abstract class AbstractBackend {
 	 * @return boolean
 	 */
 	public function setPreferences($addressbookid, array $params) {
+		
 		$key = $this->combinedKey($addressBookId);
 		$key = 'prefs_' . $key;
 
