@@ -1,6 +1,9 @@
 filter:
     excluded_paths:
         - 'js/modernizr.custom.js'
+        - 'l10n'
+        - 'js/placeholder*'
+        - 'css/placeholder*'
 
 imports:
     - php
