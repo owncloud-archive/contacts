@@ -32,7 +32,7 @@ tools:
                         disallow_space_indent_sniff: true
                 squiz:
                     white_space:
-                        logical_operator_spacing_sniff: true
+                        logical_operator_spacing_sniff: false
                         language_construct_spacing_sniff: true
                         operator_spacing_sniff: true
                         control_structure_spacing_sniff: true
@@ -40,6 +40,8 @@ tools:
                         scope_keyword_spacing_sniff: true
                         semicolon_spacing_sniff: true
                         object_operator_spacing_sniff: false
+                        scope_opener_sniff: false
+                        scope_closer_sniff: false
                     functions:
                         lowercase_function_keywords_sniff: true
                     commenting:
