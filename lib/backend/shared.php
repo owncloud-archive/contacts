@@ -66,6 +66,12 @@ class Shared extends Database {
 	 * @return mixed
 	 */
 	public function getAddressBook($addressbookid, array $options = array()) {
+
+		foreach ($this->addressbooks as $addressBook) {
+			if ($addressBook['id'] === $addressbookid) {
+				return $addressBook;
+			}
+		}
 		$addressBook = \OCP\Share::getItemSharedWithBySource(
 			'addressbook',
 			$addressbookid,
