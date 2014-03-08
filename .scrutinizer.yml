@@ -46,10 +46,8 @@ tools:
                         class_comment_sniff: true
                         doc_comment_alignment_sniff: false
                         function_comment_throw_tag_sniff: true
-                    control_structures:
-                        scope_opener_sniff: false
-                        scope_closer_sniff: false
-                        lowercase_declaration_sniff: true
+#                     control_structures:
+#                         lowercase_declaration_sniff: true
                     strings:
                         double_quote_usage_sniff: true
                     operators:
