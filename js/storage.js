@@ -332,7 +332,7 @@ OC.Contacts = OC.Contacts || {};
 			var err = textStatus + ', ' + error;
 			console.warn('Request Failed:', + err);
 			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed loading photo: {error}', {error:err});
+				message: t('contacts', 'Failed loading photo: {error}', {error:err})
 			});
 		});
 		return defer.promise();
@@ -369,9 +369,9 @@ OC.Contacts = OC.Contacts || {};
 		.fail(function(jqxhr, textStatus, error) {
 			defer.reject();
 			var err = textStatus + ', ' + error;
-			console.warn('Request Failed:' err);
+			console.warn('Request Failed:', err);
 			$(document).trigger('status.contact.error', {
-				message: t('contacts', 'Failed loading photo: {error}', {error:err});
+				message: t('contacts', 'Failed loading photo: {error}', {error:err})
 			});
 		});
 		return defer.promise();
