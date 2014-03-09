@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-07 00:49-0500\n"
-"PO-Revision-Date: 2014-03-06 06:00+0000\n"
+"POT-Creation-Date: 2014-03-09 00:48-0500\n"
+"PO-Revision-Date: 2014-03-09 05:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:37 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:105
 msgid "Contacts"
 msgstr "Kontaktuak"
 
@@ -30,23 +30,23 @@ msgstr "Kontaktuak"
 msgid "Save"
 msgstr "Gorde"
 
-#: js/addressbooks.js:298
+#: js/addressbooks.js:299
 msgid "Uploading..."
 msgstr "Igotzen..."
 
-#: js/addressbooks.js:301 js/loader.js:68
+#: js/addressbooks.js:302 js/loader.js:68
 msgid "Importing..."
 msgstr "Inportatzen"
 
-#: js/addressbooks.js:324
+#: js/addressbooks.js:325
 msgid "Preparing..."
 msgstr "Prestatzen..."
 
-#: js/addressbooks.js:372
+#: js/addressbooks.js:373
 msgid "Imported {count} of {total} contacts"
 msgstr "{total} kontaktuetatik {count} inportatuak"
 
-#: js/addressbooks.js:394
+#: js/addressbooks.js:396
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "{imported} kontaktu inportatu dira. {failed}k huts eginda."
 
@@ -58,81 +58,81 @@ msgstr "{name} izeneko helbide-liburu bat dagoeneko existitzen da"
 msgid "Failed adding address book: {error}"
 msgstr "Helbide-liburua gehitzeak huts egin du: {error}"
 
-#: js/addressbooks.js:626
+#: js/addressbooks.js:625
 msgid "Failed loading address books: {error}"
 msgstr "Helbide-liburua kargatzeak huts egin du: {error}"
 
-#: js/app.js:215
+#: js/app.js:216
 msgid "Indexing contacts"
 msgstr "Kontaktuak indexatzen"
 
-#: js/app.js:225
+#: js/app.js:226
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Errorea izan da helbide-liburua kargatzerakoan : {msg}"
 
-#: js/app.js:226
+#: js/app.js:227
 msgid "Error."
 msgstr "Akatsa."
 
-#: js/app.js:321 js/app.js:335
+#: js/app.js:322 js/app.js:336
 msgid "Add to..."
 msgstr "Gehitu hemen..."
 
-#: js/app.js:325 js/app.js:337
+#: js/app.js:326 js/app.js:338
 msgid "Remove from..."
 msgstr "Ezabatu hemendik..."
 
-#: js/app.js:342
+#: js/app.js:343
 msgid "Add group..."
 msgstr "Gehitu taldea..."
 
-#: js/app.js:470
+#: js/app.js:471
 msgid "Invalid URL: \"{url}\""
 msgstr "URL ez-egokia: \"{url}\""
 
-#: js/app.js:481
+#: js/app.js:482
 msgid "There was an error opening a mail composer."
 msgstr "Errore bat izan da posta editorea abiaraztean."
 
-#: js/app.js:486
+#: js/app.js:487
 msgid "Invalid email: \"{url}\""
 msgstr "e-posta ez egokia: \"{url}\""
 
-#: js/app.js:569
+#: js/app.js:570
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Bateratzeak huts egin du. Ezin izan da kontaktua aurkitu: {id}"
 
-#: js/app.js:582
+#: js/app.js:583
 msgid "Merge failed."
 msgstr "Bateratzeak huts egin du."
 
-#: js/app.js:589
+#: js/app.js:590
 msgid "Merge failed. Error saving contact."
 msgstr "Bateratzeak huts egin du. Errorea kontaktua gordetzerakoan."
 
-#: js/app.js:609
+#: js/app.js:610
 msgid "Select photo"
 msgstr "Hautatu argazkia"
 
-#: js/app.js:689 js/app.js:1623
+#: js/app.js:690 js/app.js:1621
 msgid "Network or server error. Please inform administrator."
 msgstr "Errore bat izan da sare edo zerbitzarian. Mesedez abisatu administradorea."
 
-#: js/app.js:911
+#: js/app.js:912
 msgid "Error adding to group."
 msgstr "Errore bat izan da taldera gehitzean."
 
-#: js/app.js:934
+#: js/app.js:935
 msgid "Error removing from group."
 msgstr "Errore bat izan da taldetik kentzean."
 
-#: js/app.js:1110
+#: js/app.js:1111
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300 kontaktu baino gehiago hautatu dituzu.\nHonek ziurasko huts egingo du! Sakatu hemen hala ere jarraitzeko."
 
-#: js/app.js:1148
+#: js/app.js:1149
 msgid "Error setting {name} as favorite."
 msgstr "Errorea {name} gogokoetara gehitzerakoan."
 
@@ -140,7 +140,7 @@ msgstr "Errorea {name} gogokoetara gehitzerakoan."
 msgid "Merge contacts"
 msgstr "Kontaktuak batu"
 
-#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/contacts.php:357
+#: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
 #: templates/contacts.php:358 templates/settings.php:62
 msgid "Cancel"
 msgstr "Ezeztatu"
@@ -157,21 +157,21 @@ msgstr "Ados"
 msgid "Could not find contact: {id}"
 msgstr "Ezin izan dugu kontaktua topatu:  {id}"
 
-#: js/app.js:1470
+#: js/app.js:1469
 msgid "No files selected for upload."
 msgstr "Ez duzu igotzeko fitxategirik hautatu."
 
-#: js/app.js:1480
+#: js/app.js:1479
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Igo nahi duzun fitxategia zerbitzariak onartzen duen tamaina baino handiagoa da."
 
-#: js/app.js:1581
+#: js/app.js:1579
 msgid "Edit profile picture"
 msgstr "Editatu profilaren argazkia"
 
-#: js/app.js:1585
+#: js/app.js:1583
 msgid "Crop photo"
 msgstr "Moztu argazkia"
 
@@ -179,25 +179,25 @@ msgstr "Moztu argazkia"
 msgid "Error parsing date: {date}"
 msgstr "Errorea data aztertzerakoan: {date}"
 
-#: js/contacts.js:1100
+#: js/contacts.js:1099
 msgid "# groups"
 msgstr "# taldeak"
 
-#: js/contacts.js:1174
+#: js/contacts.js:1173
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Kontaktu batzuk ezabatzeko markatuta daude, baina oraindik ez dira ezabatu. Mesedez itxoin ezabatu arte."
 
-#: js/contacts.js:2263
+#: js/contacts.js:2265
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikatu {num} kontaktuen ezabaketa desegiteko"
 
-#: js/contacts.js:2272
+#: js/contacts.js:2274
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num} kontaktuen ezabaketa ezeztatuta"
 
@@ -243,23 +243,23 @@ msgstr "Taldeak arrastra ditzakezu\nnahi duzun moduan antolatzeko."
 msgid "Failed adding group: {error}"
 msgstr "Ezin izan dugu taldea gehitu: {error}"
 
-#: js/groups.js:671
+#: js/groups.js:672
 msgid "All"
 msgstr "Denak"
 
-#: js/groups.js:686 js/groups.js:689
+#: js/groups.js:687 js/groups.js:690
 msgid "Favorites"
 msgstr "Gogokoak"
 
-#: js/groups.js:750
+#: js/groups.js:751
 msgid "Shared by {owner}"
 msgstr "{owner}-k partekatuta"
 
-#: js/groups.js:765
+#: js/groups.js:766
 msgid "Not grouped"
 msgstr "Taldekatu gabe"
 
-#: js/groups.js:794
+#: js/groups.js:795
 msgid "Failed loading groups: {error}"
 msgstr "Taldea kargatzeak huts egin du: {error}"
 
@@ -292,45 +292,6 @@ msgstr "Inportazioa burutua"
 msgid "Close"
 msgstr "Itxi"
 
-#: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
-msgid "Error"
-msgstr "Errorea"
-
-#: js/settings.js:75
-msgid "Displayname cannot be empty."
-msgstr "Bistaratzeko izena ezin da hutsik egon."
-
-#: js/settings.js:97 templates/settings.php:26
-msgid "Show CardDav link"
-msgstr "Erakutsi CardDav lotura"
-
-#: js/settings.js:98 templates/settings.php:29
-msgid "Show read-only VCF link"
-msgstr "Erakutsi bakarrik irakurtzeko VCF lotura"
-
-#: js/settings.js:99 templates/contacts.php:66 templates/contacts.php:365
-#: templates/contacts.php:366 templates/settings.php:40
-msgid "Download"
-msgstr "Deskargatu"
-
-#: js/settings.js:101 templates/contacts.php:499 templates/settings.php:45
-msgid "Edit"
-msgstr "Editatu"
-
-#: js/settings.js:102 templates/contacts.php:60 templates/contacts.php:61
-#: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:500 templates/settings.php:50
-msgid "Delete"
-msgstr "Ezabatu"
-
-#: js/settings.js:159 templates/settings.php:66
-msgid "More..."
-msgstr "Gehiago..."
-
-#: js/settings.js:162
-msgid "Less..."
-msgstr "Gutxiago..."
-
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr "Errore bat izan da zerbitzaria! Mesedez abisatu administradorea."
@@ -339,51 +300,47 @@ msgstr "Errore bat izan da zerbitzaria! Mesedez abisatu administradorea."
 msgid "Failed loading photo: {error}"
 msgstr "Argazkia kargatzeak huts egin du: {error}"
 
-#: lib/addressbook.php:152
+#: lib/addressbook.php:163
 msgid "You do not have permissions to see this contacts"
 msgstr "Ez duzu kontaktu hau ikusteko baimenik."
 
-#: lib/addressbook.php:159
+#: lib/addressbook.php:171
 msgid "Contact not found"
 msgstr "Ez da kontaktua aurkitu"
 
-#: lib/addressbook.php:186
+#: lib/addressbook.php:199
 msgid "You do not have permissions to see these contacts"
 msgstr "Ez duzu kontaktu hauek ikusteko baimenik."
 
-#: lib/addressbook.php:213
+#: lib/addressbook.php:229
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Ez duzu helbide-liburu honetara kontaktuak gehitzeko baimenik"
 
-#: lib/addressbook.php:216
+#: lib/addressbook.php:233
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
+#: lib/addressbook.php:262 lib/addressbook.php:293 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Ez duzu kontaktu hau ezabatzeko baimenik"
 
-#: lib/addressbook.php:243 lib/addressbook.php:269
+#: lib/addressbook.php:266 lib/addressbook.php:297
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:290
+#: lib/addressbook.php:318
 msgid "Unknown error"
 msgstr "Errore ezezaguna"
 
-#: lib/addressbook.php:332
+#: lib/addressbook.php:362
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:358
-msgid "You don't have permissions to update the address book."
-msgstr "Ez duzu helbide-liburu hau eguneratzeko baimenik"
-
-#: lib/addressbook.php:369
+#: lib/addressbook.php:390
 msgid "You don't have permissions to delete the address book."
 msgstr "Ez duzu helbide-liburu hau ezabatzeko baimenik"
 
-#: lib/app.php:146
+#: lib/app.php:152
 msgid "Address book not found"
 msgstr "Ez da helbide liburua aurkitu."
 
@@ -419,47 +376,48 @@ msgstr "BM ezezaguna:"
 msgid "{name}'s Birthday"
 msgstr "{name}ren jaioteguna"
 
-#: lib/controller/addressbookcontroller.php:135
+#: lib/controller/addressbookcontroller.php:144
 msgid "Error creating address book"
 msgstr "Errorea helbide-liburua sortzerakoan"
 
-#: lib/controller/addressbookcontroller.php:152
-msgid "Error updating address book"
-msgstr "Errorea helbide-liburua eguneratzerakoan"
+#: lib/controller/addressbookcontroller.php:176
+#, php-format
+msgid "The \"%s\" backend does not support deleting address books"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:180
+#: lib/controller/addressbookcontroller.php:184
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Ez duzu \"%s\" helbide-liburua ezabatzeko baimenik"
 
-#: lib/controller/addressbookcontroller.php:186
+#: lib/controller/addressbookcontroller.php:191
 msgid "Error deleting address book"
 msgstr "Errorea helbide-liburua ezabatzerakoan"
 
-#: lib/controller/addressbookcontroller.php:224
+#: lib/controller/addressbookcontroller.php:231
 msgid "Error creating contact."
 msgstr "Errore bat izan da kontaktua sortzean."
 
-#: lib/controller/addressbookcontroller.php:260
+#: lib/controller/addressbookcontroller.php:267
 msgid "Error deleting contact."
 msgstr "Errorea bat izan da kontaktua ezabatzean."
 
-#: lib/controller/addressbookcontroller.php:300
+#: lib/controller/addressbookcontroller.php:309
 msgid "Error retrieving contact."
 msgstr "Errorea kontaktua eskuratzerakoan."
 
-#: lib/controller/addressbookcontroller.php:310
+#: lib/controller/addressbookcontroller.php:322
 #: lib/controller/contactphotocontroller.php:332
 msgid "Error saving contact."
 msgstr "Errore bat izan da kontaktua gordetzean."
 
-#: lib/controller/addressbookcontroller.php:314
+#: lib/controller/addressbookcontroller.php:327
 msgid "Error removing contact from other address book."
 msgstr "Errorea konkatua beste helbide-liburutik ezabatzerakoan."
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:64
-#: lib/controller/contactcontroller.php:97
+#: lib/controller/contactcontroller.php:98
 #: lib/controller/contactphotocontroller.php:37
 #: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
@@ -474,27 +432,27 @@ msgstr "Ez dago kontaktu daturik eskarian."
 msgid "Error merging into contact."
 msgstr "Errorea kontaktuarekin bateratzerakoan."
 
-#: lib/controller/contactcontroller.php:71
+#: lib/controller/contactcontroller.php:72
 msgid "Error saving contact to backend."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:102
+#: lib/controller/contactcontroller.php:104
 msgid "Property name is not set."
 msgstr "Izena propietatea ez da ezarri."
 
-#: lib/controller/contactcontroller.php:107
+#: lib/controller/contactcontroller.php:110
 msgid "Property checksum is not set."
 msgstr "kontrol-batura propietatea ez da ezarri."
 
-#: lib/controller/contactcontroller.php:126
+#: lib/controller/contactcontroller.php:132
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "vCard-aren inguruko informazioa okerra da. Mesedez birkargatu orrialdea."
 
-#: lib/controller/contactcontroller.php:135
+#: lib/controller/contactcontroller.php:143
 msgid "Error updating contact"
 msgstr "Errore bat izan da kontaktua eguneratzerakoan"
 
-#: lib/controller/contactcontroller.php:140
+#: lib/controller/contactcontroller.php:150
 msgid "Error saving contact to backend"
 msgstr ""
 
@@ -581,37 +539,37 @@ msgstr "Errore bat izan da irudia mozten"
 msgid "Error getting PHOTO property."
 msgstr "Errore bat izan da PHOTO propietatea lortzean."
 
-#: lib/controller/groupcontroller.php:58 lib/controller/groupcontroller.php:80
+#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
 msgid "No group name given."
 msgstr "Ez da talde izenik eman."
 
-#: lib/controller/groupcontroller.php:65
+#: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
 msgstr "Errore bat izan da taldea gehitzean."
 
-#: lib/controller/groupcontroller.php:130
+#: lib/controller/groupcontroller.php:145
 msgid "No group name to rename from given."
 msgstr "Ez dago talde izenik emandakotik berrizendatzeko."
 
-#: lib/controller/groupcontroller.php:134
+#: lib/controller/groupcontroller.php:150
 msgid "No group name to rename to given."
 msgstr "Ez dago talde izenik emandakoa berrizendatzeko."
 
-#: lib/controller/groupcontroller.php:140
+#: lib/controller/groupcontroller.php:157
 msgid "Error renaming group."
 msgstr "Errore bat izan da taldea berrizendatzerakoan."
 
-#: lib/controller/groupcontroller.php:178
-#: lib/controller/groupcontroller.php:224
+#: lib/controller/groupcontroller.php:206
+#: lib/controller/groupcontroller.php:258
 msgid "Group ID missing from request."
 msgstr "Taldearen IDa falta da eskarian."
 
-#: lib/controller/groupcontroller.php:183
+#: lib/controller/groupcontroller.php:211
 msgid "Group name missing from request."
 msgstr "Taldearen izena falta da eskarian."
 
-#: lib/controller/groupcontroller.php:188
-#: lib/controller/groupcontroller.php:229
+#: lib/controller/groupcontroller.php:216
+#: lib/controller/groupcontroller.php:263
 msgid "Contact ID missing from request."
 msgstr "Kontaktuaren IDa falta da eskarian."
 
@@ -832,9 +790,20 @@ msgstr "Izena, Abizena"
 msgid "Last-, Firstname"
 msgstr "Abizena, Izena"
 
+#: templates/contacts.php:60 templates/contacts.php:61
+#: templates/contacts.php:215 templates/contacts.php:216
+#: templates/contacts.php:500 templates/settings.php:50
+msgid "Delete"
+msgstr "Ezabatu"
+
 #: templates/contacts.php:64 templates/contacts.php:256
 msgid "Groups"
 msgstr "Taldeak"
+
+#: templates/contacts.php:66 templates/contacts.php:365
+#: templates/contacts.php:366 templates/settings.php:40
+msgid "Download"
+msgstr "Deskargatu"
 
 #: templates/contacts.php:67
 msgid "Merge"
@@ -1078,6 +1047,10 @@ msgstr "Exportatu"
 msgid "CardDAV link"
 msgstr "CardDAV lotura"
 
+#: templates/contacts.php:499 templates/settings.php:45
+msgid "Edit"
+msgstr "Editatu"
+
 #: templates/settings.php:3
 msgid "CardDAV syncing addresses"
 msgstr "CardDAV sinkronizazio helbideak"
@@ -1098,6 +1071,14 @@ msgstr "iOS/OS X"
 msgid "Addressbooks"
 msgstr "Helbide Liburuak"
 
+#: templates/settings.php:26
+msgid "Show CardDav link"
+msgstr "Erakutsi CardDav lotura"
+
+#: templates/settings.php:29
+msgid "Show read-only VCF link"
+msgstr "Erakutsi bakarrik irakurtzeko VCF lotura"
+
 #: templates/settings.php:58
 msgid "New Address Book"
 msgstr "Helbide-liburu berria"
@@ -1105,3 +1086,7 @@ msgstr "Helbide-liburu berria"
 #: templates/settings.php:60
 msgid "Description"
 msgstr "Deskribapena"
+
+#: templates/settings.php:66
+msgid "More..."
+msgstr "Gehiago..."

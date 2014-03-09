@@ -5,10 +5,6 @@
 "Add" => "Bæta við",
 "Import" => "Flytja inn",
 "Close" => "Loka",
-"Error" => "Villa",
-"Download" => "Niðurhal",
-"Edit" => "Breyta",
-"Delete" => "Eyða",
 "No file was uploaded. Unknown error" => "Engin skrá var send inn. Óþekkt villa.",
 "There is no error, the file uploaded with success" => "Engin villa, innsending heppnaðist",
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form" => "Innsenda skráin er stærri en MAX_FILE_SIZE sem skilgreint er í HTML sniðinu.",
@@ -20,7 +16,9 @@
 "Failed to write to disk" => "Tókst ekki að skrifa á disk",
 "Other" => "Annað",
 "Text" => "Texti",
+"Delete" => "Eyða",
 "Groups" => "Hópar",
+"Download" => "Niðurhal",
 "Email" => "Netfang",
 "Address" => "Slóð",
 "Name" => "Nafn",
@@ -28,6 +26,7 @@
 "Birthday" => "Afmælisdagur",
 "Share" => "Deila",
 "Export" => "Flytja út",
+"Edit" => "Breyta",
 "more info" => "fleiri upplýsingar",
 "iOS/OS X" => "iOS/OS X"
 );

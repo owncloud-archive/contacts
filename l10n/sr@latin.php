@@ -3,10 +3,6 @@
 "Cancel" => "Otkaži",
 "Add" => "Dodaj",
 "Close" => "Zatvori",
-"Error" => "Greška",
-"Download" => "Preuzmi",
-"Edit" => "Uredi",
-"Delete" => "Obriši",
 "Information about vCard is incorrect. Please reload the page." => "Podaci o vKarti su neispravni. Ponovo učitajte stranicu.",
 "There is no error, the file uploaded with success" => "Nema greške, fajl je uspešno poslat",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "Poslati fajl prevazilazi direktivu upload_max_filesize iz ",
@@ -23,7 +19,9 @@
 "Fax" => "Faks",
 "Video" => "Video",
 "Pager" => "Pejdžer",
+"Delete" => "Obriši",
 "Groups" => "Grupe",
+"Download" => "Preuzmi",
 "Email" => "E-mail",
 "Phone" => "Telefon",
 "Address" => "Adresa",
@@ -36,5 +34,6 @@
 "Country" => "Zemlja",
 "Active" => "Aktivan",
 "Share" => "Podeli",
+"Edit" => "Uredi",
 "Description" => "Opis"
 );
