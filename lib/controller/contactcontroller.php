@@ -27,7 +27,7 @@ class ContactController extends Controller {
 	 */
 	public function getContact() {
 
-		$request = $this->request;
+		$params = $this->request->urlParams;
 		$response = new JSONResponse();
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
@@ -48,9 +48,8 @@ class ContactController extends Controller {
 	 */
 	public function saveContact() {
 
-		$request = $this->request;
 		$params = $this->request->urlParams;
-		$data = isset($request->post['data']) ? $request->post['data'] : null;
+		$data = isset($this->request->post['data']) ? $this->request->post['data'] : null;
 		$response = new JSONResponse();
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
@@ -126,7 +125,7 @@ class ContactController extends Controller {
 					$checksum = $contact->setPropertyByChecksum($checksum, $name, $value, $parameters);
 					$result['checksum'] = $checksum;
 				}
-			} catch(Exception $e)	{
+			} catch(\Exception $e)	{
 				return $response
 					->setStatus(Http::STATUS_PRECONDITION_FAILED)
 					->bailOut(App::$l10n->t('Information about vCard is incorrect. Please reload the page.'));
@@ -149,7 +148,7 @@ class ContactController extends Controller {
 		if (!$contact->save()) {
 			return $response->bailOut(App::$l10n->t('Error saving contact to backend'));
 		}
-		
+
 		$result['lastmodified'] = $contact->lastModified();
 
 		return $response->setData($result);

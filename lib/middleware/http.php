@@ -35,8 +35,6 @@ use OCA\Contacts\Controller,
  */
 class Http extends Middleware {
 
-	private $api;
-
 	/**
 	 * @param IAppContainer $app an instance of the app container
 	 */
@@ -53,7 +51,7 @@ class Http extends Middleware {
 	 * @param \Exception $exception the thrown exception
 	 * @return Response a Response object
 	 */
-	public function afterException($controller, $methodName, \Exception $exception){
+	public function afterException($controller, $methodName, \Exception $exception) {
 		// If there's no proper status code associated, set it to 500.
 		$response = new JSONResponse();
 		if($exception->getCode() < 100) {

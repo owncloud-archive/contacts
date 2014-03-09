@@ -63,7 +63,7 @@ class JSONSerializer {
 		} else {
 			if($input instanceof VObject\VCard) {
 				return self::serializeContact($input);
-			} elseif($input instanceof Sabre\VObject\Property) {
+			} elseif($input instanceof \Sabre\VObject\Property) {
 				return self::serializeProperty($input);
 			} else {
 				throw new \Exception(

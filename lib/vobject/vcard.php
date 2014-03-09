@@ -33,6 +33,17 @@ use Sabre\VObject;
  * This class overrides \Sabre\VObject\Component\VCard::validate() to be add
  * to import partially invalid vCards by ignoring invalid lines and to
  * validate and upgrade using ....
+ *
+ * Satisfy PHP Analyzer:
+ * @property N
+ * @property FN
+ * @property ORG
+ * @property EMAIL
+ * @property VERSION
+ * @property BDAY
+ * @property UID
+ * @property REV
+ * @property CATEGORIES
 */
 class VCard extends VObject\Component\VCard {
 
@@ -140,7 +151,6 @@ class VCard extends VObject\Component\VCard {
 		// Work around issue in older VObject sersions
 		// https://github.com/fruux/sabre-vobject/issues/24
 		foreach($property->parameters as $key=>$parameter) {
-			$delim = '';
 			if(strpos($parameter->value, ',') === false) {
 				continue;
 			}

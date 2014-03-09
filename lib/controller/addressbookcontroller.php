@@ -41,10 +41,10 @@ class AddressBookController extends Controller {
 		}
 
 		// To avoid invalid cache deletion time is saved
-		$lastModified = max(
+		/*$lastModified = max(
 			$lastModified,
 			\OCP\Config::getUserValue($this->api->getUserId(), 'contacts', 'last_address_book_deleted', 0)
-		);
+		);*/
 
 		$response = new JSONResponse(array(
 			'addressbooks' => $result,
@@ -100,10 +100,8 @@ class AddressBookController extends Controller {
 					}
 					$response->addHeader('Allow' , implode(',', $options));
 					return $response;
-					break;
 				case 'HEAD':
 					return $response;
-					break;
 				case 'GET':
 					$contacts = array();
 
@@ -115,7 +113,6 @@ class AddressBookController extends Controller {
 					}
 
 					return $response->setData(array('contacts' => $contacts));
-					break;
 			}
 		}
 	}
@@ -136,7 +133,7 @@ class AddressBookController extends Controller {
 
 		try {
 			$id = $backend->createAddressBook($this->request->post);
-		} catch(Exception $e) {
+		} catch(\Exception $e) {
 			return $response->bailOut($e->getMessage());
 		}
 
@@ -223,7 +220,7 @@ class AddressBookController extends Controller {
 
 		try {
 			$id = $addressBook->addChild();
-		} catch(Exception $e) {
+		} catch(\Exception $e) {
 			return $response->bailOut($e->getMessage());
 		}
 
@@ -232,8 +229,16 @@ class AddressBookController extends Controller {
 		}
 
 		$contact = $addressBook->getChild($id);
-		$response->setStatus('201');
-		$response->setETag($contact->getETag());
+
+		$serialized = JSONSerializer::serializeContact($contact);
+
+		if (is_null($serialized)) {
+			throw new \Exception(App::$l10n->t(
+				'Error creating contact'
+			));
+		}
+
+		$response->setStatus('201')->setETag($contact->getETag());
 		$response->addHeader('Location',
 			\OCP\Util::linkToRoute(
 				'contacts_contact_get',
@@ -244,7 +249,7 @@ class AddressBookController extends Controller {
 				)
 			)
 		);
-		return $response->setParams(JSONSerializer::serializeContact($contact));
+		return $response->setParams($serialized);
 	}
 
 	/**
@@ -257,14 +262,12 @@ class AddressBookController extends Controller {
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 
-		try {
-			$result = $addressBook->deleteChild($params['contactId']);
-		} catch(Exception $e) {
-			return $response->bailOut($e->getMessage());
-		}
+		$result = $addressBook->deleteChild($params['contactId']);
 
 		if ($result === false) {
-			return $response->bailOut(App::$l10n->t('Error deleting contact.'));
+			throw new \Exception(App::$l10n->t(
+				'Error deleting contact'
+			), 500);
 		}
 
 		return $response->setStatus('204');
@@ -281,11 +284,7 @@ class AddressBookController extends Controller {
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contacts = $this->request->post['contacts'];
 
-		try {
-			$result = $addressBook->deleteChildren($contacts);
-		} catch(Exception $e) {
-			return $response->bailOut($e->getMessage());
-		}
+		$result = $addressBook->deleteChildren($contacts);
 
 		return $response->setParams(array('result' => $result));
 	}
@@ -306,20 +305,20 @@ class AddressBookController extends Controller {
 		$contact = $fromAddressBook->getChild($params['contactId']);
 
 		if (!$contact) {
-			$response->bailOut(App::$l10n->t('Error retrieving contact.'));
-			return $response;
+			throw new \Exception(App::$l10n->t(
+				'Error retrieving contact'
+			), 500);
 		}
 
-		try {
-			$contactId = $targetAddressBook->addChild($contact);
-		} catch(Exception $e) {
-			return $response->bailOut($e->getMessage());
-		}
+		$contactId = $targetAddressBook->addChild($contact);
 
+		// Retrieve the contact again to be sure it's in sync
 		$contact = $targetAddressBook->getChild($contactId);
 
 		if (!$contact) {
-			return $response->bailOut(App::$l10n->t('Error saving contact.'));
+			throw new \Exception(App::$l10n->t(
+				'Error saving contact'
+			), 500);
 		}
 
 		if (!$fromAddressBook->deleteChild($params['contactId'])) {
@@ -327,7 +326,15 @@ class AddressBookController extends Controller {
 			return $response->debug(App::$l10n->t('Error removing contact from other address book.'));
 		}
 
-		return $response->setParams(JSONSerializer::serializeContact($contact));
+		$serialized = JSONSerializer::serializeContact($contact);
+
+		if (is_null($serialized)) {
+			throw new \Exception(App::$l10n->t(
+				'Error getting moved contact'
+			));
+		}
+
+		return $response->setParams($serialized);
 	}
 
 }

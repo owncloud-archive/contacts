@@ -192,6 +192,9 @@ class Addressbook extends AbstractPIMCollection {
 	/**
 	* Returns an array with all the child nodes
 	*
+	* @param int $limit
+	* @param int $offset
+	* @param bool $omitdata
 	* @return Contact[]
 	*/
 	public function getChildren($limit = null, $offset = null, $omitdata = false) {
@@ -419,7 +422,7 @@ class Addressbook extends AbstractPIMCollection {
 				$events[] = $event;
 			}
 		}
-		
+
 		return $events;
 	}
 }

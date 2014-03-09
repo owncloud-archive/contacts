@@ -62,7 +62,7 @@ class ImportController extends Controller {
 
 		$totalSize = $file['size'];
 		if ($maxUploadFilesize >= 0 and $totalSize > $maxUploadFilesize) {
-			$response->bailOut(App::$l10n->t('Not enough storage available'));
+			$response->bailOut(App::$l10n->t('Not enough storage available. %s available', array($maxHumanFilesize)));
 			return $response;
 		}
 
@@ -226,6 +226,11 @@ class ImportController extends Controller {
 		$processed = 0;
 
 		// TODO: Add a new group: "Imported at {date}"
+		$tagMgr = \OC::$server->getTagManager()->load('contact');
+		$date = date('D M j');
+		$group = App::$l10n->t('Imported %s', array($date));
+		$tagMgr->add($group);
+
 		foreach($parts as $part) {
 			try {
 				$vcard = VObject\Reader::read($part);
@@ -255,8 +260,10 @@ class ImportController extends Controller {
 			 * - continue
 			 */
 			try {
-				if($addressBook->addChild($vcard)) {
+				$id = $addressBook->addChild($vcard);
+				if($id !== false) {
 					$imported += 1;
+					$tagMgr->tagAs($id, $group);
 				} else {
 					$failed += 1;
 				}

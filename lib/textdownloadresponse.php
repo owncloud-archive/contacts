@@ -27,13 +27,11 @@ namespace OCA\Contacts;
 use OC\AppFramework\Http\DownloadResponse;
 
 /**
- * Prompts the user to download the a textfile
+ * Prompts the user to download the a textfile.
  */
 class TextDownloadResponse extends DownloadResponse {
 
 	private $content;
-	private $filename;
-	private $contentType;
 
 	/**
 	 * Creates a response that prompts the user to download a file which
@@ -55,6 +53,5 @@ class TextDownloadResponse extends DownloadResponse {
 	public function render(){
 		return $this->content;
 	}
-
 
 }

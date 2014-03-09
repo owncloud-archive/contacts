@@ -24,12 +24,13 @@ tools:
                 camel_case_variable_name: true
                 superglobals: false
 
-#     php_code_sniffer:
-#         config:
-#             sniffs:
-#                 generic:
-#                     white_space:
-#                         disallow_space_indent_sniff: true
+    php_code_sniffer:
+        config:
+            sniffs:
+                generic:
+                    white_space:
+                        disallow_space_indent_sniff: true
+
 #                 squiz:
 #                     white_space:
 #                         logical_operator_spacing_sniff: false
