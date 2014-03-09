@@ -84,6 +84,7 @@ msgstr "Erro irrecuperável enquanto tentava carregar os livros de endereço: {m
 msgid "Error."
 msgstr "Erro."
 
+<<<<<<< HEAD
 #: js/app.js:322 js/app.js:336
 msgid "Add to..."
 msgstr "Adicionar a..."
@@ -137,12 +138,71 @@ msgid "Error removing from group."
 msgstr "Erro a remover do grupo."
 
 #: js/app.js:1111
+=======
+#: js/app.js:321 js/app.js:335
+msgid "Add to..."
+msgstr "Adicionar a..."
+
+#: js/app.js:325 js/app.js:337
+msgid "Remove from..."
+msgstr "Remover de..."
+
+#: js/app.js:342
+msgid "Add group..."
+msgstr "Adicionar grupo..."
+
+#: js/app.js:470
+msgid "Invalid URL: \"{url}\""
+msgstr "URL inválido: \"{url}\""
+
+#: js/app.js:481
+msgid "There was an error opening a mail composer."
+msgstr "Houve um erro a abrir o editor de e-mail."
+
+#: js/app.js:486
+msgid "Invalid email: \"{url}\""
+msgstr "Correio eletrónico inválido: \"{url}\""
+
+#: js/app.js:569
+msgid "Merge failed. Cannot find contact: {id}"
+msgstr "Falhou a junção. Não se encontrou o contacto: {id}"
+
+#: js/app.js:582
+msgid "Merge failed."
+msgstr "Junção falhou."
+
+#: js/app.js:589
+msgid "Merge failed. Error saving contact."
+msgstr "Junção falhou. Erro ao guardar contacto."
+
+#: js/app.js:609
+msgid "Select photo"
+msgstr "Selecione uma fotografia"
+
+#: js/app.js:689 js/app.js:1631
+msgid "Network or server error. Please inform administrator."
+msgstr "Erro de rede ou do servidor. Por favor, informe o administrador."
+
+#: js/app.js:911
+msgid "Error adding to group."
+msgstr "Erro a adicionar ao grupo."
+
+#: js/app.js:934
+msgid "Error removing from group."
+msgstr "Erro a remover do grupo."
+
+#: js/app.js:1110
+>>>>>>> 5b186f9... [tx-robot] updated from transifex
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Você selecionou mais de 300 contactos.\nIsto irá falhar de certeza! Clique aqui para tentar na mesma."
 
+<<<<<<< HEAD
 #: js/app.js:1149
+=======
+#: js/app.js:1148
+>>>>>>> 5b186f9... [tx-robot] updated from transifex
 msgid "Error setting {name} as favorite."
 msgstr "Erro ao marcar {name} como favorito."
 
@@ -150,8 +210,12 @@ msgstr "Erro ao marcar {name} como favorito."
 msgid "Merge contacts"
 msgstr "Juntar contactos"
 
+<<<<<<< HEAD
 #: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
 #: templates/contacts.php:358 templates/settings.php:62
+=======
+#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
+>>>>>>> 5b186f9... [tx-robot] updated from transifex
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -163,6 +227,7 @@ msgstr "Adicionar grupo"
 msgid "OK"
 msgstr "OK"
 
+<<<<<<< HEAD
 #: js/app.js:1447
 msgid "Could not find contact: {id}"
 msgstr "Não foi possível encontrar o contacto: {id}"
@@ -172,16 +237,35 @@ msgid "No files selected for upload."
 msgstr "Nenhum ficheiro selecionado para enviar."
 
 #: js/app.js:1479
+=======
+#: js/app.js:1455
+msgid "Could not find contact: {id}"
+msgstr "Não foi possível encontrar o contacto: {id}"
+
+#: js/app.js:1478
+msgid "No files selected for upload."
+msgstr "Nenhum ficheiro selecionado para enviar."
+
+#: js/app.js:1488
+>>>>>>> 5b186f9... [tx-robot] updated from transifex
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "O tamanho do ficheiro que está a tentar carregar ultrapassa o limite máximo definido para ficheiros no servidor."
 
+<<<<<<< HEAD
 #: js/app.js:1579
 msgid "Edit profile picture"
 msgstr "Editar a fotografia de perfil."
 
 #: js/app.js:1583
+=======
+#: js/app.js:1589
+msgid "Edit profile picture"
+msgstr "Editar a fotografia de perfil."
+
+#: js/app.js:1593
+>>>>>>> 5b186f9... [tx-robot] updated from transifex
 msgid "Crop photo"
 msgstr "Cortar foto"
 

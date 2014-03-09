@@ -80,11 +80,11 @@ OC.ContactsImporter = OC.ContactsImporter || {
 			console.warn(response);
 		});
 	},
-	startImport: function(backend, addressBookId) {
+	startImport: function(backend, addressBookId, importType) {
 		var self = this;
 		$('.import-select').hide();
 		$('.import-status').show();
-		$.when(self.addressBooks.prepareImport(backend, addressBookId, this.path, this.fileName))
+		$.when(self.addressBooks.prepareImport(backend, addressBookId, importType, this.path, this.fileName))
 		.then(function(response) {
 			if(!response.error) {
 				$.when(self.addressBooks.doImport(response)).then(function(response) {

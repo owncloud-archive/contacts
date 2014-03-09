@@ -155,7 +155,7 @@ $this->create('contacts_address_book_move_contact', 'addressbook/{backend}/{addr
 	)
 	->requirements(array('backend', 'addressBookId', 'contactId'));
 
-$this->create('contacts_import_upload', 'addressbook/{backend}/{addressBookId}/import/upload')
+$this->create('contacts_import_upload', 'addressbook/{backend}/{addressBookId}/{importType}/import/upload')
 	->post()
 	->action(
 		function($params) {
@@ -164,9 +164,9 @@ $this->create('contacts_import_upload', 'addressbook/{backend}/{addressBookId}/i
 			$dispatcher->dispatch('ImportController', 'upload');
 		}
 	)
-	->requirements(array('backend', 'addressBookId'));
+	->requirements(array('backend', 'addressBookId', 'importType'));
 
-$this->create('contacts_import_prepare', 'addressbook/{backend}/{addressBookId}/import/prepare')
+$this->create('contacts_import_prepare', 'addressbook/{backend}/{addressBookId}/{importType}/import/prepare')
 	->post()
 	->action(
 		function($params) {
@@ -175,9 +175,9 @@ $this->create('contacts_import_prepare', 'addressbook/{backend}/{addressBookId}/
 			$dispatcher->dispatch('ImportController', 'prepare');
 		}
 	)
-	->requirements(array('backend', 'addressBookId'));
+	->requirements(array('backend', 'addressBookId', 'importType'));
 
-$this->create('contacts_import_start', 'addressbook/{backend}/{addressBookId}/import/start')
+$this->create('contacts_import_start', 'addressbook/{backend}/{addressBookId}/{importType}/import/start')
 	->post()
 	->action(
 		function($params) {
@@ -186,9 +186,9 @@ $this->create('contacts_import_start', 'addressbook/{backend}/{addressBookId}/im
 			$dispatcher->dispatch('ImportController', 'start');
 		}
 	)
-	->requirements(array('backend', 'addressBookId'));
+	->requirements(array('backend', 'addressBookId', 'importType'));
 
-$this->create('contacts_import_status', 'addressbook/{backend}/{addressBookId}/import/status')
+$this->create('contacts_import_status', 'addressbook/{backend}/{addressBookId}/{importType}/import/status')
 	->get()
 	->action(
 		function($params) {
@@ -197,7 +197,7 @@ $this->create('contacts_import_status', 'addressbook/{backend}/{addressBookId}/i
 			$dispatcher->dispatch('ImportController', 'status');
 		}
 	)
-	->requirements(array('backend', 'addressBookId'));
+	->requirements(array('backend', 'addressBookId', 'importType'));
 
 $this->create('contacts_address_book_export', 'addressbook/{backend}/{addressBookId}/export')
 	->get()
