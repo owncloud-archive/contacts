@@ -12,7 +12,6 @@
 "No file was uploaded" => "ھېچقانداق ھۆججەت يۈكلەنمىدى",
 "Missing a temporary folder" => "ۋاقىتلىق قىسقۇچ كەم.",
 "Failed to write to disk" => "دىسكىغا يازالمىدى",
-"Not enough storage available" => "يېتەرلىك ساقلاش بوشلۇقى يوق",
 "Other" => "باشقا",
 "Work" => "ئىش",
 "Text" => "قىسقا ئۇچۇر",
@@ -29,9 +28,5 @@
 "Active" => "ئاكتىپ",
 "Share" => "ھەمبەھىر",
 "Export" => "چىقار",
-"Edit" => "تەھرىر",
-"more info" => "تېخىمۇ كۆپ ئۇچۇرلار",
-"Primary address (Kontact et al)" => "ئاساسىي ئادرېس (ئالاقە ئۇچۇرى قاتارلىق)",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "چۈشەندۈرۈش"
+"Edit" => "تەھرىر"
 );

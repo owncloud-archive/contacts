@@ -22,7 +22,6 @@
 "Import" => "Importă",
 "Close" => "Închide",
 "{name}'s Birthday" => "Ziua de naștere a {name}",
-"Error saving contact." => "eroare in salvarea contactului",
 "Information about vCard is incorrect. Please reload the page." => "Informațiile cărții de vizită sunt incorecte. Te rog reîncarcă pagina.",
 "No file was uploaded. Unknown error" => "Nici un fișier nu a fost încărcat. Eroare necunoscută",
 "There is no error, the file uploaded with success" => "Nu a apărut nici o eroare, fișierul a fost încărcat cu succes",
@@ -39,8 +38,8 @@
 "Error creating temporary image" => "eroare la alegerea imaginii temporare",
 "Error cropping image" => "eroare la alegerea imaginii",
 "Error getting PHOTO property." => "eroare in gasirea proprietatilor fotografiei",
+"Error saving contact." => "eroare in salvarea contactului",
 "Failed to write to disk" => "Eroare la scriere pe disc",
-"Not enough storage available" => "Nu este suficient spațiu disponibil",
 "Error uploading contacts to storage." => "Eroare la ",
 "Could not set preference: " => "nu se pot seta preferinte",
 "Contact" => "Contact",
@@ -94,13 +93,5 @@
 "Active" => "Activ",
 "Share" => "Partajează",
 "Export" => "Exportă",
-"Edit" => "Editează",
-"more info" => "mai multe informații",
-"Primary address (Kontact et al)" => "Adresa primară (Kontact et al)",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "Agende",
-"Show CardDav link" => "Arată legătură CardDav",
-"New Address Book" => "Agendă nouă",
-"Description" => "Descriere",
-"More..." => "Mai multe..."
+"Edit" => "Editează"
 );

@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-09 00:48-0500\n"
-"PO-Revision-Date: 2014-03-09 05:48+0000\n"
+"POT-Creation-Date: 2014-03-10 00:48-0400\n"
+"PO-Revision-Date: 2014-03-10 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Contacts"
 msgstr "Stiki"
 
-#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519
 msgid "Save"
 msgstr "Shrani"
 
@@ -143,7 +143,7 @@ msgid "Merge contacts"
 msgstr "Združi stike"
 
 #: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
-#: templates/contacts.php:358 templates/settings.php:62
+#: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -310,35 +310,35 @@ msgstr "Ni ustreznih dovoljenj za ogled teh stikov."
 msgid "Contact not found"
 msgstr "Stika ni mogoče najti"
 
-#: lib/addressbook.php:199
+#: lib/addressbook.php:202
 msgid "You do not have permissions to see these contacts"
 msgstr "Ni ustreznih dovoljenj za ogled teh stikov."
 
-#: lib/addressbook.php:229
+#: lib/addressbook.php:232
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Ni ustreznih dovoljenj za dodajanje stikov v imenik."
 
-#: lib/addressbook.php:233
+#: lib/addressbook.php:236
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Zaledje tega imenika ne omogoča dodajanja stikov."
 
-#: lib/addressbook.php:262 lib/addressbook.php:293 lib/contact.php:248
+#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Ni ustreznih dovoljenj za brisanje tega stika"
 
-#: lib/addressbook.php:266 lib/addressbook.php:297
+#: lib/addressbook.php:269 lib/addressbook.php:300
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Zaledje tega imenika ne omogoča brisanje stikov"
 
-#: lib/addressbook.php:318
+#: lib/addressbook.php:321
 msgid "Unknown error"
 msgstr "Neznana napaka"
 
-#: lib/addressbook.php:362
+#: lib/addressbook.php:365
 msgid "The backend for this address book does not support updating"
 msgstr "Zaledje tega imenika ne omogoča posodobitev"
 
-#: lib/addressbook.php:390
+#: lib/addressbook.php:393
 msgid "You don't have permissions to delete the address book."
 msgstr "Ni ustreznih dovoljenj za brisanje imenika."
 
@@ -378,83 +378,90 @@ msgstr "Neznan IM:"
 msgid "{name}'s Birthday"
 msgstr "{name} - rojstni dan"
 
-#: lib/controller/addressbookcontroller.php:144
+#: lib/controller/addressbookcontroller.php:141
 msgid "Error creating address book"
 msgstr "Napaka med ustvarjanjem imenika"
 
-#: lib/controller/addressbookcontroller.php:176
+#: lib/controller/addressbookcontroller.php:173
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:181
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Ni ustreznih dovoljenj za brisanje imenika \"%s\""
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:188
 msgid "Error deleting address book"
 msgstr "Napaka med brisanjem imenika"
 
-#: lib/controller/addressbookcontroller.php:231
+#: lib/controller/addressbookcontroller.php:228
 msgid "Error creating contact."
 msgstr "Napaka med ustvarjanjem stika."
 
-#: lib/controller/addressbookcontroller.php:267
-msgid "Error deleting contact."
-msgstr "Napaka med brisanjem stika."
+#: lib/controller/addressbookcontroller.php:237
+msgid "Error creating contact"
+msgstr ""
+
+#: lib/controller/addressbookcontroller.php:269
+msgid "Error deleting contact"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:309
-msgid "Error retrieving contact."
-msgstr "Napaka med pridobivanjem stika."
+msgid "Error retrieving contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:322
-#: lib/controller/contactphotocontroller.php:332
-msgid "Error saving contact."
-msgstr "Napaka med shranjevanjem stika."
+#: lib/controller/addressbookcontroller.php:320
+msgid "Error saving contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
 msgstr "Prišlo je do napake med odstranjevanjem stika iz drugega imenika."
 
+#: lib/controller/addressbookcontroller.php:333
+msgid "Error getting moved contact"
+msgstr ""
+
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:64
-#: lib/controller/contactcontroller.php:98
+#: lib/controller/contactcontroller.php:63
+#: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:37
 #: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "Stika ni mogoče najti."
 
-#: lib/controller/contactcontroller.php:60
+#: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
 msgstr "Ni zahtevanih podatkov stika."
 
-#: lib/controller/contactcontroller.php:68
+#: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
 msgstr "Napaka med združevanjem v stik."
 
-#: lib/controller/contactcontroller.php:72
+#: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
 msgstr "Napaka shranjevanja stika."
 
-#: lib/controller/contactcontroller.php:104
+#: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
 msgstr "Ime lastnosti ni nastavljeno."
 
-#: lib/controller/contactcontroller.php:110
+#: lib/controller/contactcontroller.php:109
 msgid "Property checksum is not set."
 msgstr "Lastnost nadzorne vsote ni nastavljena."
 
-#: lib/controller/contactcontroller.php:132
+#: lib/controller/contactcontroller.php:131
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Podrobnosti kartice vCard niso pravilne. Ponovno naložite stran."
 
-#: lib/controller/contactcontroller.php:143
+#: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
 msgstr "Napaka posodabljanja stika"
 
-#: lib/controller/contactcontroller.php:150
+#: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
 msgstr "Napaka shranjevanja stika v hrbtišče sistema"
 
@@ -541,6 +548,10 @@ msgstr "Napaka med obrezovanjem slike"
 msgid "Error getting PHOTO property."
 msgstr "Napaka med pridobivanjem lastnosti fotografije."
 
+#: lib/controller/contactphotocontroller.php:332
+msgid "Error saving contact."
+msgstr "Napaka med shranjevanjem stika."
+
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
 msgid "No group name given."
 msgstr "Ni podanega imena skupine."
@@ -580,8 +591,9 @@ msgid "Failed to write to disk"
 msgstr "Pisanje na disk je spodletelo"
 
 #: lib/controller/importcontroller.php:65
-msgid "Not enough storage available"
-msgstr "Na voljo ni dovolj prostora"
+#, php-format
+msgid "Not enough storage available. %s available"
+msgstr ""
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -604,7 +616,7 @@ msgid "File name missing from request."
 msgstr "V zahtevi manjka ime datoteke."
 
 #: lib/controller/importcontroller.php:170
-#: lib/controller/importcontroller.php:293
+#: lib/controller/importcontroller.php:300
 msgid "Progress key missing from request."
 msgstr "Ključ napredka manjka iz zahteve."
 
@@ -615,6 +627,11 @@ msgstr "Poskus dostopa do datoteke na črnem seznamu:"
 #: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
 msgstr "Ni stikov v:"
+
+#: lib/controller/importcontroller.php:231
+#, php-format
+msgid "Imported %s"
+msgstr ""
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -794,7 +811,7 @@ msgstr "Priimek-, Ime"
 
 #: templates/contacts.php:60 templates/contacts.php:61
 #: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:500 templates/settings.php:50
+#: templates/contacts.php:500
 msgid "Delete"
 msgstr "Izbriši"
 
@@ -803,7 +820,7 @@ msgid "Groups"
 msgstr "Skupine"
 
 #: templates/contacts.php:66 templates/contacts.php:365
-#: templates/contacts.php:366 templates/settings.php:40
+#: templates/contacts.php:366
 msgid "Download"
 msgstr "Prejmi"
 
@@ -919,7 +936,6 @@ msgid "Favorite"
 msgstr "Priljubljeno"
 
 #: templates/contacts.php:231 templates/contacts.php:233
-#: templates/settings.php:59
 msgid "Name"
 msgstr "Ime"
 
@@ -1037,7 +1053,7 @@ msgstr "Hipni sporočilnik"
 msgid "Active"
 msgstr "Dejavno"
 
-#: templates/contacts.php:496 templates/settings.php:36
+#: templates/contacts.php:496
 msgid "Share"
 msgstr "Souporaba"
 
@@ -1049,46 +1065,6 @@ msgstr "Izvozi"
 msgid "CardDAV link"
 msgstr "Povezava CardDAV"
 
-#: templates/contacts.php:499 templates/settings.php:45
+#: templates/contacts.php:499
 msgid "Edit"
 msgstr "Uredi"
-
-#: templates/settings.php:3
-msgid "CardDAV syncing addresses"
-msgstr "Naslovi CardDAV za usklajevanje"
-
-#: templates/settings.php:3
-msgid "more info"
-msgstr "več podrobnosti"
-
-#: templates/settings.php:5
-msgid "Primary address (Kontact et al)"
-msgstr "Osnovni naslov (za stik)"
-
-#: templates/settings.php:7
-msgid "iOS/OS X"
-msgstr "iOS/OS X"
-
-#: templates/settings.php:11
-msgid "Addressbooks"
-msgstr "Imeniki"
-
-#: templates/settings.php:26
-msgid "Show CardDav link"
-msgstr "Pokaži povezavo CardDav"
-
-#: templates/settings.php:29
-msgid "Show read-only VCF link"
-msgstr "Pokaži povezavo VCF samo za branje"
-
-#: templates/settings.php:58
-msgid "New Address Book"
-msgstr "Nov imenik"
-
-#: templates/settings.php:60
-msgid "Description"
-msgstr "Opis"
-
-#: templates/settings.php:66
-msgid "More..."
-msgstr "Več ..."

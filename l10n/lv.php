@@ -23,7 +23,6 @@
 "Contact not found" => "Kontakts netika atrasts",
 "Error creating address book" => "Kļūda veidojot ",
 "Error creating contact." => "Kļūda, veidojot kontaktu.",
-"Error saving contact." => "Kļūda, saglabājot kontaktu.",
 "No file was uploaded. Unknown error" => "Netika augšupielādēta neviena datne. Nezināma kļūda",
 "There is no error, the file uploaded with success" => "Viss kārtībā, datne augšupielādēta veiksmīga",
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form" => "Augšupielādētā datne pārsniedz MAX_FILE_SIZE norādi, kas ir norādīta HTML formā",
@@ -35,8 +34,8 @@
 "Error loading image." => "Kļūda, ielādējot attēlu.",
 "Error cropping image" => "Kļūda, apcērtot attēlu",
 "Error getting PHOTO property." => "Kļūda, saņemot PHOTO īpašību.",
+"Error saving contact." => "Kļūda, saglabājot kontaktu.",
 "Failed to write to disk" => "Neizdevās saglabāt diskā",
-"Not enough storage available" => "Nav pietiekami daudz vietas",
 "Contact" => "Kontakts",
 "Other" => "Cits",
 "HomePage" => "Mājas lapa",
@@ -111,13 +110,5 @@
 "Share" => "Dalīties",
 "Export" => "Eksportēt",
 "CardDAV link" => "CardDAV saite",
-"Edit" => "Rediģēt",
-"CardDAV syncing addresses" => "CardDAV sinhronizēšanas adreses",
-"more info" => "vairāk informācijas",
-"Primary address (Kontact et al)" => "Primārā adrese",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "Adrešu grāmatas",
-"New Address Book" => "Jauna adrešu grāmata",
-"Description" => "Apraksts",
-"More..." => "Vairāk..."
+"Edit" => "Rediģēt"
 );

@@ -26,7 +26,5 @@
 "Birthday" => "Afmælisdagur",
 "Share" => "Deila",
 "Export" => "Flytja út",
-"Edit" => "Breyta",
-"more info" => "fleiri upplýsingar",
-"iOS/OS X" => "iOS/OS X"
+"Edit" => "Breyta"
 );

@@ -14,7 +14,6 @@
 "No file was uploaded" => "Nuk u ngarkua asnjë skedar",
 "Missing a temporary folder" => "Një dosje e përkohshme nuk u gjet",
 "Failed to write to disk" => "Ruajtja në disk dështoi",
-"Not enough storage available" => "Nuk ka mbetur hapësirë memorizimi e mjaftueshme",
 "Other" => "Të tjera",
 "Work" => "Punë",
 "Text" => "Tekst",
@@ -29,9 +28,5 @@
 "Active" => "Aktiv",
 "Share" => "Nda",
 "Export" => "Eksporto",
-"Edit" => "Ndrysho",
-"more info" => "më shumë info.",
-"Primary address (Kontact et al)" => "Adresa kryesore",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "Përshkrimi"
+"Edit" => "Ndrysho"
 );

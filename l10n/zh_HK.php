@@ -18,8 +18,5 @@
 "Title" => "標題",
 "Birthday" => "生日",
 "Share" => "分享",
-"Edit" => "編輯",
-"more info" => "更多",
-"Primary address (Kontact et al)" => "主要地址",
-"iOS/OS X" => "iOS/OSX"
+"Edit" => "編輯"
 );

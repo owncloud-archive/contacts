@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-09 00:48-0500\n"
-"PO-Revision-Date: 2014-03-09 05:48+0000\n"
+"POT-Creation-Date: 2014-03-10 00:48-0400\n"
+"PO-Revision-Date: 2014-03-10 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr ""
 msgid "Contacts"
 msgstr "Contactos"
 
-#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519
 msgid "Save"
 msgstr "Guardar"
 
@@ -151,7 +151,7 @@ msgid "Merge contacts"
 msgstr "Juntar contactos"
 
 #: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
-#: templates/contacts.php:358 templates/settings.php:62
+#: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -318,35 +318,35 @@ msgstr "Não tem permissões para ver este contacto"
 msgid "Contact not found"
 msgstr "Contacto não encontrado"
 
-#: lib/addressbook.php:199
+#: lib/addressbook.php:202
 msgid "You do not have permissions to see these contacts"
 msgstr "Não tem permissões para ver estes contactos"
 
-#: lib/addressbook.php:229
+#: lib/addressbook.php:232
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Não tem permissões para adicionar contactos ao livro de endereços"
 
-#: lib/addressbook.php:233
+#: lib/addressbook.php:236
 msgid "The backend for this address book does not support adding contacts"
 msgstr "O bastidor para este livro de endereços não suporta o adicionar de contactos"
 
-#: lib/addressbook.php:262 lib/addressbook.php:293 lib/contact.php:248
+#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Não tem permissões para apagar este contacto."
 
-#: lib/addressbook.php:266 lib/addressbook.php:297
+#: lib/addressbook.php:269 lib/addressbook.php:300
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "O bastidor para este livro de endereços não suporta o apagar de contactos"
 
-#: lib/addressbook.php:318
+#: lib/addressbook.php:321
 msgid "Unknown error"
 msgstr "Erro Desconhecido"
 
-#: lib/addressbook.php:362
+#: lib/addressbook.php:365
 msgid "The backend for this address book does not support updating"
 msgstr "O suporte deste  livro de endereços não suporta atualizações"
 
-#: lib/addressbook.php:390
+#: lib/addressbook.php:393
 msgid "You don't have permissions to delete the address book."
 msgstr "Não tem permissões para apagar este livro de endereços."
 
@@ -386,83 +386,90 @@ msgstr "Mensagens instantâneas desconhecida (IM)"
 msgid "{name}'s Birthday"
 msgstr "Aniversário de {name}"
 
-#: lib/controller/addressbookcontroller.php:144
+#: lib/controller/addressbookcontroller.php:141
 msgid "Error creating address book"
 msgstr "Erro ao criar livro de endereços"
 
-#: lib/controller/addressbookcontroller.php:176
+#: lib/controller/addressbookcontroller.php:173
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:181
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Não tem permissões para eliminar o \"%s\" livro de endereços"
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:188
 msgid "Error deleting address book"
 msgstr "Erro ao apagar o livro de endereços"
 
-#: lib/controller/addressbookcontroller.php:231
+#: lib/controller/addressbookcontroller.php:228
 msgid "Error creating contact."
 msgstr "Erro a criar contacto."
 
-#: lib/controller/addressbookcontroller.php:267
-msgid "Error deleting contact."
-msgstr "Erro ao apagar contacto."
+#: lib/controller/addressbookcontroller.php:237
+msgid "Error creating contact"
+msgstr ""
+
+#: lib/controller/addressbookcontroller.php:269
+msgid "Error deleting contact"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:309
-msgid "Error retrieving contact."
-msgstr "Erro a guardar contacto."
+msgid "Error retrieving contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:322
-#: lib/controller/contactphotocontroller.php:332
-msgid "Error saving contact."
-msgstr "Erro a guardar o contacto."
+#: lib/controller/addressbookcontroller.php:320
+msgid "Error saving contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
 msgstr "Erro ao remover o contacto do livro de endereços."
 
+#: lib/controller/addressbookcontroller.php:333
+msgid "Error getting moved contact"
+msgstr ""
+
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:64
-#: lib/controller/contactcontroller.php:98
+#: lib/controller/contactcontroller.php:63
+#: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:37
 #: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "Não é possível encontrar o contacto."
 
-#: lib/controller/contactcontroller.php:60
+#: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
 msgstr "Não há dados de contacto no pedido."
 
-#: lib/controller/contactcontroller.php:68
+#: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
 msgstr "Erro ao adicionar detalhes ao contacto."
 
-#: lib/controller/contactcontroller.php:72
+#: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
 msgstr "Erro ao guardar o contacto no suporte."
 
-#: lib/controller/contactcontroller.php:104
+#: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
 msgstr "O nome da propriedade não está definido,"
 
-#: lib/controller/contactcontroller.php:110
+#: lib/controller/contactcontroller.php:109
 msgid "Property checksum is not set."
 msgstr "A propriedade checksum não está configurada."
 
-#: lib/controller/contactcontroller.php:132
+#: lib/controller/contactcontroller.php:131
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "A informação sobre o vCard está incorreta. Por favor recarregue a página"
 
-#: lib/controller/contactcontroller.php:143
+#: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
 msgstr "Erro ao actualizar o contacto"
 
-#: lib/controller/contactcontroller.php:150
+#: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
 msgstr "Erro ao guardar o contacto no suporte"
 
@@ -549,6 +556,10 @@ msgstr "Erro a recorar a imagem"
 msgid "Error getting PHOTO property."
 msgstr "Erro a obter a propriedade Foto"
 
+#: lib/controller/contactphotocontroller.php:332
+msgid "Error saving contact."
+msgstr "Erro a guardar o contacto."
+
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
 msgid "No group name given."
 msgstr "Grupo sem nome."
@@ -588,8 +599,9 @@ msgid "Failed to write to disk"
 msgstr "Falhou a escrita no disco"
 
 #: lib/controller/importcontroller.php:65
-msgid "Not enough storage available"
-msgstr "Não há espaço suficiente em disco"
+#, php-format
+msgid "Not enough storage available. %s available"
+msgstr ""
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -612,7 +624,7 @@ msgid "File name missing from request."
 msgstr "O nome do ficheiro está em falta."
 
 #: lib/controller/importcontroller.php:170
-#: lib/controller/importcontroller.php:293
+#: lib/controller/importcontroller.php:300
 msgid "Progress key missing from request."
 msgstr "Chave de progresso em falta no pedido."
 
@@ -623,6 +635,11 @@ msgstr "Tentativa de acesso a ficheiro bloqueado:"
 #: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
 msgstr "Nenhum contacto encontrado em:"
+
+#: lib/controller/importcontroller.php:231
+#, php-format
+msgid "Imported %s"
+msgstr ""
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -802,7 +819,7 @@ msgstr "Último-, Primeiro Nome"
 
 #: templates/contacts.php:60 templates/contacts.php:61
 #: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:500 templates/settings.php:50
+#: templates/contacts.php:500
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -811,7 +828,7 @@ msgid "Groups"
 msgstr "Grupos"
 
 #: templates/contacts.php:66 templates/contacts.php:365
-#: templates/contacts.php:366 templates/settings.php:40
+#: templates/contacts.php:366
 msgid "Download"
 msgstr "Transferir"
 
@@ -927,7 +944,6 @@ msgid "Favorite"
 msgstr "Favorito"
 
 #: templates/contacts.php:231 templates/contacts.php:233
-#: templates/settings.php:59
 msgid "Name"
 msgstr "Nome"
 
@@ -1045,7 +1061,7 @@ msgstr "Mensageiro instantâneo"
 msgid "Active"
 msgstr "Activo"
 
-#: templates/contacts.php:496 templates/settings.php:36
+#: templates/contacts.php:496
 msgid "Share"
 msgstr "Partilhar"
 
@@ -1057,46 +1073,6 @@ msgstr "Exportar"
 msgid "CardDAV link"
 msgstr "Endereço CardDAV"
 
-#: templates/contacts.php:499 templates/settings.php:45
+#: templates/contacts.php:499
 msgid "Edit"
 msgstr "Editar"
-
-#: templates/settings.php:3
-msgid "CardDAV syncing addresses"
-msgstr "CardDAV a sincronizar endereços"
-
-#: templates/settings.php:3
-msgid "more info"
-msgstr "mais informação"
-
-#: templates/settings.php:5
-msgid "Primary address (Kontact et al)"
-msgstr "Endereço principal (Kontact et al.)"
-
-#: templates/settings.php:7
-msgid "iOS/OS X"
-msgstr "iOS/OS X"
-
-#: templates/settings.php:11
-msgid "Addressbooks"
-msgstr "Livros de endereços"
-
-#: templates/settings.php:26
-msgid "Show CardDav link"
-msgstr "Mostrar ligação CardDAV"
-
-#: templates/settings.php:29
-msgid "Show read-only VCF link"
-msgstr "Mostrar ligações VCF só de leitura"
-
-#: templates/settings.php:58
-msgid "New Address Book"
-msgstr "Novo livro de endereços"
-
-#: templates/settings.php:60
-msgid "Description"
-msgstr "Descrição"
-
-#: templates/settings.php:66
-msgid "More..."
-msgstr "Mais..."

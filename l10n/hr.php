@@ -69,10 +69,5 @@
 "Active" => "Aktivno",
 "Share" => "Podijeli",
 "Export" => "Izvoz",
-"Edit" => "Uredi",
-"more info" => "više informacija",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "Adresari",
-"New Address Book" => "Novi adresar",
-"Description" => "Opis"
+"Edit" => "Uredi"
 );

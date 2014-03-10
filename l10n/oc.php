@@ -24,9 +24,5 @@
 "Active" => "Actiu",
 "Share" => "Parteja",
 "Export" => "Exporta",
-"Edit" => "Editar",
-"more info" => "mai d'entresenhes",
-"Primary address (Kontact et al)" => "Adreiças primarias (Kontact et al)",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "Descripcion"
+"Edit" => "Editar"
 );

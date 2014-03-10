@@ -16,7 +16,6 @@
 "No file was uploaded" => "Ingen filer vart lasta opp",
 "Missing a temporary folder" => "Manglar ei mellombels mappe",
 "Failed to write to disk" => "Klarte ikkje skriva til disk",
-"Not enough storage available" => "Ikkje nok lagringsplass tilgjengeleg",
 "Contact" => "Kontakt",
 "Other" => "Anna",
 "Work" => "Arbeid",
@@ -46,11 +45,5 @@
 "Active" => "Aktiv",
 "Share" => "Del",
 "Export" => "Eksporter",
-"Edit" => "Endra",
-"more info" => "meir info",
-"Primary address (Kontact et al)" => "Hovudadresse (Kontact osb.)",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "Adressebøker",
-"New Address Book" => "Ny adressebok",
-"Description" => "Skildring"
+"Edit" => "Endra"
 );

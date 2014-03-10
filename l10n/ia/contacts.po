@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-09 00:48-0500\n"
-"PO-Revision-Date: 2014-03-09 05:48+0000\n"
+"POT-Creation-Date: 2014-03-10 00:48-0400\n"
+"PO-Revision-Date: 2014-03-10 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Interlingua (http://www.transifex.com/projects/p/owncloud/language/ia/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Contacts"
 msgstr "Contactos"
 
-#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519
 msgid "Save"
 msgstr "Salveguardar"
 
@@ -138,7 +138,7 @@ msgid "Merge contacts"
 msgstr ""
 
 #: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
-#: templates/contacts.php:358 templates/settings.php:62
+#: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Cancellar"
 
@@ -305,35 +305,35 @@ msgstr ""
 msgid "Contact not found"
 msgstr ""
 
-#: lib/addressbook.php:199
+#: lib/addressbook.php:202
 msgid "You do not have permissions to see these contacts"
 msgstr ""
 
-#: lib/addressbook.php:229
+#: lib/addressbook.php:232
 msgid "You do not have permissions add contacts to the address book"
 msgstr ""
 
-#: lib/addressbook.php:233
+#: lib/addressbook.php:236
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:262 lib/addressbook.php:293 lib/contact.php:248
+#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr ""
 
-#: lib/addressbook.php:266 lib/addressbook.php:297
+#: lib/addressbook.php:269 lib/addressbook.php:300
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:318
+#: lib/addressbook.php:321
 msgid "Unknown error"
 msgstr "Error Incognite"
 
-#: lib/addressbook.php:362
+#: lib/addressbook.php:365
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:390
+#: lib/addressbook.php:393
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
@@ -373,83 +373,90 @@ msgstr ""
 msgid "{name}'s Birthday"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:144
+#: lib/controller/addressbookcontroller.php:141
 msgid "Error creating address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:176
+#: lib/controller/addressbookcontroller.php:173
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:181
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:188
 msgid "Error deleting address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:231
+#: lib/controller/addressbookcontroller.php:228
 msgid "Error creating contact."
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:267
-msgid "Error deleting contact."
+#: lib/controller/addressbookcontroller.php:237
+msgid "Error creating contact"
+msgstr ""
+
+#: lib/controller/addressbookcontroller.php:269
+msgid "Error deleting contact"
 msgstr ""
 
 #: lib/controller/addressbookcontroller.php:309
-msgid "Error retrieving contact."
+msgid "Error retrieving contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:322
-#: lib/controller/contactphotocontroller.php:332
-msgid "Error saving contact."
+#: lib/controller/addressbookcontroller.php:320
+msgid "Error saving contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
 msgstr ""
 
+#: lib/controller/addressbookcontroller.php:333
+msgid "Error getting moved contact"
+msgstr ""
+
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:64
-#: lib/controller/contactcontroller.php:98
+#: lib/controller/contactcontroller.php:63
+#: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:37
 #: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:60
+#: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:68
+#: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:72
+#: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:104
+#: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:110
+#: lib/controller/contactcontroller.php:109
 msgid "Property checksum is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:132
+#: lib/controller/contactcontroller.php:131
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:143
+#: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
 msgstr ""
 
-#: lib/controller/contactcontroller.php:150
+#: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
 msgstr ""
 
@@ -536,6 +543,10 @@ msgstr ""
 msgid "Error getting PHOTO property."
 msgstr ""
 
+#: lib/controller/contactphotocontroller.php:332
+msgid "Error saving contact."
+msgstr ""
+
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
 msgid "No group name given."
 msgstr ""
@@ -575,7 +586,8 @@ msgid "Failed to write to disk"
 msgstr ""
 
 #: lib/controller/importcontroller.php:65
-msgid "Not enough storage available"
+#, php-format
+msgid "Not enough storage available. %s available"
 msgstr ""
 
 #: lib/controller/importcontroller.php:73
@@ -599,7 +611,7 @@ msgid "File name missing from request."
 msgstr ""
 
 #: lib/controller/importcontroller.php:170
-#: lib/controller/importcontroller.php:293
+#: lib/controller/importcontroller.php:300
 msgid "Progress key missing from request."
 msgstr ""
 
@@ -609,6 +621,11 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
+msgstr ""
+
+#: lib/controller/importcontroller.php:231
+#, php-format
+msgid "Imported %s"
 msgstr ""
 
 #: lib/controller/settingscontroller.php:36
@@ -789,7 +806,7 @@ msgstr ""
 
 #: templates/contacts.php:60 templates/contacts.php:61
 #: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:500 templates/settings.php:50
+#: templates/contacts.php:500
 msgid "Delete"
 msgstr "Deler"
 
@@ -798,7 +815,7 @@ msgid "Groups"
 msgstr "Gruppos"
 
 #: templates/contacts.php:66 templates/contacts.php:365
-#: templates/contacts.php:366 templates/settings.php:40
+#: templates/contacts.php:366
 msgid "Download"
 msgstr "Discargar"
 
@@ -914,7 +931,6 @@ msgid "Favorite"
 msgstr ""
 
 #: templates/contacts.php:231 templates/contacts.php:233
-#: templates/settings.php:59
 msgid "Name"
 msgstr "Nomine"
 
@@ -1032,7 +1048,7 @@ msgstr ""
 msgid "Active"
 msgstr "Active"
 
-#: templates/contacts.php:496 templates/settings.php:36
+#: templates/contacts.php:496
 msgid "Share"
 msgstr "Compartir"
 
@@ -1044,46 +1060,6 @@ msgstr "Exportar"
 msgid "CardDAV link"
 msgstr ""
 
-#: templates/contacts.php:499 templates/settings.php:45
+#: templates/contacts.php:499
 msgid "Edit"
 msgstr "Modificar"
-
-#: templates/settings.php:3
-msgid "CardDAV syncing addresses"
-msgstr ""
-
-#: templates/settings.php:3
-msgid "more info"
-msgstr "plus info"
-
-#: templates/settings.php:5
-msgid "Primary address (Kontact et al)"
-msgstr "Adresse primari (Kontact e alia)"
-
-#: templates/settings.php:7
-msgid "iOS/OS X"
-msgstr "iOS/OS X"
-
-#: templates/settings.php:11
-msgid "Addressbooks"
-msgstr "Adressarios"
-
-#: templates/settings.php:26
-msgid "Show CardDav link"
-msgstr ""
-
-#: templates/settings.php:29
-msgid "Show read-only VCF link"
-msgstr ""
-
-#: templates/settings.php:58
-msgid "New Address Book"
-msgstr "Nove adressario"
-
-#: templates/settings.php:60
-msgid "Description"
-msgstr "Description"
-
-#: templates/settings.php:66
-msgid "More..."
-msgstr ""

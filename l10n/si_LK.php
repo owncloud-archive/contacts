@@ -14,7 +14,6 @@
 "Import done" => "ආයාත කිරීම අවසන්",
 "Close" => "වසන්න",
 "{name}'s Birthday" => "{name}ගේ උපන්දිනය",
-"Error saving contact." => "සම්බන්ධතාව සුරැකිමේදී දෝෂයක්",
 "Information about vCard is incorrect. Please reload the page." => "vCard පිළිබඳ තොරතුරු අසත්‍යයි. කරුණාකර පිටුව නැවත බාගත කරන්න.",
 "No file was uploaded. Unknown error" => "ගොනුවක් උඩුගත නොවුනි. නොහැඳිනු දෝෂයක්",
 "There is no error, the file uploaded with success" => "දෝෂයක් නොමැත. සාර්ථකව ගොනුව උඩුගත කෙරුණි",
@@ -27,6 +26,7 @@
 "File doesn't exist:" => "ගොනුව නොපවතී",
 "Error loading image." => "රූපය පූරණය දෝෂ සහිතයි.",
 "Error creating temporary image" => "තාවකාලික ඡායාරූපයක් තැනීමේ දෝෂයක්",
+"Error saving contact." => "සම්බන්ධතාව සුරැකිමේදී දෝෂයක්",
 "Failed to write to disk" => "තැටිගත කිරීම අසාර්ථකයි",
 "Error uploading contacts to storage." => "ගබඩාවට පුද්ගල විස්තර උඩුගත කිරීමේ දෝෂයක්",
 "Contact" => "සබඳතාව",
@@ -73,12 +73,5 @@
 "Active" => "සක්‍රීය",
 "Share" => "බෙදා හදා ගන්න",
 "Export" => "නිර්යාත කරන්න",
-"Edit" => "සකසන්න",
-"more info" => "තව විස්තර",
-"Primary address (Kontact et al)" => "ප්‍රාථමික ලිපිනය(හැම විටම සම්බන්ධ කරගත හැක)",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "ලිපින පොත්",
-"New Address Book" => "නව ලිපින පොතක් ",
-"Description" => "විස්තරය",
-"More..." => "තවත්..."
+"Edit" => "සකසන්න"
 );

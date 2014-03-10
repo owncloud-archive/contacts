@@ -34,6 +34,5 @@
 "Country" => "Zemlja",
 "Active" => "Aktivan",
 "Share" => "Podeli",
-"Edit" => "Uredi",
-"Description" => "Opis"
+"Edit" => "Uredi"
 );

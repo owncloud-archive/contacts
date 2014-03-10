@@ -11,7 +11,6 @@
 "Import" => "Import",
 "Close" => "Tutup",
 "{name}'s Birthday" => "Hari Lahir {name}",
-"Error saving contact." => "Ralat menyimpan kenalan.",
 "Information about vCard is incorrect. Please reload the page." => "Maklumat vCard tidak tepat. Sila reload semula halaman ini.",
 "No file was uploaded. Unknown error" => "Tiada fail dimuatnaik. Ralat tidak diketahui.",
 "There is no error, the file uploaded with success" => "Tiada ralat berlaku, fail berjaya dimuatnaik",
@@ -28,6 +27,7 @@
 "Error creating temporary image" => "Ralat mencipta imej sementara",
 "Error cropping image" => "Ralat memotong imej",
 "Error getting PHOTO property." => "Ralat mendapatkan maklumat gambar.",
+"Error saving contact." => "Ralat menyimpan kenalan.",
 "Failed to write to disk" => "Gagal untuk disimpan",
 "Error uploading contacts to storage." => "Ralat memuatnaik senarai kenalan.",
 "Contact" => "Hubungan",
@@ -72,13 +72,5 @@
 "Active" => "Aktif",
 "Share" => "Kongsi",
 "Export" => "Export",
-"Edit" => "Sunting",
-"CardDAV syncing addresses" => "alamat selarian CardDAV",
-"more info" => "maklumat lanjut",
-"Primary address (Kontact et al)" => "Alamat utama",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "Senarai Buku Alamat",
-"New Address Book" => "Buku Alamat Baru",
-"Description" => "Keterangan",
-"More..." => "Lagi..."
+"Edit" => "Sunting"
 );

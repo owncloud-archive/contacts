@@ -24,7 +24,6 @@
 "Close" => "بستن",
 "Unknown error" => "خطای نامشخص",
 "{name}'s Birthday" => "روز تولد {name} است",
-"Error saving contact." => "خطا در ذخیره سازی اطلاعات",
 "Information about vCard is incorrect. Please reload the page." => "اطلاعات درمورد vCard شما اشتباه است لطفا صفحه را دوباره بار گذاری کنید",
 "No file was uploaded. Unknown error" => "هیچ فایلی آپلود نشد.خطای ناشناس",
 "There is no error, the file uploaded with success" => "هیچ خطایی نیست بارگذاری پرونده موفقیت آمیز بود",
@@ -41,8 +40,8 @@
 "Error creating temporary image" => "خطا در ساخت تصویر  temporary",
 "Error cropping image" => "خطا در برداشت تصویر",
 "Error getting PHOTO property." => "خطا در دربافت تصویر ویژگی شخصی",
+"Error saving contact." => "خطا در ذخیره سازی اطلاعات",
 "Failed to write to disk" => "نوشتن بر روی دیسک سخت ناموفق بود",
-"Not enough storage available" => "فضای کافی در دسترس نیست",
 "Error uploading contacts to storage." => "خطا در هنگام بارگذاری و ذخیره سازی",
 "Could not set preference: " => "نمی‌توان تنظیمات را ثبت نمود:",
 "Contact" => "اشخاص",
@@ -86,12 +85,5 @@
 "Active" => "فعال",
 "Share" => "اشتراک‌گذاری",
 "Export" => "گرفتن خروجی",
-"Edit" => "ویرایش",
-"CardDAV syncing addresses" => "CardDAV syncing addresses ",
-"more info" => "اطلاعات بیشتر",
-"Primary address (Kontact et al)" => "نشانی اولیه",
-"iOS/OS X" => "iOS/OS X ",
-"Addressbooks" => "کتابچه ی نشانی ها",
-"New Address Book" => "کتابچه نشانه های جدید",
-"Description" => "توضیحات"
+"Edit" => "ویرایش"
 );
