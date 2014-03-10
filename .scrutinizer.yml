@@ -2,9 +2,10 @@ filter:
     excluded_paths:
         - 'js/modernizr.custom.js'
         - 'js/jquery.onfontresize.js'
-        - 'l10n/*'
         - 'js/placeholder*'
         - 'css/placeholder*'
+        - 'l10n/*'
+        - 'templates/*'
 
 imports:
     - php
