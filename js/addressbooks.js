@@ -9,7 +9,7 @@ OC.Contacts = OC.Contacts || {};
 		this.storage = storage;
 		this.book = book;
 		this.$template = template;
-	}
+	};
 
 	AddressBook.prototype.render = function() {
 		var self = this;
@@ -41,8 +41,8 @@ OC.Contacts = OC.Contacts || {};
 			});
 		});
 		this.$li.find('a.action.download')
-			.attr('href', OC.Router.generate(
-				'contacts_address_book_export',
+			.attr('href', OC.generateUrl(
+				'apps/contacts/addressbook/{backend}/{addressBookId}/export',
 				{
 					backend: this.getBackend(),
 					addressBookId: this.getId()
@@ -198,16 +198,17 @@ OC.Contacts = OC.Contacts || {};
 			if(response.error) {
 				$(document).trigger('status.contacts.error', response);
 			}
-			cb(response);
+			if(typeof cb === 'function') {
+				cb(response);
+			}
 		});
 	};
 
 	/**
 	 * Delete address book from data store and remove it from the DOM
-	 * @param cb Optional callback function which
 	 * @return An object with a boolean variable 'error'.
 	 */
-	AddressBook.prototype.destroy = function(cb) {
+	AddressBook.prototype.destroy = function() {
 		var self = this;
 		$.when(this.storage.deleteAddressBook(this.getBackend(), self.getId()))
 			.then(function(response) {
@@ -233,7 +234,7 @@ OC.Contacts = OC.Contacts || {};
 			bookTemplate,
 			bookItemTemplate,
 			isFileAction
-  		) {
+		) {
 		var self = this;
 		this.isFileAction = isFileAction || false;
 		this.storage = storage;
@@ -271,7 +272,7 @@ OC.Contacts = OC.Contacts || {};
 			self.addressBooks.splice(self.addressBooks.indexOf(addressBook), 1);
 			self.buildImportSelect();
 		});
-		$(document).bind('status.addressbook.added', function(e) {
+		$(document).bind('status.addressbook.added', function() {
 			self.buildImportSelect();
 		});
 		this.$importIntoSelect.on('change', function() {
@@ -279,8 +280,8 @@ OC.Contacts = OC.Contacts || {};
 			var value = $(this).val();
 			self.$importFileInput.prop('disabled', value === '-1' );
 			if(value !== '-1') {
-				var url = OC.Router.generate(
-					'contacts_import_upload',
+				var url = OC.generateUrl(
+					'apps/contacts/addressbook/{backend}/{addressBookId}/import/upload',
 					{addressBookId:value, backend: $(this).find('option:selected').data('backend')}
 				);
 				self.$importFileInput.fileupload('option', 'url', url);
@@ -289,7 +290,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 		this.$importFileInput.fileupload({
 			dataType: 'json',
-			start: function(e, data) {
+			start: function(/*e, data*/) {
 				self.$importProgress.progressbar({value:false});
 				$('.tipsy').remove();
 				$('.import-upload').hide();
@@ -370,7 +371,7 @@ OC.Contacts = OC.Contacts || {};
 					if(!response.error) {
 						self.$importProgress.progressbar('value', Number(response.data.progress));
 						self.$importStatusText.text(t('contacts', 'Imported {count} of {total} contacts',
-													  {count:response.data.progress, total: self.importCount}));
+													{count:response.data.progress, total: self.importCount}));
 					} else {
 						console.warn('Error', response.message);
 						self.$importStatusText.text(response.message);
@@ -386,7 +387,8 @@ OC.Contacts = OC.Contacts || {};
 				self.storage.startImport(
 					data.backend, data.addressBookId,
 					{filename:data.filename, progresskey:data.progresskey}
-  				))
+				)
+			)
 			.then(function(response) {
 				console.log('response', response);
 				if(!response.error) {
@@ -421,7 +423,7 @@ OC.Contacts = OC.Contacts || {};
 			$(document).trigger('status.contacts.error', response);
 		}
 		return defer;
-	}
+	};
 
 	/**
 	 * Rebuild the select to choose which address book to import into.
@@ -446,7 +448,7 @@ OC.Contacts = OC.Contacts || {};
 				self.$importFileInput.prop('disabled', true);
 			}
 		}
-	}
+	};
 
 	/**
 	 * Create an AddressBook object, save it in internal list and append it's rendered result to the list
@@ -481,7 +483,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 		});
 		return addressBook;
-	}
+	};
 
 	/**
 	 * Move a contacts from one address book to another..
@@ -492,7 +494,6 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	AddressBookList.prototype.moveContact = function(contact, from, target) {
 		console.log('AddressBookList.moveContact, contact', contact, from, target);
-		var self = this;
 		$.when(this.storage.moveContact(from.backend, from.id, contact.getId(), {target:target}))
 			.then(function(response) {
 			if(!response.error) {
@@ -505,7 +506,7 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('status.contacts.error', response);
 			}
 		});
-	}
+	};
 
 	/**
 	 * Get an array of address books with at least the required permission.
@@ -515,7 +516,6 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	AddressBookList.prototype.selectByPermission = function(permission, noClone) {
 		var books = [];
-		var self = this;
 		$.each(this.addressBooks, function(idx, book) {
 			if(book.getPermissions() & permission) {
 				// Clone the address book not to mess with with original
@@ -545,7 +545,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 		var error = '';
 		$.each(this.addressBooks, function(idx, book) {
-			if(book.getDisplayName() == name) {
+			if(book.getDisplayName() === name) {
 				console.log('Dupe');
 				error = t('contacts', 'An address book called {name} already exists', {name:name});
 				if(typeof cb === 'function') {
@@ -580,7 +580,7 @@ OC.Contacts = OC.Contacts || {};
 		.fail(function(jqxhr, textStatus, error) {
 			$(this).removeClass('loading');
 			var err = textStatus + ', ' + error;
-			console.log( "Request Failed: " + err);
+			console.log('Request Failed', + err);
 			error = t('contacts', 'Failed adding address book: {error}', {error:err});
 			if(typeof cb === 'function') {
 				cb({error:true, message:error});
@@ -598,9 +598,8 @@ OC.Contacts = OC.Contacts || {};
 		var defer = $.Deferred();
 		$.when(this.storage.getAddressBooksForUser()).then(function(response) {
 			if(!response.error) {
-				var num = response.data.addressbooks.length;
 				$.each(response.data.addressbooks, function(idx, addressBook) {
-					var book = self.insertAddressBook(addressBook);
+					self.insertAddressBook(addressBook);
 				});
 				self.buildImportSelect();
 				console.log('After buildImportSelect');
@@ -620,7 +619,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 		})
 		.fail(function(response) {
-			console.warn( "Request Failed:", response);
+			console.warn('Request Failed:', response);
 			defer.reject({
 				error: true,
 				message: t('contacts', 'Failed loading address books: {error}', {error:response.message})

@@ -25,27 +25,29 @@ namespace OCA\Contacts\Backend;
 use OCA\Contacts\VObject\VCard;
 
 /**
- * Subclass this class for address book backends
- *
- * The following methods MUST be implemented:
- * @method array getAddressBooksForUser(array $options = array())
- * @method array|null getAddressBook(string $addressbookid, array $options = array())
- * @method array getContacts(string $addressbookid, array $options = array())
- * @method array|null getContact(string $addressbookid, mixed $id, array $options = array())
- * The following methods MAY be implemented:
- * @method bool hasAddressBook(string $addressbookid)
- * @method bool updateAddressBook(string $addressbookid, array $updates, array $options = array())
- * @method string createAddressBook(array $properties, array $options = array())
- * @method bool deleteAddressBook(string $addressbookid, array $options = array())
- * @method int lastModifiedAddressBook(string $addressbookid)
- * @method array numContacts(string $addressbookid)
- * @method bool updateContact(string $addressbookid, string $id, VCard $contact, array $options = array())
- * @method string createContact(string $addressbookid, VCard $contact, array $properties)
- * @method bool deleteContact(string $addressbookid, string $id, array $options = array())
- * @method int lastModifiedContact(string $addressbookid)
+ * Subclass this class for address book backends.
  */
-
 abstract class AbstractBackend {
+
+	/**
+	* The following methods MUST be implemented:
+	*
+	* @method array getAddressBooksForUser(array $options = array())
+	* @method array|null getAddressBook(string $addressbookid, array $options = array())
+	* @method array getContacts(string $addressbookid, array $options = array())
+	* @method array|null getContact(string $addressbookid, mixed $id, array $options = array())
+	* The following methods MAY be implemented:
+	* @method bool hasAddressBook(string $addressbookid)
+	* @method bool updateAddressBook(string $addressbookid, array $updates, array $options = array())
+	* @method string createAddressBook(array $properties, array $options = array())
+	* @method bool deleteAddressBook(string $addressbookid, array $options = array())
+	* @method int lastModifiedAddressBook(string $addressbookid)
+	* @method array numContacts(string $addressbookid)
+	* @method bool updateContact(string $addressbookid, string $id, VCard $contact, array $options = array())
+	* @method string createContact(string $addressbookid, VCard $contact, array $properties)
+	* @method bool deleteContact(string $addressbookid, string $id, array $options = array())
+	* @method int lastModifiedContact(string $addressbookid)
+	*/
 
 	/**
 	 * The name of the backend.
@@ -90,13 +92,15 @@ abstract class AbstractBackend {
 	*/
 	protected function getContactPermissions() {
 		$permissions = 0;
-		foreach($this->possibleContactPermissions AS $permission => $methodName) {
+
+		foreach ($this->possibleContactPermissions as $permission => $methodName) {
 			if(method_exists($this, $methodName)) {
 				$permissions |= $permission;
 			}
+
 		}
 
-		\OCP\Util::writeLog('contacts', __METHOD__.', permissions' . $permissions, \OCP\Util::DEBUG);
+		//\OCP\Util::writeLog('contacts', __METHOD__.', permissions' . $permissions, \OCP\Util::DEBUG);
 		return $permissions;
 	}
 
@@ -108,14 +112,17 @@ abstract class AbstractBackend {
 	* compared with \OCP\PERMISSION_CREATE etc.
 	*/
 	protected function getAddressBookPermissions() {
+
 		$permissions = 0;
-		foreach($this->possibleAddressBookPermissions AS $permission => $methodName) {
-			if(method_exists($this, $methodName)) {
+
+		foreach ($this->possibleAddressBookPermissions as $permission => $methodName) {
+			if (method_exists($this, $methodName)) {
 				$permissions |= $permission;
 			}
+
 		}
 
-		\OCP\Util::writeLog('contacts', __METHOD__.', permissions' . $permissions, \OCP\Util::DEBUG);
+		//\OCP\Util::writeLog('contacts', __METHOD__.', permissions' . $permissions, \OCP\Util::DEBUG);
 		return $permissions;
 	}
 
@@ -128,7 +135,9 @@ abstract class AbstractBackend {
 	* compared with \OCP\PERMISSION_CREATE etc.
 	*/
 	public function hasContactMethodFor($permission) {
+
 		return (bool)($this->getContactPermissions() & $permission);
+
 	}
 
 	/**
@@ -140,7 +149,9 @@ abstract class AbstractBackend {
 	* compared with \OCP\PERMISSION_CREATE etc.
 	*/
 	public function hasAddressBookMethodFor($permission) {
+
 		return (bool)($this->getAddressBookPermissions() & $permission);
+
 	}
 
 	/**
@@ -152,7 +163,9 @@ abstract class AbstractBackend {
 	 * @return bool
 	 */
 	public function hasAddressBook($addressbookid) {
+
 		return count($this->getAddressBook($addressbookid)) > 0;
+
 	}
 
 	/**
@@ -165,7 +178,9 @@ abstract class AbstractBackend {
 	 * @return integer|null
 	 */
 	public function numContacts($addressbookid) {
+
 		return count($this->getContacts($addressbookid));
+
 	}
 
 	/**
@@ -361,19 +376,25 @@ abstract class AbstractBackend {
 	 * 
 	 * @param string $addressBookId.
 	 * @param string $contactId.
+	 * @throws \BadMethodCallException
 	 * @return string
 	 */
 	protected function combinedKey($addressBookId = null, $contactId = null) {
 		$key = $this->name;
-		if(!is_null($addressBookId)) {
+		if (!is_null($addressBookId)) {
+
 			$key .= '_' . substr(md5($addressBookId), 0, 8);
-			if(!is_null($contactId)) {
+
+			if (!is_null($contactId)) {
 				$key .= '_' . substr(md5($contactId), 0, 8);
 			}
-		} else if(!is_null($contactId)) {
+
+		} else if (!is_null($contactId)) {
+
 			throw new \BadMethodCallException(
 				__METHOD__ . ' cannot be called with a contact ID but no address book ID'
 			);
+
 		}
 		return $key;
 	}
@@ -384,6 +405,7 @@ abstract class AbstractBackend {
 	 * @return boolean
 	 */
 	public function isActive($addressBookId = null) {
+
 		$key = $this->combinedKey($addressBookId);
 		$key = 'active_' . $key;
 
@@ -397,6 +419,7 @@ abstract class AbstractBackend {
 	 * @return boolean
 	 */
 	public function setActive($active, $addressBookId = null) {
+
 		$key = $this->combinedKey($addressBookId);
 		$key = 'active_' . $key;
 
@@ -410,6 +433,7 @@ abstract class AbstractBackend {
 	 * @return array Format array('param1' => 'value', 'param2' => 'value')
 	 */
 	public function getPreferences($addressBookId) {
+
 		$key = $this->combinedKey($addressBookId);
 		$key = 'prefs_' . $key;
 
@@ -423,7 +447,8 @@ abstract class AbstractBackend {
 	 * @param array the preferences, format array('param1' => 'value', 'param2' => 'value')
 	 * @return boolean
 	 */
-	public function setPreferences($addressbookid, array $params) {
+	public function setPreferences($addressBookId, array $params) {
+
 		$key = $this->combinedKey($addressBookId);
 		$key = 'prefs_' . $key;
 

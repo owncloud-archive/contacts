@@ -31,7 +31,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
 		\Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
 
-		$this->backend = new Backend\Mock('foobar');
+		$this->backend = new \OCA\Contacts\Backend\Mock('foobar');
 		$this->abinfo = $this->backend->getAddressBook('foo');
 		$this->ab = new AddressBook($this->backend, $this->abinfo);
 
@@ -63,7 +63,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 	function testGetChild() {
 
 		$contact = $this->ab->getChild('123');
-		$this->assertInstanceOf('OCA\\Contacts\\Contact', $contact);
+		$this->assertInstanceOf('OCA\\Contacts\\Model\\Contact', $contact);
 		$this->assertEquals('Max Mustermann', $contact->getDisplayName());
 
 	}

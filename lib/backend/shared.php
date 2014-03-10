@@ -46,15 +46,19 @@ class Shared extends Database {
 			'addressbook',
 			Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS
 		);
-		foreach($maybeSharedAddressBook as $sharedAddressbook) {
-			if(isset($sharedAddressbook['id'])) {
+
+		foreach ($maybeSharedAddressBook as $sharedAddressbook) {
+
+			if (isset($sharedAddressbook['id'])) {
 				$this->addressbooks[] = $this->getAddressBook($sharedAddressbook['id']);
 			}
+
 		}
 
-		foreach($this->addressbooks as &$addressBook) {
+		foreach ($this->addressbooks as &$addressBook) {
 			$addressBook['backend'] = $this->name;
 		}
+
 		return $this->addressbooks;
 	}
 
@@ -66,11 +70,21 @@ class Shared extends Database {
 	 * @return mixed
 	 */
 	public function getAddressBook($addressbookid, array $options = array()) {
+
+		foreach ($this->addressbooks as $addressBook) {
+
+			if ($addressBook['id'] === $addressbookid) {
+				return $addressBook;
+			}
+
+		}
+
 		$addressBook = \OCP\Share::getItemSharedWithBySource(
 			'addressbook',
 			$addressbookid,
 			Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS
 		);
+
 		// Not sure if I'm doing it wrongly, or if its supposed to return
 		// the info in an array?
 		$addressBook = (isset($addressBook['permissions']) ? $addressBook : $addressBook[0]);
@@ -88,14 +102,16 @@ class Shared extends Database {
 	public function getContacts($addressbookid, array $options = array()) {
 
 		$addressBook = $this->getAddressBook($addressbookid);
-		if(!$addressBook) {
+
+		if (!$addressBook) {
 			throw new \Exception('Shared Address Book not found: ' . $addressbookid, 404);
 		}
+
 		$permissions = $addressBook['permissions'];
 
 		$cards = parent::getContacts($addressbookid, $options);
 
-		foreach($cards as &$card) {
+		foreach ($cards as &$card) {
 			$card['permissions'] = $permissions;
 		}
 
@@ -115,16 +131,21 @@ class Shared extends Database {
 	 * @return array|false
 	 */
 	public function getContact($addressbookid, $id, array $options = array()) {
+
 		$addressBook = $this->getAddressBook($addressbookid);
-		if(!$addressBook) {
+
+		if (!$addressBook) {
 			throw new \Exception('Shared Address Book not found: ' . $addressbookid, 404);
 		}
+
 		$permissions = $addressBook['permissions'];
 
 		$card = parent::getContact($addressbookid, $id, $options);
-		if(!$card) {
+
+		if (!$card) {
 			throw new \Exception('Shared Contact not found: ' . implode(',', $id), 404);
 		}
+
 		$card['permissions'] = $permissions;
 		return $card;
 	}

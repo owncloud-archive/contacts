@@ -25,9 +25,8 @@ namespace OCA\Contacts\Interfaces;
 use	OCA\Contacts\Interfaces\AbstractPIMObject;
 
 /**
- * Subclass this for PIM collections
+ * Subclass this for PIM collections.
  */
-
 abstract class AbstractPIMCollection extends AbstractPIMObject implements \Iterator, \Countable, \ArrayAccess {
 
 	// Iterator properties
@@ -35,14 +34,6 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	protected $objects = array();
 
 	protected $counter = 0;
-
-	/**
-	 * This is a collection so return null.
-	 * @return null
-	 */
-	public function getParent() {
-		null;
-	}
 
 	/**
 	* Returns a specific child node, referenced by its id
@@ -86,7 +77,7 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	 */
 	public abstract function deleteChild($id, $options = array());
 
-    // Iterator methods
+	// Iterator methods
 
 	public function rewind() {
 		$this->counter = 0;

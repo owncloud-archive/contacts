@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-05 00:49-0500\n"
-"PO-Revision-Date: 2014-03-05 05:49+0000\n"
+"POT-Creation-Date: 2014-03-10 00:48-0400\n"
+"PO-Revision-Date: 2014-03-10 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/owncloud/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -22,31 +22,31 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: appinfo/app.php:37 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:105
 msgid "Contacts"
 msgstr "Контакти"
 
-#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519
 msgid "Save"
 msgstr "Зберегти"
 
-#: js/addressbooks.js:298
+#: js/addressbooks.js:299
 msgid "Uploading..."
 msgstr "Вивантаження..."
 
-#: js/addressbooks.js:301 js/loader.js:68
+#: js/addressbooks.js:302 js/loader.js:68
 msgid "Importing..."
 msgstr "Імпортування..."
 
-#: js/addressbooks.js:324
+#: js/addressbooks.js:325
 msgid "Preparing..."
 msgstr ""
 
-#: js/addressbooks.js:372
+#: js/addressbooks.js:373
 msgid "Imported {count} of {total} contacts"
 msgstr "Імпортовано {count} з {total} контактів"
 
-#: js/addressbooks.js:394
+#: js/addressbooks.js:396
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "Імпортовано {imported} контактів. {failed} змарновано."
 
@@ -58,81 +58,81 @@ msgstr "Адресна книга з назвою {name} вже існує"
 msgid "Failed adding address book: {error}"
 msgstr "Неможливо додати адресну книгу: {error}"
 
-#: js/addressbooks.js:626
+#: js/addressbooks.js:625
 msgid "Failed loading address books: {error}"
 msgstr "Неможливо завантажити адресні книги: {error}"
 
-#: js/app.js:215
+#: js/app.js:216
 msgid "Indexing contacts"
 msgstr "Індексування контактів"
 
-#: js/app.js:225
+#: js/app.js:226
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Невиправна помилка завантаження адресних книг: {msg}"
 
-#: js/app.js:226
+#: js/app.js:227
 msgid "Error."
 msgstr "Помилка."
 
-#: js/app.js:321 js/app.js:335
+#: js/app.js:322 js/app.js:336
 msgid "Add to..."
 msgstr "Додати до..."
 
-#: js/app.js:325 js/app.js:337
+#: js/app.js:326 js/app.js:338
 msgid "Remove from..."
 msgstr "Видалити з..."
 
-#: js/app.js:342
+#: js/app.js:343
 msgid "Add group..."
 msgstr "Додати групу..."
 
-#: js/app.js:470
+#: js/app.js:471
 msgid "Invalid URL: \"{url}\""
 msgstr "Невірний URL: \"{url}\""
 
-#: js/app.js:481
+#: js/app.js:482
 msgid "There was an error opening a mail composer."
 msgstr "Виникла помилка при відкриванні поштової програми."
 
-#: js/app.js:486
+#: js/app.js:487
 msgid "Invalid email: \"{url}\""
 msgstr "Невірний email: \"{url}\""
 
-#: js/app.js:569
+#: js/app.js:570
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Об'єднання не відбулося. Неможливо знайти контакт: {id}"
 
-#: js/app.js:582
+#: js/app.js:583
 msgid "Merge failed."
 msgstr "Об'єднання не відбулося."
 
-#: js/app.js:589
+#: js/app.js:590
 msgid "Merge failed. Error saving contact."
 msgstr "Об'єднання не відбулося. Помилка при збереженні контакту."
 
-#: js/app.js:609
+#: js/app.js:610
 msgid "Select photo"
 msgstr "Оберіть фото"
 
-#: js/app.js:689 js/app.js:1623
+#: js/app.js:690 js/app.js:1621
 msgid "Network or server error. Please inform administrator."
 msgstr "Мережева або серверна помилка. Будь ласка, проінформуйте адміністратора."
 
-#: js/app.js:911
+#: js/app.js:912
 msgid "Error adding to group."
 msgstr "Помилка при додаванні у групу."
 
-#: js/app.js:934
+#: js/app.js:935
 msgid "Error removing from group."
 msgstr "Помилка при видаленні з групи."
 
-#: js/app.js:1110
+#: js/app.js:1111
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1148
+#: js/app.js:1149
 msgid "Error setting {name} as favorite."
 msgstr "Помилка при встановленні {name} як улюбленого."
 
@@ -140,8 +140,8 @@ msgstr "Помилка при встановленні {name} як улюбле�
 msgid "Merge contacts"
 msgstr "Об'єднання контактів"
 
-#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/contacts.php:357
-#: templates/contacts.php:358 templates/settings.php:62
+#: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
+#: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Відмінити"
 
@@ -157,21 +157,21 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr "Неможливо знайти контакт: {id}"
 
-#: js/app.js:1470
+#: js/app.js:1469
 msgid "No files selected for upload."
 msgstr "Не обрано файлів для завантаження."
 
-#: js/app.js:1480
+#: js/app.js:1479
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Файл, який Ви намагаєтесь завантажити перевищує максимальний розмір файлу, що дозволено завантажувати на даний сервер."
 
-#: js/app.js:1581
+#: js/app.js:1579
 msgid "Edit profile picture"
 msgstr "Редагувати зображення облікового запису"
 
-#: js/app.js:1585
+#: js/app.js:1583
 msgid "Crop photo"
 msgstr ""
 
@@ -179,25 +179,25 @@ msgstr ""
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1100
+#: js/contacts.js:1099
 msgid "# groups"
 msgstr "# groups"
 
-#: js/contacts.js:1174
+#: js/contacts.js:1173
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Деякі контакти помічено для видалення, але ще не видалені. Будь ласка, зачекайте, доки вони будуть видалені."
 
-#: js/contacts.js:2263
+#: js/contacts.js:2265
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Натисніть для відміни видалення {num} контактів"
 
-#: js/contacts.js:2272
+#: js/contacts.js:2274
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -243,23 +243,23 @@ msgstr "Ви можете перетягнути групи для того,\nщ
 msgid "Failed adding group: {error}"
 msgstr "Не вдалося додати групу: {error}"
 
-#: js/groups.js:671
+#: js/groups.js:672
 msgid "All"
 msgstr "Всі"
 
-#: js/groups.js:686 js/groups.js:689
+#: js/groups.js:687 js/groups.js:690
 msgid "Favorites"
 msgstr "Улюблені"
 
-#: js/groups.js:750
+#: js/groups.js:751
 msgid "Shared by {owner}"
 msgstr "Опублікував {owner}"
 
-#: js/groups.js:765
+#: js/groups.js:766
 msgid "Not grouped"
 msgstr "Не згруповані"
 
-#: js/groups.js:794
+#: js/groups.js:795
 msgid "Failed loading groups: {error}"
 msgstr "Не вдалося завантажити групи: {error}"
 
@@ -292,45 +292,6 @@ msgstr "Імпортування виконано"
 msgid "Close"
 msgstr "Закрити"
 
-#: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
-msgid "Error"
-msgstr "Помилка"
-
-#: js/settings.js:75
-msgid "Displayname cannot be empty."
-msgstr "Ім'я для відображення не може бути порожнім."
-
-#: js/settings.js:97 templates/settings.php:26
-msgid "Show CardDav link"
-msgstr "Показати посилання CardDav"
-
-#: js/settings.js:98 templates/settings.php:29
-msgid "Show read-only VCF link"
-msgstr "Показати VCF посилання тільки для читання"
-
-#: js/settings.js:99 templates/contacts.php:66 templates/contacts.php:365
-#: templates/contacts.php:366 templates/settings.php:40
-msgid "Download"
-msgstr "Завантажити"
-
-#: js/settings.js:101 templates/contacts.php:499 templates/settings.php:45
-msgid "Edit"
-msgstr "Редагувати"
-
-#: js/settings.js:102 templates/contacts.php:60 templates/contacts.php:61
-#: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:500 templates/settings.php:50
-msgid "Delete"
-msgstr "Видалити"
-
-#: js/settings.js:159 templates/settings.php:66
-msgid "More..."
-msgstr "Більше..."
-
-#: js/settings.js:162
-msgid "Less..."
-msgstr "Менше..."
-
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr ""
@@ -339,51 +300,47 @@ msgstr ""
 msgid "Failed loading photo: {error}"
 msgstr "Не вдалося завантажити фото: {error}"
 
-#: lib/addressbook.php:152
+#: lib/addressbook.php:163
 msgid "You do not have permissions to see this contacts"
 msgstr "Вам бракує прав для того, щоб побачити цей контакт"
 
-#: lib/addressbook.php:159
+#: lib/addressbook.php:171
 msgid "Contact not found"
 msgstr ""
 
-#: lib/addressbook.php:186
+#: lib/addressbook.php:202
 msgid "You do not have permissions to see these contacts"
 msgstr "Вам бракує прав для того, щоб побачити ці контакти"
 
-#: lib/addressbook.php:213
+#: lib/addressbook.php:232
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Вам бракує прав щоб додати контакти до адресної книги"
 
-#: lib/addressbook.php:216
+#: lib/addressbook.php:236
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
+#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Вам бракує прав для того, щоб видалити цей контакт"
 
-#: lib/addressbook.php:243 lib/addressbook.php:269
+#: lib/addressbook.php:269 lib/addressbook.php:300
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:290
+#: lib/addressbook.php:321
 msgid "Unknown error"
 msgstr "Невідома помилка"
 
-#: lib/addressbook.php:332
+#: lib/addressbook.php:365
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:358
-msgid "You don't have permissions to update the address book."
-msgstr "Вам бракує прав для того, щоб оновити адресну книгу"
-
-#: lib/addressbook.php:369
+#: lib/addressbook.php:393
 msgid "You don't have permissions to delete the address book."
 msgstr "Вам бракує прав для того, щоб видалити адресну книгу"
 
-#: lib/app.php:146
+#: lib/app.php:152
 msgid "Address book not found"
 msgstr "Адресна книга не знайдена"
 
@@ -419,46 +376,54 @@ msgstr "Невідомий IM: "
 msgid "{name}'s Birthday"
 msgstr "День народження {name}"
 
-#: lib/controller/addressbookcontroller.php:135
+#: lib/controller/addressbookcontroller.php:141
 msgid "Error creating address book"
 msgstr "Помилка створення адресної книги"
 
-#: lib/controller/addressbookcontroller.php:152
-msgid "Error updating address book"
-msgstr "Помилка оновлення адресної книги"
+#: lib/controller/addressbookcontroller.php:173
+#, php-format
+msgid "The \"%s\" backend does not support deleting address books"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:180
+#: lib/controller/addressbookcontroller.php:181
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:186
+#: lib/controller/addressbookcontroller.php:188
 msgid "Error deleting address book"
 msgstr "Помилка видалення адресної книги"
 
-#: lib/controller/addressbookcontroller.php:224
+#: lib/controller/addressbookcontroller.php:228
 msgid "Error creating contact."
 msgstr "Помилка при створенні контакту."
 
-#: lib/controller/addressbookcontroller.php:260
-msgid "Error deleting contact."
-msgstr "Помилка при видаленні контакту."
+#: lib/controller/addressbookcontroller.php:237
+msgid "Error creating contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:300
-msgid "Error retrieving contact."
-msgstr "Помилка при отриманні контакту."
+#: lib/controller/addressbookcontroller.php:269
+msgid "Error deleting contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:310
-#: lib/controller/contactphotocontroller.php:332
-msgid "Error saving contact."
-msgstr "Помилка при збереженні контакту."
+#: lib/controller/addressbookcontroller.php:309
+msgid "Error retrieving contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:314
+#: lib/controller/addressbookcontroller.php:320
+msgid "Error saving contact"
+msgstr ""
+
+#: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
 msgstr "Помилка при переміщенні контакту з іншої адресної книги."
 
+#: lib/controller/addressbookcontroller.php:333
+msgid "Error getting moved contact"
+msgstr ""
+
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:64
+#: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:37
 #: lib/controller/contactphotocontroller.php:280
@@ -466,11 +431,11 @@ msgstr "Помилка при переміщенні контакту з інш�
 msgid "Couldn't find contact."
 msgstr "Не вдалося знайти контакт."
 
-#: lib/controller/contactcontroller.php:60
+#: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:68
+#: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
 msgstr "Помилка злиття в контакт."
 
@@ -478,23 +443,23 @@ msgstr "Помилка злиття в контакт."
 msgid "Error saving contact to backend."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:102
+#: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
 msgstr "Ім'я властивості не встановлено."
 
-#: lib/controller/contactcontroller.php:107
+#: lib/controller/contactcontroller.php:109
 msgid "Property checksum is not set."
 msgstr "Контрольна сума властивості не встановлена."
 
-#: lib/controller/contactcontroller.php:126
+#: lib/controller/contactcontroller.php:131
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Інформація про vCard помилкова. Будь ласка, перезавантажте сторінку."
 
-#: lib/controller/contactcontroller.php:135
+#: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
 msgstr ""
 
-#: lib/controller/contactcontroller.php:140
+#: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
 msgstr ""
 
@@ -581,37 +546,41 @@ msgstr "Помилка обрізки зображення"
 msgid "Error getting PHOTO property."
 msgstr "Помилка при отриманні ФОТО властивості."
 
-#: lib/controller/groupcontroller.php:58 lib/controller/groupcontroller.php:80
+#: lib/controller/contactphotocontroller.php:332
+msgid "Error saving contact."
+msgstr "Помилка при збереженні контакту."
+
+#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
 msgid "No group name given."
 msgstr "Не задано ім'я групи."
 
-#: lib/controller/groupcontroller.php:65
+#: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
 msgstr "Помилка при додаванні групи."
 
-#: lib/controller/groupcontroller.php:130
+#: lib/controller/groupcontroller.php:145
 msgid "No group name to rename from given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:134
+#: lib/controller/groupcontroller.php:150
 msgid "No group name to rename to given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:140
+#: lib/controller/groupcontroller.php:157
 msgid "Error renaming group."
 msgstr "Помилка при перейменуванні групи."
 
-#: lib/controller/groupcontroller.php:178
-#: lib/controller/groupcontroller.php:224
+#: lib/controller/groupcontroller.php:206
+#: lib/controller/groupcontroller.php:258
 msgid "Group ID missing from request."
 msgstr "В запиті відсутній ID групи."
 
-#: lib/controller/groupcontroller.php:183
+#: lib/controller/groupcontroller.php:211
 msgid "Group name missing from request."
 msgstr "В запиті відсутнє ім'я групи."
 
-#: lib/controller/groupcontroller.php:188
-#: lib/controller/groupcontroller.php:229
+#: lib/controller/groupcontroller.php:216
+#: lib/controller/groupcontroller.php:263
 msgid "Contact ID missing from request."
 msgstr "В запиті відсутній ID контакту."
 
@@ -620,8 +589,9 @@ msgid "Failed to write to disk"
 msgstr "Невдалося записати на диск"
 
 #: lib/controller/importcontroller.php:65
-msgid "Not enough storage available"
-msgstr "Місця більше немає"
+#, php-format
+msgid "Not enough storage available. %s available"
+msgstr ""
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -644,7 +614,7 @@ msgid "File name missing from request."
 msgstr ""
 
 #: lib/controller/importcontroller.php:170
-#: lib/controller/importcontroller.php:293
+#: lib/controller/importcontroller.php:300
 msgid "Progress key missing from request."
 msgstr ""
 
@@ -654,6 +624,11 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
+msgstr ""
+
+#: lib/controller/importcontroller.php:231
+#, php-format
+msgid "Imported %s"
 msgstr ""
 
 #: lib/controller/settingscontroller.php:36
@@ -832,9 +807,20 @@ msgstr ""
 msgid "Last-, Firstname"
 msgstr ""
 
+#: templates/contacts.php:60 templates/contacts.php:61
+#: templates/contacts.php:215 templates/contacts.php:216
+#: templates/contacts.php:500
+msgid "Delete"
+msgstr "Видалити"
+
 #: templates/contacts.php:64 templates/contacts.php:256
 msgid "Groups"
 msgstr "Групи"
+
+#: templates/contacts.php:66 templates/contacts.php:365
+#: templates/contacts.php:366
+msgid "Download"
+msgstr "Завантажити"
 
 #: templates/contacts.php:67
 msgid "Merge"
@@ -943,8 +929,11 @@ msgstr "Завантажити нове фото"
 msgid "Select photo from Files"
 msgstr ""
 
+#: templates/contacts.php:228
+msgid "Favorite"
+msgstr "Улюблений"
+
 #: templates/contacts.php:231 templates/contacts.php:233
-#: templates/settings.php:59
 msgid "Name"
 msgstr "Ім'я"
 
@@ -1062,7 +1051,7 @@ msgstr "Instant Messenger"
 msgid "Active"
 msgstr "Активний"
 
-#: templates/contacts.php:496 templates/settings.php:36
+#: templates/contacts.php:496
 msgid "Share"
 msgstr "Поділитися"
 
@@ -1074,30 +1063,6 @@ msgstr "Експорт"
 msgid "CardDAV link"
 msgstr ""
 
-#: templates/settings.php:3
-msgid "CardDAV syncing addresses"
-msgstr "CardDAV синхронізує адреси"
-
-#: templates/settings.php:3
-msgid "more info"
-msgstr "більше інформації"
-
-#: templates/settings.php:5
-msgid "Primary address (Kontact et al)"
-msgstr "Початкова адреса"
-
-#: templates/settings.php:7
-msgid "iOS/OS X"
-msgstr "iOS/OS X"
-
-#: templates/settings.php:11
-msgid "Addressbooks"
-msgstr "Адресні книги"
-
-#: templates/settings.php:58
-msgid "New Address Book"
-msgstr "Нова адресна книга"
-
-#: templates/settings.php:60
-msgid "Description"
-msgstr "Опис"
+#: templates/contacts.php:499
+msgid "Edit"
+msgstr "Редагувати"

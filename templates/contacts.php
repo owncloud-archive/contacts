@@ -225,7 +225,7 @@
 					<li><a class="icon-upload action upload" title="<?php echo $l->t('Upload new photo'); ?>"></a></li>
 					<li><a class="icon-folder action cloud icon-cloud" title="<?php echo $l->t('Select photo from Files'); ?>"></a></li>
 				</ul>
-				<a class="favorite {favorite}"></a>
+				<a class="favorite {favorite} tooltipped" title="<?php echo $l->t('Favorite'); ?>"></a>
 			</div>
 			<div class="singleproperties">
 				<h3><?php p($l->t('Name')); ?></h3>

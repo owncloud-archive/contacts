@@ -34,7 +34,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 
 	function setUp() {
 
-		$this->backend = new Backend\Mock('foobar');
+		$this->backend = new \OCA\Contacts\Backend\Mock('foobar');
 		$this->abinfo = $this->backend->getAddressBook('foo');
 		$this->ab = new AddressBook($this->backend, $this->abinfo);
 		$this->contact = $this->ab->getChild('123');

@@ -75,7 +75,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Storage.prototype.getAddressBooksForUser = function() {
 		return this.requestRoute(
-			'contacts_address_books_for_user',
+			'addressbooks/',
 			'GET',
 			{}
 		);
@@ -100,7 +100,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.addAddressBook = function(backend, parameters) {
 		console.log('Storage.addAddressBook', backend);
 		return this.requestRoute(
-			'contacts_address_book_add',
+			'addressbook/{backend}/add',
 			'POST',
 			{backend: 'local'},
 			JSON.stringify(parameters)
@@ -127,7 +127,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.updateAddressBook = function(backend, addressBookId, properties) {
 		console.log('Storage.updateAddressBook', backend);
 		return this.requestRoute(
-			'contacts_address_book_update',
+			'addressbook/{backend}/{addressBookId}',
 			'POST',
 			{backend: backend, addressBookId: addressBookId},
 			JSON.stringify(properties)
@@ -143,7 +143,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.deleteAddressBook = function(backend, addressBookId) {
 		console.log('Storage.deleteAddressBook', backend, addressBookId);
 		return this.requestRoute(
-			'contacts_address_book_delete',
+			'addressbook/{backend}/{addressBookId}',
 			'DELETE',
 			{backend: backend, addressBookId: addressBookId}
 		);
@@ -159,7 +159,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.activateAddressBook = function(backend, addressBookId, state) {
 		console.log('Storage.activateAddressBook', backend, addressBookId, state);
 		return this.requestRoute(
-			'contacts_address_book_activate',
+			'addressbook/{backend}/{addressBookId}/activate',
 			'POST',
 			{backend: backend, addressBookId: addressBookId},
 			JSON.stringify({state: state})
@@ -196,7 +196,7 @@ OC.Contacts = OC.Contacts || {};
 			headers['If-None-Match'] = data.Etag;
 		}
 		$.when(this.requestRoute(
-			'contacts_address_book',
+			'addressbook/{backend}/{addressBookId}',
 			'GET',
 			{backend: backend, addressBookId: addressBookId},
 			'',
@@ -245,7 +245,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.addContact = function(backend, addressBookId) {
 		console.log('Storage.addContact', backend, addressBookId);
 		return this.requestRoute(
-			'contacts_address_book_add_contact',
+			'addressbook/{backend}/{addressBookId}/contact/add',
 			'POST',
 			{backend: backend, addressBookId: addressBookId}
 		);
@@ -261,11 +261,11 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.deleteContact = function(backend, addressBookId, contactId) {
 		console.log('Storage.deleteContact', backend, addressBookId, contactId);
 		return this.requestRoute(
-			'contacts_address_book_delete_contact',
+			'addressbook/{backend}/{addressBookId}/contact/{contactId}',
 			'DELETE',
 			{backend: backend, addressBookId: addressBookId, contactId: contactId}
 		);
-	}
+	};
 
 	/**
 	 * Delete a list of contacts from an address book from a specific backend
@@ -277,7 +277,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.deleteContacts = function(backend, addressBookId, contactIds) {
 		console.log('Storage.deleteContacts', backend, addressBookId, contactIds);
 		return this.requestRoute(
-			'contacts_address_book_delete_contacts',
+			'addressbook/{backend}/{addressBookId}/deleteContacts',
 			'POST',
 			{backend: backend, addressBookId: addressBookId},
 			JSON.stringify({contacts: contactIds})
@@ -294,7 +294,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.moveContact = function(backend, addressBookId, contactId, target) {
 		console.log('Storage.moveContact', backend, addressBookId, contactId, target);
 		return this.requestRoute(
-			'contacts_address_book_move_contact',
+			'addressbook/{backend}/{addressBookId}/contact/{contactId}',
 			'POST',
 			{backend: backend, addressBookId: addressBookId, contactId: contactId},
 			JSON.stringify(target)
@@ -311,18 +311,18 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Storage.prototype.getContactPhoto = function(backend, addressBookId, contactId) {
 		var photo = new Image();
-		var url = OC.Router.generate(
-			'contacts_contact_photo',
+		var url = OC.generateUrl(
+			'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo',
 			{backend: backend, addressBookId: addressBookId, contactId: contactId}
 		);
 		var defer = $.Deferred();
-		var self = this;
+
 		$.when(
 			$(photo).on('load', function() {
 				defer.resolve(photo);
 			})
 			.error(function() {
-				console.log('Error loading contact photo')
+				console.log('Error loading contact photo');
 				defer.reject();
 			})
 			.attr('src', url + '?refresh=' + Math.random())
@@ -330,7 +330,7 @@ OC.Contacts = OC.Contacts || {};
 		.fail(function(jqxhr, textStatus, error) {
 			defer.reject();
 			var err = textStatus + ', ' + error;
-			console.log( "Request Failed: " + err);
+			console.warn('Request Failed:', + err);
 			$(document).trigger('status.contact.error', {
 				message: t('contacts', 'Failed loading photo: {error}', {error:err})
 			});
@@ -339,7 +339,7 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
-	 * Get Image instance for a contacts profile picture
+	 * Get Image instance for cropping contacts profile picture
 	 *
 	 * @param string backend
 	 * @param string addressBookId Address book ID
@@ -349,13 +349,13 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Storage.prototype.getTempContactPhoto = function(backend, addressBookId, contactId, key) {
 		var photo = new Image();
-		var url = OC.Router.generate(
-			'contacts_tmp_contact_photo',
+		var url = OC.generateUrl(
+			'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/{key}/tmp',
 			{backend: backend, addressBookId: addressBookId, contactId: contactId, key: key, refresh: Math.random()}
 		);
 		console.log('url', url);
 		var defer = $.Deferred();
-		var self = this;
+
 		$.when(
 			$(photo).on('load', function() {
 				defer.resolve(photo);
@@ -369,7 +369,7 @@ OC.Contacts = OC.Contacts || {};
 		.fail(function(jqxhr, textStatus, error) {
 			defer.reject();
 			var err = textStatus + ', ' + error;
-			console.log( "Request Failed: " + err);
+			console.warn('Request Failed:', err);
 			$(document).trigger('status.contact.error', {
 				message: t('contacts', 'Failed loading photo: {error}', {error:err})
 			});
@@ -392,7 +392,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Storage.prototype.patchContact = function(backend, addressBookId, contactId, params) {
 		return this.requestRoute(
-			'contacts_contact_patch',
+			'addressbook/{backend}/{addressBookId}/contact/{contactId}',
 			'PATCH',
 			{backend: backend, addressBookId: addressBookId, contactId: contactId},
 			JSON.stringify(params)
@@ -410,7 +410,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.saveAllProperties = function(backend, addressBookId, contactId, params) {
 		console.log('Storage.saveAllProperties', params);
 		return this.requestRoute(
-			'contacts_contact_save_all',
+			'addressbook/{backend}/{addressBookId}/contact/{contactId}/save',
 			'POST',
 			{backend: backend, addressBookId: addressBookId, contactId: contactId},
 			JSON.stringify(params)
@@ -433,7 +433,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.getGroupsForUser = function() {
 		console.log('getGroupsForUser');
 		return this.requestRoute(
-			'contacts_categories_list',
+			'groups/',
 			'GET',
 			{}
 		);
@@ -452,7 +452,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.addGroup = function(name) {
 		console.log('Storage.addGroup', name);
 		return this.requestRoute(
-			'contacts_categories_add',
+			'groups/add',
 			'POST',
 			{},
 			JSON.stringify({name: name})
@@ -466,7 +466,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Storage.prototype.deleteGroup = function(name) {
 		return this.requestRoute(
-			'contacts_categories_delete',
+			'groups/delete',
 			'POST',
 			{},
 			JSON.stringify({name: name})
@@ -481,7 +481,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Storage.prototype.renameGroup = function(from, to) {
 		return this.requestRoute(
-			'contacts_categories_rename',
+			'groups/rename',
 			'POST',
 			{},
 			JSON.stringify({from: from, to: to})
@@ -496,7 +496,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.addToGroup = function(contactIds, categoryId, categoryName) {
 		console.log('Storage.addToGroup', contactIds, categoryId);
 		return this.requestRoute(
-			'contacts_categories_addto',
+			'groups/addto/{categoryId}',
 			'POST',
 			{categoryId: categoryId},
 			JSON.stringify({contactIds: contactIds, name: categoryName})
@@ -511,7 +511,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.removeFromGroup = function(contactIds, categoryId, categoryName) {
 		console.log('Storage.removeFromGroup', contactIds, categoryId);
 		return this.requestRoute(
-			'contacts_categories_removefrom',
+			'groups/removefrom/{categoryId}',
 			'POST',
 			{categoryId: categoryId},
 			JSON.stringify({contactIds: contactIds, name: categoryName})
@@ -526,7 +526,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Storage.prototype.setPreference = function(key, value) {
 		return this.requestRoute(
-			'contacts_setpreference',
+			'preference/set',
 			'POST',
 			{},
 			JSON.stringify({key: key, value:value})
@@ -536,7 +536,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.prepareImport = function(backend, addressBookId, params) {
 		console.log('Storage.prepareImport', backend, addressBookId);
 		return this.requestRoute(
-			'contacts_import_prepare',
+			'addressbook/{backend}/{addressBookId}/import/prepare',
 			'POST',
 			{backend: backend, addressBookId: addressBookId},
 			JSON.stringify(params)
@@ -546,7 +546,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.startImport = function(backend, addressBookId, params) {
 		console.log('Storage.startImport', backend, addressBookId);
 		return this.requestRoute(
-			'contacts_import_start',
+			'addressbook/{backend}/{addressBookId}/import/start',
 			'POST',
 			{backend: backend, addressBookId: addressBookId},
 			JSON.stringify(params)
@@ -555,7 +555,7 @@ OC.Contacts = OC.Contacts || {};
 
 	Storage.prototype.importStatus = function(backend, addressBookId, params) {
 		return this.requestRoute(
-			'contacts_import_status',
+			'addressbook/{backend}/{addressBookId}/import/status',
 			'GET',
 			{backend: backend, addressBookId: addressBookId},
 			params
@@ -569,10 +569,9 @@ OC.Contacts = OC.Contacts || {};
 			: 'application/x-www-form-urlencoded';
 		var processData = !isJSON;
 		contentType += '; charset=UTF-8';
-		var self = this;
-		var url = OC.Router.generate(route, routeParams);
+		var url = OC.generateUrl('apps/contacts/' + route, routeParams);
 		var headers = {
-			Accept : 'application/json; charset=utf-8',
+			Accept : 'application/json; charset=utf-8'
 		};
 		if(typeof additionalHeaders === 'object') {
 			headers = $.extend(headers, additionalHeaders);
@@ -593,7 +592,7 @@ OC.Contacts = OC.Contacts || {};
 			.done(function(response, textStatus, jqXHR) {
 				defer.resolve(new JSONResponse(response, jqXHR));
 			})
-			.fail(function(jqXHR, textStatus, error) {
+			.fail(function(jqXHR/*, textStatus, error*/) {
 				console.log(jqXHR);
 				var response = jqXHR.responseText ? $.parseJSON(jqXHR.responseText) : null;
 				console.log('response', response);

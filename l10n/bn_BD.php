@@ -8,10 +8,6 @@
 "Please choose the addressbook" => "ঠিকানাপঞ্জীটি নির্বাচন করুন",
 "Import" => "আমদানি",
 "Close" => "বন্ধ",
-"Error" => "সমস্যা",
-"Download" => "ডাউনলোড",
-"Edit" => "সম্পাদনা",
-"Delete" => "মুছে",
 "No file was uploaded. Unknown error" => "কোন ফাইল আপলোড করা হয় নি। সমস্যার কারণটি অজ্ঞাত।",
 "There is no error, the file uploaded with success" => "কোন সমস্যা হয় নি, ফাইল আপলোড সুসম্পন্ন হয়েছে।",
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form" => "আপলোড করা ফাইলটি  HTML  ফর্মে উল্লিখিত MAX_FILE_SIZE নির্ধারিত ফাইলের সর্বোচ্চ আকার  অতিক্রম করতে চলেছে ",
@@ -24,7 +20,9 @@
 "Work" => "কর্মস্থল",
 "Home" => "নিবাস",
 "Text" => "টেক্সট",
+"Delete" => "মুছে",
 "Groups" => "গোষ্ঠীসমূহ",
+"Download" => "ডাউনলোড",
 "Email" => "ইমেইল",
 "Address" => "ঠিকানা",
 "Name" => "রাম",
@@ -34,8 +32,5 @@
 "Active" => "সক্রিয়",
 "Share" => "ভাগাভাগি কর",
 "Export" => "রপ্তানি",
-"more info" => "আরও তথ্য",
-"Primary address (Kontact et al)" => "প্রাথমিক ঠিকানা (Kontact et al)",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "বিবরণ"
+"Edit" => "সম্পাদনা"
 );

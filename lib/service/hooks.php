@@ -150,21 +150,22 @@ class Hooks{
 		$tagMgr = \OC::$server->getTagManager()->load('contact');
 		$tags = array();
 
-		foreach($tagMgr->getTags() as $tag) {
+		foreach ($tagMgr->getTags() as $tag) {
 			$tags[] = $tag['name'];
 		}
 
 		// reset tags
 		$tagMgr->delete($tags);
 
-		$backend = $this->app->getBackend('local');
+		$app = new App();
+		$backend = $app->getBackend('local');
 		$addressBookInfos = $backend->getAddressBooksForUser();
 
-		foreach($addressBookInfos as $addressBookInfo) {
+		foreach ($addressBookInfos as $addressBookInfo) {
 			$addressBook = new AddressBook($backend, $addressBookInfo);
-			while($contacts = $addressBook->getChildren($limit, $offset, false)) {
-				foreach($contacts as $contact) {
-					if(isset($contact->CATEGORIES)) {
+			while ($contacts = $addressBook->getChildren($limit, $offset, false)) {
+				foreach ($contacts as $contact) {
+					if (isset($contact->CATEGORIES)) {
 						$tagMgr->addMultiple($contact->CATEGORIES->getParts(), true, $contact->getId());
 					}
 				}
@@ -187,10 +188,10 @@ class Hooks{
 		$backend = $app->getBackend('local');
 		$addressBookInfos = $backend->getAddressBooksForUser();
 
-		foreach($addressBookInfos as $addressBookInfo) {
+		foreach ($addressBookInfos as $addressBookInfo) {
 			$addressBook = new AddressBook($backend, $addressBookInfo);
-			while($contacts = $addressBook->getChildren($limit, $offset, false)) {
-				foreach($contacts as $contact) {
+			while ($contacts = $addressBook->getChildren($limit, $offset, false)) {
+				foreach ($contacts as $contact) {
 					$contact->retrieve();
 				}
 				\OCP\Util::writeLog('contacts',
@@ -209,7 +210,8 @@ class Hooks{
 		$app = new App();
 		$addressBooks = $app->getAddressBooksForUser();
 		$base_url = \OCP\Util::linkTo('calendar', 'ajax/events.php').'?calendar_id=';
-		foreach($addressBooks as $addressBook) {
+
+		foreach ($addressBooks as $addressBook) {
 			$info = $addressBook->getMetaData();
 			$parameters['sources'][]
 				= array(
@@ -226,15 +228,18 @@ class Hooks{
 	public static function getBirthdayEvents($parameters) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
 		$name = $parameters['calendar_id'];
+
 		if (strpos($name, 'birthday_') != 0) {
 			return;
 		}
+
 		$info = explode('_', $name);
 		$backend = $info[1];
 		$aid = $info[2];
 		$app = new App();
 		$addressBook = $app->getAddressBook($backend, $aid);
-		foreach($addressBook->getBirthdayEvents() as $vevent) {
+
+		foreach ($addressBook->getBirthdayEvents() as $vevent) {
 			$parameters['events'][] = array(
 				'id' => 0,
 				'vevent' => $vevent,

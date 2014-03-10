@@ -6,10 +6,6 @@
 "Please choose the addressbook" => "Per favor selige le adressario",
 "Import" => "Importar",
 "Close" => "Clauder",
-"Error" => "Error",
-"Download" => "Discargar",
-"Edit" => "Modificar",
-"Delete" => "Deler",
 "Unknown error" => "Error Incognite",
 "The uploaded file was only partially uploaded" => "Le file incargate solmente esseva incargate partialmente",
 "No file was uploaded" => "Nulle file esseva incargate.",
@@ -27,7 +23,9 @@
 "Video" => "Video",
 "Pager" => "Pager",
 "Internet" => "Internet",
+"Delete" => "Deler",
 "Groups" => "Gruppos",
+"Download" => "Discargar",
 "Email" => "E-posta",
 "Phone" => "Phono",
 "Address" => "Adresse",
@@ -52,10 +50,5 @@
 "Active" => "Active",
 "Share" => "Compartir",
 "Export" => "Exportar",
-"more info" => "plus info",
-"Primary address (Kontact et al)" => "Adresse primari (Kontact e alia)",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "Adressarios",
-"New Address Book" => "Nove adressario",
-"Description" => "Description"
+"Edit" => "Modificar"
 );

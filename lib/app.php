@@ -98,13 +98,13 @@ class App {
 	 * @return AddressBook[]
 	 */
 	public function getAddressBooksForUser() {
-		if(!self::$addressBooks) {
-			foreach(array_keys(self::$backendClasses) as $backendName) {
+		if (!self::$addressBooks) {
+			foreach (array_keys(self::$backendClasses) as $backendName) {
 				$backend = self::getBackend($backendName, $this->user);
 				$addressBooks = $backend->getAddressBooksForUser();
-				if($backendName === 'local' && count($addressBooks) === 0) {
+				if ($backendName === 'local' && count($addressBooks) === 0) {
 					$id = $backend->createAddressBook(array('displayname' => self::$l10n->t('Contacts')));
-					if($id !== false) {
+					if ($id !== false) {
 						$addressBook = $backend->getAddressBook($id);
 						$addressBooks = array($addressBook);
 					} else {
@@ -114,13 +114,18 @@ class App {
 							\OCP\Util::ERROR
 						);
 					}
+
 				}
-				foreach($addressBooks as $addressBook) {
+
+				foreach ($addressBooks as $addressBook) {
 					$addressBook['backend'] = $backendName;
 					self::$addressBooks[] = new AddressBook($backend, $addressBook);
 				}
+
 			}
+
 		}
+
 		return self::$addressBooks;
 	}
 
@@ -133,8 +138,8 @@ class App {
 	 */
 	public function getAddressBook($backendName, $addressbookid) {
 		//\OCP\Util::writeLog('contacts', __METHOD__ . ': '. $backendName . ', ' . $addressbookid, \OCP\Util::DEBUG);
-		foreach(self::$addressBooks as $addressBook) {
-			if($addressBook->getBackend()->name === $backendName
+		foreach (self::$addressBooks as $addressBook) {
+			if ($addressBook->getBackend()->name === $backendName
 				&& $addressBook->getId() === $addressbookid
 			) {
 				return $addressBook;
@@ -143,9 +148,11 @@ class App {
 
 		$backend = self::getBackend($backendName, $this->user);
 		$info = $backend->getAddressBook($addressbookid);
-		if(!$info) {
+
+		if (!$info) {
 			throw new \Exception(self::$l10n->t('Address book not found'), 404);
 		}
+		
 		$addressBook = new AddressBook($backend, $info);
 		self::$addressBooks[] = $addressBook;
 		return $addressBook;

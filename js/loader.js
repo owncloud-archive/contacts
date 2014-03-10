@@ -112,9 +112,8 @@ OC.ContactsImporter = OC.ContactsImporter || {
 		});
 	},
 	_getTemplate: function() {
-		var defer = $.Deferred(), self = this;
+		var defer = $.Deferred();
 		if(!this.$template) {
-			var self = this;
 			$.get(OC.filePath('contacts', 'templates', 'importdialog.html'), function(tmpl) {
 				defer.resolve($(tmpl));
 			})

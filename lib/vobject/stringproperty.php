@@ -27,13 +27,13 @@ namespace OCA\Contacts\VObject;
 use Sabre\VObject;
 
 /**
- * This class overrides \Sabre\VObject\Property::serialize() properly
+ * This class overrides \Sabre\VObject\Property::serialize() to properly
  * escape commas and semi-colons in string properties.
 */
 class StringProperty extends VObject\Property {
 
 	/**
-	* Turns the object back into a serialized blob.
+	* Turns the object back into a serialized clob.
 	*
 	* @return string
 	*/

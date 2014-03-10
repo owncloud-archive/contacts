@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-05 00:49-0500\n"
-"PO-Revision-Date: 2014-03-05 05:49+0000\n"
+"POT-Creation-Date: 2014-03-10 00:48-0400\n"
+"PO-Revision-Date: 2014-03-10 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -29,31 +29,31 @@ msgstr ""
 "Language: hu_HU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:37 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:105
 msgid "Contacts"
 msgstr "Névjegyek"
 
-#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519
 msgid "Save"
 msgstr "Mentés"
 
-#: js/addressbooks.js:298
+#: js/addressbooks.js:299
 msgid "Uploading..."
 msgstr "Feltöltés..."
 
-#: js/addressbooks.js:301 js/loader.js:68
+#: js/addressbooks.js:302 js/loader.js:68
 msgid "Importing..."
 msgstr "Importálás..."
 
-#: js/addressbooks.js:324
+#: js/addressbooks.js:325
 msgid "Preparing..."
 msgstr "Előkészítés..."
 
-#: js/addressbooks.js:372
+#: js/addressbooks.js:373
 msgid "Imported {count} of {total} contacts"
 msgstr "A {total} névjegyből {count} importálva"
 
-#: js/addressbooks.js:394
+#: js/addressbooks.js:396
 msgid "Imported {imported} contacts. {failed} failed."
 msgstr "{imported} névjegy importálva. {failed} sikertelen."
 
@@ -65,81 +65,81 @@ msgstr "\"{name}\" névvel már létezik névjegy"
 msgid "Failed adding address book: {error}"
 msgstr "Nem sikerült hozzáadni a címjegyzékhez: {error}"
 
-#: js/addressbooks.js:626
+#: js/addressbooks.js:625
 msgid "Failed loading address books: {error}"
 msgstr "Hiba a címjegyzék betöltésekor: {error}"
 
-#: js/app.js:215
+#: js/app.js:216
 msgid "Indexing contacts"
 msgstr "Névjegyek indexelése"
 
-#: js/app.js:225
+#: js/app.js:226
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Helyrehozhatatlan hiba a címjegyzékek betöltésekor: {msg}"
 
-#: js/app.js:226
+#: js/app.js:227
 msgid "Error."
 msgstr "Hiba."
 
-#: js/app.js:321 js/app.js:335
+#: js/app.js:322 js/app.js:336
 msgid "Add to..."
 msgstr "Hozzáadás ehhez..."
 
-#: js/app.js:325 js/app.js:337
+#: js/app.js:326 js/app.js:338
 msgid "Remove from..."
 msgstr "Eltávolítás innen..."
 
-#: js/app.js:342
+#: js/app.js:343
 msgid "Add group..."
 msgstr "Csoport hozzáadása..."
 
-#: js/app.js:470
+#: js/app.js:471
 msgid "Invalid URL: \"{url}\""
 msgstr "Hibás URL: \"{url}\""
 
-#: js/app.js:481
+#: js/app.js:482
 msgid "There was an error opening a mail composer."
 msgstr "Hiba történt a levélszerkesztő megnyitása közben."
 
-#: js/app.js:486
+#: js/app.js:487
 msgid "Invalid email: \"{url}\""
 msgstr "Hibás e-mail: \"{url}\""
 
-#: js/app.js:569
+#: js/app.js:570
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Sikertelen összefűzés. Nem található a névjegy: {id}"
 
-#: js/app.js:582
+#: js/app.js:583
 msgid "Merge failed."
 msgstr "Sikertelen összefűzés."
 
-#: js/app.js:589
+#: js/app.js:590
 msgid "Merge failed. Error saving contact."
 msgstr "Sikertelen összefűzés. Hiba a kapcsolat mentésekor."
 
-#: js/app.js:609
+#: js/app.js:610
 msgid "Select photo"
 msgstr "Fénykép kiválasztása"
 
-#: js/app.js:689 js/app.js:1623
+#: js/app.js:690 js/app.js:1621
 msgid "Network or server error. Please inform administrator."
 msgstr "Hiba történt a hálózatban vagy a kiszolgálón. Értesítse a rendszergazdát!"
 
-#: js/app.js:911
+#: js/app.js:912
 msgid "Error adding to group."
 msgstr "Hiba a csoporthoz adás közben."
 
-#: js/app.js:934
+#: js/app.js:935
 msgid "Error removing from group."
 msgstr "Hiba a csoportból való eltávolítás közben."
 
-#: js/app.js:1110
+#: js/app.js:1111
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300-nál több adatot választott a címjegyzékből. Ez valószínűleg hibát fog okozni. Kattintson ide, ha mégis meg akarja próbálni!"
 
-#: js/app.js:1148
+#: js/app.js:1149
 msgid "Error setting {name} as favorite."
 msgstr "Nem sikerült \"{name}\"-t kedvencként beállítani."
 
@@ -147,8 +147,8 @@ msgstr "Nem sikerült \"{name}\"-t kedvencként beállítani."
 msgid "Merge contacts"
 msgstr "Névjegyek összefűzése."
 
-#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/contacts.php:357
-#: templates/contacts.php:358 templates/settings.php:62
+#: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
+#: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Mégsem"
 
@@ -164,21 +164,21 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr "Nem található a névjegy: {id}"
 
-#: js/app.js:1470
+#: js/app.js:1469
 msgid "No files selected for upload."
 msgstr "Nincs kiválasztva feltöltendő fájl."
 
-#: js/app.js:1480
+#: js/app.js:1479
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "A feltöltendő fájl mérete meghaladja a kiszolgálón engedélyezett maximális méretet."
 
-#: js/app.js:1581
+#: js/app.js:1579
 msgid "Edit profile picture"
 msgstr "Profilkép szerkesztése"
 
-#: js/app.js:1585
+#: js/app.js:1583
 msgid "Crop photo"
 msgstr "Fénykép vágása"
 
@@ -186,25 +186,25 @@ msgstr "Fénykép vágása"
 msgid "Error parsing date: {date}"
 msgstr "Nem sikerült értelmezni ezt a dátumot: {date}"
 
-#: js/contacts.js:1100
+#: js/contacts.js:1099
 msgid "# groups"
 msgstr "# csoport"
 
-#: js/contacts.js:1174
+#: js/contacts.js:1173
 msgid "Error parsing birthday {bday}"
 msgstr "Hiba a születésnap értelmezésekor {bday}"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Néhány névjegy ki lett jelölve törlésre, de még nem lett törölve. Várja meg a végleges törlést."
 
-#: js/contacts.js:2263
+#: js/contacts.js:2265
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kattintson ide {num} névjegy törlésének visszavonásához"
 
-#: js/contacts.js:2272
+#: js/contacts.js:2274
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num} névjegy törlése visszavonva"
 
@@ -250,23 +250,23 @@ msgstr "A sorrend megváltoztatásához\\n\negérrel húzza a csoportokat."
 msgid "Failed adding group: {error}"
 msgstr "Hiba a csoport hozzáadásakor: {error}"
 
-#: js/groups.js:671
+#: js/groups.js:672
 msgid "All"
 msgstr "Mind"
 
-#: js/groups.js:686 js/groups.js:689
+#: js/groups.js:687 js/groups.js:690
 msgid "Favorites"
 msgstr "Kedvencek"
 
-#: js/groups.js:750
+#: js/groups.js:751
 msgid "Shared by {owner}"
 msgstr "Megosztotta: {owner}"
 
-#: js/groups.js:765
+#: js/groups.js:766
 msgid "Not grouped"
 msgstr "Nem csoportosított"
 
-#: js/groups.js:794
+#: js/groups.js:795
 msgid "Failed loading groups: {error}"
 msgstr "Nem sikerült betölteni a csopotokat: {error}"
 
@@ -299,45 +299,6 @@ msgstr "Importálás befejezve"
 msgid "Close"
 msgstr "Bezárás"
 
-#: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
-msgid "Error"
-msgstr "Hiba"
-
-#: js/settings.js:75
-msgid "Displayname cannot be empty."
-msgstr "A megjelenített nevet ki kell tölteni."
-
-#: js/settings.js:97 templates/settings.php:26
-msgid "Show CardDav link"
-msgstr "CardDav link mutatása"
-
-#: js/settings.js:98 templates/settings.php:29
-msgid "Show read-only VCF link"
-msgstr "Csak-olvasható VCF link megjelenítése"
-
-#: js/settings.js:99 templates/contacts.php:66 templates/contacts.php:365
-#: templates/contacts.php:366 templates/settings.php:40
-msgid "Download"
-msgstr "Letöltés"
-
-#: js/settings.js:101 templates/contacts.php:499 templates/settings.php:45
-msgid "Edit"
-msgstr "Szerkesztés"
-
-#: js/settings.js:102 templates/contacts.php:60 templates/contacts.php:61
-#: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:500 templates/settings.php:50
-msgid "Delete"
-msgstr "Törlés"
-
-#: js/settings.js:159 templates/settings.php:66
-msgid "More..."
-msgstr "Bővebben..."
-
-#: js/settings.js:162
-msgid "Less..."
-msgstr "Kevesebb..."
-
 #: js/storage.js:30
 msgid "Server error! Please inform system administator"
 msgstr "Kiszolgáló hiba! Értesítse a rendszergazdát!"
@@ -346,51 +307,47 @@ msgstr "Kiszolgáló hiba! Értesítse a rendszergazdát!"
 msgid "Failed loading photo: {error}"
 msgstr "Hiba a kép betöltésekor: {error}"
 
-#: lib/addressbook.php:152
+#: lib/addressbook.php:163
 msgid "You do not have permissions to see this contacts"
 msgstr "Nincs jogosultsága a névjegy megtekintéséhez"
 
-#: lib/addressbook.php:159
+#: lib/addressbook.php:171
 msgid "Contact not found"
 msgstr "Kapcsolat nem található"
 
-#: lib/addressbook.php:186
+#: lib/addressbook.php:202
 msgid "You do not have permissions to see these contacts"
 msgstr "Nincs jogosultsága megnézni ezeket a névjegyeket"
 
-#: lib/addressbook.php:213
+#: lib/addressbook.php:232
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Nincs jogosultsága új névjegyeket hozzáadni a címjegyzékhez"
 
-#: lib/addressbook.php:216
+#: lib/addressbook.php:236
 msgid "The backend for this address book does not support adding contacts"
 msgstr "A címjegyzék háttérredszere nem támogatja az új névjegyek felvételét"
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
+#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Nincs jogosultsága törölni ezt a névjegyet!"
 
-#: lib/addressbook.php:243 lib/addressbook.php:269
+#: lib/addressbook.php:269 lib/addressbook.php:300
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "A címjegyzék háttérrendszere nem támogatja a névjegyek törlését"
 
-#: lib/addressbook.php:290
+#: lib/addressbook.php:321
 msgid "Unknown error"
 msgstr "Ismeretlen hiba"
 
-#: lib/addressbook.php:332
+#: lib/addressbook.php:365
 msgid "The backend for this address book does not support updating"
 msgstr "A címjegyzék háttérrendszere nem támogatja a frissítést"
 
-#: lib/addressbook.php:358
-msgid "You don't have permissions to update the address book."
-msgstr "Nincs jogosultsága frissíteni a címjegyzéket!"
-
-#: lib/addressbook.php:369
+#: lib/addressbook.php:393
 msgid "You don't have permissions to delete the address book."
 msgstr "Nincs jogosultsága törölni a címjegyzéket!"
 
-#: lib/app.php:146
+#: lib/app.php:152
 msgid "Address book not found"
 msgstr "A címjegyzék nem található"
 
@@ -426,46 +383,54 @@ msgstr "Ismeretlen Üzenetküldő:"
 msgid "{name}'s Birthday"
 msgstr "{name} születésnapja"
 
-#: lib/controller/addressbookcontroller.php:135
+#: lib/controller/addressbookcontroller.php:141
 msgid "Error creating address book"
 msgstr "Hiba a címjegyzék létrehozásakor"
 
-#: lib/controller/addressbookcontroller.php:152
-msgid "Error updating address book"
-msgstr "Hiba a címjegyzék frissítésekor"
+#: lib/controller/addressbookcontroller.php:173
+#, php-format
+msgid "The \"%s\" backend does not support deleting address books"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:180
+#: lib/controller/addressbookcontroller.php:181
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Önnek nincs jogosultsága ahhoz, hogy törölje ezt a címjegyzéket: \"%s\""
 
-#: lib/controller/addressbookcontroller.php:186
+#: lib/controller/addressbookcontroller.php:188
 msgid "Error deleting address book"
 msgstr "Hiba a címjegyzék törlésekor"
 
-#: lib/controller/addressbookcontroller.php:224
+#: lib/controller/addressbookcontroller.php:228
 msgid "Error creating contact."
 msgstr "Hiba a névjegy létrehozásakor."
 
-#: lib/controller/addressbookcontroller.php:260
-msgid "Error deleting contact."
-msgstr "Hiba a névjegy törlésekor."
+#: lib/controller/addressbookcontroller.php:237
+msgid "Error creating contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:300
-msgid "Error retrieving contact."
-msgstr "Hiba a névjegy betöltésekor."
+#: lib/controller/addressbookcontroller.php:269
+msgid "Error deleting contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:310
-#: lib/controller/contactphotocontroller.php:332
-msgid "Error saving contact."
-msgstr "A névjegy mentése sikertelen"
+#: lib/controller/addressbookcontroller.php:309
+msgid "Error retrieving contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:314
+#: lib/controller/addressbookcontroller.php:320
+msgid "Error saving contact"
+msgstr ""
+
+#: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
 msgstr "Hiba a névjegy más címjegyzékből történő törlésekor."
 
+#: lib/controller/addressbookcontroller.php:333
+msgid "Error getting moved contact"
+msgstr ""
+
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:64
+#: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:37
 #: lib/controller/contactphotocontroller.php:280
@@ -473,11 +438,11 @@ msgstr "Hiba a névjegy más címjegyzékből történő törlésekor."
 msgid "Couldn't find contact."
 msgstr "Nem található névjegy."
 
-#: lib/controller/contactcontroller.php:60
+#: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
 msgstr "A kérés nem tartalmaz névjegyet"
 
-#: lib/controller/contactcontroller.php:68
+#: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
 msgstr "Hiba a névjegy összefűzésekor."
 
@@ -485,23 +450,23 @@ msgstr "Hiba a névjegy összefűzésekor."
 msgid "Error saving contact to backend."
 msgstr "Hiba a névjegy mentésekor a háttérrendszerben."
 
-#: lib/controller/contactcontroller.php:102
+#: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
 msgstr "Tulajdonság neve nincs megadva."
 
-#: lib/controller/contactcontroller.php:107
+#: lib/controller/contactcontroller.php:109
 msgid "Property checksum is not set."
 msgstr "Tulajdonság ellenőrzőkódja nincs megadva."
 
-#: lib/controller/contactcontroller.php:126
+#: lib/controller/contactcontroller.php:131
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "A vCardról szóló információ helytelen. Töltsd újra az oldalt."
 
-#: lib/controller/contactcontroller.php:135
+#: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
 msgstr "Hiba, a kapcsolat aktualizálásakor"
 
-#: lib/controller/contactcontroller.php:140
+#: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
 msgstr "Hiba a kapcsolat háttérmentésekor."
 
@@ -588,37 +553,41 @@ msgstr "Képvágás sikertelen"
 msgid "Error getting PHOTO property."
 msgstr "A PHOTO-tulajdonság  feldolgozása sikertelen"
 
-#: lib/controller/groupcontroller.php:58 lib/controller/groupcontroller.php:80
+#: lib/controller/contactphotocontroller.php:332
+msgid "Error saving contact."
+msgstr "A névjegy mentése sikertelen"
+
+#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
 msgid "No group name given."
 msgstr "Nem adott meg csoportnevet."
 
-#: lib/controller/groupcontroller.php:65
+#: lib/controller/groupcontroller.php:67
 msgid "Error adding group."
 msgstr "Hiba a csoport hozzáadása közben."
 
-#: lib/controller/groupcontroller.php:130
+#: lib/controller/groupcontroller.php:145
 msgid "No group name to rename from given."
 msgstr "Nem adta meg, hogy miről nevezzük át a csoportot."
 
-#: lib/controller/groupcontroller.php:134
+#: lib/controller/groupcontroller.php:150
 msgid "No group name to rename to given."
 msgstr "Nem adta meg, hogy mire nevezzük át a csoportot."
 
-#: lib/controller/groupcontroller.php:140
+#: lib/controller/groupcontroller.php:157
 msgid "Error renaming group."
 msgstr "Hiba a csoport átnevezésekor."
 
-#: lib/controller/groupcontroller.php:178
-#: lib/controller/groupcontroller.php:224
+#: lib/controller/groupcontroller.php:206
+#: lib/controller/groupcontroller.php:258
 msgid "Group ID missing from request."
 msgstr "A csoport azonosítója hiányzik a kérésből."
 
-#: lib/controller/groupcontroller.php:183
+#: lib/controller/groupcontroller.php:211
 msgid "Group name missing from request."
 msgstr "A csoport neve hiányzik a kérésből."
 
-#: lib/controller/groupcontroller.php:188
-#: lib/controller/groupcontroller.php:229
+#: lib/controller/groupcontroller.php:216
+#: lib/controller/groupcontroller.php:263
 msgid "Contact ID missing from request."
 msgstr "A névjegy azonosítója (ID) hiányzik a kérésből."
 
@@ -627,8 +596,9 @@ msgid "Failed to write to disk"
 msgstr "Nem sikerült a lemezre írás"
 
 #: lib/controller/importcontroller.php:65
-msgid "Not enough storage available"
-msgstr "Nincs elég tárhely."
+#, php-format
+msgid "Not enough storage available. %s available"
+msgstr ""
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -651,7 +621,7 @@ msgid "File name missing from request."
 msgstr "A kérésből hiányzik a fájl neve."
 
 #: lib/controller/importcontroller.php:170
-#: lib/controller/importcontroller.php:293
+#: lib/controller/importcontroller.php:300
 msgid "Progress key missing from request."
 msgstr "A kérésből hiányzik a folyamat kulcsa."
 
@@ -662,6 +632,11 @@ msgstr "Feketelistán szereplő fájl hozzáférési kísérlet:"
 #: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
 msgstr "Itt egy névjegy sem található:"
+
+#: lib/controller/importcontroller.php:231
+#, php-format
+msgid "Imported %s"
+msgstr ""
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -839,9 +814,20 @@ msgstr "Kereszt- Vezetéknév"
 msgid "Last-, Firstname"
 msgstr "Vezeték-, Keresztnév"
 
+#: templates/contacts.php:60 templates/contacts.php:61
+#: templates/contacts.php:215 templates/contacts.php:216
+#: templates/contacts.php:500
+msgid "Delete"
+msgstr "Törlés"
+
 #: templates/contacts.php:64 templates/contacts.php:256
 msgid "Groups"
 msgstr "Csoportok"
+
+#: templates/contacts.php:66 templates/contacts.php:365
+#: templates/contacts.php:366
+msgid "Download"
+msgstr "Letöltés"
 
 #: templates/contacts.php:67
 msgid "Merge"
@@ -950,8 +936,11 @@ msgstr "Új kép feltöltése"
 msgid "Select photo from Files"
 msgstr ""
 
+#: templates/contacts.php:228
+msgid "Favorite"
+msgstr "Kedvenc"
+
 #: templates/contacts.php:231 templates/contacts.php:233
-#: templates/settings.php:59
 msgid "Name"
 msgstr "Név"
 
@@ -1069,7 +1058,7 @@ msgstr "Azonnali üzenetküldő"
 msgid "Active"
 msgstr "Aktív"
 
-#: templates/contacts.php:496 templates/settings.php:36
+#: templates/contacts.php:496
 msgid "Share"
 msgstr "Megosztás"
 
@@ -1081,30 +1070,6 @@ msgstr "Exportálás"
 msgid "CardDAV link"
 msgstr "CardDav hivatkozás"
 
-#: templates/settings.php:3
-msgid "CardDAV syncing addresses"
-msgstr "CardDAV szinkronizációs címek"
-
-#: templates/settings.php:3
-msgid "more info"
-msgstr "további információ"
-
-#: templates/settings.php:5
-msgid "Primary address (Kontact et al)"
-msgstr "Elsődleges cím (Kontact és már programok)"
-
-#: templates/settings.php:7
-msgid "iOS/OS X"
-msgstr "iOS/OS X"
-
-#: templates/settings.php:11
-msgid "Addressbooks"
-msgstr "Címlisták"
-
-#: templates/settings.php:58
-msgid "New Address Book"
-msgstr "Új címlista"
-
-#: templates/settings.php:60
-msgid "Description"
-msgstr "Leírás"
+#: templates/contacts.php:499
+msgid "Edit"
+msgstr "Szerkesztés"
