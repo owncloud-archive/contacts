@@ -129,12 +129,12 @@ class Database extends AbstractBackend {
 		try {
 			$query = 'SELECT `id`, `displayname`, `description`, `userid` AS `owner`, `ctag` AS `lastmodified`, `uri` FROM `'
 				. $this->addressBooksTableName
-				. '` WHERE `id` = ?';
+				. '` WHERE `id` = ? AND `userid` = ?';
 			if (!isset(self::$preparedQueries['getaddressbook'])) {
 				self::$preparedQueries['getaddressbook'] = \OCP\DB::prepare($query);
 			}
 
-			$result = self::$preparedQueries['getaddressbook']->execute(array($addressbookid));
+			$result = self::$preparedQueries['getaddressbook']->execute(array($addressbookid, $this->userid));
 
 			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
@@ -145,7 +145,7 @@ class Database extends AbstractBackend {
 			$row = $result->fetchRow();
 
 			if (!$row) {
-				throw new \Exception('Address Book not found', 404);
+				return null;
 			}
 
 			$row['permissions'] = \OCP\PERMISSION_ALL;
