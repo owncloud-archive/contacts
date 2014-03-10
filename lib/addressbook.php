@@ -186,6 +186,9 @@ class Addressbook extends AbstractPIMCollection {
 	* @return bool
 	*/
 	public function childExists($id) {
+		if(isset($this->objects[$id])) {
+			return true;
+		}
 		return ($this->getChild($id) !== null);
 	}
 
@@ -244,11 +247,19 @@ class Addressbook extends AbstractPIMCollection {
 
 		$id = $contact->getId();
 
-		if ($this->count() !== null) {
+		// If this method is called directly the index isn't set.
+		if (!isset($this->objects[$id])) {
+			$this->objects[$id] = $contact;
+		}
+
+		/* If count() hasn't been called yet don't _count hasn't been initialized
+		 * so incrementing it would give a misleading value.
+		 */
+		if (isset($this->_count)) {
 			$this->_count += 1;
 		}
 
-		\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$id, \OCP\Util::DEBUG);
+		\OCP\Util::writeLog('contacts', __METHOD__.' id: ' . $id, \OCP\Util::DEBUG);
 		return $id;
 	}
 
@@ -274,7 +285,10 @@ class Addressbook extends AbstractPIMCollection {
 				unset($this->objects[$id]);
 			}
 
-			if ($this->count() !== null) {
+			/* If count() hasn't been called yet don't _count hasn't been initialized
+			* so decrementing it would give a misleading value.
+			*/
+			if (isset($this->_count)) {
 				$this->_count -= 1;
 			}
 

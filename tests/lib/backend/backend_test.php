@@ -89,6 +89,7 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 
 	function testCreateAddressBookFail() {
 
+		// displayname must be provided.
 		$id = $this->backend->createAddressBook(array('description' => 'foo bar'));
 
 		$this->assertFalse($id);
