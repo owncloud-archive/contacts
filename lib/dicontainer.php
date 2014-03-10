@@ -32,7 +32,7 @@ class DIContainer extends BaseContainer {
 		parent::__construct('contacts');
 
 		$this['HttpMiddleware'] = $this->share(function($c){
-			return new HttpMiddleware($c['API']);
+			return new HttpMiddleware();
 		});
 
 		$this['MiddlewareDispatcher'] = $this->share(function($c){
