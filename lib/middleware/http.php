@@ -36,13 +36,6 @@ use OCA\Contacts\Controller,
 class Http extends Middleware {
 
 	/**
-	 * @param IAppContainer $app an instance of the app container
-	 */
-	public function __construct($app) {
-		//$this->api = $api;
-	}
-
-	/**
 	 * If an Exception is being caught, return a JSON error response with
 	 * a suitable status code
 	 * @param Controller $controller the controller that is being called
@@ -59,16 +52,9 @@ class Http extends Middleware {
 		} else {
 			$response->setStatus($exception->getCode());
 		}
-		$response->setErrorMessage($exception->getMessage());
-		//$this->api->log(get_class($controller) . '->' . $methodName . ': ' . $exception->getMessage());
-		return $response;
-	}
 
-	function beforeOutput($controller, $methodName, $output) {
-		return $output;
-	}
-	function beforeController($controller, $methodName) {}
-	function afterController($controller, $methodName, Response $response) {
+		$response->setErrorMessage($exception->getMessage());
+
 		return $response;
 	}
 
