@@ -422,7 +422,10 @@ dt[data-element="org"] { margin-top: 4px; }
 .addressbooks-settings a.action:hover { opacity: 1; }
 .addressbooks-settings td.active, .addressbooks-settings td.action { width: 20px; }
 
-.addressbooklist .actions { position: absolute; right: 0px; }
+.addressbooklist .actions {
+	position: absolute; right: 0px;
+	display: inline-flex;
+}
 .addressbooklist .actions > a { width: 20px; height: 20px; }
 .addressbooklist > li > div {
 	display: inline-block;
