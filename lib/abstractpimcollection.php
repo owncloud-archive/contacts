@@ -31,11 +31,10 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 
 	protected $objects = array();
 
-	protected $counter = 0;
+	protected $current;
 
 	/**
 	* Returns a specific child node, referenced by its id
-	* TODO: Maybe implement it here?
 	*
 	* @param string $id
 	* @return IPIMObject
@@ -77,20 +76,26 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 
 	// Iterator methods
 
+	// NOTE: This method is reliant on sub class implementing count()
 	public function rewind() {
-		$this->counter = 0;
+		// Assure any internal counter's initialized
+		self::count();
+		if (count($this->objects) === 0) {
+			$this->getChildren();
+		}
+		$this->current = reset($this->objects);
 	}
 
 	public function next() {
-		$this->counter++;
+		$this->current = next($this->objects);
 	}
 
 	public function valid() {
-		return array_key_exists($this->counter, $this->objects);
+		return $this->current ? array_key_exists($this->current->getId(), $this->objects) : false;
 	}
 
 	public function current() {
-		return $this->objects[$this->counter];
+		return $this->objects[$this->current->getId()];
 	}
 
 	/** Implementations can choose to return the current objects ID/UUID
@@ -98,7 +103,7 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	 * foreach($collection as $id => $object) {}
 	 */
 	public function key() {
-		return $this->counter;
+		return $this->current->getId();
 	}
 
 	// Countable method.
@@ -106,9 +111,7 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 	/**
 	 * For implementations using a backend where fetching all object at once
 	 * would give too much overhead, they can maintain an internal count value
-	 * and fetch objects progressively. Simply watch the diffence between
-	 * $this->counter, the value of count($this->objects) and the internal
-	 * value, and fetch more objects when needed.
+	 * and fetch objects progressively.
 	 */
 	public function count() {
 		return count($this->objects);
@@ -118,42 +121,49 @@ abstract class AbstractPIMCollection extends AbstractPIMObject implements \Itera
 
 	public function offsetSet($offset, $value) {
 		if (is_null($offset)) {
-			$this->objects[] = $value;
+			throw new \RunTimeException('You cannot add objects using array access');
 		} else {
+			// TODO: Check if offset is set and update element.
 			$this->objects[$offset] = $value;
 		}
 	}
 
 	public function offsetExists($offset) {
-		return isset($this->objects[$offset]);
+		if (isset($this->objects[$offset])) {
+			return true;
+		}
+
+		try {
+			$child = $this->getChild($offset);
+		} catch (\Exception $e) {
+			return false;
+		}
+
+		if ($child) {
+			$this->objects[$offset] = $child;
+			return true;
+		}
+
+		return false;
 	}
 
 	public function offsetUnset($offset) {
+		$this->deleteChild($offset);
 		unset($this->objects[$offset]);
 	}
 
 	public function offsetGet($offset) {
-		return isset($this->objects[$offset]) ? $this->objects[$offset] : null;
-	}
+		if (isset($this->objects[$offset])) {
+			return $this->objects[$offset];
+		}
 
-	// Magic property accessors
-	// NOTE: They should go in the implementations(?)
-	/*
-	public function __set($id, $value) {
-		$this->objects[$id] = $value;
-	}
+		$child = $this->getChild($offset);
 
-	public function __get($id) {
-		return $this->objects[$id];
-	}
+		if ($child) {
+			$this->objects[$offset] = $child;
+			return $child;
+		}
 
-	public function __isset($id) {
-		return isset($this->objects[$id]);
 	}
-
-	public function __unset($id) {
-		unset($this->objects[$id]);
-	}
-	*/
 
 }

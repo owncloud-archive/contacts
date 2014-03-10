@@ -149,4 +149,56 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
+	function testArrayAccess() {
+
+		$carddata = file_get_contents(__DIR__ . '/../data/test2.vcf');
+		$vcard = Reader::read($carddata);
+
+		$contact = $this->ab['123'];
+
+		// Test get
+		$this->assertTrue(isset($this->ab['123']));
+		$this->assertInstanceOf('OCA\\Contacts\\Contact', $contact);
+		$this->assertEquals('Max Mustermann', $contact->getDisplayName());
+
+		// Test unset
+		unset($this->ab['123']);
+
+		$this->assertTrue(!isset($this->ab['123']));
+
+		// Test set
+		try {
+			$this->ab[] = $vcard;
+		} catch(\Exception $e) {
+			return;
+		}
+
+		$this->fail('Expected Exception');
+
+	}
+
+	/**
+	* @depends testAddChild
+	*/
+	function testIterator($ab) {
+
+		$count = 0;
+
+		foreach($ab as $contact) {
+			$this->assertInstanceOf('OCA\\Contacts\\Contact', $contact);
+			$count += 1;
+		}
+
+		$this->assertEquals(2, $count);
+	}
+
+	/**
+	* @depends testAddChild
+	*/
+	function testCountable($ab) {
+
+		$this->assertEquals(2, count($ab));
+
+	}
+
 }
