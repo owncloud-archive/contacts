@@ -32,7 +32,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 	*/
 	protected $backend;
 
-	function setUp() {
+	public function setUp() {
 
 		$this->backend = new Backend\Mock('foobar');
 		$this->abinfo = $this->backend->getAddressBook('foo');
@@ -40,19 +40,19 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 		$this->contact = $this->ab->getChild('123');
 	}
 
-	function tearDown() {
+	public function tearDown() {
 		unset($this->backend);
 		unset($this->ab);
 		unset($this->contact);
 	}
 
-	function testGetDisplayName() {
+	public function testGetDisplayName() {
 
 		$this->assertEquals('Max Mustermann', $this->contact->getDisplayName());
 
 	}
 
-	function testGetMetaData() {
+	public function testGetMetaData() {
 
 		$props = $this->contact->getMetaData();
 		$this->assertEquals('Max Mustermann', $props['displayname']);
@@ -62,32 +62,32 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testGetPermissions() {
+	public function testGetPermissions() {
 
 		$this->assertEquals($this->ab->getPermissions(), $this->contact->getPermissions());
 		$this->assertEquals(\OCP\PERMISSION_ALL, $this->contact->getPermissions());
 
 	}
 
-	function testGetParent() {
+	public function testGetParent() {
 
 		$this->assertEquals($this->ab, $this->contact->getParent());
 
 	}
 
-	function testGetBackend() {
+	public function testGetBackend() {
 
 		$this->assertEquals($this->backend, $this->contact->getBackend());
 
 	}
 
-	function testDelete() {
+	public function testDelete() {
 
 		$this->assertTrue($this->contact->delete());
 
 	}
 
-	function testIsSaved() {
+	public function testIsSaved() {
 
 		$this->assertTrue($this->contact->isSaved());
 
@@ -97,7 +97,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testSave() {
+	public function testSave() {
 
 		$this->contact->FN = 'Don Quixote';
 
@@ -107,7 +107,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testSetByChecksum() {
+	public function testSetByChecksum() {
 		// TODO: Move JSONSerializer tests to a TestUtils class or something
 		$serialized = JSONSerializer::serializeContact($this->contact);
 
@@ -126,7 +126,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testSetByChecksumFail() {
+	public function testSetByChecksumFail() {
 
 		try {
 			$this->contact->setPropertyByChecksum('87654321', 'EMAIL', 'mmustermann@example.org');
@@ -140,7 +140,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testUnsetByChecksum() {
+	public function testUnsetByChecksum() {
 
 		$serialized = JSONSerializer::serializeContact($this->contact);
 		$checksum = $serialized['data']['EMAIL'][0]['checksum'];
@@ -153,7 +153,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testSetByName() {
+	public function testSetByName() {
 
 		$this->assertTrue(!isset($this->contact->NICKNAME));
 
