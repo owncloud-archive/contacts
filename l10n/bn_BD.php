@@ -32,9 +32,5 @@
 "Active" => "সক্রিয়",
 "Share" => "ভাগাভাগি কর",
 "Export" => "রপ্তানি",
-"Edit" => "সম্পাদনা",
-"more info" => "আরও তথ্য",
-"Primary address (Kontact et al)" => "প্রাথমিক ঠিকানা (Kontact et al)",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "বিবরণ"
+"Edit" => "সম্পাদনা"
 );

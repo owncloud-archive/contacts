@@ -20,9 +20,5 @@
 "Birthday" => "ថ្ងៃ​កំណើត",
 "Share" => "ចែក​រំលែក",
 "Export" => "នាំចេញ",
-"Edit" => "កែ",
-"more info" => "ព័ត៌មាន​បន្ថែម",
-"Primary address (Kontact et al)" => "អាសយដ្ឋាន​ចម្បង",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "ការ​អធិប្បាយ"
+"Edit" => "កែ"
 );

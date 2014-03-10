@@ -10,7 +10,6 @@
 "Close" => "סגירה",
 "Unknown error" => "שגיאה בלתי ידועה",
 "{name}'s Birthday" => "יום ההולדת של {name}",
-"Error saving contact." => "שגיאה בשמירת איש הקשר",
 "Information about vCard is incorrect. Please reload the page." => "המידע אודות vCard אינו נכון. נא לטעון מחדש את הדף.",
 "No file was uploaded. Unknown error" => "לא הועלה קובץ. טעות בלתי מזוהה.",
 "There is no error, the file uploaded with success" => "לא התרחשה שגיאה, הקובץ הועלה בהצלחה",
@@ -24,8 +23,8 @@
 "File doesn't exist:" => "קובץ לא קיים:",
 "Error loading image." => "שגיאה בטעינת התמונה.",
 "Error getting PHOTO property." => "שגיאה בקבלת מידע של תמונה",
+"Error saving contact." => "שגיאה בשמירת איש הקשר",
 "Failed to write to disk" => "הכתיבה לכונן נכשלה",
-"Not enough storage available" => "אין די שטח פנוי באחסון",
 "Error uploading contacts to storage." => "התרשה שגיאה בהעלאת אנשי הקשר לאכסון.",
 "Contact" => "איש קשר",
 "Other" => "אחר",
@@ -70,12 +69,5 @@
 "Active" => "פעיל",
 "Share" => "שיתוף",
 "Export" => "ייצוא",
-"Edit" => "עריכה",
-"CardDAV syncing addresses" => "CardDAV מסנכרן כתובות",
-"more info" => "מידע נוסף",
-"Primary address (Kontact et al)" => "כתובת ראשית (קונטקט ואחרים)",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "פנקסי כתובות",
-"New Address Book" => "פנקס כתובות חדש",
-"Description" => "תיאור"
+"Edit" => "עריכה"
 );

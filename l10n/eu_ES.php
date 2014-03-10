@@ -8,6 +8,5 @@
 "Title" => "titulua",
 "Birthday" => "Urtebetetze",
 "Export" => "Esportazio",
-"Edit" => "Aldatu",
-"Description" => "Deskripzioa"
+"Edit" => "Aldatu"
 );

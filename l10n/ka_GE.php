@@ -16,7 +16,6 @@
 "No file was uploaded" => "ფაილი არ აიტვირთა",
 "Missing a temporary folder" => "დროებითი საქაღალდე არ არსებობს",
 "Failed to write to disk" => "შეცდომა დისკზე ჩაწერისას",
-"Not enough storage available" => "საცავში საკმარისი ადგილი არ არის",
 "Contact" => "კონტაქტი",
 "Other" => "სხვა",
 "Work" => "სამსახური",
@@ -52,11 +51,5 @@
 "Active" => "აქტიური",
 "Share" => "გაზიარება",
 "Export" => "ექსპორტი",
-"Edit" => "რედაქტირება",
-"more info" => "უფრო მეტი ინფორმაცია",
-"Primary address (Kontact et al)" => "პირველადი მისამართი (Kontact et al)",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "მისამართის წიგნები",
-"New Address Book" => "ახალი მისამართების წიგნი",
-"Description" => "გვერდის დახასიათება"
+"Edit" => "რედაქტირება"
 );

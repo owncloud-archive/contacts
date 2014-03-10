@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-09 00:48-0500\n"
-"PO-Revision-Date: 2014-03-09 05:48+0000\n"
+"POT-Creation-Date: 2014-03-10 00:48-0400\n"
+"PO-Revision-Date: 2014-03-10 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Vietnamese (http://www.transifex.com/projects/p/owncloud/language/vi/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Contacts"
 msgstr "Danh bạ"
 
-#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519
 msgid "Save"
 msgstr "Lưu"
 
@@ -143,7 +143,7 @@ msgid "Merge contacts"
 msgstr "Kết hợp danh sách "
 
 #: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
-#: templates/contacts.php:358 templates/settings.php:62
+#: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Hủy"
 
@@ -310,35 +310,35 @@ msgstr "Bạn không có quyền xem danh bạ "
 msgid "Contact not found"
 msgstr "Không tìm th"
 
-#: lib/addressbook.php:199
+#: lib/addressbook.php:202
 msgid "You do not have permissions to see these contacts"
 msgstr "Bạn không có quyền xem các địa chỉ liên lạc"
 
-#: lib/addressbook.php:229
+#: lib/addressbook.php:232
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Bạn không có quyền thêm địa chỉ liên l vào sổ địa chỉ"
 
-#: lib/addressbook.php:233
+#: lib/addressbook.php:236
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Sổ địa chỉ này không hỗ trợ thêm địa chỉ liên lạc"
 
-#: lib/addressbook.php:262 lib/addressbook.php:293 lib/contact.php:248
+#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Bạn không có quyền xóa liên hệ "
 
-#: lib/addressbook.php:266 lib/addressbook.php:297
+#: lib/addressbook.php:269 lib/addressbook.php:300
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Sổ địa chỉ này không hỗ trợ xóa địa chỉ liên lạc"
 
-#: lib/addressbook.php:318
+#: lib/addressbook.php:321
 msgid "Unknown error"
 msgstr "Lỗi chưa biết"
 
-#: lib/addressbook.php:362
+#: lib/addressbook.php:365
 msgid "The backend for this address book does not support updating"
 msgstr " Sổ địa chỉ này không hỗ trợ cập nhật địa chỉ liên "
 
-#: lib/addressbook.php:390
+#: lib/addressbook.php:393
 msgid "You don't have permissions to delete the address book."
 msgstr "Bạn không có quyền truy cập để xóa danh bạ này."
 
@@ -378,83 +378,90 @@ msgstr "Không biết IM:"
 msgid "{name}'s Birthday"
 msgstr "Sinh nhật của {name}"
 
-#: lib/controller/addressbookcontroller.php:144
+#: lib/controller/addressbookcontroller.php:141
 msgid "Error creating address book"
 msgstr "Lỗi khi tạo danh sách địa c"
 
-#: lib/controller/addressbookcontroller.php:176
+#: lib/controller/addressbookcontroller.php:173
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:181
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Bạn không có quyền xóa địa chỉ \"%s\" "
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:188
 msgid "Error deleting address book"
 msgstr "Lỗi khi xóa danh sách địa ch"
 
-#: lib/controller/addressbookcontroller.php:231
+#: lib/controller/addressbookcontroller.php:228
 msgid "Error creating contact."
 msgstr "Lỗi khi tạo liên l"
 
-#: lib/controller/addressbookcontroller.php:267
-msgid "Error deleting contact."
-msgstr "Lỗi khi xóa liên lạc."
-
-#: lib/controller/addressbookcontroller.php:309
-msgid "Error retrieving contact."
+#: lib/controller/addressbookcontroller.php:237
+msgid "Error creating contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:322
-#: lib/controller/contactphotocontroller.php:332
-msgid "Error saving contact."
-msgstr "Lỗi khi lưu liên lạc"
+#: lib/controller/addressbookcontroller.php:269
+msgid "Error deleting contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:309
+msgid "Error retrieving contact"
+msgstr ""
+
+#: lib/controller/addressbookcontroller.php:320
+msgid "Error saving contact"
+msgstr ""
+
+#: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
 msgstr ""
 
+#: lib/controller/addressbookcontroller.php:333
+msgid "Error getting moved contact"
+msgstr ""
+
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:64
-#: lib/controller/contactcontroller.php:98
+#: lib/controller/contactcontroller.php:63
+#: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:37
 #: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "Không tìm th"
 
-#: lib/controller/contactcontroller.php:60
+#: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
 msgstr "Không có danh sách yu cầu."
 
-#: lib/controller/contactcontroller.php:68
+#: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:72
+#: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:104
+#: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:110
+#: lib/controller/contactcontroller.php:109
 msgid "Property checksum is not set."
 msgstr ""
 
-#: lib/controller/contactcontroller.php:132
+#: lib/controller/contactcontroller.php:131
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Thông tin vCard không chính xác. Vui lòng tải lại trang."
 
-#: lib/controller/contactcontroller.php:143
+#: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
 msgstr "Lỗi cập nhập liên "
 
-#: lib/controller/contactcontroller.php:150
+#: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
 msgstr ""
 
@@ -541,6 +548,10 @@ msgstr "Lỗi khi cắt ảnh"
 msgid "Error getting PHOTO property."
 msgstr "Lỗi lấy thuộc tính ảnh"
 
+#: lib/controller/contactphotocontroller.php:332
+msgid "Error saving contact."
+msgstr "Lỗi khi lưu liên lạc"
+
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
 msgid "No group name given."
 msgstr "Không có tên nhóm ."
@@ -580,8 +591,9 @@ msgid "Failed to write to disk"
 msgstr "Không thể ghi "
 
 #: lib/controller/importcontroller.php:65
-msgid "Not enough storage available"
-msgstr "Không đủ không gian lưu trữ"
+#, php-format
+msgid "Not enough storage available. %s available"
+msgstr ""
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -604,7 +616,7 @@ msgid "File name missing from request."
 msgstr ""
 
 #: lib/controller/importcontroller.php:170
-#: lib/controller/importcontroller.php:293
+#: lib/controller/importcontroller.php:300
 msgid "Progress key missing from request."
 msgstr ""
 
@@ -615,6 +627,11 @@ msgstr ""
 #: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
 msgstr "Không có danh sách nào được tìm thấy trong :"
+
+#: lib/controller/importcontroller.php:231
+#, php-format
+msgid "Imported %s"
+msgstr ""
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -794,7 +811,7 @@ msgstr "T"
 
 #: templates/contacts.php:60 templates/contacts.php:61
 #: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:500 templates/settings.php:50
+#: templates/contacts.php:500
 msgid "Delete"
 msgstr "Xóa"
 
@@ -803,7 +820,7 @@ msgid "Groups"
 msgstr "Nhóm"
 
 #: templates/contacts.php:66 templates/contacts.php:365
-#: templates/contacts.php:366 templates/settings.php:40
+#: templates/contacts.php:366
 msgid "Download"
 msgstr "Tải về"
 
@@ -919,7 +936,6 @@ msgid "Favorite"
 msgstr "Ưu thích"
 
 #: templates/contacts.php:231 templates/contacts.php:233
-#: templates/settings.php:59
 msgid "Name"
 msgstr "Tên"
 
@@ -1037,7 +1053,7 @@ msgstr "Tin nhắn khẩn cấp"
 msgid "Active"
 msgstr "Kích hoạt"
 
-#: templates/contacts.php:496 templates/settings.php:36
+#: templates/contacts.php:496
 msgid "Share"
 msgstr "Chia sẻ"
 
@@ -1049,46 +1065,6 @@ msgstr "Xuất ra"
 msgid "CardDAV link"
 msgstr "Liên kết CardDAV "
 
-#: templates/contacts.php:499 templates/settings.php:45
+#: templates/contacts.php:499
 msgid "Edit"
 msgstr "Sửa"
-
-#: templates/settings.php:3
-msgid "CardDAV syncing addresses"
-msgstr "CardDAV đồng bộ địa chỉ"
-
-#: templates/settings.php:3
-msgid "more info"
-msgstr "Thông tin thêm"
-
-#: templates/settings.php:5
-msgid "Primary address (Kontact et al)"
-msgstr "Địa chỉ chính (Kontact et al)"
-
-#: templates/settings.php:7
-msgid "iOS/OS X"
-msgstr "iOS/OS X"
-
-#: templates/settings.php:11
-msgid "Addressbooks"
-msgstr "Sổ địa chỉ"
-
-#: templates/settings.php:26
-msgid "Show CardDav link"
-msgstr "Hiển thị CardDav "
-
-#: templates/settings.php:29
-msgid "Show read-only VCF link"
-msgstr "Hiển thị liên kết VCF chỉ đọc"
-
-#: templates/settings.php:58
-msgid "New Address Book"
-msgstr "Sổ địa chỉ mới"
-
-#: templates/settings.php:60
-msgid "Description"
-msgstr "Mô tả"
-
-#: templates/settings.php:66
-msgid "More..."
-msgstr "nhiều hơn..."

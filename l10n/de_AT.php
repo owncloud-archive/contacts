@@ -10,9 +10,5 @@
 "Title" => "Titel",
 "Birthday" => "Geburtstag",
 "Share" => "Freigeben",
-"Edit" => "Bearbeiten",
-"more info" => "weitere Informationen",
-"Primary address (Kontact et al)" => "Primäre Adresse (Kontakt u.a.)",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "Beschreibung"
+"Edit" => "Bearbeiten"
 );

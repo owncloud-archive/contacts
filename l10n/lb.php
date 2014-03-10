@@ -17,7 +17,6 @@
 "Close" => "Zoumaachen",
 "Unknown error" => "Et ass en onbekannte Fehler opgetrueden",
 "{name}'s Birthday" => "{name} säi Gebuertsdag",
-"Error saving contact." => "Feeler beim Späichere vum Kontakt.",
 "Information about vCard is incorrect. Please reload the page." => "Informatioun iwwert vCard ass net richteg. Lued d'Säit wegl nei.",
 "There is no error, the file uploaded with success" => "Keen Feeler, Datei ass komplett ropgelueden ginn",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "Déi ropgelueden Datei ass méi grouss wei d'upload_max_filesize Eegenschaft an der php.ini",
@@ -30,6 +29,7 @@
 "Error loading image." => "Fehler beim lueden vum Bild.",
 "Error cropping image" => "Feeler beim Schneide vum Bild",
 "Error getting PHOTO property." => "Feeler beim Luede vun der PHOTO-Eegeschaft.",
+"Error saving contact." => "Feeler beim Späichere vum Kontakt.",
 "Failed to write to disk" => "Konnt net op den Disk schreiwen",
 "Contact" => "Kontakt",
 "Other" => "Aner",
@@ -86,12 +86,5 @@
 "Share" => "Deelen",
 "Export" => "Exporteieren",
 "CardDAV link" => "CardDav Link",
-"Edit" => "Editéieren",
-"more info" => "méi Informatiounen",
-"Primary address (Kontact et al)" => "Primair address (Kontact et al)",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "Adressbicher ",
-"New Address Book" => "Neit Adressbuch",
-"Description" => "Beschreiwung",
-"More..." => "Méi..."
+"Edit" => "Editéieren"
 );

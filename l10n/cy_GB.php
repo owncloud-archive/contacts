@@ -14,7 +14,6 @@
 "No file was uploaded" => "Ni lwythwyd ffeil i fyny",
 "Missing a temporary folder" => "Plygell dros dro yn eisiau",
 "Failed to write to disk" => "Methwyd ysgrifennu i'r ddisg",
-"Not enough storage available" => "Dim digon o le storio ar gael",
 "Other" => "Arall",
 "Work" => "Gwaith",
 "Text" => "Testun",
@@ -29,9 +28,5 @@
 "Active" => "Gweithredol",
 "Share" => "Rhannu",
 "Export" => "Allforio",
-"Edit" => "Golygu",
-"more info" => "mwy o wybodaeth",
-"Primary address (Kontact et al)" => "Prif gyfeiriad (Kontact et al)",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "Disgrifiad"
+"Edit" => "Golygu"
 );

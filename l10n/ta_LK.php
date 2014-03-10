@@ -33,7 +33,6 @@
 "Close" => "மூடுக",
 "Unknown IM: " => "அறியப்படாத IM",
 "{name}'s Birthday" => "{பெயர்} இன் பிறந்தநாள்",
-"Error saving contact." => "தொடர்பை சேமிப்பதில் வழு",
 "Information about vCard is incorrect. Please reload the page." => "vCard பற்றிய தகவல்கள் தவறானது. தயவுசெய்து பக்கத்தை மீள்ளேற்றுக",
 "No file was uploaded. Unknown error" => "ஒரு கோப்பும் பதிவேற்றப்படவில்லை. அறியப்படாத வழு",
 "There is no error, the file uploaded with success" => "இங்கு வழு இல்லை, கோப்பு வெற்றிகரமாக பதிவேற்றப்பட்டது",
@@ -50,6 +49,7 @@
 "Error creating temporary image" => "தற்காலிக படத்தை உருவாக்குவதில் வழு",
 "Error cropping image" => "படத்தை செதுக்குவதில் வழு",
 "Error getting PHOTO property." => "பட தொகுப்பை பெறுவதில் வழு",
+"Error saving contact." => "தொடர்பை சேமிப்பதில் வழு",
 "Error adding group." => "குழுவை சேர்ப்பதில் வழு",
 "Group ID missing from request." => "வேண்டுகோளில் குழு ID விடுபட்டுள்ளது.",
 "Contact ID missing from request." => "வேண்டுகோளில் தொடர்பு ID விடுபட்டுள்ளது.",
@@ -136,15 +136,5 @@
 "Active" => "இயங்கும்",
 "Share" => "பகிர்வு",
 "Export" => "ஏற்றுமதி",
-"Edit" => "தொகுக்க",
-"CardDAV syncing addresses" => "முகவரிகளை cardDAV ஒத்திசைக்கின்றன",
-"more info" => "மேலதிக தகவல்",
-"Primary address (Kontact et al)" => "முதன்மை முகவரி (Kontact et al)",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "முகவரி புத்தகங்கள்",
-"Show CardDav link" => "CardDav இணைப்பை காட்டவும்",
-"Show read-only VCF link" => "வாசிக்கக்கூடிய VCF இணைப்பை மட்டும் காட்டுக",
-"New Address Book" => "புதிய முகவரி புத்தகம்",
-"Description" => "விவரிப்பு",
-"More..." => "மேலதிக..."
+"Edit" => "தொகுக்க"
 );

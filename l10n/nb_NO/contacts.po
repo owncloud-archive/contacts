@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-09 00:48-0500\n"
-"PO-Revision-Date: 2014-03-09 05:48+0000\n"
+"POT-Creation-Date: 2014-03-10 00:48-0400\n"
+"PO-Revision-Date: 2014-03-10 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/projects/p/owncloud/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519
 msgid "Save"
 msgstr "Lagre"
 
@@ -148,7 +148,7 @@ msgid "Merge contacts"
 msgstr "Flett kontakter"
 
 #: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
-#: templates/contacts.php:358 templates/settings.php:62
+#: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -315,35 +315,35 @@ msgstr "Du har ikke adgang til å se denne kontakten"
 msgid "Contact not found"
 msgstr "Fant ikke kontakt"
 
-#: lib/addressbook.php:199
+#: lib/addressbook.php:202
 msgid "You do not have permissions to see these contacts"
 msgstr "Du har ikke adgang til å se disse kontaktene"
 
-#: lib/addressbook.php:229
+#: lib/addressbook.php:232
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Du har ikke adgang til å legge inn kontakter i adresseboken"
 
-#: lib/addressbook.php:233
+#: lib/addressbook.php:236
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Server-komponenten for denne adresseboken støtter ikke innlegging av kontakter"
 
-#: lib/addressbook.php:262 lib/addressbook.php:293 lib/contact.php:248
+#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Du har ikke adgang til å slette denne kontakten"
 
-#: lib/addressbook.php:266 lib/addressbook.php:297
+#: lib/addressbook.php:269 lib/addressbook.php:300
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Server-komponenten for denne adresseboken støtter ikke sletting av kontakter"
 
-#: lib/addressbook.php:318
+#: lib/addressbook.php:321
 msgid "Unknown error"
 msgstr "Ukjent feil"
 
-#: lib/addressbook.php:362
+#: lib/addressbook.php:365
 msgid "The backend for this address book does not support updating"
 msgstr "Server-komponenten for denne adresseboken støtter ikke oppdatering"
 
-#: lib/addressbook.php:390
+#: lib/addressbook.php:393
 msgid "You don't have permissions to delete the address book."
 msgstr "Du har ikke adgang til å slette adresseboken."
 
@@ -383,83 +383,90 @@ msgstr "Ukjent IM: "
 msgid "{name}'s Birthday"
 msgstr "{name}s bursdag"
 
-#: lib/controller/addressbookcontroller.php:144
+#: lib/controller/addressbookcontroller.php:141
 msgid "Error creating address book"
 msgstr "Oppretting av adressebok feilet"
 
-#: lib/controller/addressbookcontroller.php:176
+#: lib/controller/addressbookcontroller.php:173
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "\"%s\"-severdelen støtter ikke sletting av adressebøker"
 
-#: lib/controller/addressbookcontroller.php:184
+#: lib/controller/addressbookcontroller.php:181
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Du har ikke adgang til å slette adresseboken \"%s\""
 
-#: lib/controller/addressbookcontroller.php:191
+#: lib/controller/addressbookcontroller.php:188
 msgid "Error deleting address book"
 msgstr "Sletting av adressebok feilet"
 
-#: lib/controller/addressbookcontroller.php:231
+#: lib/controller/addressbookcontroller.php:228
 msgid "Error creating contact."
 msgstr "Oppretting av kontakt feilet."
 
-#: lib/controller/addressbookcontroller.php:267
-msgid "Error deleting contact."
-msgstr "Sletting av kontakt feilet."
+#: lib/controller/addressbookcontroller.php:237
+msgid "Error creating contact"
+msgstr ""
+
+#: lib/controller/addressbookcontroller.php:269
+msgid "Error deleting contact"
+msgstr ""
 
 #: lib/controller/addressbookcontroller.php:309
-msgid "Error retrieving contact."
-msgstr "Henting av kontakt feilet."
+msgid "Error retrieving contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:322
-#: lib/controller/contactphotocontroller.php:332
-msgid "Error saving contact."
-msgstr "Klarte ikke å lagre kontakt."
+#: lib/controller/addressbookcontroller.php:320
+msgid "Error saving contact"
+msgstr ""
 
-#: lib/controller/addressbookcontroller.php:327
+#: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
 msgstr "Feil ved fjerning av kontakt fra annen adressebok."
 
+#: lib/controller/addressbookcontroller.php:333
+msgid "Error getting moved contact"
+msgstr ""
+
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:64
-#: lib/controller/contactcontroller.php:98
+#: lib/controller/contactcontroller.php:63
+#: lib/controller/contactcontroller.php:97
 #: lib/controller/contactphotocontroller.php:37
 #: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "Kunne ikke finne kontakt."
 
-#: lib/controller/contactcontroller.php:60
+#: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
 msgstr "Ingen kontaktdata i anmodningen."
 
-#: lib/controller/contactcontroller.php:68
+#: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
 msgstr "Fletting inn i kontakt feilet."
 
-#: lib/controller/contactcontroller.php:72
+#: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
 msgstr "Lagring av kontakt til server feilet."
 
-#: lib/controller/contactcontroller.php:104
+#: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
 msgstr "Egenskapsnavn er ikke satt."
 
-#: lib/controller/contactcontroller.php:110
+#: lib/controller/contactcontroller.php:109
 msgid "Property checksum is not set."
 msgstr "Egenskaps-sjekksum er ikke satt."
 
-#: lib/controller/contactcontroller.php:132
+#: lib/controller/contactcontroller.php:131
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Informasjonen om vCard-filen er ikke riktig. Last inn siden på nytt."
 
-#: lib/controller/contactcontroller.php:143
+#: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
 msgstr "Feil ved oppdatering av kontakt"
 
-#: lib/controller/contactcontroller.php:150
+#: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
 msgstr "Lagring av kontakt til server feilet"
 
@@ -546,6 +553,10 @@ msgstr "Klarte ikke å beskjære bildet"
 msgid "Error getting PHOTO property."
 msgstr "Feil ved henting av fotoverdi."
 
+#: lib/controller/contactphotocontroller.php:332
+msgid "Error saving contact."
+msgstr "Klarte ikke å lagre kontakt."
+
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
 msgid "No group name given."
 msgstr "Gruppenavn ikke oppgitt."
@@ -585,8 +596,9 @@ msgid "Failed to write to disk"
 msgstr "Klarte ikke å skrive til disk"
 
 #: lib/controller/importcontroller.php:65
-msgid "Not enough storage available"
-msgstr "Ikke nok lagringsplass"
+#, php-format
+msgid "Not enough storage available. %s available"
+msgstr ""
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -609,7 +621,7 @@ msgid "File name missing from request."
 msgstr "Filnavn mangler i anmodningen."
 
 #: lib/controller/importcontroller.php:170
-#: lib/controller/importcontroller.php:293
+#: lib/controller/importcontroller.php:300
 msgid "Progress key missing from request."
 msgstr "Framdriftsnøkkel mangler i anmodningen."
 
@@ -620,6 +632,11 @@ msgstr "Forsøk på å aksessere svartelistet fil:"
 #: lib/controller/importcontroller.php:218
 msgid "No contacts found in: "
 msgstr "Fant ingen kontakter i:"
+
+#: lib/controller/importcontroller.php:231
+#, php-format
+msgid "Imported %s"
+msgstr ""
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -799,7 +816,7 @@ msgstr "Etter-, Fornavn"
 
 #: templates/contacts.php:60 templates/contacts.php:61
 #: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:500 templates/settings.php:50
+#: templates/contacts.php:500
 msgid "Delete"
 msgstr "Slett"
 
@@ -808,7 +825,7 @@ msgid "Groups"
 msgstr "Grupper"
 
 #: templates/contacts.php:66 templates/contacts.php:365
-#: templates/contacts.php:366 templates/settings.php:40
+#: templates/contacts.php:366
 msgid "Download"
 msgstr "Last ned"
 
@@ -924,7 +941,6 @@ msgid "Favorite"
 msgstr "Favoritt"
 
 #: templates/contacts.php:231 templates/contacts.php:233
-#: templates/settings.php:59
 msgid "Name"
 msgstr "Navn"
 
@@ -1042,7 +1058,7 @@ msgstr "Lynmelding"
 msgid "Active"
 msgstr "Aktiv"
 
-#: templates/contacts.php:496 templates/settings.php:36
+#: templates/contacts.php:496
 msgid "Share"
 msgstr "Del"
 
@@ -1054,46 +1070,6 @@ msgstr "Eksporter"
 msgid "CardDAV link"
 msgstr "CardDAV-lenke"
 
-#: templates/contacts.php:499 templates/settings.php:45
+#: templates/contacts.php:499
 msgid "Edit"
 msgstr "Endre"
-
-#: templates/settings.php:3
-msgid "CardDAV syncing addresses"
-msgstr "Synkroniseringsadresse for CardDAV"
-
-#: templates/settings.php:3
-msgid "more info"
-msgstr "mer info"
-
-#: templates/settings.php:5
-msgid "Primary address (Kontact et al)"
-msgstr "Primær adresse (kontakt osv)"
-
-#: templates/settings.php:7
-msgid "iOS/OS X"
-msgstr "iOS/OS X"
-
-#: templates/settings.php:11
-msgid "Addressbooks"
-msgstr "Adressebøker"
-
-#: templates/settings.php:26
-msgid "Show CardDav link"
-msgstr "Vis CardDav-lenke"
-
-#: templates/settings.php:29
-msgid "Show read-only VCF link"
-msgstr "Vis VCF-lenke for lesetilgang"
-
-#: templates/settings.php:58
-msgid "New Address Book"
-msgstr "Ny adressebok"
-
-#: templates/settings.php:60
-msgid "Description"
-msgstr "Beskrivelse"
-
-#: templates/settings.php:66
-msgid "More..."
-msgstr "Mer..."

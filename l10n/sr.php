@@ -16,7 +16,6 @@
 "No file was uploaded" => "Датотека није отпремљена",
 "Missing a temporary folder" => "Недостаје привремена фасцикла",
 "Failed to write to disk" => "Не могу да пишем на диск",
-"Not enough storage available" => "Нема довољно простора",
 "Contact" => "Контакт",
 "Other" => "Друго",
 "Work" => "Посао",
@@ -44,10 +43,5 @@
 "Active" => "Активан",
 "Share" => "Дели",
 "Export" => "Извези",
-"Edit" => "Уреди",
-"more info" => "више информација",
-"iOS/OS X" => "iOS/OS X",
-"Addressbooks" => "Адресар",
-"New Address Book" => "Нови адресар",
-"Description" => "Опис"
+"Edit" => "Уреди"
 );
