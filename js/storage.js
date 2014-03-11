@@ -141,13 +141,11 @@ OC.Contacts = OC.Contacts || {};
 	 * @param string addressBookId Address book ID
 	 */
 	Storage.prototype.deleteAddressBook = function(backend, addressBookId) {
-		/* https://github.com/owncloud/core/pull/7652
-		 * var key = 'contacts::' + backend + '::' + addressBookId;
+		var key = 'contacts::' + backend + '::' + addressBookId;
 
 		if(OC.localStorage.hasItem(key)) {
 			OC.localStorage.removeItem(key);
 		}
-		*/
 
 		console.log('Storage.deleteAddressBook', backend, addressBookId);
 		return this.requestRoute(
