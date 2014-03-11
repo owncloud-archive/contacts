@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-10 00:48-0400\n"
-"PO-Revision-Date: 2014-03-10 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-11 06:38-0400\n"
+"PO-Revision-Date: 2014-03-11 06:11+0000\n"
+"Last-Translator: Flávio Veras <flaviove@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -302,7 +302,7 @@ msgstr "Fechar"
 msgid "Server error! Please inform system administator"
 msgstr "Erro no servidor. Por favor, informe o administrador."
 
-#: js/storage.js:335 js/storage.js:374
+#: js/storage.js:343 js/storage.js:382
 msgid "Failed loading photo: {error}"
 msgstr "Falha carregando foto: {error}"
 
@@ -314,35 +314,35 @@ msgstr "Você não tem permissão para ver este contatos"
 msgid "Contact not found"
 msgstr "Contato não encontrado"
 
-#: lib/addressbook.php:202
+#: lib/addressbook.php:205
 msgid "You do not have permissions to see these contacts"
 msgstr "Você não tem permissão para ver esses contatos"
 
-#: lib/addressbook.php:232
+#: lib/addressbook.php:235
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Você não tem permissão para adicionar contatos no catálogo de endereços"
 
-#: lib/addressbook.php:236
+#: lib/addressbook.php:239
 msgid "The backend for this address book does not support adding contacts"
 msgstr "O final deste catálogo de endereços não suporta a adição de contatos"
 
-#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
+#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Você não tem permissão para excluir esse contato"
 
-#: lib/addressbook.php:269 lib/addressbook.php:300
+#: lib/addressbook.php:280 lib/addressbook.php:314
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "O final deste catálogo de endereços não suporta a exclusão de contatos"
 
-#: lib/addressbook.php:321
+#: lib/addressbook.php:335
 msgid "Unknown error"
 msgstr "Erro desconhecido"
 
-#: lib/addressbook.php:365
+#: lib/addressbook.php:379
 msgid "The backend for this address book does not support updating"
 msgstr "O final deste catálogo de endereços não suporta a atualização"
 
-#: lib/addressbook.php:393
+#: lib/addressbook.php:407
 msgid "You don't have permissions to delete the address book."
 msgstr "Você não tem permissões para excluir o livro de endereços."
 
@@ -389,7 +389,7 @@ msgstr "Erro criando livro de endereço"
 #: lib/controller/addressbookcontroller.php:173
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "O backend \"%s\" não suporta apagar livros de endereços"
 
 #: lib/controller/addressbookcontroller.php:181
 #, php-format
@@ -406,19 +406,19 @@ msgstr "Erro criando contato."
 
 #: lib/controller/addressbookcontroller.php:237
 msgid "Error creating contact"
-msgstr ""
+msgstr "Erro criando contato"
 
 #: lib/controller/addressbookcontroller.php:269
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Erro eliminando contato"
 
 #: lib/controller/addressbookcontroller.php:309
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Erro recuperando contato"
 
 #: lib/controller/addressbookcontroller.php:320
 msgid "Error saving contact"
-msgstr ""
+msgstr "Erro salvando contato"
 
 #: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
@@ -426,7 +426,7 @@ msgstr "Erro removendo contato de outro livro de endereço."
 
 #: lib/controller/addressbookcontroller.php:333
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Erro movendo contato"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -597,7 +597,7 @@ msgstr "Falha ao escrever no disco"
 #: lib/controller/importcontroller.php:65
 #, php-format
 msgid "Not enough storage available. %s available"
-msgstr ""
+msgstr "Não existe espaço de armazenamento disponível. %s disponível"
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -635,7 +635,7 @@ msgstr "Nenhum contato encontrado em:"
 #: lib/controller/importcontroller.php:231
 #, php-format
 msgid "Imported %s"
-msgstr ""
+msgstr "Importado %s"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
