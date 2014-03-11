@@ -285,8 +285,12 @@ OC.Contacts = OC.Contacts || {};
 			self.$importFileInput.prop('disabled', value === '-1' );
 			if(value !== '-1') {
 				var url = OC.generateUrl(
-					'addressbook/{backend}/{addressBookId}/{importType}/import/upload',
-					{addressBookId:value, importType:self.$importFormatSelect.find('option:selected').val(), backend: $(this).find('option:selected').data('backend')}
+					'apps/contacts/addressbook/{backend}/{addressBookId}/{importType}/import/upload',
+					{
+						addressBookId:value,
+						importType:self.$importFormatSelect.find('option:selected').val(),
+						backend: $(this).find('option:selected').data('backend')
+					}
 				);
 				self.$importFileInput.fileupload('option', 'url', url);
 				//self.$importFileInput.attr('data-url', url);
@@ -294,7 +298,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 		this.$importFileInput.fileupload({
 			dataType: 'json',
-			start: function(/*e, data*/) {
+			start: function(e, data) {
 				self.$importProgress.progressbar({value:false});
 				$('.tipsy').remove();
 				$('.import-upload').hide();
