@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-10 00:48-0400\n"
-"PO-Revision-Date: 2014-03-10 04:48+0000\n"
+"POT-Creation-Date: 2014-03-11 06:38-0400\n"
+"PO-Revision-Date: 2014-03-11 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Vietnamese (http://www.transifex.com/projects/p/owncloud/language/vi/)\n"
 "MIME-Version: 1.0\n"
@@ -298,7 +298,7 @@ msgstr "Đóng"
 msgid "Server error! Please inform system administator"
 msgstr ""
 
-#: js/storage.js:335 js/storage.js:374
+#: js/storage.js:343 js/storage.js:382
 msgid "Failed loading photo: {error}"
 msgstr "Thất bại khi tải ảnh: {error}"
 
@@ -310,35 +310,35 @@ msgstr "Bạn không có quyền xem danh bạ "
 msgid "Contact not found"
 msgstr "Không tìm th"
 
-#: lib/addressbook.php:202
+#: lib/addressbook.php:205
 msgid "You do not have permissions to see these contacts"
 msgstr "Bạn không có quyền xem các địa chỉ liên lạc"
 
-#: lib/addressbook.php:232
+#: lib/addressbook.php:235
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Bạn không có quyền thêm địa chỉ liên l vào sổ địa chỉ"
 
-#: lib/addressbook.php:236
+#: lib/addressbook.php:239
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Sổ địa chỉ này không hỗ trợ thêm địa chỉ liên lạc"
 
-#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
+#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Bạn không có quyền xóa liên hệ "
 
-#: lib/addressbook.php:269 lib/addressbook.php:300
+#: lib/addressbook.php:280 lib/addressbook.php:314
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Sổ địa chỉ này không hỗ trợ xóa địa chỉ liên lạc"
 
-#: lib/addressbook.php:321
+#: lib/addressbook.php:335
 msgid "Unknown error"
 msgstr "Lỗi chưa biết"
 
-#: lib/addressbook.php:365
+#: lib/addressbook.php:379
 msgid "The backend for this address book does not support updating"
 msgstr " Sổ địa chỉ này không hỗ trợ cập nhật địa chỉ liên "
 
-#: lib/addressbook.php:393
+#: lib/addressbook.php:407
 msgid "You don't have permissions to delete the address book."
 msgstr "Bạn không có quyền truy cập để xóa danh bạ này."
 

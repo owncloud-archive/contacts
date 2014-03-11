@@ -5,6 +5,7 @@
 "Cancel" => "Avbryt",
 "OK" => "Greitt",
 "Add" => "Legg til",
+"Shared by {owner}" => "Delt av {owner}",
 "Import" => "Importer",
 "Close" => "Lukk",
 "Information about vCard is incorrect. Please reload the page." => "Informasjonen om vCard-et er feil, ver venleg og last sida på nytt.",

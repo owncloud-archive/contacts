@@ -5,6 +5,7 @@
 "Cancel" => "ביטול",
 "OK" => "אישור",
 "Add" => "הוספה",
+"Shared by {owner}" => "שותף בידי {owner}",
 "Please choose the addressbook" => "אנא בחר ספר כתובות",
 "Import" => "יבוא",
 "Close" => "סגירה",

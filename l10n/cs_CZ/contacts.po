@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-10 00:48-0400\n"
-"PO-Revision-Date: 2014-03-10 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-11 06:38-0400\n"
+"PO-Revision-Date: 2014-03-11 06:11+0000\n"
+"Last-Translator: liska_\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -300,7 +300,7 @@ msgstr "Zavřít"
 msgid "Server error! Please inform system administator"
 msgstr "Chyba serveru! Prosím informujte systémového správce."
 
-#: js/storage.js:335 js/storage.js:374
+#: js/storage.js:343 js/storage.js:382
 msgid "Failed loading photo: {error}"
 msgstr "Načtení fotografie se nezdařilo: {error}"
 
@@ -312,35 +312,35 @@ msgstr "Nemáte oprávnění pro zobrazení těchto kontaktů"
 msgid "Contact not found"
 msgstr "Kontakt nebyl nalezen"
 
-#: lib/addressbook.php:202
+#: lib/addressbook.php:205
 msgid "You do not have permissions to see these contacts"
 msgstr "Nemáte oprávnění pro zobrazení těchto kontaktů"
 
-#: lib/addressbook.php:232
+#: lib/addressbook.php:235
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Nemáte oprávnění pro přidání kontaktů do adresáře kontaktů"
 
-#: lib/addressbook.php:236
+#: lib/addressbook.php:239
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Úložiště tohoto adresáře kontaktů nepodporuje přidávání kontaktů"
 
-#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
+#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Nemáte oprávnění pro smazání tohoto kontaktu"
 
-#: lib/addressbook.php:269 lib/addressbook.php:300
+#: lib/addressbook.php:280 lib/addressbook.php:314
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Úložiště tohoto adresáře kontaktů nepodporuje mazání kontaktů"
 
-#: lib/addressbook.php:321
+#: lib/addressbook.php:335
 msgid "Unknown error"
 msgstr "Neznámá chyba"
 
-#: lib/addressbook.php:365
+#: lib/addressbook.php:379
 msgid "The backend for this address book does not support updating"
 msgstr "Úložiště tohoto adresáře kontaktů nepodporuje změnu kontaktů"
 
-#: lib/addressbook.php:393
+#: lib/addressbook.php:407
 msgid "You don't have permissions to delete the address book."
 msgstr "Nemáte oprávnění pro mazání v adresáři kontaktů"
 
@@ -387,7 +387,7 @@ msgstr "Chyba při vytváření adresáře kontaktů"
 #: lib/controller/addressbookcontroller.php:173
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "Toto uložiště \"%s\" nepodporuje mazání adresářů"
 
 #: lib/controller/addressbookcontroller.php:181
 #, php-format
@@ -404,19 +404,19 @@ msgstr "Chyba při vytváření kontaktu"
 
 #: lib/controller/addressbookcontroller.php:237
 msgid "Error creating contact"
-msgstr ""
+msgstr "Chyba při vytváření kontaktu"
 
 #: lib/controller/addressbookcontroller.php:269
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Chyba při odstraňování kontaktu"
 
 #: lib/controller/addressbookcontroller.php:309
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Chyba při otevírání kontaktu"
 
 #: lib/controller/addressbookcontroller.php:320
 msgid "Error saving contact"
-msgstr ""
+msgstr "Chyba při ukládání kontaktu"
 
 #: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
@@ -424,7 +424,7 @@ msgstr "Chyba při odebírání kontaktu z jiného adresáře kontaktů."
 
 #: lib/controller/addressbookcontroller.php:333
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Chyba při získávání přesunutého kontaktu"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -514,7 +514,7 @@ msgstr "Nelze načíst dočasný obrázek: "
 
 #: lib/controller/contactphotocontroller.php:128
 msgid "Uploaded image is invalid"
-msgstr ""
+msgstr "Nahraný obrázek je neplatný"
 
 #: lib/controller/contactphotocontroller.php:132
 #: lib/controller/contactphotocontroller.php:172
@@ -595,7 +595,7 @@ msgstr "Zápis na disk selhal"
 #: lib/controller/importcontroller.php:65
 #, php-format
 msgid "Not enough storage available. %s available"
-msgstr ""
+msgstr "Nedostatek úložného prostoru. %s k dispozici"
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -633,7 +633,7 @@ msgstr "Žádné kontakty v:"
 #: lib/controller/importcontroller.php:231
 #, php-format
 msgid "Imported %s"
-msgstr ""
+msgstr "%s importováno "
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -931,7 +931,7 @@ msgstr "Nahrát novou fotku"
 
 #: templates/contacts.php:226
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Vybrat fotku ze souborů"
 
 #: templates/contacts.php:228
 msgid "Favorite"
@@ -955,7 +955,7 @@ msgstr "Příjmení"
 
 #: templates/contacts.php:263
 msgid "Address book"
-msgstr ""
+msgstr "Adresář"
 
 #: templates/contacts.php:270 templates/contacts.php:347
 msgid "Nickname"

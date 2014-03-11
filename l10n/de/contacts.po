@@ -41,8 +41,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-10 00:48-0400\n"
-"PO-Revision-Date: 2014-03-10 04:49+0000\n"
+"POT-Creation-Date: 2014-03-11 06:38-0400\n"
+"PO-Revision-Date: 2014-03-11 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: German (http://www.transifex.com/projects/p/owncloud/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -325,7 +325,7 @@ msgstr "Schließen"
 msgid "Server error! Please inform system administator"
 msgstr "Serverfehler! Bitte informiere den System-Administrator"
 
-#: js/storage.js:335 js/storage.js:374
+#: js/storage.js:343 js/storage.js:382
 msgid "Failed loading photo: {error}"
 msgstr "Fehler beim Laden eines Bildes: {error}"
 
@@ -337,35 +337,35 @@ msgstr "Du besitzt nicht die erforderlichen Rechte, um diesen Kontakte zu sehen.
 msgid "Contact not found"
 msgstr "Kontakt nicht gefunden"
 
-#: lib/addressbook.php:202
+#: lib/addressbook.php:205
 msgid "You do not have permissions to see these contacts"
 msgstr "Du besitzt nicht die erforderlichen Rechte, um diesen Kontakte zu sehen."
 
-#: lib/addressbook.php:232
+#: lib/addressbook.php:235
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Du hast nicht die Berechtigung, diesem Adressbuch Kontakte hinzuzufügen."
 
-#: lib/addressbook.php:236
+#: lib/addressbook.php:239
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Das Backend für dieses Adressbuch unterstützt nicht das Hinzufügen von Kontakten."
 
-#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
+#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr "Du besitzt nicht die erforderlichen Rechte, um diesen Kontakte zu löschen."
 
-#: lib/addressbook.php:269 lib/addressbook.php:300
+#: lib/addressbook.php:280 lib/addressbook.php:314
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Das Backend für dieses Adressbuch unterstützt nicht das Löschen von Kontakten."
 
-#: lib/addressbook.php:321
+#: lib/addressbook.php:335
 msgid "Unknown error"
 msgstr "Unbekannter Fehler"
 
-#: lib/addressbook.php:365
+#: lib/addressbook.php:379
 msgid "The backend for this address book does not support updating"
 msgstr "Das Backend für dieses Adressbuch unterstützt keine Aktualisierung."
 
-#: lib/addressbook.php:393
+#: lib/addressbook.php:407
 msgid "You don't have permissions to delete the address book."
 msgstr "Du besitzt nicht die Berechtigungen, dieses Adressbuch zu löschen."
 
