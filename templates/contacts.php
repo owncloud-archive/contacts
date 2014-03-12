@@ -32,7 +32,7 @@ use OCA\Contacts\ImportManager;
 								<option value="-1"><?php p($l->t('Import into...')); ?></option>
 							</select>
 							<select id="import_format">
-								<option value="-1"><?php p($l->t('Automatic format')); ?></option>
+								<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
 								<?php
 								$importManager = new ImportManager();
 								$types = $importManager->getTypes();
