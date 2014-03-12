@@ -28,8 +28,8 @@ class ImportController extends Controller {
 	public function upload() {
 		$request = $this->request;
 		$params = $this->request->urlParams;
-                $addressBookId = $params['addressBookId'];
-                $format = $params['importType'];
+		$addressBookId = $params['addressBookId'];
+		$format = $params['importType'];
 		$response = new JSONResponse();
 
 		$view = \OCP\Files::getStorage('contacts');
@@ -81,12 +81,10 @@ class ImportController extends Controller {
 			\OC_FileProxy::$enabled = false;
 			if($view->file_put_contents('/imports/'.$filename, $content)) {
 				\OC_FileProxy::$enabled = $proxyStatus;
-				$count = substr_count($content, 'BEGIN:');
 				$progresskey = 'contacts-import-' . rand();
 				$response->setParams(
 					array(
 						'filename'=>$filename,
-						'count' => $count,
 						'progresskey' => $progresskey,
 						'backend' => $params['backend'],
 						'addressBookId' => $params['addressBookId']
@@ -128,12 +126,10 @@ class ImportController extends Controller {
 		//$content = file_get_contents('oc://' . $path . '/' . $filename);
 		if($view->file_put_contents('/imports/' . $filename, $content)) {
 			\OC_FileProxy::$enabled = $proxyStatus;
-			$count = substr_count($content, 'BEGIN:');
 			$progresskey = 'contacts-import-' . rand();
 			$response->setParams(
 				array(
 					'filename'=>$filename,
-					'count' => $count,
 					'progresskey' => $progresskey,
 					'backend' => $params['backend'],
 					'addressBookId' => $params['addressBookId'],
@@ -283,8 +279,6 @@ class ImportController extends Controller {
 				'addressBookId' => $params['addressBookId'],
 				'importType' => $params['importType'],
 				'imported' => $imported,
-				'count' => $processed,
-				'total' => $total,
 				'failed' => $failed,
 			)
 		);
