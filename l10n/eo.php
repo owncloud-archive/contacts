@@ -9,7 +9,6 @@
 "Remove from..." => "Forigi el...",
 "Add group..." => "Aldoni grupon...",
 "Invalid URL: \"{url}\"" => "Nevalidas URL-adreso: “{url}”",
-"There was an error opening a mail composer." => "Eraro okazis dum malfermo de retpoŝtomesaĝoredaktilo.",
 "Invalid email: \"{url}\"" => "Nevalidas retpoŝtadreso: “{url}”",
 "Merge failed. Cannot find contact: {id}" => "Kunfando malsukcesis. Ne troviĝas kontakto: {id}",
 "Merge failed." => "Kunfando malsukcesis.",

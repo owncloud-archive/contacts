@@ -16,7 +16,6 @@
 "Remove from..." => "다음에서 삭제...",
 "Add group..." => "그룹 추가..",
 "Invalid URL: \"{url}\"" => "잘못된 URL: \"{url}\"",
-"There was an error opening a mail composer." => "메일 작성기를 여는 중 오류가 발생하였습니다.",
 "Invalid email: \"{url}\"" => "잘못된 이메일: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "합치기 실패. 연락처를 찾을 수 없음: {id}",
 "Merge failed." => "합치기 실패.",

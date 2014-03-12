@@ -16,7 +16,6 @@
 "Remove from..." => "Entferne von...",
 "Add group..." => "Füge Gruppe hinzu...",
 "Invalid URL: \"{url}\"" => "Ungültige Adresse: «{url}»",
-"There was an error opening a mail composer." => "Fehler beim öffnen des Mail-Editors",
 "Invalid email: \"{url}\"" => "Ungültige E-Mail Adresse: «{url}»",
 "Merge failed. Cannot find contact: {id}" => "Zusammenführung fehlgeschlagen. Kontakt nicht gefunden: {id}",
 "Merge failed." => "Zusammenführung fehlgeschlagen.",

@@ -16,7 +16,6 @@
 "Remove from..." => "Sil...",
 "Add group..." => "Grup ekle...",
 "Invalid URL: \"{url}\"" => "Geçersiz URL: \"{url}\"",
-"There was an error opening a mail composer." => "Bir posta düzenleyicisi açarken hata oluştu.",
 "Invalid email: \"{url}\"" => "Geçersiz e-posta: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Birleştirme başarısız. Kişi bulunamadı: {id}",
 "Merge failed." => "Birleştirme başarısız.",

@@ -16,7 +16,6 @@
 "Remove from..." => "Odstrani iz ...",
 "Add group..." => "Dodaj skupino ...",
 "Invalid URL: \"{url}\"" => "Neveljaven naslov URL: \"{url}\"",
-"There was an error opening a mail composer." => "Med odpiranjem sestavljalnika pošte je prišlo do napake.",
 "Invalid email: \"{url}\"" => "Neveljaven elektronski naslov: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Združevanje je spodletelo. Stika ni mogoče najti: {id}",
 "Merge failed." => "Združevanje je spodletelo.",

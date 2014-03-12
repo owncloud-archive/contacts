@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-11 06:38-0400\n"
-"PO-Revision-Date: 2014-03-11 06:11+0000\n"
+"POT-Creation-Date: 2014-03-12 00:48-0400\n"
+"PO-Revision-Date: 2014-03-12 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -90,88 +90,84 @@ msgstr "Gehitu taldea..."
 msgid "Invalid URL: \"{url}\""
 msgstr "URL ez-egokia: \"{url}\""
 
-#: js/app.js:482
-msgid "There was an error opening a mail composer."
-msgstr "Errore bat izan da posta editorea abiaraztean."
-
-#: js/app.js:487
+#: js/app.js:497
 msgid "Invalid email: \"{url}\""
 msgstr "e-posta ez egokia: \"{url}\""
 
-#: js/app.js:570
+#: js/app.js:580
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Bateratzeak huts egin du. Ezin izan da kontaktua aurkitu: {id}"
 
-#: js/app.js:583
+#: js/app.js:593
 msgid "Merge failed."
 msgstr "Bateratzeak huts egin du."
 
-#: js/app.js:590
+#: js/app.js:600
 msgid "Merge failed. Error saving contact."
 msgstr "Bateratzeak huts egin du. Errorea kontaktua gordetzerakoan."
 
-#: js/app.js:610
+#: js/app.js:620
 msgid "Select photo"
 msgstr "Hautatu argazkia"
 
-#: js/app.js:690 js/app.js:1621
+#: js/app.js:700 js/app.js:1646
 msgid "Network or server error. Please inform administrator."
 msgstr "Errore bat izan da sare edo zerbitzarian. Mesedez abisatu administradorea."
 
-#: js/app.js:912
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "Errore bat izan da taldera gehitzean."
 
-#: js/app.js:935
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "Errore bat izan da taldetik kentzean."
 
-#: js/app.js:1111
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300 kontaktu baino gehiago hautatu dituzu.\nHonek ziurasko huts egingo du! Sakatu hemen hala ere jarraitzeko."
 
-#: js/app.js:1149
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "Errorea {name} gogokoetara gehitzerakoan."
 
-#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Kontaktuak batu"
 
-#: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Ezeztatu"
 
-#: js/app.js:1340 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "Gehitu taldea"
 
-#: js/app.js:1344
+#: js/app.js:1369
 msgid "OK"
 msgstr "Ados"
 
-#: js/app.js:1447
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "Ezin izan dugu kontaktua topatu:  {id}"
 
-#: js/app.js:1469
+#: js/app.js:1494
 msgid "No files selected for upload."
 msgstr "Ez duzu igotzeko fitxategirik hautatu."
 
-#: js/app.js:1479
+#: js/app.js:1504
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Igo nahi duzun fitxategia zerbitzariak onartzen duen tamaina baino handiagoa da."
 
-#: js/app.js:1579
+#: js/app.js:1604
 msgid "Edit profile picture"
 msgstr "Editatu profilaren argazkia"
 
-#: js/app.js:1583
+#: js/app.js:1608
 msgid "Crop photo"
 msgstr "Moztu argazkia"
 
@@ -296,7 +292,7 @@ msgstr "Itxi"
 msgid "Server error! Please inform system administator"
 msgstr "Errore bat izan da zerbitzaria! Mesedez abisatu administradorea."
 
-#: js/storage.js:343 js/storage.js:382
+#: js/storage.js:341 js/storage.js:380
 msgid "Failed loading photo: {error}"
 msgstr "Argazkia kargatzeak huts egin du: {error}"
 

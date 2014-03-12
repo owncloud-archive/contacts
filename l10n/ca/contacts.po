@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-11 06:38-0400\n"
-"PO-Revision-Date: 2014-03-11 06:11+0000\n"
+"POT-Creation-Date: 2014-03-12 00:48-0400\n"
+"PO-Revision-Date: 2014-03-12 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/owncloud/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -91,88 +91,84 @@ msgstr "Afegeix grup..."
 msgid "Invalid URL: \"{url}\""
 msgstr "URL no vàlida: \"{url}\""
 
-#: js/app.js:482
-msgid "There was an error opening a mail composer."
-msgstr "S'ha produït un error en obrir un redactor de correus electrónics."
-
-#: js/app.js:487
+#: js/app.js:497
 msgid "Invalid email: \"{url}\""
 msgstr "Correu electrònic no vàlid: \"{url}\""
 
-#: js/app.js:570
+#: js/app.js:580
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "La combinació ha fallat. No es pot trobar el contacte: {id}"
 
-#: js/app.js:583
+#: js/app.js:593
 msgid "Merge failed."
 msgstr "La combinació ha fallat."
 
-#: js/app.js:590
+#: js/app.js:600
 msgid "Merge failed. Error saving contact."
 msgstr "La combinació ha fallat. Error en desar el contacte."
 
-#: js/app.js:610
+#: js/app.js:620
 msgid "Select photo"
 msgstr "Selecciona una foto"
 
-#: js/app.js:690 js/app.js:1621
+#: js/app.js:700 js/app.js:1646
 msgid "Network or server error. Please inform administrator."
 msgstr "Error de xarxa o del servidor. Informeu a l'administrador."
 
-#: js/app.js:912
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "Error en afegir grup"
 
-#: js/app.js:935
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "Error en eliminar del grup"
 
-#: js/app.js:1111
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Heu seleccionat més de 300 contactes.\nAixò segurament fallarà!  Feu clic aquí per provar-ho igualment."
 
-#: js/app.js:1149
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "Error en establir {name} com a preferit."
 
-#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Combina contactes"
 
-#: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: js/app.js:1340 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "Afegeix grup"
 
-#: js/app.js:1344
+#: js/app.js:1369
 msgid "OK"
 msgstr "D'acord"
 
-#: js/app.js:1447
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "El contacte no s'ha trobat: {id}"
 
-#: js/app.js:1469
+#: js/app.js:1494
 msgid "No files selected for upload."
 msgstr "No s'han seleccionat fitxers per a la pujada."
 
-#: js/app.js:1479
+#: js/app.js:1504
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "El fitxer que intenteu pujar excedeix la mida màxima de pujada en aquest servidor."
 
-#: js/app.js:1579
+#: js/app.js:1604
 msgid "Edit profile picture"
 msgstr "Edita la fotografia de perfil"
 
-#: js/app.js:1583
+#: js/app.js:1608
 msgid "Crop photo"
 msgstr "Talla la fotografia"
 
@@ -297,7 +293,7 @@ msgstr "Tanca"
 msgid "Server error! Please inform system administator"
 msgstr "Error en el servidor! Informeu a l'administrador del sistema"
 
-#: js/storage.js:343 js/storage.js:382
+#: js/storage.js:341 js/storage.js:380
 msgid "Failed loading photo: {error}"
 msgstr "Ha fallat en carregar la foto: {error}"
 

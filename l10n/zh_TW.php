@@ -16,7 +16,6 @@
 "Remove from..." => "從…移除",
 "Add group..." => "新增群組",
 "Invalid URL: \"{url}\"" => "無效的 URL ：\"{url}\"",
-"There was an error opening a mail composer." => "開啟郵件編輯器發生錯誤。",
 "Invalid email: \"{url}\"" => "無效的電子郵件：\"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "合併失敗，沒有找到聯絡人：{id}",
 "Merge failed." => "合併失敗。",

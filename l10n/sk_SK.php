@@ -16,7 +16,6 @@
 "Remove from..." => "Odstrániť z...",
 "Add group..." => "Pridať skupinu...",
 "Invalid URL: \"{url}\"" => "Chybná URL: \"{url}\"",
-"There was an error opening a mail composer." => "Vyskytla sa chyba pri otváraní nástroja na tvorbu pošty.",
 "Invalid email: \"{url}\"" => "Chybný email: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Zlúčenie zlyhalo. Nemožno nájsť kontakt: {id}",
 "Merge failed." => "Zlúčenie zlyhalo.",

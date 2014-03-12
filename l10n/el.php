@@ -16,7 +16,6 @@
 "Remove from..." => "Αφαίρεση από το...",
 "Add group..." => "Προσθήκη ομάδας...",
 "Invalid URL: \"{url}\"" => "Μη έγκυρη URL: \"{url}\"",
-"There was an error opening a mail composer." => "Υπήρχε ένα σφάλμα στο άνοιγμα του επεξεργαστή μηνυμάτων.",
 "Invalid email: \"{url}\"" => "Μη έγκυρο email: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Αποτυχία συγχώνευσης. Αδυναμία εύρεσης επαφής: {id}",
 "Merge failed." => "Η συγχώνευση απέτυχε. ",

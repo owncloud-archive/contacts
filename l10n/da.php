@@ -16,7 +16,6 @@
 "Remove from..." => "Fjern fra...",
 "Add group..." => "Tilføj gruppe...",
 "Invalid URL: \"{url}\"" => "Ugyldig URL: \"{url}\"",
-"There was an error opening a mail composer." => "Der opstod en fejl under åbning af en e-mail-editor.",
 "Invalid email: \"{url}\"" => "Ugyldig email: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Sammenlægning fejlede. Kan ikke finde kontakt: {id}",
 "Merge failed." => "Sammenlægning fejlede.",

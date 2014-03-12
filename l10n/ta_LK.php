@@ -6,7 +6,6 @@
 "Add to..." => "இற்கு சேர்க்கப்பட்டது...",
 "Remove from..." => "இலிருந்து அகற்றுக...",
 "Add group..." => "குழுவிற்கு சேர்க்க...",
-"There was an error opening a mail composer." => "மின்னஞ்சல் செய்தியாக்குகையை திறப்பதில் வழு.",
 "Select photo" => "படத்தை தெரிக",
 "Network or server error. Please inform administrator." => "வ​லைய​மைப்பு அல்லது சேவையக வழு. தயவுசெய்து நிர்வாகிக்கு தெரியப்படுத்தவும்.",
 "Error adding to group." => "குழுவில் சேர்ப்பதில் வழு.",

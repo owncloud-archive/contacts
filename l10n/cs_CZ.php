@@ -16,7 +16,6 @@
 "Remove from..." => "Odebrat z...",
 "Add group..." => "Přidat skupinu...",
 "Invalid URL: \"{url}\"" => "Neplatná URL: \"{url}\"",
-"There was an error opening a mail composer." => "Nastala chyba při otevírání editoru e-malů.",
 "Invalid email: \"{url}\"" => "Neplatný e-mail: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Sloučení selhalo. Nelze nalézt kontakt: {id}",
 "Merge failed." => "Sloučení selhalo.",

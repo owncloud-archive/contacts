@@ -16,7 +16,6 @@
 "Remove from..." => "Xóa từ...",
 "Add group..." => "Thêm nhóm...",
 "Invalid URL: \"{url}\"" => "URL không hợp lệ: \"{url}\"",
-"There was an error opening a mail composer." => "Lỗi mở phần soạn email.",
 "Invalid email: \"{url}\"" => "Email không hợp lệ: \"{url}\"",
 "Merge failed." => "Kết hợp lỗi",
 "Merge failed. Error saving contact." => "Kết hợp thất bại. Lỗi khi lưu liên lạc.",

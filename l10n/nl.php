@@ -16,7 +16,6 @@
 "Remove from..." => "Verwijderen uit...",
 "Add group..." => "Nieuwe groep...",
 "Invalid URL: \"{url}\"" => "Ongeldige URL: \"{url}\"",
-"There was an error opening a mail composer." => "Er is iets misgegaan tijdens het openen van een email programma.",
 "Invalid email: \"{url}\"" => "Ongeldige e-mail: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Samenvoegen mislukt. Kan contactpersoon {id} niet vinden ",
 "Merge failed." => "Samenvoeging mislukt.",

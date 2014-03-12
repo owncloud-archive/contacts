@@ -16,7 +16,6 @@
 "Remove from..." => "Удалить из...",
 "Add group..." => "Добавить группу...",
 "Invalid URL: \"{url}\"" => "Неверный URL: \"{url}\"",
-"There was an error opening a mail composer." => "Произошла ошибка при открытии почтовой программы.",
 "Invalid email: \"{url}\"" => "Неправильная электронная почта: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Объединение не удалось. Не найден контакт: {id}",
 "Merge failed." => "Объединение не удалось.",

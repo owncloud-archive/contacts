@@ -16,7 +16,6 @@
 "Remove from..." => "Ezabatu hemendik...",
 "Add group..." => "Gehitu taldea...",
 "Invalid URL: \"{url}\"" => "URL ez-egokia: \"{url}\"",
-"There was an error opening a mail composer." => "Errore bat izan da posta editorea abiaraztean.",
 "Invalid email: \"{url}\"" => "e-posta ez egokia: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Bateratzeak huts egin du. Ezin izan da kontaktua aurkitu: {id}",
 "Merge failed." => "Bateratzeak huts egin du.",

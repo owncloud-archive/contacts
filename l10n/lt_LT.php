@@ -15,7 +15,6 @@
 "Remove from..." => "Pašalinti iš...",
 "Add group..." => "Pridėti grupę...",
 "Invalid URL: \"{url}\"" => "Netinkamas URL\" „{url}“",
-"There was an error opening a mail composer." => "Buvo klaida atveriant el. laiško redaktorių.",
 "Invalid email: \"{url}\"" => "Netinkamas el. paštas",
 "Merge failed. Cannot find contact: {id}" => "Suliejimas nepavyko. Nepavyksta rasti kontakto: {id}",
 "Merge failed." => "Sulieti nepavyko.",

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-10 00:48-0400\n"
-"PO-Revision-Date: 2014-03-10 04:48+0000\n"
+"POT-Creation-Date: 2014-03-12 00:48-0400\n"
+"PO-Revision-Date: 2014-03-12 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Malayalam (India) (http://www.transifex.com/projects/p/owncloud/language/ml_IN/)\n"
 "MIME-Version: 1.0\n"
@@ -85,88 +85,84 @@ msgstr ""
 msgid "Invalid URL: \"{url}\""
 msgstr ""
 
-#: js/app.js:482
-msgid "There was an error opening a mail composer."
-msgstr ""
-
-#: js/app.js:487
+#: js/app.js:497
 msgid "Invalid email: \"{url}\""
 msgstr ""
 
-#: js/app.js:570
+#: js/app.js:580
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr ""
 
-#: js/app.js:583
+#: js/app.js:593
 msgid "Merge failed."
 msgstr ""
 
-#: js/app.js:590
+#: js/app.js:600
 msgid "Merge failed. Error saving contact."
 msgstr ""
 
-#: js/app.js:610
+#: js/app.js:620
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:690 js/app.js:1621
+#: js/app.js:700 js/app.js:1646
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
-#: js/app.js:912
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr ""
 
-#: js/app.js:935
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1111
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1149
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr ""
 
-#: js/app.js:1340 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1344
+#: js/app.js:1369
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1447
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1469
+#: js/app.js:1494
 msgid "No files selected for upload."
 msgstr ""
 
-#: js/app.js:1479
+#: js/app.js:1504
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1579
+#: js/app.js:1604
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1583
+#: js/app.js:1608
 msgid "Crop photo"
 msgstr ""
 
@@ -291,7 +287,7 @@ msgstr ""
 msgid "Server error! Please inform system administator"
 msgstr ""
 
-#: js/storage.js:335 js/storage.js:374
+#: js/storage.js:341 js/storage.js:380
 msgid "Failed loading photo: {error}"
 msgstr ""
 
@@ -303,35 +299,35 @@ msgstr ""
 msgid "Contact not found"
 msgstr ""
 
-#: lib/addressbook.php:202
+#: lib/addressbook.php:205
 msgid "You do not have permissions to see these contacts"
 msgstr ""
 
-#: lib/addressbook.php:232
+#: lib/addressbook.php:235
 msgid "You do not have permissions add contacts to the address book"
 msgstr ""
 
-#: lib/addressbook.php:236
+#: lib/addressbook.php:239
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:265 lib/addressbook.php:296 lib/contact.php:248
+#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
 msgid "You do not have permissions to delete this contact"
 msgstr ""
 
-#: lib/addressbook.php:269 lib/addressbook.php:300
+#: lib/addressbook.php:280 lib/addressbook.php:314
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:321
+#: lib/addressbook.php:335
 msgid "Unknown error"
 msgstr ""
 
-#: lib/addressbook.php:365
+#: lib/addressbook.php:379
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:393
+#: lib/addressbook.php:407
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 

@@ -9,7 +9,6 @@
 "Add to..." => "เพิ่มเข้าไปที่...",
 "Remove from..." => "ลบออกจาก...",
 "Add group..." => "เพิ่มกลุ่ม...",
-"There was an error opening a mail composer." => "เกิดข้อผิดพลาดในการระหว่างการเปิดหน้าเครื่องมือเขียนอีเมล",
 "Select photo" => "เลือกรูปถ่าย",
 "Network or server error. Please inform administrator." => "เครือข่ายหรือเซิร์ฟเวอร์ เกิดข้อผิดพลาด กรุณาติดต่อผู้ดูแลระบบ",
 "Error adding to group." => "เกิดข้อผิดพลาดในการเพิ่มเข้าไปยังกลุ่ม",

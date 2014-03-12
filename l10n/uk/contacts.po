@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-11 06:38-0400\n"
-"PO-Revision-Date: 2014-03-11 06:11+0000\n"
+"POT-Creation-Date: 2014-03-12 00:48-0400\n"
+"PO-Revision-Date: 2014-03-12 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/owncloud/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -90,88 +90,84 @@ msgstr "Додати групу..."
 msgid "Invalid URL: \"{url}\""
 msgstr "Невірний URL: \"{url}\""
 
-#: js/app.js:482
-msgid "There was an error opening a mail composer."
-msgstr "Виникла помилка при відкриванні поштової програми."
-
-#: js/app.js:487
+#: js/app.js:497
 msgid "Invalid email: \"{url}\""
 msgstr "Невірний email: \"{url}\""
 
-#: js/app.js:570
+#: js/app.js:580
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Об'єднання не відбулося. Неможливо знайти контакт: {id}"
 
-#: js/app.js:583
+#: js/app.js:593
 msgid "Merge failed."
 msgstr "Об'єднання не відбулося."
 
-#: js/app.js:590
+#: js/app.js:600
 msgid "Merge failed. Error saving contact."
 msgstr "Об'єднання не відбулося. Помилка при збереженні контакту."
 
-#: js/app.js:610
+#: js/app.js:620
 msgid "Select photo"
 msgstr "Оберіть фото"
 
-#: js/app.js:690 js/app.js:1621
+#: js/app.js:700 js/app.js:1646
 msgid "Network or server error. Please inform administrator."
 msgstr "Мережева або серверна помилка. Будь ласка, проінформуйте адміністратора."
 
-#: js/app.js:912
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "Помилка при додаванні у групу."
 
-#: js/app.js:935
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "Помилка при видаленні з групи."
 
-#: js/app.js:1111
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1149
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "Помилка при встановленні {name} як улюбленого."
 
-#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Об'єднання контактів"
 
-#: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Відмінити"
 
-#: js/app.js:1340 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "Додати групу"
 
-#: js/app.js:1344
+#: js/app.js:1369
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1447
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "Неможливо знайти контакт: {id}"
 
-#: js/app.js:1469
+#: js/app.js:1494
 msgid "No files selected for upload."
 msgstr "Не обрано файлів для завантаження."
 
-#: js/app.js:1479
+#: js/app.js:1504
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Файл, який Ви намагаєтесь завантажити перевищує максимальний розмір файлу, що дозволено завантажувати на даний сервер."
 
-#: js/app.js:1579
+#: js/app.js:1604
 msgid "Edit profile picture"
 msgstr "Редагувати зображення облікового запису"
 
-#: js/app.js:1583
+#: js/app.js:1608
 msgid "Crop photo"
 msgstr ""
 
@@ -296,7 +292,7 @@ msgstr "Закрити"
 msgid "Server error! Please inform system administator"
 msgstr ""
 
-#: js/storage.js:343 js/storage.js:382
+#: js/storage.js:341 js/storage.js:380
 msgid "Failed loading photo: {error}"
 msgstr "Не вдалося завантажити фото: {error}"
 

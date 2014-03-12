@@ -15,7 +15,6 @@
 "Remove from..." => "Видалити з...",
 "Add group..." => "Додати групу...",
 "Invalid URL: \"{url}\"" => "Невірний URL: \"{url}\"",
-"There was an error opening a mail composer." => "Виникла помилка при відкриванні поштової програми.",
 "Invalid email: \"{url}\"" => "Невірний email: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Об'єднання не відбулося. Неможливо знайти контакт: {id}",
 "Merge failed." => "Об'єднання не відбулося.",

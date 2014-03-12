@@ -16,7 +16,6 @@
 "Remove from..." => "الحذف من ...",
 "Add group..." => "إضافة مجموعة ...",
 "Invalid URL: \"{url}\"" => "الرابط غير صحيح: \"{url}\"",
-"There was an error opening a mail composer." => "يوجد خطأ في فتح مؤلف الرسائل",
 "Invalid email: \"{url}\"" => "رابط البريد الإلكتروني غير صالح:  \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "عملية الدمج فشلت. لا يمكن إيجاد جهة الاتصال: {id}",
 "Merge failed." => "علمية الدمج فشلت.",

@@ -16,7 +16,6 @@
 "Remove from..." => "Eltávolítás innen...",
 "Add group..." => "Csoport hozzáadása...",
 "Invalid URL: \"{url}\"" => "Hibás URL: \"{url}\"",
-"There was an error opening a mail composer." => "Hiba történt a levélszerkesztő megnyitása közben.",
 "Invalid email: \"{url}\"" => "Hibás e-mail: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Sikertelen összefűzés. Nem található a névjegy: {id}",
 "Merge failed." => "Sikertelen összefűzés.",

@@ -16,7 +16,6 @@
 "Remove from..." => "Eemalda...",
 "Add group..." => "Lisa gruppi...",
 "Invalid URL: \"{url}\"" => "Vigane URL: \"{url}\"",
-"There was an error opening a mail composer." => "Meiliprogrammi avamisel tekkis viga.",
 "Invalid email: \"{url}\"" => "Vigane e-post: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Ühendamine ebaõnnestus. Ei suuda leida kontakti: {id}",
 "Merge failed." => "Ühendamine ebaõnnestus.",

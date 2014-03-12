@@ -16,7 +16,6 @@
 "Remove from..." => "从…删除",
 "Add group..." => "添加分组…",
 "Invalid URL: \"{url}\"" => "无效URL:\"{url}\"",
-"There was an error opening a mail composer." => "打开邮件撰写器时出错。",
 "Invalid email: \"{url}\"" => "无效的电子邮件: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "合并失败。无法找到联系人：{id}",
 "Merge failed." => "合并失败",

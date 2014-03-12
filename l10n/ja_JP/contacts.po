@@ -5,7 +5,7 @@
 # Translators:
 # Daisuke Deguchi <ddeguchi@nagoya-u.jp>, 2012
 # Daisuke Deguchi <ddeguchi@nagoya-u.jp>, 2012-2014
-# plazmism <gomidori@live.jp>, 2013
+# plazmism <gomidori@live.jp>, 2013-2014
 # Koichi MATSUMOTO <mzch@me.com>, 2013-2014
 # kuromabo <md81bird@hitaki.net>, 2014
 # pabook <pabook.32@gmail.com>, 2013
@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-11 06:38-0400\n"
-"PO-Revision-Date: 2014-03-11 06:11+0000\n"
+"POT-Creation-Date: 2014-03-12 00:48-0400\n"
+"PO-Revision-Date: 2014-03-12 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -93,88 +93,84 @@ msgstr "グループを追加..."
 msgid "Invalid URL: \"{url}\""
 msgstr "無効なURL: \"{url}\""
 
-#: js/app.js:482
-msgid "There was an error opening a mail composer."
-msgstr "メールコンポーザを起動する際にエラーが発生しました。"
-
-#: js/app.js:487
+#: js/app.js:497
 msgid "Invalid email: \"{url}\""
 msgstr "無効なメールアドレス: \"{url}\""
 
-#: js/app.js:570
+#: js/app.js:580
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "マージに失敗しました。 連絡先が見つかりません: {id}"
 
-#: js/app.js:583
+#: js/app.js:593
 msgid "Merge failed."
 msgstr "マージに失敗しました。"
 
-#: js/app.js:590
+#: js/app.js:600
 msgid "Merge failed. Error saving contact."
 msgstr "マージに失敗しました。連絡先の保存エラー。"
 
-#: js/app.js:610
+#: js/app.js:620
 msgid "Select photo"
 msgstr "写真を選択"
 
-#: js/app.js:690 js/app.js:1621
+#: js/app.js:700 js/app.js:1646
 msgid "Network or server error. Please inform administrator."
 msgstr "ネットワークもしくはサーバーエラーです。管理者に連絡してください。"
 
-#: js/app.js:912
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "グループの追加時にエラー発生。"
 
-#: js/app.js:935
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "グループからの削除でエラーが発生。"
 
-#: js/app.js:1111
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300 以上の連絡先が洗濯されています。"
 
-#: js/app.js:1149
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "{name} をお気に入りにする際にエラーが発生しました。"
 
-#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "連絡先をマージ"
 
-#: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: js/app.js:1340 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "グループを追加"
 
-#: js/app.js:1344
+#: js/app.js:1369
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1447
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "連絡先が見つかりませんでした: {id}"
 
-#: js/app.js:1469
+#: js/app.js:1494
 msgid "No files selected for upload."
 msgstr "アップロードするファイルが選択されていません。"
 
-#: js/app.js:1479
+#: js/app.js:1504
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "アップロードしようとしているファイルは、このサーバーの最大ファイルアップロードサイズを超えています。"
 
-#: js/app.js:1579
+#: js/app.js:1604
 msgid "Edit profile picture"
 msgstr "プロフィール写真を編集"
 
-#: js/app.js:1583
+#: js/app.js:1608
 msgid "Crop photo"
 msgstr "フォトをトリミング"
 
@@ -299,7 +295,7 @@ msgstr "閉じる"
 msgid "Server error! Please inform system administator"
 msgstr "サーバーエラー！システム管理者に知らせてください。"
 
-#: js/storage.js:343 js/storage.js:382
+#: js/storage.js:341 js/storage.js:380
 msgid "Failed loading photo: {error}"
 msgstr "写真の読み込みに失敗: {error}"
 
@@ -386,7 +382,7 @@ msgstr "アドレス帳の作成エラー"
 #: lib/controller/addressbookcontroller.php:173
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "\"%s\" のバックエンドはアドレスブックの削除をサポートしていません"
 
 #: lib/controller/addressbookcontroller.php:181
 #, php-format
@@ -403,19 +399,19 @@ msgstr "連絡先の作成エラー。"
 
 #: lib/controller/addressbookcontroller.php:237
 msgid "Error creating contact"
-msgstr ""
+msgstr "連絡先の作成エラー"
 
 #: lib/controller/addressbookcontroller.php:269
 msgid "Error deleting contact"
-msgstr ""
+msgstr "連絡先の削除エラー"
 
 #: lib/controller/addressbookcontroller.php:309
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "連絡先の取得エラー"
 
 #: lib/controller/addressbookcontroller.php:320
 msgid "Error saving contact"
-msgstr ""
+msgstr "連絡先の保存エラー"
 
 #: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
@@ -423,7 +419,7 @@ msgstr "他のアドレス帳からの連絡先の削除エラー"
 
 #: lib/controller/addressbookcontroller.php:333
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "連絡先の移動取得エラー"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -594,7 +590,7 @@ msgstr "ディスクへの書き込みに失敗しました"
 #: lib/controller/importcontroller.php:65
 #, php-format
 msgid "Not enough storage available. %s available"
-msgstr ""
+msgstr "ストレージに十分な空き容量がありません。 %s 利用可能"
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -632,7 +628,7 @@ msgstr "連絡先が見つかりません:"
 #: lib/controller/importcontroller.php:231
 #, php-format
 msgid "Imported %s"
-msgstr ""
+msgstr "%s をインポートしました"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -954,7 +950,7 @@ msgstr "姓"
 
 #: templates/contacts.php:263
 msgid "Address book"
-msgstr ""
+msgstr "アドレスブック"
 
 #: templates/contacts.php:270 templates/contacts.php:347
 msgid "Nickname"

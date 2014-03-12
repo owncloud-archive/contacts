@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-11 06:38-0400\n"
-"PO-Revision-Date: 2014-03-11 06:11+0000\n"
+"POT-Creation-Date: 2014-03-12 00:48-0400\n"
+"PO-Revision-Date: 2014-03-12 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -104,88 +104,84 @@ msgstr "그룹 추가.."
 msgid "Invalid URL: \"{url}\""
 msgstr "잘못된 URL: \"{url}\""
 
-#: js/app.js:482
-msgid "There was an error opening a mail composer."
-msgstr "메일 작성기를 여는 중 오류가 발생하였습니다."
-
-#: js/app.js:487
+#: js/app.js:497
 msgid "Invalid email: \"{url}\""
 msgstr "잘못된 이메일: \"{url}\""
 
-#: js/app.js:570
+#: js/app.js:580
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "합치기 실패. 연락처를 찾을 수 없음: {id}"
 
-#: js/app.js:583
+#: js/app.js:593
 msgid "Merge failed."
 msgstr "합치기 실패."
 
-#: js/app.js:590
+#: js/app.js:600
 msgid "Merge failed. Error saving contact."
 msgstr "합치기 실패. 연락처 저장 오류."
 
-#: js/app.js:610
+#: js/app.js:620
 msgid "Select photo"
 msgstr "사진 선택"
 
-#: js/app.js:690 js/app.js:1621
+#: js/app.js:700 js/app.js:1646
 msgid "Network or server error. Please inform administrator."
 msgstr "네트워크 및 서버 오류입니다. 관리자에게 연락하십시오."
 
-#: js/app.js:912
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "그룹에 추가하는 중 오류가 발생하였습니다."
 
-#: js/app.js:935
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "그룹에서 삭제하는 중 오류가 발생하였습니다."
 
-#: js/app.js:1111
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300명 이상의 연락처를 선택하였습니다.\n오류가 발생할 수도 있습니다! 그래도 시도하려면 여기를 누르십시오."
 
-#: js/app.js:1149
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "{name} 님을 즐겨찾는 연락처로 설정할 수 없음."
 
-#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "연락처 합치기"
 
-#: js/app.js:1313 js/app.js:1366 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "취소"
 
-#: js/app.js:1340 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "그룹 추가"
 
-#: js/app.js:1344
+#: js/app.js:1369
 msgid "OK"
 msgstr "확인"
 
-#: js/app.js:1447
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "연락처를 찾을 수 없음: {id}"
 
-#: js/app.js:1469
+#: js/app.js:1494
 msgid "No files selected for upload."
 msgstr "업로드할 파일이 선택되지 않았습니다."
 
-#: js/app.js:1479
+#: js/app.js:1504
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "업로드할 파일 크기가 서버의 최대 허용 용량을 초과합니다."
 
-#: js/app.js:1579
+#: js/app.js:1604
 msgid "Edit profile picture"
 msgstr "프로필 사진 편집"
 
-#: js/app.js:1583
+#: js/app.js:1608
 msgid "Crop photo"
 msgstr "사진 자르기"
 
@@ -310,7 +306,7 @@ msgstr "닫기"
 msgid "Server error! Please inform system administator"
 msgstr "서버 오류! 시스템 관리자에게 연락하십시오"
 
-#: js/storage.js:343 js/storage.js:382
+#: js/storage.js:341 js/storage.js:380
 msgid "Failed loading photo: {error}"
 msgstr "사진 불러오기 오류: {error}"
 

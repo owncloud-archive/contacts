@@ -16,7 +16,6 @@
 "Remove from..." => "Hapus dari...",
 "Add group..." => "Tambah grup...",
 "Invalid URL: \"{url}\"" => "URL salah: \"{url}\"",
-"There was an error opening a mail composer." => "Terjadi galat saat membuka pembuat mail.",
 "Invalid email: \"{url}\"" => "Surel salah: \"{url}\"",
 "Merge failed. Cannot find contact: {id}" => "Gagal gabung. Tidak dapat menemukan kontak: {id}",
 "Merge failed." => "Gagal gabung.",
