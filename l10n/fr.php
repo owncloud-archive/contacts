@@ -1,10 +1,10 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contacts",
 "Save" => "Sauvegarder",
-"Uploading..." => "Téléversement en cours...",
-"Importing..." => "Import en cours...",
+"Uploading..." => "Téléversement en cours…",
+"Importing..." => "Import en cours…",
 "Preparing..." => "En préparation...",
-"Processed {count} contacts" => "{count} contacts ont été traités",
+"Imported {count} of {total} contacts" => "{count} contacts sur {total} ont été importés",
 "Imported {imported} contacts. {failed} failed." => "{imported} contacts importés. {failed} échoués.",
 "An address book called {name} already exists" => "Un carnet d'adresse appelé {name} existe déjà",
 "Failed adding address book: {error}" => "Échec de l'ajout du carnet d'adresses : {error}",

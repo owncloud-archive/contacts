@@ -378,8 +378,8 @@ OC.Contacts = OC.Contacts || {};
 				.then(function(response) {
 					if(!response.error) {
 						self.$importProgress.progressbar('value', Number(response.data.progress));
-						self.$importStatusText.text(t('contacts', 'Processed {count} contacts',
-													{count:response.data.progress}));
+						self.$importStatusText.text(t('contacts', 'Imported {count} of {total} contacts',
+													{count:response.data.progress, total: self.importCount}));
 					} else {
 						console.warn('Error', response.message);
 						self.$importStatusText.text(response.message);
