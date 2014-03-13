@@ -12,6 +12,7 @@
 # hoek <hoek@hoek.pl>, 2014
 # orcio6 <orcio6@o2.pl>, 2013
 # paszczak000 <paszczak000@gmail.com>, 2013
+# maxxx <maxxxrally@gmail.com>, 2014
 # bobie <maciej.przybecki@gmail.com>, 2013-2014
 # Maciej Tarmas <maciej@tarmas.pl>, 2013
 # Marcin Małecki <gerber@tkdami.net>, 2011-2012
@@ -25,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-12 00:48-0400\n"
-"PO-Revision-Date: 2014-03-12 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-13 17:27-0400\n"
+"PO-Revision-Date: 2014-03-13 07:10+0000\n"
+"Last-Translator: maxxx <maxxxrally@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -392,7 +393,7 @@ msgstr "Błąd przy tworzeniu książki adresowej"
 #: lib/controller/addressbookcontroller.php:173
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "\"%s\" nie wspiera kasowania książek adresowych"
 
 #: lib/controller/addressbookcontroller.php:181
 #, php-format
@@ -409,19 +410,19 @@ msgstr "Błąd przy tworzeniu kontaktu"
 
 #: lib/controller/addressbookcontroller.php:237
 msgid "Error creating contact"
-msgstr ""
+msgstr "Błąd tworzenia kontaktu"
 
 #: lib/controller/addressbookcontroller.php:269
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Błąd kasowania kontaktu"
 
 #: lib/controller/addressbookcontroller.php:309
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Błąd wczytywania kontaktu"
 
 #: lib/controller/addressbookcontroller.php:320
 msgid "Error saving contact"
-msgstr ""
+msgstr "Błąd zapisywania kontaktu"
 
 #: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
@@ -429,7 +430,7 @@ msgstr "Błąd usuwania kontaktu z innej książki adresowej."
 
 #: lib/controller/addressbookcontroller.php:333
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Błąd przenoszenia kontaktu"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -600,7 +601,7 @@ msgstr "Błąd zapisu na dysk"
 #: lib/controller/importcontroller.php:65
 #, php-format
 msgid "Not enough storage available. %s available"
-msgstr ""
+msgstr "Brak wolnego miejsca na dysku. Dostępne %s"
 
 #: lib/controller/importcontroller.php:73
 msgid "Attempt to upload blacklisted file:"
@@ -638,7 +639,7 @@ msgstr "Nie znaleziono kontaktów w:"
 #: lib/controller/importcontroller.php:231
 #, php-format
 msgid "Imported %s"
-msgstr ""
+msgstr "Zaimportowano %s"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
