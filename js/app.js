@@ -490,7 +490,7 @@ OC.Contacts = OC.Contacts || {
 							} catch(e) {
 								console.log('There was an error opening a mail composer.', e);
 							}
-							}, 500);
+							}, 1000);
 					} else {
 						$(document).trigger('status.contacts.error', {
 							error: true,
