@@ -88,6 +88,11 @@ class Shared extends Database {
 		// Not sure if I'm doing it wrongly, or if its supposed to return
 		// the info in an array?
 		$addressBook = (isset($addressBook['permissions']) ? $addressBook : $addressBook[0]);
+
+		if(!isset($addressBook['permissions'])) {
+			return null;
+		}
+
 		$addressBook['backend'] = $this->name;
 		return $addressBook;
 	}
