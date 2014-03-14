@@ -630,7 +630,10 @@ OC.Contacts = OC.Contacts || {
 			$.each(result.contacts, function(idx, contactid) {
 				var contact = self.contacts.findById(contactid);
 
-				contact.removeFromGroup(result.groupname);
+				// Test if valid because there could be stale ids in the tag index.
+				if(contact) {
+					contact.removeFromGroup(result.groupname);
+				}
 			});
 		});
 
