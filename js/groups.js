@@ -689,7 +689,7 @@ OC.Contacts = OC.Contacts || {};
 				$elem.data('obj', self);
 				$elem.data('rawname', t('contacts', 'Favorites'));
 				if(!$elem.find('.starred').length) {
-					$elem.data('contacts', contacts).find('.numcontacts').before('<span class="icon icon-starred starred action" />');
+					$elem.data('contacts', contacts).find('.numcontacts').before('<span class="icon-starred starred action" />');
 				}
 				$elem.droppable({
 							drop: self.contactDropped,
