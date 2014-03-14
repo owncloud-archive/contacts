@@ -159,12 +159,12 @@ abstract class AbstractBackend {
 	 *
 	 * This can be reimplemented in the backend to improve performance.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @return bool
 	 */
-	public function hasAddressBook($addressbookid) {
+	public function hasAddressBook($addressBookId) {
 
-		return count($this->getAddressBook($addressbookid)) > 0;
+		return count($this->getAddressBook($addressBookId)) > 0;
 
 	}
 
@@ -174,12 +174,12 @@ abstract class AbstractBackend {
 	 * get the result more effectively or to return null if the backend
 	 * cannot determine the number.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @return integer|null
 	 */
-	public function numContacts($addressbookid) {
+	public function numContacts($addressBookId) {
 
-		return count($this->getContacts($addressbookid));
+		return count($this->getContacts($addressBookId));
 
 	}
 
@@ -204,11 +204,11 @@ abstract class AbstractBackend {
 	 * Currently the only ones supported are 'displayname' and
 	 * 'description', but backends can implement additional.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param array $options - Optional (backend specific options)
 	 * @return array|null $properties
 	 */
-	public abstract function getAddressBook($addressbookid, array $options = array());
+	public abstract function getAddressBook($addressBookId, array $options = array());
 
 	/**
 	 * Updates an addressbook's properties
@@ -218,11 +218,11 @@ abstract class AbstractBackend {
 	 * Currently the only ones supported are 'displayname' and
 	 * 'description', but backends can implement additional.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param array $properties
 	 * @param array $options - Optional (backend specific options)
 	 * @return bool
-	public function updateAddressBook($addressbookid, array $properties, array $options = array());
+	public function updateAddressBook($addressBookId, array $properties, array $options = array());
 	 */
 
 	/**
@@ -245,10 +245,10 @@ abstract class AbstractBackend {
 	 *
 	 * Classes that doesn't support deleting address books MUST NOT implement this method.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param array $options - Optional (backend specific options)
 	 * @return bool
-	public function deleteAddressBook($addressbookid, array $options = array());
+	public function deleteAddressBook($addressBookId, array $options = array());
 	 */
 
 	/**
@@ -257,10 +257,10 @@ abstract class AbstractBackend {
 	 * Must return a UNIX time stamp or null if the backend
 	 * doesn't support it.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @returns int | null
 	 */
-	public function lastModifiedAddressBook($addressbookid) {
+	public function lastModifiedAddressBook($addressBookId) {
 	}
 
 	/**
@@ -270,9 +270,9 @@ abstract class AbstractBackend {
 	 * modification date so lastModifiedAddressBook() can be
 	 * used to invalidate the cache.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 */
-	public function setModifiedAddressBook($addressbookid) {
+	public function setModifiedAddressBook($addressBookId) {
 	}
 
 	/**
@@ -301,34 +301,34 @@ abstract class AbstractBackend {
 	 * - 'offset': The offset to start at.
 	 * - 'omitdata': Whether to fetch the entire carddata or vcard.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param array $options - Optional options
 	 * @return array
 	 */
-	public abstract function getContacts($addressbookid, array $options = array());
+	public abstract function getContacts($addressBookId, array $options = array());
 
 	/**
 	 * Returns a specfic contact.
 	 *
 	 * Same as getContacts except that either 'carddata' or 'vcard' is mandatory.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param mixed $id
 	 * @param array $options - Optional options
 	 * @return array|null
 	 */
-	public abstract function getContact($addressbookid, $id, array $options = array());
+	public abstract function getContact($addressBookId, $id, array $options = array());
 
 	/**
 	 * Creates a new contact
 	 *
 	 * Classes that doesn't support adding contacts MUST NOT implement this method.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param VCard $contact
 	 * @param array $options - Optional options
 	 * @return string|bool The identifier for the new contact or false on error.
-	public function createContact($addressbookid, $contact, array $options = array());
+	public function createContact($addressBookId, $contact, array $options = array());
 	 */
 
 	/**
@@ -336,12 +336,12 @@ abstract class AbstractBackend {
 	 *
 	 * Classes that doesn't support updating contacts MUST NOT implement this method.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param mixed $id
 	 * @param VCard $contact
 	 * @param array $options - Optional options
 	 * @return bool
-	public function updateContact($addressbookid, $id, $carddata, array $options = array());
+	public function updateContact($addressBookId, $id, $carddata, array $options = array());
 	 */
 
 	/**
@@ -349,11 +349,11 @@ abstract class AbstractBackend {
 	 *
 	 * Classes that doesn't support deleting contacts MUST NOT implement this method.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param mixed $id
 	 * @param array $options - Optional options
 	 * @return bool
-	public function deleteContact($addressbookid, $id, array $options = array());
+	public function deleteContact($addressBookId, $id, array $options = array());
 	 */
 
 	/**
@@ -362,11 +362,11 @@ abstract class AbstractBackend {
 	 * Must return a UNIX time stamp or null if the backend
 	 * doesn't support it.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param mixed $id
 	 * @returns int | null
 	 */
-	public function lastModifiedContact($addressbookid, $id) {
+	public function lastModifiedContact($addressBookId, $id) {
 	}
 	
 	/**

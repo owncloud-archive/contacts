@@ -31,7 +31,7 @@ use OCA\Contacts;
 class Shared extends Database {
 
 	public $name = 'shared';
-	public $addressbooks = array();
+	public $addressBooks = array();
 
 	/**
 	 * Returns the list of addressbooks for a specific user.
@@ -50,30 +50,30 @@ class Shared extends Database {
 		foreach ($maybeSharedAddressBook as $sharedAddressbook) {
 
 			if (isset($sharedAddressbook['id'])) {
-				$this->addressbooks[] = $this->getAddressBook($sharedAddressbook['id']);
+				$this->addressBooks[] = $this->getAddressBook($sharedAddressbook['id']);
 			}
 
 		}
 
-		foreach ($this->addressbooks as &$addressBook) {
+		foreach ($this->addressBooks as &$addressBook) {
 			$addressBook['backend'] = $this->name;
 		}
 
-		return $this->addressbooks;
+		return $this->addressBooks;
 	}
 
 	/**
 	 * Returns a specific address book.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param mixed $id Contact ID
 	 * @return mixed
 	 */
-	public function getAddressBook($addressbookid, array $options = array()) {
+	public function getAddressBook($addressBookId, array $options = array()) {
 
-		foreach ($this->addressbooks as $addressBook) {
+		foreach ($this->addressBooks as $addressBook) {
 
-			if ($addressBook['id'] === $addressbookid) {
+			if ($addressBook['id'] === $addressBookId) {
 				return $addressBook;
 			}
 
@@ -81,7 +81,7 @@ class Shared extends Database {
 
 		$addressBook = \OCP\Share::getItemSharedWithBySource(
 			'addressbook',
-			$addressbookid,
+			$addressBookId,
 			Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS
 		);
 
@@ -94,27 +94,28 @@ class Shared extends Database {
 		}
 
 		$addressBook['backend'] = $this->name;
+		$this->addressBooks[] = $addressBook;
 		return $addressBook;
 	}
 
 	/**
 	 * Returns all contacts for a specific addressbook id.
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
 	 * @return array
 	 */
-	public function getContacts($addressbookid, array $options = array()) {
+	public function getContacts($addressBookId, array $options = array()) {
 
-		$addressBook = $this->getAddressBook($addressbookid);
+		$addressBook = $this->getAddressBook($addressBookId);
 
 		if (!$addressBook) {
-			throw new \Exception('Shared Address Book not found: ' . $addressbookid, 404);
+			throw new \Exception('Shared Address Book not found: ' . $addressBookId, 404);
 		}
 
 		$permissions = $addressBook['permissions'];
 
-		$cards = parent::getContacts($addressbookid, $options);
+		$cards = parent::getContacts($addressBookId, $options);
 
 		foreach ($cards as &$card) {
 			$card['permissions'] = $permissions;
@@ -131,21 +132,21 @@ class Shared extends Database {
 	 * CardDAV backend.
 	 * @see \Database\getContact
 	 *
-	 * @param string $addressbookid
+	 * @param string $addressBookId
 	 * @param mixed $id Contact ID
 	 * @return array|false
 	 */
-	public function getContact($addressbookid, $id, array $options = array()) {
+	public function getContact($addressBookId, $id, array $options = array()) {
 
-		$addressBook = $this->getAddressBook($addressbookid);
+		$addressBook = $this->getAddressBook($addressBookId);
 
 		if (!$addressBook) {
-			throw new \Exception('Shared Address Book not found: ' . $addressbookid, 404);
+			throw new \Exception('Shared Address Book not found: ' . $addressBookId, 404);
 		}
 
 		$permissions = $addressBook['permissions'];
 
-		$card = parent::getContact($addressbookid, $id, $options);
+		$card = parent::getContact($addressBookId, $id, $options);
 
 		if (!$card) {
 			throw new \Exception('Shared Contact not found: ' . implode(',', $id), 404);
