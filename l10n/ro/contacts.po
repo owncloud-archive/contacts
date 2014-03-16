@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# andreiacob <andrei.iacob@y7mail.com>, 2014
 # Claudiu, 2011, 2012
 # Dimon Pockemon <>, 2012
 # Eugen Mihalache <eugemjj@gmail.com>, 2012
@@ -12,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-12 00:48-0400\n"
-"PO-Revision-Date: 2014-03-12 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-16 01:24-0400\n"
+"PO-Revision-Date: 2014-03-15 08:10+0000\n"
+"Last-Translator: andreiacob <andrei.iacob@y7mail.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/owncloud/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,7 +45,7 @@ msgstr ""
 
 #: js/addressbooks.js:373
 msgid "Imported {count} of {total} contacts"
-msgstr ""
+msgstr "S-au importat {count} din {total} contacte"
 
 #: js/addressbooks.js:396
 msgid "Imported {imported} contacts. {failed} failed."
@@ -96,78 +97,78 @@ msgstr "email invalid"
 
 #: js/app.js:580
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "Imbinare nereusita. Nu se poate gasi contactul: {id}"
 
 #: js/app.js:593
 msgid "Merge failed."
-msgstr ""
+msgstr "Imbinare nereusita."
 
 #: js/app.js:600
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "Imbinare nereusita. Eroare la salvarea contactului."
 
 #: js/app.js:620
 msgid "Select photo"
-msgstr ""
+msgstr "Selecteaza fotografie"
 
-#: js/app.js:700 js/app.js:1646
+#: js/app.js:703 js/app.js:1649
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "Eroare de server sau de retea. Va rugam informati administratorul."
 
-#: js/app.js:922
+#: js/app.js:925
 msgid "Error adding to group."
-msgstr ""
+msgstr "Eroare la adaugarea la grup."
 
-#: js/app.js:945
+#: js/app.js:948
 msgid "Error removing from group."
-msgstr ""
+msgstr "Eroare la eliminarea din grup."
 
-#: js/app.js:1136
+#: js/app.js:1139
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1174
+#: js/app.js:1177
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "Eroare la setarea {name} ca favorit."
 
-#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
+#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
+#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Anulare"
 
-#: js/app.js:1365 templates/contacts.php:152
+#: js/app.js:1368 templates/contacts.php:152
 msgid "Add group"
-msgstr ""
+msgstr "Adaugati grup"
 
-#: js/app.js:1369
+#: js/app.js:1372
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1472
+#: js/app.js:1475
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "Nu s-a putut gasi contactul: {id}"
 
-#: js/app.js:1494
+#: js/app.js:1497
 msgid "No files selected for upload."
-msgstr ""
+msgstr "Nu sunt fisiere selectate pentru incarcare."
 
-#: js/app.js:1504
+#: js/app.js:1507
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr ""
 
-#: js/app.js:1604
+#: js/app.js:1607
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1608
+#: js/app.js:1611
 msgid "Crop photo"
 msgstr ""
 
