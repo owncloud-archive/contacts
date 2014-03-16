@@ -82,11 +82,8 @@ class Database extends AbstractBackend {
 	}
 
 	/**
-	 * Returns the list of addressbooks for a specific user.
-	 *
-	 * @see AbstractBackend::getAddressBooksForUser
-	 * @return array
-	 */
+	* {@inheritdoc}
+	*/
 	public function getAddressBooksForUser(array $options = array()) {
 
 		try {
@@ -117,6 +114,9 @@ class Database extends AbstractBackend {
 		return $this->addressBooks;
 	}
 
+	/**
+	* {@inheritdoc}
+	*/
 	public function getAddressBook($addressBookId, array $options = array()) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' id: '
 		//	. $addressBookId, \OCP\Util::DEBUG);
@@ -161,6 +161,9 @@ class Database extends AbstractBackend {
 
 	}
 
+	/**
+	* {@inheritdoc}
+	*/
 	public function hasAddressBook($addressBookId, array $options = array()) {
 
 		// First check if it's already cached
@@ -396,6 +399,9 @@ class Database extends AbstractBackend {
 		return true;
 	}
 
+	/**
+	* {@inheritdoc}
+	*/
 	public function lastModifiedAddressBook($addressBookId) {
 
 		if ($this->addressBooks && isset($this->addressBooks[$addressBookId])) {
@@ -433,13 +439,8 @@ class Database extends AbstractBackend {
 	}
 
 	/**
-	 * Returns all contacts for a specific addressbook id.
-	 *
-	 * @param string $addressBookId
-	 * @param array $options - Optional (backend specific options)
-	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
-	 * @return array
-	 */
+	* {@inheritdoc}
+	*/
 	public function getContacts($addressBookId, array $options = array() ) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' addressbookid: ' . $addressBookId, \OCP\Util::DEBUG);
 		$cards = array();

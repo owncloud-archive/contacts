@@ -34,11 +34,8 @@ class Shared extends Database {
 	public $addressBooks = array();
 
 	/**
-	 * Returns the list of addressbooks for a specific user.
-	 *
-	 * @param string $principaluri
-	 * @return array
-	 */
+	* {@inheritdoc}
+	*/
 	public function getAddressBooksForUser(array $options = array()) {
 
 		// workaround for https://github.com/owncloud/core/issues/2814
@@ -63,12 +60,8 @@ class Shared extends Database {
 	}
 
 	/**
-	 * Returns a specific address book.
-	 *
-	 * @param string $addressBookId
-	 * @param mixed $id Contact ID
-	 * @return mixed
-	 */
+	* {@inheritdoc}
+	*/
 	public function getAddressBook($addressBookId, array $options = array()) {
 
 		foreach ($this->addressBooks as $addressBook) {
@@ -99,12 +92,8 @@ class Shared extends Database {
 	}
 
 	/**
-	 * Returns all contacts for a specific addressbook id.
-	 *
-	 * @param string $addressBookId
-	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
-	 * @return array
-	 */
+	* {@inheritdoc}
+	*/
 	public function getContacts($addressBookId, array $options = array()) {
 
 		$addressBook = $this->getAddressBook($addressBookId);
@@ -125,17 +114,8 @@ class Shared extends Database {
 	}
 
 	/**
-	 * Returns a specific contact.
-	 *
-	 * The $id for Database and Shared backends can be an array containing
-	 * either 'id' or 'uri' to be able to play seamlessly with the
-	 * CardDAV backend.
-	 * @see \Database\getContact
-	 *
-	 * @param string $addressBookId
-	 * @param mixed $id Contact ID
-	 * @return array|false
-	 */
+	* {@inheritdoc}
+	*/
 	public function getContact($addressBookId, $id, array $options = array()) {
 
 		$addressBook = $this->getAddressBook($addressBookId);
