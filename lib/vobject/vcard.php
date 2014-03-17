@@ -110,7 +110,7 @@ class VCard extends VObject\Component\VCard {
 	/**
 	* Decode properties for upgrading from v. 2.1
 	*
-	* @param Sabre_VObject_Property $property Reference to a \Sabre\VObject\Property.
+	* @param \Sabre\VObject\Property $property Reference to a \Sabre\VObject\Property.
 	* The only encoding allowed in version 3.0 is 'b' for binary. All encoded strings
 	* must therefore be decoded and the parameters removed.
 	*/
