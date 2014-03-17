@@ -243,6 +243,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	padding: 0; margin: 0; 
 	background-position: center;
 	background-size:contain;
+	display: inline-block;
 }
 
 .action:not(.add):not(.sort).text, .icon:not(.add):not(.sort).text, [class^="icon-"]:not(.add):not(.sort).text, [class*=" icon-"]:not(.add):not(.sort).text {
