@@ -202,7 +202,8 @@ Class Properties {
 	}
 
 	public static function generateUID($app = 'contacts') {
-		return date('Ymd\\THis') . '.' . substr(md5(rand().time()), 0, 10). '@' . \OCP\Util::getServerHostName();
+		$uuid = new UUID();
+		return $uuid->get() . '@' . \OCP\Util::getServerHostName();
 	}
 
 	/**
