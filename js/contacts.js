@@ -1302,6 +1302,18 @@ OC.Contacts = OC.Contacts || {};
 			if($(this).hasClass('value') && this.value === this.defaultValue) {
 				return;
 			}
+			function isMultiByte(str) {
+				return /[\uD800-\uDFFF]/.test(str);
+			}
+
+			if (isMultiByte(this.value) && self.getBackend()) {
+				$(document).trigger('status.contacts.error',
+				{error:true, message: t('contacts', 'The backend does not support multi-byte characters.')});
+				if(this.defaultValue) {
+					this.value = this.defaultValue;
+				}
+				return;
+			}
 			//console.log('change', this.defaultValue, this.value);
 			this.defaultValue = this.value;
 			self.saveProperty({obj:event.target});

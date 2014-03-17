@@ -187,7 +187,11 @@ class VCard extends VObject\Component\VCard {
 
 		if ($options & self::UPGRADE) {
 			$this->VERSION = self::DEFAULT_VERSION;
-			foreach($this->children as &$property) {
+			foreach($this->children as $idx => &$property) {
+				if (mb_strlen($property->value, 'utf-8') < strlen($property->value)) {
+					unset($this->children[$idx]);
+				}
+
 				$this->decodeProperty($property);
 				$this->fixPropertyParameters($property);
 				/* What exactly was I thinking here?
