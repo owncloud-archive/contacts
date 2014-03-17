@@ -1428,7 +1428,7 @@ OC.Contacts = OC.Contacts || {
 			if(contact) {
 				// Only show the list element if contact is in current group
 				var showListElement = contact.inGroup(this.groups.nameById(this.currentgroup))
-					|| this.currentgroup === 'all'
+					|| ['all', 'fav', 'uncategorized'].indexOf(this.currentgroup) !== -1
 					|| (this.currentgroup === 'uncategorized' && contact.groups().length === 0);
 				contact.close(showListElement);
 			}
