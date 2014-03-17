@@ -49,10 +49,6 @@ class Plugin extends \Sabre_CardDAV_Plugin {
 			$data = stream_get_contents($data);
 		}
 
-		// Converting the data to unicode, if needed.
-		$data = \Sabre_DAV_StringUtil::ensureUTF8($data);
-		//\OCP\Util::writeLog('contacts', __METHOD__ . "\n".$data, \OCP\Util::DEBUG);
-
 		try {
 			$vobj = VObject\Reader::read($data, VObject\Reader::OPTION_IGNORE_INVALID_LINES);
 		} catch (VObject\ParseException $e) {
