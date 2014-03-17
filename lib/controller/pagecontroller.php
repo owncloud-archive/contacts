@@ -28,14 +28,14 @@ class PageController extends Controller {
 	public function index() {
 		\OC::$server->getNavigationManager()->setActiveEntry('contacts');
 
-		$impp_types = Properties::getTypesForProperty('IMPP');
-		$adr_types = Properties::getTypesForProperty('ADR');
-		$phone_types = Properties::getTypesForProperty('TEL');
-		$email_types = Properties::getTypesForProperty('EMAIL');
+		$imppTypes = Properties::getTypesForProperty('IMPP');
+		$adrTypes = Properties::getTypesForProperty('ADR');
+		$phoneTypes = Properties::getTypesForProperty('TEL');
+		$emailTypes = Properties::getTypesForProperty('EMAIL');
 		$ims = Properties::getIMOptions();
-		$im_protocols = array();
+		$imProtocols = array();
 		foreach($ims as $name => $values) {
-			$im_protocols[$name] = $values['displayname'];
+			$imProtocols[$name] = $values['displayname'];
 		}
 
 		$maxUploadFilesize = \OCP\Util::maxUploadFilesize('/');
@@ -62,11 +62,11 @@ class PageController extends Controller {
 		$response->setParams(array(
 			'uploadMaxFilesize' => $maxUploadFilesize,
 			'uploadMaxHumanFilesize' => \OCP\Util::humanFileSize($maxUploadFilesize),
-			'phone_types' => $phone_types,
-			'email_types' => $email_types,
-			'adr_types' => $adr_types,
-			'impp_types' => $impp_types,
-			'im_protocols' => $im_protocols,
+			'phoneTypes' => $phoneTypes,
+			'emailTypes' => $emailTypes,
+			'adrTypes' => $adrTypes,
+			'imppTypes' => $imppTypes,
+			'imProtocols' => $imProtocols,
 		));
 
 		return $response;

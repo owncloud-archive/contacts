@@ -209,13 +209,13 @@ class Hooks{
 
 		$app = new App();
 		$addressBooks = $app->getAddressBooksForUser();
-		$base_url = \OCP\Util::linkTo('calendar', 'ajax/events.php').'?calendar_id=';
+		$baseUrl = \OCP\Util::linkTo('calendar', 'ajax/events.php').'?calendar_id=';
 
 		foreach ($addressBooks as $addressBook) {
 			$info = $addressBook->getMetaData();
 			$parameters['sources'][]
 				= array(
-					'url' => $base_url.'birthday_'. $info['backend'].'_'.$info['id'],
+					'url' => $baseUrl . 'birthday_'. $info['backend'].'_' . $info['id'],
 					'backgroundColor' => '#cccccc',
 					'borderColor' => '#888',
 					'textColor' => 'black',

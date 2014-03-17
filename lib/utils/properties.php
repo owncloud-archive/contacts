@@ -48,14 +48,14 @@ Class Properties {
 	 *
 	 * @var array
 	 */
-	public static $multi_properties = array('EMAIL', 'TEL', 'IMPP', 'ADR', 'URL');
+	public static $multiProperties = array('EMAIL', 'TEL', 'IMPP', 'ADR', 'URL');
 
 	/**
 	 * Properties to index.
 	 *
 	 * @var array
 	 */
-	public static $index_properties = array(
+	public static $indexProperties = array(
 		'BDAY', 'UID', 'N', 'FN', 'TITLE', 'ROLE', 'NOTE', 'NICKNAME',
 		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO');
 
@@ -256,7 +256,7 @@ Class Properties {
 				. '(`userid`, `contactid`,`name`,`value`,`preferred`) VALUES(?,?,?,?,?)' );
 		}
 		foreach($vcard->children as $property) {
-			if(!in_array($property->name, self::$index_properties)) {
+			if(!in_array($property->name, self::$indexProperties)) {
 				continue;
 			}
 			$preferred = 0;

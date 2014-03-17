@@ -139,7 +139,7 @@ class JSONSerializer {
 	 * but we should look out for any problems.
 	 */
 	public static function serializeProperty(\Sabre\VObject\Property $property) {
-		if(!in_array($property->name, Properties::$index_properties)) {
+		if(!in_array($property->name, Properties::$indexProperties)) {
 			return;
 		}
 		$value = $property->value;
@@ -188,7 +188,7 @@ class JSONSerializer {
 		);
 
 		// This cuts around a 3rd off of the json response size.
-		if(in_array($property->name, Properties::$multi_properties)) {
+		if(in_array($property->name, Properties::$multiProperties)) {
 			$temp['checksum'] = substr(md5($property->serialize()), 0, 8);
 		}
 		foreach($property->parameters as $parameter) {

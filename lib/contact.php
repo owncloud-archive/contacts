@@ -590,7 +590,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 *
 	 * NOTE: The data has actually already been merged client side!
 	 * NOTE: The only properties coming from the web client are the ones
-	 * defined in \OCA\Contacts\Utils\Properties::$index_properties and
+	 * defined in \OCA\Contacts\Utils\Properties::$indexProperties and
 	 * UID is skipped for obvious reasons, and PHOTO is currently not updated.
 	 * The data array has this structure:
 	 *
@@ -608,12 +608,12 @@ class Contact extends VObject\VCard implements IPIMObject {
 			if(!is_array($properties)) {
 				\OCP\Util::writeLog('contacts', __METHOD__.' not an array?: ' .$name. ' '.print_r($properties, true), \OCP\Util::DEBUG);
 			}
-			if(in_array($name, Utils\Properties::$multi_properties)) {
+			if(in_array($name, Utils\Properties::$multiProperties)) {
 				unset($this->{$name});
 			}
 			foreach($properties as $parray) {
 				\OCP\Util::writeLog('contacts', __METHOD__.' adding: ' .$name. ' '.print_r($parray['value'], true) . ' ' . print_r($parray['parameters'], true), \OCP\Util::DEBUG);
-				if(in_array($name, Utils\Properties::$multi_properties)) {
+				if(in_array($name, Utils\Properties::$multiProperties)) {
 					// TODO: wrap in try/catch, check return value
 					$this->setPropertyByChecksum('new', $name, $parray['value'], $parray['parameters']);
 				} else {
@@ -643,7 +643,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				continue;
 			}
 			\OCP\Util::writeLog('contacts', __METHOD__.' merging: ' .$property->name, \OCP\Util::DEBUG);
-			if(in_array($property->name, Utils\Properties::$multi_properties)) {
+			if(in_array($property->name, Utils\Properties::$multiProperties)) {
 				$ownproperties = $this->select($property->name);
 				if(count($ownproperties) === 0) {
 					// We don't have any instances of this property, so just add it.

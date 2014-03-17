@@ -103,7 +103,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 				break;
 		}
 		
-		if(in_array($row['name'], Properties::$multi_properties)) {
+		if(in_array($row['name'], Properties::$multiProperties)) {
 			if(!isset($results[$row['contactid']])) {
 				$results[$row['contactid']] = array('id' => $row['contactid'], $row['name'] => array($value));
 			} elseif(!isset($results[$row['contactid']][$row['name']])) {

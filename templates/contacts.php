@@ -377,7 +377,7 @@
 			<span class="parameters">
 				<input type="checkbox" class="parameter tooltipped rightwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
 				<select class="rtl type parameter" data-parameter="TYPE" name="parameters[TYPE][]">
-					<?php print_unescaped(OCP\html_select_options($_['email_types'], array())) ?>
+					<?php print_unescaped(OCP\html_select_options($_['emailTypes'], array())) ?>
 				</select>
 			</span>
 			<input type="email" class="nonempty value" name="value" value="{value}" x-moz-errormessage="<?php p($l->t('Please specify a valid email address.')); ?>" placeholder="<?php p($l->t('someone@example.com')); ?>" required />
@@ -392,7 +392,7 @@
 			<span class="parameters">
 				<input type="checkbox" class="parameter tooltipped rightwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
 				<select class="rtl type parameter" data-parameter="TYPE" name="parameters[TYPE][]">
-					<?php print_unescaped(OCP\html_select_options($_['phone_types'], array())) ?>
+					<?php print_unescaped(OCP\html_select_options($_['phoneTypes'], array())) ?>
 				</select>
 			</span>
 			<input type="text" class="nonempty value" name="value" value="{value}" placeholder="<?php p($l->t('Enter phone number')); ?>" required />
@@ -406,7 +406,7 @@
 			<span class="parameters">
 				<input type="checkbox" class="parameter tooltipped rightwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
 				<select class="rtl type parameter" data-parameter="TYPE" name="parameters[TYPE][]">
-					<?php print_unescaped(OCP\html_select_options($_['email_types'], array())) ?>
+					<?php print_unescaped(OCP\html_select_options($_['emailTypes'], array())) ?>
 				</select>
 			</span>
 			<input type="url" class="nonempty value" name="value" value="{value}" placeholder="http://www.example.com/" required />
@@ -421,7 +421,7 @@
 			<span class="parameters">
 				<input type="checkbox" id="adr_pref_{idx}" class="parameter tooltipped downwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
 				<select class="type parameter" data-parameter="TYPE" name="parameters[TYPE][]">
-					<?php print_unescaped(OCP\html_select_options($_['impp_types'], array())) ?>
+					<?php print_unescaped(OCP\html_select_options($_['adrTypes'], array())) ?>
 				</select>
 			</span>
 			<span class="float display">
@@ -463,7 +463,7 @@
 			<span class="parameters">
 				<input type="checkbox" id="adr_pref_{idx}" class="parameter tooltipped downwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
 				<select class="type parameter" data-parameter="TYPE" name="parameters[TYPE][]">
-					<?php print_unescaped(OCP\html_select_options($_['impp_types'], array())) ?>
+					<?php print_unescaped(OCP\html_select_options($_['imppTypes'], array())) ?>
 				</select>
 			</span>
 	-->
@@ -473,7 +473,7 @@
 			<span class="parameters">
 				<input type="checkbox" id="impp_pref_{idx}" class="parameter tooltipped downwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
 				<select class="rtl type parameter" data-parameter="X-SERVICE-TYPE" name="parameters[X-SERVICE-TYPE]">
-					<?php print_unescaped(OCP\html_select_options($_['im_protocols'], array())) ?>
+					<?php print_unescaped(OCP\html_select_options($_['imProtocols'], array())) ?>
 				</select>
 			</span>
 			<input type="text" class="nonempty value" name="value" value="{value}"

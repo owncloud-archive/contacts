@@ -103,7 +103,7 @@ class ContactController extends Controller {
 				->bailOut(App::$l10n->t('Property name is not set.'));
 		}
 
-		if (!$checksum && in_array($name, Properties::$multi_properties)) {
+		if (!$checksum && in_array($name, Properties::$multiProperties)) {
 			return $response
 				->setStatus(Http::STATUS_PRECONDITION_FAILED)
 				->bailOut(App::$l10n->t('Property checksum is not set.'));
@@ -117,7 +117,7 @@ class ContactController extends Controller {
 
 		$result = array('contactId' => $params['contactId']);
 
-		if ($checksum && in_array($name, Properties::$multi_properties)) {
+		if ($checksum && in_array($name, Properties::$multiProperties)) {
 			try {
 				if(is_null($value)) {
 					$contact->unsetPropertyByChecksum($checksum);
@@ -130,7 +130,7 @@ class ContactController extends Controller {
 					->setStatus(Http::STATUS_PRECONDITION_FAILED)
 					->bailOut(App::$l10n->t('Information about vCard is incorrect. Please reload the page.'));
 			}
-		} elseif (!in_array($name, Properties::$multi_properties)) {
+		} elseif (!in_array($name, Properties::$multiProperties)) {
 
 			if (is_null($value)) {
 				unset($contact->{$name});
