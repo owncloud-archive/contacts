@@ -145,7 +145,7 @@ class VCard extends VObject\Component\VCard {
 	* Work around issue in older VObject sersions
 	* https://github.com/fruux/sabre-vobject/issues/24
 	*
-	* @param Sabre_VObject_Property $property Reference to a Sabre_VObject_Property.
+	* @param \Sabre\VObject\Property $property Reference to a \Sabre\VObject\Property.
 	*/
 	public function fixPropertyParameters(&$property) {
 		// Work around issue in older VObject sersions
