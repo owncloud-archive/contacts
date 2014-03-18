@@ -302,6 +302,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 	/**
 	 * Get the data from the backend
 	 * FIXME: Clean this up and make sure the logic is OK.
+	 *
+	 * @return bool
 	 */
 	public function retrieve() {
 		if($this->isRetrieved() || count($this->children) > 1) {
