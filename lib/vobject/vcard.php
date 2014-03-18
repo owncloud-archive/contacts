@@ -35,15 +35,16 @@ use Sabre\VObject;
  * validate and upgrade using ....
  *
  * Satisfy PHP Analyzer:
- * @property N
- * @property FN
- * @property ORG
- * @property EMAIL
- * @property VERSION
- * @property BDAY
- * @property UID
- * @property REV
- * @property CATEGORIES
+ * @property \OC\VObject\CompoundProperty N
+ * @property \OC\VObject\CompoundProperty ORG
+ * @property \OC\VObject\CompoundProperty ADR
+ * @property \OCA\Contacts\VObject\GroupProperty CATEGORIES
+ * @property string FN
+ * @property string EMAIL
+ * @property string VERSION
+ * @property string BDAY
+ * @property string UID
+ * @property string REV
 */
 class VCard extends VObject\Component\VCard {
 
