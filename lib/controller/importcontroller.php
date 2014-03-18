@@ -186,7 +186,7 @@ class ImportController extends Controller {
 			\OC_Cache::set($progresskey, $pct, 300);
 		};
 
-		$cleanup = function() use ($view, $filename, $progresskey) {
+		$cleanup = function() use ($view, $filename, $progresskey, $response) {
 			if(!$view->unlink('/imports/' . $filename)) {
 				$response->debug('Unable to unlink /imports/' . $filename);
 			}
