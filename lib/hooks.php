@@ -92,7 +92,7 @@ class Hooks{
 	 * @param array $parameters Currently only the id of the contact.
 	 */
 	public static function contactDeletion($parameters) {
-		\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$parameters['id'], \OCP\Util::DEBUG);
+		\OCP\Util::writeLog('contacts', __METHOD__.' id: '.print_r($parameters['id'], true), \OCP\Util::DEBUG);
 		$ids = is_array($parameters['id']) ? $parameters['id'] : array($parameters['id']);
 		$tagMgr = \OC::$server->getTagManager()->load('contact');
 		$tagMgr->purgeObjects($ids);

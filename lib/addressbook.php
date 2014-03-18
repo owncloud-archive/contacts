@@ -241,6 +241,11 @@ class Addressbook extends AbstractPIMCollection {
 
 		$contact = new Contact($this, $this->backend, $data);
 
+		if (is_null($data)) {
+			// A new Contact, don't try to load from backend
+			$contact->setRetrieved(true);
+		}
+
 		if ($contact->save() === false) {
 			return false;
 		}
@@ -259,7 +264,7 @@ class Addressbook extends AbstractPIMCollection {
 			$this->_count += 1;
 		}
 
-		\OCP\Util::writeLog('contacts', __METHOD__.' id: ' . $id, \OCP\Util::DEBUG);
+		//\OCP\Util::writeLog('contacts', __METHOD__.' id: ' . $id, \OCP\Util::DEBUG);
 		return $id;
 	}
 

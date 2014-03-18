@@ -49,7 +49,7 @@ class JSONResponse extends OriginalResponse {
 	 */
 	public function setErrorMessage($message){
 		$this->error = true;
-		$this->data = $message;
+		$this->data = array('status' => 'error', 'data' => array('message' => $message));
 		return $this;
 	}
 

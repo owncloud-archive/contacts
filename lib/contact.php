@@ -58,8 +58,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 */
 	public function __construct($parent, $backend, $data = null) {
 		self::$l10n = $parent::$l10n;
-		//\OCP\Util::writeLog('contacts', __METHOD__ . ' parent: ' . print_r($parent, true) . ', backend: ' . print_r($backend, true) . ', data: ' . print_r($data, true), \OCP\Util::DEBUG);
-		//\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
+		//\OCP\Util::writeLog('contacts', __METHOD__ . ' , data: ' . print_r($data, true), \OCP\Util::DEBUG);
 		$this->props['parent'] = $parent;
 		$this->props['backend'] = $backend;
 		$this->props['retrieved'] = false;
@@ -266,9 +265,11 @@ class Contact extends VObject\VCard implements IPIMObject {
 			\OCP\Util::writeLog('contacts', __METHOD__.' Already saved: ' . print_r($this->props, true), \OCP\Util::DEBUG);
 			return true;
 		}
+
 		if(isset($this->FN)) {
 			$this->props['displayname'] = (string)$this->FN;
 		}
+
 		if($this->getId()) {
 			if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_UPDATE)) {
 				throw new \Exception(self::$l10n->t('The backend for this contact does not support updating it'), 501);
@@ -287,7 +288,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 				return false;
 			}
 		} else {
-			//print(__METHOD__.' ' . print_r($this->getParent(), true));
 			if(!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_CREATE)) {
 				throw new \Exception(self::$l10n->t('This backend not support adding contacts'), 501);
 			}
