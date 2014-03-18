@@ -663,7 +663,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 					$updated = true;
 				}
 			} else {
-				if(!isset($this->{$name})) {
+				if(!isset($this->{$property->name})) {
 					$this->add($property);
 					$updated = true;
 				} else {
