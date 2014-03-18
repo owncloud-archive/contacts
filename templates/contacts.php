@@ -158,7 +158,7 @@
 
 <script id="groupListItemTemplate" type="text/template">
 	<li class="group" data-type="{type}" data-id="{id}">
-		<a class="name" role="button">{name}</a>
+		<a class="name" title="{name}" role="button">{name}</a>
 		<span class="utils">
 			<a class="icon-delete action delete tooltipped rightwards"></a>
 			<a class="icon-rename action edit tooltipped rightwards"></a>
