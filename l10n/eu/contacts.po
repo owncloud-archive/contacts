@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-12 00:48-0400\n"
-"PO-Revision-Date: 2014-03-12 04:49+0000\n"
+"POT-Creation-Date: 2014-03-18 00:49-0400\n"
+"PO-Revision-Date: 2014-03-18 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -110,64 +110,64 @@ msgstr "Bateratzeak huts egin du. Errorea kontaktua gordetzerakoan."
 msgid "Select photo"
 msgstr "Hautatu argazkia"
 
-#: js/app.js:700 js/app.js:1646
+#: js/app.js:703 js/app.js:1649
 msgid "Network or server error. Please inform administrator."
 msgstr "Errore bat izan da sare edo zerbitzarian. Mesedez abisatu administradorea."
 
-#: js/app.js:922
+#: js/app.js:925
 msgid "Error adding to group."
 msgstr "Errore bat izan da taldera gehitzean."
 
-#: js/app.js:945
+#: js/app.js:948
 msgid "Error removing from group."
 msgstr "Errore bat izan da taldetik kentzean."
 
-#: js/app.js:1136
+#: js/app.js:1139
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300 kontaktu baino gehiago hautatu dituzu.\nHonek ziurasko huts egingo du! Sakatu hemen hala ere jarraitzeko."
 
-#: js/app.js:1174
+#: js/app.js:1177
 msgid "Error setting {name} as favorite."
 msgstr "Errorea {name} gogokoetara gehitzerakoan."
 
-#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
+#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Kontaktuak batu"
 
-#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
+#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Ezeztatu"
 
-#: js/app.js:1365 templates/contacts.php:152
+#: js/app.js:1368 templates/contacts.php:152
 msgid "Add group"
 msgstr "Gehitu taldea"
 
-#: js/app.js:1369
+#: js/app.js:1372
 msgid "OK"
 msgstr "Ados"
 
-#: js/app.js:1472
+#: js/app.js:1475
 msgid "Could not find contact: {id}"
 msgstr "Ezin izan dugu kontaktua topatu:  {id}"
 
-#: js/app.js:1494
+#: js/app.js:1497
 msgid "No files selected for upload."
 msgstr "Ez duzu igotzeko fitxategirik hautatu."
 
-#: js/app.js:1504
+#: js/app.js:1507
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Igo nahi duzun fitxategia zerbitzariak onartzen duen tamaina baino handiagoa da."
 
-#: js/app.js:1604
+#: js/app.js:1607
 msgid "Edit profile picture"
 msgstr "Editatu profilaren argazkia"
 
-#: js/app.js:1608
+#: js/app.js:1611
 msgid "Crop photo"
 msgstr "Moztu argazkia"
 
@@ -183,17 +183,21 @@ msgstr "# taldeak"
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2254
+#: js/contacts.js:1311
+msgid "The backend does not support multi-byte characters."
+msgstr ""
+
+#: js/contacts.js:2266
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Kontaktu batzuk ezabatzeko markatuta daude, baina oraindik ez dira ezabatu. Mesedez itxoin ezabatu arte."
 
-#: js/contacts.js:2265
+#: js/contacts.js:2277
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikatu {num} kontaktuen ezabaketa desegiteko"
 
-#: js/contacts.js:2274
+#: js/contacts.js:2286
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num} kontaktuen ezabaketa ezeztatuta"
 

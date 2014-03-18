@@ -33,9 +33,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-13 17:27-0400\n"
-"PO-Revision-Date: 2014-03-13 15:47+0000\n"
-"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
+"POT-Creation-Date: 2014-03-18 00:49-0400\n"
+"PO-Revision-Date: 2014-03-18 04:49+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -131,64 +131,64 @@ msgstr "Αποτυχία συγχώνευσης. Σφάλμα αποθήκευσ
 msgid "Select photo"
 msgstr "Επέλεξε φωτογραφία"
 
-#: js/app.js:700 js/app.js:1646
+#: js/app.js:703 js/app.js:1649
 msgid "Network or server error. Please inform administrator."
 msgstr "Σφάλμα δικτύου ή διακομιστή. Παρακαλώ ενημερώστε το διαχειριστή."
 
-#: js/app.js:922
+#: js/app.js:925
 msgid "Error adding to group."
 msgstr "Σφάλμα κατά την προσθήκη σε ομάδα."
 
-#: js/app.js:945
+#: js/app.js:948
 msgid "Error removing from group."
 msgstr "Σφάλμα κατά την αφαίρεση από ομάδα."
 
-#: js/app.js:1136
+#: js/app.js:1139
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Έχετε επιλέξει πάνω από 300 επαφές.\nΑυτό μάλλον θα αποτύχει! Κλικάρετε εδώ για να δοκιμάσετε ούτως ή άλλως."
 
-#: js/app.js:1174
+#: js/app.js:1177
 msgid "Error setting {name} as favorite."
 msgstr "Σφάλμα κατά τον ορισμό του {name} σαν αγαπημένο."
 
-#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
+#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Συγχώνευση επαφών"
 
-#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
+#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#: js/app.js:1365 templates/contacts.php:152
+#: js/app.js:1368 templates/contacts.php:152
 msgid "Add group"
 msgstr "Προσθήκη ομάδας"
 
-#: js/app.js:1369
+#: js/app.js:1372
 msgid "OK"
 msgstr "ΟΚ"
 
-#: js/app.js:1472
+#: js/app.js:1475
 msgid "Could not find contact: {id}"
 msgstr "Αδυναμία εύρεσης επαφής: {id}"
 
-#: js/app.js:1494
+#: js/app.js:1497
 msgid "No files selected for upload."
 msgstr "Δεν επιλέχτηκαν αρχεία για μεταφόρτωση."
 
-#: js/app.js:1504
+#: js/app.js:1507
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Το αρχείο που προσπαθείτε να μεταφορτώσετε υπερβαίνει το μέγιστο μέγεθος μεταφόρτωσης αρχείων σε αυτόν το διακομιστή."
 
-#: js/app.js:1604
+#: js/app.js:1607
 msgid "Edit profile picture"
 msgstr "Επεξεργασία εικόνας προφίλ"
 
-#: js/app.js:1608
+#: js/app.js:1611
 msgid "Crop photo"
 msgstr "Περικοπή φωτογραφίας"
 
@@ -204,17 +204,21 @@ msgstr "# ομάδων"
 msgid "Error parsing birthday {bday}"
 msgstr "Σφάλμα κατά την ανάλυση των γενεθλίων {bday}"
 
-#: js/contacts.js:2254
+#: js/contacts.js:1311
+msgid "The backend does not support multi-byte characters."
+msgstr ""
+
+#: js/contacts.js:2266
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή αλλά δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
-#: js/contacts.js:2265
+#: js/contacts.js:2277
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Επιλέξτε για να αναιρέσετε τη διαγραφή {num} επαφών"
 
-#: js/contacts.js:2274
+#: js/contacts.js:2286
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Αναιρέθηκε η διαγραφή {num} επαφών"
 

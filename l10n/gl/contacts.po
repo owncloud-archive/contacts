@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-12 00:48-0400\n"
-"PO-Revision-Date: 2014-03-12 04:49+0000\n"
+"POT-Creation-Date: 2014-03-18 00:49-0400\n"
+"PO-Revision-Date: 2014-03-18 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/owncloud/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -112,64 +112,64 @@ msgstr "Non foi posíbel facer a mistura. produciuse un erro ao gardar o contact
 msgid "Select photo"
 msgstr "Seleccione fotografía"
 
-#: js/app.js:700 js/app.js:1646
+#: js/app.js:703 js/app.js:1649
 msgid "Network or server error. Please inform administrator."
 msgstr "Produciuse un erro na rede ou no servidor. Informe ao administrador."
 
-#: js/app.js:922
+#: js/app.js:925
 msgid "Error adding to group."
 msgstr "Produciuse un erro ao engadir ao grupo."
 
-#: js/app.js:945
+#: js/app.js:948
 msgid "Error removing from group."
 msgstr "Produciuse un erro ao retirar do grupo."
 
-#: js/app.js:1136
+#: js/app.js:1139
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Seleccionou máis de 300 contactos.\nIsto probabelmente fallará! Prema aquí para tentalo aínda así."
 
-#: js/app.js:1174
+#: js/app.js:1177
 msgid "Error setting {name} as favorite."
 msgstr "Produciuse un erro ao estabelecer {name} como favorito."
 
-#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
+#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Misturar os contactos"
 
-#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
+#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: js/app.js:1365 templates/contacts.php:152
+#: js/app.js:1368 templates/contacts.php:152
 msgid "Add group"
 msgstr "Engadir un grupo"
 
-#: js/app.js:1369
+#: js/app.js:1372
 msgid "OK"
 msgstr "Aceptar"
 
-#: js/app.js:1472
+#: js/app.js:1475
 msgid "Could not find contact: {id}"
 msgstr "Non foi posíbel atopar o contacto: {id}"
 
-#: js/app.js:1494
+#: js/app.js:1497
 msgid "No files selected for upload."
 msgstr "Non foi seleccionado ningún ficheiro para enviar."
 
-#: js/app.js:1504
+#: js/app.js:1507
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "O ficheiro que tenta enviar supera o tamaño máximo permitido neste servidor."
 
-#: js/app.js:1604
+#: js/app.js:1607
 msgid "Edit profile picture"
 msgstr "Editar a imaxe do perfil"
 
-#: js/app.js:1608
+#: js/app.js:1611
 msgid "Crop photo"
 msgstr "Recortar a foto"
 
@@ -185,17 +185,21 @@ msgstr "Núm. grupos"
 msgid "Error parsing birthday {bday}"
 msgstr "Produciuse un erro ao analizar o aniversario {bday}"
 
-#: js/contacts.js:2254
+#: js/contacts.js:1311
+msgid "The backend does not support multi-byte characters."
+msgstr ""
+
+#: js/contacts.js:2266
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Algúns contactos están marcados para ser eliminados máis aínda non se eliminaron. Espera a que se eliminen."
 
-#: js/contacts.js:2265
+#: js/contacts.js:2277
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Prema para desfacer a eliminación de {num} contactos"
 
-#: js/contacts.js:2274
+#: js/contacts.js:2286
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancelada a eliminación de {num} contactos"
 

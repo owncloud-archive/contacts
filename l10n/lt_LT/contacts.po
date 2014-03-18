@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-12 00:48-0400\n"
-"PO-Revision-Date: 2014-03-12 04:49+0000\n"
+"POT-Creation-Date: 2014-03-18 00:49-0400\n"
+"PO-Revision-Date: 2014-03-18 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/projects/p/owncloud/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -113,64 +113,64 @@ msgstr "Suliejimas nepavyko. Klaida saugant kontaktą."
 msgid "Select photo"
 msgstr "Nurodykite nuotrauką"
 
-#: js/app.js:700 js/app.js:1646
+#: js/app.js:703 js/app.js:1649
 msgid "Network or server error. Please inform administrator."
 msgstr "Tinklo arba serverio klaida. Prašome informuoti administratorių."
 
-#: js/app.js:922
+#: js/app.js:925
 msgid "Error adding to group."
 msgstr "Klaida pridedant į grupę."
 
-#: js/app.js:945
+#: js/app.js:948
 msgid "Error removing from group."
 msgstr "Klaida pašalinant iš grupės."
 
-#: js/app.js:1136
+#: js/app.js:1139
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Jūs pažymėjote daugiau nei 300 kontaktų.\nTai greičiausiai nepavyks! Spauskite, kad vis tiek bandyti."
 
-#: js/app.js:1174
+#: js/app.js:1177
 msgid "Error setting {name} as favorite."
 msgstr "Klaida nustatant {name} mėgstamu."
 
-#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
+#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Sulieti kontaktus"
 
-#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
+#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Atšaukti"
 
-#: js/app.js:1365 templates/contacts.php:152
+#: js/app.js:1368 templates/contacts.php:152
 msgid "Add group"
 msgstr "Pridėti grupę"
 
-#: js/app.js:1369
+#: js/app.js:1372
 msgid "OK"
 msgstr "Gerai"
 
-#: js/app.js:1472
+#: js/app.js:1475
 msgid "Could not find contact: {id}"
 msgstr "Nepavyko rasti kontakto: {id}"
 
-#: js/app.js:1494
+#: js/app.js:1497
 msgid "No files selected for upload."
 msgstr "Nepažymėta jokių failų įkėlimui."
 
-#: js/app.js:1504
+#: js/app.js:1507
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "Įkeliamo failo dydis viršijo šio serverio maksimalų leistiną dydį."
 
-#: js/app.js:1604
+#: js/app.js:1607
 msgid "Edit profile picture"
 msgstr "Redaguoti profilio paveikslėlį"
 
-#: js/app.js:1608
+#: js/app.js:1611
 msgid "Crop photo"
 msgstr "Apkirpti nuotrauką"
 
@@ -186,17 +186,21 @@ msgstr "# grupės"
 msgid "Error parsing birthday {bday}"
 msgstr "Klaida apdorojant gimtadienį {bday}"
 
-#: js/contacts.js:2254
+#: js/contacts.js:1311
+msgid "The backend does not support multi-byte characters."
+msgstr ""
+
+#: js/contacts.js:2266
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Keletas kontaktų buvo pažymėti ištrinimui, bet dar neištrinti. Prašome palaukti kol jie bus ištrinti."
 
-#: js/contacts.js:2265
+#: js/contacts.js:2277
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Spauskite, kad atstatyti trynimą {num} kontaktų"
 
-#: js/contacts.js:2274
+#: js/contacts.js:2286
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Atšauktas {num} kontaktų trynimas"
 

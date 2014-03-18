@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-12 00:48-0400\n"
-"PO-Revision-Date: 2014-03-12 04:49+0000\n"
+"POT-Creation-Date: 2014-03-18 00:49-0400\n"
+"PO-Revision-Date: 2014-03-18 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/owncloud/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -118,64 +118,64 @@ msgstr "合併失敗，儲存聯絡人時發生錯誤。"
 msgid "Select photo"
 msgstr "選擇相片"
 
-#: js/app.js:700 js/app.js:1646
+#: js/app.js:703 js/app.js:1649
 msgid "Network or server error. Please inform administrator."
 msgstr "網路或伺服器錯誤，請通知系統管理員。"
 
-#: js/app.js:922
+#: js/app.js:925
 msgid "Error adding to group."
 msgstr "新增到群組時出錯。"
 
-#: js/app.js:945
+#: js/app.js:948
 msgid "Error removing from group."
 msgstr "從群組中移除出錯。"
 
-#: js/app.js:1136
+#: js/app.js:1139
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1174
+#: js/app.js:1177
 msgid "Error setting {name} as favorite."
 msgstr "設定 {name} 為最愛時發生錯誤。"
 
-#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
+#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "合併聯絡人"
 
-#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
+#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "取消"
 
-#: js/app.js:1365 templates/contacts.php:152
+#: js/app.js:1368 templates/contacts.php:152
 msgid "Add group"
 msgstr "新增群組"
 
-#: js/app.js:1369
+#: js/app.js:1372
 msgid "OK"
 msgstr "好"
 
-#: js/app.js:1472
+#: js/app.js:1475
 msgid "Could not find contact: {id}"
 msgstr "找不到聯絡人：{id}"
 
-#: js/app.js:1494
+#: js/app.js:1497
 msgid "No files selected for upload."
 msgstr "沒有選定上傳的檔案。"
 
-#: js/app.js:1504
+#: js/app.js:1507
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "您想要上傳的檔案大小超過伺服器限制。"
 
-#: js/app.js:1604
+#: js/app.js:1607
 msgid "Edit profile picture"
 msgstr "編輯大頭貼照"
 
-#: js/app.js:1608
+#: js/app.js:1611
 msgid "Crop photo"
 msgstr "裁切相片"
 
@@ -191,17 +191,21 @@ msgstr "# groups"
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2254
+#: js/contacts.js:1311
+msgid "The backend does not support multi-byte characters."
+msgstr ""
+
+#: js/contacts.js:2266
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "有一些聯絡人被標記為將刪除但是尚未刪除，稍等一下就會刪除了。"
 
-#: js/contacts.js:2265
+#: js/contacts.js:2277
 msgid "Click to undo deletion of {num} contacts"
 msgstr "點一下來復原刪除 {num} 個聯絡人"
 
-#: js/contacts.js:2274
+#: js/contacts.js:2286
 msgid "Cancelled deletion of {num} contacts"
 msgstr "取消 {num} 個聯絡人的刪除動作"
 

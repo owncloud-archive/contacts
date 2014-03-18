@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-12 00:48-0400\n"
-"PO-Revision-Date: 2014-03-12 04:49+0000\n"
+"POT-Creation-Date: 2014-03-18 00:49-0400\n"
+"PO-Revision-Date: 2014-03-18 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -124,64 +124,64 @@ msgstr "합치기 실패. 연락처 저장 오류."
 msgid "Select photo"
 msgstr "사진 선택"
 
-#: js/app.js:700 js/app.js:1646
+#: js/app.js:703 js/app.js:1649
 msgid "Network or server error. Please inform administrator."
 msgstr "네트워크 및 서버 오류입니다. 관리자에게 연락하십시오."
 
-#: js/app.js:922
+#: js/app.js:925
 msgid "Error adding to group."
 msgstr "그룹에 추가하는 중 오류가 발생하였습니다."
 
-#: js/app.js:945
+#: js/app.js:948
 msgid "Error removing from group."
 msgstr "그룹에서 삭제하는 중 오류가 발생하였습니다."
 
-#: js/app.js:1136
+#: js/app.js:1139
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300명 이상의 연락처를 선택하였습니다.\n오류가 발생할 수도 있습니다! 그래도 시도하려면 여기를 누르십시오."
 
-#: js/app.js:1174
+#: js/app.js:1177
 msgid "Error setting {name} as favorite."
 msgstr "{name} 님을 즐겨찾는 연락처로 설정할 수 없음."
 
-#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
+#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "연락처 합치기"
 
-#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
+#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "취소"
 
-#: js/app.js:1365 templates/contacts.php:152
+#: js/app.js:1368 templates/contacts.php:152
 msgid "Add group"
 msgstr "그룹 추가"
 
-#: js/app.js:1369
+#: js/app.js:1372
 msgid "OK"
 msgstr "확인"
 
-#: js/app.js:1472
+#: js/app.js:1475
 msgid "Could not find contact: {id}"
 msgstr "연락처를 찾을 수 없음: {id}"
 
-#: js/app.js:1494
+#: js/app.js:1497
 msgid "No files selected for upload."
 msgstr "업로드할 파일이 선택되지 않았습니다."
 
-#: js/app.js:1504
+#: js/app.js:1507
 msgid ""
 "The file you are trying to upload exceed the maximum size for file uploads "
 "on this server."
 msgstr "업로드할 파일 크기가 서버의 최대 허용 용량을 초과합니다."
 
-#: js/app.js:1604
+#: js/app.js:1607
 msgid "Edit profile picture"
 msgstr "프로필 사진 편집"
 
-#: js/app.js:1608
+#: js/app.js:1611
 msgid "Crop photo"
 msgstr "사진 자르기"
 
@@ -197,17 +197,21 @@ msgstr "그룹 수"
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:2254
+#: js/contacts.js:1311
+msgid "The backend does not support multi-byte characters."
+msgstr ""
+
+#: js/contacts.js:2266
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "일부 연락처가 삭제할 것으로 표시되었으나 아직 삭제되지 않았습니다. 삭제가 끝날 때까지 기다려 주십시오."
 
-#: js/contacts.js:2265
+#: js/contacts.js:2277
 msgid "Click to undo deletion of {num} contacts"
 msgstr "연락처 {num}명 삭제를 취소하려면 누르십시오"
 
-#: js/contacts.js:2274
+#: js/contacts.js:2286
 msgid "Cancelled deletion of {num} contacts"
 msgstr "연락처 {num}명 삭제가 취소됨"
 
