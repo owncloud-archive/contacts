@@ -942,13 +942,13 @@ class Database extends AbstractBackend {
 				break;
 			case 'addressbookuris':
 				self::$preparedQueries[$identifier] =
-					 \OCP\DB::prepare('SELECT `uri` FROM `'
+					\OCP\DB::prepare('SELECT `uri` FROM `'
 						. $this->addressBooksTableName
 						. '` WHERE `userid` = ? ');
 				break;
 			case 'contactidfromuri':
 				self::$preparedQueries[$identifier] =
-					 \OCP\DB::prepare('SELECT `id` FROM `'
+					\OCP\DB::prepare('SELECT `id` FROM `'
 						. $this->cardsTableName
 						. '` WHERE `uri` = ?');
 				break;
