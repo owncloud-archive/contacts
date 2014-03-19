@@ -170,7 +170,7 @@ class Database extends AbstractBackend {
 	 * @param array $changes
 	 * @return bool
 	 */
-	public function updateAddressBook($addressBookId, array $changes, array $options = array()) {
+	public function updateAddressBook($addressBookId, array $changes) {
 
 		if (count($changes) === 0) {
 			return false;
@@ -968,6 +968,7 @@ class Database extends AbstractBackend {
 					. '` (`addressbookid`,`fullname`,`carddata`,`uri`,`lastmodified`) '
 					. ' VALUES(?,?,?,?,?)';
 				break;
+			case 'getcontactbyid':
 				$args[] = 'SELECT `id`, `uri`, `carddata`, `lastmodified`, '
 						. '`addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
 						. $this->cardsTableName
