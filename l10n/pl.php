@@ -38,6 +38,7 @@
 "Error parsing date: {date}" => "Błąd przetwarzania daty : {date}",
 "# groups" => "# grupy",
 "Error parsing birthday {bday}" => "Błąd przetwarzania urodzin {bday}",
+"The backend does not support multi-byte characters." => "Zaplecze nie obsługuje wielobajtowych znaków",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "Niektóre kontakty są zaznaczone do usunięcia, ale nie są usunięte jeszcze. Proszę czekać na ich usunięcie.",
 "Click to undo deletion of {num} contacts" => "Kliknij aby cofnąć usunięcie {num} kontaktów",
 "Cancelled deletion of {num} contacts" => "Usunięcie Anulowane {num} kontaktów",
