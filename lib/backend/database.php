@@ -890,158 +890,133 @@ class Database extends AbstractBackend {
 		return $uri;
 	}
 
+	/**
+	* Collect (nearly) all queries in one place
+	*
+	* @param string $identifier
+	* @param array $options Can be used for e.g. offset/limit
+	* @throws \Exception If $identifier isn't known
+	* @return \OC_DB_StatementWrapper
+	*/
 	protected function getPreparedQuery($identifier, array $options = array()) {
 
 		if (isset(self::$preparedQueries[$identifier])) {
 			return self::$preparedQueries[$identifier];
 		}
 
+		$args = array();
+
 		switch ($identifier) {
 
 			case 'getaddressbooksforuser':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id`, `displayname`, `description`, `ctag`'
+				$args[] = 'SELECT `id`, `displayname`, `description`, `ctag`'
 					. ' AS `lastmodified`, `userid` AS `owner`, `uri` FROM `'
 					. $this->addressBooksTableName
-					. '` WHERE `userid` = ? ORDER BY `displayname`');
+					. '` WHERE `userid` = ? ORDER BY `displayname`';
 				break;
 			case 'getaddressbook':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id`, `displayname`, `description`, '
+				$args[] = 'SELECT `id`, `displayname`, `description`, '
 						. '`userid` AS `owner`, `ctag` AS `lastmodified`, `uri` FROM `'
 						. $this->addressBooksTableName
-						. '` WHERE `id` = ? AND `userid` = ?');
+						. '` WHERE `id` = ? AND `userid` = ?';
 				break;
 			case 'createaddressbook':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('INSERT INTO `'
+				$args[] = 'INSERT INTO `'
 						. $this->addressBooksTableName . '` '
 						. '(`userid`,`displayname`,`uri`,`description`,`ctag`) '
-						. 'VALUES(?,?,?,?,?)');
+						. 'VALUES(?,?,?,?,?)';
 				break;
 			case 'deleteaddressbookcontacts':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('DELETE FROM `' . $this->cardsTableName
-						. '` WHERE `addressbookid` = ?');
+				$args[] = 'DELETE FROM `' . $this->cardsTableName
+						. '` WHERE `addressbookid` = ?';
 				break;
 			case 'deleteaddressbook':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('DELETE FROM `'
-						. $this->addressBooksTableName . '` WHERE `id` = ?');
+				$args[] = 'DELETE FROM `'
+						. $this->addressBooksTableName . '` WHERE `id` = ?';
 				break;
 			case 'touchaddressbook':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('UPDATE `' . $this->addressBooksTableName
-						. '` SET `ctag` = ? + 1 WHERE `id` = ?');
+				$args[] = 'UPDATE `' . $this->addressBooksTableName
+						. '` SET `ctag` = ? + 1 WHERE `id` = ?';
 				break;
 			case 'counturi':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT COUNT(*) AS `count` FROM `'
+				$args[] = 'SELECT COUNT(*) AS `count` FROM `'
 						. $this->cardsTableName
-						. '` WHERE `addressbookid` = ? AND `uri` = ?');
+						. '` WHERE `addressbookid` = ? AND `uri` = ?';
 				break;
 			case 'addressbookuris':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `uri` FROM `'
-						. $this->addressBooksTableName
-						. '` WHERE `userid` = ? ');
+				$args[] = 'SELECT `uri` FROM `'
+						. $this->addressBooksTableName . '` WHERE `userid` = ? ';
 				break;
 			case 'contactidfromuri':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id` FROM `'
+				$args[] = 'SELECT `id` FROM `'
 						. $this->cardsTableName
-						. '` WHERE `uri` = ?');
+						. '` WHERE `uri` = ?';
 				break;
 			case 'deletecontact':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('DELETE FROM `'
+				$args[] = 'DELETE FROM `'
 					. $this->cardsTableName
-					. '` WHERE `id` = ? AND `addressbookid` = ?');
+					. '` WHERE `id` = ? AND `addressbookid` = ?';
 				break;
 			case 'updatecontact':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('UPDATE `' . $this->cardsTableName
+				$args[] = 'UPDATE `' . $this->cardsTableName
 						. '` SET `fullname` = ?,`carddata` = ?, `lastmodified` = ?'
-						. ' WHERE `id` = ? AND `addressbookid` = ?');
+						. ' WHERE `id` = ? AND `addressbookid` = ?';
 				break;
 			case 'createcontact':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('INSERT INTO `'
+				$args[] = 'INSERT INTO `'
 					. $this->cardsTableName
 					. '` (`addressbookid`,`fullname`,`carddata`,`uri`,`lastmodified`) '
-					. ' VALUES(?,?,?,?,?)');
+					. ' VALUES(?,?,?,?,?)';
 				break;
-			case 'getcontactbyid':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id`, `uri`, `carddata`, `lastmodified`, '
+				$args[] = 'SELECT `id`, `uri`, `carddata`, `lastmodified`, '
 						. '`addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
 						. $this->cardsTableName
-						. '` WHERE `id` = ? AND `addressbookid` = ?'
-					);
+						. '` WHERE `id` = ? AND `addressbookid` = ?';
 				break;
 			case 'getcontactbyuri':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id`, `uri`, `carddata`, `lastmodified`, '
+				$args[] = 'SELECT `id`, `uri`, `carddata`, `lastmodified`, '
 						. '`addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
 						. $this->cardsTableName
-						. '` WHERE `uri` = ? AND `addressbookid` = ?'
-					);
+						. '` WHERE `uri` = ? AND `addressbookid` = ?';
 				break;
 			case 'getcontactbyidnocollection':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id`, `uri`, `carddata`, `lastmodified`, '
+				$args[] = 'SELECT `id`, `uri`, `carddata`, `lastmodified`, '
 						. '`addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
-						. $this->cardsTableName
-						. '` WHERE `id` = ?'
-					);
+						. $this->cardsTableName . '` WHERE `id` = ?';
 				break;
 			case 'getcontactbyurinocollection':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id`, `uri`, `carddata`, `lastmodified`, '
+				$args[] = 'SELECT `id`, `uri`, `carddata`, `lastmodified`, '
 						. '`addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
-						. $this->cardsTableName
-						. '` WHERE `uri` = ?'
-					);
+						. $this->cardsTableName . '` WHERE `uri` = ?';
 				break;
 			case 'getcontactids':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id` FROM `'
-						. $this->cardsTableName
-						. '` WHERE `addressbookid` = ?'
-					);
+				$args[] = 'SELECT `id` FROM `'
+						. $this->cardsTableName . '` WHERE `addressbookid` = ?';
 				break;
 			case 'getcontacts':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id`, `uri`, `carddata`, `lastmodified`, '
+				$args[] = 'SELECT `id`, `uri`, `carddata`, `lastmodified`, '
 						. '`addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
-						. $this->cardsTableName
-						. '` WHERE `addressbookid` = ?',
-						isset($options['limit']) ? $options['limit'] : null,
-						isset($options['offset']) ? $options['offset'] : null
-					);
+						. $this->cardsTableName . '` WHERE `addressbookid` = ?';
+				$args[] = isset($options['limit']) ? $options['limit'] : null;
+				$args[] = isset($options['offset']) ? $options['offset'] : null;
 				break;
 			case 'getcontactsomitdata':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT `id`, `uri`, `lastmodified`, '
+				$args[] = 'SELECT `id`, `uri`, `lastmodified`, '
 						. '`addressbookid` AS `parent`, `fullname` AS `displayname` FROM `'
-						. $this->cardsTableName
-						. '` WHERE `addressbookid` = ?',
-						isset($options['limit']) ? $options['limit'] : null,
-						isset($options['offset']) ? $options['offset'] : null
-
-					);
+						. $this->cardsTableName . '` WHERE `addressbookid` = ?';
+				$args[] = isset($options['limit']) ? $options['limit'] : null;
+				$args[] = isset($options['offset']) ? $options['offset'] : null;
 				break;
 			case 'numcontacts':
-				self::$preparedQueries[$identifier] =
-					\OCP\DB::prepare('SELECT COUNT(*) AS `count` FROM `'
-						. $this->cardsTableName
-						. '` WHERE `addressbookid` = ?'
-					);
+				$args[] = 'SELECT COUNT(*) AS `count` FROM `'
+						. $this->cardsTableName . '` WHERE `addressbookid` = ?';
 				break;
 			default:
 				throw new \Exception('Unknown query identifier: ' . $identifier);
 
 		}
+
+		self::$preparedQueries[$identifier] = call_user_func_array('\OCP\DB::prepare', $args);
 
 		return self::$preparedQueries[$identifier];
 	}
