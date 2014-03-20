@@ -45,6 +45,8 @@ use Sabre\VObject;
  * @property string BDAY
  * @property string UID
  * @property string REV
+ * @property string PHOTO
+ * @property string LOGO
 */
 class VCard extends VObject\Component\VCard {
 
