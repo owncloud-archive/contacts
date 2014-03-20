@@ -27,8 +27,6 @@ use OCA\Contacts\Contact as ContactObject,
 	OCP\IRequest,
 	OCP\AppFramework\Http,
 	OCP\Image;
-;
-
 
 /**
  * This class loads an image from the virtual file system.
