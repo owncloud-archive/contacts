@@ -14,7 +14,6 @@
 "The uploaded file was only partially uploaded" => "আপলোড করা ফাইলটি আংশিক আপলোড করা হয়েছে",
 "No file was uploaded" => "কোন ফাইল আপলোড করা হয় নি",
 "Missing a temporary folder" => "অস্থায়ী ফোল্ডারটি হারানো গিয়েছে",
-"File doesn't exist:" => "ফাইলটি অস্তিত্বহীনঃ",
 "Failed to write to disk" => "ডিস্কে লিখতে ব্যর্থ",
 "Other" => "অন্যান্য",
 "Work" => "কর্মস্থল",

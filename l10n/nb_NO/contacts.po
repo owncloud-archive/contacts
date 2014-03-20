@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-18 00:49-0400\n"
-"PO-Revision-Date: 2014-03-18 04:49+0000\n"
+"POT-Creation-Date: 2014-03-20 00:49-0400\n"
+"PO-Revision-Date: 2014-03-20 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/projects/p/owncloud/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -117,94 +117,84 @@ msgstr "Fletting feilet. Feil ved lagring av kontakt."
 msgid "Select photo"
 msgstr "Velg bilde"
 
-#: js/app.js:703 js/app.js:1649
+#: js/app.js:703 js/app.js:1626
 msgid "Network or server error. Please inform administrator."
 msgstr "Nettverks- eller serverfeil. Vennligs informer administratoren."
 
-#: js/app.js:925
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "Feil ved innlegging i gruppe."
 
-#: js/app.js:948
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "Feil ved fjerning fra gruppe."
 
-#: js/app.js:1139
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Du har valgt over 300 kontakter.\nDette vil sannsynligvis feile! Klikk her for å prøve uansett."
 
-#: js/app.js:1177
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "Feil ved setting av {name} som favoritt."
 
-#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Flett kontakter"
 
-#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: js/app.js:1368 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "Legg til gruppe"
 
-#: js/app.js:1372
+#: js/app.js:1369
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1475
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "Fant ikke kontakt: {id}"
 
-#: js/app.js:1497
-msgid "No files selected for upload."
-msgstr "Ingen filer valgt for opplasting."
-
-#: js/app.js:1507
-msgid ""
-"The file you are trying to upload exceed the maximum size for file uploads "
-"on this server."
-msgstr "Filen du prøver å laste opp er for stor."
-
-#: js/app.js:1607
+#: js/app.js:1584
 msgid "Edit profile picture"
 msgstr "Rediger profilbilde"
 
-#: js/app.js:1611
+#: js/app.js:1588
 msgid "Crop photo"
 msgstr "Beskjær bilde"
 
-#: js/contacts.js:896
+#: js/contacts.js:900
 msgid "Error parsing date: {date}"
 msgstr "Tyding av dato feilet: {date}"
 
-#: js/contacts.js:1099
+#: js/contacts.js:1097
 msgid "# groups"
 msgstr "Ant. grupper"
 
-#: js/contacts.js:1173
+#: js/contacts.js:1177
 msgid "Error parsing birthday {bday}"
 msgstr "Klarer ikke å tyde fødselsdag {bday}"
 
-#: js/contacts.js:1311
+#: js/contacts.js:1315
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2266
+#: js/contacts.js:2270
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Noen kontakter er markert for sletting men ikke slettet ennå. Vent mens de slettes."
 
-#: js/contacts.js:2277
+#: js/contacts.js:2281
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikk for å angre sletting av {num} kontakter"
 
-#: js/contacts.js:2286
+#: js/contacts.js:2290
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Avbrøt sletting av {num} kontakter"
 
@@ -327,23 +317,23 @@ msgstr "Du har ikke adgang til å legge inn kontakter i adresseboken"
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Server-komponenten for denne adresseboken støtter ikke innlegging av kontakter"
 
-#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
+#: lib/addressbook.php:281 lib/addressbook.php:315 lib/contact.php:247
 msgid "You do not have permissions to delete this contact"
 msgstr "Du har ikke adgang til å slette denne kontakten"
 
-#: lib/addressbook.php:280 lib/addressbook.php:314
+#: lib/addressbook.php:285 lib/addressbook.php:319
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Server-komponenten for denne adresseboken støtter ikke sletting av kontakter"
 
-#: lib/addressbook.php:335
+#: lib/addressbook.php:340
 msgid "Unknown error"
 msgstr "Ukjent feil"
 
-#: lib/addressbook.php:379
+#: lib/addressbook.php:384
 msgid "The backend for this address book does not support updating"
 msgstr "Server-komponenten for denne adresseboken støtter ikke oppdatering"
 
-#: lib/addressbook.php:407
+#: lib/addressbook.php:412
 msgid "You don't have permissions to delete the address book."
 msgstr "Du har ikke adgang til å slette adresseboken."
 
@@ -351,15 +341,15 @@ msgstr "Du har ikke adgang til å slette adresseboken."
 msgid "Address book not found"
 msgstr "Fant ikke adressebok"
 
-#: lib/contact.php:114 lib/contact.php:161
+#: lib/contact.php:113 lib/contact.php:160
 msgid "You do not have permissions to see this contact"
 msgstr "Du har ikke adgang til å se denne kontakten"
 
-#: lib/contact.php:263
+#: lib/contact.php:262
 msgid "You do not have permissions to update this contact"
 msgstr "Du har ikke adgang til å oppdatere denne kontakten"
 
-#: lib/contact.php:274
+#: lib/contact.php:275
 msgid "The backend for this contact does not support updating it"
 msgstr "Server-komponenten for denne kontakten støtter ikke oppdatering av den"
 
@@ -367,19 +357,19 @@ msgstr "Server-komponenten for denne kontakten støtter ikke oppdatering av den"
 msgid "This backend not support adding contacts"
 msgstr "Server-komponenten støtter ikke innlegging av kontakter"
 
-#: lib/contact.php:402 lib/contact.php:419
+#: lib/contact.php:419 lib/contact.php:436
 msgid "Property not found"
 msgstr "Fant ikke egenskap"
 
-#: lib/contact.php:467
+#: lib/contact.php:484
 msgid " Missing IM parameter for: "
 msgstr "IM-parameter mangler for:"
 
-#: lib/contact.php:475
+#: lib/contact.php:492
 msgid "Unknown IM: "
 msgstr "Ukjent IM: "
 
-#: lib/contact.php:752
+#: lib/contact.php:769
 msgid "{name}'s Birthday"
 msgstr "{name}s bursdag"
 
@@ -432,8 +422,8 @@ msgstr ""
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:37
-#: lib/controller/contactphotocontroller.php:280
+#: lib/controller/contactphotocontroller.php:38
+#: lib/controller/contactphotocontroller.php:205
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "Kunne ikke finne kontakt."
@@ -470,90 +460,31 @@ msgstr "Feil ved oppdatering av kontakt"
 msgid "Error saving contact to backend"
 msgstr "Lagring av kontakt til server feilet"
 
-#: lib/controller/contactphotocontroller.php:68
+#: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
 msgstr "Feil ved henting av brukerbilde"
 
-#: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:38
-msgid "No file was uploaded. Unknown error"
-msgstr "Ingen filer ble lastet opp. Ukjent feil."
-
-#: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:47
-msgid "There is no error, the file uploaded with success"
-msgstr "Pust ut, ingen feil. Filen ble lastet opp problemfritt"
-
-#: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:48
-msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Filen du prøvde å laste opp var større enn grensen upload_max_filesize i php.ini"
-
-#: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:50
-msgid ""
-"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
-"the HTML form"
-msgstr "Filen du prøvde å laste opp var større enn grensen satt i MAX_FILE_SIZE i HTML-skjemaet."
-
-#: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:51
-msgid "The uploaded file was only partially uploaded"
-msgstr "Filen du prøvde å laste opp ble kun delvis lastet opp"
-
-#: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:52
-msgid "No file was uploaded"
-msgstr "Ingen filer ble lastet opp"
-
-#: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:53
-msgid "Missing a temporary folder"
-msgstr "Mangler midlertidig mappe"
-
-#: lib/controller/contactphotocontroller.php:115
-msgid "Couldn't load temporary image: "
-msgstr "Kunne ikke laste midlertidig bilde:"
-
-#: lib/controller/contactphotocontroller.php:128
-msgid "Uploaded image is invalid"
-msgstr "Opplastet bilde er ugyldig"
-
-#: lib/controller/contactphotocontroller.php:132
-#: lib/controller/contactphotocontroller.php:172
-msgid "Couldn't save temporary image: "
-msgstr "Kunne ikke lagre midlertidig bilde:"
-
-#: lib/controller/contactphotocontroller.php:202
+#: lib/controller/contactphotocontroller.php:146
 msgid "No photo path was submitted."
 msgstr "Ingen filsti ble lagt inn."
 
-#: lib/controller/contactphotocontroller.php:209
-msgid "File doesn't exist:"
-msgstr "Filen eksisterer ikke:"
-
-#: lib/controller/contactphotocontroller.php:214
-#: lib/controller/contactphotocontroller.php:217
-msgid "Error loading image."
-msgstr "Klarte ikke å laste bilde."
-
-#: lib/controller/contactphotocontroller.php:285
+#: lib/controller/contactphotocontroller.php:210
 msgid "Image has been removed from cache"
 msgstr "Bildet er fjernet fra mellomlageret"
 
-#: lib/controller/contactphotocontroller.php:291
+#: lib/controller/contactphotocontroller.php:216
 msgid "Error creating temporary image"
 msgstr "Klarte ikke å lage et midlertidig bilde"
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:223
 msgid "Error cropping image"
 msgstr "Klarte ikke å beskjære bildet"
 
-#: lib/controller/contactphotocontroller.php:315
+#: lib/controller/contactphotocontroller.php:240
 msgid "Error getting PHOTO property."
 msgstr "Feil ved henting av fotoverdi."
 
-#: lib/controller/contactphotocontroller.php:332
+#: lib/controller/contactphotocontroller.php:257
 msgid "Error saving contact."
 msgstr "Klarte ikke å lagre kontakt."
 
@@ -590,6 +521,36 @@ msgstr "Gruppenavn mangler i anmodningen."
 #: lib/controller/groupcontroller.php:263
 msgid "Contact ID missing from request."
 msgstr "Kontakt-ID mangler i anmodningen."
+
+#: lib/controller/importcontroller.php:38
+msgid "No file was uploaded. Unknown error"
+msgstr "Ingen filer ble lastet opp. Ukjent feil."
+
+#: lib/controller/importcontroller.php:47
+msgid "There is no error, the file uploaded with success"
+msgstr "Pust ut, ingen feil. Filen ble lastet opp problemfritt"
+
+#: lib/controller/importcontroller.php:48
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "Filen du prøvde å laste opp var større enn grensen upload_max_filesize i php.ini"
+
+#: lib/controller/importcontroller.php:50
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr "Filen du prøvde å laste opp var større enn grensen satt i MAX_FILE_SIZE i HTML-skjemaet."
+
+#: lib/controller/importcontroller.php:51
+msgid "The uploaded file was only partially uploaded"
+msgstr "Filen du prøvde å laste opp ble kun delvis lastet opp"
+
+#: lib/controller/importcontroller.php:52
+msgid "No file was uploaded"
+msgstr "Ingen filer ble lastet opp"
+
+#: lib/controller/importcontroller.php:53
+msgid "Missing a temporary folder"
+msgstr "Mangler midlertidig mappe"
 
 #: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"

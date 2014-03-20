@@ -10,7 +10,6 @@
 "The uploaded file was only partially uploaded" => "Le file incargate solmente esseva incargate partialmente",
 "No file was uploaded" => "Nulle file esseva incargate.",
 "Missing a temporary folder" => "Manca un dossier temporari",
-"Error loading image." => "Il habeva un error durante le cargamento del imagine.",
 "Contact" => "Contacto",
 "Other" => "Altere",
 "Work" => "Travalio",

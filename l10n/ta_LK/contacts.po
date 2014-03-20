@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-18 00:49-0400\n"
-"PO-Revision-Date: 2014-03-18 04:49+0000\n"
+"POT-Creation-Date: 2014-03-20 00:49-0400\n"
+"PO-Revision-Date: 2014-03-20 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Tamil (Sri-Lanka) (http://www.transifex.com/projects/p/owncloud/language/ta_LK/)\n"
 "MIME-Version: 1.0\n"
@@ -106,94 +106,84 @@ msgstr ""
 msgid "Select photo"
 msgstr "படத்தை தெரிக"
 
-#: js/app.js:703 js/app.js:1649
+#: js/app.js:703 js/app.js:1626
 msgid "Network or server error. Please inform administrator."
 msgstr "வ​லைய​மைப்பு அல்லது சேவையக வழு. தயவுசெய்து நிர்வாகிக்கு தெரியப்படுத்தவும்."
 
-#: js/app.js:925
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "குழுவில் சேர்ப்பதில் வழு."
 
-#: js/app.js:948
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "குழுவிலிருந்து அகற்றுவதிலிருந்து வழு."
 
-#: js/app.js:1139
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1177
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "இரத்து செய்க"
 
-#: js/app.js:1368 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "குழுவில் சேர்க்க"
 
-#: js/app.js:1372
+#: js/app.js:1369
 msgid "OK"
 msgstr "சரி "
 
-#: js/app.js:1475
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1497
-msgid "No files selected for upload."
-msgstr "பதிவேற்றுவதற்கு கோப்புகள் தெரிவுசெய்யப்படவில்லை"
-
-#: js/app.js:1507
-msgid ""
-"The file you are trying to upload exceed the maximum size for file uploads "
-"on this server."
-msgstr "நீங்கள் பதிவேற்ற முயற்சிக்கும் கோப்பானது இந்த சேவையகத்தில் பதிவேற்றக்கூடிய கோப்பின் ஆகக்கூடிய அளவைவிட கூடியது. "
-
-#: js/app.js:1607
+#: js/app.js:1584
 msgid "Edit profile picture"
 msgstr "விபரக்கோவை படத்தை தொகுக்க "
 
-#: js/app.js:1611
+#: js/app.js:1588
 msgid "Crop photo"
 msgstr ""
 
-#: js/contacts.js:896
+#: js/contacts.js:900
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1099
+#: js/contacts.js:1097
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:1173
+#: js/contacts.js:1177
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:1311
+#: js/contacts.js:1315
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2266
+#: js/contacts.js:2270
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "சில தொடர்புகள் அழிப்பதற்காக அடையாளப்படுத்தப்பட்டுள்ளது, ஆனால் இன்னும் அழிக்கவில்லை. தயவுசெய்து அது அழியும் வரை காத்திருக்கவும்."
 
-#: js/contacts.js:2277
+#: js/contacts.js:2281
 msgid "Click to undo deletion of {num} contacts"
 msgstr "தொடர்புகள் நீக்கியதை முன் செயல் நீக்கம் {num} செய்வதற்கு சொடக்குக"
 
-#: js/contacts.js:2286
+#: js/contacts.js:2290
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -316,23 +306,23 @@ msgstr ""
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
+#: lib/addressbook.php:281 lib/addressbook.php:315 lib/contact.php:247
 msgid "You do not have permissions to delete this contact"
 msgstr ""
 
-#: lib/addressbook.php:280 lib/addressbook.php:314
+#: lib/addressbook.php:285 lib/addressbook.php:319
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:335
+#: lib/addressbook.php:340
 msgid "Unknown error"
 msgstr ""
 
-#: lib/addressbook.php:379
+#: lib/addressbook.php:384
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:407
+#: lib/addressbook.php:412
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
@@ -340,15 +330,15 @@ msgstr ""
 msgid "Address book not found"
 msgstr ""
 
-#: lib/contact.php:114 lib/contact.php:161
+#: lib/contact.php:113 lib/contact.php:160
 msgid "You do not have permissions to see this contact"
 msgstr ""
 
-#: lib/contact.php:263
+#: lib/contact.php:262
 msgid "You do not have permissions to update this contact"
 msgstr ""
 
-#: lib/contact.php:274
+#: lib/contact.php:275
 msgid "The backend for this contact does not support updating it"
 msgstr ""
 
@@ -356,19 +346,19 @@ msgstr ""
 msgid "This backend not support adding contacts"
 msgstr ""
 
-#: lib/contact.php:402 lib/contact.php:419
+#: lib/contact.php:419 lib/contact.php:436
 msgid "Property not found"
 msgstr ""
 
-#: lib/contact.php:467
+#: lib/contact.php:484
 msgid " Missing IM parameter for: "
 msgstr ""
 
-#: lib/contact.php:475
+#: lib/contact.php:492
 msgid "Unknown IM: "
 msgstr "அறியப்படாத IM"
 
-#: lib/contact.php:752
+#: lib/contact.php:769
 msgid "{name}'s Birthday"
 msgstr "{பெயர்} இன் பிறந்தநாள்"
 
@@ -421,8 +411,8 @@ msgstr ""
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:37
-#: lib/controller/contactphotocontroller.php:280
+#: lib/controller/contactphotocontroller.php:38
+#: lib/controller/contactphotocontroller.php:205
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr ""
@@ -459,90 +449,31 @@ msgstr ""
 msgid "Error saving contact to backend"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:68
+#: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:38
-msgid "No file was uploaded. Unknown error"
-msgstr "ஒரு கோப்பும் பதிவேற்றப்படவில்லை. அறியப்படாத வழு"
-
-#: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:47
-msgid "There is no error, the file uploaded with success"
-msgstr "இங்கு வழு இல்லை, கோப்பு வெற்றிகரமாக பதிவேற்றப்பட்டது"
-
-#: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:48
-msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "பதிவேற்றப்பட்ட கோப்பானது php.ini இலுள்ள upload_max_filesize  directive ஐ விட கூடியது"
-
-#: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:50
-msgid ""
-"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
-"the HTML form"
-msgstr "பதிவேற்றப்பட்ட கோப்பானது HTML  படிவத்தில் குறிப்பிடப்பட்டுள்ள MAX_FILE_SIZE  directive ஐ விட கூடியது"
-
-#: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:51
-msgid "The uploaded file was only partially uploaded"
-msgstr "பதிவேற்றப்பட்ட கோப்பானது பகுதியாக மட்டுமே பதிவேற்றப்பட்டுள்ளது"
-
-#: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:52
-msgid "No file was uploaded"
-msgstr "எந்த கோப்பும் பதிவேற்றப்படவில்லை"
-
-#: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:53
-msgid "Missing a temporary folder"
-msgstr "ஒரு தற்காலிகமான கோப்புறையை காணவில்லை"
-
-#: lib/controller/contactphotocontroller.php:115
-msgid "Couldn't load temporary image: "
-msgstr "தற்காலிக படத்தை ஏற்றமுடியாது"
-
-#: lib/controller/contactphotocontroller.php:128
-msgid "Uploaded image is invalid"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:132
-#: lib/controller/contactphotocontroller.php:172
-msgid "Couldn't save temporary image: "
-msgstr "தற்காலிக படத்தை சேமிக்கமுடியாது"
-
-#: lib/controller/contactphotocontroller.php:202
+#: lib/controller/contactphotocontroller.php:146
 msgid "No photo path was submitted."
 msgstr "படத்திற்கான பாதை சமர்ப்பிக்கப்படவில்லை"
 
-#: lib/controller/contactphotocontroller.php:209
-msgid "File doesn't exist:"
-msgstr "கோப்பு ஏற்கனவே இல்லை"
-
-#: lib/controller/contactphotocontroller.php:214
-#: lib/controller/contactphotocontroller.php:217
-msgid "Error loading image."
-msgstr "படங்களை ஏற்றுவதில் வழு"
-
-#: lib/controller/contactphotocontroller.php:285
+#: lib/controller/contactphotocontroller.php:210
 msgid "Image has been removed from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:291
+#: lib/controller/contactphotocontroller.php:216
 msgid "Error creating temporary image"
 msgstr "தற்காலிக படத்தை உருவாக்குவதில் வழு"
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:223
 msgid "Error cropping image"
 msgstr "படத்தை செதுக்குவதில் வழு"
 
-#: lib/controller/contactphotocontroller.php:315
+#: lib/controller/contactphotocontroller.php:240
 msgid "Error getting PHOTO property."
 msgstr "பட தொகுப்பை பெறுவதில் வழு"
 
-#: lib/controller/contactphotocontroller.php:332
+#: lib/controller/contactphotocontroller.php:257
 msgid "Error saving contact."
 msgstr "தொடர்பை சேமிப்பதில் வழு"
 
@@ -579,6 +510,36 @@ msgstr ""
 #: lib/controller/groupcontroller.php:263
 msgid "Contact ID missing from request."
 msgstr "வேண்டுகோளில் தொடர்பு ID விடுபட்டுள்ளது."
+
+#: lib/controller/importcontroller.php:38
+msgid "No file was uploaded. Unknown error"
+msgstr "ஒரு கோப்பும் பதிவேற்றப்படவில்லை. அறியப்படாத வழு"
+
+#: lib/controller/importcontroller.php:47
+msgid "There is no error, the file uploaded with success"
+msgstr "இங்கு வழு இல்லை, கோப்பு வெற்றிகரமாக பதிவேற்றப்பட்டது"
+
+#: lib/controller/importcontroller.php:48
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "பதிவேற்றப்பட்ட கோப்பானது php.ini இலுள்ள upload_max_filesize  directive ஐ விட கூடியது"
+
+#: lib/controller/importcontroller.php:50
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr "பதிவேற்றப்பட்ட கோப்பானது HTML  படிவத்தில் குறிப்பிடப்பட்டுள்ள MAX_FILE_SIZE  directive ஐ விட கூடியது"
+
+#: lib/controller/importcontroller.php:51
+msgid "The uploaded file was only partially uploaded"
+msgstr "பதிவேற்றப்பட்ட கோப்பானது பகுதியாக மட்டுமே பதிவேற்றப்பட்டுள்ளது"
+
+#: lib/controller/importcontroller.php:52
+msgid "No file was uploaded"
+msgstr "எந்த கோப்பும் பதிவேற்றப்படவில்லை"
+
+#: lib/controller/importcontroller.php:53
+msgid "Missing a temporary folder"
+msgstr "ஒரு தற்காலிகமான கோப்புறையை காணவில்லை"
 
 #: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"

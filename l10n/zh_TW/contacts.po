@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-18 00:49-0400\n"
-"PO-Revision-Date: 2014-03-18 04:49+0000\n"
+"POT-Creation-Date: 2014-03-20 00:49-0400\n"
+"PO-Revision-Date: 2014-03-20 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/owncloud/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -118,94 +118,84 @@ msgstr "合併失敗，儲存聯絡人時發生錯誤。"
 msgid "Select photo"
 msgstr "選擇相片"
 
-#: js/app.js:703 js/app.js:1649
+#: js/app.js:703 js/app.js:1626
 msgid "Network or server error. Please inform administrator."
 msgstr "網路或伺服器錯誤，請通知系統管理員。"
 
-#: js/app.js:925
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "新增到群組時出錯。"
 
-#: js/app.js:948
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "從群組中移除出錯。"
 
-#: js/app.js:1139
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1177
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "設定 {name} 為最愛時發生錯誤。"
 
-#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "合併聯絡人"
 
-#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "取消"
 
-#: js/app.js:1368 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "新增群組"
 
-#: js/app.js:1372
+#: js/app.js:1369
 msgid "OK"
 msgstr "好"
 
-#: js/app.js:1475
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "找不到聯絡人：{id}"
 
-#: js/app.js:1497
-msgid "No files selected for upload."
-msgstr "沒有選定上傳的檔案。"
-
-#: js/app.js:1507
-msgid ""
-"The file you are trying to upload exceed the maximum size for file uploads "
-"on this server."
-msgstr "您想要上傳的檔案大小超過伺服器限制。"
-
-#: js/app.js:1607
+#: js/app.js:1584
 msgid "Edit profile picture"
 msgstr "編輯大頭貼照"
 
-#: js/app.js:1611
+#: js/app.js:1588
 msgid "Crop photo"
 msgstr "裁切相片"
 
-#: js/contacts.js:896
+#: js/contacts.js:900
 msgid "Error parsing date: {date}"
 msgstr "錯誤的解析日期:{date}"
 
-#: js/contacts.js:1099
+#: js/contacts.js:1097
 msgid "# groups"
 msgstr "# groups"
 
-#: js/contacts.js:1173
+#: js/contacts.js:1177
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:1311
+#: js/contacts.js:1315
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2266
+#: js/contacts.js:2270
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "有一些聯絡人被標記為將刪除但是尚未刪除，稍等一下就會刪除了。"
 
-#: js/contacts.js:2277
+#: js/contacts.js:2281
 msgid "Click to undo deletion of {num} contacts"
 msgstr "點一下來復原刪除 {num} 個聯絡人"
 
-#: js/contacts.js:2286
+#: js/contacts.js:2290
 msgid "Cancelled deletion of {num} contacts"
 msgstr "取消 {num} 個聯絡人的刪除動作"
 
@@ -328,23 +318,23 @@ msgstr "您沒有權限新增聯絡人至這本通訊錄。"
 msgid "The backend for this address book does not support adding contacts"
 msgstr "這本通訊錄的後端不支援新增聯絡人"
 
-#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
+#: lib/addressbook.php:281 lib/addressbook.php:315 lib/contact.php:247
 msgid "You do not have permissions to delete this contact"
 msgstr "您沒有權限刪除這位聯絡人。"
 
-#: lib/addressbook.php:280 lib/addressbook.php:314
+#: lib/addressbook.php:285 lib/addressbook.php:319
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "這本通訊錄的後端不支援刪除聯絡人"
 
-#: lib/addressbook.php:335
+#: lib/addressbook.php:340
 msgid "Unknown error"
 msgstr "未知的錯誤"
 
-#: lib/addressbook.php:379
+#: lib/addressbook.php:384
 msgid "The backend for this address book does not support updating"
 msgstr "這本通訊錄的後端不支援編輯聯絡人"
 
-#: lib/addressbook.php:407
+#: lib/addressbook.php:412
 msgid "You don't have permissions to delete the address book."
 msgstr "您沒有權限刪除這本通訊錄。"
 
@@ -352,15 +342,15 @@ msgstr "您沒有權限刪除這本通訊錄。"
 msgid "Address book not found"
 msgstr "找不到通訊錄"
 
-#: lib/contact.php:114 lib/contact.php:161
+#: lib/contact.php:113 lib/contact.php:160
 msgid "You do not have permissions to see this contact"
 msgstr "您沒有權限檢視這個聯絡人"
 
-#: lib/contact.php:263
+#: lib/contact.php:262
 msgid "You do not have permissions to update this contact"
 msgstr "您沒有權限編輯這位聯絡人"
 
-#: lib/contact.php:274
+#: lib/contact.php:275
 msgid "The backend for this contact does not support updating it"
 msgstr "這個聯絡人的後端不支援編輯"
 
@@ -368,19 +358,19 @@ msgstr "這個聯絡人的後端不支援編輯"
 msgid "This backend not support adding contacts"
 msgstr "後端不支援新增聯絡人"
 
-#: lib/contact.php:402 lib/contact.php:419
+#: lib/contact.php:419 lib/contact.php:436
 msgid "Property not found"
 msgstr "找不到這個屬性"
 
-#: lib/contact.php:467
+#: lib/contact.php:484
 msgid " Missing IM parameter for: "
 msgstr "遺失的 IM 參數："
 
-#: lib/contact.php:475
+#: lib/contact.php:492
 msgid "Unknown IM: "
 msgstr "未知的 IM:"
 
-#: lib/contact.php:752
+#: lib/contact.php:769
 msgid "{name}'s Birthday"
 msgstr "{name}的生日"
 
@@ -433,8 +423,8 @@ msgstr ""
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:37
-#: lib/controller/contactphotocontroller.php:280
+#: lib/controller/contactphotocontroller.php:38
+#: lib/controller/contactphotocontroller.php:205
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "找不到聯絡人"
@@ -471,90 +461,31 @@ msgstr ""
 msgid "Error saving contact to backend"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:68
+#: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
 msgstr "取得使用者相片時發生錯誤"
 
-#: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:38
-msgid "No file was uploaded. Unknown error"
-msgstr "沒有檔案被上傳。未知的錯誤。"
-
-#: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:47
-msgid "There is no error, the file uploaded with success"
-msgstr "無錯誤，檔案上傳成功"
-
-#: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:48
-msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "上傳的檔案超過了 php.ini 中的 upload_max_filesize 設定"
-
-#: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:50
-msgid ""
-"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
-"the HTML form"
-msgstr "上傳的檔案大小超過 HTML 表單中 MAX_FILE_SIZE 的限制"
-
-#: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:51
-msgid "The uploaded file was only partially uploaded"
-msgstr "只有檔案的一部分被上傳"
-
-#: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:52
-msgid "No file was uploaded"
-msgstr "沒有檔案被上傳"
-
-#: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:53
-msgid "Missing a temporary folder"
-msgstr "找不到暫存資料夾"
-
-#: lib/controller/contactphotocontroller.php:115
-msgid "Couldn't load temporary image: "
-msgstr "無法載入暫存圖片："
-
-#: lib/controller/contactphotocontroller.php:128
-msgid "Uploaded image is invalid"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:132
-#: lib/controller/contactphotocontroller.php:172
-msgid "Couldn't save temporary image: "
-msgstr "無法儲存暫存影像"
-
-#: lib/controller/contactphotocontroller.php:202
+#: lib/controller/contactphotocontroller.php:146
 msgid "No photo path was submitted."
 msgstr "沒有提供相片路徑"
 
-#: lib/controller/contactphotocontroller.php:209
-msgid "File doesn't exist:"
-msgstr "檔案不存在"
-
-#: lib/controller/contactphotocontroller.php:214
-#: lib/controller/contactphotocontroller.php:217
-msgid "Error loading image."
-msgstr "載入影像時發生錯誤"
-
-#: lib/controller/contactphotocontroller.php:285
+#: lib/controller/contactphotocontroller.php:210
 msgid "Image has been removed from cache"
 msgstr "圖片已經從快取中移除"
 
-#: lib/controller/contactphotocontroller.php:291
+#: lib/controller/contactphotocontroller.php:216
 msgid "Error creating temporary image"
 msgstr "產生暫存圖片發生錯誤"
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:223
 msgid "Error cropping image"
 msgstr "修剪圖片發生錯誤"
 
-#: lib/controller/contactphotocontroller.php:315
+#: lib/controller/contactphotocontroller.php:240
 msgid "Error getting PHOTO property."
 msgstr "讀取 PHOTO 屬性時發生錯誤"
 
-#: lib/controller/contactphotocontroller.php:332
+#: lib/controller/contactphotocontroller.php:257
 msgid "Error saving contact."
 msgstr "儲存聯絡人時發生錯誤"
 
@@ -591,6 +522,36 @@ msgstr "請求中缺少群組名稱"
 #: lib/controller/groupcontroller.php:263
 msgid "Contact ID missing from request."
 msgstr "請求中缺少聯絡人 ID"
+
+#: lib/controller/importcontroller.php:38
+msgid "No file was uploaded. Unknown error"
+msgstr "沒有檔案被上傳。未知的錯誤。"
+
+#: lib/controller/importcontroller.php:47
+msgid "There is no error, the file uploaded with success"
+msgstr "無錯誤，檔案上傳成功"
+
+#: lib/controller/importcontroller.php:48
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "上傳的檔案超過了 php.ini 中的 upload_max_filesize 設定"
+
+#: lib/controller/importcontroller.php:50
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr "上傳的檔案大小超過 HTML 表單中 MAX_FILE_SIZE 的限制"
+
+#: lib/controller/importcontroller.php:51
+msgid "The uploaded file was only partially uploaded"
+msgstr "只有檔案的一部分被上傳"
+
+#: lib/controller/importcontroller.php:52
+msgid "No file was uploaded"
+msgstr "沒有檔案被上傳"
+
+#: lib/controller/importcontroller.php:53
+msgid "Missing a temporary folder"
+msgstr "找不到暫存資料夾"
 
 #: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"

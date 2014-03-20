@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-18 00:49-0400\n"
-"PO-Revision-Date: 2014-03-18 04:49+0000\n"
+"POT-Creation-Date: 2014-03-20 00:49-0400\n"
+"PO-Revision-Date: 2014-03-20 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -118,94 +118,84 @@ msgstr "Samenvoegen mislukt. Fout bij opslaan contactpersoon."
 msgid "Select photo"
 msgstr "Selecteer een foto"
 
-#: js/app.js:703 js/app.js:1649
+#: js/app.js:703 js/app.js:1626
 msgid "Network or server error. Please inform administrator."
 msgstr "Netwerk- of serverfout. Neem contact op met de beheerder."
 
-#: js/app.js:925
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "Fout bij het toevoegen aan de groep."
 
-#: js/app.js:948
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "Fout bij het verwijderen uit de groep."
 
-#: js/app.js:1139
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "U hebt meer dan300 contactpersonen geselecteerd.\nDat gaat waarschijnlijk niet lukken! Klik hier om het toch te proberen."
 
-#: js/app.js:1177
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "Fout bij instellen {name} als favoriet"
 
-#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "Samenvoegen contactgegevens"
 
-#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "Annuleer"
 
-#: js/app.js:1368 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "Toevoegen groep"
 
-#: js/app.js:1372
+#: js/app.js:1369
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1475
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "Kon contactpersoon niet vinden: {id}"
 
-#: js/app.js:1497
-msgid "No files selected for upload."
-msgstr "Geen bestanden geselecteerd voor upload."
-
-#: js/app.js:1507
-msgid ""
-"The file you are trying to upload exceed the maximum size for file uploads "
-"on this server."
-msgstr "Het bestand dat u probeert te uploaden overschrijdt de maximale bestand grootte voor bestand uploads voor deze server."
-
-#: js/app.js:1607
+#: js/app.js:1584
 msgid "Edit profile picture"
 msgstr "Bewerk profielafbeelding"
 
-#: js/app.js:1611
+#: js/app.js:1588
 msgid "Crop photo"
 msgstr "Bijsnijden foto"
 
-#: js/contacts.js:896
+#: js/contacts.js:900
 msgid "Error parsing date: {date}"
 msgstr "Fout bij lezen datum: {date}"
 
-#: js/contacts.js:1099
+#: js/contacts.js:1097
 msgid "# groups"
 msgstr "# groepen"
 
-#: js/contacts.js:1173
+#: js/contacts.js:1177
 msgid "Error parsing birthday {bday}"
 msgstr "Error bij interpreteren geboortedatum {bday}"
 
-#: js/contacts.js:1311
+#: js/contacts.js:1315
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Het backend ondersteunt geen multi--byte tekens"
 
-#: js/contacts.js:2266
+#: js/contacts.js:2270
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd."
 
-#: js/contacts.js:2277
+#: js/contacts.js:2281
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik om het verwijderen van {num} contactpersonen ongedaan te maken."
 
-#: js/contacts.js:2286
+#: js/contacts.js:2290
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Verwijderen van {num} contacten geannuleerd"
 
@@ -328,23 +318,23 @@ msgstr "U heeft geen permissie om contactpersonen toe te voegen aan het adresboe
 msgid "The backend for this address book does not support adding contacts"
 msgstr "De backend voor dit adresboek heeft geen ondersteuning voor het toevoegen van contactpersonen"
 
-#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
+#: lib/addressbook.php:281 lib/addressbook.php:315 lib/contact.php:247
 msgid "You do not have permissions to delete this contact"
 msgstr "U heeft geen permissie om dit contact te verwijderen"
 
-#: lib/addressbook.php:280 lib/addressbook.php:314
+#: lib/addressbook.php:285 lib/addressbook.php:319
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "De backend voor dit adresboek heeft geen ondersteuning voor het verwijderen van contactpersonen."
 
-#: lib/addressbook.php:335
+#: lib/addressbook.php:340
 msgid "Unknown error"
 msgstr "Onbekende fout"
 
-#: lib/addressbook.php:379
+#: lib/addressbook.php:384
 msgid "The backend for this address book does not support updating"
 msgstr "De backend voor dit adresboek ondersteund geen bewerk acties."
 
-#: lib/addressbook.php:407
+#: lib/addressbook.php:412
 msgid "You don't have permissions to delete the address book."
 msgstr "U heeft geen permissie om dit adresboek te verwijderen."
 
@@ -352,15 +342,15 @@ msgstr "U heeft geen permissie om dit adresboek te verwijderen."
 msgid "Address book not found"
 msgstr "Adresboek niet gevonden"
 
-#: lib/contact.php:114 lib/contact.php:161
+#: lib/contact.php:113 lib/contact.php:160
 msgid "You do not have permissions to see this contact"
 msgstr "U heeft geen permissie om deze contactpersoon te bekijken"
 
-#: lib/contact.php:263
+#: lib/contact.php:262
 msgid "You do not have permissions to update this contact"
 msgstr "U heeft geen permissie om deze contactpersoon te bewerken"
 
-#: lib/contact.php:274
+#: lib/contact.php:275
 msgid "The backend for this contact does not support updating it"
 msgstr "De backend voor deze contactpersoon heeft geen ondersteuning voor bewerk acties"
 
@@ -368,19 +358,19 @@ msgstr "De backend voor deze contactpersoon heeft geen ondersteuning voor bewerk
 msgid "This backend not support adding contacts"
 msgstr "De backend heeft geen ondersteuning voor het toevoegen van contactpersonen"
 
-#: lib/contact.php:402 lib/contact.php:419
+#: lib/contact.php:419 lib/contact.php:436
 msgid "Property not found"
 msgstr "Eigenschap niet gevonden"
 
-#: lib/contact.php:467
+#: lib/contact.php:484
 msgid " Missing IM parameter for: "
 msgstr "Ontbrekende IM parameter voor:"
 
-#: lib/contact.php:475
+#: lib/contact.php:492
 msgid "Unknown IM: "
 msgstr "Onbekende IM:"
 
-#: lib/contact.php:752
+#: lib/contact.php:769
 msgid "{name}'s Birthday"
 msgstr "{name}'s verjaardag"
 
@@ -433,8 +423,8 @@ msgstr "Fout bij verplaatsen contactpersoon"
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:37
-#: lib/controller/contactphotocontroller.php:280
+#: lib/controller/contactphotocontroller.php:38
+#: lib/controller/contactphotocontroller.php:205
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "Kon contactpersoon niet vinden."
@@ -471,90 +461,31 @@ msgstr "Fout bij bijwerken contactpersoon"
 msgid "Error saving contact to backend"
 msgstr "Fout bij opslaan contactpersoongegevens baar backend"
 
-#: lib/controller/contactphotocontroller.php:68
+#: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
 msgstr "Fout bij ophalen gebruikersfoto"
 
-#: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:38
-msgid "No file was uploaded. Unknown error"
-msgstr "Er was geen bestand geladen.  Onbekende fout"
-
-#: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:47
-msgid "There is no error, the file uploaded with success"
-msgstr "De upload van het bestand is goedgegaan."
-
-#: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:48
-msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "Het bestand overschrijdt de upload_max_filesize instelling in php.ini"
-
-#: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:50
-msgid ""
-"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
-"the HTML form"
-msgstr "Het bestand overschrijdt de MAX_FILE_SIZE instelling dat is opgegeven in het HTML formulier"
-
-#: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:51
-msgid "The uploaded file was only partially uploaded"
-msgstr "Het bestand is gedeeltelijk geüpload"
-
-#: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:52
-msgid "No file was uploaded"
-msgstr "Er is geen bestand geüpload"
-
-#: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:53
-msgid "Missing a temporary folder"
-msgstr "Er ontbreekt een tijdelijke map"
-
-#: lib/controller/contactphotocontroller.php:115
-msgid "Couldn't load temporary image: "
-msgstr "Kan tijdelijk plaatje niet op laden:"
-
-#: lib/controller/contactphotocontroller.php:128
-msgid "Uploaded image is invalid"
-msgstr "Ge-uploade afbeelding is ongeldig"
-
-#: lib/controller/contactphotocontroller.php:132
-#: lib/controller/contactphotocontroller.php:172
-msgid "Couldn't save temporary image: "
-msgstr "Kan tijdelijk plaatje niet op slaan:"
-
-#: lib/controller/contactphotocontroller.php:202
+#: lib/controller/contactphotocontroller.php:146
 msgid "No photo path was submitted."
 msgstr "Geen fotopad opgestuurd."
 
-#: lib/controller/contactphotocontroller.php:209
-msgid "File doesn't exist:"
-msgstr "Bestand bestaat niet: "
-
-#: lib/controller/contactphotocontroller.php:214
-#: lib/controller/contactphotocontroller.php:217
-msgid "Error loading image."
-msgstr "Fout bij laden plaatje."
-
-#: lib/controller/contactphotocontroller.php:285
+#: lib/controller/contactphotocontroller.php:210
 msgid "Image has been removed from cache"
 msgstr "Afbeelding is verwijderd uit de cache"
 
-#: lib/controller/contactphotocontroller.php:291
+#: lib/controller/contactphotocontroller.php:216
 msgid "Error creating temporary image"
 msgstr "Fout om een tijdelijk plaatje te maken"
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:223
 msgid "Error cropping image"
 msgstr "Fout tijdens aanpassen plaatje"
 
-#: lib/controller/contactphotocontroller.php:315
+#: lib/controller/contactphotocontroller.php:240
 msgid "Error getting PHOTO property."
 msgstr "Fout om PHOTO eigenschap te verkrijgen"
 
-#: lib/controller/contactphotocontroller.php:332
+#: lib/controller/contactphotocontroller.php:257
 msgid "Error saving contact."
 msgstr "Fout om contact op te slaan"
 
@@ -591,6 +522,36 @@ msgstr "Groepsnaam niet aanwezig bij aanvraag."
 #: lib/controller/groupcontroller.php:263
 msgid "Contact ID missing from request."
 msgstr "Contact ID niet opgegeven"
+
+#: lib/controller/importcontroller.php:38
+msgid "No file was uploaded. Unknown error"
+msgstr "Er was geen bestand geladen.  Onbekende fout"
+
+#: lib/controller/importcontroller.php:47
+msgid "There is no error, the file uploaded with success"
+msgstr "De upload van het bestand is goedgegaan."
+
+#: lib/controller/importcontroller.php:48
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "Het bestand overschrijdt de upload_max_filesize instelling in php.ini"
+
+#: lib/controller/importcontroller.php:50
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr "Het bestand overschrijdt de MAX_FILE_SIZE instelling dat is opgegeven in het HTML formulier"
+
+#: lib/controller/importcontroller.php:51
+msgid "The uploaded file was only partially uploaded"
+msgstr "Het bestand is gedeeltelijk geüpload"
+
+#: lib/controller/importcontroller.php:52
+msgid "No file was uploaded"
+msgstr "Er is geen bestand geüpload"
+
+#: lib/controller/importcontroller.php:53
+msgid "Missing a temporary folder"
+msgstr "Er ontbreekt een tijdelijke map"
 
 #: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"

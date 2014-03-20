@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-18 00:49-0400\n"
-"PO-Revision-Date: 2014-03-18 04:49+0000\n"
+"POT-Creation-Date: 2014-03-20 00:49-0400\n"
+"PO-Revision-Date: 2014-03-20 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -124,94 +124,84 @@ msgstr "합치기 실패. 연락처 저장 오류."
 msgid "Select photo"
 msgstr "사진 선택"
 
-#: js/app.js:703 js/app.js:1649
+#: js/app.js:703 js/app.js:1626
 msgid "Network or server error. Please inform administrator."
 msgstr "네트워크 및 서버 오류입니다. 관리자에게 연락하십시오."
 
-#: js/app.js:925
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "그룹에 추가하는 중 오류가 발생하였습니다."
 
-#: js/app.js:948
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "그룹에서 삭제하는 중 오류가 발생하였습니다."
 
-#: js/app.js:1139
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300명 이상의 연락처를 선택하였습니다.\n오류가 발생할 수도 있습니다! 그래도 시도하려면 여기를 누르십시오."
 
-#: js/app.js:1177
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "{name} 님을 즐겨찾는 연락처로 설정할 수 없음."
 
-#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "연락처 합치기"
 
-#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "취소"
 
-#: js/app.js:1368 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "그룹 추가"
 
-#: js/app.js:1372
+#: js/app.js:1369
 msgid "OK"
 msgstr "확인"
 
-#: js/app.js:1475
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "연락처를 찾을 수 없음: {id}"
 
-#: js/app.js:1497
-msgid "No files selected for upload."
-msgstr "업로드할 파일이 선택되지 않았습니다."
-
-#: js/app.js:1507
-msgid ""
-"The file you are trying to upload exceed the maximum size for file uploads "
-"on this server."
-msgstr "업로드할 파일 크기가 서버의 최대 허용 용량을 초과합니다."
-
-#: js/app.js:1607
+#: js/app.js:1584
 msgid "Edit profile picture"
 msgstr "프로필 사진 편집"
 
-#: js/app.js:1611
+#: js/app.js:1588
 msgid "Crop photo"
 msgstr "사진 자르기"
 
-#: js/contacts.js:896
+#: js/contacts.js:900
 msgid "Error parsing date: {date}"
 msgstr "날짜 처리 중 오류 발생: {date}"
 
-#: js/contacts.js:1099
+#: js/contacts.js:1097
 msgid "# groups"
 msgstr "그룹 수"
 
-#: js/contacts.js:1173
+#: js/contacts.js:1177
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:1311
+#: js/contacts.js:1315
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2266
+#: js/contacts.js:2270
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "일부 연락처가 삭제할 것으로 표시되었으나 아직 삭제되지 않았습니다. 삭제가 끝날 때까지 기다려 주십시오."
 
-#: js/contacts.js:2277
+#: js/contacts.js:2281
 msgid "Click to undo deletion of {num} contacts"
 msgstr "연락처 {num}명 삭제를 취소하려면 누르십시오"
 
-#: js/contacts.js:2286
+#: js/contacts.js:2290
 msgid "Cancelled deletion of {num} contacts"
 msgstr "연락처 {num}명 삭제가 취소됨"
 
@@ -334,23 +324,23 @@ msgstr "주소록에 연락처를 추가할 수 있는 권한이 없습니다"
 msgid "The backend for this address book does not support adding contacts"
 msgstr "이 주소록의 백엔드는 연락처 추가를 지원하지 않습니다"
 
-#: lib/addressbook.php:276 lib/addressbook.php:310 lib/contact.php:248
+#: lib/addressbook.php:281 lib/addressbook.php:315 lib/contact.php:247
 msgid "You do not have permissions to delete this contact"
 msgstr "이 연락처를 삭제할 수 있는 권한이 없습니다"
 
-#: lib/addressbook.php:280 lib/addressbook.php:314
+#: lib/addressbook.php:285 lib/addressbook.php:319
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "이 주소록의 백엔드는 연락처 삭제를 지원하지 않습니다"
 
-#: lib/addressbook.php:335
+#: lib/addressbook.php:340
 msgid "Unknown error"
 msgstr "알 수 없는 오류"
 
-#: lib/addressbook.php:379
+#: lib/addressbook.php:384
 msgid "The backend for this address book does not support updating"
 msgstr "이 주소록의 백엔드는 업데이트를 지원하지 않습니다"
 
-#: lib/addressbook.php:407
+#: lib/addressbook.php:412
 msgid "You don't have permissions to delete the address book."
 msgstr "이 주소록을 삭제할 수 있는 권한이 없습니다."
 
@@ -358,15 +348,15 @@ msgstr "이 주소록을 삭제할 수 있는 권한이 없습니다."
 msgid "Address book not found"
 msgstr "주소록을 찾을 수 없음"
 
-#: lib/contact.php:114 lib/contact.php:161
+#: lib/contact.php:113 lib/contact.php:160
 msgid "You do not have permissions to see this contact"
 msgstr "이 연락처를 볼 수 있는 권한이 없습니다"
 
-#: lib/contact.php:263
+#: lib/contact.php:262
 msgid "You do not have permissions to update this contact"
 msgstr "이 연락처를 업데이트할 수 있는 권한이 없습니다"
 
-#: lib/contact.php:274
+#: lib/contact.php:275
 msgid "The backend for this contact does not support updating it"
 msgstr "이 연락처의 백엔드는 업데이트를 지원하지 않습니다"
 
@@ -374,19 +364,19 @@ msgstr "이 연락처의 백엔드는 업데이트를 지원하지 않습니다"
 msgid "This backend not support adding contacts"
 msgstr "이 백엔드는 연락처 추가를 지원하지 않습니다"
 
-#: lib/contact.php:402 lib/contact.php:419
+#: lib/contact.php:419 lib/contact.php:436
 msgid "Property not found"
 msgstr "속성을 찾을 수 없음"
 
-#: lib/contact.php:467
+#: lib/contact.php:484
 msgid " Missing IM parameter for: "
 msgstr " 다음의 IM 인자를 찾을 수 없음: "
 
-#: lib/contact.php:475
+#: lib/contact.php:492
 msgid "Unknown IM: "
 msgstr "알려지지 않은 IM: "
 
-#: lib/contact.php:752
+#: lib/contact.php:769
 msgid "{name}'s Birthday"
 msgstr "{이름}의 생일"
 
@@ -439,8 +429,8 @@ msgstr ""
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:37
-#: lib/controller/contactphotocontroller.php:280
+#: lib/controller/contactphotocontroller.php:38
+#: lib/controller/contactphotocontroller.php:205
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "연락처를 찾을 수 없습니다."
@@ -477,90 +467,31 @@ msgstr "연락처 업데이트 오류"
 msgid "Error saving contact to backend"
 msgstr "연락처 백엔드 저장 오류"
 
-#: lib/controller/contactphotocontroller.php:68
+#: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
 msgstr "사용자 사진 가져오기 오류"
 
-#: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:38
-msgid "No file was uploaded. Unknown error"
-msgstr "파일이 업로드되지 않았습니다. 알 수 없는 오류입니다"
-
-#: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:47
-msgid "There is no error, the file uploaded with success"
-msgstr "파일 업로드에 성공하였습니다."
-
-#: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:48
-msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "업로드된 파일이 php.ini의 upload_max_filesize보다 큼"
-
-#: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:50
-msgid ""
-"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
-"the HTML form"
-msgstr "업로드한 파일 크기가 HTML 양식의 MAX_FILE_SIZE보다 큼"
-
-#: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:51
-msgid "The uploaded file was only partially uploaded"
-msgstr "파일의 일부분만 업로드됨"
-
-#: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:52
-msgid "No file was uploaded"
-msgstr "파일이 업로드되지 않았음"
-
-#: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:53
-msgid "Missing a temporary folder"
-msgstr "임시 폴더가 없음"
-
-#: lib/controller/contactphotocontroller.php:115
-msgid "Couldn't load temporary image: "
-msgstr "임시 이미지를 불러올 수 없음: "
-
-#: lib/controller/contactphotocontroller.php:128
-msgid "Uploaded image is invalid"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:132
-#: lib/controller/contactphotocontroller.php:172
-msgid "Couldn't save temporary image: "
-msgstr "임시 이미지를 저장할 수 없음: "
-
-#: lib/controller/contactphotocontroller.php:202
+#: lib/controller/contactphotocontroller.php:146
 msgid "No photo path was submitted."
 msgstr "사진 경로가 제출되지 않았습니다."
 
-#: lib/controller/contactphotocontroller.php:209
-msgid "File doesn't exist:"
-msgstr "파일이 존재하지 않습니다:"
-
-#: lib/controller/contactphotocontroller.php:214
-#: lib/controller/contactphotocontroller.php:217
-msgid "Error loading image."
-msgstr "그림을 불러올 수 없습니다."
-
-#: lib/controller/contactphotocontroller.php:285
+#: lib/controller/contactphotocontroller.php:210
 msgid "Image has been removed from cache"
 msgstr "그림이 캐시에서 삭제됨"
 
-#: lib/controller/contactphotocontroller.php:291
+#: lib/controller/contactphotocontroller.php:216
 msgid "Error creating temporary image"
 msgstr "임시 이미지를 생성 중 오류가 발생했습니다."
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:223
 msgid "Error cropping image"
 msgstr "그림을 자르는 중 오류가 발생했습니다."
 
-#: lib/controller/contactphotocontroller.php:315
+#: lib/controller/contactphotocontroller.php:240
 msgid "Error getting PHOTO property."
 msgstr "PHOTO 속성을 가져오는 중 오류가 발생했습니다."
 
-#: lib/controller/contactphotocontroller.php:332
+#: lib/controller/contactphotocontroller.php:257
 msgid "Error saving contact."
 msgstr "연락처 저장 중 오류가 발생했습니다."
 
@@ -597,6 +528,36 @@ msgstr "요청에 그룹 이름이 없습니다."
 #: lib/controller/groupcontroller.php:263
 msgid "Contact ID missing from request."
 msgstr "요청에 연락처 ID가 없습니다."
+
+#: lib/controller/importcontroller.php:38
+msgid "No file was uploaded. Unknown error"
+msgstr "파일이 업로드되지 않았습니다. 알 수 없는 오류입니다"
+
+#: lib/controller/importcontroller.php:47
+msgid "There is no error, the file uploaded with success"
+msgstr "파일 업로드에 성공하였습니다."
+
+#: lib/controller/importcontroller.php:48
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "업로드된 파일이 php.ini의 upload_max_filesize보다 큼"
+
+#: lib/controller/importcontroller.php:50
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr "업로드한 파일 크기가 HTML 양식의 MAX_FILE_SIZE보다 큼"
+
+#: lib/controller/importcontroller.php:51
+msgid "The uploaded file was only partially uploaded"
+msgstr "파일의 일부분만 업로드됨"
+
+#: lib/controller/importcontroller.php:52
+msgid "No file was uploaded"
+msgstr "파일이 업로드되지 않았음"
+
+#: lib/controller/importcontroller.php:53
+msgid "Missing a temporary folder"
+msgstr "임시 폴더가 없음"
 
 #: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"

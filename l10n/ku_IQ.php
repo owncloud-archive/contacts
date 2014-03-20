@@ -7,8 +7,6 @@
 "Import" => "هێنان",
 "Close" => "داخستن",
 "No photo path was submitted." => "هیچ ڕێڕه‌وی وێنەیەک پێشکه‌ش نه‌کراوه.",
-"File doesn't exist:" => "په‌ڕگه‌که‌ هه‌بوون نیه:",
-"Error loading image." => "هه‌ڵه‌ ڕوویدا لە ئامادەکردنى وێنە",
 "Download" => "داگرتن",
 "Email" => "ئیمه‌یل",
 "Phone" => "تەلەفۆن",

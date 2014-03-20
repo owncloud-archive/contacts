@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-19 00:49-0400\n"
-"PO-Revision-Date: 2014-03-18 21:00+0000\n"
+"POT-Creation-Date: 2014-03-20 00:49-0400\n"
+"PO-Revision-Date: 2014-03-20 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -111,64 +111,54 @@ msgstr "عملية الدمج فشلت. خطأ في حفظ جهة الاتصال
 msgid "Select photo"
 msgstr "اختر صورة"
 
-#: js/app.js:703 js/app.js:1649
+#: js/app.js:703 js/app.js:1626
 msgid "Network or server error. Please inform administrator."
 msgstr "حدث خطأ في شبكة الاتصال أو في الخادم. يرجى إبلاغ المسؤول."
 
-#: js/app.js:925
+#: js/app.js:922
 msgid "Error adding to group."
 msgstr "خطأ في إضافة المجموعة"
 
-#: js/app.js:948
+#: js/app.js:945
 msgid "Error removing from group."
 msgstr "حدث خطأ أثناء الحذف من المجموعة"
 
-#: js/app.js:1139
+#: js/app.js:1136
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1177
+#: js/app.js:1174
 msgid "Error setting {name} as favorite."
 msgstr "حدث خطأ أثناء إعداد {name} كمفضلة ."
 
-#: js/app.js:1315 js/app.js:1319 templates/contacts.php:171
+#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
 msgid "Merge contacts"
 msgstr "دمج جهات الاتصال"
 
-#: js/app.js:1341 js/app.js:1394 templates/contacts.php:357
+#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
 #: templates/contacts.php:358
 msgid "Cancel"
 msgstr "الغاء"
 
-#: js/app.js:1368 templates/contacts.php:152
+#: js/app.js:1365 templates/contacts.php:152
 msgid "Add group"
 msgstr "إضافة مجموعة"
 
-#: js/app.js:1372
+#: js/app.js:1369
 msgid "OK"
 msgstr "تم"
 
-#: js/app.js:1475
+#: js/app.js:1472
 msgid "Could not find contact: {id}"
 msgstr "تعذر ايجاد جهة الاتصال:  {id}"
 
-#: js/app.js:1497
-msgid "No files selected for upload."
-msgstr "لا يوجد ملفات مختارة لتحميلها"
-
-#: js/app.js:1507
-msgid ""
-"The file you are trying to upload exceed the maximum size for file uploads "
-"on this server."
-msgstr "الملف الذي تحاول تحميله يتجاوز الحد الأقصى لحجم الملف الذي يمكن تحميله على هذا الخادم."
-
-#: js/app.js:1607
+#: js/app.js:1584
 msgid "Edit profile picture"
 msgstr "تعديل صورة الملف الشخصي"
 
-#: js/app.js:1611
+#: js/app.js:1588
 msgid "Crop photo"
 msgstr "قص الصورة."
 
@@ -361,19 +351,19 @@ msgstr ""
 msgid "This backend not support adding contacts"
 msgstr ""
 
-#: lib/contact.php:404 lib/contact.php:421
+#: lib/contact.php:419 lib/contact.php:436
 msgid "Property not found"
 msgstr "لم يتم العثور على الملكية"
 
-#: lib/contact.php:469
+#: lib/contact.php:484
 msgid " Missing IM parameter for: "
 msgstr ""
 
-#: lib/contact.php:477
+#: lib/contact.php:492
 msgid "Unknown IM: "
 msgstr "جهة تراسل فوري غير معروفة"
 
-#: lib/contact.php:754
+#: lib/contact.php:769
 msgid "{name}'s Birthday"
 msgstr "يوم ميلاد {name}'s"
 
@@ -426,8 +416,8 @@ msgstr ""
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:37
-#: lib/controller/contactphotocontroller.php:280
+#: lib/controller/contactphotocontroller.php:38
+#: lib/controller/contactphotocontroller.php:205
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "تعذر ايجاد جهة الاتصال"
@@ -464,90 +454,31 @@ msgstr "خطأ في تحديث جهات الاتصال"
 msgid "Error saving contact to backend"
 msgstr "حدث خطأ أثناء حفظ جهات الاتصال في الخلفية."
 
-#: lib/controller/contactphotocontroller.php:68
+#: lib/controller/contactphotocontroller.php:69
 msgid "Error getting user photo"
 msgstr "حدث خطأ أثناء جلب صورة المستخدم"
 
-#: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:38
-msgid "No file was uploaded. Unknown error"
-msgstr "لم يتم رفع أي ملف , خطأ غير معروف"
-
-#: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:47
-msgid "There is no error, the file uploaded with success"
-msgstr "تم ترفيع الملفات بنجاح."
-
-#: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:48
-msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
-msgstr "حجم الملف الذي تريد ترفيعه أعلى مما upload_max_filesize يسمح به في ملف php.ini"
-
-#: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:50
-msgid ""
-"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
-"the HTML form"
-msgstr "حجم الملف الذي تريد ترفيعه أعلى مما MAX_FILE_SIZE يسمح به في واجهة ال HTML."
-
-#: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:51
-msgid "The uploaded file was only partially uploaded"
-msgstr "تم ترفيع جزء من الملفات الذي تريد ترفيعها فقط"
-
-#: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:52
-msgid "No file was uploaded"
-msgstr "لم يتم ترفيع أي من الملفات"
-
-#: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:53
-msgid "Missing a temporary folder"
-msgstr "المجلد المؤقت غير موجود"
-
-#: lib/controller/contactphotocontroller.php:115
-msgid "Couldn't load temporary image: "
-msgstr "لا يمكن تحميل الصورة المؤقتة"
-
-#: lib/controller/contactphotocontroller.php:128
-msgid "Uploaded image is invalid"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:132
-#: lib/controller/contactphotocontroller.php:172
-msgid "Couldn't save temporary image: "
-msgstr "لا يمكن حفظ الصورة المؤقتة "
-
-#: lib/controller/contactphotocontroller.php:202
+#: lib/controller/contactphotocontroller.php:146
 msgid "No photo path was submitted."
 msgstr "لم يتم عرض مسار الصورة. \nلم يتم تقديم مسار للصورة. "
 
-#: lib/controller/contactphotocontroller.php:209
-msgid "File doesn't exist:"
-msgstr "الملف غير موجود"
-
-#: lib/controller/contactphotocontroller.php:214
-#: lib/controller/contactphotocontroller.php:217
-msgid "Error loading image."
-msgstr "خطأ في تحميل الصورة. "
-
-#: lib/controller/contactphotocontroller.php:285
+#: lib/controller/contactphotocontroller.php:210
 msgid "Image has been removed from cache"
 msgstr "تم إزالة الصورة من ذاكرة التخزين المؤقتة. "
 
-#: lib/controller/contactphotocontroller.php:291
+#: lib/controller/contactphotocontroller.php:216
 msgid "Error creating temporary image"
 msgstr "خطأ في إنشاء صورة مؤقتة "
 
-#: lib/controller/contactphotocontroller.php:298
+#: lib/controller/contactphotocontroller.php:223
 msgid "Error cropping image"
 msgstr "خطأ في قص الصورة"
 
-#: lib/controller/contactphotocontroller.php:315
+#: lib/controller/contactphotocontroller.php:240
 msgid "Error getting PHOTO property."
 msgstr "خطأ في الحصول على ملكية الصورة."
 
-#: lib/controller/contactphotocontroller.php:332
+#: lib/controller/contactphotocontroller.php:257
 msgid "Error saving contact."
 msgstr "خطأ في حفظ جهة الإتصال."
 
@@ -584,6 +515,36 @@ msgstr ""
 #: lib/controller/groupcontroller.php:263
 msgid "Contact ID missing from request."
 msgstr ""
+
+#: lib/controller/importcontroller.php:38
+msgid "No file was uploaded. Unknown error"
+msgstr "لم يتم رفع أي ملف , خطأ غير معروف"
+
+#: lib/controller/importcontroller.php:47
+msgid "There is no error, the file uploaded with success"
+msgstr "تم ترفيع الملفات بنجاح."
+
+#: lib/controller/importcontroller.php:48
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "حجم الملف الذي تريد ترفيعه أعلى مما upload_max_filesize يسمح به في ملف php.ini"
+
+#: lib/controller/importcontroller.php:50
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form"
+msgstr "حجم الملف الذي تريد ترفيعه أعلى مما MAX_FILE_SIZE يسمح به في واجهة ال HTML."
+
+#: lib/controller/importcontroller.php:51
+msgid "The uploaded file was only partially uploaded"
+msgstr "تم ترفيع جزء من الملفات الذي تريد ترفيعها فقط"
+
+#: lib/controller/importcontroller.php:52
+msgid "No file was uploaded"
+msgstr "لم يتم ترفيع أي من الملفات"
+
+#: lib/controller/importcontroller.php:53
+msgid "Missing a temporary folder"
+msgstr "المجلد المؤقت غير موجود"
 
 #: lib/controller/importcontroller.php:54
 msgid "Failed to write to disk"
