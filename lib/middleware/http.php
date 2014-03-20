@@ -35,6 +35,10 @@ use OCA\Contacts\Controller,
  */
 class Http extends Middleware {
 
+	public function __construct() {
+		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
+	}
+
 	/**
 	 * If an Exception is being caught, return a JSON error response with
 	 * a suitable status code
@@ -45,6 +49,7 @@ class Http extends Middleware {
 	 * @return Response a Response object
 	 */
 	public function afterException($controller, $methodName, \Exception $exception) {
+		\OCP\Util::writeLog('contacts', __METHOD__.' method: '.$methodName, \OCP\Util::DEBUG);
 		// If there's no proper status code associated, set it to 500.
 		$response = new JSONResponse();
 		if($exception->getCode() < 100) {

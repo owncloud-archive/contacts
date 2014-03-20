@@ -76,19 +76,16 @@ class ContactPhotoController extends Controller {
 	 * @return JSONResponse with data.tmp set to the key in the cache.
 	 *
 	 * @NoAdminRequired
-	 * @NoCSRFRequired
 	 */
 	public function uploadPhoto() {
 		$params = $this->request->urlParams;
-
+		$response = new JSONResponse();
 
 		$tempPhoto = TemporaryPhoto::get(
 			$this->server,
 			TemporaryPhoto::PHOTO_UPLOADED,
 			$this->request
 		);
-
-		$response = new JSONResponse();
 
 		return $response->setParams(array(
 			'tmp'=>$tempPhoto->getKey(),
@@ -139,7 +136,6 @@ class ContactPhotoController extends Controller {
 	 */
 	public function cacheFileSystemPhoto() {
 		$params = $this->request->urlParams;
-		$maxSize = isset($this->request->get['maxSize']) ? $this->request->get['maxSize'] : 400;
 		$response = new JSONResponse();
 
 		if(!isset($this->request->get['path'])) {

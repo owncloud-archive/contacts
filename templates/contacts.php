@@ -117,10 +117,10 @@
 			</div>
 			</div>
 		</div>
-		<form class="float" id="file_upload_form" action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'ajax/uploadphoto.php')); ?>" method="put" target="file_upload_target">
+		<form class="float" name="file_upload_form" id="file_upload_form" method="PUT" target="file_upload_target">
 			<input type="hidden" name="requesttoken" value="<?php p($_['requesttoken']) ?>">
 			<input type="hidden" name="MAX_FILE_SIZE" value="<?php p($_['uploadMaxFilesize']) ?>" id="max_upload">
-			<input type="hidden" class="max_human_file_size" value="(max <?php p($_['uploadMaxHumanFilesize']); ?>)">
+			<input type="hidden" name="max_human_file_size" value="<?php p($_['uploadMaxHumanFilesize']); ?>">
 			<input id="contactphoto_fileupload" type="file" accept="image/*" name="imagefile" />
 		</form>
 		<iframe name="file_upload_target" id='file_upload_target' src=""></iframe>
@@ -131,13 +131,7 @@
 		class="coords"
 		method="post"
 		enctype="multipart/form-data"
-		target="crop_target"
-		action="{action}"
 		>
-		<input type="hidden" id="contactid" name="contactid" value="{contactid}" />
-		<input type="hidden" id="addressbookid" name="addressbookid" value="{addressbookid}" />
-		<input type="hidden" id="backend" name="backend" value="{backend}" />
-		<input type="hidden" id="tmpkey" name="tmpkey" value="{tmpkey}" />
 		<fieldset id="coords">
 		<input type="hidden" id="x" name="x" value="" />
 		<input type="hidden" id="y" name="y" value="" />
@@ -145,7 +139,6 @@
 		<input type="hidden" id="h" name="h" value="" />
 		</fieldset>
 	</form>
-	<iframe name="crop_target" id="crop_target" src=""></iframe>
 </script>
 
 <script id="addGroupTemplate" type="text/template">

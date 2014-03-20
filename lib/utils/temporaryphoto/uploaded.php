@@ -23,7 +23,10 @@
 namespace OCA\Contacts\Utils\TemporaryPhoto;
 
 use OCA\Contacts\Contact as ContactObject,
-	OCA\Contacts\Utils\TemporaryPhoto as AbstractTemporaryPhoto;
+	OCA\Contacts\Utils\TemporaryPhoto as AbstractTemporaryPhoto,
+	OCP\IRequest,
+	OCP\AppFramework\Http;
+
 
 /**
  * This class loads an image from the virtual file system.
@@ -37,9 +40,9 @@ class Uploaded extends AbstractTemporaryPhoto {
 	 */
 	protected $input;
 
-	public function __construct(\OCP\IServerContainer $server, \OCP\IRequest $request) {
+	public function __construct(\OCP\IServerContainer $server, IRequest $request) {
 		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
-		if (!$request instanceOf \OCP\IRequest) {
+		if (!$request instanceOf IRequest) {
 			throw new \Exception(
 				__METHOD__ . ' Second argument must be an instance of \\OCP\\IRequest'
 			);
@@ -54,9 +57,31 @@ class Uploaded extends AbstractTemporaryPhoto {
 	 * Load the image.
 	 */
 	protected function processImage() {
+		// If image has already been read return
+		if ($this->image instanceOf \OCP\Image) {
+			return;
+		}
 		$this->image = new \OCP\Image();
 		\OCP\Util::writeLog('contacts', __METHOD__ . ', Content-Type: ' . $this->request->getHeader('Content-Type'), \OCP\Util::DEBUG);
 		\OCP\Util::writeLog('contacts', __METHOD__ . ', Content-Length: ' . $this->request->getHeader('Content-Length'), \OCP\Util::DEBUG);
+
+		if (substr($this->request->getHeader('Content-Type'), 0, 6) !== 'image/') {
+			throw new \Exception(
+				'Only images can be used as contact photo',
+				Http::STATUS_UNSUPPORTED_MEDIA_TYPE
+			);
+		}
+
+		$maxSize = \OCP\Util::maxUploadFilesize('/');
+		if ($this->request->getHeader('Content-Length') > $maxSize) {
+			throw new \Exception(
+				sprintf(
+					'The size of the file exceeds the maximum allowed %s',
+					\OCP\Util::humanFileSize($maxSize)
+				),
+				Http::STATUS_REQUEST_ENTITY_TOO_LARGE
+			);
+		}
 
 		$this->image->loadFromFileHandle($this->request->put);
 	}

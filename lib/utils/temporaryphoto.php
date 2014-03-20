@@ -22,6 +22,8 @@
 
 namespace OCA\Contacts\Utils;
 
+//use OCP\Image;
+
 /**
  * This class is used for getting a contact photo for cropping.
  */
@@ -39,37 +41,37 @@ abstract class TemporaryPhoto {
 	protected $server;
 
 	/**
-	 * @var OCP\Image
-	 */
+	* @var OCP\Image
+	*/
 	protected $image;
 
 	/**
-	 * Cache key for temporary storage.
-	 *
-	 * @var string
-	 */
+	* Cache key for temporary storage.
+	*
+	* @var string
+	*/
 	protected $key;
 
 
 	/**
-	 * Whether normalizePhoto() has already been called.
-	 *
-	 * @var bool
-	 */
+	* Whether normalizePhoto() has already been called.
+	*
+	* @var bool
+	*/
 	protected $normalized;
 
 	/**
-	 * Whether the photo is cached.
-	 *
-	 * @var bool
-	 */
+	* Whether the photo is cached.
+	*
+	* @var bool
+	*/
 	protected $cached;
 
-    /**
-     * Photo loader classes.
-     *
-     * @var array
-     */
+	/**
+	* Photo loader classes.
+	*
+	* @var array
+	*/
     static public $classMap = array(
 		'OCA\\Contacts\\Utils\\TemporaryPhoto\\Contact',
 		'OCA\\Contacts\\Utils\\TemporaryPhoto\\FileSystem',
@@ -77,20 +79,20 @@ abstract class TemporaryPhoto {
 	);
 
 	/**
-	 * Always call parents ctor:
-	 *   		parent::__construct($server);
-	 */
+	* Always call parents ctor:
+	*   		parent::__construct($server);
+	*/
 	public function __construct(\OCP\IServerContainer $server) {
 		$this->server = $server;
 	}
 
 	/**
-	 * Returns an instance of a subclass of this class
-	 *
-	 * @param \OCP\IServerContainer $server
-	 * @param int $type One of the pre-defined types.
-	 * @param mixed $data Whatever data is needed to load the photo.
-	 */
+	* Returns an instance of a subclass of this class
+	*
+	* @param \OCP\IServerContainer $server
+	* @param int $type One of the pre-defined types.
+	* @param mixed $data Whatever data is needed to load the photo.
+	*/
 	public static function get(\OCP\IServerContainer $server, $type, $data) {
 		if (isset(self::$classMap[$type])) {
 			return new self::$classMap[$type]($server, $data);
@@ -101,53 +103,53 @@ abstract class TemporaryPhoto {
 	}
 
 	/**
-	 * Do what's needed to get the image from storage
-	 * depending on the type.
-	 * After this method is called $this->image must hold an
-	 * instance of \OCP\Image.
-	 */
+	* Do what's needed to get the image from storage
+	* depending on the type.
+	* After this method is called $this->image must hold an
+	* instance of \OCP\Image.
+	*/
 	protected abstract function processImage();
 
 	/**
-	 * Whether this image is valied
-	 *
-	 * @return bool
-	 */
+	* Whether this image is valied
+	*
+	* @return bool
+	*/
 	public function isValid() {
-		return (($this->image instanceof \OCP\Image) && $this->image->valid());
+		return (($this->image instanceof Image) && $this->image->valid());
 	}
 
 	/**
-	 * Get the key to the cache image.
-	 *
-	 * @return string
-	 */
+	* Get the key to the cache image.
+	*
+	* @return string
+	*/
 	public function getKey() {
 		$this->cachePhoto();
 		return $this->key;
 	}
 
 	/**
-	 * Get normalized image.
-	 *
-	 * @return \OCP\Image
-	 */
+	* Get normalized image.
+	*
+	* @return \OCP\Image
+	*/
 	public function getPhoto() {
 		$this->normalizePhoto();
 		return $this->image;
 	}
 
 	/**
-	 * Save image data to cache and return the key
-	 *
-	 * @return string
-	 */
+	* Save image data to cache and return the key
+	*
+	* @return string
+	*/
 	private function cachePhoto() {
 		if ($this->cached) {
 			return;
 		}
 
-		if (!$this->image instanceof \OCP\Image) {
+		if (!$this->image instanceof Image) {
 			$this->processImage();
 		}
 		$this->normalizePhoto();
@@ -158,8 +160,8 @@ abstract class TemporaryPhoto {
 	}
 
 	/**
-	 * Resize and rotate the image if needed.
-	 */
+	* Resize and rotate the image if needed.
+	*/
 	private function normalizePhoto() {
 		
 		if($this->normalized) {
