@@ -1738,7 +1738,7 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('request.select.contactphoto.fromcloud', self.metaData());
 			});
 			$phototools.find('.upload').on('click', function() {
-				$(document).trigger('request.select.contactphoto.fromlocal', self.metaData());
+				$(document).trigger('request.select.contactphoto.fromlocal', self);
 			});
 			if(this.hasPhoto()) {
 				$phototools.find('.delete').show();

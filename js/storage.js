@@ -23,6 +23,7 @@ OC.Contacts = OC.Contacts || {};
 			if(response.status === 'error'|| this.statusCode >= 400) {
 				this.error = true;
 				if(this.statusCode < 500) {
+					console.log('JSONResponse', response);
 					this.message = (response.data && response.data.message)
 						? response.data.message
 						: response;
@@ -30,7 +31,7 @@ OC.Contacts = OC.Contacts || {};
 					this.message = t('contacts', 'Server error! Please inform system administator');
 				}
 			} else {
-				this.data = response;
+				this.data = response.data || response;
 			}
 		}
 	};
@@ -54,6 +55,8 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * When the response isn't returned from requestRoute(), you can
 	 * wrap it in a JSONResponse so that it's parsable by other objects.
+	 * FIXME: Reverse the order of the arguments as jqXHR should contain
+	 * everything needed.
 	 *
 	 * @param object response The body of the response
 	 * @param XMLHTTPRequest http://api.jquery.com/jQuery.ajax/#jqXHR
@@ -381,6 +384,24 @@ OC.Contacts = OC.Contacts || {};
 			});
 		});
 		return defer.promise();
+	};
+
+	/**
+	 * Crop a contact phot.
+	 *
+	 * @param string backend
+	 * @param string addressBookId Address book ID
+	 * @param string contactId Contact ID
+	 * @param string key The key to the cache where the temporary image is saved.
+	 * @param object coords An object with the properties: x, y, w, h
+	 */
+	Storage.prototype.cropContactPhoto = function(backend, addressBookId, contactId, key, coords) {
+		return this.requestRoute(
+			'addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/{key}/crop',
+			'POST',
+			{backend: backend, addressBookId: addressBookId, contactId: contactId, key: key},
+			JSON.stringify(coords)
+		);
 	};
 
 	/**

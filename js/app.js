@@ -610,9 +610,9 @@ OC.Contacts = OC.Contacts || {
 			});
 		});
 
-		$(document).bind('request.select.contactphoto.fromlocal', function(e, metadata) {
-			console.log('request.select.contactphoto.fromlocal', metadata);
-			$('#contactphoto_fileupload').trigger('click', metadata);
+		$(document).bind('request.select.contactphoto.fromlocal', function(e, contact) {
+			console.log('request.select.contactphoto.fromlocal', contact);
+			$('#contactphoto_fileupload').trigger('click', contact);
 		});
 
 		$(document).bind('request.select.contactphoto.fromcloud', function(e, metadata) {
@@ -764,10 +764,12 @@ OC.Contacts = OC.Contacts || {
 				//console.log('scroll, unseen:', offset, self.$rightContent.height());
 			}
 		});*/
-		$('#contactphoto_fileupload').on('click', function(event, metadata) {
+		$('#contactphoto_fileupload').on('click', function(event, contact) {
+			console.log('contact', contact);
+			var metaData = contact.metaData();
 			var url = OC.generateUrl(
 				'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo',
-				{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId}
+				{backend: metaData.backend, addressBookId: metaData.addressBookId, contactId: metaData.contactId}
 			);
 			$(this).fileupload('option', 'url', url);
 		}).fileupload({
@@ -775,6 +777,33 @@ OC.Contacts = OC.Contacts || {
 			multipart: false,
 			dataType: 'json',
 			type: 'PUT',
+			dropZone: null, pasteZone: null,
+			acceptFileTypes: /^image\//,
+			add: function(e, data) {
+				var file = data.files[0];
+				/*if (file.type.substr(0, 6) !== 'image/') {
+					$(document).trigger('status.contacts.error', {
+						error: true,
+						message: t('contacts', 'Only images can be used as contact photo')
+					});
+					return;
+				}*/
+				if (file.size > parseInt($(this).siblings('[name="MAX_FILE_SIZE"]').val())) {
+					$(document).trigger('status.contacts.error', {
+						error: true,
+						message: t(
+							'contacts',
+							'The size of "{filename}" exceeds the maximum allowed {size}',
+							{filename: file.name, size: $(this).siblings('[name="max_human_file_size"]').val()}
+						)
+					});
+					return;
+				}
+				data.submit();
+			},
+			start: function(e, data) {
+				console.log('fileupload.start',data);
+			},
 			done: function (e, data) {
 				console.log('Upload done:', data);
 				self.editPhoto(
@@ -784,8 +813,13 @@ OC.Contacts = OC.Contacts || {
 			},
 			fail: function(e, data) {
 				console.log('fail', data);
-				OC.notify({message:data.errorThrown + ': ' + data.textStatus});
+				var response = self.storage.formatResponse(data.jqXHR.responseJSON, data.jqXHR);
+				$(document).trigger('status.contacts.error', response);
 			}
+		});
+
+		this.$rightContent.bind('drop dragover', function (e) {
+			e.preventDefault();
 		});
 
 		this.$ninjahelp.find('.close').on('click keydown',function(event) {
@@ -1542,18 +1576,7 @@ OC.Contacts = OC.Contacts || {
 			this.$cropBoxTmpl = $('#cropBoxTemplate');
 		}
 		var $container = $('<div />').appendTo($('body'));
-		var url = OC.generateUrl(
-			'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/{key}/crop',
-			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId, key: tmpkey}
-		);
-		var $dlg = this.$cropBoxTmpl.octemplate(
-			{
-				action: url,
-				backend: metadata.backend,
-				addressbookid: metadata.addressbookid,
-				contactid: metadata.contactid,
-				tmpkey: tmpkey
-			}).prependTo($container);
+		var $dlg = this.$cropBoxTmpl.octemplate().prependTo($container);
 
 		$.when(this.storage.getTempContactPhoto(
 			metadata.backend,
@@ -1587,7 +1610,7 @@ OC.Contacts = OC.Contacts || {
 					{
 						text: t('contacts', 'Crop photo'),
 						click:function() {
-							self.savePhoto($(this), function() {
+							self.savePhoto($(this), metadata, tmpkey, function() {
 								$container.ocdialog('close');
 							});
 						},
@@ -1607,31 +1630,34 @@ OC.Contacts = OC.Contacts || {
 			console.warn('Error getting temporary photo');
 		});
 	},
-	savePhoto:function($dlg, cb) {
-		var $form = $dlg.find('#cropform');
-		var $target = $dlg.find('#crop_target');
-		console.log('target', $target);
-		$target.on('load', function() {
-			console.log('submitted');
-			var response = $.parseJSON($target.contents().text());
+	savePhoto:function($dlg, metaData, key, cb) {
+		var coords = {};
+		$.each($dlg.find('#coords').serializeArray(), function(idx, coord) {
+			coords[coord.name] = coord.value;
+		});
+
+		$.when(this.storage.cropContactPhoto(
+			metaData.backend, metaData.addressBookId, metaData.contactId, key, coords
+		))
+		.then(function(response) {
+			$(document).trigger('status.contact.photoupdated', {
+				id: response.data.id,
+				thumbnail: response.data.thumbnail
+			});
+		})
+		.fail(function(response) {
 			console.log('response', response);
-			if(response && response.status === 'success') {
-				$(document).trigger('status.contact.photoupdated', {
-					id: response.data.id,
-					thumbnail: response.data.thumbnail
+			if(!response || !response.message) {
+				$(document).trigger('status.contacts.error', {
+					message:t('contacts', 'Network or server error. Please inform administrator.')
 				});
 			} else {
-				if(!response) {
-					$(document).trigger('status.contacts.error', {
-						message:t('contacts', 'Network or server error. Please inform administrator.')
-					});
-				} else {
-					$(document).trigger('status.contacts.error', response);
-				}
+				$(document).trigger('status.contacts.error', response);
 			}
+		})
+		.always(function() {
 			cb();
 		});
-		$form.submit();
 	}
 };
 
