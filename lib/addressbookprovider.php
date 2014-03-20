@@ -180,7 +180,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			// TODO: test if $id belongs to this addressbook
 			$id = $properties['id'];
 			// TODO: Test $vcard
-			$vcard = App::getContactVCard($properties['id']);
+			$vcard = $this->addressBook->getChild($properties['id']);
 			foreach(array_keys($properties) as $name) {
 				if(isset($vcard->{$name})) {
 					unset($vcard->{$name});
@@ -191,7 +191,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			$uid = substr(md5(rand().time()), 0, 10);
 			$vcard->add('UID', $uid);
 			try {
-				$id = VCard::add($this->id, $vcard, null, true);
+				$id = $this->addressBook->addChild($this->id, $vcard);
 			} catch(\Exception $e) {
 				\OCP\Util::writeLog('contacts', __METHOD__ . ' ' . $e->getMessage(), \OCP\Util::ERROR);
 				return false;
