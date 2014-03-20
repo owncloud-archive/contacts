@@ -421,7 +421,7 @@ class Addressbook extends AbstractPIMCollection {
 	 * Must return a UNIX time stamp or null if the backend
 	 * doesn't support it.
 	 *
-	 * @returns int | null
+	 * @return int | null
 	 */
 	public function lastModified() {
 		return $this->backend->lastModifiedAddressBook($this->getId());
