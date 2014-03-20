@@ -22,7 +22,7 @@
 
 namespace OCA\Contacts\Utils;
 
-//use OCP\Image;
+use OCP\Image;
 
 /**
  * This class is used for getting a contact photo for cropping.

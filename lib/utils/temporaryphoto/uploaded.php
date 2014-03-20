@@ -25,7 +25,9 @@ namespace OCA\Contacts\Utils\TemporaryPhoto;
 use OCA\Contacts\Contact as ContactObject,
 	OCA\Contacts\Utils\TemporaryPhoto as AbstractTemporaryPhoto,
 	OCP\IRequest,
-	OCP\AppFramework\Http;
+	OCP\AppFramework\Http,
+	OCP\Image;
+;
 
 
 /**
@@ -58,10 +60,10 @@ class Uploaded extends AbstractTemporaryPhoto {
 	 */
 	protected function processImage() {
 		// If image has already been read return
-		if ($this->image instanceOf \OCP\Image) {
+		if ($this->image instanceOf Image) {
 			return;
 		}
-		$this->image = new \OCP\Image();
+		$this->image = new Image();
 		\OCP\Util::writeLog('contacts', __METHOD__ . ', Content-Type: ' . $this->request->getHeader('Content-Type'), \OCP\Util::DEBUG);
 		\OCP\Util::writeLog('contacts', __METHOD__ . ', Content-Length: ' . $this->request->getHeader('Content-Length'), \OCP\Util::DEBUG);
 
