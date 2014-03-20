@@ -765,29 +765,26 @@ OC.Contacts = OC.Contacts || {
 			}
 		});*/
 		$('#contactphoto_fileupload').on('click', function(event, metadata) {
-			var form = $('#file_upload_form');
 			var url = OC.generateUrl(
 				'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo',
 				{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId}
 			);
-			form.attr('action', url);
-		}).on('change', function() {
-			console.log('#contactphoto_fileupload, change');
-			self.uploadPhoto(this.files);
-		});
-
-		var target = $('#file_upload_target');
-		target.load(function() {
-			var response = $.parseJSON(target.contents().text());
-			if(response && response.status === 'success') {
-				console.log('response', response);
+			$(this).fileupload('option', 'url', url);
+		}).fileupload({
+			singleFileUploads: true,
+			multipart: false,
+			dataType: 'json',
+			type: 'PUT',
+			done: function (e, data) {
+				console.log('Upload done:', data);
 				self.editPhoto(
-					response.data.metadata,
-					response.data.tmp
+					data.result.metadata,
+					data.result.tmp
 				);
-				//alert('File: ' + file.tmp + ' ' + file.name + ' ' + file.mime);
-			} else if(response) {
-				$(document).trigger('status.contacts.error', response);
+			},
+			fail: function(e, data) {
+				console.log('fail', data);
+				OC.notify({message:data.errorThrown + ': ' + data.textStatus});
 			}
 		});
 
@@ -1491,34 +1488,14 @@ OC.Contacts = OC.Contacts || {
 	update: function() {
 		console.log('update');
 	},
-	uploadPhoto:function(filelist) {
-		console.log('uploadPhoto');
-		if(!filelist) {
-			$(document).trigger('status.contacts.error', {message:t('contacts','No files selected for upload.')});
-			return;
-		}
-		var file = filelist[0];
-		var form = $('#file_upload_form');
-
-		if(file.size > $('#max_upload').val()) {
-			$(document).trigger('status.contacts.error', {
-				message:t(
-					'contacts',
-					'The file you are trying to upload exceed the maximum size for file uploads on this server.')
-			});
-			return;
-		} else {
-			form.submit();
-		}
-	},
 	cloudPhotoSelected:function(metadata, path) {
 		var self = this;
 		console.log('cloudPhotoSelected', metadata);
 		var url = OC.generateUrl(
 			'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo/cacheFS',
-			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId, path: path}
+			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId}
 		);
-		var jqXHR = $.getJSON(url, function(response) {
+		var jqXHR = $.getJSON(url, {path: path}, function(response) {
 			console.log('response', response);
 			response = self.storage.formatResponse(response, jqXHR);
 			if(!response.error) {

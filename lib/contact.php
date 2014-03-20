@@ -386,6 +386,21 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	/**
+	 * Get the PHOTO or LOGO
+	 *
+	 * @return \OCP\Image|null
+	 */
+	public function getPhoto() {
+		$image = new \OCP\Image();
+
+		if (isset($this->PHOTO) && $image->loadFromBase64((string)$this->PHOTO)) {
+			return $image;
+		} elseif (isset($this->LOGO) && $image->loadFromBase64((string)$this->LOGO)) {
+			return $image;
+		}
+	}
+
+	/**
 	* Get a property index in the contact by the checksum of its serialized value
 	*
 	* @param string $checksum An 8 char m5d checksum.

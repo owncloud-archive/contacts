@@ -13,6 +13,7 @@ use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\ImageResponse,
 	OCA\Contacts\Utils\Properties,
+	OCA\Contacts\Utils\TemporaryPhoto,
 	OCA\Contacts\Controller;
 
 /**
@@ -79,73 +80,24 @@ class ContactPhotoController extends Controller {
 	 */
 	public function uploadPhoto() {
 		$params = $this->request->urlParams;
-		$maxSize = isset($this->request->post['maxSize']) ? $this->request->post['maxSize'] : 400;
+
+
+		$tempPhoto = TemporaryPhoto::get(
+			$this->server,
+			TemporaryPhoto::PHOTO_UPLOADED,
+			$this->request
+		);
 
 		$response = new JSONResponse();
 
-		if (!isset($this->request->files['imagefile'])) {
-			$response->bailOut(App::$l10n->t('No file was uploaded. Unknown error'));
-			return $response;
-		}
-
-		$file = $this->request->files['imagefile'];
-		$error = $file['error'];
-		if($error !== UPLOAD_ERR_OK) {
-			$errors = array(
-				0=>App::$l10n->t("There is no error, the file uploaded with success"),
-				1=>App::$l10n->t("The uploaded file exceeds the upload_max_filesize directive in php.ini").ini_get('upload_max_filesize'),
-				2=>App::$l10n->t("The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form"),
-				3=>App::$l10n->t("The uploaded file was only partially uploaded"),
-				4=>App::$l10n->t("No file was uploaded"),
-				6=>App::$l10n->t("Missing a temporary folder")
-			);
-			$response->bailOut($errors[$error]);
-			return $response;
-		}
-
-		if(!file_exists($file['tmp_name'])) {
-			$response->bailOut('Temporary file: \''.$file['tmp_name'].'\' has gone AWOL?');
-			return $response;
-		}
-
-		$tmpkey = 'contact-photo-'.md5(basename($file['tmp_name']));
-		$image = new \OCP\Image();
-
-		if(!$image->loadFromFile($file['tmp_name'])) {
-			$response->bailOut(App::$l10n->t('Couldn\'t load temporary image: ').$file['tmp_name']);
-			return $response;
-		}
-
-		if(!$image->fixOrientation()) { // No fatal error so we don't bail out.
-			$response->debug('Couldn\'t save correct image orientation: '.$tmpkey);
-		}
-
-		if($image->valid()) {
-			if($image->height() > $maxSize || $image->width() > $maxSize) {
-				$image->resize($maxSize);
-			}
-		} else {
-			$response->bailOut(App::$l10n->t('Uploaded image is invalid'));
-		}
-
-		if(!$this->server->getCache()->set($tmpkey, $image->data(), 600)) {
-			$response->bailOut(App::$l10n->t('Couldn\'t save temporary image: ').$tmpkey);
-			return $response;
-		}
-
-		$response->setData(array(
-			'status' => 'success',
-			'data' => array(
-				'tmp'=>$tmpkey,
-				'metadata' => array(
-					'contactId'=> $params['contactId'],
-					'addressBookId'=> $params['addressBookId'],
-					'backend'=> $params['backend'],
-				),
-			)
+		return $response->setParams(array(
+			'tmp'=>$tempPhoto->getKey(),
+			'metadata' => array(
+				'contactId'=> $params['contactId'],
+				'addressBookId'=> $params['addressBookId'],
+				'backend'=> $params['backend'],
+			),
 		));
-
-		return $response;
 	}
 
 	/**
@@ -158,32 +110,24 @@ class ContactPhotoController extends Controller {
 	public function cacheCurrentPhoto() {
 		$params = $this->request->urlParams;
 		$response = new JSONResponse();
-		$maxSize = isset($this->request->get['maxSize']) ? $this->request->get['maxSize'] : 400;
 
-		$photoResponse = $this->getPhoto($maxSize);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
+		$contact = $addressBook->getChild($params['contactId']);
 
-		if(!$photoResponse instanceof ImageResponse) {
-			return $photoResponse;
-		}
+		$tempPhoto = TemporaryPhoto::get(
+			$this->server,
+			TemporaryPhoto::PHOTO_CURRENT,
+			$contact
+		);
 
-		$data = $photoResponse->render();
-		$tmpkey = 'contact-photo-' . $params['contactId'];
-		if(!$this->server->getCache()->set($tmpkey, $data, 600)) {
-			$response->bailOut(App::$l10n->t('Couldn\'t save temporary image: ').$tmpkey);
-			return $response;
-		}
-
-		$response->setParams(array(
-			'tmp'=>$tmpkey,
+		return $response->setParams(array(
+			'tmp'=>$tempPhoto->getKey(),
 			'metadata' => array(
 				'contactId'=> $params['contactId'],
 				'addressBookId'=> $params['addressBookId'],
 				'backend'=> $params['backend'],
 			),
 		));
-
-		return $response;
-
 	}
 
 	/**
@@ -202,39 +146,20 @@ class ContactPhotoController extends Controller {
 			$response->bailOut(App::$l10n->t('No photo path was submitted.'));
 		}
 
-		$localpath = \OC\Files\Filesystem::getLocalFile($this->request->get['path']);
-		$tmpkey = 'contact-photo-' . $params['contactId'];
+		$tempPhoto = TemporaryPhoto::get(
+			$this->server,
+			TemporaryPhoto::PHOTO_FILESYSTEM,
+			$this->request->get['path']
+		);
 
-		if(!file_exists($localpath)) {
-			return $response->bailOut(App::$l10n->t('File doesn\'t exist:').$localpath);
-		}
-
-		$image = new \OCP\Image();
-		if(!$image) {
-			return $response->bailOut(App::$l10n->t('Error loading image.'));
-		}
-		if(!$image->loadFromFile($localpath)) {
-			return $response->bailOut(App::$l10n->t('Error loading image.'));
-		}
-		if($image->width() > $maxSize || $image->height() > $maxSize) {
-			$image->resize($maxSize); // Prettier resizing than with browser and saves bandwidth.
-		}
-		if(!$image->fixOrientation()) { // No fatal error so we don't bail out.
-			$response->debug('Couldn\'t save correct image orientation: '.$localpath);
-		}
-		if(!$this->server->getCache()->set($tmpkey, $image->data(), 600)) {
-			return $response->bailOut('Couldn\'t save temporary image: '.$tmpkey);
-		}
-
-		return $response->setData(array(
-			'tmp'=>$tmpkey,
+		return $response->setParams(array(
+			'tmp'=>$tempPhoto->getKey(),
 			'metadata' => array(
 				'contactId'=> $params['contactId'],
 				'addressBookId'=> $params['addressBookId'],
 				'backend'=> $params['backend'],
 			),
 		));
-
 	}
 
 	/**

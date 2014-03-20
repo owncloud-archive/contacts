@@ -243,7 +243,7 @@ $this->create('contacts_contact_photo', 'addressbook/{backend}/{addressBookId}/c
 	->requirements(array('backend', 'addressbook', 'contactId'));
 
 $this->create('contacts_upload_contact_photo', 'addressbook/{backend}/{addressBookId}/contact/{contactId}/photo')
-	->post()
+	->put()
 	->action(
 		function($params) {
 			session_write_close();
