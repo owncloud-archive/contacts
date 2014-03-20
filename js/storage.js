@@ -32,6 +32,10 @@ OC.Contacts = OC.Contacts || {};
 				}
 			} else {
 				this.data = response.data || response;
+				// Kind of a hack
+				if (response.metadata) {
+					this.metadata = response.metadata;
+				}
 			}
 		}
 	};

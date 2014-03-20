@@ -33,23 +33,14 @@ class ContactPhotoController extends Controller {
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contact = $addressBook->getChild($params['contactId']);
 
-		if(!$contact) {
-			$response = new JSONResponse();
-			$response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-			return $response;
-		}
+		$tempPhoto = TemporaryPhoto::create(
+			$this->server,
+			TemporaryPhoto::PHOTO_CURRENT,
+			$contact
+		);
 
-		$image = new \OCP\Image();
-		if (isset($contact->PHOTO) && $image->loadFromBase64((string)$contact->PHOTO)) {
-			// OK
-			$etag = md5($contact->PHOTO);
-		}
-		else
-		// Logo :-/
-		if(isset($contact->LOGO) && $image->loadFromBase64((string)$contact->LOGO)) {
-			// OK
-			$etag = md5($contact->LOGO);
-		}
+		$image = $tempPhoto->getPhoto();
+
 		if($image->valid()) {
 			$response = new ImageResponse($image);
 			$lastModified = $contact->lastModified();
@@ -65,9 +56,7 @@ class ContactPhotoController extends Controller {
 			}
 			return $response;
 		} else {
-			$response = new JSONResponse();
-			$response->bailOut(App::$l10n->t('Error getting user photo'));
-			return $response;
+			throw new \Exception(App::$l10n->t('Error getting user photo'));
 		}
 	}
 
@@ -81,7 +70,7 @@ class ContactPhotoController extends Controller {
 		$params = $this->request->urlParams;
 		$response = new JSONResponse();
 
-		$tempPhoto = TemporaryPhoto::get(
+		$tempPhoto = TemporaryPhoto::create(
 			$this->server,
 			TemporaryPhoto::PHOTO_UPLOADED,
 			$this->request
@@ -111,7 +100,7 @@ class ContactPhotoController extends Controller {
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contact = $addressBook->getChild($params['contactId']);
 
-		$tempPhoto = TemporaryPhoto::get(
+		$tempPhoto = TemporaryPhoto::create(
 			$this->server,
 			TemporaryPhoto::PHOTO_CURRENT,
 			$contact
@@ -142,7 +131,7 @@ class ContactPhotoController extends Controller {
 			$response->bailOut(App::$l10n->t('No photo path was submitted.'));
 		}
 
-		$tempPhoto = TemporaryPhoto::get(
+		$tempPhoto = TemporaryPhoto::create(
 			$this->server,
 			TemporaryPhoto::PHOTO_FILESYSTEM,
 			$this->request->get['path']
@@ -167,8 +156,9 @@ class ContactPhotoController extends Controller {
 		$params = $this->request->urlParams;
 		$tmpkey = $params['key'];
 
-		$image = new \OCP\Image();
-		$image->loadFromData($this->server->getCache()->get($tmpkey));
+		$tmpPhoto = new TemporaryPhoto($this->server, $tmpkey);
+		$image = $tmpPhoto->getPhoto();
+
 		if($image->valid()) {
 			$response = new ImageResponse($image);
 			return $response;
@@ -197,19 +187,10 @@ class ContactPhotoController extends Controller {
 
 		$response = new JSONResponse();
 
-		if(!$contact) {
-			return $response->bailOut(App::$l10n->t('Couldn\'t find contact.'));
-		}
-
-		$data = $this->server->getCache()->get($tmpkey);
-		if(!$data) {
-			return $response->bailOut(App::$l10n->t('Image has been removed from cache'));
-		}
-
-		$image = new \OCP\Image();
-
-		if(!$image->loadFromData($data)) {
-			return $response->bailOut(App::$l10n->t('Error creating temporary image'));
+		$tmpPhoto = new TemporaryPhoto($this->server, $tmpkey);
+		$image = $tmpPhoto->getPhoto();
+		if(!$image || !$image->valid()) {
+			return $response->bailOut(App::$l10n->t('Error loading image from cache'));
 		}
 
 		$w = ($w !== -1 ? $w : $image->width());
@@ -219,36 +200,11 @@ class ContactPhotoController extends Controller {
 			return $response->bailOut(App::$l10n->t('Error cropping image'));
 		}
 
-		// For vCard 3.0 the type must be e.g. JPEG or PNG
-		// For version 4.0 the full mimetype should be used.
-		// https://tools.ietf.org/html/rfc2426#section-3.1.4
-		if(strval($contact->VERSION) === '4.0') {
-			$type = $image->mimeType();
-		} else {
-			$type = explode('/', $image->mimeType());
-			$type = strtoupper(array_pop($type));
+		if (!$contact->setPhoto($image)) {
+			$tmpPhoto->remove($tmpkey);
+			return $response->bailOut(App::$l10n->t('Error getting PHOTO property.'));
 		}
-		if(isset($contact->PHOTO)) {
-			$property = $contact->PHOTO;
-			if(!$property) {
-				$this->server->getCache()->remove($tmpkey);
-				return $response->bailOut(App::$l10n
-					->t('Error getting PHOTO property.'));
-			}
-			$property->setValue(strval($image));
-			$property->parameters = array();
-			$property->parameters[]
-				= new \Sabre\VObject\Parameter('ENCODING', 'b');
-			$property->parameters[]
-				= new \Sabre\VObject\Parameter('TYPE', $image->mimeType());
-			$contact->PHOTO = $property;
-		} else {
-			$contact->add('PHOTO',
-				strval($image), array('ENCODING' => 'b',
-				'TYPE' => $type));
-			// TODO: Fix this hack
-			$contact->setSaved(false);
-		}
+
 		if(!$contact->save()) {
 			return $response->bailOut(App::$l10n->t('Error saving contact.'));
 		}
@@ -268,7 +224,7 @@ class ContactPhotoController extends Controller {
 			)
 		));
 
-		$this->server->getCache()->remove($tmpkey);
+		$tmpPhoto->remove($tmpkey);
 
 		return $response;
 	}

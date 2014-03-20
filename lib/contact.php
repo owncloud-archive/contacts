@@ -401,6 +401,45 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	/**
+	 * Set the contact photo.
+	 *
+	 * @param \OCP\Image $photo
+	 */
+	public function setPhoto(\OCP\Image $photo) {
+		// For vCard 3.0 the type must be e.g. JPEG or PNG
+		// For version 4.0 the full mimetype should be used.
+		// https://tools.ietf.org/html/rfc2426#section-3.1.4
+		if(strval($this->VERSION) === '4.0') {
+			$type = $photo->mimeType();
+		} else {
+			$type = explode('/', $photo->mimeType());
+			$type = strtoupper(array_pop($type));
+		}
+		if(isset($this->PHOTO)) {
+			$property = $this->PHOTO;
+			if(!$property) {
+				return false;
+			}
+			$property->setValue(strval($photo));
+			$property->parameters = array();
+			$property->parameters[]
+				= new \Sabre\VObject\Parameter('ENCODING', 'b');
+			$property->parameters[]
+				= new \Sabre\VObject\Parameter('TYPE', $photo->mimeType());
+			$this->PHOTO = $property;
+		} else {
+			$this->add('PHOTO',
+				strval($photo), array('ENCODING' => 'b',
+				'TYPE' => $type));
+			// TODO: Fix this hack
+			$this->setSaved(false);
+		}
+
+		return true;
+
+	}
+
+	/**
 	* Get a property index in the contact by the checksum of its serialized value
 	*
 	* @param string $checksum An 8 char m5d checksum.

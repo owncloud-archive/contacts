@@ -793,9 +793,9 @@ OC.Contacts = OC.Contacts || {};
 		$.when(this.storage.addContact(this.metadata.backend, this.metadata.parent))
 			.then(function(response) {
 			if(!response.error) {
-				self.id = String(response.data.metadata.id);
-				self.metadata = response.data.metadata;
-				self.data = response.data.data;
+				self.id = String(response.metadata.id);
+				self.metadata = response.metadata;
+				self.data = response.data;
 				console.log('Contact.add, groupprops', self.groupprops);
 				if(self.groupprops && self.groupprops.groups.length > 0) {
 					self._buildGroupSelect(self.groupprops.groups);

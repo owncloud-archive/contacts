@@ -25,9 +25,9 @@ namespace OCA\Contacts\Utils;
 use OCP\Image;
 
 /**
- * This class is used for getting a contact photo for cropping.
+ * This class is used for getting a temporary contact photo for cropping.
  */
-abstract class TemporaryPhoto {
+class TemporaryPhoto {
 
 	const MAX_SIZE = 400;
 
@@ -82,24 +82,36 @@ abstract class TemporaryPhoto {
 	* Always call parents ctor:
 	*   		parent::__construct($server);
 	*/
-	public function __construct(\OCP\IServerContainer $server) {
+	public function __construct(\OCP\IServerContainer $server, $key = null) {
 		$this->server = $server;
+		$this->key = $key;
+		if (!is_null($key)) {
+			$this->processImage();
+		}
 	}
 
 	/**
 	* Returns an instance of a subclass of this class
 	*
 	* @param \OCP\IServerContainer $server
-	* @param int $type One of the pre-defined types.
-	* @param mixed $data Whatever data is needed to load the photo.
+	* @param int|null $type One of the pre-defined types.
+	* @param mixed|null $data Whatever data is needed to load the photo.
 	*/
-	public static function get(\OCP\IServerContainer $server, $type, $data) {
+	public static function create(\OCP\IServerContainer $server, $type = null, $data = null) {
 		if (isset(self::$classMap[$type])) {
 			return new self::$classMap[$type]($server, $data);
 		} else {
-			// TODO: Return a "null object"
-			return new self($data);
+			return new self($data, $data);
 		}
+	}
+
+	/**
+	* Remove a cached image by key.
+	*
+	* @param string $key
+	*/
+	public function remove($key) {
+		return $this->server->getCache()->remove($key);
 	}
 
 	/**
@@ -108,7 +120,10 @@ abstract class TemporaryPhoto {
 	* After this method is called $this->image must hold an
 	* instance of \OCP\Image.
 	*/
-	protected abstract function processImage();
+	protected function processImage() {
+		$this->image = new \OCP\Image();
+		$this->image->loadFromData($this->server->getCache()->get($this->key));
+	}
 
 	/**
 	* Whether this image is valied
