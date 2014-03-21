@@ -196,9 +196,7 @@ class ContactPhotoController extends Controller {
 		$w = ($w !== -1 ? $w : $image->width());
 		$h = ($h !== -1 ? $h : $image->height());
 
-		if(!$image->crop($x, $y, $w, $h)) {
-			return $response->bailOut(App::$l10n->t('Error cropping image'));
-		}
+		$image->crop($x, $y, $w, $h);
 
 		if (!$contact->setPhoto($image)) {
 			$tmpPhoto->remove($tmpkey);
