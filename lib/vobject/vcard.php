@@ -39,14 +39,14 @@ use Sabre\VObject;
  * @property \OC\VObject\CompoundProperty ORG
  * @property \OC\VObject\CompoundProperty ADR
  * @property \OCA\Contacts\VObject\GroupProperty CATEGORIES
- * @property string FN
- * @property string EMAIL
- * @property string VERSION
- * @property string BDAY
- * @property string UID
- * @property string REV
- * @property string PHOTO
- * @property string LOGO
+ * @property \OC\VObject\StringProperty FN
+ * @property \OC\VObject\StringProperty EMAIL
+ * @property \OC\VObject\StringProperty VERSION
+ * @property \OC\VObject\StringProperty BDAY
+ * @property \OC\VObject\StringProperty UID
+ * @property \OC\VObject\StringProperty REV
+ * @property \OC\VObject\StringProperty PHOTO
+ * @property \OC\VObject\StringProperty LOGO
 */
 class VCard extends VObject\Component\VCard {
 
