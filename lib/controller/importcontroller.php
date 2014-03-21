@@ -28,8 +28,8 @@ class ImportController extends Controller {
 	public function upload() {
 		$request = $this->request;
 		$params = $this->request->urlParams;
-                $addressBookId = $params['addressBookId'];
-                $format = $params['importType'];
+		$addressBookId = $params['addressBookId'];
+		$format = $params['importType'];
 		$response = new JSONResponse();
 
 		$view = \OCP\Files::getStorage('contacts');
@@ -81,18 +81,16 @@ class ImportController extends Controller {
 			\OC_FileProxy::$enabled = false;
 			if($view->file_put_contents('/imports/'.$filename, $content)) {
 				\OC_FileProxy::$enabled = $proxyStatus;
-				$count = substr_count($content, 'BEGIN:');
 				$progresskey = 'contacts-import-' . rand();
 				$response->setParams(
 					array(
 						'filename'=>$filename,
-						'count' => $count,
 						'progresskey' => $progresskey,
 						'backend' => $params['backend'],
-						'addressBookId' => $params['addressBookId']
+						'addressBookId' => $params['addressBookId'],
+						'importType' => $format
 					)
 				);
-				\OC_Cache::set($progresskey, '0', 300);
 			} else {
 				\OC_FileProxy::$enabled = $proxyStatus;
 				$response->bailOut(App::$l10n->t('Error uploading contacts to storage.'));
@@ -128,19 +126,16 @@ class ImportController extends Controller {
 		//$content = file_get_contents('oc://' . $path . '/' . $filename);
 		if($view->file_put_contents('/imports/' . $filename, $content)) {
 			\OC_FileProxy::$enabled = $proxyStatus;
-			$count = substr_count($content, 'BEGIN:');
 			$progresskey = 'contacts-import-' . rand();
 			$response->setParams(
 				array(
 					'filename'=>$filename,
-					'count' => $count,
 					'progresskey' => $progresskey,
 					'backend' => $params['backend'],
 					'addressBookId' => $params['addressBookId'],
 					'importType' => $params['importType']
 				)
 			);
-			\OC_Cache::set($progresskey, '0', 300);
 		} else {
 			\OC_FileProxy::$enabled = $proxyStatus;
 			$response->bailOut(App::$l10n->t('Error moving file to imports folder.'));
@@ -190,8 +185,9 @@ class ImportController extends Controller {
 		$file = $view->file_get_contents('/imports/' . $filename);
 		\OC_FileProxy::$enabled = $proxyStatus;
 
-		$writeProgress = function($pct) use ($progresskey) {
+		$writeProgress = function($pct, $total) use ($progresskey) {
 			\OC_Cache::set($progresskey, $pct, 300);
+			\OC_Cache::set($progresskey.'_total', $total, 300);
 		};
 
 		$cleanup = function() use ($view, $filename, $progresskey) {
@@ -199,10 +195,11 @@ class ImportController extends Controller {
 				$response->debug('Unable to unlink /imports/' . $filename);
 			}
 			\OC_Cache::remove($progresskey);
+			\OC_Cache::remove($progresskey.'_total');
 		};
 		
 		$importManager = new ImportManager();
-		$file = str_replace(array("\r","\n\n"), array("\n","\n"), $file);
+		
 		$formatList = $importManager->getTypes();
 		
 		$found = false;
@@ -266,7 +263,7 @@ class ImportController extends Controller {
 					$failed++;
 				}
 				$processed++;
-				$writeProgress($processed);
+				$writeProgress($processed, $total);
 			}
 		} else {
 			$imported = 0;
@@ -304,7 +301,8 @@ class ImportController extends Controller {
 			return $response;
 		}
 
-		$response->setParams(array('progress' => \OC_Cache::get($progresskey)));
+		error_log("progresskey: ".\OC_Cache::get($progresskey)." total: ".\OC_Cache::get($progresskey.'_total') );
+		$response->setParams(array('progress' => \OC_Cache::get($progresskey), 'total' => \OC_Cache::get($progresskey.'_total') ));
 		return $response;
 	}
 }

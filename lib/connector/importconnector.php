@@ -81,9 +81,9 @@ abstract class ImportConnector {
 						$separator=$importEntry->vcard_entry['separator'];
 					}
 					$position = $importEntry->vcard_entry['position'];
-					$v_array = explode($separator, $property);
-					$v_array[intval($position)] = StringUtil::convertToUTF8($value);
-					$property->setValue(implode($separator, $v_array));
+					$vArray = explode($separator, $property);
+					$vArray[intval($position)] = StringUtil::convertToUTF8($value);
+					$property->setValue(implode($separator, $vArray));
 				} else {
 					if (isset($importEntry->vcard_entry['value'])) {
 						$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($value));

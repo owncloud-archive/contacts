@@ -88,7 +88,7 @@ class ImportCsvConnector extends ImportConnector {
 			}
 			$csv->setCsvControl($delimiter, "\"", "\\");
 
-			$ignore_first_line = (isset($this->configContent->import_core->ignore_first_line)
+			$ignoreFirstLine = (isset($this->configContent->import_core->ignore_first_line)
 									&& (((string)$this->configContent->import_core->ignore_first_line) == 'true')
 										|| ((string)$this->configContent->import_core->ignore_first_line) == '1');
 
@@ -98,14 +98,14 @@ class ImportCsvConnector extends ImportConnector {
 
 			$index = 0;
 			foreach($csv as $line) {
-				if (!($ignore_first_line && $index == 0) && count($line) > 1) { // Ignore first line
+				if (!($ignoreFirstLine && $index == 0) && count($line) > 1) { // Ignore first line
 
 					$lines[] = $line;
 
 					if (count($lines) == $limit) {
 						break;
 					}
-				} else if ($ignore_first_line && $index == 0) {
+				} else if ($ignoreFirstLine && $index == 0) {
 					$titles = $line;
 				}
 				$index++;
@@ -126,9 +126,10 @@ class ImportCsvConnector extends ImportConnector {
 	public function convertElementToVCard($element, $title = null) {
 		$vcard = \Sabre\VObject\Component::create('VCARD');
 
-		for ($i=0; $i < count($element); $i++) {
+		$nbElt = count($element);
+		for ($i=0; $i < $nbElt; $i++) {
 			if ($element[$i] != '') {
-				//error_log("element at $i, value:'".$element[$i]."'");
+				//$importEntry = false;
 				// Look for the right import_entry
 				if (isset($this->configContent->import_core->base_parsing)) {
 					if (strcasecmp((string)$this->configContent->import_core->base_parsing, 'position') == 0) {
@@ -181,7 +182,8 @@ class ImportCsvConnector extends ImportConnector {
 	 * @return int|false
 	 */
 	private function getImportEntryFromPosition($position) {
-		for ($i=0; $i < $this->configContent->import_entry->count(); $i++) {
+		$nbElt = $this->configContent->import_entry->count();
+		for ($i=0; $i < $nbElt; $i++) {
 			if ($this->configContent->import_entry[$i]['position'] == $position && $this->configContent->import_entry[$i]['enabled'] == 'true') {
 				return $this->configContent->import_entry[$i];
 			}
@@ -195,7 +197,8 @@ class ImportCsvConnector extends ImportConnector {
 	 * @return string|false
 	 */
 	private function getImportEntryFromName($name) {
-		for ($i=0; $i < $this->configContent->import_entry->count(); $i++) {
+		$nbElt = $this->configContent->import_entry->count();
+		for ($i=0; $i < $nbElt; $i++) {
 			if ($this->configContent->import_entry[$i]['name'] == StringUtil::convertToUTF8($name) && $this->configContent->import_entry[$i]['enabled'] == 'true') {
 				return $this->configContent->import_entry[$i];
 			}

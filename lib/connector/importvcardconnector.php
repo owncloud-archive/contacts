@@ -61,16 +61,16 @@ class ImportVCardConnector extends ImportConnector{
 		$file = StringUtil::convertToUTF8(file_get_contents($file));
 
 		$nl = "\n";
-		$replace_from = array("\r","\n\n");
-		$replace_to = array("\n","\n");
+		$replaceFrom = array("\r","\n\n");
+		$replaceTo = array("\n","\n");
 		foreach ($this->configContent->import_core->replace as $replace) {
 			if (isset($replace['from']) && isset($replace['to'])) {
-				$replace_from[] = $replace['from'];
-				$replace_to[] = $replace['to'];
+				$replaceFrom[] = $replace['from'];
+				$replaceTo[] = $replace['to'];
 			}
 		}
 		
-		$file = str_replace($replace_from, $replace_to, $file);
+		$file = str_replace($replaceFrom, $replaceTo, $file);
 		
 		$lines = explode($nl, $file);
 		$inelement = false;
@@ -150,10 +150,10 @@ class ImportVCardConnector extends ImportConnector{
 	 * @param $vcard the parent Sabre VCard object to look for a 
 	 */
 	private function getImportEntry($property, $vcard) {
-		for ($i=0; $i < $this->configContent->import_entry->count(); $i++) {
+		$nbElt = $this->configContent->import_entry->count();
+		for ($i=0; $i < $nbElt; $i++) {
 			if ($this->configContent->import_entry[$i]['property'] == $property->name && $this->configContent->import_entry[$i]['enabled'] == 'true') {
 				if (isset($this->configContent->import_entry[$i]->group_entry)) {
-					$toUnset = array();
 					$numElt = 0;
 					foreach($this->configContent->import_entry[$i]->group_entry as $groupEntry) {
 						$sourceGroupList = $vcard->select($groupEntry['property']);

@@ -61,16 +61,16 @@ class ImportLdifConnector extends ImportConnector{
 		$file = StringUtil::convertToUTF8(file_get_contents($file));
 
 		$nl = "\n";
-		$replace_from = array("\r","\n ");
-		$replace_to = array("\n","");
+		$replaceFrom = array("\r","\n ");
+		$replaceTo = array("\n","");
 		foreach ($this->configContent->import_core->replace as $replace) {
 			if (isset($replace['from']) && isset($replace['to'])) {
-				$replace_from[] = $replace['from'];
-				$replace_to[] = $replace['to'];
+				$replaceFrom[] = $replace['from'];
+				$replaceTo[] = $replace['to'];
 			}
 		}
 		
-		$file = str_replace($replace_from, $replace_to, $file);
+		$file = str_replace($replaceFrom, $replaceTo, $file);
 		
 		$lines = explode($nl, $file);
 		$parts = array();
@@ -81,7 +81,7 @@ class ImportLdifConnector extends ImportConnector{
 				if(preg_match("/^\w+:: /",$line)) {
 					$kv = explode(':: ', $line, 2);
 					$key = $kv[0];
-					$value = base64_decode($kv[1]);
+					$value = base64_decode($kv[1], true);
 				} else {
 					$kv = explode(': ', $line, 2);
 					$key = $kv[0];
@@ -132,28 +132,7 @@ class ImportLdifConnector extends ImportConnector{
 				}
 				
 				foreach ($values as $oneValue) {
-					if (isset($importEntry->vcard_favourites)) {
-						foreach ($importEntry->vcard_favourites as $vcardFavourite) {
-							if (strcasecmp((string)$vcardFavourite, trim($oneValue)) == 0) {
-								$property = \Sabre\VObject\Property::create("X-FAVOURITES", 'yes');
-								$dest->add($property);
-							} else {
-								$property = $this->getOrCreateVCardProperty($dest, $importEntry->vcard_entry);
-								if (isset($importEntry['image']) && $importEntry['image'] == "true") {
-									$this->updateImageProperty($property, $oneValue);
-								} else {
-									$this->updateProperty($property, $importEntry, $oneValue);
-								}
-							}
-						}
-					} else {
-						$property = $this->getOrCreateVCardProperty($dest, $importEntry->vcard_entry);
-						if (isset($importEntry['image']) && $importEntry['image'] == "true") {
-							$this->updateImageProperty($property, $oneValue);
-						} else {
-							$this->updateProperty($property, $importEntry, $oneValue);
-						}
-					}
+					$this->convertElementToProperty($oneValue, $importEntry, $dest);
 				}
 			} else {
 				$property = \Sabre\VObject\Property::create("X-Unknown-Element", ''.StringUtil::convertToUTF8($ldifProperty[1]));
@@ -164,6 +143,38 @@ class ImportLdifConnector extends ImportConnector{
 		
 		$dest->validate(\Sabre\VObject\Component\VCard::REPAIR);
 		return $dest;
+	}
+	
+	/**
+	 * @brief converts an LDIF element into a VCard property
+	 * and updates the VCard
+	 * @param $value the LDIF value
+	 * @param $importEntry the VCard entry to modify
+	 * @param $dest the VCard to modify (for adding a X-FAVOURITE property)
+	 */
+	private function convertElementToProperty($value, $importEntry, &$dest) {
+		if (isset($importEntry->vcard_favourites)) {
+			foreach ($importEntry->vcard_favourites as $vcardFavourite) {
+				if (strcasecmp((string)$vcardFavourite, trim($value)) == 0) {
+					$property = \Sabre\VObject\Property::create("X-FAVOURITES", 'yes');
+					$dest->add($property);
+				} else {
+					$property = $this->getOrCreateVCardProperty($dest, $importEntry->vcard_entry);
+					if (isset($importEntry['image']) && $importEntry['image'] == "true") {
+						$this->updateImageProperty($property, $value);
+					} else {
+						$this->updateProperty($property, $importEntry, $value);
+					}
+				}
+			}
+		} else {
+			$property = $this->getOrCreateVCardProperty($dest, $importEntry->vcard_entry);
+			if (isset($importEntry['image']) && $importEntry['image'] == "true") {
+				$this->updateImageProperty($property, $value);
+			} else {
+				$this->updateProperty($property, $importEntry, $value);
+			}
+		}
 	}
 	
 	/**
