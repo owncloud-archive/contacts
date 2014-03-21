@@ -769,7 +769,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				$this->getParent()->getId(),
 				$this->getId(),
 				null,
-				null,
+				$this,
 				array('remove' => true)
 			);
 		}
