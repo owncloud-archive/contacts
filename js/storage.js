@@ -232,7 +232,7 @@ OC.Contacts = OC.Contacts || {};
 		})
 		.fail(function(response) {
 			console.warn('Request Failed:', response.message);
-			defer.reject();
+			defer.reject(response);
 		});
 		return defer;
 	};

@@ -2604,7 +2604,7 @@ OC.Contacts = OC.Contacts || {};
 		})
 		.fail(function(response) {
 			console.warn('Request Failed:', response.message);
-			defer.reject({error: true, message: response.message});
+			$(document).trigger('status.contacts.error', response);
 		});
 
 	};
