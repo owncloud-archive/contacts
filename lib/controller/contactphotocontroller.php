@@ -211,7 +211,8 @@ class ContactPhotoController extends Controller {
 			$params['backend'],
 			$params['addressBookId'],
 			$params['contactId'],
-			$image
+			$image,
+			$contact
 		);
 
 		$response->setData(array(
