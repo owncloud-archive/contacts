@@ -35,10 +35,6 @@ use OCA\Contacts\Controller,
  */
 class Http extends Middleware {
 
-	public function __construct() {
-		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
-	}
-
 	/**
 	 * If an Exception is being caught, return a JSON error response with
 	 * a suitable status code
