@@ -175,6 +175,10 @@ class AddressbookProvider implements \OCP\IAddressBook {
 	*/
 	public function createOrUpdate($properties) {
 		$id = null;
+
+		/**
+		 * @var \OCA\Contacts\VObject\VCard
+		 */
 		$vcard = null;
 		if(array_key_exists('id', $properties)) {
 			// TODO: test if $id belongs to this addressbook
@@ -191,7 +195,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			$uid = substr(md5(rand().time()), 0, 10);
 			$vcard->add('UID', $uid);
 			try {
-				$id = $this->addressBook->addChild($this->id, $vcard);
+				$id = $this->addressBook->addChild($vcard);
 			} catch(\Exception $e) {
 				\OCP\Util::writeLog('contacts', __METHOD__ . ' ' . $e->getMessage(), \OCP\Util::ERROR);
 				return false;
