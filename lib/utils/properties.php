@@ -210,7 +210,6 @@ Class Properties {
 	 * Purge indexed properties.
 	 *
 	 * @param string[] $ids
-	 * @param \OCA\VObject\VCard|null $vcard
 	 */
 	public static function purgeIndexes($ids) {
 		\OCP\Util::writeLog('contacts', __METHOD__.', ids: ' . print_r($ids, true), \OCP\Util::DEBUG);
@@ -289,48 +288,48 @@ Class Properties {
 	}
 
 	public static function cacheThumbnail($backendName, $addressBookId, $contactId,
-		\OCP\Image $image = null, $vcard = null, $options = array()) {
+		\OCP\Image $image = null, \OCA\VObject\VCard $vcard = null, $options = array()) {
 		$cache = \OC::$server->getCache();
 		$key = self::THUMBNAIL_PREFIX . $backendName . '::' . $addressBookId . '::' . $contactId;
 		//$cache->remove($key);
-		if($cache->hasKey($key) && $image === null
+		if ($cache->hasKey($key) && $image === null
 			&& (isset($options['remove']) && $options['remove'] === false)
 			&& (isset($options['update']) && $options['update'] === false)) {
 			return $cache->get($key);
 		}
-		if(isset($options['remove']) && $options['remove']) {
+
+		if (isset($options['remove']) && $options['remove']) {
 			$cache->remove($key);
 			if(!isset($options['update']) || !$options['update']) {
 				return false;
 			}
 		}
-		if(is_null($image)) {
-			if(is_null($vcard)) {
+
+		if (is_null($image)) {
+			if (is_null($vcard)) {
 				$app = new App();
 				$vcard = $app->getContact($backendName, $addressBookId, $contactId);
-			}
-			$image = new \OCP\Image();
-			if(!isset($vcard->PHOTO) && !isset($vcard->LOGO)) {
-				return false;
-			}
-			if(!$image->loadFromBase64((string)$vcard->PHOTO)) {
-				if(!$image->loadFromBase64((string)$vcard->LOGO)) {
+				$image = $vcard->getPhoto();
+				if (is_null($image)) {
 					return false;
 				}
 			}
 		}
-		if(!$image->centerCrop()) {
+
+		if (!$image->centerCrop()) {
 			\OCP\Util::writeLog('contacts',
 				__METHOD__ .'. Couldn\'t crop thumbnail for ID ' . $key,
 				\OCP\Util::ERROR);
 			return false;
 		}
-		if(!$image->resize(self::THUMBNAIL_SIZE)) {
+
+		if (!$image->resize(self::THUMBNAIL_SIZE)) {
 			\OCP\Util::writeLog('contacts',
 				__METHOD__ . '. Couldn\'t resize thumbnail for ID ' . $key,
 				\OCP\Util::ERROR);
 			return false;
 		}
+
 		 // Cache as base64 for around a month
 		$cache->set($key, strval($image), 3000000);
 		\OCP\Util::writeLog('contacts', 'Caching ' . $key, \OCP\Util::DEBUG);
