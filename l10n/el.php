@@ -101,8 +101,6 @@
 "Error saving contact to backend" => "Σφάλμα κατά την αποθήκευση επαφής στο σύστημα",
 "Error getting user photo" => "Σφάλμα κατά την λήψη φωτογραφίας χρήστη",
 "No photo path was submitted." => "Δεν δόθηκε διαδρομή εικόνας",
-"Image has been removed from cache" => "Η εικόνα αφαιρέθηκε από τη προσωρινή μνήμη",
-"Error creating temporary image" => "Σφάλμα κατά τη δημιουργία προσωρινής εικόνας",
 "Error cropping image" => "Σφάλμα κατά την περικοπή εικόνας",
 "Error getting PHOTO property." => "Σφάλμα κατά τη λήψη ιδιοτήτων ΦΩΤΟΓΡΑΦΙΑΣ.",
 "Error saving contact." => "Σφάλμα κατά την αποθήκευση επαφής.",

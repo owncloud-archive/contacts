@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-20 00:49-0400\n"
-"PO-Revision-Date: 2014-03-20 04:49+0000\n"
+"POT-Creation-Date: 2014-03-21 00:49-0400\n"
+"PO-Revision-Date: 2014-03-21 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -124,54 +124,62 @@ msgstr "합치기 실패. 연락처 저장 오류."
 msgid "Select photo"
 msgstr "사진 선택"
 
-#: js/app.js:703 js/app.js:1626
+#: js/app.js:703 js/app.js:1652
 msgid "Network or server error. Please inform administrator."
 msgstr "네트워크 및 서버 오류입니다. 관리자에게 연락하십시오."
 
-#: js/app.js:922
+#: js/app.js:787
+msgid "Only images can be used as contact photo"
+msgstr ""
+
+#: js/app.js:796
+msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
+msgstr ""
+
+#: js/app.js:956
 msgid "Error adding to group."
 msgstr "그룹에 추가하는 중 오류가 발생하였습니다."
 
-#: js/app.js:945
+#: js/app.js:979
 msgid "Error removing from group."
 msgstr "그룹에서 삭제하는 중 오류가 발생하였습니다."
 
-#: js/app.js:1136
+#: js/app.js:1170
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "300명 이상의 연락처를 선택하였습니다.\n오류가 발생할 수도 있습니다! 그래도 시도하려면 여기를 누르십시오."
 
-#: js/app.js:1174
+#: js/app.js:1208
 msgid "Error setting {name} as favorite."
 msgstr "{name} 님을 즐겨찾는 연락처로 설정할 수 없음."
 
-#: js/app.js:1312 js/app.js:1316 templates/contacts.php:171
+#: js/app.js:1346 js/app.js:1350 templates/contacts.php:164
 msgid "Merge contacts"
 msgstr "연락처 합치기"
 
-#: js/app.js:1338 js/app.js:1391 templates/contacts.php:357
-#: templates/contacts.php:358
+#: js/app.js:1372 js/app.js:1425 templates/contacts.php:350
+#: templates/contacts.php:351
 msgid "Cancel"
 msgstr "취소"
 
-#: js/app.js:1365 templates/contacts.php:152
+#: js/app.js:1399 templates/contacts.php:145
 msgid "Add group"
 msgstr "그룹 추가"
 
-#: js/app.js:1369
+#: js/app.js:1403
 msgid "OK"
 msgstr "확인"
 
-#: js/app.js:1472
+#: js/app.js:1506
 msgid "Could not find contact: {id}"
 msgstr "연락처를 찾을 수 없음: {id}"
 
-#: js/app.js:1584
+#: js/app.js:1607
 msgid "Edit profile picture"
 msgstr "프로필 사진 편집"
 
-#: js/app.js:1588
+#: js/app.js:1611
 msgid "Crop photo"
 msgstr "사진 자르기"
 
@@ -291,16 +299,16 @@ msgstr "가져오기"
 msgid "Import done"
 msgstr "가져오기 완료"
 
-#: js/loader.js:95 templates/contacts.php:80 templates/contacts.php:361
-#: templates/contacts.php:362
+#: js/loader.js:95 templates/contacts.php:80 templates/contacts.php:354
+#: templates/contacts.php:355
 msgid "Close"
 msgstr "닫기"
 
-#: js/storage.js:30
+#: js/storage.js:31
 msgid "Server error! Please inform system administator"
 msgstr "서버 오류! 시스템 관리자에게 연락하십시오"
 
-#: js/storage.js:341 js/storage.js:380
+#: js/storage.js:348 js/storage.js:387
 msgid "Failed loading photo: {error}"
 msgstr "사진 불러오기 오류: {error}"
 
@@ -364,19 +372,19 @@ msgstr "이 연락처의 백엔드는 업데이트를 지원하지 않습니다"
 msgid "This backend not support adding contacts"
 msgstr "이 백엔드는 연락처 추가를 지원하지 않습니다"
 
-#: lib/contact.php:419 lib/contact.php:436
+#: lib/contact.php:458 lib/contact.php:475
 msgid "Property not found"
 msgstr "속성을 찾을 수 없음"
 
-#: lib/contact.php:484
+#: lib/contact.php:523
 msgid " Missing IM parameter for: "
 msgstr " 다음의 IM 인자를 찾을 수 없음: "
 
-#: lib/contact.php:492
+#: lib/contact.php:531
 msgid "Unknown IM: "
 msgstr "알려지지 않은 IM: "
 
-#: lib/contact.php:769
+#: lib/contact.php:808
 msgid "{name}'s Birthday"
 msgstr "{이름}의 생일"
 
@@ -429,8 +437,6 @@ msgstr ""
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:38
-#: lib/controller/contactphotocontroller.php:205
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "연락처를 찾을 수 없습니다."
@@ -467,31 +473,27 @@ msgstr "연락처 업데이트 오류"
 msgid "Error saving contact to backend"
 msgstr "연락처 백엔드 저장 오류"
 
-#: lib/controller/contactphotocontroller.php:69
+#: lib/controller/contactphotocontroller.php:59
 msgid "Error getting user photo"
 msgstr "사용자 사진 가져오기 오류"
 
-#: lib/controller/contactphotocontroller.php:146
+#: lib/controller/contactphotocontroller.php:131
 msgid "No photo path was submitted."
 msgstr "사진 경로가 제출되지 않았습니다."
 
-#: lib/controller/contactphotocontroller.php:210
-msgid "Image has been removed from cache"
-msgstr "그림이 캐시에서 삭제됨"
+#: lib/controller/contactphotocontroller.php:193
+msgid "Error loading image from cache"
+msgstr ""
 
-#: lib/controller/contactphotocontroller.php:216
-msgid "Error creating temporary image"
-msgstr "임시 이미지를 생성 중 오류가 발생했습니다."
-
-#: lib/controller/contactphotocontroller.php:223
+#: lib/controller/contactphotocontroller.php:200
 msgid "Error cropping image"
 msgstr "그림을 자르는 중 오류가 발생했습니다."
 
-#: lib/controller/contactphotocontroller.php:240
+#: lib/controller/contactphotocontroller.php:205
 msgid "Error getting PHOTO property."
 msgstr "PHOTO 속성을 가져오는 중 오류가 발생했습니다."
 
-#: lib/controller/contactphotocontroller.php:257
+#: lib/controller/contactphotocontroller.php:209
 msgid "Error saving contact."
 msgstr "연락처 저장 중 오류가 발생했습니다."
 
@@ -783,17 +785,17 @@ msgid "Last-, Firstname"
 msgstr "성, 이름"
 
 #: templates/contacts.php:60 templates/contacts.php:61
-#: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:500
+#: templates/contacts.php:208 templates/contacts.php:209
+#: templates/contacts.php:493
 msgid "Delete"
 msgstr "삭제"
 
-#: templates/contacts.php:64 templates/contacts.php:256
+#: templates/contacts.php:64 templates/contacts.php:249
 msgid "Groups"
 msgstr "그룹"
 
-#: templates/contacts.php:66 templates/contacts.php:365
-#: templates/contacts.php:366
+#: templates/contacts.php:66 templates/contacts.php:358
+#: templates/contacts.php:359
 msgid "Download"
 msgstr "다운로드"
 
@@ -801,15 +803,15 @@ msgstr "다운로드"
 msgid "Merge"
 msgstr ""
 
-#: templates/contacts.php:70 templates/contacts.php:350
+#: templates/contacts.php:70 templates/contacts.php:343
 msgid "Email"
 msgstr "이메일"
 
-#: templates/contacts.php:71 templates/contacts.php:349
+#: templates/contacts.php:71 templates/contacts.php:342
 msgid "Phone"
 msgstr "전화 번호"
 
-#: templates/contacts.php:72 templates/contacts.php:352
+#: templates/contacts.php:72 templates/contacts.php:345
 msgid "Address"
 msgstr "주소"
 
@@ -876,168 +878,168 @@ msgstr "<h3>주소록에 연락처가 없거나 주소록이 비활성화되었�
 msgid "Add contact"
 msgstr "연락처 추가"
 
-#: templates/contacts.php:172
+#: templates/contacts.php:165
 msgid "Which contact should the data be merged into?"
 msgstr "데이터를 어떤 연락처로 합치시겠습니까?"
 
-#: templates/contacts.php:180
+#: templates/contacts.php:173
 msgid "Delete the other(s) after successful merge?"
 msgstr "합친 후 다른 연락처를 삭제하시겠습니까?"
 
-#: templates/contacts.php:195
+#: templates/contacts.php:188
 msgid "Compose mail"
 msgstr "메일 작성"
 
-#: templates/contacts.php:223
+#: templates/contacts.php:216
 msgid "Delete current photo"
 msgstr "현재 사진 삭제"
 
-#: templates/contacts.php:224
+#: templates/contacts.php:217
 msgid "Edit current photo"
 msgstr "현재 사진 편집"
 
-#: templates/contacts.php:225
+#: templates/contacts.php:218
 msgid "Upload new photo"
 msgstr "새 사진 업로드"
 
-#: templates/contacts.php:226
+#: templates/contacts.php:219
 msgid "Select photo from Files"
 msgstr ""
 
-#: templates/contacts.php:228
+#: templates/contacts.php:221
 msgid "Favorite"
 msgstr "즐겨찾기"
 
-#: templates/contacts.php:231 templates/contacts.php:233
+#: templates/contacts.php:224 templates/contacts.php:226
 msgid "Name"
 msgstr "이름"
 
-#: templates/contacts.php:239
+#: templates/contacts.php:232
 msgid "First name"
 msgstr "이름"
 
-#: templates/contacts.php:243
+#: templates/contacts.php:236
 msgid "Additional names"
 msgstr "추가 이름"
 
-#: templates/contacts.php:247
+#: templates/contacts.php:240
 msgid "Last name"
 msgstr "성"
 
-#: templates/contacts.php:263
+#: templates/contacts.php:256
 msgid "Address book"
 msgstr ""
 
-#: templates/contacts.php:270 templates/contacts.php:347
+#: templates/contacts.php:263 templates/contacts.php:340
 msgid "Nickname"
 msgstr "별명"
 
-#: templates/contacts.php:280 templates/contacts.php:346
+#: templates/contacts.php:273 templates/contacts.php:339
 msgid "Title"
 msgstr "직위"
 
-#: templates/contacts.php:290 templates/contacts.php:345
+#: templates/contacts.php:283 templates/contacts.php:338
 msgid "Organization"
 msgstr "조직"
 
-#: templates/contacts.php:300 templates/contacts.php:348
+#: templates/contacts.php:293 templates/contacts.php:341
 msgid "Birthday"
 msgstr "생일"
 
-#: templates/contacts.php:337
+#: templates/contacts.php:330
 msgid "Notes go here..."
 msgstr "메모를 입력하십시오..."
 
-#: templates/contacts.php:344
+#: templates/contacts.php:337
 msgid "Add field..."
 msgstr "필드 추가..."
 
-#: templates/contacts.php:351
+#: templates/contacts.php:344
 msgid "Instant Messaging"
 msgstr "인스턴트 메시지"
 
-#: templates/contacts.php:353
+#: templates/contacts.php:346
 msgid "Note"
 msgstr "메모"
 
-#: templates/contacts.php:354
+#: templates/contacts.php:347
 msgid "Web site"
 msgstr "웹 사이트"
 
-#: templates/contacts.php:378 templates/contacts.php:393
-#: templates/contacts.php:407 templates/contacts.php:422
-#: templates/contacts.php:464 templates/contacts.php:474
+#: templates/contacts.php:371 templates/contacts.php:386
+#: templates/contacts.php:400 templates/contacts.php:415
+#: templates/contacts.php:457 templates/contacts.php:467
 msgid "Preferred"
 msgstr "선호함"
 
-#: templates/contacts.php:383
+#: templates/contacts.php:376
 msgid "Please specify a valid email address."
 msgstr "올바른 이메일 주소를 입력하십시오."
 
-#: templates/contacts.php:383
+#: templates/contacts.php:376
 msgid "someone@example.com"
 msgstr "someone@example.com"
 
-#: templates/contacts.php:385
+#: templates/contacts.php:378
 msgid "Mail to address"
 msgstr "이메일 보내기"
 
-#: templates/contacts.php:386
+#: templates/contacts.php:379
 msgid "Delete email address"
 msgstr "이메일 주소 삭제"
 
-#: templates/contacts.php:398
+#: templates/contacts.php:391
 msgid "Enter phone number"
 msgstr "전화번호 입력"
 
-#: templates/contacts.php:414
+#: templates/contacts.php:407
 msgid "Go to web site"
 msgstr "웹 사이트로 가기"
 
-#: templates/contacts.php:431
+#: templates/contacts.php:424
 msgid "View on map"
 msgstr "지도에서 보기"
 
-#: templates/contacts.php:439
+#: templates/contacts.php:432
 msgid "Street address"
 msgstr "도로명 주소"
 
-#: templates/contacts.php:443
+#: templates/contacts.php:436
 msgid "Postal code"
 msgstr "우편 번호"
 
-#: templates/contacts.php:445
+#: templates/contacts.php:438
 msgid "City"
 msgstr "도시"
 
-#: templates/contacts.php:449
+#: templates/contacts.php:442
 msgid "State or province"
 msgstr "도 및 광역시"
 
-#: templates/contacts.php:453
+#: templates/contacts.php:446
 msgid "Country"
 msgstr "국가"
 
-#: templates/contacts.php:480
+#: templates/contacts.php:473
 msgid "Instant Messenger"
 msgstr "인스턴트 메신저"
 
-#: templates/contacts.php:493
+#: templates/contacts.php:486
 msgid "Active"
 msgstr "활성"
 
-#: templates/contacts.php:496
+#: templates/contacts.php:489
 msgid "Share"
 msgstr "공유"
 
-#: templates/contacts.php:497
+#: templates/contacts.php:490
 msgid "Export"
 msgstr "내보내기"
 
-#: templates/contacts.php:498
+#: templates/contacts.php:491
 msgid "CardDAV link"
 msgstr "CardDAV 링크"
 
-#: templates/contacts.php:499
+#: templates/contacts.php:492
 msgid "Edit"
 msgstr "편집"

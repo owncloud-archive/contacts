@@ -11,7 +11,6 @@
 "{name}'s Birthday" => "Hari Lahir {name}",
 "Information about vCard is incorrect. Please reload the page." => "Maklumat vCard tidak tepat. Sila reload semula halaman ini.",
 "No photo path was submitted." => "Tiada direktori gambar yang diberi.",
-"Error creating temporary image" => "Ralat mencipta imej sementara",
 "Error cropping image" => "Ralat memotong imej",
 "Error getting PHOTO property." => "Ralat mendapatkan maklumat gambar.",
 "Error saving contact." => "Ralat menyimpan kenalan.",

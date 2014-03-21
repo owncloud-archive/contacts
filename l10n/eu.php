@@ -90,8 +90,6 @@
 "Error updating contact" => "Errore bat izan da kontaktua eguneratzerakoan",
 "Error getting user photo" => "Errorea erabiltzailearen argazkia eskuratzerakoan",
 "No photo path was submitted." => "Ez da argazkiaren bide-izenik eman.",
-"Image has been removed from cache" => "Irudia katxetik ezabatu egin da",
-"Error creating temporary image" => "Errore bat izan da aldi bateko irudia sortzen",
 "Error cropping image" => "Errore bat izan da irudia mozten",
 "Error getting PHOTO property." => "Errore bat izan da PHOTO propietatea lortzean.",
 "Error saving contact." => "Errore bat izan da kontaktua gordetzean.",

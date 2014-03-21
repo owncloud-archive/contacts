@@ -35,7 +35,6 @@
 "{name}'s Birthday" => "Ziua de naștere a {name}",
 "Information about vCard is incorrect. Please reload the page." => "Informațiile cărții de vizită sunt incorecte. Te rog reîncarcă pagina.",
 "No photo path was submitted." => "Nici o adresă către fotografie nu a fost transmisă",
-"Error creating temporary image" => "eroare la alegerea imaginii temporare",
 "Error cropping image" => "eroare la alegerea imaginii",
 "Error getting PHOTO property." => "eroare in gasirea proprietatilor fotografiei",
 "Error saving contact." => "eroare in salvarea contactului",

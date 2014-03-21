@@ -98,8 +98,6 @@
 "Error saving contact to backend" => "Ошибка сохранения контакта в бэкенд",
 "Error getting user photo" => "Ошибка загрузки фото пользователя",
 "No photo path was submitted." => "Нет фото по адресу.",
-"Image has been removed from cache" => "Изображение удалено из кеша",
-"Error creating temporary image" => "Ошибка создания временных изображений",
 "Error cropping image" => "Ошибка обрезки изображений",
 "Error getting PHOTO property." => "Ошибка при получении ФОТО.",
 "Error saving contact." => "Ошибка при сохранении контактов.",

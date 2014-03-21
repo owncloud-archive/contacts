@@ -105,8 +105,6 @@
 "Error saving contact to backend" => "Fout bij opslaan contactpersoongegevens baar backend",
 "Error getting user photo" => "Fout bij ophalen gebruikersfoto",
 "No photo path was submitted." => "Geen fotopad opgestuurd.",
-"Image has been removed from cache" => "Afbeelding is verwijderd uit de cache",
-"Error creating temporary image" => "Fout om een tijdelijk plaatje te maken",
 "Error cropping image" => "Fout tijdens aanpassen plaatje",
 "Error getting PHOTO property." => "Fout om PHOTO eigenschap te verkrijgen",
 "Error saving contact." => "Fout om contact op te slaan",

@@ -104,8 +104,6 @@
 "Error saving contact to backend" => "Erro ao guardar o contacto no suporte",
 "Error getting user photo" => "Erro a obter a fotografia do utilizador",
 "No photo path was submitted." => "Nenhum caminho da foto definido.",
-"Image has been removed from cache" => "A imagem foi retirada do cache",
-"Error creating temporary image" => "Erro a criar a imagem temporária",
 "Error cropping image" => "Erro a recorar a imagem",
 "Error getting PHOTO property." => "Erro a obter a propriedade Foto",
 "Error saving contact." => "Erro a guardar o contacto.",

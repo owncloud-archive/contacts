@@ -98,8 +98,6 @@
 "Error saving contact to backend" => "Viga kontakti salvestamisel tagarakendisse",
 "Error getting user photo" => "Viga kasutaja foto hankimisel",
 "No photo path was submitted." => "Foto asukohta pole määratud.",
-"Image has been removed from cache" => "Pilt on puhvrist eemaldatud",
-"Error creating temporary image" => "Viga ajutise pildi loomisel",
 "Error cropping image" => "Viga pildi lõikamisel",
 "Error getting PHOTO property." => "Viga PHOTO omaduse hankimisel.",
 "Error saving contact." => "Viga kontakti salvestamisel.",

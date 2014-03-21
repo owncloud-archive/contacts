@@ -99,8 +99,6 @@
 "Error saving contact to backend" => "Lagring av kontakt til server feilet",
 "Error getting user photo" => "Feil ved henting av brukerbilde",
 "No photo path was submitted." => "Ingen filsti ble lagt inn.",
-"Image has been removed from cache" => "Bildet er fjernet fra mellomlageret",
-"Error creating temporary image" => "Klarte ikke å lage et midlertidig bilde",
 "Error cropping image" => "Klarte ikke å beskjære bildet",
 "Error getting PHOTO property." => "Feil ved henting av fotoverdi.",
 "Error saving contact." => "Klarte ikke å lagre kontakt.",

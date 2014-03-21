@@ -98,8 +98,6 @@
 "Error saving contact to backend" => "Kesalahan saat menyimpan kontak ke backend",
 "Error getting user photo" => "Galat mendapatkan foto pengguna",
 "No photo path was submitted." => "Tidak ada foto yang ditambahkan.",
-"Image has been removed from cache" => "Gambar sudah dihapus dari cache",
-"Error creating temporary image" => "Kesalahan saat membuat gambar sementara",
 "Error cropping image" => "Kesalahan saat memotong gambar",
 "Error getting PHOTO property." => "Kesalahan saat mengambil properti FOTO.",
 "Error saving contact." => "Kesalahan saat menyimpan kontak.",

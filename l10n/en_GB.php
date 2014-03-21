@@ -105,8 +105,6 @@
 "Error saving contact to backend" => "Error saving contact to backend",
 "Error getting user photo" => "Error getting user photo",
 "No photo path was submitted." => "No photo path was submitted.",
-"Image has been removed from cache" => "Image has been removed from cache",
-"Error creating temporary image" => "Error creating temporary image",
 "Error cropping image" => "Error cropping image",
 "Error getting PHOTO property." => "Error getting PHOTO property.",
 "Error saving contact." => "Error saving contact.",

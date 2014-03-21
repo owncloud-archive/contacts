@@ -98,8 +98,6 @@
 "Error saving contact to backend" => "Kunne ikke gemme kontakt til server",
 "Error getting user photo" => "Fejl ved indlæsning af brugerfoto",
 "No photo path was submitted." => "Der blev ikke medsendt en sti til fotoet.",
-"Image has been removed from cache" => "Billedet blev fjernet fra cache",
-"Error creating temporary image" => "Kunne ikke oprette midlertidigt billede",
 "Error cropping image" => "Kunne ikke beskære billedet",
 "Error getting PHOTO property." => "Fejl ved indlæsning af PHOTO feltet.",
 "Error saving contact." => "Kunne ikke gemme kontaktpersonen.",

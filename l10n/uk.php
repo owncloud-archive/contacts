@@ -75,7 +75,6 @@
 "Property checksum is not set." => "Контрольна сума властивості не встановлена.",
 "Information about vCard is incorrect. Please reload the page." => "Інформація про vCard помилкова. Будь ласка, перезавантажте сторінку.",
 "No photo path was submitted." => "Не надано шлях до зображення.",
-"Error creating temporary image" => "Помилка при створенні тимчасового зображення",
 "Error cropping image" => "Помилка обрізки зображення",
 "Error getting PHOTO property." => "Помилка при отриманні ФОТО властивості.",
 "Error saving contact." => "Помилка при збереженні контакту.",

@@ -13,7 +13,6 @@
 "Close" => "වසන්න",
 "{name}'s Birthday" => "{name}ගේ උපන්දිනය",
 "Information about vCard is incorrect. Please reload the page." => "vCard පිළිබඳ තොරතුරු අසත්‍යයි. කරුණාකර පිටුව නැවත බාගත කරන්න.",
-"Error creating temporary image" => "තාවකාලික ඡායාරූපයක් තැනීමේ දෝෂයක්",
 "Error saving contact." => "සම්බන්ධතාව සුරැකිමේදී දෝෂයක්",
 "No file was uploaded. Unknown error" => "ගොනුවක් උඩුගත නොවුනි. නොහැඳිනු දෝෂයක්",
 "There is no error, the file uploaded with success" => "දෝෂයක් නොමැත. සාර්ථකව ගොනුව උඩුගත කෙරුණි",

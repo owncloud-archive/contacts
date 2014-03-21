@@ -105,8 +105,6 @@
 "Error saving contact to backend" => "Błąd podczas zapisywania kontaktu do bazy",
 "Error getting user photo" => "Błąd pobrania zdjęcia użytkownika",
 "No photo path was submitted." => "Ścieżka do zdjęcia nie została podana.",
-"Image has been removed from cache" => "Obraz został usunięty z pamięci podręcznej",
-"Error creating temporary image" => "Błąd utworzenia obrazu tymczasowego",
 "Error cropping image" => "Błąd przycinania obrazu",
 "Error getting PHOTO property." => "Błąd uzyskiwania właściwości ZDJĘCIA.",
 "Error saving contact." => "Błąd zapisu kontaktu.",

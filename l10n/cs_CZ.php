@@ -104,8 +104,6 @@
 "Error saving contact to backend" => "Chyba při zápisu kontaktu do úložiště",
 "Error getting user photo" => "Chyba při získávání uživatelovy fotky",
 "No photo path was submitted." => "Žádná fotka nebyla odeslána.",
-"Image has been removed from cache" => "Obrázek byl odstraněn z mezipaměti",
-"Error creating temporary image" => "Chyba při vytváření dočasného obrázku.",
 "Error cropping image" => "Chyba při ořezávání obrázku.",
 "Error getting PHOTO property." => "Chyba při získávání vlastností fotky.",
 "Error saving contact." => "Chyba při ukládání kontaktu.",

@@ -79,8 +79,6 @@
 "Error saving contact to backend" => "Virhe tallennettaessa yhteystietoa taustajärjestelmään",
 "Error getting user photo" => "Virhe hankkiessa kuvaa ",
 "No photo path was submitted." => "Kuvan polkua ei annettu.",
-"Image has been removed from cache" => "Kuva on poistettu välimuistista",
-"Error creating temporary image" => "Virhe luotaessa väliaikaista kuvaa",
 "Error cropping image" => "Virhe rajatessa kuvaa",
 "Error getting PHOTO property." => "Virhe KUVA ominaisuuden saamisessa.",
 "Error saving contact." => "Virhe yhteystietoa tallennettaessa.",

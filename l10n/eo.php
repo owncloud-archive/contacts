@@ -63,8 +63,6 @@
 "Error updating contact" => "Eraris ĝisdatigo de kontakto",
 "Error getting user photo" => "Eraris ekhavo de uzantofoto",
 "No photo path was submitted." => "Neniu vojo al foto sendiĝis.",
-"Image has been removed from cache" => "La bildo foriĝis el kaŝmemoro.",
-"Error creating temporary image" => "Eraro dum kreiĝis provizora bildo.",
 "Error cropping image" => "Eraro dum stuciĝis bildo.",
 "Error getting PHOTO property." => "Eraro dum ekhaviĝis la propraĵon PHOTO.",
 "Error saving contact." => "Eraro dum konserviĝis kontakto.",

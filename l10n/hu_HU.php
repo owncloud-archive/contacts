@@ -98,8 +98,6 @@
 "Error saving contact to backend" => "Hiba a kapcsolat háttérmentésekor.",
 "Error getting user photo" => "Nem sikerült beolvasni a felhasználó fényképét",
 "No photo path was submitted." => "Nincs fénykép-útvonal megadva",
-"Image has been removed from cache" => "A kép el lett távolítva a gyorsítótárból",
-"Error creating temporary image" => "Ideiglenes kép létrehozása sikertelen",
 "Error cropping image" => "Képvágás sikertelen",
 "Error getting PHOTO property." => "A PHOTO-tulajdonság  feldolgozása sikertelen",
 "Error saving contact." => "A névjegy mentése sikertelen",

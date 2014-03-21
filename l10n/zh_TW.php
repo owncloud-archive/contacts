@@ -87,8 +87,6 @@
 "Information about vCard is incorrect. Please reload the page." => "有關 vCard 的資訊不正確，請重新載入此頁。",
 "Error getting user photo" => "取得使用者相片時發生錯誤",
 "No photo path was submitted." => "沒有提供相片路徑",
-"Image has been removed from cache" => "圖片已經從快取中移除",
-"Error creating temporary image" => "產生暫存圖片發生錯誤",
 "Error cropping image" => "修剪圖片發生錯誤",
 "Error getting PHOTO property." => "讀取 PHOTO 屬性時發生錯誤",
 "Error saving contact." => "儲存聯絡人時發生錯誤",

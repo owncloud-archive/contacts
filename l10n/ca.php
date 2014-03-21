@@ -105,8 +105,6 @@
 "Error saving contact to backend" => "Error en desar el contacte en el dorsal",
 "Error getting user photo" => "Error en obtenir la fotografia d'usuari.",
 "No photo path was submitted." => "No heu tramès el camí de la foto.",
-"Image has been removed from cache" => "La imatge s'ha eliminat de la memòria de cau",
-"Error creating temporary image" => "Error en crear la imatge temporal",
 "Error cropping image" => "Error en retallar la imatge",
 "Error getting PHOTO property." => "Error en obtenir la propietat PHOTO.",
 "Error saving contact." => "Error en desar el contacte.",

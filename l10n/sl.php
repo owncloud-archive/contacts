@@ -104,8 +104,6 @@
 "Error saving contact to backend" => "Napaka shranjevanja stika v hrbtišče sistema",
 "Error getting user photo" => "Napaka pridobivanja fotografije uporabnika",
 "No photo path was submitted." => "Pot slike ni poslana.",
-"Image has been removed from cache" => "Slika je odstranjena iz predpomnilnika",
-"Error creating temporary image" => "Napaka med ustvarjanjem začasne slike",
 "Error cropping image" => "Napaka med obrezovanjem slike",
 "Error getting PHOTO property." => "Napaka med pridobivanjem lastnosti fotografije.",
 "Error saving contact." => "Napaka med shranjevanjem stika.",

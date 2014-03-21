@@ -32,7 +32,6 @@
 "{name}'s Birthday" => "{பெயர்} இன் பிறந்தநாள்",
 "Information about vCard is incorrect. Please reload the page." => "vCard பற்றிய தகவல்கள் தவறானது. தயவுசெய்து பக்கத்தை மீள்ளேற்றுக",
 "No photo path was submitted." => "படத்திற்கான பாதை சமர்ப்பிக்கப்படவில்லை",
-"Error creating temporary image" => "தற்காலிக படத்தை உருவாக்குவதில் வழு",
 "Error cropping image" => "படத்தை செதுக்குவதில் வழு",
 "Error getting PHOTO property." => "பட தொகுப்பை பெறுவதில் வழு",
 "Error saving contact." => "தொடர்பை சேமிப்பதில் வழு",
