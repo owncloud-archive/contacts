@@ -22,8 +22,6 @@
 
 namespace OCA\Contacts\Utils;
 
-use OCP\Image;
-
 /**
  * This class is used for getting a temporary contact photo for cropping.
  */
@@ -131,7 +129,7 @@ class TemporaryPhoto {
 	* @return bool
 	*/
 	public function isValid() {
-		return (($this->image instanceof Image) && $this->image->valid());
+		return (($this->image instanceof \OCP\Image) && $this->image->valid());
 	}
 
 	/**
@@ -164,7 +162,7 @@ class TemporaryPhoto {
 			return;
 		}
 
-		if (!$this->image instanceof Image) {
+		if (!$this->image instanceof \OCP\Image) {
 			$this->processImage();
 		}
 		$this->normalizePhoto();
