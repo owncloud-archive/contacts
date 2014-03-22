@@ -781,13 +781,13 @@ OC.Contacts = OC.Contacts || {
 			acceptFileTypes: /^image\//,
 			add: function(e, data) {
 				var file = data.files[0];
-				/*if (file.type.substr(0, 6) !== 'image/') {
+				if (file.type.substr(0, 6) !== 'image/') {
 					$(document).trigger('status.contacts.error', {
 						error: true,
-						message: t('contacts', 'Only images can be used as contact photo')
+						message: t('contacts', 'Only images can be used as contact photos')
 					});
 					return;
-				}*/
+				}
 				if (file.size > parseInt($(this).siblings('[name="MAX_FILE_SIZE"]').val())) {
 					$(document).trigger('status.contacts.error', {
 						error: true,
