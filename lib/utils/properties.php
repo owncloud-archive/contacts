@@ -288,7 +288,8 @@ Class Properties {
 	}
 
 	public static function cacheThumbnail($backendName, $addressBookId, $contactId,
-		\OCP\Image $image = null, \OCA\VObject\VCard $vcard = null, $options = array()) {
+		\OCP\Image $image = null, $vcard = null, $options = array()
+	) {
 		$cache = \OC::$server->getCache();
 		$key = self::THUMBNAIL_PREFIX . $backendName . '::' . $addressBookId . '::' . $contactId;
 		//$cache->remove($key);
@@ -309,10 +310,10 @@ Class Properties {
 			if (is_null($vcard)) {
 				$app = new App();
 				$vcard = $app->getContact($backendName, $addressBookId, $contactId);
-				$image = $vcard->getPhoto();
-				if (is_null($image)) {
-					return false;
-				}
+			}
+			$image = $vcard->getPhoto();
+			if (is_null($image)) {
+				return false;
 			}
 		}
 
