@@ -79,7 +79,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Thông tin vCard không chính xác. Vui lòng tải lại trang.",
 "Error updating contact" => "Lỗi cập nhập liên ",
 "No photo path was submitted." => "Đường dẫn hình ảnh bị thiếu",
-"Error cropping image" => "Lỗi khi cắt ảnh",
 "Error getting PHOTO property." => "Lỗi lấy thuộc tính ảnh",
 "Error saving contact." => "Lỗi khi lưu liên lạc",
 "No group name given." => "Không có tên nhóm .",

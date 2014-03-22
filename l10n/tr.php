@@ -105,7 +105,6 @@
 "Error saving contact to backend" => "Kişi arka uca kaydedilirken hata",
 "Error getting user photo" => "Kullanıcı fotoğrafı alınırken hata",
 "No photo path was submitted." => "Fotoğraf girilmedi.",
-"Error cropping image" => "Görüntü kırpılamadı.",
 "Error getting PHOTO property." => "Resim özelleğini alırken hata oluştu.",
 "Error saving contact." => "Bağlantıyı kaydederken hata",
 "No group name given." => "Grup adı belirtilmedi.",

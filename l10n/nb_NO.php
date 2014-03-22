@@ -99,7 +99,6 @@
 "Error saving contact to backend" => "Lagring av kontakt til server feilet",
 "Error getting user photo" => "Feil ved henting av brukerbilde",
 "No photo path was submitted." => "Ingen filsti ble lagt inn.",
-"Error cropping image" => "Klarte ikke å beskjære bildet",
 "Error getting PHOTO property." => "Feil ved henting av fotoverdi.",
 "Error saving contact." => "Klarte ikke å lagre kontakt.",
 "No group name given." => "Gruppenavn ikke oppgitt.",

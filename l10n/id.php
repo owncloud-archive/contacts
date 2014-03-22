@@ -98,7 +98,6 @@
 "Error saving contact to backend" => "Kesalahan saat menyimpan kontak ke backend",
 "Error getting user photo" => "Galat mendapatkan foto pengguna",
 "No photo path was submitted." => "Tidak ada foto yang ditambahkan.",
-"Error cropping image" => "Kesalahan saat memotong gambar",
 "Error getting PHOTO property." => "Kesalahan saat mengambil properti FOTO.",
 "Error saving contact." => "Kesalahan saat menyimpan kontak.",
 "No group name given." => "Tidak ada nama grup yang diberikan.",

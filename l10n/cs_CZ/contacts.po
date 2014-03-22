@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-21 00:49-0400\n"
-"PO-Revision-Date: 2014-03-21 04:49+0000\n"
+"POT-Creation-Date: 2014-03-22 00:49-0400\n"
+"PO-Revision-Date: 2014-03-22 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -475,15 +475,11 @@ msgstr "Žádná fotka nebyla odeslána."
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:200
-msgid "Error cropping image"
-msgstr "Chyba při ořezávání obrázku."
-
-#: lib/controller/contactphotocontroller.php:205
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error getting PHOTO property."
 msgstr "Chyba při získávání vlastností fotky."
 
-#: lib/controller/contactphotocontroller.php:209
+#: lib/controller/contactphotocontroller.php:207
 msgid "Error saving contact."
 msgstr "Chyba při ukládání kontaktu."
 

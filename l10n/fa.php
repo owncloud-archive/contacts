@@ -25,7 +25,6 @@
 "{name}'s Birthday" => "روز تولد {name} است",
 "Information about vCard is incorrect. Please reload the page." => "اطلاعات درمورد vCard شما اشتباه است لطفا صفحه را دوباره بار گذاری کنید",
 "No photo path was submitted." => "هیچ نشانی از تصویرارسال نشده",
-"Error cropping image" => "خطا در برداشت تصویر",
 "Error getting PHOTO property." => "خطا در دربافت تصویر ویژگی شخصی",
 "Error saving contact." => "خطا در ذخیره سازی اطلاعات",
 "No file was uploaded. Unknown error" => "هیچ فایلی آپلود نشد.خطای ناشناس",

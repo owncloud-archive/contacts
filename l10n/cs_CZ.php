@@ -104,7 +104,6 @@
 "Error saving contact to backend" => "Chyba při zápisu kontaktu do úložiště",
 "Error getting user photo" => "Chyba při získávání uživatelovy fotky",
 "No photo path was submitted." => "Žádná fotka nebyla odeslána.",
-"Error cropping image" => "Chyba při ořezávání obrázku.",
 "Error getting PHOTO property." => "Chyba při získávání vlastností fotky.",
 "Error saving contact." => "Chyba při ukládání kontaktu.",
 "No group name given." => "Nebyl zadán název skupiny.",

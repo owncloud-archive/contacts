@@ -98,7 +98,6 @@
 "Error saving contact to backend" => "Viga kontakti salvestamisel tagarakendisse",
 "Error getting user photo" => "Viga kasutaja foto hankimisel",
 "No photo path was submitted." => "Foto asukohta pole määratud.",
-"Error cropping image" => "Viga pildi lõikamisel",
 "Error getting PHOTO property." => "Viga PHOTO omaduse hankimisel.",
 "Error saving contact." => "Viga kontakti salvestamisel.",
 "No group name given." => "Puudub grupi nimi.",

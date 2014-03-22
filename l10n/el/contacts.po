@@ -33,8 +33,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-21 00:49-0400\n"
-"PO-Revision-Date: 2014-03-21 04:49+0000\n"
+"POT-Creation-Date: 2014-03-22 00:49-0400\n"
+"PO-Revision-Date: 2014-03-22 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -492,15 +492,11 @@ msgstr "Δεν δόθηκε διαδρομή εικόνας"
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:200
-msgid "Error cropping image"
-msgstr "Σφάλμα κατά την περικοπή εικόνας"
-
-#: lib/controller/contactphotocontroller.php:205
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error getting PHOTO property."
 msgstr "Σφάλμα κατά τη λήψη ιδιοτήτων ΦΩΤΟΓΡΑΦΙΑΣ."
 
-#: lib/controller/contactphotocontroller.php:209
+#: lib/controller/contactphotocontroller.php:207
 msgid "Error saving contact."
 msgstr "Σφάλμα κατά την αποθήκευση επαφής."
 

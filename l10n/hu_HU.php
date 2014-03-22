@@ -98,7 +98,6 @@
 "Error saving contact to backend" => "Hiba a kapcsolat háttérmentésekor.",
 "Error getting user photo" => "Nem sikerült beolvasni a felhasználó fényképét",
 "No photo path was submitted." => "Nincs fénykép-útvonal megadva",
-"Error cropping image" => "Képvágás sikertelen",
 "Error getting PHOTO property." => "A PHOTO-tulajdonság  feldolgozása sikertelen",
 "Error saving contact." => "A névjegy mentése sikertelen",
 "No group name given." => "Nem adott meg csoportnevet.",

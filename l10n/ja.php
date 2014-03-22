@@ -104,7 +104,6 @@
 "Error saving contact to backend" => "バックエンドへの連絡先の保存エラー",
 "Error getting user photo" => "ユーザーフォト取得エラー",
 "No photo path was submitted." => "写真のパスが登録されていません。",
-"Error cropping image" => "画像の切り抜きエラー",
 "Error getting PHOTO property." => "写真属性の取得エラー。",
 "Error saving contact." => "連絡先の保存エラー。",
 "No group name given." => "グループ名が指定されていません。",

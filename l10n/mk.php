@@ -38,7 +38,6 @@
 "Error merging into contact." => "Грешка при спојување на контактите.",
 "Information about vCard is incorrect. Please reload the page." => "Информацијата за vCard не е точна. Ве молам превчитајте ја страницава.",
 "No photo path was submitted." => "Не беше поднесена патека за фотографија.",
-"Error cropping image" => "Грешка при сечење на фотографијата",
 "Error getting PHOTO property." => "Грешка при утврдувањето на карактеристиките на фотографијата.",
 "Error saving contact." => "Грешка при снимање на контактите.",
 "No file was uploaded. Unknown error" => "Ниту еден фајл не се вчита. Непозната грешка",

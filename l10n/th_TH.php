@@ -43,7 +43,6 @@
 "Error deleting address book" => "เกิดข้อผิดพลาดขณะลบสมุดบันทึกที่อยู่",
 "Information about vCard is incorrect. Please reload the page." => "ข้อมูลเกี่ยวกับ vCard ไม่ถูกต้อง กรุณาโหลดหน้าเวปใหม่อีกครั้ง",
 "No photo path was submitted." => "ไม่พบตำแหน่งพาธของรูปภาพ",
-"Error cropping image" => "เกิดข้อผิดพลาดในการครอบตัดภาพ",
 "Error getting PHOTO property." => "เกิดข้อผิดพลาดในการดึงคุณสมบัติของรูปภาพ",
 "Error saving contact." => "เกิดข้อผิดพลาดในการบันทึกข้อมูลผู้ติดต่อ",
 "Error adding group." => "เกิดข้อผิดพลาดในการเพิ่มกลุ่ม",

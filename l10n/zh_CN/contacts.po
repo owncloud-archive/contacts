@@ -27,8 +27,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-21 00:49-0400\n"
-"PO-Revision-Date: 2014-03-21 04:49+0000\n"
+"POT-Creation-Date: 2014-03-22 00:49-0400\n"
+"PO-Revision-Date: 2014-03-22 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -486,15 +486,11 @@ msgstr "未提供照片路径。"
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:200
-msgid "Error cropping image"
-msgstr "裁切图像时出错"
-
-#: lib/controller/contactphotocontroller.php:205
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error getting PHOTO property."
 msgstr "获取照片属性时出错。"
 
-#: lib/controller/contactphotocontroller.php:209
+#: lib/controller/contactphotocontroller.php:207
 msgid "Error saving contact."
 msgstr "保存联系人时出错。"
 

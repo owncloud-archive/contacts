@@ -90,7 +90,6 @@
 "Error updating contact" => "Errore bat izan da kontaktua eguneratzerakoan",
 "Error getting user photo" => "Errorea erabiltzailearen argazkia eskuratzerakoan",
 "No photo path was submitted." => "Ez da argazkiaren bide-izenik eman.",
-"Error cropping image" => "Errore bat izan da irudia mozten",
 "Error getting PHOTO property." => "Errore bat izan da PHOTO propietatea lortzean.",
 "Error saving contact." => "Errore bat izan da kontaktua gordetzean.",
 "No group name given." => "Ez da talde izenik eman.",

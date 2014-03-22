@@ -91,7 +91,6 @@
 "Error updating contact" => "更新联系人错误。",
 "Error saving contact to backend" => "保存联系人到后台出错。",
 "No photo path was submitted." => "未提供照片路径。",
-"Error cropping image" => "裁切图像时出错",
 "Error getting PHOTO property." => "获取照片属性时出错。",
 "Error saving contact." => "保存联系人时出错。",
 "No group name given." => "未指定组名称。",

@@ -105,7 +105,6 @@
 "Error saving contact to backend" => "Error en desar el contacte en el dorsal",
 "Error getting user photo" => "Error en obtenir la fotografia d'usuari.",
 "No photo path was submitted." => "No heu tramès el camí de la foto.",
-"Error cropping image" => "Error en retallar la imatge",
 "Error getting PHOTO property." => "Error en obtenir la propietat PHOTO.",
 "Error saving contact." => "Error en desar el contacte.",
 "No group name given." => "No heu facilitat el nom de cap grup.",

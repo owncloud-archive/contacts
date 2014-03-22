@@ -95,7 +95,6 @@
 "Error saving contact to backend" => "Fel när kontakt skulle sparas till server",
 "Error getting user photo" => "Fel uppstod under hämtning av användarbild",
 "No photo path was submitted." => "Ingen sökväg till foto angavs.",
-"Error cropping image" => "Fel vid beskärning av bilden",
 "Error getting PHOTO property." => "Fel vid hämtning av egenskaper för FOTO.",
 "Error saving contact." => "Fel vid spara kontakt.",
 "No group name given." => "Inget gruppnamn angivet.",

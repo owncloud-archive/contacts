@@ -19,7 +19,6 @@
 "{name}'s Birthday" => "{name} säi Gebuertsdag",
 "Information about vCard is incorrect. Please reload the page." => "Informatioun iwwert vCard ass net richteg. Lued d'Säit wegl nei.",
 "No photo path was submitted." => "Et gouf kee Foto-Pfad iwwerdroen.",
-"Error cropping image" => "Feeler beim Schneide vum Bild",
 "Error getting PHOTO property." => "Feeler beim Luede vun der PHOTO-Eegeschaft.",
 "Error saving contact." => "Feeler beim Späichere vum Kontakt.",
 "There is no error, the file uploaded with success" => "Keen Feeler, Datei ass komplett ropgelueden ginn",

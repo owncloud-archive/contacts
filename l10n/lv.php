@@ -24,7 +24,6 @@
 "Error creating address book" => "Kļūda veidojot ",
 "Error creating contact." => "Kļūda, veidojot kontaktu.",
 "No photo path was submitted." => "Nav iesniegts fotogrāfijas ceļš.",
-"Error cropping image" => "Kļūda, apcērtot attēlu",
 "Error getting PHOTO property." => "Kļūda, saņemot PHOTO īpašību.",
 "Error saving contact." => "Kļūda, saglabājot kontaktu.",
 "No file was uploaded. Unknown error" => "Netika augšupielādēta neviena datne. Nezināma kļūda",

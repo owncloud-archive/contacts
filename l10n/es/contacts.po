@@ -35,8 +35,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-21 00:49-0400\n"
-"PO-Revision-Date: 2014-03-21 04:49+0000\n"
+"POT-Creation-Date: 2014-03-22 00:49-0400\n"
+"PO-Revision-Date: 2014-03-22 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -139,11 +139,11 @@ msgstr "Error en la red o en el servidor. Por favor, informe al administrador."
 
 #: js/app.js:787
 msgid "Only images can be used as contact photo"
-msgstr ""
+msgstr "Solo se pueden usar imágenes como fotos de contacto"
 
 #: js/app.js:796
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "El tamaño de \"{filename}\" excede el máximo permitido {size}"
 
 #: js/app.js:956
 msgid "Error adding to group."
@@ -492,17 +492,13 @@ msgstr "No se ha introducido la ruta de la foto."
 
 #: lib/controller/contactphotocontroller.php:193
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Error al cargar la imagen de la memoria caché"
 
-#: lib/controller/contactphotocontroller.php:200
-msgid "Error cropping image"
-msgstr "Error al recortar la imagen"
-
-#: lib/controller/contactphotocontroller.php:205
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error getting PHOTO property."
 msgstr "Error obteniendo las propiedades de la foto."
 
-#: lib/controller/contactphotocontroller.php:209
+#: lib/controller/contactphotocontroller.php:207
 msgid "Error saving contact."
 msgstr "Error guardando el contacto."
 

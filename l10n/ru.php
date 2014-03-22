@@ -98,7 +98,6 @@
 "Error saving contact to backend" => "Ошибка сохранения контакта в бэкенд",
 "Error getting user photo" => "Ошибка загрузки фото пользователя",
 "No photo path was submitted." => "Нет фото по адресу.",
-"Error cropping image" => "Ошибка обрезки изображений",
 "Error getting PHOTO property." => "Ошибка при получении ФОТО.",
 "Error saving contact." => "Ошибка при сохранении контактов.",
 "No group name given." => "Не задано имя группы.",

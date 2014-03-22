@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-21 00:49-0400\n"
-"PO-Revision-Date: 2014-03-21 04:49+0000\n"
+"POT-Creation-Date: 2014-03-22 00:49-0400\n"
+"PO-Revision-Date: 2014-03-22 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/projects/p/owncloud/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
@@ -118,11 +118,11 @@ msgstr "Verkko- tai palvelinvirhe. Ilmoita asiasta pääkäyttäjälle."
 
 #: js/app.js:787
 msgid "Only images can be used as contact photo"
-msgstr ""
+msgstr "Vain kuvatiedostoja voi asettaa yhteystietojen kuviksi"
 
 #: js/app.js:796
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "Tiedoston \"{filename}\" koko ylittää sallitus enimmäiskoon {size}"
 
 #: js/app.js:956
 msgid "Error adding to group."
@@ -471,17 +471,13 @@ msgstr "Kuvan polkua ei annettu."
 
 #: lib/controller/contactphotocontroller.php:193
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Virhe ladatessa kuvaa välimuistista"
 
-#: lib/controller/contactphotocontroller.php:200
-msgid "Error cropping image"
-msgstr "Virhe rajatessa kuvaa"
-
-#: lib/controller/contactphotocontroller.php:205
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error getting PHOTO property."
 msgstr "Virhe KUVA ominaisuuden saamisessa."
 
-#: lib/controller/contactphotocontroller.php:209
+#: lib/controller/contactphotocontroller.php:207
 msgid "Error saving contact."
 msgstr "Virhe yhteystietoa tallennettaessa."
 

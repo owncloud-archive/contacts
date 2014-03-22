@@ -96,7 +96,6 @@
 "Error saving contact to backend" => "연락처 백엔드 저장 오류",
 "Error getting user photo" => "사용자 사진 가져오기 오류",
 "No photo path was submitted." => "사진 경로가 제출되지 않았습니다.",
-"Error cropping image" => "그림을 자르는 중 오류가 발생했습니다.",
 "Error getting PHOTO property." => "PHOTO 속성을 가져오는 중 오류가 발생했습니다.",
 "Error saving contact." => "연락처 저장 중 오류가 발생했습니다.",
 "No group name given." => "그룹 이름이 지정되지 않았습니다.",

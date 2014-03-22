@@ -95,7 +95,6 @@
 "Error saving contact to backend" => "Fehler beim Speichern eines Kontakts ins Backend",
 "Error getting user photo" => "Fehler beim Abrufen des Benutzerfotos",
 "No photo path was submitted." => "Kein Foto-Pfad angegeben.",
-"Error cropping image" => "Fehler beim Zuschneiden des Bildes",
 "Error getting PHOTO property." => "Fehler beim Abrufen der PHOTO-Eigenschaft.",
 "Error saving contact." => "Fehler beim Speichern des Kontaktes.",
 "No group name given." => "Kein Gruppenname angegeben.",

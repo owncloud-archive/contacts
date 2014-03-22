@@ -91,7 +91,6 @@
 "Error saving contact to backend" => "Klaida išsaugant kontaktą į sistemą.",
 "Error getting user photo" => "Klaida gaunant naudotojo nuotrauką",
 "No photo path was submitted." => "Nenurodytas nuotraukos kelias. ",
-"Error cropping image" => "Klaida apkerpant paveikslėlį",
 "Error getting PHOTO property." => "Klaida gaunant nuotraukos  savybes.",
 "Error saving contact." => "Klaida išsaugant kontaktą.",
 "No group name given." => "Nepateiktas grupės pavadinimas.",

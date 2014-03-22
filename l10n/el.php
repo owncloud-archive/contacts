@@ -101,7 +101,6 @@
 "Error saving contact to backend" => "Σφάλμα κατά την αποθήκευση επαφής στο σύστημα",
 "Error getting user photo" => "Σφάλμα κατά την λήψη φωτογραφίας χρήστη",
 "No photo path was submitted." => "Δεν δόθηκε διαδρομή εικόνας",
-"Error cropping image" => "Σφάλμα κατά την περικοπή εικόνας",
 "Error getting PHOTO property." => "Σφάλμα κατά τη λήψη ιδιοτήτων ΦΩΤΟΓΡΑΦΙΑΣ.",
 "Error saving contact." => "Σφάλμα κατά την αποθήκευση επαφής.",
 "No group name given." => "Δεν δόθηκε όνομα ομάδας.",
