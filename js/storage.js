@@ -74,10 +74,10 @@ OC.Contacts = OC.Contacts || {};
 	 *
 	 * @return An array containing object of address book metadata e.g.:
 	 * {
-	 * 	backend:'local',
-	 * 	id:'1234'
-	 * 	permissions:31,
-	 * 	displayname:'Contacts'
+	 *    backend:'local',
+	 *    id:'1234'
+	 *    permissions:31,
+	 *    displayname:'Contacts'
 	 * }
 	 */
 	Storage.prototype.getAddressBooksForUser = function() {
@@ -95,13 +95,13 @@ OC.Contacts = OC.Contacts || {};
 	 * @param object params An object {displayname:"My contacts", description:""}
 	 * @return An array containing contact data e.g.:
 	 * {
-	 * 	metadata:
-	 * 		{
-	 * 		id:'1234'
-	 * 		permissions:31,
-	 * 		displayname:'My contacts',
-	 * 		lastmodified: (unix timestamp),
-	 * 		owner: 'joye',
+	 * metadata:
+	 * {
+	 *     id:'1234'
+	 *     permissions:31,
+	 *     displayname:'My contacts',
+	 *     lastmodified: (unix timestamp),
+	 *     owner: 'joye',
 	 * }
 	 */
 	Storage.prototype.addAddressBook = function(backend, parameters) {
@@ -122,13 +122,13 @@ OC.Contacts = OC.Contacts || {};
 	 * @param object params An object {displayname:"My contacts", description:""}
 	 * @return An array containing contact data e.g.:
 	 * {
-	 * 	metadata:
-	 * 		{
-	 * 		id:'1234'
-	 * 		permissions:31,
-	 * 		displayname:'My contacts',
-	 * 		lastmodified: (unix timestamp),
-	 * 		owner: 'joye',
+	 * metadata:
+	 * {
+	 *     id:'1234'
+	 *     permissions:31,
+	 *     displayname:'My contacts',
+	 *     lastmodified: (unix timestamp),
+	 *     owner: 'joye',
 	 * }
 	 */
 	Storage.prototype.updateAddressBook = function(backend, addressBookId, properties) {
@@ -187,15 +187,15 @@ OC.Contacts = OC.Contacts || {};
 	 * @return
 	 * An array containing contact data e.g.:
 	 * {
-	 * 	metadata:
-	 * 		{
-	 * 		id:'1234'
-	 * 		permissions:31,
-	 * 		displayname:'John Q. Public',
-	 * 		lastmodified: (unix timestamp),
-	 * 		owner: 'joye',
-	 * 		parent: (id of the parent address book)
-	 * 	data: //array of VCard data
+	 * metadata:
+	 * {
+	 *     id:'1234'
+	 *     permissions:31,
+	 *     displayname:'John Q. Public',
+	 *     lastmodified: (unix timestamp),
+	 *     owner: 'joye',
+	 *     parent: (id of the parent address book)
+	 *     data: //array of VCard data
 	 * }
 	 */
 	Storage.prototype.getAddressBook = function(backend, addressBookId) {
@@ -244,15 +244,15 @@ OC.Contacts = OC.Contacts || {};
 	 * @param string addressBookId Address book ID
 	 * @return An array containing contact data e.g.:
 	 * {
-	 * 	metadata:
-	 * 		{
-	 * 		id:'1234'
-	 * 		permissions:31,
-	 * 		displayname:'John Q. Public',
-	 * 		lastmodified: (unix timestamp),
-	 * 		owner: 'joye',
-	 * 		parent: (id of the parent address book)
-	 * 	data: //array of VCard data
+	 * metadata:
+	 *     {
+	 *     id:'1234'
+	 *     permissions:31,
+	 *     displayname:'John Q. Public',
+	 *     lastmodified: (unix timestamp),
+	 *     owner: 'joye',
+	 *     parent: (id of the parent address book)
+	 *     data: //array of VCard data
 	 * }
 	 */
 	Storage.prototype.addContact = function(backend, addressBookId) {
@@ -454,11 +454,11 @@ OC.Contacts = OC.Contacts || {};
 	 * @return An array containing the groups, the favorites, any shared
 	 * address books, the last selected group and the sort order of the groups.
 	 * {
-	 * 	'categories': [{'id':1',Family'}, {...}],
-	 * 	'favorites': [123,456],
-	 * 	'shared': [],
-	 * 	'lastgroup':'1',
-	 * 	'sortorder':'3,2,4'
+	 *     'categories': [{'id':1',Family'}, {...}],
+	 *     'favorites': [123,456],
+	 *     'shared': [],
+	 *     'lastgroup':'1',
+	 *     'sortorder':'3,2,4'
 	 * }
 	 */
 	Storage.prototype.getGroupsForUser = function() {
@@ -476,8 +476,8 @@ OC.Contacts = OC.Contacts || {};
 	 * @param string name
 	 * @return A JSON object containing the (maybe sanitized) group name and its ID:
 	 * {
-	 * 	'id':1234,
-	 * 	'name':'My group'
+	 *     'id':1234,
+	 *     'name':'My group'
 	 * }
 	 */
 	Storage.prototype.addGroup = function(name) {
