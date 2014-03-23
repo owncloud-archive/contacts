@@ -1518,8 +1518,8 @@ OC.notify = function(params) {
 			var $listElement = contact.getListItemElement();
 			console.log('selected element', $listElement);
 			window.location.hash = this.currentid;
-			self.jumpToContact(self.currentid);
 			$contactelem.insertAfter($listElement).show().find('.fullname').focus();
+			self.jumpToContact(self.currentid);
 			$listElement.hide();
 			setTimeout(function() {
 				$(window).bind('hashchange', self.hashChange);
