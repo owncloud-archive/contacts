@@ -242,6 +242,7 @@ OC.Contacts = OC.Contacts || {};
 		this.$bookList = this.$bookTemplate.find('.addressbooklist');
 		this.$bookItemTemplate = bookItemTemplate;
 		this.$importIntoSelect = this.$bookTemplate.find('#import_into');
+		this.$importFormatSelect = this.$bookTemplate.find('#import_format');
 		this.$importProgress = this.$bookTemplate.find('#import-status-progress');
 		this.$importStatusText = this.$bookTemplate.find('#import-status-text');
 		this.addressBooks = [];
@@ -274,6 +275,9 @@ OC.Contacts = OC.Contacts || {};
 		});
 		$(document).bind('status.addressbook.added', function() {
 			self.buildImportSelect();
+		})
+		this.$importFormatSelect.on('change', function() {
+			self.$importIntoSelect.trigger('change');
 		});
 		this.$importIntoSelect.on('change', function() {
 			// Disable file input if no address book selected
@@ -281,25 +285,33 @@ OC.Contacts = OC.Contacts || {};
 			self.$importFileInput.prop('disabled', value === '-1' );
 			if(value !== '-1') {
 				var url = OC.generateUrl(
-					'apps/contacts/addressbook/{backend}/{addressBookId}/import/upload',
-					{addressBookId:value, backend: $(this).find('option:selected').data('backend')}
+					'apps/contacts/addressbook/{backend}/{addressBookId}/{importType}/import/upload',
+					{
+						addressBookId:value,
+						importType:self.$importFormatSelect.find('option:selected').val(),
+						backend: $(this).find('option:selected').data('backend')
+					}
 				);
 				self.$importFileInput.fileupload('option', 'url', url);
-				//self.$importFileInput.attr('data-url', url);
 			}
 		});
 		this.$importFileInput.fileupload({
 			dataType: 'json',
-			start: function(/*e, data*/) {
+			start: function(e, data) {
 				self.$importProgress.progressbar({value:false});
 				$('.tipsy').remove();
 				$('.import-upload').hide();
 				$('.import-status').show();
 				self.$importProgress.fadeIn();
-				self.$importStatusText.text(t('contacts', 'Uploading...'));
+				self.$importStatusText.text(t('contacts', 'Starting file import'));
 			},
 			done: function (e, data) {
-				self.$importStatusText.text(t('contacts', 'Importing...'));
+				if ($('#import_format').find('option:selected').val() != 'automatic') {
+					$('#import-status-text').text(t('contacts', 'Format selected: {format}',
+													{format: $('#import_format').find('option:selected').text() }));
+				} else {
+					$('#import-status-text').text(t('contacts', 'Automatic format detection'));
+				}
 				console.log('Upload done:', data);
 				self.doImport(self.storage.formatResponse(data.jqXHR));
 			},
@@ -319,18 +331,23 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * For importing from oC filesyatem
 	 */
-	AddressBookList.prototype.prepareImport = function(backend, addressBookId, path, fileName) {
-		console.log('prepareImport', backend, addressBookId, path, fileName);
+	AddressBookList.prototype.prepareImport = function(backend, addressBookId, importType, path, fileName) {
+		console.log('prepareImport', backend, addressBookId, importType, path, fileName);
 		this.$importProgress.progressbar({value:false});
-		this.$importStatusText.text(t('contacts', 'Preparing...'));
+		if (importType != 'automatic') {
+			this.$importStatusText.text(t('contacts', 'Format selected: {format}',
+											{format: self.$importFormatSelect.find('option:selected').val() }));
+		} else {
+			this.$importStatusText.text(t('contacts', 'Automatic format detection'));
+		}
 		return this.storage.prepareImport(
-				backend, addressBookId,
+				backend, addressBookId, importType,
 				{filename:fileName, path:path}
 			);
 	};
 
 	AddressBookList.prototype.doImport = function(response) {
-		console.log('doImport');
+		console.log('doImport', response);
 		var defer = $.Deferred();
 		var done = false;
 		var interval = null, isChecking = false;
@@ -345,14 +362,12 @@ OC.Contacts = OC.Contacts || {};
 				if(self.$importProgress.hasClass('ui-progressbar')) {
 					self.$importProgress.progressbar('destroy');
 				}
-			}, 5000);
+			}, 3000);
 		};
 		if(!response.error) {
-			this.importCount = response.data.count;
 			this.$importProgress.progressbar('value', 0);
-			this.$importProgress.progressbar('option', 'max', this.importCount);
 			var data = response.data;
-			var getStatus = function(backend, addressbookid, progresskey, interval, done) {
+			var getStatus = function(backend, addressbookid, importType, progresskey, interval, done) {
 				if(done) {
 					clearInterval(interval);
 					closeImport();
@@ -364,14 +379,18 @@ OC.Contacts = OC.Contacts || {};
 				isChecking = true;
 				$.when(
 					self.storage.importStatus(
-						backend, addressbookid,
+						backend, addressbookid, importType,
 						{progresskey:progresskey}
 					))
 				.then(function(response) {
 					if(!response.error) {
-						self.$importProgress.progressbar('value', Number(response.data.progress));
-						self.$importStatusText.text(t('contacts', 'Imported {count} of {total} contacts',
-													{count:response.data.progress, total: self.importCount}));
+						console.log('status, response: ', response);
+						if (response.data.total != null && response.data.progress != null) {
+							self.$importProgress.progressbar('option', 'max', Number(response.data.total));
+							self.$importProgress.progressbar('value', Number(response.data.progress));
+							self.$importStatusText.text(t('contacts', 'Processing {count}/{total} cards',
+														{count: response.data.progress, total: response.data.total}));
+						}
 					} else {
 						console.warn('Error', response.message);
 						self.$importStatusText.text(response.message);
@@ -385,7 +404,7 @@ OC.Contacts = OC.Contacts || {};
 			};
 			$.when(
 				self.storage.startImport(
-					data.backend, data.addressBookId,
+					data.backend, data.addressBookId, data.importType,
 					{filename:data.filename, progresskey:data.progresskey}
 				)
 			)
@@ -393,8 +412,8 @@ OC.Contacts = OC.Contacts || {};
 				console.log('response', response);
 				if(!response.error) {
 					console.log('Import done');
-					self.$importStatusText.text(t('contacts', 'Imported {imported} contacts. {failed} failed.',
-													  {imported:response.data.imported, failed: response.data.failed}));
+					self.$importStatusText.text(t('contacts', 'Total:{total}, Success:{imported}, Errors:{failed}',
+													  {total: response.data.total, imported:response.data.imported, failed: response.data.failed}));
 					var addressBook = self.find({id:response.data.addressBookId, backend: response.data.backend});
 					$(document).trigger('status.addressbook.imported', {
 						addressbook: addressBook
@@ -413,7 +432,7 @@ OC.Contacts = OC.Contacts || {};
 				done = true;
 			});
 			interval = setInterval(function() {
-				getStatus(data.backend, data.addressBookId, data.progresskey, interval, done);
+				getStatus(data.backend, data.addressBookId, data.importType, data.progresskey, interval, done);
 			}, 1500);
 		} else {
 			defer.reject(response);

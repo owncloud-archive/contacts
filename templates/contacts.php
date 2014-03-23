@@ -1,3 +1,6 @@
+<?php
+use OCA\Contacts\ImportManager;
+?>
 <div id="app">	
 	<div id="app-navigation" class="loading">
 		<ul id="grouplist" class="hidden-on-load">
@@ -27,6 +30,16 @@
 						<li class="import-upload">
 							<select id="import_into">
 								<option value="-1"><?php p($l->t('Import into...')); ?></option>
+							</select>
+							<select id="import_format">
+								<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
+								<?php
+								$importManager = new ImportManager();
+								$types = $importManager->getTypes();
+								foreach ($types as $id => $label) {
+									echo "<option value=\"$id\">$label</option>";
+								}
+								?>
 							</select>
 							<button class="icon-upload svg tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
 							<input id="import_upload_start" class="tooltipped rightwards" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
