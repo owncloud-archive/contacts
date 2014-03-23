@@ -372,7 +372,7 @@ OC.Contacts = OC.Contacts || {};
 				defer.resolve(photo);
 			})
 			.error(function(event) {
-				console.log('Error loading temporary photo', event)
+				console.warn('Error loading temporary photo', event);
 				defer.reject();
 			})
 			.attr('src', url)
@@ -417,7 +417,7 @@ OC.Contacts = OC.Contacts || {};
 	 * @param string|array|null value The of the property
 	 * @param array parameters Optional parameters for the property
 	 * @param string checksum For non-singular properties such as email this must contain
-	 * 	an 8 character md5 checksum of the serialized \Sabre\Property
+	 *               an 8 character md5 checksum of the serialized \Sabre\Property
 	 */
 	Storage.prototype.patchContact = function(backend, addressBookId, contactId, params) {
 		return this.requestRoute(
@@ -617,7 +617,7 @@ OC.Contacts = OC.Contacts || {};
 
 		var defer = $.Deferred();
 
-		var jqxhr = $.ajax(ajaxParams)
+		$.ajax(ajaxParams)
 			.done(function(response, textStatus, jqXHR) {
 				console.log(jqXHR);
 				defer.resolve(new JSONResponse(jqXHR));

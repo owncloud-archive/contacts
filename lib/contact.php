@@ -155,7 +155,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	/**
 	 * @return string|null
 	 */
-	function getDisplayName() {
+	public function getDisplayName() {
 		if(!$this->hasPermission(\OCP\PERMISSION_READ)) {
 			throw new \Exception(self::$l10n->t('You do not have permissions to see this contact'), 403);
 		}
@@ -731,7 +731,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return $updated;
 	}
 
-    public function __get($key) {
+	public function __get($key) {
 		if(!$this->isRetrieved()) {
 			$this->retrieve();
 		}
@@ -739,7 +739,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return parent::__get($key);
 	}
 
-    public function __isset($key) {
+	public function __isset($key) {
 		if(!$this->isRetrieved()) {
 			$this->retrieve();
 		}

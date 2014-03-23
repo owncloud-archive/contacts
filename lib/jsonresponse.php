@@ -53,22 +53,22 @@ class JSONResponse extends OriginalResponse {
 		return $this;
 	}
 
-	function bailOut($msg, $tracelevel = 1, $debuglevel = \OCP\Util::ERROR) {
+	public function bailOut($msg, $tracelevel = 1, $debuglevel = \OCP\Util::ERROR) {
 		if($msg instanceof \Exception) {
-			$msg = $msg->getMessage();
 			$this->setStatus($msg->getCode());
+			$msg = $msg->getMessage();
 		}
 		$this->setErrorMessage($msg);
 		return $this->debug($msg, $tracelevel, $debuglevel);
 	}
 
-	function debug($msg, $tracelevel = 0, $debuglevel = \OCP\Util::DEBUG) {
+	public function debug($msg, $tracelevel = 0, $debuglevel = \OCP\Util::DEBUG) {
 		if(!is_numeric($tracelevel)) {
 			return $this;
 		}
 
 		if(PHP_VERSION >= "5.4") {
-			$call = debug_backtrace(false, $tracelevel + 1);
+			$call = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, $tracelevel + 1);
 		} else {
 			$call = debug_backtrace(false);
 		}

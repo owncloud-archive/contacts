@@ -153,7 +153,7 @@ class Database extends AbstractBackend {
 	/**
 	* {@inheritdoc}
 	*/
-	public function hasAddressBook($addressBookId, array $options = array()) {
+	public function hasAddressBook($addressBookId) {
 
 		// First check if it's already cached
 		if ($this->addressBooks && isset($this->addressBooks[$addressBookId])) {
@@ -244,14 +244,11 @@ class Database extends AbstractBackend {
 	 * @param array $options - Optional (backend specific options)
 	 * @return string|false The ID if the newly created AddressBook or false on error.
 	 */
-	public function createAddressBook(array $properties, array $options = array()) {
+	public function createAddressBook(array $properties) {
 
 		if (count($properties) === 0 || !isset($properties['displayname'])) {
 			return false;
 		}
-
-		$query = 'INSERT INTO `' . $this->addressBooksTableName . '` '
-			. '(`userid`,`displayname`,`uri`,`description`,`ctag`) VALUES(?,?,?,?,?)';
 
 		$updates = array($this->userid, $properties['displayname']);
 		$updates[] = isset($properties['uri'])

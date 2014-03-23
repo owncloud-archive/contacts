@@ -39,7 +39,7 @@ class TemporaryPhoto {
 	protected $server;
 
 	/**
-	* @var OCP\Image
+	* @var \OCP\Image
 	*/
 	protected $image;
 

@@ -27,7 +27,8 @@ namespace OCA\Contacts\Middleware;
 use OCA\Contacts\Controller,
 	OCA\Contacts\JSONResponse,
 	OCP\AppFramework\Middleware,
-	OCP\AppFramework\Http\Response;
+	OCP\AppFramework\Http\Response,
+	OCP\AppFramework\Http as HttpStatus;
 
 /**
  * Used to intercept exceptions thrown in controllers and backends
@@ -49,13 +50,14 @@ class Http extends Middleware {
 		// If there's no proper status code associated, set it to 500.
 		$response = new JSONResponse();
 		if($exception->getCode() < 100) {
-			$response->setStatus(500);
+			$response->setStatus(HttpStatus::STATUS_INTERNAL_SERVER_ERROR);
 		} else {
 			$response->setStatus($exception->getCode());
 		}
 
 		$response->setErrorMessage($exception->getMessage());
 
+		\OCP\Util::logException('contacts', $exception);
 		return $response;
 	}
 
