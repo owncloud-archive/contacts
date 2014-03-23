@@ -3,10 +3,11 @@ OC.Contacts = OC.Contacts || {};
 (function(window, $, OC) {
 	'use strict';
 
-	var JSONResponse = function(response, jqXHR) {
+	var JSONResponse = function(jqXHR) {
 		this.getAllResponseHeaders = jqXHR.getAllResponseHeaders;
 		this.getResponseHeader = jqXHR.getResponseHeader;
 		this.statusCode = jqXHR.status;
+		var response = jqXHR.responseJSON;
 		this.error = false;
 		// 204 == No content
 		// 304 == Not modified
@@ -59,14 +60,11 @@ OC.Contacts = OC.Contacts || {};
 	/**
 	 * When the response isn't returned from requestRoute(), you can
 	 * wrap it in a JSONResponse so that it's parsable by other objects.
-	 * FIXME: Reverse the order of the arguments as jqXHR should contain
-	 * everything needed.
 	 *
-	 * @param object response The body of the response
 	 * @param XMLHTTPRequest http://api.jquery.com/jQuery.ajax/#jqXHR
 	 */
-	Storage.prototype.formatResponse = function(response, jqXHR) {
-		return new JSONResponse(response, jqXHR);
+	Storage.prototype.formatResponse = function(jqXHR) {
+		return new JSONResponse(jqXHR);
 	};
 
 	/**
@@ -621,13 +619,14 @@ OC.Contacts = OC.Contacts || {};
 
 		var jqxhr = $.ajax(ajaxParams)
 			.done(function(response, textStatus, jqXHR) {
-				defer.resolve(new JSONResponse(response, jqXHR));
+				console.log(jqXHR);
+				defer.resolve(new JSONResponse(jqXHR));
 			})
 			.fail(function(jqXHR/*, textStatus, error*/) {
 				console.log(jqXHR);
 				var response = jqXHR.responseText ? $.parseJSON(jqXHR.responseText) : null;
 				console.log('response', response);
-				defer.reject(new JSONResponse(response, jqXHR));
+				defer.reject(new JSONResponse(jqXHR));
 			});
 
 		return defer.promise();

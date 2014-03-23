@@ -301,7 +301,7 @@ OC.Contacts = OC.Contacts || {};
 			done: function (e, data) {
 				self.$importStatusText.text(t('contacts', 'Importing...'));
 				console.log('Upload done:', data);
-				self.doImport(self.storage.formatResponse(data.result, data.jqXHR));
+				self.doImport(self.storage.formatResponse(data.jqXHR));
 			},
 			fail: function(e, data) {
 				console.log('fail', data);

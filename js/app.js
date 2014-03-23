@@ -150,6 +150,8 @@ OC.notify = function(params) {
 	}
 };
 
+(function(window, $, OC) {
+	'use strict';
 
 OC.Contacts = OC.Contacts || {
 	init:function() {
@@ -366,7 +368,7 @@ OC.Contacts = OC.Contacts || {
 		// This apparently get's called on some weird occasions.
 		//$(window).bind('popstate', this.hashChange);
 		$(window).bind('hashchange', this.hashChange);
-		
+
 		// App specific events
 		$(document).bind('status.contact.deleted', function(e, data) {
 			var id = String(data.id);
@@ -815,7 +817,7 @@ OC.Contacts = OC.Contacts || {
 			},
 			fail: function(e, data) {
 				console.log('fail', data);
-				var response = self.storage.formatResponse(data.jqXHR.responseJSON, data.jqXHR);
+				var response = self.storage.formatResponse(data.jqXHR);
 				$(document).trigger('status.contacts.error', response);
 			}
 		});
@@ -865,7 +867,7 @@ OC.Contacts = OC.Contacts || {
 				self.showActions(['toggle', 'add', 'download', 'groups', 'delete', 'favorite', 'merge']);
 			}
 		});
-		
+
 		this.$contactList.on('click', 'label:not([for=select_all])', function(/*event*/) {
 			var $input = $(this).prev('input');
 			$input.prop('checked', !$input.prop('checked'));
@@ -1230,7 +1232,7 @@ OC.Contacts = OC.Contacts || {
 		$('body').on('touchmove', function(event) {
 			event.preventDefault();
 		});
-		
+
 		$(document).on('keyup', function(event) {
 			if(!$(event.target).is('body') || event.isPropagationStopped()) {
 				return;
@@ -1537,7 +1539,7 @@ OC.Contacts = OC.Contacts || {
 		);
 		var jqXHR = $.getJSON(url, {path: path}, function(response) {
 			console.log('response', response);
-			response = self.storage.formatResponse(response, jqXHR);
+			response = self.storage.formatResponse(jqXHR);
 			if(!response.error) {
 				self.editPhoto(metadata, response.data.tmp);
 			} else {
@@ -1553,7 +1555,7 @@ OC.Contacts = OC.Contacts || {
 		);
 		console.log('url', url);
 		var jqXHR = $.getJSON(url, function(response) {
-			response = self.storage.formatResponse(response, jqXHR);
+			response = self.storage.formatResponse(jqXHR);
 			if(!response.error) {
 				self.editPhoto(metadata, response.data.tmp);
 			} else {
