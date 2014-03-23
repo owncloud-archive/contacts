@@ -22,7 +22,6 @@
 "Merge failed. Error saving contact." => "Samenvoegen mislukt. Fout bij opslaan contactpersoon.",
 "Select photo" => "Selecteer een foto",
 "Network or server error. Please inform administrator." => "Netwerk- of serverfout. Neem contact op met de beheerder.",
-"Only images can be used as contact photo" => "Alleen afbeeldingen kunnen worden gebruik als contactfoto",
 "The size of \"{filename}\" exceeds the maximum allowed {size}" => "De omvang van \"{filenama}\" overschrijdt de maximaal toegestane {size}",
 "Error adding to group." => "Fout bij het toevoegen aan de groep.",
 "Error removing from group." => "Fout bij het verwijderen uit de groep.",

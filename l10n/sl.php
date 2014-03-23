@@ -22,7 +22,6 @@
 "Merge failed. Error saving contact." => "Združevanje je spodletelo. Prišlo je do napake med shranjevanjem stika.",
 "Select photo" => "Izbor slike",
 "Network or server error. Please inform administrator." => "Napaka omrežja ali strežnika. Pošljite obvestilo skrbniku sistema.",
-"Only images can be used as contact photo" => "Kot fotografijo stika je mogoče uporabiti le slike",
 "The size of \"{filename}\" exceeds the maximum allowed {size}" => "Velikost datoteke \"{filename}\" presega največjo dovoljeno velikost {size}",
 "Error adding to group." => "Napaka med dodajanjem stika v skupino.",
 "Error removing from group." => "Napaka med odstranjevanjem stika iz skupino.",

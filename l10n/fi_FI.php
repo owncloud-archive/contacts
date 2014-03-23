@@ -21,7 +21,6 @@
 "Merge failed. Error saving contact." => "Yhdistäminen epäonnistui. Virhe yhteystietoa tallentaessa.",
 "Select photo" => "Valitse valokuva",
 "Network or server error. Please inform administrator." => "Verkko- tai palvelinvirhe. Ilmoita asiasta pääkäyttäjälle.",
-"Only images can be used as contact photo" => "Vain kuvatiedostoja voi asettaa yhteystietojen kuviksi",
 "The size of \"{filename}\" exceeds the maximum allowed {size}" => "Tiedoston \"{filename}\" koko ylittää sallitus enimmäiskoon {size}",
 "Error adding to group." => "Virhe ryhmään lisättäessä.",
 "Error removing from group." => "Virhe poistaessa ryhmästä.",

@@ -22,7 +22,6 @@
 "Merge failed. Error saving contact." => "Zusammenführung fehlgeschlagen. Fehler beim Speichern des Kontakts. ",
 "Select photo" => "Wähle  ein Foto",
 "Network or server error. Please inform administrator." => "Netzwerk- oder Serverfehler. Bitte Administrator informieren.",
-"Only images can be used as contact photo" => "Nur Bilder können als Kontaktfoto genutzt werden.",
 "The size of \"{filename}\" exceeds the maximum allowed {size}" => "Die Größe von \"{filename}\" überschreitet die maximal erlaubte Größe von {size}",
 "Error adding to group." => "Fehler beim Hinzufügen zur Gruppe.",
 "Error removing from group." => "Fehler beim Entfernen aus Gruppe.",

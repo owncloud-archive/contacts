@@ -22,7 +22,6 @@
 "Merge failed. Error saving contact." => "Non foi posíbel facer a mistura. produciuse un erro ao gardar o contacto.",
 "Select photo" => "Seleccione fotografía",
 "Network or server error. Please inform administrator." => "Produciuse un erro na rede ou no servidor. Informe ao administrador.",
-"Only images can be used as contact photo" => "Só pode empregar imaxes como foto do contacto",
 "The size of \"{filename}\" exceeds the maximum allowed {size}" => "O tamaño de «{filename}» excede do máximo permitido de {size}",
 "Error adding to group." => "Produciuse un erro ao engadir ao grupo.",
 "Error removing from group." => "Produciuse un erro ao retirar do grupo.",

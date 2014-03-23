@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-22 00:49-0400\n"
-"PO-Revision-Date: 2014-03-22 04:49+0000\n"
+"POT-Creation-Date: 2014-03-23 00:49-0400\n"
+"PO-Revision-Date: 2014-03-23 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -121,8 +121,8 @@ msgid "Network or server error. Please inform administrator."
 msgstr "Erro no servidor ou rede. Por favor, informe o administrador."
 
 #: js/app.js:787
-msgid "Only images can be used as contact photo"
-msgstr "Apenas as imagens podem ser utilizadas como foto de contato"
+msgid "Only images can be used as contact photos"
+msgstr ""
 
 #: js/app.js:796
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"

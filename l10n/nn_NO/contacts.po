@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# unhammer <unhammer+dill@mm.st>, 2013
+# unhammer <unhammer+dill@mm.st>, 2013-2014
 # unhammer <unhammer+dill@mm.st>, 2011
 # olealX <post@olealx.net>, 2012
 # unhammer <unhammer+dill@mm.st>, 2013
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-22 00:49-0400\n"
-"PO-Revision-Date: 2014-03-22 04:49+0000\n"
+"POT-Creation-Date: 2014-03-23 00:49-0400\n"
+"PO-Revision-Date: 2014-03-23 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Norwegian Nynorsk (Norway) (http://www.transifex.com/projects/p/owncloud/language/nn_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Lastar opp …"
 
 #: js/addressbooks.js:302 js/loader.js:68
 msgid "Importing..."
-msgstr ""
+msgstr "Importerer …"
 
 #: js/addressbooks.js:325
 msgid "Preparing..."
@@ -43,78 +43,78 @@ msgstr ""
 
 #: js/addressbooks.js:373
 msgid "Imported {count} of {total} contacts"
-msgstr ""
+msgstr "Importerte {count} av {total} kontaktar"
 
 #: js/addressbooks.js:396
 msgid "Imported {imported} contacts. {failed} failed."
-msgstr ""
+msgstr "Importerte {imported} kontaktar. {failed} mislykka."
 
 #: js/addressbooks.js:550
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "Det finst alt ei adressebok som heiter {name}"
 
 #: js/addressbooks.js:584
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "Klarte ikkje leggja til adresseboka: {error}"
 
 #: js/addressbooks.js:625
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "Klarte ikkje lasta adressebøkene: {error}"
 
 #: js/app.js:216
 msgid "Indexing contacts"
-msgstr ""
+msgstr "Indekserer kontaktar"
 
 #: js/app.js:226
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "Uoppretteleg feil ved lasting av adressebøkene: {msg}"
 
 #: js/app.js:227
 msgid "Error."
-msgstr ""
+msgstr "Feil."
 
 #: js/app.js:322 js/app.js:336
 msgid "Add to..."
-msgstr ""
+msgstr "Legg til i …"
 
 #: js/app.js:326 js/app.js:338
 msgid "Remove from..."
-msgstr ""
+msgstr "Fjern frå …"
 
 #: js/app.js:343
 msgid "Add group..."
-msgstr ""
+msgstr "Legg til gruppe …"
 
 #: js/app.js:471
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "Ugyldig URL: «{url}»"
 
 #: js/app.js:497
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "Ugyldig e-post: «{url}»"
 
 #: js/app.js:580
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "Klarte ikkje føya saman. Fann ikkje kontakten: {id}"
 
 #: js/app.js:593
 msgid "Merge failed."
-msgstr ""
+msgstr "Klarte ikkje føya saman."
 
 #: js/app.js:600
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "Klarte ikkje føya saman. Feil ved lagring av kontakten."
 
 #: js/app.js:620
 msgid "Select photo"
-msgstr ""
+msgstr "Vel bilete"
 
 #: js/app.js:703 js/app.js:1652
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "Nettverks- eller tenarfeil. Ver venleg og kontakt administratoren."
 
 #: js/app.js:787
-msgid "Only images can be used as contact photo"
+msgid "Only images can be used as contact photos"
 msgstr ""
 
 #: js/app.js:796
@@ -123,11 +123,11 @@ msgstr ""
 
 #: js/app.js:956
 msgid "Error adding to group."
-msgstr ""
+msgstr "Klarte ikkje leggja til i gruppe."
 
 #: js/app.js:979
 msgid "Error removing from group."
-msgstr ""
+msgstr "Klarte ikkje fjerna frå gruppe."
 
 #: js/app.js:1170
 msgid ""
@@ -141,7 +141,7 @@ msgstr ""
 
 #: js/app.js:1346 js/app.js:1350 templates/contacts.php:164
 msgid "Merge contacts"
-msgstr ""
+msgstr "Føy saman kontaktar"
 
 #: js/app.js:1372 js/app.js:1425 templates/contacts.php:350
 #: templates/contacts.php:351
@@ -432,7 +432,7 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
-msgstr ""
+msgstr "Klarte ikkje føya saman med kontakten."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
@@ -464,7 +464,7 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:131
 msgid "No photo path was submitted."
-msgstr ""
+msgstr "Ingen fotosti sendt inn."
 
 #: lib/controller/contactphotocontroller.php:193
 msgid "Error loading image from cache"
@@ -472,11 +472,11 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:203
 msgid "Error getting PHOTO property."
-msgstr ""
+msgstr "Klarte ikkje henta PHOTO-eigenskapen."
 
 #: lib/controller/contactphotocontroller.php:207
 msgid "Error saving contact."
-msgstr ""
+msgstr "Klarte ikkje lagra kontakten."
 
 #: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
 msgid "No group name given."
@@ -557,7 +557,7 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:95
 msgid "Error uploading contacts to storage."
-msgstr ""
+msgstr "Klarte ikkje lasta opp kontaktar til lagring."
 
 #: lib/controller/importcontroller.php:140
 msgid "Error moving file to imports folder."
@@ -599,7 +599,7 @@ msgstr ""
 
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr ""
+msgstr "Klarte ikkje lagra innstilling:"
 
 #: lib/searchprovider.php:37
 msgid "Contact"
@@ -782,7 +782,7 @@ msgstr "Last ned"
 
 #: templates/contacts.php:67
 msgid "Merge"
-msgstr ""
+msgstr "Føy saman"
 
 #: templates/contacts.php:70 templates/contacts.php:343
 msgid "Email"
@@ -861,11 +861,11 @@ msgstr ""
 
 #: templates/contacts.php:165
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "Kva kontakt vil du føya saman med?"
 
 #: templates/contacts.php:173
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Slett den/dei andre etter samanføying?"
 
 #: templates/contacts.php:188
 msgid "Compose mail"
