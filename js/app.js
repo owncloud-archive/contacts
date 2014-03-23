@@ -1,3 +1,5 @@
+'use strict';
+
 Modernizr.load({
 	test: Modernizr.input.placeholder,
 	nope: [
@@ -1474,18 +1476,22 @@ OC.Contacts = OC.Contacts || {
 		$(window).bind('hashchange', this.hashChange);
 	},
 	openContact: function(id) {
-		var self = this;
+		var self = this, contact;
 		if(typeof id === 'undefined' || id === 'undefined') {
 			console.warn('id is undefined!');
 			console.trace();
 		}
-		this.hideActions();
 		console.log('Contacts.openContact', id, typeof id);
 		if(this.currentid && this.currentid !== id) {
 			this.closeContact(this.currentid);
 		}
+		contact = this.contacts.findById(id);
+		if (!contact) {
+			console.warn('Contact', id, 'not found. Possibly deleted');
+			return;
+		}
 		this.currentid = id;
-		var contact = this.contacts.findById(this.currentid);
+		this.hideActions();
 		// If opened from search we can't be sure the contact is in currentgroup
 		if(!contact.inGroup(this.groups.nameById(this.currentgroup))
 			&& ['all', 'fav', 'uncategorized'].indexOf(this.currentgroup) === -1
