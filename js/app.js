@@ -873,6 +873,15 @@ OC.notify = function(params) {
 				return false; // Prevent opening contact
 			});
 
+			// Add title to names that would elliptized
+			this.$contactList.on('mouseenter', '.nametext', function() {
+				var $this = $(this);
+
+				if($this.width() > $this.parent().width() && !$this.attr('title')) {
+					$this.attr('title', $this.text());
+				}
+			});
+
 			this.$sortOrder.on('change', function() {
 				$(this).blur().addClass('loading');
 				contacts_sortby = $(this).val();
