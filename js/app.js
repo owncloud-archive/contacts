@@ -1591,7 +1591,7 @@ OC.Contacts = OC.Contacts || {
 			tmpkey
 		))
 		.then(function(image) {
-			var x = 5, y = 5, w = h = Math.min(image.width, image.height);
+			var x = 5, y = 5, w = Math.min(image.width, image.height), h = w;
 			//$dlg.css({'min-width': w, 'min-height': h});
 			console.log(x,y,w,h);
 			$(image).attr('id', 'cropbox').prependTo($dlg).show()
