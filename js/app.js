@@ -873,7 +873,7 @@ OC.notify = function(params) {
 				return false; // Prevent opening contact
 			});
 
-			// Add title to names that would elliptized
+			// Add title to names that would elliptisized (is that a word?)
 			this.$contactList.on('mouseenter', '.nametext', function() {
 				var $this = $(this);
 
