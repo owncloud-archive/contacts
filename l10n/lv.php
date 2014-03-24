@@ -1,8 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakti",
 "Save" => "Saglabāt",
-"Uploading..." => "Augšupielādē...",
-"Importing..." => "Importē...",
 "Error." => "Kļūda.",
 "Remove from..." => "Izņemt no...",
 "Add group..." => "Pievienot grupu...",
@@ -19,6 +17,7 @@
 "Favorites" => "Iecienītie",
 "Shared by {owner}" => "Dalījās {owner}",
 "Import" => "Importēt",
+"Importing..." => "Importē...",
 "Close" => "Aizvērt",
 "Contact not found" => "Kontakts netika atrasts",
 "Error creating address book" => "Kļūda veidojot ",

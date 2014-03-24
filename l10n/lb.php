@@ -1,8 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakter",
 "Save" => "Späicheren",
-"Uploading..." => "Upload...",
-"Importing..." => "Gett importéiert...",
 "Error." => "Fehler.",
 "Add group..." => "Grupp bäisetzen...",
 "Select photo" => "Foto auswielen",
@@ -14,6 +12,7 @@
 "All" => "All",
 "Favorites" => "Favoriten",
 "Import" => "Importeieren",
+"Importing..." => "Gett importéiert...",
 "Close" => "Zoumaachen",
 "Unknown error" => "Et ass en onbekannte Fehler opgetrueden",
 "{name}'s Birthday" => "{name} säi Gebuertsdag",

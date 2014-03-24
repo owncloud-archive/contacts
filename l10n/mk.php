@@ -1,8 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакти",
 "Save" => "Сними",
-"Uploading..." => "Подигнувам...",
-"Importing..." => "Увезувам...",
 "Indexing contacts" => "Индексирање на контактите",
 "Error." => "Грешка.",
 "Add to..." => "Додади на...",
@@ -23,6 +21,7 @@
 "Not grouped" => "Не групирани",
 "Please choose the addressbook" => "Ве молам изберете адресар",
 "Import" => "Увези",
+"Importing..." => "Увезувам...",
 "Close" => "Затвори",
 "Unknown error" => "Непозната грешка",
 "Address book not found" => "Адресарот не е пронајден",

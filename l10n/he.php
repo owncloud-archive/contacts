@@ -1,7 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "אנשי קשר",
 "Save" => "שמירה",
-"Uploading..." => "העלאה...",
 "Cancel" => "ביטול",
 "OK" => "אישור",
 "Add" => "הוספה",

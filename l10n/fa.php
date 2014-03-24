@@ -1,10 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ارتباط‌ها",
 "Save" => "ذخیره",
-"Uploading..." => "درحال بارگذاری...",
-"Importing..." => "در حال وارد کردن...",
-"Imported {count} of {total} contacts" => "{count} از {total} کاربر وارد شد",
-"Imported {imported} contacts. {failed} failed." => "{imported} کاربر وارد شد. {failed} ناموفق بود.",
 "An address book called {name} already exists" => "دفتر تلفن با نام {name} در حال حاضر وجود دارد",
 "Failed adding address book: {error}" => "خطا در خصوص اضافه نمودن دفتر تلفن: {error}",
 "Failed loading address books: {error}" => "خطا در خصوص فراخوانی دفتر تلفن: {error}",
@@ -20,6 +16,7 @@
 "Shared by {owner}" => "اشتراک گذارنده {owner}",
 "Please choose the addressbook" => "لطفا یک کتابچه نشانی انتخاب کنید",
 "Import" => "وارد کردن",
+"Importing..." => "در حال وارد کردن...",
 "Close" => "بستن",
 "Unknown error" => "خطای نامشخص",
 "{name}'s Birthday" => "روز تولد {name} است",

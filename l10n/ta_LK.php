@@ -1,7 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "தொடர்புகள்",
 "Save" => "சேமிக்க ",
-"Uploading..." => "பதிவேற்றல்...",
 "Indexing contacts" => "தொடர்புகளை அட்டவணையிடுதல்",
 "Add to..." => "இற்கு சேர்க்கப்பட்டது...",
 "Remove from..." => "இலிருந்து அகற்றுக...",

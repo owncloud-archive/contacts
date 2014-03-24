@@ -1,10 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contacte",
 "Save" => "Salvează",
-"Uploading..." => "Încărcare",
-"Importing..." => "a importa",
-"Imported {count} of {total} contacts" => "S-au importat {count} din {total} contacte",
-"Imported {imported} contacts. {failed} failed." => "contactele importate . esuat.",
 "An address book called {name} already exists" => "numele exista deja in agenda",
 "Failed adding address book: {error}" => "adaugarea agendei a esuat",
 "Failed loading address books: {error}" => "adaugarea agendei a esuat.eroare",
@@ -30,6 +26,7 @@
 "Could not find contact: {id}" => "Nu s-a putut gasi contactul: {id}",
 "Add" => "Adaugă",
 "Import" => "Importă",
+"Importing..." => "a importa",
 "Close" => "Închide",
 "Unknown error" => "Eroare necunoscută",
 "{name}'s Birthday" => "Ziua de naștere a {name}",

@@ -1,6 +1,5 @@
 <?php $TRANSLATIONS = array(
 "Save" => "រក្សាទុក",
-"Uploading..." => "កំពុងដាក់បញ្ចូល...",
 "Cancel" => "លើកលែង",
 "OK" => "OK",
 "Add" => "បញ្ចូល",

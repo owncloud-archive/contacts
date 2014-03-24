@@ -1,10 +1,10 @@
 <?php $TRANSLATIONS = array(
 "Save" => "پاشکه‌وتکردن",
-"Importing..." => "ده‌هێنرێت...",
 "Cancel" => "لابردن",
 "OK" => "باشە",
 "Add" => "زیادکردن",
 "Import" => "هێنان",
+"Importing..." => "ده‌هێنرێت...",
 "Close" => "داخستن",
 "No photo path was submitted." => "هیچ ڕێڕه‌وی وێنەیەک پێشکه‌ش نه‌کراوه.",
 "Download" => "داگرتن",

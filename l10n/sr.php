@@ -1,7 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакти",
 "Save" => "Сачувај",
-"Uploading..." => "Отпремам…",
 "Cancel" => "Откажи",
 "OK" => "У реду",
 "Add" => "Додај",

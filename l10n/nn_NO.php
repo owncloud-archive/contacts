@@ -1,10 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kotaktar",
 "Save" => "Lagra",
-"Uploading..." => "Lastar opp …",
-"Importing..." => "Importerer …",
-"Imported {count} of {total} contacts" => "Importerte {count} av {total} kontaktar",
-"Imported {imported} contacts. {failed} failed." => "Importerte {imported} kontaktar. {failed} mislykka.",
 "An address book called {name} already exists" => "Det finst alt ei adressebok som heiter {name}",
 "Failed adding address book: {error}" => "Klarte ikkje leggja til adresseboka: {error}",
 "Failed loading address books: {error}" => "Klarte ikkje lasta adressebøkene: {error}",
@@ -29,6 +25,7 @@
 "Add" => "Legg til",
 "Shared by {owner}" => "Delt av {owner}",
 "Import" => "Importer",
+"Importing..." => "Importerer …",
 "Close" => "Lukk",
 "Error merging into contact." => "Klarte ikkje føya saman med kontakten.",
 "Information about vCard is incorrect. Please reload the page." => "Informasjonen om vCard-et er feil, ver venleg og last sida på nytt.",

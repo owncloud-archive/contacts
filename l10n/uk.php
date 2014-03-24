@@ -1,10 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакти",
 "Save" => "Зберегти",
-"Uploading..." => "Вивантаження...",
-"Importing..." => "Імпортування...",
-"Imported {count} of {total} contacts" => "Імпортовано {count} з {total} контактів",
-"Imported {imported} contacts. {failed} failed." => "Імпортовано {imported} контактів. {failed} змарновано.",
 "An address book called {name} already exists" => "Адресна книга з назвою {name} вже існує",
 "Failed adding address book: {error}" => "Неможливо додати адресну книгу: {error}",
 "Failed loading address books: {error}" => "Неможливо завантажити адресні книги: {error}",
@@ -49,6 +45,7 @@
 "Failed loading groups: {error}" => "Не вдалося завантажити групи: {error}",
 "Please choose the addressbook" => "Будь ласка, оберіть адресну книгу",
 "Import" => "Імпорт",
+"Importing..." => "Імпортування...",
 "Import done" => "Імпортування виконано",
 "Close" => "Закрити",
 "Failed loading photo: {error}" => "Не вдалося завантажити фото: {error}",

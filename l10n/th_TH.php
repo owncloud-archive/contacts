@@ -1,9 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ข้อมูลผู้ติดต่อ",
 "Save" => "บันทึก",
-"Uploading..." => "กำลังอัพโหลด...",
-"Importing..." => "กำลังนำเข้าข้อมูล...",
-"Imported {count} of {total} contacts" => "นำเข้าข้อมูลผู้ติดต่อเรียบร้อย {count} จากทั้งหมด {total} ",
 "Indexing contacts" => "จัดทำสารบัญรายชื่อผู้ติดต่อ",
 "Error." => "ข้อผิดพลาด",
 "Add to..." => "เพิ่มเข้าไปที่...",
@@ -31,6 +28,7 @@
 "Shared by {owner}" => "ถูกแชร์โดย {owner}",
 "Please choose the addressbook" => "กรุณาเลือกสมุดบันทึกที่อยู่",
 "Import" => "นำเข้า",
+"Importing..." => "กำลังนำเข้าข้อมูล...",
 "Import done" => "เสร็จสิ้นการนำเข้าข้อมูล",
 "Close" => "ปิด",
 "Unknown error" => "ข้อผิดพลาดที่ไม่ทราบสาเหตุ",

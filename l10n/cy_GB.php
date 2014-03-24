@@ -1,7 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Cysylltiadau",
 "Save" => "Cadw",
-"Uploading..." => "Yn llwytho i fyny...",
 "Cancel" => "Diddymu",
 "OK" => "Iawn",
 "Add" => "Ychwanegu",

@@ -1,7 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ئالاقەداشلار",
 "Save" => "ساقلا",
-"Uploading..." => "يۈكلەۋاتىدۇ…",
 "Cancel" => "ۋاز كەچ",
 "OK" => "جەزملە",
 "Add" => "قوش",
