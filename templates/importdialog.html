@@ -6,7 +6,7 @@
 			<option value="-1">{defaultText}</option>
 		</select>
 		<div id="newaddressbookform" style="display: none;">
-			<input type="text" style="width: 97%;" placeholder="<?php echo $l->t('Name of new addressbook'); ?>" id="newaddressbook" name="newaddressbook">
+			<input type="text" style="width: 97%;" placeholder="<?php p($l->t('Name of new addressbook')); ?>" id="newaddressbook" name="newaddressbook">
 		</div>
 	</div>
 	<div class="import-status hidden">
@@ -14,7 +14,7 @@
 		<div id="import-status-progress"></div>
 		<div id="import_done" style="display: none;">
 			<p style="text-align:center;"></p>
-			<input type="button" value="<?php echo $l->t('Close'); ?>" id="import_done_button">
+			<input type="button" value="<?php p($l->t('Close')); ?>" id="import_done_button">
 		</div>
 	</div>
 </div>
