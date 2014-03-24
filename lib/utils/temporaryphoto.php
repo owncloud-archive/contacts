@@ -24,6 +24,8 @@ namespace OCA\Contacts\Utils;
 
 /**
  * This class is used for getting a temporary contact photo for cropping.
+ *
+ * Sub-classes must override __construct() and processImage()
  */
 class TemporaryPhoto {
 

@@ -23,7 +23,7 @@
 namespace OCA\Contacts\Utils\TemporaryPhoto;
 
 use OCA\Contacts\Contact as ContactObject,
-	OCA\Contacts\Utils\TemporaryPhoto as AbstractTemporaryPhoto,
+	OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto,
 	OCP\IRequest,
 	OCP\AppFramework\Http,
 	OCP\Image;
@@ -31,7 +31,7 @@ use OCA\Contacts\Contact as ContactObject,
 /**
  * This class loads an image from the virtual file system.
  */
-class Uploaded extends AbstractTemporaryPhoto {
+class Uploaded extends BaseTemporaryPhoto {
 
 	/**
 	 * The request to read the data from

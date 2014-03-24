@@ -23,12 +23,13 @@
 namespace OCA\Contacts\Utils\TemporaryPhoto;
 
 use OCA\Contacts\Contact as ContactObject,
-	OCA\Contacts\Utils\TemporaryPhoto as AbstractTemporaryPhoto;
+	OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto,
+	OCP\AppFramework\Http;
 
 /**
  * This class loads an image from the virtual file system.
  */
-class FileSystem extends AbstractTemporaryPhoto {
+class FileSystem extends BaseTemporaryPhoto {
 
 	/**
 	 * The virtual file system path to load the image from
@@ -54,10 +55,17 @@ class FileSystem extends AbstractTemporaryPhoto {
 	 * Load the image.
 	 */
 	protected function processImage() {
-		$localpath = \OC\Files\Filesystem::getLocalFile($this->path);
+		$localPath = \OC\Files\Filesystem::getLocalFile($this->path);
+
+		if (!file_exists($localPath)) {
+			throw new \Exception(
+				'The file does not exist: ' . $localPath,
+				Http::STATUS_NOT_FOUND
+			);
+		}
 
 		$this->image = new \OCP\Image();
-		$this->image->loadFromFile($localpath);
+		$this->image->loadFromFile($localPath);
 	}
 
 }
