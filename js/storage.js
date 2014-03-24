@@ -9,27 +9,27 @@ OC.Contacts = OC.Contacts || {};
 		this.statusCode = jqXHR.status;
 		var response = jqXHR.responseJSON;
 		this.error = false;
-		// 204 == No content
-		// 304 == Not modified
-		if(!response) {
-			if([204, 304].indexOf(this.statusCode) === -1) {
-				console.log('jqXHR', jqXHR);
+		console.log('jqXHR', jqXHR);
+		if (!response) {
+			// 204 == No content
+			// 304 == Not modified
+			if ([204, 304].indexOf(this.statusCode) === -1) {
 				this.error = true;
-				this.message = jqXHR.statusText;
 			}
+			this.message = jqXHR.statusText;
 		} else {
 			// We need to allow for both the 'old' success/error status property
 			// with the body in the data property, and the newer where we rely
 			// on the status code, and the entire body is used.
-			if(response.status === 'error'|| this.statusCode >= 400) {
+			if (response.status === 'error'|| this.statusCode >= 400) {
 				this.error = true;
-				if(this.statusCode < 500) {
+				if (!response.data || !response.data.message) {
+					this.message = t('contacts', 'Server error! Please inform system administator');
+				} else {
 					console.log('JSONResponse', response);
 					this.message = (response.data && response.data.message)
 						? response.data.message
 						: response;
-				} else {
-					this.message = t('contacts', 'Server error! Please inform system administator');
 				}
 			} else {
 				this.data = response.data || response;
