@@ -225,7 +225,7 @@ OC.notify = function(params) {
 				}).fail(function(response) {
 					console.warn(response);
 					self.$rightContent.removeClass('loading');
-					message = t('contacts', 'Unrecoverable error loading address books: {msg}', {msg:response.message});
+					var message = t('contacts', 'Unrecoverable error loading address books: {msg}', {msg:response.message});
 					OC.dialogs.alert(message, t('contacts', 'Error.'));
 				});
 			}).fail(function(response) {
@@ -501,7 +501,7 @@ OC.notify = function(params) {
 						}
 						break;
 					case 'adr':
-						address = data.url.filter(function(n) {
+						var address = data.url.filter(function(n) {
 							return n;
 						});
 						var newWindow = window.open('http://open.mapquest.com/?q='+address, '_blank');
@@ -1552,6 +1552,10 @@ OC.notify = function(params) {
 				} else {
 					$(document).trigger('status.contacts.error', response);
 				}
+			}).fail(function(response) {
+				response = self.storage.formatResponse(jqXHR);
+				console.warn('response', response);
+				$(document).trigger('status.contacts.error', response);
 			});
 		},
 		editCurrentPhoto:function(metadata) {
@@ -1568,6 +1572,10 @@ OC.notify = function(params) {
 				} else {
 					$(document).trigger('status.contacts.error', response);
 				}
+			}).fail(function(response) {
+				response = self.storage.formatResponse(jqXHR);
+				console.warn('response', response);
+				$(document).trigger('status.contacts.error', response);
 			});
 		},
 		editPhoto:function(metadata, tmpkey) {
