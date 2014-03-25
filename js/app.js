@@ -1598,7 +1598,7 @@ OC.notify = function(params) {
 			if(!this.$cropBoxTmpl) {
 				this.$cropBoxTmpl = $('#cropBoxTemplate');
 			}
-			var $container = $('<div />').appendTo($('body'));
+			var $container = $('<div />').appendTo($('#content'));
 			var $dlg = this.$cropBoxTmpl.octemplate().prependTo($container);
 
 			$.when(this.storage.getTempContactPhoto(
