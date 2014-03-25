@@ -12,7 +12,8 @@ namespace OCA\Contacts\Controller;
 
 use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
-	OCA\Contacts\Controller;
+	OCA\Contacts\Controller,
+	OCP\AppFramework\Http;
 
 /**
  * Controller class for groups/categories
@@ -198,23 +199,29 @@ class GroupController extends Controller {
 		$response = new JSONResponse();
 		$params = $this->request->urlParams;
 		$categoryId = $params['categoryId'];
-		$categoryname = $this->request->post['name'];
+		$categoryName = $this->request->post['name'];
 		$ids = $this->request->post['contactIds'];
 		$response->debug('request: '.print_r($this->request->post, true));
 
 		if (is_null($categoryId) || $categoryId === '') {
-			$response->bailOut(App::$l10n->t('Group ID missing from request.'));
-			return $response;
+			throw new \Exception(
+				App::$l10n->t('Group ID missing from request.'),
+				Http::STATUS_PRECONDITION_FAILED
+			);
 		}
 
-		if (is_null($categoryId) || $categoryId === '') {
-			$response->bailOut(App::$l10n->t('Group name missing from request.'));
-			return $response;
+		if (is_null($categoryName) || $categoryName === '') {
+			throw new \Exception(
+				App::$l10n->t('Group name missing from request.'),
+				Http::STATUS_PRECONDITION_FAILED
+			);
 		}
 
 		if (is_null($ids)) {
-			$response->bailOut(App::$l10n->t('Contact ID missing from request.'));
-			return $response;
+			throw new \Exception(
+				App::$l10n->t('Contact ID missing from request.'),
+				Http::STATUS_PRECONDITION_FAILED
+			);
 		}
 
 		$backend = $this->app->getBackend('local');
@@ -230,7 +237,7 @@ class GroupController extends Controller {
 
 			if ($obj) {
 
-				if ($obj->addToGroup($categoryname)) {
+				if ($obj->addToGroup($categoryName)) {
 					$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
 				}
 
@@ -255,13 +262,24 @@ class GroupController extends Controller {
 		//$response->debug('request: '.print_r($this->request->post, true));
 
 		if (is_null($categoryId) || $categoryId === '') {
-			$response->bailOut(App::$l10n->t('Group ID missing from request.'));
-			return $response;
+			throw new \Exception(
+				App::$l10n->t('Group ID missing from request.'),
+				Http::STATUS_PRECONDITION_FAILED
+			);
+		}
+
+		if (is_null($categoryName) || $categoryName === '') {
+			throw new \Exception(
+				App::$l10n->t('Group name missing from request.'),
+				Http::STATUS_PRECONDITION_FAILED
+			);
 		}
 
 		if (is_null($ids)) {
-			$response->bailOut(App::$l10n->t('Contact ID missing from request.'));
-			return $response;
+			throw new \Exception(
+				App::$l10n->t('Contact ID missing from request.'),
+				Http::STATUS_PRECONDITION_FAILED
+			);
 		}
 
 		$backend = $this->app->getBackend('local');
