@@ -5,7 +5,7 @@ Build status
 
 | branch      | status |
 | ----------- | ------ |
-| master      | [![Build Status](https://travis-ci.org/owncloud/contacts.png?branch=master)](https://travis-ci.org/owncloud/contacts) |
+| master      | [![Build Status](http://img.shields.io/travis/owncloud/contacts.svg)](https://travis-ci.org/owncloud/contacts) |
 
 
 ##Maintainer:
