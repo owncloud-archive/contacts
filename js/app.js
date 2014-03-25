@@ -1538,7 +1538,7 @@ OC.Contacts = OC.Contacts || {
 		if(!this.$cropBoxTmpl) {
 			this.$cropBoxTmpl = $('#cropBoxTemplate');
 		}
-		var $container = $('<div />').appendTo($('body'));
+		var $container = $('<div />').appendTo($('#content'));
 		var url = OC.Router.generate(
 			'contacts_crop_contact_photo',
 			{backend: metadata.backend, addressBookId: metadata.addressBookId, contactId: metadata.contactId, key: tmpkey}
