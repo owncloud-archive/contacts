@@ -122,6 +122,7 @@
 "No file was uploaded" => "Nie wysłano żadnego pliku",
 "Missing a temporary folder" => "Brak folderu tymczasowego",
 "Failed to write to disk" => "Błąd zapisu na dysk",
+"Not enough storage available" => "Za mało dostępnego miejsca",
 "Attempt to upload blacklisted file:" => "Próba wgrania pliku na czarną listę:",
 "Error uploading contacts to storage." => "Wystąpił błąd podczas wysyłania kontaktów do magazynu.",
 "Error moving file to imports folder." => "Błąd podczas przenoszenia pliku do folderu importów.",

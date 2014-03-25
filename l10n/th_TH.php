@@ -54,6 +54,7 @@
 "No file was uploaded" => "ไม่มีไฟล์ที่ถูกอัพโหลด",
 "Missing a temporary folder" => "โฟลเดอร์ชั่วคราวเกิดการสูญหาย",
 "Failed to write to disk" => "เขียนข้อมูลลงแผ่นดิสก์ล้มเหลว",
+"Not enough storage available" => "เหลือพื้นที่ไม่เพียงสำหรับใช้งาน",
 "Error uploading contacts to storage." => "เกิดข้อผิดพลาดในการอัพโหลดข้อมูลการติดต่อไปยังพื้นที่จัดเก็บข้อมูล",
 "You do not have permissions to import into this address book." => "คุณไม่ได้รับสิทธิ์ให้นำเข้าข้อมูลสำหรับสมุดบันทึกที่อยู่นี้",
 "Could not set preference: " => "ไม่สามารถกำหนดการตั้งค่าส่่วนตัว:",

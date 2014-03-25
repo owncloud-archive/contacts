@@ -119,6 +119,7 @@
 "No file was uploaded" => "No s'ha carregat cap fitxer",
 "Missing a temporary folder" => "Falta un fitxer temporal",
 "Failed to write to disk" => "Ha fallat en escriure al disc",
+"Not enough storage available" => "No hi ha prou espai disponible",
 "Attempt to upload blacklisted file:" => "Intent de pujar un fitxer de la llista negra:",
 "Error uploading contacts to storage." => "Error en carregar contactes a l'emmagatzemament.",
 "Error moving file to imports folder." => "Error en moure el fitxer a la carpeta d'importació.",

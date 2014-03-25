@@ -122,6 +122,7 @@
 "No file was uploaded" => "Non se enviou ningún ficheiro",
 "Missing a temporary folder" => "Falta o cartafol temporal",
 "Failed to write to disk" => "Produciuse un erro ao escribir no disco",
+"Not enough storage available" => "Non hai espazo de almacenamento abondo",
 "Attempt to upload blacklisted file:" => "Intentar enviar o ficheiro da lista negra:",
 "Error uploading contacts to storage." => "Produciuse un erro ao enviar os contactos ao almacén.",
 "Error moving file to imports folder." => "Produciuse un erro ao mover o ficheiro ao cartafol de importacións.",

@@ -47,6 +47,7 @@
 "No file was uploaded" => "Не беше подигната датотека.",
 "Missing a temporary folder" => "Недостасува привремена папка",
 "Failed to write to disk" => "Неуспеав да запишам на диск",
+"Not enough storage available" => "Нема доволно слободен сториџ",
 "Error uploading contacts to storage." => "Грешка во снимање на контактите на диск.",
 "Contact" => "Контакт",
 "Other" => "Останато",

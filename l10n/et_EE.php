@@ -112,6 +112,7 @@
 "No file was uploaded" => "Ühtegi faili ei laetud üles",
 "Missing a temporary folder" => "Ajutiste failide kaust puudub",
 "Failed to write to disk" => "Kettale kirjutamine ebaõnnestus",
+"Not enough storage available" => "Saadaval pole piisavalt ruumi",
 "Attempt to upload blacklisted file:" => "Katse üles laadida mustas nimekirjas olevat faili:",
 "Error uploading contacts to storage." => "Viga kontaktide üleslaadimisel kettale.",
 "Error moving file to imports folder." => "Viga faili liigutamisel impordi kataloogi.",

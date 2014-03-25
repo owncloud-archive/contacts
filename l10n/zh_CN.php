@@ -105,6 +105,7 @@
 "No file was uploaded" => "没有文件被上传",
 "Missing a temporary folder" => "缺少临时目录",
 "Failed to write to disk" => "写入磁盘失败",
+"Not enough storage available" => "没有足够的存储空间",
 "Attempt to upload blacklisted file:" => "尝试上传黑名单文件：",
 "Error uploading contacts to storage." => "上传联系人到存储空间时出错",
 "You do not have permissions to import into this address book." => "您没有权限导入到此地址簿。",

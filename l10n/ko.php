@@ -110,6 +110,7 @@
 "No file was uploaded" => "파일이 업로드되지 않았음",
 "Missing a temporary folder" => "임시 폴더가 없음",
 "Failed to write to disk" => "디스크에 쓸 수 없음",
+"Not enough storage available" => "저장소 용량이 충분하지 않음",
 "Attempt to upload blacklisted file:" => "허용되지 않은 파일을 업로드하려고 함:",
 "Error uploading contacts to storage." => "연락처를 저장소에 업로드할 수 없습니다.",
 "Error moving file to imports folder." => "가져오기 폴더로 파일을 이동할 수 없습니다.",

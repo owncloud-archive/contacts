@@ -104,6 +104,7 @@
 "No file was uploaded" => "Ez da fitxategirik igo",
 "Missing a temporary folder" => "Aldi bateko karpeta falta da",
 "Failed to write to disk" => "Errore bat izan da diskoan idazterakoan",
+"Not enough storage available" => "Ez dago behar aina leku erabilgarri,",
 "Attempt to upload blacklisted file:" => "Zerrenda beltzeko fitxategi baten igotzearen saiakuntza:",
 "Error uploading contacts to storage." => "Errore bat egon da kontaktuak biltegira igotzerakoan.",
 "Error moving file to imports folder." => "Errorea fitxategia inportatze karpetara mugitzearkoan.",

@@ -122,6 +122,7 @@
 "No file was uploaded" => "Hiç dosya gönderilmedi",
 "Missing a temporary folder" => "Geçici dizin eksik",
 "Failed to write to disk" => "Diske yazılamadı",
+"Not enough storage available" => "Yeterli disk alanı yok",
 "Attempt to upload blacklisted file:" => "Karalistede bulunan dosya yükleme girişimi:",
 "Error uploading contacts to storage." => "Bağlantılar depoya yüklenirken hata.",
 "Error moving file to imports folder." => "Dosyalar içe aktarım klasörüne taşınırken hata oluştu.",

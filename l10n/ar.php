@@ -92,6 +92,7 @@
 "No file was uploaded" => "لم يتم ترفيع أي من الملفات",
 "Missing a temporary folder" => "المجلد المؤقت غير موجود",
 "Failed to write to disk" => "خطأ في الكتابة على القرص الصلب",
+"Not enough storage available" => "لا يوجد مساحة تخزينية كافية",
 "Error uploading contacts to storage." => "خطأ في رفع جهات الإتصال للمخزن,",
 "Error moving file to imports folder." => "خطأ في نقل الملف إلى مجلد الاستيراد.",
 "Could not set preference: " => "تعذر تعيين المفضل ",

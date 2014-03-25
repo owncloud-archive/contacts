@@ -115,6 +115,7 @@
 "No file was uploaded" => "Κανένα αρχείο δεν μεταφορτώθηκε",
 "Missing a temporary folder" => "Λείπει ένας προσωρινός φάκελος",
 "Failed to write to disk" => "Αποτυχία εγγραφής στο δίσκο",
+"Not enough storage available" => "Μη επαρκής διαθέσιμος αποθηκευτικός χώρος",
 "Attempt to upload blacklisted file:" => "Προσπάθεια μεταφόρτωσης αρχείου που βρίσκεται στη μαύρη λίστα:",
 "Error uploading contacts to storage." => "Σφάλμα κατά την μεταφόρτωση επαφών",
 "Error moving file to imports folder." => "Σφάλμα μετακίνησης αρχείου στο φάκελο εισαγωγών.",

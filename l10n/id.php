@@ -112,6 +112,7 @@
 "No file was uploaded" => "Tidak ada berkas yang diunggah",
 "Missing a temporary folder" => "Folder sementara tidak ada",
 "Failed to write to disk" => "Gagal menulis ke disk",
+"Not enough storage available" => "Ruang penyimpanan tidak mencukupi",
 "Attempt to upload blacklisted file:" => "Mencoba untuk mengupload file daftar hitam:",
 "Error uploading contacts to storage." => "Kesalahan saat mengunggah kontak ke penyimpanan",
 "Error moving file to imports folder." => "Kesalahan saat memindahkan berkas ke folder impor.",

@@ -109,6 +109,7 @@
 "No file was uploaded" => "Ingen fil har laddats upp",
 "Missing a temporary folder" => "Temporär-mapp saknas",
 "Failed to write to disk" => "Misslyckades att spara till disk",
+"Not enough storage available" => "Det finns inte tillräckligt med lagringsutrymme",
 "Attempt to upload blacklisted file:" => "Försök att ladda upp svartlistad fil:",
 "Error uploading contacts to storage." => "Fel uppstod när kontakter sparades.",
 "Error moving file to imports folder." => "Fel uppstod när fil skulle flyttas till importmappen.",

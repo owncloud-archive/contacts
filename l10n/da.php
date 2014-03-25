@@ -112,6 +112,7 @@
 "No file was uploaded" => "Ingen fil uploadet",
 "Missing a temporary folder" => "Manglende midlertidig mappe.",
 "Failed to write to disk" => "Fejl ved skrivning til disk.",
+"Not enough storage available" => "Der er ikke nok plads til rådlighed",
 "Attempt to upload blacklisted file:" => "Forsøg på at oploade sortlistede filer:",
 "Error uploading contacts to storage." => "Kunne ikke uploade kontaktepersoner til midlertidig opbevaring.",
 "Error moving file to imports folder." => "Kunne ikke flytte filer til importmappe.",

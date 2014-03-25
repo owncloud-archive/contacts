@@ -120,6 +120,7 @@
 "No file was uploaded" => "Nenhum ficheiro foi submetido",
 "Missing a temporary folder" => "Está a faltar a pasta temporária",
 "Failed to write to disk" => "Falhou a escrita no disco",
+"Not enough storage available" => "Não há espaço suficiente em disco",
 "Attempt to upload blacklisted file:" => "Tentativa de envio de ficheiro bloqueado:",
 "Error uploading contacts to storage." => "Erro a carregar os contactos para o armazenamento.",
 "Error moving file to imports folder." => "Erro ao mover ficheiro para a pasta de importação.",

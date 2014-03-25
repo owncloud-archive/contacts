@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-24 00:49-0400\n"
-"PO-Revision-Date: 2014-03-24 04:49+0000\n"
+"POT-Creation-Date: 2014-03-25 00:49-0400\n"
+"PO-Revision-Date: 2014-03-24 05:00+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -111,7 +111,7 @@ msgstr "عملية الدمج فشلت. خطأ في حفظ جهة الاتصال
 msgid "Select photo"
 msgstr "اختر صورة"
 
-#: js/app.js:705 js/app.js:1667
+#: js/app.js:705 js/app.js:1675
 msgid "Network or server error. Please inform administrator."
 msgstr "حدث خطأ في شبكة الاتصال أو في الخادم. يرجى إبلاغ المسؤول."
 
@@ -162,11 +162,11 @@ msgstr "تم"
 msgid "Could not find contact: {id}"
 msgstr "تعذر ايجاد جهة الاتصال:  {id}"
 
-#: js/app.js:1622
+#: js/app.js:1630
 msgid "Edit profile picture"
 msgstr "تعديل صورة الملف الشخصي"
 
-#: js/app.js:1626
+#: js/app.js:1634
 msgid "Crop photo"
 msgstr "قص الصورة."
 
@@ -295,7 +295,7 @@ msgstr "تمت عملية الاستيراد "
 msgid "Close"
 msgstr "إغلاق"
 
-#: js/storage.js:32
+#: js/storage.js:27
 msgid "Server error! Please inform system administator"
 msgstr "خطأ في الخادم! يرجى ابلاغ مدير النظام."
 
@@ -488,37 +488,38 @@ msgstr "خطأ في الحصول على ملكية الصورة."
 msgid "Error saving contact."
 msgstr "خطأ في حفظ جهة الإتصال."
 
-#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
+#: lib/controller/groupcontroller.php:61 lib/controller/groupcontroller.php:84
 msgid "No group name given."
 msgstr "لم يتم تسمية المجموعة بعد."
 
-#: lib/controller/groupcontroller.php:67
+#: lib/controller/groupcontroller.php:68
 msgid "Error adding group."
 msgstr "حدث خطأ أثناء إضافة المجموعة,"
 
-#: lib/controller/groupcontroller.php:145
+#: lib/controller/groupcontroller.php:146
 msgid "No group name to rename from given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:150
+#: lib/controller/groupcontroller.php:151
 msgid "No group name to rename to given."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:157
+#: lib/controller/groupcontroller.php:158
 msgid "Error renaming group."
 msgstr "حدث خطأ أثناء إعادة تسمية المجموعة."
 
-#: lib/controller/groupcontroller.php:206
-#: lib/controller/groupcontroller.php:258
+#: lib/controller/groupcontroller.php:208
+#: lib/controller/groupcontroller.php:266
 msgid "Group ID missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:211
+#: lib/controller/groupcontroller.php:215
+#: lib/controller/groupcontroller.php:273
 msgid "Group name missing from request."
 msgstr ""
 
-#: lib/controller/groupcontroller.php:216
-#: lib/controller/groupcontroller.php:263
+#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:280
 msgid "Contact ID missing from request."
 msgstr ""
 
@@ -558,7 +559,7 @@ msgstr "خطأ في الكتابة على القرص الصلب"
 
 #: lib/controller/importcontroller.php:68
 msgid "Not enough storage available"
-msgstr ""
+msgstr "لا يوجد مساحة تخزينية كافية"
 
 #: lib/controller/importcontroller.php:76
 msgid "Attempt to upload blacklisted file:"

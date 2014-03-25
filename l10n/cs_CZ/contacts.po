@@ -9,6 +9,7 @@
 # liska_, 2013-2014
 # Martin <fireball@atlas.cz>, 2013
 # Martin <fireball@atlas.cz>, 2011-2012
+# m23 <black23@gmail.com>, 2014
 # Michal Hrušecký <Michal@hrusecky.net>, 2012-2013
 # pstast <petr@stastny.eu>, 2013-2014
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012-2013
@@ -16,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-24 00:49-0400\n"
-"PO-Revision-Date: 2014-03-24 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-25 00:49-0400\n"
+"PO-Revision-Date: 2014-03-24 15:53+0000\n"
+"Last-Translator: m23 <black23@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,19 +41,19 @@ msgstr ""
 
 #: js/addressbooks.js:310 js/addressbooks.js:338
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Zvolený formát: {format}"
 
 #: js/addressbooks.js:313 js/addressbooks.js:341
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Automatická detekce formátu"
 
 #: js/addressbooks.js:391
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Zpracovávání {count}/{total} karet"
 
 #: js/addressbooks.js:415
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Celkem:{total}, Úspěšně:{imported}, Chyby:{failed}"
 
 #: js/addressbooks.js:569
 msgid "An address book called {name} already exists"
@@ -114,7 +115,7 @@ msgstr "Sloučení selhalo. Chyba při ukládání kontaktu."
 msgid "Select photo"
 msgstr "Vybrat fotku"
 
-#: js/app.js:705 js/app.js:1667
+#: js/app.js:705 js/app.js:1675
 msgid "Network or server error. Please inform administrator."
 msgstr "Chyba sítě či serveru. Kontaktujte prosím správce."
 
@@ -165,11 +166,11 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr "Nelze nalézt kontakt: {id}"
 
-#: js/app.js:1622
+#: js/app.js:1630
 msgid "Edit profile picture"
 msgstr "Upravit obrázek profilu"
 
-#: js/app.js:1626
+#: js/app.js:1634
 msgid "Crop photo"
 msgstr "Oříznout fotku"
 
@@ -298,7 +299,7 @@ msgstr "Import dokončen"
 msgid "Close"
 msgstr "Zavřít"
 
-#: js/storage.js:32
+#: js/storage.js:27
 msgid "Server error! Please inform system administator"
 msgstr "Chyba serveru! Prosím informujte systémového správce."
 
@@ -340,7 +341,7 @@ msgstr "Neznámá chyba"
 
 #: lib/addressbook.php:410
 msgid "Access denied"
-msgstr ""
+msgstr "Přístup zamítnut"
 
 #: lib/addressbook.php:417
 msgid "The backend for this address book does not support updating"
@@ -491,37 +492,38 @@ msgstr "Chyba při získávání vlastností fotky."
 msgid "Error saving contact."
 msgstr "Chyba při ukládání kontaktu."
 
-#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
+#: lib/controller/groupcontroller.php:61 lib/controller/groupcontroller.php:84
 msgid "No group name given."
 msgstr "Nebyl zadán název skupiny."
 
-#: lib/controller/groupcontroller.php:67
+#: lib/controller/groupcontroller.php:68
 msgid "Error adding group."
 msgstr "Chyba při přidávání skupiny."
 
-#: lib/controller/groupcontroller.php:145
+#: lib/controller/groupcontroller.php:146
 msgid "No group name to rename from given."
 msgstr "Nebyl zadán název skupiny k přejmenování."
 
-#: lib/controller/groupcontroller.php:150
+#: lib/controller/groupcontroller.php:151
 msgid "No group name to rename to given."
 msgstr "Nebyl zadán nový název skupiny."
 
-#: lib/controller/groupcontroller.php:157
+#: lib/controller/groupcontroller.php:158
 msgid "Error renaming group."
 msgstr "Chyba při přejmenování skupiny."
 
-#: lib/controller/groupcontroller.php:206
-#: lib/controller/groupcontroller.php:258
+#: lib/controller/groupcontroller.php:208
+#: lib/controller/groupcontroller.php:266
 msgid "Group ID missing from request."
 msgstr "V požadavku chybí ID skupiny."
 
-#: lib/controller/groupcontroller.php:211
+#: lib/controller/groupcontroller.php:215
+#: lib/controller/groupcontroller.php:273
 msgid "Group name missing from request."
 msgstr "V požadavku chybí název skupiny."
 
-#: lib/controller/groupcontroller.php:216
-#: lib/controller/groupcontroller.php:263
+#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:280
 msgid "Contact ID missing from request."
 msgstr "V požadavku chybí ID kontaktu."
 
@@ -561,7 +563,7 @@ msgstr "Zápis na disk selhal"
 
 #: lib/controller/importcontroller.php:68
 msgid "Not enough storage available"
-msgstr ""
+msgstr "Nedostatek dostupného úložného prostoru"
 
 #: lib/controller/importcontroller.php:76
 msgid "Attempt to upload blacklisted file:"
@@ -750,7 +752,7 @@ msgstr "Přidat adresář kontaktů"
 
 #: templates/contacts.php:35
 msgid "Automatic format"
-msgstr ""
+msgstr "Automatícký formát"
 
 #: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."

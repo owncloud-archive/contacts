@@ -40,8 +40,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-24 00:49-0400\n"
-"PO-Revision-Date: 2014-03-24 04:49+0000\n"
+"POT-Creation-Date: 2014-03-25 00:49-0400\n"
+"PO-Revision-Date: 2014-03-24 05:00+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: German (Switzerland) (http://www.transifex.com/projects/p/owncloud/language/de_CH/)\n"
 "MIME-Version: 1.0\n"
@@ -138,7 +138,7 @@ msgstr "Zusammenführung fehlgeschlagen. Fehler beim Speichern des Kontakts."
 msgid "Select photo"
 msgstr "Wählen Sie ein Foto"
 
-#: js/app.js:705 js/app.js:1667
+#: js/app.js:705 js/app.js:1675
 msgid "Network or server error. Please inform administrator."
 msgstr "Netzwerk- oder Serverfehler. Bitte informieren Sie den Administrator."
 
@@ -189,11 +189,11 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr "Kontakt {id} nicht gefunden"
 
-#: js/app.js:1622
+#: js/app.js:1630
 msgid "Edit profile picture"
 msgstr "Profilbild bearbeiten"
 
-#: js/app.js:1626
+#: js/app.js:1634
 msgid "Crop photo"
 msgstr "Foto zuschneiden"
 
@@ -322,7 +322,7 @@ msgstr "Import ausgeführt"
 msgid "Close"
 msgstr "Schliessen"
 
-#: js/storage.js:32
+#: js/storage.js:27
 msgid "Server error! Please inform system administator"
 msgstr "Serverfehler! Bitte informieren Sie den System-Administrator"
 
@@ -515,37 +515,38 @@ msgstr "Fehler beim Abrufen der PHOTO-Eigenschaft."
 msgid "Error saving contact."
 msgstr "Fehler beim Speichern des Kontaktes."
 
-#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
+#: lib/controller/groupcontroller.php:61 lib/controller/groupcontroller.php:84
 msgid "No group name given."
 msgstr "Kein Gruppenname angegeben."
 
-#: lib/controller/groupcontroller.php:67
+#: lib/controller/groupcontroller.php:68
 msgid "Error adding group."
 msgstr "Fehler beim Hinzufügen der Gruppe."
 
-#: lib/controller/groupcontroller.php:145
+#: lib/controller/groupcontroller.php:146
 msgid "No group name to rename from given."
 msgstr "Kein Gruppenname zum Umbenennen von angegeben."
 
-#: lib/controller/groupcontroller.php:150
+#: lib/controller/groupcontroller.php:151
 msgid "No group name to rename to given."
 msgstr "Kein Gruppenname zum Umbenennen zu angegeben."
 
-#: lib/controller/groupcontroller.php:157
+#: lib/controller/groupcontroller.php:158
 msgid "Error renaming group."
 msgstr "Fehler beim Umbenennen der Gruppe aufgetreten."
 
-#: lib/controller/groupcontroller.php:206
-#: lib/controller/groupcontroller.php:258
+#: lib/controller/groupcontroller.php:208
+#: lib/controller/groupcontroller.php:266
 msgid "Group ID missing from request."
 msgstr "Gruppen-ID fehlt in der Anfrage."
 
-#: lib/controller/groupcontroller.php:211
+#: lib/controller/groupcontroller.php:215
+#: lib/controller/groupcontroller.php:273
 msgid "Group name missing from request."
 msgstr "Fehlender Gruppenname bei der Anfrage."
 
-#: lib/controller/groupcontroller.php:216
-#: lib/controller/groupcontroller.php:263
+#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:280
 msgid "Contact ID missing from request."
 msgstr "Kontakt-ID fehlt in der Anfrage."
 
@@ -585,7 +586,7 @@ msgstr "Fehler beim Schreiben auf die Festplatte"
 
 #: lib/controller/importcontroller.php:68
 msgid "Not enough storage available"
-msgstr ""
+msgstr "Nicht genug Speicher vorhanden."
 
 #: lib/controller/importcontroller.php:76
 msgid "Attempt to upload blacklisted file:"

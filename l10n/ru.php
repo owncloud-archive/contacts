@@ -112,6 +112,7 @@
 "No file was uploaded" => "Файл не был загружен",
 "Missing a temporary folder" => "Отсутствует временная папка",
 "Failed to write to disk" => "Ошибка записи на диск",
+"Not enough storage available" => "Недостаточно доступного места в хранилище",
 "Attempt to upload blacklisted file:" => "Попытка загрузки файла черного списка:",
 "Error uploading contacts to storage." => "Ошибка загрузки контактов в хранилище.",
 "Error moving file to imports folder." => "Ошибка перемещения файла в папку импорта",

@@ -32,6 +32,7 @@
 "No file was uploaded" => "Neviena datne netika augšupielādēta",
 "Missing a temporary folder" => "Trūkst pagaidu mapes",
 "Failed to write to disk" => "Neizdevās saglabāt diskā",
+"Not enough storage available" => "Nav pietiekami daudz vietas",
 "Contact" => "Kontakts",
 "Other" => "Cits",
 "HomePage" => "Mājas lapa",

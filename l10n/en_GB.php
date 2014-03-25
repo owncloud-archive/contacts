@@ -122,6 +122,7 @@
 "No file was uploaded" => "No file was uploaded",
 "Missing a temporary folder" => "Missing a temporary folder",
 "Failed to write to disk" => "Failed to write to disk",
+"Not enough storage available" => "Not enough storage available",
 "Attempt to upload blacklisted file:" => "Attempt to upload blacklisted file:",
 "Error uploading contacts to storage." => "Error uploading contacts to storage.",
 "Error moving file to imports folder." => "Error moving file to imports folder.",
