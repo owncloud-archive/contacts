@@ -42,6 +42,7 @@
 "No file was uploaded" => "Nu a fost încărcat nici un fișier",
 "Missing a temporary folder" => "Lipsește un director temporar",
 "Failed to write to disk" => "Eroare la scriere pe disc",
+"Not enough storage available" => "Nu este disponibil suficient spațiu",
 "Error uploading contacts to storage." => "Eroare la ",
 "Could not set preference: " => "nu se pot seta preferinte",
 "Contact" => "Contact",

@@ -105,6 +105,7 @@
 "No file was uploaded" => "Nebuvo įkeltas joks failas",
 "Missing a temporary folder" => "Nėra laikinojo katalogo",
 "Failed to write to disk" => "Nepavyko įrašyti į diską",
+"Not enough storage available" => "Nepakanka vietos serveryje",
 "Attempt to upload blacklisted file:" => "Bandymas įkelti draudžiamą failą:",
 "Error uploading contacts to storage." => "Klaida siunčiant kontaktus į saugyklą.",
 "Error moving file to imports folder." => "Klaida perkeliant failą į importavimų aplanką.",

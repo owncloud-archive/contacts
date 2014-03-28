@@ -109,6 +109,7 @@
 "No file was uploaded" => "Keine Datei konnte übertragen werden.",
 "Missing a temporary folder" => "Kein temporärer Ordner vorhanden",
 "Failed to write to disk" => "Fehler beim Schreiben auf die Festplatte",
+"Not enough storage available" => "Nicht genug Speicher vorhanden.",
 "Attempt to upload blacklisted file:" => "Versuch, eine gesperrte Datei hochzuladen:",
 "Error uploading contacts to storage." => "Übertragen der Kontakte fehlgeschlagen.",
 "Error moving file to imports folder." => "Fehler beim Verschieben der Datei in den Importordner.",

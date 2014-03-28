@@ -112,6 +112,7 @@
 "No file was uploaded" => "Žiadny súbor nebol nahraný",
 "Missing a temporary folder" => "Chýba dočasný priečinok",
 "Failed to write to disk" => "Zápis na disk sa nepodaril",
+"Not enough storage available" => "Nedostatok dostupného úložného priestoru",
 "Attempt to upload blacklisted file:" => "Pokus o nahratie zakázaného súboru:",
 "Error uploading contacts to storage." => "Chyba pri nahrávaní kontaktov do úložiska.",
 "Error moving file to imports folder." => "Chyba pri presune súboru do priečinka importov",

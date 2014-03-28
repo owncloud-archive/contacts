@@ -16,6 +16,7 @@
 "No file was uploaded" => "ფაილი არ აიტვირთა",
 "Missing a temporary folder" => "დროებითი საქაღალდე არ არსებობს",
 "Failed to write to disk" => "შეცდომა დისკზე ჩაწერისას",
+"Not enough storage available" => "საცავში საკმარისი ადგილი არ არის",
 "Contact" => "კონტაქტი",
 "Other" => "სხვა",
 "Work" => "სამსახური",

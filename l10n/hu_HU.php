@@ -112,6 +112,7 @@
 "No file was uploaded" => "Egy fájlt sem töltött fel",
 "Missing a temporary folder" => "Hiányzik egy ideiglenes mappa",
 "Failed to write to disk" => "Nem sikerült a lemezre írás",
+"Not enough storage available" => "Nincs elég tárhely.",
 "Attempt to upload blacklisted file:" => "Tiltólistán szereplő fájl feltöltésének kísérlete:",
 "Error uploading contacts to storage." => "Hiba a névjegyek feltöltésekor a tárhelyre.",
 "Error moving file to imports folder." => "Az állomány áthelyezése az importáltak mappába nem sikerült.",

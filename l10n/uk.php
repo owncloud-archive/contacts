@@ -88,6 +88,7 @@
 "No file was uploaded" => "Не відвантажено жодного файлу",
 "Missing a temporary folder" => "Відсутній тимчасовий каталог",
 "Failed to write to disk" => "Невдалося записати на диск",
+"Not enough storage available" => "Місця більше немає",
 "Error uploading contacts to storage." => "Помилка завантаження контактів у сховище.",
 "You do not have permissions to import into this address book." => "У вас немає дозволу імпортувати щось у цю адресну книгу.",
 "Could not set preference: " => "Не вдалося встановити важливість: ",

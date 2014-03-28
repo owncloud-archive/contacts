@@ -14,6 +14,7 @@
 "No file was uploaded" => "Nuk u ngarkua asnjë skedar",
 "Missing a temporary folder" => "Një dosje e përkohshme nuk u gjet",
 "Failed to write to disk" => "Ruajtja në disk dështoi",
+"Not enough storage available" => "Hapsira e arkivimit e pamjaftueshme",
 "Other" => "Të tjera",
 "Work" => "Punë",
 "Text" => "Tekst",

@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-24 00:49-0400\n"
-"PO-Revision-Date: 2014-03-24 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-26 05:41-0400\n"
+"PO-Revision-Date: 2014-03-26 06:00+0000\n"
+"Last-Translator: rogerc\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/owncloud/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,23 +34,23 @@ msgstr "Desa"
 
 #: js/addressbooks.js:306
 msgid "Starting file import"
-msgstr ""
+msgstr "Iniciant la importació del fitxer"
 
 #: js/addressbooks.js:310 js/addressbooks.js:338
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Format seleccionat: {format}"
 
 #: js/addressbooks.js:313 js/addressbooks.js:341
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Detecció automàtica del format"
 
 #: js/addressbooks.js:391
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Processant contactes {count}/{total}"
 
 #: js/addressbooks.js:415
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Total:{total}, Amb èxit:{imported}, Errors:{failed}"
 
 #: js/addressbooks.js:569
 msgid "An address book called {name} already exists"
@@ -112,17 +112,17 @@ msgstr "La combinació ha fallat. Error en desar el contacte."
 msgid "Select photo"
 msgstr "Selecciona una foto"
 
-#: js/app.js:705 js/app.js:1667
+#: js/app.js:705 js/app.js:1675
 msgid "Network or server error. Please inform administrator."
 msgstr "Error de xarxa o del servidor. Informeu a l'administrador."
 
 #: js/app.js:789
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Només es poden utilitzar imatges com a fotos de contacte"
 
 #: js/app.js:798
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "El fitxer \"{filename}\" excedeix el pes màxim permès {size}"
 
 #: js/app.js:967
 msgid "Error adding to group."
@@ -163,11 +163,11 @@ msgstr "D'acord"
 msgid "Could not find contact: {id}"
 msgstr "El contacte no s'ha trobat: {id}"
 
-#: js/app.js:1622
+#: js/app.js:1630
 msgid "Edit profile picture"
 msgstr "Edita la fotografia de perfil"
 
-#: js/app.js:1626
+#: js/app.js:1634
 msgid "Crop photo"
 msgstr "Talla la fotografia"
 
@@ -296,7 +296,7 @@ msgstr "S'ha importat"
 msgid "Close"
 msgstr "Tanca"
 
-#: js/storage.js:32
+#: js/storage.js:27
 msgid "Server error! Please inform system administator"
 msgstr "Error en el servidor! Informeu a l'administrador del sistema"
 
@@ -338,7 +338,7 @@ msgstr "Error desconegut"
 
 #: lib/addressbook.php:410
 msgid "Access denied"
-msgstr ""
+msgstr "Accés denegat"
 
 #: lib/addressbook.php:417
 msgid "The backend for this address book does not support updating"
@@ -479,7 +479,7 @@ msgstr "No heu tramès el camí de la foto."
 
 #: lib/controller/contactphotocontroller.php:193
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Error en carregar la imatge de la memòria de cau"
 
 #: lib/controller/contactphotocontroller.php:203
 msgid "Error getting PHOTO property."
@@ -489,37 +489,38 @@ msgstr "Error en obtenir la propietat PHOTO."
 msgid "Error saving contact."
 msgstr "Error en desar el contacte."
 
-#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
+#: lib/controller/groupcontroller.php:61 lib/controller/groupcontroller.php:84
 msgid "No group name given."
 msgstr "No heu facilitat el nom de cap grup."
 
-#: lib/controller/groupcontroller.php:67
+#: lib/controller/groupcontroller.php:68
 msgid "Error adding group."
 msgstr "Error en afegir grup."
 
-#: lib/controller/groupcontroller.php:145
+#: lib/controller/groupcontroller.php:146
 msgid "No group name to rename from given."
 msgstr "No heu facilitat cap nom de grup per canviar-li el nom."
 
-#: lib/controller/groupcontroller.php:150
+#: lib/controller/groupcontroller.php:151
 msgid "No group name to rename to given."
 msgstr "No heu facilitat el nom de grup per canviar-li el nom."
 
-#: lib/controller/groupcontroller.php:157
+#: lib/controller/groupcontroller.php:158
 msgid "Error renaming group."
 msgstr "Error en canviar el nom del grup."
 
-#: lib/controller/groupcontroller.php:206
-#: lib/controller/groupcontroller.php:258
+#: lib/controller/groupcontroller.php:208
+#: lib/controller/groupcontroller.php:266
 msgid "Group ID missing from request."
 msgstr "La ID del grup s'ha perdut en el requeriment."
 
-#: lib/controller/groupcontroller.php:211
+#: lib/controller/groupcontroller.php:215
+#: lib/controller/groupcontroller.php:273
 msgid "Group name missing from request."
 msgstr "Al requeriment li falta el nom del grup."
 
-#: lib/controller/groupcontroller.php:216
-#: lib/controller/groupcontroller.php:263
+#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:280
 msgid "Contact ID missing from request."
 msgstr "La ID del contacte s'ha perdut en el requeriment."
 
@@ -559,7 +560,7 @@ msgstr "Ha fallat en escriure al disc"
 
 #: lib/controller/importcontroller.php:68
 msgid "Not enough storage available"
-msgstr ""
+msgstr "No hi ha prou espai disponible"
 
 #: lib/controller/importcontroller.php:76
 msgid "Attempt to upload blacklisted file:"
@@ -748,7 +749,7 @@ msgstr "Afegeix una llibreta d'adreces"
 
 #: templates/contacts.php:35
 msgid "Automatic format"
-msgstr ""
+msgstr "Format automàtic"
 
 #: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."

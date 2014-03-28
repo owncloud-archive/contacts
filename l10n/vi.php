@@ -92,6 +92,7 @@
 "No file was uploaded" => "Chưa có file nào được tải lên",
 "Missing a temporary folder" => "Không tìm thấy thư mục tạm",
 "Failed to write to disk" => "Không thể ghi ",
+"Not enough storage available" => "Không đủ không gian lưu trữ",
 "Error uploading contacts to storage." => "Lỗi tải lên danh sách địa chỉ để lưu trữ.",
 "Could not set preference: " => "Không thể thiết lập ưu tiên:",
 "Contact" => "Liên lạc",

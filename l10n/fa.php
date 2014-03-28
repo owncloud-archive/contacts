@@ -32,6 +32,7 @@
 "No file was uploaded" => "هیچ پروندهای بارگذاری نشده",
 "Missing a temporary folder" => "یک پوشه موقت گم شده",
 "Failed to write to disk" => "نوشتن بر روی دیسک سخت ناموفق بود",
+"Not enough storage available" => "فضای کافی در دسترس نیست",
 "Error uploading contacts to storage." => "خطا در هنگام بارگذاری و ذخیره سازی",
 "Could not set preference: " => "نمی‌توان تنظیمات را ثبت نمود:",
 "Contact" => "اشخاص",

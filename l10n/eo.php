@@ -77,6 +77,7 @@
 "No file was uploaded" => "Neniu dosiero alŝutiĝis.",
 "Missing a temporary folder" => "Mankas provizora dosierujo.",
 "Failed to write to disk" => "Malsukcesis skribo al disko",
+"Not enough storage available" => "Ne haveblas sufiĉa memoro",
 "Error uploading contacts to storage." => "Eraro dum alŝutiĝis kontaktoj al konservejo.",
 "File name missing from request." => "Dosieronomo mankas en peto.",
 "Progress key missing from request." => "Progresklavo mankas en peto.",

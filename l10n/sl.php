@@ -121,6 +121,7 @@
 "No file was uploaded" => "Ni poslane datoteke",
 "Missing a temporary folder" => "Manjka začasna mapa",
 "Failed to write to disk" => "Pisanje na disk je spodletelo",
+"Not enough storage available" => "Na voljo ni dovolj prostora",
 "Attempt to upload blacklisted file:" => "Poskus pošiljanja datoteke na črnem seznamu:",
 "Error uploading contacts to storage." => "Napaka med nalaganjem stikov v hrambo.",
 "Error moving file to imports folder." => "Napaka premikanja datoteke v mapo uvoza.",

@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-24 00:49-0400\n"
-"PO-Revision-Date: 2014-03-24 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-03-28 00:48-0400\n"
+"PO-Revision-Date: 2014-03-27 19:31+0000\n"
+"Last-Translator: volkangezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,23 +38,23 @@ msgstr "Kaydet"
 
 #: js/addressbooks.js:306
 msgid "Starting file import"
-msgstr ""
+msgstr "Dosya aktarımına başlanıyor"
 
 #: js/addressbooks.js:310 js/addressbooks.js:338
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Seçilen biçim: {format}"
 
 #: js/addressbooks.js:313 js/addressbooks.js:341
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Otomatik biçim tespiti"
 
 #: js/addressbooks.js:391
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "İşlenen {count}/{total} kart"
 
 #: js/addressbooks.js:415
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Toplam:{total}, Başarılı:{imported}, Hata:{failed}"
 
 #: js/addressbooks.js:569
 msgid "An address book called {name} already exists"
@@ -116,7 +116,7 @@ msgstr "Birleştirme başarısız. Kişi kaydedilirken hata oluştu."
 msgid "Select photo"
 msgstr "Fotograf seç"
 
-#: js/app.js:705 js/app.js:1667
+#: js/app.js:705 js/app.js:1675
 msgid "Network or server error. Please inform administrator."
 msgstr "Ağ veya sunucu hatası. Lütfen sistem yöneticisini bilgilendirin."
 
@@ -167,11 +167,11 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr "Kişi bulunamadı: {id}"
 
-#: js/app.js:1622
+#: js/app.js:1630
 msgid "Edit profile picture"
 msgstr "Profil fotografını düzenle"
 
-#: js/app.js:1626
+#: js/app.js:1634
 msgid "Crop photo"
 msgstr "Fotoğrafı kırp"
 
@@ -300,7 +300,7 @@ msgstr "İçe aktarma tamamlandı"
 msgid "Close"
 msgstr "Kapat"
 
-#: js/storage.js:32
+#: js/storage.js:27
 msgid "Server error! Please inform system administator"
 msgstr "Sunucu hatası! Lütfen sistem yöneticisini bilgilendirin"
 
@@ -342,7 +342,7 @@ msgstr "Bilinmeyen hata"
 
 #: lib/addressbook.php:410
 msgid "Access denied"
-msgstr ""
+msgstr "Erişim reddedildi"
 
 #: lib/addressbook.php:417
 msgid "The backend for this address book does not support updating"
@@ -493,37 +493,38 @@ msgstr "Resim özelleğini alırken hata oluştu."
 msgid "Error saving contact."
 msgstr "Bağlantıyı kaydederken hata"
 
-#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
+#: lib/controller/groupcontroller.php:61 lib/controller/groupcontroller.php:84
 msgid "No group name given."
 msgstr "Grup adı belirtilmedi."
 
-#: lib/controller/groupcontroller.php:67
+#: lib/controller/groupcontroller.php:68
 msgid "Error adding group."
 msgstr "Grup ekleme hatası."
 
-#: lib/controller/groupcontroller.php:145
+#: lib/controller/groupcontroller.php:146
 msgid "No group name to rename from given."
 msgstr "Değiştirmek için bir grup adı belirtilmedi."
 
-#: lib/controller/groupcontroller.php:150
+#: lib/controller/groupcontroller.php:151
 msgid "No group name to rename to given."
 msgstr "Değiştirmek için bir grup adı belirtilmedi."
 
-#: lib/controller/groupcontroller.php:157
+#: lib/controller/groupcontroller.php:158
 msgid "Error renaming group."
 msgstr "Grup adını değiştirirken hata oluştu."
 
-#: lib/controller/groupcontroller.php:206
-#: lib/controller/groupcontroller.php:258
+#: lib/controller/groupcontroller.php:208
+#: lib/controller/groupcontroller.php:266
 msgid "Group ID missing from request."
 msgstr "İstekde grup IS eksik."
 
-#: lib/controller/groupcontroller.php:211
+#: lib/controller/groupcontroller.php:215
+#: lib/controller/groupcontroller.php:273
 msgid "Group name missing from request."
 msgstr "İstekte grup adı yok."
 
-#: lib/controller/groupcontroller.php:216
-#: lib/controller/groupcontroller.php:263
+#: lib/controller/groupcontroller.php:222
+#: lib/controller/groupcontroller.php:280
 msgid "Contact ID missing from request."
 msgstr "İstekte kişi kimliği yok."
 
@@ -563,7 +564,7 @@ msgstr "Diske yazılamadı"
 
 #: lib/controller/importcontroller.php:68
 msgid "Not enough storage available"
-msgstr ""
+msgstr "Yeterli disk alanı yok"
 
 #: lib/controller/importcontroller.php:76
 msgid "Attempt to upload blacklisted file:"
@@ -752,7 +753,7 @@ msgstr "Adres defteri ekle"
 
 #: templates/contacts.php:35
 msgid "Automatic format"
-msgstr ""
+msgstr "Otomatik biçim"
 
 #: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."

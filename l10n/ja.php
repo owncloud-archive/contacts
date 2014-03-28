@@ -118,6 +118,7 @@
 "No file was uploaded" => "アップロードされたファイルはありません",
 "Missing a temporary folder" => "一時保存フォルダーが見つかりません",
 "Failed to write to disk" => "ディスクへの書き込みに失敗しました",
+"Not enough storage available" => "ストレージに十分な空き容量がありません",
 "Attempt to upload blacklisted file:" => "ブラックリストファイルのアップロードの試行:",
 "Error uploading contacts to storage." => "ストレージへの連絡先のアップロードエラー。",
 "Error moving file to imports folder." => "ファイルのインポートフォルダーへの移動エラー。",

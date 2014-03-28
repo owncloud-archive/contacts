@@ -15,6 +15,7 @@
 "No file was uploaded" => "Датотека није отпремљена",
 "Missing a temporary folder" => "Недостаје привремена фасцикла",
 "Failed to write to disk" => "Не могу да пишем на диск",
+"Not enough storage available" => "Нема довољно простора",
 "Contact" => "Контакт",
 "Other" => "Друго",
 "Work" => "Посао",

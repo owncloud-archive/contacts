@@ -23,12 +23,12 @@
 namespace OCA\Contacts\Utils\TemporaryPhoto;
 
 use OCA\Contacts\Contact as ContactObject,
-	OCA\Contacts\Utils\TemporaryPhoto as AbstractTemporaryPhoto;
+	OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto;
 
 /**
  * This class loads the PHOTO or LOGO property from a contact.
  */
-class Contact extends AbstractTemporaryPhoto {
+class Contact extends BaseTemporaryPhoto {
 
 	/**
 	 * The Contact object to load the image from

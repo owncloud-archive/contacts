@@ -101,6 +101,7 @@
 "No file was uploaded" => "沒有檔案被上傳",
 "Missing a temporary folder" => "找不到暫存資料夾",
 "Failed to write to disk" => "寫入硬碟失敗",
+"Not enough storage available" => "儲存空間不足",
 "Attempt to upload blacklisted file:" => "試圖上傳被禁止的檔案：",
 "Error uploading contacts to storage." => "上傳聯絡人到儲存空間時發生錯誤",
 "You do not have permissions to import into this address book." => "您沒有權限將資料匯入至這本通訊錄。",

@@ -22,6 +22,7 @@
 "No file was uploaded" => "שום קובץ לא הועלה",
 "Missing a temporary folder" => "תקיה זמנית חסרה",
 "Failed to write to disk" => "הכתיבה לכונן נכשלה",
+"Not enough storage available" => "אין די שטח פנוי באחסון",
 "Error uploading contacts to storage." => "התרשה שגיאה בהעלאת אנשי הקשר לאכסון.",
 "Contact" => "איש קשר",
 "Other" => "אחר",
