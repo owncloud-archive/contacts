@@ -23,61 +23,10 @@
 namespace OCA\Contacts;
 
 /**
- * Subclass this class or implement IPIMObject interface for PIM objects
+ * Subclass this class or implement IPIMObject interface for PIM objects.
  */
 
 abstract class AbstractPIMObject implements IPIMObject {
-
-	/**
-	 * This variable holds the ID of this object.
-	 * Depending on the backend, this can be either a string
-	 * or an integer, so we treat them all as strings.
-	 *
-	 * @var string
-	 */
-	protected $id;
-
-	/**
-	 * This variable holds the owner of this object.
-	 *
-	 * @var string
-	 */
-	protected $owner;
-
-	/**
-	 * This variable holds the parent of this object if any.
-	 *
-	 * @var string|null
-	 */
-	protected $parent;
-
-	/**
-	 * This variable holds the permissions of this object.
-	 *
-	 * @var integer
-	 */
-	protected $permissions;
-
-	/**
-	 * @return string
-	 */
-	public function getId() {
-		return $this->id;
-	}
-
-	/**
-	 * @return string|null
-	 */
-	function getDisplayName() {
-		return $this->displayName;
-	}
-
-	/**
-	 * @return string|null
-	 */
-	public function getOwner() {
-		return $this->owner;
-	}
 
 	/**
 	 * If this object is part of a collection return a reference
@@ -85,30 +34,6 @@ abstract class AbstractPIMObject implements IPIMObject {
 	 * @return IPIMObject|null
 	 */
 	public function getParent() {
-		return $this->parent;
-	}
-
-	/** CRUDS permissions (Create, Read, Update, Delete, Share) using a bitmask of
-	 *
-	 * \OCP\PERMISSION_CREATE
-	 * \OCP\PERMISSION_READ
-	 * \OCP\PERMISSION_UPDATE
-	 * \OCP\PERMISSION_DELETE
-	 * \OCP\PERMISSION_SHARE
-	 * or
-	 * \OCP\PERMISSION_ALL
-	 *
-	 * @return integer
-	 */
-	public function getPermissions() {
-		return $this->permissions;
-	}
-
-	/**
-	 * @return AbstractBackend
-	 */
-	public function getBackend() {
-		return $this->backend;
 	}
 
 	/**

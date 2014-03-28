@@ -30,26 +30,26 @@ use OCA\Contacts;
 */
 class Card extends \Sabre_CardDAV_Card {
 
-    /**
-     * Array with information about the containing addressbook
-     *
-     * @var array
-     */
-    protected $addressBookInfo;
+	/**
+	* Array with information about the containing addressbook
+	*
+	* @var array
+	*/
+	protected $addressBookInfo;
 
-    /**
-     * Constructor
-     *
-     * @param Sabre_CardDAV_Backend_Abstract $carddavBackend
-     * @param array $addressBookInfo
-     * @param array $cardData
-     */
-    public function __construct(\Sabre_CardDAV_Backend_Abstract $carddavBackend, array $addressBookInfo, array $cardData) {
+	/**
+	* Constructor
+	*
+	* @param Sabre_CardDAV_Backend_Abstract $carddavBackend
+	* @param array $addressBookInfo
+	* @param array $cardData
+	*/
+	public function __construct(\Sabre_CardDAV_Backend_Abstract $carddavBackend, array $addressBookInfo, array $cardData) {
 
-        $this->addressBookInfo = $addressBookInfo;
+		$this->addressBookInfo = $addressBookInfo;
 		parent::__construct($carddavBackend, $addressBookInfo, $cardData);
 
-    }
+	}
 
 	/**
 	* Returns a list of ACE's for this node.
@@ -70,7 +70,7 @@ class Card extends \Sabre_CardDAV_Card {
 		$uid = $this->carddavBackend->userIDByPrincipal($this->getOwner());
 
 		if($uid != \OCP\USER::getUser()) {
-			list($backendName, $id) = explode('::', $this->addressBookInfo['id']);
+			list(, $id) = explode('::', $this->addressBookInfo['id']);
 			$sharedAddressbook = \OCP\Share::getItemSharedWithBySource('addressbook', $id);
 			if ($sharedAddressbook && ($sharedAddressbook['permissions'] & \OCP\PERMISSION_READ)) {
 				$readprincipal = 'principals/' . \OCP\USER::getUser();

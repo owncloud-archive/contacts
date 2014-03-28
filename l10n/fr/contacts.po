@@ -36,9 +36,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-01 00:48-0500\n"
-"PO-Revision-Date: 2014-02-28 21:56+0000\n"
-"Last-Translator: Christophe Lherieau <skimpax@gmail.com>\n"
+"POT-Creation-Date: 2014-03-24 00:49-0400\n"
+"PO-Revision-Date: 2014-03-24 04:49+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: French (http://www.transifex.com/projects/p/owncloud/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,181 +46,180 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: appinfo/app.php:36 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:105
 msgid "Contacts"
 msgstr "Contacts"
 
-#: js/addressbooks.js:83 js/groups.js:519 templates/settings.php:61
+#: js/addressbooks.js:83 js/groups.js:519
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: js/addressbooks.js:298
-msgid "Uploading..."
-msgstr "Téléversement en cours…"
+#: js/addressbooks.js:306
+msgid "Starting file import"
+msgstr ""
 
-#: js/addressbooks.js:301 js/loader.js:68
-msgid "Importing..."
-msgstr "Import en cours…"
+#: js/addressbooks.js:310 js/addressbooks.js:338
+msgid "Format selected: {format}"
+msgstr ""
 
-#: js/addressbooks.js:324
-msgid "Preparing..."
-msgstr "En préparation..."
+#: js/addressbooks.js:313 js/addressbooks.js:341
+msgid "Automatic format detection"
+msgstr ""
 
-#: js/addressbooks.js:372
-msgid "Imported {count} of {total} contacts"
-msgstr "{count} contacts sur {total} ont été importés"
+#: js/addressbooks.js:391
+msgid "Processing {count}/{total} cards"
+msgstr ""
 
-#: js/addressbooks.js:394
-msgid "Imported {imported} contacts. {failed} failed."
-msgstr "{imported} contacts importés. {failed} échoués."
+#: js/addressbooks.js:415
+msgid "Total:{total}, Success:{imported}, Errors:{failed}"
+msgstr ""
 
-#: js/addressbooks.js:550
+#: js/addressbooks.js:569
 msgid "An address book called {name} already exists"
 msgstr "Un carnet d'adresse appelé {name} existe déjà"
 
-#: js/addressbooks.js:584
+#: js/addressbooks.js:603
 msgid "Failed adding address book: {error}"
 msgstr "Échec de l'ajout du carnet d'adresses : {error}"
 
-#: js/addressbooks.js:626
+#: js/addressbooks.js:644
 msgid "Failed loading address books: {error}"
 msgstr "Echec du chargement des carnets d'adresses : {error}"
 
-#: js/app.js:215
+#: js/app.js:218
 msgid "Indexing contacts"
 msgstr "Indexation des contacts"
 
-#: js/app.js:225
+#: js/app.js:228
 msgid "Unrecoverable error loading address books: {msg}"
 msgstr "Erreur irrécupérable lors du chargement des carnets d'adresses : {msg}"
 
-#: js/app.js:226
+#: js/app.js:229
 msgid "Error."
 msgstr "Erreur."
 
-#: js/app.js:321 js/app.js:335
+#: js/app.js:324 js/app.js:338
 msgid "Add to..."
 msgstr "Ajouter à…"
 
-#: js/app.js:325 js/app.js:337
+#: js/app.js:328 js/app.js:340
 msgid "Remove from..."
 msgstr "Retirer de…"
 
-#: js/app.js:342
+#: js/app.js:345
 msgid "Add group..."
 msgstr "Ajouter un groupe…"
 
-#: js/app.js:470
+#: js/app.js:473
 msgid "Invalid URL: \"{url}\""
 msgstr "Adresse URL invalide : \"{URL}\""
 
-#: js/app.js:481
-msgid "There was an error opening a mail composer."
-msgstr "Une erreur s'est produite lors de l’ouverture d'un outil de composition email."
-
-#: js/app.js:486
+#: js/app.js:499
 msgid "Invalid email: \"{url}\""
 msgstr "Courriel invalide : \"{url}\""
 
-#: js/app.js:569
+#: js/app.js:582
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Échec de la fusion. Impossible de trouver le contact : {id}"
 
-#: js/app.js:582
+#: js/app.js:595
 msgid "Merge failed."
 msgstr "Echec de la fusion."
 
-#: js/app.js:589
+#: js/app.js:602
 msgid "Merge failed. Error saving contact."
 msgstr "Échec de la fusion. Erreur d'enregistrement du contact."
 
-#: js/app.js:609
+#: js/app.js:622
 msgid "Select photo"
 msgstr "Sélectionner une photo"
 
-#: js/app.js:689 js/app.js:1631
+#: js/app.js:705 js/app.js:1667
 msgid "Network or server error. Please inform administrator."
 msgstr "Erreur de serveur ou du réseau. Veuillez contacter votre administrateur."
 
-#: js/app.js:911
+#: js/app.js:789
+msgid "Only images can be used as contact photos"
+msgstr ""
+
+#: js/app.js:798
+msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
+msgstr ""
+
+#: js/app.js:967
 msgid "Error adding to group."
 msgstr "Erreur lors de l'ajout au groupe."
 
-#: js/app.js:934
+#: js/app.js:990
 msgid "Error removing from group."
 msgstr "Erreur lors du retrait du groupe."
 
-#: js/app.js:1110
+#: js/app.js:1181
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Vous avez sélectionné plus de 300 contacts.\nCela va très probablement échouer ! Cliquer ici pour essayer cependant."
 
-#: js/app.js:1148
+#: js/app.js:1219
 msgid "Error setting {name} as favorite."
 msgstr "Erreur lors de la mise en favori de {name}."
 
-#: js/app.js:1287 js/app.js:1291 templates/contacts.php:171
+#: js/app.js:1357 js/app.js:1361 templates/contacts.php:177
 msgid "Merge contacts"
 msgstr "Fusionner les contacts"
 
-#: js/app.js:1313 js/app.js:1366 js/settings.js:120 templates/settings.php:62
+#: js/app.js:1383 js/app.js:1436 templates/contacts.php:363
+#: templates/contacts.php:364
 msgid "Cancel"
 msgstr "Annuler"
 
-#: js/app.js:1340 templates/contacts.php:152
+#: js/app.js:1410 templates/contacts.php:158
 msgid "Add group"
 msgstr "Ajouter un groupe"
 
-#: js/app.js:1344
+#: js/app.js:1414
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1455
+#: js/app.js:1521
 msgid "Could not find contact: {id}"
 msgstr "Impossible de trouver le contact : {id}"
 
-#: js/app.js:1478
-msgid "No files selected for upload."
-msgstr "Aucun fichiers choisis pour être chargés"
-
-#: js/app.js:1488
-msgid ""
-"The file you are trying to upload exceed the maximum size for file uploads "
-"on this server."
-msgstr "Le fichier que vous tentez de charger dépasse la taille maximum de fichier autorisée sur ce serveur."
-
-#: js/app.js:1589
+#: js/app.js:1622
 msgid "Edit profile picture"
 msgstr "Éditer l'image de profil"
 
-#: js/app.js:1593
+#: js/app.js:1626
 msgid "Crop photo"
 msgstr "Recadrer la photo"
 
-#: js/contacts.js:889
+#: js/contacts.js:900
 msgid "Error parsing date: {date}"
 msgstr "Erreur lors de l'analyse de la date : {date}"
 
-#: js/contacts.js:1093
+#: js/contacts.js:1097
 msgid "# groups"
 msgstr "# groupes"
 
-#: js/contacts.js:1167
+#: js/contacts.js:1177
 msgid "Error parsing birthday {bday}"
 msgstr "Erreur lors de l’analyse de l’anniversaire {bday}"
 
-#: js/contacts.js:2241
+#: js/contacts.js:1315
+msgid "The backend does not support multi-byte characters."
+msgstr ""
+
+#: js/contacts.js:2270
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Certains contacts sont marqués pour être supprimés, mais ne le sont pas encore. Veuillez attendre que l'opération se termine."
 
-#: js/contacts.js:2252
+#: js/contacts.js:2281
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Cliquer pour annuler la suppression de {num} contacts"
 
-#: js/contacts.js:2261
+#: js/contacts.js:2290
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Suppression annulée pour {num} contacts"
 
@@ -266,23 +265,23 @@ msgstr "Vous pouvez faire glisser les groupess pour les réorganiser comme bon v
 msgid "Failed adding group: {error}"
 msgstr "Echec de l'ajout du groupe : {error}"
 
-#: js/groups.js:671
+#: js/groups.js:672
 msgid "All"
 msgstr "Tous"
 
-#: js/groups.js:686 js/groups.js:689
+#: js/groups.js:687 js/groups.js:690
 msgid "Favorites"
 msgstr "Favoris"
 
-#: js/groups.js:750
+#: js/groups.js:751
 msgid "Shared by {owner}"
 msgstr "Partagé par {owner}"
 
-#: js/groups.js:765
+#: js/groups.js:766
 msgid "Not grouped"
 msgstr "Non groupé"
 
-#: js/groups.js:794
+#: js/groups.js:795
 msgid "Failed loading groups: {error}"
 msgstr "Échec lors du chargement des groupes : {error}"
 
@@ -290,7 +289,7 @@ msgstr "Échec lors du chargement des groupes : {error}"
 msgid "Please choose the addressbook"
 msgstr "Veuillez choisir le carnet d'adresses"
 
-#: js/loader.js:22 templates/contacts.php:29
+#: js/loader.js:22 templates/contacts.php:32
 msgid "Import into..."
 msgstr "Importer dans..."
 
@@ -302,123 +301,88 @@ msgstr "Erreur de chargement du modèle d'importation"
 msgid "Import contacts"
 msgstr "Importer les contacts"
 
-#: js/loader.js:61 templates/contacts.php:25
+#: js/loader.js:61 templates/contacts.php:28
 msgid "Import"
 msgstr "Importer"
+
+#: js/loader.js:68
+msgid "Importing..."
+msgstr "Import en cours…"
 
 #: js/loader.js:92
 msgid "Import done"
 msgstr "Fichiers importés"
 
-#: js/loader.js:95 templates/contacts.php:80 templates/contacts.php:354
-#: templates/contacts.php:355
+#: js/loader.js:95 templates/contacts.php:93 templates/contacts.php:367
+#: templates/contacts.php:368
 msgid "Close"
 msgstr "Fermer"
 
-#: js/settings.js:25 js/settings.js:45 js/settings.js:75 js/settings.js:112
-msgid "Error"
-msgstr "Erreur"
-
-#: js/settings.js:75
-msgid "Displayname cannot be empty."
-msgstr "Le nom d'affichage ne peut pas être vide."
-
-#: js/settings.js:97 templates/settings.php:26
-msgid "Show CardDav link"
-msgstr "Afficher le lien CardDav"
-
-#: js/settings.js:98 templates/settings.php:29
-msgid "Show read-only VCF link"
-msgstr "Afficher les liens VCF en lecture seule"
-
-#: js/settings.js:99 templates/contacts.php:66 templates/contacts.php:358
-#: templates/contacts.php:359 templates/settings.php:40
-msgid "Download"
-msgstr "Télécharger"
-
-#: js/settings.js:101 templates/contacts.php:492 templates/settings.php:45
-msgid "Edit"
-msgstr "Modifier"
-
-#: js/settings.js:102 templates/contacts.php:60 templates/contacts.php:61
-#: templates/contacts.php:215 templates/contacts.php:216
-#: templates/contacts.php:493 templates/settings.php:50
-msgid "Delete"
-msgstr "Supprimer"
-
-#: js/settings.js:159 templates/settings.php:66
-msgid "More..."
-msgstr "Plus…"
-
-#: js/settings.js:162
-msgid "Less..."
-msgstr "Moins..."
-
-#: js/storage.js:30
+#: js/storage.js:32
 msgid "Server error! Please inform system administator"
 msgstr "Erreur du serveur ! Veuillez contacter votre administrateur."
 
-#: js/storage.js:335 js/storage.js:374
+#: js/storage.js:346 js/storage.js:385
 msgid "Failed loading photo: {error}"
 msgstr "Echec du chargement de la photo : {error}"
 
-#: lib/addressbook.php:152
+#: lib/addressbook.php:166
 msgid "You do not have permissions to see this contacts"
 msgstr "Vous n'avez pas les droits suffisants pour voir ces contacts."
 
-#: lib/addressbook.php:159
+#: lib/addressbook.php:177
 msgid "Contact not found"
 msgstr "Contact introuvable"
 
-#: lib/addressbook.php:186
+#: lib/addressbook.php:214
 msgid "You do not have permissions to see these contacts"
 msgstr "Vous n'avez pas les droits suffisants pour voir ces contacts."
 
-#: lib/addressbook.php:213
+#: lib/addressbook.php:247
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Vous n'avez pas les droits suffisants pour ajouter des contacts à ce carnet d'adresses."
 
-#: lib/addressbook.php:216
+#: lib/addressbook.php:254
 msgid "The backend for this address book does not support adding contacts"
 msgstr "L'infrastructure pour ce carnet d'adresses ne supporte pas l'ajout de contacts."
 
-#: lib/addressbook.php:240 lib/addressbook.php:266 lib/contact.php:248
+#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:247
 msgid "You do not have permissions to delete this contact"
 msgstr "Vous n'avez pas les droits suffisants pour supprimer ce contact."
 
-#: lib/addressbook.php:243 lib/addressbook.php:269
+#: lib/addressbook.php:306 lib/addressbook.php:346
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "L'infrastructure pour ce carnet d'adresses ne supporte pas la suppression de contacts."
 
-#: lib/addressbook.php:290
+#: lib/addressbook.php:369
 msgid "Unknown error"
 msgstr "Erreur Inconnue "
 
-#: lib/addressbook.php:332
+#: lib/addressbook.php:410
+msgid "Access denied"
+msgstr ""
+
+#: lib/addressbook.php:417
 msgid "The backend for this address book does not support updating"
 msgstr "L'infrastructure pour ce carnet d'adresses ne supporte pas la mise à jour"
 
-#: lib/addressbook.php:358
-msgid "You don't have permissions to update the address book."
-msgstr "Vous n'avez pas les droits suffisants pour mettre à jour ce carnet d'adresses."
-
-#: lib/addressbook.php:369
+#: lib/addressbook.php:448
 msgid "You don't have permissions to delete the address book."
 msgstr "Vous n'avez pas les droits suffisants pour supprimer ce carnet d'adresses."
 
-#: lib/app.php:146
+#: lib/app.php:152
 msgid "Address book not found"
 msgstr "Carnet d'adresses non trouvé."
 
-#: lib/contact.php:114 lib/contact.php:161
+#: lib/contact.php:113 lib/contact.php:160
 msgid "You do not have permissions to see this contact"
 msgstr "Vous n'avez pas les droits suffisants pour voir ce contact."
 
-#: lib/contact.php:263
+#: lib/contact.php:262
 msgid "You do not have permissions to update this contact"
 msgstr "Vous n'avez pas les droits suffisants pour mettre à jour ce contact"
 
-#: lib/contact.php:274
+#: lib/contact.php:275
 msgid "The backend for this contact does not support updating it"
 msgstr "L'infrastructure pour ce contact ne supporte pas sa mise à jour"
 
@@ -426,74 +390,80 @@ msgstr "L'infrastructure pour ce contact ne supporte pas sa mise à jour"
 msgid "This backend not support adding contacts"
 msgstr "L'infrastructure ne supporte pas l'ajout de contacts"
 
-#: lib/contact.php:402 lib/contact.php:419
+#: lib/contact.php:458 lib/contact.php:475
 msgid "Property not found"
 msgstr "Propriété non trouvée"
 
-#: lib/contact.php:467
+#: lib/contact.php:523
 msgid " Missing IM parameter for: "
 msgstr "Paramètres de Messagerie Instantanée manquants pour :"
 
-#: lib/contact.php:475
+#: lib/contact.php:531
 msgid "Unknown IM: "
 msgstr "Messagerie instantanée inconnue"
 
-#: lib/contact.php:752
+#: lib/contact.php:808
 msgid "{name}'s Birthday"
 msgstr "Anniversaire de {name}"
 
-#: lib/controller/addressbookcontroller.php:135
+#: lib/controller/addressbookcontroller.php:141
 msgid "Error creating address book"
 msgstr "Erreur à la création du carnet d'adresses"
 
-#: lib/controller/addressbookcontroller.php:152
-msgid "Error updating address book"
-msgstr "Erreur à la mise à jour du carnet d'adresses"
+#: lib/controller/addressbookcontroller.php:173
+#, php-format
+msgid "The \"%s\" backend does not support deleting address books"
+msgstr "L'infrastructure \"%s\" ne supporte pas la suppression de carnet d'adresses."
 
-#: lib/controller/addressbookcontroller.php:180
+#: lib/controller/addressbookcontroller.php:181
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Vous n'avez pas les droits suffisants pour supprimer le carnet d'adresses \"%s\""
 
-#: lib/controller/addressbookcontroller.php:186
+#: lib/controller/addressbookcontroller.php:188
 msgid "Error deleting address book"
 msgstr "Erreur à la suppression du carnet d'adresses"
 
-#: lib/controller/addressbookcontroller.php:224
+#: lib/controller/addressbookcontroller.php:228
 msgid "Error creating contact."
 msgstr "Erreur à la création du contact."
 
-#: lib/controller/addressbookcontroller.php:260
-msgid "Error deleting contact."
+#: lib/controller/addressbookcontroller.php:237
+msgid "Error creating contact"
+msgstr "Erreur à la création du contact."
+
+#: lib/controller/addressbookcontroller.php:269
+msgid "Error deleting contact"
 msgstr "Erreur à la suppression du contact."
 
-#: lib/controller/addressbookcontroller.php:300
-msgid "Error retrieving contact."
+#: lib/controller/addressbookcontroller.php:309
+msgid "Error retrieving contact"
 msgstr "Erreur à la récupération du contact."
 
-#: lib/controller/addressbookcontroller.php:310
-#: lib/controller/contactphotocontroller.php:332
-msgid "Error saving contact."
+#: lib/controller/addressbookcontroller.php:320
+msgid "Error saving contact"
 msgstr "Erreur de sauvegarde du contact"
 
-#: lib/controller/addressbookcontroller.php:314
+#: lib/controller/addressbookcontroller.php:326
 msgid "Error removing contact from other address book."
 msgstr "Erreur à la suppression du contact d'un autre carnet d'adresses."
 
+#: lib/controller/addressbookcontroller.php:333
+msgid "Error getting moved contact"
+msgstr "Erreur lors de l'obtention du contact déplacé"
+
 #: lib/controller/contactcontroller.php:37
-#: lib/controller/contactcontroller.php:64
+#: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
-#: lib/controller/contactphotocontroller.php:37
-#: lib/controller/contactphotocontroller.php:280
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
 msgstr "Impossible de trouver le contact."
 
-#: lib/controller/contactcontroller.php:60
+#: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
 msgstr "Aucune donnée de contact dans la requête."
 
-#: lib/controller/contactcontroller.php:68
+#: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
 msgstr "Erreur de la fusion du contact."
 
@@ -501,183 +471,146 @@ msgstr "Erreur de la fusion du contact."
 msgid "Error saving contact to backend."
 msgstr "Erreur d'enregistrement du contact sur l'infrastructure d'arrière-plan."
 
-#: lib/controller/contactcontroller.php:102
+#: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
 msgstr "Le nom de la propriété n'est pas défini."
 
-#: lib/controller/contactcontroller.php:107
+#: lib/controller/contactcontroller.php:109
 msgid "Property checksum is not set."
 msgstr "La somme de contrôle de la propriété n'est pas définie."
 
-#: lib/controller/contactcontroller.php:126
+#: lib/controller/contactcontroller.php:131
 msgid "Information about vCard is incorrect. Please reload the page."
 msgstr "Les informations relatives à cette vCard sont incorrectes. Veuillez recharger la page."
 
-#: lib/controller/contactcontroller.php:135
+#: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
 msgstr "Erreur lors de la mise à jour du contact"
 
-#: lib/controller/contactcontroller.php:140
+#: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
 msgstr "Erreur d'enregistrement du contact sur l'infrastructure d'arrière-plan."
 
-#: lib/controller/contactphotocontroller.php:68
+#: lib/controller/contactphotocontroller.php:59
 msgid "Error getting user photo"
 msgstr "Erreur lors de l'obtention de la photo de l'utilisateur"
 
-#: lib/controller/contactphotocontroller.php:87
-#: lib/controller/importcontroller.php:38
+#: lib/controller/contactphotocontroller.php:131
+msgid "No photo path was submitted."
+msgstr "Le chemin de la photo n'a pas été envoyé."
+
+#: lib/controller/contactphotocontroller.php:193
+msgid "Error loading image from cache"
+msgstr ""
+
+#: lib/controller/contactphotocontroller.php:203
+msgid "Error getting PHOTO property."
+msgstr "Erreur lors de l'obtention des propriétés de la photo."
+
+#: lib/controller/contactphotocontroller.php:207
+msgid "Error saving contact."
+msgstr "Erreur de sauvegarde du contact"
+
+#: lib/controller/groupcontroller.php:60 lib/controller/groupcontroller.php:83
+msgid "No group name given."
+msgstr "Aucun nom de groupe n'a été spécifié."
+
+#: lib/controller/groupcontroller.php:67
+msgid "Error adding group."
+msgstr "Erreur lors de l'ajout du groupe."
+
+#: lib/controller/groupcontroller.php:145
+msgid "No group name to rename from given."
+msgstr "Aucun nom de groupe à renommer n'a été spécifié."
+
+#: lib/controller/groupcontroller.php:150
+msgid "No group name to rename to given."
+msgstr "Aucun nouveau nom de groupe n'a été spécifié pour le renommage."
+
+#: lib/controller/groupcontroller.php:157
+msgid "Error renaming group."
+msgstr "Erreur lors du renommage du groupe. "
+
+#: lib/controller/groupcontroller.php:206
+#: lib/controller/groupcontroller.php:258
+msgid "Group ID missing from request."
+msgstr "Identifiant du groupe manquant dans la requête."
+
+#: lib/controller/groupcontroller.php:211
+msgid "Group name missing from request."
+msgstr "Nom de groupe manquant dans la requête."
+
+#: lib/controller/groupcontroller.php:216
+#: lib/controller/groupcontroller.php:263
+msgid "Contact ID missing from request."
+msgstr "Identifiant du contact manquant dans la requête."
+
+#: lib/controller/importcontroller.php:41
 msgid "No file was uploaded. Unknown error"
 msgstr "Aucun fichier n'a été envoyé. Erreur inconnue"
 
-#: lib/controller/contactphotocontroller.php:95
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:50
 msgid "There is no error, the file uploaded with success"
 msgstr "Aucune erreur, le fichier a été envoyé avec succès."
 
-#: lib/controller/contactphotocontroller.php:96
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:51
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Le fichier envoyé dépasse la directive upload_max_filesize dans php.ini"
 
-#: lib/controller/contactphotocontroller.php:97
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:53
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Le fichier envoyé dépasse la directive MAX_FILE_SIZE qui est spécifiée dans le formulaire HTML."
 
-#: lib/controller/contactphotocontroller.php:98
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:54
 msgid "The uploaded file was only partially uploaded"
 msgstr "Le fichier n'a été que partiellement envoyé."
 
-#: lib/controller/contactphotocontroller.php:99
-#: lib/controller/importcontroller.php:52
+#: lib/controller/importcontroller.php:55
 msgid "No file was uploaded"
 msgstr "Pas de fichier envoyé."
 
-#: lib/controller/contactphotocontroller.php:100
-#: lib/controller/importcontroller.php:53
+#: lib/controller/importcontroller.php:56
 msgid "Missing a temporary folder"
 msgstr "Absence de dossier temporaire."
 
-#: lib/controller/contactphotocontroller.php:115
-msgid "Couldn't load temporary image: "
-msgstr "Impossible de charger l'image temporaire :"
-
-#: lib/controller/contactphotocontroller.php:128
-msgid "Uploaded image is invalid"
-msgstr "L'image envoyée est invalide"
-
-#: lib/controller/contactphotocontroller.php:132
-#: lib/controller/contactphotocontroller.php:172
-msgid "Couldn't save temporary image: "
-msgstr "Impossible de sauvegarder l'image temporaire :"
-
-#: lib/controller/contactphotocontroller.php:202
-msgid "No photo path was submitted."
-msgstr "Le chemin de la photo n'a pas été envoyé."
-
-#: lib/controller/contactphotocontroller.php:209
-msgid "File doesn't exist:"
-msgstr "Ce fichier n'existe pas :"
-
-#: lib/controller/contactphotocontroller.php:214
-#: lib/controller/contactphotocontroller.php:217
-msgid "Error loading image."
-msgstr "Erreur lors du chargement de l'image."
-
-#: lib/controller/contactphotocontroller.php:285
-msgid "Image has been removed from cache"
-msgstr "L'image a été supprimée du cache"
-
-#: lib/controller/contactphotocontroller.php:291
-msgid "Error creating temporary image"
-msgstr "Erreur de création de l'image temporaire"
-
-#: lib/controller/contactphotocontroller.php:298
-msgid "Error cropping image"
-msgstr "Erreur lors du rognage de l'image"
-
-#: lib/controller/contactphotocontroller.php:315
-msgid "Error getting PHOTO property."
-msgstr "Erreur lors de l'obtention des propriétés de la photo."
-
-#: lib/controller/groupcontroller.php:58 lib/controller/groupcontroller.php:80
-msgid "No group name given."
-msgstr "Aucun nom de groupe n'a été spécifié."
-
-#: lib/controller/groupcontroller.php:65
-msgid "Error adding group."
-msgstr "Erreur lors de l'ajout du groupe."
-
-#: lib/controller/groupcontroller.php:130
-msgid "No group name to rename from given."
-msgstr "Aucun nom de groupe à renommer n'a été spécifié."
-
-#: lib/controller/groupcontroller.php:134
-msgid "No group name to rename to given."
-msgstr "Aucun nouveau nom de groupe n'a été spécifié pour le renommage."
-
-#: lib/controller/groupcontroller.php:140
-msgid "Error renaming group."
-msgstr "Erreur lors du renommage du groupe. "
-
-#: lib/controller/groupcontroller.php:178
-#: lib/controller/groupcontroller.php:224
-msgid "Group ID missing from request."
-msgstr "Identifiant du groupe manquant dans la requête."
-
-#: lib/controller/groupcontroller.php:183
-msgid "Group name missing from request."
-msgstr "Nom de groupe manquant dans la requête."
-
-#: lib/controller/groupcontroller.php:188
-#: lib/controller/groupcontroller.php:229
-msgid "Contact ID missing from request."
-msgstr "Identifiant du contact manquant dans la requête."
-
-#: lib/controller/importcontroller.php:54
+#: lib/controller/importcontroller.php:57
 msgid "Failed to write to disk"
 msgstr "Erreur d'écriture sur le disque"
 
-#: lib/controller/importcontroller.php:65
+#: lib/controller/importcontroller.php:68
 msgid "Not enough storage available"
-msgstr "Plus assez d'espace de stockage disponible"
+msgstr ""
 
-#: lib/controller/importcontroller.php:73
+#: lib/controller/importcontroller.php:76
 msgid "Attempt to upload blacklisted file:"
 msgstr "Tentative de téléverser un fichier appartenant à la liste noire :"
 
-#: lib/controller/importcontroller.php:95
+#: lib/controller/importcontroller.php:96
 msgid "Error uploading contacts to storage."
 msgstr "Erreur lors de l'envoi des contacts vers le stockage."
 
-#: lib/controller/importcontroller.php:140
+#: lib/controller/importcontroller.php:141
 msgid "Error moving file to imports folder."
 msgstr "Erreur lors du déplacement du fichier vers le dossier cible."
 
-#: lib/controller/importcontroller.php:157
+#: lib/controller/importcontroller.php:160
 msgid "You do not have permissions to import into this address book."
 msgstr "Vous n'avez pas les droits suffisants pour importer ce carnet d'adresses."
 
-#: lib/controller/importcontroller.php:165
+#: lib/controller/importcontroller.php:168
 msgid "File name missing from request."
 msgstr "Nom de fichier manquant dans la requête."
 
-#: lib/controller/importcontroller.php:170
-#: lib/controller/importcontroller.php:293
+#: lib/controller/importcontroller.php:173
+#: lib/controller/importcontroller.php:300
 msgid "Progress key missing from request."
 msgstr "Clé de progression manquante dans la requête."
 
-#: lib/controller/importcontroller.php:176
+#: lib/controller/importcontroller.php:179
 msgid "Attempt to access blacklisted file:"
 msgstr "Tentative d'accès à un fichier appartenant à la liste noire :"
-
-#: lib/controller/importcontroller.php:218
-msgid "No contacts found in: "
-msgstr "Aucun contact trouvé dans :"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -811,312 +744,310 @@ msgstr "Amis"
 msgid "Family"
 msgstr "Famille"
 
-#: templates/contacts.php:6
+#: templates/contacts.php:9
 msgid "New contact"
 msgstr "Nouveau contact"
 
-#: templates/contacts.php:10
+#: templates/contacts.php:13
 msgid "Group name"
 msgstr "Nom du groupe"
 
-#: templates/contacts.php:10
+#: templates/contacts.php:13
 msgid "New group"
 msgstr "Nouveau groupe"
 
-#: templates/contacts.php:19
+#: templates/contacts.php:22
 msgid "Address books"
 msgstr "Carnets d'adresses"
 
-#: templates/contacts.php:22 templates/contacts.php:52
+#: templates/contacts.php:25 templates/contacts.php:65
 msgid "Display name"
 msgstr "Nom affiché"
 
-#: templates/contacts.php:22
+#: templates/contacts.php:25
 msgid "Add Address Book"
 msgstr "Ajouter un carnet d'adresse"
 
-#: templates/contacts.php:31 templates/contacts.php:32
+#: templates/contacts.php:35
+msgid "Automatic format"
+msgstr ""
+
+#: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."
 msgstr "Sélectionner un fichier..."
 
-#: templates/contacts.php:49
+#: templates/contacts.php:62
 msgid "(De-)select all"
 msgstr "(Dé-)sélectionner tout"
 
-#: templates/contacts.php:51
+#: templates/contacts.php:64
 msgid "Sort order"
 msgstr "Ordre de tri"
 
-#: templates/contacts.php:53
+#: templates/contacts.php:66
 msgid "First- Lastname"
 msgstr "Prénom-Nom"
 
-#: templates/contacts.php:54
+#: templates/contacts.php:67
 msgid "Last-, Firstname"
 msgstr "Nom-Prénom"
 
-#: templates/contacts.php:64 templates/contacts.php:255
+#: templates/contacts.php:73 templates/contacts.php:74
+#: templates/contacts.php:221 templates/contacts.php:222
+#: templates/contacts.php:506
+msgid "Delete"
+msgstr "Supprimer"
+
+#: templates/contacts.php:77 templates/contacts.php:262
 msgid "Groups"
 msgstr "Groupes"
 
-#: templates/contacts.php:67
+#: templates/contacts.php:79 templates/contacts.php:371
+#: templates/contacts.php:372
+msgid "Download"
+msgstr "Télécharger"
+
+#: templates/contacts.php:80
 msgid "Merge"
 msgstr "Fusionner"
 
-#: templates/contacts.php:70 templates/contacts.php:347
+#: templates/contacts.php:83 templates/contacts.php:356
 msgid "Email"
 msgstr "Adresse mail"
 
-#: templates/contacts.php:71 templates/contacts.php:346
+#: templates/contacts.php:84 templates/contacts.php:355
 msgid "Phone"
 msgstr "Téléphone"
 
-#: templates/contacts.php:72 templates/contacts.php:349
+#: templates/contacts.php:85 templates/contacts.php:358
 msgid "Address"
 msgstr "Adresse"
 
-#: templates/contacts.php:73
+#: templates/contacts.php:86
 msgid "Group"
 msgstr "Groupe"
 
-#: templates/contacts.php:81
+#: templates/contacts.php:94
 msgid "Keyboard shortcuts"
 msgstr "Raccourcis clavier"
 
-#: templates/contacts.php:83
+#: templates/contacts.php:96
 msgid "Navigation"
 msgstr "Navigation"
 
-#: templates/contacts.php:86
+#: templates/contacts.php:99
 msgid "Next contact in list"
 msgstr "Contact suivant dans la liste"
 
-#: templates/contacts.php:88
+#: templates/contacts.php:101
 msgid "Previous contact in list"
 msgstr "Contact précédent dans la liste"
 
-#: templates/contacts.php:90
+#: templates/contacts.php:103
 msgid "Expand/collapse current addressbook"
 msgstr "Dé/Replier le carnet d'adresses courant"
 
-#: templates/contacts.php:92
+#: templates/contacts.php:105
 msgid "Next addressbook"
 msgstr "Carnet d'adresses suivant"
 
-#: templates/contacts.php:94
+#: templates/contacts.php:107
 msgid "Previous addressbook"
 msgstr "Carnet d'adresses précédent"
 
-#: templates/contacts.php:98
+#: templates/contacts.php:111
 msgid "Actions"
 msgstr "Actions"
 
-#: templates/contacts.php:101
+#: templates/contacts.php:114
 msgid "Refresh contacts list"
 msgstr "Actualiser la liste des contacts"
 
-#: templates/contacts.php:103
+#: templates/contacts.php:116
 msgid "Add new contact"
 msgstr "Ajouter un nouveau contact"
 
-#: templates/contacts.php:105
+#: templates/contacts.php:118
 msgid "Add new addressbook"
 msgstr "Ajouter un nouveau carnet d'adresses"
 
-#: templates/contacts.php:107
+#: templates/contacts.php:120
 msgid "Delete current contact"
 msgstr "Effacer le contact sélectionné"
 
-#: templates/contacts.php:113
+#: templates/contacts.php:126
 msgid ""
 "<h3>You have no contacts in your address book or your address book is "
 "disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
 "file.</p>"
 msgstr "<h3>Vous n'avez aucun contact dans votre carnet d'adresses ou votre carnet d'adresses n'est pas activé.</h3><p>Ajoutez un nouveau contact ou importez des contacts existants depuis un fichier VCF.</p>"
 
-#: templates/contacts.php:116
+#: templates/contacts.php:129
 msgid "Add contact"
 msgstr "Ajouter un contact"
 
-#: templates/contacts.php:172
+#: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"
 msgstr "Vers quel contact les données doivent-elles être fusionnées ?"
 
-#: templates/contacts.php:180
+#: templates/contacts.php:186
 msgid "Delete the other(s) after successful merge?"
 msgstr "Supprimer le(s) autre(s) après une fusion réalisée avec succès ?"
 
-#: templates/contacts.php:195
+#: templates/contacts.php:201
 msgid "Compose mail"
 msgstr "Écrire un mail"
 
-#: templates/contacts.php:223
+#: templates/contacts.php:229
 msgid "Delete current photo"
 msgstr "Supprimer la photo actuelle"
 
-#: templates/contacts.php:224
+#: templates/contacts.php:230
 msgid "Edit current photo"
 msgstr "Editer la photo actuelle"
 
-#: templates/contacts.php:225
+#: templates/contacts.php:231
 msgid "Upload new photo"
 msgstr "Envoyer une nouvelle photo"
 
-#: templates/contacts.php:226
+#: templates/contacts.php:232
 msgid "Select photo from Files"
 msgstr "Sélectionner une photo dans des fichiers"
 
-#: templates/contacts.php:231 templates/contacts.php:233
-#: templates/settings.php:59
+#: templates/contacts.php:234
+msgid "Favorite"
+msgstr "Favoris"
+
+#: templates/contacts.php:237 templates/contacts.php:239
 msgid "Name"
 msgstr "Nom"
 
-#: templates/contacts.php:239
+#: templates/contacts.php:245
 msgid "First name"
 msgstr "Prénom"
 
-#: templates/contacts.php:243
+#: templates/contacts.php:249
 msgid "Additional names"
 msgstr "Nom supplémentaires"
 
-#: templates/contacts.php:247
+#: templates/contacts.php:253
 msgid "Last name"
 msgstr "Nom"
 
-#: templates/contacts.php:267 templates/contacts.php:344
+#: templates/contacts.php:269
+msgid "Address book"
+msgstr "Carnets d'adresses"
+
+#: templates/contacts.php:276 templates/contacts.php:353
 msgid "Nickname"
 msgstr "Surnom"
 
-#: templates/contacts.php:277 templates/contacts.php:343
+#: templates/contacts.php:286 templates/contacts.php:352
 msgid "Title"
 msgstr "Titre"
 
-#: templates/contacts.php:287 templates/contacts.php:342
+#: templates/contacts.php:296 templates/contacts.php:351
 msgid "Organization"
 msgstr "Société"
 
-#: templates/contacts.php:297 templates/contacts.php:345
+#: templates/contacts.php:306 templates/contacts.php:354
 msgid "Birthday"
 msgstr "Anniversaire"
 
-#: templates/contacts.php:334
+#: templates/contacts.php:343
 msgid "Notes go here..."
 msgstr "Remarques…"
 
-#: templates/contacts.php:341
+#: templates/contacts.php:350
 msgid "Add field..."
 msgstr "Ajouter un champ ..."
 
-#: templates/contacts.php:348
+#: templates/contacts.php:357
 msgid "Instant Messaging"
 msgstr "Messagerie instantanée"
 
-#: templates/contacts.php:350
+#: templates/contacts.php:359
 msgid "Note"
 msgstr "Note"
 
-#: templates/contacts.php:351
+#: templates/contacts.php:360
 msgid "Web site"
 msgstr "Page web"
 
-#: templates/contacts.php:371 templates/contacts.php:386
-#: templates/contacts.php:400 templates/contacts.php:415
-#: templates/contacts.php:457 templates/contacts.php:467
+#: templates/contacts.php:384 templates/contacts.php:399
+#: templates/contacts.php:413 templates/contacts.php:428
+#: templates/contacts.php:470 templates/contacts.php:480
 msgid "Preferred"
 msgstr "Préféré"
 
-#: templates/contacts.php:376
+#: templates/contacts.php:389
 msgid "Please specify a valid email address."
 msgstr "Veuillez entrer une adresse e-mail valide."
 
-#: templates/contacts.php:376
+#: templates/contacts.php:389
 msgid "someone@example.com"
 msgstr "personne@exemple.com"
 
-#: templates/contacts.php:378
+#: templates/contacts.php:391
 msgid "Mail to address"
 msgstr "Envoyer à l'adresse"
 
-#: templates/contacts.php:379
+#: templates/contacts.php:392
 msgid "Delete email address"
 msgstr "Supprimer l'adresse e-mail"
 
-#: templates/contacts.php:391
+#: templates/contacts.php:404
 msgid "Enter phone number"
 msgstr "Entrer un numéro de téléphone"
 
-#: templates/contacts.php:407
+#: templates/contacts.php:420
 msgid "Go to web site"
 msgstr "Allez à la page web"
 
-#: templates/contacts.php:424
+#: templates/contacts.php:437
 msgid "View on map"
 msgstr "Voir sur une carte"
 
-#: templates/contacts.php:432
+#: templates/contacts.php:445
 msgid "Street address"
 msgstr "Adresse postale"
 
-#: templates/contacts.php:436
+#: templates/contacts.php:449
 msgid "Postal code"
 msgstr "Code postal"
 
-#: templates/contacts.php:438
+#: templates/contacts.php:451
 msgid "City"
 msgstr "Ville"
 
-#: templates/contacts.php:442
+#: templates/contacts.php:455
 msgid "State or province"
 msgstr "Pays ou région"
 
-#: templates/contacts.php:446
+#: templates/contacts.php:459
 msgid "Country"
 msgstr "Pays"
 
-#: templates/contacts.php:473
+#: templates/contacts.php:486
 msgid "Instant Messenger"
 msgstr "Instant Messenger"
 
-#: templates/contacts.php:486
+#: templates/contacts.php:499
 msgid "Active"
 msgstr "Carnet actif"
 
-#: templates/contacts.php:489 templates/settings.php:36
+#: templates/contacts.php:502
 msgid "Share"
 msgstr "Partager"
 
-#: templates/contacts.php:490
+#: templates/contacts.php:503
 msgid "Export"
 msgstr "Exporter"
 
-#: templates/contacts.php:491
+#: templates/contacts.php:504
 msgid "CardDAV link"
 msgstr "Lien CardDAV"
 
-#: templates/settings.php:3
-msgid "CardDAV syncing addresses"
-msgstr "Synchronisation des contacts CardDAV"
-
-#: templates/settings.php:3
-msgid "more info"
-msgstr "plus d'infos"
-
-#: templates/settings.php:5
-msgid "Primary address (Kontact et al)"
-msgstr "Adresses principales (Kontact et assimilés)"
-
-#: templates/settings.php:7
-msgid "iOS/OS X"
-msgstr "iOS/OS X"
-
-#: templates/settings.php:11
-msgid "Addressbooks"
-msgstr "Carnets d'adresses"
-
-#: templates/settings.php:58
-msgid "New Address Book"
-msgstr "Nouveau Carnet d'adresses"
-
-#: templates/settings.php:60
-msgid "Description"
-msgstr "Description"
+#: templates/contacts.php:505
+msgid "Edit"
+msgstr "Modifier"

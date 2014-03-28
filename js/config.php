@@ -29,8 +29,8 @@ $user = OCP\User::getUser();
 $groupsort = OCP\Config::getUserValue($user, 'contacts', 'groupsort', '');
 $groupsort = explode(',', $groupsort);
 $tmp = array();
-foreach($groupsort as $group) {
-	if(is_int($group)) {
+foreach ($groupsort as $group) {
+	if (is_int($group)) {
 		$tmp[] = $group;
 	}
 }

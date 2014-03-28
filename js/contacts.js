@@ -35,7 +35,7 @@ OC.Contacts = OC.Contacts || {};
 			contactId: this.id,
 			addressBookId: this.metadata.parent,
 			backend: this.metadata.backend
-		}
+		};
 	};
 
 	Contact.prototype.getDisplayName = function() {
@@ -149,7 +149,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 			// Not found, so adding it.
 			self.data[name].push(newproperty);
-		}
+		};
 
 		var self = this;
 		$.each(mergees, function(idx, mergee) {
@@ -181,10 +181,17 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	Contact.prototype.showActions = function(act) {
-		this.$footer.children().hide();
-		if(act && act.length > 0) {
-			this.$footer.children('.'+act.join(',.')).show();
-		}
+		// non-destructive merge.
+		var $actions = $.merge($.merge([], this.$footer.children()), this.$header.children());
+		$.each($actions, function(idx, action) {
+			$(action).hide();
+			$.each(act, function(i, a) {
+				if($(action).hasClass(a)) {
+					$(action).show();
+					return false; // break
+				}
+			});
+		});
 	};
 
 	Contact.prototype.setAsSaving = function(obj, state) {
@@ -256,11 +263,11 @@ OC.Contacts = OC.Contacts || {};
 			oldvalue: params.oldvalue
 		});
 		//console.log('undoQueue', this.undoQueue);
-	}
+	};
 	
 	Contact.prototype.addProperty = function($option, name) {
-		console.log('Contact.addProperty', name)
-		var $elem;
+		console.log('Contact.addProperty', name);
+		var $elem, $list;
 		switch(name) {
 			case 'NICKNAME':
 			case 'TITLE':
@@ -269,7 +276,7 @@ OC.Contacts = OC.Contacts || {};
 			case 'NOTE':
 				$elem = this.$fullelem.find('[data-element="' + name.toLowerCase() + '"]');
 				$elem.addClass('new').show();
-				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$list = this.$fullelem.find('ul.' + name.toLowerCase());
 				$list.show();
 				$elem.find('input:not(:checkbox),textarea').first().focus();
 				$option.prop('disabled', true);
@@ -277,16 +284,16 @@ OC.Contacts = OC.Contacts || {};
 			case 'TEL':
 			case 'URL':
 			case 'EMAIL':
-				var $elem = this.renderStandardProperty(name.toLowerCase());
-				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$elem = this.renderStandardProperty(name.toLowerCase());
+				$list = this.$fullelem.find('ul.' + name.toLowerCase());
 				$list.show();
 				$list.append($elem);
 				$elem.find('input.value').addClass('new');
 				$elem.find('input:not(:checkbox)').first().focus();
 				break;
 			case 'ADR':
-				var $elem = this.renderAddressProperty();
-				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$elem = this.renderAddressProperty();
+				$list = this.$fullelem.find('ul.' + name.toLowerCase());
 				$list.show();
 				$list.append($elem);
 				$elem.find('.display').trigger('click');
@@ -294,8 +301,8 @@ OC.Contacts = OC.Contacts || {};
 				$elem.find('input:not(:checkbox)').first().focus();
 				break;
 			case 'IMPP':
-				var $elem = this.renderIMProperty();
-				var $list = this.$fullelem.find('ul.' + name.toLowerCase());
+				$elem = this.renderIMProperty();
+				$list = this.$fullelem.find('ul.' + name.toLowerCase());
 				$list.show();
 				$list.append($elem);
 				$elem.find('input.value').addClass('new');
@@ -329,13 +336,12 @@ OC.Contacts = OC.Contacts || {};
 		var element = this.propertyTypeFor(obj);
 		var $container = this.propertyContainerFor(obj);
 		console.log('Contact.deleteProperty, element', element, $container);
-		var params = {
-			name: element,
-			value: null
-		};
+		params.name = element;
+		params.value = null;
+
 		if(this.multi_properties.indexOf(element) !== -1) {
-			params['checksum'] = this.checksumFor(obj);
-			if(params['checksum'] === 'new' && $.trim(this.valueFor(obj)) === '') {
+			params.checksum = this.checksumFor(obj);
+			if(params.checksum === 'new' && $.trim(this.valueFor(obj)) === '') {
 				// If there's only one property of this type enable setting as preferred.
 				if((undefined !== this.data[element] && this.data[element].length) && (this.data[element].length === 1)) {
 					var selector = 'li[data-element="' + element.toLowerCase() + '"]';
@@ -419,7 +425,6 @@ OC.Contacts = OC.Contacts || {};
 			console.log(response.message);
 			$(document).trigger('status.contacts.error', response);
 		});
-;
 	};
 
 	/**
@@ -429,8 +434,8 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Contact.prototype.saveAll = function(cb) {
 		console.log('Contact.saveAll');
+		var self = this;
 		if(!this.id) {
-			var self = this;
 			this.add({isnew:true}, function(response) {
 				if(response.error) {
 					console.warn('No response object');
@@ -440,10 +445,9 @@ OC.Contacts = OC.Contacts || {};
 			});
 			return;
 		}
-		var self = this;
+
 		this.setAsSaving(this.$fullelem, true);
-		var data = JSON.stringify(this.data);
-		//console.log('stringified', data);
+
 		$.when(this.storage.saveAllProperties(this.metadata.backend, this.metadata.parent, this.id, {data:this.data}))
 			.then(function(response) {
 			if(!response.error) {
@@ -462,7 +466,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 			self.setAsSaving(self.$fullelem, false);
 		});
-	}
+	};
 
 	/**
 	 * @brief Act on change of a property.
@@ -476,8 +480,9 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	Contact.prototype.saveProperty = function(params) {
 		console.log('Contact.saveProperty', params);
+		var self = this;
+
 		if(!this.id) {
-			var self = this;
 			this.add({isnew:true}, function(response) {
 				if(!response || response.status === 'error') {
 					console.warn('No response object');
@@ -491,6 +496,7 @@ OC.Contacts = OC.Contacts || {};
 		var obj = null;
 		var element = null;
 		var args = [];
+
 		if(params.obj) {
 			obj = params.obj;
 			args = this.argumentsFor(obj);
@@ -499,16 +505,14 @@ OC.Contacts = OC.Contacts || {};
 		} else {
 			args = params;
 			element = params.name;
-			var value = utils.isArray(params.value)
-				? $.param(params.value)
-				: encodeURIComponent(params.value);
 		}
+
 		if(!args) {
 			console.log('No arguments. returning');
 			return false;
 		}
 		console.log('args', args);
-		var self = this;
+
 		this.setAsSaving(obj, true);
 		$.when(this.storage.patchContact(this.metadata.backend, this.metadata.parent, this.id, args))
 			.then(function(response) {
@@ -521,9 +525,9 @@ OC.Contacts = OC.Contacts || {};
 					var checksum = self.checksumFor(obj);
 					var value = self.valueFor(obj);
 					var parameters = self.parametersFor(obj);
-					if(parameters['TYPE'] && parameters['TYPE'].indexOf('PREF') !== -1) {
-						parameters['PREF'] = 1;
-						parameters['TYPE'].splice(parameters['TYPE'].indexOf('PREF', 1));
+					if(parameters.TYPE && parameters.TYPE.indexOf('PREF') !== -1) {
+						parameters.PREF = 1;
+						parameters.TYPE.splice(parameters.TYPE.indexOf('PREF', 1));
 					}
 					if(checksum && checksum !== 'new') {
 						self.pushToUndo({
@@ -587,27 +591,28 @@ OC.Contacts = OC.Contacts || {};
 							if(!self.data.FN || !self.data.FN.length) {
 								self.data.FN = [{name:'FN', value:'', parameters:[]}];
 							}
-							self.data.FN[0]['value'] = value;
+							self.data.FN[0].value = value;
+							// Used for sorting list elements
 							self.displayNames.fn = value;
 							var nempty = true;
 							if(!self.data.N) {
 								// TODO: Maybe add a method for constructing new elements?
 								self.data.N = [{name:'N',value:['', '', '', '', ''],parameters:[]}];
 							}
-							$.each(self.data.N[0]['value'], function(idx, val) {
+							$.each(self.data.N[0].value, function(idx, val) {
 								if(val) {
 									nempty = false;
 									return false;
 								}
 							});
 							if(nempty) {
-								self.data.N[0]['value'] = ['', '', '', '', ''];
+								self.data.N[0].value = ['', '', '', '', ''];
 								var nvalue = value.split(' ');
 								// Very basic western style parsing. I'm not gonna implement
 								// https://github.com/android/platform_packages_providers_contactsprovider/blob/master/src/com/android/providers/contacts/NameSplitter.java ;)
-								self.data.N[0]['value'][0] = nvalue.length > 2 && nvalue.slice(nvalue.length-1).toString() || nvalue[1] || '';
-								self.data.N[0]['value'][1] = nvalue[0] || '';
-								self.data.N[0]['value'][2] = nvalue.length > 2 && nvalue.slice(1, nvalue.length-1).join(' ') || '';
+								self.data.N[0].value[0] = nvalue.length > 2 && nvalue.slice(nvalue.length-1).toString() || nvalue[1] || '';
+								self.data.N[0].value[1] = nvalue[0] || '';
+								self.data.N[0].value[2] = nvalue.length > 2 && nvalue.slice(1, nvalue.length-1).join(' ') || '';
 								setTimeout(function() {
 									self.saveProperty({name:'N', value:self.data.N[0].value.join(';')});
 								}, 500);
@@ -619,17 +624,19 @@ OC.Contacts = OC.Contacts || {};
 							break;
 						case 'N':
 							if(!utils.isArray(value)) {
-								value = value.split(';');
 								// Then it is auto-generated from FN.
-								var $nelems = self.$fullelem.find('.n.editor input');
+								value = value.split(';');
+
 								$.each(value, function(idx, val) {
 									self.$fullelem.find('#n_' + idx).val(val).get(0).defaultValue = val;
 								});
 							}
-							self.displayNames.fl = value.slice(0, 2).reverse().join(' ');
 
+							// Used for sorting list elements
+							self.displayNames.fl = value.slice(0, 2).reverse().join(' ');
 							self.displayNames.lf = value.slice(0, 2).join(', ').trim();
-							var $fullname = self.$fullelem.find('.fullname'), fullname = '';
+
+							var $fullname = self.$fullelem.find('.fullname');
 							var update_fn = false;
 							if(!self.data.FN) {
 								self.data.FN = [{name:'FN', value:'', parameters:[]}];
@@ -639,28 +646,29 @@ OC.Contacts = OC.Contacts || {};
 							 * also check if the contents of FN equals parts of N and fill
 							 * out the rest.
 							 */
-							if(self.data.FN[0]['value'] === '') {
-								self.data.FN[0]['value'] = value[1] + ' ' + value[0];
-								$fullname.val(self.data.FN[0]['value']);
+							if(self.data.FN[0].value === '') {
+								self.data.FN[0].value = value[1] + ' ' + value[0];
+								$fullname.val(self.data.FN[0].value);
 								update_fn = true;
-							} else if($fullname.val() == value[1] + ' ') {
-								self.data.FN[0]['value'] = value[1] + ' ' + value[0];
-								$fullname.val(self.data.FN[0]['value']);
+							} else if($fullname.val() === value[1] + ' ') {
+								self.data.FN[0].value = value[1] + ' ' + value[0];
+								$fullname.val(self.data.FN[0].value);
 								update_fn = true;
-							} else if($fullname.val() == ' ' + value[0]) {
-								self.data.FN[0]['value'] = value[1] + ' ' + value[0];
-								$fullname.val(self.data.FN[0]['value']);
+							} else if($fullname.val() === ' ' + value[0]) {
+								self.data.FN[0].value = value[1] + ' ' + value[0];
+								$fullname.val(self.data.FN[0].value);
 								update_fn = true;
 							}
 							if(update_fn) {
 								setTimeout(function() {
-									self.saveProperty({name:'FN', value:self.data.FN[0]['value']});
+									self.saveProperty({name:'FN', value:self.data.FN[0].value});
 								}, 1000);
 							}
 							if(!self.hasPhoto() && self.sortOrder !== 'fn') {
 								self.loadAvatar();
 							}
 						case 'NICKNAME':
+							/* falls through */
 						case 'ORG':
 							// Auto-fill FN if empty
 							if(!self.data.FN) {
@@ -668,6 +676,7 @@ OC.Contacts = OC.Contacts || {};
 								self.$fullelem.find('.fullname').val(value).trigger('change');
 							}
 						case 'TITLE':
+							/* falls through */
 						case 'NOTE':
 							self.data[element][0] = {
 								name: element,
@@ -784,10 +793,14 @@ OC.Contacts = OC.Contacts || {};
 		$.when(this.storage.addContact(this.metadata.backend, this.metadata.parent))
 			.then(function(response) {
 			if(!response.error) {
-				self.id = String(response.data.metadata.id);
-				self.metadata = response.data.metadata;
-				self.data = response.data.data;
-				self.$groupSelect.multiselect('enable');
+				self.id = String(response.metadata.id);
+				self.metadata = response.metadata;
+				self.data = response.data;
+				console.log('Contact.add, groupprops', self.groupprops);
+				if(self.groupprops && self.groupprops.groups.length > 0) {
+					self._buildGroupSelect(self.groupprops.groups);
+					self.$groupSelect.multiselect('enable');
+				}
 				// Add contact to current group
 				if(self.groupprops
 					&& ['all', 'fav', 'uncategorized'].indexOf(self.groupprops.currentgroup.id) === -1
@@ -811,7 +824,7 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('status.contacts.error', response);
 				return false;
 			}
-			if(typeof cb == 'function') {
+			if(typeof cb === 'function') {
 				cb(response);
 			}
 		});
@@ -829,8 +842,6 @@ OC.Contacts = OC.Contacts || {};
 			this.metadata.parent,
 			this.id)
 		).then(function(response) {
-		//$.post(OC.filePath('contacts', 'ajax', 'contact/delete.php'),
-		//	   {id: this.id}, function(response) {
 			if(!response.error) {
 				if(self.$listelem) {
 					self.$listelem.remove();
@@ -839,7 +850,7 @@ OC.Contacts = OC.Contacts || {};
 					self.$fullelem.remove();
 				}
 			}
-			if(typeof cb == 'function') {
+			if(typeof cb === 'function') {
 				if(response.error) {
 					cb(response);
 				} else {
@@ -853,36 +864,36 @@ OC.Contacts = OC.Contacts || {};
 		console.log('Contact.argumentsFor', $(obj));
 		var args = {};
 		var ptype = this.propertyTypeFor(obj);
-		args['name'] = ptype;
+		args.name = ptype;
 
 		if(this.multi_properties.indexOf(ptype) !== -1) {
-			args['checksum'] = this.checksumFor(obj);
+			args.checksum = this.checksumFor(obj);
 		}
 
 		if($(obj).hasClass('propertycontainer')) {
 			if($(obj).is('select[data-element="categories"]')) {
-				args['value'] = [];
+				args.value = [];
 				$.each($(obj).find(':selected'), function(idx, e) {
-					args['value'].push($(e).text());
+					args.value.push($(e).text());
 				});
 			} else {
-				args['value'] = $(obj).val();
+				args.value = $(obj).val();
 			}
 		} else {
 			var $elements = this.propertyContainerFor(obj)
 				.find('input.value,select.value,textarea.value');
 			if($elements.length > 1) {
-				args['value'] = [];
+				args.value = [];
 				$.each($elements, function(idx, e) {
-					args['value'][parseInt($(e).attr('name').substr(6,1))] = $(e).val();
+					args.value[parseInt($(e).attr('name').substr(6,1))] = $(e).val();
 					//args['value'].push($(e).val());
 				});
 			} else {
 				var value = $elements.val();
-				switch(args['name']) {
+				switch(args.name) {
 					case 'BDAY':
 						try {
-							args['value'] = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate(datepickerFormatDate, value));
+							args.value = $.datepicker.formatDate('yy-mm-dd', $.datepicker.parseDate(datepickerFormatDate, value));
 						} catch(e) {
 							$(document).trigger(
 								'status.contacts.error',
@@ -892,12 +903,12 @@ OC.Contacts = OC.Contacts || {};
 						}
 						break;
 					default:
-						args['value'] = value;
+						args.value = value;
 						break;
 				}
 			}
 		}
-		args['parameters'] = this.parametersFor(obj);
+		args.parameters = this.parametersFor(obj);
 		console.log('Contact.argumentsFor', args);
 		return args;
 	};
@@ -964,8 +975,7 @@ OC.Contacts = OC.Contacts || {};
 	Contact.prototype.parametersFor = function(obj, asText) {
 		var parameters = {};
 		$.each(this.propertyContainerFor(obj)
-			.find('select.parameter,input:checkbox:checked.parameter'),
-			   function(i, elem) {
+			.find('select.parameter,input:checkbox:checked.parameter'), function(i, elem) {
 			var $elem = $(elem);
 			var paramname = $elem.data('parameter');
 			if(!parameters[paramname]) {
@@ -1008,7 +1018,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 		this.setThumbnail(this.$dragelem);
 		return this.$dragelem;
-	}
+	};
 
 	/**
 	 * Render the list item
@@ -1055,7 +1065,7 @@ OC.Contacts = OC.Contacts || {};
 					cursor: 'move',
 					distance: 10,
 					revert: 'invalid',
-					helper: function (e,ui) {
+					helper: function(/*event, ui*/) {
 						return self.renderDragItem().appendTo('body');
 					},
 					opacity: 1,
@@ -1069,6 +1079,84 @@ OC.Contacts = OC.Contacts || {};
 		return this.$listelem;
 	};
 
+	Contact.prototype._buildGroupSelect = function(availableGroups) {
+		var self = this;
+		this.$fullelem.find('.groupscontainer').show();
+		//this.$groupSelect.find('option').remove();
+		$.each(availableGroups, function(idx, group) {
+			var $option = $('<option value="' + group.id + '">' + group.name + '</option>');
+			if(self.inGroup(group.name)) {
+				$option.attr('selected', 'selected');
+			}
+			self.$groupSelect.append($option);
+		});
+		self.$groupSelect.multiselect({
+			header: false,
+			selectedList: 3,
+			noneSelectedText: self.$groupSelect.attr('title'),
+			selectedText: t('contacts', '# groups'),
+			minWidth: 300
+		});
+		self.$groupSelect.bind('multiselectclick', function(event, ui) {
+			var action = ui.checked ? 'addtogroup' : 'removefromgroup';
+			console.assert(typeof self.id === 'string', 'ID is not a string');
+			$(document).trigger('request.contact.' + action, {
+				id: self.id,
+				groupid: parseInt(ui.value)
+			});
+			if(ui.checked) {
+				self.addToGroup(ui.text);
+			} else {
+				self.removeFromGroup(ui.text);
+			}
+		});
+		if(!self.id || !self.hasPermission(OC.PERMISSION_UPDATE)) {
+			self.$groupSelect.multiselect('disable');
+		}
+	};
+
+	Contact.prototype._buildAddressBookSelect = function(availableAddressBooks) {
+		var self = this;
+		console.log('address books', availableAddressBooks.length, availableAddressBooks);
+		$.each(availableAddressBooks, function(idx, addressBook) {
+			//console.log('addressBook', idx, addressBook);
+			var $option = $('<option />')
+				.val(addressBook.getId())
+				.text(addressBook.getDisplayName() + '(' + addressBook.getBackend() + ')')
+				.data('backend', addressBook.getBackend())
+				.data('owner', addressBook.getOwner());
+			if(self.metadata.parent === addressBook.getId()
+				&& self.metadata.backend === addressBook.getBackend()) {
+				$option.attr('selected', 'selected');
+			}
+			self.$addressBookSelect.append($option);
+		});
+		self.$addressBookSelect.multiselect({
+			header: false,
+			multiple: false,
+			selectedList: 3,
+			noneSelectedText: self.$addressBookSelect.attr('title'),
+			minWidth: 300
+		});
+		self.$addressBookSelect.on('multiselectclick', function(event, ui) {
+			console.log('AddressBook select', ui);
+			self.$addressBookSelect.val(ui.value);
+			var opt = self.$addressBookSelect.find(':selected');
+			if(self.id) {
+				console.log('AddressBook', opt);
+				$(document).trigger('request.contact.move', {
+					contact: self,
+					from: {id:self.getParent(), backend:self.getBackend()},
+					target: {id:opt.val(), backend:opt.data('backend')}
+				});
+			} else {
+				self.setBackend(opt.data('backend'));
+				self.setParent(opt.val());
+				self.setOwner(opt.data('owner'));
+			}
+		});
+	};
+
 	/**
 	 * Render the full contact
 	 * @return A jquery object to be inserted in the DOM
@@ -1077,84 +1165,6 @@ OC.Contacts = OC.Contacts || {};
 		var self = this;
 		this.groupprops = groupprops;
 		
-		var buildGroupSelect = function(availableGroups) {
-			//this.$groupSelect.find('option').remove();
-			$.each(availableGroups, function(idx, group) {
-				var $option = $('<option value="' + group.id + '">' + group.name + '</option>');
-				if(self.inGroup(group.name)) {
-					$option.attr('selected', 'selected');
-				}
-				self.$groupSelect.append($option);
-			});
-			self.$groupSelect.multiselect({
-				header: false,
-				selectedList: 3,
-				noneSelectedText: self.$groupSelect.attr('title'),
-				selectedText: t('contacts', '# groups'),
-				minWidth: 300
-			});
-			self.$groupSelect.bind('multiselectclick', function(event, ui) {
-				var action = ui.checked ? 'addtogroup' : 'removefromgroup';
-				console.assert(typeof self.id === 'string', 'ID is not a string')
-				$(document).trigger('request.contact.' + action, {
-					id: self.id,
-					groupid: parseInt(ui.value)
-				});
-				if(ui.checked) {
-					self.addToGroup(ui.text);
-				} else {
-					self.removeFromGroup(ui.text);
-				}
-			});
-			if(!self.id || !self.hasPermission(OC.PERMISSION_UPDATE)) {
-				self.$groupSelect.multiselect('disable');
-			}
-		};
-		
-		var buildAddressBookSelect = function(availableAddressBooks) {
-			console.log('address books', availableAddressBooks.length, availableAddressBooks);
-			$.each(availableAddressBooks, function(idx, addressBook) {
-				//console.log('addressBook', idx, addressBook);
-				var $option = $('<option />')
-					.val(addressBook.getId())
-					.text(addressBook.getDisplayName() + '(' + addressBook.getBackend() + ')')
-					.data('backend', addressBook.getBackend())
-					.data('owner', addressBook.getOwner());
-				if(self.metadata.parent === addressBook.getId()
-					&& self.metadata.backend === addressBook.getBackend()) {
-					$option.attr('selected', 'selected');
-				}
-				self.$addressBookSelect.append($option);
-			});
-			self.$addressBookSelect.multiselect({
-				header: false,
-				multiple: false,
-				selectedList: 3,
-				noneSelectedText: self.$addressBookSelect.attr('title'),
-				minWidth: 300
-			});
-			self.$addressBookSelect.on('multiselectclick', function(event, ui) {
-				console.log('AddressBook select', ui);
-				self.$addressBookSelect.val(ui.value);
-				var opt = self.$addressBookSelect.find(':selected');
-				if(self.id) {
-					console.log('AddressBook', opt);
-					$(document).trigger('request.contact.move', {
-						contact: self,
-						from: {id:self.getParent(), backend:self.getBackend()},
-						target: {id:opt.val(), backend:opt.data('backend')}
-					});
-				} else {
-					self.setBackend(opt.data('backend'));
-					self.setParent(opt.val());
-					self.setOwner(opt.data('owner'));
-				}
-			});
-			if(self.id) {
-				//self.$addressBookSelect.multiselect('disable');
-			}
-		};
-
 		var values;
 		if(this.data) {
 			var n = this.getPreferredValue('N', ['', '', '', '', '']),
@@ -1175,7 +1185,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 			values = {
 				id: this.id,
-				favorite:groupprops.favorite ? 'active' : '',
+				favorite:groupprops.favorite ? 'icon-starred' : 'icon-star',
 				name: this.getPreferredValue('FN', ''),
 				n0: n[0]||'', n1: n[1]||'', n2: n[2]||'', n3: n[3]||'', n4: n[4]||'',
 				nickname: this.getPreferredValue('NICKNAME', ''),
@@ -1183,7 +1193,7 @@ OC.Contacts = OC.Contacts || {};
 				org: this.getPreferredValue('ORG', []).clean('').join(', '), // TODO Add parts if more than one.
 				bday: bday,
 				note: this.getPreferredValue('NOTE', '')
-			}
+			};
 		} else {
 			values = {id:'', favorite:'', name:'', nickname:'', title:'', org:'', bday:'', note:'', n0:'', n1:'', n2:'', n3:'', n4:''};
 		}
@@ -1191,26 +1201,29 @@ OC.Contacts = OC.Contacts || {};
 
 		this.$header = this.$fullelem.find('header');
 		this.$footer = this.$fullelem.find('footer');
+		this.$groupSelect = this.$fullelem.find('#contactgroups');
+		this.$addressBookSelect = this.$fullelem.find('#contactaddressbooks');
 
 		this.$fullelem.find('.tooltipped.rightwards.onfocus').tipsy({trigger: 'focus', gravity: 'w'});
 		this.$fullelem.on('submit', function() {
 			return false;
 		});
 		
-		if(this.getOwner() === OC.currentUser) {
-			this.$groupSelect = this.$fullelem.find('#contactgroups');
-			buildGroupSelect(groupprops.groups);
+		if(this.getOwner() === OC.currentUser && groupprops.groups.length > 0) {
+			this._buildGroupSelect(groupprops.groups);
+		} else {
+			this.$fullelem.find('.groupscontainer').hide();
 		}
 		
 		var writeableAddressBooks = this.parent.addressBooks.selectByPermission(OC.PERMISSION_CREATE);
 		if(writeableAddressBooks.length > 1 && this.hasPermission(OC.PERMISSION_DELETE)) {
-			this.$addressBookSelect = this.$fullelem.find('#contactaddressbooks');
-			buildAddressBookSelect(writeableAddressBooks);
+			this._buildAddressBookSelect(writeableAddressBooks);
+		} else {
+			this.$fullelem.find('.addressbookcontainer').hide();
 		}
 
 		this.$addMenu = this.$fullelem.find('#addproperty');
-		this.$addMenu.on('change', function(event) {
-			//console.log('add', $(this).val());
+		this.$addMenu.on('change', function(/*event*/) {
 			var $opt = $(this).find('option:selected');
 			self.addProperty($opt, $(this).val());
 			$(this).val('');
@@ -1230,7 +1243,7 @@ OC.Contacts = OC.Contacts || {};
 			$(this).css('opacity', '0');
 			var $editor = $(this).next('.n.editor').first();
 			var bodyListener = function(e) {
-				if($editor.find($(e.target)).length == 0) {
+				if($editor.find($(e.target)).length === 0) {
 					$editor.toggle('blind');
 					$('body').unbind('click', bodyListener);
 				}
@@ -1248,7 +1261,7 @@ OC.Contacts = OC.Contacts || {};
 			self.deleteProperty({obj:event.target});
 		});
 
-		this.$fullelem.on('click keydown', '.globe,.mail', function(event) {
+		this.$fullelem.on('click keydown', '.globe,.mail,.favorite', function(event) {
 			$('.tipsy').remove();
 			if(wrongKey(event)) {
 				return;
@@ -1293,6 +1306,18 @@ OC.Contacts = OC.Contacts || {};
 			if($(this).hasClass('value') && this.value === this.defaultValue) {
 				return;
 			}
+			function isMultiByte(str) {
+				return /[\uD800-\uDFFF]/.test(str);
+			}
+
+			if (isMultiByte(this.value) && self.getBackend()) {
+				$(document).trigger('status.contacts.error',
+				{error:true, message: t('contacts', 'The backend does not support multi-byte characters.')});
+				if(this.defaultValue) {
+					this.value = this.defaultValue;
+				}
+				return;
+			}
 			//console.log('change', this.defaultValue, this.value);
 			this.defaultValue = this.value;
 			self.saveProperty({obj:event.target});
@@ -1305,20 +1330,20 @@ OC.Contacts = OC.Contacts || {};
 		$bdayinput.attr('placeholder', $.datepicker.formatDate(datepickerFormatDate, new Date()));
 
 		this.$fullelem.find('.favorite').on('click', function () {
-			var state = $(this).hasClass('active');
+			var state = $(this).hasClass('icon-starred');
 			if(!self.data) {
 				return;
 			}
 			if(state) {
-				$(this).switchClass('active', 'inactive');
+				$(this).switchClass('icon-starred', 'icon-star');
 			} else {
-				$(this).switchClass('inactive', 'active');
+				$(this).switchClass('icon-star', 'icon-starred');
 			}
 			$(document).trigger('request.contact.setasfavorite', {
 				id: self.id,
 				state: !state
 			});
-		});
+		}).tipsy();
 		this.loadAvatar();
 		if(!this.data) {
 			// A new contact
@@ -1392,41 +1417,45 @@ OC.Contacts = OC.Contacts || {};
 						//console.log('$property', $property);
 						var meta = [];
 						if(property.label) {
-							if(!property.parameters['TYPE']) {
-								property.parameters['TYPE'] = [];
+							if(!property.parameters.TYPE) {
+								property.parameters.TYPE = [];
 							}
-							property.parameters['TYPE'].push(property.label);
+							property.parameters.TYPE.push(property.label);
 							meta.push(property.label);
 						}
 						for(var param in property.parameters) {
-							//console.log('param', param);
-							if(param.toUpperCase() == 'PREF') {
-								var $cb = $property.find('input[type="checkbox"]');
-								$cb.attr('checked', 'checked');
-								meta.push($cb.attr('title'));
-							}
-							else if(param.toUpperCase() == 'TYPE') {
-								for(var etype in property.parameters[param]) {
-									var found = false;
-									var et = property.parameters[param][etype];
-									if(typeof et !== 'string') {
-										continue;
-									}
-									$property.find('select.type option').each(function() {
-										if($(this).val().toUpperCase() === et.toUpperCase()) {
-											$(this).attr('selected', 'selected');
-											meta.push($(this).text());
-											found = true;
+							if(property.parameters.hasOwnProperty(param)) {
+								//console.log('param', param);
+								if(param.toUpperCase() === 'PREF') {
+									var $cb = $property.find('input[type="checkbox"]');
+									$cb.attr('checked', 'checked');
+									meta.push($cb.attr('title'));
+								}
+								else if(param.toUpperCase() === 'TYPE') {
+									for(var etype in property.parameters[param]) {
+										if(!property.parameters[param].hasOwnProperty(etype)) {
+											var found = false;
+											var et = property.parameters[param][etype];
+											if(typeof et !== 'string') {
+												continue;
+											}
+											$property.find('select.type option').each(function() {
+												if($(this).val().toUpperCase() === et.toUpperCase()) {
+													$(this).attr('selected', 'selected');
+													meta.push($(this).text());
+													found = true;
+												}
+											});
+											if(!found) {
+												$property.find('select.type option:last-child').after('<option value="'+et+'" selected="selected">'+et+'</option>');
+											}
 										}
-									});
-									if(!found) {
-										$property.find('select.type option:last-child').after('<option value="'+et+'" selected="selected">'+et+'</option>');
 									}
 								}
-							}
-							else if(param.toUpperCase() == 'X-SERVICE-TYPE') {
-								//console.log('setting', $property.find('select.impp'), 'to', property.parameters[param].toLowerCase());
-								$property.find('select.rtl').val(property.parameters[param].toLowerCase());
+								else if(param.toUpperCase() === 'X-SERVICE-TYPE') {
+									//console.log('setting', $property.find('select.impp'), 'to', property.parameters[param].toLowerCase());
+									$property.find('select.rtl').val(property.parameters[param].toLowerCase());
+								}
 							}
 						}
 						var $meta = $property.find('.meta');
@@ -1485,7 +1514,7 @@ OC.Contacts = OC.Contacts || {};
 	 * @return A jquery object to be injected in the DOM
 	 */
 	Contact.prototype.renderAddressProperty = function(idx, property) {
-		if(!this.detailTemplates['adr']) {
+		if(!this.detailTemplates.adr) {
 			console.warn('No template for adr', this.detailTemplates);
 			return;
 		}
@@ -1509,7 +1538,7 @@ OC.Contacts = OC.Contacts || {};
 				idx: idx
 			}
 			: {value:'', checksum:'new', adr0:'', adr1:'', adr2:'', adr3:'', adr4:'', adr5:'', adr6:'', idx: idx};
-		var $elem = this.detailTemplates['adr'].octemplate(values);
+		var $elem = this.detailTemplates.adr.octemplate(values);
 		var self = this;
 		$elem.find('.tooltipped.downwards:not(.onfocus)').tipsy({gravity: 'n'});
 		$elem.find('.tooltipped.rightwards.onfocus').tipsy({trigger: 'focus', gravity: 'w'});
@@ -1518,13 +1547,12 @@ OC.Contacts = OC.Contacts || {};
 			var $editor = $(this).siblings('.adr.editor').first();
 			var $viewer = $(this);
 			var bodyListener = function(e) {
-				if($editor.find($(e.target)).length == 0) {
+				if($editor.find($(e.target)).length === 0) {
 					$editor.toggle('blind');
 					$viewer.slideDown(550, function() {
 						var input = $editor.find('input').first();
-						var val = self.valueFor(input);
 						var params = self.parametersFor(input, true);
-						$(this).find('.meta').html(params['TYPE'].join('/'));
+						$(this).find('.meta').html(params.TYPE.join('/'));
 						$(this).find('.adr').html(self.valueFor($editor.find('input').first()).clean('').join(', '));
 						$(this).next('.listactions').css('display', 'inline-block');
 						$('body').unbind('click', bodyListener);
@@ -1540,11 +1568,11 @@ OC.Contacts = OC.Contacts || {};
 			.autocomplete({
 				source: function( request, response ) {
 					$.ajax({
-						url: "http://ws.geonames.org/searchJSON",
-						dataType: "jsonp",
+						url: 'http://ws.geonames.org/searchJSON',
+						dataType: 'jsonp',
 						data: {
-							featureClass: "P",
-							style: "full",
+							featureClass: 'P',
+							style: 'full',
 							maxRows: 12,
 							lang: $elem.data('lang'),
 							name_startsWith: request.term
@@ -1552,7 +1580,7 @@ OC.Contacts = OC.Contacts || {};
 						success: function( data ) {
 							response( $.map( data.geonames, function( item ) {
 								return {
-									label: item.name + (item.adminName1 ? ", " + item.adminName1 : "") + ", " + item.countryName,
+									label: item.name + (item.adminName1 ? ', ' + item.adminName1 : '') + ', ' + item.countryName,
 									value: item.name,
 									country: item.countryName
 								};
@@ -1562,20 +1590,20 @@ OC.Contacts = OC.Contacts || {};
 				},
 				minLength: 2,
 				select: function( event, ui ) {
-					if(ui.item && $.trim($elem.find('.value.country').val()).length == 0) {
+					if(ui.item && $.trim($elem.find('.value.country').val()).length === 0) {
 						$elem.find('.value.country').val(ui.item.country);
 					}
 				}
 			});
 		$elem.find('.value.country')
 			.autocomplete({
-				source: function( request, response ) {
+				source: function(request, response) {
 					$.ajax({
-						url: "http://ws.geonames.org/searchJSON",
-						dataType: "jsonp",
+						url: 'http://ws.geonames.org/searchJSON',
+						dataType: 'jsonp',
 						data: {
 							/*featureClass: "A",*/
-							featureCode: "PCLI",
+							featureCode: 'PCLI',
 							/*countryBias: "true",*/
 							/*style: "full",*/
 							lang: lang,
@@ -1602,7 +1630,7 @@ OC.Contacts = OC.Contacts || {};
 	 * @return A jquery object to be injected in the DOM
 	 */
 	Contact.prototype.renderIMProperty = function(property) {
-		if(!this.detailTemplates['impp']) {
+		if(!this.detailTemplates.impp) {
 			console.warn('No template for impp', this.detailTemplates);
 			return;
 		}
@@ -1610,7 +1638,7 @@ OC.Contacts = OC.Contacts || {};
 			value: property.value,
 			checksum: property.checksum
 		} : {value: '', checksum: 'new'};
-		return this.detailTemplates['impp'].octemplate(values);
+		return this.detailTemplates.impp.octemplate(values);
 	};
 
 	/**
@@ -1636,10 +1664,10 @@ OC.Contacts = OC.Contacts || {};
 			$elem.addClass('thumbnail');
 			$elem.removeAttr('style');
 		}
-	}
+	};
 
 	/**
-	 * Render the PHOTO property.
+	 * Render the PHOTO property or a generated avatar.
 	 */
 	Contact.prototype.loadAvatar = function() {
 		var self = this;
@@ -1710,7 +1738,7 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('request.select.contactphoto.fromcloud', self.metaData());
 			});
 			$phototools.find('.upload').on('click', function() {
-				$(document).trigger('request.select.contactphoto.fromlocal', self.metaData());
+				$(document).trigger('request.select.contactphoto.fromlocal', self);
 			});
 			if(this.hasPhoto()) {
 				$phototools.find('.delete').show();
@@ -1764,7 +1792,7 @@ OC.Contacts = OC.Contacts || {};
 					pref = prop.value;
 				}
 				for(var param in prop.parameters) {
-					if(param.toUpperCase() == 'PREF') {
+					if(param.toUpperCase() === 'PREF') {
 						found = true; //
 						break;
 					}
@@ -1802,8 +1830,8 @@ OC.Contacts = OC.Contacts || {};
 		var found = false;
 
 		$.each(categories, function(idx, category) {
-			if(name.toLowerCase() == $.trim(category).toLowerCase()) {
-				found = true
+			if(name.toLowerCase() === $.trim(category).toLowerCase()) {
+				found = true;
 				return false;
 			}
 		});
@@ -1941,7 +1969,6 @@ OC.Contacts = OC.Contacts || {};
 		});
 		$(document).bind('status.contact.moved', function(e, data) {
 			var contact = data.contact;
-			var oldid = contact.getId();
 			contact.close();
 			contact.reload(data.data);
 			self.contacts[contact.getId()] = contact;
@@ -1950,7 +1977,7 @@ OC.Contacts = OC.Contacts || {};
 			});
 			console.log('status.contact.moved', data);
 		});
-		$(document).bind('request.contact.close', function(e, data) {
+		$(document).bind('request.contact.close', function(/*e, data*/) {
 			self.currentContact = null;
 		});
 		$(document).bind('status.contact.updated', function(e, data) {
@@ -2004,7 +2031,7 @@ OC.Contacts = OC.Contacts || {};
 	 * @return integer
 	 */
 	ContactList.prototype.count = function() {
-		return Object.keys(this.contacts.contacts).length
+		return Object.keys(this.contacts.contacts).length;
 	};
 
 	/**
@@ -2029,7 +2056,7 @@ OC.Contacts = OC.Contacts || {};
 		$(document).trigger('status.contacts.count', {
 			count: self.length
 		});
-	}
+	};
 
 	/**
 	* Show/hide contacts belonging to an addressbook.
@@ -2071,7 +2098,7 @@ OC.Contacts = OC.Contacts || {};
 
 	/**
 	* Show/hide contacts belonging to shared addressbooks.
-	* @param boolean show. Whether to show or hide.
+	* @param Boolean show. Whether to show or hide.
 	*/
 	ContactList.prototype.showSharedAddressbooks = function(show) {
 		console.log('ContactList.showSharedAddressbooks', show);
@@ -2089,7 +2116,7 @@ OC.Contacts = OC.Contacts || {};
 
 	/**
 	* Show contacts in list
-	* @param Array contacts. A list of contact ids.
+	* @param String[] contacts. A list of contact ids.
 	*/
 	ContactList.prototype.showContacts = function(contacts) {
 		console.log('showContacts', contacts);
@@ -2117,7 +2144,7 @@ OC.Contacts = OC.Contacts || {};
 		console.time('show');
 		$('tr.contact').filter(':visible').hide();
 		$.each(contacts, function(idx, id) {
-			var contact =  self.findById(id);
+			var contact = self.findById(id);
 			if(contact === null) {
 				return true; // continue
 			}
@@ -2129,15 +2156,17 @@ OC.Contacts = OC.Contacts || {};
 		// Amazingly this is slightly faster
 		//console.time('show');
 		for(var id in this.contacts) {
-			var contact = this.findById(id);
-			if(contact === null) {
-				continue;
-			}
-			if(contacts.indexOf(String(id)) === -1) {
-				contact.getListItemElement().hide();
-			} else {
-				contact.getListItemElement().show();
-				contact.setThumbnail();
+			if(this.contacts.hasOwnProperty(id)) {
+				var contact = this.findById(id);
+				if(contact === null) {
+					continue;
+				}
+				if(contacts.indexOf(String(id)) === -1) {
+					contact.getListItemElement().hide();
+				} else {
+					contact.getListItemElement().show();
+					contact.setThumbnail();
+				}
 			}
 		}
 		//console.timeEnd('show');*/
@@ -2195,15 +2224,15 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
-	 * TODO: Instead of having a timeout the contacts should be moved to a "Trash" backend/address book
-	 * https://github.com/owncloud/contacts/issues/107
-	 * @param object|object[] data An object or array of objects containing contact identification
-	 * {
-	 * 	contactid: '1234',
-	 * 	addressbookid: '4321',
-	 * 	backend: 'local'
-	 * }
-	 */
+	* TODO: Instead of having a timeout the contacts should be moved to a "Trash" backend/address book
+	* https://github.com/owncloud/contacts/issues/107
+	* @param Object|Object[] data An object or array of objects containing contact identification
+	* {
+	* 	contactid: '1234',
+	* 	addressbookid: '4321',
+	* 	backend: 'local'
+	* }
+	*/
 	ContactList.prototype.delayedDelete = function(data) {
 		console.log('delayedDelete, data:', typeof data, data);
 		var self = this;
@@ -2279,7 +2308,7 @@ OC.Contacts = OC.Contacts || {};
 		console.log('ContactList.deleteContacts, deletionQueue', this.deletionQueue);
 
 		if(this.deletionQueue.length === 1) {
-			contact = this.deletionQueue.shift()
+			contact = this.deletionQueue.shift();
 			// Let contact remove itself.
 			var id = contact.getId();
 			contact.destroy(function(response) {
@@ -2301,7 +2330,8 @@ OC.Contacts = OC.Contacts || {};
 		} else {
 
 			// Make a map of backends, address books and contacts for easier processing.
-			while(contact = this.deletionQueue.shift()) {
+			do {
+				contact = this.deletionQueue.shift();
 				if(!contactMap[contact.getBackend()]) {
 					contactMap[contact.getBackend()] = {};
 				}
@@ -2309,7 +2339,7 @@ OC.Contacts = OC.Contacts || {};
 					contactMap[contact.getBackend()][contact.getParent()] = [];
 				}
 				contactMap[contact.getBackend()][contact.getParent()].push(contact.getId());
-			}
+			} while(this.deletionQueue.length > 0);
 			console.log('map', contactMap);
 
 			// Call each backend/addressBook to delete contacts.
@@ -2359,7 +2389,7 @@ OC.Contacts = OC.Contacts || {};
 			distance: 10,
 			revert: 'invalid',
 			//containment: '#content',
-			helper: function (e,ui) {
+			helper: function (/*event, ui*/) {
 				return $(this).clone().appendTo('body').css('zIndex', 5).show();
 			},
 			opacity: 0.8,
@@ -2548,7 +2578,7 @@ OC.Contacts = OC.Contacts || {};
 		$(document).trigger('status.contacts.count', {
 			count: self.length
 		});
-	}
+	};
 
 	/**
 	* Load contacts
@@ -2559,8 +2589,7 @@ OC.Contacts = OC.Contacts || {};
 		if(!isActive) {
 			return;
 		}
-		var self = this,
-			contacts;
+		var self = this;
 
 		return $.when(self.storage.getAddressBook(backend, addressBookId, false))
 			.then(function(response) {
@@ -2575,7 +2604,7 @@ OC.Contacts = OC.Contacts || {};
 		})
 		.fail(function(response) {
 			console.warn('Request Failed:', response.message);
-			defer.reject({error: true, message: response.message});
+			$(document).trigger('status.contacts.error', response);
 		});
 
 	};

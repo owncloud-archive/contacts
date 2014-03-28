@@ -5,10 +5,6 @@
 "OK" => "D'accòrdi",
 "Add" => "Ajusta",
 "Import" => "Importa",
-"Error" => "Error",
-"Download" => "Avalcarga",
-"Edit" => "Editar",
-"Delete" => "Escafa",
 "There is no error, the file uploaded with success" => "Amontcargament capitat, pas d'errors",
 "The uploaded file exceeds the upload_max_filesize directive in php.ini" => "Lo fichièr amontcargat es tròp bèl per la directiva «upload_max_filesize » del php.ini",
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form" => "Lo fichièr amontcargat es mai gròs que la directiva «MAX_FILE_SIZE» especifiada dins lo formulari HTML",
@@ -18,7 +14,9 @@
 "Failed to write to disk" => "L'escriptura sul disc a fracassat",
 "Other" => "Autres",
 "Work" => "Trabalh",
+"Delete" => "Escafa",
 "Groups" => "Grops",
+"Download" => "Avalcarga",
 "Email" => "Corrièl",
 "Name" => "Nom",
 "Title" => "Títol",
@@ -26,8 +24,5 @@
 "Active" => "Actiu",
 "Share" => "Parteja",
 "Export" => "Exporta",
-"more info" => "mai d'entresenhes",
-"Primary address (Kontact et al)" => "Adreiças primarias (Kontact et al)",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "Descripcion"
+"Edit" => "Editar"
 );

@@ -24,14 +24,14 @@
 
 OCP\App::checkAppEnabled('contacts');
 
-if(substr(OCP\Util::getRequestUri(), 0, strlen(OC_App::getAppWebPath('contacts').'/carddav.php'))
+if (substr(OCP\Util::getRequestUri(), 0, strlen(OC_App::getAppWebPath('contacts').'/carddav.php'))
 	=== OC_App::getAppWebPath('contacts').'/carddav.php'
 ) {
 	$baseuri = OC_App::getAppWebPath('contacts').'/carddav.php';
 }
 
 // only need authentication apps
-$RUNTIME_APPTYPES=array('authentication');
+$RUNTIME_APPTYPES = array('authentication');
 OC_App::loadApps($RUNTIME_APPTYPES);
 
 // Backends
@@ -53,7 +53,7 @@ $addressBookRoot->disableListing = true; // Disable listing
 $nodes = array(
 	$principalCollection,
 	$addressBookRoot,
-	);
+);
 
 // Fire up server
 $server = new Sabre_DAV_Server($nodes);
@@ -67,8 +67,9 @@ $server->addPlugin(new Sabre_DAV_Browser_Plugin(false)); // Show something in th
 $server->addPlugin(new Sabre_CardDAV_VCFExportPlugin());
 $server->addPlugin(new OC_Connector_Sabre_ExceptionLoggerPlugin('carddav'));
 
-if(defined('DEBUG') && DEBUG) {
+if (defined('DEBUG') && DEBUG) {
 	$server->debugExceptions = true;
 }
+
 // And off we go!
 $server->exec();

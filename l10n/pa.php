@@ -2,10 +2,9 @@
 "Contacts" => "ਸੰਪਰਕ",
 "Cancel" => "ਰੱਦ ਕਰੋ",
 "OK" => "ਠੀਕ ਹੈ",
-"Error" => "ਗਲਤੀ",
-"Download" => "ਡਾਊਨਲੋਡ",
-"Delete" => "ਹਟਾਓ",
 "Unknown error" => "ਅਣਜਾਣ ਗਲਤੀ",
+"Delete" => "ਹਟਾਓ",
 "Groups" => "ਗਰੁੱਪ",
+"Download" => "ਡਾਊਨਲੋਡ",
 "Share" => "ਸਾਂਝਾ ਕਰੋ"
 );

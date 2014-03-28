@@ -20,7 +20,7 @@ OC.Contacts = OC.Contacts || {};
 		this.storage = storage;
 		this.$groupList = groupList;
 		var self = this;
-		var numtypes = ['category', 'fav', 'all'];
+
 		this.$groupList.on('click', 'li.group', function(event) {
 			$('.tipsy').remove();
 			if(wrongKey(event)) {
@@ -119,7 +119,7 @@ OC.Contacts = OC.Contacts || {};
 
 	GroupList.prototype.triggerLastGroup = function() {
 		this.selectGroup({id:this.lastgroup});
-	}
+	};
 
 	/**
 	 * Test if a group with this name exists (case-insensitive)
@@ -129,7 +129,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	GroupList.prototype.hasGroup = function(name) {
 		return (this.findByName(name) !== null);
-	}
+	};
 
 	/**
 	 * Get the group name by id.
@@ -260,7 +260,7 @@ OC.Contacts = OC.Contacts || {};
 				ids.push(contactid);
 				doPost = true;
 			} else {
-				if(typeof cb == 'function') {
+				if(typeof cb === 'function') {
 					cb({error:true, message:t('contacts', 'Contact is already in this group.')});
 				}
 			}
@@ -273,7 +273,7 @@ OC.Contacts = OC.Contacts || {};
 			if(ids.length > 0) {
 				doPost = true;
 			} else {
-				if(typeof cb == 'function') {
+				if(typeof cb === 'function') {
 					cb({error:true, message:t('contacts', 'Contacts are already in this group.')});
 				}
 			}
@@ -302,7 +302,7 @@ OC.Contacts = OC.Contacts || {};
 						});
 					});
 				} else {
-					if(typeof cb == 'function') {
+					if(typeof cb === 'function') {
 						cb({error:true, message:response.message});
 					}
 				}
@@ -350,7 +350,7 @@ OC.Contacts = OC.Contacts || {};
 				ids.push(contactid);
 				doPost = true;
 			} else {
-				if(typeof cb == 'function') {
+				if(typeof cb === 'function') {
 					cb({error:true, message:t('contacts', 'Contact is not in this group.')});
 				}
 			}
@@ -364,7 +364,7 @@ OC.Contacts = OC.Contacts || {};
 				doPost = true;
 			} else {
 				console.log(contactid, 'not in', contacts);
-				if(typeof cb == 'function') {
+				if(typeof cb === 'function') {
 					cb({error:true, message:t('contacts', 'Contacts are not in this group.')});
 				}
 			}
@@ -391,7 +391,7 @@ OC.Contacts = OC.Contacts || {};
 							cb({ids:ids});
 						}
 					} else {
-						if(typeof cb == 'function') {
+						if(typeof cb === 'function') {
 							cb({error:true, message:response.message});
 						}
 					}
@@ -411,7 +411,7 @@ OC.Contacts = OC.Contacts || {};
 	GroupList.prototype.removeFromAll = function(contactid, alsoSpecial, onlyInternal) {
 		var self = this;
 		var selector = alsoSpecial ? 'li' : 'li[data-type="category"]';
-		$.each(this.$groupList.find(selector), function(i, group) {
+		$.each(this.$groupList.find(selector), function() {
 			self.removeFrom(contactid, $(this).data('id'), onlyInternal);
 		});
 	};
@@ -422,7 +422,7 @@ OC.Contacts = OC.Contacts || {};
 	 * dialog, and will probably not be used in this app.
 	 */
 	GroupList.prototype.categoriesChanged = function(newcategories) {
-		console.log('GroupList.categoriesChanged, I should do something');
+		console.log('GroupList.categoriesChanged, I should do something with them:', newcategories);
 	};
 
 	/**
@@ -431,7 +431,7 @@ OC.Contacts = OC.Contacts || {};
 	 * during drag, and the drop target is hard to hit.
 	 */
 	GroupList.prototype.contactDropped = function(event, ui) {
-		var dragitem = ui.draggable, droptarget = $(this);
+		var dragitem = ui.draggable;
 		console.log('dropped', dragitem);
 		if(dragitem.is('.name')) {
 			var id = String(dragitem.parent().data('id'));
@@ -492,7 +492,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 		})
 		.fail(function(response) {
-			console.log( "Request Failed: " + response.message);
+			console.log('Request Failed:', response);
 			$(document).trigger('status.contacts.error', response);
 		});
 	};
@@ -569,7 +569,7 @@ OC.Contacts = OC.Contacts || {};
 			cb({error:false});
 		})
 		.fail(function(response) {
-			console.log( "Request Failed: " + response);
+			console.log('Request Failed:', response);
 			cb({error:true});
 			response.message = t('contacts', 'Failed renaming group: {error}', {error:response.message});
 			$(document).trigger('status.contacts.error', response);
@@ -655,8 +655,8 @@ OC.Contacts = OC.Contacts || {};
 			}
 		})
 		.fail(function(response) {
-			console.log( "Request Failed: " + response);
-			response.message = t('contacts', 'Failed adding group: {error}', {error:response.message})
+			console.log('Request Failed:', response);
+			response.message = t('contacts', 'Failed adding group: {error}', {error:response.message});
 			$(document).trigger('status.contacts.error', response);
 		});
 	};
@@ -666,6 +666,7 @@ OC.Contacts = OC.Contacts || {};
 		var acceptdrop = '.dragContact';
 		var $groupList = this.$groupList;
 		var tmpl = this.$groupListItemTemplate;
+		var $elem;
 
 		if(!this.findById('all').length) {
 			tmpl.octemplate({id: 'all', type: 'all', num: '', name: t('contacts', 'All')}).appendTo($groupList);
@@ -678,7 +679,7 @@ OC.Contacts = OC.Contacts || {};
 				// Favorites
 				// Map to strings to easier lookup in contacts list.
 				var contacts = $.map(response.data.favorites, function(c) {return String(c);});
-				var $elem = self.findById('fav');
+				$elem = self.findById('fav');
 				$elem = $elem.length ? $elem : tmpl.octemplate({
 					id: 'fav',
 					type: 'fav',
@@ -688,7 +689,7 @@ OC.Contacts = OC.Contacts || {};
 				$elem.data('obj', self);
 				$elem.data('rawname', t('contacts', 'Favorites'));
 				if(!$elem.find('.starred').length) {
-					$elem.data('contacts', contacts).find('.numcontacts').before('<span class="icon icon-starred starred action" />');
+					$elem.data('contacts', contacts).find('.numcontacts').before('<span class="icon-starred starred action" />');
 				}
 				$elem.droppable({
 							drop: self.contactDropped,
@@ -706,7 +707,7 @@ OC.Contacts = OC.Contacts || {};
 				// Normal groups
 				$.each(response.data.categories, function(c, category) {
 					var contacts = $.map(category.contacts, function(c) {return String(c);});
-					var $elem = self.findById(category.id);
+					$elem = self.findById(category.id);
 					if($elem.length) {
 						$elem.find('.numcontacts').text(contacts.length > 0 && contacts.length || '');
 					} else {
@@ -748,7 +749,7 @@ OC.Contacts = OC.Contacts || {};
 				$.each(response.data.shared, function(c, shared) {
 					var sharedindicator = '<img class="shared svg" src="' + OC.imagePath('core', 'actions/shared') + '"'
 						+ 'title="' + t('contacts', 'Shared by {owner}', {owner:shared.owner}) + '" />';
-					var $elem = self.findById(shared.id);
+					$elem = self.findById(shared.id);
 					$elem = $elem.length ? $elem : (tmpl).octemplate({
 						id: shared.id,
 						type: 'shared',
@@ -771,7 +772,7 @@ OC.Contacts = OC.Contacts || {};
 						var ids = [];
 						$.each($(this).children('li[data-type="category"]'), function(i, elem) {
 							var id = $(elem).data('id');
-							if(typeof id === 'number' && id % 1 == 0) {
+							if(typeof id === 'number' && id % 1 === 0) {
 								ids.push(id);
 							}
 						});
@@ -781,7 +782,7 @@ OC.Contacts = OC.Contacts || {};
 						});
 					}
 				});
-				var $elem = self.findById(self.lastgroup);
+				$elem = self.findById(self.lastgroup);
 				$elem.addClass('active');
 				self.loaded = true;
 			} // TODO: else
@@ -790,7 +791,7 @@ OC.Contacts = OC.Contacts || {};
 			}
 		})
 		.fail(function(response) {
-			console.log( "Request Failed:", response);
+			console.log('Request Failed:', response);
 			response.message = t('contacts', 'Failed loading groups: {error}', {error:response.message});
 			$(document).trigger('status.contacts.error', response);
 		});

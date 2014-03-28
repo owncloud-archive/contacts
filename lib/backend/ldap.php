@@ -50,7 +50,7 @@ class Ldap extends AbstractBackend {
 	public function setLdapParams($aid) {
 		$tmp = $this->getPreferences($aid);
 		if ($tmp != false) {
-			$this->ldapParams = $tmp;
+			$this->ldapParams = (array)$tmp;
 			$this->connector = new LdapConnector($this->ldapParams['ldap_vcard_connector']);
 			return true;
 		} else {
@@ -279,7 +279,7 @@ class Ldap extends AbstractBackend {
 			return $this->addressbooks[$addressbookid];
 		}
 		// Hmm, not found. Lets query the db.
-		$preferences = self::getPreferences($addressbookid);
+		$preferences = (array)self::getPreferences($addressbookid);
 		if ($preferences != false) {
 			$current = array();
 			$current['id'] = (string)$addressbookid;
@@ -519,7 +519,7 @@ class Ldap extends AbstractBackend {
 				}
 			}
 		}
-		//error_log("stay added ".print_r($trace,1));
+		error_log("stay added ".print_r($trace,1));
 
 		$uri = isset($options['uri']) ? $options['uri'] : null;
 		
@@ -541,7 +541,7 @@ class Ldap extends AbstractBackend {
 				return false;
 			}
 		}
-		//error_log("adding ".$contact->serialize());
+		error_log("adding ".$contact->serialize());
 
 		try {
 			$contact->validate(VCard::REPAIR|VCard::UPGRADE);

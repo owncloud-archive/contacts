@@ -38,7 +38,7 @@ class Dispatcher extends MainApp {
 	public function __construct($params) {
 		parent::__construct('contacts', $params);
 		$this->container = $this->getContainer();
-		$this->container->registerMiddleware(new HttpMiddleware($this->container));
+		$this->container->registerMiddleware(new HttpMiddleware());
 		$this->app = new App($this->container->query('API')->getUserId());
 		$this->registerServices();
 	}

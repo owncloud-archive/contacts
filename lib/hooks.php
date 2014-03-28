@@ -92,7 +92,7 @@ class Hooks{
 	 * @param array $parameters Currently only the id of the contact.
 	 */
 	public static function contactDeletion($parameters) {
-		\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$parameters['id'], \OCP\Util::DEBUG);
+		\OCP\Util::writeLog('contacts', __METHOD__.' id: '.print_r($parameters['id'], true), \OCP\Util::DEBUG);
 		$ids = is_array($parameters['id']) ? $parameters['id'] : array($parameters['id']);
 		$tagMgr = \OC::$server->getTagManager()->load('contact');
 		$tagMgr->purgeObjects($ids);
@@ -150,21 +150,22 @@ class Hooks{
 		$tagMgr = \OC::$server->getTagManager()->load('contact');
 		$tags = array();
 
-		foreach($tagMgr->getTags() as $tag) {
+		foreach ($tagMgr->getTags() as $tag) {
 			$tags[] = $tag['name'];
 		}
 
 		// reset tags
 		$tagMgr->delete($tags);
 
-		$backend = $this->app->getBackend('local');
+		$app = new App();
+		$backend = $app->getBackend('local');
 		$addressBookInfos = $backend->getAddressBooksForUser();
 
-		foreach($addressBookInfos as $addressBookInfo) {
+		foreach ($addressBookInfos as $addressBookInfo) {
 			$addressBook = new AddressBook($backend, $addressBookInfo);
-			while($contacts = $addressBook->getChildren($limit, $offset, false)) {
-				foreach($contacts as $contact) {
-					if(isset($contact->CATEGORIES)) {
+			while ($contacts = $addressBook->getChildren($limit, $offset, false)) {
+				foreach ($contacts as $contact) {
+					if (isset($contact->CATEGORIES)) {
 						$tagMgr->addMultiple($contact->CATEGORIES->getParts(), true, $contact->getId());
 					}
 				}
@@ -187,17 +188,20 @@ class Hooks{
 		$backend = $app->getBackend('local');
 		$addressBookInfos = $backend->getAddressBooksForUser();
 
-		foreach($addressBookInfos as $addressBookInfo) {
+		foreach ($addressBookInfos as $addressBookInfo) {
 			$addressBook = new AddressBook($backend, $addressBookInfo);
-			while($contacts = $addressBook->getChildren($limit, $offset, false)) {
-				foreach($contacts as $contact) {
-					$contact->retrieve();
-				}
+			while ($contacts = $addressBook->getChildren($limit, $offset, false)) {
 				\OCP\Util::writeLog('contacts',
-					__CLASS__.'::'.__METHOD__
-						.', indexing: ' . $limit . ' starting from ' . $offset,
+					__METHOD__ . ', indexing: ' . $limit . ' starting from ' . $offset,
 					\OCP\Util::DEBUG);
-				Utils\Properties::updateIndex($contact->getId(), $contact);
+				foreach ($contacts as $contact) {
+					if(!$contact->retrieve()) {
+						\OCP\Util::writeLog('contacts',
+							__METHOD__ . ', Error loading contact ' .print_r($contact, true),
+							\OCP\Util::DEBUG);
+					}
+					Utils\Properties::updateIndex($contact->getId(), $contact);
+				}
 				$offset += $limit;
 			}
 		}
@@ -208,12 +212,13 @@ class Hooks{
 
 		$app = new App();
 		$addressBooks = $app->getAddressBooksForUser();
-		$base_url = \OCP\Util::linkTo('calendar', 'ajax/events.php').'?calendar_id=';
-		foreach($addressBooks as $addressBook) {
+		$baseUrl = \OCP\Util::linkTo('calendar', 'ajax/events.php').'?calendar_id=';
+
+		foreach ($addressBooks as $addressBook) {
 			$info = $addressBook->getMetaData();
 			$parameters['sources'][]
 				= array(
-					'url' => $base_url.'birthday_'. $info['backend'].'_'.$info['id'],
+					'url' => $baseUrl . 'birthday_'. $info['backend'].'_' . $info['id'],
 					'backgroundColor' => '#cccccc',
 					'borderColor' => '#888',
 					'textColor' => 'black',
@@ -226,15 +231,18 @@ class Hooks{
 	public static function getBirthdayEvents($parameters) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
 		$name = $parameters['calendar_id'];
+
 		if (strpos($name, 'birthday_') != 0) {
 			return;
 		}
+
 		$info = explode('_', $name);
 		$backend = $info[1];
 		$aid = $info[2];
 		$app = new App();
 		$addressBook = $app->getAddressBook($backend, $aid);
-		foreach($addressBook->getBirthdayEvents() as $vevent) {
+
+		foreach ($addressBook->getBirthdayEvents() as $vevent) {
 			$parameters['events'][] = array(
 				'id' => 0,
 				'vevent' => $vevent,

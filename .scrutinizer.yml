@@ -1,0 +1,81 @@
+build_failure_conditions:
+    - 'elements.rating(<= D).exists'               # No classes/methods with a rating of D or worse
+    - 'elements.rating(<= D).new.exists'           # No new classes/methods with a rating of D or worse
+
+    - 'issues.label("coding-style").new.exists'    # No new coding style issues allowed
+
+    - 'issues.severity(>= MAJOR).new.exists'       # New issues of major or higher severity
+
+    - 'project.metric("scrutinizer.quality", < 6)' # Code Quality Rating drops below 6
+
+filter:
+    excluded_paths:
+        - 'js/modernizr.custom.js'
+        - 'js/jquery.onfontresize.js'
+        - 'js/placeholder*'
+        - 'css/placeholder*'
+        - 'l10n/*'
+        - 'templates/*'
+
+imports:
+    - php
+    - javascript
+
+tools:
+    js_hint:
+        use_native_config: true
+
+    php_mess_detector:
+        config:
+            controversial_rules:
+                camel_case_class_name: true
+                camel_case_property_name: true
+                camel_case_method_name: true
+                camel_case_parameter_name: true
+                camel_case_variable_name: true
+                superglobals: false
+
+    php_code_sniffer:
+        config:
+            sniffs:
+                generic:
+                    white_space:
+                        disallow_space_indent_sniff: true
+
+#                 squiz:
+#                     white_space:
+#                         logical_operator_spacing_sniff: false
+#                         language_construct_spacing_sniff: true
+#                         operator_spacing_sniff: true
+#                         control_structure_spacing_sniff: true
+#                         function_spacing_sniff: false
+#                         scope_keyword_spacing_sniff: true
+#                         semicolon_spacing_sniff: true
+#                         object_operator_spacing_sniff: false
+#                     functions:
+#                         lowercase_function_keywords_sniff: true
+#                     commenting:
+#                         class_comment_sniff: true
+#                         doc_comment_alignment_sniff: false
+#                         function_comment_throw_tag_sniff: true
+#                     strings:
+#                         double_quote_usage_sniff: true
+#                     operators:
+#                         valid_logical_operators_sniff: true
+#                 psr1:
+#                     files:
+#                         side_effects_sniff: false
+#                 psr2:
+#                     classes:
+#                         class_declaration_sniff: false
+#                     namespaces:
+#                         namespace_declaration_sniff: true
+#                 pear:
+#                     commenting:
+#                         inline_comment_sniff: true
+#                     control_structures:
+#                         control_signature_sniff: true
+#                     naming_conventions:
+#                         valid_function_name_sniff: true
+#                         valid_class_name_sniff: true
+

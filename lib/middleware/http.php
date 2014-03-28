@@ -27,22 +27,14 @@ namespace OCA\Contacts\Middleware;
 use OCA\Contacts\Controller,
 	OCA\Contacts\JSONResponse,
 	OCP\AppFramework\Middleware,
-	OCP\AppFramework\Http\Response;
+	OCP\AppFramework\Http\Response,
+	OCP\AppFramework\Http as HttpStatus;
 
 /**
  * Used to intercept exceptions thrown in controllers and backends
  * and transform them into valid HTTP responses.
  */
 class Http extends Middleware {
-
-	private $api;
-
-	/**
-	 * @param IAppContainer $app an instance of the app container
-	 */
-	public function __construct($app) {
-		//$this->api = $api;
-	}
 
 	/**
 	 * If an Exception is being caught, return a JSON error response with
@@ -53,24 +45,19 @@ class Http extends Middleware {
 	 * @param \Exception $exception the thrown exception
 	 * @return Response a Response object
 	 */
-	public function afterException($controller, $methodName, \Exception $exception){
+	public function afterException($controller, $methodName, \Exception $exception) {
+		\OCP\Util::writeLog('contacts', __METHOD__.' method: '.$methodName, \OCP\Util::DEBUG);
 		// If there's no proper status code associated, set it to 500.
 		$response = new JSONResponse();
 		if($exception->getCode() < 100) {
-			$response->setStatus(500);
+			$response->setStatus(HttpStatus::STATUS_INTERNAL_SERVER_ERROR);
 		} else {
 			$response->setStatus($exception->getCode());
 		}
-		$response->setErrorMessage($exception->getMessage());
-		//$this->api->log(get_class($controller) . '->' . $methodName . ': ' . $exception->getMessage());
-		return $response;
-	}
 
-	function beforeOutput($controller, $methodName, $output) {
-		return $output;
-	}
-	function beforeController($controller, $methodName) {}
-	function afterController($controller, $methodName, Response $response) {
+		$response->setErrorMessage($exception->getMessage());
+
+		\OCP\Util::logException('contacts', $exception);
 		return $response;
 	}
 

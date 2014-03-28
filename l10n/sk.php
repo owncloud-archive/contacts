@@ -2,14 +2,11 @@
 "Save" => "Uložiť",
 "Cancel" => "Zrušiť",
 "Import" => "Importovať",
-"Download" => "Stiahnuť",
-"Edit" => "Upraviť",
-"Delete" => "Odstrániť",
 "Other" => "Ostatné",
+"Delete" => "Odstrániť",
+"Download" => "Stiahnuť",
 "Title" => "Názov",
 "Birthday" => "Narodeniny",
 "Share" => "Zdieľať",
-"more info" => "viac informácií",
-"iOS/OS X" => "iOS/OS X",
-"Description" => "Popis"
+"Edit" => "Upraviť"
 );

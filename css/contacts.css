@@ -21,6 +21,9 @@
 	text-overflow: ellipsis;
 }
 
+#contact input:not([type=checkbox]), #contact select:not(.button), #contact textarea {
+	float: left;
+}
 #contact .label {
 	float: right !important;
 }
@@ -67,10 +70,10 @@
 /*#app-navigation img.shared { float: right; opacity: 0.4; margin: 0 .5em; }
 #app-navigation img.shared:hover { opacity: 1; }*/
 #app-navigation input[type="text"] {
-	display: block;
-	width: 204px;
-	height: 34px !important;
-	float: left;
+	width: 180px;
+}
+
+#app-navigation .oc-addnew input[type="text"] {
 }
 
 #app-navigation .utils {
@@ -82,13 +85,14 @@
 #app-navigation .active {
 	font-weight: bold;
 }
-#app-navigation li > .utils > *:not(.numcontacts) {
+#app-navigation li > .utils > *:not(.numcontacts):not(.starred) {
 	display: none;
 }
 #app-navigation li > .utils > * {
 	line-height: 44px;
 	width: 44px; height: 44px;
 	background-size: auto;
+	float: left;
 }
 #app-navigation li.active[data-type="category"] > .utils > * {
 	display: inline-block;
@@ -159,7 +163,7 @@
 #contact footer .add {
 	width: 300px;
 }
-#contact footer .close, #contact footer .export, #contact header .delete {
+#contact footer .cancel, #contact footer .close, #contact footer .export, #contact header .delete {
 	float: right;
 	background-image: none;
 }
@@ -231,7 +235,6 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 }
 
 [class^="icon-"], [class*=" icon-"], .action, .icon {
-	display: inline-block; 
 	cursor: pointer;
 	background-repeat: no-repeat;
 }
@@ -240,6 +243,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	padding: 0; margin: 0; 
 	background-position: center;
 	background-size:contain;
+	display: inline-block;
 }
 
 .action:not(.add):not(.sort).text, .icon:not(.add):not(.sort).text, [class^="icon-"]:not(.add):not(.sort).text, [class*=" icon-"]:not(.add):not(.sort).text {
@@ -247,21 +251,12 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	text-indent: 18px;
 }
 
-/* TODO: Use @import url('../css/[no-]svg.css); instead. */
-
-.no-svg .starred { background-image:url('../img/starred.png'); background-size: contain; }
-.no-svg .checked { background-image:url('../img/checkmark-green.png'); }
-.no-svg .checked.disabled { background-image:url('../img/checkmark-gray.png'); cursor: default; }
-
 .svg .action.text, .svg .icon.text, .svg .svg.text {
 	background-size: 16px 16px;
 	background-origin: content-box;
 	background-repeat: no-repeat;
 	width: auto; height: auto;
 }
-.svg .starred { background-image:url('../img/starred.svg'); background-size: contain; }
-.svg .checked { background-image:url('../img/checkmark-green.svg'); }
-.svg .checked.disabled { background-image:url('../img/checkmark-gray.svg'); cursor: default; }
 
 .transparent{ opacity: 0.6; }
 .float { float: left; display: inline-block; width: auto; }
@@ -309,12 +304,12 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	text-align: right;
 }
 .singleproperties { float: left; width: 100%; }
-.singleproperties .fullname { width: 300px; font-size: 20px; }
+.singleproperties .fullname { float: none !important; margin-left: 4px; width: 300px; font-size: 20px; }
 .singleproperties input { width: 300px; }
 .singleproperties dd { float:left; }
 .singleproperties dd .listactions a { margin-top: 10px; }
 .singleproperties .n.editor { width: 270px; padding: 3px; }
-.singleproperties .n.editor input { width: 292px; }
+.singleproperties .n.editor input { width: 292px; margin-left: 12px; }
 .singleproperties .propertycontainer input.value.new { border: 3px solid #1d2d44;}
 .singleproperties .propertycontainer input.value.error { border: 3px solid red;}
 .singleproperties .propertycontainer .action {
@@ -357,7 +352,7 @@ ul.propertylist { width: 100%; line-height: 34px; }
 	clear: none; opacity: 0; 
 }
 .propertylist li.propertycontainer:hover > .listactions { opacity: 1; }
-.propertylist li.propertycontainer .listactions a { 
+.singleproperties .propertycontainer .listactions a, .propertylist li.propertycontainer .listactions a {
 	display: inline-block; 
 	clear: none; 
 	width: 16px; height: 16px; 
@@ -428,43 +423,10 @@ dt[data-element="org"] { margin-top: 4px; }
 .addressbooks-settings a.action:hover { opacity: 1; }
 .addressbooks-settings td.active, .addressbooks-settings td.action { width: 20px; }
 
-/*
-#contacts-settings .settings { 
-	height:1.4em;
-	background-repeat: no-repeat;
-	background-position:0px 0px;
-	background-origin: content-box;
-	background-image:url('%webroot%/core/img/actions/settings.svg'); 
+.addressbooklist .actions {
+	position: absolute; right: 0px;
+	display: inline-flex;
 }
-#contacts-settings .settings:hover { 
-	font-weight: normal;
-	color: #666666;
-}
-#contacts-settings.open {
-    height: auto;
-	z-index: 10;
-	overflow-y: auto;
-}
-#contacts-settings {
-	-webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: none repeat scroll 0 0 #EEEEEE;
-    border-right: 1px solid #CCCCCC;
-    border-top: 1px solid #CCCCCC;
-    bottom: 0;
-    height: 2.8em;
-    margin: 0;
-    overflow: visible;
-    padding: 0;
-    position: fixed;
-    width: 20em;
-    z-index: 2;
-}
-#contacts-settings li,#contacts-settings li:hover { background-color: transparent; white-space: nowrap; }
-#contacts-settings a.action:not(.settings) { width: 16px; height: 16px; }
-*/
-.addressbooklist .actions { position: absolute; right: 0px; }
 .addressbooklist .actions > a { width: 20px; height: 20px; }
 .addressbooklist > li > div {
 	display: inline-block;
@@ -581,13 +543,9 @@ input[type=checkbox].propertytype { width: 10px; }
 	padding-left: 20px;
 	font-weight: normal;
 }
-.no-svg .favorite { display: inline-block; float: left; height: 20px; width: 20px; background-image:url('../img/inactive_star.png'); }
-.no-svg .favorite.active, .favorite:hover { background-image:url('../img/active_star.png'); }
-.no-svg .favorite.inactive { background-image:url('../img/inactive_star.png'); }
+.no-svg .favorite { display: inline-block; float: left; height: 20px; width: 20px;  }
 
-.svg .favorite { display: inline-block; float: left; height: 20px; width: 20px; background-image:url('../img/inactive_star.svg'); background-size:contain; }
-.svg .favorite.active, .favorite:hover { background-image:url('../img/active_star.svg');	}
-.svg .favorite.inactive { background-image:url('../img/inactive_star.svg'); background-size:contain; }
+.svg .favorite { display: inline-block; float: left; height: 20px; width: 20px; background-size:contain; }
 
 #app-content {
 	top: 44px;
@@ -747,7 +705,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	width: 32px;
  	margin-left: 10px;
 }
-/* Override default style for an open cpntact */
+/* Override default style for an open contact */
 tbody tr, tbody tr.hover {
 	background-color: #fff !important;
 }

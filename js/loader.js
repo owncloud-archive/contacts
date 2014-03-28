@@ -80,11 +80,11 @@ OC.ContactsImporter = OC.ContactsImporter || {
 			console.warn(response);
 		});
 	},
-	startImport: function(backend, addressBookId) {
+	startImport: function(backend, addressBookId, importType) {
 		var self = this;
 		$('.import-select').hide();
 		$('.import-status').show();
-		$.when(self.addressBooks.prepareImport(backend, addressBookId, this.path, this.fileName))
+		$.when(self.addressBooks.prepareImport(backend, addressBookId, importType, this.path, this.fileName))
 		.then(function(response) {
 			if(!response.error) {
 				$.when(self.addressBooks.doImport(response)).then(function(response) {
@@ -112,9 +112,8 @@ OC.ContactsImporter = OC.ContactsImporter || {
 		});
 	},
 	_getTemplate: function() {
-		var defer = $.Deferred(), self = this;
+		var defer = $.Deferred();
 		if(!this.$template) {
-			var self = this;
 			$.get(OC.filePath('contacts', 'templates', 'importdialog.html'), function(tmpl) {
 				defer.resolve($(tmpl));
 			})

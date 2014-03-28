@@ -27,7 +27,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 	*/
 	protected $backend;
 
-	function setUp() {
+	public function setUp() {
 
 		\Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
 
@@ -37,30 +37,30 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function tearDown() {
+	public function tearDown() {
 		unset($this->backend);
 		unset($this->ab);
 	}
 
-	function testGetDisplayName() {
+	public function testGetDisplayName() {
 
 		$this->assertEquals('d-name', $this->ab->getDisplayName());
 
 	}
 
-	function testGetPermissions() {
+	public function testGetPermissions() {
 
 		$this->assertEquals(\OCP\PERMISSION_ALL, $this->ab->getPermissions());
 
 	}
 
-	function testGetBackend() {
+	public function testGetBackend() {
 
 		$this->assertEquals($this->backend, $this->ab->getBackend());
 
 	}
 
-	function testGetChild() {
+	public function testGetChild() {
 
 		$contact = $this->ab->getChild('123');
 		$this->assertInstanceOf('OCA\\Contacts\\Contact', $contact);
@@ -68,7 +68,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testAddChild() {
+	public function testAddChild() {
 
 		$carddata = file_get_contents(__DIR__ . '/../data/test2.vcf');
 		$vcard = Reader::read($carddata);
@@ -78,14 +78,14 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 		return $this->ab;
 	}
 
-	function testDeleteChild() {
+	public function testDeleteChild() {
 
 		$this->assertTrue($this->ab->deleteChild('123'));
 		$this->assertEquals(array(), $this->ab->getChildren());
 
 	}
 
-	function testGetChildNotFound() {
+	public function testGetChildNotFound() {
 
 		try {
 			$contact = $this->ab->getChild('Nowhere');
@@ -102,7 +102,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 	/**
 	* @depends testAddChild
 	*/
-	function testGetChildren($ab) {
+	public function testGetChildren($ab) {
 
 		$contacts = $ab->getChildren();
 
@@ -113,20 +113,20 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testDelete() {
+	public function testDelete() {
 
 		$this->assertTrue($this->ab->delete());
 		$this->assertEquals(array(), $this->backend->addressBooks);
 
 	}
 
-	function testGetLastModified() {
+	public function testGetLastModified() {
 
 		$this->assertNull($this->ab->lastModified());
 
 	}
 
-	function testUpdate() {
+	public function testUpdate() {
 
 		$this->assertTrue(
 			$this->ab->update(array('displayname' => 'bar'))
@@ -142,10 +142,62 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 	/**
 	* @depends testUpdate
 	*/
-	function testGetMetaData($ab) {
+	public function testGetMetaData($ab) {
 
 		$props = $ab->getMetaData();
 		$this->assertEquals('bar', $props['displayname']);
+
+	}
+
+	public function testArrayAccess() {
+
+		$carddata = file_get_contents(__DIR__ . '/../data/test2.vcf');
+		$vcard = Reader::read($carddata);
+
+		$contact = $this->ab['123'];
+
+		// Test get
+		$this->assertTrue(isset($this->ab['123']));
+		$this->assertInstanceOf('OCA\\Contacts\\Contact', $contact);
+		$this->assertEquals('Max Mustermann', $contact->getDisplayName());
+
+		// Test unset
+		unset($this->ab['123']);
+
+		$this->assertTrue(!isset($this->ab['123']));
+
+		// Test set
+		try {
+			$this->ab[] = $vcard;
+		} catch(\Exception $e) {
+			return;
+		}
+
+		$this->fail('Expected Exception');
+
+	}
+
+	/**
+	* @depends testAddChild
+	*/
+	public function testIterator($ab) {
+
+		$count = 0;
+
+		foreach($ab as $contact) {
+			$this->assertInstanceOf('OCA\\Contacts\\Contact', $contact);
+			$count += 1;
+		}
+
+		$this->assertEquals(2, $count);
+	}
+
+	/**
+	* @depends testAddChild
+	*/
+	public function testCountable($ab) {
+
+		$this->assertEquals(2, count($ab));
 
 	}
 

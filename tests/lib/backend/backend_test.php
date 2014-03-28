@@ -34,17 +34,17 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 	*/
 	protected $backend;
 
-	function setUp() {
+	public function setUp() {
 
 		$this->backend = new Mock('foobar');
 
 	}
 
-	function tearDown() {
+	public function tearDown() {
 		unset($this->backend);
 	}
 
-	function testHasContactMethodFor() {
+	public function testHasContactMethodFor() {
 
 		foreach($this->permissions as $permission) {
 			$this->assertTrue($this->backend->hasContactMethodFor($permission));
@@ -52,7 +52,7 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testHasAddressBookMethodFor() {
+	public function testHasAddressBookMethodFor() {
 
 		foreach($this->permissions as $permission) {
 			$this->assertTrue($this->backend->hasAddressBookMethodFor($permission));
@@ -60,20 +60,20 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testgetAddressBooksForUser() {
+	public function testgetAddressBooksForUser() {
 
 		$this->assertEquals(1, count($this->backend->getAddressBooksForUser()));
 
 	}
 
-	function testDeleteAddressBook() {
+	public function testDeleteAddressBook() {
 
 		$this->assertTrue($this->backend->deleteAddressBook('foo'));
 		$this->assertEquals(array(), $this->backend->addressBooks);
 
 	}
 
-	function testCreateAddressBook() {
+	public function testCreateAddressBook() {
 
 		$id = $this->backend->createAddressBook(array('displayname' => 'bar'));
 
@@ -87,15 +87,16 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testCreateAddressBookFail() {
+	public function testCreateAddressBookFail() {
 
+		// displayname must be provided.
 		$id = $this->backend->createAddressBook(array('description' => 'foo bar'));
 
 		$this->assertFalse($id);
 
 	}
 
-	function testUpdateAddressBook() {
+	public function testUpdateAddressBook() {
 
 		$this->assertTrue(
 			$this->backend->updateAddressBook('foo', array('displayname' => 'bar'))
@@ -107,7 +108,7 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testUpdateAddressBookFail() {
+	public function testUpdateAddressBookFail() {
 
 		$this->assertFalse(
 			$this->backend->updateAddressBook('foo', array('description' => 'foo bar'))
@@ -118,26 +119,26 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 	/**
 	* @depends testUpdateAddressBook
 	*/
-	function testGetAddressBook($backend) {
+	public function testGetAddressBook($backend) {
 
 		$book = $backend->getAddressBook('foo');
 		$this->assertEquals('bar', $book['displayname']);
 
 	}
 
-	function testGetAddressBookFail() {
+	public function testGetAddressBookFail() {
 
 		$this->assertNull($this->backend->getAddressBook('bar'));
 
 	}
 
-	function testGetLastModifiedAddressBook() {
+	public function testGetLastModifiedAddressBook() {
 
 		$this->assertNull($this->backend->lastModifiedAddressBook('foo'));
 
 	}
 
-	function testGetContact() {
+	public function testGetContact() {
 
 		$contact = $this->backend->getContact('foo', '123');
 		$this->assertTrue(is_array($contact));
@@ -147,13 +148,13 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testGetContactFail() {
+	public function testGetContactFail() {
 
 		$this->assertNull($this->backend->getContact('foo', '1234'));
 
 	}
 
-	function testCreateContact() {
+	public function testCreateContact() {
 
 		$carddata = file_get_contents(__DIR__ . '/../../data/test2.vcf');
 		$vcard = Reader::read($carddata);
@@ -167,7 +168,7 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 	/**
 	* @depends testCreateContact
 	*/
-	function testGetContacts($backend) {
+	public function testGetContacts($backend) {
 
 		$contacts = $backend->getContacts('foo');
 
@@ -178,7 +179,7 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testUpdateContact() {
+	public function testUpdateContact() {
 
 		$carddata = file_get_contents(__DIR__ . '/../../data/test2.vcf');
 		$vcard = Reader::read($carddata);
@@ -193,7 +194,7 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
-	function testDeleteContact() {
+	public function testDeleteContact() {
 
 		$this->assertTrue($this->backend->deleteContact('foo', '123'));
 		$this->assertEquals(array(), $this->backend->getContacts('foo'));

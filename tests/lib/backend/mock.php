@@ -190,4 +190,7 @@ class Mock extends AbstractBackend {
 
 	}
 
+	function numContacts($addressBookId) {
+		return count($this->contacts[$addressBookId]);
+	}
 }

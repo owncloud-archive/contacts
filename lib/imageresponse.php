@@ -23,7 +23,7 @@ class ImageResponse extends Response {
 	protected $image;
 
 	/**
-	 * @param OCP\Image $image
+	 * @param \OCP\Image $image
 	 */
 	public function __construct($image = null) {
 		if(!is_null($image)) {
