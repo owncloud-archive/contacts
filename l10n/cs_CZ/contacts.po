@@ -7,6 +7,7 @@
 # Honza K. <honza889@gmail.com>, 2013
 # Jan Krejci <krejca85@gmail.com>, 2011-2012
 # liska_, 2013-2014
+# xmorave2 <josef.moravec@gmail.com>, 2014
 # Martin <fireball@atlas.cz>, 2013
 # Martin <fireball@atlas.cz>, 2011-2012
 # m23 <black23@gmail.com>, 2014
@@ -17,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-26 05:41-0400\n"
-"PO-Revision-Date: 2014-03-26 06:00+0000\n"
-"Last-Translator: m23 <black23@gmail.com>\n"
+"POT-Creation-Date: 2014-03-28 00:48-0400\n"
+"PO-Revision-Date: 2014-03-27 13:30+0000\n"
+"Last-Translator: xmorave2 <josef.moravec@gmail.com>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +38,7 @@ msgstr "Uložit"
 
 #: js/addressbooks.js:306
 msgid "Starting file import"
-msgstr ""
+msgstr "Zahajuje se import souboru"
 
 #: js/addressbooks.js:310 js/addressbooks.js:338
 msgid "Format selected: {format}"

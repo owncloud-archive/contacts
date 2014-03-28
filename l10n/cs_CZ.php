@@ -1,6 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakty",
 "Save" => "Uložit",
+"Starting file import" => "Zahajuje se import souboru",
 "Format selected: {format}" => "Zvolený formát: {format}",
 "Automatic format detection" => "Automatická detekce formátu",
 "Processing {count}/{total} cards" => "Zpracovávání {count}/{total} karet",
