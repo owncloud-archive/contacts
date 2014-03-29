@@ -650,3 +650,113 @@ OC.Contacts = OC.Contacts || {};
 	OC.Contacts.AddressBookList = AddressBookList;
 
 })(window, jQuery, OC);
+
+function openCalendarUi() {
+	calendarUiInit();
+
+	$("#calendar-ui-backend").change(function() {
+		calendarUiInit();
+	});
+	$("#calendar-ui-ldapanonymous").change(function() {
+		if ($("#calendar-ui-ldapanonymous").prop('checked')) {
+			$("#calendar-ui-ldapuser").attr('disabled', true);
+			$("#calendar-ui-ldappass").attr('disabled', true);
+		} else {
+			$("#calendar-ui-ldapuser").removeAttr('disabled');
+			$("#calendar-ui-ldappass").removeAttr('disabled');
+		}
+	});
+	$("#calendar-ui-ldapbasednsearch").change(function() {
+		if ($("#calendar-ui-ldapbasednmodify").val() == '') {
+			$("#calendar-ui-ldapbasednmodify").val($("#calendar-ui-ldapbasednsearch").val());
+		}
+	});
+	$("#calendar-ui-ldapbasednmodify").change(function() {
+		if ($("#calendar-ui-ldapbasednsearch").val() == '') {
+			$("#calendar-ui-ldapbasednsearch").val($("#calendar-ui-ldapbasednmodify").val());
+		}
+	});
+}
+
+function calendarUiOk() {
+	storage = new OC.Contacts.Storage();
+	var defer = $.Deferred();
+
+	$.when(storage.addAddressBook($("#calendar-ui-backend").val(),
+	{
+		displayname: $("#calendar-ui-name").val(),
+		description: $("#calendar-ui-description").val(),
+		uri: $("#calendar-ui-uri").val(),
+		ldapurl: $("#calendar-ui-ldapurl").val(),
+		ldapanonymous: $("#calendar-ui-ldapanonymous").prop('checked')==true?"true":"false",
+		ldapreadonly: $("#calendar-ui-ldapreadonly").prop('checked')==true?"true":"false",
+		ldapuser: $("#calendar-ui-ldapuser").val(),
+		ldappass: $("#calendar-ui-ldappass").val(),
+		ldappagesize: $("#calendar-ui-ldappagesize").val(),
+		ldapbasednsearch: $("#calendar-ui-ldapbasednsearch").val(),
+		ldapfilter: $("#calendar-ui-ldapfilter").val(),
+		ldapbasednmodify: $("#calendar-ui-ldapbasednmodify").val(),
+		ldapvcardconnector: $("#calendar-ui-ldapvcardconnector").val(),
+	}
+	)).then(function(response) {
+		if(response.error) {
+			error = response.message;
+			if(typeof cb === 'function') {
+				cb({error:true, message:error});
+			}
+			defer.reject(response);
+		} else {
+			/*var book = addressbook.insertAddressBook(response.data);
+			$(document).trigger('status.addressbook.added');
+			if(typeof cb === 'function') {
+				cb({error:false, addressbook: book});
+			}
+			defer.resolve({error:false, addressbook: book});*/
+			$("#calendar-ui").dialog('close');
+		}
+	})
+	.fail(function(jqxhr, textStatus, error) {
+		$(this).removeClass('loading');
+		var err = textStatus + ', ' + error;
+		console.log('Request Failed', + err);
+		error = t('contacts', 'Failed adding address book: {error}', {error:err});
+		if(typeof cb === 'function') {
+			cb({error:true, message:error});
+		}
+		defer.reject({error:true, message:error});
+	});
+}
+
+function calendarUiCancel() {
+	$("#calendar-ui").dialog('close');
+}
+
+function calendarUiInit() {
+	if ($("#calendar-ui-backend").val() == "local") {
+		$("#calendar-ui-uri-p").hide();
+		$("#calendar-ui-description-p").hide();
+		$("#calendar-ui-ldapurl-p").hide();
+		$("#calendar-ui-ldapanonymous-p").hide();
+		$("#calendar-ui-ldapreadonly-p").hide();
+		$("#calendar-ui-ldapuser-p").hide();
+		$("#calendar-ui-ldappass-p").hide();
+		$("#calendar-ui-ldappagesize-p").hide();
+		$("#calendar-ui-ldapbasednsearch-p").hide();
+		$("#calendar-ui-ldapfilter-p").hide();
+		$("#calendar-ui-ldapbasednmodify-p").hide();
+		$("#calendar-ui-ldapvcardconnector-p").hide();
+	} else if ($("#calendar-ui-backend").val() == "ldap") {
+		$("#calendar-ui-uri-p").show();
+		$("#calendar-ui-description-p").show();
+		$("#calendar-ui-ldapurl-p").show();
+		$("#calendar-ui-ldapanonymous-p").show();
+		$("#calendar-ui-ldapreadonly-p").show();
+		$("#calendar-ui-ldapuser-p").show();
+		$("#calendar-ui-ldappass-p").show();
+		$("#calendar-ui-ldappagesize-p").show();
+		$("#calendar-ui-ldapbasednsearch-p").show();
+		$("#calendar-ui-ldapfilter-p").show();
+		$("#calendar-ui-ldapbasednmodify-p").show();
+		$("#calendar-ui-ldapvcardconnector-p").show();
+	}
+}

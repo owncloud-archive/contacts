@@ -34,6 +34,16 @@ $this->create('contacts_address_books_for_user', 'addressbooks/')
 		}
 	);
 
+$this->create('contacts_address_books_get_ldap_connectors', 'addressbook/connector')
+	->get()
+	->action(
+		function($params) {
+			\OC::$session->close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('AddressBookController', 'getLdapConnectors');
+		}
+	);
+
 $this->create('contacts_address_book_add', 'addressbook/{backend}/add')
 	->post()
 	->action(
@@ -417,4 +427,3 @@ $this->create('contacts_index_properties', 'indexproperties/{user}/')
 	)
 	->requirements(array('user'))
 	->defaults(array('user' => \OCP\User::getUser()));
-

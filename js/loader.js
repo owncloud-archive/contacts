@@ -146,4 +146,6 @@ $(document).ready(function(){
 		FileActions.register('text/x-vcard','importaddressbook', OC.PERMISSION_READ, '', OC.ContactsImporter.init);
 		FileActions.setDefault('text/x-vcard','importaddressbook');
 	}
+	
+	$("#calendar-ui").hide();
 });

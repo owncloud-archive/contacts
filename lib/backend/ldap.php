@@ -335,7 +335,48 @@ class Ldap extends AbstractBackend {
 	 * @return string|false The ID if the newly created AddressBook or false on error.
 	 */
 	public function createAddressBook(array $properties, array $options = array()) {
-		// TODO: use backend settings
+		if (count($properties) === 0) {
+			return false;
+		}
+		if (isset($properties['displayname']) && $properties['displayname'] != '' &&
+			isset($properties['uri']) && $properties['uri'] != '' &&
+			isset($properties['ldapurl']) && $properties['ldapurl'] != '' &&
+			isset($properties['ldappagesize']) && $properties['ldappagesize'] != '' &&
+			isset($properties['ldapbasednsearch']) && $properties['ldapbasednsearch'] != '' &&
+			isset($properties['ldapfilter']) && $properties['ldapfilter'] != '' &&
+			isset($properties['ldapbasednmodify']) && $properties['ldapbasednmodify'] != '' &&
+			isset($properties['ldapvcardconnector']) && $properties['ldapvcardconnector'] != '' &&
+			isset($properties['ldapanonymous']) &&
+				($properties['ldapanonymous']=='true' 
+					|| ($properties['ldapanonymous']=='false' 
+						&& isset($properties['ldapuser']) && $properties['ldapuser'] != ''
+						&& isset($properties['ldappass']) && $properties['ldappass'] != ''
+						)
+				)
+			) {
+			$addressbookSettings = array();
+			$addressbookSettings['uri'] = $properties['uri'];
+			$addressbookSettings['displayname'] = $properties['displayname'];
+			$addressbookSettings['description'] = $properties['description'];
+			$addressbookSettings['ldapurl'] = $properties['ldapurl'];
+			$addressbookSettings['ldapanonymous'] = false;
+			$addressbookSettings['ldapreadonly'] = false;
+			$addressbookSettings['ldapuser'] = $properties['ldapuser'];
+			$addressbookSettings['ldappass'] = base64_encode($properties['ldappass']);
+			$addressbookSettings['ldappagesize'] = $properties['ldappagesize'];
+			$addressbookSettings['ldapbasednsearch'] = $properties['ldapbasednsearch'];
+			$addressbookSettings['ldapfilter'] = $properties['ldapfilter'];
+			$addressbookSettings['ldapbasednmodify'] = $properties['ldapbasednmodify'];
+			$prefix = "backend_ldap_";
+			$suffix = "_connector.xml";
+			$path = __DIR__ . "/../../formats/";
+			if (file_exists( $path.$prefix.$properties['ldapvcardconnector'].$suffix )) {
+				$addressbookSettings['ldap_vcard_connector'] = file_get_contents ( $path.$prefix.$properties['ldapvcardconnector'].$suffix );
+			}
+			$this->setPreferences($properties['uri'], $addressbookSettings);
+			$this->setActive(1, $properties['uri']);
+		}
+		return $properties['uri'];
 	}
 
 	/**
@@ -345,7 +386,8 @@ class Ldap extends AbstractBackend {
 	 * @return bool
 	 */
 	public function deleteAddressBook($addressbookid, array $options = array()) {
-		$addressbook = self::getAddressBook($addressbookid);
+		//$addressbook = self::getAddressBook($addressbookid);
+		self::removePreferences($addressbookid);
 
 		// TODO: use backend settings
 		return true;
@@ -459,7 +501,7 @@ class Ldap extends AbstractBackend {
 																	$this->connector->getLdapEntries());
 				} else {
 					$card = self::ldapFindOne(base64_decode($cid),
-																	'objectClass=*',
+																	$this->ldapParams['ldapfilter'],
 																	$this->connector->getLdapEntries());
 				}
 			}
@@ -519,7 +561,7 @@ class Ldap extends AbstractBackend {
 				}
 			}
 		}
-		error_log("stay added ".print_r($trace,1));
+		//error_log("stay added ".print_r($trace,1));
 
 		$uri = isset($options['uri']) ? $options['uri'] : null;
 		
@@ -541,7 +583,7 @@ class Ldap extends AbstractBackend {
 				return false;
 			}
 		}
-		error_log("adding ".$contact->serialize());
+		//error_log("adding ".$contact->serialize());
 
 		try {
 			$contact->validate(VCard::REPAIR|VCard::UPGRADE);
@@ -584,7 +626,6 @@ class Ldap extends AbstractBackend {
 	 * @return bool
 	 */
 	public function updateContact($addressbookid, $id, $carddata, array $options = array()) {
-		error_log(__FUNCTION__." call : ".$begin);
 		if(!$carddata instanceof VCard) {
 			try {
 				$vcard = \Sabre\VObject\Reader::read($carddata);
@@ -630,7 +671,6 @@ class Ldap extends AbstractBackend {
 			$result = self::ldapUpdate($dn, $ldifEntries);
 		}
 		self::ldapCloseConnection();
-		error_log(__FUNCTION__." end call : ".$end.", duration: ".($end-$begin));
 		return $result;
 	}
 

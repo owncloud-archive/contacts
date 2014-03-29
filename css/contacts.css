@@ -815,6 +815,21 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	transition: all 0.5s ease-in-out;
 }
 
+#calendar-ui > p > select {
+	width:200px;
+	display: inline-block;
+}
+
+#calendar-ui > p > input {
+	width:200px;
+	display: inline-block;
+}
+
+#calendar-ui > p > label {
+	width:200px;
+	display: inline-block;
+}
+
 @media screen and (min-width: 1400px) {
 	#contact > ul.propertylist {
 		-moz-column-count: 3;

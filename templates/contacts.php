@@ -507,3 +507,135 @@ use OCA\Contacts\ImportManager;
 	</span>
 </li>
 </script>
+
+<div id="calendar-ui" title="Add new addressbook" class="calendar-ui-class">
+	<p id="calendar-ui-backend-p">
+	<label for="calendar-ui-backend">
+	<?php p($l->t('Addressbook type')); ?>:
+	</label>
+	<select id="calendar-ui-backend">
+		<option value="local">Local</option>
+		<option value="ldap">LDAP</option>
+	</select>
+	</p>
+	<p id="calendar-ui-name-p">
+	<label for="calendar-ui-name">
+	<?php p($l->t('Name')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="calendar-ui-name" value=""
+		placeholder="<?php p($l->t('Name')); ?>" required />
+	</p>
+	<p id="calendar-ui-uri-p">
+	<label for="calendar-ui-uri">
+	<?php p($l->t('Addressbook URI')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="calendar-ui-uri" value=""
+		placeholder="<?php p($l->t('uri')); ?>" required />
+	</p>
+	<p id="calendar-ui-description-p">
+	<label for="calendar-ui-description">
+	<?php p($l->t('Description')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="calendar-ui-description" value=""
+		placeholder="<?php p($l->t('Description')); ?>" />
+	</p>
+	<p id="calendar-ui-ldapurl-p">
+	<label for="calendar-ui-ldapurl">
+	<?php p($l->t('LDAP URL')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="calendar-ui-ldapurl" value=""
+		placeholder="<?php p($l->t('LDAP URL')); ?>" required />
+	</p>
+	<p id="calendar-ui-ldapanonymous-p">
+	<label for="calendar-ui-ldapanonymous">
+	<?php p($l->t('Anonymous')); ?>:
+	</label>
+	<input type="checkbox" id="calendar-ui-ldapanonymous" title="<?php p($l->t('Anonymous')); ?>" />
+	</p>
+	<p id="calendar-ui-ldapreadonly-p">
+	<label for="calendar-ui-ldapreadonly">
+	<?php p($l->t('Read-only')); ?>:
+	</label>
+	<input type="checkbox" id="calendar-ui-ldapreadonly" title="<?php p($l->t('Read-Only')); ?>" />
+	</p>
+	<p id="calendar-ui-ldapuser-p">
+	<label for="calendar-ui-ldapuser">
+	<?php p($l->t('User')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="calendar-ui-ldapuser" value=""
+		placeholder="<?php p($l->t('User')); ?>" required />
+	</p>
+	<p id="calendar-ui-ldappass-p">
+	<label for="calendar-ui-ldappass">
+	<?php p($l->t('Password')); ?>:
+	</label>
+	<input type="password" class="nonempty value" id="calendar-ui-ldappass" value=""
+		placeholder="<?php p($l->t('Password')); ?>" required />
+	</p>
+	<p id="calendar-ui-ldappagesize-p">
+	<label for="calendar-ui-ldappagesize">
+	<?php p($l->t('Page size')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="calendar-ui-ldappagesize" value="20"
+		placeholder="<?php p($l->t('Page size')); ?>" required />
+	</p>
+	<p id="calendar-ui-ldapbasednsearch-p">
+	<label for="calendar-ui-ldapbasednsearch">
+	<?php p($l->t('Base DN for search')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="calendar-ui-ldapbasednsearch" value=""
+		placeholder="<?php p($l->t('Base DN')); ?>" required />
+	</p>
+	<p id="calendar-ui-ldapfilter-p">
+	<label for="calendar-ui-ldapfilter">
+	<?php p($l->t('Search filter')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="calendar-ui-ldapfilter" value=""
+		placeholder="<?php p($l->t('Filter')); ?>" required />
+	</p>
+	<p id="calendar-ui-ldapbasednmodify-p">
+	<label for="calendar-ui-ldapbasednmodify">
+	<?php p($l->t('Base DN for modification')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="calendar-ui-ldapbasednmodify" value=""
+		placeholder="<?php p($l->t('Base DN')); ?>" required />
+	</p>
+	<p id="calendar-ui-ldapvcardconnector-p">
+	<label for="calendar-ui-ldapvcardconnector">
+	<?php p($l->t('Connector')); ?>:
+	</label>
+	<select id="calendar-ui-ldapvcardconnector">
+		<?php
+		$ldapConnectors = getLdapConnectors();
+		foreach ($ldapConnectors as $value => $label) {
+			echo "<option value=\"$value\">$label</option>";
+		}
+		?>
+	</select>
+	</p>
+</div>
+<?php
+
+// TODO: use route instead
+function getLdapConnectors() {
+	$prefix = "backend_ldap_";
+	$suffix = "_connector.xml";
+	$path = __DIR__ . "/../formats/";
+	$files = scandir($path);
+	$formats = array();
+	foreach ($files as $file) {
+		if (!strncmp($file, $prefix, strlen($prefix)) && substr($file, - strlen($suffix)) === $suffix) {
+			if (file_exists($path.$file)) {
+				$format = simplexml_load_file ( $path.$file );
+				if ($format) {
+					if (isset($format['name'])) {
+						$formatId = substr($file, strlen($prefix), - strlen($suffix));
+						$formats[$formatId] = (string)$format['name'];
+					}
+				}
+			}
+		}
+	}
+	return $formats;
+}
+?>

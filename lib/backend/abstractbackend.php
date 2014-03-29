@@ -452,9 +452,12 @@ abstract class AbstractBackend {
 		$key = 'prefs_' . $key;
 		
 		$addressbookList = $this->getAddressbookList($params);
+		/*if (!is_array($addressbookList)) {
+			$addressbookList = array($addressbookList);
+		}*/
 		if (!in_array($addressbookid, $addressbookList)) {
 			$addressbookList[] = $addressbookid;
-			$this->setAddressbookList($addressbookList, $params);
+			$this->setAddressbookList($addressbookList);
 		}
 
 		$data = json_encode($params);
@@ -463,7 +466,21 @@ abstract class AbstractBackend {
 			: false;
 	}
 	
-	protected function setAddressbookList(array $addressbookList, array $params) {
+	public function removePreferences($addressbookid) {
+		$key = $this->combinedKey($addressbookid);
+		$key = 'prefs_' . $key;
+		
+		\OC_Preferences::deleteKey( $this->userid, 'contacts', $key );
+		
+		$addressbookList = $this->getAddressbookList($params);
+		$toRemove = array_search($addressbookid, $addressbookList);
+		if ($toRemove) {
+			unset($addressbookList[$toRemove]);
+			$this->setAddressbookList($addressbookList);
+		}
+	}
+	
+	protected function setAddressbookList(array $addressbookList) {
 		$key = $this->name . "_list";
 		$data = json_encode($addressbookList);
 		

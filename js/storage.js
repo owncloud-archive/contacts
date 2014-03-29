@@ -107,7 +107,7 @@ OC.Contacts = OC.Contacts || {};
 		return this.requestRoute(
 			'addressbook/{backend}/add',
 			'POST',
-			{backend: 'local'},
+			{backend: backend},
 			JSON.stringify(parameters)
 		);
 	};
