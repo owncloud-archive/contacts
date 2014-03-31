@@ -430,6 +430,7 @@ class Database extends AbstractBackend {
 			\OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
 			return $cards;
 		}
+                
 
 		if (!is_null($result)) {
 
@@ -439,7 +440,6 @@ class Database extends AbstractBackend {
 			}
 
 		}
-
 		return $cards;
 	}
 

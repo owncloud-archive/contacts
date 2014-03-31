@@ -351,19 +351,9 @@
 		<name>*dbprefix*contacts_ocu_addressbooks</name>
 
 		<declaration>
-
+                    
 		<field>
 			<name>id</name>
-			<type>integer</type>
-			<default>0</default>
-			<notnull>true</notnull>
-			<autoincrement>1</autoincrement>
-			<unsigned>true</unsigned>
-			<length>4</length>
-		</field>
-
-		<field>
-			<name>userid</name>
 			<type>text</type>
 			<default></default>
 			<notnull>true</notnull>
@@ -410,13 +400,6 @@
 			<length>4</length>
 		</field>
 
-		<index>
-			<name>c_addressbook_userid_index</name>
-			<field>
-				<name>userid</name>
-				<sorting>ascending</sorting>
-			</field>
-		</index>
 		</declaration>
 
 	</table>
@@ -428,7 +411,7 @@
 		<declaration>
 
 		<field>
-			<name>userid</name>
+			<name>id</name>
                         <type>text</type>
 			<default></default>
 			<notnull>true</notnull>
@@ -436,7 +419,7 @@
 		</field>
     
                 <field>
-			<name>ownerid</name>
+			<name>owner</name>
                         <type>text</type>
 			<default></default>
 			<notnull>true</notnull>
