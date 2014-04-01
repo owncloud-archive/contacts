@@ -178,6 +178,42 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Get metadata from an address book from a specific backend
+	 *
+	 * @param string backend
+	 * @param string addressBookId Address book ID
+	 * @return
+	 *
+	 * metadata:
+	 * {
+	 *     id:'1234'
+	 *     permissions:31,
+	 *     displayname:'Contacts',
+	 *     lastmodified: (unix timestamp),
+	 *     owner: 'joye'
+	 * }
+	 */
+	Storage.prototype.getAddressBook = function(backend, addressBookId) {
+		var defer = $.Deferred();
+
+		$.when(this.requestRoute(
+			'addressbook/{backend}/{addressBookId}',
+			'GET',
+			{backend: backend, addressBookId: addressBookId},
+			''
+		))
+		.then(function(response) {
+			console.log('response', response);
+			defer.resolve(response);
+		})
+		.fail(function(response) {
+			console.warn('Request Failed:', response.message);
+			defer.reject(response);
+		});
+		return defer;
+	};
+
+	/**
 	 * Get contacts from an address book from a specific backend
 	 *
 	 * @param string backend
@@ -196,7 +232,7 @@ OC.Contacts = OC.Contacts || {};
 	 *     data: //array of VCard data
 	 * }
 	 */
-	Storage.prototype.getAddressBook = function(backend, addressBookId) {
+	Storage.prototype.getContacts = function(backend, addressBookId) {
 		var headers = {},
 			data,
 			key = 'contacts::' + backend + '::' + addressBookId,
@@ -207,7 +243,7 @@ OC.Contacts = OC.Contacts || {};
 			headers['If-None-Match'] = data.Etag;
 		}
 		$.when(this.requestRoute(
-			'addressbook/{backend}/{addressBookId}',
+			'addressbook/{backend}/{addressBookId}/contacts',
 			'GET',
 			{backend: backend, addressBookId: addressBookId},
 			'',

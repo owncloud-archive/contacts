@@ -2591,7 +2591,7 @@ OC.Contacts = OC.Contacts || {};
 		}
 		var self = this;
 
-		return $.when(self.storage.getAddressBook(backend, addressBookId, false))
+		return $.when(self.storage.getContacts(backend, addressBookId, false))
 			.then(function(response) {
 			console.log('ContactList.loadContacts - fetching', response);
 			if(!response.error) {
