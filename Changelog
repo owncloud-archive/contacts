@@ -1,5 +1,12 @@
 ownCloud Contacts Changelog
 
+6.0.3
+- Some browsers showed the contact photo crop editor in upper-left corner.
+- Added test for functional localStorage.
+- Fixed CardDAV Extended MKCOL.
+- The list item for an open contact disappeared if the user clicked on "New contact".
+- Silenced annoying warning on address book sharing.
+
 6.0.2
 - Many improvements for groups both front- and back-end.
 - Fix unusable app after import of contact with no name.
