@@ -7,10 +7,12 @@ use OCA\Contacts\Contact,
 	OCA\Contacts\Utils\Properties,
 	Sabre\VObject\Reader,
         OCA\Contacts\Addressbook;
+
+
 /**
  * Contact backend for storing all the ownCloud users in this installation.
  * Every user has *1* personal addressbook. The id of this addresbook is the 
- * userid of the owner. 
+ * userid of the owner.
  */
 class OwnCloudUsers extends AbstractBackend {
 
@@ -33,6 +35,9 @@ class OwnCloudUsers extends AbstractBackend {
         $this->userid = $userid ? $userid : \OCP\User::getUser();
     }
     
+    /**
+     * {@inheritdoc}
+     */
     public function getAddressBooksForUser(array $options = array()) {
         // Only 1 addressbook for every user
         $sql = 'SELECT * FROM ' . $this->addressBooksTableName . ' WHERE id = ?';
@@ -40,17 +45,17 @@ class OwnCloudUsers extends AbstractBackend {
         $query = \OCP\DB::prepare($sql);
         $result = $query->execute($args);
         $row = $result->fetchRow();
-        // Check if there are no results TODO?
-        if(!$row){
-            // Create new addressbook
+
+        if(!$row){ // TODO -> better way?
+            // Create new addressbook 
             $sql = 'INSERT INTO ' . $this->addressBooksTableName 
                     . ' ( '
                         . 'id, '
                         . 'displayname, '
                         //. 'uri, ' TODO
                         . 'description, '
-                //        . 'ctag, '
-                    . 'active '
+                        //. 'ctag, '
+                        . 'active '
                     . ') VALUES ( '
                         . '?, '
                         . '?, '
@@ -73,6 +78,10 @@ class OwnCloudUsers extends AbstractBackend {
         }
     }
         
+    /**
+     * {@inheritdoc}
+     * Only 1 addressbook for every user
+     */
     public function getAddressBook($addressBookId, array $options = array()) {
         
         $sql = 'SELECT * FROM ' . $this->addressBooksTableName . ' WHERE id = ?';
@@ -86,6 +95,10 @@ class OwnCloudUsers extends AbstractBackend {
         return array($row);
     }
     
+     /**
+     * {@inheritdoc}
+     * There are as many contacts in this addressbook as in this ownCloud installation
+     */
     public function getContacts($addressbookid, array $options = array()){
         $contacts =  array();
         
@@ -125,6 +138,13 @@ class OwnCloudUsers extends AbstractBackend {
         }
     }
     
+     /**
+     * {@inheritdoc}
+     * If your username is "admin" and you want to retrieve your own contact
+     * the params would be: $addressbookid = 'admin'; $id = 'admin';
+     * If your username is 'foo' and you want to retrieve the contact with 
+      * ownCloud username 'bar' the params would be: $addressbookid = 'foo'; $id = 'bar';
+     */
     public function getContact($addressbookid, $id, array $options = array()){
         $sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE owner = ?';
         $query = \OCP\DB::prepare($sql);
@@ -135,10 +155,18 @@ class OwnCloudUsers extends AbstractBackend {
         return $row;
     }
     
+    // Not needed since there is only one addressbook for every user
     public function createAddressBook(array $properties) {
         
     }
     
+    /**
+     * Help function to add contacts to an addressbook. 
+     * This only happens when an admin creates new users
+     * @param array $contacts array with userid of ownCloud users 
+     * @param string $addressBookId
+     * @return bool
+     */
     private function addContacts($contacts, $addressbookid){
         foreach($contacts as $user){
             $sql = 'INSERT INTO ' . $this->cardsTableName . ' ('
@@ -173,19 +201,32 @@ class OwnCloudUsers extends AbstractBackend {
             );
             $carddata = $this->generateCardData($contact);
             $result = $query->execute(array($user, $this->userid, $addressbookid, \OCP\User::getDisplayName($user), $carddata->serialize(), 'test', time()));
+            // TODO Check if $result succeeded
         }
     }
     
+    /**
+     * Help function to remove contacts from an addressbook. 
+     * This only happens when an admin remove an ownCloud user
+     * @param array $contacts array with userid of ownCloud users 
+     * @param string $addressBookId
+     * @return bool
+     */
     private function removeContacts($contacts, $addressbookid){
         foreach($contacts as $user){
             $sql = 'DELETE FROM ' . $this->cardsTableName . ' WHERE owner = ? AND id = ?';
             
             $query = \OCP\DB::prepare($sql);
             $result = $query->execute(array($this->userid, $user));
+            // TODO Check if $result succeeded
         }
     }
     
-    
+    /**
+     * Help function to generate the carddate which than can be stored in the db 
+     * @param string|VCard $data 
+     * @return Vcard
+     */
     private function generateCardData($data){
         if (!$data instanceof VCard) {
             try {
@@ -215,48 +256,49 @@ class OwnCloudUsers extends AbstractBackend {
         return $data;
     }
     
+    /**
+     * @inheritdoc
+     */
     public function updateContact($addressBookId, $id, $contact, array $options = array()) {
 
         $updateRevision = true;
         $isCardDAV = false;
 
         if (!$contact instanceof VCard) {
-                try {
-                        $contact = Reader::read($contact);
-                } catch(\Exception $e) {
-                        \OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
-                        return false;
-                }
+            try {
+                $contact = Reader::read($contact);
+            } catch(\Exception $e) {
+                \OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
+                return false;
+            }
         }
 
         if (is_array($id)) {
+            if (isset($id['id'])) {
+                $id = $id['id'];
+            } elseif (isset($id['uri'])) {
+                $updateRevision = false;
+                $isCardDAV = true;
+                $id = $this->getIdFromUri($id['uri']);
 
-                if (isset($id['id'])) {
-                        $id = $id['id'];
-                } elseif (isset($id['uri'])) {
-                        $updateRevision = false;
-                        $isCardDAV = true;
-                        $id = $this->getIdFromUri($id['uri']);
-
-                        if (is_null($id)) {
-                                \OCP\Util::writeLog('contacts', __METHOD__ . ' Couldn\'t find contact', \OCP\Util::ERROR);
-                                return false;
-                        }
-
-                } else {
-                        throw new \Exception(
-                                __METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
-                        );
+                if (is_null($id)) {
+                    \OCP\Util::writeLog('contacts', __METHOD__ . ' Couldn\'t find contact', \OCP\Util::ERROR);
+                    return false;
                 }
+
+            } else {
+                throw new \Exception(
+                    __METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
+                );
+            }
         }
 
         if ($updateRevision || !isset($contact->REV)) {
-                $now = new \DateTime;
-                $contact->REV = $now->format(\DateTime::W3C);
+            $now = new \DateTime;
+            $contact->REV = $now->format(\DateTime::W3C);
         }
 
         $data = $contact->serialize();
-        
         
         $sql = 'UPDATE ' . $this->cardsTableName
             . ' SET '
