@@ -143,7 +143,7 @@
 #firstrun #selections { font-size:0.8em; margin: 2em auto auto auto; clear: both; }
 
 #contact textarea {
-	margin-left: 114px;
+	margin-left: 110px;
 	min-height: 5em;
 	min-width: 300px;
 	font-family: inherit;
@@ -304,7 +304,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	text-align: right;
 }
 .singleproperties { float: left; width: 100%; }
-.singleproperties .fullname { float: none !important; margin-left: 4px; width: 300px; font-size: 20px; }
+.singleproperties .fullname { float: none !important; width: 300px; font-size: 20px; }
 .singleproperties input { width: 300px; }
 .singleproperties dd { float:left; }
 .singleproperties dd .listactions a { margin-top: 10px; }
@@ -568,7 +568,6 @@ input[type=checkbox].propertytype { width: 10px; }
 
 .display .meta { text-align: right; margin-left: -30px; }
 .display .adr {
-	margin: .3em;
 	padding-left: 5px;
 	padding-right: 5px;
 	cursor: pointer;
@@ -779,7 +778,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	max-width: 700px;
 }
 #contact h3 {
-	margin-left: 115px;
+	margin-left: 110px;
 	margin-top: 7px;
 	margin-bottom: 0px;
 	font-size: 12px;
