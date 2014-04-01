@@ -52,6 +52,28 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Test if localStorage is working
+	 *
+	 * @return bool
+	 */
+	Storage.prototype.hasLocalStorage = function(jqXHR) {
+		if (Modernizr) {
+			if (!Modernizr.localStorage) {
+				return false;
+			}
+		}
+		// Some browsers report support but doesn't have it
+		// e.g. Safari in private browsing mode.
+		try {
+			OC.localStorage.setItem('Hello', 'World');
+			OC.localStorage.removeItem('Hello');
+		} catch (e) {
+			return false;
+		}
+		return true;
+	};
+
+	/**
 	 * When the response isn't returned from requestRoute(), you can
 	 * wrap it in a JSONResponse so that it's parsable by other objects.
 	 *
@@ -186,12 +208,13 @@ OC.Contacts = OC.Contacts || {};
 	 * }
 	 */
 	Storage.prototype.getAddressBook = function(backend, addressBookId) {
-		var headers = {},
+		var self = this,
+			headers = {},
 			data,
 			key = 'contacts::' + backend + '::' + addressBookId,
 			defer = $.Deferred();
 
-		if(OC.localStorage.hasItem(key)) {
+		if(this.hasLocalStorage() && OC.localStorage.hasItem(key)) {
 			data = OC.localStorage.getItem(key);
 			headers['If-None-Match'] = data.Etag;
 		}
@@ -208,7 +231,9 @@ OC.Contacts = OC.Contacts || {};
 				console.log('Returning fetched address book');
 				if(response.data) {
 					response.data.Etag = response.getResponseHeader('Etag');
-					OC.localStorage.setItem(key, response.data);
+					if (!self.hasLocalStorage()) {
+						OC.localStorage.setItem(key, response.data);
+					}
 					defer.resolve(response);
 				}
 			} else if(response.statusCode === 304) {
