@@ -52,6 +52,7 @@ class OwnCloudUsers extends AbstractBackend {
     private $cardsTableName = '*PREFIX*contacts_ocu_cards';
 
     public function __construct($userid){
+
 	$this->userid = $userid ? $userid : \OCP\User::getUser();
     }
 
@@ -59,55 +60,7 @@ class OwnCloudUsers extends AbstractBackend {
      * {@inheritdoc}
      */
     public function getAddressBooksForUser(array $options = array()) {
-	// Only 1 addressbook for every user
-	$sql = 'SELECT * FROM ' . $this->addressBooksTableName . ' WHERE id = ?';
-	$args = array($this->userid);
-	$query = \OCP\DB::prepare($sql);
-	$result = $query->execute($args);
-	$row = $result->fetchRow();
-
-	if(!$row){ // TODO -> better way?
-	    // Create new addressbook 
-	    try{ 
-		$sql = 'INSERT INTO ' . $this->addressBooksTableName 
-		    . ' ( '
-			. 'id, '
-			. 'displayname, '
-			//. 'uri, ' TODO
-			. 'description, '
-			//. 'ctag, '
-			. 'active '
-		    . ') VALUES ( '
-			. '?, '
-			. '?, '
-			. '?, '
-			. '? '
-		    . ')';
-		$args = array(
-		    $this->userid,
-		    'ownCloud Users',
-		    'ownCloud Users',
-		    1
-		);
-		$query = \OCP\DB::prepare($sql);
-		$result = $query->execute($args);
-
-		if (\OCP\DB::isError($result)) {
-		    \OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
-			. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-		    return array();
-		}
-	    } catch(\Exception $e) {
-		\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
-		    . $e->getMessage(), \OCP\Util::ERROR);
-		return array();
-	    }
-	    
-	    return $this->getAddressBooksForUser();
-	} else {
-	    $row['permissions'] = \OCP\PERMISSION_ALL;
-	    return array($row);
-	}
+	return array($this->getAddressBook('admin'));
     }
 
     /**
@@ -115,29 +68,19 @@ class OwnCloudUsers extends AbstractBackend {
      * Only 1 addressbook for every user
      */
     public function getAddressBook($addressBookId, array $options = array()) {
-	try{ 
-	    $sql = 'SELECT * FROM ' . $this->addressBooksTableName . ' WHERE id = ?';
-	    $args = array($addressBookId);
-	    $query = \OCP\DB::prepare($sql);
-	    $result = $query->execute($args);
-	    
-	    
-	    if (\OCP\DB::isError($result)) {
-		\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
-		    . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-		return array();
-	    } else {
-		$row = $result->fetchRow();
-		// TODO create address book if it doesn't exists
-		$row['permissions'] = \OCP\PERMISSION_ALL;
-		$row['backend'] = $this->name;
-		return array($row);
-	    }
-	} catch(\Exception $e) {
-		\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
-		    . $e->getMessage(), \OCP\Util::ERROR);
-	    return array();
-	}
+	$addressbook = array(
+	    "id" => $addressBookId,
+	    "displayname" => 'ownCloudUsers',
+	    "description" => 'ownCloud Users',
+	    "ctag" => time(),
+	    "permissions" => \OCP\PERMISSION_ALL,
+	    "backend" => $this->name,
+	    "active" => 1
+	);
+	//var_dump($addressbook);
+	//throw new \Exception($addressBookId);
+	
+	return $addressbook;
     }
 
      /**
