@@ -62,11 +62,9 @@ OC.Contacts = OC.Contacts || {};
 	 *
 	 * @return bool
 	 */
-	Storage.prototype.hasLocalStorage = function(jqXHR) {
-		if (Modernizr) {
-			if (!Modernizr.localStorage) {
-				return false;
-			}
+	Storage.prototype.hasLocalStorage = function() {
+		if (Modernizr && !Modernizr.localStorage) {
+			return false;
 		}
 		// Some browsers report support but doesn't have it
 		// e.g. Safari in private browsing mode.
