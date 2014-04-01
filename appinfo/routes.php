@@ -34,7 +34,7 @@ $this->create('contacts_address_books_for_user', 'addressbooks/')
 		}
 	);
 
-$this->create('contacts_address_books_get_ldap_connectors', 'addressbook/connector')
+$this->create('contacts_address_book_connectors', 'connectors/{backend}')
 	->get()
 	->action(
 		function($params) {
@@ -42,7 +42,8 @@ $this->create('contacts_address_books_get_ldap_connectors', 'addressbook/connect
 			$dispatcher = new Dispatcher($params);
 			$dispatcher->dispatch('AddressBookController', 'getLdapConnectors');
 		}
-	);
+	)
+	->requirements(array('backend'));
 
 $this->create('contacts_address_book_add', 'addressbook/{backend}/add')
 	->post()

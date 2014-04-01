@@ -825,6 +825,11 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	display: inline-block;
 }
 
+#calendar-ui > p > textarea {
+	width:200px;
+	display: inline-block;
+}
+
 #calendar-ui > p > label {
 	width:200px;
 	display: inline-block;

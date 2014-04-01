@@ -407,6 +407,7 @@ class Addressbook extends AbstractPIMCollection {
 	 * @return bool
 	 */
 	public function update(array $data) {
+		error_log(__METHOD__." enter");
 		if (!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
 			throw new \Exception(
 				self::$l10n->t('Access denied'),
@@ -421,6 +422,7 @@ class Addressbook extends AbstractPIMCollection {
 			);
 		}
 
+		error_log(__METHOD__." count ".count($data));
 		if (count($data) === 0) {
 			return false;
 		}
@@ -436,6 +438,7 @@ class Addressbook extends AbstractPIMCollection {
 			}
 		}
 
+		error_log(__METHOD__);
 		return $this->backend->updateAddressBook($this->getId(), $data);
 	}
 

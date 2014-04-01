@@ -509,6 +509,7 @@ use OCA\Contacts\ImportManager;
 </script>
 
 <div id="calendar-ui" title="Add new addressbook" class="calendar-ui-class">
+	<input type="hidden" id="calendar-ui-addressbookid" />
 	<p id="calendar-ui-backend-p">
 	<label for="calendar-ui-backend">
 	<?php p($l->t('Addressbook type')); ?>:
@@ -606,12 +607,19 @@ use OCA\Contacts\ImportManager;
 	</label>
 	<select id="calendar-ui-ldapvcardconnector">
 		<?php
-		$ldapConnectors = getLdapConnectors();
+		/*$ldapConnectors = getLdapConnectors();
 		foreach ($ldapConnectors as $value => $label) {
 			echo "<option value=\"$value\">$label</option>";
-		}
+		}*/
 		?>
+		<option value="custom">Custom connector</option>
 	</select>
+	</p>
+	<p id="calendar-ui-ldapvcardconnector-value-p">
+	<label for="calendar-ui-ldapvcardconnector-value">
+	<?php p($l->t('Connector value')); ?>:
+	</label>
+	<textarea id="calendar-ui-ldapvcardconnector-value"></textarea>
 	</p>
 </div>
 <?php

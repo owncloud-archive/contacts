@@ -272,6 +272,16 @@ class Ldap extends AbstractBackend {
 	 * @return array $properties
 	 */
 	public function getAddressBook($addressbookid, array $options = array()) {
+		$backtrace = debug_backtrace();
+		$trace=array();
+		foreach ($backtrace as $elt) {
+			foreach ($elt as $key => $line) {
+				if ($key == "file" || $key == "line") {
+					$trace[] = $line;
+				}
+			}
+		}
+		//error_log(__METHOD__." ".print_r($trace,1));
 		//\OC_Log::write('contacts', __METHOD__.' id: '
 		//	. $addressbookid, \OC_Log::DEBUG);
 		if($this->addressbooks && isset($this->addressbooks[$addressbookid])) {
@@ -281,7 +291,12 @@ class Ldap extends AbstractBackend {
 		// Hmm, not found. Lets query the db.
 		$preferences = (array)self::getPreferences($addressbookid);
 		if ($preferences != false) {
-			$current = array();
+			$preferences['id'] = (string)$addressbookid;
+			$preferences['owner'] = $this->userid;
+			$preferences['permissions'] = \OCP\PERMISSION_ALL;
+			$preferences['lastmodified'] = self::lastModifiedAddressBook($addressbookid);
+			return $preferences;
+			/*$current = array();
 			$current['id'] = (string)$addressbookid;
 			$current['displayname'] = (string)$preferences['displayname'];
 			$current['description'] = (string)$preferences['description'];
@@ -289,7 +304,8 @@ class Ldap extends AbstractBackend {
 			$current['uri'] = (string)$preferences['uri'];
 			$current['permissions'] = \OCP\PERMISSION_ALL;
 			$current['lastmodified'] = self::lastModifiedAddressBook($addressbookid);
-			return $current;
+			error_log(print_r($current, 1));
+			return $current;*/
 		} else {
 			return array();
 		}
@@ -316,12 +332,18 @@ class Ldap extends AbstractBackend {
 	 *
 	 * @param string $addressbookid
 	 * @param array $properties
-	 * @return bool
+	 * @return string|false The ID if the modified AddressBook or false on error.
 	 */
 	public function updateAddressBook($addressbookid, array $properties, array $options = array()) {
-		// TODO: use backend settings
-
-		return true;
+		error_log("where am i ?");
+		if ($this->hasAddressBook($addressbookid)) {
+			error_log("was here ?");
+			// Addressbook exists, modify it through the create function
+			return $this->createAddressBook($properties);
+		} else {
+			error_log("nope, was here");
+			return false;
+		}
 	}
 
 	/**
@@ -405,7 +427,7 @@ class Ldap extends AbstractBackend {
 	 * @returns int | null
 	 */
 	public function lastModifiedAddressBook($addressbookid, array $options = array()) {
-    return null;
+		return null;
 	}
 
 	/**
@@ -435,6 +457,18 @@ class Ldap extends AbstractBackend {
 	 * @return array
 	 */
 	public function getContacts($addressbookid, array $options = array()) {
+		//error_log("was here ".__METHOD__);
+		$backtrace = debug_backtrace();
+		$trace=array();
+		foreach ($backtrace as $elt) {
+			foreach ($elt as $key => $line) {
+				if ($key == "file" || $key == "line") {
+					$trace[] = $line;
+				}
+			}
+		}
+		//error_log(__METHOD__." ".print_r($trace,1));
+		
 		$cards = array();
 		$vcards = array();
 		if(is_array($addressbookid) && count($addressbookid)) {

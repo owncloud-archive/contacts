@@ -151,8 +151,10 @@ class AddressBookController extends Controller {
 
 		$response = new JSONResponse();
 
+		error_log(__METHOD__.print_r($this->request, true));
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
-		$addressBook->update($this->request['properties']);
+		//$addressBook->update($this->request['properties']);
+		$addressBook->update($this->request->post);
 
 		return $response->setParams($addressBook->getMetaData());
 	}
@@ -338,10 +340,11 @@ class AddressBookController extends Controller {
 
 	/**
 	 * @NoAdminRequired
+	 * @NoCSRFRequired
 	 */
 	public function getLdapConnectors() {
 		$params = $this->request->urlParams;
-		$targetInfo = $this->request->post['target'];
+		//$targetInfo = $this->request->post['target'];
 
 		$response = new JSONResponse();
 		$prefix = "backend_ldap_";
