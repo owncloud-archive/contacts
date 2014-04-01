@@ -1354,11 +1354,21 @@ OC.Contacts = OC.Contacts || {};
 				var $list = self.$fullelem.find('ul.' + name);
 				$list.removeClass('hidden');
 				var $property = self.renderStandardProperty(name);
+				$property.find('select[name="parameters[TYPE][]"]')
+					.combobox({
+					singleclick: true,
+					classes: ['propertytype', 'float', 'label']
+				});
 				$list.append($property);
 			});
 			var $list = self.$fullelem.find('ul.adr');
 			$list.removeClass('hidden');
 			var $property = self.renderAddressProperty(name);
+			$property.find('select[name="parameters[TYPE][]"]')
+				.combobox({
+				singleclick: true,
+				classes: ['propertytype', 'float', 'label']
+			});
 			$list.append($property);
 
 			// Hide some of the values

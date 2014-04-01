@@ -802,6 +802,8 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	float: left; 
 	width: 300px;
 	height: 30px;
+	margin: 3px;
+	margin-left: 0px;
 	overflow: hidden; text-overflow: ellipsis; text-align: bottom; white-space: nowrap; 
 }
 #contact span.adr:hover { /*overflow: inherit;*/ /*white-space: pre-wrap;*/ }
