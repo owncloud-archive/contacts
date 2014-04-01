@@ -35,14 +35,42 @@ class OwnCloudUsers extends AbstractBackend {
     
     public function getAddressBooksForUser(array $options = array()) {
         // Only 1 addressbook for every user
-        $sql = 'SELECT * FROM ' . $this->addressBooksTableName . ' WHERE userid = ?';
+        $sql = 'SELECT * FROM ' . $this->addressBooksTableName . ' WHERE id = ?';
         $args = array($this->userid);
         $query = \OCP\DB::prepare($sql);
         $result = $query->execute($args);
         $row = $result->fetchRow();
-        $row['permissions'] = \OCP\PERMISSION_ALL;
-        
-        return array($row);
+        // Check if there are no results TODO?
+        if(!$row){
+            // Create new addressbook
+            $sql = 'INSERT INTO ' . $this->addressBooksTableName 
+                    . ' ( '
+                        . 'id, '
+                        . 'displayname, '
+                        //. 'uri, ' TODO
+                        . 'description, '
+                //        . 'ctag, '
+                    . 'active '
+                    . ') VALUES ( '
+                        . '?, '
+                        . '?, '
+                        . '?, '
+                        . '? '
+                    . ')';
+            $args = array(
+                $this->userid,
+                'ownCloud Users',
+                'ownCloud Users',
+                1
+                );
+            $query = \OCP\DB::prepare($sql);
+            $query->execute($args);
+            
+            return $this->getAddressBooksForUser();
+        } else {
+            $row['permissions'] = \OCP\PERMISSION_ALL;
+            return array($row);
+        }
     }
         
     public function getAddressBook($addressBookId, array $options = array()) {
