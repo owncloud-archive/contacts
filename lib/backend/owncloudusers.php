@@ -98,9 +98,9 @@ class OwnCloudUsers extends AbstractBackend {
 		    return array();
 		}
 	    } catch(\Exception $e) {
-		    \OCP\Util::writeLog('contacts', __METHOD__.' exception: '
-			. $e->getMessage(), \OCP\Util::ERROR);
-		return $this->addressBooks;
+		\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
+		    . $e->getMessage(), \OCP\Util::ERROR);
+		return array();
 	    }
 	    
 	    return $this->getAddressBooksForUser();
@@ -131,13 +131,13 @@ class OwnCloudUsers extends AbstractBackend {
 		// TODO create address book if it doesn't exists
 		$row['permissions'] = \OCP\PERMISSION_ALL;
 		$row['backend'] = $this->name;
+		return array($row);
 	    }
 	} catch(\Exception $e) {
 		\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
 		    . $e->getMessage(), \OCP\Util::ERROR);
-	    return $this->addressBooks;
+	    return array();
 	}
-	return array($row);
     }
 
      /**
@@ -191,7 +191,7 @@ class OwnCloudUsers extends AbstractBackend {
 	} catch(\Exception $e) {
 		\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
 		    . $e->getMessage(), \OCP\Util::ERROR);
-	    return $this->addressBooks;
+	    return array();
 	}
 	
     }
@@ -221,7 +221,7 @@ class OwnCloudUsers extends AbstractBackend {
 	} catch(\Exception $e) {
 	    \OCP\Util::writeLog('contacts', __METHOD__.' exception: '
 		. $e->getMessage(), \OCP\Util::ERROR);
-	    return $this->addressBooks;
+	    return array();
 	}
     }
 
@@ -239,7 +239,8 @@ class OwnCloudUsers extends AbstractBackend {
      */
     private function addContacts($contacts, $addressbookid){
 	foreach($contacts as $user){
-	    $sql = 'INSERT INTO ' . $this->cardsTableName . ' ('
+	    try{ 
+		$sql = 'INSERT INTO ' . $this->cardsTableName . ' ('
 		    . 'id, '
 		    . 'owner,'
 		    . 'addressbookid, '
@@ -257,24 +258,35 @@ class OwnCloudUsers extends AbstractBackend {
 		    . '?'
 		. ')';
 
-	    $query = \OCP\DB::prepare($sql);
+		$query = \OCP\DB::prepare($sql);
 
-	    $contact = new Contact(	
-		$addressBook = new AddressBook($this , $this->getAddressBooksForUser()), // since there is only one addressbook with OC users for each OC user we can use this function
-		$this,
-		array(
-		    "id" => $user,
-		    "lastmodified" => time(), 
-		    "displayname" => \OCP\User::getDisplayName($user),
-		    "fullname" => \OCP\User::getDisplayName($user)
-		)
-	    );
-	    $carddata = $this->generateCardData($contact);
-	    $result = $query->execute(array($user, $this->userid, $addressbookid, \OCP\User::getDisplayName($user), $carddata->serialize(), 'test', time()));
-	    // TODO Check if $result succeeded
+		$contact = new Contact(	
+		    $addressBook = new AddressBook($this , $this->getAddressBooksForUser()), // since there is only one addressbook with OC users for each OC user we can use this function
+		    $this,
+		    array(
+			"id" => $user,
+			"lastmodified" => time(), 
+			"displayname" => \OCP\User::getDisplayName($user),
+			"fullname" => \OCP\User::getDisplayName($user)
+		    )
+		);
+		$carddata = $this->generateCardData($contact);
+		$result = $query->execute(array($user, $this->userid, $addressbookid, \OCP\User::getDisplayName($user), $carddata->serialize(), 'test', time()));
+
+		if (\OCP\DB::isError($result)) {
+		    \OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
+			. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+		    return false;
+		} else {
+		    return true;
+		}
+	    } catch(\Exception $e) {
+		\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
+		    . $e->getMessage(), \OCP\Util::ERROR);
+		return false;
+	    }	    
 	}
     }
-
     /**
      * Help function to remove contacts from an addressbook. 
      * This only happens when an admin remove an ownCloud user
@@ -284,11 +296,22 @@ class OwnCloudUsers extends AbstractBackend {
      */
     private function removeContacts($contacts, $addressbookid){
 	foreach($contacts as $user){
-	    $sql = 'DELETE FROM ' . $this->cardsTableName . ' WHERE owner = ? AND id = ?';
-
-	    $query = \OCP\DB::prepare($sql);
-	    $result = $query->execute(array($this->userid, $user));
-	    // TODO Check if $result succeeded
+	      try{ 
+		$sql = 'DELETE FROM ' . $this->cardsTableName . ' WHERE owner = ? AND id = ?';
+		$query = \OCP\DB::prepare($sql);
+		$result = $query->execute(array($this->userid, $user));
+		if (\OCP\DB::isError($result)) {
+		    \OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
+			. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+		    return false;
+		} else {
+		    return true;
+		}
+	    } catch(\Exception $e) {
+		\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
+		    . $e->getMessage(), \OCP\Util::ERROR);
+		return false;
+	    }
 	}
     }
 
@@ -369,18 +392,30 @@ class OwnCloudUsers extends AbstractBackend {
 	}
 
 	$data = $contact->serialize();
-
-	$sql = 'UPDATE ' . $this->cardsTableName
-	    . ' SET '
+	
+	try{ 
+	    $sql = 'UPDATE ' . $this->cardsTableName
+		. ' SET '
 		. '`addressbookid` = ?, '
-		. '`fullname` = ?, '
-		. '`carddata` = ?, '
-		. '`lastmodified` = ? '
-	    . ' WHERE '
-		. '`id` = ? '
-		. 'AND `owner` = ? ';
-	$query = \OCP\DB::prepare($sql);
-	$result = $query->execute(array($addressBookId, $contact->FN, $data, time(), $id, $this->userid));
-	return true;
+		    . '`fullname` = ?, '
+		    . '`carddata` = ?, '
+		    . '`lastmodified` = ? '
+		. ' WHERE '
+		    . '`id` = ? '
+		    . 'AND `owner` = ? ';
+	    $query = \OCP\DB::prepare($sql);
+	    $result = $query->execute(array($addressBookId, $contact->FN, $data, time(), $id, $this->userid));
+	    if (\OCP\DB::isError($result)) {
+		\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
+		    . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+		return false;
+	    } else {
+		return true;
+	    }
+	} catch(\Exception $e) {
+	    \OCP\Util::writeLog('contacts', __METHOD__.' exception: '
+		. $e->getMessage(), \OCP\Util::ERROR);
+	    return false;
+	}
     }
 }
