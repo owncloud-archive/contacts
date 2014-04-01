@@ -123,11 +123,11 @@ use OCA\Contacts\ImportManager;
 		</div>
 		<div id="firstrun" class="hidden">
 			<div>
-			<?php print_unescaped($l->t('<h3>You have no contacts in your address book or your address book is disabled.</h3>'
-				. '<p>Add a new contact or import existing contacts from a VCF file.</p>')) ?>
-			<div id="selections">
-				<button class="add-contact icon-plus text"><?php p($l->t('Add contact')) ?></button>
-			</div>
+				<h3><?php p($l->t('You have no contacts in your address book or your address book is disabled.')); ?></h3>
+				<p><?php p($l->t('Add a new contact or import existing contacts from a VCF file.')); ?></p>
+				<div id="selections">
+					<input type="button" class="add-contact text" value="<?php p($l->t('New contact')) ?>">
+				</div>
 			</div>
 		</div>
 		<form class="float" name="file_upload_form" id="file_upload_form" method="PUT" target="file_upload_target">
