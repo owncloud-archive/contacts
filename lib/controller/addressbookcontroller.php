@@ -69,7 +69,6 @@ class AddressBookController extends Controller {
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$lastModified = $addressBook->lastModified();
-		$etag = null;
 		$response = new JSONResponse();
 		$response->setData(array('data' => $addressBook->getMetaData()));
 
