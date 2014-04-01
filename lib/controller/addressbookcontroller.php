@@ -102,12 +102,12 @@ class AddressBookController extends Controller {
 		}
 
 		//$response->debug('comparing: "' . $etag . '" to ' . $this->request->getHeader('If-None-Match'));
-		/*if (!is_null($etag)
+		if (!is_null($etag)
 			&& $this->request->getHeader('If-None-Match') === '"'.$etag.'"')
 		{
 			return $response->setStatus(Http::STATUS_NOT_MODIFIED);
 		} else {
-		*/	switch ($this->request->method) {
+			switch ($this->request->method) {
 				case 'OPTIONS':
 					$options = array('GET', 'HEAD', 'OPTIONS');
 					if ($addressBook->hasPermission(\OCP\PERMISSION_DELETE)
@@ -136,7 +136,7 @@ class AddressBookController extends Controller {
 
 					return $response->setData(array('contacts' => $contacts));
 			}
-		//}
+		}
 	}
 
 	/**
