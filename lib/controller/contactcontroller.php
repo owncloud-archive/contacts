@@ -83,8 +83,8 @@ class ContactController extends Controller {
 		$patch = $this->request->patch;
 		$response = new JSONResponse();
 
-		$name = $patch['name'];
-		$value = $patch['value'];
+		$name = isset($patch['name']) ? $patch['name'] : null;
+		$value = isset($patch['value']) ? $patch['value'] : null;
 		$checksum = isset($patch['checksum']) ? $patch['checksum'] : null;
 		$parameters = isset($patch['parameters']) ? $patch['parameters'] : null;
 

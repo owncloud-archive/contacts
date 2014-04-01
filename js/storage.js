@@ -58,6 +58,26 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Test if localStorage is working
+	 *
+	 * @return bool
+	 */
+	Storage.prototype.hasLocalStorage = function() {
+		if (Modernizr && !Modernizr.localStorage) {
+			return false;
+		}
+		// Some browsers report support but doesn't have it
+		// e.g. Safari in private browsing mode.
+		try {
+			OC.localStorage.setItem('Hello', 'World');
+			OC.localStorage.removeItem('Hello');
+		} catch (e) {
+			return false;
+		}
+		return true;
+	};
+
+	/**
 	 * When the response isn't returned from requestRoute(), you can
 	 * wrap it in a JSONResponse so that it's parsable by other objects.
 	 *
@@ -148,7 +168,7 @@ OC.Contacts = OC.Contacts || {};
 	Storage.prototype.deleteAddressBook = function(backend, addressBookId) {
 		var key = 'contacts::' + backend + '::' + addressBookId;
 
-		if(OC.localStorage.hasItem(key)) {
+		if(this.hasLocalStorage() && OC.localStorage.hasItem(key)) {
 			OC.localStorage.removeItem(key);
 		}
 
@@ -205,6 +225,42 @@ OC.Contacts = OC.Contacts || {};
 	};
 
 	/**
+	 * Get metadata from an address book from a specific backend
+	 *
+	 * @param string backend
+	 * @param string addressBookId Address book ID
+	 * @return
+	 *
+	 * metadata:
+	 * {
+	 *     id:'1234'
+	 *     permissions:31,
+	 *     displayname:'Contacts',
+	 *     lastmodified: (unix timestamp),
+	 *     owner: 'joye'
+	 * }
+	 */
+	Storage.prototype.getAddressBook = function(backend, addressBookId) {
+		var defer = $.Deferred();
+
+		$.when(this.requestRoute(
+			'addressbook/{backend}/{addressBookId}',
+			'GET',
+			{backend: backend, addressBookId: addressBookId},
+			''
+		))
+		.then(function(response) {
+			console.log('response', response);
+			defer.resolve(response);
+		})
+		.fail(function(response) {
+			console.warn('Request Failed:', response.message);
+			defer.reject(response);
+		});
+		return defer;
+	};
+
+	/**
 	 * Get contacts from an address book from a specific backend
 	 *
 	 * @param string backend
@@ -223,18 +279,19 @@ OC.Contacts = OC.Contacts || {};
 	 *     data: //array of VCard data
 	 * }
 	 */
-	Storage.prototype.getAddressBook = function(backend, addressBookId) {
-		var headers = {},
+	Storage.prototype.getContacts = function(backend, addressBookId) {
+		var self = this,
+			headers = {},
 			data,
 			key = 'contacts::' + backend + '::' + addressBookId,
 			defer = $.Deferred();
 
-		if(OC.localStorage.hasItem(key)) {
+		if(this.hasLocalStorage() && OC.localStorage.hasItem(key)) {
 			data = OC.localStorage.getItem(key);
 			headers['If-None-Match'] = data.Etag;
 		}
 		$.when(this.requestRoute(
-			'addressbook/{backend}/{addressBookId}',
+			'addressbook/{backend}/{addressBookId}/contacts',
 			'GET',
 			{backend: backend, addressBookId: addressBookId},
 			'',
@@ -246,7 +303,9 @@ OC.Contacts = OC.Contacts || {};
 				console.log('Returning fetched address book');
 				if(response.data) {
 					response.data.Etag = response.getResponseHeader('Etag');
-					OC.localStorage.setItem(key, response.data);
+					if (!self.hasLocalStorage()) {
+						OC.localStorage.setItem(key, response.data);
+					}
 					defer.resolve(response);
 				}
 			} else if(response.statusCode === 304) {

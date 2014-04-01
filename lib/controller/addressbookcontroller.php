@@ -69,6 +69,28 @@ class AddressBookController extends Controller {
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$lastModified = $addressBook->lastModified();
+		$response = new JSONResponse();
+		$response->setData(array('data' => $addressBook->getMetaData()));
+
+		if (!is_null($lastModified)) {
+			$response->addHeader('Cache-Control', 'private, must-revalidate');
+			$response->setLastModified(\DateTime::createFromFormat('U', $lastModified) ?: null);
+			$etag = md5($lastModified);
+			$response->setETag($etag);
+		}
+
+		return $response;
+	}
+
+	/**
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
+	 */
+	public function getContacts() {
+		$params = $this->request->urlParams;
+
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
+		$lastModified = $addressBook->lastModified();
 		$etag = null;
 		$response = new JSONResponse();
 

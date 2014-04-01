@@ -21,6 +21,7 @@
 # Nisok Kosin <nikos.efthimiou@gmail.com>, 2012
 # Petros Kyladitis <petros.kyladitis@gmail.com>, 2011-2012
 # Serenata <pamponiros@yahoo.com>, 2013
+# pe_ppe <peppe@cs.uoi.gr>, 2014
 # Teogramm <theodorewii121@hotmail.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012
@@ -33,9 +34,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-26 05:41-0400\n"
-"PO-Revision-Date: 2014-03-26 06:00+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-01 00:49-0400\n"
+"PO-Revision-Date: 2014-03-31 16:21+0000\n"
+"Last-Translator: pe_ppe <peppe@cs.uoi.gr>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,23 +54,23 @@ msgstr "Αποθήκευση"
 
 #: js/addressbooks.js:306
 msgid "Starting file import"
-msgstr ""
+msgstr "Έναρξη εισαγωγής αρχείου"
 
 #: js/addressbooks.js:310 js/addressbooks.js:338
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Επιλεγμένη μορφή: {format}"
 
 #: js/addressbooks.js:313 js/addressbooks.js:341
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Αυτόματη ανίχνευση μορφής"
 
 #: js/addressbooks.js:391
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Επεξεργασία {count}/{total} καρτών"
 
 #: js/addressbooks.js:415
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Σύνολο:{total}, Επιτυχείς:{imported}, Ανεπιτυχείς:{failed}"
 
 #: js/addressbooks.js:569
 msgid "An address book called {name} already exists"
@@ -137,11 +138,11 @@ msgstr "Σφάλμα δικτύου ή διακομιστή. Παρακαλώ ε
 
 #: js/app.js:789
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Μόνο αρχεία εικόνας μπορούν να χρησιμοποιηθούν σαν φωτογραφίες επαφών"
 
 #: js/app.js:798
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "Το μέγεθος του \"{filename}\" υπερβαίνει το μέγιστο επιτρεπόμενο {size}"
 
 #: js/app.js:967
 msgid "Error adding to group."
@@ -204,19 +205,19 @@ msgstr "Σφάλμα κατά την ανάλυση των γενεθλίων {b
 
 #: js/contacts.js:1315
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Το σύστημα δεν υποστηρίζει χαρακτήρες πολλών bytes"
 
-#: js/contacts.js:2270
+#: js/contacts.js:2212
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή αλλά δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
-#: js/contacts.js:2281
+#: js/contacts.js:2223
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Επιλέξτε για να αναιρέσετε τη διαγραφή {num} επαφών"
 
-#: js/contacts.js:2290
+#: js/contacts.js:2232
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Αναιρέθηκε η διαγραφή {num} επαφών"
 
@@ -319,7 +320,7 @@ msgstr "Κλείσιμο"
 msgid "Server error! Please inform system administator"
 msgstr "Σφάλμα διακομιστή! Παρακαλώ ενημερώστε το διαχειριστή"
 
-#: js/storage.js:346 js/storage.js:385
+#: js/storage.js:405 js/storage.js:444
 msgid "Failed loading photo: {error}"
 msgstr "Αποτυχία φόρτωσης φωτογραφίας: {error}"
 
@@ -357,7 +358,7 @@ msgstr "Άγνωστο σφάλμα"
 
 #: lib/addressbook.php:410
 msgid "Access denied"
-msgstr ""
+msgstr "Δεν επιτρέπεται η πρόσβαση"
 
 #: lib/addressbook.php:417
 msgid "The backend for this address book does not support updating"
@@ -403,51 +404,51 @@ msgstr "Άγνωστο AM:"
 msgid "{name}'s Birthday"
 msgstr "Τα γενέθλια του/της {name}"
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error creating address book"
 msgstr "Σφάλμα κατά την δημιουργία βιβλίου διευθύνσεων "
 
-#: lib/controller/addressbookcontroller.php:173
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "Το σύστημα \"%s\" δεν υποστηρίζει την διαγραφή βιβλίων διευθύνσεων"
 
-#: lib/controller/addressbookcontroller.php:181
+#: lib/controller/addressbookcontroller.php:203
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Δεν έχετε άδεια να διαγράψετε το βιβλίο διευθύνσεων \"%s\""
 
-#: lib/controller/addressbookcontroller.php:188
+#: lib/controller/addressbookcontroller.php:210
 msgid "Error deleting address book"
 msgstr "Σφάλμα κατά την διαγραφή βιβλίου διεευθύνσεων "
 
-#: lib/controller/addressbookcontroller.php:228
+#: lib/controller/addressbookcontroller.php:250
 msgid "Error creating contact."
 msgstr "Σφάλμα δημιουργίας επαφής."
 
-#: lib/controller/addressbookcontroller.php:237
+#: lib/controller/addressbookcontroller.php:259
 msgid "Error creating contact"
 msgstr "Σφάλμα δημιουργίας επαφής"
 
-#: lib/controller/addressbookcontroller.php:269
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error deleting contact"
 msgstr "Σφάλμα διαγραφής επαφής"
 
-#: lib/controller/addressbookcontroller.php:309
+#: lib/controller/addressbookcontroller.php:331
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Σφάλμα κατά την ανάκτηση της επαφής"
 
-#: lib/controller/addressbookcontroller.php:320
+#: lib/controller/addressbookcontroller.php:342
 msgid "Error saving contact"
 msgstr "Σφάλμα αποθήκευσης επαφής"
 
-#: lib/controller/addressbookcontroller.php:326
+#: lib/controller/addressbookcontroller.php:348
 msgid "Error removing contact from other address book."
 msgstr "Σφάλμα διαγραφής επαφής από άλλο βιβλίο διευθύνσεων."
 
-#: lib/controller/addressbookcontroller.php:333
+#: lib/controller/addressbookcontroller.php:355
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Σφάλμα κατά την λήψη μετακινημένης επαφής"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -498,7 +499,7 @@ msgstr "Δεν δόθηκε διαδρομή εικόνας"
 
 #: lib/controller/contactphotocontroller.php:193
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Σφάλμα κατά την φόρτωση της εικόνας από την προσωρινή αποθήκευση"
 
 #: lib/controller/contactphotocontroller.php:203
 msgid "Error getting PHOTO property."
@@ -768,7 +769,7 @@ msgstr "Προσθήκη Βιβλίου Διευθύνσεων"
 
 #: templates/contacts.php:35
 msgid "Automatic format"
-msgstr ""
+msgstr "Αυτόματη μορφοποίηση"
 
 #: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."
