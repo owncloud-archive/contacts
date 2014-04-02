@@ -76,6 +76,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 						case 'id':
 							$this->props['id'] = $value;
 							break;
+						case 'permissions':
+							$this->props['permissions'] = $value;
+							break;
 						case 'lastmodified':
 							$this->props['lastmodified'] = $value;
 							break;
@@ -198,7 +201,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @return integer
 	 */
 	public function getPermissions() {
-		return $this->props['parent']->getPermissions();
+		return isset($this->props['permissions'])
+			? $this->props['permissions']
+			: $this->props['parent']->getPermissions();
 	}
 
 	/**
