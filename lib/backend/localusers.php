@@ -34,9 +34,9 @@ use OCA\Contacts\Contact,
  * Every user has *1* personal addressbook. The id of this addresbook is the 
  * userid of the owner.
  */
-class OwnCloudUsers extends AbstractBackend {
+class LocalUsers extends AbstractBackend {
 
-    public $name = 'OwnCloudUsers';
+    public $name = 'localusers';
 
     /**
      * The table that holds the address books.
@@ -70,8 +70,8 @@ class OwnCloudUsers extends AbstractBackend {
     public function getAddressBook($addressBookId, array $options = array()) {
 	$addressbook = array(
 	    "id" => $addressBookId,
-	    "displayname" => 'ownCloudUsers',
-	    "description" => 'ownCloud Users',
+	    "displayname" => 'Local Users',
+	    "description" => 'Local Users',
 	    "ctag" => time(),
 	    "permissions" => \OCP\PERMISSION_READ,
 	    "backend" => $this->name,

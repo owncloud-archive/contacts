@@ -56,7 +56,7 @@ class App {
 		'ldap' => 'OCA\Contacts\Backend\Ldap',
 		'local' => 'OCA\Contacts\Backend\Database',
 		'shared' => 'OCA\Contacts\Backend\Shared',
-		'owncloudusers' => 'OCA\Contacts\Backend\OwnCloudUsers',
+		'localusers' => 'OCA\Contacts\Backend\LocalUsers',
 	);
 
 	public function __construct(
