@@ -28,7 +28,6 @@ use OCA\Contacts\Contact,
 	Sabre\VObject\Reader,
 	OCA\Contacts\Addressbook;
 
-
 /**
  * Contact backend for storing all the ownCloud users in this installation.
  * Every user has *1* personal addressbook. The id of this addresbook is the 
@@ -124,6 +123,8 @@ class LocalUsers extends AbstractBackend {
 		    $this->removeContacts($remove, $addressbookid);
 		    $recall = true;
 		}
+		//var_dump($contacts);
+		//throw new \Exception('err');
 
 		if($recall === true){
 		    return $this->getContacts($addressbookid);
@@ -148,9 +149,9 @@ class LocalUsers extends AbstractBackend {
      */
     public function getContact($addressbookid, $id, array $options = array()){
 	try{ 
-	    $sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
+	    $sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ? AND id = ?';
 	    $query = \OCP\DB::prepare($sql);
-	    $result = $query->execute(array($this->userid));
+	    $result = $query->execute(array($this->userid, $id));
 		    
 	    if (\OCP\DB::isError($result)) {
 		\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
@@ -272,19 +273,17 @@ class LocalUsers extends AbstractBackend {
 	}
 
 	$data = $contact->serialize();
-	
 	try{ 
 	    $sql = 'UPDATE ' . $this->cardsTableName
 		. ' SET '
-		. '`addressbookid` = ?, '
 		    . '`fullname` = ?, '
 		    . '`carddata` = ?, '
 		    . '`lastmodified` = ? '
 		. ' WHERE '
 		    . '`id` = ? '
-		    . 'AND `owner` = ? ';
+		    . 'AND `addressbookid` = ? ';
 	    $query = \OCP\DB::prepare($sql);
-	    $result = $query->execute(array($addressBookId, $contact->FN, $data, time(), $id, $this->userid));
+	    $result = $query->execute(array($contact->FN, $data, time(), $id, $this->userid));
 	    if (\OCP\DB::isError($result)) {
 		\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 		    . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
