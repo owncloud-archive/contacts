@@ -271,26 +271,6 @@ class OwnCloudUsers extends AbstractBackend {
 	    }
 	}
 
-	if (is_array($id)) {
-	    if (isset($id['id'])) {
-		$id = $id['id'];
-	    } elseif (isset($id['uri'])) {
-		$updateRevision = false;
-		$isCardDAV = true;
-		$id = $this->getIdFromUri($id['uri']);
-
-		if (is_null($id)) {
-		    \OCP\Util::writeLog('contacts', __METHOD__ . ' Couldn\'t find contact', \OCP\Util::ERROR);
-		    return false;
-		}
-
-	    } else {
-		throw new \Exception(
-		    __METHOD__ . ' If second argument is an array, either \'id\' or \'uri\' has to be set.'
-		);
-	    }
-	}
-
 	if ($updateRevision || !isset($contact->REV)) {
 	    $now = new \DateTime;
 	    $contact->REV = $now->format(\DateTime::W3C);
