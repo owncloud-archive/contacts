@@ -59,7 +59,7 @@ class LocalUsers extends AbstractBackend {
      * {@inheritdoc}
      */
     public function getAddressBooksForUser(array $options = array()) {
-	return array($this->getAddressBook('admin'));
+	return array($this->getAddressBook($this->userid));
     }
 
     /**
@@ -232,7 +232,7 @@ class LocalUsers extends AbstractBackend {
     private function removeContacts($contacts, $addressbookid){
 	foreach($contacts as $user){
 	      try{ 
-		$sql = 'DELETE FROM ' . $this->cardsTableName . ' WHERE owner = ? AND id = ?';
+		$sql = 'DELETE FROM ' . $this->cardsTableName . ' WHERE addressbookid = ? AND id = ?';
 		$query = \OCP\DB::prepare($sql);
 		$result = $query->execute(array($this->userid, $user));
 		if (\OCP\DB::isError($result)) {
