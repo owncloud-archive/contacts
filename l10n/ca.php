@@ -200,8 +200,6 @@
 "Add new contact" => "Afegeix un contacte nou",
 "Add new addressbook" => "Afegeix una llibreta d'adreces nova",
 "Delete current contact" => "Esborra el contacte",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>No teniu contactes a la vostra llibreta d'adreces o la vostra llibreta d'adreces està inhabilitada.</h3><p>Afegiu un nou contacte o importeu-ne d'existents des d'un fitxer VCF.</p>",
-"Add contact" => "Afegeix un contacte",
 "Which contact should the data be merged into?" => "A quin contacte li voleu combinar les dades?",
 "Delete the other(s) after successful merge?" => "Elimino els altre(s) després d'una combinació satisfactòria?",
 "Compose mail" => "Redacta un correu electrónic",

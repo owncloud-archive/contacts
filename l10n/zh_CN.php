@@ -172,7 +172,6 @@
 "Add new contact" => "新增联系人",
 "Add new addressbook" => "新增地址簿",
 "Delete current contact" => "删除当前联系人",
-"Add contact" => "添加联系人",
 "Which contact should the data be merged into?" => "要将数据合并到哪个联系人？",
 "Delete the other(s) after successful merge?" => "在成功合并后删除其他项？",
 "Compose mail" => "编写邮件",

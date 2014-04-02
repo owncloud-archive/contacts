@@ -159,8 +159,6 @@
 "Add new contact" => "Lisää uusi yhteystieto",
 "Add new addressbook" => "Lisää uusi osoitekirja",
 "Delete current contact" => "Poista nykyinen yhteystieto",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Osoitekirjassasi ei ole yhteystietoja, tai osoitekirja on poistettu käytöstä.</h3><p>Lisää uusia yhteystietoja, tai tuo yhteystietoja VCF-tiedostosta.</p>",
-"Add contact" => "Lisää yhteystieto",
 "Compose mail" => "Lähetä sähköpostia",
 "Delete current photo" => "Poista nykyinen valokuva",
 "Edit current photo" => "Muokkaa nykyistä valokuvaa",

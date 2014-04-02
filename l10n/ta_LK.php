@@ -92,7 +92,6 @@
 "Add new contact" => "புதிய தொடர்பை சேர்க்க",
 "Add new addressbook" => "புதிய முகவரி புத்தகத்தை சேர்க்க",
 "Delete current contact" => "தற்போதைய தொடர்பை நீக்குக",
-"Add contact" => "தொடர்பை சேர்க்க",
 "Compose mail" => "மின்னஞ்சல் செய்தியாக்குகை",
 "Delete current photo" => "தற்போதைய படத்தை நீக்குக",
 "Edit current photo" => "தற்போதைய படத்தை தொகுக்க",

@@ -54,7 +54,6 @@
 "Email" => "ایمیل",
 "Phone" => "شماره تلفن",
 "Address" => "آدرس",
-"Add contact" => "افزودن اطلاعات شخص مورد نظر",
 "Delete current photo" => "پاک کردن تصویر کنونی",
 "Edit current photo" => "ویرایش تصویر کنونی",
 "Upload new photo" => "بار گذاری یک تصویر جدید",

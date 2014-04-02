@@ -106,8 +106,6 @@
 "Add new contact" => "เพิ่มข้อมูลผู้ติดต่อใหม่",
 "Add new addressbook" => "เพิ่มสมุดบันทึกที่อยู่ใหม่",
 "Delete current contact" => "ลบข้อมูลผู้ติดต่อปัจจุบัน",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3> คุณยังไม่มีรายชื่อผู้ติดต่อในสมุดบันทึกที่อยู่ของคุณ หรือ สมุดบันทึกที่อยู่ของคุณถูกปิดการใช้งาน </h3><p>เพิ่มรายชื่อผู้ติดต่อใหม่ หรือนำเข้ารายชื่อผู้ติดต่อเดิมที่มีอยู่แล้วจากไฟล์ VCF</p>",
-"Add contact" => "เพิ่มชื่อผู้ติดต่อ",
 "Compose mail" => "เขียนอีเมล",
 "Delete current photo" => "ลบรูปภาพปัจจุบัน",
 "Edit current photo" => "แก้ไขรูปภาพปัจจุบัน",

@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-26 05:41-0400\n"
-"PO-Revision-Date: 2014-03-26 06:00+0000\n"
+"POT-Creation-Date: 2014-04-02 00:49-0400\n"
+"PO-Revision-Date: 2014-04-02 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -192,17 +192,17 @@ msgstr "Hiba a születésnap értelmezésekor {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2270
+#: js/contacts.js:2222
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Néhány névjegy ki lett jelölve törlésre, de még nem lett törölve. Várja meg a végleges törlést."
 
-#: js/contacts.js:2281
+#: js/contacts.js:2233
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kattintson ide {num} névjegy törlésének visszavonásához"
 
-#: js/contacts.js:2290
+#: js/contacts.js:2242
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num} névjegy törlése visszavonva"
 
@@ -305,7 +305,7 @@ msgstr "Bezárás"
 msgid "Server error! Please inform system administator"
 msgstr "Kiszolgáló hiba! Értesítse a rendszergazdát!"
 
-#: js/storage.js:346 js/storage.js:385
+#: js/storage.js:405 js/storage.js:444
 msgid "Failed loading photo: {error}"
 msgstr "Hiba a kép betöltésekor: {error}"
 
@@ -389,49 +389,49 @@ msgstr "Ismeretlen Üzenetküldő:"
 msgid "{name}'s Birthday"
 msgstr "{name} születésnapja"
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error creating address book"
 msgstr "Hiba a címjegyzék létrehozásakor"
 
-#: lib/controller/addressbookcontroller.php:173
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:181
+#: lib/controller/addressbookcontroller.php:203
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Önnek nincs jogosultsága ahhoz, hogy törölje ezt a címjegyzéket: \"%s\""
 
-#: lib/controller/addressbookcontroller.php:188
+#: lib/controller/addressbookcontroller.php:210
 msgid "Error deleting address book"
 msgstr "Hiba a címjegyzék törlésekor"
 
-#: lib/controller/addressbookcontroller.php:228
+#: lib/controller/addressbookcontroller.php:250
 msgid "Error creating contact."
 msgstr "Hiba a névjegy létrehozásakor."
 
-#: lib/controller/addressbookcontroller.php:237
+#: lib/controller/addressbookcontroller.php:259
 msgid "Error creating contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:269
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error deleting contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:309
+#: lib/controller/addressbookcontroller.php:331
 msgid "Error retrieving contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:320
+#: lib/controller/addressbookcontroller.php:342
 msgid "Error saving contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:326
+#: lib/controller/addressbookcontroller.php:348
 msgid "Error removing contact from other address book."
 msgstr "Hiba a névjegy más címjegyzékből történő törlésekor."
 
-#: lib/controller/addressbookcontroller.php:333
+#: lib/controller/addressbookcontroller.php:355
 msgid "Error getting moved contact"
 msgstr ""
 
@@ -728,7 +728,7 @@ msgstr "Barátok"
 msgid "Family"
 msgstr "Család"
 
-#: templates/contacts.php:9
+#: templates/contacts.php:9 templates/contacts.php:129
 msgid "New contact"
 msgstr "Új névjegy"
 
@@ -861,14 +861,12 @@ msgstr "Jelenlegi kapcsolat törlése"
 
 #: templates/contacts.php:126
 msgid ""
-"<h3>You have no contacts in your address book or your address book is "
-"disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
-"file.</p>"
-msgstr "<h3>Ebben a címjegyzékben még nincsenek bejegyzések.</h3><p>Hozzon létre egyet, vagy importáljon adatokat egy VCF-állományból.</p>"
+"You have no contacts in your address book or your address book is disabled."
+msgstr ""
 
-#: templates/contacts.php:129
-msgid "Add contact"
-msgstr "Kapcsolat hozzáadása"
+#: templates/contacts.php:127
+msgid "Add a new contact or import existing contacts from a VCF file."
+msgstr ""
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"

@@ -183,8 +183,6 @@
 "Add new contact" => "Tilføj ny kontaktperson",
 "Add new addressbook" => "Tilføj ny adressebog",
 "Delete current contact" => "Slet aktuelle kontaktperson",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3> Din adressebog er deaktiveret eller indeholder ingen kontakter.</h3><p>Tilføj nye kontakter eller importer eksisterende kontakter fra en VCF fil.</p>",
-"Add contact" => "Tilføj kontaktpeson.",
 "Which contact should the data be merged into?" => "Hvilken kontaktperson skal data føjes til?",
 "Delete the other(s) after successful merge?" => "Slet de andre efter gennemgørt sammenfletning?",
 "Compose mail" => "Skriv mail",

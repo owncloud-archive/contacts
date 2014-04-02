@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-01 00:49-0400\n"
+"POT-Creation-Date: 2014-04-02 00:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -180,17 +180,17 @@ msgstr ""
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2212
+#: js/contacts.js:2222
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2223
+#: js/contacts.js:2233
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2242
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -716,7 +716,7 @@ msgstr ""
 msgid "Family"
 msgstr ""
 
-#: templates/contacts.php:9
+#: templates/contacts.php:9 templates/contacts.php:129
 msgid "New contact"
 msgstr ""
 
@@ -849,13 +849,11 @@ msgstr ""
 
 #: templates/contacts.php:126
 msgid ""
-"<h3>You have no contacts in your address book or your address book is "
-"disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
-"file.</p>"
+"You have no contacts in your address book or your address book is disabled."
 msgstr ""
 
-#: templates/contacts.php:129
-msgid "Add contact"
+#: templates/contacts.php:127
+msgid "Add a new contact or import existing contacts from a VCF file."
 msgstr ""
 
 #: templates/contacts.php:178

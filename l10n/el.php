@@ -199,8 +199,6 @@
 "Add new contact" => "Προσθήκη νέας επαφής",
 "Add new addressbook" => "Προσθήκη νέου βιβλίου επαφών",
 "Delete current contact" => "Διαγραφή τρέχουσας επαφής",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Δεν έχετε επαφές στο βιβλίο διευθύνσεων ή το βιβλίο διευθύνσεών σας είναι απενεργοποιημένο.</h3><p>Προσθέστε μία νέα επαφή ή εισάγετε τις υπάρχουσες επαφές σας από ένα αρχείο VCF.</p>",
-"Add contact" => "Προσθήκη επαφής",
 "Which contact should the data be merged into?" => "Με ποιά επαφή θα θέλατε να συγχωνευτούν τα δεδομένα?",
 "Delete the other(s) after successful merge?" => "Διαγραφή του(ων) άλλου(ων) μετά την επιτυχή συγχώνευση?",
 "Compose mail" => "Σύνθεση μηνύματος",

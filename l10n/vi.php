@@ -150,7 +150,6 @@
 "Add new contact" => "Thêm liên lạc mới",
 "Add new addressbook" => "Thêm sổ địa chỉ mới",
 "Delete current contact" => "Xóa liên lạc hiện tại",
-"Add contact" => "Thêm liên lạc",
 "Compose mail" => "Soạn email",
 "Delete current photo" => "Xóa hình ảnh hiện tại",
 "Edit current photo" => "Sửa hình ảnh hiện tại",

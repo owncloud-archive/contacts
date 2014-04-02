@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-26 05:41-0400\n"
-"PO-Revision-Date: 2014-03-26 06:00+0000\n"
+"POT-Creation-Date: 2014-04-02 00:49-0400\n"
+"PO-Revision-Date: 2014-04-02 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/owncloud/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -188,17 +188,17 @@ msgstr "Hari ulang tahun Kesalahan penguraian {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2270
+#: js/contacts.js:2222
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Beberapa kontak telah ditandai untuk dihapus, tetapi belum selesai dihapus. Mohon tunggu."
 
-#: js/contacts.js:2281
+#: js/contacts.js:2233
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik untuk membatalkan penghapusan {num} kontak"
 
-#: js/contacts.js:2290
+#: js/contacts.js:2242
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Penghapusan dibatalkan  {num} kontak"
 
@@ -301,7 +301,7 @@ msgstr "Tutup"
 msgid "Server error! Please inform system administator"
 msgstr "Server galat! Silakan menginformasikan administrator sistem."
 
-#: js/storage.js:346 js/storage.js:385
+#: js/storage.js:405 js/storage.js:444
 msgid "Failed loading photo: {error}"
 msgstr "Gagal memuat foto: {error}"
 
@@ -385,49 +385,49 @@ msgstr "IM tidak diketahui"
 msgid "{name}'s Birthday"
 msgstr "Ulang tahun {name}"
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error creating address book"
 msgstr "Kesalahan saat membuat buku alamat"
 
-#: lib/controller/addressbookcontroller.php:173
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:181
+#: lib/controller/addressbookcontroller.php:203
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Anda tidak memiliki izin untuk menghapus buku alamat \"%s\""
 
-#: lib/controller/addressbookcontroller.php:188
+#: lib/controller/addressbookcontroller.php:210
 msgid "Error deleting address book"
 msgstr "Kesalahan saat menghapus buku alamat"
 
-#: lib/controller/addressbookcontroller.php:228
+#: lib/controller/addressbookcontroller.php:250
 msgid "Error creating contact."
 msgstr "Kesalahan saat membuat kontak"
 
-#: lib/controller/addressbookcontroller.php:237
+#: lib/controller/addressbookcontroller.php:259
 msgid "Error creating contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:269
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error deleting contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:309
+#: lib/controller/addressbookcontroller.php:331
 msgid "Error retrieving contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:320
+#: lib/controller/addressbookcontroller.php:342
 msgid "Error saving contact"
 msgstr ""
 
-#: lib/controller/addressbookcontroller.php:326
+#: lib/controller/addressbookcontroller.php:348
 msgid "Error removing contact from other address book."
 msgstr "Kesalahan saat menghapus kontak dari buku alamat lainnya."
 
-#: lib/controller/addressbookcontroller.php:333
+#: lib/controller/addressbookcontroller.php:355
 msgid "Error getting moved contact"
 msgstr ""
 
@@ -724,7 +724,7 @@ msgstr "Teman"
 msgid "Family"
 msgstr "Keluarga"
 
-#: templates/contacts.php:9
+#: templates/contacts.php:9 templates/contacts.php:129
 msgid "New contact"
 msgstr "Kontak baru"
 
@@ -857,14 +857,12 @@ msgstr "Hapus kontak tarbaru"
 
 #: templates/contacts.php:126
 msgid ""
-"<h3>You have no contacts in your address book or your address book is "
-"disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
-"file.</p>"
-msgstr "<h3>Anda tidak memiliki kontak dalam buku alamat atau buku alamat dinonaktifkan.</h3><p>Tambah kontak baru atau impor kontak yang sudah ada dari berkas VCF.</p>"
+"You have no contacts in your address book or your address book is disabled."
+msgstr ""
 
-#: templates/contacts.php:129
-msgid "Add contact"
-msgstr "Tambah kontak"
+#: templates/contacts.php:127
+msgid "Add a new contact or import existing contacts from a VCF file."
+msgstr ""
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"

@@ -154,8 +154,6 @@
 "Add new contact" => "أَف جهة اتصال جديدة",
 "Add new addressbook" => "أضف دفتر عناوين جديد",
 "Delete current contact" => "إزالة جهة الاتصال الحالية",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>لا يوجد لديك جهات اتصال في دفتر العناوين أو أن دفتر العناوين معطل. </h3><p> يرجى إضافة جهات اتصال جديدة أو استيراد جهات الاتصال الموجودة من ملف  VCF . \n</p> ",
-"Add contact" => "أضف جهة اتصال",
 "Which contact should the data be merged into?" => "إي جهة اتصال ترغب بدمج البيانات إليها؟",
 "Delete the other(s) after successful merge?" => "هل تريد إزالة (الآخرون) بعد نجاح عملية الدمج؟",
 "Compose mail" => "إنشاء رسالة بريد إلكتروني",

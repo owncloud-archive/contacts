@@ -46,7 +46,6 @@
 "Phone" => "Telefon",
 "Address" => "Adresa",
 "Group" => "Grupa",
-"Add contact" => "Dodaj kontakt",
 "Delete current photo" => "Izbriši trenutnu sliku",
 "Edit current photo" => "Uredi trenutnu sliku",
 "Upload new photo" => "Učitaj novu sliku",

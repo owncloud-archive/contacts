@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-30 00:49-0400\n"
-"PO-Revision-Date: 2014-03-29 20:30+0000\n"
-"Last-Translator: mateju <>\n"
+"POT-Creation-Date: 2014-04-02 00:49-0400\n"
+"PO-Revision-Date: 2014-04-02 04:49+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -187,17 +187,17 @@ msgstr "Ni mogoče razčleniti rojstnega dne {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Ozadnji program ne podpira večbitnih znakov."
 
-#: js/contacts.js:2270
+#: js/contacts.js:2222
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Nekateri stiki so označeni za izbris, vendar še niso izbrisani. Počakajte na dokončanje opravila."
 
-#: js/contacts.js:2281
+#: js/contacts.js:2233
 msgid "Click to undo deletion of {num} contacts"
 msgstr "S klikom bodo povrnjeni izbrisani stiki ({num})"
 
-#: js/contacts.js:2290
+#: js/contacts.js:2242
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Preklican izbris {num} stikov"
 
@@ -300,7 +300,7 @@ msgstr "Zapri"
 msgid "Server error! Please inform system administator"
 msgstr "Napaka strežnika! Stopite v stik s skrbnikom sistema."
 
-#: js/storage.js:346 js/storage.js:385
+#: js/storage.js:405 js/storage.js:444
 msgid "Failed loading photo: {error}"
 msgstr "Nalaganje slike je spodletelo: {error}"
 
@@ -384,49 +384,49 @@ msgstr "Neznan IM:"
 msgid "{name}'s Birthday"
 msgstr "{name} - rojstni dan"
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error creating address book"
 msgstr "Napaka med ustvarjanjem imenika"
 
-#: lib/controller/addressbookcontroller.php:173
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "Ozadnji program \"%s\" ne podpira brisanja imenika"
 
-#: lib/controller/addressbookcontroller.php:181
+#: lib/controller/addressbookcontroller.php:203
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Ni ustreznih dovoljenj za brisanje imenika \"%s\""
 
-#: lib/controller/addressbookcontroller.php:188
+#: lib/controller/addressbookcontroller.php:210
 msgid "Error deleting address book"
 msgstr "Napaka med brisanjem imenika"
 
-#: lib/controller/addressbookcontroller.php:228
+#: lib/controller/addressbookcontroller.php:250
 msgid "Error creating contact."
 msgstr "Napaka med ustvarjanjem stika."
 
-#: lib/controller/addressbookcontroller.php:237
+#: lib/controller/addressbookcontroller.php:259
 msgid "Error creating contact"
 msgstr "Napaka ustvarjanja stika"
 
-#: lib/controller/addressbookcontroller.php:269
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error deleting contact"
 msgstr "Napaka brisanja stika"
 
-#: lib/controller/addressbookcontroller.php:309
+#: lib/controller/addressbookcontroller.php:331
 msgid "Error retrieving contact"
 msgstr "Napaka pridobivanja stika"
 
-#: lib/controller/addressbookcontroller.php:320
+#: lib/controller/addressbookcontroller.php:342
 msgid "Error saving contact"
 msgstr "Napaka shranjevanja stika"
 
-#: lib/controller/addressbookcontroller.php:326
+#: lib/controller/addressbookcontroller.php:348
 msgid "Error removing contact from other address book."
 msgstr "Prišlo je do napake med odstranjevanjem stika iz drugega imenika."
 
-#: lib/controller/addressbookcontroller.php:333
+#: lib/controller/addressbookcontroller.php:355
 msgid "Error getting moved contact"
 msgstr "Napaka pridobivanja premaknjenega stika"
 
@@ -723,7 +723,7 @@ msgstr "Prijatelji"
 msgid "Family"
 msgstr "Družina"
 
-#: templates/contacts.php:9
+#: templates/contacts.php:9 templates/contacts.php:129
 msgid "New contact"
 msgstr "Nov stik"
 
@@ -856,14 +856,12 @@ msgstr "Izbriši trenutni stik"
 
 #: templates/contacts.php:126
 msgid ""
-"<h3>You have no contacts in your address book or your address book is "
-"disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
-"file.</p>"
-msgstr "<h3>Ali v imeniku ni stikov ali pa je imenik onemogočen.</h3><p>Dodajte nov stik ali pa uvozite stike iz datoteke VCF.</p>"
+"You have no contacts in your address book or your address book is disabled."
+msgstr ""
 
-#: templates/contacts.php:129
-msgid "Add contact"
-msgstr "Dodaj stik"
+#: templates/contacts.php:127
+msgid "Add a new contact or import existing contacts from a VCF file."
+msgstr ""
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"

@@ -71,7 +71,6 @@
 "Actions" => "Acțiuni",
 "Add new contact" => "Adaugă contact nou",
 "Delete current contact" => "Șterge contactul curent",
-"Add contact" => "Adaugă contact",
 "Delete current photo" => "Șterge poza curentă",
 "Edit current photo" => "Editează poza curentă",
 "Upload new photo" => "Încarcă poză nouă",

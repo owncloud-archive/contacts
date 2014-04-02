@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-30 00:49-0400\n"
-"PO-Revision-Date: 2014-03-29 08:40+0000\n"
-"Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
+"POT-Creation-Date: 2014-04-02 00:49-0400\n"
+"PO-Revision-Date: 2014-04-02 04:49+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -190,17 +190,17 @@ msgstr "Errore durante l'elaborazione della data di nascita {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Il motore non supporta i caratteri multi-byte."
 
-#: js/contacts.js:2270
+#: js/contacts.js:2222
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alcuni contatti sono marcati per l'eliminazione, ma non sono stati ancora rimossi. Attendi fino al completamento dell'operazione."
 
-#: js/contacts.js:2281
+#: js/contacts.js:2233
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Un clic per annullare l'eliminazione di {num} contatti"
 
-#: js/contacts.js:2290
+#: js/contacts.js:2242
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Eliminazione di {num} contatti annullata"
 
@@ -303,7 +303,7 @@ msgstr "Chiudi"
 msgid "Server error! Please inform system administator"
 msgstr "Errore del server. Informa l'amministratore di sistema"
 
-#: js/storage.js:346 js/storage.js:385
+#: js/storage.js:405 js/storage.js:444
 msgid "Failed loading photo: {error}"
 msgstr "Caricamento foto non riuscito: {error}"
 
@@ -387,49 +387,49 @@ msgstr "IM sconosciuto:"
 msgid "{name}'s Birthday"
 msgstr "Compleanno di {name}"
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error creating address book"
 msgstr "Errore durante la creazione della rubrica"
 
-#: lib/controller/addressbookcontroller.php:173
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "Il motore \"%s\" non supporta l'eliminazione delle rubriche"
 
-#: lib/controller/addressbookcontroller.php:181
+#: lib/controller/addressbookcontroller.php:203
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Non hai i permessi per eliminare la rubrica \"%s\""
 
-#: lib/controller/addressbookcontroller.php:188
+#: lib/controller/addressbookcontroller.php:210
 msgid "Error deleting address book"
 msgstr "Errore durante l'eliminazione della rubrica"
 
-#: lib/controller/addressbookcontroller.php:228
+#: lib/controller/addressbookcontroller.php:250
 msgid "Error creating contact."
 msgstr "Errore durante la creazione del contatto."
 
-#: lib/controller/addressbookcontroller.php:237
+#: lib/controller/addressbookcontroller.php:259
 msgid "Error creating contact"
 msgstr "Errore durante la creazione del contatto"
 
-#: lib/controller/addressbookcontroller.php:269
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error deleting contact"
 msgstr "Errore durante l'eliminazione del contatto"
 
-#: lib/controller/addressbookcontroller.php:309
+#: lib/controller/addressbookcontroller.php:331
 msgid "Error retrieving contact"
 msgstr "Errore durante il recupero del contatto"
 
-#: lib/controller/addressbookcontroller.php:320
+#: lib/controller/addressbookcontroller.php:342
 msgid "Error saving contact"
 msgstr "Errore durante il salvataggio del contatto"
 
-#: lib/controller/addressbookcontroller.php:326
+#: lib/controller/addressbookcontroller.php:348
 msgid "Error removing contact from other address book."
 msgstr "Errore durante la rimozione del contatto da altre rubriche."
 
-#: lib/controller/addressbookcontroller.php:333
+#: lib/controller/addressbookcontroller.php:355
 msgid "Error getting moved contact"
 msgstr "Errore durante il recupero del contatto spostato"
 
@@ -726,7 +726,7 @@ msgstr "Amici"
 msgid "Family"
 msgstr "Famiglia"
 
-#: templates/contacts.php:9
+#: templates/contacts.php:9 templates/contacts.php:129
 msgid "New contact"
 msgstr "Nuovo contatto"
 
@@ -859,14 +859,12 @@ msgstr "Elimina il contatto corrente"
 
 #: templates/contacts.php:126
 msgid ""
-"<h3>You have no contacts in your address book or your address book is "
-"disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
-"file.</p>"
-msgstr "<h3>Non ci sono contatti nella tua rubrica o la rubrica è disabilitata.</h3><p>Aggiungi un nuovo contatto o importa contatti esistenti da un file VCF.</p>"
+"You have no contacts in your address book or your address book is disabled."
+msgstr ""
 
-#: templates/contacts.php:129
-msgid "Add contact"
-msgstr "Aggiungi contatto"
+#: templates/contacts.php:127
+msgid "Add a new contact or import existing contacts from a VCF file."
+msgstr ""
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"

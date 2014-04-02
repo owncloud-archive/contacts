@@ -138,7 +138,6 @@
 "Add new contact" => "Aldoni novan kontakton",
 "Add new addressbook" => "Aldoni novan adresaron",
 "Delete current contact" => "Forigi la nunan kontakton",
-"Add contact" => "Aldoni kontakton",
 "Compose mail" => "Redakti retpoŝtomesaĝon",
 "Delete current photo" => "Forigi nunan foton",
 "Edit current photo" => "Redakti nunan foton",

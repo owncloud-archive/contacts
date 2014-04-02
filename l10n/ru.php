@@ -182,8 +182,6 @@
 "Add new contact" => "Добавить новый контакт",
 "Add new addressbook" => "Добавить новую адресную книгу",
 "Delete current contact" => "Удалить текущий контакт",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>В вашей адресной книге нет контактов, либо ваша адресная книга отключена.</h3><p>Добавьте новый контакт или импортируйте контакты из файла VCF.</p>",
-"Add contact" => "Добавить контакт",
 "Which contact should the data be merged into?" => "В какой контакт следует объединить данные?",
 "Delete the other(s) after successful merge?" => "Удалить другой(ие) после успешного объединения?",
 "Compose mail" => "Написать письмо",

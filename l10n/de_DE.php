@@ -200,8 +200,6 @@
 "Add new contact" => "Neuen Kontakt hinzufügen",
 "Add new addressbook" => "Neues Adressbuch hinzufügen",
 "Delete current contact" => "Aktuellen Kontakt löschen",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Sie haben keine Kontakte in Ihrem Adressbuch oder Ihr Adressbuch íst deaktiviert.</h3><p>Fügen Sie einen neuen hinzu oder importieren Sie existierende Kontakte aus einer VCF-Datei.</p>",
-"Add contact" => "Kontakt hinzufügen",
 "Which contact should the data be merged into?" => "In welchen Kontakt sollen die Daten zusammengeführt werden?",
 "Delete the other(s) after successful merge?" => "Den/die Anderen löschen nach erfolgreicher Zusammenführung?",
 "Compose mail" => "E-Mail schreiben",

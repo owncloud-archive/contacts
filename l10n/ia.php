@@ -29,7 +29,6 @@
 "Phone" => "Phono",
 "Address" => "Adresse",
 "Group" => "Gruppo",
-"Add contact" => "Adder adressario",
 "Delete current photo" => "Deler photo currente",
 "Edit current photo" => "Modificar photo currente",
 "Upload new photo" => "Incargar nove photo",

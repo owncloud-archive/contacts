@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-26 05:41-0400\n"
-"PO-Revision-Date: 2014-03-26 06:00+0000\n"
+"POT-Creation-Date: 2014-04-02 00:49-0400\n"
+"PO-Revision-Date: 2014-04-02 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -188,17 +188,17 @@ msgstr "誕生日 {bday} の解析エラー"
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2270
+#: js/contacts.js:2222
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一部の連絡先が削除対象としてマークされていますが、まだ削除されていません。削除されるまでお待ちください。"
 
-#: js/contacts.js:2281
+#: js/contacts.js:2233
 msgid "Click to undo deletion of {num} contacts"
 msgstr "クリックして {num} 個の連絡先の削除を取り消す"
 
-#: js/contacts.js:2290
+#: js/contacts.js:2242
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num}件の連絡先の削除がキャンセルされました"
 
@@ -301,7 +301,7 @@ msgstr "閉じる"
 msgid "Server error! Please inform system administator"
 msgstr "サーバーエラー！システム管理者に知らせてください。"
 
-#: js/storage.js:346 js/storage.js:385
+#: js/storage.js:405 js/storage.js:444
 msgid "Failed loading photo: {error}"
 msgstr "写真の読み込みに失敗: {error}"
 
@@ -385,49 +385,49 @@ msgstr "不明なIM:"
 msgid "{name}'s Birthday"
 msgstr "{name}の誕生日"
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error creating address book"
 msgstr "アドレス帳の作成エラー"
 
-#: lib/controller/addressbookcontroller.php:173
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "\"%s\" のバックエンドはアドレスブックの削除をサポートしていません"
 
-#: lib/controller/addressbookcontroller.php:181
+#: lib/controller/addressbookcontroller.php:203
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "アドレス帳 \"%s\" を削除する権限がありません"
 
-#: lib/controller/addressbookcontroller.php:188
+#: lib/controller/addressbookcontroller.php:210
 msgid "Error deleting address book"
 msgstr "アドレス帳の削除エラー"
 
-#: lib/controller/addressbookcontroller.php:228
+#: lib/controller/addressbookcontroller.php:250
 msgid "Error creating contact."
 msgstr "連絡先の作成エラー。"
 
-#: lib/controller/addressbookcontroller.php:237
+#: lib/controller/addressbookcontroller.php:259
 msgid "Error creating contact"
 msgstr "連絡先の作成エラー"
 
-#: lib/controller/addressbookcontroller.php:269
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error deleting contact"
 msgstr "連絡先の削除エラー"
 
-#: lib/controller/addressbookcontroller.php:309
+#: lib/controller/addressbookcontroller.php:331
 msgid "Error retrieving contact"
 msgstr "連絡先の取得エラー"
 
-#: lib/controller/addressbookcontroller.php:320
+#: lib/controller/addressbookcontroller.php:342
 msgid "Error saving contact"
 msgstr "連絡先の保存エラー"
 
-#: lib/controller/addressbookcontroller.php:326
+#: lib/controller/addressbookcontroller.php:348
 msgid "Error removing contact from other address book."
 msgstr "他のアドレス帳からの連絡先の削除エラー"
 
-#: lib/controller/addressbookcontroller.php:333
+#: lib/controller/addressbookcontroller.php:355
 msgid "Error getting moved contact"
 msgstr "連絡先の移動取得エラー"
 
@@ -724,7 +724,7 @@ msgstr "友達"
 msgid "Family"
 msgstr "家族"
 
-#: templates/contacts.php:9
+#: templates/contacts.php:9 templates/contacts.php:129
 msgid "New contact"
 msgstr "新しい連絡先"
 
@@ -857,14 +857,12 @@ msgstr "現在の連絡先を削除"
 
 #: templates/contacts.php:126
 msgid ""
-"<h3>You have no contacts in your address book or your address book is "
-"disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
-"file.</p>"
-msgstr "<h3>アドレスブックに連絡先が存在しない、もしくはアドレスブックが無効になっています。</h3><p>新しい連絡先を追加するか、VCFファイルから既存の連絡先をインポートしてください。</p>"
+"You have no contacts in your address book or your address book is disabled."
+msgstr ""
 
-#: templates/contacts.php:129
-msgid "Add contact"
-msgstr "連絡先を追加"
+#: templates/contacts.php:127
+msgid "Add a new contact or import existing contacts from a VCF file."
+msgstr ""
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"

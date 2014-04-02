@@ -182,8 +182,6 @@
 "Add new contact" => "Tambah kontak baru",
 "Add new addressbook" => "Tambah buku alamat baru",
 "Delete current contact" => "Hapus kontak tarbaru",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Anda tidak memiliki kontak dalam buku alamat atau buku alamat dinonaktifkan.</h3><p>Tambah kontak baru atau impor kontak yang sudah ada dari berkas VCF.</p>",
-"Add contact" => "Tambah kontak",
 "Which contact should the data be merged into?" => "Yang kontak harus data digabung menjadi?",
 "Delete the other(s) after successful merge?" => "Hapus lainnya (s) setelah sukses merge?",
 "Compose mail" => "Buat surat",
