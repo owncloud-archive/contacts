@@ -100,7 +100,7 @@ class OwnCloudUsers extends AbstractBackend {
 		return array();
 	    } else {
 		while($row = $result->fetchRow()){
-		    $row['permissions'] = \OCP\PERMISSION_UPDATE;
+		    $row['permissions'] = \OCP\PERMISSION_READ;
 		    $contacts[] = $row;
 		}	
 
@@ -158,7 +158,7 @@ class OwnCloudUsers extends AbstractBackend {
 		return array();
 	    } else {
 		$row = $result->fetchRow();
-		$row['permissions'] = \OCP\PERMISSION_UPDATE;
+		$row['permissions'] = \OCP\PERMISSION_READ;
 		return $row;
 	    }
 	} catch(\Exception $e) {
@@ -166,11 +166,6 @@ class OwnCloudUsers extends AbstractBackend {
 		. $e->getMessage(), \OCP\Util::ERROR);
 	    return array();
 	}
-    }
-
-    // Not needed since there is only one addressbook for every user
-    public function createAddressBook(array $properties) {
-
     }
 
     /**
