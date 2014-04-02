@@ -73,7 +73,7 @@ class OwnCloudUsers extends AbstractBackend {
 	    "displayname" => 'ownCloudUsers',
 	    "description" => 'ownCloud Users',
 	    "ctag" => time(),
-	    "permissions" => \OCP\PERMISSION_ALL,
+	    "permissions" => \OCP\PERMISSION_READ,
 	    "backend" => $this->name,
 	    "active" => 1
 	);
@@ -90,7 +90,7 @@ class OwnCloudUsers extends AbstractBackend {
     public function getContacts($addressbookid, array $options = array()){
 	$contacts =  array();
 	try{ 
-	    $sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE owner = ?';
+	    $sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
 	    $query = \OCP\DB::prepare($sql);
 	    $result = $query->execute(array($this->userid));
 	    
@@ -100,7 +100,7 @@ class OwnCloudUsers extends AbstractBackend {
 		return array();
 	    } else {
 		while($row = $result->fetchRow()){
-		    $row['permissions'] = \OCP\PERMISSION_ALL;
+		    $row['permissions'] = \OCP\PERMISSION_UPDATE;
 		    $contacts[] = $row;
 		}	
 
@@ -148,7 +148,7 @@ class OwnCloudUsers extends AbstractBackend {
      */
     public function getContact($addressbookid, $id, array $options = array()){
 	try{ 
-	    $sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE owner = ?';
+	    $sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
 	    $query = \OCP\DB::prepare($sql);
 	    $result = $query->execute(array($this->userid));
 		    
@@ -158,7 +158,7 @@ class OwnCloudUsers extends AbstractBackend {
 		return array();
 	    } else {
 		$row = $result->fetchRow();
-		$row['permissions'] = \OCP\PERMISSION_ALL;
+		$row['permissions'] = \OCP\PERMISSION_UPDATE;
 		return $row;
 	    }
 	} catch(\Exception $e) {
@@ -185,15 +185,11 @@ class OwnCloudUsers extends AbstractBackend {
 	    try{ 
 		$sql = 'INSERT INTO ' . $this->cardsTableName . ' ('
 		    . 'id, '
-		    . 'owner,'
 		    . 'addressbookid, '
 		    . 'fullname, '
 		    . 'carddata, '
-		    . 'uri, '
 		    . 'lastmodified'
 		. ') VALUES ('
-		    . '?,'
-		    . '?,'
 		    . '?,'
 		    . '?,'
 		    . '?,'
@@ -202,19 +198,19 @@ class OwnCloudUsers extends AbstractBackend {
 		. ')';
 
 		$query = \OCP\DB::prepare($sql);
-
-		$contact = new Contact(	
-		    $addressBook = new AddressBook($this , $this->getAddressBooksForUser()), // since there is only one addressbook with OC users for each OC user we can use this function
-		    $this,
-		    array(
-			"id" => $user,
-			"lastmodified" => time(), 
-			"displayname" => \OCP\User::getDisplayName($user),
-			"fullname" => \OCP\User::getDisplayName($user)
-		    )
-		);
-		$carddata = $this->generateCardData($contact);
-		$result = $query->execute(array($user, $this->userid, $addressbookid, \OCP\User::getDisplayName($user), $carddata->serialize(), 'test', time()));
+		
+		$vcard = \Sabre\VObject\Component::create('VCARD');
+		$vcard->FN = \OCP\User::getDisplayName($user);
+		$now = new \DateTime('now');
+		$vcard->REV = $now->format(\DateTime::W3C);
+	    
+		$appinfo = \OCP\App::getAppInfo('contacts');
+	  	$appversion = \OCP\App::getAppVersion('contacts');
+		$prodid = '-//ownCloud//NONSGML ' . $appinfo['name'] . ' ' . $appversion.'//EN';
+		$vcard->PRODID = $prodid;
+		
+		
+		$result = $query->execute(array($user, $this->userid, \OCP\User::getDisplayName($user), $vcard->serialize(), time()));
 
 		if (\OCP\DB::isError($result)) {
 		    \OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
@@ -256,40 +252,6 @@ class OwnCloudUsers extends AbstractBackend {
 		return false;
 	    }
 	}
-    }
-
-    /**
-     * Help function to generate the carddate which than can be stored in the db 
-     * @param string|VCard $data 
-     * @return Vcard
-     */
-    private function generateCardData($data){
-	if (!$data instanceof VCard) {
-	    try {
-		$data = Reader::read($data);
-	    } catch(\Exception $e) {
-	       \OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
-		return false;
-	    }      
-	}
-
-	try {
-	    $data->validate(VCard::REPAIR|VCard::UPGRADE);
-	} catch (\Exception $e) {
-	    \OCP\Util::writeLog('contacts', __METHOD__ . ' ' .
-		'Error validating vcard: ' . $e->getMessage(), \OCP\Util::ERROR);
-	    return false;
-	}
-
-	$now = new \DateTime;
-	$data->REV = $now->format(\DateTime::W3C);
-
-	$appinfo = \OCP\App::getAppInfo('contacts');
-	$appversion = \OCP\App::getAppVersion('contacts');
-	$prodid = '-//ownCloud//NONSGML ' . $appinfo['name'] . ' ' . $appversion.'//EN';
-	$data->PRODID = $prodid;
-
-	return $data;
     }
 
     /**
