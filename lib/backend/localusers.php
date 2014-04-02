@@ -100,7 +100,7 @@ class LocalUsers extends AbstractBackend {
 		return array();
 	    } else {
 		while($row = $result->fetchRow()){
-		    $row['permissions'] = \OCP\PERMISSION_READ;
+		$row['permissions'] = \OCP\PERMISSION_READ | \OCP\PERMISSION_UPDATE;
 		    $contacts[] = $row;
 		}	
 
@@ -158,7 +158,7 @@ class LocalUsers extends AbstractBackend {
 		return array();
 	    } else {
 		$row = $result->fetchRow();
-		$row['permissions'] = \OCP\PERMISSION_READ;
+		$row['permissions'] = \OCP\PERMISSION_READ | \OCP\PERMISSION_UPDATE;
 		return $row;
 	    }
 	} catch(\Exception $e) {
