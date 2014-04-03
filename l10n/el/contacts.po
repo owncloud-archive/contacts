@@ -22,6 +22,7 @@
 # Petros Kyladitis <petros.kyladitis@gmail.com>, 2011-2012
 # Serenata <pamponiros@yahoo.com>, 2013
 # pe_ppe <peppe@cs.uoi.gr>, 2014
+# stratosgl <stratos_gl@yahoo.com>, 2014
 # Teogramm <theodorewii121@hotmail.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012
@@ -34,9 +35,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-02 00:49-0400\n"
-"PO-Revision-Date: 2014-04-02 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-03 00:49-0400\n"
+"PO-Revision-Date: 2014-04-02 19:00+0000\n"
+"Last-Translator: stratosgl <stratos_gl@yahoo.com>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -344,7 +345,7 @@ msgstr "Δεν έχετε άδεια για να προσθέσετε επαφέ
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Το σύστημα για αυτό το βιβλίο διευθύνσεων δεν υποστηρίζει την προσθήκη επαφών."
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:247
+#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
 msgid "You do not have permissions to delete this contact"
 msgstr "Δεν έχετε άδεια για τη διαγραφή αυτής της επαφής"
 
@@ -372,35 +373,35 @@ msgstr "Δεν έχετε άδεια να διαγράψετε το βιβλίο
 msgid "Address book not found"
 msgstr "Δε βρέθηκε βιβλίο διευθύνσεων"
 
-#: lib/contact.php:113 lib/contact.php:160
+#: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
 msgstr "Δεν έχετε άδεια να δείτε αυτή την επαφή"
 
-#: lib/contact.php:262
+#: lib/contact.php:267
 msgid "You do not have permissions to update this contact"
 msgstr "Δεν έχετε άδεια για να ενημερώσετε αυτή την επαφή"
 
-#: lib/contact.php:275
+#: lib/contact.php:280
 msgid "The backend for this contact does not support updating it"
 msgstr "Το σύστημα για αυτή την επαφή δεν υποστηρίζει την ενημέρωσή της"
 
-#: lib/contact.php:292
+#: lib/contact.php:297
 msgid "This backend not support adding contacts"
 msgstr "Αυτό το σύστημα δεν υποστηρίζει προσθήκη επαφών"
 
-#: lib/contact.php:458 lib/contact.php:475
+#: lib/contact.php:463 lib/contact.php:480
 msgid "Property not found"
 msgstr "H ιδιότητα δεν βρέθηκε"
 
-#: lib/contact.php:523
+#: lib/contact.php:528
 msgid " Missing IM parameter for: "
 msgstr "Λείπει παράμετρος AM για:"
 
-#: lib/contact.php:531
+#: lib/contact.php:536
 msgid "Unknown IM: "
 msgstr "Άγνωστο AM:"
 
-#: lib/contact.php:808
+#: lib/contact.php:813
 msgid "{name}'s Birthday"
 msgstr "Τα γενέθλια του/της {name}"
 
@@ -877,11 +878,11 @@ msgstr "Διαγραφή τρέχουσας επαφής"
 #: templates/contacts.php:126
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "Δεν έχετε επαφές στο βιβλίο διευθύνσεών σας ή το βιβλίο διευθύνσεων σας είναι απενεργοποιημένο."
 
 #: templates/contacts.php:127
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Προσθέστε μια νέα επαφή ή εισαγάγετε υπάρχουσες επαφές από ένα VCF αρχείο."
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"

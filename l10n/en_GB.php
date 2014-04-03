@@ -200,6 +200,8 @@
 "Add new contact" => "Add new contact",
 "Add new addressbook" => "Add new address book",
 "Delete current contact" => "Delete current contact",
+"You have no contacts in your address book or your address book is disabled." => "You have no contacts in your address book or your address book is disabled.",
+"Add a new contact or import existing contacts from a VCF file." => "Add a new contact or import existing contacts from a VCF file.",
 "Which contact should the data be merged into?" => "Into which contact should the data be merged?",
 "Delete the other(s) after successful merge?" => "Delete the other(s) after successful merge?",
 "Compose mail" => "Compose mail",

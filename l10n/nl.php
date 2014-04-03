@@ -200,6 +200,8 @@
 "Add new contact" => "Voeg nieuw contact toe",
 "Add new addressbook" => "Voeg nieuw adresboek toe",
 "Delete current contact" => "Verwijder huidig contact",
+"You have no contacts in your address book or your address book is disabled." => "U hebt geen contacten in uw adresboek, of uw adresboek is gedeactiveerd.",
+"Add a new contact or import existing contacts from a VCF file." => "Een nieuw contact toevoegen, of importeren vanuit een VCF-bestand",
 "Which contact should the data be merged into?" => "Bij welke contactpersoon moeten de gegevens worden samengevoegd?",
 "Delete the other(s) after successful merge?" => "Verwijder de andere(n) na een succesvolle samenvoeging?",
 "Compose mail" => "Schrijf email",

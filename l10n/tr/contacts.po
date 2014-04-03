@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-02 00:49-0400\n"
-"PO-Revision-Date: 2014-04-02 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-03 00:49-0400\n"
+"PO-Revision-Date: 2014-04-02 12:10+0000\n"
+"Last-Translator: volkangezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -328,7 +328,7 @@ msgstr "Adres defterine kişi eklemek için izniniz yok"
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Bu adres defterinin geri plandaki mekanizması kişi eklemeyi desteklemiyor."
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:247
+#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
 msgid "You do not have permissions to delete this contact"
 msgstr "Bu kişiyi silmek için izniniz yok."
 
@@ -356,35 +356,35 @@ msgstr "Bu adres defterini silmek için izniniz yok."
 msgid "Address book not found"
 msgstr "Adres defteri bulunamadı."
 
-#: lib/contact.php:113 lib/contact.php:160
+#: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
 msgstr "Bu kişileri görmek için izniniz yok"
 
-#: lib/contact.php:262
+#: lib/contact.php:267
 msgid "You do not have permissions to update this contact"
 msgstr "Bu kişi bilgilerini güncellemek için izniniz yok."
 
-#: lib/contact.php:275
+#: lib/contact.php:280
 msgid "The backend for this contact does not support updating it"
 msgstr "Bu kişinin geri plandaki mekanizması güncellemeyi desteklemiyor."
 
-#: lib/contact.php:292
+#: lib/contact.php:297
 msgid "This backend not support adding contacts"
 msgstr "Bu geri plan mekanizması kişi eklemeyi desteklemiyor."
 
-#: lib/contact.php:458 lib/contact.php:475
+#: lib/contact.php:463 lib/contact.php:480
 msgid "Property not found"
 msgstr "Özellik bulunamadı"
 
-#: lib/contact.php:523
+#: lib/contact.php:528
 msgid " Missing IM parameter for: "
 msgstr "Şunun için eksik IM parametresi:"
 
-#: lib/contact.php:531
+#: lib/contact.php:536
 msgid "Unknown IM: "
 msgstr "Bilinmeyen IM:"
 
-#: lib/contact.php:808
+#: lib/contact.php:813
 msgid "{name}'s Birthday"
 msgstr "{name}'nin Doğumgünü"
 
@@ -769,11 +769,11 @@ msgstr "Sıralama şekli"
 
 #: templates/contacts.php:66
 msgid "First- Lastname"
-msgstr "İsim Soyisim"
+msgstr "Ad Soyad"
 
 #: templates/contacts.php:67
 msgid "Last-, Firstname"
-msgstr "Soyisim, İsim"
+msgstr "Soyad, Ad"
 
 #: templates/contacts.php:73 templates/contacts.php:74
 #: templates/contacts.php:221 templates/contacts.php:222
@@ -861,11 +861,11 @@ msgstr "Şuanki kişiyi sil"
 #: templates/contacts.php:126
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "Adres defterinizde hiç bağlantınız yok veya adres defteriniz devre dışı."
 
 #: templates/contacts.php:127
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Yeni bir bağlantı ekleyin veya bir VCF dosyasından içe aktarın."
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"
@@ -913,7 +913,7 @@ msgstr "İlave isimler"
 
 #: templates/contacts.php:253
 msgid "Last name"
-msgstr "Soyisim"
+msgstr "Soyad"
 
 #: templates/contacts.php:269
 msgid "Address book"

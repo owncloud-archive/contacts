@@ -36,9 +36,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-02 00:49-0400\n"
-"PO-Revision-Date: 2014-04-02 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-03 00:49-0400\n"
+"PO-Revision-Date: 2014-04-02 16:40+0000\n"
+"Last-Translator: Art O. Pal <artopal@fastmail.fm>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -346,7 +346,7 @@ msgstr "No tiene permisos para agregar contactos a esta libreta de direcciones"
 msgid "The backend for this address book does not support adding contacts"
 msgstr "El backend de esta libreta de direcciones no permite agregar contactos"
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:247
+#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
 msgid "You do not have permissions to delete this contact"
 msgstr "No tiene permisos para borrar este contacto"
 
@@ -374,35 +374,35 @@ msgstr "No tiene permisos para borrar esta libreta de direcciones."
 msgid "Address book not found"
 msgstr "No se encontraron libretas de direcciones."
 
-#: lib/contact.php:113 lib/contact.php:160
+#: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
 msgstr "No tiene permisos para ver este contacto"
 
-#: lib/contact.php:262
+#: lib/contact.php:267
 msgid "You do not have permissions to update this contact"
 msgstr "No tiene permisos para actualizar este contacto"
 
-#: lib/contact.php:275
+#: lib/contact.php:280
 msgid "The backend for this contact does not support updating it"
 msgstr "El backend de este contacto no permite actualizarlo"
 
-#: lib/contact.php:292
+#: lib/contact.php:297
 msgid "This backend not support adding contacts"
 msgstr "Este backend no permite agregar contactos"
 
-#: lib/contact.php:458 lib/contact.php:475
+#: lib/contact.php:463 lib/contact.php:480
 msgid "Property not found"
 msgstr "Propiedad no encontrada"
 
-#: lib/contact.php:523
+#: lib/contact.php:528
 msgid " Missing IM parameter for: "
 msgstr "Falta el parámetro de IM para:"
 
-#: lib/contact.php:531
+#: lib/contact.php:536
 msgid "Unknown IM: "
 msgstr "Servicio IM desconocido:"
 
-#: lib/contact.php:808
+#: lib/contact.php:813
 msgid "{name}'s Birthday"
 msgstr "Cumpleaños de {name}"
 
@@ -879,11 +879,11 @@ msgstr "Eliminar contacto actual"
 #: templates/contacts.php:126
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "No tiene contactos en su libreta de direcciones, o su libreta está desactivada."
 
 #: templates/contacts.php:127
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Agregue un nuevo contacto o importe contactos existentes de un archivo VCF."
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"
