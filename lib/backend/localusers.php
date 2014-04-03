@@ -77,9 +77,6 @@ class LocalUsers extends AbstractBackend {
 	    "backend" => $this->name,
 	    "active" => 1
 	);
-	//var_dump($addressbook);
-	//throw new \Exception($addressBookId);
-	
 	return $addressbook;
     }
 
@@ -124,8 +121,6 @@ class LocalUsers extends AbstractBackend {
 		    $this->removeContacts($remove, $addressbookid);
 		    $recall = true;
 		}
-		//var_dump($contacts);
-		//throw new \Exception('err');
 
 		if($recall === true){
 		    return $this->getContacts($addressbookid);
@@ -232,7 +227,7 @@ class LocalUsers extends AbstractBackend {
      */
     private function removeContacts($contacts, $addressbookid){
 	foreach($contacts as $user){
-	      try{ 
+	    try{ 
 		$sql = 'DELETE FROM ' . $this->cardsTableName . ' WHERE addressbookid = ? AND id = ?';
 		$query = \OCP\DB::prepare($sql);
 		$result = $query->execute(array($this->userid, $user));

@@ -16,22 +16,18 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
     */
     public function search($pattern, $searchProperties, $options) {
 	if(in_array("FN", $searchProperties) && in_array("id", $searchProperties)){
-	    echo "beide";
 	    $query = 'SELECT DISTINCT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ? AND (`id` LIKE ? OR `fullname` LIKE ?) ';
 	    $stmt = \OCP\DB::prepare($query);
 	    $result = $stmt->execute(array(\OCP\User::getUser(), '%' . $pattern . "%", '%' . $pattern . "%"));
 	} elseif(in_array("FN", $searchProperties)){
-	    echo "fn";
 	    $query = 'SELECT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ? AND `fullname` LIKE ? ';
 	    $stmt = \OCP\DB::prepare($query);
 	    $result = $stmt->execute(array(\OCP\User::getUser(), '%' . $pattern . "%"));
 	} elseif(in_array("id", $searchProperties)){
-	    echo "id";
 	    $query = 'SELECT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ? AND `id` LIKE ? ';
 	    $stmt = \OCP\DB::prepare($query);
 	    $result = $stmt->execute(array(\OCP\User::getUser(), '%' . $pattern . "%"));
 	} else {
-	    echo "else";
 	    $query = 'SELECT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ?';
 	    $stmt = \OCP\DB::prepare($query);
 	    $result = $stmt->execute(array(\OCP\User::getUser()));
@@ -46,7 +42,7 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 	$contacts = array();
 	
 	while( $row = $result->fetchRow()) {
-	    $contacts[] = $row['id'];
+	    $contacts[] = $row;
 	}
 
 	return $contacts;
@@ -80,7 +76,7 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
     * @return bool successful or not
     */
     public function delete($id){
-	
+	 
     }
 
 }
