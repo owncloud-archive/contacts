@@ -26,7 +26,8 @@ use OCA\Contacts\Contact,
 	OCA\Contacts\VObject\VCard,
 	OCA\Contacts\Utils\Properties,
 	Sabre\VObject\Reader,
-	OCA\Contacts\Addressbook;
+	OCA\Contacts\Addressbook,
+	OCA\Contacts\LocalUsersAddressbookProvider;
 
 /**
  * Contact backend for storing all the ownCloud users in this installation.
@@ -296,5 +297,9 @@ class LocalUsers extends AbstractBackend {
 		. $e->getMessage(), \OCP\Util::ERROR);
 	    return false;
 	}
+    }
+    
+    public function getSearchProvider(){
+	return new LocalUsersAddressbookProvider();
     }
 }

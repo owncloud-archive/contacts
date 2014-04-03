@@ -68,3 +68,4 @@ if (\OCP\User::isLoggedIn()) {
 		}
 	}
 }
+
