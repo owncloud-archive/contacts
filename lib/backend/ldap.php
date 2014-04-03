@@ -295,17 +295,13 @@ class Ldap extends AbstractBackend {
 			$preferences['owner'] = $this->userid;
 			$preferences['permissions'] = \OCP\PERMISSION_ALL;
 			$preferences['lastmodified'] = self::lastModifiedAddressBook($addressbookid);
+			
+			// remove the ldappassword from the return value if exists
+			if (isset($preferences['ldappass']) && (isset($options['getpwd']) && !$options['getpwd'])) {
+				unset($preferences['ldappass']);
+			}
+			
 			return $preferences;
-			/*$current = array();
-			$current['id'] = (string)$addressbookid;
-			$current['displayname'] = (string)$preferences['displayname'];
-			$current['description'] = (string)$preferences['description'];
-			$current['owner'] = $this->userid;
-			$current['uri'] = (string)$preferences['uri'];
-			$current['permissions'] = \OCP\PERMISSION_ALL;
-			$current['lastmodified'] = self::lastModifiedAddressBook($addressbookid);
-			error_log(print_r($current, 1));
-			return $current;*/
 		} else {
 			return array();
 		}
@@ -335,17 +331,19 @@ class Ldap extends AbstractBackend {
 	 * @return string|false The ID if the modified AddressBook or false on error.
 	 */
 	public function updateAddressBook($addressbookid, array $properties, array $options = array()) {
-		error_log("where am i ?");
 		if ($this->hasAddressBook($addressbookid)) {
-			error_log("was here ?");
 			// Addressbook exists, modify it through the create function
-			return $this->createAddressBook($properties);
+			if (isset($properties['ldappassmodified']) && $properties['ldappassmodified'] != 'true') {
+				// If password hasn't changed, get it from the preferences
+				$addrbook = $this->getAddressBook($addressbookid, array('getpwd' => true));
+				$properties['ldappass'] = base64_decode($addrbook['ldappass']);
+			}
+			return $this->setAddressBook($properties, $options);
 		} else {
-			error_log("nope, was here");
 			return false;
 		}
 	}
-
+	
 	/**
 	 * Creates a new address book
 	 *
@@ -357,6 +355,20 @@ class Ldap extends AbstractBackend {
 	 * @return string|false The ID if the newly created AddressBook or false on error.
 	 */
 	public function createAddressBook(array $properties, array $options = array()) {
+		if (!isset($properties['uri']) || $this->hasAddressBook($properties['uri'])) {
+			return false;
+		} else {
+			return $this->setAddressBook($properties, $options);
+		}
+	}
+
+	/*
+	 * Sets the parameters for a new or existing addressbook
+	 *
+	 * @param array $properties
+	 * @return string|false The ID if the newly created AddressBook or false on error.
+	 */
+	public function setAddressBook(array $properties, array $options = array()) {
 		if (count($properties) === 0) {
 			return false;
 		}
@@ -366,13 +378,18 @@ class Ldap extends AbstractBackend {
 			isset($properties['ldappagesize']) && $properties['ldappagesize'] != '' &&
 			isset($properties['ldapbasednsearch']) && $properties['ldapbasednsearch'] != '' &&
 			isset($properties['ldapfilter']) && $properties['ldapfilter'] != '' &&
-			isset($properties['ldapbasednmodify']) && $properties['ldapbasednmodify'] != '' &&
-			isset($properties['ldapvcardconnector']) && $properties['ldapvcardconnector'] != '' &&
+			isset($properties['ldapvcardconnector']) &&
 			isset($properties['ldapanonymous']) &&
 				($properties['ldapanonymous']=='true' 
 					|| ($properties['ldapanonymous']=='false' 
 						&& isset($properties['ldapuser']) && $properties['ldapuser'] != ''
 						&& isset($properties['ldappass']) && $properties['ldappass'] != ''
+						)
+				) &&
+			isset($properties['ldapreadonly']) &&
+				($properties['ldapreadonly']=='true' 
+					|| ($properties['ldapreadonly']=='false' 
+						&& isset($properties['ldapbasednmodify']) && $properties['ldapbasednmodify'] != ''
 						)
 				)
 			) {
@@ -381,24 +398,31 @@ class Ldap extends AbstractBackend {
 			$addressbookSettings['displayname'] = $properties['displayname'];
 			$addressbookSettings['description'] = $properties['description'];
 			$addressbookSettings['ldapurl'] = $properties['ldapurl'];
-			$addressbookSettings['ldapanonymous'] = false;
-			$addressbookSettings['ldapreadonly'] = false;
-			$addressbookSettings['ldapuser'] = $properties['ldapuser'];
-			$addressbookSettings['ldappass'] = base64_encode($properties['ldappass']);
+			$addressbookSettings['ldapanonymous'] = ($properties['ldapanonymous']=='true');
+			$addressbookSettings['ldapreadonly'] = ($properties['ldapreadonly']=='true');
+			$addressbookSettings['ldapuser'] = ($properties['ldapanonymous']=='false')?$properties['ldapuser']:"";
+			$addressbookSettings['ldappass'] = ($properties['ldapanonymous']=='false')?base64_encode($properties['ldappass']):"";
 			$addressbookSettings['ldappagesize'] = $properties['ldappagesize'];
 			$addressbookSettings['ldapbasednsearch'] = $properties['ldapbasednsearch'];
 			$addressbookSettings['ldapfilter'] = $properties['ldapfilter'];
-			$addressbookSettings['ldapbasednmodify'] = $properties['ldapbasednmodify'];
-			$prefix = "backend_ldap_";
-			$suffix = "_connector.xml";
-			$path = __DIR__ . "/../../formats/";
-			if (file_exists( $path.$prefix.$properties['ldapvcardconnector'].$suffix )) {
-				$addressbookSettings['ldap_vcard_connector'] = file_get_contents ( $path.$prefix.$properties['ldapvcardconnector'].$suffix );
+			$addressbookSettings['ldapbasednmodify'] = ($properties['ldapanonymous']=='false')?$properties['ldapbasednmodify']:"";
+			$addressbookSettings['ldapconnectorid'] = $properties['ldapvcardconnector'];
+			
+			if ($properties['ldapvcardconnector'] != '') {
+				$prefix = "backend_ldap_";
+				$suffix = "_connector.xml";
+				$path = __DIR__ . "/../../formats/";
+				if (file_exists( $path.$prefix.$properties['ldapvcardconnector'].$suffix )) {
+					$addressbookSettings['ldap_vcard_connector'] = file_get_contents ( $path.$prefix.$properties['ldapvcardconnector'].$suffix );
+				}
+			} else {
+				$addressbookSettings['ldap_vcard_connector'] = $properties['ldapvcardconnectorvalue'];
 			}
 			$this->setPreferences($properties['uri'], $addressbookSettings);
 			$this->setActive(1, $properties['uri']);
+			return $properties['uri'];
 		}
-		return $properties['uri'];
+		return false;
 	}
 
 	/**
@@ -491,6 +515,7 @@ class Ldap extends AbstractBackend {
 					isset($options['limit']) ? $options['limit'] : null
 				);
 				for ($i=0; $i<$info["count"]; $i++) {
+					//error_log(print_r($info[$i], true));
 					$a_card = $this->connector->ldapToVCard($info[$i]);
 					$cards[] = self::getSabreFormatCard($addressbookid, $a_card);
 				}

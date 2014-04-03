@@ -173,7 +173,6 @@ class AddressBookController extends Controller {
 
 		$response = new JSONResponse();
 
-		error_log(__METHOD__.print_r($this->request, true));
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		//$addressBook->update($this->request['properties']);
 		$addressBook->update($this->request->post);
@@ -379,8 +378,9 @@ class AddressBookController extends Controller {
 				if (file_exists($path.$file)) {
 					$format = simplexml_load_file ( $path.$file );
 					if ($format) {
-						if (isset($format->entries->name)) {
-							$formats[$format->entries['name']] = $format->entries['name'];
+						if (isset($format['name'])) {
+							$formatId = substr($file, strlen($prefix), - strlen($suffix));
+							$formats[$formatId] = array('id' => $formatId, 'name' => (string)$format['name'], 'xml' => $format->asXML());
 						}
 					}
 				}

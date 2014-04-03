@@ -567,6 +567,7 @@ use OCA\Contacts\ImportManager;
 		placeholder="<?php p($l->t('User')); ?>" required />
 	</p>
 	<p id="calendar-ui-ldappass-p">
+	<input type="hidden" id="calendar-ui-ldappass-modified" />
 	<label for="calendar-ui-ldappass">
 	<?php p($l->t('Password')); ?>:
 	</label>
@@ -606,13 +607,6 @@ use OCA\Contacts\ImportManager;
 	<?php p($l->t('Connector')); ?>:
 	</label>
 	<select id="calendar-ui-ldapvcardconnector">
-		<?php
-		/*$ldapConnectors = getLdapConnectors();
-		foreach ($ldapConnectors as $value => $label) {
-			echo "<option value=\"$value\">$label</option>";
-		}*/
-		?>
-		<option value="custom">Custom connector</option>
 	</select>
 	</p>
 	<p id="calendar-ui-ldapvcardconnector-value-p">
@@ -621,29 +615,11 @@ use OCA\Contacts\ImportManager;
 	</label>
 	<textarea id="calendar-ui-ldapvcardconnector-value"></textarea>
 	</p>
+	<p id="calendar-ui-ldapvcardconnector-copyfrom-p">
+	<label for="calendar-ui-ldapvcardconnector-copyfrom">
+	<?php p($l->t('Copy from (Warning, it will replace the current custom value)')); ?>:
+	</label>
+	<select id="calendar-ui-ldapvcardconnector-copyfrom">
+	</select>
+	</p>
 </div>
-<?php
-
-// TODO: use route instead
-function getLdapConnectors() {
-	$prefix = "backend_ldap_";
-	$suffix = "_connector.xml";
-	$path = __DIR__ . "/../formats/";
-	$files = scandir($path);
-	$formats = array();
-	foreach ($files as $file) {
-		if (!strncmp($file, $prefix, strlen($prefix)) && substr($file, - strlen($suffix)) === $suffix) {
-			if (file_exists($path.$file)) {
-				$format = simplexml_load_file ( $path.$file );
-				if ($format) {
-					if (isset($format['name'])) {
-						$formatId = substr($file, strlen($prefix), - strlen($suffix));
-						$formats[$formatId] = (string)$format['name'];
-					}
-				}
-			}
-		}
-	}
-	return $formats;
-}
-?>

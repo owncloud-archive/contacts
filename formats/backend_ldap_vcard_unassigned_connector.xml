@@ -1,5 +1,5 @@
 <?xml version='1.0' standalone='yes'?>
-<entries name="inetOrgPerson">
+<entries name="VCardUnassigned">
 	
   <vcard_entries>
 
@@ -60,7 +60,8 @@
 		<ldap_core>
 			<object_class name="top" />
 			<object_class name="inetOrgPerson" />
-			<unassigned_vcard_property ldap_name="telexnumber" />
+			<object_class name="VCardUnassigned" />
+			<unassigned_vcard_property ldap_name="unassignedproperty" />
 			<ldap_id name="cn" />
 			<not_null name="sn">
 				<action_switch name="givenname"/>
@@ -133,7 +134,7 @@
       </vcard_entry>
     </ldif_entry>
     
-    <ldif_entry name="c" enabled="true">
+    <ldif_entry name="vcardcountry" enabled="true">
       <vcard_entry property="ADR" type="HOME" position="6">
       </vcard_entry>
     </ldif_entry>

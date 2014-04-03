@@ -474,8 +474,9 @@ abstract class AbstractBackend {
 		
 		$addressbookList = $this->getAddressbookList($params);
 		$toRemove = array_search($addressbookid, $addressbookList);
-		if ($toRemove) {
+		if (is_int($toRemove)) {
 			unset($addressbookList[$toRemove]);
+			$addressbookList = array_values($addressbookList);
 			$this->setAddressbookList($addressbookList);
 		}
 	}

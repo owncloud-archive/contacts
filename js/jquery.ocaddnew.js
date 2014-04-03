@@ -38,28 +38,31 @@
 					return;
 				}
 				if($(event.target).is('.oc-addnew-init')) {
-					$("#calendar-ui")
-					.dialog({
-						title:"Add new Addressbook",
-						close: function() { $(this).hide() },
-						modal: false,
-						width: 'auto',
-						height: 'auto',
-						position: ['top', 100],
-						buttons: {
-							Ok: function() {
-								calendarUiOk();
+//					if ($(event.target).id == 'add-address-book') {
+						$("#calendar-ui")
+						.dialog({
+							title:"Add new Addressbook",
+							close: function() { $(this).hide() },
+							modal: false,
+							width: 'auto',
+							height: 'auto',
+							position: ['top', 100],
+							buttons: {
+								Ok: function() {
+									calendarUiOk();
+								},
+								Cancel: function() {
+									calendarUiCancel();
+								}
 							},
-							Cancel: function() {
-								calendarUiCancel();
-							}
-						},
-						open: openCalendarUi()
-					});
-					/*if(self.$ul.is('.open')) {
-						self.close();
-					} else {
-						self.open();
+							open: openCalendarUi()
+						});
+/*					} else {
+						if(self.$ul.is('.open')) {
+							self.close();
+						} else {
+							self.open();
+						}
 					}*/
 					return false;
 				} else if($(event.target).is('button.primary')) {
