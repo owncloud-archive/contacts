@@ -200,6 +200,8 @@
 "Add new contact" => "Dodaj nov stik",
 "Add new addressbook" => "Dodaj nov imenik",
 "Delete current contact" => "Izbriši trenutni stik",
+"You have no contacts in your address book or your address book is disabled." => "Ni navedenih stikov v imeniku ali pa je imenik onemogočen.",
+"Add a new contact or import existing contacts from a VCF file." => "Dodaj nov stik ali pa uvozi stike iz datoteke VCF.",
 "Which contact should the data be merged into?" => "S katerim stikom naj bodo podatki združeni?",
 "Delete the other(s) after successful merge?" => "Ali naj bodo ostali izbrisani po uspešnem združevanju?",
 "Compose mail" => "Sestavi sporočilo",
