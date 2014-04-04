@@ -200,8 +200,6 @@
 "Add new contact" => "Přidat nový kontakt",
 "Add new addressbook" => "Přidat nový adresář kontaktů",
 "Delete current contact" => "Odstranit současný kontakt",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Váš adresář kontaktů je buď vypnutý nebo prázdný.</h3><p>Vložte nový kontakt nebo importujte již existující kontakty ze souboru VCF.</p>",
-"Add contact" => "Přidat kontakt",
 "Which contact should the data be merged into?" => "Do kterého kontaktu mají být data sjednocena?",
 "Delete the other(s) after successful merge?" => "Smazat ostatní po úspěšném sjednocení?",
 "Compose mail" => "Napsat e-mail",

@@ -42,7 +42,6 @@
 "Address" => "Alamat",
 "Next addressbook" => "Buku alamat seterusnya",
 "Previous addressbook" => "Buku alamat sebelumnya",
-"Add contact" => "Letak kenalan",
 "Delete current photo" => "Padam foto semasa",
 "Edit current photo" => "Ubah foto semasa",
 "Upload new photo" => "Muatnaik foto baru",

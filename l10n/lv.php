@@ -73,7 +73,6 @@
 "Add new contact" => "Pievienot jaunu kontaktu",
 "Add new addressbook" => "Pievienot jaunu adrešu grāmatu",
 "Delete current contact" => "Dzēst pašreizējo kontaktu",
-"Add contact" => "Pievienot kontaktu",
 "Delete current photo" => "Dzēst pašreizējo fotogrāfiju",
 "Edit current photo" => "Rediģēt pašreizējo fotogrāfiju",
 "Upload new photo" => "Augšupielādēt jaunu fotogrāfiju",

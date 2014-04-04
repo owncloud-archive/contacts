@@ -189,8 +189,6 @@
 "Add new contact" => "Pridať nový kontakt",
 "Add new addressbook" => "Pridať nový adresár",
 "Delete current contact" => "Vymazať tento kontakt",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Váš adresár je buď vypnutý, alebo prázdny.</h3><p>Vložte nový kontakt, alebo ho naimportujete z VCF súboru.</p>",
-"Add contact" => "Pridať kontakt",
 "Which contact should the data be merged into?" => "Do ktorého kontaktu sa majú údaje zlúčiť?",
 "Delete the other(s) after successful merge?" => "Zmazať ostatné po úspešnom zlúčení?",
 "Compose mail" => "Napísať poštu",

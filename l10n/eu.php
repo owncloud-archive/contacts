@@ -174,8 +174,6 @@
 "Add new contact" => "Gehitu kontaktu berria",
 "Add new addressbook" => "Gehitu helbide-liburu berria",
 "Delete current contact" => "Ezabatu uneko kontaktuak",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Ez duzu kontakturik helbide-liburuan edo helbide-liburua desgaituta dago.</h3><p>Gehitu kontaktu berri bat edo inportatu VCF fitxategi batetatik.</p>",
-"Add contact" => "Gehitu kontaktua",
 "Which contact should the data be merged into?" => "Ze kontaktura bateratu beharko dira datuak?",
 "Delete the other(s) after successful merge?" => "Ezabatu besteak bateratze arrakastatsu baten ondoren?",
 "Compose mail" => "Idatzi eposta",

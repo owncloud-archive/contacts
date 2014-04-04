@@ -183,8 +183,6 @@
 "Add new contact" => "Új kapcsolat hozzáadása",
 "Add new addressbook" => "Új címlista létrehozása",
 "Delete current contact" => "Jelenlegi kapcsolat törlése",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Ebben a címjegyzékben még nincsenek bejegyzések.</h3><p>Hozzon létre egyet, vagy importáljon adatokat egy VCF-állományból.</p>",
-"Add contact" => "Kapcsolat hozzáadása",
 "Which contact should the data be merged into?" => "Melyik kapcsolathoz adódjon hozzá az adat?",
 "Delete the other(s) after successful merge?" => "Sikeres összefűzés után törölje a többit.",
 "Compose mail" => "Levél írás",

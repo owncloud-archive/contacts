@@ -42,7 +42,6 @@
 "Address" => "ලිපිනය",
 "Next addressbook" => "මෙයට පසු ලිපින පොත",
 "Previous addressbook" => "මෙයට පෙර ලිපින පොත",
-"Add contact" => "සම්බන්ධතාවක් එකතු කරන්න",
 "Delete current photo" => "වර්තමාන ඡායාරූපය මකන්න",
 "Edit current photo" => "වර්තමාන ඡායාරූපය සංස්කරණය කරන්න",
 "Upload new photo" => "නව ඡායාරූපයක් උඩුගත කරන්න",

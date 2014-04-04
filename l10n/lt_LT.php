@@ -175,8 +175,6 @@
 "Add new contact" => "Pridėti naują kontaktą",
 "Add new addressbook" => "Pridėti naują adresų knygą",
 "Delete current contact" => "Ištrinti šį kontaktą",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Jūs neturite kontaktų savo adresų knygoje, arba adresų knyga yra išjungta.</h3><p>Pridėkite naują kontaktą, arba importuokite turimus kontaktus iš VCF failo.</p>",
-"Add contact" => "Pridėti kontaktą",
 "Which contact should the data be merged into?" => "Į kurį kontaktą sulieti duomenis?",
 "Delete the other(s) after successful merge?" => "Ištrinti kitą(-us) sėkmingai suliejus?",
 "Compose mail" => "Sukurti el. laišką",

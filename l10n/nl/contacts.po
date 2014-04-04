@@ -6,11 +6,11 @@
 # André Koot <meneer@tken.net>, 2012-2014
 # isama <bart.formosus@gmail.com>, 2011
 # bartv <transifex@thisnet.nl>, 2011
-# diederikdehaas <didi.debian@cknow.org>, 2012
+# diederikdehaas <inactive+diederikdehaas@transifex.com>, 2012
 # Erik Bent <hj.bent.60@gmail.com>, 2012
 # gertvdw <gertvdw@gmail.com>, 2012
 # Robin Appelman <icewind1991@gmail.com>, 2012
-# koenvervloesem <koen@vervloesem.eu>, 2012
+# koenvervloesem <inactive+koenvervloesem@transifex.com>, 2012
 # Len <lenny@weijl.org>, 2013
 # Len <lenny@weijl.org>, 2012
 # Richard Bos <radoeka@gmail.com>, 2012
@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-03-26 05:41-0400\n"
-"PO-Revision-Date: 2014-03-26 06:00+0000\n"
+"POT-Creation-Date: 2014-04-03 00:49-0400\n"
+"PO-Revision-Date: 2014-04-02 07:50+0000\n"
 "Last-Translator: André Koot <meneer@tken.net>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -193,17 +193,17 @@ msgstr "Error bij interpreteren geboortedatum {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Het backend ondersteunt geen multi--byte tekens"
 
-#: js/contacts.js:2270
+#: js/contacts.js:2222
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd."
 
-#: js/contacts.js:2281
+#: js/contacts.js:2233
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik om het verwijderen van {num} contactpersonen ongedaan te maken."
 
-#: js/contacts.js:2290
+#: js/contacts.js:2242
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Verwijderen van {num} contacten geannuleerd"
 
@@ -306,7 +306,7 @@ msgstr "Sluit"
 msgid "Server error! Please inform system administator"
 msgstr "Server fout! Neem contact op met de systeembeheerder"
 
-#: js/storage.js:346 js/storage.js:385
+#: js/storage.js:405 js/storage.js:444
 msgid "Failed loading photo: {error}"
 msgstr "Mislukt: inladen foto: {error}"
 
@@ -330,7 +330,7 @@ msgstr "U heeft geen permissie om contactpersonen toe te voegen aan het adresboe
 msgid "The backend for this address book does not support adding contacts"
 msgstr "De backend voor dit adresboek heeft geen ondersteuning voor het toevoegen van contactpersonen"
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:247
+#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
 msgid "You do not have permissions to delete this contact"
 msgstr "U heeft geen permissie om dit contact te verwijderen"
 
@@ -358,81 +358,81 @@ msgstr "U heeft geen permissie om dit adresboek te verwijderen."
 msgid "Address book not found"
 msgstr "Adresboek niet gevonden"
 
-#: lib/contact.php:113 lib/contact.php:160
+#: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
 msgstr "U heeft geen permissie om deze contactpersoon te bekijken"
 
-#: lib/contact.php:262
+#: lib/contact.php:267
 msgid "You do not have permissions to update this contact"
 msgstr "U heeft geen permissie om deze contactpersoon te bewerken"
 
-#: lib/contact.php:275
+#: lib/contact.php:280
 msgid "The backend for this contact does not support updating it"
 msgstr "De backend voor deze contactpersoon heeft geen ondersteuning voor bewerk acties"
 
-#: lib/contact.php:292
+#: lib/contact.php:297
 msgid "This backend not support adding contacts"
 msgstr "De backend heeft geen ondersteuning voor het toevoegen van contactpersonen"
 
-#: lib/contact.php:458 lib/contact.php:475
+#: lib/contact.php:463 lib/contact.php:480
 msgid "Property not found"
 msgstr "Eigenschap niet gevonden"
 
-#: lib/contact.php:523
+#: lib/contact.php:528
 msgid " Missing IM parameter for: "
 msgstr "Ontbrekende IM parameter voor:"
 
-#: lib/contact.php:531
+#: lib/contact.php:536
 msgid "Unknown IM: "
 msgstr "Onbekende IM:"
 
-#: lib/contact.php:808
+#: lib/contact.php:813
 msgid "{name}'s Birthday"
 msgstr "{name}'s verjaardag"
 
-#: lib/controller/addressbookcontroller.php:141
+#: lib/controller/addressbookcontroller.php:163
 msgid "Error creating address book"
 msgstr "Fout bij aanmaken adresboek"
 
-#: lib/controller/addressbookcontroller.php:173
+#: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "De \"%s\" backend ondersteunt het verwijderen van adresboeken niet."
 
-#: lib/controller/addressbookcontroller.php:181
+#: lib/controller/addressbookcontroller.php:203
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "U hebt niet de permissies om het \"%s\" adresboek te verwijderen"
 
-#: lib/controller/addressbookcontroller.php:188
+#: lib/controller/addressbookcontroller.php:210
 msgid "Error deleting address book"
 msgstr "Fout bij verwijderen adresboek"
 
-#: lib/controller/addressbookcontroller.php:228
+#: lib/controller/addressbookcontroller.php:250
 msgid "Error creating contact."
 msgstr "Fout bij aanmaken contactpersoon."
 
-#: lib/controller/addressbookcontroller.php:237
+#: lib/controller/addressbookcontroller.php:259
 msgid "Error creating contact"
 msgstr "Fout bij aanmaken contactpersoon"
 
-#: lib/controller/addressbookcontroller.php:269
+#: lib/controller/addressbookcontroller.php:291
 msgid "Error deleting contact"
 msgstr "Fout bij verwijderen contactpersoon"
 
-#: lib/controller/addressbookcontroller.php:309
+#: lib/controller/addressbookcontroller.php:331
 msgid "Error retrieving contact"
 msgstr "Fout bij ophalen contactpersoon"
 
-#: lib/controller/addressbookcontroller.php:320
+#: lib/controller/addressbookcontroller.php:342
 msgid "Error saving contact"
 msgstr "Fout bij bewaren contactpersoon"
 
-#: lib/controller/addressbookcontroller.php:326
+#: lib/controller/addressbookcontroller.php:348
 msgid "Error removing contact from other address book."
 msgstr "Fout bij verwijderen contactpersoon uit ander adresboek."
 
-#: lib/controller/addressbookcontroller.php:333
+#: lib/controller/addressbookcontroller.php:355
 msgid "Error getting moved contact"
 msgstr "Fout bij verplaatsen contactpersoon"
 
@@ -729,7 +729,7 @@ msgstr "Vrienden"
 msgid "Family"
 msgstr "Familie"
 
-#: templates/contacts.php:9
+#: templates/contacts.php:9 templates/contacts.php:129
 msgid "New contact"
 msgstr "Nieuwe contactpersoon"
 
@@ -862,14 +862,12 @@ msgstr "Verwijder huidig contact"
 
 #: templates/contacts.php:126
 msgid ""
-"<h3>You have no contacts in your address book or your address book is "
-"disabled.</h3><p>Add a new contact or import existing contacts from a VCF "
-"file.</p>"
-msgstr "<h3>U hebt geen contactpersonen in uw adresboek of uw adresboek is uitgeschakeld.</h3><p>Voeg een nieuwe contactpersoon toe, of importeer bestaande contactpersonen vanuit een VCF bestand.</p>"
+"You have no contacts in your address book or your address book is disabled."
+msgstr "U hebt geen contacten in uw adresboek, of uw adresboek is gedeactiveerd."
 
-#: templates/contacts.php:129
-msgid "Add contact"
-msgstr "Contactpersoon toevoegen"
+#: templates/contacts.php:127
+msgid "Add a new contact or import existing contacts from a VCF file."
+msgstr "Een nieuw contact toevoegen, of importeren vanuit een VCF-bestand"
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"

@@ -166,8 +166,6 @@
 "Add new contact" => "新增聯絡人",
 "Add new addressbook" => "新增通訊錄",
 "Delete current contact" => "刪除這個聯絡人",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>您的通訊錄中無聯絡人，或是您的通訊錄未啓用</h3><p>請加入新的聯絡人或從 VCF 檔案匯入聯絡人</p>",
-"Add contact" => "新增聯絡人",
 "Which contact should the data be merged into?" => "要將資料匯入至哪一個聯絡人?",
 "Delete the other(s) after successful merge?" => "合併成功後刪除多餘的聯絡人？",
 "Compose mail" => "撰寫郵件",

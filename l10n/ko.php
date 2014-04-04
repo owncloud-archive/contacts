@@ -176,8 +176,6 @@
 "Add new contact" => "새 연락처 추가",
 "Add new addressbook" => "새 주소록 추가",
 "Delete current contact" => "현재 연락처 삭제",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>주소록에 연락처가 없거나 주소록이 비활성화되었습니다.</h3><p>새 연락처를 추가하거나 VCF 파일에서 가져올 수 있습니다.</p>",
-"Add contact" => "연락처 추가",
 "Which contact should the data be merged into?" => "데이터를 어떤 연락처로 합치시겠습니까?",
 "Delete the other(s) after successful merge?" => "합친 후 다른 연락처를 삭제하시겠습니까?",
 "Compose mail" => "메일 작성",

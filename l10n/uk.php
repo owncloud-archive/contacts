@@ -138,7 +138,6 @@
 "Add new contact" => "Додати новий контакт",
 "Add new addressbook" => "Додати нову адресну книгу",
 "Delete current contact" => "Видалити даний контакт",
-"Add contact" => "Додати контакт",
 "Compose mail" => "Написати листа",
 "Delete current photo" => "Видалити поточне фото",
 "Edit current photo" => "Редагувати поточне фото",

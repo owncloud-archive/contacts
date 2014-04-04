@@ -67,7 +67,6 @@
 "Email" => "Е-пошта",
 "Phone" => "Телефон",
 "Address" => "Адреса",
-"Add contact" => "Додади контакт",
 "Delete current photo" => "Избриши моментална фотографија",
 "Edit current photo" => "Уреди моментална фотографија",
 "Upload new photo" => "Подигни нова фотографија",

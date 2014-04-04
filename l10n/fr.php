@@ -189,8 +189,6 @@
 "Add new contact" => "Ajouter un nouveau contact",
 "Add new addressbook" => "Ajouter un nouveau carnet d'adresses",
 "Delete current contact" => "Effacer le contact sélectionné",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Vous n'avez aucun contact dans votre carnet d'adresses ou votre carnet d'adresses n'est pas activé.</h3><p>Ajoutez un nouveau contact ou importez des contacts existants depuis un fichier VCF.</p>",
-"Add contact" => "Ajouter un contact",
 "Which contact should the data be merged into?" => "Vers quel contact les données doivent-elles être fusionnées ?",
 "Delete the other(s) after successful merge?" => "Supprimer le(s) autre(s) après une fusion réalisée avec succès ?",
 "Compose mail" => "Écrire un mail",

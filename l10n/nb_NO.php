@@ -184,8 +184,6 @@
 "Add new contact" => "Legg til ny kontakt",
 "Add new addressbook" => "Legg til ny adressebok",
 "Delete current contact" => "Slett kontakten",
-"<h3>You have no contacts in your address book or your address book is disabled.</h3><p>Add a new contact or import existing contacts from a VCF file.</p>" => "<h3>Du har ingen kontakter eller adresseboken din er ikke aktivert.</h3><p>Legg inn en ny kontakt eller importer eksisterende kontakter fra en VCF-fil.</p>",
-"Add contact" => "Ny kontakt",
 "Which contact should the data be merged into?" => "Hvilken kontakt skal dataene flettes inn i?",
 "Delete the other(s) after successful merge?" => "Slett den/de andre etter vellykket fletting?",
 "Compose mail" => "Skriv epost",
