@@ -102,7 +102,6 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('status.contacts.error', response);
 			});
 			// TODO: remove this mock value
-			//var addressbook = JSON.parse('{"uri":"hector","displayname":"hector","description":"Hector LDAP","ldapurl":"ldaps:\/\/hector.babelouest.org\/","ldapanonymous":false,"ldapreadonly":false,"ldapuser":"cn=Radio Radio,ou=private,ou=Addressbook,dc=babelouest,dc=org","ldappass":"Z291Z291","ldappagesize":"20","ldapbasednsearch":"cn=Radio Radio,ou=private,ou=Addressbook,dc=babelouest,dc=org","ldapfilter":"(objectclass=VCardUnassigned)","ldapbasednmodify":"cn=Radio Radio,ou=private,ou=Addressbook,dc=babelouest,dc=org","ldap_vcard_connector":"<xml>","id":"local","owner":"nico","permissions":31,"lastmodified":null}');
 			/*if($(this).data('open')) {
 				return;
 			}
