@@ -16,6 +16,7 @@ use OCP\AppFramework\App as MainApp,
 	OCA\Contacts\Middleware\Http as HttpMiddleware,
 	OCA\Contacts\Controller\PageController,
 	OCA\Contacts\Controller\AddressBookController,
+	OCA\Contacts\Controller\BackendController,
 	OCA\Contacts\Controller\GroupController,
 	OCA\Contacts\Controller\ContactController,
 	OCA\Contacts\Controller\ContactPhotoController,
@@ -50,6 +51,9 @@ class Dispatcher extends MainApp {
 		});
 		$this->container->registerService('AddressBookController', function(IAppContainer $container) use($app) {
 			return new AddressBookController($container, $app);
+		});
+		$this->container->registerService('BackendController', function(IAppContainer $container) use($app) {
+			return new BackendController($container, $app);
 		});
 		$this->container->registerService('GroupController', function(IAppContainer $container) use($app) {
 			return new GroupController($container, $app);

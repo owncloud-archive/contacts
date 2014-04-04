@@ -328,8 +328,8 @@ abstract class AbstractBackend {
 	 * @param VCard $contact
 	 * @param array $options - Optional options
 	 * @return string|bool The identifier for the new contact or false on error.
+	public function createContact($addressbookid, $contact, array $options = array());
 	 */
-	public abstract function createContact($addressbookid, $contact, array $options = array());
 
 	/**
 	 * Updates a contact
@@ -341,8 +341,8 @@ abstract class AbstractBackend {
 	 * @param VCard $contact
 	 * @param array $options - Optional options
 	 * @return bool
+	public function updateContact($addressbookid, $id, $carddata, array $options = array());
 	 */
-	public abstract function updateContact($addressbookid, $id, $carddata, array $options = array());
 
 	/**
 	 * Deletes a contact
@@ -353,8 +353,8 @@ abstract class AbstractBackend {
 	 * @param mixed $id
 	 * @param array $options - Optional options
 	 * @return bool
+	public function deleteContact($addressbookid, $id, array $options = array());
 	 */
-	public abstract function deleteContact($addressbookid, $id, array $options = array());
 
 	/**
 	 * @brief Get the last modification time for a contact.
@@ -438,7 +438,7 @@ abstract class AbstractBackend {
 		$key = 'prefs_' . $key;
 
 		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $key, false);
-		return $data ? json_decode($data) : array();
+		return $data ? json_decode($data, true) : array();
 	}
 	
 	/**
@@ -450,15 +450,6 @@ abstract class AbstractBackend {
 	public function setPreferences($addressbookid, array $params) {
 		$key = $this->combinedKey($addressbookid);
 		$key = 'prefs_' . $key;
-		
-		$addressbookList = $this->getAddressbookList($params);
-		/*if (!is_array($addressbookList)) {
-			$addressbookList = array($addressbookList);
-		}*/
-		if (!in_array($addressbookid, $addressbookList)) {
-			$addressbookList[] = $addressbookid;
-			$this->setAddressbookList($addressbookList);
-		}
 
 		$data = json_encode($params);
 		return $data
@@ -472,28 +463,5 @@ abstract class AbstractBackend {
 		
 		\OC_Preferences::deleteKey( $this->userid, 'contacts', $key );
 		
-		$addressbookList = $this->getAddressbookList($params);
-		$toRemove = array_search($addressbookid, $addressbookList);
-		if (is_int($toRemove)) {
-			unset($addressbookList[$toRemove]);
-			$addressbookList = array_values($addressbookList);
-			$this->setAddressbookList($addressbookList);
-		}
-	}
-	
-	protected function setAddressbookList(array $addressbookList) {
-		$key = $this->name . "_list";
-		$data = json_encode($addressbookList);
-		
-		return $data
-			? \OCP\Config::setUserValue($this->userid, 'contacts', $key, $data)
-			: false;
-	}
-	
-	protected function getAddressbookList() {
-		$key = $this->name . "_list";
-		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $key, false);
-		
-		return $data ? json_decode($data) : array();
 	}
 }

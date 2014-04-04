@@ -13,6 +13,8 @@ OC.Contacts = OC.Contacts || {};
 
 	AddressBook.prototype.render = function() {
 		var self = this;
+		//var dialog = OC.Contacts.Dialog(null, null);
+		
 		this.$li = this.$template.octemplate({
 			id: this.book.id,
 			displayname: this.book.displayname,
@@ -66,6 +68,27 @@ OC.Contacts = OC.Contacts || {};
 				});
 			});
 		});
+		$('#add-address-book-element').on('click keypress', function() {
+			console.log('OC.Contacts', OC.Contacts);
+			$("#addressbooks-ui")
+			.dialog({
+				title:"Add new Addressbook",
+				close: function() { $(this).hide() },
+				modal: false,
+				width: 'auto',
+				height: 'auto',
+				position: ['top', 100],
+				buttons: {
+					Ok: function() {
+						addressbookUiOk();
+					},
+					Cancel: function() {
+						addressbookUiCancel();
+					}
+				},
+				open: openAddressbookUi()
+			});
+		});
 		this.$li.find('a.action.edit').on('click keypress', function(event) {
 			$.when(self.storage.getAddressBook(self.getBackend(), self.getId()))
 			.then(function(response) {
@@ -73,7 +96,7 @@ OC.Contacts = OC.Contacts || {};
 				if(response.data) {
 					var addressbook = response.data;
 					console.log('addressbook', addressbook);
-					$("#calendar-ui")
+					$("#addressbooks-ui")
 					.dialog({
 						title:"Edit Addressbook",
 						close: function() { $(this).hide() },
@@ -83,13 +106,13 @@ OC.Contacts = OC.Contacts || {};
 						position: ['top', 100],
 						buttons: {
 							Ok: function() {
-								calendarUiEditOk();
+								addressbookUiEditOk();
 							},
 							Cancel: function() {
-								calendarUiCancel();
+								addressbookUiCancel();
 							}
 						},
-						open: editCalendarUI(addressbook)
+						open: editAddressbookUI(addressbook)
 					});
 					//self.insertContacts(response.data.contacts);
 				}
@@ -102,7 +125,6 @@ OC.Contacts = OC.Contacts || {};
 				$(document).trigger('status.contacts.error', response);
 			});
 			// TODO: remove this mock value
-			//var addressbook = JSON.parse('{"uri":"hector","displayname":"hector","description":"Hector LDAP","ldapurl":"ldaps:\/\/hector.babelouest.org\/","ldapanonymous":false,"ldapreadonly":false,"ldapuser":"cn=Radio Radio,ou=private,ou=Addressbook,dc=babelouest,dc=org","ldappass":"Z291Z291","ldappagesize":"20","ldapbasednsearch":"cn=Radio Radio,ou=private,ou=Addressbook,dc=babelouest,dc=org","ldapfilter":"(objectclass=VCardUnassigned)","ldapbasednmodify":"cn=Radio Radio,ou=private,ou=Addressbook,dc=babelouest,dc=org","ldap_vcard_connector":"<xml>","id":"local","owner":"nico","permissions":31,"lastmodified":null}');
 			/*if($(this).data('open')) {
 				return;
 			}
@@ -686,382 +708,3 @@ OC.Contacts = OC.Contacts || {};
 	OC.Contacts.AddressBookList = AddressBookList;
 
 })(window, jQuery, OC);
-
-function openCalendarUi() {
-	$("#calendar-ui-backend option[value='local']").prop('selected', true);
-	$("#calendar-ui-uri").attr('disabled', false);
-	$("#calendar-ui-name").removeProp("required");
-	$("#calendar-ui-name").val("");
-	$("#calendar-ui-name").prop("required", "");
-	$("#calendar-ui-uri").removeProp("required");
-	$("#calendar-ui-uri").val("");
-	$("#calendar-ui-uri").prop("required", "");
-	$("#calendar-ui-description").removeProp("required");
-	$("#calendar-ui-description").val("");
-	$("#calendar-ui-description").prop("required", "");
-	$("#calendar-ui-ldapurl").removeProp("required");
-	$("#calendar-ui-ldapurl").val("");
-	$("#calendar-ui-ldapurl").prop("required", "");
-	$("#calendar-ui-ldapanonymous").attr('checked', false);
-	$("#calendar-ui-ldapreadonly").attr('checked', false);
-	$("#calendar-ui-ldapuser").removeProp("required");
-	$("#calendar-ui-ldapuser").val("");
-	$("#calendar-ui-ldapuser").prop("required", "");
-	$("#calendar-ui-ldapuser").removeAttr('disabled');
-	$("#calendar-ui-ldappass").removeProp("required");
-	$("#calendar-ui-ldappass").val("");
-	$("#calendar-ui-ldappass").prop("required", "");
-	$("#calendar-ui-ldappass").removeAttr('disabled');
-	$("#calendar-ui-ldappass-modified").val("true");
-	$("#calendar-ui-ldappagesize").val("20");
-	$("#calendar-ui-ldapbasednsearch").removeProp("required");
-	$("#calendar-ui-ldapbasednsearch").val("");
-	$("#calendar-ui-ldapbasednsearch").prop("required", "");
-	$("#calendar-ui-ldapfilter").removeProp("required");
-	$("#calendar-ui-ldapfilter").val("");
-	$("#calendar-ui-ldapfilter").prop("required", "");
-	$("#calendar-ui-ldapbasednmodify").removeProp("required");
-	$("#calendar-ui-ldapbasednmodify").val("");
-	$("#calendar-ui-ldapbasednmodify").prop("required", "");
-	$("#calendar-ui-ldapbasednmodify").removeAttr('disabled');
-
-	$("#calendar-ui-backend").change(function() {
-		storage = new OC.Contacts.Storage();
-		calendarUiInit();
-		$.when(storage.getConnectors($("#calendar-ui-backend").val()))
-		.then(function(response) {
-			$("#calendar-ui-ldapvcardconnector").empty();
-			for (id in response.data) {
-				var $option = $('<option value="' + response.data[id]['id'] + '">' + response.data[id]['name'] + '</option>');
-				$("#calendar-ui-ldapvcardconnector").append($option);
-			}
-			var $option = $('<option value="">' + 'Custom connector' + '</option>');
-			$("#calendar-ui-ldapvcardconnector").append($option);
-		})
-		.fail(function(jqxhr, textStatus, error) {
-			var err = textStatus + ', ' + error;
-			console.log('Request Failed', + err);
-			defer.reject({error:true, message:error});
-		});
-	});
-	calendarUiInit();
-}
-
-function editCalendarUI(addressbook) {
-	storage = new OC.Contacts.Storage();
-	$("#calendar-ui-addressbookid").val(addressbook.id);
-	$("#calendar-ui-backend option[value="+addressbook.backend+"]").prop('selected', true);
-	$("#calendar-ui-name").val(addressbook.displayname);
-	if (addressbook.backend == 'ldap') {
-		$("#calendar-ui-uri").val(addressbook.uri);
-		$("#calendar-ui-description").val(addressbook.description);
-		$("#calendar-ui-ldapurl").val(addressbook.ldapurl);
-		$("#calendar-ui-ldapanonymous").attr('checked', (addressbook.ldapanonymous==true));
-		$("#calendar-ui-ldapreadonly").attr('checked', (addressbook.ldapreadonly==true));
-		$("#calendar-ui-ldapuser").val(addressbook.ldapuser);
-		$("#calendar-ui-ldappass").val("nochange");
-		$("#calendar-ui-ldappass-modified").val("false");
-		$("#calendar-ui-ldappagesize").val(addressbook.ldappagesize);
-		$("#calendar-ui-ldapbasednsearch").val(addressbook.ldapbasednsearch);
-		$("#calendar-ui-ldapfilter").val(addressbook.ldapfilter);
-		$("#calendar-ui-ldapbasednmodify").val(addressbook.ldapbasednmodify);
-		$("#calendar-ui-uri").attr('disabled', true);
-		if ($("#calendar-ui-ldapanonymous").prop('checked')) {
-			$("#calendar-ui-ldapuser").attr('disabled', true);
-			$("#calendar-ui-ldappass").attr('disabled', true);
-		} else {
-			$("#calendar-ui-ldapuser").removeAttr('disabled');
-			$("#calendar-ui-ldappass").removeAttr('disabled');
-		}
-		if ($("#calendar-ui-ldapreadonly").prop('checked')) {
-			$("#calendar-ui-ldapbasednmodify").attr('disabled', true);
-		} else {
-			$("#calendar-ui-ldapbasednmodify").removeAttr('disabled');
-		}
-		
-		$("#calendar-ui-ldappass").change(function() {
-			$("#calendar-ui-ldappass-modified").val("true");
-		});
-
-		$.when(storage.getConnectors($("#calendar-ui-backend").val()))
-			.then(function(response) {
-				$("#calendar-ui-ldapvcardconnector").empty();
-				var custom = true;
-				console.log('addressbook.ldapconnectorid', addressbook.ldapconnectorid);
-				for (id in response.data) {
-					console.log('response.data[id][\'id\']', response.data[id]['id']);
-					if (response.data[id]['id'] == addressbook.ldapconnectorid) {
-						var $option = $('<option value="' + response.data[id]['id'] + '">' + response.data[id]['name'] + '</option>').attr('selected','selected');
-						custom = false;
-					} else {
-						var $option = $('<option value="' + response.data[id]['id'] + '">' + response.data[id]['name'] + '</option>');
-					}
-					$("#calendar-ui-ldapvcardconnector").append($option);
-				}
-				if (custom) {
-					var $option = $('<option value="">' + 'Custom connector' + '</option>').attr('selected','selected');
-					$("#calendar-ui-ldapvcardconnector-value-p").show();
-					$("#calendar-ui-ldapvcardconnector-copyfrom-p").show();
-					$.when(storage.getConnectors($("#calendar-ui-backend").val()))
-					.then(function(response) {
-						$("#calendar-ui-ldapvcardconnector-copyfrom").empty();
-						var $option = $('<option value="">' + 'Select connector' + '</option>').attr('selected','selected');
-						$("#calendar-ui-ldapvcardconnector-copyfrom").append($option);
-						for (id in response.data) {
-							var $option = $('<option value="' + response.data[id]['id'] + '">' + response.data[id]['name'] + '</option>');
-							$("#calendar-ui-ldapvcardconnector-copyfrom").append($option);
-						}
-					})
-					.fail(function(jqxhr, textStatus, error) {
-						var err = textStatus + ', ' + error;
-						console.log('Request Failed', + err);
-						defer.reject({error:true, message:error});
-					});
-					$("#calendar-ui-ldapvcardconnector-copyfrom").change(function() {
-						if ($("#calendar-ui-ldapvcardconnector-copyfrom").val() != '') {
-							console.log('$("#calendar-ui-backend").val()', $("#calendar-ui-backend").val());
-							$.when(storage.getConnectors($("#calendar-ui-backend").val()))
-							.then(function(response) {
-								console.log('$("#calendar-ui-backend").val(2)', $("#calendar-ui-backend").val());
-								for (id in response.data) {
-									if ($("#calendar-ui-ldapvcardconnector-copyfrom").val() == response.data[id]['id']) {
-										console.log(response.data[id]['id']);
-										$("#calendar-ui-ldapvcardconnector-value").text(response.data[id]['xml']);
-									}
-								}
-							})
-							.fail(function(jqxhr, textStatus, error) {
-								var err = textStatus + ', ' + error;
-								console.log('Request Failed', + err);
-								defer.reject({error:true, message:error});
-							});
-						}
-					});
-
-					$("#calendar-ui-ldapvcardconnector-value").text(addressbook.ldap_vcard_connector);
-				} else {
-					var $option = $('<option value="">' + 'Custom connector' + '</option>');
-				}
-				$("#calendar-ui-ldapvcardconnector").append($option);
-			})
-			.fail(function(jqxhr, textStatus, error) {
-				var err = textStatus + ', ' + error;
-				console.log('Request Failed', + err);
-				defer.reject({error:true, message:error});
-			});
-	}
-	calendarUiInit();
-}
-
-function calendarUiOk() {
-	storage = new OC.Contacts.Storage();
-	//addressbook = new OC.Contacts.AddressBook();
-	var defer = $.Deferred();
-
-	$.when(storage.addAddressBook($("#calendar-ui-backend").val(),
-	{
-		displayname: $("#calendar-ui-name").val(),
-		description: $("#calendar-ui-description").val(),
-		uri: ($("#calendar-ui-uri").val()=='')?$("#calendar-ui-name").val():$("#calendar-ui-uri").val(),
-		ldapurl: $("#calendar-ui-ldapurl").val(),
-		ldapanonymous: $("#calendar-ui-ldapanonymous").prop('checked')==true?"true":"false",
-		ldapreadonly: $("#calendar-ui-ldapreadonly").prop('checked')==true?"true":"false",
-		ldapuser: $("#calendar-ui-ldapuser").val(),
-		ldappass: $("#calendar-ui-ldappass").val(),
-		ldappagesize: $("#calendar-ui-ldappagesize").val(),
-		ldapbasednsearch: $("#calendar-ui-ldapbasednsearch").val(),
-		ldapfilter: $("#calendar-ui-ldapfilter").val(),
-		ldapbasednmodify: $("#calendar-ui-ldapbasednmodify").val(),
-		ldapvcardconnector: $("#calendar-ui-ldapvcardconnector").val(),
-		ldapvcardconnectorvalue: $("#calendar-ui-ldapvcardconnector-value").val(),
-	}
-	)).then(function(response) {
-		if(response.error) {
-			error = response.message;
-			if(typeof cb === 'function') {
-				cb({error:true, message:error});
-			}
-			defer.reject(response);
-		} else {
-			/*var book = addressbook.insertAddressBook(response.data);
-			$(document).trigger('status.addressbook.added');
-			if(typeof cb === 'function') {
-				cb({error:false, addressbook: book});
-			}
-			defer.resolve({error:false, addressbook: book});*/
-			$("#calendar-ui").dialog('close');
-		}
-	})
-	.fail(function(jqxhr, textStatus, error) {
-		$(this).removeClass('loading');
-		var err = textStatus + ', ' + error;
-		console.log('Request Failed', + err);
-		error = t('contacts', 'Failed adding address book: {error}', {error:err});
-		if(typeof cb === 'function') {
-			cb({error:true, message:error});
-		}
-		defer.reject({error:true, message:error});
-	});
-}
-
-function calendarUiEditOk() {
-	storage = new OC.Contacts.Storage();
-	//addressbook = new OC.Contacts.Addressbook();
-	var defer = $.Deferred();
-	console.log($("#calendar-ui-addressbookid").val())
-
-	$.when(storage.updateAddressBook($("#calendar-ui-backend").val(), $("#calendar-ui-addressbookid").val(),
-	{
-		displayname: $("#calendar-ui-name").val(),
-		description: $("#calendar-ui-description").val(),
-		uri: $("#calendar-ui-uri").val(),
-		ldapurl: $("#calendar-ui-ldapurl").val(),
-		ldapanonymous: $("#calendar-ui-ldapanonymous").prop('checked')==true?"true":"false",
-		ldapreadonly: $("#calendar-ui-ldapreadonly").prop('checked')==true?"true":"false",
-		ldapuser: $("#calendar-ui-ldapuser").val(),
-		ldappassmodified: $("#calendar-ui-ldappass-modified").val(),
-		ldappass: $("#calendar-ui-ldappass").val(),
-		ldappagesize: $("#calendar-ui-ldappagesize").val(),
-		ldapbasednsearch: $("#calendar-ui-ldapbasednsearch").val(),
-		ldapfilter: $("#calendar-ui-ldapfilter").val(),
-		ldapbasednmodify: $("#calendar-ui-ldapbasednmodify").val(),
-		ldapvcardconnector: $("#calendar-ui-ldapvcardconnector").val(),
-		ldapvcardconnectorvalue: $("#calendar-ui-ldapvcardconnector-value").val(),
-	}
-	)).then(function(response) {
-		if(response.error) {
-			error = response.message;
-			if(typeof cb === 'function') {
-				cb({error:true, message:error});
-			}
-			defer.reject(response);
-		} else {
-			/*var book = addressbook.insertAddressBook(response.data);
-			$(document).trigger('status.addressbook.added');
-			if(typeof cb === 'function') {
-				cb({error:false, addressbook: book});
-			}
-			defer.resolve({error:false, addressbook: book});*/
-			$("#calendar-ui").dialog('close');
-		}
-	})
-	.fail(function(jqxhr, textStatus, error) {
-		$(this).removeClass('loading');
-		var err = textStatus + ', ' + error;
-		console.log('Request Failed', + err);
-		error = t('contacts', 'Failed adding address book: {error}', {error:err});
-		if(typeof cb === 'function') {
-			cb({error:true, message:error});
-		}
-		defer.reject({error:true, message:error});
-	});
-}
-
-function calendarUiCancel() {
-	$("#calendar-ui").dialog('close');
-}
-
-function calendarUiInit() {
-	storage = new OC.Contacts.Storage();
-	
-	if ($("#calendar-ui-backend").val() == "local") {
-		$("#calendar-ui-uri-p").hide();
-		$("#calendar-ui-description-p").hide();
-		$("#calendar-ui-ldapurl-p").hide();
-		$("#calendar-ui-ldapanonymous-p").hide();
-		$("#calendar-ui-ldapreadonly-p").hide();
-		$("#calendar-ui-ldapuser-p").hide();
-		$("#calendar-ui-ldappass-p").hide();
-		$("#calendar-ui-ldappagesize-p").hide();
-		$("#calendar-ui-ldapbasednsearch-p").hide();
-		$("#calendar-ui-ldapfilter-p").hide();
-		$("#calendar-ui-ldapbasednmodify-p").hide();
-		$("#calendar-ui-ldapvcardconnector-p").hide();
-		$("#calendar-ui-ldapvcardconnector-value-p").hide();
-		$("#calendar-ui-ldapvcardconnector-copyfrom-p").hide();
-	} else if ($("#calendar-ui-backend").val() == "ldap") {
-		$("#calendar-ui-uri-p").show();
-		$("#calendar-ui-description-p").show();
-		$("#calendar-ui-ldapurl-p").show();
-		$("#calendar-ui-ldapanonymous-p").show();
-		$("#calendar-ui-ldapreadonly-p").show();
-		$("#calendar-ui-ldapuser-p").show();
-		$("#calendar-ui-ldappass-p").show();
-		$("#calendar-ui-ldappagesize-p").show();
-		$("#calendar-ui-ldapbasednsearch-p").show();
-		$("#calendar-ui-ldapfilter-p").show();
-		$("#calendar-ui-ldapbasednmodify-p").show();
-		$("#calendar-ui-ldapvcardconnector-p").show();
-		$("#calendar-ui-ldapvcardconnector-value-p").hide();
-		$("#calendar-ui-ldapvcardconnector-copyfrom-p").hide();
-	}
-	$("#calendar-ui-ldapanonymous").change(function() {
-		if ($("#calendar-ui-ldapanonymous").prop('checked')) {
-			$("#calendar-ui-ldapuser").attr('disabled', true);
-			$("#calendar-ui-ldappass").attr('disabled', true);
-		} else {
-			$("#calendar-ui-ldapuser").removeAttr('disabled');
-			$("#calendar-ui-ldappass").removeAttr('disabled');
-		}
-	});
-	$("#calendar-ui-ldapreadonly").change(function() {
-		if ($("#calendar-ui-ldapreadonly").prop('checked')) {
-			$("#calendar-ui-ldapbasednmodify").attr('disabled', true);
-		} else {
-			$("#calendar-ui-ldapbasednmodify").removeAttr('disabled');
-		}
-	});
-	$("#calendar-ui-ldapbasednsearch").change(function() {
-		if ($("#calendar-ui-ldapbasednmodify").val() == '') {
-			$("#calendar-ui-ldapbasednmodify").val($("#calendar-ui-ldapbasednsearch").val());
-		}
-	});
-	$("#calendar-ui-ldapbasednmodify").change(function() {
-		if ($("#calendar-ui-ldapbasednsearch").val() == '') {
-			$("#calendar-ui-ldapbasednsearch").val($("#calendar-ui-ldapbasednmodify").val());
-		}
-	});
-	$("#calendar-ui-ldapvcardconnector").change(function() {
-		// Custom connector
-		if ($("#calendar-ui-ldapvcardconnector").val() == '') {
-			$("#calendar-ui-ldapvcardconnector-value-p").show();
-			$("#calendar-ui-ldapvcardconnector-value").text('');
-			$("#calendar-ui-ldapvcardconnector-copyfrom-p").show();
-			$.when(storage.getConnectors($("#calendar-ui-backend").val()))
-			.then(function(response) {
-				$("#calendar-ui-ldapvcardconnector-copyfrom").empty();
-				var $option = $('<option value="">' + 'Select connector' + '</option>').attr('selected','selected');
-				$("#calendar-ui-ldapvcardconnector-copyfrom").append($option);
-				for (id in response.data) {
-					var $option = $('<option value="' + response.data[id]['id'] + '">' + response.data[id]['name'] + '</option>');
-					$("#calendar-ui-ldapvcardconnector-copyfrom").append($option);
-				}
-			})
-			.fail(function(jqxhr, textStatus, error) {
-				var err = textStatus + ', ' + error;
-				console.log('Request Failed', + err);
-				defer.reject({error:true, message:error});
-			});
-			$("#calendar-ui-ldapvcardconnector-copyfrom").change(function() {
-				if ($("#calendar-ui-ldapvcardconnector-copyfrom").val() != '') {
-					console.log('$("#calendar-ui-backend").val()', $("#calendar-ui-backend").val());
-					$.when(storage.getConnectors($("#calendar-ui-backend").val()))
-					.then(function(response) {
-						console.log('$("#calendar-ui-backend").val(2)', $("#calendar-ui-backend").val());
-						for (id in response.data) {
-							if ($("#calendar-ui-ldapvcardconnector-copyfrom").val() == response.data[id]['id']) {
-								console.log(response.data[id]['id']);
-								$("#calendar-ui-ldapvcardconnector-value").text(response.data[id]['xml']);
-							}
-						}
-					})
-					.fail(function(jqxhr, textStatus, error) {
-						var err = textStatus + ', ' + error;
-						console.log('Request Failed', + err);
-						defer.reject({error:true, message:error});
-					});
-				}
-			});
-		}
-	});
-}

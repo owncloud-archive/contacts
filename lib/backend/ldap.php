@@ -254,6 +254,7 @@ class Ldap extends AbstractBackend {
 		$addressbookidList = $this->getAddressbookList();
 		$this->addressbooks = array();
 		foreach($addressbookidList as $addressbookid) {
+			error_log(__METHOD__." am i here ? ".$addressbookid);
 			$this->addressbooks[] = self::getAddressBook($addressbookid);
 		}
 		return $this->addressbooks;
@@ -289,8 +290,8 @@ class Ldap extends AbstractBackend {
 			return $this->addressbooks[$addressbookid];
 		}
 		// Hmm, not found. Lets query the db.
-		$preferences = (array)self::getPreferences($addressbookid);
-		if ($preferences != false) {
+		$preferences = self::getPreferences($addressbookid);
+		if (count($preferences) > 0) {
 			$preferences['id'] = (string)$addressbookid;
 			$preferences['owner'] = $this->userid;
 			$preferences['permissions'] = \OCP\PERMISSION_ALL;
@@ -418,6 +419,12 @@ class Ldap extends AbstractBackend {
 			} else {
 				$addressbookSettings['ldap_vcard_connector'] = $properties['ldapvcardconnectorvalue'];
 			}
+
+			$addressbookList = $this->getAddressbookList();
+			if (!in_array($properties['uri'], $addressbookList)) {
+				$addressbookList[] = $properties['uri'];
+				$this->setAddressbookList($addressbookList);
+			}
 			$this->setPreferences($properties['uri'], $addressbookSettings);
 			$this->setActive(1, $properties['uri']);
 			return $properties['uri'];
@@ -433,25 +440,18 @@ class Ldap extends AbstractBackend {
 	 */
 	public function deleteAddressBook($addressbookid, array $options = array()) {
 		//$addressbook = self::getAddressBook($addressbookid);
+		$addressbookList = $this->getAddressbookList();
+		$toRemove = array_search($addressbookid, $addressbookList);
+		if (is_int($toRemove)) {
+			unset($addressbookList[$toRemove]);
+			$addressbookList = array_values($addressbookList);
+			$this->setAddressbookList($addressbookList);
+		}
+
 		self::removePreferences($addressbookid);
 
 		// TODO: use backend settings
 		return true;
-	}
-
-	/**
-	 * @brief Get the last modification time for an address book.
-	 *
-	 * Must return a UNIX time stamp or null if the backend
-	 * doesn't support it.
-	 *
-	 * TODO: Implement default methods get/set for backends that
-	 * don't support.
-	 * @param string $addressbookid
-	 * @returns int | null
-	 */
-	public function lastModifiedAddressBook($addressbookid, array $options = array()) {
-		return null;
 	}
 
 	/**
@@ -806,4 +806,21 @@ class Ldap extends AbstractBackend {
 
         return $trace;
     } 
+	
+	protected function setAddressbookList(array $addressbookList) {
+		$key = $this->name . "_list";
+		$data = json_encode($addressbookList);
+		
+		return $data
+			? \OCP\Config::setUserValue($this->userid, 'contacts', $key, $data)
+			: false;
+	}
+	
+	protected function getAddressbookList() {
+		$key = $this->name . "_list";
+		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $key, false);
+		
+		error_log($key." - ".$this->userid);
+		return $data ? json_decode($data) : array();
+	}
 }

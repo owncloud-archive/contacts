@@ -147,5 +147,4 @@ $(document).ready(function(){
 		FileActions.setDefault('text/x-vcard','importaddressbook');
 	}
 	
-	$("#calendar-ui").hide();
 });

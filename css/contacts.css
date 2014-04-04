@@ -815,22 +815,22 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	transition: all 0.5s ease-in-out;
 }
 
-#calendar-ui > p > select {
+#addressbooks-ui-div > p > select {
 	width:200px;
 	display: inline-block;
 }
 
-#calendar-ui > p > input {
+#addressbooks-ui-div > p > input {
 	width:200px;
 	display: inline-block;
 }
 
-#calendar-ui > p > textarea {
+#addressbooks-ui-div > p > textarea {
 	width:200px;
 	display: inline-block;
 }
 
-#calendar-ui > p > label {
+#addressbooks-ui-div > p > label {
 	vertical-align:top;
 	width:200px;
 	display: inline-block;

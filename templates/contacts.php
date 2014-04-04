@@ -22,7 +22,9 @@ use OCA\Contacts\ImportManager;
 				<h2 data-id="addressbooks" tabindex="0" role="button"><?php p($l->t('Address books')); ?></h2>
 					<ul class="addressbooklist">
 					</ul>
-					<input type="text" tabindex="0" autofocus id="add-address-book" placeholder="<?php p($l->t('Display name')); ?>" title="<?php p($l->t('Add Address Book')); ?>" />
+					<ul class="oc-addnew">
+						<li id="add-address-book-element"><a class="oc-addnew-init"><?php p($l->t('Add Address Book')); ?></a></li>
+					</ul>
 				</div>
 				<div id="import">
 				<h2 data-id="import" tabindex="0" role="button"><?php p($l->t('Import')); ?></h2>
@@ -508,118 +510,120 @@ use OCA\Contacts\ImportManager;
 </li>
 </script>
 
-<div id="calendar-ui" title="Add new addressbook" class="calendar-ui-class">
-	<input type="hidden" id="calendar-ui-addressbookid" />
-	<p id="calendar-ui-backend-p">
-	<label for="calendar-ui-backend">
+<form id="addressbooks-ui" method="GET" name="addressbook-ui" action="#">
+<div id="addressbooks-ui-div" title="Add new addressbook" class="addressbooks-ui-class">
+	<input type="hidden" id="addressbooks-ui-addressbookid" />
+	<p id="addressbooks-ui-backend-p">
+	<label for="addressbooks-ui-backend">
 	<?php p($l->t('Addressbook type')); ?>:
 	</label>
-	<select id="calendar-ui-backend">
+	<select id="addressbooks-ui-backend">
 		<option value="local">Local</option>
 		<option value="ldap">LDAP</option>
 	</select>
 	</p>
-	<p id="calendar-ui-name-p">
-	<label for="calendar-ui-name">
+	<p id="addressbooks-ui-name-p">
+	<label for="addressbooks-ui-name">
 	<?php p($l->t('Name')); ?>:
 	</label>
-	<input type="text" class="nonempty value" id="calendar-ui-name" value=""
+	<input type="text" class="nonempty value" id="addressbooks-ui-name" value=""
 		placeholder="<?php p($l->t('Name')); ?>" required />
 	</p>
-	<p id="calendar-ui-uri-p">
-	<label for="calendar-ui-uri">
+	<p id="addressbooks-ui-uri-p">
+	<label for="addressbooks-ui-uri">
 	<?php p($l->t('Addressbook URI')); ?>:
 	</label>
-	<input type="text" class="nonempty value" id="calendar-ui-uri" value=""
-		placeholder="<?php p($l->t('uri')); ?>" required />
+	<input type="text" class="nonempty value" id="addressbooks-ui-uri" value=""
+		placeholder="<?php p($l->t('URI')); ?>" required />
 	</p>
-	<p id="calendar-ui-description-p">
-	<label for="calendar-ui-description">
+	<p id="addressbooks-ui-description-p">
+	<label for="addressbooks-ui-description">
 	<?php p($l->t('Description')); ?>:
 	</label>
-	<input type="text" class="nonempty value" id="calendar-ui-description" value=""
+	<input type="text" class="nonempty value" id="addressbooks-ui-description" value=""
 		placeholder="<?php p($l->t('Description')); ?>" />
 	</p>
-	<p id="calendar-ui-ldapurl-p">
-	<label for="calendar-ui-ldapurl">
+	<p id="addressbooks-ui-ldapurl-p">
+	<label for="addressbooks-ui-ldapurl">
 	<?php p($l->t('LDAP URL')); ?>:
 	</label>
-	<input type="text" class="nonempty value" id="calendar-ui-ldapurl" value=""
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapurl" value=""
 		placeholder="<?php p($l->t('LDAP URL')); ?>" required />
 	</p>
-	<p id="calendar-ui-ldapanonymous-p">
-	<label for="calendar-ui-ldapanonymous">
+	<p id="addressbooks-ui-ldapanonymous-p">
+	<label for="addressbooks-ui-ldapanonymous">
 	<?php p($l->t('Anonymous')); ?>:
 	</label>
-	<input type="checkbox" id="calendar-ui-ldapanonymous" title="<?php p($l->t('Anonymous')); ?>" />
+	<input type="checkbox" id="addressbooks-ui-ldapanonymous" title="<?php p($l->t('Anonymous')); ?>" />
 	</p>
-	<p id="calendar-ui-ldapreadonly-p">
-	<label for="calendar-ui-ldapreadonly">
+	<p id="addressbooks-ui-ldapreadonly-p">
+	<label for="addressbooks-ui-ldapreadonly">
 	<?php p($l->t('Read-only')); ?>:
 	</label>
-	<input type="checkbox" id="calendar-ui-ldapreadonly" title="<?php p($l->t('Read-Only')); ?>" />
+	<input type="checkbox" id="addressbooks-ui-ldapreadonly" title="<?php p($l->t('Read-Only')); ?>" />
 	</p>
-	<p id="calendar-ui-ldapuser-p">
-	<label for="calendar-ui-ldapuser">
+	<p id="addressbooks-ui-ldapuser-p">
+	<label for="addressbooks-ui-ldapuser">
 	<?php p($l->t('User')); ?>:
 	</label>
-	<input type="text" class="nonempty value" id="calendar-ui-ldapuser" value=""
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapuser" value=""
 		placeholder="<?php p($l->t('User')); ?>" required />
 	</p>
-	<p id="calendar-ui-ldappass-p">
-	<input type="hidden" id="calendar-ui-ldappass-modified" />
-	<label for="calendar-ui-ldappass">
+	<p id="addressbooks-ui-ldappass-p">
+	<input type="hidden" id="addressbooks-ui-ldappass-modified" />
+	<label for="addressbooks-ui-ldappass">
 	<?php p($l->t('Password')); ?>:
 	</label>
-	<input type="password" class="nonempty value" id="calendar-ui-ldappass" value=""
+	<input type="password" class="nonempty value" id="addressbooks-ui-ldappass" value=""
 		placeholder="<?php p($l->t('Password')); ?>" required />
 	</p>
-	<p id="calendar-ui-ldappagesize-p">
-	<label for="calendar-ui-ldappagesize">
+	<p id="addressbooks-ui-ldappagesize-p">
+	<label for="addressbooks-ui-ldappagesize">
 	<?php p($l->t('Page size')); ?>:
 	</label>
-	<input type="text" class="nonempty value" id="calendar-ui-ldappagesize" value="20"
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldappagesize" value="20"
 		placeholder="<?php p($l->t('Page size')); ?>" required />
 	</p>
-	<p id="calendar-ui-ldapbasednsearch-p">
-	<label for="calendar-ui-ldapbasednsearch">
+	<p id="addressbooks-ui-ldapbasednsearch-p">
+	<label for="addressbooks-ui-ldapbasednsearch">
 	<?php p($l->t('Base DN for search')); ?>:
 	</label>
-	<input type="text" class="nonempty value" id="calendar-ui-ldapbasednsearch" value=""
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapbasednsearch" value=""
 		placeholder="<?php p($l->t('Base DN')); ?>" required />
 	</p>
-	<p id="calendar-ui-ldapfilter-p">
-	<label for="calendar-ui-ldapfilter">
+	<p id="addressbooks-ui-ldapfilter-p">
+	<label for="addressbooks-ui-ldapfilter">
 	<?php p($l->t('Search filter')); ?>:
 	</label>
-	<input type="text" class="nonempty value" id="calendar-ui-ldapfilter" value=""
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapfilter" value=""
 		placeholder="<?php p($l->t('Filter')); ?>" required />
 	</p>
-	<p id="calendar-ui-ldapbasednmodify-p">
-	<label for="calendar-ui-ldapbasednmodify">
+	<p id="addressbooks-ui-ldapbasednmodify-p">
+	<label for="addressbooks-ui-ldapbasednmodify">
 	<?php p($l->t('Base DN for modification')); ?>:
 	</label>
-	<input type="text" class="nonempty value" id="calendar-ui-ldapbasednmodify" value=""
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapbasednmodify" value=""
 		placeholder="<?php p($l->t('Base DN')); ?>" required />
 	</p>
-	<p id="calendar-ui-ldapvcardconnector-p">
-	<label for="calendar-ui-ldapvcardconnector">
+	<p id="addressbooks-ui-ldapvcardconnector-p">
+	<label for="addressbooks-ui-ldapvcardconnector">
 	<?php p($l->t('Connector')); ?>:
 	</label>
-	<select id="calendar-ui-ldapvcardconnector">
+	<select id="addressbooks-ui-ldapvcardconnector">
 	</select>
 	</p>
-	<p id="calendar-ui-ldapvcardconnector-value-p">
-	<label for="calendar-ui-ldapvcardconnector-value">
+	<p id="addressbooks-ui-ldapvcardconnector-value-p">
+	<label for="addressbooks-ui-ldapvcardconnector-value">
 	<?php p($l->t('Connector value')); ?>:
 	</label>
-	<textarea id="calendar-ui-ldapvcardconnector-value"></textarea>
+	<textarea id="addressbooks-ui-ldapvcardconnector-value"></textarea>
 	</p>
-	<p id="calendar-ui-ldapvcardconnector-copyfrom-p">
-	<label for="calendar-ui-ldapvcardconnector-copyfrom">
+	<p id="addressbooks-ui-ldapvcardconnector-copyfrom-p">
+	<label for="addressbooks-ui-ldapvcardconnector-copyfrom">
 	<?php p($l->t('Copy from (Warning, it will replace the current custom value)')); ?>:
 	</label>
-	<select id="calendar-ui-ldapvcardconnector-copyfrom">
+	<select id="addressbooks-ui-ldapvcardconnector-copyfrom">
 	</select>
 	</p>
 </div>
+</form>
