@@ -13,6 +13,7 @@ namespace OCA\Contacts;
 use Sabre\VObject,
 	OCP\AppFramework,
 	OCA\Contacts\Controller\AddressBookController,
+	OCA\Contacts\Controller\BackendController,
 	OCA\Contacts\Controller\GroupController,
 	OCA\Contacts\Controller\ContactController,
 	OCA\Contacts\Controller\ContactPhotoController,

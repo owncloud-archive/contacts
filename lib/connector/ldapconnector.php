@@ -33,7 +33,14 @@ class LdapConnector {
 			\OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', error in setting xml config', \OCP\Util::DEBUG);
 		}
 	}
-	
+	private function convertDate ($ldapDate) {
+
+		$tstamp = strtotime($ldapDate);
+		$theDate = new \DateTime;
+		$theDate->setTimestamp($tstamp);
+		
+		return $theDate;
+	}
 	/**
 	 * @brief transform a ldap entry into an VCard object
 	 *	for each ldap entry which is like "property: value"
@@ -43,7 +50,8 @@ class LdapConnector {
 	 */
 	public function ldapToVCard($ldapEntry) {
 		$vcard = \Sabre\VObject\Component::create('VCARD');
-		$vcard->REV = $ldapEntry['modifytimestamp'][0];
+		$vcard->REV = $this->convertDate($ldapEntry['modifytimestamp'][0])->format(\DateTime::W3C);
+		//error_log("modifytimestamp: ".$vcard->REV);
 		$vcard->{'X-LDAP-DN'} = base64_encode($ldapEntry['dn']);
 		// OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' vcard is '.$vcard->serialize(), \OCP\Util::DEBUG);
 		
@@ -86,7 +94,6 @@ class LdapConnector {
 		if (!isset($vcard->UID)) {
 			$vcard->UID = base64_encode($ldapEntry['dn']);
 		}
-		$vcard->validate(\Sabre\VObject\Component\VCard::REPAIR);
 		return $vcard;
 	}
 	
@@ -419,6 +426,22 @@ class LdapConnector {
 			return true;
 		} else {
 			return false;
+		}
+	}
+	
+	/**
+	 * @brief adds empty entries in $dest if $dest doesn't have those entries and if $source has
+	 * otherwise, I couldn't find how to remove attributes
+	 * @param $source the source ldap entry as model
+	 * @param $dest the destination entry to add empty params if we have to
+	 */
+	public function insertEmptyEntries($source, &$dest) {
+		for ($i=0; $i<$source["count"]; $i++) {
+			
+			$l_property = $source[$i];
+			if (!isset($dest[$l_property]) && $l_property != 'modifytimestamp') {
+				$dest[$l_property] = array();
+			}
 		}
 	}
 }

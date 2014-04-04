@@ -101,7 +101,6 @@ class AddressBookController extends Controller {
 			$response->setETag($etag);
 		}
 
-		//$response->debug('comparing: "' . $etag . '" to ' . $this->request->getHeader('If-None-Match'));
 		if (!is_null($etag)
 			&& $this->request->getHeader('If-None-Match') === '"'.$etag.'"')
 		{
@@ -175,7 +174,8 @@ class AddressBookController extends Controller {
 		$response = new JSONResponse();
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
-		$addressBook->update($this->request['properties']);
+		//$addressBook->update($this->request['properties']);
+		$addressBook->update($this->request->post);
 
 		return $response->setParams($addressBook->getMetaData());
 	}
@@ -359,5 +359,34 @@ class AddressBookController extends Controller {
 		return $response->setParams($serialized);
 	}
 
+	/**
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
+	 */
+	public function getLdapConnectors() {
+		$params = $this->request->urlParams;
+		//$targetInfo = $this->request->post['target'];
+
+		$response = new JSONResponse();
+		$prefix = "backend_ldap_";
+		$suffix = "_connector.xml";
+		$path = __DIR__ . "/../../formats/";
+		$files = scandir($path);
+		$formats = array();
+		foreach ($files as $file) {
+			if (!strncmp($file, $prefix, strlen($prefix)) && substr($file, - strlen($suffix)) === $suffix) {
+				if (file_exists($path.$file)) {
+					$format = simplexml_load_file ( $path.$file );
+					if ($format) {
+						if (isset($format['name'])) {
+							$formatId = substr($file, strlen($prefix), - strlen($suffix));
+							$formats[$formatId] = array('id' => $formatId, 'name' => (string)$format['name'], 'xml' => $format->asXML());
+						}
+					}
+				}
+			}
+		}
+		return $response->setData($formats);
+	}
 }
 

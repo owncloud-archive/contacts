@@ -40,7 +40,7 @@ $principalBackend = new OC_Connector_Sabre_Principal();
 
 $addressbookbackends = array();
 $addressbookbackends[] = new OCA\Contacts\Backend\Database(\OCP\User::getUser());
-$carddavBackend = new OCA\Contacts\CardDAV\Backend(array('local', 'shared'));
+$carddavBackend = new OCA\Contacts\CardDAV\Backend(array('local', 'shared', 'ldap'));
 $requestBackend = new OC_Connector_Sabre_Request();
 
 // Root nodes

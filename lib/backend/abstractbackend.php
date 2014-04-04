@@ -328,7 +328,7 @@ abstract class AbstractBackend {
 	 * @param VCard $contact
 	 * @param array $options - Optional options
 	 * @return string|bool The identifier for the new contact or false on error.
-	public function createContact($addressBookId, $contact, array $options = array());
+	public function createContact($addressbookid, $contact, array $options = array());
 	 */
 
 	/**
@@ -341,7 +341,7 @@ abstract class AbstractBackend {
 	 * @param VCard $contact
 	 * @param array $options - Optional options
 	 * @return bool
-	public function updateContact($addressBookId, $id, $carddata, array $options = array());
+	public function updateContact($addressbookid, $id, $carddata, array $options = array());
 	 */
 
 	/**
@@ -353,7 +353,7 @@ abstract class AbstractBackend {
 	 * @param mixed $id
 	 * @param array $options - Optional options
 	 * @return bool
-	public function deleteContact($addressBookId, $id, array $options = array());
+	public function deleteContact($addressbookid, $id, array $options = array());
 	 */
 
 	/**
@@ -438,7 +438,7 @@ abstract class AbstractBackend {
 		$key = 'prefs_' . $key;
 
 		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $key, false);
-		return $data ? json_decode($data) : array();
+		return $data ? json_decode($data, true) : array();
 	}
 	
 	/**
@@ -447,14 +447,21 @@ abstract class AbstractBackend {
 	 * @param array the preferences, format array('param1' => 'value', 'param2' => 'value')
 	 * @return boolean
 	 */
-	public function setPreferences($addressBookId, array $params) {
-
-		$key = $this->combinedKey($addressBookId);
+	public function setPreferences($addressbookid, array $params) {
+		$key = $this->combinedKey($addressbookid);
 		$key = 'prefs_' . $key;
 
 		$data = json_encode($params);
 		return $data
 			? \OCP\Config::setUserValue($this->userid, 'contacts', $key, $data)
 			: false;
+	}
+	
+	public function removePreferences($addressbookid) {
+		$key = $this->combinedKey($addressbookid);
+		$key = 'prefs_' . $key;
+		
+		\OC_Preferences::deleteKey( $this->userid, 'contacts', $key );
+		
 	}
 }

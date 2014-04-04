@@ -127,7 +127,7 @@ OC.Contacts = OC.Contacts || {};
 		return this.requestRoute(
 			'addressbook/{backend}/add',
 			'POST',
-			{backend: 'local'},
+			{backend: backend},
 			JSON.stringify(parameters)
 		);
 	};
@@ -150,7 +150,7 @@ OC.Contacts = OC.Contacts || {};
 	 * }
 	 */
 	Storage.prototype.updateAddressBook = function(backend, addressBookId, properties) {
-		console.log('Storage.updateAddressBook', backend);
+		console.log('Storage.updateAddressBook', backend, addressBookId);
 		return this.requestRoute(
 			'addressbook/{backend}/{addressBookId}',
 			'POST',
@@ -194,6 +194,32 @@ OC.Contacts = OC.Contacts || {};
 			'POST',
 			{backend: backend, addressBookId: addressBookId},
 			JSON.stringify({state: state})
+		);
+	};
+	
+	/**
+	 * Update an address book in a specific backend
+	 *
+	 * @param string backend
+	 * @param string addressBookId Address book ID
+	 * @param object params An object {displayname:"My contacts", description:""}
+	 * @return An array containing contact data e.g.:
+	 * {
+	 * metadata:
+	 * {
+	 *     id:'1234'
+	 *     permissions:31,
+	 *     displayname:'My contacts',
+	 *     lastmodified: (unix timestamp),
+	 *     owner: 'joye',
+	 * }
+	 */
+	Storage.prototype.getConnectors = function(backend) {
+		console.log('Storage.getConnectors', backend);
+		return this.requestRoute(
+			'connectors/{backend}',
+			'GET',
+			{backend: backend}
 		);
 	};
 

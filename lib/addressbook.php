@@ -171,7 +171,8 @@ class Addressbook extends AbstractPIMCollection {
 		if (!isset($this->objects[$id])) {
 			$contact = $this->backend->getContact($this->getId(), $id);
 			if ($contact) {
-				$this->objects[$id] = new Contact($this, $this->backend, $contact);
+				//$this->objects[$id] = new Contact($this, $this->backend, $contact);
+				$curContact = new Contact($this, $this->backend, $contact);
 			} else {
 				throw new \Exception(
 					self::$l10n->t('Contact not found'),
@@ -181,9 +182,10 @@ class Addressbook extends AbstractPIMCollection {
 		}
 
 		// When requesting a single contact we preparse it
-		if (isset($this->objects[$id])) {
-			$this->objects[$id]->retrieve();
-			return $this->objects[$id];
+		if (isset($curContact)) {
+			$curContact->retrieve();
+			$this->objects[$id] = $curContact;
+			return $curContact;
 		}
 	}
 

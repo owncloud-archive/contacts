@@ -13,6 +13,8 @@ OC.Contacts = OC.Contacts || {};
 
 	AddressBook.prototype.render = function() {
 		var self = this;
+		//var dialog = OC.Contacts.Dialog(null, null);
+		
 		this.$li = this.$template.octemplate({
 			id: this.book.id,
 			displayname: this.book.displayname,
@@ -66,8 +68,64 @@ OC.Contacts = OC.Contacts || {};
 				});
 			});
 		});
+		$('#add-address-book-element').on('click keypress', function() {
+			console.log('OC.Contacts', OC.Contacts);
+			$("#addressbooks-ui")
+			.dialog({
+				title:"Add new Addressbook",
+				close: function() { $(this).hide() },
+				modal: false,
+				width: 'auto',
+				height: 'auto',
+				position: ['top', 100],
+				buttons: {
+					Ok: function() {
+						addressbookUiOk();
+					},
+					Cancel: function() {
+						addressbookUiCancel();
+					}
+				},
+				open: openAddressbookUi()
+			});
+		});
 		this.$li.find('a.action.edit').on('click keypress', function(event) {
-			if($(this).data('open')) {
+			$.when(self.storage.getAddressBook(self.getBackend(), self.getId()))
+			.then(function(response) {
+			if(!response.error) {
+				if(response.data) {
+					var addressbook = response.data;
+					console.log('addressbook', addressbook);
+					$("#addressbooks-ui")
+					.dialog({
+						title:"Edit Addressbook",
+						close: function() { $(this).hide() },
+						modal: false,
+						width: 'auto',
+						height: 'auto',
+						position: ['top', 100],
+						buttons: {
+							Ok: function() {
+								addressbookUiEditOk();
+							},
+							Cancel: function() {
+								addressbookUiCancel();
+							}
+						},
+						open: editAddressbookUI(addressbook)
+					});
+					//self.insertContacts(response.data.contacts);
+				}
+			} else {
+				console.warn('Addressbook getAddressbook - no data !!');
+			}
+			})
+			.fail(function(response) {
+				console.warn('Request Failed:', response.message);
+				$(document).trigger('status.contacts.error', response);
+			});
+			// TODO: remove this mock value
+			/*if($(this).data('open')) {
 				return;
 			}
 			var editor = this;
@@ -100,7 +158,7 @@ OC.Contacts = OC.Contacts || {};
 					$(editor).data('open', false);
 				}
 			});
-			$(this).data('open', true);
+			$(this).data('open', true);*/
 		});
 		return this.$li;
 	};
