@@ -15,18 +15,20 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
     * @return array|false
     */
     public function search($pattern, $searchProperties, $options) {
-	if(in_array("FN", $searchProperties) && in_array("id", $searchProperties)){
-	    $query = 'SELECT DISTINCT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ? AND (`id` LIKE ? OR `fullname` LIKE ?) ';
-	    $stmt = \OCP\DB::prepare($query);
-	    $result = $stmt->execute(array(\OCP\User::getUser(), '%' . $pattern . "%", '%' . $pattern . "%"));
-	} elseif(in_array("FN", $searchProperties)){
-	    $query = 'SELECT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ? AND `fullname` LIKE ? ';
-	    $stmt = \OCP\DB::prepare($query);
-	    $result = $stmt->execute(array(\OCP\User::getUser(), '%' . $pattern . "%"));
-	} elseif(in_array("id", $searchProperties)){
-	    $query = 'SELECT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ? AND `id` LIKE ? ';
-	    $stmt = \OCP\DB::prepare($query);
-	    $result = $stmt->execute(array(\OCP\User::getUser(), '%' . $pattern . "%"));
+	if($pattern !== ''){
+	    if(in_array("FN", $searchProperties) && in_array("id", $searchProperties)){
+		$query = 'SELECT DISTINCT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ? AND (`id` LIKE ? OR `fullname` LIKE ?) ';
+		$stmt = \OCP\DB::prepare($query);
+		$result = $stmt->execute(array(\OCP\User::getUser(), '%' . $pattern . "%", '%' . $pattern . "%"));
+	    } elseif(in_array("FN", $searchProperties)){
+		$query = 'SELECT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ? AND `fullname` LIKE ? ';
+		$stmt = \OCP\DB::prepare($query);
+		$result = $stmt->execute(array(\OCP\User::getUser(), '%' . $pattern . "%"));
+	    } elseif(in_array("id", $searchProperties)){
+		$query = 'SELECT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ? AND `id` LIKE ? ';
+		$stmt = \OCP\DB::prepare($query);
+		$result = $stmt->execute(array(\OCP\User::getUser(), '%' . $pattern . "%"));
+	    }
 	} else {
 	    $query = 'SELECT * FROM `*PREFIX*contacts_ocu_cards` WHERE addressbookid = ?';
 	    $stmt = \OCP\DB::prepare($query);

@@ -50,7 +50,13 @@ class LocalUsers extends AbstractBackend {
      * @var string
      */
     private $cardsTableName = '*PREFIX*contacts_ocu_cards';
+    
+    private $indexTableName = '*PREFIX*contacts_ocu_cards_properties';
 
+    private $indexProperties = array(
+		'BDAY', 'UID', 'N', 'FN', 'TITLE', 'ROLE', 'NOTE', 'NICKNAME',
+		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO');
+    
     public function __construct($userid){
 
 	$this->userid = $userid ? $userid : \OCP\User::getUser();
@@ -209,6 +215,9 @@ class LocalUsers extends AbstractBackend {
 			. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 		    return false;
 		} else {
+		    // All done
+		    // now update the index table with all the properties
+		    $this->updateIndex($user, $vcard);
 		    return true;
 		}
 	    } catch(\Exception $e) {
@@ -268,7 +277,6 @@ class LocalUsers extends AbstractBackend {
 	    $contact->REV = $now->format(\DateTime::W3C);
 	}
 
-	$data = $contact->serialize();
 	try{ 
 	    $sql = 'UPDATE ' . $this->cardsTableName
 		. ' SET '
@@ -279,12 +287,15 @@ class LocalUsers extends AbstractBackend {
 		    . '`id` = ? '
 		    . 'AND `addressbookid` = ? ';
 	    $query = \OCP\DB::prepare($sql);
-	    $result = $query->execute(array($contact->FN, $data, time(), $id, $this->userid));
+	    $result = $query->execute(array($contact->FN, $contact->serialize(), time(), $id, $this->userid));
 	    if (\OCP\DB::isError($result)) {
 		\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 		    . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 		return false;
 	    } else {
+		// All done
+		// now update the indexes in the DB
+		$this->updateIndex($id, $contact);
 		return true;
 	    }
 	} catch(\Exception $e) {
@@ -296,5 +307,56 @@ class LocalUsers extends AbstractBackend {
     
     public function getSearchProvider(){
 	return new LocalUsersAddressbookProvider();
+    }
+    
+    private function updateIndex($contactId, $vcard){
+	// Utils\Properties::updateIndex($parameters['id'], $contact);
+	$this->purgeIndex($contactId);
+	$updatestmt = \OCP\DB::prepare('INSERT INTO `' . $this->indexTableName . '` '
+				. '(`addressbookid`, `contactid`,`name`,`value`,`preferred`) VALUES(?,?,?,?,?)');
+	// Insert all properties in the table
+	foreach($vcard->children as $property) {
+	    if(!in_array($property->name, $this->indexProperties)) {
+		    continue;
+	    }
+	    $preferred = 0;
+	    foreach($property->parameters as $parameter) {
+		    if($parameter->name == 'TYPE' && strtoupper($parameter->value) == 'PREF') {
+			    $preferred = 1;
+			    break;
+		    }
+	    }
+	    try {
+		    $result = $updatestmt->execute(
+			    array(
+				    \OCP\User::getUser(),
+				    $contactId,
+				    $property->name,
+				    substr($property->value, 0, 254),
+				    $preferred,
+			    )
+		    );
+		    if (\OCP\DB::isError($result)) {
+			    \OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
+				    . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			    return false;
+		    }
+	    } catch(\Exception $e) {
+		    \OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
+		    return false;
+	    }
+	}
+    }
+    
+    private function purgeIndex($id){	    
+	// Remove all indexes from the table
+	try {
+	    $query = \OCP\DB::prepare('DELETE FROM `' . $this->indexTableName . '`'
+		. ' WHERE `contactid` = ?');
+	    $query->execute(array($id));
+	    
+	} catch(\Exception $e) {
+	    return false;
+	}
     }
 }
