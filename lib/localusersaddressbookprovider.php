@@ -7,9 +7,25 @@ use OCA\Contacts\Utils\Properties;
 
 class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 
-    private $indexTableName = '*PREFIX*contacts_ocu_cards_properties';
-    private $contactTableName = '*PREFIX*contacts_ocu_cards';
+    /**
+     * The table that holds the address books.
+     * For every user there is *1* addressbook.
+     * @var string
+     */
+    private $addressBooksTableName = '*PREFIX*contacts_ocu_addressbooks';
 
+    /**
+     * The table that holds the contacts.
+     * @var string
+     */
+    private $cardsTableName = '*PREFIX*contacts_ocu_cards';
+    
+    /**
+     * The table that holds the properties of the contacts.
+     * This is used to provice a search function.
+     * @var string
+     */
+    private $indexTableName = '*PREFIX*contacts_ocu_cards_properties';
     
     public function __construct(){
 	
@@ -46,10 +62,10 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 	}
 
 	if(count($ids) > 0) {
-		$query = 'SELECT `' . $this->contactTableName . '`.`addressbookid`, `' . $this->indexTableName . '`.`contactid`, `' 
+		$query = 'SELECT `' . $this->cardsTableName . '`.`addressbookid`, `' . $this->indexTableName . '`.`contactid`, `' 
 			. $this->indexTableName . '`.`name`, `' . $this->indexTableName . '`.`value` FROM `' 
-			. $this->indexTableName . '`,`' . $this->contactTableName . '` WHERE `'
-			. $this->contactTableName . '`.`addressbookid` = \'' . \OCP\User::getUser() . '\' AND `'
+			. $this->indexTableName . '`,`' . $this->cardsTableNam . '` WHERE `'
+			. $this->cardsTableNam . '`.`addressbookid` = \'' . \OCP\User::getUser() . '\' AND `'
 			. $this->indexTableName . '`.`contactid` = `' . $this->contactTableName . '`.`id` AND `' 
 			. $this->indexTableName . '`.`contactid` IN (' . join(',', array_fill(0, count($ids), '?')) . ')';
 		
