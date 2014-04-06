@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Lokal_Profil <lokal_profil@hotmail.com>, 2013
+# AsavarTzeth <asavartzeth@gmail.com>, 2014
 # Christer Eriksson <post@hceriksson.com>, 2012
 # Daniel Sandman <revoltism@gmail.com>, 2012-2013
 # Gunnar Norin <blittan@xbmc.org>, 2013
@@ -22,9 +23,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-02 00:49-0400\n"
-"PO-Revision-Date: 2014-04-02 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-06 00:49-0400\n"
+"PO-Revision-Date: 2014-04-05 19:40+0000\n"
+"Last-Translator: AsavarTzeth <asavartzeth@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,23 +43,23 @@ msgstr "Spara"
 
 #: js/addressbooks.js:306
 msgid "Starting file import"
-msgstr ""
+msgstr "Startar fil import"
 
 #: js/addressbooks.js:310 js/addressbooks.js:338
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Format valt: {format}"
 
 #: js/addressbooks.js:313 js/addressbooks.js:341
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Automatisk detektering av format"
 
 #: js/addressbooks.js:391
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Bearbetar {count}/{total} kort"
 
 #: js/addressbooks.js:415
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Totalt:{total}, Lyckades:{imported}, Fel:{failed}"
 
 #: js/addressbooks.js:569
 msgid "An address book called {name} already exists"
@@ -126,11 +127,11 @@ msgstr "Nätverk eller serverfel. Informera administratören."
 
 #: js/app.js:789
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Endast bilder kan användas som kontakt foton"
 
 #: js/app.js:798
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "Storleken på \"{filname}\" överskrider den maximalt tillåtna {size}"
 
 #: js/app.js:967
 msgid "Error adding to group."
@@ -144,7 +145,7 @@ msgstr "Fel vid radering från grupp."
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "Du har valt mer än 300 kontakter.\nDetta kommer troligen misslyckas! Klicka här för att försöka i alla fall."
 
 #: js/app.js:1219
 msgid "Error setting {name} as favorite."
@@ -189,7 +190,7 @@ msgstr "# grupper"
 
 #: js/contacts.js:1177
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Fel uppstod under inläsning av födelsedag {bday}"
 
 #: js/contacts.js:1315
 msgid "The backend does not support multi-byte characters."
@@ -235,7 +236,7 @@ msgstr "Kontakterna är inte i denna grupp."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "En grupp med namnet \"{group}\" finns redan"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -332,7 +333,7 @@ msgstr "Du saknar behörighet för att lägga till kontakter i denna adressbok."
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Gränssnittet för denna adressbok saknar stöd för att lägga till kontakter."
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:247
+#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
 msgid "You do not have permissions to delete this contact"
 msgstr "Du saknar behörighet att ta bort denna kontakt"
 
@@ -346,7 +347,7 @@ msgstr "Okänt fel"
 
 #: lib/addressbook.php:410
 msgid "Access denied"
-msgstr ""
+msgstr "Åtkomst nekas"
 
 #: lib/addressbook.php:417
 msgid "The backend for this address book does not support updating"
@@ -360,35 +361,35 @@ msgstr "Du saknar behörighet att ta bort adressboken."
 msgid "Address book not found"
 msgstr "Kan inte hitta adressboken."
 
-#: lib/contact.php:113 lib/contact.php:160
+#: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
 msgstr "Du saknar behörighet att se denna kontakt"
 
-#: lib/contact.php:262
+#: lib/contact.php:267
 msgid "You do not have permissions to update this contact"
 msgstr "Du har inte behörighet att uppdatera denna kontakt"
 
-#: lib/contact.php:275
+#: lib/contact.php:280
 msgid "The backend for this contact does not support updating it"
 msgstr "Gränssnittet för denna kontakt saknar stöd för uppdatering av den."
 
-#: lib/contact.php:292
+#: lib/contact.php:297
 msgid "This backend not support adding contacts"
 msgstr "Detta gränssnitt saknar stöd för att lägga till kontakter"
 
-#: lib/contact.php:458 lib/contact.php:475
+#: lib/contact.php:463 lib/contact.php:480
 msgid "Property not found"
 msgstr "Egenskap kunde inte hittas"
 
-#: lib/contact.php:523
+#: lib/contact.php:528
 msgid " Missing IM parameter for: "
 msgstr "IM-parametrar saknas för:"
 
-#: lib/contact.php:531
+#: lib/contact.php:536
 msgid "Unknown IM: "
 msgstr "Okänt IM:"
 
-#: lib/contact.php:808
+#: lib/contact.php:813
 msgid "{name}'s Birthday"
 msgstr "{name}'s födelsedag"
 
@@ -416,19 +417,19 @@ msgstr "Fel vid skapandet av kontakt"
 
 #: lib/controller/addressbookcontroller.php:259
 msgid "Error creating contact"
-msgstr ""
+msgstr "Fel vid skapandet av kontakt"
 
 #: lib/controller/addressbookcontroller.php:291
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Fel när kontakt skulle raderas"
 
 #: lib/controller/addressbookcontroller.php:331
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Fel när kontakt skulle hämtas"
 
 #: lib/controller/addressbookcontroller.php:342
 msgid "Error saving contact"
-msgstr ""
+msgstr "Fel vid sparande av kontakt"
 
 #: lib/controller/addressbookcontroller.php:348
 msgid "Error removing contact from other address book."
@@ -436,7 +437,7 @@ msgstr "Fel vid borttagning av kontakt från den andra adressboken."
 
 #: lib/controller/addressbookcontroller.php:355
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Fel vid flytt av kontakt"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -487,7 +488,7 @@ msgstr "Ingen sökväg till foto angavs."
 
 #: lib/controller/contactphotocontroller.php:193
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "fel uppstod när bild laddades från cache"
 
 #: lib/controller/contactphotocontroller.php:203
 msgid "Error getting PHOTO property."
@@ -733,7 +734,7 @@ msgstr "Familj"
 
 #: templates/contacts.php:9 templates/contacts.php:129
 msgid "New contact"
-msgstr ""
+msgstr "Ny kontakt"
 
 #: templates/contacts.php:13
 msgid "Group name"
@@ -741,7 +742,7 @@ msgstr "Gruppnamn"
 
 #: templates/contacts.php:13
 msgid "New group"
-msgstr ""
+msgstr "Ny grupp"
 
 #: templates/contacts.php:22
 msgid "Address books"
@@ -757,7 +758,7 @@ msgstr "Lägg till adressbok"
 
 #: templates/contacts.php:35
 msgid "Automatic format"
-msgstr ""
+msgstr "Automatiskt format"
 
 #: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."
@@ -796,7 +797,7 @@ msgstr "Ladda ner"
 
 #: templates/contacts.php:80
 msgid "Merge"
-msgstr ""
+msgstr "Sammanfoga"
 
 #: templates/contacts.php:83 templates/contacts.php:356
 msgid "Email"
@@ -897,7 +898,7 @@ msgstr "Ladda upp ett nytt foto"
 
 #: templates/contacts.php:232
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Välj foto från Filer"
 
 #: templates/contacts.php:234
 msgid "Favorite"
@@ -921,7 +922,7 @@ msgstr "Efternamn"
 
 #: templates/contacts.php:269
 msgid "Address book"
-msgstr ""
+msgstr "Adressbok"
 
 #: templates/contacts.php:276 templates/contacts.php:353
 msgid "Nickname"
