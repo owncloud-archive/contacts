@@ -314,27 +314,27 @@ use OCA\Contacts\ImportManager;
 		</li>
 		<li>
 			<ul class="email propertylist hidden">
-				<h3>Email</h3>
+				<h3><?php p($l->t('Email')); ?></h3>
 			</ul>
 		</li>
 		<li>
 			<ul class="tel propertylist hidden">
-				<h3>Phone</h3>
+				<h3><?php p($l->t('Phone')); ?></h3>
 			</ul>
 		</li>
 		<li>
 			<ul class="adr propertylist hidden">
-				<h3>Address</h3>
+				<h3><?php p($l->t('Address')); ?></h3>
 			</ul>
 		</li>
 		<li>
 			<ul class="url propertylist hidden">
-				<h3>Website</h3>
+				<h3><?php p($l->t('Website')); ?></h3>
 			</ul>
 		</li>
 		<li>
 			<ul class="impp propertylist hidden">
-				<h3>Instant messaging</h3>
+				<h3><?php p($l->t('Instant messaging')); ?></h3>
 			</ul>
 		</li>
 		<li>
