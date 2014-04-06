@@ -206,7 +206,7 @@ class LocalUsers extends AbstractBackend {
 	  	$appversion = \OCP\App::getAppVersion('contacts');
 		$prodid = '-//ownCloud//NONSGML ' . $appinfo['name'] . ' ' . $appversion.'//EN';
 		$vcard->PRODID = $prodid;
-		
+		$vcard->add('IMPP', 'x-owncloud-handle:' . $user, array("X-SERVICE-TYPE" => array("owncloud-handle")));		
 		
 		$result = $query->execute(array($user, $this->userid, \OCP\User::getDisplayName($user), $vcard->serialize(), time()));
 
