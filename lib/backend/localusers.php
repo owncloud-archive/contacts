@@ -51,14 +51,36 @@ class LocalUsers extends AbstractBackend {
      */
     private $cardsTableName = '*PREFIX*contacts_ocu_cards';
     
+    /**
+     * The table that holds the properties of the contacts.
+     * This is used to provice a search function.
+     * @var string
+     */
     private $indexTableName = '*PREFIX*contacts_ocu_cards_properties';
 
+    /**
+     * All possible properties which can be stored in the $indexTableName.
+     * @var string
+     */
     private $indexProperties = array(
 		'BDAY', 'UID', 'N', 'FN', 'TITLE', 'ROLE', 'NOTE', 'NICKNAME',
 		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO');
     
+    /**
+    * language object
+    * @var OC_L10N
+    */
+    public static $l10n;
+    
+    /**
+    * Defaults object
+    * @var OC_Defaults
+    */
+    public static $defaults;
+    
     public function __construct($userid){
-
+	self::$l10n = \OCP\Util::getL10N('contacts');
+	self::$defaults = new \OCP\Defaults();
 	$this->userid = $userid ? $userid : \OCP\User::getUser();
     }
 
@@ -76,8 +98,8 @@ class LocalUsers extends AbstractBackend {
     public function getAddressBook($addressBookId, array $options = array()) {
 	$addressbook = array(
 	    "id" => $addressBookId,
-	    "displayname" => 'Local Users',
-	    "description" => 'Local Users',
+	    "displayname" => self::$l10n->t('On this') . self::$defaults->getName(),
+	    "description" => self::$l10n->t('On this') . self::$defaults->getName(),
 	    "ctag" => time(),
 	    "permissions" => \OCP\PERMISSION_READ,
 	    "backend" => $this->name,
@@ -227,6 +249,7 @@ class LocalUsers extends AbstractBackend {
 	    }	    
 	}
     }
+    
     /**
      * Help function to remove contacts from an addressbook. 
      * This only happens when an admin remove an ownCloud user
@@ -305,10 +328,21 @@ class LocalUsers extends AbstractBackend {
 	}
     }
     
+    /**
+     * This is a hack so backends can have different search functions.
+     * @return \OCA\Contacts\LocalUsersAddressbookProvider
+     */    
     public function getSearchProvider(){
 	return new LocalUsersAddressbookProvider();
     }
     
+    /**
+     * Updates the index table. All properties of a contact are stored in it. 
+     * Needed for the search function.
+     * @param type $contactId
+     * @param type $vcard
+     * @return boolean
+     */
     private function updateIndex($contactId, $vcard){
 	// Utils\Properties::updateIndex($parameters['id'], $contact);
 	$this->purgeIndex($contactId);
@@ -317,37 +351,44 @@ class LocalUsers extends AbstractBackend {
 	// Insert all properties in the table
 	foreach($vcard->children as $property) {
 	    if(!in_array($property->name, $this->indexProperties)) {
-		    continue;
+		continue;
 	    }
 	    $preferred = 0;
 	    foreach($property->parameters as $parameter) {
-		    if($parameter->name == 'TYPE' && strtoupper($parameter->value) == 'PREF') {
-			    $preferred = 1;
-			    break;
-		    }
+		if($parameter->name == 'TYPE' && strtoupper($parameter->value) == 'PREF') {
+		    $preferred = 1;
+		    break;
+		}
 	    }
 	    try {
-		    $result = $updatestmt->execute(
-			    array(
-				    \OCP\User::getUser(),
-				    $contactId,
-				    $property->name,
-				    substr($property->value, 0, 254),
-				    $preferred,
-			    )
-		    );
-		    if (\OCP\DB::isError($result)) {
-			    \OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
-				    . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-			    return false;
-		    }
-	    } catch(\Exception $e) {
-		    \OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
+		$result = $updatestmt->execute(
+		    array(
+			\OCP\User::getUser(),
+			$contactId,
+			$property->name,
+			substr($property->value, 0, 254),
+			$preferred,
+		    )
+		);
+		if (\OCP\DB::isError($result)) {
+		    \OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
+			. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 		    return false;
+		}
+	    } catch(\Exception $e) {
+		\OCP\Util::writeLog('contacts', __METHOD__.', exception: '.$e->getMessage(), \OCP\Util::ERROR);
+		return false;
 	    }
 	}
     }
     
+    /**
+     * Remove all indexes from the table. 
+     * This is always called before adding new properties.
+     * @param type $contactId
+     * @param type $vcard
+     * @return boolean
+     */
     private function purgeIndex($id){	    
 	// Remove all indexes from the table
 	try {
