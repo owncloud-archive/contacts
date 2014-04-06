@@ -3,6 +3,7 @@
 namespace OCA\Contacts;
 
 use OCA\Contacts\Utils\Properties;
+use OCA\Contacts\Backend\LocalUsers;
 
 
 class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
@@ -27,8 +28,13 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
      */
     private $indexTableName = '*PREFIX*contacts_ocu_cards_properties';
     
-    public function __construct(){
-	
+    /**
+     * @var LocalUsers 
+     */
+    private $backend;
+    
+    public function __construct(LocalUsers $backend){
+	$this->backend = $backend;
     }
     
     /**
@@ -38,6 +44,9 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
     * @return array|false
     */
     public function search($pattern, $searchProperties, $options) {
+	// First make sure the database is updated
+	$this->backend->updateDatabase();
+	
 	$ids = array();
 	$results = array();
 	$query = 'SELECT DISTINCT `contactid` FROM `' . $this->indexTableName . '` WHERE (';

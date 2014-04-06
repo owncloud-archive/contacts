@@ -113,49 +113,24 @@ class LocalUsers extends AbstractBackend {
      * There are as many contacts in this addressbook as in this ownCloud installation
      */
     public function getContacts($addressbookid, array $options = array()){
+	$this->updateDatabase();
 	$contacts =  array();
 	try{ 
 	    $sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
 	    $query = \OCP\DB::prepare($sql);
 	    $result = $query->execute(array($this->userid));
-	    
+
 	    if (\OCP\DB::isError($result)) {
 		\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 		    . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-		return array();
+		return true;
 	    } else {
 		while($row = $result->fetchRow()){
-		$row['permissions'] = \OCP\PERMISSION_READ | \OCP\PERMISSION_UPDATE;
+		    $row['permissions'] = \OCP\PERMISSION_READ | \OCP\PERMISSION_UPDATE;
 		    $contacts[] = $row;
-		}	
-
-		$contactsId = array();
-
-		foreach($contacts as $contact){
-		    $contactsId[] = $contact['id'];
-		}
-
-		$users = \OCP\User::getUsers();
-		$recall = false;
-
-		$add = array_diff($users, $contactsId);
-		$remove = array_diff($contactsId, $users);
-		if(count($add) > 0){
-		    $this->addContacts($add, $addressbookid);
-		    $recall = true;
-		}
-
-		if(count($remove) > 0){
-		    $this->removeContacts($remove, $addressbookid);
-		    $recall = true;
-		}
-
-		if($recall === true){
-		    return $this->getContacts($addressbookid);
-		} else {
-		    return $contacts;
 		}
 	    }
+	    return $contacts;
 	} catch(\Exception $e) {
 		\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
 		    . $e->getMessage(), \OCP\Util::ERROR);
@@ -333,7 +308,7 @@ class LocalUsers extends AbstractBackend {
      * @return \OCA\Contacts\LocalUsersAddressbookProvider
      */    
     public function getSearchProvider(){
-	return new LocalUsersAddressbookProvider();
+	return new LocalUsersAddressbookProvider($this);
     }
     
     /**
@@ -400,4 +375,36 @@ class LocalUsers extends AbstractBackend {
 	    return false;
 	}
     }
+    
+    public function updateDatabase(){
+	$sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
+	$query = \OCP\DB::prepare($sql);
+	$result = $query->execute(array($this->userid));
+
+	if (\OCP\DB::isError($result)) {
+	    \OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
+		. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+	    return true;
+	} else {
+	    while($row = $result->fetchRow()){
+		$contactsId[] = $row['id'];
+	    }
+
+	    $users = \OCP\User::getUsers();
+
+	    $add = array_diff($users, $contactsId);
+	    $remove = array_diff($contactsId, $users);
+	    if(count($add) > 0){
+		$this->addContacts($add, $addressbookid);
+		$recall = true;
+	    }
+
+	    if(count($remove) > 0){
+		$this->removeContacts($remove, $addressbookid);
+		$recall = true;
+	    }
+	    return true;
+	}
+    }
+    
 }
