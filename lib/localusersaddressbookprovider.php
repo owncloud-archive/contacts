@@ -64,9 +64,9 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 	if(count($ids) > 0) {
 		$query = 'SELECT `' . $this->cardsTableName . '`.`addressbookid`, `' . $this->indexTableName . '`.`contactid`, `' 
 			. $this->indexTableName . '`.`name`, `' . $this->indexTableName . '`.`value` FROM `' 
-			. $this->indexTableName . '`,`' . $this->cardsTableNam . '` WHERE `'
-			. $this->cardsTableNam . '`.`addressbookid` = \'' . \OCP\User::getUser() . '\' AND `'
-			. $this->indexTableName . '`.`contactid` = `' . $this->contactTableName . '`.`id` AND `' 
+			. $this->indexTableName . '`,`' . $this->cardsTableName . '` WHERE `'
+			. $this->cardsTableName . '`.`addressbookid` = \'' . \OCP\User::getUser() . '\' AND `'
+			. $this->indexTableName . '`.`contactid` = `' . $this->cardsTableName . '`.`id` AND `' 
 			. $this->indexTableName . '`.`contactid` IN (' . join(',', array_fill(0, count($ids), '?')) . ')';
 		
 		$stmt = \OCP\DB::prepare($query);
