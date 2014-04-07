@@ -79,7 +79,7 @@ class ContactPhotoController extends Controller {
 		$response = new JSONResponse();
 
 		$tempPhoto = TemporaryPhoto::create(
-			$this->server,
+			$this->cache,
 			TemporaryPhoto::PHOTO_UPLOADED,
 			$this->request
 		);
@@ -109,7 +109,7 @@ class ContactPhotoController extends Controller {
 		$contact = $addressBook->getChild($params['contactId']);
 
 		$tempPhoto = TemporaryPhoto::create(
-			$this->server,
+			$this->cache,
 			TemporaryPhoto::PHOTO_CURRENT,
 			$contact
 		);
@@ -140,7 +140,7 @@ class ContactPhotoController extends Controller {
 		}
 
 		$tempPhoto = TemporaryPhoto::create(
-			$this->server,
+			$this->cache,
 			TemporaryPhoto::PHOTO_FILESYSTEM,
 			$this->request->get['path']
 		);
@@ -164,7 +164,7 @@ class ContactPhotoController extends Controller {
 		$params = $this->request->urlParams;
 		$tmpkey = $params['key'];
 
-		$tmpPhoto = new TemporaryPhoto($this->server, $tmpkey);
+		$tmpPhoto = new TemporaryPhoto($this->cache, $tmpkey);
 		$image = $tmpPhoto->getPhoto();
 
 		if($image->valid()) {
@@ -189,13 +189,13 @@ class ContactPhotoController extends Controller {
 		$h = (isset($this->request->post['h']) && $this->request->post['h']) ? $this->request->post['h'] : -1;
 		$tmpkey = $params['key'];
 
-		$app = new App($this->api->getUserId());
+		$app = new App(\OCP\User::getUser());
 		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contact = $addressBook->getChild($params['contactId']);
 
 		$response = new JSONResponse();
 
-		$tmpPhoto = new TemporaryPhoto($this->server, $tmpkey);
+		$tmpPhoto = new TemporaryPhoto($this->cache, $tmpkey);
 		$image = $tmpPhoto->getPhoto();
 		if(!$image || !$image->valid()) {
 			return $response->bailOut(App::$l10n->t('Error loading image from cache'));
