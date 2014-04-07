@@ -9,6 +9,10 @@
   "jquery": true,
   "browser": true,
   "devel": true,
-  "globals": { "OC": false, "Modernizr": false, "error": false },
+  "globals": {
+     "OC": false,
+     "Modernizr": false,
+     "error": false
+  },
   "maxerr": 100
 }
