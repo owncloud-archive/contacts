@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-03 00:49-0400\n"
-"PO-Revision-Date: 2014-04-02 12:10+0000\n"
+"POT-Creation-Date: 2014-04-06 00:49-0400\n"
+"PO-Revision-Date: 2014-04-05 13:40+0000\n"
 "Last-Translator: volkangezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -114,7 +114,7 @@ msgstr "Birleştirme başarısız. Kişi kaydedilirken hata oluştu."
 
 #: js/app.js:622
 msgid "Select photo"
-msgstr "Fotograf seç"
+msgstr "Fotoğraf seç"
 
 #: js/app.js:705 js/app.js:1675
 msgid "Network or server error. Please inform administrator."
@@ -169,7 +169,7 @@ msgstr "Kişi bulunamadı: {id}"
 
 #: js/app.js:1630
 msgid "Edit profile picture"
-msgstr "Profil fotografını düzenle"
+msgstr "Profil fotoğrafını düzenle"
 
 #: js/app.js:1634
 msgid "Crop photo"

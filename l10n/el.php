@@ -155,6 +155,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud handle" => "Χειρισμός ownCloud",
 "Work" => "Εργασία",
 "Home" => "Σπίτι",
 "Mobile" => "Κινητό",
