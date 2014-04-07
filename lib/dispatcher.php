@@ -37,7 +37,7 @@ class Dispatcher extends MainApp {
 	protected $appName;
 
 	/**
-	* @var OCA\Contacts\App
+	* @var \OCA\Contacts\App
 	*/
 	protected $app;
 
@@ -47,7 +47,7 @@ class Dispatcher extends MainApp {
 	protected $server;
 
 	/**
-	* @var OCP\AppFramework\IAppContainer
+	* @var \OCP\AppFramework\IAppContainer
 	*/
 	protected $container;
 

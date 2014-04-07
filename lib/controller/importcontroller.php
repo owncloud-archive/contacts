@@ -24,8 +24,7 @@ use OCA\Contacts\App,
 class ImportController extends Controller {
 
 	public function __construct($appName, IRequest $request, App $app, ICache $cache) {
-		parent::__construct($appName, $request);
-		$this->app = $app;
+		parent::__construct($appName, $request, $app);
 		$this->cache = $cache;
 	}
 

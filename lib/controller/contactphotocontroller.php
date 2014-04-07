@@ -23,9 +23,13 @@ use OCA\Contacts\App,
  */
 class ContactPhotoController extends Controller {
 
+	/**
+	 * @var \OCP\ICache
+	 */
+	$cache;
+
 	public function __construct($appName, IRequest $request, App $app, ICache $cache) {
-		parent::__construct($appName, $request);
-		$this->app = $app;
+		parent::__construct($appName, $request, $app);
 		$this->cache = $cache;
 	}
 

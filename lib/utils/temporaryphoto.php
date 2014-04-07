@@ -39,9 +39,9 @@ class TemporaryPhoto {
 	const PHOTO_UPLOADED	=	2;
 
 	/**
-	 * @var \OCP\IServerContainer
+	 * @var \OCP\ICache
 	 */
-	protected $server;
+	$cache;
 
 	/**
 	* @var \OCP\Image
@@ -82,8 +82,8 @@ class TemporaryPhoto {
 	);
 
 	/**
-	* Always call parents ctor:
-	*   		parent::__construct($server);
+	* Always call parents ctor in subclasses:
+	*   		parent::__construct($cache);
 	*/
 	public function __construct(ICache $cache, $key = null) {
 		$this->cache = $cache;
@@ -104,7 +104,7 @@ class TemporaryPhoto {
 		if (isset(self::$classMap[$type])) {
 			return new self::$classMap[$type]($cache, $data);
 		} else {
-			return new self($data, $data);
+			return new self($cache, $data);
 		}
 	}
 
