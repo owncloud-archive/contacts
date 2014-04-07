@@ -67,6 +67,7 @@
 "You do not have permissions to delete this contact" => "Du har ikke adgang til å slette denne kontakten",
 "The backend for this address book does not support deleting contacts" => "Server-komponenten for denne adresseboken støtter ikke sletting av kontakter",
 "Unknown error" => "Ukjent feil",
+"Access denied" => "Adgang nektet",
 "The backend for this address book does not support updating" => "Server-komponenten for denne adresseboken støtter ikke oppdatering",
 "You don't have permissions to delete the address book." => "Du har ikke adgang til å slette adresseboken.",
 "Address book not found" => "Fant ikke adressebok",
