@@ -26,7 +26,8 @@ use OCA\Contacts\Contact as ContactObject,
 	OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto,
 	OCP\IRequest,
 	OCP\AppFramework\Http,
-	OCP\Image;
+	OCP\Image,
+	OCP\ICache;
 
 /**
  * This class loads an image from the virtual file system.
@@ -40,7 +41,7 @@ class Uploaded extends BaseTemporaryPhoto {
 	 */
 	protected $input;
 
-	public function __construct(\OCP\IServerContainer $server, IRequest $request) {
+	public function __construct(ICache $cache, IRequest $request) {
 		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
 		if (!$request instanceOf IRequest) {
 			throw new \Exception(
@@ -48,7 +49,7 @@ class Uploaded extends BaseTemporaryPhoto {
 			);
 		}
 
-		parent::__construct($server);
+		parent::__construct($cache);
 		$this->request = $request;
 		$this->processImage();
 	}

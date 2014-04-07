@@ -15,12 +15,19 @@ use OCA\Contacts\App,
 	OCA\Contacts\Controller,
 	Sabre\VObject,
 	OCA\Contacts\VObject\VCard as MyVCard,
-	OCA\Contacts\ImportManager;
+	OCA\Contacts\ImportManager,
+	OCP\IRequest;
 
 /**
  * Controller importing contacts
  */
 class ImportController extends Controller {
+
+	public function __construct($appName, IRequest $request, App $app, ICache $cache) {
+		parent::__construct($appName, $request);
+		$this->app = $app;
+		$this->cache = $cache;
+	}
 
 	/**
 	 * @NoAdminRequired
@@ -150,7 +157,7 @@ class ImportController extends Controller {
 		$request = $this->request;
 		$response = new JSONResponse();
 		$params = $this->request->urlParams;
-		$app = new App($this->api->getUserId());
+		$app = new App(\OCP\User::getUser());
 		$addressBookId = $params['addressBookId'];
 		$format = $params['importType'];
 
@@ -186,16 +193,16 @@ class ImportController extends Controller {
 		\OC_FileProxy::$enabled = $proxyStatus;
 
 		$writeProgress = function($pct, $total) use ($progresskey) {
-			\OC_Cache::set($progresskey, $pct, 300);
-			\OC_Cache::set($progresskey.'_total', $total, 300);
+			$this->cache->set($progresskey, $pct, 300);
+			$this->cache->set($progresskey.'_total', $total, 300);
 		};
 
 		$cleanup = function() use ($view, $filename, $progresskey, $response) {
 			if(!$view->unlink('/imports/' . $filename)) {
 				$response->debug('Unable to unlink /imports/' . $filename);
 			}
-			\OC_Cache::remove($progresskey);
-			\OC_Cache::remove($progresskey.'_total');
+			$this->cache->remove($progresskey);
+			$this->cache->remove($progresskey.'_total');
 		};
 		
 		$importManager = new ImportManager();
@@ -301,8 +308,8 @@ class ImportController extends Controller {
 			return $response;
 		}
 
-		error_log("progresskey: ".\OC_Cache::get($progresskey)." total: ".\OC_Cache::get($progresskey.'_total') );
-		$response->setParams(array('progress' => \OC_Cache::get($progresskey), 'total' => \OC_Cache::get($progresskey.'_total') ));
+		error_log("progresskey: ".$this->cache->get($progresskey)." total: ".$this->cache->get($progresskey.'_total') );
+		$response->setParams(array('progress' => $this->cache->get($progresskey), 'total' => $this->cache->get($progresskey.'_total') ));
 		return $response;
 	}
 }

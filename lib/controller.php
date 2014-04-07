@@ -36,10 +36,8 @@ class Controller extends BaseController {
 	*/
 	protected $app;
 
-	public function __construct(IAppContainer $container, App $app) {
-		$this->api = $container->query('API');
-		$this->request = $container->query('Request');
-		$this->server = $container->getServer();
+	public function __construct($appName, IRequest $request, App $app) {
+		parent::__construct($appName, $request);
 		$this->app = $app;
 	}
 

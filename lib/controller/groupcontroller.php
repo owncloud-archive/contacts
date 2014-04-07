@@ -13,37 +13,44 @@ namespace OCA\Contacts\Controller;
 use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Controller,
-	OCP\AppFramework\Http;
+	OCP\AppFramework\Http,
+	OCP\ITags,
+	OCP\IRequest;
 
 /**
  * Controller class for groups/categories
  */
 class GroupController extends Controller {
 
+	public function __construct($appName, IRequest $request, App $app, ITags $tags) {
+		parent::__construct($appName, $request, $app);
+		$this->app = $app;
+		$this->tagMgr = $tags;
+	}
+
 	/**
 	 * @NoAdminRequired
 	 */
 	public function getGroups() {
-		$tagMgr = $this->server->getTagManager()->load('contact');
-		$tags = $tagMgr->getTags();
+		$tags = $this->tagMgr->getTags();
 
 		foreach ($tags as &$tag) {
 			try {
-				$ids = $tagMgr->getIdsForTag($tag['name']);
+				$ids = $this->tagMgr->getIdsForTag($tag['name']);
 				$tag['contacts'] = $ids;
 			} catch(\Exception $e) {
 				$this->api->log(__METHOD__ . ' ' . $e->getMessage());
 			}
 		}
 
-		$favorites = $tagMgr->getFavorites();
+		$favorites = $this->tagMgr->getFavorites();
 
 		$groups = array(
 			'categories' => $tags,
 			'favorites' => $favorites,
 			'shared' => \OCP\Share::getItemsSharedWith('addressbook', \OCA\Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS),
-			'lastgroup' => \OCP\Config::getUserValue($this->api->getUserId(), 'contacts', 'lastgroup', 'all'),
-			'sortorder' => \OCP\Config::getUserValue($this->api->getUserId(), 'contacts', 'groupsort', ''),
+			'lastgroup' => \OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'lastgroup', 'all'),
+			'sortorder' => \OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'groupsort', ''),
 			);
 
 		return new JSONResponse($groups);
@@ -61,8 +68,7 @@ class GroupController extends Controller {
 			$response->bailOut(App::$l10n->t('No group name given.'));
 		}
 
-		$tagMgr = $this->server->getTagManager()->load('contact');
-		$id = $tagMgr->add($name);
+		$id = $this->tagMgr->add($name);
 
 		if ($id === false) {
 			$response->bailOut(App::$l10n->t('Error adding group.'));
@@ -85,10 +91,8 @@ class GroupController extends Controller {
 			return $response;
 		}
 
-		$tagMgr = $this->server->getTagManager()->load('contact');
-
 		try {
-			$ids = $tagMgr->getIdsForTag($name);
+			$ids = $this->tagMgr->getIdsForTag($name);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
@@ -124,7 +128,7 @@ class GroupController extends Controller {
 		}
 
 		try {
-			$tagMgr->delete($name);
+			$this->tagMgr->delete($name);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
@@ -152,14 +156,12 @@ class GroupController extends Controller {
 			return $response;
 		}
 
-		$tagMgr = $this->server->getTagManager()->load('contact');
-
-		if (!$tagMgr->rename($from, $to)) {
+		if (!$this->tagMgr->rename($from, $to)) {
 			$response->bailOut(App::$l10n->t('Error renaming group.'));
 			return $response;
 		}
 
-		$ids = $tagMgr->getIdsForTag($to);
+		$ids = $this->tagMgr->getIdsForTag($to);
 
 		if ($ids !== false) {
 
@@ -225,7 +227,6 @@ class GroupController extends Controller {
 		}
 
 		$backend = $this->app->getBackend('local');
-		$tagMgr = $this->server->getTagManager()->load('contact');
 
 		foreach ($ids as $contactId) {
 
@@ -244,7 +245,7 @@ class GroupController extends Controller {
 			}
 
 			$response->debug('contactId: ' . $contactId . ', categoryId: ' . $categoryId);
-			$tagMgr->tagAs($contactId, $categoryId);
+			$this->tagMgr->tagAs($contactId, $categoryId);
 		}
 
 		return $response;
@@ -283,7 +284,6 @@ class GroupController extends Controller {
 		}
 
 		$backend = $this->app->getBackend('local');
-		$tagMgr = $this->server->getTagManager()->load('contact');
 
 		foreach ($ids as $contactId) {
 
@@ -314,7 +314,7 @@ class GroupController extends Controller {
 			}
 
 			$response->debug('contactId: ' . $contactId . ', categoryId: ' . $categoryId);
-			$tagMgr->unTag($contactId, $categoryId);
+			$this->tagMgr->unTag($contactId, $categoryId);
 		}
 
 		return $response;

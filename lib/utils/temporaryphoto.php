@@ -22,6 +22,9 @@
 
 namespace OCA\Contacts\Utils;
 
+use OCP\ICache,
+	OCP\Image;
+
 /**
  * This class is used for getting a temporary contact photo for cropping.
  *
@@ -82,8 +85,8 @@ class TemporaryPhoto {
 	* Always call parents ctor:
 	*   		parent::__construct($server);
 	*/
-	public function __construct(\OCP\IServerContainer $server, $key = null) {
-		$this->server = $server;
+	public function __construct(ICache $cache, $key = null) {
+		$this->cache = $cache;
 		$this->key = $key;
 		if (!is_null($key)) {
 			$this->processImage();
@@ -97,9 +100,9 @@ class TemporaryPhoto {
 	* @param int|null $type One of the pre-defined types.
 	* @param mixed|null $data Whatever data is needed to load the photo.
 	*/
-	public static function create(\OCP\IServerContainer $server, $type = null, $data = null) {
+	public static function create(ICache $cache, $type = null, $data = null) {
 		if (isset(self::$classMap[$type])) {
-			return new self::$classMap[$type]($server, $data);
+			return new self::$classMap[$type]($cache, $data);
 		} else {
 			return new self($data, $data);
 		}
@@ -111,7 +114,7 @@ class TemporaryPhoto {
 	* @param string $key
 	*/
 	public function remove($key) {
-		return $this->server->getCache()->remove($key);
+		return $this->cache->remove($key);
 	}
 
 	/**
@@ -121,8 +124,8 @@ class TemporaryPhoto {
 	* instance of \OCP\Image.
 	*/
 	protected function processImage() {
-		$this->image = new \OCP\Image();
-		$this->image->loadFromData($this->server->getCache()->get($this->key));
+		$this->image = new Image();
+		$this->image->loadFromData($this->cache->get($this->key));
 	}
 
 	/**
@@ -131,7 +134,7 @@ class TemporaryPhoto {
 	* @return bool
 	*/
 	public function isValid() {
-		return (($this->image instanceof \OCP\Image) && $this->image->valid());
+		return (($this->image instanceof Image) && $this->image->valid());
 	}
 
 	/**
@@ -164,14 +167,14 @@ class TemporaryPhoto {
 			return;
 		}
 
-		if (!$this->image instanceof \OCP\Image) {
+		if (!$this->image instanceof Image) {
 			$this->processImage();
 		}
 		$this->normalizePhoto();
 
 		$data = $this->image->data();
 		$this->key = uniqid('photo-');
-		$this->server->getCache()->set($this->key, $data, 600);
+		$this->cache->set($this->key, $data, 600);
 	}
 
 	/**

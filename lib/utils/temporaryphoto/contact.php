@@ -23,7 +23,8 @@
 namespace OCA\Contacts\Utils\TemporaryPhoto;
 
 use OCA\Contacts\Contact as ContactObject,
-	OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto;
+	OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto,
+	OCP\ICache;
 
 /**
  * This class loads the PHOTO or LOGO property from a contact.
@@ -37,7 +38,7 @@ class Contact extends BaseTemporaryPhoto {
 	 */
 	protected $contact;
 
-	public function __construct(\OCP\IServerContainer $server, $contact) {
+	public function __construct(ICache $cache, $contact) {
 		if (!$contact instanceof ContactObject) {
 			throw new \Exception(
 				__METHOD__
@@ -45,7 +46,7 @@ class Contact extends BaseTemporaryPhoto {
 			);
 		}
 
-		parent::__construct($server);
+		parent::__construct($cache);
 		$this->contact = $contact;
 		$this->processImage();
 	}

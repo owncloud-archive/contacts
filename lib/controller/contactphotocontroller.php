@@ -14,12 +14,20 @@ use OCA\Contacts\App,
 	OCA\Contacts\ImageResponse,
 	OCA\Contacts\Utils\Properties,
 	OCA\Contacts\Utils\TemporaryPhoto,
-	OCA\Contacts\Controller;
+	OCA\Contacts\Controller,
+	OCP\IRequest,
+	OCP\ICache;
 
 /**
  * Controller class For Contacts
  */
 class ContactPhotoController extends Controller {
+
+	public function __construct($appName, IRequest $request, App $app, ICache $cache) {
+		parent::__construct($appName, $request);
+		$this->app = $app;
+		$this->cache = $cache;
+	}
 
 	/**
 	 * @NoAdminRequired
@@ -34,7 +42,7 @@ class ContactPhotoController extends Controller {
 		$contact = $addressBook->getChild($params['contactId']);
 
 		$tempPhoto = TemporaryPhoto::create(
-			$this->server,
+			$this->cache,
 			TemporaryPhoto::PHOTO_CURRENT,
 			$contact
 		);
