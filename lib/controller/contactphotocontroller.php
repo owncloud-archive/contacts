@@ -189,8 +189,7 @@ class ContactPhotoController extends Controller {
 		$h = (isset($this->request->post['h']) && $this->request->post['h']) ? $this->request->post['h'] : -1;
 		$tmpkey = $params['key'];
 
-		$app = new App(\OCP\User::getUser());
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contact = $addressBook->getChild($params['contactId']);
 
 		$response = new JSONResponse();
