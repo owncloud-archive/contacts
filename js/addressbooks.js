@@ -69,23 +69,35 @@ OC.Contacts = OC.Contacts || {};
 			});
 		});
 		$('#add-address-book-element').on('click keypress', function() {
-			$("#addressbooks-ui")
-			.dialog({
-				title:"Add new Addressbook",
-				close: function() { $(this).hide(); },
-				modal: false,
-				width: 'auto',
+			var $rightContent = $('#app-content');
+			$rightContent.append('<div id="addressbook-ui-dialog"></div>');
+			var frmDlg = $('#addressbooks-ui').clone().octemplate();
+			var divDlg = $('#addressbook-ui-dialog');
+			divDlg.html(frmDlg).ocdialog({
+				modal: true,
+				closeOnEscape: true,
+				title: t('contacts', 'Add new Addressbook'),
 				height: 'auto',
-				position: ['top', 100],
-				buttons: {
-					Ok: function() {
-						OC.Contacts.addressBookDialog.addressbookUiOk();
+				width: 'auto',
+				buttons: [
+					{
+						text: t('contacts', 'Ok'),
+						click: function() {
+							OC.Contacts.addressBookDialog.addressbookUiOk(divDlg);
+						},
+						defaultButton: true
 					},
-					Cancel: function() {
-						OC.Contacts.addressBookDialog.addressbookUiCancel();
+					{
+						text: t('contacts', 'Cancel'),
+						click: function() {
+							OC.Contacts.addressBookDialog.addressbookUiClose(divDlg);
+						}
 					}
+				],
+				close: function(/*event, ui*/) {
+					OC.Contacts.addressBookDialog.addressbookUiClose(divDlg);
 				},
-				open: function() {
+				open: function(/*event, ui*/) {
 					OC.Contacts.addressBookDialog.openAddressbookUi();
 				}
 			});
@@ -97,24 +109,37 @@ OC.Contacts = OC.Contacts || {};
 				if(response.data) {
 					var addressbook = response.data;
 					console.log('addressbook', addressbook);
-					$('#addressbooks-ui')
-					.dialog({
-						title:'Edit Addressbook',
-						close: function() { $(this).hide() },
-						modal: false,
-						width: 'auto',
-						height: 'auto',
-						position: ['top', 100],
-						buttons: {
-							Ok: function() {
-								OC.Contacts.addressBookDialog.addressbookUiEditOk();
-								self.setDisplayName($('#addressbooks-ui-name').val());
+					var $rightContent = $('#app-content');
+					$rightContent.append('<div id="addressbook-ui-dialog"></div>');
+					var frmDlg = $('#addressbooks-ui').clone().octemplate();
+					var divDlg = $('#addressbook-ui-dialog');
+					divDlg.html(frmDlg).ocdialog({
+						modal: true,
+						closeOnEscape: true,
+						title: t('contacts', 'Edit Addressbook'),
+						height: 'auto', width: 'auto',
+						buttons: [
+							{
+								text: t('contacts', 'Ok'),
+								click: function() {
+									OC.Contacts.addressBookDialog.addressbookUiEditOk(divDlg);
+									self.setDisplayName($('#addressbooks-ui-name').val());
+								},
+								defaultButton: true
 							},
-							Cancel: function() {
-								OC.Contacts.addressBookDialog.addressbookUiCancel();
+							{
+								text: t('contacts', 'Cancel'),
+								click: function() {
+									OC.Contacts.addressBookDialog.addressbookUiClose(divDlg);
+								}
 							}
+						],
+						close: function(/*event, ui*/) {
+							OC.Contacts.addressBookDialog.addressbookUiClose(divDlg);
 						},
-						open: OC.Contacts.addressBookDialog.editAddressbookUI(addressbook)
+						open: function(/*event, ui*/) {
+							OC.Contacts.addressBookDialog.editAddressbookUI(addressbook);
+						}
 					});
 				}
 			} else {

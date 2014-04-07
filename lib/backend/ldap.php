@@ -38,10 +38,15 @@ class Ldap extends AbstractBackend {
 	 * @var string
 	 */
 	public $name='ldap';
-	static private $preparedQueries = array();
 	private $ldapConnection = null;
 	private $connector = null;
 	
+	/**
+	 * The cached address books.
+	 * @var array[]
+	 */
+	public $addressBooks;
+
 	/**
 	* @brief validates and sets the ldap parameters
 	* @param $ldapParams array containing the parameters
@@ -252,9 +257,8 @@ class Ldap extends AbstractBackend {
 	 */
 	public function getAddressBooksForUser(array $options = array()) {
 		$addressbookidList = $this->getAddressbookList();
-		$this->addressbooks = array();
 		foreach($addressbookidList as $addressbookid) {
-			error_log(__METHOD__." am i here ? ".$addressbookid);
+			//error_log(__METHOD__." am i here ? ".$addressbookid);
 			$this->addressbooks[] = self::getAddressBook($addressbookid);
 		}
 		return $this->addressbooks;
@@ -273,16 +277,6 @@ class Ldap extends AbstractBackend {
 	 * @return array $properties
 	 */
 	public function getAddressBook($addressbookid, array $options = array()) {
-		$backtrace = debug_backtrace();
-		$trace=array();
-		foreach ($backtrace as $elt) {
-			foreach ($elt as $key => $line) {
-				if ($key == "file" || $key == "line") {
-					$trace[] = $line;
-				}
-			}
-		}
-		//error_log(__METHOD__." ".print_r($trace,1));
 		//\OC_Log::write('contacts', __METHOD__.' id: '
 		//	. $addressbookid, \OC_Log::DEBUG);
 		if($this->addressbooks && isset($this->addressbooks[$addressbookid])) {
@@ -293,6 +287,7 @@ class Ldap extends AbstractBackend {
 		$preferences = self::getPreferences($addressbookid);
 		if (count($preferences) > 0) {
 			$preferences['id'] = (string)$addressbookid;
+			$preferences['backend'] = $this->name;
 			$preferences['owner'] = $this->userid;
 			$preferences['permissions'] = \OCP\PERMISSION_ALL;
 			$preferences['lastmodified'] = self::lastModifiedAddressBook($addressbookid);
@@ -596,7 +591,7 @@ class Ldap extends AbstractBackend {
 			$URI = (string)$vcard->{'X-LDAP-DN'};
 		}
 		return array('id' => $UID,
-								 'permissions' => \OCP\PERMISSION_READ,
+								 'permissions' => \OCP\PERMISSION_ALL,
 								 'displayname' => $FN,
 								 'carddata' => $vcard->serialize(),
 								 'uri' => $URI,
@@ -611,16 +606,6 @@ class Ldap extends AbstractBackend {
 	 * @return string|bool The identifier for the new contact or false on error.
 	 */
 	public function createContact($addressbookid, $contact, array $options = array()) {
-		$backtrace = debug_backtrace();
-		$trace=array();
-		foreach ($backtrace as $elt) {
-			foreach ($elt as $key => $line) {
-				if ($key == "file" || $key == "line") {
-					$trace[] = $line;
-				}
-			}
-		}
-		//error_log("stay added ".print_r($trace,1));
 
 		$uri = isset($options['uri']) ? $options['uri'] : null;
 		
@@ -741,16 +726,6 @@ class Ldap extends AbstractBackend {
 	 * @return bool
 	 */
 	public function deleteContact($addressbookid, $id, array $options = array()) {
-		$backtrace = debug_backtrace();
-		$trace=array();
-		foreach ($backtrace as $elt) {
-			foreach ($elt as $key => $line) {
-				if ($key == "file" || $key == "line") {
-					$trace[] = $line;
-				}
-			}
-		}
-		//error_log("stay dead ".print_r($trace, 1));
 		self::setLdapParams($addressbookid);
 		self::ldapCreateAndBindConnection();
 		$card=null;
@@ -790,23 +765,12 @@ class Ldap extends AbstractBackend {
 		}
 	}
 	
-	// Please remove this
-    public function debug_string_backtrace() {
-        ob_start();
-        debug_print_backtrace();
-        $trace = ob_get_contents();
-        ob_end_clean();
-
-        // Remove first item from backtrace as it's this function which
-        // is redundant.
-        $trace = preg_replace ('/^#0\s+' . __FUNCTION__ . "[^\n]*\n/", '', $trace, 1);
-
-        // Renumber backtrace items.
-        $trace = preg_replace ('/^#(\d+)/me', '\'#\' . ($1 - 1)', $trace);
-
-        return $trace;
-    } 
-	
+	/**
+	 * @brief sets the list of ldap addressbooks in the preferences
+	 * with the list given in parameter
+	 * @param the new list
+	 * @returns result|false
+	 */
 	protected function setAddressbookList(array $addressbookList) {
 		$key = $this->name . "_list";
 		$data = json_encode($addressbookList);
@@ -816,11 +780,14 @@ class Ldap extends AbstractBackend {
 			: false;
 	}
 	
+	/**
+	 * @brief gets the list of ldap addressbooks in the preferences
+	 * returns array()
+	 */
 	protected function getAddressbookList() {
 		$key = $this->name . "_list";
 		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $key, false);
 		
-		error_log($key." - ".$this->userid);
 		return $data ? json_decode($data) : array();
 	}
 }

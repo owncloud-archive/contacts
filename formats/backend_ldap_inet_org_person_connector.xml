@@ -60,7 +60,7 @@
 		<ldap_core>
 			<object_class name="top" />
 			<object_class name="inetOrgPerson" />
-			<unassigned_vcard_property ldap_name="telexnumber" />
+			<unassigned_vcard_property ldap_name="businessCategory" />
 			<ldap_id name="cn" />
 			<not_null name="sn">
 				<action_switch name="givenname"/>

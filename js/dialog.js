@@ -24,9 +24,12 @@ OC.Contacts = OC.Contacts || {};
 			$.when(storage.getConnectors($('#addressbooks-ui-backend').val()))
 			.then(function(response) {
 				$('#addressbooks-ui-ldapvcardconnector').empty();
+				var $option = null;
 				for (var id in response.data) {
-					var $option = $('<option value="' + response.data[id].id + '">' + response.data[id].name + '</option>');
-					$('#addressbooks-ui-ldapvcardconnector').append($option);
+					if (response.data[id] != null) {
+						$option = $('<option value="' + response.data[id].id + '">' + response.data[id].name + '</option>');
+						$('#addressbooks-ui-ldapvcardconnector').append($option);
+					}
 				}
 				$option = $('<option value="">' + 'Custom connector' + '</option>');
 				$('#addressbooks-ui-ldapvcardconnector').append($option);
@@ -38,7 +41,7 @@ OC.Contacts = OC.Contacts || {};
 			});
 		});
 		this.addressbookUiInit();
-	}
+	};
 
 	AddressBookDialog.prototype.editAddressbookUI = function(addressbook) {
 		var storage = OC.Contacts.storage;
@@ -84,8 +87,9 @@ OC.Contacts = OC.Contacts || {};
 					console.log('addressbook.ldapconnectorid', addressbook.ldapconnectorid);
 					for (var id in response.data) {
 						console.log('response.data[id][\'id\']', response.data[id].id);
+						var $option = null;
 						if (response.data[id].id === addressbook.ldapconnectorid) {
-							var $option = $('<option value="' + response.data[id].id + '">' + response.data[id].name + '</option>').attr('selected','selected');
+							$option = $('<option value="' + response.data[id].id + '">' + response.data[id].name + '</option>').attr('selected','selected');
 							custom = false;
 						} else {
 							$option = $('<option value="' + response.data[id].id + '">' + response.data[id].name + '</option>');
@@ -143,9 +147,9 @@ OC.Contacts = OC.Contacts || {};
 				});
 		}
 		this.addressbookUiInit();
-	}
+	};
 
-	AddressBookDialog.prototype.addressbookUiOk = function() {
+	AddressBookDialog.prototype.addressbookUiOk = function(divDlg) {
 		var defer = $.Deferred();
 		var storage = OC.Contacts.storage;
 		var addressbook = OC.Contacts.addressBooks;
@@ -175,14 +179,15 @@ OC.Contacts = OC.Contacts || {};
 				}
 				defer.reject(response);
 			} else {
+				console.log('response.data', response.data);
 				var book = addressbook.insertAddressBook(response.data);
 				$(document).trigger('status.addressbook.added');
 				if(typeof cb === 'function') {
 					cb({error:false, addressbook: book});
 				}
 				defer.resolve({error:false, addressbook: book});
-				$('#addressbooks-ui').dialog('close');
 			}
+			OC.Contacts.addressBookDialog.addressbookUiClose(divDlg);
 		})
 		.fail(function(jqxhr, textStatus, error) {
 			$(this).removeClass('loading');
@@ -193,10 +198,11 @@ OC.Contacts = OC.Contacts || {};
 				cb({error:true, message:error});
 			}
 			defer.reject({error:true, message:error});
+			OC.Contacts.addressBookDialog.addressbookUiClose(divDlg);
 		});
-	}
+	};
 
-	AddressBookDialog.prototype.addressbookUiEditOk = function() {
+	AddressBookDialog.prototype.addressbookUiEditOk = function(divDlg) {
 		var storage = OC.Contacts.storage;
 		var defer = $.Deferred();
 
@@ -225,9 +231,8 @@ OC.Contacts = OC.Contacts || {};
 					cb({error:true, message:error});
 				}
 				defer.reject(response);
-			} else {
-				$("#addressbooks-ui").dialog('close');
 			}
+		OC.Contacts.addressBookDialog.addressbookUiClose(divDlg);
 		})
 		.fail(function(jqxhr, textStatus, error) {
 			$(this).removeClass('loading');
@@ -239,11 +244,12 @@ OC.Contacts = OC.Contacts || {};
 			}
 			defer.reject({error:true, message:error});
 		});
-	}
+	};
 
-	AddressBookDialog.prototype.addressbookUiCancel = function() {
-		$('#addressbooks-ui').dialog('close');
-	}
+	AddressBookDialog.prototype.addressbookUiClose = function(divDlg) {
+		divDlg.ocdialog().ocdialog('close');
+		divDlg.ocdialog().ocdialog('destroy').remove();
+	};
 
 	AddressBookDialog.prototype.addressbookUiInit = function() {
 		
@@ -315,12 +321,12 @@ OC.Contacts = OC.Contacts || {};
 				$('#addressbooks-ui-ldapvcardconnector-value-p').show();
 				$('#addressbooks-ui-ldapvcardconnector-value').text('');
 				$('#addressbooks-ui-ldapvcardconnector-copyfrom-p').show();
-				$.when(this.storage.getConnectors($('#addressbooks-ui-backend').val()))
+				$.when(OC.Contacts.storage.getConnectors($('#addressbooks-ui-backend').val()))
 				.then(function(response) {
 					$('#addressbooks-ui-ldapvcardconnector-copyfrom').empty();
 					var $option = $('<option value="">' + 'Select connector' + '</option>').attr('selected','selected');
 					$('#addressbooks-ui-ldapvcardconnector-copyfrom').append($option);
-					for (id in response.data) {
+					for (var id in response.data) {
 						var $option = $('<option value="' + response.data[id].id + '">' + response.data[id].name + '</option>');
 						$('#addressbooks-ui-ldapvcardconnector-copyfrom').append($option);
 					}
@@ -332,9 +338,9 @@ OC.Contacts = OC.Contacts || {};
 				});
 				$('#addressbooks-ui-ldapvcardconnector-copyfrom').change(function() {
 					if ($('#addressbooks-ui-ldapvcardconnector-copyfrom').val() != '') {
-						$.when(this.storage.getConnectors($('#addressbooks-ui-backend').val()))
+						$.when(OC.Contacts.storage.getConnectors($('#addressbooks-ui-backend').val()))
 						.then(function(response) {
-							for (id in response.data) {
+							for (var id in response.data) {
 								if ($('#addressbooks-ui-ldapvcardconnector-copyfrom').val() == response.data[id].id) {
 									console.log(response.data[id].id);
 									$('#addressbooks-ui-ldapvcardconnector-value').text(response.data[id].xml);
@@ -350,6 +356,6 @@ OC.Contacts = OC.Contacts || {};
 				});
 			}
 		});
-	}
+	};
   
 })(window, jQuery, OC);

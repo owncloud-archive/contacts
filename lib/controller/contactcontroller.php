@@ -90,7 +90,6 @@ class ContactController extends Controller {
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contact = $addressBook->getChild($params['contactId']);
-		error_log($params['contactId']." found ? ".$contact->serialize());
 
 		if (!$contact) {
 			return $response
@@ -147,7 +146,6 @@ class ContactController extends Controller {
 		}
 
 		if (!$contact->save()) {
-			error_log("not good");
 			return $response->bailOut(App::$l10n->t('Error saving contact to backend'));
 		}
 
