@@ -26,7 +26,7 @@ class ContactPhotoController extends Controller {
 	/**
 	 * @var \OCP\ICache
 	 */
-	$cache;
+	protected $cache;
 
 	public function __construct($appName, IRequest $request, App $app, ICache $cache) {
 		parent::__construct($appName, $request, $app);

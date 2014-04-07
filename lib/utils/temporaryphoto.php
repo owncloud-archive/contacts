@@ -41,7 +41,7 @@ class TemporaryPhoto {
 	/**
 	 * @var \OCP\ICache
 	 */
-	$cache;
+	protected $cache;
 
 	/**
 	* @var \OCP\Image
