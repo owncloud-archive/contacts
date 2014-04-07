@@ -25,9 +25,6 @@ class BackendController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function getLdapConnectors() {
-		$params = $this->request->urlParams;
-		//$targetInfo = $this->request->post['target'];
-
 		$response = new JSONResponse();
 		$prefix = "backend_ldap_";
 		$suffix = "_connector.xml";

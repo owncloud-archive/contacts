@@ -434,8 +434,7 @@ abstract class AbstractBackend {
 	 */
 	public function getPreferences($addressBookId) {
 
-		$key = $this->combinedKey($addressBookId);
-		$key = 'prefs_' . $key;
+		$key = 'prefs_' . $this->combinedKey($addressBookId);
 
 		$data = \OCP\Config::getUserValue($this->userid, 'contacts', $key, false);
 		return $data ? json_decode($data, true) : array();
@@ -448,8 +447,7 @@ abstract class AbstractBackend {
 	 * @return boolean
 	 */
 	public function setPreferences($addressbookid, array $params) {
-		$key = $this->combinedKey($addressbookid);
-		$key = 'prefs_' . $key;
+		$key = 'prefs_' . $this->combinedKey($addressbookid);
 
 		$data = json_encode($params);
 		return $data
