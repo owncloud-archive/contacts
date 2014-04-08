@@ -62,41 +62,40 @@ class Dispatcher extends MainApp {
 	}
 
 	public function registerServices() {
-		$appName = $this->appName;
 		$app = $this->app;
 
-		$this->container->registerService('PageController', function(IAppContainer $container) use($app, $appName) {
+		$this->container->registerService('PageController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
-			return new PageController($appName, $request);
+			return new PageController($this->appName, $request);
 		});
-		$this->container->registerService('AddressBookController', function(IAppContainer $container) use($app, $appName) {
+		$this->container->registerService('AddressBookController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
-			return new AddressBookController($appName, $request, $app);
+			return new AddressBookController($this->appName, $request, $app);
 		});
-		$this->container->registerService('GroupController', function(IAppContainer $container) use($app, $appName) {
+		$this->container->registerService('GroupController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
 			$tags = $this->server->getTagManager()->load('contact');
 			return new GroupController($this->appName, $request, $app, $tags);
 		});
-		$this->container->registerService('ContactController', function(IAppContainer $container) use($app, $appName) {
+		$this->container->registerService('ContactController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
 			return new ContactController($this->appName, $request, $app);
 		});
-		$this->container->registerService('ContactPhotoController', function(IAppContainer $container) use($app, $appName) {
+		$this->container->registerService('ContactPhotoController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
 			$cache = $this->server->getCache();
 			return new ContactPhotoController($this->appName, $request, $app, $cache);
 		});
-		$this->container->registerService('SettingsController', function(IAppContainer $container) use($app, $appName) {
+		$this->container->registerService('SettingsController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
 			return new SettingsController($this->appName, $request, $app);
 		});
-		$this->container->registerService('ImportController', function(IAppContainer $container) use($app, $appName) {
+		$this->container->registerService('ImportController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
 			$cache = $this->server->getCache();
 			return new ImportController($this->appName, $request, $app, $cache);
 		});
-		$this->container->registerService('ExportController', function(IAppContainer $container) use($app, $appName) {
+		$this->container->registerService('ExportController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
 			return new ExportController($this->appName, $request, $app);
 		});
