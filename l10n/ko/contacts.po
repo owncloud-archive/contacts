@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-02 00:49-0400\n"
-"PO-Revision-Date: 2014-04-02 04:49+0000\n"
+"POT-Creation-Date: 2014-04-08 00:50-0400\n"
+"PO-Revision-Date: 2014-04-08 04:50+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -336,7 +336,7 @@ msgstr "주소록에 연락처를 추가할 수 있는 권한이 없습니다"
 msgid "The backend for this address book does not support adding contacts"
 msgstr "이 주소록의 백엔드는 연락처 추가를 지원하지 않습니다"
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:247
+#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
 msgid "You do not have permissions to delete this contact"
 msgstr "이 연락처를 삭제할 수 있는 권한이 없습니다"
 
@@ -364,35 +364,35 @@ msgstr "이 주소록을 삭제할 수 있는 권한이 없습니다."
 msgid "Address book not found"
 msgstr "주소록을 찾을 수 없음"
 
-#: lib/contact.php:113 lib/contact.php:160
+#: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
 msgstr "이 연락처를 볼 수 있는 권한이 없습니다"
 
-#: lib/contact.php:262
+#: lib/contact.php:267
 msgid "You do not have permissions to update this contact"
 msgstr "이 연락처를 업데이트할 수 있는 권한이 없습니다"
 
-#: lib/contact.php:275
+#: lib/contact.php:280
 msgid "The backend for this contact does not support updating it"
 msgstr "이 연락처의 백엔드는 업데이트를 지원하지 않습니다"
 
-#: lib/contact.php:292
+#: lib/contact.php:297
 msgid "This backend not support adding contacts"
 msgstr "이 백엔드는 연락처 추가를 지원하지 않습니다"
 
-#: lib/contact.php:458 lib/contact.php:475
+#: lib/contact.php:463 lib/contact.php:480
 msgid "Property not found"
 msgstr "속성을 찾을 수 없음"
 
-#: lib/contact.php:523
+#: lib/contact.php:528
 msgid " Missing IM parameter for: "
 msgstr " 다음의 IM 인자를 찾을 수 없음: "
 
-#: lib/contact.php:531
+#: lib/contact.php:536
 msgid "Unknown IM: "
 msgstr "알려지지 않은 IM: "
 
-#: lib/contact.php:808
+#: lib/contact.php:813
 msgid "{name}'s Birthday"
 msgstr "{이름}의 생일"
 
@@ -481,125 +481,125 @@ msgstr "연락처 업데이트 오류"
 msgid "Error saving contact to backend"
 msgstr "연락처 백엔드 저장 오류"
 
-#: lib/controller/contactphotocontroller.php:59
+#: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
 msgstr "사용자 사진 가져오기 오류"
 
-#: lib/controller/contactphotocontroller.php:131
+#: lib/controller/contactphotocontroller.php:143
 msgid "No photo path was submitted."
 msgstr "사진 경로가 제출되지 않았습니다."
 
-#: lib/controller/contactphotocontroller.php:193
+#: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
 msgstr "PHOTO 속성을 가져오는 중 오류가 발생했습니다."
 
-#: lib/controller/contactphotocontroller.php:207
+#: lib/controller/contactphotocontroller.php:218
 msgid "Error saving contact."
 msgstr "연락처 저장 중 오류가 발생했습니다."
 
-#: lib/controller/groupcontroller.php:61 lib/controller/groupcontroller.php:84
+#: lib/controller/groupcontroller.php:68 lib/controller/groupcontroller.php:90
 msgid "No group name given."
 msgstr "그룹 이름이 지정되지 않았습니다."
 
-#: lib/controller/groupcontroller.php:68
+#: lib/controller/groupcontroller.php:74
 msgid "Error adding group."
 msgstr "그룹을 추가하는 중 오류가 발생하였습니다."
 
-#: lib/controller/groupcontroller.php:146
+#: lib/controller/groupcontroller.php:150
 msgid "No group name to rename from given."
 msgstr "변경할 그룹 이름이 지정되지 않았습니다."
 
-#: lib/controller/groupcontroller.php:151
+#: lib/controller/groupcontroller.php:155
 msgid "No group name to rename to given."
 msgstr "그룹의 새 이름이 지정되지 않았습니다."
 
-#: lib/controller/groupcontroller.php:158
+#: lib/controller/groupcontroller.php:160
 msgid "Error renaming group."
 msgstr "그룹 이름을 변경하는 중 오류가 발생하였습니다."
 
-#: lib/controller/groupcontroller.php:208
-#: lib/controller/groupcontroller.php:266
+#: lib/controller/groupcontroller.php:210
+#: lib/controller/groupcontroller.php:267
 msgid "Group ID missing from request."
 msgstr "요청에 그룹 ID가 없습니다."
 
-#: lib/controller/groupcontroller.php:215
-#: lib/controller/groupcontroller.php:273
+#: lib/controller/groupcontroller.php:217
+#: lib/controller/groupcontroller.php:274
 msgid "Group name missing from request."
 msgstr "요청에 그룹 이름이 없습니다."
 
-#: lib/controller/groupcontroller.php:222
-#: lib/controller/groupcontroller.php:280
+#: lib/controller/groupcontroller.php:224
+#: lib/controller/groupcontroller.php:281
 msgid "Contact ID missing from request."
 msgstr "요청에 연락처 ID가 없습니다."
 
-#: lib/controller/importcontroller.php:41
+#: lib/controller/importcontroller.php:47
 msgid "No file was uploaded. Unknown error"
 msgstr "파일이 업로드되지 않았습니다. 알 수 없는 오류입니다"
 
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:56
 msgid "There is no error, the file uploaded with success"
 msgstr "파일 업로드에 성공하였습니다."
 
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:57
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "업로드된 파일이 php.ini의 upload_max_filesize보다 큼"
 
-#: lib/controller/importcontroller.php:53
+#: lib/controller/importcontroller.php:59
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "업로드한 파일 크기가 HTML 양식의 MAX_FILE_SIZE보다 큼"
 
-#: lib/controller/importcontroller.php:54
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file was only partially uploaded"
 msgstr "파일의 일부분만 업로드됨"
 
-#: lib/controller/importcontroller.php:55
+#: lib/controller/importcontroller.php:61
 msgid "No file was uploaded"
 msgstr "파일이 업로드되지 않았음"
 
-#: lib/controller/importcontroller.php:56
+#: lib/controller/importcontroller.php:62
 msgid "Missing a temporary folder"
 msgstr "임시 폴더가 없음"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:63
 msgid "Failed to write to disk"
 msgstr "디스크에 쓸 수 없음"
 
-#: lib/controller/importcontroller.php:68
+#: lib/controller/importcontroller.php:74
 msgid "Not enough storage available"
 msgstr "저장소 용량이 충분하지 않음"
 
-#: lib/controller/importcontroller.php:76
+#: lib/controller/importcontroller.php:82
 msgid "Attempt to upload blacklisted file:"
 msgstr "허용되지 않은 파일을 업로드하려고 함:"
 
-#: lib/controller/importcontroller.php:96
+#: lib/controller/importcontroller.php:102
 msgid "Error uploading contacts to storage."
 msgstr "연락처를 저장소에 업로드할 수 없습니다."
 
-#: lib/controller/importcontroller.php:141
+#: lib/controller/importcontroller.php:147
 msgid "Error moving file to imports folder."
 msgstr "가져오기 폴더로 파일을 이동할 수 없습니다."
 
-#: lib/controller/importcontroller.php:160
+#: lib/controller/importcontroller.php:166
 msgid "You do not have permissions to import into this address book."
 msgstr "이 주소록으로 가져올 수 있는 권한이 없습니다."
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:174
 msgid "File name missing from request."
 msgstr "요청에 파일 이름이 없습니다."
 
-#: lib/controller/importcontroller.php:173
-#: lib/controller/importcontroller.php:300
+#: lib/controller/importcontroller.php:179
+#: lib/controller/importcontroller.php:306
 msgid "Progress key missing from request."
 msgstr "요청에 진행 키가 없습니다."
 
-#: lib/controller/importcontroller.php:179
+#: lib/controller/importcontroller.php:185
 msgid "Attempt to access blacklisted file:"
 msgstr "허용되지 않은 파일에 접근하려고 함:"
 
@@ -802,15 +802,18 @@ msgstr "다운로드"
 msgid "Merge"
 msgstr ""
 
-#: templates/contacts.php:83 templates/contacts.php:356
+#: templates/contacts.php:83 templates/contacts.php:317
+#: templates/contacts.php:356
 msgid "Email"
 msgstr "이메일"
 
-#: templates/contacts.php:84 templates/contacts.php:355
+#: templates/contacts.php:84 templates/contacts.php:322
+#: templates/contacts.php:355
 msgid "Phone"
 msgstr "전화 번호"
 
-#: templates/contacts.php:85 templates/contacts.php:358
+#: templates/contacts.php:85 templates/contacts.php:327
+#: templates/contacts.php:358
 msgid "Address"
 msgstr "주소"
 
@@ -942,6 +945,14 @@ msgstr "조직"
 #: templates/contacts.php:306 templates/contacts.php:354
 msgid "Birthday"
 msgstr "생일"
+
+#: templates/contacts.php:332
+msgid "Website"
+msgstr ""
+
+#: templates/contacts.php:337
+msgid "Instant messaging"
+msgstr ""
 
 #: templates/contacts.php:343
 msgid "Notes go here..."

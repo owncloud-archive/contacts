@@ -36,9 +36,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-03 00:49-0400\n"
-"PO-Revision-Date: 2014-04-02 16:40+0000\n"
-"Last-Translator: Art O. Pal <artopal@fastmail.fm>\n"
+"POT-Creation-Date: 2014-04-08 00:50-0400\n"
+"PO-Revision-Date: 2014-04-08 04:50+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -491,125 +491,125 @@ msgstr "Error actualizando contacto"
 msgid "Error saving contact to backend"
 msgstr "Error guardando el contacto"
 
-#: lib/controller/contactphotocontroller.php:59
+#: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
 msgstr "Error obteniendo la imagen de usuario"
 
-#: lib/controller/contactphotocontroller.php:131
+#: lib/controller/contactphotocontroller.php:143
 msgid "No photo path was submitted."
 msgstr "No se ha introducido la ruta de la foto."
 
-#: lib/controller/contactphotocontroller.php:193
+#: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
 msgstr "Error al cargar la imagen de la memoria caché"
 
-#: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
 msgstr "Error obteniendo las propiedades de la foto."
 
-#: lib/controller/contactphotocontroller.php:207
+#: lib/controller/contactphotocontroller.php:218
 msgid "Error saving contact."
 msgstr "Error guardando el contacto."
 
-#: lib/controller/groupcontroller.php:61 lib/controller/groupcontroller.php:84
+#: lib/controller/groupcontroller.php:68 lib/controller/groupcontroller.php:90
 msgid "No group name given."
 msgstr "No se ha especificado un nombre de grupo."
 
-#: lib/controller/groupcontroller.php:68
+#: lib/controller/groupcontroller.php:74
 msgid "Error adding group."
 msgstr "Error añadiendo el grupo."
 
-#: lib/controller/groupcontroller.php:146
+#: lib/controller/groupcontroller.php:150
 msgid "No group name to rename from given."
 msgstr "No hay nombre de grupo para renombrar el que se ha dado."
 
-#: lib/controller/groupcontroller.php:151
+#: lib/controller/groupcontroller.php:155
 msgid "No group name to rename to given."
 msgstr "No se ha especificado un nombre de grupo para renombrar el que se ha dado"
 
-#: lib/controller/groupcontroller.php:158
+#: lib/controller/groupcontroller.php:160
 msgid "Error renaming group."
 msgstr "Error renombrando grupo."
 
-#: lib/controller/groupcontroller.php:208
-#: lib/controller/groupcontroller.php:266
+#: lib/controller/groupcontroller.php:210
+#: lib/controller/groupcontroller.php:267
 msgid "Group ID missing from request."
 msgstr "Falta el ID de grupo en la solicitud."
 
-#: lib/controller/groupcontroller.php:215
-#: lib/controller/groupcontroller.php:273
+#: lib/controller/groupcontroller.php:217
+#: lib/controller/groupcontroller.php:274
 msgid "Group name missing from request."
 msgstr "Falta el nombre del grupo en la petición."
 
-#: lib/controller/groupcontroller.php:222
-#: lib/controller/groupcontroller.php:280
+#: lib/controller/groupcontroller.php:224
+#: lib/controller/groupcontroller.php:281
 msgid "Contact ID missing from request."
 msgstr "Falta el ID de contacto en la solicitud."
 
-#: lib/controller/importcontroller.php:41
+#: lib/controller/importcontroller.php:47
 msgid "No file was uploaded. Unknown error"
 msgstr "No se subió ningún archivo. Error desconocido"
 
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:56
 msgid "There is no error, the file uploaded with success"
 msgstr "No hay ningún error, el archivo se ha subido con éxito"
 
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:57
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "El archivo subido sobrepasa la directiva \"upload_max_filesize\" del archivo PHP.ini"
 
-#: lib/controller/importcontroller.php:53
+#: lib/controller/importcontroller.php:59
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "El archivo subido sobrepasa la directiva \"MAX_FILE_SIZE\" especificada en el formulario HTML"
 
-#: lib/controller/importcontroller.php:54
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file was only partially uploaded"
 msgstr "El archivo ha sido subido parcialmente"
 
-#: lib/controller/importcontroller.php:55
+#: lib/controller/importcontroller.php:61
 msgid "No file was uploaded"
 msgstr "No se subió ningún archivo"
 
-#: lib/controller/importcontroller.php:56
+#: lib/controller/importcontroller.php:62
 msgid "Missing a temporary folder"
 msgstr "Falta una carpeta temporal"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:63
 msgid "Failed to write to disk"
 msgstr "Error al escribir al disco"
 
-#: lib/controller/importcontroller.php:68
+#: lib/controller/importcontroller.php:74
 msgid "Not enough storage available"
 msgstr "No hay suficiente espacio disponible"
 
-#: lib/controller/importcontroller.php:76
+#: lib/controller/importcontroller.php:82
 msgid "Attempt to upload blacklisted file:"
 msgstr "Intentó subir un fichero en lista negra:"
 
-#: lib/controller/importcontroller.php:96
+#: lib/controller/importcontroller.php:102
 msgid "Error uploading contacts to storage."
 msgstr "Error subiendo contactos al almacenamiento."
 
-#: lib/controller/importcontroller.php:141
+#: lib/controller/importcontroller.php:147
 msgid "Error moving file to imports folder."
 msgstr "Error moviendo ficheros a la carpeta de importaciones."
 
-#: lib/controller/importcontroller.php:160
+#: lib/controller/importcontroller.php:166
 msgid "You do not have permissions to import into this address book."
 msgstr "No tiene permiso para importar en esta libreta de direcciones."
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:174
 msgid "File name missing from request."
 msgstr "Falta el nombre del fichero en la petición."
 
-#: lib/controller/importcontroller.php:173
-#: lib/controller/importcontroller.php:300
+#: lib/controller/importcontroller.php:179
+#: lib/controller/importcontroller.php:306
 msgid "Progress key missing from request."
 msgstr "Falta la clave de progreso en la petición."
 
-#: lib/controller/importcontroller.php:179
+#: lib/controller/importcontroller.php:185
 msgid "Attempt to access blacklisted file:"
 msgstr "Intentó acceder a un fichero en la lista negra:"
 
@@ -812,15 +812,18 @@ msgstr "Descargar"
 msgid "Merge"
 msgstr "Unir"
 
-#: templates/contacts.php:83 templates/contacts.php:356
+#: templates/contacts.php:83 templates/contacts.php:317
+#: templates/contacts.php:356
 msgid "Email"
 msgstr "E-mail"
 
-#: templates/contacts.php:84 templates/contacts.php:355
+#: templates/contacts.php:84 templates/contacts.php:322
+#: templates/contacts.php:355
 msgid "Phone"
 msgstr "Teléfono"
 
-#: templates/contacts.php:85 templates/contacts.php:358
+#: templates/contacts.php:85 templates/contacts.php:327
+#: templates/contacts.php:358
 msgid "Address"
 msgstr "Dirección"
 
@@ -952,6 +955,14 @@ msgstr "Organización"
 #: templates/contacts.php:306 templates/contacts.php:354
 msgid "Birthday"
 msgstr "Fecha de nacimiento"
+
+#: templates/contacts.php:332
+msgid "Website"
+msgstr ""
+
+#: templates/contacts.php:337
+msgid "Instant messaging"
+msgstr ""
 
 #: templates/contacts.php:343
 msgid "Notes go here..."

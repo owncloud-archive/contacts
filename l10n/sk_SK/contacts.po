@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-02 00:49-0400\n"
-"PO-Revision-Date: 2014-04-02 04:49+0000\n"
+"POT-Creation-Date: 2014-04-08 00:50-0400\n"
+"PO-Revision-Date: 2014-04-08 04:50+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
@@ -326,7 +326,7 @@ msgstr "Nemáte oprávnenie na pridávanie kontaktov do adresára"
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Úložisko tohto adresára nepodporuje pridávanie kontaktov"
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:247
+#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
 msgid "You do not have permissions to delete this contact"
 msgstr "Nemáte oprávnenie na vymazanie tohto kontaktu"
 
@@ -354,35 +354,35 @@ msgstr "Nemáte oprávnenie na vymazanie tohto adresára."
 msgid "Address book not found"
 msgstr "Adresár nenájdený"
 
-#: lib/contact.php:113 lib/contact.php:160
+#: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
 msgstr "Nemáte oprávnenie na zobrazenie tohto kontaktu"
 
-#: lib/contact.php:262
+#: lib/contact.php:267
 msgid "You do not have permissions to update this contact"
 msgstr "Nemáte oprávnenie na aktualizáciu tohto kontaktu"
 
-#: lib/contact.php:275
+#: lib/contact.php:280
 msgid "The backend for this contact does not support updating it"
 msgstr "Úložisko tohto kontaktu nepodporuje jeho aktualizáciu"
 
-#: lib/contact.php:292
+#: lib/contact.php:297
 msgid "This backend not support adding contacts"
 msgstr "Toto úložisko nepodporuje pridávanie kontaktov"
 
-#: lib/contact.php:458 lib/contact.php:475
+#: lib/contact.php:463 lib/contact.php:480
 msgid "Property not found"
 msgstr "Vlastnosť nenájdená"
 
-#: lib/contact.php:523
+#: lib/contact.php:528
 msgid " Missing IM parameter for: "
 msgstr " Chýba IM parameter pre: "
 
-#: lib/contact.php:531
+#: lib/contact.php:536
 msgid "Unknown IM: "
 msgstr "Neznáme IM:"
 
-#: lib/contact.php:808
+#: lib/contact.php:813
 msgid "{name}'s Birthday"
 msgstr "Narodeniny {name}"
 
@@ -471,125 +471,125 @@ msgstr "Chyba pri ukladaní zmien kontaktu"
 msgid "Error saving contact to backend"
 msgstr "Chyba pri zápise kontaktu do úložiska"
 
-#: lib/controller/contactphotocontroller.php:59
+#: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
 msgstr "Chyba pri získavaní používateľovej fotky"
 
-#: lib/controller/contactphotocontroller.php:131
+#: lib/controller/contactphotocontroller.php:143
 msgid "No photo path was submitted."
 msgstr "Žiadna fotka nebola odoslaná."
 
-#: lib/controller/contactphotocontroller.php:193
+#: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:203
+#: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
 msgstr "Chyba počas získavania vlastností fotky."
 
-#: lib/controller/contactphotocontroller.php:207
+#: lib/controller/contactphotocontroller.php:218
 msgid "Error saving contact."
 msgstr "Chyba počas ukladania kontaktu."
 
-#: lib/controller/groupcontroller.php:61 lib/controller/groupcontroller.php:84
+#: lib/controller/groupcontroller.php:68 lib/controller/groupcontroller.php:90
 msgid "No group name given."
 msgstr "Názov skupiny nie je zadaný."
 
-#: lib/controller/groupcontroller.php:68
+#: lib/controller/groupcontroller.php:74
 msgid "Error adding group."
 msgstr "Chyba vytvárania danej skupiny."
 
-#: lib/controller/groupcontroller.php:146
+#: lib/controller/groupcontroller.php:150
 msgid "No group name to rename from given."
 msgstr "Názov skupiny na premenovanie nie je zadaný."
 
-#: lib/controller/groupcontroller.php:151
+#: lib/controller/groupcontroller.php:155
 msgid "No group name to rename to given."
 msgstr "Nový názov skupiny nie je zadaný."
 
-#: lib/controller/groupcontroller.php:158
+#: lib/controller/groupcontroller.php:160
 msgid "Error renaming group."
 msgstr "Chyba pri premenovávaní skupiny."
 
-#: lib/controller/groupcontroller.php:208
-#: lib/controller/groupcontroller.php:266
+#: lib/controller/groupcontroller.php:210
+#: lib/controller/groupcontroller.php:267
 msgid "Group ID missing from request."
 msgstr "Chýbajúce skupinové ID pri požiadavke."
 
-#: lib/controller/groupcontroller.php:215
-#: lib/controller/groupcontroller.php:273
+#: lib/controller/groupcontroller.php:217
+#: lib/controller/groupcontroller.php:274
 msgid "Group name missing from request."
 msgstr "V požiadavke chýba názov skupiny."
 
-#: lib/controller/groupcontroller.php:222
-#: lib/controller/groupcontroller.php:280
+#: lib/controller/groupcontroller.php:224
+#: lib/controller/groupcontroller.php:281
 msgid "Contact ID missing from request."
 msgstr "Chýbajúce kontaktné ID pri požiadavke."
 
-#: lib/controller/importcontroller.php:41
+#: lib/controller/importcontroller.php:47
 msgid "No file was uploaded. Unknown error"
 msgstr "Žiaden súbor nebol odoslaný. Neznáma chyba"
 
-#: lib/controller/importcontroller.php:50
+#: lib/controller/importcontroller.php:56
 msgid "There is no error, the file uploaded with success"
 msgstr "Nenastala žiadna chyba, súbor bol úspešne nahraný"
 
-#: lib/controller/importcontroller.php:51
+#: lib/controller/importcontroller.php:57
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Nahrávaný súbor prekračuje nastavenie upload_max_filesize v php.ini"
 
-#: lib/controller/importcontroller.php:53
+#: lib/controller/importcontroller.php:59
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Nahrávaný súbor prekračuje nastavenie MAX_FILE_SIZE z volieb HTML formulára"
 
-#: lib/controller/importcontroller.php:54
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file was only partially uploaded"
 msgstr "Nahrávaný súbor sa nahral len čiastočne"
 
-#: lib/controller/importcontroller.php:55
+#: lib/controller/importcontroller.php:61
 msgid "No file was uploaded"
 msgstr "Žiadny súbor nebol nahraný"
 
-#: lib/controller/importcontroller.php:56
+#: lib/controller/importcontroller.php:62
 msgid "Missing a temporary folder"
 msgstr "Chýba dočasný priečinok"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:63
 msgid "Failed to write to disk"
 msgstr "Zápis na disk sa nepodaril"
 
-#: lib/controller/importcontroller.php:68
+#: lib/controller/importcontroller.php:74
 msgid "Not enough storage available"
 msgstr "Nedostatok dostupného úložného priestoru"
 
-#: lib/controller/importcontroller.php:76
+#: lib/controller/importcontroller.php:82
 msgid "Attempt to upload blacklisted file:"
 msgstr "Pokus o nahratie zakázaného súboru:"
 
-#: lib/controller/importcontroller.php:96
+#: lib/controller/importcontroller.php:102
 msgid "Error uploading contacts to storage."
 msgstr "Chyba pri nahrávaní kontaktov do úložiska."
 
-#: lib/controller/importcontroller.php:141
+#: lib/controller/importcontroller.php:147
 msgid "Error moving file to imports folder."
 msgstr "Chyba pri presune súboru do priečinka importov"
 
-#: lib/controller/importcontroller.php:160
+#: lib/controller/importcontroller.php:166
 msgid "You do not have permissions to import into this address book."
 msgstr "Nemáte oprávnenie na import do tohto adresára."
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:174
 msgid "File name missing from request."
 msgstr "V požiadavke chýba názov súboru."
 
-#: lib/controller/importcontroller.php:173
-#: lib/controller/importcontroller.php:300
+#: lib/controller/importcontroller.php:179
+#: lib/controller/importcontroller.php:306
 msgid "Progress key missing from request."
 msgstr "V požiadavke chýba položka priebehu."
 
-#: lib/controller/importcontroller.php:179
+#: lib/controller/importcontroller.php:185
 msgid "Attempt to access blacklisted file:"
 msgstr "Pokus o prístup k zakázanému súboru:"
 
@@ -792,15 +792,18 @@ msgstr "Sťahovanie"
 msgid "Merge"
 msgstr "Zlúčiť"
 
-#: templates/contacts.php:83 templates/contacts.php:356
+#: templates/contacts.php:83 templates/contacts.php:317
+#: templates/contacts.php:356
 msgid "Email"
 msgstr "Email"
 
-#: templates/contacts.php:84 templates/contacts.php:355
+#: templates/contacts.php:84 templates/contacts.php:322
+#: templates/contacts.php:355
 msgid "Phone"
 msgstr "Telefón"
 
-#: templates/contacts.php:85 templates/contacts.php:358
+#: templates/contacts.php:85 templates/contacts.php:327
+#: templates/contacts.php:358
 msgid "Address"
 msgstr "Adresa"
 
@@ -932,6 +935,14 @@ msgstr "Organizácia"
 #: templates/contacts.php:306 templates/contacts.php:354
 msgid "Birthday"
 msgstr "Narodeniny"
+
+#: templates/contacts.php:332
+msgid "Website"
+msgstr ""
+
+#: templates/contacts.php:337
+msgid "Instant messaging"
+msgstr ""
 
 #: templates/contacts.php:343
 msgid "Notes go here..."
