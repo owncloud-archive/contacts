@@ -386,6 +386,7 @@ class LocalUsers extends AbstractBackend {
 		. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 	    return true;
 	} else {
+	    $contactsId = array();
 	    while($row = $result->fetchRow()){
 		$contactsId[] = $row['id'];
 	    }
