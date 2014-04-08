@@ -39,7 +39,7 @@ class Uploaded extends BaseTemporaryPhoto {
 	 *
 	 * @var \OCP\IRequest
 	 */
-	protected $input;
+	protected $request;
 
 	public function __construct(ICache $cache, IRequest $request) {
 		\OCP\Util::writeLog('contacts', __METHOD__, \OCP\Util::DEBUG);
