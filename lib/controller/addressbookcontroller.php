@@ -174,8 +174,7 @@ class AddressBookController extends Controller {
 		$response = new JSONResponse();
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
-		//$addressBook->update($this->request['properties']);
-		$addressBook->update($this->request->post);
+		$addressBook->update($this->request['properties']);
 
 		return $response->setParams($addressBook->getMetaData());
 	}

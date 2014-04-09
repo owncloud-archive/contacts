@@ -22,8 +22,9 @@ use OCA\Contacts\ImportManager;
 				<h2 data-id="addressbooks" tabindex="0" role="button"><?php p($l->t('Address books')); ?></h2>
 					<ul class="addressbooklist">
 					</ul>
+					<input type="text" tabindex="0" autofocus id="add-address-book" placeholder="<?php p($l->t('Display name')); ?>" title="<?php p($l->t('Add Address Book')); ?>" />
 					<ul class="oc-addnew">
-						<li id="add-address-book-element"><a class="oc-addnew-init"><?php p($l->t('Add Address Book')); ?></a></li>
+						<li id="add-ldap-address-book-element"><a class="oc-addnew-init"><?php p($l->t('Add LDAP Address Book')); ?></a></li>
 					</ul>
 				</div>
 				<div id="import">
@@ -510,18 +511,10 @@ use OCA\Contacts\ImportManager;
 </li>
 </script>
 
-<form id="addressbooks-ui" method="GET" name="addressbook-ui" action="#">
-<div id="addressbooks-ui-div" title="Add new addressbook" class="addressbooks-ui-class">
+<script id="addressBookConfigTemplate" class="hidden" type="text/template">
+<div id="addressbooks-ui-div" class="addressbooks-ui-class">
 	<input type="hidden" id="addressbooks-ui-addressbookid" />
-	<p id="addressbooks-ui-backend-p">
-	<label for="addressbooks-ui-backend">
-	<?php p($l->t('Addressbook type')); ?>:
-	</label>
-	<select id="addressbooks-ui-backend">
-		<option value="local">Local</option>
-		<option value="ldap">LDAP</option>
-	</select>
-	</p>
+	<input type="hidden" id="addressbooks-ui-backend" value="{backend}" />
 	<p id="addressbooks-ui-name-p">
 	<label for="addressbooks-ui-name">
 	<?php p($l->t('Name')); ?>:
@@ -614,16 +607,16 @@ use OCA\Contacts\ImportManager;
 	</p>
 	<p id="addressbooks-ui-ldapvcardconnector-value-p">
 	<label for="addressbooks-ui-ldapvcardconnector-value">
-	<?php p($l->t('Connector value')); ?>:
+	<?php p($l->t('Connector value (Better use external editor and copy/paste)')); ?>:
 	</label>
 	<textarea id="addressbooks-ui-ldapvcardconnector-value"></textarea>
 	</p>
 	<p id="addressbooks-ui-ldapvcardconnector-copyfrom-p">
 	<label for="addressbooks-ui-ldapvcardconnector-copyfrom">
-	<?php p($l->t('Copy from (Warning, it will replace the current custom value)')); ?>:
+	<?php p($l->t('Copy from (Warning, replaces current custom value)')); ?>:
 	</label>
 	<select id="addressbooks-ui-ldapvcardconnector-copyfrom">
 	</select>
 	</p>
 </div>
-</form>
+</script>

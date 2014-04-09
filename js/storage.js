@@ -150,7 +150,7 @@ OC.Contacts = OC.Contacts || {};
 	 * }
 	 */
 	Storage.prototype.updateAddressBook = function(backend, addressBookId, properties) {
-		console.log('Storage.updateAddressBook', backend, addressBookId);
+		console.log('Storage.updateAddressBook', backend, addressBookId, properties);
 		return this.requestRoute(
 			'addressbook/{backend}/{addressBookId}',
 			'POST',

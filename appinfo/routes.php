@@ -40,7 +40,7 @@ $this->create('contacts_address_book_connectors', 'connectors/{backend}')
 		function($params) {
 			\OC::$session->close();
 			$dispatcher = new Dispatcher($params);
-			$dispatcher->dispatch('BackendController', 'getLdapConnectors');
+			$dispatcher->dispatch('BackendController', 'getConnectors');
 		}
 	)
 	->requirements(array('backend'));

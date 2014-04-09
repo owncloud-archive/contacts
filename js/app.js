@@ -168,7 +168,11 @@ OC.notify = function(params) {
 				$('#app-settings-content'),
 				$('#addressBookTemplate')
 			);
-			this.addressBookDialog = new OC.Contacts.AddressBookDialog();
+			this.otherBackendConfig = new OC.Contacts.OtherBackendConfig(
+				this.storage,
+				this.addressBooks,
+				$('#addressBookConfigTemplate')
+			);
 			this.contacts = new OC.Contacts.ContactList(
 				this.storage,
 				this.addressBooks,

@@ -24,7 +24,7 @@ class BackendController extends Controller {
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
 	 */
-	public function getLdapConnectors() {
+	public function getConnectors() {
 		$response = new JSONResponse();
 		$prefix = "backend_ldap_";
 		$suffix = "_connector.xml";
@@ -38,7 +38,7 @@ class BackendController extends Controller {
 					if ($format) {
 						if (isset($format['name'])) {
 							$formatId = substr($file, strlen($prefix), - strlen($suffix));
-							$formats[$formatId] = array('id' => $formatId, 'name' => (string)$format['name'], 'xml' => $format->asXML());
+							$formats[] = array('id' => $formatId, 'name' => (string)$format['name'], 'xml' => $format->asXML());
 						}
 					}
 				}
