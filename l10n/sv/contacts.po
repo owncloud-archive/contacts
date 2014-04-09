@@ -23,9 +23,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-08 00:50-0400\n"
-"PO-Revision-Date: 2014-04-08 04:50+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-09 00:49-0400\n"
+"PO-Revision-Date: 2014-04-08 18:10+0000\n"
+"Last-Translator: AsavarTzeth <asavartzeth@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -194,7 +194,7 @@ msgstr "Fel uppstod under inläsning av födelsedag {bday}"
 
 #: js/contacts.js:1315
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Backend saknar stöd för multi-byte tecken."
 
 #: js/contacts.js:2222
 msgid ""
@@ -400,7 +400,7 @@ msgstr "Fel vid skapandet av adressbok"
 #: lib/controller/addressbookcontroller.php:195
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "\"%s\"  backend saknar stöd för att ta bort adressböcker"
 
 #: lib/controller/addressbookcontroller.php:203
 #, php-format
@@ -680,7 +680,7 @@ msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
 msgid "ownCloud handle"
-msgstr ""
+msgstr "ownCloud handle"
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
@@ -869,11 +869,11 @@ msgstr "Radera denna kontakt"
 #: templates/contacts.php:126
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "Du har inga kontakter i din adressbok eller så är din adressbok inaktiverad."
 
 #: templates/contacts.php:127
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Lägg till en ny kontakt eller importera från en en VCF-fil."
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"
@@ -945,11 +945,11 @@ msgstr "Födelsedag"
 
 #: templates/contacts.php:332
 msgid "Website"
-msgstr ""
+msgstr "Webbplats"
 
 #: templates/contacts.php:337
 msgid "Instant messaging"
-msgstr ""
+msgstr "Snabbmeddelanden"
 
 #: templates/contacts.php:343
 msgid "Notes go here..."

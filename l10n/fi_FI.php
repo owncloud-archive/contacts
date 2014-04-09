@@ -177,6 +177,8 @@
 "Title" => "Otsikko",
 "Organization" => "Organisaatio",
 "Birthday" => "Syntymäpäivä",
+"Website" => "Verkkosivusto",
+"Instant messaging" => "Pikaviestintä",
 "Notes go here..." => "Muistiinpanot kuuluvat tähän...",
 "Add field..." => "Lisää kenttä...",
 "Instant Messaging" => "Pikaviestintä",
