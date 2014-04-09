@@ -227,6 +227,13 @@
 button.ui-multiselect { width: 300px !important; padding: 6px 0 0 6px; height: 30px; font-weight: normal; } /* No idea why this is needed? */
 span.ui-icon { margin: 1px 3px 10px 0px; }
 
+/* Use jquery-ui.datepickers own styling */
+.ui-datepicker-title > select {
+	background-color: inherit;
+	color: inherit;
+	border: none;
+}
+
 #content .multiselectoptions > li > * { 
 	-webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; 
 	color: #888888; 

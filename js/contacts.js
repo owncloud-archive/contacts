@@ -1325,7 +1325,9 @@ OC.Contacts = OC.Contacts || {};
 
 		var $bdayinput = this.$fullelem.find('[data-element="bday"]').find('input');
 		$bdayinput.datepicker({
-				dateFormat : datepickerFormatDate
+			dateFormat : datepickerFormatDate,
+			changeMonth: true,
+			changeYear: true
 		});
 		$bdayinput.attr('placeholder', $.datepicker.formatDate(datepickerFormatDate, new Date()));
 
