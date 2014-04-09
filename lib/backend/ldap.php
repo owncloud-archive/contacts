@@ -45,7 +45,7 @@ class Ldap extends AbstractBackend {
 	 * The cached address books.
 	 * @var array[]
 	 */
-	public $addressBooks;
+	public $addressbooks;
 
 	/**
 	* @brief validates and sets the ldap parameters
@@ -728,7 +728,6 @@ class Ldap extends AbstractBackend {
 	public function deleteContact($addressbookid, $id, array $options = array()) {
 		self::setLdapParams($addressbookid);
 		self::ldapCreateAndBindConnection();
-		$card=null;
 		if (is_array($id)) {
 			$card = self::getContact($addressbookid, $id);
 		} else {

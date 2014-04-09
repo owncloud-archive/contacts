@@ -12,7 +12,6 @@ OC.Contacts = OC.Contacts || {};
 	OC.Contacts.OtherBackendConfig = OtherBackendConfig;
 
 	OtherBackendConfig.prototype.openAddressbookUi = function() {
-		var self = this;
 		this.addressbookUiInit();
 	};
 
@@ -69,8 +68,8 @@ OC.Contacts = OC.Contacts || {};
 					$('#addressbooks-ui-ldapvcardconnector').append($option);
 				}
 				if (custom) {
-					console.log("custom selected");
 					var $option = $('<option value="">' + 'Custom connector' + '</option>').attr('selected','selected');
+					$('#addressbooks-ui-ldapvcardconnector').append($option);
 					$('#addressbooks-ui-ldapvcardconnector-value-p').show();
 					$('#addressbooks-ui-ldapvcardconnector-copyfrom-p').show();
 					$.when(self.storage.getConnectors($('#addressbooks-ui-backend').val()))
@@ -91,10 +90,9 @@ OC.Contacts = OC.Contacts || {};
 
 					$('#addressbooks-ui-ldapvcardconnector-value').text(addressbook.ldap_vcard_connector);
 				} else {
-					console.log("custom not selected");
 					var $option = $('<option value="">' + 'Custom connector' + '</option>');
+					$('#addressbooks-ui-ldapvcardconnector').append($option);
 				}
-				$('#addressbooks-ui-ldapvcardconnector').append($option);
 			})
 			.fail(function(jqxhr, textStatus, error) {
 				var err = textStatus + ', ' + error;
@@ -232,12 +230,12 @@ OC.Contacts = OC.Contacts || {};
 			}
 		});
 		$('#addressbooks-ui-ldapbasednsearch').change(function() {
-			if ($('#addressbooks-ui-ldapbasednmodify').val() == '') {
+			if ($('#addressbooks-ui-ldapbasednmodify').val() === '') {
 				$('#addressbooks-ui-ldapbasednmodify').val($('#addressbooks-ui-ldapbasednsearch').val());
 			}
 		});
 		$('#addressbooks-ui-ldapbasednmodify').change(function() {
-			if ($('#addressbooks-ui-ldapbasednsearch').val() == '') {
+			if ($('#addressbooks-ui-ldapbasednsearch').val() === '') {
 				$('#addressbooks-ui-ldapbasednsearch').val($('#addressbooks-ui-ldapbasednmodify').val());
 			}
 		});
@@ -246,7 +244,7 @@ OC.Contacts = OC.Contacts || {};
 			$('#addressbooks-ui-ldapvcardconnector').empty();
 			var $option = null;
 			for (var id = 0; id < response.data.length; id++) {
-				if (response.data[id] != null) {
+				if (response.data[id] !== null) {
 					$option = $('<option value="' + response.data[id].id + '">' + response.data[id].name + '</option>');
 					$('#addressbooks-ui-ldapvcardconnector').append($option);
 				}
@@ -261,7 +259,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 		$('#addressbooks-ui-ldapvcardconnector').change(function() {
 			// Custom connector
-			if ($('#addressbooks-ui-ldapvcardconnector').val() == '') {
+			if ($('#addressbooks-ui-ldapvcardconnector').val() === '') {
 				$('#addressbooks-ui-ldapvcardconnector-value-p').show();
 				$('#addressbooks-ui-ldapvcardconnector-copyfrom-p').show();
 				$.when(self.storage.getConnectors($('#addressbooks-ui-backend').val()))
@@ -270,7 +268,7 @@ OC.Contacts = OC.Contacts || {};
 					var $option = $('<option value="">' + 'Select connector' + '</option>').attr('selected','selected');
 					$('#addressbooks-ui-ldapvcardconnector-copyfrom').append($option);
 					for (var id = 0; id < response.data.length; id++) {
-						var $option = $('<option value="' + response.data[id].id + '">' + response.data[id].name + '</option>');
+						$option = $('<option value="' + response.data[id].id + '">' + response.data[id].name + '</option>');
 						$('#addressbooks-ui-ldapvcardconnector-copyfrom').append($option);
 					}
 				})
@@ -285,11 +283,11 @@ OC.Contacts = OC.Contacts || {};
 			}
 		});
 		$('#addressbooks-ui-ldapvcardconnector-copyfrom').change(function() {
-			if ($('#addressbooks-ui-ldapvcardconnector-copyfrom').val() != '') {
+			if ($('#addressbooks-ui-ldapvcardconnector-copyfrom').val() !== '') {
 				$.when(self.storage.getConnectors($('#addressbooks-ui-backend').val()))
 				.then(function(response) {
 					for (var id = 0; id < response.data.length; id++) {
-						if ($('#addressbooks-ui-ldapvcardconnector-copyfrom').val() == response.data[id].id) {
+						if ($('#addressbooks-ui-ldapvcardconnector-copyfrom').val() === response.data[id].id) {
 							console.log(response.data[id].id);
 							$('#addressbooks-ui-ldapvcardconnector-value').text(response.data[id].xml);
 						}

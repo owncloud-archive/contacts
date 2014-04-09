@@ -57,20 +57,20 @@ class LdapConnector {
 		
 		for ($i=0; $i<$ldapEntry["count"]; $i++) {
 			// ldap property name : $ldap_entry[$i]
-			$l_property = $ldapEntry[$i];
-			for ($j=0;$j<$ldapEntry[$l_property]["count"];$j++){
+			$lProperty = $ldapEntry[$i];
+			for ($j=0;$j<$ldapEntry[$lProperty]["count"];$j++){
 				
 				// What to do :
 				// convert the ldap property into vcard property, type and position (if needed)
 				// $v_params format: array('property' => property, 'type' => array(types), 'position' => position)
-				$v_params = $this->getVCardProperty($l_property);
+				$v_params = $this->getVCardProperty($lProperty);
 				
 				foreach ($v_params as $v_param) {
 					
 					if (isset($v_param['unassigned'])) {
 						// if the value comes from the unassigned entry, it's a vcard property dumped
 						try {
-							$property = \Sabre\VObject\Reader::read($ldapEntry[$l_property][$j]);
+							$property = \Sabre\VObject\Reader::read($ldapEntry[$lProperty][$j]);
 							$vcard->add($property);
 						} catch (exception $e) {
 						}
@@ -82,9 +82,9 @@ class LdapConnector {
 						
 						// modify the property with the new data
 						if (strcasecmp($v_param['image'], 'true') == 0) {
-							$this->updateVCardImageProperty($v_property, $ldapEntry[$l_property][$j], $vcard->VERSION);
+							$this->updateVCardImageProperty($v_property, $ldapEntry[$lProperty][$j], $vcard->VERSION);
 						} else {
-							$this->updateVCardProperty($v_property, $ldapEntry[$l_property][$j], $v_param['position']);
+							$this->updateVCardProperty($v_property, $ldapEntry[$lProperty][$j], $v_param['position']);
 						}
 					}
 				}
@@ -186,16 +186,16 @@ class LdapConnector {
 	
 	/**
 	 * @brief gets the vcard property values from an ldif entry name
-	 * @param $l_property the ldif property name
+	 * @param $lProperty the ldif property name
 	 * @return array('property' => property, 'type' => type, 'position' => position)
 	 */
-	public function getVCardProperty($l_property) {
+	public function getVCardProperty($lProperty) {
 		$properties = array();
-		if (strcmp($l_property, $this->getUnassignedVCardProperty()) == 0) {
+		if (strcmp($lProperty, $this->getUnassignedVCardProperty()) == 0) {
 			$properties[] = array('unassigned' => true);
 		} else {
 			foreach ($this->config_content->ldap_entries->ldif_entry as $ldif_entry) {
-				if ($l_property == $ldif_entry['name']) {
+				if ($lProperty == $ldif_entry['name']) {
 					// $ldif_entry['name'] is the right config xml
 					foreach ($ldif_entry->vcard_entry as $vcard_entry) {
 						$type=isset($vcard_entry['type'])?$vcard_entry['type']:"";
@@ -438,9 +438,9 @@ class LdapConnector {
 	public function insertEmptyEntries($source, &$dest) {
 		for ($i=0; $i<$source["count"]; $i++) {
 			
-			$l_property = $source[$i];
-			if (!isset($dest[$l_property]) && $l_property != 'modifytimestamp') {
-				$dest[$l_property] = array();
+			$lProperty = $source[$i];
+			if (!isset($dest[$lProperty]) && $lProperty != 'modifytimestamp') {
+				$dest[$lProperty] = array();
 			}
 		}
 	}
