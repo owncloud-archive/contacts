@@ -11,7 +11,7 @@
 namespace OCA\Contacts\Controller;
 
 use OCA\Contacts\App,
-	OCA\Contacts\Controller,
+	OCP\AppFramework\Controller,
 	OCA\Contacts\Utils\Properties,
 	OCP\AppFramework\Http\TemplateResponse;
 
@@ -26,7 +26,7 @@ class PageController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function index() {
-		\OC::$server->getNavigationManager()->setActiveEntry('contacts');
+		\OC::$server->getNavigationManager()->setActiveEntry($this->appName);
 
 		$imppTypes = Properties::getTypesForProperty('IMPP');
 		$adrTypes = Properties::getTypesForProperty('ADR');
@@ -59,7 +59,7 @@ class PageController extends Controller {
 		\OCP\Util::addStyle('3rdparty/Jcrop', 'jquery.Jcrop');
 		\OCP\Util::addStyle('contacts', 'contacts');
 
-		$response = new TemplateResponse('contacts', 'contacts');
+		$response = new TemplateResponse($this->appName, 'contacts');
 		$response->setParams(array(
 			'uploadMaxFilesize' => $maxUploadFilesize,
 			'uploadMaxHumanFilesize' => \OCP\Util::humanFileSize($maxUploadFilesize),

@@ -219,6 +219,8 @@
 "Title" => "Titel",
 "Organization" => "Organisatie",
 "Birthday" => "Verjaardag",
+"Website" => "Website",
+"Instant messaging" => "Instant messaging",
 "Notes go here..." => "Hier de notities...",
 "Add field..." => "Toevoegen veld...",
 "Instant Messaging" => "Instant Messaging",

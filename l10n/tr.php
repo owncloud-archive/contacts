@@ -219,6 +219,8 @@
 "Title" => "Başlık",
 "Organization" => "Kurum",
 "Birthday" => "Doğum günü",
+"Website" => "Web sitesi",
+"Instant messaging" => "Anında mesajlaşma",
 "Notes go here..." => "Notları buraya ekleyin.",
 "Add field..." => "Alan ekle...",
 "Instant Messaging" => "Anında Mesajlaşma",

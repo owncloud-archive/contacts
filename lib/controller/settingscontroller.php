@@ -12,7 +12,7 @@ namespace OCA\Contacts\Controller;
 
 use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
-	OCA\Contacts\Controller,
+	OCP\AppFramework\Controller,
 	OCA\AppFramework\Core\API;
 
 
@@ -40,7 +40,7 @@ class SettingsController extends Controller {
 			$response->bailOut(App::$l10n->t('No value is given.'));
 		}
 
-		if(\OCP\Config::setUserValue($this->api->getUserId(), 'contacts', $key, $value)) {
+		if(\OCP\Config::setUserValue(\OCP\User::getUser(), 'contacts', $key, $value)) {
 			$response->setParams(array(
 				'key' => $key,
 				'value' => $value)

@@ -24,7 +24,8 @@ namespace OCA\Contacts\Utils\TemporaryPhoto;
 
 use OCA\Contacts\Contact as ContactObject,
 	OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto,
-	OCP\AppFramework\Http;
+	OCP\AppFramework\Http,
+	OCP\ICache;
 
 /**
  * This class loads an image from the virtual file system.
@@ -38,7 +39,7 @@ class FileSystem extends BaseTemporaryPhoto {
 	 */
 	protected $path;
 
-	public function __construct(\OCP\IServerContainer $server, $path) {
+	public function __construct(ICache $cache, $path) {
 		\OCP\Util::writeLog('contacts', __METHOD__.' path: ' . $path, \OCP\Util::DEBUG);
 		if (!is_string($path)) {
 			throw new \Exception(
@@ -46,7 +47,7 @@ class FileSystem extends BaseTemporaryPhoto {
 			);
 		}
 
-		parent::__construct($server);
+		parent::__construct($cache);
 		$this->path = $path;
 		$this->processImage();
 	}

@@ -14,12 +14,24 @@ use OCA\Contacts\App,
 	OCA\Contacts\ImageResponse,
 	OCA\Contacts\Utils\Properties,
 	OCA\Contacts\Utils\TemporaryPhoto,
-	OCA\Contacts\Controller;
+	OCA\Contacts\Controller,
+	OCP\IRequest,
+	OCP\ICache;
 
 /**
  * Controller class For Contacts
  */
 class ContactPhotoController extends Controller {
+
+	/**
+	 * @var \OCP\ICache
+	 */
+	protected $cache;
+
+	public function __construct($appName, IRequest $request, App $app, ICache $cache) {
+		parent::__construct($appName, $request, $app);
+		$this->cache = $cache;
+	}
 
 	/**
 	 * @NoAdminRequired
@@ -34,7 +46,7 @@ class ContactPhotoController extends Controller {
 		$contact = $addressBook->getChild($params['contactId']);
 
 		$tempPhoto = TemporaryPhoto::create(
-			$this->server,
+			$this->cache,
 			TemporaryPhoto::PHOTO_CURRENT,
 			$contact
 		);
@@ -71,7 +83,7 @@ class ContactPhotoController extends Controller {
 		$response = new JSONResponse();
 
 		$tempPhoto = TemporaryPhoto::create(
-			$this->server,
+			$this->cache,
 			TemporaryPhoto::PHOTO_UPLOADED,
 			$this->request
 		);
@@ -101,7 +113,7 @@ class ContactPhotoController extends Controller {
 		$contact = $addressBook->getChild($params['contactId']);
 
 		$tempPhoto = TemporaryPhoto::create(
-			$this->server,
+			$this->cache,
 			TemporaryPhoto::PHOTO_CURRENT,
 			$contact
 		);
@@ -132,7 +144,7 @@ class ContactPhotoController extends Controller {
 		}
 
 		$tempPhoto = TemporaryPhoto::create(
-			$this->server,
+			$this->cache,
 			TemporaryPhoto::PHOTO_FILESYSTEM,
 			$this->request->get['path']
 		);
@@ -156,7 +168,7 @@ class ContactPhotoController extends Controller {
 		$params = $this->request->urlParams;
 		$tmpkey = $params['key'];
 
-		$tmpPhoto = new TemporaryPhoto($this->server, $tmpkey);
+		$tmpPhoto = new TemporaryPhoto($this->cache, $tmpkey);
 		$image = $tmpPhoto->getPhoto();
 
 		if($image->valid()) {
@@ -181,13 +193,12 @@ class ContactPhotoController extends Controller {
 		$h = (isset($this->request->post['h']) && $this->request->post['h']) ? $this->request->post['h'] : -1;
 		$tmpkey = $params['key'];
 
-		$app = new App($this->api->getUserId());
-		$addressBook = $app->getAddressBook($params['backend'], $params['addressBookId']);
+		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
 		$contact = $addressBook->getChild($params['contactId']);
 
 		$response = new JSONResponse();
 
-		$tmpPhoto = new TemporaryPhoto($this->server, $tmpkey);
+		$tmpPhoto = new TemporaryPhoto($this->cache, $tmpkey);
 		$image = $tmpPhoto->getPhoto();
 		if(!$image || !$image->valid()) {
 			return $response->bailOut(App::$l10n->t('Error loading image from cache'));

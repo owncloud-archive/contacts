@@ -219,6 +219,8 @@
 "Title" => "Título",
 "Organization" => "Organización",
 "Birthday" => "Fecha de nacimiento",
+"Website" => "Sitio web",
+"Instant messaging" => "Mensajería instantánea",
 "Notes go here..." => "Puede escribir notas aquí...",
 "Add field..." => "Agregar campo...",
 "Instant Messaging" => "Mensajería instantánea",
