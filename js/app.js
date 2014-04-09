@@ -1528,6 +1528,10 @@ OC.notify = function(params) {
 			console.log('selected element', $listElement);
 			window.location.hash = this.currentid;
 			$contactelem.insertAfter($listElement).show().find('.fullname').focus();
+			// Remove once IE8 is finally obsoleted in oC.
+			if (!OC.Util.hasSVGSupport()) {
+				OC.Util.replaceSVG($contactelem);
+			}
 			self.jumpToContact(self.currentid);
 			$listElement.hide();
 			setTimeout(function() {

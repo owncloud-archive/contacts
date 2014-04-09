@@ -226,10 +226,10 @@ use OCA\Contacts\ImportManager;
 		<li>
 			<div id="photowrapper" class="propertycontainer" data-element="photo">
 				<ul id="phototools" class="transparent hidden">
-					<li><a class="icon-delete action delete" title="<?php echo $l->t('Delete current photo'); ?>"></a></li>
-					<li><a class="icon-rename action edit" title="<?php echo $l->t('Edit current photo'); ?>"></a></li>
-					<li><a class="icon-upload action upload" title="<?php echo $l->t('Upload new photo'); ?>"></a></li>
-					<li><a class="icon-folder action cloud icon-cloud" title="<?php echo $l->t('Select photo from Files'); ?>"></a></li>
+					<li><a class="svg icon-delete action delete" title="<?php echo $l->t('Delete current photo'); ?>"></a></li>
+					<li><a class="svg icon-rename action edit" title="<?php echo $l->t('Edit current photo'); ?>"></a></li>
+					<li><a class="svg icon-upload action upload" title="<?php echo $l->t('Upload new photo'); ?>"></a></li>
+					<li><a class="svg icon-folder action cloud icon-cloud" title="<?php echo $l->t('Select photo from Files'); ?>"></a></li>
 				</ul>
 				<a class="favorite {favorite} tooltipped" title="<?php echo $l->t('Favorite'); ?>"></a>
 			</div>
