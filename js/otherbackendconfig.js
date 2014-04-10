@@ -106,9 +106,9 @@ OC.Contacts = OC.Contacts || {};
 		var addressbook = OC.Contacts.addressBooks;
 
 		var error=false;
-		var errorFields = new Array();
+		var errorFields = [];
 		$('[required]').each(function() {
-			if ($(this).val() == '' && !$(this).attr('disabled')){
+			if ($(this).val() === '' && !$(this).attr('disabled')){
 				error = true;
 				errorFields.push($(this).attr('placeholder'));
 			}
@@ -172,9 +172,9 @@ OC.Contacts = OC.Contacts || {};
 		var defer = $.Deferred();
 
 		var error=false;
-		var errorFields = new Array();
+		var errorFields = [];
 		$('[required]').each(function() {
-			if ($(this).val() == '' && !$(this).attr('disabled')){
+			if ($(this).val() === '' && !$(this).attr('disabled')){
 				error = true;
 				errorFields.push($(this).attr('placeholder'));
 			}
@@ -342,12 +342,12 @@ OC.Contacts = OC.Contacts || {};
 				// allow backspace, tab, delete, enter, arrows, numbers and keypad numbers ONLY
 				// home, end, period, and numpad decimal
 				return (
-					key == 8 || 
-					key == 9 ||
-					key == 13 ||
-					key == 46 ||
-					key == 110 ||
-					key == 190 ||
+					key === 8 || 
+					key === 9 ||
+					key === 13 ||
+					key === 46 ||
+					key === 110 ||
+					key === 190 ||
 					(key >= 35 && key <= 40) ||
 					(key >= 48 && key <= 57) ||
 					(key >= 96 && key <= 105));
