@@ -596,7 +596,7 @@ use OCA\Contacts\ImportManager;
 	<?php p($l->t('Base DN for modification')); ?>:
 	</label>
 	<input type="text" class="nonempty value" id="addressbooks-ui-ldapbasednmodify" value=""
-		placeholder="<?php p($l->t('Base DN')); ?>" required />
+		placeholder="<?php p($l->t('Base DN modification')); ?>" required />
 	</p>
 	<p id="addressbooks-ui-ldapvcardconnector-p">
 	<label for="addressbooks-ui-ldapvcardconnector">
@@ -617,6 +617,10 @@ use OCA\Contacts\ImportManager;
 	</label>
 	<select id="addressbooks-ui-ldapvcardconnector-copyfrom">
 	</select>
+	</p>
+	<p id="addressbooks-ui-errortitle-p">&nbsp;
+	</p>
+	<p id="addressbooks-ui-errormessage-p">&nbsp;
 	</p>
 </div>
 </script>
