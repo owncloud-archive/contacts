@@ -75,7 +75,8 @@ class Dispatcher extends MainApp {
 		});
 		$this->container->registerService('AddressBookController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
-			return new AddressBookController($this->appName, $request, $app);
+			$api = $container->query('API');
+			return new AddressBookController($this->appName, $request, $app, $api);
 		});
 		$this->container->registerService('BackendController', function(IAppContainer $container) use($app) {
 			$request = $container->query('Request');
