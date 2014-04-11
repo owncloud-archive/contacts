@@ -13,12 +13,24 @@ use OCA\Contacts\App,
 	OCA\Contacts\JSONResponse,
 	OCA\Contacts\Utils\JSONSerializer,
 	OCA\Contacts\Controller,
-	OCP\AppFramework\Http;
+	OCP\AppFramework\Http,
+	OCP\AppFramework\IApi,
+	OCP\IRequest;
 
 /**
  * Controller class For Address Books
  */
 class AddressBookController extends Controller {
+
+	/**
+	 * @var \OCP\AppFramework\IApi
+	 */
+	protected $api;
+
+	public function __construct($appName, IRequest $request, App $app, IApi $api) {
+		parent::__construct($appName, $request, $app);
+		$this->api = $api;
+	}
 
 	/**
 	 * @NoAdminRequired
