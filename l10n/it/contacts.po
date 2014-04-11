@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-10 00:48-0400\n"
-"PO-Revision-Date: 2014-04-09 23:00+0000\n"
-"Last-Translator: idetao <marcxosm@gmail.com>\n"
+"POT-Creation-Date: 2014-04-11 00:48-0400\n"
+"PO-Revision-Date: 2014-04-10 22:34+0000\n"
+"Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,7 +115,7 @@ msgstr "Unione non riuscita. Errore durante il salvataggio del contatto."
 msgid "Select photo"
 msgstr "Seleziona la foto"
 
-#: js/app.js:705 js/app.js:1675
+#: js/app.js:705 js/app.js:1679
 msgid "Network or server error. Please inform administrator."
 msgstr "Errore di rete o del server. Informa l'amministratore."
 
@@ -166,11 +166,11 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr "Impossibile trovare il contatto: {id}"
 
-#: js/app.js:1630
+#: js/app.js:1634
 msgid "Edit profile picture"
 msgstr "Modifica l'immagine del profilo"
 
-#: js/app.js:1634
+#: js/app.js:1638
 msgid "Crop photo"
 msgstr "Ritaglia foto"
 
@@ -190,17 +190,17 @@ msgstr "Errore durante l'elaborazione della data di nascita {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Il motore non supporta i caratteri multi-byte."
 
-#: js/contacts.js:2222
+#: js/contacts.js:2224
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alcuni contatti sono marcati per l'eliminazione, ma non sono stati ancora rimossi. Attendi fino al completamento dell'operazione."
 
-#: js/contacts.js:2233
+#: js/contacts.js:2235
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Un clic per annullare l'eliminazione di {num} contatti"
 
-#: js/contacts.js:2242
+#: js/contacts.js:2244
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Eliminazione di {num} contatti annullata"
 
