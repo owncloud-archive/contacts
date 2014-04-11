@@ -48,7 +48,8 @@ class AddressBook extends \Sabre_CardDAV_AddressBook {
 	*/
 	public function __construct(
 		\Sabre_CardDAV_Backend_Abstract $carddavBackend,
-		array $addressBookInfo) {
+		array $addressBookInfo
+	) {
 
 		$this->carddavBackend = $carddavBackend;
 		$this->addressBookInfo = $addressBookInfo;
