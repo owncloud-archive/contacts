@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2014
 # bjamalaro <bjamalaro@yahoo.com.br>, 2013
 # Flávio Veras <flaviove@gmail.com>, 2013-2014
 # Schopfer <glauber.guimaraes@poli.ufrj.br>, 2012
@@ -18,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-09 00:49-0400\n"
-"PO-Revision-Date: 2014-04-08 10:40+0000\n"
-"Last-Translator: Flávio Veras <flaviove@gmail.com>\n"
+"POT-Creation-Date: 2014-04-13 00:48-0400\n"
+"PO-Revision-Date: 2014-04-13 02:50+0000\n"
+"Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,7 +117,7 @@ msgstr "A mesclagem falhou. Erro salvando o contato."
 msgid "Select photo"
 msgstr "Selecione foto"
 
-#: js/app.js:705 js/app.js:1675
+#: js/app.js:705 js/app.js:1679
 msgid "Network or server error. Please inform administrator."
 msgstr "Erro no servidor ou rede. Por favor, informe o administrador."
 
@@ -165,13 +166,13 @@ msgstr "OK"
 
 #: js/app.js:1521
 msgid "Could not find contact: {id}"
-msgstr "Não foi possível encontrar o contato:{id}"
+msgstr "Não foi possível encontrar o contato: {id}"
 
-#: js/app.js:1630
+#: js/app.js:1634
 msgid "Edit profile picture"
 msgstr "Editar imagem do perfil"
 
-#: js/app.js:1634
+#: js/app.js:1638
 msgid "Crop photo"
 msgstr "Recortar foto"
 
@@ -191,17 +192,17 @@ msgstr "Erro na análise da data de aniversário {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "O backend não suporta caracteres multi-byte."
 
-#: js/contacts.js:2222
+#: js/contacts.js:2224
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr "Alguns contatos foram marcados para remoção, mas não foram removidos ainda. Por favor aguarde a remoção desses contatos."
+msgstr "Alguns contatos foram marcados para remoção, mas não foram removidos ainda. Por favor, aguarde a remoção desses contatos."
 
-#: js/contacts.js:2233
+#: js/contacts.js:2235
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Clique para desfazer a exclusão de {num} contatos"
 
-#: js/contacts.js:2242
+#: js/contacts.js:2244
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancelada a eliminação de {num} contatos"
 
@@ -219,7 +220,7 @@ msgstr "Os contatos já pertencem ao grupo."
 
 #: js/groups.js:343
 msgid "Couldn't get contact list."
-msgstr "Não foi possível obter lista de contatos."
+msgstr "Não foi possível obter a lista de contatos."
 
 #: js/groups.js:354
 msgid "Contact is not in this group."
@@ -265,7 +266,7 @@ msgstr "Não agrupado"
 
 #: js/groups.js:795
 msgid "Failed loading groups: {error}"
-msgstr "Falha carregando grupos:{error}"
+msgstr "Falha carregando grupos: {error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
@@ -388,49 +389,49 @@ msgstr "IM desconhecido:"
 msgid "{name}'s Birthday"
 msgstr "Aniversário de {name}"
 
-#: lib/controller/addressbookcontroller.php:163
+#: lib/controller/addressbookcontroller.php:175
 msgid "Error creating address book"
 msgstr "Erro criando livro de endereço"
 
-#: lib/controller/addressbookcontroller.php:195
+#: lib/controller/addressbookcontroller.php:207
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "O backend \"%s\" não suporta apagar livros de endereços"
 
-#: lib/controller/addressbookcontroller.php:203
+#: lib/controller/addressbookcontroller.php:215
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Você não tem permissão para excluir o livro de endereços \"%s\""
 
-#: lib/controller/addressbookcontroller.php:210
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting address book"
 msgstr "Erro excluindo livro de endereço"
 
-#: lib/controller/addressbookcontroller.php:250
+#: lib/controller/addressbookcontroller.php:262
 msgid "Error creating contact."
 msgstr "Erro criando contato."
 
-#: lib/controller/addressbookcontroller.php:259
+#: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
 msgstr "Erro criando contato"
 
-#: lib/controller/addressbookcontroller.php:291
+#: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
 msgstr "Erro eliminando contato"
 
-#: lib/controller/addressbookcontroller.php:331
+#: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
 msgstr "Erro recuperando contato"
 
-#: lib/controller/addressbookcontroller.php:342
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
 msgstr "Erro salvando contato"
 
-#: lib/controller/addressbookcontroller.php:348
+#: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
 msgstr "Erro removendo contato de outro livro de endereço."
 
-#: lib/controller/addressbookcontroller.php:355
+#: lib/controller/addressbookcontroller.php:367
 msgid "Error getting moved contact"
 msgstr "Erro movendo contato"
 
@@ -584,7 +585,7 @@ msgstr "Você não tem permissão para importar para este livro de endereços."
 
 #: lib/controller/importcontroller.php:174
 msgid "File name missing from request."
-msgstr "Nome do arquivo ausente da requisção."
+msgstr "Nome do arquivo ausente da requisição."
 
 #: lib/controller/importcontroller.php:179
 #: lib/controller/importcontroller.php:306
