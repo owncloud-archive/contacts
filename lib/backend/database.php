@@ -439,7 +439,7 @@ class Database extends AbstractBackend {
 			}
 
 		}
-
+		
 		return $cards;
 	}
 
@@ -1018,4 +1018,9 @@ class Database extends AbstractBackend {
 
 		return self::$preparedQueries[$identifier];
 	}
+    
+    public function getSearchProvider($addressbook){
+	return new \OCA\Contacts\AddressbookProvider($addressbook);
+    }
+	
 }
