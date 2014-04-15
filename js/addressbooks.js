@@ -29,6 +29,12 @@ OC.Contacts = OC.Contacts || {};
 		if(!this.hasPermission(OC.PERMISSION_UPDATE)) {
 			this.$li.find('a.action.edit').hide();
 		}
+		if(!this.hasPermission(OC.PERMISSION_SHARE)) {
+			this.$li.find('a.action.share').hide();
+		}
+		if(['local', 'ldap'].indexOf(this.getBackend() === -1)) {
+			this.$li.find('a.action.carddav').hide();
+		}
 		this.$li.find('input:checkbox').prop('checked', this.book.active).on('change', function() {
 			console.log('activate', self.getId());
 			var checkbox = $(this).get(0);
@@ -53,7 +59,7 @@ OC.Contacts = OC.Contacts || {};
 			console.log('delete', self.getId());
 			self.destroy();
 		});
-		this.$li.find('a.action.globe').on('click keypress', function() {
+		this.$li.find('a.action.carddav').on('click keypress', function() {
 			var uri = (self.book.owner === oc_current_user ) ? self.book.uri : self.book.uri + '_shared_by_' + self.book.owner;
 			var link = OC.linkToRemote('carddav')+'/addressbooks/'+encodeURIComponent(oc_current_user)+'/'+encodeURIComponent(uri);
 			var $dropdown = $('<li><div id="dropdown" class="drop"><input type="text" value="{link}" readonly /></div></li>')

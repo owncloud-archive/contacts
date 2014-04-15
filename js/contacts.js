@@ -1488,15 +1488,18 @@ OC.Contacts = OC.Contacts || {};
 				}
 			}
 		});
-		if(this.metadata.owner !== OC.currentUser
-			&& !(this.hasPermission(OC.PERMISSION_UPDATE)
-				|| this.hasPermission(OC.PERMISSION_DELETE))) {
-			this.setEnabled(false);
-			this.showActions(['close', 'export']);
-		} else {
-			this.setEnabled(true);
-			this.showActions(['close', 'add', 'export', 'delete']);
+		var actions = ['close', 'export'];
+		if(this.hasPermission(OC.PERMISSION_DELETE)) {
+			actions.push('delete');
 		}
+		if(this.hasPermission(OC.PERMISSION_UPDATE)) {
+			actions.push('add');
+			this.setEnabled(true);
+		} else {
+			this.setEnabled(false);
+		}
+		this.showActions(actions);
+
 		return this.$fullelem;
 	};
 
