@@ -174,7 +174,7 @@
 "Address books" => "Adresáře kontaktů",
 "Display name" => "Zobrazované jméno",
 "Add Address Book" => "Přidat adresář kontaktů",
-"Automatic format" => "Automatícký formát",
+"Automatic format" => "Automatický formát",
 "Select file..." => "Vybrat soubor...",
 "(De-)select all" => "Vybrat (odznačit) vše",
 "Sort order" => "Řazení",

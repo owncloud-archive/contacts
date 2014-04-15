@@ -504,7 +504,7 @@ use OCA\Contacts\ImportManager;
 	<span class="actions">
 		<a title="<?php p($l->t('Share')); ?>" class="icon-share share action" data-possible-permissions="{permissions}" data-item="{id}" data-item-type="addressbook"></a>
 		<a title="<?php p($l->t('Export')); ?>" class="icon-download download action"></a>
-		<a title="<?php p($l->t('CardDAV link')); ?>" class="icon-public globe action"></a>
+		<a title="<?php p($l->t('CardDAV link')); ?>" class="icon-public carddav action"></a>
 		<a title="<?php p($l->t('Edit')); ?>" class="icon-rename edit action"></a>
 		<a title="<?php p($l->t('Delete')); ?>" class="icon-delete delete action"></a>
 	</span>
