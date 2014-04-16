@@ -457,4 +457,8 @@ abstract class AbstractBackend {
 			? \OCP\Config::setUserValue($this->userid, 'contacts', $key, $data)
 			: false;
 	}
+
+	public function getSearchProvider($addressbook) {
+	}
+
 }
