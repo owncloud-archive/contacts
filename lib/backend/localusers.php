@@ -98,8 +98,8 @@ class LocalUsers extends AbstractBackend {
     public function getAddressBook($addressBookId, array $options = array()) {
 	$addressbook = array(
 	    "id" => $addressBookId,
-	    "displayname" => self::$l10n->t('On this') . self::$defaults->getName(),
-	    "description" => self::$l10n->t('On this') . self::$defaults->getName(),
+	    "displayname" => (string)self::$l10n->t('On this %s', array(self::$defaults->getName())),
+	    "description" => (string)self::$l10n->t('On this %s', array(self::$defaults->getName())),
 	    "ctag" => time(),
 	    "permissions" => \OCP\PERMISSION_READ,
 	    "backend" => $this->name,
