@@ -56,7 +56,7 @@ class App {
 		'ldap' => 'OCA\Contacts\Backend\Ldap',
 		'local' => 'OCA\Contacts\Backend\Database',
 		'shared' => 'OCA\Contacts\Backend\Shared',
-		'localusers' => 'OCA\Contacts\Backend\LocalUsers',
+		//'localusers' => 'OCA\Contacts\Backend\LocalUsers',
 	);
 
 	public function __construct(
@@ -152,7 +152,7 @@ class App {
 		if (!$info) {
 			throw new \Exception(self::$l10n->t('Address book not found'), 404);
 		}
-		
+
 		$addressBook = new AddressBook($backend, $info);
 		self::$addressBooks[] = $addressBook;
 		return $addressBook;

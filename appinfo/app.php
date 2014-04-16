@@ -10,6 +10,8 @@
 namespace OCA\Contacts;
 
 use \OC\AppFramework\Core\API;
+use \OCA\Contacts\Backend\LocalUsers;
+use \OCA\Contacts\LocalUsersAddressbookProvider;
 
 //require_once __DIR__ . '/../lib/controller/pagecontroller.php';
 \Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
@@ -67,5 +69,11 @@ if (\OCP\User::isLoggedIn()) {
 			\OCP\Contacts::registerAddressBook(new AddressbookProvider($addressBook));
 		}
 	}
+
+	$localUsers = new LocalUsers();
+	$addressbook = $localUsers->getAddressBooksForUser();
+	$provider = new LocalUsersAddressbookProvider($addressbook, $localUsers);
+	\OCP\Contacts::registerAddressBook($provider);
+
 }
 
