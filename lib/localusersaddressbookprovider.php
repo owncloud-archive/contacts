@@ -8,45 +8,46 @@ use OCA\Contacts\Backend\LocalUsers;
 
 class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 
-    /**
-     * The table that holds the address books.
-     * For every user there is *1* addressbook.
-     * @var string
-     */
-    private $addressBooksTableName = '*PREFIX*contacts_ocu_addressbooks';
+	/**
+	 * The table that holds the address books.
+	 * For every user there is *1* addressbook.
+	 * @var string
+	 */
+	private $addressBooksTableName = '*PREFIX*contacts_ocu_addressbooks';
 
-    /**
-     * The table that holds the contacts.
-     * @var string
-     */
-    private $cardsTableName = '*PREFIX*contacts_ocu_cards';
-    
-    /**
-     * The table that holds the properties of the contacts.
-     * This is used to provice a search function.
-     * @var string
-     */
-    private $indexTableName = '*PREFIX*contacts_ocu_cards_properties';
-    
-    /**
-     * @var LocalUsers 
-     */
-    private $backend;
-    
-    public function __construct(LocalUsers $backend){
-	$this->backend = $backend;
-    }
-    
-    /**
-    * @param $pattern
-    * @param $searchProperties
-    * @param $options
-    * @return array|false
-    */
-    public function search($pattern, $searchProperties, $options) {
+	/**
+	 * The table that holds the contacts.
+	 * @var string
+	 */
+	private $cardsTableName = '*PREFIX*contacts_ocu_cards';
+
+	/**
+	 * The table that holds the properties of the contacts.
+	 * This is used to provice a search function.
+	 * @var string
+	 */
+	private $indexTableName = '*PREFIX*contacts_ocu_cards_properties';
+
+	/**
+	 * @var LocalUsers
+	 */
+	private $backend;
+
+	public function __construct($addressbook, LocalUsers $backend){
+		$this->addressbook = $addressbook;
+		$this->backend = $backend;
+	}
+
+	/**
+	* @param $pattern
+	* @param $searchProperties
+	* @param $options
+	* @return array|false
+	*/
+	public function search($pattern, $searchProperties, $options) {
 	// First make sure the database is updated
 	$this->backend->updateDatabase();
-	
+
 	$ids = array();
 	$results = array();
 	$query = 'SELECT DISTINCT `contactid` FROM `' . $this->indexTableName . '` WHERE (';
@@ -71,55 +72,55 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 	}
 
 	if(count($ids) > 0) {
-		$query = 'SELECT `' . $this->cardsTableName . '`.`addressbookid`, `' . $this->indexTableName . '`.`contactid`, `' 
-			. $this->indexTableName . '`.`name`, `' . $this->indexTableName . '`.`value` FROM `' 
+		$query = 'SELECT `' . $this->cardsTableName . '`.`addressbookid`, `' . $this->indexTableName . '`.`contactid`, `'
+			. $this->indexTableName . '`.`name`, `' . $this->indexTableName . '`.`value` FROM `'
 			. $this->indexTableName . '`,`' . $this->cardsTableName . '` WHERE `'
 			. $this->cardsTableName . '`.`addressbookid` = \'' . \OCP\User::getUser() . '\' AND `'
-			. $this->indexTableName . '`.`contactid` = `' . $this->cardsTableName . '`.`id` AND `' 
+			. $this->indexTableName . '`.`contactid` = `' . $this->cardsTableName . '`.`id` AND `'
 			. $this->indexTableName . '`.`contactid` IN (' . join(',', array_fill(0, count($ids), '?')) . ')';
-		
+
 		$stmt = \OCP\DB::prepare($query);
 		$result = $stmt->execute($ids);
 	}
-	
+
 	while( $row = $result->fetchRow()) {
-	    $this->getProperty($results, $row);
+		$this->getProperty($results, $row);
 	}
 	return $results;
-    }
-    
-    public function getKey(){
-	
-    }
+	}
 
-    /**
-    * In comparison to getKey() this function returns a human readable (maybe translated) name
-    * @return mixed
-    */
-    public function getDisplayName(){
+	public function getKey(){
+		return "localusers:" . \OCP\User::getUser();
+	}
+
+	/**
+	* In comparison to getKey() this function returns a human readable (maybe translated) name
+	* @return mixed
+	*/
+	public function getDisplayName(){
 
 }
 
-    public function createOrUpdate($properties){
-	
-    }
-    
-    /**
-    * @return mixed
-    */
-    public function getPermissions(){
-	
-    }
+	public function createOrUpdate($properties){
 
-    /**
-    * @param object $id the unique identifier to a contact
-    * @return bool successful or not
-    */
-    public function delete($id){
-	 
-    }
-    
-    private function getProperty(&$results, $row) {
+	}
+
+	/**
+	* @return mixed
+	*/
+	public function getPermissions(){
+
+	}
+
+	/**
+	* @param object $id the unique identifier to a contact
+	* @return bool successful or not
+	*/
+	public function delete($id){
+
+	}
+
+	private function getProperty(&$results, $row) {
 		if(!$row['name'] || !$row['value']) {
 			return false;
 		}
@@ -142,7 +143,7 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 				$value = $value = strtr($row['value'], array('\,' => ',', '\;' => ';'));
 				break;
 		}
-		
+
 		if(in_array($row['name'], Properties::$multiProperties)) {
 			if(!isset($results[$row['contactid']])) {
 				$results[$row['contactid']] = array('id' => $row['contactid'], $row['name'] => array($value));
