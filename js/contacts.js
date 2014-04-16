@@ -1209,7 +1209,7 @@ OC.Contacts = OC.Contacts || {};
 			return false;
 		});
 		
-		if(this.getOwner() === OC.currentUser && groupprops.groups.length > 0) {
+		if(this.getOwner() === OC.currentUser && groupprops.groups.length > 0 && this.getBackend() === 'local') {
 			this._buildGroupSelect(groupprops.groups);
 		} else {
 			this.$fullelem.find('.groupscontainer').hide();
