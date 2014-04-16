@@ -23,9 +23,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-09 00:49-0400\n"
-"PO-Revision-Date: 2014-04-08 18:10+0000\n"
-"Last-Translator: AsavarTzeth <asavartzeth@gmail.com>\n"
+"POT-Creation-Date: 2014-04-16 00:49-0400\n"
+"PO-Revision-Date: 2014-04-16 04:49+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,43 +33,43 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:106
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: js/addressbooks.js:83 js/groups.js:519
+#: js/addressbooks.js:89 js/groups.js:519
 msgid "Save"
 msgstr "Spara"
 
-#: js/addressbooks.js:306
+#: js/addressbooks.js:312
 msgid "Starting file import"
 msgstr "Startar fil import"
 
-#: js/addressbooks.js:310 js/addressbooks.js:338
+#: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
 msgstr "Format valt: {format}"
 
-#: js/addressbooks.js:313 js/addressbooks.js:341
+#: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
 msgstr "Automatisk detektering av format"
 
-#: js/addressbooks.js:391
+#: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
 msgstr "Bearbetar {count}/{total} kort"
 
-#: js/addressbooks.js:415
+#: js/addressbooks.js:421
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
 msgstr "Totalt:{total}, Lyckades:{imported}, Fel:{failed}"
 
-#: js/addressbooks.js:569
+#: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
 msgstr "En adressbok vid namn {name} finns redan"
 
-#: js/addressbooks.js:603
+#: js/addressbooks.js:609
 msgid "Failed adding address book: {error}"
 msgstr "Kan inte lägga till adressbok: {error}"
 
-#: js/addressbooks.js:644
+#: js/addressbooks.js:650
 msgid "Failed loading address books: {error}"
 msgstr "Misslyckades ladda adressböcker: {error}"
 
@@ -121,7 +121,7 @@ msgstr "Sammanslagning misslyckades: Fel vid sparande av kontakt."
 msgid "Select photo"
 msgstr "Välj foto"
 
-#: js/app.js:705 js/app.js:1675
+#: js/app.js:705 js/app.js:1679
 msgid "Network or server error. Please inform administrator."
 msgstr "Nätverk eller serverfel. Informera administratören."
 
@@ -172,11 +172,11 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr "Kunde inte hitta kontakt: {id}"
 
-#: js/app.js:1630
+#: js/app.js:1634
 msgid "Edit profile picture"
 msgstr "Anpassa profilbild"
 
-#: js/app.js:1634
+#: js/app.js:1638
 msgid "Crop photo"
 msgstr "Beskär bild"
 
@@ -196,17 +196,17 @@ msgstr "Fel uppstod under inläsning av födelsedag {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Backend saknar stöd för multi-byte tecken."
 
-#: js/contacts.js:2222
+#: js/contacts.js:2227
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Vissa kontakter är markerade för radering, men är inte raderade än. Vänta tills att de har raderats."
 
-#: js/contacts.js:2233
+#: js/contacts.js:2238
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klicka för att ångra radering av {num} kontakter"
 
-#: js/contacts.js:2242
+#: js/contacts.js:2247
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Avbruten radering av {num} kontakter"
 
@@ -357,9 +357,13 @@ msgstr "Gränssnittet för denna adressbok saknar stöd för uppdateringar"
 msgid "You don't have permissions to delete the address book."
 msgstr "Du saknar behörighet att ta bort adressboken."
 
-#: lib/app.php:152
+#: lib/app.php:153
 msgid "Address book not found"
 msgstr "Kan inte hitta adressboken."
+
+#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
+msgid "On this"
+msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
@@ -393,49 +397,49 @@ msgstr "Okänt IM:"
 msgid "{name}'s Birthday"
 msgstr "{name}'s födelsedag"
 
-#: lib/controller/addressbookcontroller.php:163
+#: lib/controller/addressbookcontroller.php:175
 msgid "Error creating address book"
 msgstr "Fel vid skapandet av adressbok"
 
-#: lib/controller/addressbookcontroller.php:195
+#: lib/controller/addressbookcontroller.php:207
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "\"%s\"  backend saknar stöd för att ta bort adressböcker"
 
-#: lib/controller/addressbookcontroller.php:203
+#: lib/controller/addressbookcontroller.php:215
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Du har inte behörighet att radera \"%s\" adressbok"
 
-#: lib/controller/addressbookcontroller.php:210
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting address book"
 msgstr "Fel när adressbok skulle raderas"
 
-#: lib/controller/addressbookcontroller.php:250
+#: lib/controller/addressbookcontroller.php:262
 msgid "Error creating contact."
 msgstr "Fel vid skapandet av kontakt"
 
-#: lib/controller/addressbookcontroller.php:259
+#: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
 msgstr "Fel vid skapandet av kontakt"
 
-#: lib/controller/addressbookcontroller.php:291
+#: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
 msgstr "Fel när kontakt skulle raderas"
 
-#: lib/controller/addressbookcontroller.php:331
+#: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
 msgstr "Fel när kontakt skulle hämtas"
 
-#: lib/controller/addressbookcontroller.php:342
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
 msgstr "Fel vid sparande av kontakt"
 
-#: lib/controller/addressbookcontroller.php:348
+#: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
 msgstr "Fel vid borttagning av kontakt från den andra adressboken."
 
-#: lib/controller/addressbookcontroller.php:355
+#: lib/controller/addressbookcontroller.php:367
 msgid "Error getting moved contact"
 msgstr "Fel vid flytt av kontakt"
 

@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-15 00:48-0400\n"
-"PO-Revision-Date: 2014-04-14 05:00+0000\n"
-"Last-Translator: pstast <petr@stastny.eu>\n"
+"POT-Creation-Date: 2014-04-16 00:49-0400\n"
+"PO-Revision-Date: 2014-04-16 04:49+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,43 +28,43 @@ msgstr ""
 "Language: cs_CZ\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: appinfo/app.php:38 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:106
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: js/addressbooks.js:83 js/groups.js:519
+#: js/addressbooks.js:89 js/groups.js:519
 msgid "Save"
 msgstr "Uložit"
 
-#: js/addressbooks.js:306
+#: js/addressbooks.js:312
 msgid "Starting file import"
 msgstr "Zahajuje se import souboru"
 
-#: js/addressbooks.js:310 js/addressbooks.js:338
+#: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
 msgstr "Zvolený formát: {format}"
 
-#: js/addressbooks.js:313 js/addressbooks.js:341
+#: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
 msgstr "Automatická detekce formátu"
 
-#: js/addressbooks.js:391
+#: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
 msgstr "Zpracovávání {count}/{total} karet"
 
-#: js/addressbooks.js:415
+#: js/addressbooks.js:421
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
 msgstr "Celkem:{total}, Úspěšně:{imported}, Chyby:{failed}"
 
-#: js/addressbooks.js:569
+#: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
 msgstr "Adresář kontaktů s názvem {name} již existuje"
 
-#: js/addressbooks.js:603
+#: js/addressbooks.js:609
 msgid "Failed adding address book: {error}"
 msgstr "Přidání adresáře kontaktů selhalo: {error}"
 
-#: js/addressbooks.js:644
+#: js/addressbooks.js:650
 msgid "Failed loading address books: {error}"
 msgstr "Načtení adresářů kontaktů selhalo: {error}"
 
@@ -191,17 +191,17 @@ msgstr "Chyba parsování narozenin {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Úložiště nepodporuje více-bajtové znaky."
 
-#: js/contacts.js:2224
+#: js/contacts.js:2227
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Některé kontakty jsou označeny ke smazání, ale ještě smazány nejsou. Počkejte, prosím, na dokončení operace."
 
-#: js/contacts.js:2235
+#: js/contacts.js:2238
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikněte pro navrácení smazání {num} kontaktů"
 
-#: js/contacts.js:2244
+#: js/contacts.js:2247
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Smazání {num} kontaktů zrušeno"
 
@@ -352,9 +352,13 @@ msgstr "Úložiště tohoto adresáře kontaktů nepodporuje změnu kontaktů"
 msgid "You don't have permissions to delete the address book."
 msgstr "Nemáte oprávnění pro mazání v adresáři kontaktů"
 
-#: lib/app.php:152
+#: lib/app.php:153
 msgid "Address book not found"
 msgstr "Adresář kontaktů nenalezen"
+
+#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
+msgid "On this"
+msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"

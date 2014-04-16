@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-09 00:49-0400\n"
-"PO-Revision-Date: 2014-04-08 20:00+0000\n"
-"Last-Translator: Iñigo Varela <ivarela@softastur.org>\n"
+"POT-Creation-Date: 2014-04-16 00:49-0400\n"
+"PO-Revision-Date: 2014-04-16 04:49+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/owncloud/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,43 +18,43 @@ msgstr ""
 "Language: ast\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:106
 msgid "Contacts"
 msgstr "Contautos"
 
-#: js/addressbooks.js:83 js/groups.js:519
+#: js/addressbooks.js:89 js/groups.js:519
 msgid "Save"
 msgstr "Guardar"
 
-#: js/addressbooks.js:306
+#: js/addressbooks.js:312
 msgid "Starting file import"
 msgstr "Aniciando la importación de ficheros"
 
-#: js/addressbooks.js:310 js/addressbooks.js:338
+#: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
 msgstr "Formatu escoyíu: {format}"
 
-#: js/addressbooks.js:313 js/addressbooks.js:341
+#: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
 msgstr "Deteición automática de formatu"
 
-#: js/addressbooks.js:391
+#: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
 msgstr "Procesando {count}/{total} tarxetes"
 
-#: js/addressbooks.js:415
+#: js/addressbooks.js:421
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
 msgstr "Total:{total}, válides:{imported}, fallos:{failed}"
 
-#: js/addressbooks.js:569
+#: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
 msgstr "Yá esiste una llibreta de contautos denomada {name}"
 
-#: js/addressbooks.js:603
+#: js/addressbooks.js:609
 msgid "Failed adding address book: {error}"
 msgstr "Hebo un fallu al amestar la llibreta de contautos: {error}"
 
-#: js/addressbooks.js:644
+#: js/addressbooks.js:650
 msgid "Failed loading address books: {error}"
 msgstr "Hebo un fallu al cargar les llibretes de contautos: {error}"
 
@@ -106,7 +106,7 @@ msgstr "Combinación fallida. Fallu guardando'l contautu."
 msgid "Select photo"
 msgstr "Esbillar una semeya"
 
-#: js/app.js:705 js/app.js:1675
+#: js/app.js:705 js/app.js:1679
 msgid "Network or server error. Please inform administrator."
 msgstr "Fallu na rede o nel sirvidor. Por favor, informa al alministrador."
 
@@ -157,11 +157,11 @@ msgstr "Aceutar"
 msgid "Could not find contact: {id}"
 msgstr "Nun pue atopase'l contautu: {id}"
 
-#: js/app.js:1630
+#: js/app.js:1634
 msgid "Edit profile picture"
 msgstr "Editar imaxe de perfil."
 
-#: js/app.js:1634
+#: js/app.js:1638
 msgid "Crop photo"
 msgstr "Recortar imaxe"
 
@@ -181,17 +181,17 @@ msgstr "Fallu al analizar la data de nacencia {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "El backend nun permite caráuteres multi-byte."
 
-#: js/contacts.js:2222
+#: js/contacts.js:2227
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Dellos contautos tán marcaos pa desaniciar, pero entá nun se desaniciaron. Por favor, espere a que se desanicien."
 
-#: js/contacts.js:2233
+#: js/contacts.js:2238
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Calca pa desfacer el desaniciu de {num} contautos"
 
-#: js/contacts.js:2242
+#: js/contacts.js:2247
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Encaboxáu'l desaniciu de {num} contautos"
 
@@ -342,9 +342,13 @@ msgstr "El backend d'esta llibreta de direiciones nun permite anovamientos"
 msgid "You don't have permissions to delete the address book."
 msgstr "Nun tienes permisos pa desaniciar esta llibreta de direiciones."
 
-#: lib/app.php:152
+#: lib/app.php:153
 msgid "Address book not found"
 msgstr "Nun s'atoparon llibretes de direiciones."
+
+#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
+msgid "On this"
+msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
@@ -378,49 +382,49 @@ msgstr "Serviciu IM desconocíu:"
 msgid "{name}'s Birthday"
 msgstr "Cumpleaños de {name}"
 
-#: lib/controller/addressbookcontroller.php:163
+#: lib/controller/addressbookcontroller.php:175
 msgid "Error creating address book"
 msgstr "Fallu creando llibreta de direiciones"
 
-#: lib/controller/addressbookcontroller.php:195
+#: lib/controller/addressbookcontroller.php:207
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "El backend \"%s\" nun permite desaniciar llibretes de direiciones"
 
-#: lib/controller/addressbookcontroller.php:203
+#: lib/controller/addressbookcontroller.php:215
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Nun tienes los permisos necesarios pa desaniciar la llibreta de direiciones \"%s\""
 
-#: lib/controller/addressbookcontroller.php:210
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting address book"
 msgstr "Fallu desaniciando llibreta de direiciones"
 
-#: lib/controller/addressbookcontroller.php:250
+#: lib/controller/addressbookcontroller.php:262
 msgid "Error creating contact."
 msgstr "Fallu creando contautu."
 
-#: lib/controller/addressbookcontroller.php:259
+#: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
 msgstr "Fallu al crear contautu"
 
-#: lib/controller/addressbookcontroller.php:291
+#: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
 msgstr "Fallu al desaniciar contautu"
 
-#: lib/controller/addressbookcontroller.php:331
+#: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
 msgstr "Fallu al recuperar contautu"
 
-#: lib/controller/addressbookcontroller.php:342
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
 msgstr "Fallu al guardar contautu"
 
-#: lib/controller/addressbookcontroller.php:348
+#: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
 msgstr "Fallu desaniciando contautu dende otra llibreta de direiciones."
 
-#: lib/controller/addressbookcontroller.php:355
+#: lib/controller/addressbookcontroller.php:367
 msgid "Error getting moved contact"
 msgstr "Fallu al obtener contautu movíu"
 

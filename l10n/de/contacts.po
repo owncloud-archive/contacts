@@ -42,9 +42,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-11 00:48-0400\n"
-"PO-Revision-Date: 2014-04-10 18:20+0000\n"
-"Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
+"POT-Creation-Date: 2014-04-16 00:49-0400\n"
+"PO-Revision-Date: 2014-04-16 04:49+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: German (http://www.transifex.com/projects/p/owncloud/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,43 +52,43 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:106
 msgid "Contacts"
 msgstr "Kontakte"
 
-#: js/addressbooks.js:83 js/groups.js:519
+#: js/addressbooks.js:89 js/groups.js:519
 msgid "Save"
 msgstr "Speichern"
 
-#: js/addressbooks.js:306
+#: js/addressbooks.js:312
 msgid "Starting file import"
 msgstr "Beginne Datei-Import"
 
-#: js/addressbooks.js:310 js/addressbooks.js:338
+#: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
 msgstr "Ausgewähltes Format: {format}"
 
-#: js/addressbooks.js:313 js/addressbooks.js:341
+#: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
 msgstr "Automatische Format-Erkennung"
 
-#: js/addressbooks.js:391
+#: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
 msgstr "Bearbeite {count}/{total} Visitenkarten"
 
-#: js/addressbooks.js:415
+#: js/addressbooks.js:421
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
 msgstr "Insgesamt: {total}, Erfolgreich: {imported}, Fehler {failed}"
 
-#: js/addressbooks.js:569
+#: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
 msgstr "Ein Adressbuch mit dem Namen {name} ist schon vorhanden"
 
-#: js/addressbooks.js:603
+#: js/addressbooks.js:609
 msgid "Failed adding address book: {error}"
 msgstr "Fehler beim Hinzufügen des Adressbuchs: {error}"
 
-#: js/addressbooks.js:644
+#: js/addressbooks.js:650
 msgid "Failed loading address books: {error}"
 msgstr "Fehler beim Laden von Adressbüchern: {error}"
 
@@ -215,17 +215,17 @@ msgstr "Fehler beim Analysieren des Geburtstages {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Das Backend unterstüzt keine Multibyte-Zeichen."
 
-#: js/contacts.js:2224
+#: js/contacts.js:2227
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Einige zum Löschen vorgemerkte Kontakte wurden noch nicht gelöscht. Bitte warten."
 
-#: js/contacts.js:2235
+#: js/contacts.js:2238
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klicken um das Löschen von {num} Kontakten rückgängig zu machen."
 
-#: js/contacts.js:2244
+#: js/contacts.js:2247
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Die Löschung von {num} Kontakten wurde abgebrochen"
 
@@ -376,9 +376,13 @@ msgstr "Das Backend für dieses Adressbuch unterstützt keine Aktualisierung."
 msgid "You don't have permissions to delete the address book."
 msgstr "Du besitzt nicht die Berechtigungen, dieses Adressbuch zu löschen."
 
-#: lib/app.php:152
+#: lib/app.php:153
 msgid "Address book not found"
 msgstr "Adressbuch nicht gefunden."
+
+#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
+msgid "On this"
+msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
@@ -412,49 +416,49 @@ msgstr "IM unbekannt:"
 msgid "{name}'s Birthday"
 msgstr "Geburtstag von {name}"
 
-#: lib/controller/addressbookcontroller.php:163
+#: lib/controller/addressbookcontroller.php:175
 msgid "Error creating address book"
 msgstr "Fehler beim Anlegen eines Adressbuches."
 
-#: lib/controller/addressbookcontroller.php:195
+#: lib/controller/addressbookcontroller.php:207
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "Das \"%s\"-Backend unterstüzt das Löschen von Adressbüchern nicht."
 
-#: lib/controller/addressbookcontroller.php:203
+#: lib/controller/addressbookcontroller.php:215
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Du hast nicht die erforderlichen Rechte, das \"%s\" Adressbuch zu löschen"
 
-#: lib/controller/addressbookcontroller.php:210
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting address book"
 msgstr "Fehler beim Löschen eines Adressbuches."
 
-#: lib/controller/addressbookcontroller.php:250
+#: lib/controller/addressbookcontroller.php:262
 msgid "Error creating contact."
 msgstr "Fehler beim Anlegen eines Kontakts."
 
-#: lib/controller/addressbookcontroller.php:259
+#: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
 msgstr "Fehler beim Erstellen des Kontaktes"
 
-#: lib/controller/addressbookcontroller.php:291
+#: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
 msgstr "Fehler beim Löschen des Kontaktes"
 
-#: lib/controller/addressbookcontroller.php:331
+#: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
 msgstr "Fehler beim Abrufen des Kontaktes"
 
-#: lib/controller/addressbookcontroller.php:342
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
 msgstr "Fehler beim Speichern des Kontaktes"
 
-#: lib/controller/addressbookcontroller.php:348
+#: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
 msgstr "Fehler beim Entfernen des Kontakts aus einem anderen Adressbuch."
 
-#: lib/controller/addressbookcontroller.php:355
+#: lib/controller/addressbookcontroller.php:367
 msgid "Error getting moved contact"
 msgstr "Fehler beim Verschieben des Kontaktes"
 

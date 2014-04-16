@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-08 00:50-0400\n"
-"PO-Revision-Date: 2014-04-08 04:50+0000\n"
+"POT-Creation-Date: 2014-04-16 00:49-0400\n"
+"PO-Revision-Date: 2014-04-16 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -25,43 +25,43 @@ msgstr ""
 "Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: appinfo/app.php:38 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:106
 msgid "Contacts"
 msgstr "コンタクト"
 
-#: js/addressbooks.js:83 js/groups.js:519
+#: js/addressbooks.js:89 js/groups.js:519
 msgid "Save"
 msgstr "保存"
 
-#: js/addressbooks.js:306
+#: js/addressbooks.js:312
 msgid "Starting file import"
 msgstr ""
 
-#: js/addressbooks.js:310 js/addressbooks.js:338
+#: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
 msgstr ""
 
-#: js/addressbooks.js:313 js/addressbooks.js:341
+#: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
 msgstr ""
 
-#: js/addressbooks.js:391
+#: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
 msgstr ""
 
-#: js/addressbooks.js:415
+#: js/addressbooks.js:421
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
 msgstr ""
 
-#: js/addressbooks.js:569
+#: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
 msgstr "{name} という名前のアドレス帳はすでに存在します"
 
-#: js/addressbooks.js:603
+#: js/addressbooks.js:609
 msgid "Failed adding address book: {error}"
 msgstr "アドレス帳の追加に失敗: {error}"
 
-#: js/addressbooks.js:644
+#: js/addressbooks.js:650
 msgid "Failed loading address books: {error}"
 msgstr "アドレス帳の読み込みに失敗: {error}"
 
@@ -113,7 +113,7 @@ msgstr "マージに失敗しました。連絡先の保存エラー。"
 msgid "Select photo"
 msgstr "写真を選択"
 
-#: js/app.js:705 js/app.js:1675
+#: js/app.js:705 js/app.js:1679
 msgid "Network or server error. Please inform administrator."
 msgstr "ネットワークもしくはサーバーエラーです。管理者に連絡してください。"
 
@@ -164,11 +164,11 @@ msgstr "OK"
 msgid "Could not find contact: {id}"
 msgstr "連絡先が見つかりませんでした: {id}"
 
-#: js/app.js:1630
+#: js/app.js:1634
 msgid "Edit profile picture"
 msgstr "プロフィール写真を編集"
 
-#: js/app.js:1634
+#: js/app.js:1638
 msgid "Crop photo"
 msgstr "フォトをトリミング"
 
@@ -188,17 +188,17 @@ msgstr "誕生日 {bday} の解析エラー"
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2222
+#: js/contacts.js:2227
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一部の連絡先が削除対象としてマークされていますが、まだ削除されていません。削除されるまでお待ちください。"
 
-#: js/contacts.js:2233
+#: js/contacts.js:2238
 msgid "Click to undo deletion of {num} contacts"
 msgstr "クリックして {num} 個の連絡先の削除を取り消す"
 
-#: js/contacts.js:2242
+#: js/contacts.js:2247
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num}件の連絡先の削除がキャンセルされました"
 
@@ -349,9 +349,13 @@ msgstr "このアドレス帳のバックエンドは更新をサポートして
 msgid "You don't have permissions to delete the address book."
 msgstr "アドレス帳を削除する権限がありません。"
 
-#: lib/app.php:152
+#: lib/app.php:153
 msgid "Address book not found"
 msgstr "アドレス帳が見つかりません"
+
+#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
+msgid "On this"
+msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
@@ -385,49 +389,49 @@ msgstr "不明なIM:"
 msgid "{name}'s Birthday"
 msgstr "{name}の誕生日"
 
-#: lib/controller/addressbookcontroller.php:163
+#: lib/controller/addressbookcontroller.php:175
 msgid "Error creating address book"
 msgstr "アドレス帳の作成エラー"
 
-#: lib/controller/addressbookcontroller.php:195
+#: lib/controller/addressbookcontroller.php:207
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "\"%s\" のバックエンドはアドレスブックの削除をサポートしていません"
 
-#: lib/controller/addressbookcontroller.php:203
+#: lib/controller/addressbookcontroller.php:215
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "アドレス帳 \"%s\" を削除する権限がありません"
 
-#: lib/controller/addressbookcontroller.php:210
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting address book"
 msgstr "アドレス帳の削除エラー"
 
-#: lib/controller/addressbookcontroller.php:250
+#: lib/controller/addressbookcontroller.php:262
 msgid "Error creating contact."
 msgstr "連絡先の作成エラー。"
 
-#: lib/controller/addressbookcontroller.php:259
+#: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
 msgstr "連絡先の作成エラー"
 
-#: lib/controller/addressbookcontroller.php:291
+#: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
 msgstr "連絡先の削除エラー"
 
-#: lib/controller/addressbookcontroller.php:331
+#: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
 msgstr "連絡先の取得エラー"
 
-#: lib/controller/addressbookcontroller.php:342
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
 msgstr "連絡先の保存エラー"
 
-#: lib/controller/addressbookcontroller.php:348
+#: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
 msgstr "他のアドレス帳からの連絡先の削除エラー"
 
-#: lib/controller/addressbookcontroller.php:355
+#: lib/controller/addressbookcontroller.php:367
 msgid "Error getting moved contact"
 msgstr "連絡先の移動取得エラー"
 

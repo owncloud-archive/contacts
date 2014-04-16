@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-08 00:50-0400\n"
-"PO-Revision-Date: 2014-04-08 04:50+0000\n"
+"POT-Creation-Date: 2014-04-16 00:49-0400\n"
+"PO-Revision-Date: 2014-04-16 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -24,43 +24,43 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-#: appinfo/app.php:38 lib/app.php:105
+#: appinfo/app.php:38 lib/app.php:106
 msgid "Contacts"
 msgstr "Stiki"
 
-#: js/addressbooks.js:83 js/groups.js:519
+#: js/addressbooks.js:89 js/groups.js:519
 msgid "Save"
 msgstr "Shrani"
 
-#: js/addressbooks.js:306
+#: js/addressbooks.js:312
 msgid "Starting file import"
 msgstr "Začenjanje uvoza datoteke"
 
-#: js/addressbooks.js:310 js/addressbooks.js:338
+#: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
 msgstr "Izbran zapis: {format}"
 
-#: js/addressbooks.js:313 js/addressbooks.js:341
+#: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
 msgstr "Samodejno zaznavanje zapisa"
 
-#: js/addressbooks.js:391
+#: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
 msgstr "Obdelava {count}/{total} kartic"
 
-#: js/addressbooks.js:415
+#: js/addressbooks.js:421
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
 msgstr "Skupaj:{total}, od tega {imported} uspešno uvoženih in {failed} napak."
 
-#: js/addressbooks.js:569
+#: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
 msgstr "Imenik z imenom {name} že obstaja"
 
-#: js/addressbooks.js:603
+#: js/addressbooks.js:609
 msgid "Failed adding address book: {error}"
 msgstr "Dodajanje imenika je spodletelo: {error}"
 
-#: js/addressbooks.js:644
+#: js/addressbooks.js:650
 msgid "Failed loading address books: {error}"
 msgstr "Nalaganje imenikov je spodletelo: {error}"
 
@@ -112,7 +112,7 @@ msgstr "Združevanje je spodletelo. Prišlo je do napake med shranjevanjem stika
 msgid "Select photo"
 msgstr "Izbor slike"
 
-#: js/app.js:705 js/app.js:1675
+#: js/app.js:705 js/app.js:1679
 msgid "Network or server error. Please inform administrator."
 msgstr "Napaka omrežja ali strežnika. Pošljite obvestilo skrbniku sistema."
 
@@ -163,11 +163,11 @@ msgstr "V redu"
 msgid "Could not find contact: {id}"
 msgstr "Stika ni mogoče najti: {id}"
 
-#: js/app.js:1630
+#: js/app.js:1634
 msgid "Edit profile picture"
 msgstr "Uredi fotografijo profila"
 
-#: js/app.js:1634
+#: js/app.js:1638
 msgid "Crop photo"
 msgstr "Obreži sliko"
 
@@ -187,17 +187,17 @@ msgstr "Ni mogoče razčleniti rojstnega dne {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Ozadnji program ne podpira večbitnih znakov."
 
-#: js/contacts.js:2222
+#: js/contacts.js:2227
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Nekateri stiki so označeni za izbris, vendar še niso izbrisani. Počakajte na dokončanje opravila."
 
-#: js/contacts.js:2233
+#: js/contacts.js:2238
 msgid "Click to undo deletion of {num} contacts"
 msgstr "S klikom bodo povrnjeni izbrisani stiki ({num})"
 
-#: js/contacts.js:2242
+#: js/contacts.js:2247
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Preklican izbris {num} stikov"
 
@@ -348,9 +348,13 @@ msgstr "Zaledje tega imenika ne omogoča posodobitev"
 msgid "You don't have permissions to delete the address book."
 msgstr "Ni ustreznih dovoljenj za brisanje imenika."
 
-#: lib/app.php:152
+#: lib/app.php:153
 msgid "Address book not found"
 msgstr "Imenika ni mogoče najti"
+
+#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
+msgid "On this"
+msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
@@ -384,49 +388,49 @@ msgstr "Neznan IM:"
 msgid "{name}'s Birthday"
 msgstr "{name} - rojstni dan"
 
-#: lib/controller/addressbookcontroller.php:163
+#: lib/controller/addressbookcontroller.php:175
 msgid "Error creating address book"
 msgstr "Napaka med ustvarjanjem imenika"
 
-#: lib/controller/addressbookcontroller.php:195
+#: lib/controller/addressbookcontroller.php:207
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
 msgstr "Ozadnji program \"%s\" ne podpira brisanja imenika"
 
-#: lib/controller/addressbookcontroller.php:203
+#: lib/controller/addressbookcontroller.php:215
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
 msgstr "Ni ustreznih dovoljenj za brisanje imenika \"%s\""
 
-#: lib/controller/addressbookcontroller.php:210
+#: lib/controller/addressbookcontroller.php:222
 msgid "Error deleting address book"
 msgstr "Napaka med brisanjem imenika"
 
-#: lib/controller/addressbookcontroller.php:250
+#: lib/controller/addressbookcontroller.php:262
 msgid "Error creating contact."
 msgstr "Napaka med ustvarjanjem stika."
 
-#: lib/controller/addressbookcontroller.php:259
+#: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
 msgstr "Napaka ustvarjanja stika"
 
-#: lib/controller/addressbookcontroller.php:291
+#: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
 msgstr "Napaka brisanja stika"
 
-#: lib/controller/addressbookcontroller.php:331
+#: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
 msgstr "Napaka pridobivanja stika"
 
-#: lib/controller/addressbookcontroller.php:342
+#: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
 msgstr "Napaka shranjevanja stika"
 
-#: lib/controller/addressbookcontroller.php:348
+#: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
 msgstr "Prišlo je do napake med odstranjevanjem stika iz drugega imenika."
 
-#: lib/controller/addressbookcontroller.php:355
+#: lib/controller/addressbookcontroller.php:367
 msgid "Error getting moved contact"
 msgstr "Napaka pridobivanja premaknjenega stika"
 
