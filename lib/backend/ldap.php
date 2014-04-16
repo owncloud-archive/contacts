@@ -258,7 +258,6 @@ class Ldap extends AbstractBackend {
 	public function getAddressBooksForUser(array $options = array()) {
 		$addressbookidList = $this->getAddressbookList();
 		foreach($addressbookidList as $addressbookid) {
-			//error_log(__METHOD__." am i here ? ".$addressbookid);
 			$this->addressbooks[] = self::getAddressBook($addressbookid);
 		}
 		return $this->addressbooks;
@@ -476,7 +475,6 @@ class Ldap extends AbstractBackend {
 	 * @return array
 	 */
 	public function getContacts($addressbookid, array $options = array()) {
-		//error_log("was here ".__METHOD__);
 		$backtrace = debug_backtrace();
 		$trace=array();
 		foreach ($backtrace as $elt) {
@@ -486,7 +484,6 @@ class Ldap extends AbstractBackend {
 				}
 			}
 		}
-		//error_log(__METHOD__." ".print_r($trace,1));
 		
 		$cards = array();
 		$vcards = array();
@@ -510,7 +507,6 @@ class Ldap extends AbstractBackend {
 					isset($options['limit']) ? $options['limit'] : null
 				);
 				for ($i=0; $i<$info["count"]; $i++) {
-					//error_log(print_r($info[$i], true));
 					$a_card = $this->connector->ldapToVCard($info[$i]);
 					$cards[] = self::getSabreFormatCard($addressbookid, $a_card);
 				}
@@ -538,7 +534,6 @@ class Ldap extends AbstractBackend {
 		
 		$cards = array();
 		$toReturn = false;
-		self::setLdapParams($addressbookid);
 		if (self::setLdapParams($addressbookid)) {
 			foreach ($a_ids as $id) {
 				$cid = str_replace(".vcf", "", $id);
@@ -616,7 +611,6 @@ class Ldap extends AbstractBackend {
 			$generated = "nocn-".rand(0, 65535);
 			$contact->N = $generated;
 			$contact->FN = $generated;
-			//error_log("Generated name: $generated");
 		}
 
 		if(!$contact instanceof VCard) {
@@ -627,7 +621,6 @@ class Ldap extends AbstractBackend {
 				return false;
 			}
 		}
-		//error_log("adding ".$contact->serialize());
 
 		try {
 			$contact->validate(VCard::REPAIR|VCard::UPGRADE);
