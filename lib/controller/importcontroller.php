@@ -16,7 +16,8 @@ use OCA\Contacts\App,
 	Sabre\VObject,
 	OCA\Contacts\VObject\VCard as MyVCard,
 	OCA\Contacts\ImportManager,
-	OCP\IRequest;
+	OCP\IRequest,
+	OCP\ICache;
 
 /**
  * Controller importing contacts
