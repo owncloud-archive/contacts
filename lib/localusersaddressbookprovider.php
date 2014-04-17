@@ -1,125 +1,141 @@
 <?php
+/**
+ * ownCloud - ownCloud users backend for Contacts
+ *
+ * @author Tobia De Koninck
+ * @copyright 2014 Tobia De Koninck (tobia@ledfan.be)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU AFFERO GENERAL PUBLIC LICENSE
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU AFFERO GENERAL PUBLIC LICENSE for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public
+ * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 
 namespace OCA\Contacts;
 
 use OCA\Contacts\Utils\Properties;
 use OCA\Contacts\Backend\LocalUsers;
 
-
 class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 
-    /**
-     * The table that holds the address books.
-     * For every user there is *1* addressbook.
-     * @var string
-     */
-    private $addressBooksTableName = '*PREFIX*contacts_ocu_addressbooks';
+	/**
+	* The table that holds the address books.
+	* For every user there is *1* addressbook.
+	* @var string
+	*/
+	private $addressBooksTableName = '*PREFIX*contacts_ocu_addressbooks';
 
-    /**
-     * The table that holds the contacts.
-     * @var string
-     */
-    private $cardsTableName = '*PREFIX*contacts_ocu_cards';
-    
-    /**
-     * The table that holds the properties of the contacts.
-     * This is used to provice a search function.
-     * @var string
-     */
-    private $indexTableName = '*PREFIX*contacts_ocu_cards_properties';
-    
-    /**
-     * @var LocalUsers 
-     */
-    private $backend;
-    
-    public function __construct(LocalUsers $backend){
-	$this->backend = $backend;
-    }
-    
-    /**
-    * @param $pattern
-    * @param $searchProperties
-    * @param $options
-    * @return array|false
-    */
-    public function search($pattern, $searchProperties, $options) {
-	// First make sure the database is updated
-	$this->backend->updateDatabase();
-	
-	$ids = array();
-	$results = array();
-	$query = 'SELECT DISTINCT `contactid` FROM `' . $this->indexTableName . '` WHERE (';
-	$params = array();
-	foreach($searchProperties as $property) {
-		$params[] = $property;
-		$params[] = '%' . $pattern . '%';
-		$query .= '(`name` = ? AND `value` LIKE ?) OR ';
-	}
-	$query = substr($query, 0, strlen($query) - 4);
-	$query .= ')';
+	/**
+	* The table that holds the contacts.
+	* @var string
+	*/
+	private $cardsTableName = '*PREFIX*contacts_ocu_cards';
 
-	$stmt = \OCP\DB::prepare($query);
-	$result = $stmt->execute($params);
-	if (\OCP\DB::isError($result)) {
-		\OCP\Util::writeLog('contacts', __METHOD__ . 'DB error: ' . \OC_DB::getErrorMessage($result),
-			\OCP\Util::ERROR);
-		return false;
-	}
-	while( $row = $result->fetchRow()) {
-		$ids[] = $row['contactid'];
+	/**
+	* The table that holds the properties of the contacts.
+	* This is used to provice a search function.
+	* @var string
+	*/
+	private $indexTableName = '*PREFIX*contacts_ocu_cards_properties';
+
+	/**
+	* @var LocalUsers
+	*/
+	private $backend;
+
+	public function __construct(LocalUsers $backend) {
+		$this->backend = $backend;
 	}
 
-	if(count($ids) > 0) {
-		$query = 'SELECT `' . $this->cardsTableName . '`.`addressbookid`, `' . $this->indexTableName . '`.`contactid`, `' 
-			. $this->indexTableName . '`.`name`, `' . $this->indexTableName . '`.`value` FROM `' 
-			. $this->indexTableName . '`,`' . $this->cardsTableName . '` WHERE `'
-			. $this->cardsTableName . '`.`addressbookid` = \'' . \OCP\User::getUser() . '\' AND `'
-			. $this->indexTableName . '`.`contactid` = `' . $this->cardsTableName . '`.`id` AND `' 
-			. $this->indexTableName . '`.`contactid` IN (' . join(',', array_fill(0, count($ids), '?')) . ')';
-		
+	/**
+	* @param $pattern
+	* @param $searchProperties
+	* @param $options
+	* @return array|false
+	*/
+	public function search($pattern, $searchProperties, $options) {
+		// First make sure the database is updated
+		$this->backend->updateDatabase();
+
+		$ids = array();
+		$results = array();
+		$query = 'SELECT DISTINCT `contactid` FROM `' . $this->indexTableName . '` WHERE (';
+		$params = array();
+		foreach ($searchProperties as $property) {
+			$params[] = $property;
+			$params[] = '%' . $pattern . '%';
+			$query .= '(`name` = ? AND `value` LIKE ?) OR ';
+		}
+		$query = substr($query, 0, strlen($query) - 4);
+		$query .= ')';
+
 		$stmt = \OCP\DB::prepare($query);
-		$result = $stmt->execute($ids);
+		$result = $stmt->execute($params);
+
+		if (\OCP\DB::isError($result)) {
+			\OCP\Util::writeLog('contacts', __METHOD__ . 'DB error: ' . \OC_DB::getErrorMessage($result),
+				\OCP\Util::ERROR);
+			return false;
+		}
+
+		while ($row = $result->fetchRow()) {
+			$ids[] = $row['contactid'];
+		}
+
+		if (count($ids) > 0) {
+			$query = 'SELECT `' . $this->cardsTableName . '`.`addressbookid`, `' . $this->indexTableName . '`.`contactid`, `'
+				. $this->indexTableName . '`.`name`, `' . $this->indexTableName . '`.`value` FROM `'
+				. $this->indexTableName . '`,`' . $this->cardsTableName . '` WHERE `'
+				. $this->cardsTableName . '`.`addressbookid` = \'' . \OCP\User::getUser() . '\' AND `'
+				. $this->indexTableName . '`.`contactid` = `' . $this->cardsTableName . '`.`id` AND `'
+				. $this->indexTableName . '`.`contactid` IN (' . join(',', array_fill(0, count($ids), '?')) . ')';
+
+			$stmt = \OCP\DB::prepare($query);
+			$result = $stmt->execute($ids);
+		}
+
+		while ($row = $result->fetchRow()) {
+			$this->getProperty($results, $row);
+		}
+		return $results;
 	}
-	
-	while( $row = $result->fetchRow()) {
-	    $this->getProperty($results, $row);
+
+	public function getKey() {
 	}
-	return $results;
-    }
-    
-    public function getKey(){
-	
-    }
 
-    /**
-    * In comparison to getKey() this function returns a human readable (maybe translated) name
-    * @return mixed
-    */
-    public function getDisplayName(){
+	/**
+	* In comparison to getKey() this function returns a human readable (maybe translated) name
+	* @return mixed
+	*/
+	public function getDisplayName() {
+	}
 
-}
+	public function createOrUpdate($properties) {
+	}
 
-    public function createOrUpdate($properties){
-	
-    }
-    
-    /**
-    * @return mixed
-    */
-    public function getPermissions(){
-	
-    }
+	/**
+	* @return mixed
+	*/
+	public function getPermissions() {
+	}
 
-    /**
-    * @param object $id the unique identifier to a contact
-    * @return bool successful or not
-    */
-    public function delete($id){
-	 
-    }
-    
-    private function getProperty(&$results, $row) {
+	/**
+	* @param object $id the unique identifier to a contact
+	* @return bool successful or not
+	*/
+	public function delete($id){
+	}
+
+	private function getProperty(&$results, $row) {
 		if(!$row['name'] || !$row['value']) {
 			return false;
 		}
@@ -143,16 +159,16 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 				break;
 		}
 		
-		if(in_array($row['name'], Properties::$multiProperties)) {
-			if(!isset($results[$row['contactid']])) {
+		if (in_array($row['name'], Properties::$multiProperties)) {
+			if (!isset($results[$row['contactid']])) {
 				$results[$row['contactid']] = array('id' => $row['contactid'], $row['name'] => array($value));
-			} elseif(!isset($results[$row['contactid']][$row['name']])) {
+			} elseif (!isset($results[$row['contactid']][$row['name']])) {
 				$results[$row['contactid']][$row['name']] = array($value);
 			} else {
 				$results[$row['contactid']][$row['name']][] = $value;
 			}
 		} else {
-			if(!isset($results[$row['contactid']])) {
+			if (!isset($results[$row['contactid']])) {
 				$results[$row['contactid']] = array('id' => $row['contactid'], $row['name'] => $value);
 			} elseif(!isset($results[$row['contactid']][$row['name']])) {
 				$results[$row['contactid']][$row['name']] = $value;
