@@ -101,7 +101,8 @@ class LocalUsers extends AbstractBackend {
 			"id" => $addressBookId,
 			"displayname" => (string)self::$l10n->t('On this %s', array(self::$defaults->getName())),
 			"description" => (string)self::$l10n->t('On this %s', array(self::$defaults->getName())),
-			"ctag" => time(),
+			"lastmodified" => time(),
+			/* FIXME: we need on 'owner' here */
 			"permissions" => \OCP\PERMISSION_READ,
 			"backend" => $this->name,
 			"active" => 1
@@ -124,7 +125,7 @@ class LocalUsers extends AbstractBackend {
 			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-				return true;
+				return $contacts;
 			} else {
 				while($row = $result->fetchRow()){
 					$row['permissions'] = \OCP\PERMISSION_READ | \OCP\PERMISSION_UPDATE;
@@ -135,7 +136,7 @@ class LocalUsers extends AbstractBackend {
 		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
 				. $e->getMessage(), \OCP\Util::ERROR);
-			return array();
+			return $contacts;
 		}
 	
 	}
@@ -156,7 +157,7 @@ class LocalUsers extends AbstractBackend {
 			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-				return array();
+				return null;
 			} else {
 				$row = $result->fetchRow();
 				$row['permissions'] = \OCP\PERMISSION_READ | \OCP\PERMISSION_UPDATE;
@@ -165,7 +166,7 @@ class LocalUsers extends AbstractBackend {
 		} catch(\Exception $e) {
 			\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
 			. $e->getMessage(), \OCP\Util::ERROR);
-			return array();
+			return null;
 		}
 	}
 
@@ -182,7 +183,7 @@ class LocalUsers extends AbstractBackend {
 				$sql = 'INSERT INTO ' . $this->cardsTableName . ' ('
 					. 'id, '
 					. 'addressbookid, '
-					. 'fullname, '
+					. 'fullname, ' /* Change to displayname*/
 					. 'carddata, '
 					. 'lastmodified'
 				. ') VALUES ('
@@ -308,8 +309,8 @@ class LocalUsers extends AbstractBackend {
 	* This is a hack so backends can have different search functions.
 	* @return \OCA\Contacts\LocalUsersAddressbookProvider
 	*/
-	public function getSearchProvider(){
-		return new LocalUsersAddressbookProvider($this);
+	public function getSearchProvider($addressBook) {
+		return new LocalUsersAddressbookProvider($addressBook);
 	}
 
 	/**
@@ -408,4 +409,12 @@ class LocalUsers extends AbstractBackend {
 			return true;
 		}
 	}
+
+	/**
+	 * Don't cache
+	 */
+	public function lastModifiedAddressBook($addressBookId) {
+		return time();
+	}
+
 }

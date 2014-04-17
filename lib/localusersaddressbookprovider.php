@@ -52,8 +52,12 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 	*/
 	private $backend;
 
-	public function __construct(LocalUsers $backend) {
-		$this->backend = $backend;
+	/**
+	 * Constructor
+	 * @param AddressBook $addressBook
+	 */
+	public function __construct(AddressBook $addressBook) {
+		$this->addressBook = $addressBook;
 	}
 
 	/**
@@ -64,7 +68,7 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 	*/
 	public function search($pattern, $searchProperties, $options) {
 		// First make sure the database is updated
-		$this->backend->updateDatabase();
+		$this->addressBook->getBackend()->updateDatabase();
 
 		$ids = array();
 		$results = array();
