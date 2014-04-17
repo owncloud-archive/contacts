@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-16 00:49-0400\n"
-"PO-Revision-Date: 2014-04-16 04:49+0000\n"
+"POT-Creation-Date: 2014-04-17 00:49-0400\n"
+"PO-Revision-Date: 2014-04-17 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/projects/p/owncloud/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
@@ -352,8 +352,9 @@ msgstr "Oikeutesi eivät riitä tämän osoitekirjan poistamiseen."
 msgid "Address book not found"
 msgstr "Osoitekirjaa ei löytynyt"
 
-#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
-msgid "On this"
+#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
+#, php-format
+msgid "On this %s"
 msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163
@@ -872,11 +873,11 @@ msgstr "Lisää uusi yhteystieto tai tuo olemassa olevia yhteystietoja VCF-tiedo
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "Mihin yhteystietoon tiedot tulee yhdistää?"
 
 #: templates/contacts.php:186
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Poistetaanko muut onnistuneen yhdistämisen jälkeen?"
 
 #: templates/contacts.php:201
 msgid "Compose mail"

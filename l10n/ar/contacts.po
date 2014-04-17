@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-16 00:49-0400\n"
-"PO-Revision-Date: 2014-04-16 04:49+0000\n"
+"POT-Creation-Date: 2014-04-17 00:49-0400\n"
+"PO-Revision-Date: 2014-04-17 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -352,8 +352,9 @@ msgstr "ليس لديك الصلاحية  لحذف دفتر العناوين."
 msgid "Address book not found"
 msgstr "تعذر ايجاد دفتر العناوين"
 
-#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
-msgid "On this"
+#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
+#, php-format
+msgid "On this %s"
 msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163

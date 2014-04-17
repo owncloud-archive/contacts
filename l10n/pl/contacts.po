@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-16 00:49-0400\n"
-"PO-Revision-Date: 2014-04-16 04:49+0000\n"
+"POT-Creation-Date: 2014-04-17 00:49-0400\n"
+"PO-Revision-Date: 2014-04-17 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -364,8 +364,9 @@ msgstr "Nie masz uprawnień do usunięcia tej książki adresowej."
 msgid "Address book not found"
 msgstr "Nie znaleziono książki adresowej"
 
-#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
-msgid "On this"
+#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
+#, php-format
+msgid "On this %s"
 msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163

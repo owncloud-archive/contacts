@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# ard1t <ardit.dani@gmail.com>, 2014
 # Odeen <rapid_odeen@zoho.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-16 00:49-0400\n"
-"PO-Revision-Date: 2014-04-16 04:49+0000\n"
+"POT-Creation-Date: 2014-04-17 00:49-0400\n"
+"PO-Revision-Date: 2014-04-17 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Albanian (http://www.transifex.com/projects/p/owncloud/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -68,19 +69,19 @@ msgstr ""
 
 #: js/app.js:229
 msgid "Error."
-msgstr ""
+msgstr "Gabim."
 
 #: js/app.js:324 js/app.js:338
 msgid "Add to..."
-msgstr ""
+msgstr "Shto tek..."
 
 #: js/app.js:328 js/app.js:340
 msgid "Remove from..."
-msgstr ""
+msgstr "Hiq nga..."
 
 #: js/app.js:345
 msgid "Add group..."
-msgstr ""
+msgstr "Shto grup..."
 
 #: js/app.js:473
 msgid "Invalid URL: \"{url}\""
@@ -104,7 +105,7 @@ msgstr ""
 
 #: js/app.js:622
 msgid "Select photo"
-msgstr ""
+msgstr "Zgjidhni foto"
 
 #: js/app.js:705 js/app.js:1679
 msgid "Network or server error. Please inform administrator."
@@ -120,7 +121,7 @@ msgstr ""
 
 #: js/app.js:967
 msgid "Error adding to group."
-msgstr ""
+msgstr "Gabim shtim në grup."
 
 #: js/app.js:990
 msgid "Error removing from group."
@@ -279,7 +280,7 @@ msgstr "Importo"
 
 #: js/loader.js:68
 msgid "Importing..."
-msgstr ""
+msgstr "Importim..."
 
 #: js/loader.js:92
 msgid "Import done"
@@ -346,8 +347,9 @@ msgstr ""
 msgid "Address book not found"
 msgstr ""
 
-#: lib/backend/localusers.php:101 lib/backend/localusers.php:102
-msgid "On this"
+#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
+#, php-format
+msgid "On this %s"
 msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:163
