@@ -79,6 +79,7 @@
 "The backend for this address book does not support updating" => "Bu adres defterinin geri plandaki mekanizması güncellemeyi desteklemiyor.",
 "You don't have permissions to delete the address book." => "Bu adres defterini silmek için izniniz yok.",
 "Address book not found" => "Adres defteri bulunamadı.",
+"On this %s" => "Bu %s üzerinde",
 "You do not have permissions to see this contact" => "Bu kişileri görmek için izniniz yok",
 "You do not have permissions to update this contact" => "Bu kişi bilgilerini güncellemek için izniniz yok.",
 "The backend for this contact does not support updating it" => "Bu kişinin geri plandaki mekanizması güncellemeyi desteklemiyor.",

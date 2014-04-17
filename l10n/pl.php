@@ -79,6 +79,7 @@
 "The backend for this address book does not support updating" => "Zaplecze dla tej książki nie obsługuje aktualizowania kontaktów",
 "You don't have permissions to delete the address book." => "Nie masz uprawnień do usunięcia tej książki adresowej.",
 "Address book not found" => "Nie znaleziono książki adresowej",
+"On this %s" => "Na tym %s",
 "You do not have permissions to see this contact" => "Nie masz uprawnień do podglądania tego kontaktu",
 "You do not have permissions to update this contact" => "Nie masz uprawnień edytowania tego kontaktu.",
 "The backend for this contact does not support updating it" => "Zaplecze dla tego kontaktu nie obsługuje aktualizacji",

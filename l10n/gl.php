@@ -79,6 +79,7 @@
 "The backend for this address book does not support updating" => "A infraestrutura para este caderno de enderezos non admite que se eliminen contactos",
 "You don't have permissions to delete the address book." => "Vostede non ten permisos para eliminar o caderno de enderezos",
 "Address book not found" => "Non se atoparon cadernos de enderezos",
+"On this %s" => "Neste %s",
 "You do not have permissions to see this contact" => "Vostede non ten permisos para ver este contacto",
 "You do not have permissions to update this contact" => "Vostede non ten permisos para actualizar este contacto",
 "The backend for this contact does not support updating it" => "A infraestrutura para este contacto non admite a súa actualización",
