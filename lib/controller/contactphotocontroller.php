@@ -187,10 +187,10 @@ class ContactPhotoController extends Controller {
 	 */
 	public function cropPhoto() {
 		$params = $this->request->urlParams;
-		$x = (isset($this->request->post['x']) && $this->request->post['x']) ? $this->request->post['x'] : 0;
-		$y = (isset($this->request->post['y']) && $this->request->post['y']) ? $this->request->post['y'] : 0;
-		$w = (isset($this->request->post['w']) && $this->request->post['w']) ? $this->request->post['w'] : -1;
-		$h = (isset($this->request->post['h']) && $this->request->post['h']) ? $this->request->post['h'] : -1;
+		$x = $this->params('x', 0);
+		$y = $this->params('y', 0);
+		$w = $this->params('w', -1);
+		$h = $this->params('h', -1);
 		$tmpkey = $params['key'];
 
 		$addressBook = $this->app->getAddressBook($params['backend'], $params['addressBookId']);
