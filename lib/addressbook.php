@@ -482,4 +482,8 @@ class Addressbook extends AbstractPIMCollection {
 
 		return $events;
 	}
+
+	public function getSearchProvider($addressbook){
+		return $this->backend->getSearchProvider($addressbook);
+	}
 }
