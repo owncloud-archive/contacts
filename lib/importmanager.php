@@ -61,7 +61,7 @@ class ImportManager {
 		$formats = array();
 		foreach ($files as $file) {
 			if (!strncmp($file, $prefix, strlen($prefix)) && substr($file, - strlen($suffix)) === $suffix) {
-				$format = $this->loadXmlFile($path.$file);
+				$format = $this->loadXmlFile(realpath($path.$file));
 				if ($format) {
 					$formats[(string)$format->import_core->name] = (string)$format->import_core->display_name;
 				}
