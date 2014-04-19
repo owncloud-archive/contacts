@@ -79,6 +79,7 @@
 "The backend for this address book does not support updating" => "O final deste catálogo de endereços não suporta a atualização",
 "You don't have permissions to delete the address book." => "Você não tem permissões para excluir o livro de endereços.",
 "Address book not found" => "Nenhum livro de endereço encontrado",
+"On this %s" => "Neste %s",
 "You do not have permissions to see this contact" => "Você não tem permissão para ver este contato",
 "You do not have permissions to update this contact" => "Você não tem permissão para atualizar esse contato",
 "The backend for this contact does not support updating it" => "O final deste contato não suporta atualização",

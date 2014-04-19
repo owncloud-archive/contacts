@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-17 00:49-0400\n"
-"PO-Revision-Date: 2014-04-17 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-19 00:49-0400\n"
+"PO-Revision-Date: 2014-04-18 12:00+0000\n"
+"Last-Translator: Flávio Veras <flaviove@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -360,7 +360,7 @@ msgstr "Nenhum livro de endereço encontrado"
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "Neste %s"
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
@@ -534,70 +534,70 @@ msgstr "Nome do grupo ausente da requisição."
 msgid "Contact ID missing from request."
 msgstr "O ID do contato requisitado não foi encontrado."
 
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid "No file was uploaded. Unknown error"
 msgstr "Nenhum arquivo foi enviado. Erro desconhecido"
 
-#: lib/controller/importcontroller.php:56
+#: lib/controller/importcontroller.php:57
 msgid "There is no error, the file uploaded with success"
 msgstr "Sem erros, o arquivo foi enviado com sucesso"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "O arquivo enviado excede a diretiva upload_max_filesize em php.ini"
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "O arquivo carregado excede o argumento MAX_FILE_SIZE especificado no formulário HTML"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid "The uploaded file was only partially uploaded"
 msgstr "O arquivo foi parcialmente enviado"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "No file was uploaded"
 msgstr "Nenhum arquivo enviado"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Missing a temporary folder"
 msgstr "Pasta temporária não encontrada"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Failed to write to disk"
 msgstr "Falha ao escrever no disco"
 
-#: lib/controller/importcontroller.php:74
+#: lib/controller/importcontroller.php:75
 msgid "Not enough storage available"
 msgstr "Espaço de armazenamento insuficiente"
 
-#: lib/controller/importcontroller.php:82
+#: lib/controller/importcontroller.php:83
 msgid "Attempt to upload blacklisted file:"
 msgstr "Tente fazer o envio do arquivo de lista negra:"
 
-#: lib/controller/importcontroller.php:102
+#: lib/controller/importcontroller.php:103
 msgid "Error uploading contacts to storage."
 msgstr "Erro enviando contatos para armazenamento."
 
-#: lib/controller/importcontroller.php:147
+#: lib/controller/importcontroller.php:148
 msgid "Error moving file to imports folder."
 msgstr "Erro ao mover arquivo para a pasta de importações."
 
-#: lib/controller/importcontroller.php:166
+#: lib/controller/importcontroller.php:167
 msgid "You do not have permissions to import into this address book."
 msgstr "Você não tem permissão para importar para este livro de endereços."
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "File name missing from request."
 msgstr "Nome do arquivo ausente da requisição."
 
-#: lib/controller/importcontroller.php:179
-#: lib/controller/importcontroller.php:306
+#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr "Chave de progresso faltando no pedido."
 
-#: lib/controller/importcontroller.php:185
+#: lib/controller/importcontroller.php:186
 msgid "Attempt to access blacklisted file:"
 msgstr "Tentando acessar o arquivo de lista negra:"
 

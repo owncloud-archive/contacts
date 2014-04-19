@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-17 00:49-0400\n"
-"PO-Revision-Date: 2014-04-17 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-19 00:49-0400\n"
+"PO-Revision-Date: 2014-04-18 10:30+0000\n"
+"Last-Translator: André Koot <meneer@tken.net>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -361,7 +361,7 @@ msgstr "Adresboek niet gevonden"
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "Op deze %s"
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
@@ -535,70 +535,70 @@ msgstr "Groepsnaam niet aanwezig bij aanvraag."
 msgid "Contact ID missing from request."
 msgstr "Contact ID niet opgegeven"
 
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid "No file was uploaded. Unknown error"
 msgstr "Er was geen bestand geladen.  Onbekende fout"
 
-#: lib/controller/importcontroller.php:56
+#: lib/controller/importcontroller.php:57
 msgid "There is no error, the file uploaded with success"
 msgstr "De upload van het bestand is goedgegaan."
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Het bestand overschrijdt de upload_max_filesize instelling in php.ini"
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Het bestand overschrijdt de MAX_FILE_SIZE instelling dat is opgegeven in het HTML formulier"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid "The uploaded file was only partially uploaded"
 msgstr "Het bestand is gedeeltelijk geüpload"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "No file was uploaded"
 msgstr "Er is geen bestand geüpload"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Missing a temporary folder"
 msgstr "Er ontbreekt een tijdelijke map"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Failed to write to disk"
 msgstr "Schrijven naar schijf mislukt"
 
-#: lib/controller/importcontroller.php:74
+#: lib/controller/importcontroller.php:75
 msgid "Not enough storage available"
 msgstr "Niet genoeg opslagruimte beschikbaar"
 
-#: lib/controller/importcontroller.php:82
+#: lib/controller/importcontroller.php:83
 msgid "Attempt to upload blacklisted file:"
 msgstr "Poging om geblacklist bestand te uploaden:"
 
-#: lib/controller/importcontroller.php:102
+#: lib/controller/importcontroller.php:103
 msgid "Error uploading contacts to storage."
 msgstr "Fout bij opslaan van contacten."
 
-#: lib/controller/importcontroller.php:147
+#: lib/controller/importcontroller.php:148
 msgid "Error moving file to imports folder."
 msgstr "Fout bij verplaatsen bestand naar importmap."
 
-#: lib/controller/importcontroller.php:166
+#: lib/controller/importcontroller.php:167
 msgid "You do not have permissions to import into this address book."
 msgstr "U heeft geen permissie om te importeren naar dit adresboek."
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "File name missing from request."
 msgstr "Bestandsnaam ontbreekt in aanvraag."
 
-#: lib/controller/importcontroller.php:179
-#: lib/controller/importcontroller.php:306
+#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr "Voortgangssleutel ontbreekt in aanvraag."
 
-#: lib/controller/importcontroller.php:185
+#: lib/controller/importcontroller.php:186
 msgid "Attempt to access blacklisted file:"
 msgstr "Poging om geblacklist bestand te openen:"
 

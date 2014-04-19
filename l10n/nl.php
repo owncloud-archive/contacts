@@ -79,6 +79,7 @@
 "The backend for this address book does not support updating" => "De backend voor dit adresboek ondersteund geen bewerk acties.",
 "You don't have permissions to delete the address book." => "U heeft geen permissie om dit adresboek te verwijderen.",
 "Address book not found" => "Adresboek niet gevonden",
+"On this %s" => "Op deze %s",
 "You do not have permissions to see this contact" => "U heeft geen permissie om deze contactpersoon te bekijken",
 "You do not have permissions to update this contact" => "U heeft geen permissie om deze contactpersoon te bewerken",
 "The backend for this contact does not support updating it" => "De backend voor deze contactpersoon heeft geen ondersteuning voor bewerk acties",
