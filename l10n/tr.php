@@ -31,7 +31,7 @@
 "Merge contacts" => "Kişileri birleştir",
 "Cancel" => "İptal",
 "Add group" => "Grup ekle",
-"OK" => "OK",
+"OK" => "Tamam",
 "Could not find contact: {id}" => "Kişi bulunamadı: {id}",
 "Edit profile picture" => "Profil fotoğrafını düzenle",
 "Crop photo" => "Fotoğrafı kırp",

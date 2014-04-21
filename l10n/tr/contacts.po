@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-17 15:04-0400\n"
-"PO-Revision-Date: 2014-04-17 11:27+0000\n"
+"POT-Creation-Date: 2014-04-21 00:49-0400\n"
+"PO-Revision-Date: 2014-04-20 13:10+0000\n"
 "Last-Translator: volkangezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/owncloud/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -161,7 +161,7 @@ msgstr "Grup ekle"
 
 #: js/app.js:1414
 msgid "OK"
-msgstr "OK"
+msgstr "Tamam"
 
 #: js/app.js:1521
 msgid "Could not find contact: {id}"
@@ -533,70 +533,70 @@ msgstr "İstekte grup adı yok."
 msgid "Contact ID missing from request."
 msgstr "İstekte kişi kimliği yok."
 
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid "No file was uploaded. Unknown error"
 msgstr "Dosya yüklenmedi. Bilinmeyen hata"
 
-#: lib/controller/importcontroller.php:56
+#: lib/controller/importcontroller.php:57
 msgid "There is no error, the file uploaded with success"
 msgstr "Dosya başarıyla yüklendi, hata oluşmadı"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Dosyanın boyutu php.ini dosyasındaki upload_max_filesize limitini aşıyor"
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Yüklenecek dosyanın boyutu HTML formunda belirtilen MAX_FILE_SIZE limitini aşıyor"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid "The uploaded file was only partially uploaded"
 msgstr "Dosya kısmen karşıya yüklenebildi"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "No file was uploaded"
 msgstr "Hiç dosya gönderilmedi"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Missing a temporary folder"
 msgstr "Geçici dizin eksik"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Failed to write to disk"
 msgstr "Diske yazılamadı"
 
-#: lib/controller/importcontroller.php:74
+#: lib/controller/importcontroller.php:75
 msgid "Not enough storage available"
 msgstr "Yeterli disk alanı yok"
 
-#: lib/controller/importcontroller.php:82
+#: lib/controller/importcontroller.php:83
 msgid "Attempt to upload blacklisted file:"
 msgstr "Karalistede bulunan dosya yükleme girişimi:"
 
-#: lib/controller/importcontroller.php:102
+#: lib/controller/importcontroller.php:103
 msgid "Error uploading contacts to storage."
 msgstr "Bağlantılar depoya yüklenirken hata."
 
-#: lib/controller/importcontroller.php:147
+#: lib/controller/importcontroller.php:148
 msgid "Error moving file to imports folder."
 msgstr "Dosyalar içe aktarım klasörüne taşınırken hata oluştu."
 
-#: lib/controller/importcontroller.php:166
+#: lib/controller/importcontroller.php:167
 msgid "You do not have permissions to import into this address book."
 msgstr "Bu adres defterine ekleme yetkiniz yok."
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "File name missing from request."
 msgstr "İstekte dosya adı eksik."
 
-#: lib/controller/importcontroller.php:179
-#: lib/controller/importcontroller.php:306
+#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr "İstekte süreç anahtarı eksik"
 
-#: lib/controller/importcontroller.php:185
+#: lib/controller/importcontroller.php:186
 msgid "Attempt to access blacklisted file:"
 msgstr "Karaliste dosyasına erişim girişimi:"
 

@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-17 00:49-0400\n"
-"PO-Revision-Date: 2014-04-17 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-21 00:49-0400\n"
+"PO-Revision-Date: 2014-04-20 20:51+0000\n"
+"Last-Translator: mateju <>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -355,7 +355,7 @@ msgstr "Imenika ni mogoče najti"
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "Na %s"
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
@@ -529,70 +529,70 @@ msgstr "Ime skupine manjka iz zahteve."
 msgid "Contact ID missing from request."
 msgstr "V zahtevi manjka ID stika."
 
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid "No file was uploaded. Unknown error"
 msgstr "Ni poslane datoteke. Neznana napaka."
 
-#: lib/controller/importcontroller.php:56
+#: lib/controller/importcontroller.php:57
 msgid "There is no error, the file uploaded with success"
 msgstr "Datoteka je uspešno naložena."
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Naložena datoteka presega velikost, ki jo določa parameter upload_max_filesize v datoteki php.ini"
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Poslana datoteka presega velikost, ki jo določa parameter največje dovoljene velikosti v obrazcu HTML."
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid "The uploaded file was only partially uploaded"
 msgstr "Poslan je le del datoteke."
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "No file was uploaded"
 msgstr "Ni poslane datoteke"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Missing a temporary folder"
 msgstr "Manjka začasna mapa"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Failed to write to disk"
 msgstr "Pisanje na disk je spodletelo"
 
-#: lib/controller/importcontroller.php:74
+#: lib/controller/importcontroller.php:75
 msgid "Not enough storage available"
 msgstr "Na voljo ni dovolj prostora"
 
-#: lib/controller/importcontroller.php:82
+#: lib/controller/importcontroller.php:83
 msgid "Attempt to upload blacklisted file:"
 msgstr "Poskus pošiljanja datoteke na črnem seznamu:"
 
-#: lib/controller/importcontroller.php:102
+#: lib/controller/importcontroller.php:103
 msgid "Error uploading contacts to storage."
 msgstr "Napaka med nalaganjem stikov v hrambo."
 
-#: lib/controller/importcontroller.php:147
+#: lib/controller/importcontroller.php:148
 msgid "Error moving file to imports folder."
 msgstr "Napaka premikanja datoteke v mapo uvoza."
 
-#: lib/controller/importcontroller.php:166
+#: lib/controller/importcontroller.php:167
 msgid "You do not have permissions to import into this address book."
 msgstr "Ni ustreznih dovoljenj za uvoz v ta imenik."
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "File name missing from request."
 msgstr "V zahtevi manjka ime datoteke."
 
-#: lib/controller/importcontroller.php:179
-#: lib/controller/importcontroller.php:306
+#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr "Ključ napredka manjka iz zahteve."
 
-#: lib/controller/importcontroller.php:185
+#: lib/controller/importcontroller.php:186
 msgid "Attempt to access blacklisted file:"
 msgstr "Poskus dostopa do datoteke na črnem seznamu:"
 
@@ -941,11 +941,11 @@ msgstr "Rojstni dan"
 
 #: templates/contacts.php:332
 msgid "Website"
-msgstr ""
+msgstr "Spletna stran"
 
 #: templates/contacts.php:337
 msgid "Instant messaging"
-msgstr ""
+msgstr "Hipno sporočanje"
 
 #: templates/contacts.php:343
 msgid "Notes go here..."
