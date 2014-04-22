@@ -114,6 +114,7 @@ class Database extends AbstractBackend {
 	* {@inheritdoc}
 	*/
 	public function getAddressBook($addressBookId, array $options = array()) {
+		$owner = isset($options['shared_by']) ? $options['shared_by'] : $this->userid;
 		//\OCP\Util::writeLog('contacts', __METHOD__.' id: '
 		//	. $addressBookId, \OCP\Util::DEBUG);
 		if ($this->addressBooks && isset($this->addressBooks[$addressBookId])) {
@@ -123,7 +124,7 @@ class Database extends AbstractBackend {
 
 		// Hmm, not found. Lets query the db.
 		try {
-			$result = $this->getPreparedQuery('getaddressbook')->execute(array($addressBookId, $this->userid));
+			$result = $this->getPreparedQuery('getaddressbook')->execute(array($addressBookId, $owner));
 
 			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
