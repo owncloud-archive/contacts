@@ -98,9 +98,8 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 
 		if ($format === self::FORMAT_ADDRESSBOOKS) {
 			foreach ($items as $item) {
-				//\OCP\Util::writeLog('contacts', __METHOD__.' item_source: ' . $item['item_source'] . ' include: '
-				//	. (int)$include, \OCP\Util::DEBUG);
-				$addressBook = $backend->getAddressBook($item['item_source']);
+				//\OCP\Util::writeLog('contacts', __METHOD__.' item owner: ' . print_r($item['uid_owner'], true) , \OCP\Util::DEBUG);
+				$addressBook = $backend->getAddressBook($item['item_source'], array('shared_by' => $item['uid_owner']));
 				if ($addressBook) {
 					$addressBook['displayname'] = $addressBook['displayname'] . ' (' . $addressBook['owner'] . ')';
 					$addressBook['permissions'] = $item['permissions'];

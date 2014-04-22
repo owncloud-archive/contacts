@@ -90,8 +90,8 @@ class Database extends AbstractBackend {
 	}
 
 	public function getAddressBook($addressbookid, array $options = array()) {
-		//\OCP\Util::writeLog('contacts', __METHOD__.' id: '
-		//	. $addressbookid, \OCP\Util::DEBUG);
+		\OCP\Util::writeLog('contacts', __METHOD__.' id: ' . $addressbookid, \OCP\Util::DEBUG);
+		$owner = isset($options['shared_by']) ? $options['shared_by'] : $this->userid;
 		if($this->addressbooks && isset($this->addressbooks[$addressbookid])) {
 			//print(__METHOD__ . ' ' . __LINE__ .' addressBookInfo: ' . print_r($this->addressbooks[$addressbookid], true));
 			return $this->addressbooks[$addressbookid];
@@ -104,7 +104,7 @@ class Database extends AbstractBackend {
 			if(!isset(self::$preparedQueries['getaddressbook'])) {
 				self::$preparedQueries['getaddressbook'] = \OCP\DB::prepare($query);
 			}
-			$result = self::$preparedQueries['getaddressbook']->execute(array($addressbookid, $this->userid));
+			$result = self::$preparedQueries['getaddressbook']->execute(array($addressbookid, $owner));
 			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
