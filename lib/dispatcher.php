@@ -36,13 +36,17 @@ class Dispatcher extends MainApp {
 	public function __construct($params) {
 		parent::__construct('contacts', $params);
 		$this->container = $this->getContainer();
-		$this->container->registerMiddleware(new HttpMiddleware($this->container));
 		$this->app = new App($this->container->query('API')->getUserId());
 		$this->registerServices();
+		$this->container->registerMiddleware('HttpMiddleware');
 	}
+
 
 	public function registerServices() {
 		$app = $this->app;
+		$this->container->registerService('HttpMiddleware', function(IAppContainer $container) use($app) {
+			return new HttpMiddleware($container);
+		});
 		$this->container->registerService('PageController', function(IAppContainer $container) use($app) {
 			return new PageController($container, $app);
 		});
