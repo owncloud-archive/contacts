@@ -7,6 +7,7 @@
 # Honza K. <honza889@gmail.com>, 2013
 # Jan Krejci <krejca85@gmail.com>, 2011-2012
 # liska_, 2013-2014
+# svetlemodry <jaroslav@lichtblau.cz>, 2014
 # xmorave2 <josef.moravec@gmail.com>, 2014
 # Martin <fireball@atlas.cz>, 2013
 # Martin <fireball@atlas.cz>, 2011-2012
@@ -18,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-17 00:49-0400\n"
-"PO-Revision-Date: 2014-04-17 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-22 00:48-0400\n"
+"PO-Revision-Date: 2014-04-21 17:44+0000\n"
+"Last-Translator: svetlemodry <jaroslav@lichtblau.cz>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -533,70 +534,70 @@ msgstr "V požadavku chybí název skupiny."
 msgid "Contact ID missing from request."
 msgstr "V požadavku chybí ID kontaktu."
 
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid "No file was uploaded. Unknown error"
 msgstr "Soubor nebyl odeslán. Neznámá chyba"
 
-#: lib/controller/importcontroller.php:56
+#: lib/controller/importcontroller.php:57
 msgid "There is no error, the file uploaded with success"
 msgstr "Soubor byl odeslán úspěšně"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Odeslaný soubor přesáhl svou velikostí parametr upload_max_filesize v php.ini"
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Odeslaný soubor přesáhl svou velikostí parametr MAX_FILE_SIZE specifikovaný v formuláři HTML"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid "The uploaded file was only partially uploaded"
 msgstr "Soubor byl odeslán pouze částečně"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "No file was uploaded"
 msgstr "Žádný soubor nebyl odeslán"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Missing a temporary folder"
 msgstr "Chybí adresář pro dočasné soubory"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Failed to write to disk"
 msgstr "Zápis na disk selhal"
 
-#: lib/controller/importcontroller.php:74
+#: lib/controller/importcontroller.php:75
 msgid "Not enough storage available"
 msgstr "Nedostatek dostupného úložného prostoru"
 
-#: lib/controller/importcontroller.php:82
+#: lib/controller/importcontroller.php:83
 msgid "Attempt to upload blacklisted file:"
 msgstr "Pokud o nahrání zakázaného souboru:"
 
-#: lib/controller/importcontroller.php:102
+#: lib/controller/importcontroller.php:103
 msgid "Error uploading contacts to storage."
 msgstr "Chyba při nahrávání kontaktů do úložiště."
 
-#: lib/controller/importcontroller.php:147
+#: lib/controller/importcontroller.php:148
 msgid "Error moving file to imports folder."
 msgstr "Chyba při přesunu souboru do složky pro importy."
 
-#: lib/controller/importcontroller.php:166
+#: lib/controller/importcontroller.php:167
 msgid "You do not have permissions to import into this address book."
 msgstr "Nemáte oprávnění pro import do tohoto adresáře kontaktů."
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "File name missing from request."
 msgstr "V požadavku chybí název souboru."
 
-#: lib/controller/importcontroller.php:179
-#: lib/controller/importcontroller.php:306
+#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr "V požadavku chybí položka průběhu."
 
-#: lib/controller/importcontroller.php:185
+#: lib/controller/importcontroller.php:186
 msgid "Attempt to access blacklisted file:"
 msgstr "Pokus o přístup k zakázanému souboru:"
 
@@ -869,11 +870,11 @@ msgstr "Odstranit současný kontakt"
 #: templates/contacts.php:126
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "Nemáte žádné kontakty v adresáři nebo je adresář vypnutý."
 
 #: templates/contacts.php:127
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Přidat nový kontakt nebo importovat existující kontakty ze souboru VCF."
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"
@@ -945,11 +946,11 @@ msgstr "Narozeniny"
 
 #: templates/contacts.php:332
 msgid "Website"
-msgstr ""
+msgstr "Stránka"
 
 #: templates/contacts.php:337
 msgid "Instant messaging"
-msgstr ""
+msgstr "Komunikátor"
 
 #: templates/contacts.php:343
 msgid "Notes go here..."

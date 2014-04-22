@@ -79,6 +79,7 @@
 "The backend for this address book does not support updating" => "El dorsal d'aquesta llibreta d'adreces no permet actualitzacions",
 "You don't have permissions to delete the address book." => "No teniu permisos per esborar la llibreta d'adreces.",
 "Address book not found" => "No s'han trobat llibretes d'adreces.",
+"On this %s" => "En aquest %s",
 "You do not have permissions to see this contact" => "No teniu permisos per veure aquest contacte",
 "You do not have permissions to update this contact" => "No teniu permisos per actualitzar aquest contacte",
 "The backend for this contact does not support updating it" => "El dorsal d'aquest contacte no permet actualitzar-lo",
