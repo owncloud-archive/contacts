@@ -47,13 +47,10 @@ class Shared extends Database {
 		foreach ($maybeSharedAddressBook as $sharedAddressbook) {
 
 			if (isset($sharedAddressbook['id'])) {
-				$this->addressBooks[] = $this->getAddressBook($sharedAddressbook['id']);
+				$this->addressBooks[$sharedAddressbook['id']] = $sharedAddressbook;
+				$this->addressBooks[$sharedAddressbook['id']]['backend'] = $this->name;
 			}
 
-		}
-
-		foreach ($this->addressBooks as &$addressBook) {
-			$addressBook['backend'] = $this->name;
 		}
 
 		return $this->addressBooks;
