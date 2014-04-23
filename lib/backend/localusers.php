@@ -217,7 +217,6 @@ class LocalUsers extends AbstractBackend {
 					// All done
 					// now update the index table with all the properties
 					$this->updateIndex($user, $vcard);
-					return true;
 				}
 			} catch(\Exception $e) {
 				\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
@@ -225,6 +224,7 @@ class LocalUsers extends AbstractBackend {
 				return false;
 			}
 		}
+		return true;
 	}
 
 	/**
@@ -244,8 +244,6 @@ class LocalUsers extends AbstractBackend {
 					\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
 					return false;
-				} else {
-					return true;
 				}
 			} catch(\Exception $e) {
 				\OCP\Util::writeLog('contacts', __METHOD__.' exception: '
@@ -253,6 +251,7 @@ class LocalUsers extends AbstractBackend {
 				return false;
 			}
 		}
+		return true;
 	}
 
 	/**
