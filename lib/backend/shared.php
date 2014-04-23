@@ -47,6 +47,8 @@ class Shared extends Database {
 			Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS
 		);
 
+		$this->addressBooks = array();
+
 		foreach ($maybeSharedAddressBook as $sharedAddressbook) {
 
 			if (isset($sharedAddressbook['id'])) {
