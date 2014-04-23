@@ -485,9 +485,10 @@ class Addressbook extends AbstractPIMCollection {
 
 	/**
 	 * Returns the searchProvider for a specific backend.
-	 * @param \OCA\Contacts\Addressbook $addressbook
+	 *
+	 * @return \OCP\IAddressBook
 	 */
-	public function getSearchProvider(){
+	public function getSearchProvider() {
 		return $this->backend->getSearchProvider($this);
 	}
 }
