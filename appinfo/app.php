@@ -64,8 +64,7 @@ if (\OCP\User::isLoggedIn()) {
 	$addressBooks = $app->getAddressBooksForUser();
 	foreach ($addressBooks as $addressBook)  {
 		if ($addressBook->isActive()) {
-			// $addressBook is instance of \OCA\Contacts\Addressbook
-			\OCP\Contacts::registerAddressBook($addressBook->getSearchProvider($addressBook));
+			\OCP\Contacts::registerAddressBook($addressBook->getSearchProvider());
 		}
 	}
 }
