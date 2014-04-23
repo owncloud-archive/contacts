@@ -19,20 +19,20 @@ OC.Contacts = OC.Contacts || {};
 			backend: this.book.backend,
 			permissions: this.book.permissions
 		});
-		if(this.isFileAction) {
+		if (this.isFileAction) {
 			return this.$li;
 		}
 		this.$li.find('a.action').tipsy({gravity: 'w'});
-		if(!this.hasPermission(OC.PERMISSION_DELETE)) {
+		if (!this.hasPermission(OC.PERMISSION_DELETE)) {
 			this.$li.find('a.action.delete').hide();
 		}
-		if(!this.hasPermission(OC.PERMISSION_UPDATE)) {
+		if (!this.hasPermission(OC.PERMISSION_UPDATE)) {
 			this.$li.find('a.action.edit').hide();
 		}
-		if(!this.hasPermission(OC.PERMISSION_SHARE)) {
+		if (!this.hasPermission(OC.PERMISSION_SHARE)) {
 			this.$li.find('a.action.share').hide();
 		}
-		if(['local', 'ldap'].indexOf(this.getBackend() === -1)) {
+		if (['local', 'ldap'].indexOf(this.getBackend()) === -1) {
 			this.$li.find('a.action.carddav').hide();
 		}
 		this.$li.find('input:checkbox').prop('checked', this.book.active).on('change', function() {
