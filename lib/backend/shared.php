@@ -31,7 +31,7 @@ use OCA\Contacts;
 class Shared extends Database {
 
 	public $name = 'shared';
-	public $addressbooks = array();
+	public $addressBooks = array();
 
 	/**
 	 * Returns the list of addressbooks for a specific user.
