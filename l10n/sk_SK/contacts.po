@@ -16,9 +16,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-17 00:49-0400\n"
-"PO-Revision-Date: 2014-04-17 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-04-23 00:48-0400\n"
+"PO-Revision-Date: 2014-04-22 07:10+0000\n"
+"Last-Translator: mhh <marian.hvolka@stuba.sk>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,11 +48,11 @@ msgstr "Automatická detekcia formátu"
 
 #: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Spracovaných {count}/{total} kariet"
 
 #: js/addressbooks.js:421
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Celkom:{total}, Úspešne:{imported}, Chybné:{failed}"
 
 #: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
@@ -120,11 +120,11 @@ msgstr "Chyba sieťe alebo servra. Informujte prosím administrátora."
 
 #: js/app.js:789
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Iba obrázky môžu byť použité ako fotografie kontaktov"
 
 #: js/app.js:798
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "Veľkosť súboru \"{filename}\" prekračuje povolené maximum {size}"
 
 #: js/app.js:967
 msgid "Error adding to group."
@@ -187,7 +187,7 @@ msgstr "Chyba parsovania narodenín {bday}"
 
 #: js/contacts.js:1315
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Úložisko nepodporuje viacbajtové znaky."
 
 #: js/contacts.js:2227
 msgid ""
@@ -357,7 +357,7 @@ msgstr "Adresár nenájdený"
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "Na tomto %s"
 
 #: lib/contact.php:116 lib/contact.php:163
 msgid "You do not have permissions to see this contact"
@@ -398,7 +398,7 @@ msgstr "Chyba pri vytváraní adresára"
 #: lib/controller/addressbookcontroller.php:207
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "\"%s\" úložiskonepodporuje vymazanie adresárov"
 
 #: lib/controller/addressbookcontroller.php:215
 #, php-format
@@ -435,7 +435,7 @@ msgstr "Chyba pri vymazávaní kontaktu z iného adresára."
 
 #: lib/controller/addressbookcontroller.php:367
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Chyba pri presúvaní kontaktu"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -486,7 +486,7 @@ msgstr "Žiadna fotka nebola odoslaná."
 
 #: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Chyba pri načítaní obrázka z vyrovnávacej pamäte"
 
 #: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
@@ -531,70 +531,70 @@ msgstr "V požiadavke chýba názov skupiny."
 msgid "Contact ID missing from request."
 msgstr "Chýbajúce kontaktné ID pri požiadavke."
 
-#: lib/controller/importcontroller.php:47
+#: lib/controller/importcontroller.php:48
 msgid "No file was uploaded. Unknown error"
 msgstr "Žiaden súbor nebol odoslaný. Neznáma chyba"
 
-#: lib/controller/importcontroller.php:56
+#: lib/controller/importcontroller.php:57
 msgid "There is no error, the file uploaded with success"
 msgstr "Nenastala žiadna chyba, súbor bol úspešne nahraný"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Nahrávaný súbor prekračuje nastavenie upload_max_filesize v php.ini"
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Nahrávaný súbor prekračuje nastavenie MAX_FILE_SIZE z volieb HTML formulára"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid "The uploaded file was only partially uploaded"
 msgstr "Nahrávaný súbor sa nahral len čiastočne"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "No file was uploaded"
 msgstr "Žiadny súbor nebol nahraný"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "Missing a temporary folder"
 msgstr "Chýba dočasný priečinok"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Failed to write to disk"
 msgstr "Zápis na disk sa nepodaril"
 
-#: lib/controller/importcontroller.php:74
+#: lib/controller/importcontroller.php:75
 msgid "Not enough storage available"
 msgstr "Nedostatok dostupného úložného priestoru"
 
-#: lib/controller/importcontroller.php:82
+#: lib/controller/importcontroller.php:83
 msgid "Attempt to upload blacklisted file:"
 msgstr "Pokus o nahratie zakázaného súboru:"
 
-#: lib/controller/importcontroller.php:102
+#: lib/controller/importcontroller.php:103
 msgid "Error uploading contacts to storage."
 msgstr "Chyba pri nahrávaní kontaktov do úložiska."
 
-#: lib/controller/importcontroller.php:147
+#: lib/controller/importcontroller.php:148
 msgid "Error moving file to imports folder."
 msgstr "Chyba pri presune súboru do priečinka importov"
 
-#: lib/controller/importcontroller.php:166
+#: lib/controller/importcontroller.php:167
 msgid "You do not have permissions to import into this address book."
 msgstr "Nemáte oprávnenie na import do tohto adresára."
 
-#: lib/controller/importcontroller.php:174
+#: lib/controller/importcontroller.php:175
 msgid "File name missing from request."
 msgstr "V požiadavke chýba názov súboru."
 
-#: lib/controller/importcontroller.php:179
-#: lib/controller/importcontroller.php:306
+#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr "V požiadavke chýba položka priebehu."
 
-#: lib/controller/importcontroller.php:185
+#: lib/controller/importcontroller.php:186
 msgid "Attempt to access blacklisted file:"
 msgstr "Pokus o prístup k zakázanému súboru:"
 
@@ -867,11 +867,11 @@ msgstr "Vymazať tento kontakt"
 #: templates/contacts.php:126
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "Nemáte žiadne kontakty vo vašom adresári alebo je váš adresár vypnutý."
 
 #: templates/contacts.php:127
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Pridať nový kontakt alebo importovať existujúce kontakty zo súboru VCF."
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"
