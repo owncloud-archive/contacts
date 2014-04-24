@@ -111,13 +111,13 @@ class LocalUsers extends AbstractBackend {
 	* {@inheritdoc}
 	* There are as many contacts in this addressbook as in this ownCloud installation
 	*/
-	public function getContacts($addressbookid, array $options = array()) {
-		$this->updateDatabase();
+	public function getContacts($addressBookId, array $options = array()) {
+		$this->updateDatabase($addressBookId);
 		$contacts =  array();
-		try{
+		try {
 			$sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
 			$query = \OCP\DB::prepare($sql);
-			$result = $query->execute(array($this->userid));
+			$result = $query->execute(array($addressBookId));
 
 			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
@@ -145,11 +145,11 @@ class LocalUsers extends AbstractBackend {
 	* If your username is 'foo' and you want to retrieve the contact with
 	* ownCloud username 'bar' the params would be: $addressbookid = 'foo'; $id = 'bar';
 	*/
-	public function getContact($addressbookid, $id, array $options = array()) {
+	public function getContact($addressBookId, $id, array $options = array()) {
 		try{
 			$sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ? AND id = ?';
 			$query = \OCP\DB::prepare($sql);
-			$result = $query->execute(array($this->userid, $id));
+			$result = $query->execute(array($addressBookId, $id));
 
 			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
@@ -174,13 +174,13 @@ class LocalUsers extends AbstractBackend {
 	* @param string $addressBookId
 	* @return bool
 	*/
-	private function addContacts($contacts, $addressbookid) {
-		foreach($contacts as $user){
+	private function addContacts($contacts, $addressBookId) {
+		foreach ($contacts as $user) {
 			try {
 				$sql = 'INSERT INTO ' . $this->cardsTableName . ' ('
 					. 'id, '
 					. 'addressbookid, '
-					. 'fullname, ' /* Change to displayname*/
+					. 'displayname, '
 					. 'carddata, '
 					. 'lastmodified'
 				. ') VALUES ('
@@ -204,7 +204,7 @@ class LocalUsers extends AbstractBackend {
 				$vcard->PRODID = $prodid;
 				$vcard->add('IMPP', 'x-owncloud-handle:' . $user, array("X-SERVICE-TYPE" => array("owncloud-handle")));
 
-				$result = $query->execute(array($user, $this->userid, \OCP\User::getDisplayName($user), $vcard->serialize(), time()));
+				$result = $query->execute(array($user, $addressBookId, \OCP\User::getDisplayName($user), $vcard->serialize(), time()));
 
 				if (\OCP\DB::isError($result)) {
 					\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
@@ -231,12 +231,13 @@ class LocalUsers extends AbstractBackend {
 	* @param string $addressBookId
 	* @return bool
 	*/
-	private function removeContacts($contacts, $addressbookid) {
-		foreach($contacts as $user){
+	private function removeContacts($contacts, $addressBookId) {
+		foreach ($contacts as $user) {
+			\OCP\Util::writeLog('contacts', 'Removing: ' . $user . ' from ' . $addressBookId, \OCP\Util::DEBUG);
 			try {
 				$sql = 'DELETE FROM ' . $this->cardsTableName . ' WHERE addressbookid = ? AND id = ?';
 				$query = \OCP\DB::prepare($sql);
-				$result = $query->execute(array($this->userid, $user));
+				$result = $query->execute(array($addressBookId, $user));
 				if (\OCP\DB::isError($result)) {
 					\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
@@ -276,14 +277,14 @@ class LocalUsers extends AbstractBackend {
 		try{
 			$sql = 'UPDATE ' . $this->cardsTableName
 			. ' SET '
-				. '`fullname` = ?, '
+				. '`displayname` = ?, '
 				. '`carddata` = ?, '
 				. '`lastmodified` = ? '
 			. ' WHERE '
 				. '`id` = ? '
 				. 'AND `addressbookid` = ? ';
 			$query = \OCP\DB::prepare($sql);
-			$result = $query->execute(array($contact->FN, $contact->serialize(), time(), $id, $this->userid));
+			$result = $query->execute(array($contact->FN, $contact->serialize(), time(), $id, $addressBookId));
 			if (\OCP\DB::isError($result)) {
 				\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
@@ -322,13 +323,13 @@ class LocalUsers extends AbstractBackend {
 		$updatestmt = \OCP\DB::prepare('INSERT INTO `' . $this->indexTableName . '` '
 					. '(`addressbookid`, `contactid`,`name`,`value`,`preferred`) VALUES(?,?,?,?,?)');
 		// Insert all properties in the table
-		foreach($vcard->children as $property) {
-			if(!in_array($property->name, $this->indexProperties)) {
+		foreach ($vcard->children as $property) {
+			if (!in_array($property->name, $this->indexProperties)) {
 				continue;
 			}
 			$preferred = 0;
-			foreach($property->parameters as $parameter) {
-				if($parameter->name == 'TYPE' && strtoupper($parameter->value) == 'PREF') {
+			foreach ($property->parameters as $parameter) {
+				if ($parameter->name == 'TYPE' && strtoupper($parameter->value) == 'PREF') {
 					$preferred = 1;
 					break;
 				}
@@ -374,18 +375,18 @@ class LocalUsers extends AbstractBackend {
 		}
 	}
 
-	public function updateDatabase() {
+	public function updateDatabase($addressBookId) {
 		$sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
 		$query = \OCP\DB::prepare($sql);
-		$result = $query->execute(array($this->userid));
+		$result = $query->execute(array($addressBookId));
 
 		if (\OCP\DB::isError($result)) {
 			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
 			. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
-			return true;
+			return true; // Huh?
 		} else {
 			$contactsId = array();
-			while($row = $result->fetchRow()) {
+			while ($row = $result->fetchRow()) {
 				$contactsId[] = $row['id'];
 			}
 
@@ -393,13 +394,13 @@ class LocalUsers extends AbstractBackend {
 
 			$add = array_diff($users, $contactsId);
 			$remove = array_diff($contactsId, $users);
-			if(count($add) > 0) {
-				$this->addContacts($add, $addressbookid);
+			if (count($add) > 0) {
+				$this->addContacts($add, $addressBookId);
 				$recall = true;
 			}
 
-			if(count($remove) > 0) {
-				$this->removeContacts($remove, $addressbookid);
+			if (count($remove) > 0) {
+				$this->removeContacts($remove, $addressBookId);
 				$recall = true;
 			}
 			return true;
