@@ -1,7 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kişiler",
 "Save" => "Kaydet",
-"Starting file import" => "Dosya aktarımına başlanıyor",
+"Starting file import" => "Dosya içe aktarımı başlıyor",
 "Format selected: {format}" => "Seçilen biçim: {format}",
 "Automatic format detection" => "Otomatik biçim tespiti",
 "Processing {count}/{total} cards" => "İşlenen {count}/{total} kart",
