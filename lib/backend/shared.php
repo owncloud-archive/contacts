@@ -25,12 +25,22 @@ namespace OCA\Contacts\Backend;
 use OCA\Contacts;
 
 /**
- * Subclass this class for Cantacts backends
+ * Backend class for shared address books.
  */
-
 class Shared extends Database {
 
+	/**
+	 * The name of the backend.
+	 *
+	 * @var string
+	 */
 	public $name = 'shared';
+
+	/**
+	 * The cached address books.
+	 *
+	 * @var array[]
+	 */
 	public $addressBooks = array();
 
 	/**

@@ -103,6 +103,7 @@ class Addressbook extends AbstractPIMCollection {
 		$metadata['lastmodified'] = $this->lastModified();
 		$metadata['active'] = $this->isActive();
 		$metadata['backend'] = $this->getBackend()->name;
+		$metadata['owner'] = $this->getOwner();
 		return $metadata;
 	}
 
@@ -124,7 +125,9 @@ class Addressbook extends AbstractPIMCollection {
 	 * @return string
 	 */
 	public function getOwner() {
-		return $this->addressBookInfo['owner'];
+		return isset($this->addressBookInfo['owner'])
+			? $this->addressBookInfo['owner']
+			: \OCP\User::getUser();
 	}
 
 	/**

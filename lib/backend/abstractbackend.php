@@ -36,7 +36,9 @@ abstract class AbstractBackend {
 	* @method array|null getAddressBook(string $addressbookid, array $options = array())
 	* @method array getContacts(string $addressbookid, array $options = array())
 	* @method array|null getContact(string $addressbookid, mixed $id, array $options = array())
-	* The following methods MAY be implemented:
+	*
+	* The following methods MAY be implemented but ONLY if the backend can actually perform the action
+	* as the existence of the methods is used to determine the backends capabilities:
 	* @method bool hasAddressBook(string $addressbookid)
 	* @method bool updateAddressBook(string $addressbookid, array $updates, array $options = array())
 	* @method string createAddressBook(array $properties, array $options = array())
@@ -51,24 +53,26 @@ abstract class AbstractBackend {
 
 	/**
 	 * The name of the backend.
+	 *
 	 * @var string
 	 */
 	public $name;
 
 	/**
-	 * The current usert.
+	 * The current user.
+	 *
 	 * @var string
 	 */
 	public $userid;
 
-	protected $possibleContactPermissions = array(
+	protected $possibleContactCapabilities = array(
 		\OCP\PERMISSION_CREATE 	=> 'createContact',
 		\OCP\PERMISSION_READ	=> 'getContact',
 		\OCP\PERMISSION_UPDATE	=> 'updateContact',
 		\OCP\PERMISSION_DELETE 	=> 'deleteContact',
 	);
 
-	protected $possibleAddressBookPermissions = array(
+	protected $possibleAddressBookCapabilities = array(
 		\OCP\PERMISSION_CREATE 	=> 'createAddressBook',
 		\OCP\PERMISSION_READ	=> 'getAddressBook',
 		\OCP\PERMISSION_UPDATE	=> 'updateAddressBook',
@@ -84,16 +88,17 @@ abstract class AbstractBackend {
 	}
 
 	/**
-	* @brief Get all possible permissions for contacts based on what the backend implements.
-	* @returns bitwise-or'ed actions
+	* @brief Get all capabilities for contacts based on what the backend implements.
 	*
 	* Returns the supported actions as an int to be
 	* compared with \OCP\PERMISSION_CREATE etc.
+	* @see AbstractBackend::hasContactMethodFor()
+	* @returns bitwise-or'ed actions
 	*/
-	protected function getContactPermissions() {
+	protected function getContactCapacilities() {
 		$permissions = 0;
 
-		foreach ($this->possibleContactPermissions as $permission => $methodName) {
+		foreach ($this->possibleContactCapabilities as $permission => $methodName) {
 			if(method_exists($this, $methodName)) {
 				$permissions |= $permission;
 			}
@@ -105,17 +110,18 @@ abstract class AbstractBackend {
 	}
 
 	/**
-	* @brief Get all permissions for address book based on what the backend implements.
-	* @returns bitwise-or'ed actions
+	* @brief Get all capabilities for address books based on what the backend implements.
 	*
 	* Returns the supported actions as int to be
 	* compared with \OCP\PERMISSION_CREATE etc.
+	* @see AbstractBackend::hasAddressBookMethodFor()
+	* @returns bitwise-or'ed actions
 	*/
-	protected function getAddressBookPermissions() {
+	protected function getAddressBookCapabilities() {
 
 		$permissions = 0;
 
-		foreach ($this->possibleAddressBookPermissions as $permission => $methodName) {
+		foreach ($this->possibleAddressBookCapabilities as $permission => $methodName) {
 			if (method_exists($this, $methodName)) {
 				$permissions |= $permission;
 			}
@@ -128,34 +134,36 @@ abstract class AbstractBackend {
 
 	/**
 	* @brief Check if backend implements action for contacts
-	* @param $actions bitwise-or'ed actions
-	* @returns boolean
 	*
-	* Returns the supported actions as int to be
-	* compared with \OCP\PERMISSION_CREATE etc.
+	* Returns true if the backend supports an action for a given permission
+	* for example \OCP\PERMISSION_CREATE etc.
+	*
+	* @param $permission bitwise-or'ed actions
+	* @returns boolean
 	*/
 	public function hasContactMethodFor($permission) {
 
-		return (bool)($this->getContactPermissions() & $permission);
+		return (bool)($this->getContactCapacilities() & $permission);
 
 	}
 
 	/**
 	* @brief Check if backend implements action for contacts
-	* @param $actions bitwise-or'ed actions
-	* @returns boolean
 	*
-	* Returns the supported actions as int to be
-	* compared with \OCP\PERMISSION_CREATE etc.
+	* Returns true if the backend supports an action for a given permission
+	* for example \OCP\PERMISSION_CREATE etc.
+	*
+	* @param $permission bitwise-or'ed actions
+	* @returns boolean
 	*/
 	public function hasAddressBookMethodFor($permission) {
 
-		return (bool)($this->getAddressBookPermissions() & $permission);
+		return (bool)($this->getAddressBookCapabilities() & $permission);
 
 	}
 
 	/**
-	 * Check if the backend has the address book
+	 * @brief Check if the backend has the address book
 	 *
 	 * This can be reimplemented in the backend to improve performance.
 	 *
@@ -169,7 +177,8 @@ abstract class AbstractBackend {
 	}
 
 	/**
-	 * Returns the number of contacts in an address book.
+	 * @brief Returns the number of contacts in an address book.
+	 *
 	 * Implementations can choose to override this method to either
 	 * get the result more effectively or to return null if the backend
 	 * cannot determine the number.
@@ -184,12 +193,13 @@ abstract class AbstractBackend {
 	}
 
 	/**
-	 * Returns the list of addressbooks for a specific user.
+	 * @brief Returns the list of addressbooks for a specific user.
 	 *
 	 * The returned arrays MUST contain a unique 'id' for the
-	 * backend and a 'displayname', and it MAY contain a
-	 * 'description'.
+	 * backend a string 'displayname' and an integer
+	 * 'permissions', and it MAY contain a string 'description'.
 	 *
+	 * @see AbstractBackend::getAddressBook()
 	 * @param array $options - Optional (backend specific options)
 	 * @return array
 	 */
@@ -201,8 +211,8 @@ abstract class AbstractBackend {
 	 * The returned array MUST contain string: 'displayname',string: 'backend'
 	 * and integer: 'permissions' value using there ownCloud CRUDS constants
 	 * (which MUST be at least \OCP\PERMISSION_READ).
-	 * Currently the only ones supported are 'displayname' and
-	 * 'description', but backends can implement additional.
+	 * The backend MAY also add the optional entries 'description' and 'owner',
+	 * and can add additional entries if needed internally.
 	 *
 	 * @param string $addressBookId
 	 * @param array $options - Optional (backend specific options)
@@ -215,9 +225,10 @@ abstract class AbstractBackend {
 	 *
 	 * The $properties array contains the changes to be made.
 	 *
-	 * Currently the only ones supported are 'displayname' and
-	 * 'description', but backends can implement additional.
+	 * The backend MUST NOT implement this method if it doesn't support updating,
+	 * and the implementation is commented out here intentionally!
 	 *
+	 * @see AbstractBackend::getAddressBook()
 	 * @param string $addressBookId
 	 * @param array $properties
 	 * @param array $options - Optional (backend specific options)
@@ -228,7 +239,7 @@ abstract class AbstractBackend {
 	/**
 	 * Creates a new address book
 	 *
-	 * Classes that doesn't support adding address books MUST NOT implement this method.
+	 * Backends that doesn't support adding address books MUST NOT implement this method.
 	 *
 	 * Currently the only ones supported are 'displayname' and
 	 * 'description', but backends can implement additional.
@@ -243,7 +254,7 @@ abstract class AbstractBackend {
 	/**
 	 * Deletes an entire address book and all its contents
 	 *
-	 * Classes that doesn't support deleting address books MUST NOT implement this method.
+	 * Backends that doesn't support deleting address books MUST NOT implement this method.
 	 *
 	 * @param string $addressBookId
 	 * @param array $options - Optional (backend specific options)
@@ -279,11 +290,18 @@ abstract class AbstractBackend {
 	 * Returns all contacts for a specific addressbook id.
 	 *
 	 * The returned array MUST contain the unique ID a string value 'id', a string
-	 * value 'displayname', a string value 'owner' and an integer 'permissions' value using there
+	 * value 'displayname' and an integer 'permissions' value using there
 	 * ownCloud CRUDS constants (which MUST be at least \OCP\PERMISSION_READ), and SHOULD
 	 * contain the properties of the contact formatted as a vCard 3.0
 	 * https://tools.ietf.org/html/rfc2426 mapped to 'carddata' or as an
 	 * \OCA\Contacts\VObject\VCard object mapped to 'vcard'.
+	 * If the backend supports different ownerships it can add an 'owner' entry.
+	 *
+	 * NOTE: To improve performance $options can contain the boolean value 'omitdata'
+	 * that if true indicates that the backend SHOULD NOT add 'vcard' or 'carddata'.
+	 *
+	 * NOTE: If the backend doesn't support fetching in batches 'offset' and 'limit'
+	 * MUST be ignored and all contacts MUST be returned.
 	 *
 	 * Example:
 	 *
@@ -291,9 +309,6 @@ abstract class AbstractBackend {
 	 *   0 => array('id' => '4e111fef5df', 'owner' => 'foo', 'permissions' => 1, 'displayname' => 'John Q. Public', 'vcard' => $vobject),
 	 *   1 => array('id' => 'bbcca2d1535', 'owner' => 'bar', 'permissions' => 32, 'displayname' => 'Jane Doe', 'carddata' => $data)
 	 * );
-	 *
-	 * For contacts that contain loads of data, the 'carddata' or 'vcard' MAY be omitted
-	 * as it can be fetched later.
 	 *
 	 * The following options are supported in the $options array:
 	 *

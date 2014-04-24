@@ -97,17 +97,14 @@ class LocalUsers extends AbstractBackend {
 	* Only 1 addressbook for every user
 	*/
 	public function getAddressBook($addressBookId, array $options = array()) {
-		$addressbook = array(
-			"id" => $addressBookId,
-			"displayname" => (string)self::$l10n->t('On this %s', array(self::$defaults->getName())),
-			"description" => (string)self::$l10n->t('On this %s', array(self::$defaults->getName())),
-			"lastmodified" => time(),
-			/* FIXME: we need on 'owner' here */
-			"permissions" => \OCP\PERMISSION_READ,
-			"backend" => $this->name,
-			"active" => 1
+		return array(
+			'id' => $addressBookId,
+			'displayname' => (string)self::$l10n->t('On this %s', array(self::$defaults->getName())),
+			'description' => (string)self::$l10n->t('On this %s', array(self::$defaults->getName())),
+			'lastmodified' => $this->lastModifiedAddressBook($addressBookId),
+			'permissions' => \OCP\PERMISSION_READ,
+			'backend' => $this->name
 		);
-		return $addressbook;
 	}
 
 	/**
