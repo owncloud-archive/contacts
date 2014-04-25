@@ -462,6 +462,7 @@ dt[data-element="org"] { margin-top: 4px; }
 .import-upload-button {
     background-position: center center;
     background-repeat: no-repeat;
+	border: none;
     cursor: pointer;
     z-index: 100;
 }
