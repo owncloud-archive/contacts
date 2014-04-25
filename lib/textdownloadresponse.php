@@ -24,7 +24,7 @@
 
 namespace OCA\Contacts;
 
-use OC\AppFramework\Http\DownloadResponse;
+use OCP\AppFramework\Http\DownloadResponse;
 
 /**
  * Prompts the user to download the a textfile.
