@@ -857,6 +857,10 @@ OC.Contacts = OC.Contacts || {};
 					cb({id:self.id});
 				}
 			}
+		}).fail(function(response) {
+			if(typeof cb === 'function') {
+				cb(response);
+			}
 		});
 	};
 
@@ -2326,6 +2330,8 @@ OC.Contacts = OC.Contacts || {};
 									self.insertContact(self.contacts[result.id].getListItemElement());
 								}
 							});
+						} else {
+							console.warn(response);
 						}
 					});
 				});
