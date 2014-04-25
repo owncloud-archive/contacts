@@ -1,4 +1,4 @@
 <?php $TRANSLATIONS = array(
-"Password" => "Wagwoord",
-"Help" => "Hulp"
+"Cancel" => "Kanseleer",
+"Add" => "Voeg by"
 );

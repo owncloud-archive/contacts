@@ -48,6 +48,8 @@
 "Pager" => "صفحه",
 "Internet" => "اینترنت",
 "Family" => "خانواده",
+"Group name" => "نام گروه",
+"Address books" => "کتابچه آدرس",
 "Delete" => "حذف",
 "Groups" => "گروه ها",
 "Download" => "دانلود",

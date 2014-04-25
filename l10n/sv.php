@@ -79,6 +79,7 @@
 "The backend for this address book does not support updating" => "Gränssnittet för denna adressbok saknar stöd för uppdateringar",
 "You don't have permissions to delete the address book." => "Du saknar behörighet att ta bort adressboken.",
 "Address book not found" => "Kan inte hitta adressboken.",
+"On this %s" => "På denna %s",
 "You do not have permissions to see this contact" => "Du saknar behörighet att se denna kontakt",
 "You do not have permissions to update this contact" => "Du har inte behörighet att uppdatera denna kontakt",
 "The backend for this contact does not support updating it" => "Gränssnittet för denna kontakt saknar stöd för uppdatering av den.",
