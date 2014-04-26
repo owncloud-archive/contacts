@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-25 00:48-0400\n"
+"POT-Creation-Date: 2014-04-26 00:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,7 +105,7 @@ msgstr ""
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:705 js/app.js:1679
+#: js/app.js:705 js/app.js:1681
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
@@ -125,72 +125,72 @@ msgstr ""
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1181
+#: js/app.js:1183
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1219
+#: js/app.js:1221
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1357 js/app.js:1361 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1383 js/app.js:1436 templates/contacts.php:363
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
 #: templates/contacts.php:364
 msgid "Cancel"
 msgstr ""
 
-#: js/app.js:1410 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:158
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1414
+#: js/app.js:1416
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1521
+#: js/app.js:1523
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1634
+#: js/app.js:1636
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1638
+#: js/app.js:1640
 msgid "Crop photo"
 msgstr ""
 
-#: js/contacts.js:900
+#: js/contacts.js:904
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1097
+#: js/contacts.js:1101
 msgid "# groups"
 msgstr ""
 
-#: js/contacts.js:1177
+#: js/contacts.js:1181
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:1315
+#: js/contacts.js:1319
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2227
+#: js/contacts.js:2231
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2238
+#: js/contacts.js:2242
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2247
+#: js/contacts.js:2251
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 

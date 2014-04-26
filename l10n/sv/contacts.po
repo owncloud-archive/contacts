@@ -24,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-25 00:48-0400\n"
-"PO-Revision-Date: 2014-04-24 12:51+0000\n"
+"POT-Creation-Date: 2014-04-26 00:48-0400\n"
+"PO-Revision-Date: 2014-04-25 13:00+0000\n"
 "Last-Translator: enoch85 <enoch85@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -122,7 +122,7 @@ msgstr "Sammanslagning misslyckades: Fel vid sparande av kontakt."
 msgid "Select photo"
 msgstr "Välj foto"
 
-#: js/app.js:705 js/app.js:1679
+#: js/app.js:705 js/app.js:1681
 msgid "Network or server error. Please inform administrator."
 msgstr "Nätverk eller serverfel. Informera administratören."
 
@@ -142,72 +142,72 @@ msgstr "Fel vid tillägg i grupp."
 msgid "Error removing from group."
 msgstr "Fel vid radering från grupp."
 
-#: js/app.js:1181
+#: js/app.js:1183
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Du har valt mer än 300 kontakter.\nDetta kommer troligen misslyckas! Klicka här för att försöka i alla fall."
 
-#: js/app.js:1219
+#: js/app.js:1221
 msgid "Error setting {name} as favorite."
 msgstr "Fel när {name} skulle läggas till favoriter."
 
-#: js/app.js:1357 js/app.js:1361 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
 msgid "Merge contacts"
 msgstr "Sammanfoga kontakter"
 
-#: js/app.js:1383 js/app.js:1436 templates/contacts.php:363
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
 #: templates/contacts.php:364
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: js/app.js:1410 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:158
 msgid "Add group"
 msgstr "Lägg till grupp"
 
-#: js/app.js:1414
+#: js/app.js:1416
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1521
+#: js/app.js:1523
 msgid "Could not find contact: {id}"
 msgstr "Kunde inte hitta kontakt: {id}"
 
-#: js/app.js:1634
+#: js/app.js:1636
 msgid "Edit profile picture"
 msgstr "Anpassa profilbild"
 
-#: js/app.js:1638
+#: js/app.js:1640
 msgid "Crop photo"
 msgstr "Beskär bild"
 
-#: js/contacts.js:900
+#: js/contacts.js:904
 msgid "Error parsing date: {date}"
 msgstr "Fel vid läsning av datum: {date}"
 
-#: js/contacts.js:1097
+#: js/contacts.js:1101
 msgid "# groups"
 msgstr "# grupper"
 
-#: js/contacts.js:1177
+#: js/contacts.js:1181
 msgid "Error parsing birthday {bday}"
 msgstr "Fel uppstod under inläsning av födelsedag {bday}"
 
-#: js/contacts.js:1315
+#: js/contacts.js:1319
 msgid "The backend does not support multi-byte characters."
 msgstr "Backend saknar stöd för multi-byte tecken."
 
-#: js/contacts.js:2227
+#: js/contacts.js:2231
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Vissa kontakter är markerade för radering, men är inte raderade än. Vänta tills att de har raderats."
 
-#: js/contacts.js:2238
+#: js/contacts.js:2242
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klicka för att ångra radering av {num} kontakter"
 
-#: js/contacts.js:2247
+#: js/contacts.js:2251
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Avbruten radering av {num} kontakter"
 
