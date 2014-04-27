@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-20 00:49-0400\n"
-"PO-Revision-Date: 2014-04-19 06:23+0000\n"
+"POT-Creation-Date: 2014-04-27 00:48-0400\n"
+"PO-Revision-Date: 2014-04-26 06:12+0000\n"
 "Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -115,7 +115,7 @@ msgstr "Unione non riuscita. Errore durante il salvataggio del contatto."
 msgid "Select photo"
 msgstr "Seleziona la foto"
 
-#: js/app.js:705 js/app.js:1679
+#: js/app.js:705 js/app.js:1681
 msgid "Network or server error. Please inform administrator."
 msgstr "Errore di rete o del server. Informa l'amministratore."
 
@@ -135,72 +135,72 @@ msgstr "Errore durante l'aggiunta al gruppo."
 msgid "Error removing from group."
 msgstr "Errore durante la rimozione dal gruppo."
 
-#: js/app.js:1181
+#: js/app.js:1183
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Hai selezionato più di 300 contatti.\nL'operazione potrebbe non riuscire! Fai clic qui per provare comunque."
 
-#: js/app.js:1219
+#: js/app.js:1221
 msgid "Error setting {name} as favorite."
 msgstr "Errore durante l'impostazione di {name} come preferito."
 
-#: js/app.js:1357 js/app.js:1361 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
 msgid "Merge contacts"
 msgstr "Unisci contatti"
 
-#: js/app.js:1383 js/app.js:1436 templates/contacts.php:363
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
 #: templates/contacts.php:364
 msgid "Cancel"
 msgstr "Annulla"
 
-#: js/app.js:1410 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:158
 msgid "Add group"
 msgstr "Aggiungi gruppo"
 
-#: js/app.js:1414
+#: js/app.js:1416
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1521
+#: js/app.js:1523
 msgid "Could not find contact: {id}"
 msgstr "Impossibile trovare il contatto: {id}"
 
-#: js/app.js:1634
+#: js/app.js:1636
 msgid "Edit profile picture"
 msgstr "Modifica l'immagine del profilo"
 
-#: js/app.js:1638
+#: js/app.js:1640
 msgid "Crop photo"
 msgstr "Ritaglia foto"
 
-#: js/contacts.js:900
+#: js/contacts.js:904
 msgid "Error parsing date: {date}"
 msgstr "Errore durante l'elaborazione della data: {date}"
 
-#: js/contacts.js:1097
+#: js/contacts.js:1101
 msgid "# groups"
 msgstr "# gruppi"
 
-#: js/contacts.js:1177
+#: js/contacts.js:1181
 msgid "Error parsing birthday {bday}"
 msgstr "Errore durante l'elaborazione della data di nascita {bday}"
 
-#: js/contacts.js:1315
+#: js/contacts.js:1319
 msgid "The backend does not support multi-byte characters."
 msgstr "Il motore non supporta i caratteri multi-byte."
 
-#: js/contacts.js:2227
+#: js/contacts.js:2231
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alcuni contatti sono marcati per l'eliminazione, ma non sono stati ancora rimossi. Attendi fino al completamento dell'operazione."
 
-#: js/contacts.js:2238
+#: js/contacts.js:2242
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Un clic per annullare l'eliminazione di {num} contatti"
 
-#: js/contacts.js:2247
+#: js/contacts.js:2251
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Eliminazione di {num} contatti annullata"
 
@@ -307,47 +307,47 @@ msgstr "Errore del server. Informa l'amministratore di sistema"
 msgid "Failed loading photo: {error}"
 msgstr "Caricamento foto non riuscito: {error}"
 
-#: lib/addressbook.php:166
+#: lib/addressbook.php:169
 msgid "You do not have permissions to see this contacts"
 msgstr "Non hai i permessi per vedere questo contatto"
 
-#: lib/addressbook.php:177
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "Contatto non trovato"
 
-#: lib/addressbook.php:214
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "Non hai i permessi per vedere questi contatti"
 
-#: lib/addressbook.php:247
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Non hai i permessi per aggiungere contatti alla rubrica"
 
-#: lib/addressbook.php:254
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Il motore per questa rubrica non supporta l'aggiunta di contatti"
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "Non hai i permessi per eliminare questo contatto"
 
-#: lib/addressbook.php:306 lib/addressbook.php:346
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Il motore per questa rubrica non supporta l'eliminazione di contatti"
 
-#: lib/addressbook.php:369
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "Errore sconosciuto"
 
-#: lib/addressbook.php:410
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr "Accesso negato"
 
-#: lib/addressbook.php:417
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "Il motore per questa rubrica non supporta l'aggiornamento"
 
-#: lib/addressbook.php:448
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "Non hai i permessi per eliminare la rubrica."
 
@@ -360,35 +360,35 @@ msgstr "Rubrica non trovata."
 msgid "On this %s"
 msgstr "Su questo %s"
 
-#: lib/contact.php:116 lib/contact.php:163
+#: lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
 msgstr "Non hai i permessi per vedere questo contatto"
 
-#: lib/contact.php:267
+#: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Non hai i permessi per aggiornare questo contatto"
 
-#: lib/contact.php:280
+#: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
 msgstr "Il motore per questo contatto non supporta l'aggiornamento"
 
-#: lib/contact.php:297
+#: lib/contact.php:299
 msgid "This backend not support adding contacts"
 msgstr "Questo motore non supporta l'aggiunta di contatti"
 
-#: lib/contact.php:463 lib/contact.php:480
+#: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
 msgstr "Proprietà non trovata"
 
-#: lib/contact.php:528
+#: lib/contact.php:530
 msgid " Missing IM parameter for: "
 msgstr "Parametro IM mancante per:"
 
-#: lib/contact.php:536
+#: lib/contact.php:538
 msgid "Unknown IM: "
 msgstr "IM sconosciuto:"
 
-#: lib/contact.php:813
+#: lib/contact.php:815
 msgid "{name}'s Birthday"
 msgstr "Compleanno di {name}"
 
