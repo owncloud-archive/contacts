@@ -68,7 +68,7 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 	*/
 	public function search($pattern, $searchProperties, $options) {
 		// First make sure the database is updated
-		$this->addressBook->getBackend()->updateDatabase(\OCP\User::getUSer());
+		$this->addressBook->getBackend()->updateDatabase(\OCP\User::getUser());
 
 		$ids = array();
 		$results = array();
