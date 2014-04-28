@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-22 00:48-0400\n"
-"PO-Revision-Date: 2014-04-21 17:44+0000\n"
-"Last-Translator: svetlemodry <jaroslav@lichtblau.cz>\n"
+"POT-Creation-Date: 2014-04-28 00:48-0400\n"
+"PO-Revision-Date: 2014-04-28 02:30+0000\n"
+"Last-Translator: pstast <petr@stastny.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -117,7 +117,7 @@ msgstr "Sloučení selhalo. Chyba při ukládání kontaktu."
 msgid "Select photo"
 msgstr "Vybrat fotku"
 
-#: js/app.js:705 js/app.js:1679
+#: js/app.js:705 js/app.js:1681
 msgid "Network or server error. Please inform administrator."
 msgstr "Chyba sítě či serveru. Kontaktujte prosím správce."
 
@@ -137,72 +137,72 @@ msgstr "Chyba při přidávání do skupiny"
 msgid "Error removing from group."
 msgstr "Chyba při odebírání ze skupiny"
 
-#: js/app.js:1181
+#: js/app.js:1183
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Je označeno více než 300 kontaktů.\nToto pravděpodobně selže. Klikněte zde, pokud chcete přesto pokračovat."
 
-#: js/app.js:1219
+#: js/app.js:1221
 msgid "Error setting {name} as favorite."
 msgstr "Chyba při nastavování {name} jako oblíbený."
 
-#: js/app.js:1357 js/app.js:1361 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
 msgid "Merge contacts"
 msgstr "Sloučit kontakty"
 
-#: js/app.js:1383 js/app.js:1436 templates/contacts.php:363
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
 #: templates/contacts.php:364
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: js/app.js:1410 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:158
 msgid "Add group"
 msgstr "Přidat skupinu"
 
-#: js/app.js:1414
+#: js/app.js:1416
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1521
+#: js/app.js:1523
 msgid "Could not find contact: {id}"
 msgstr "Nelze nalézt kontakt: {id}"
 
-#: js/app.js:1634
+#: js/app.js:1636
 msgid "Edit profile picture"
 msgstr "Upravit obrázek profilu"
 
-#: js/app.js:1638
+#: js/app.js:1640
 msgid "Crop photo"
 msgstr "Oříznout fotku"
 
-#: js/contacts.js:900
+#: js/contacts.js:904
 msgid "Error parsing date: {date}"
 msgstr "Chyba při parsování data: {date}"
 
-#: js/contacts.js:1097
+#: js/contacts.js:1101
 msgid "# groups"
 msgstr "počet skupin"
 
-#: js/contacts.js:1177
+#: js/contacts.js:1181
 msgid "Error parsing birthday {bday}"
 msgstr "Chyba parsování narozenin {bday}"
 
-#: js/contacts.js:1315
+#: js/contacts.js:1319
 msgid "The backend does not support multi-byte characters."
 msgstr "Úložiště nepodporuje více-bajtové znaky."
 
-#: js/contacts.js:2227
+#: js/contacts.js:2231
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Některé kontakty jsou označeny ke smazání, ale ještě smazány nejsou. Počkejte, prosím, na dokončení operace."
 
-#: js/contacts.js:2238
+#: js/contacts.js:2242
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klikněte pro navrácení smazání {num} kontaktů"
 
-#: js/contacts.js:2247
+#: js/contacts.js:2251
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Smazání {num} kontaktů zrušeno"
 
@@ -309,47 +309,47 @@ msgstr "Chyba serveru! Prosím informujte systémového správce."
 msgid "Failed loading photo: {error}"
 msgstr "Načtení fotografie se nezdařilo: {error}"
 
-#: lib/addressbook.php:166
+#: lib/addressbook.php:169
 msgid "You do not have permissions to see this contacts"
 msgstr "Nemáte oprávnění pro zobrazení těchto kontaktů"
 
-#: lib/addressbook.php:177
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "Kontakt nebyl nalezen"
 
-#: lib/addressbook.php:214
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "Nemáte oprávnění pro zobrazení těchto kontaktů"
 
-#: lib/addressbook.php:247
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Nemáte oprávnění pro přidání kontaktů do adresáře kontaktů"
 
-#: lib/addressbook.php:254
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Úložiště tohoto adresáře kontaktů nepodporuje přidávání kontaktů"
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "Nemáte oprávnění pro smazání tohoto kontaktu"
 
-#: lib/addressbook.php:306 lib/addressbook.php:346
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Úložiště tohoto adresáře kontaktů nepodporuje mazání kontaktů"
 
-#: lib/addressbook.php:369
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "Neznámá chyba"
 
-#: lib/addressbook.php:410
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr "Přístup zamítnut"
 
-#: lib/addressbook.php:417
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "Úložiště tohoto adresáře kontaktů nepodporuje změnu kontaktů"
 
-#: lib/addressbook.php:448
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "Nemáte oprávnění pro mazání v adresáři kontaktů"
 
@@ -362,35 +362,35 @@ msgstr "Adresář kontaktů nenalezen"
 msgid "On this %s"
 msgstr ""
 
-#: lib/contact.php:116 lib/contact.php:163
+#: lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
 msgstr "Nemáte oprávnění k zobrazení tohoto kontaktu"
 
-#: lib/contact.php:267
+#: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Nemáte oprávnění ke změně tohoto kontaktu"
 
-#: lib/contact.php:280
+#: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
 msgstr "Úložiště tohoto kontaktu nepodporuje jeho změnu"
 
-#: lib/contact.php:297
+#: lib/contact.php:299
 msgid "This backend not support adding contacts"
 msgstr "Toto úložiště nepodporuje přidávání kontaktů"
 
-#: lib/contact.php:463 lib/contact.php:480
+#: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
 msgstr "Vlastnost nenalezena"
 
-#: lib/contact.php:528
+#: lib/contact.php:530
 msgid " Missing IM parameter for: "
 msgstr "Chybí IM parametr pro:"
 
-#: lib/contact.php:536
+#: lib/contact.php:538
 msgid "Unknown IM: "
 msgstr "Neznámý komunikátor: "
 
-#: lib/contact.php:813
+#: lib/contact.php:815
 msgid "{name}'s Birthday"
 msgstr "Narozeniny {name}"
 
@@ -870,7 +870,7 @@ msgstr "Odstranit současný kontakt"
 #: templates/contacts.php:126
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr "Nemáte žádné kontakty v adresáři nebo je adresář vypnutý."
+msgstr "Nemáte žádné kontakty v adresáři nebo je adresář kontaktů vypnutý."
 
 #: templates/contacts.php:127
 msgid "Add a new contact or import existing contacts from a VCF file."
