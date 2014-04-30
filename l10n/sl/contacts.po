@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-22 00:48-0400\n"
-"PO-Revision-Date: 2014-04-21 15:56+0000\n"
+"POT-Creation-Date: 2014-04-30 00:48-0400\n"
+"PO-Revision-Date: 2014-04-29 10:01+0000\n"
 "Last-Translator: mateju <>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +112,7 @@ msgstr "Združevanje je spodletelo. Prišlo je do napake med shranjevanjem stika
 msgid "Select photo"
 msgstr "Izbor slike"
 
-#: js/app.js:705 js/app.js:1679
+#: js/app.js:705 js/app.js:1681
 msgid "Network or server error. Please inform administrator."
 msgstr "Napaka omrežja ali strežnika. Pošljite obvestilo skrbniku sistema."
 
@@ -132,72 +132,72 @@ msgstr "Napaka med dodajanjem stika v skupino."
 msgid "Error removing from group."
 msgstr "Napaka med odstranjevanjem stika iz skupino."
 
-#: js/app.js:1181
+#: js/app.js:1183
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Izbranih je več kot 300 stikov.\nOpravilo bo najverjetneje spodletelo. Kliknite, če želite vseeno poskusiti."
 
-#: js/app.js:1219
+#: js/app.js:1221
 msgid "Error setting {name} as favorite."
 msgstr "Napaka med nastavljanjem {name} kot priljubljenega."
 
-#: js/app.js:1357 js/app.js:1361 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
 msgid "Merge contacts"
 msgstr "Združi stike"
 
-#: js/app.js:1383 js/app.js:1436 templates/contacts.php:363
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
 #: templates/contacts.php:364
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: js/app.js:1410 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:158
 msgid "Add group"
 msgstr "Dodaj skupino"
 
-#: js/app.js:1414
+#: js/app.js:1416
 msgid "OK"
 msgstr "V redu"
 
-#: js/app.js:1521
+#: js/app.js:1523
 msgid "Could not find contact: {id}"
 msgstr "Stika ni mogoče najti: {id}"
 
-#: js/app.js:1634
+#: js/app.js:1636
 msgid "Edit profile picture"
 msgstr "Uredi fotografijo profila"
 
-#: js/app.js:1638
+#: js/app.js:1640
 msgid "Crop photo"
 msgstr "Obreži sliko"
 
-#: js/contacts.js:900
+#: js/contacts.js:904
 msgid "Error parsing date: {date}"
 msgstr "Napaka razčlenjevanja datuma: {date}"
 
-#: js/contacts.js:1097
+#: js/contacts.js:1101
 msgid "# groups"
 msgstr "# skupine"
 
-#: js/contacts.js:1177
+#: js/contacts.js:1181
 msgid "Error parsing birthday {bday}"
 msgstr "Ni mogoče razčleniti rojstnega dne {bday}"
 
-#: js/contacts.js:1315
+#: js/contacts.js:1319
 msgid "The backend does not support multi-byte characters."
 msgstr "Ozadnji program ne podpira večbitnih znakov."
 
-#: js/contacts.js:2227
+#: js/contacts.js:2231
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Nekateri stiki so označeni za izbris, vendar še niso izbrisani. Počakajte na dokončanje opravila."
 
-#: js/contacts.js:2238
+#: js/contacts.js:2242
 msgid "Click to undo deletion of {num} contacts"
 msgstr "S klikom bodo povrnjeni izbrisani stiki ({num})"
 
-#: js/contacts.js:2247
+#: js/contacts.js:2251
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Preklican izbris {num} stikov"
 
@@ -304,47 +304,47 @@ msgstr "Napaka strežnika! Stopite v stik s skrbnikom sistema."
 msgid "Failed loading photo: {error}"
 msgstr "Nalaganje slike je spodletelo: {error}"
 
-#: lib/addressbook.php:166
+#: lib/addressbook.php:169
 msgid "You do not have permissions to see this contacts"
 msgstr "Ni ustreznih dovoljenj za ogled teh stikov."
 
-#: lib/addressbook.php:177
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "Stika ni mogoče najti"
 
-#: lib/addressbook.php:214
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "Ni ustreznih dovoljenj za ogled teh stikov."
 
-#: lib/addressbook.php:247
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Ni ustreznih dovoljenj za dodajanje stikov v imenik."
 
-#: lib/addressbook.php:254
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Zaledje tega imenika ne omogoča dodajanja stikov."
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "Ni ustreznih dovoljenj za brisanje tega stika"
 
-#: lib/addressbook.php:306 lib/addressbook.php:346
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Zaledje tega imenika ne omogoča brisanje stikov"
 
-#: lib/addressbook.php:369
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "Neznana napaka"
 
-#: lib/addressbook.php:410
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr "Dostop je zavrnjen"
 
-#: lib/addressbook.php:417
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "Zaledje tega imenika ne omogoča posodobitev"
 
-#: lib/addressbook.php:448
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "Ni ustreznih dovoljenj za brisanje imenika."
 
@@ -357,35 +357,35 @@ msgstr "Imenika ni mogoče najti"
 msgid "On this %s"
 msgstr "Na %s"
 
-#: lib/contact.php:116 lib/contact.php:163
+#: lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
 msgstr "Ni ustreznih dovoljenj za ogled tega stika"
 
-#: lib/contact.php:267
+#: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Ni ustreznih dovoljenj za posodabljanje tega stika"
 
-#: lib/contact.php:280
+#: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
 msgstr "Hrbtišče stika ne omogoča posodabljanja podatkov"
 
-#: lib/contact.php:297
+#: lib/contact.php:299
 msgid "This backend not support adding contacts"
 msgstr "Hrbtišče ne podpira dodajanja stikov"
 
-#: lib/contact.php:463 lib/contact.php:480
+#: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
 msgstr "Lastnosti ni mogoče najti"
 
-#: lib/contact.php:528
+#: lib/contact.php:530
 msgid " Missing IM parameter for: "
 msgstr "Manjka parameter IM za:"
 
-#: lib/contact.php:536
+#: lib/contact.php:538
 msgid "Unknown IM: "
 msgstr "Neznan IM:"
 
-#: lib/contact.php:813
+#: lib/contact.php:815
 msgid "{name}'s Birthday"
 msgstr "{name} - rojstni dan"
 

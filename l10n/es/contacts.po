@@ -18,7 +18,7 @@
 # juanman <juanma@kde.org.ar>, 2011-2012
 # valarauco <manudeloz86@gmail.com>, 2012
 # msoko <sokolovitch@yahoo.com>, 2013
-# mikelanabitarte <mikelanabitarte@gmail.com>, 2013
+# mikelanabitarte <inactive+mikelanabitarte@transifex.com>, 2013
 # oSiNaReF  <>, 2012
 # plaguna <laguna.sanchez@gmail.com>, 2013
 # pablomillaquen <pablomillaquen@gmail.com>, 2013
@@ -36,8 +36,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-22 00:48-0400\n"
-"PO-Revision-Date: 2014-04-21 14:42+0000\n"
+"POT-Creation-Date: 2014-04-30 00:48-0400\n"
+"PO-Revision-Date: 2014-04-29 10:01+0000\n"
 "Last-Translator: Art O. Pal <artopal@fastmail.fm>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -134,7 +134,7 @@ msgstr "Combinación fallida. Error guardando el contacto."
 msgid "Select photo"
 msgstr "Seleccionar una foto"
 
-#: js/app.js:705 js/app.js:1679
+#: js/app.js:705 js/app.js:1681
 msgid "Network or server error. Please inform administrator."
 msgstr "Error en la red o en el servidor. Por favor, informe al administrador."
 
@@ -154,72 +154,72 @@ msgstr "Error añadiendo al grupo."
 msgid "Error removing from group."
 msgstr "Error eliminando del grupo."
 
-#: js/app.js:1181
+#: js/app.js:1183
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Ha seleccionado más de 300 contactos.\n¡Puede que no tenga éxito! Pulse aquí para intentarlo de todas formas."
 
-#: js/app.js:1219
+#: js/app.js:1221
 msgid "Error setting {name} as favorite."
 msgstr "Error configurando {name} como favorito."
 
-#: js/app.js:1357 js/app.js:1361 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
 msgid "Merge contacts"
 msgstr "Combinar contactos"
 
-#: js/app.js:1383 js/app.js:1436 templates/contacts.php:363
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
 #: templates/contacts.php:364
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: js/app.js:1410 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:158
 msgid "Add group"
 msgstr "Añadir grupo"
 
-#: js/app.js:1414
+#: js/app.js:1416
 msgid "OK"
 msgstr "Aceptar"
 
-#: js/app.js:1521
+#: js/app.js:1523
 msgid "Could not find contact: {id}"
 msgstr "No se puede encontrar el contacto: {id}"
 
-#: js/app.js:1634
+#: js/app.js:1636
 msgid "Edit profile picture"
 msgstr "Editar imagen de perfil."
 
-#: js/app.js:1638
+#: js/app.js:1640
 msgid "Crop photo"
 msgstr "Recortar imagen"
 
-#: js/contacts.js:900
+#: js/contacts.js:904
 msgid "Error parsing date: {date}"
 msgstr "Error al analizar la fecha: {date}"
 
-#: js/contacts.js:1097
+#: js/contacts.js:1101
 msgid "# groups"
 msgstr "# grupos"
 
-#: js/contacts.js:1177
+#: js/contacts.js:1181
 msgid "Error parsing birthday {bday}"
 msgstr "Error al analizar la fecha de nacimiento {bday}"
 
-#: js/contacts.js:1315
+#: js/contacts.js:1319
 msgid "The backend does not support multi-byte characters."
 msgstr "El backend no permite caracteres multi-byte."
 
-#: js/contacts.js:2227
+#: js/contacts.js:2231
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Algunos contactos están marcados para su eliminación, pero no eliminados todavía. Por favor, espere a que sean eliminados."
 
-#: js/contacts.js:2238
+#: js/contacts.js:2242
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Pulse para deshacer la eliminación de {num} contactos"
 
-#: js/contacts.js:2247
+#: js/contacts.js:2251
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancelada la eliminación de {num} contactos"
 
@@ -326,47 +326,47 @@ msgstr "Error en el servidor. Por favor, informe al administrador."
 msgid "Failed loading photo: {error}"
 msgstr "Error cargando foto: {error}"
 
-#: lib/addressbook.php:166
+#: lib/addressbook.php:169
 msgid "You do not have permissions to see this contacts"
 msgstr "No tiene permisos para ver este contacto"
 
-#: lib/addressbook.php:177
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "Contacto no encontrado"
 
-#: lib/addressbook.php:214
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "No tiene permisos para ver estos contactos"
 
-#: lib/addressbook.php:247
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "No tiene permisos para agregar contactos a esta libreta de direcciones"
 
-#: lib/addressbook.php:254
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "El backend de esta libreta de direcciones no permite agregar contactos"
 
-#: lib/addressbook.php:299 lib/addressbook.php:339 lib/contact.php:252
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "No tiene permisos para borrar este contacto"
 
-#: lib/addressbook.php:306 lib/addressbook.php:346
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "El backend de esta libreta de direcciones no permite eliminar contactos"
 
-#: lib/addressbook.php:369
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "Error desconocido"
 
-#: lib/addressbook.php:410
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr "Acceso denegado"
 
-#: lib/addressbook.php:417
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "El backend de esta libreta de direcciones no permite actualizaciones"
 
-#: lib/addressbook.php:448
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "No tiene permisos para borrar esta libreta de direcciones."
 
@@ -379,35 +379,35 @@ msgstr "No se encontraron libretas de direcciones."
 msgid "On this %s"
 msgstr "En este %s"
 
-#: lib/contact.php:116 lib/contact.php:163
+#: lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
 msgstr "No tiene permisos para ver este contacto"
 
-#: lib/contact.php:267
+#: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "No tiene permisos para actualizar este contacto"
 
-#: lib/contact.php:280
+#: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
 msgstr "El backend de este contacto no permite actualizarlo"
 
-#: lib/contact.php:297
+#: lib/contact.php:299
 msgid "This backend not support adding contacts"
 msgstr "Este backend no permite agregar contactos"
 
-#: lib/contact.php:463 lib/contact.php:480
+#: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
 msgstr "Propiedad no encontrada"
 
-#: lib/contact.php:528
+#: lib/contact.php:530
 msgid " Missing IM parameter for: "
 msgstr "Falta el parámetro de IM para:"
 
-#: lib/contact.php:536
+#: lib/contact.php:538
 msgid "Unknown IM: "
 msgstr "Servicio IM desconocido:"
 
-#: lib/contact.php:813
+#: lib/contact.php:815
 msgid "{name}'s Birthday"
 msgstr "Cumpleaños de {name}"
 

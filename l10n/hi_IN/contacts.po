@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
 "POT-Creation-Date: 2014-04-30 00:48-0400\n"
-"PO-Revision-Date: 2014-04-29 10:01+0000\n"
-"Last-Translator: I Robot\n"
-"Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
+"PO-Revision-Date: 2011-09-23 17:10+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi (India) (http://www.transifex.com/projects/p/owncloud/language/hi_IN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: bn_BD\n"
+"Language: hi_IN\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: appinfo/app.php:38 lib/app.php:106
 msgid "Contacts"
-msgstr "ঠিকানাপঞ্জী"
+msgstr ""
 
 #: js/addressbooks.js:89 js/groups.js:519
 msgid "Save"
-msgstr "সংরক্ষণ"
+msgstr ""
 
 #: js/addressbooks.js:312
 msgid "Starting file import"
@@ -142,7 +142,7 @@ msgstr ""
 #: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
 #: templates/contacts.php:364
 msgid "Cancel"
-msgstr "বাতির"
+msgstr ""
 
 #: js/app.js:1412 templates/contacts.php:158
 msgid "Add group"
@@ -150,7 +150,7 @@ msgstr ""
 
 #: js/app.js:1416
 msgid "OK"
-msgstr "তথাস্তু"
+msgstr ""
 
 #: js/app.js:1523
 msgid "Could not find contact: {id}"
@@ -196,7 +196,7 @@ msgstr ""
 
 #: js/groups.js:53
 msgid "Add"
-msgstr "যোগ কর"
+msgstr ""
 
 #: js/groups.js:264
 msgid "Contact is already in this group."
@@ -258,7 +258,7 @@ msgstr ""
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr "ঠিকানাপঞ্জীটি নির্বাচন করুন"
+msgstr ""
 
 #: js/loader.js:22 templates/contacts.php:32
 msgid "Import into..."
@@ -274,7 +274,7 @@ msgstr ""
 
 #: js/loader.js:61 templates/contacts.php:28
 msgid "Import"
-msgstr "আমদানি"
+msgstr ""
 
 #: js/loader.js:68
 msgid "Importing..."
@@ -287,7 +287,7 @@ msgstr ""
 #: js/loader.js:95 templates/contacts.php:93 templates/contacts.php:367
 #: templates/contacts.php:368
 msgid "Close"
-msgstr "বন্ধ"
+msgstr ""
 
 #: js/storage.js:27
 msgid "Server error! Please inform system administator"
@@ -524,11 +524,11 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:48
 msgid "No file was uploaded. Unknown error"
-msgstr "কোন ফাইল আপলোড করা হয় নি। সমস্যার কারণটি অজ্ঞাত।"
+msgstr ""
 
 #: lib/controller/importcontroller.php:57
 msgid "There is no error, the file uploaded with success"
-msgstr "কোন সমস্যা হয় নি, ফাইল আপলোড সুসম্পন্ন হয়েছে।"
+msgstr ""
 
 #: lib/controller/importcontroller.php:58
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
@@ -538,23 +538,23 @@ msgstr ""
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
-msgstr "আপলোড করা ফাইলটি  HTML  ফর্মে উল্লিখিত MAX_FILE_SIZE নির্ধারিত ফাইলের সর্বোচ্চ আকার  অতিক্রম করতে চলেছে "
+msgstr ""
 
 #: lib/controller/importcontroller.php:61
 msgid "The uploaded file was only partially uploaded"
-msgstr "আপলোড করা ফাইলটি আংশিক আপলোড করা হয়েছে"
+msgstr ""
 
 #: lib/controller/importcontroller.php:62
 msgid "No file was uploaded"
-msgstr "কোন ফাইল আপলোড করা হয় নি"
+msgstr ""
 
 #: lib/controller/importcontroller.php:63
 msgid "Missing a temporary folder"
-msgstr "অস্থায়ী ফোল্ডারটি হারানো গিয়েছে"
+msgstr ""
 
 #: lib/controller/importcontroller.php:64
 msgid "Failed to write to disk"
-msgstr "ডিস্কে লিখতে ব্যর্থ"
+msgstr ""
 
 #: lib/controller/importcontroller.php:75
 msgid "Not enough storage available"
@@ -609,7 +609,7 @@ msgstr ""
 #: lib/utils/properties.php:178 lib/utils/properties.php:185
 #: lib/utils/properties.php:200
 msgid "Other"
-msgstr "অন্যান্য"
+msgstr ""
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
@@ -674,12 +674,12 @@ msgstr ""
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
 msgid "Work"
-msgstr "কর্মস্থল"
+msgstr ""
 
 #: lib/utils/properties.php:164 lib/utils/properties.php:169
 #: lib/utils/properties.php:183
 msgid "Home"
-msgstr "নিবাস"
+msgstr ""
 
 #: lib/utils/properties.php:170
 msgid "Mobile"
@@ -687,7 +687,7 @@ msgstr ""
 
 #: lib/utils/properties.php:172
 msgid "Text"
-msgstr "টেক্সট"
+msgstr ""
 
 #: lib/utils/properties.php:173
 msgid "Voice"
@@ -773,16 +773,16 @@ msgstr ""
 #: templates/contacts.php:221 templates/contacts.php:222
 #: templates/contacts.php:506
 msgid "Delete"
-msgstr "মুছে"
+msgstr ""
 
 #: templates/contacts.php:77 templates/contacts.php:262
 msgid "Groups"
-msgstr "গোষ্ঠীসমূহ"
+msgstr ""
 
 #: templates/contacts.php:79 templates/contacts.php:371
 #: templates/contacts.php:372
 msgid "Download"
-msgstr "ডাউনলোড"
+msgstr ""
 
 #: templates/contacts.php:80
 msgid "Merge"
@@ -791,7 +791,7 @@ msgstr ""
 #: templates/contacts.php:83 templates/contacts.php:317
 #: templates/contacts.php:356
 msgid "Email"
-msgstr "ইমেইল"
+msgstr ""
 
 #: templates/contacts.php:84 templates/contacts.php:322
 #: templates/contacts.php:355
@@ -801,7 +801,7 @@ msgstr ""
 #: templates/contacts.php:85 templates/contacts.php:327
 #: templates/contacts.php:358
 msgid "Address"
-msgstr "ঠিকানা"
+msgstr ""
 
 #: templates/contacts.php:86
 msgid "Group"
@@ -898,7 +898,7 @@ msgstr ""
 
 #: templates/contacts.php:237 templates/contacts.php:239
 msgid "Name"
-msgstr "রাম"
+msgstr ""
 
 #: templates/contacts.php:245
 msgid "First name"
@@ -922,7 +922,7 @@ msgstr ""
 
 #: templates/contacts.php:286 templates/contacts.php:352
 msgid "Title"
-msgstr "শিরোনাম"
+msgstr ""
 
 #: templates/contacts.php:296 templates/contacts.php:351
 msgid "Organization"
@@ -930,7 +930,7 @@ msgstr ""
 
 #: templates/contacts.php:306 templates/contacts.php:354
 msgid "Birthday"
-msgstr "জন্মদিন"
+msgstr ""
 
 #: templates/contacts.php:332
 msgid "Website"
@@ -954,7 +954,7 @@ msgstr ""
 
 #: templates/contacts.php:359
 msgid "Note"
-msgstr "দ্রষ্টব্য"
+msgstr ""
 
 #: templates/contacts.php:360
 msgid "Web site"
@@ -1020,15 +1020,15 @@ msgstr ""
 
 #: templates/contacts.php:499
 msgid "Active"
-msgstr "সক্রিয়"
+msgstr ""
 
 #: templates/contacts.php:502
 msgid "Share"
-msgstr "ভাগাভাগি কর"
+msgstr ""
 
 #: templates/contacts.php:503
 msgid "Export"
-msgstr "রপ্তানি"
+msgstr ""
 
 #: templates/contacts.php:504
 msgid "CardDAV link"
@@ -1036,4 +1036,4 @@ msgstr ""
 
 #: templates/contacts.php:505
 msgid "Edit"
-msgstr "সম্পাদনা"
+msgstr ""

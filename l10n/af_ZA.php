@@ -1,4 +1,5 @@
 <?php $TRANSLATIONS = array(
 "Cancel" => "Kanseleer",
-"Add" => "Voeg by"
+"Add" => "Voeg by",
+"Share" => "Deel"
 );
