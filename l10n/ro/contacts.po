@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# alinaa <alinaah_albu@yahoo.com>, 2014
 # andreiacob <andrei.iacob@y7mail.com>, 2014
 # Claudiu, 2011, 2012
 # Dimon Pockemon <>, 2012
@@ -13,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-04-30 00:48-0400\n"
-"PO-Revision-Date: 2014-04-29 10:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-02 00:49-0400\n"
+"PO-Revision-Date: 2014-05-01 23:00+0000\n"
+"Last-Translator: alinaa <alinaah_albu@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/owncloud/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -143,7 +144,7 @@ msgstr "Eroare la setarea {name} ca favorit."
 
 #: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
 msgid "Merge contacts"
-msgstr ""
+msgstr "Imbinare contacte"
 
 #: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
 #: templates/contacts.php:364
@@ -164,7 +165,7 @@ msgstr "Nu s-a putut gasi contactul: {id}"
 
 #: js/app.js:1636
 msgid "Edit profile picture"
-msgstr ""
+msgstr "Editare fotografie de profil"
 
 #: js/app.js:1640
 msgid "Crop photo"
