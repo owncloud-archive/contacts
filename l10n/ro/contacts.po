@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-03 00:49-0400\n"
-"PO-Revision-Date: 2014-05-02 20:01+0000\n"
+"POT-Creation-Date: 2014-05-04 00:49-0400\n"
+"PO-Revision-Date: 2014-05-03 17:33+0000\n"
 "Last-Translator: lauraberindei <lauraagavriloae@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/owncloud/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -39,11 +39,11 @@ msgstr ""
 
 #: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Format selectat : {format}"
 
 #: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Detectare automata a formatului "
 
 #: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
-msgstr "numele exista deja in agenda"
+msgstr "Numele exista deja în agenda"
 
 #: js/addressbooks.js:609
 msgid "Failed adding address book: {error}"
@@ -87,7 +87,7 @@ msgstr "eliminat din..."
 
 #: js/app.js:345
 msgid "Add group..."
-msgstr "adauga grup"
+msgstr "adaugă grup"
 
 #: js/app.js:473
 msgid "Invalid URL: \"{url}\""
@@ -111,7 +111,7 @@ msgstr "Imbinare nereusita. Eroare la salvarea contactului."
 
 #: js/app.js:622
 msgid "Select photo"
-msgstr "Selecteaza fotografie"
+msgstr "Selectează fotografie"
 
 #: js/app.js:705 js/app.js:1681
 msgid "Network or server error. Please inform administrator."
@@ -145,7 +145,7 @@ msgstr "Eroare la setarea {name} ca favorit."
 
 #: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
 msgid "Merge contacts"
-msgstr "Imbinare contacte"
+msgstr "Îmbinare contacte"
 
 #: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
 #: templates/contacts.php:364
@@ -154,7 +154,7 @@ msgstr "Anulare"
 
 #: js/app.js:1412 templates/contacts.php:158
 msgid "Add group"
-msgstr "Adaugati grup"
+msgstr "Adaugaţi grup"
 
 #: js/app.js:1416
 msgid "OK"
@@ -162,7 +162,7 @@ msgstr "OK"
 
 #: js/app.js:1523
 msgid "Could not find contact: {id}"
-msgstr "Nu s-a putut gasi contactul: {id}"
+msgstr "Nu s-a putut găsi contactul: {id}"
 
 #: js/app.js:1636
 msgid "Edit profile picture"
@@ -192,7 +192,7 @@ msgstr ""
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr "Anumite contacte sunt selectate pentru stergere, dar inca nu au fost sterse. Va rugam asteptati stergerea lor"
+msgstr "Anumite contacte sunt selectate pentru ştergere, dar încă nu au fost şterse. Va rugam aşteptaţi ştergerea lor"
 
 #: js/contacts.js:2242
 msgid "Click to undo deletion of {num} contacts"
@@ -208,23 +208,23 @@ msgstr "Adaugă"
 
 #: js/groups.js:264
 msgid "Contact is already in this group."
-msgstr "Contactul exista deja in acest grup"
+msgstr "Contactul exista deja în acest grup"
 
 #: js/groups.js:277
 msgid "Contacts are already in this group."
-msgstr "Contactele sunt deja in acest grup."
+msgstr "Contactele sunt deja în acest grup."
 
 #: js/groups.js:343
 msgid "Couldn't get contact list."
-msgstr "Nu se poate obtine lista de contacte ."
+msgstr "Nu se poate obţine lista de contacte ."
 
 #: js/groups.js:354
 msgid "Contact is not in this group."
-msgstr "Contactul nu se afla in acest grup ."
+msgstr "Contactul nu se afla în acest grup ."
 
 #: js/groups.js:368
 msgid "Contacts are not in this group."
-msgstr "Contactele nu se afla in acest grup ."
+msgstr "Contactele nu se afla în acest grup ."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
@@ -266,11 +266,11 @@ msgstr ""
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr ""
+msgstr "Va rugam alegeţi agenda"
 
 #: js/loader.js:22 templates/contacts.php:32
 msgid "Import into..."
-msgstr "Importa in ..."
+msgstr "Importa în ..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
@@ -278,7 +278,7 @@ msgstr ""
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr "Importati contacte"
+msgstr "Importaţi contacte"
 
 #: js/loader.js:61 templates/contacts.php:28
 msgid "Import"
@@ -286,7 +286,7 @@ msgstr "Importă"
 
 #: js/loader.js:68
 msgid "Importing..."
-msgstr "se importa"
+msgstr "Se importa"
 
 #: js/loader.js:92
 msgid "Import done"
@@ -299,7 +299,7 @@ msgstr "Închide"
 
 #: js/storage.js:27
 msgid "Server error! Please inform system administator"
-msgstr "Eroare de server ! Va rugam anuntati administratorul sistemului"
+msgstr "Eroare de server ! Va rugam anunţaţi administratorul sistemului"
 
 #: js/storage.js:405 js/storage.js:444
 msgid "Failed loading photo: {error}"
@@ -307,19 +307,19 @@ msgstr ""
 
 #: lib/addressbook.php:169
 msgid "You do not have permissions to see this contacts"
-msgstr "Nu aveti permisiunea sa vedeti aceste contacte "
+msgstr "Nu aveţi permisiunea sa vedeţi aceste contacte "
 
 #: lib/addressbook.php:180
 msgid "Contact not found"
-msgstr ""
+msgstr "Contactul nu a putut fi găsit "
 
 #: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
-msgstr "Nu aveti permisiunea sa vedeti aceste contacte "
+msgstr "Nu aveţi permisiunea sa vedeţi aceste contacte "
 
 #: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
-msgstr "Nu aveti permisiunea sa adaugati contacte in agenda ."
+msgstr "Nu aveţi permisiunea sa adaugaţi contacte în agenda ."
 
 #: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
@@ -327,7 +327,7 @@ msgstr ""
 
 #: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
-msgstr "Nu aveti permisiunea sa stergeti acest contact ."
+msgstr "Nu aveţi permisiunea sa ştergeţi acest contact ."
 
 #: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
@@ -339,7 +339,7 @@ msgstr "Eroare necunoscută"
 
 #: lib/addressbook.php:413
 msgid "Access denied"
-msgstr ""
+msgstr "Acces refuzat"
 
 #: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
@@ -347,7 +347,7 @@ msgstr ""
 
 #: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
-msgstr "Nu aveti permisiunea sa stergeti agenda ."
+msgstr "Nu aveţi permisiunea sa ştergeţi agenda ."
 
 #: lib/app.php:153
 msgid "Address book not found"
@@ -360,7 +360,7 @@ msgstr ""
 
 #: lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
-msgstr "Nu aveti permisiunea sa vedeti acest contact . "
+msgstr "Nu aveţi permisiunea sa vedeţi acest contact . "
 
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
@@ -392,7 +392,7 @@ msgstr "Ziua de naștere a {name}"
 
 #: lib/controller/addressbookcontroller.php:175
 msgid "Error creating address book"
-msgstr "Eroare in creearea agendei"
+msgstr "Eroare în crearea agendei"
 
 #: lib/controller/addressbookcontroller.php:207
 #, php-format
@@ -414,19 +414,19 @@ msgstr "Eroare in crearea contactului ."
 
 #: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
-msgstr "Eroare in crearea contactului"
+msgstr "Eroare în crearea contactului"
 
 #: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
-msgstr "Eroare in stergerea contactului"
+msgstr "Eroare în ştergerea contactului"
 
 #: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
-msgstr "Eroare in recuperarea contactului"
+msgstr "Eroare în recuperarea contactului"
 
 #: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
-msgstr "Eroare in salvarea contactului"
+msgstr "Eroare în salvarea contactului"
 
 #: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
@@ -441,7 +441,7 @@ msgstr ""
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
-msgstr "Contactul nu poate fi gasit ."
+msgstr "Contactul nu poate fi găsit ."
 
 #: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
@@ -489,7 +489,7 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
-msgstr "eroare in gasirea proprietatilor fotografiei"
+msgstr "eroare în găsirea proprietăţilor fotografiei"
 
 #: lib/controller/contactphotocontroller.php:218
 msgid "Error saving contact."
@@ -501,7 +501,7 @@ msgstr "Nu a fost desemnat un nume pentru grup."
 
 #: lib/controller/groupcontroller.php:74
 msgid "Error adding group."
-msgstr "Eroare in adaugarea unui grup"
+msgstr "Eroare în adăugarea unui grup"
 
 #: lib/controller/groupcontroller.php:150
 msgid "No group name to rename from given."
@@ -513,7 +513,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:160
 msgid "Error renaming group."
-msgstr "Eroare in redenumirea grupului ."
+msgstr "Eroare în redenumirea grupului ."
 
 #: lib/controller/groupcontroller.php:210
 #: lib/controller/groupcontroller.php:267
@@ -582,7 +582,7 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:167
 msgid "You do not have permissions to import into this address book."
-msgstr "Nu ai permisiunea sa importi in aceasta agenda "
+msgstr "Nu ai permisiunea sa imporţi în aceasta agenda "
 
 #: lib/controller/importcontroller.php:175
 msgid "File name missing from request."
@@ -607,7 +607,7 @@ msgstr "Nu este data nici o valoare ."
 
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr "nu se pot seta preferinte"
+msgstr "nu se pot seta preferinţe"
 
 #: lib/searchprovider.php:37
 msgid "Contact"
@@ -661,11 +661,11 @@ msgstr ""
 
 #: lib/utils/properties.php:116
 msgid "Yahoo"
-msgstr ""
+msgstr "Yahoo"
 
 #: lib/utils/properties.php:121
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: lib/utils/properties.php:126
 msgid "QQ"
@@ -743,15 +743,15 @@ msgstr "Grup nou "
 
 #: templates/contacts.php:22
 msgid "Address books"
-msgstr ""
+msgstr "Agende"
 
 #: templates/contacts.php:25 templates/contacts.php:65
 msgid "Display name"
-msgstr ""
+msgstr "Afişaţi nume"
 
 #: templates/contacts.php:25
 msgid "Add Address Book"
-msgstr ""
+msgstr "Adaugaţi agenda"
 
 #: templates/contacts.php:35
 msgid "Automatic format"
@@ -759,7 +759,7 @@ msgstr ""
 
 #: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."
-msgstr "Selecteaza fisier ..."
+msgstr "Selectează fişier ..."
 
 #: templates/contacts.php:62
 msgid "(De-)select all"
@@ -767,7 +767,7 @@ msgstr ""
 
 #: templates/contacts.php:64
 msgid "Sort order"
-msgstr "Sorteaza ordinea"
+msgstr "Sortează ordinea"
 
 #: templates/contacts.php:66
 msgid "First- Lastname"
@@ -857,7 +857,7 @@ msgstr "Adaugă contact nou"
 
 #: templates/contacts.php:118
 msgid "Add new addressbook"
-msgstr "Adaugati o noua agenda"
+msgstr "Adaugaţi o noua agenda"
 
 #: templates/contacts.php:120
 msgid "Delete current contact"
@@ -866,7 +866,7 @@ msgstr "Șterge contactul curent"
 #: templates/contacts.php:126
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr "Nu aveti nici un contact in agenda sau agenda este dezactivata"
+msgstr "Nu aveţi nici un contact în agenda sau agenda este dezactivata"
 
 #: templates/contacts.php:127
 msgid "Add a new contact or import existing contacts from a VCF file."
@@ -882,7 +882,7 @@ msgstr ""
 
 #: templates/contacts.php:201
 msgid "Compose mail"
-msgstr "Compuneti mesaj"
+msgstr "Compuneţi mesaj"
 
 #: templates/contacts.php:229
 msgid "Delete current photo"
@@ -898,7 +898,7 @@ msgstr "Încarcă poză nouă"
 
 #: templates/contacts.php:232
 msgid "Select photo from Files"
-msgstr "Selectati poza din fisier"
+msgstr "Selectaţi poza din fişier"
 
 #: templates/contacts.php:234
 msgid "Favorite"
@@ -954,11 +954,11 @@ msgstr ""
 
 #: templates/contacts.php:350
 msgid "Add field..."
-msgstr "Adaugati camp..."
+msgstr "Adaugaţi câmp..."
 
 #: templates/contacts.php:357
 msgid "Instant Messaging"
-msgstr ""
+msgstr "Mesaj instant"
 
 #: templates/contacts.php:359
 msgid "Note"
