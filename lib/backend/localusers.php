@@ -388,7 +388,7 @@ class LocalUsers extends AbstractBackend {
 			$contactsId = array();
 			$contacts = array();
 			while ($row = $result->fetchRow()) {
-				$contacts[] = array($row['id'] => $row['displayname']);
+				$contacts[$row['id']] = $row['displayname'];
 				$contactsId[] = $row['id'];
 			}
 
@@ -413,9 +413,25 @@ class LocalUsers extends AbstractBackend {
 	
 	private function updateDisplayNames($contacts){
 		foreach($contacts as $id => $displayname){
+			if(\OCP\User::getDisplayName($id) !== $displayname){
+				$this->updateDisplayName($id);
+			}
 		}
 	}
-
+	
+	private function updateDisplayName($id){
+		$sql = 'UPDATE ' . $this->cardsTableName . ' SET `displayname` = ? WHERE id = ?';
+		$query = \OCP\DB::prepare($sql);
+		$result = $query->execute(array(\OCP\User::getDisplayName($id), $id));
+		
+		if (\OCP\DB::isError($result)) {
+			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
+					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			return false;
+		}
+		return true;
+	}
+	
 	/**
 	 * Don't cache
 	 */
