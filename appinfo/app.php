@@ -53,11 +53,13 @@ $api->connectHook('OC_Calendar', 'getEvents', 'OCA\Contacts\Hooks', 'getBirthday
 $api->connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Hooks', 'getCalenderSources');
 
 \OCP\Util::addscript('contacts', 'loader');
+\OCP\Util::addscript('contacts', 'admin');
 
 \OC_Search::registerProvider('OCA\Contacts\SearchProvider');
 //\OCP\Share::registerBackend('contact', 'OCA\Contacts\Share_Backend_Contact');
 \OCP\Share::registerBackend('addressbook', 'OCA\Contacts\Share\Addressbook', 'contact');
 //\OCP\App::registerPersonal('contacts','personalsettings');
+\OCP\App::registerAdmin('contacts', 'admin');
 
 if (\OCP\User::isLoggedIn()) {
 	$app = new App($api->getUserId());

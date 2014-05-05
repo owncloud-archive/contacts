@@ -675,7 +675,7 @@ OC.Contacts = OC.Contacts || {};
 			params
 		);
 	};
-
+	
 	Storage.prototype.requestRoute = function(route, type, routeParams, params, additionalHeaders) {
 		var isJSON = (typeof params === 'string');
 		var contentType = isJSON

@@ -46,5 +46,28 @@ class BackendController extends Controller {
 		}
 		return $response->setData($formats);
 	}
+	
+	/**
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
+	 */
+	public function enableBackend() {
+		$response = new JSONResponse();
+		$params = $this->request->urlParams;
+		$backend = $params['backend'];
+		$enable = $params['enable'];
+		return $response->setData(\OCP\Config::setAppValue('contacts', 'backend_'.$backend, $enable));
+	}
+	/**
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
+	 */
+	public function backendStatus() {
+		$response = new JSONResponse();
+		$params = $this->request->urlParams;
+		$backend = $params['backend'];
+		$enabled = \OCP\Config::getAppValue('contacts', 'backend_'.$backend, "false");
+		return $response->setData($enabled);
+	}
 }
 
