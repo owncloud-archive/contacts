@@ -376,7 +376,7 @@ class LocalUsers extends AbstractBackend {
 	}
 
 	public function updateDatabase($addressBookId) {
-		$sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
+		$sql = 'SELECT id, displayname FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
 		$query = \OCP\DB::prepare($sql);
 		$result = $query->execute(array($addressBookId));
 
@@ -386,7 +386,9 @@ class LocalUsers extends AbstractBackend {
 			return true; // Huh?
 		} else {
 			$contactsId = array();
+			$contacts = array();
 			while ($row = $result->fetchRow()) {
+				$contacts[] = array($row['id'] => $row['displayname']);
 				$contactsId[] = $row['id'];
 			}
 
@@ -403,7 +405,14 @@ class LocalUsers extends AbstractBackend {
 				$this->removeContacts($remove, $addressBookId);
 				$recall = true;
 			}
+			
+			$this->updateDisplayNames($contacts);
 			return true;
+		}
+	}
+	
+	private function updateDisplayNames($contacts){
+		foreach($contacts as $id => $displayname){
 		}
 	}
 
