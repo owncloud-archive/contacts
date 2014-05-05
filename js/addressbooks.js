@@ -358,7 +358,7 @@ OC.Contacts = OC.Contacts || {};
 					$divDlg.ocdialog().ocdialog('destroy').remove();
 				},
 				open: function(/*event, ui*/) {
-					self.buildImportSelect2();
+					self.buildImportSelect();
 				}
 			});
 		});
@@ -508,35 +508,6 @@ OC.Contacts = OC.Contacts || {};
 					self.$importFileInput.prop('disabled', false);
 				} else {
 					//console.log("coin !!!");
-					this.$importIntoSelect.show();
-					self.$importFileInput.prop('disabled', true);
-				}
-			}
-		}
-	};
-
-	/**
-	 * Rebuild the select to choose which address book to import into.
-	 */
-	AddressBookList.prototype.buildImportSelect2 = function() {
-		console.log('buildImportSelect2', this);
-		var self = this;
-		this.$importIntoSelect.find('option:not([value="-1"])').remove();
-		var addressBooks = self.selectByPermission(OC.PERMISSION_UPDATE);
-		if (addressBooks.length > 0) {
-			console.log('ImportInto Select', self.$importIntoSelect);
-			//console.log('addressbooks', addressBooks);
-			$.each(addressBooks, function(idx, book) {
-				var $opt = $('<option />');
-				$opt.val(book.getId()).text(book.getDisplayName()).data('backend', book.getBackend());
-				self.$importIntoSelect.append($opt);
-				console.log('appending2', $opt, 'to', self.$importIntoSelect);
-			});
-			if(!this.isFileAction) {
-				if(addressBooks.length === 1) {
-					this.$importIntoSelect.val(this.$importIntoSelect.find('option:not([value="-1"])').first().val()).hide().trigger('change');
-					self.$importFileInput.prop('disabled', false);
-				} else {
 					this.$importIntoSelect.show();
 					self.$importFileInput.prop('disabled', true);
 				}
