@@ -25,29 +25,8 @@ use OCA\Contacts\ImportManager;
 					<input type="text" tabindex="0" autofocus id="add-address-book" placeholder="<?php p($l->t('Display name')); ?>" title="<?php p($l->t('Add Address Book')); ?>" />
 				</div>
 				<div id="import">
-				<h2 data-id="import" tabindex="0" role="button"><?php p($l->t('Import')); ?></h2>
-					<ul>
-						<li class="import-upload">
-							<select id="import_into">
-								<option value="-1"><?php p($l->t('Import into...')); ?></option>
-							</select>
-							<select id="import_format">
-								<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
-								<?php
-								$importManager = new ImportManager();
-								$types = $importManager->getTypes();
-								foreach ($types as $id => $label) {
-									echo "<option value=\"$id\">$label</option>";
-								}
-								?>
-							</select>
-							<button class="icon-upload svg tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
-							<input id="import_upload_start" class="tooltipped rightwards" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
-						</li>
-						<li class="import-status">
-							<label id="import-status-text"></label>
-							<div id="import-status-progress"></div>
-						</li>
+					<ul class="oc-addnew">
+						<li id="import-contacts"><a class="oc-addnew-init"><?php p($l->t('Import')); ?></a></li>
 					</ul>
 				</div>
 			</div> <!-- app-settings-content -->
@@ -506,4 +485,35 @@ use OCA\Contacts\ImportManager;
 		<a title="<?php p($l->t('Delete')); ?>" class="icon-delete delete action"></a>
 	</span>
 </li>
+</script>
+
+<script id="contactsImportTemplate" class="hidden" type="text/template">
+<div id="contacts-import-div" class="contacts-import-class">
+<p>
+	<ul>
+		<!--<li data-id="import" tabindex="0" role="button"><?php p($l->t('Import')); ?></li>-->
+		<li class="import-upload">
+			<select id="import_into">
+				<option value="-1"><?php p($l->t('Import into...')); ?></option>
+			</select>
+			<select id="import_format">
+				<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
+				<?php
+				$importManager = new ImportManager();
+				$types = $importManager->getTypes();
+				foreach ($types as $id => $label) {
+					echo "<option value=\"$id\">$label</option>";
+				}
+				?>
+			</select>
+			<button class="icon-upload svg tooltipped import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
+			<input id="import_upload_start" class="tooltipped" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
+		</li>
+		<li class="import-status">
+			<label id="import-status-text"></label>
+			<div id="import-status-progress"></div>
+		</li>
+	</ul>
+</p>
+</div>
 </script>
