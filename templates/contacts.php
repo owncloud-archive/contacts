@@ -106,6 +106,7 @@ use OCA\Contacts\ImportManager;
 				<p><?php p($l->t('Add a new contact or import existing contacts from a VCF file.')); ?></p>
 				<div id="selections">
 					<input type="button" class="add-contact text" value="<?php p($l->t('New contact')) ?>">
+					<input type="button" id="oc-import-nocontact" value="<?php p($l->t('Import contacts')); ?>">
 				</div>
 			</div>
 		</div>
@@ -507,7 +508,7 @@ use OCA\Contacts\ImportManager;
 				?>
 			</select>
 			<button class="icon-upload svg tooltipped import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
-			<input id="import_upload_start" class="tooltipped" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
+			<input id="import_upload_start" class="tooltipped" title="<?php p($l->t('Select file...')); ?>" type="file" name="file" disabled />
 		</li>
 		<li class="import-status">
 			<label id="import-status-text"></label>

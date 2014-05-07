@@ -258,7 +258,7 @@ class ImportController extends Controller {
 						$favourites = $part->select('X-FAVOURITES');
 						foreach ($favourites as $favourite) {
 							if ($favourite->getValue() == 'yes') {
-								$tagMgr = $this->server->getTagManager()->load('contact');
+								$tagMgr = \OC::$server->getTagManager()->load('contact');
 								$tagMgr->addToFavorites($id);
 							}
 						}
@@ -307,9 +307,13 @@ class ImportController extends Controller {
 			$response->bailOut(App::$l10n->t('Progress key missing from request.'));
 			return $response;
 		}
-
-		error_log("progresskey: ".$this->cache->get($progresskey)." total: ".$this->cache->get($progresskey.'_total') );
 		$response->setParams(array('progress' => $this->cache->get($progresskey), 'total' => $this->cache->get($progresskey.'_total') ));
 		return $response;
+	}
+
+	/**
+	 * @NoAdminRequired
+	 */
+	public function detectFileType() {
 	}
 }
