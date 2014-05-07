@@ -6,6 +6,7 @@
 # TheHiter <magicreative.fr@gmail.com>, 2013
 # Abderraouf Mehdi Bouhali <armbouhali@gmail.com>, 2014
 # cuperous, 2013
+# eng1fares <fares_ss202@hotmail.com>, 2014
 # Meesh <M_almohimeed@yahoo.com>, 2013
 # matar <matar@linux.com>, 2013
 # Raed667 <shemada@gmail.com>, 2013
@@ -14,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-04 00:49-0400\n"
-"PO-Revision-Date: 2014-05-03 06:11+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-07 00:49-0400\n"
+"PO-Revision-Date: 2014-05-06 11:41+0000\n"
+"Last-Translator: eng1fares <fares_ss202@hotmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -136,7 +137,7 @@ msgstr "حدث خطأ أثناء الحذف من المجموعة"
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "لقد قمت بتحديد أكثر من 300 جهة إتصال.\nفي العادة سوف يفشل! إضغط هنا للمحاولة على أي حال."
 
 #: js/app.js:1221
 msgid "Error setting {name} as favorite."
@@ -338,7 +339,7 @@ msgstr "حدث خطأ غير معروف. "
 
 #: lib/addressbook.php:413
 msgid "Access denied"
-msgstr ""
+msgstr "الوصول محظور"
 
 #: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
@@ -355,7 +356,7 @@ msgstr "تعذر ايجاد دفتر العناوين"
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "على هذا %s"
 
 #: lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
@@ -413,19 +414,19 @@ msgstr "حدث خطأ أثناء إنشاء جهة اتصال."
 
 #: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
-msgstr ""
+msgstr "حدث خطأ أثناء إنشاء جهة الإتصال"
 
 #: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
-msgstr ""
+msgstr "حدث خطأ أثناء حذف جهة الإتصال"
 
 #: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "حدث خطأ أثناء إسترداد جهة الإتصال"
 
 #: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
-msgstr ""
+msgstr "حدث خطأ أثناء حفظ جهة الإتصال"
 
 #: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
@@ -730,7 +731,7 @@ msgstr "العائلة"
 
 #: templates/contacts.php:9 templates/contacts.php:129
 msgid "New contact"
-msgstr ""
+msgstr "جهة إتصال جديدة"
 
 #: templates/contacts.php:13
 msgid "Group name"
@@ -754,7 +755,7 @@ msgstr "أضف دفتر عناوين جديد"
 
 #: templates/contacts.php:35
 msgid "Automatic format"
-msgstr ""
+msgstr "تنسيق تلقائي"
 
 #: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."
@@ -941,7 +942,7 @@ msgstr "عيد ميلاد"
 
 #: templates/contacts.php:332
 msgid "Website"
-msgstr ""
+msgstr "موقع إلكتروني"
 
 #: templates/contacts.php:337
 msgid "Instant messaging"

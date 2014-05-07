@@ -19,7 +19,7 @@
 # waterone <suiy02@gmail.com>, 2012
 # tonnie <supertonnie@hotmail.com>, 2012
 # modokwang <modokwang@gmail.com>, 2013
-# Xuetian Weng <wengxt@gmail.com>, 2013
+# Xuetian Weng <wengxt@gmail.com>, 2013-2014
 # Xuetian Weng <wengxt@gmail.com>, 2011, 2012
 # yhsih <shuxq@sina.com>, 2014
 # min zhang <zm1990s@gmail.com>, 2013
@@ -27,9 +27,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-04 00:49-0400\n"
-"PO-Revision-Date: 2014-05-03 06:11+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-07 00:49-0400\n"
+"PO-Revision-Date: 2014-05-05 18:44+0000\n"
+"Last-Translator: Xuetian Weng <wengxt@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,15 +47,15 @@ msgstr "保存"
 
 #: js/addressbooks.js:312
 msgid "Starting file import"
-msgstr ""
+msgstr "开始文件导入"
 
 #: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "已选择格式：{format}"
 
 #: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
-msgstr ""
+msgstr "自动格式检测"
 
 #: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
@@ -131,7 +131,7 @@ msgstr "网络或服务器错误。请通知管理员。"
 
 #: js/app.js:789
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "只有图像才可用作联系人照片"
 
 #: js/app.js:798
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
@@ -351,7 +351,7 @@ msgstr "未知错误"
 
 #: lib/addressbook.php:413
 msgid "Access denied"
-msgstr ""
+msgstr "访问被拒绝"
 
 #: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
@@ -426,19 +426,19 @@ msgstr "创建联系人出错。"
 
 #: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
-msgstr ""
+msgstr "创建联系人出错"
 
 #: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
-msgstr ""
+msgstr "删除联系人出错"
 
 #: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "检索联系人出错"
 
 #: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
-msgstr ""
+msgstr "保存联系人时出错"
 
 #: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
@@ -767,7 +767,7 @@ msgstr "添加地址薄"
 
 #: templates/contacts.php:35
 msgid "Automatic format"
-msgstr ""
+msgstr "自动格式"
 
 #: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."
@@ -934,7 +934,7 @@ msgstr "姓"
 
 #: templates/contacts.php:269
 msgid "Address book"
-msgstr ""
+msgstr "地址簿"
 
 #: templates/contacts.php:276 templates/contacts.php:353
 msgid "Nickname"
@@ -954,7 +954,7 @@ msgstr "生日"
 
 #: templates/contacts.php:332
 msgid "Website"
-msgstr ""
+msgstr "网站"
 
 #: templates/contacts.php:337
 msgid "Instant messaging"
