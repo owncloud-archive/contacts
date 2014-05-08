@@ -80,7 +80,7 @@ class Dispatcher extends MainApp {
 		});
 		$this->container->registerService('GroupController', function(IAppContainer $container) use($appName, $app) {
 			$request = $container->query('Request');
-			$tags = $container->server->getTagManager()->load('contact');
+			$tags = $container->getServer()->getTagManager()->load('contact');
 			return new GroupController($appName, $request, $app, $tags);
 		});
 		$this->container->registerService('ContactController', function(IAppContainer $container) use($appName, $app) {
