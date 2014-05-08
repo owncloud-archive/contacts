@@ -490,31 +490,35 @@ use OCA\Contacts\ImportManager;
 
 <script id="contactsImportTemplate" class="hidden" type="text/template">
 <div id="contacts-import-div" class="contacts-import-class">
-<p>
-	<ul>
-		<!--<li data-id="import" tabindex="0" role="button"><?php p($l->t('Import')); ?></li>-->
-		<li class="import-upload">
-			<select id="import_into">
-				<option value="-1"><?php p($l->t('Import into...')); ?></option>
-			</select>
-			<select id="import_format">
-				<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
-				<?php
-				$importManager = new ImportManager();
-				$types = $importManager->getTypes();
-				foreach ($types as $id => $label) {
-					echo "<option value=\"$id\">$label</option>";
-				}
-				?>
-			</select>
-			<button class="icon-upload svg tooltipped import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
-			<input id="import_upload_start" class="tooltipped" title="<?php p($l->t('Select file...')); ?>" type="file" name="file" disabled />
-		</li>
-		<li class="import-status">
-			<label id="import-status-text"></label>
-			<div id="import-status-progress"></div>
-		</li>
-	</ul>
+<p id="contacts-import-into-p">
+	<label for="contacts-import-into"><?php p($l->t('Addresbook')); ?></label>
+	<select id="contacts-import-into">
+		<option value="-1"><?php p($l->t('Import into...')); ?></option>
+	</select>
+</p>
+<p id="contacts-import-format-p">
+	<label for="contacts-import-into"><?php p($l->t('Format')); ?></label>
+	<select id="contacts-import-format">
+		<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
+		<?php
+		$importManager = new ImportManager();
+		$types = $importManager->getTypes();
+		foreach ($types as $id => $label) {
+			echo "<option value=\"$id\">$label</option>";
+		}
+		?>
+	</select>
+</p>
+<p id="contacts-import-upload">
+	<!--<label for="contacts-import-upload"><?php p($l->t('Select file')); ?></label>-->
+	<button class="icon-upload svg tooltipped import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
+	<input id="contacts-import-upload-start" class="tooltipped" title="<?php p($l->t('Select file...')); ?>" type="file" name="file" disabled />
+</p>
+<p id="contacts-import-status">
+	<div class="import-status">
+		<label id="import-status-text"></label>
+		<div id="import-status-progress"></div>
+	</div>
 </p>
 </div>
 </script>

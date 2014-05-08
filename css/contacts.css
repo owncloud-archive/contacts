@@ -446,16 +446,16 @@ dt[data-element="org"] { margin-top: 4px; }
 }
 
 /* Single elements */
-#file_upload_form, #file_upload_target, #import_upload_target, #crop_target { display:none; }
-#import_upload_start, .import-upload-button {
+#file_upload_form { display:none; }
+#contacts-import-upload-start, .import-upload-button {
     width: 30px !important; height: 30px !important;
 	display:block;
 	position: absolute;
-	right: 0; top: 0;
+	right: 0; bottom: 0;
 	margin: 5px !important;
 	cursor: pointer;
 }
-#import_upload_start {
+#contacts-import-upload-start {
 	cursor: pointer;
 	z-index: 1001;
 }
@@ -530,7 +530,7 @@ input[type=checkbox].propertytype { width: 10px; }
 	background-size: 80%;
 }
 #phototools li a:hover { opacity: 0.8; }
-#contactphoto_fileupload, #import_upload_start { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0; z-index:1001; }
+#contactphoto_fileupload, #contacts-import-upload-start { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0); opacity:0; z-index:1001; }
 
 #dialog-merge-contacts .mergelist {
 	margin: 10px;
@@ -848,6 +848,17 @@ tbody tr.contact.active, tbody tr.contact:hover {
 		-o-columns: 1;
 		columns: 1;
 	}
+}
+
+#contacts-import-div > p > select {
+	width:200px;
+	display: inline-block;
+}
+
+#contacts-import-div > p > label {
+	vertical-align:top;
+	width:200px;
+	display: inline-block;
 }
 
 @media screen and (max-width: 1400px) {

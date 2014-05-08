@@ -310,10 +310,4 @@ class ImportController extends Controller {
 		$response->setParams(array('progress' => $this->cache->get($progresskey), 'total' => $this->cache->get($progresskey.'_total') ));
 		return $response;
 	}
-
-	/**
-	 * @NoAdminRequired
-	 */
-	public function detectFileType() {
-	}
 }
