@@ -89,7 +89,7 @@ class Dispatcher extends MainApp {
 		});
 		$this->container->registerService('ContactPhotoController', function(IAppContainer $container) use($appName, $app) {
 			$request = $container->query('Request');
-			$cache = $container->server->getCache();
+			$cache = $container->getServer()->getCache();
 			return new ContactPhotoController($appName, $request, $app, $cache);
 		});
 		$this->container->registerService('SettingsController', function(IAppContainer $container) use($appName, $app) {
@@ -98,7 +98,7 @@ class Dispatcher extends MainApp {
 		});
 		$this->container->registerService('ImportController', function(IAppContainer $container) use($appName, $app) {
 			$request = $container->query('Request');
-			$cache = $container->server->getCache();
+			$cache = $container->getServer()->getCache();
 			return new ImportController($appName, $request, $app, $cache);
 		});
 		$this->container->registerService('ExportController', function(IAppContainer $container) use($appName, $app) {
