@@ -133,7 +133,7 @@ Class Properties {
 					'protocol' => 'x-apple',
 				),
 				'owncloud-handle' => array(
-				    'displayname' => (string)$l10n->t('ownCloud handle'),
+				    'displayname' => (string)$l10n->t('ownCloud'),
 				    'xname' => null,
 				    'protocol' => 'x-owncloud-handle'
 				),
