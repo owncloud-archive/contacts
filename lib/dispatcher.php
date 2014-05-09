@@ -21,7 +21,8 @@ use OCP\AppFramework\App as MainApp,
 	OCA\Contacts\Controller\ContactPhotoController,
 	OCA\Contacts\Controller\SettingsController,
 	OCA\Contacts\Controller\ImportController,
-	OCA\Contacts\Controller\ExportController;
+	OCA\Contacts\Controller\ExportController,
+	OCA\Contacts\Controller\BackendController;
 
 /**
  * This class manages our app actions
@@ -104,6 +105,10 @@ class Dispatcher extends MainApp {
 		$this->container->registerService('ExportController', function(IAppContainer $container) use($appName, $app) {
 			$request = $container->query('Request');
 			return new ExportController($appName, $request, $app);
+		});
+		$this->container->registerService('BackendController', function(IAppContainer $container) use($appName, $app) {
+			$request = $container->query('Request');
+			return new BackendController($appName, $request, $app);
 		});
 	}
 
