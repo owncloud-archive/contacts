@@ -42,7 +42,7 @@ $addressbookbackends = array();
 $addressbookbackends[] = new OCA\Contacts\Backend\Database(\OCP\User::getUser());
 $backends = array('local', 'shared');
 if (\OCP\Config::getAppValue('contacts', 'backend_ldap', "false") === "true") {
-	$backends[] = 'ldap'
+	$backends[] = 'ldap';
 }
 $carddavBackend = new OCA\Contacts\CardDAV\Backend($backends);
 $requestBackend = new OC_Connector_Sabre_Request();

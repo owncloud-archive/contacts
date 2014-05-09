@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('#contacts-ldap-enabled').change(function() {
-		var enabled=$(this).prop('checked')?"true":"false";
+		var enabled=$(this).prop('checked')?'true':'false';
 		$.when(
 			enableBackend(
 				'ldap',
@@ -60,19 +60,10 @@ function requestRoute(route, type, routeParams, params, additionalHeaders) {
 }
 
 function enableBackend(backend, enable, params) {
-	return this.requestRoute(
+	return requestRoute(
 		'backend/{backend}/{enable}',
 		'GET',
 		{backend: backend, enable: enable},
-		JSON.stringify(params)
-	);
-}
-
-function backendStatus(backend, params) {
-	return this.requestRoute(
-		'backend/{backend}',
-		'GET',
-		{backend: backend},
 		JSON.stringify(params)
 	);
 }

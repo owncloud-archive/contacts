@@ -55,8 +55,8 @@ OC.Contacts = OC.Contacts || {};
 		var connectors = self.getConnectors();
 		$('#addressbooks-ui-ldapvcardconnector').empty();
 		var custom = true;
+		var $option = null;
 		for (var id = 0; id < connectors.length; id++) {
-			var $option = null;
 			if (connectors[id].id === addressbook.ldapconnectorid) {
 				$option = $('<option value="' + connectors[id].id + '">' + connectors[id].name + '</option>').attr('selected','selected');
 				custom = false;
@@ -66,13 +66,12 @@ OC.Contacts = OC.Contacts || {};
 			$('#addressbooks-ui-ldapvcardconnector').append($option);
 		}
 		if (custom) {
-			var $option = $('<option value="">' + 'Custom connector' + '</option>').attr('selected','selected');
+			$option = $('<option value="">' + 'Custom connector' + '</option>').attr('selected','selected');
 			$('#addressbooks-ui-ldapvcardconnector').append($option);
 			$('#addressbooks-ui-ldapvcardconnector-value-p').show();
 			$('#addressbooks-ui-ldapvcardconnector-copyfrom-p').show();
-			var connectors = self.getConnectors();
 			$('#addressbooks-ui-ldapvcardconnector-copyfrom').empty();
-			var $option = $('<option value="">' + 'Select connector' + '</option>').attr('selected','selected');
+			$option = $('<option value="">' + 'Select connector' + '</option>').attr('selected','selected');
 			$('#addressbooks-ui-ldapvcardconnector-copyfrom').append($option);
 			for (var id = 0; id < connectors.length; id++) {
 				$option = $('<option value="' + connectors[id].id + '">' + connectors[id].name + '</option>');
@@ -81,7 +80,7 @@ OC.Contacts = OC.Contacts || {};
 
 			$('#addressbooks-ui-ldapvcardconnector-value').text(addressbook.ldap_vcard_connector);
 		} else {
-			var $option = $('<option value="">' + 'Custom connector' + '</option>');
+			$option = $('<option value="">' + 'Custom connector' + '</option>');
 			$('#addressbooks-ui-ldapvcardconnector').append($option);
 		}
 	};
@@ -299,7 +298,7 @@ OC.Contacts = OC.Contacts || {};
 	OtherBackendConfig.prototype.getConnectors = function() {
 		var self = this;
 		
-		if (self.connectors == null) {
+		if (self.connectors === null) {
 			$.when(self.storage.getConnectors($('#addressbooks-ui-backend').val()))
 			.then(function(response) {
 				self.connectors = response.data;
@@ -313,7 +312,7 @@ OC.Contacts = OC.Contacts || {};
 		} else {
 			return self.connectors;
 		}
-	}
+	};
 	
 	jQuery.fn.forceNumericOnly = function()
 	{
