@@ -13,6 +13,7 @@ namespace OCA\Contacts\Controller;
 use OCA\Contacts\App,
 	OCP\AppFramework\Controller,
 	OCA\Contacts\Utils\Properties,
+	OCA\Contacts\ImportManager,
 	OCP\AppFramework\Http\TemplateResponse;
 
 
@@ -28,6 +29,7 @@ class PageController extends Controller {
 	public function index() {
 		\OC::$server->getNavigationManager()->setActiveEntry($this->appName);
 
+		$importManager = new ImportManager();
 		$imppTypes = Properties::getTypesForProperty('IMPP');
 		$adrTypes = Properties::getTypesForProperty('ADR');
 		$phoneTypes = Properties::getTypesForProperty('TEL');
@@ -67,6 +69,7 @@ class PageController extends Controller {
 			'adrTypes' => $adrTypes,
 			'imppTypes' => $imppTypes,
 			'imProtocols' => $imProtocols,
+			'importManager' => $importManager,
 		));
 
 		return $response;

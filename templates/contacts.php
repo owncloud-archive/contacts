@@ -1,6 +1,3 @@
-<?php
-use OCA\Contacts\ImportManager;
-?>
 <div id="app">
 	<div id="app-navigation" class="loading">
 		<ul id="grouplist" class="hidden-on-load">
@@ -34,8 +31,7 @@ use OCA\Contacts\ImportManager;
 							<select id="import_format">
 								<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
 								<?php
-								$importManager = new ImportManager();
-								$types = $importManager->getTypes();
+								$types = $_['importManager']->getTypes();
 								foreach ($types as $id => $label) {
 									echo "<option value=\"$id\">$label</option>";
 								}
