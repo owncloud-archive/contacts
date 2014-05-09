@@ -782,8 +782,4 @@ class Ldap extends AbstractBackend {
 		
 		return $data ? json_decode($data) : array();
 	}
-
-	public function getSearchProvider($addressbook) {
-		return new \OCA\Contacts\AddressbookProvider($addressbook);
-	}
 }

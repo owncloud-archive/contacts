@@ -14,7 +14,7 @@
 
 <div class="section">
 	<h2>Contacts</h2>
-	<input type="checkbox" name="contacts-ldap-enabled" id="contacts-ldap-enabled" value="checked"/>
+	<input type="checkbox" name="contacts-ldap-enabled" id="contacts-ldap-enabled" value="checked" <?php (\OCP\Config::getAppValue('contacts', 'backend_ldap', "false") === "true")?print "checked":print ""?> />
 	<label for="contacts-ldap-enabled"><?php p($l->t('Enable LDAP Backend')) ?></label><br>
 	<em><?php p($l->t('Enable LDAP backend for the contacts application')) ?></em>
 	<br/><em><?php p($l->t('Warning: LDAP Backend is in beta mode, use with precautions')) ?></em>

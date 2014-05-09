@@ -1,24 +1,4 @@
-console.log($('#contacts-ldap-enabled'));
-
 $(document).ready(function() {
-	
-	$.when(
-		backendStatus(
-			'ldap'
-		))
-	.then(function(response) {
-		if(!response.error) {
-			console.log('response', response.data);
-			if (response.data === "true") {
-				$('#contacts-ldap-enabled').prop('checked', true);
-			}
-		} else {
-			console.warn('Error', response.message);
-		}
-	}).fail(function(response) {
-		console.log(response.message);
-	});
-	
 	$('#contacts-ldap-enabled').change(function() {
 		var enabled=$(this).prop('checked')?"true":"false";
 		$.when(
@@ -37,7 +17,6 @@ $(document).ready(function() {
 		});
 	});
 });
-
 
 function requestRoute(route, type, routeParams, params, additionalHeaders) {
 	var isJSON = (typeof params === 'string');
@@ -97,7 +76,6 @@ function backendStatus(backend, params) {
 		JSON.stringify(params)
 	);
 }
-
 
 var JSONResponse = function(jqXHR) {
 	this.getAllResponseHeaders = jqXHR.getAllResponseHeaders;
