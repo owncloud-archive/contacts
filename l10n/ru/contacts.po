@@ -10,7 +10,7 @@
 # Dmitry <linuxsquirrel.dev@gmail.com>, 2013
 # Evgeniy Spitsyn <evgeniy@spitsyn.net>, 2013
 # Dmitry Kurenkov <ideamk@gmail.com>, 2012
-# jekader <jekader@gmail.com>, 2013
+# jekader <jekader@gmail.com>, 2013-2014
 # jekader <jekader@gmail.com>, 2012
 # Yaroslav Petrov <lankme@gmail.com>, 2012
 # Mihail Vasiliev <mickvav@gmail.com>, 2012
@@ -34,9 +34,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-04 00:49-0400\n"
-"PO-Revision-Date: 2014-05-03 06:11+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-09 00:49-0400\n"
+"PO-Revision-Date: 2014-05-08 19:20+0000\n"
+"Last-Translator: jekader <jekader@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,23 +54,23 @@ msgstr "Сохранить"
 
 #: js/addressbooks.js:312
 msgid "Starting file import"
-msgstr ""
+msgstr "Начинается импорт"
 
 #: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Выбран формат: {format}"
 
 #: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Автоматическое определение формата"
 
 #: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Обработано {count} из {total} контактов"
 
 #: js/addressbooks.js:421
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Всего: {total}, Удачно: {imported}, Ошибок: {failed}"
 
 #: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
@@ -138,11 +138,11 @@ msgstr "Ошибка сети или сервера. Пожалуйста, со�
 
 #: js/app.js:789
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "В качестве фотографий контактов можно использовать только фотографии"
 
 #: js/app.js:798
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "Размер \"{filename}\" превышает разрешённый максимум {size}"
 
 #: js/app.js:967
 msgid "Error adding to group."
@@ -205,7 +205,7 @@ msgstr "Ошибка анализа даты рождения {bday}"
 
 #: js/contacts.js:1319
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Реализация не поддерживает мультибайтовые символы."
 
 #: js/contacts.js:2231
 msgid ""
@@ -358,7 +358,7 @@ msgstr "Неизвестная ошибка"
 
 #: lib/addressbook.php:413
 msgid "Access denied"
-msgstr ""
+msgstr "Доступ разрешен"
 
 #: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
@@ -416,7 +416,7 @@ msgstr "Ошибка создания адресной книги"
 #: lib/controller/addressbookcontroller.php:207
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "Тип \"%s\" не поддерживает удаление адресных книг."
 
 #: lib/controller/addressbookcontroller.php:215
 #, php-format
@@ -433,19 +433,19 @@ msgstr "Ошибка создания контакта."
 
 #: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
-msgstr ""
+msgstr "Ошибка создания контакта."
 
 #: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Ошибка удаления контакта."
 
 #: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Ошибка получения контакта."
 
 #: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
-msgstr ""
+msgstr "Ошибка при сохранении контактов."
 
 #: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
@@ -453,7 +453,7 @@ msgstr "Ошибка удаления контакта из другой адр�
 
 #: lib/controller/addressbookcontroller.php:367
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Ошибка при получении перемещённого контакта"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -504,7 +504,7 @@ msgstr "Нет фото по адресу."
 
 #: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Ошибка загрузки изображения из кэша"
 
 #: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
@@ -774,7 +774,7 @@ msgstr "Добавить адресную книгу"
 
 #: templates/contacts.php:35
 msgid "Automatic format"
-msgstr ""
+msgstr "Автоматический формат"
 
 #: templates/contacts.php:44 templates/contacts.php:45
 msgid "Select file..."
@@ -885,11 +885,11 @@ msgstr "Удалить текущий контакт"
 #: templates/contacts.php:126
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "В адресной книге нет контактов, либо Ваша адресная книга отключена."
 
 #: templates/contacts.php:127
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Добавить новый контакт или импортировать существующие контакты из файла VCF."
 
 #: templates/contacts.php:178
 msgid "Which contact should the data be merged into?"
@@ -917,7 +917,7 @@ msgstr "Загрузить новую фотографию"
 
 #: templates/contacts.php:232
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Выбрать фото в файлах"
 
 #: templates/contacts.php:234
 msgid "Favorite"
@@ -941,7 +941,7 @@ msgstr "Фамилия"
 
 #: templates/contacts.php:269
 msgid "Address book"
-msgstr ""
+msgstr "Адресная книга"
 
 #: templates/contacts.php:276 templates/contacts.php:353
 msgid "Nickname"
@@ -961,11 +961,11 @@ msgstr "День рождения"
 
 #: templates/contacts.php:332
 msgid "Website"
-msgstr ""
+msgstr "Сайт"
 
 #: templates/contacts.php:337
 msgid "Instant messaging"
-msgstr ""
+msgstr "Быстрые сообщения"
 
 #: templates/contacts.php:343
 msgid "Notes go here..."
