@@ -24,7 +24,7 @@ use OCA\Contacts\ImportManager;
 					</ul>
 					<input type="text" tabindex="0" autofocus id="add-address-book" placeholder="<?php p($l->t('Display name')); ?>" title="<?php p($l->t('Add Address Book')); ?>" />
 					<?php
-					if (\OCP\Config::getAppValue('contacts', 'backend_'.$backend, "false")) {
+					if (\OCP\Config::getAppValue('contacts', 'backend_ldap', "false") === "true") {
 					?>
 					<ul class="oc-addnew">
 						<li id="add-ldap-address-book-element"><a class="oc-addnew-init"><?php p($l->t('Add LDAP Address Book')); ?></a></li>
