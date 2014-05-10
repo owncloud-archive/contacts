@@ -139,7 +139,6 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
-"ownCloud handle" => "ownCloud kezelő",
 "Work" => "Munkahelyi",
 "Home" => "Otthoni",
 "Mobile" => "Mobil",

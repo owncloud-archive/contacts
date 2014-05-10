@@ -1,5 +1,5 @@
 <?xml version='1.0' standalone='yes'?>
-<entries name="inetOrgPersonModify">
+<entries name="VCardUnassigned">
 	
   <vcard_entries>
 
@@ -135,11 +135,6 @@
     </ldif_entry>
     
     <ldif_entry name="vcardcountry" enabled="true">
-      <vcard_entry property="ADR" type="HOME" position="6">
-      </vcard_entry>
-    </ldif_entry>
-    
-    <ldif_entry name="c" enabled="true">
       <vcard_entry property="ADR" type="HOME" position="6">
       </vcard_entry>
     </ldif_entry>

@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-04 00:49-0400\n"
-"PO-Revision-Date: 2014-05-03 06:11+0000\n"
+"POT-Creation-Date: 2014-05-10 00:49-0400\n"
+"PO-Revision-Date: 2014-05-10 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Esperanto (http://www.transifex.com/projects/p/owncloud/language/eo/)\n"
 "MIME-Version: 1.0\n"
@@ -138,16 +138,16 @@ msgstr ""
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:173
 msgid "Merge contacts"
 msgstr "Kunfandi kontaktojn"
 
-#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
-#: templates/contacts.php:364
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:359
+#: templates/contacts.php:360
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: js/app.js:1412 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:154
 msgid "Add group"
 msgstr "Aldoni grupon"
 
@@ -171,29 +171,29 @@ msgstr ""
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1101
+#: js/contacts.js:1102
 msgid "# groups"
 msgstr "# grupoj"
 
-#: js/contacts.js:1181
+#: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:1319
+#: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2231
+#: js/contacts.js:2232
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Iuj kontaktoj estas markitaj por forigo, sed ankoraŭ ne forigitaj. Bonvolu atendi ĝis ili foriĝos."
 
-#: js/contacts.js:2242
+#: js/contacts.js:2243
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klaku por malfari forigon de {num} kontaktoj"
 
-#: js/contacts.js:2251
+#: js/contacts.js:2252
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Nuliĝis forigo de {num} kontaktoj"
 
@@ -263,7 +263,7 @@ msgstr "Malsukcesis ŝargo de grupoj: {error}"
 msgid "Please choose the addressbook"
 msgstr "Bonvolu elekti adresaron"
 
-#: js/loader.js:22 templates/contacts.php:32
+#: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
 msgstr "Enporti en..."
 
@@ -275,7 +275,7 @@ msgstr ""
 msgid "Import contacts"
 msgstr "Enporti kontaktojn"
 
-#: js/loader.js:61 templates/contacts.php:28
+#: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
 msgstr "Enporti"
 
@@ -287,8 +287,8 @@ msgstr "Enportante..."
 msgid "Import done"
 msgstr "Enporto plenumiĝis"
 
-#: js/loader.js:95 templates/contacts.php:93 templates/contacts.php:367
-#: templates/contacts.php:368
+#: js/loader.js:95 templates/contacts.php:89 templates/contacts.php:363
+#: templates/contacts.php:364
 msgid "Close"
 msgstr "Fermi"
 
@@ -671,7 +671,7 @@ msgid "GaduGadu"
 msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
-msgid "ownCloud handle"
+msgid "ownCloud"
 msgstr ""
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
@@ -724,319 +724,319 @@ msgstr "Amikoj"
 msgid "Family"
 msgstr "Familio"
 
-#: templates/contacts.php:9 templates/contacts.php:129
+#: templates/contacts.php:6 templates/contacts.php:125
 msgid "New contact"
 msgstr ""
 
-#: templates/contacts.php:13
+#: templates/contacts.php:10
 msgid "Group name"
 msgstr "Gruponomo"
 
-#: templates/contacts.php:13
+#: templates/contacts.php:10
 msgid "New group"
 msgstr ""
 
-#: templates/contacts.php:22
+#: templates/contacts.php:19
 msgid "Address books"
 msgstr "Adresaroj"
 
-#: templates/contacts.php:25 templates/contacts.php:65
+#: templates/contacts.php:22 templates/contacts.php:61
 msgid "Display name"
 msgstr ""
 
-#: templates/contacts.php:25
+#: templates/contacts.php:22
 msgid "Add Address Book"
 msgstr "Aldoni adresaron"
 
-#: templates/contacts.php:35
+#: templates/contacts.php:32
 msgid "Automatic format"
 msgstr ""
 
-#: templates/contacts.php:44 templates/contacts.php:45
+#: templates/contacts.php:40 templates/contacts.php:41
 msgid "Select file..."
 msgstr "Elekti dosieron..."
 
-#: templates/contacts.php:62
+#: templates/contacts.php:58
 msgid "(De-)select all"
 msgstr "(Mal)elekti ĉion"
 
-#: templates/contacts.php:64
+#: templates/contacts.php:60
 msgid "Sort order"
 msgstr ""
 
-#: templates/contacts.php:66
+#: templates/contacts.php:62
 msgid "First- Lastname"
 msgstr "Persona- FamiliaNomo"
 
-#: templates/contacts.php:67
+#: templates/contacts.php:63
 msgid "Last-, Firstname"
 msgstr "Familia-, PersonaNomo"
 
-#: templates/contacts.php:73 templates/contacts.php:74
-#: templates/contacts.php:221 templates/contacts.php:222
-#: templates/contacts.php:506
+#: templates/contacts.php:69 templates/contacts.php:70
+#: templates/contacts.php:217 templates/contacts.php:218
+#: templates/contacts.php:502
 msgid "Delete"
 msgstr "Forigi"
 
-#: templates/contacts.php:77 templates/contacts.php:262
+#: templates/contacts.php:73 templates/contacts.php:258
 msgid "Groups"
 msgstr "Grupoj"
 
-#: templates/contacts.php:79 templates/contacts.php:371
-#: templates/contacts.php:372
+#: templates/contacts.php:75 templates/contacts.php:367
+#: templates/contacts.php:368
 msgid "Download"
 msgstr "Elŝuti"
 
-#: templates/contacts.php:80
+#: templates/contacts.php:76
 msgid "Merge"
 msgstr ""
 
-#: templates/contacts.php:83 templates/contacts.php:317
-#: templates/contacts.php:356
+#: templates/contacts.php:79 templates/contacts.php:313
+#: templates/contacts.php:352
 msgid "Email"
 msgstr "Retpoŝto"
 
-#: templates/contacts.php:84 templates/contacts.php:322
-#: templates/contacts.php:355
+#: templates/contacts.php:80 templates/contacts.php:318
+#: templates/contacts.php:351
 msgid "Phone"
 msgstr "Telefono"
 
-#: templates/contacts.php:85 templates/contacts.php:327
-#: templates/contacts.php:358
+#: templates/contacts.php:81 templates/contacts.php:323
+#: templates/contacts.php:354
 msgid "Address"
 msgstr "Adreso"
 
-#: templates/contacts.php:86
+#: templates/contacts.php:82
 msgid "Group"
 msgstr "Grupo"
 
-#: templates/contacts.php:94
+#: templates/contacts.php:90
 msgid "Keyboard shortcuts"
 msgstr "Fulmoklavoj"
 
-#: templates/contacts.php:96
+#: templates/contacts.php:92
 msgid "Navigation"
 msgstr "Navigado"
 
-#: templates/contacts.php:99
+#: templates/contacts.php:95
 msgid "Next contact in list"
 msgstr "Jena kontakto en la listo"
 
-#: templates/contacts.php:101
+#: templates/contacts.php:97
 msgid "Previous contact in list"
 msgstr "Maljena kontakto en la listo"
 
-#: templates/contacts.php:103
+#: templates/contacts.php:99
 msgid "Expand/collapse current addressbook"
 msgstr "Etendi/Maletendi la nunan adresaron"
 
-#: templates/contacts.php:105
+#: templates/contacts.php:101
 msgid "Next addressbook"
 msgstr "Jena adresaro"
 
-#: templates/contacts.php:107
+#: templates/contacts.php:103
 msgid "Previous addressbook"
 msgstr "Maljena adresaro"
 
-#: templates/contacts.php:111
+#: templates/contacts.php:107
 msgid "Actions"
 msgstr "Agoj"
 
-#: templates/contacts.php:114
+#: templates/contacts.php:110
 msgid "Refresh contacts list"
 msgstr "Refreŝigi la kontaktoliston"
 
-#: templates/contacts.php:116
+#: templates/contacts.php:112
 msgid "Add new contact"
 msgstr "Aldoni novan kontakton"
 
-#: templates/contacts.php:118
+#: templates/contacts.php:114
 msgid "Add new addressbook"
 msgstr "Aldoni novan adresaron"
 
-#: templates/contacts.php:120
+#: templates/contacts.php:116
 msgid "Delete current contact"
 msgstr "Forigi la nunan kontakton"
 
-#: templates/contacts.php:126
+#: templates/contacts.php:122
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
 msgstr ""
 
-#: templates/contacts.php:127
+#: templates/contacts.php:123
 msgid "Add a new contact or import existing contacts from a VCF file."
 msgstr ""
 
-#: templates/contacts.php:178
+#: templates/contacts.php:174
 msgid "Which contact should the data be merged into?"
 msgstr ""
 
-#: templates/contacts.php:186
+#: templates/contacts.php:182
 msgid "Delete the other(s) after successful merge?"
 msgstr ""
 
-#: templates/contacts.php:201
+#: templates/contacts.php:197
 msgid "Compose mail"
 msgstr "Redakti retpoŝtomesaĝon"
 
-#: templates/contacts.php:229
+#: templates/contacts.php:225
 msgid "Delete current photo"
 msgstr "Forigi nunan foton"
 
-#: templates/contacts.php:230
+#: templates/contacts.php:226
 msgid "Edit current photo"
 msgstr "Redakti nunan foton"
 
-#: templates/contacts.php:231
+#: templates/contacts.php:227
 msgid "Upload new photo"
 msgstr "Alŝuti novan foton"
 
-#: templates/contacts.php:232
+#: templates/contacts.php:228
 msgid "Select photo from Files"
 msgstr ""
 
-#: templates/contacts.php:234
+#: templates/contacts.php:230
 msgid "Favorite"
 msgstr "Favorato"
 
-#: templates/contacts.php:237 templates/contacts.php:239
+#: templates/contacts.php:233 templates/contacts.php:235
 msgid "Name"
 msgstr "Nomo"
 
-#: templates/contacts.php:245
+#: templates/contacts.php:241
 msgid "First name"
 msgstr "Persona nomo"
 
-#: templates/contacts.php:249
+#: templates/contacts.php:245
 msgid "Additional names"
 msgstr "Pliaj nomoj"
 
-#: templates/contacts.php:253
+#: templates/contacts.php:249
 msgid "Last name"
 msgstr "Familia nomo"
 
-#: templates/contacts.php:269
+#: templates/contacts.php:265
 msgid "Address book"
 msgstr ""
 
-#: templates/contacts.php:276 templates/contacts.php:353
+#: templates/contacts.php:272 templates/contacts.php:349
 msgid "Nickname"
 msgstr "Kromnomo"
 
-#: templates/contacts.php:286 templates/contacts.php:352
+#: templates/contacts.php:282 templates/contacts.php:348
 msgid "Title"
 msgstr "Titolo"
 
-#: templates/contacts.php:296 templates/contacts.php:351
+#: templates/contacts.php:292 templates/contacts.php:347
 msgid "Organization"
 msgstr "Organizaĵo"
 
-#: templates/contacts.php:306 templates/contacts.php:354
+#: templates/contacts.php:302 templates/contacts.php:350
 msgid "Birthday"
 msgstr "Naskiĝotago"
 
-#: templates/contacts.php:332
+#: templates/contacts.php:328
 msgid "Website"
 msgstr ""
 
-#: templates/contacts.php:337
+#: templates/contacts.php:333
 msgid "Instant messaging"
 msgstr ""
 
-#: templates/contacts.php:343
+#: templates/contacts.php:339
 msgid "Notes go here..."
 msgstr "Notoj iras tie ĉi..."
 
-#: templates/contacts.php:350
+#: templates/contacts.php:346
 msgid "Add field..."
 msgstr "Aldoni kampon..."
 
-#: templates/contacts.php:357
+#: templates/contacts.php:353
 msgid "Instant Messaging"
 msgstr "Tujmesaĝado"
 
-#: templates/contacts.php:359
+#: templates/contacts.php:355
 msgid "Note"
 msgstr "Noto"
 
-#: templates/contacts.php:360
+#: templates/contacts.php:356
 msgid "Web site"
 msgstr "TTT-ejo"
 
-#: templates/contacts.php:384 templates/contacts.php:399
-#: templates/contacts.php:413 templates/contacts.php:428
-#: templates/contacts.php:470 templates/contacts.php:480
+#: templates/contacts.php:380 templates/contacts.php:395
+#: templates/contacts.php:409 templates/contacts.php:424
+#: templates/contacts.php:466 templates/contacts.php:476
 msgid "Preferred"
 msgstr "Preferata"
 
-#: templates/contacts.php:389
+#: templates/contacts.php:385
 msgid "Please specify a valid email address."
 msgstr "Bonvolu specifi validan retpoŝtadreson."
 
-#: templates/contacts.php:389
+#: templates/contacts.php:385
 msgid "someone@example.com"
 msgstr "iu@example.com"
 
-#: templates/contacts.php:391
+#: templates/contacts.php:387
 msgid "Mail to address"
 msgstr "Retpoŝtmesaĝo al adreso"
 
-#: templates/contacts.php:392
+#: templates/contacts.php:388
 msgid "Delete email address"
 msgstr "Forigi retpoŝþadreson"
 
-#: templates/contacts.php:404
+#: templates/contacts.php:400
 msgid "Enter phone number"
 msgstr "Enigi telefonnumeron"
 
-#: templates/contacts.php:420
+#: templates/contacts.php:416
 msgid "Go to web site"
 msgstr "Iri al TTT-ejon"
 
-#: templates/contacts.php:437
+#: templates/contacts.php:433
 msgid "View on map"
 msgstr "Vidi en mapo"
 
-#: templates/contacts.php:445
+#: templates/contacts.php:441
 msgid "Street address"
 msgstr "Stratadreso"
 
-#: templates/contacts.php:449
+#: templates/contacts.php:445
 msgid "Postal code"
 msgstr "Poŝtkodo"
 
-#: templates/contacts.php:451
+#: templates/contacts.php:447
 msgid "City"
 msgstr "Urbo"
 
-#: templates/contacts.php:455
+#: templates/contacts.php:451
 msgid "State or province"
 msgstr ""
 
-#: templates/contacts.php:459
+#: templates/contacts.php:455
 msgid "Country"
 msgstr "Lando"
 
-#: templates/contacts.php:486
+#: templates/contacts.php:482
 msgid "Instant Messenger"
 msgstr "Tujmesaĝilo"
 
-#: templates/contacts.php:499
+#: templates/contacts.php:495
 msgid "Active"
 msgstr "Aktiva"
 
-#: templates/contacts.php:502
+#: templates/contacts.php:498
 msgid "Share"
 msgstr "Kunhavigi"
 
-#: templates/contacts.php:503
+#: templates/contacts.php:499
 msgid "Export"
 msgstr "Elporti"
 
-#: templates/contacts.php:504
+#: templates/contacts.php:500
 msgid "CardDAV link"
 msgstr ""
 
-#: templates/contacts.php:505
+#: templates/contacts.php:501
 msgid "Edit"
 msgstr "Redakti"

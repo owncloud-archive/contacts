@@ -13,6 +13,7 @@ namespace OCA\Contacts;
 use Sabre\VObject,
 	OCP\AppFramework,
 	OCA\Contacts\Controller\AddressBookController,
+	OCA\Contacts\Controller\BackendController,
 	OCA\Contacts\Controller\GroupController,
 	OCA\Contacts\Controller\ContactController,
 	OCA\Contacts\Controller\ContactPhotoController,
@@ -53,7 +54,6 @@ class App {
 	* @var array
 	*/
 	public static $backendClasses = array(
-		'ldap' => 'OCA\Contacts\Backend\Ldap',
 		'local' => 'OCA\Contacts\Backend\Database',
 		'shared' => 'OCA\Contacts\Backend\Shared',
 		'localusers' => 'OCA\Contacts\Backend\LocalUsers',
@@ -71,6 +71,9 @@ class App {
 		$this->dbBackend = $dbBackend
 			? $dbBackend
 			: new Backend\Database($user);
+		if (\OCP\Config::getAppValue('contacts', 'backend_ldap', "false") === "true") {
+			self::$backendClasses['ldap'] = 'OCA\Contacts\Backend\Ldap';
+		}
 	}
 
 	/**

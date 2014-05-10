@@ -1058,9 +1058,10 @@ OC.Contacts = OC.Contacts || {};
 			categories: this.getPreferredValue('CATEGORIES', [])
 				.clean('').join(' / ')
 		});
-		if(this.getOwner() !== OC.currentUser
-				&& !(this.metadata.permissions & OC.PERMISSION_UPDATE
-				|| this.metadata.permissions & OC.PERMISSION_DELETE)) {
+		if (this.getOwner() !== OC.currentUser
+			&& !(this.metadata.permissions & OC.PERMISSION_UPDATE
+			|| this.metadata.permissions & OC.PERMISSION_DELETE)
+		) {
 			this.$listelem.find('input:checkbox').prop('disabled', true).css('opacity', '0');
 		} else {
 			var self = this;

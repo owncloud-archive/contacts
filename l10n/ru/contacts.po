@@ -10,7 +10,7 @@
 # Dmitry <linuxsquirrel.dev@gmail.com>, 2013
 # Evgeniy Spitsyn <evgeniy@spitsyn.net>, 2013
 # Dmitry Kurenkov <ideamk@gmail.com>, 2012
-# jekader <jekader@gmail.com>, 2013
+# jekader <jekader@gmail.com>, 2013-2014
 # jekader <jekader@gmail.com>, 2012
 # Yaroslav Petrov <lankme@gmail.com>, 2012
 # Mihail Vasiliev <mickvav@gmail.com>, 2012
@@ -34,8 +34,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-04 00:49-0400\n"
-"PO-Revision-Date: 2014-05-03 06:11+0000\n"
+"POT-Creation-Date: 2014-05-10 00:49-0400\n"
+"PO-Revision-Date: 2014-05-10 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -54,23 +54,23 @@ msgstr "Сохранить"
 
 #: js/addressbooks.js:312
 msgid "Starting file import"
-msgstr ""
+msgstr "Начинается импорт"
 
 #: js/addressbooks.js:316 js/addressbooks.js:344
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Выбран формат: {format}"
 
 #: js/addressbooks.js:319 js/addressbooks.js:347
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Автоматическое определение формата"
 
 #: js/addressbooks.js:397
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Обработано {count} из {total} контактов"
 
 #: js/addressbooks.js:421
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Всего: {total}, Удачно: {imported}, Ошибок: {failed}"
 
 #: js/addressbooks.js:575
 msgid "An address book called {name} already exists"
@@ -138,11 +138,11 @@ msgstr "Ошибка сети или сервера. Пожалуйста, со�
 
 #: js/app.js:789
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "В качестве фотографий контактов можно использовать только фотографии"
 
 #: js/app.js:798
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "Размер \"{filename}\" превышает разрешённый максимум {size}"
 
 #: js/app.js:967
 msgid "Error adding to group."
@@ -162,16 +162,16 @@ msgstr "Вы выбрали более 300 контактов.\nCкорее вс
 msgid "Error setting {name} as favorite."
 msgstr "Ошибка установки {name} избранным."
 
-#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:173
 msgid "Merge contacts"
 msgstr "Объединить контакты"
 
-#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
-#: templates/contacts.php:364
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:359
+#: templates/contacts.php:360
 msgid "Cancel"
 msgstr "Отменить"
 
-#: js/app.js:1412 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:154
 msgid "Add group"
 msgstr "Добавить группу"
 
@@ -195,29 +195,29 @@ msgstr "Обрезать фото"
 msgid "Error parsing date: {date}"
 msgstr "Ошибка формата даты: {date}"
 
-#: js/contacts.js:1101
+#: js/contacts.js:1102
 msgid "# groups"
 msgstr "# группы"
 
-#: js/contacts.js:1181
+#: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
 msgstr "Ошибка анализа даты рождения {bday}"
 
-#: js/contacts.js:1319
+#: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Реализация не поддерживает мультибайтовые символы."
 
-#: js/contacts.js:2231
+#: js/contacts.js:2232
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Некоторые контакты помечены на удаление, но ещё не удалены. Подождите, пока они удаляются."
 
-#: js/contacts.js:2242
+#: js/contacts.js:2243
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Нажмите для отмены удаления {num} контактов"
 
-#: js/contacts.js:2251
+#: js/contacts.js:2252
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Отмена удаления {num} контактов"
 
@@ -287,7 +287,7 @@ msgstr "Ошибка загрузки групп: {error}"
 msgid "Please choose the addressbook"
 msgstr "Выберите адресную книгу"
 
-#: js/loader.js:22 templates/contacts.php:32
+#: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
 msgstr "Импорт в..."
 
@@ -299,7 +299,7 @@ msgstr "Ошибка загрузки шаблона импорта"
 msgid "Import contacts"
 msgstr "Импортировать контакты"
 
-#: js/loader.js:61 templates/contacts.php:28
+#: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
 msgstr "Импорт"
 
@@ -311,8 +311,8 @@ msgstr "Импортирую..."
 msgid "Import done"
 msgstr "Импорт завершен"
 
-#: js/loader.js:95 templates/contacts.php:93 templates/contacts.php:367
-#: templates/contacts.php:368
+#: js/loader.js:95 templates/contacts.php:89 templates/contacts.php:363
+#: templates/contacts.php:364
 msgid "Close"
 msgstr "Закрыть"
 
@@ -358,7 +358,7 @@ msgstr "Неизвестная ошибка"
 
 #: lib/addressbook.php:413
 msgid "Access denied"
-msgstr ""
+msgstr "Доступ разрешен"
 
 #: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
@@ -416,7 +416,7 @@ msgstr "Ошибка создания адресной книги"
 #: lib/controller/addressbookcontroller.php:207
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "Тип \"%s\" не поддерживает удаление адресных книг."
 
 #: lib/controller/addressbookcontroller.php:215
 #, php-format
@@ -433,19 +433,19 @@ msgstr "Ошибка создания контакта."
 
 #: lib/controller/addressbookcontroller.php:271
 msgid "Error creating contact"
-msgstr ""
+msgstr "Ошибка создания контакта."
 
 #: lib/controller/addressbookcontroller.php:303
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Ошибка удаления контакта."
 
 #: lib/controller/addressbookcontroller.php:343
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Ошибка получения контакта."
 
 #: lib/controller/addressbookcontroller.php:354
 msgid "Error saving contact"
-msgstr ""
+msgstr "Ошибка при сохранении контактов."
 
 #: lib/controller/addressbookcontroller.php:360
 msgid "Error removing contact from other address book."
@@ -453,7 +453,7 @@ msgstr "Ошибка удаления контакта из другой адр�
 
 #: lib/controller/addressbookcontroller.php:367
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Ошибка при получении перемещённого контакта"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -504,7 +504,7 @@ msgstr "Нет фото по адресу."
 
 #: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Ошибка загрузки изображения из кэша"
 
 #: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
@@ -695,7 +695,7 @@ msgid "GaduGadu"
 msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
-msgid "ownCloud handle"
+msgid "ownCloud"
 msgstr ""
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
@@ -748,319 +748,319 @@ msgstr "Друзья"
 msgid "Family"
 msgstr "Семья"
 
-#: templates/contacts.php:9 templates/contacts.php:129
+#: templates/contacts.php:6 templates/contacts.php:125
 msgid "New contact"
 msgstr "Новый контакт"
 
-#: templates/contacts.php:13
+#: templates/contacts.php:10
 msgid "Group name"
 msgstr "Имя группы"
 
-#: templates/contacts.php:13
+#: templates/contacts.php:10
 msgid "New group"
 msgstr "Новая группа"
 
-#: templates/contacts.php:22
+#: templates/contacts.php:19
 msgid "Address books"
 msgstr "Адресная книга"
 
-#: templates/contacts.php:25 templates/contacts.php:65
+#: templates/contacts.php:22 templates/contacts.php:61
 msgid "Display name"
 msgstr "Отобразить имя"
 
-#: templates/contacts.php:25
+#: templates/contacts.php:22
 msgid "Add Address Book"
 msgstr "Добавить адресную книгу"
 
-#: templates/contacts.php:35
+#: templates/contacts.php:32
 msgid "Automatic format"
-msgstr ""
+msgstr "Автоматический формат"
 
-#: templates/contacts.php:44 templates/contacts.php:45
+#: templates/contacts.php:40 templates/contacts.php:41
 msgid "Select file..."
 msgstr "Выбрать файл..."
 
-#: templates/contacts.php:62
+#: templates/contacts.php:58
 msgid "(De-)select all"
 msgstr "(Отменить) отметить все"
 
-#: templates/contacts.php:64
+#: templates/contacts.php:60
 msgid "Sort order"
 msgstr "Порядок сортировки"
 
-#: templates/contacts.php:66
+#: templates/contacts.php:62
 msgid "First- Lastname"
 msgstr "Имя Фамилия"
 
-#: templates/contacts.php:67
+#: templates/contacts.php:63
 msgid "Last-, Firstname"
 msgstr "Имя, Фамилия"
 
-#: templates/contacts.php:73 templates/contacts.php:74
-#: templates/contacts.php:221 templates/contacts.php:222
-#: templates/contacts.php:506
+#: templates/contacts.php:69 templates/contacts.php:70
+#: templates/contacts.php:217 templates/contacts.php:218
+#: templates/contacts.php:502
 msgid "Delete"
 msgstr "Удалить"
 
-#: templates/contacts.php:77 templates/contacts.php:262
+#: templates/contacts.php:73 templates/contacts.php:258
 msgid "Groups"
 msgstr "Группы"
 
-#: templates/contacts.php:79 templates/contacts.php:371
-#: templates/contacts.php:372
+#: templates/contacts.php:75 templates/contacts.php:367
+#: templates/contacts.php:368
 msgid "Download"
 msgstr "Скачать"
 
-#: templates/contacts.php:80
+#: templates/contacts.php:76
 msgid "Merge"
 msgstr "Объединение"
 
-#: templates/contacts.php:83 templates/contacts.php:317
-#: templates/contacts.php:356
+#: templates/contacts.php:79 templates/contacts.php:313
+#: templates/contacts.php:352
 msgid "Email"
 msgstr "E-mail"
 
-#: templates/contacts.php:84 templates/contacts.php:322
-#: templates/contacts.php:355
+#: templates/contacts.php:80 templates/contacts.php:318
+#: templates/contacts.php:351
 msgid "Phone"
 msgstr "Телефон"
 
-#: templates/contacts.php:85 templates/contacts.php:327
-#: templates/contacts.php:358
+#: templates/contacts.php:81 templates/contacts.php:323
+#: templates/contacts.php:354
 msgid "Address"
 msgstr "Адрес"
 
-#: templates/contacts.php:86
+#: templates/contacts.php:82
 msgid "Group"
 msgstr "Группа"
 
-#: templates/contacts.php:94
+#: templates/contacts.php:90
 msgid "Keyboard shortcuts"
 msgstr "Горячие клавиши"
 
-#: templates/contacts.php:96
+#: templates/contacts.php:92
 msgid "Navigation"
 msgstr "Навигация"
 
-#: templates/contacts.php:99
+#: templates/contacts.php:95
 msgid "Next contact in list"
 msgstr "Следующий контакт в списке"
 
-#: templates/contacts.php:101
+#: templates/contacts.php:97
 msgid "Previous contact in list"
 msgstr "Предыдущий контакт в списке"
 
-#: templates/contacts.php:103
+#: templates/contacts.php:99
 msgid "Expand/collapse current addressbook"
 msgstr "Развернуть/свернуть текущую адресную книгу"
 
-#: templates/contacts.php:105
+#: templates/contacts.php:101
 msgid "Next addressbook"
 msgstr "Следующая адресная книга"
 
-#: templates/contacts.php:107
+#: templates/contacts.php:103
 msgid "Previous addressbook"
 msgstr "Предыдущая адресная книга"
 
-#: templates/contacts.php:111
+#: templates/contacts.php:107
 msgid "Actions"
 msgstr "Действия"
 
-#: templates/contacts.php:114
+#: templates/contacts.php:110
 msgid "Refresh contacts list"
 msgstr "Обновить список контактов"
 
-#: templates/contacts.php:116
+#: templates/contacts.php:112
 msgid "Add new contact"
 msgstr "Добавить новый контакт"
 
-#: templates/contacts.php:118
+#: templates/contacts.php:114
 msgid "Add new addressbook"
 msgstr "Добавить новую адресную книгу"
 
-#: templates/contacts.php:120
+#: templates/contacts.php:116
 msgid "Delete current contact"
 msgstr "Удалить текущий контакт"
 
-#: templates/contacts.php:126
+#: templates/contacts.php:122
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "В адресной книге нет контактов, либо Ваша адресная книга отключена."
 
-#: templates/contacts.php:127
+#: templates/contacts.php:123
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Добавить новый контакт или импортировать существующие контакты из файла VCF."
 
-#: templates/contacts.php:178
+#: templates/contacts.php:174
 msgid "Which contact should the data be merged into?"
 msgstr "В какой контакт следует объединить данные?"
 
-#: templates/contacts.php:186
+#: templates/contacts.php:182
 msgid "Delete the other(s) after successful merge?"
 msgstr "Удалить другой(ие) после успешного объединения?"
 
-#: templates/contacts.php:201
+#: templates/contacts.php:197
 msgid "Compose mail"
 msgstr "Написать письмо"
 
-#: templates/contacts.php:229
+#: templates/contacts.php:225
 msgid "Delete current photo"
 msgstr "Удалить текущую фотографию"
 
-#: templates/contacts.php:230
+#: templates/contacts.php:226
 msgid "Edit current photo"
 msgstr "Редактировать текущую фотографию"
 
-#: templates/contacts.php:231
+#: templates/contacts.php:227
 msgid "Upload new photo"
 msgstr "Загрузить новую фотографию"
 
-#: templates/contacts.php:232
+#: templates/contacts.php:228
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Выбрать фото в файлах"
 
-#: templates/contacts.php:234
+#: templates/contacts.php:230
 msgid "Favorite"
 msgstr "Избранное"
 
-#: templates/contacts.php:237 templates/contacts.php:239
+#: templates/contacts.php:233 templates/contacts.php:235
 msgid "Name"
 msgstr "Имя"
 
-#: templates/contacts.php:245
+#: templates/contacts.php:241
 msgid "First name"
 msgstr "Имя"
 
-#: templates/contacts.php:249
+#: templates/contacts.php:245
 msgid "Additional names"
 msgstr "Отчество"
 
-#: templates/contacts.php:253
+#: templates/contacts.php:249
 msgid "Last name"
 msgstr "Фамилия"
 
-#: templates/contacts.php:269
+#: templates/contacts.php:265
 msgid "Address book"
-msgstr ""
+msgstr "Адресная книга"
 
-#: templates/contacts.php:276 templates/contacts.php:353
+#: templates/contacts.php:272 templates/contacts.php:349
 msgid "Nickname"
 msgstr "Псевдоним"
 
-#: templates/contacts.php:286 templates/contacts.php:352
+#: templates/contacts.php:282 templates/contacts.php:348
 msgid "Title"
 msgstr "Заголовок"
 
-#: templates/contacts.php:296 templates/contacts.php:351
+#: templates/contacts.php:292 templates/contacts.php:347
 msgid "Organization"
 msgstr "Организация"
 
-#: templates/contacts.php:306 templates/contacts.php:354
+#: templates/contacts.php:302 templates/contacts.php:350
 msgid "Birthday"
 msgstr "День рождения"
 
-#: templates/contacts.php:332
+#: templates/contacts.php:328
 msgid "Website"
-msgstr ""
+msgstr "Сайт"
 
-#: templates/contacts.php:337
+#: templates/contacts.php:333
 msgid "Instant messaging"
-msgstr ""
+msgstr "Быстрые сообщения"
 
-#: templates/contacts.php:343
+#: templates/contacts.php:339
 msgid "Notes go here..."
 msgstr "Здесь будут заметки..."
 
-#: templates/contacts.php:350
+#: templates/contacts.php:346
 msgid "Add field..."
 msgstr "Добавить поле..."
 
-#: templates/contacts.php:357
+#: templates/contacts.php:353
 msgid "Instant Messaging"
 msgstr "Быстрые сообщения"
 
-#: templates/contacts.php:359
+#: templates/contacts.php:355
 msgid "Note"
 msgstr "Заметка"
 
-#: templates/contacts.php:360
+#: templates/contacts.php:356
 msgid "Web site"
 msgstr "Веб-сайт"
 
-#: templates/contacts.php:384 templates/contacts.php:399
-#: templates/contacts.php:413 templates/contacts.php:428
-#: templates/contacts.php:470 templates/contacts.php:480
+#: templates/contacts.php:380 templates/contacts.php:395
+#: templates/contacts.php:409 templates/contacts.php:424
+#: templates/contacts.php:466 templates/contacts.php:476
 msgid "Preferred"
 msgstr "Предпочитаемый"
 
-#: templates/contacts.php:389
+#: templates/contacts.php:385
 msgid "Please specify a valid email address."
 msgstr "Укажите правильный адрес электронной почты."
 
-#: templates/contacts.php:389
+#: templates/contacts.php:385
 msgid "someone@example.com"
 msgstr "someone@example.com"
 
-#: templates/contacts.php:391
+#: templates/contacts.php:387
 msgid "Mail to address"
 msgstr "Написать по адресу"
 
-#: templates/contacts.php:392
+#: templates/contacts.php:388
 msgid "Delete email address"
 msgstr "Удалить адрес электронной почты"
 
-#: templates/contacts.php:404
+#: templates/contacts.php:400
 msgid "Enter phone number"
 msgstr "Введите номер телефона"
 
-#: templates/contacts.php:420
+#: templates/contacts.php:416
 msgid "Go to web site"
 msgstr "Перейти на веб-сайт"
 
-#: templates/contacts.php:437
+#: templates/contacts.php:433
 msgid "View on map"
 msgstr "Показать на карте"
 
-#: templates/contacts.php:445
+#: templates/contacts.php:441
 msgid "Street address"
 msgstr "Улица"
 
-#: templates/contacts.php:449
+#: templates/contacts.php:445
 msgid "Postal code"
 msgstr "Почтовый индекс"
 
-#: templates/contacts.php:451
+#: templates/contacts.php:447
 msgid "City"
 msgstr "Город"
 
-#: templates/contacts.php:455
+#: templates/contacts.php:451
 msgid "State or province"
 msgstr "Область или район"
 
-#: templates/contacts.php:459
+#: templates/contacts.php:455
 msgid "Country"
 msgstr "Страна"
 
-#: templates/contacts.php:486
+#: templates/contacts.php:482
 msgid "Instant Messenger"
 msgstr "Instant Messenger"
 
-#: templates/contacts.php:499
+#: templates/contacts.php:495
 msgid "Active"
 msgstr "Активно"
 
-#: templates/contacts.php:502
+#: templates/contacts.php:498
 msgid "Share"
 msgstr "Открыть доступ"
 
-#: templates/contacts.php:503
+#: templates/contacts.php:499
 msgid "Export"
 msgstr "Экспорт"
 
-#: templates/contacts.php:504
+#: templates/contacts.php:500
 msgid "CardDAV link"
 msgstr "Ссылка CardDAV"
 
-#: templates/contacts.php:505
+#: templates/contacts.php:501
 msgid "Edit"
 msgstr "Редактировать"

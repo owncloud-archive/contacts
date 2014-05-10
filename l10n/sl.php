@@ -156,7 +156,6 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
-"ownCloud handle" => "ročica ownCloud",
 "Work" => "Služba",
 "Home" => "Doma",
 "Mobile" => "Mobilni telefon",

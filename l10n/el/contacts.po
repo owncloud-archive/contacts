@@ -16,6 +16,7 @@
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012, 2012-2013, 2013
 # gtsamis <gtsamis@yahoo.com>, 2013
+# thea_rad <happy.thea@hotmail.com>, 2014
 # KAT.RAT12 <spanish.katerina@gmail.com>, 2013
 # Marios Bekatoros <>, 2012-2013
 # Nisok Kosin <nikos.efthimiou@gmail.com>, 2012
@@ -35,8 +36,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-04 00:49-0400\n"
-"PO-Revision-Date: 2014-05-03 06:11+0000\n"
+"POT-Creation-Date: 2014-05-10 00:49-0400\n"
+"PO-Revision-Date: 2014-05-10 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -163,16 +164,16 @@ msgstr "Έχετε επιλέξει πάνω από 300 επαφές.\nΑυτό 
 msgid "Error setting {name} as favorite."
 msgstr "Σφάλμα κατά τον ορισμό του {name} σαν αγαπημένο."
 
-#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:173
 msgid "Merge contacts"
 msgstr "Συγχώνευση επαφών"
 
-#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
-#: templates/contacts.php:364
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:359
+#: templates/contacts.php:360
 msgid "Cancel"
 msgstr "Άκυρο"
 
-#: js/app.js:1412 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:154
 msgid "Add group"
 msgstr "Προσθήκη ομάδας"
 
@@ -196,29 +197,29 @@ msgstr "Περικοπή φωτογραφίας"
 msgid "Error parsing date: {date}"
 msgstr "Σφάλμα κατά την ανάλυση της ημερομηνίας: {date}"
 
-#: js/contacts.js:1101
+#: js/contacts.js:1102
 msgid "# groups"
 msgstr "# ομάδων"
 
-#: js/contacts.js:1181
+#: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
 msgstr "Σφάλμα κατά την ανάλυση των γενεθλίων {bday}"
 
-#: js/contacts.js:1319
+#: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
 msgstr "Το σύστημα δεν υποστηρίζει χαρακτήρες πολλών bytes"
 
-#: js/contacts.js:2231
+#: js/contacts.js:2232
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή αλλά δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
-#: js/contacts.js:2242
+#: js/contacts.js:2243
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Επιλέξτε για να αναιρέσετε τη διαγραφή {num} επαφών"
 
-#: js/contacts.js:2251
+#: js/contacts.js:2252
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Αναιρέθηκε η διαγραφή {num} επαφών"
 
@@ -288,7 +289,7 @@ msgstr "Σφάλμα φόρτωσης της ομάδας: {error}"
 msgid "Please choose the addressbook"
 msgstr "Παρακαλώ επιλέξτε το βιβλίο διευθύνσεων"
 
-#: js/loader.js:22 templates/contacts.php:32
+#: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
 msgstr "Εισαγωγή σε..."
 
@@ -300,7 +301,7 @@ msgstr "Σφάλμα φόρτωσης προτύπου"
 msgid "Import contacts"
 msgstr "Εισαγωγή επαφών"
 
-#: js/loader.js:61 templates/contacts.php:28
+#: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
 msgstr "Εισαγωγή"
 
@@ -312,8 +313,8 @@ msgstr "Γίνεται εισαγωγή..."
 msgid "Import done"
 msgstr "Η εισαγωγή ολοκληρώθηκε"
 
-#: js/loader.js:95 templates/contacts.php:93 templates/contacts.php:367
-#: templates/contacts.php:368
+#: js/loader.js:95 templates/contacts.php:89 templates/contacts.php:363
+#: templates/contacts.php:364
 msgid "Close"
 msgstr "Κλείσιμο"
 
@@ -696,8 +697,8 @@ msgid "GaduGadu"
 msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
-msgid "ownCloud handle"
-msgstr "Χειρισμός ownCloud"
+msgid "ownCloud"
+msgstr ""
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
@@ -749,319 +750,319 @@ msgstr "Φίλοι"
 msgid "Family"
 msgstr "Οικογένεια"
 
-#: templates/contacts.php:9 templates/contacts.php:129
+#: templates/contacts.php:6 templates/contacts.php:125
 msgid "New contact"
 msgstr "Νέα επαφή"
 
-#: templates/contacts.php:13
+#: templates/contacts.php:10
 msgid "Group name"
 msgstr "Όνομα ομάδας"
 
-#: templates/contacts.php:13
+#: templates/contacts.php:10
 msgid "New group"
 msgstr "Νέα ομάδα"
 
-#: templates/contacts.php:22
+#: templates/contacts.php:19
 msgid "Address books"
 msgstr "Βιβλία Διευθύνσεων"
 
-#: templates/contacts.php:25 templates/contacts.php:65
+#: templates/contacts.php:22 templates/contacts.php:61
 msgid "Display name"
 msgstr "Προβαλλόμενο όνομα"
 
-#: templates/contacts.php:25
+#: templates/contacts.php:22
 msgid "Add Address Book"
 msgstr "Προσθήκη Βιβλίου Διευθύνσεων"
 
-#: templates/contacts.php:35
+#: templates/contacts.php:32
 msgid "Automatic format"
 msgstr "Αυτόματη μορφοποίηση"
 
-#: templates/contacts.php:44 templates/contacts.php:45
+#: templates/contacts.php:40 templates/contacts.php:41
 msgid "Select file..."
 msgstr "Επιλογή αρχείου..."
 
-#: templates/contacts.php:62
+#: templates/contacts.php:58
 msgid "(De-)select all"
 msgstr "(Απο-)επιλογή όλων"
 
-#: templates/contacts.php:64
+#: templates/contacts.php:60
 msgid "Sort order"
 msgstr "Σειρά ταξινόμησης"
 
-#: templates/contacts.php:66
+#: templates/contacts.php:62
 msgid "First- Lastname"
 msgstr "Όνομα- Επίθετο"
 
-#: templates/contacts.php:67
+#: templates/contacts.php:63
 msgid "Last-, Firstname"
 msgstr "Επίθετο-, Όνομα"
 
-#: templates/contacts.php:73 templates/contacts.php:74
-#: templates/contacts.php:221 templates/contacts.php:222
-#: templates/contacts.php:506
+#: templates/contacts.php:69 templates/contacts.php:70
+#: templates/contacts.php:217 templates/contacts.php:218
+#: templates/contacts.php:502
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#: templates/contacts.php:77 templates/contacts.php:262
+#: templates/contacts.php:73 templates/contacts.php:258
 msgid "Groups"
 msgstr "Ομάδες"
 
-#: templates/contacts.php:79 templates/contacts.php:371
-#: templates/contacts.php:372
+#: templates/contacts.php:75 templates/contacts.php:367
+#: templates/contacts.php:368
 msgid "Download"
 msgstr "Λήψη"
 
-#: templates/contacts.php:80
+#: templates/contacts.php:76
 msgid "Merge"
 msgstr "Συγχώνευση"
 
-#: templates/contacts.php:83 templates/contacts.php:317
-#: templates/contacts.php:356
+#: templates/contacts.php:79 templates/contacts.php:313
+#: templates/contacts.php:352
 msgid "Email"
 msgstr "Ηλ. ταχυδρομείο"
 
-#: templates/contacts.php:84 templates/contacts.php:322
-#: templates/contacts.php:355
+#: templates/contacts.php:80 templates/contacts.php:318
+#: templates/contacts.php:351
 msgid "Phone"
 msgstr "Τηλέφωνο"
 
-#: templates/contacts.php:85 templates/contacts.php:327
-#: templates/contacts.php:358
+#: templates/contacts.php:81 templates/contacts.php:323
+#: templates/contacts.php:354
 msgid "Address"
 msgstr "Διεύθυνση"
 
-#: templates/contacts.php:86
+#: templates/contacts.php:82
 msgid "Group"
 msgstr "Ομάδα"
 
-#: templates/contacts.php:94
+#: templates/contacts.php:90
 msgid "Keyboard shortcuts"
 msgstr "Συντομεύσεις πλητρολογίου"
 
-#: templates/contacts.php:96
+#: templates/contacts.php:92
 msgid "Navigation"
 msgstr "Πλοήγηση"
 
-#: templates/contacts.php:99
+#: templates/contacts.php:95
 msgid "Next contact in list"
 msgstr "Επόμενη επαφή στη λίστα"
 
-#: templates/contacts.php:101
+#: templates/contacts.php:97
 msgid "Previous contact in list"
 msgstr "Προηγούμενη επαφή στη λίστα"
 
-#: templates/contacts.php:103
+#: templates/contacts.php:99
 msgid "Expand/collapse current addressbook"
 msgstr "Ανάπτυξη/σύμπτυξη τρέχοντος βιβλίου διευθύνσεων"
 
-#: templates/contacts.php:105
+#: templates/contacts.php:101
 msgid "Next addressbook"
 msgstr "Επόμενο βιβλίο διευθύνσεων"
 
-#: templates/contacts.php:107
+#: templates/contacts.php:103
 msgid "Previous addressbook"
 msgstr "Προηγούμενο βιβλίο διευθύνσεων"
 
-#: templates/contacts.php:111
+#: templates/contacts.php:107
 msgid "Actions"
 msgstr "Ενέργειες"
 
-#: templates/contacts.php:114
+#: templates/contacts.php:110
 msgid "Refresh contacts list"
 msgstr "Ανανέωση λίστας επαφών"
 
-#: templates/contacts.php:116
+#: templates/contacts.php:112
 msgid "Add new contact"
 msgstr "Προσθήκη νέας επαφής"
 
-#: templates/contacts.php:118
+#: templates/contacts.php:114
 msgid "Add new addressbook"
 msgstr "Προσθήκη νέου βιβλίου επαφών"
 
-#: templates/contacts.php:120
+#: templates/contacts.php:116
 msgid "Delete current contact"
 msgstr "Διαγραφή τρέχουσας επαφής"
 
-#: templates/contacts.php:126
+#: templates/contacts.php:122
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
 msgstr "Δεν έχετε επαφές στο βιβλίο διευθύνσεών σας ή το βιβλίο διευθύνσεων σας είναι απενεργοποιημένο."
 
-#: templates/contacts.php:127
+#: templates/contacts.php:123
 msgid "Add a new contact or import existing contacts from a VCF file."
 msgstr "Προσθέστε μια νέα επαφή ή εισαγάγετε υπάρχουσες επαφές από ένα VCF αρχείο."
 
-#: templates/contacts.php:178
+#: templates/contacts.php:174
 msgid "Which contact should the data be merged into?"
 msgstr "Με ποιά επαφή θα θέλατε να συγχωνευτούν τα δεδομένα?"
 
-#: templates/contacts.php:186
+#: templates/contacts.php:182
 msgid "Delete the other(s) after successful merge?"
 msgstr "Διαγραφή του(ων) άλλου(ων) μετά την επιτυχή συγχώνευση?"
 
-#: templates/contacts.php:201
+#: templates/contacts.php:197
 msgid "Compose mail"
 msgstr "Σύνθεση μηνύματος"
 
-#: templates/contacts.php:229
+#: templates/contacts.php:225
 msgid "Delete current photo"
 msgstr "Διαγραφή τρέχουσας φωτογραφίας"
 
-#: templates/contacts.php:230
+#: templates/contacts.php:226
 msgid "Edit current photo"
 msgstr "Επεξεργασία τρέχουσας φωτογραφίας"
 
-#: templates/contacts.php:231
+#: templates/contacts.php:227
 msgid "Upload new photo"
 msgstr "Μεταφόρτωση νέας φωτογραφίας"
 
-#: templates/contacts.php:232
+#: templates/contacts.php:228
 msgid "Select photo from Files"
 msgstr "Επιλογή φωτογραφίας από τα Αρχεία"
 
-#: templates/contacts.php:234
+#: templates/contacts.php:230
 msgid "Favorite"
 msgstr "Αγαπημένο"
 
-#: templates/contacts.php:237 templates/contacts.php:239
+#: templates/contacts.php:233 templates/contacts.php:235
 msgid "Name"
 msgstr "Όνομα"
 
-#: templates/contacts.php:245
+#: templates/contacts.php:241
 msgid "First name"
 msgstr "Όνομα"
 
-#: templates/contacts.php:249
+#: templates/contacts.php:245
 msgid "Additional names"
 msgstr "Επιπλέον ονόματα"
 
-#: templates/contacts.php:253
+#: templates/contacts.php:249
 msgid "Last name"
 msgstr "Επώνυμο"
 
-#: templates/contacts.php:269
+#: templates/contacts.php:265
 msgid "Address book"
 msgstr "Βιβλίο διευθύνσεων"
 
-#: templates/contacts.php:276 templates/contacts.php:353
+#: templates/contacts.php:272 templates/contacts.php:349
 msgid "Nickname"
 msgstr "Παρατσούκλι"
 
-#: templates/contacts.php:286 templates/contacts.php:352
+#: templates/contacts.php:282 templates/contacts.php:348
 msgid "Title"
 msgstr "Τίτλος"
 
-#: templates/contacts.php:296 templates/contacts.php:351
+#: templates/contacts.php:292 templates/contacts.php:347
 msgid "Organization"
 msgstr "Οργανισμός"
 
-#: templates/contacts.php:306 templates/contacts.php:354
+#: templates/contacts.php:302 templates/contacts.php:350
 msgid "Birthday"
 msgstr "Γενέθλια"
 
-#: templates/contacts.php:332
+#: templates/contacts.php:328
 msgid "Website"
-msgstr ""
+msgstr "Ιστοσελίδα"
 
-#: templates/contacts.php:337
+#: templates/contacts.php:333
 msgid "Instant messaging"
 msgstr ""
 
-#: templates/contacts.php:343
+#: templates/contacts.php:339
 msgid "Notes go here..."
 msgstr "Πρόσθεσε τις σημειώσεις εδώ..."
 
-#: templates/contacts.php:350
+#: templates/contacts.php:346
 msgid "Add field..."
 msgstr "Προσθήκη πεδίου..."
 
-#: templates/contacts.php:357
+#: templates/contacts.php:353
 msgid "Instant Messaging"
 msgstr "Άμεσα μηνύματα"
 
-#: templates/contacts.php:359
+#: templates/contacts.php:355
 msgid "Note"
 msgstr "Σημείωση"
 
-#: templates/contacts.php:360
+#: templates/contacts.php:356
 msgid "Web site"
 msgstr "Ιστότοπος"
 
-#: templates/contacts.php:384 templates/contacts.php:399
-#: templates/contacts.php:413 templates/contacts.php:428
-#: templates/contacts.php:470 templates/contacts.php:480
+#: templates/contacts.php:380 templates/contacts.php:395
+#: templates/contacts.php:409 templates/contacts.php:424
+#: templates/contacts.php:466 templates/contacts.php:476
 msgid "Preferred"
 msgstr "Προτιμώμενο"
 
-#: templates/contacts.php:389
+#: templates/contacts.php:385
 msgid "Please specify a valid email address."
 msgstr "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου"
 
-#: templates/contacts.php:389
+#: templates/contacts.php:385
 msgid "someone@example.com"
 msgstr "someone@example.com"
 
-#: templates/contacts.php:391
+#: templates/contacts.php:387
 msgid "Mail to address"
 msgstr "Αποστολή σε διεύθυνση"
 
-#: templates/contacts.php:392
+#: templates/contacts.php:388
 msgid "Delete email address"
 msgstr "Διαγραφή διεύθυνσης ηλ. ταχυδρομείου"
 
-#: templates/contacts.php:404
+#: templates/contacts.php:400
 msgid "Enter phone number"
 msgstr "Εισάγετε αριθμό τηλεφώνου"
 
-#: templates/contacts.php:420
+#: templates/contacts.php:416
 msgid "Go to web site"
 msgstr "Πήγαινε στον ιστότοπο"
 
-#: templates/contacts.php:437
+#: templates/contacts.php:433
 msgid "View on map"
 msgstr "Προβολή στο χάρτη"
 
-#: templates/contacts.php:445
+#: templates/contacts.php:441
 msgid "Street address"
 msgstr "Διεύθυνση οδού"
 
-#: templates/contacts.php:449
+#: templates/contacts.php:445
 msgid "Postal code"
 msgstr "Ταχυδρομικός Κωδικός"
 
-#: templates/contacts.php:451
+#: templates/contacts.php:447
 msgid "City"
 msgstr "Πόλη"
 
-#: templates/contacts.php:455
+#: templates/contacts.php:451
 msgid "State or province"
 msgstr "Νομός ή περιφέρεια"
 
-#: templates/contacts.php:459
+#: templates/contacts.php:455
 msgid "Country"
 msgstr "Χώρα"
 
-#: templates/contacts.php:486
+#: templates/contacts.php:482
 msgid "Instant Messenger"
 msgstr "Εφαρμογή Άμεσων Μηνυμάτων"
 
-#: templates/contacts.php:499
+#: templates/contacts.php:495
 msgid "Active"
 msgstr "Ενεργό"
 
-#: templates/contacts.php:502
+#: templates/contacts.php:498
 msgid "Share"
 msgstr "Διαμοιρασμός"
 
-#: templates/contacts.php:503
+#: templates/contacts.php:499
 msgid "Export"
 msgstr "Εξαγωγή"
 
-#: templates/contacts.php:504
+#: templates/contacts.php:500
 msgid "CardDAV link"
 msgstr "Σύνδεσμος CardDAV"
 
-#: templates/contacts.php:505
+#: templates/contacts.php:501
 msgid "Edit"
 msgstr "Επεξεργασία"

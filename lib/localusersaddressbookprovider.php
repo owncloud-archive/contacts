@@ -114,6 +114,7 @@ class LocalUsersAddressbookProvider implements \OCP\IAddressBook {
 	}
 
 	public function getKey() {
+		return "localusers:" . \OCP\User::getUser();
 	}
 
 	/**
