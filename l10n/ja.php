@@ -145,7 +145,6 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
-"ownCloud handle" => "ownCloud ハンドル",
 "Work" => "週の始まり",
 "Home" => "住居",
 "Mobile" => "携帯電話",

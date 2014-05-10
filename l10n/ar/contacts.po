@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-07 00:49-0400\n"
-"PO-Revision-Date: 2014-05-06 11:41+0000\n"
-"Last-Translator: eng1fares <fares_ss202@hotmail.com>\n"
+"POT-Creation-Date: 2014-05-10 00:49-0400\n"
+"PO-Revision-Date: 2014-05-10 04:49+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -143,16 +143,16 @@ msgstr "لقد قمت بتحديد أكثر من 300 جهة إتصال.\nفي ا
 msgid "Error setting {name} as favorite."
 msgstr "حدث خطأ أثناء إعداد {name} كمفضلة ."
 
-#: js/app.js:1359 js/app.js:1363 templates/contacts.php:177
+#: js/app.js:1359 js/app.js:1363 templates/contacts.php:173
 msgid "Merge contacts"
 msgstr "دمج جهات الاتصال"
 
-#: js/app.js:1385 js/app.js:1438 templates/contacts.php:363
-#: templates/contacts.php:364
+#: js/app.js:1385 js/app.js:1438 templates/contacts.php:359
+#: templates/contacts.php:360
 msgid "Cancel"
 msgstr "الغاء"
 
-#: js/app.js:1412 templates/contacts.php:158
+#: js/app.js:1412 templates/contacts.php:154
 msgid "Add group"
 msgstr "إضافة مجموعة"
 
@@ -176,29 +176,29 @@ msgstr "قص الصورة."
 msgid "Error parsing date: {date}"
 msgstr ""
 
-#: js/contacts.js:1101
+#: js/contacts.js:1102
 msgid "# groups"
 msgstr "#المجموعات"
 
-#: js/contacts.js:1181
+#: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
 msgstr ""
 
-#: js/contacts.js:1319
+#: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2231
+#: js/contacts.js:2232
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "بعض جهات الأتصال تم تحديدها للحذف لكن لم يتم حذفها بعد. يرجى الانتظار قليلاً حتى يتم حذفها بالكامل."
 
-#: js/contacts.js:2242
+#: js/contacts.js:2243
 msgid "Click to undo deletion of {num} contacts"
 msgstr "إضغط حتى يتم التراجع عن حذف {أرقام} جهات الاتصال"
 
-#: js/contacts.js:2251
+#: js/contacts.js:2252
 msgid "Cancelled deletion of {num} contacts"
 msgstr "ألغاء حذف {num}  من جهات الاتصال."
 
@@ -268,7 +268,7 @@ msgstr "{خطأ}: فشلت مهمة تجميل المجموعات."
 msgid "Please choose the addressbook"
 msgstr "يرجى اختيار دفتر العناوين"
 
-#: js/loader.js:22 templates/contacts.php:32
+#: js/loader.js:22 templates/contacts.php:29
 msgid "Import into..."
 msgstr "استيراد إلى..."
 
@@ -280,7 +280,7 @@ msgstr "خطأ في تحميل نموذج الاستيراد"
 msgid "Import contacts"
 msgstr "استيراد جهات الإتصال."
 
-#: js/loader.js:61 templates/contacts.php:28
+#: js/loader.js:61 templates/contacts.php:25
 msgid "Import"
 msgstr "استيراد"
 
@@ -292,8 +292,8 @@ msgstr "استيراد..."
 msgid "Import done"
 msgstr "تمت عملية الاستيراد "
 
-#: js/loader.js:95 templates/contacts.php:93 templates/contacts.php:367
-#: templates/contacts.php:368
+#: js/loader.js:95 templates/contacts.php:89 templates/contacts.php:363
+#: templates/contacts.php:364
 msgid "Close"
 msgstr "إغلاق"
 
@@ -676,7 +676,7 @@ msgid "GaduGadu"
 msgstr "قادو قادو البولندي للمراسلة الفورية"
 
 #: lib/utils/properties.php:136
-msgid "ownCloud handle"
+msgid "ownCloud"
 msgstr ""
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
@@ -729,319 +729,319 @@ msgstr "الاصدقاء"
 msgid "Family"
 msgstr "العائلة"
 
-#: templates/contacts.php:9 templates/contacts.php:129
+#: templates/contacts.php:6 templates/contacts.php:125
 msgid "New contact"
 msgstr "جهة إتصال جديدة"
 
-#: templates/contacts.php:13
+#: templates/contacts.php:10
 msgid "Group name"
 msgstr "اسم المجموعة"
 
-#: templates/contacts.php:13
+#: templates/contacts.php:10
 msgid "New group"
 msgstr "مجموعة جديدة"
 
-#: templates/contacts.php:22
+#: templates/contacts.php:19
 msgid "Address books"
 msgstr "دفتر العناوين"
 
-#: templates/contacts.php:25 templates/contacts.php:65
+#: templates/contacts.php:22 templates/contacts.php:61
 msgid "Display name"
 msgstr "اسم العرض"
 
-#: templates/contacts.php:25
+#: templates/contacts.php:22
 msgid "Add Address Book"
 msgstr "أضف دفتر عناوين جديد"
 
-#: templates/contacts.php:35
+#: templates/contacts.php:32
 msgid "Automatic format"
 msgstr "تنسيق تلقائي"
 
-#: templates/contacts.php:44 templates/contacts.php:45
+#: templates/contacts.php:40 templates/contacts.php:41
 msgid "Select file..."
 msgstr "تحديد ملف..."
 
-#: templates/contacts.php:62
+#: templates/contacts.php:58
 msgid "(De-)select all"
 msgstr "(De-) تحديد الكل"
 
-#: templates/contacts.php:64
+#: templates/contacts.php:60
 msgid "Sort order"
 msgstr "* ترتيب.\n* فرز."
 
-#: templates/contacts.php:66
+#: templates/contacts.php:62
 msgid "First- Lastname"
 msgstr "الاسم الأول - العائلة"
 
-#: templates/contacts.php:67
+#: templates/contacts.php:63
 msgid "Last-, Firstname"
 msgstr "العائلة -الاسم الأول"
 
-#: templates/contacts.php:73 templates/contacts.php:74
-#: templates/contacts.php:221 templates/contacts.php:222
-#: templates/contacts.php:506
+#: templates/contacts.php:69 templates/contacts.php:70
+#: templates/contacts.php:217 templates/contacts.php:218
+#: templates/contacts.php:502
 msgid "Delete"
 msgstr "إلغاء"
 
-#: templates/contacts.php:77 templates/contacts.php:262
+#: templates/contacts.php:73 templates/contacts.php:258
 msgid "Groups"
 msgstr "مجموعات"
 
-#: templates/contacts.php:79 templates/contacts.php:371
-#: templates/contacts.php:372
+#: templates/contacts.php:75 templates/contacts.php:367
+#: templates/contacts.php:368
 msgid "Download"
 msgstr "تحميل"
 
-#: templates/contacts.php:80
+#: templates/contacts.php:76
 msgid "Merge"
 msgstr "دمج"
 
-#: templates/contacts.php:83 templates/contacts.php:317
-#: templates/contacts.php:356
+#: templates/contacts.php:79 templates/contacts.php:313
+#: templates/contacts.php:352
 msgid "Email"
 msgstr "البريد الإلكترونى"
 
-#: templates/contacts.php:84 templates/contacts.php:322
-#: templates/contacts.php:355
+#: templates/contacts.php:80 templates/contacts.php:318
+#: templates/contacts.php:351
 msgid "Phone"
 msgstr "الهاتف"
 
-#: templates/contacts.php:85 templates/contacts.php:327
-#: templates/contacts.php:358
+#: templates/contacts.php:81 templates/contacts.php:323
+#: templates/contacts.php:354
 msgid "Address"
 msgstr "عنوان"
 
-#: templates/contacts.php:86
+#: templates/contacts.php:82
 msgid "Group"
 msgstr "مجموعة"
 
-#: templates/contacts.php:94
+#: templates/contacts.php:90
 msgid "Keyboard shortcuts"
 msgstr "اختصارات لوحة المفاتيح"
 
-#: templates/contacts.php:96
+#: templates/contacts.php:92
 msgid "Navigation"
 msgstr "تصفح"
 
-#: templates/contacts.php:99
+#: templates/contacts.php:95
 msgid "Next contact in list"
 msgstr "جهة الاتصال التالية في القائمة "
 
-#: templates/contacts.php:101
+#: templates/contacts.php:97
 msgid "Previous contact in list"
 msgstr "جهة الاتصال السابقة في القائمة "
 
-#: templates/contacts.php:103
+#: templates/contacts.php:99
 msgid "Expand/collapse current addressbook"
 msgstr "توسيع / طي دفتر العناوين الحالي."
 
-#: templates/contacts.php:105
+#: templates/contacts.php:101
 msgid "Next addressbook"
 msgstr "دفتر العنوان التالي"
 
-#: templates/contacts.php:107
+#: templates/contacts.php:103
 msgid "Previous addressbook"
 msgstr "دفتر العنوان السابق"
 
-#: templates/contacts.php:111
+#: templates/contacts.php:107
 msgid "Actions"
 msgstr "* تطبيقات.\n* أنشطة."
 
-#: templates/contacts.php:114
+#: templates/contacts.php:110
 msgid "Refresh contacts list"
 msgstr "تحديث قائمة جهات الاتصال"
 
-#: templates/contacts.php:116
+#: templates/contacts.php:112
 msgid "Add new contact"
 msgstr "أَف جهة اتصال جديدة"
 
-#: templates/contacts.php:118
+#: templates/contacts.php:114
 msgid "Add new addressbook"
 msgstr "أضف دفتر عناوين جديد"
 
-#: templates/contacts.php:120
+#: templates/contacts.php:116
 msgid "Delete current contact"
 msgstr "إزالة جهة الاتصال الحالية"
 
-#: templates/contacts.php:126
+#: templates/contacts.php:122
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
 msgstr ""
 
-#: templates/contacts.php:127
+#: templates/contacts.php:123
 msgid "Add a new contact or import existing contacts from a VCF file."
 msgstr ""
 
-#: templates/contacts.php:178
+#: templates/contacts.php:174
 msgid "Which contact should the data be merged into?"
 msgstr "إي جهة اتصال ترغب بدمج البيانات إليها؟"
 
-#: templates/contacts.php:186
+#: templates/contacts.php:182
 msgid "Delete the other(s) after successful merge?"
 msgstr "هل تريد إزالة (الآخرون) بعد نجاح عملية الدمج؟"
 
-#: templates/contacts.php:201
+#: templates/contacts.php:197
 msgid "Compose mail"
 msgstr "إنشاء رسالة بريد إلكتروني"
 
-#: templates/contacts.php:229
+#: templates/contacts.php:225
 msgid "Delete current photo"
 msgstr "إزالة الصورة الحالية"
 
-#: templates/contacts.php:230
+#: templates/contacts.php:226
 msgid "Edit current photo"
 msgstr "تحرير الصورة الحالية"
 
-#: templates/contacts.php:231
+#: templates/contacts.php:227
 msgid "Upload new photo"
 msgstr "رفع صورة جديدة"
 
-#: templates/contacts.php:232
+#: templates/contacts.php:228
 msgid "Select photo from Files"
 msgstr ""
 
-#: templates/contacts.php:234
+#: templates/contacts.php:230
 msgid "Favorite"
 msgstr "المفضلة"
 
-#: templates/contacts.php:237 templates/contacts.php:239
+#: templates/contacts.php:233 templates/contacts.php:235
 msgid "Name"
 msgstr "اسم"
 
-#: templates/contacts.php:245
+#: templates/contacts.php:241
 msgid "First name"
 msgstr "الاسم الأول"
 
-#: templates/contacts.php:249
+#: templates/contacts.php:245
 msgid "Additional names"
 msgstr "الاسماء الإضافية"
 
-#: templates/contacts.php:253
+#: templates/contacts.php:249
 msgid "Last name"
 msgstr "اسم العائلة"
 
-#: templates/contacts.php:269
+#: templates/contacts.php:265
 msgid "Address book"
 msgstr "دفتر العناوين"
 
-#: templates/contacts.php:276 templates/contacts.php:353
+#: templates/contacts.php:272 templates/contacts.php:349
 msgid "Nickname"
 msgstr "كنية.\nلقب."
 
-#: templates/contacts.php:286 templates/contacts.php:352
+#: templates/contacts.php:282 templates/contacts.php:348
 msgid "Title"
 msgstr "اللقب"
 
-#: templates/contacts.php:296 templates/contacts.php:351
+#: templates/contacts.php:292 templates/contacts.php:347
 msgid "Organization"
 msgstr "المؤسسة"
 
-#: templates/contacts.php:306 templates/contacts.php:354
+#: templates/contacts.php:302 templates/contacts.php:350
 msgid "Birthday"
 msgstr "عيد ميلاد"
 
-#: templates/contacts.php:332
+#: templates/contacts.php:328
 msgid "Website"
 msgstr "موقع إلكتروني"
 
-#: templates/contacts.php:337
+#: templates/contacts.php:333
 msgid "Instant messaging"
 msgstr ""
 
-#: templates/contacts.php:343
+#: templates/contacts.php:339
 msgid "Notes go here..."
 msgstr "للملاحظات إذهب هنا..."
 
-#: templates/contacts.php:350
+#: templates/contacts.php:346
 msgid "Add field..."
 msgstr "إضافة حقل ..."
 
-#: templates/contacts.php:357
+#: templates/contacts.php:353
 msgid "Instant Messaging"
 msgstr "التراسل الفوري"
 
-#: templates/contacts.php:359
+#: templates/contacts.php:355
 msgid "Note"
 msgstr "ملاحظة"
 
-#: templates/contacts.php:360
+#: templates/contacts.php:356
 msgid "Web site"
 msgstr "موقع إلكتروني"
 
-#: templates/contacts.php:384 templates/contacts.php:399
-#: templates/contacts.php:413 templates/contacts.php:428
-#: templates/contacts.php:470 templates/contacts.php:480
+#: templates/contacts.php:380 templates/contacts.php:395
+#: templates/contacts.php:409 templates/contacts.php:424
+#: templates/contacts.php:466 templates/contacts.php:476
 msgid "Preferred"
 msgstr "مفضل"
 
-#: templates/contacts.php:389
+#: templates/contacts.php:385
 msgid "Please specify a valid email address."
 msgstr "يرجى تحديد عنوان إلكتروني صالح للإستخدام."
 
-#: templates/contacts.php:389
+#: templates/contacts.php:385
 msgid "someone@example.com"
 msgstr "someone@example.com"
 
-#: templates/contacts.php:391
+#: templates/contacts.php:387
 msgid "Mail to address"
 msgstr "إرسال إلى العنوان."
 
-#: templates/contacts.php:392
+#: templates/contacts.php:388
 msgid "Delete email address"
 msgstr "حذف عنوان البريد الإلكتروني"
 
-#: templates/contacts.php:404
+#: templates/contacts.php:400
 msgid "Enter phone number"
 msgstr "إدخال رقم الهاتف"
 
-#: templates/contacts.php:420
+#: templates/contacts.php:416
 msgid "Go to web site"
 msgstr "الذهاب إلى الموقع الإلكتروني."
 
-#: templates/contacts.php:437
+#: templates/contacts.php:433
 msgid "View on map"
 msgstr "مشاهدة على الخريطة."
 
-#: templates/contacts.php:445
+#: templates/contacts.php:441
 msgid "Street address"
 msgstr "عنوان الشارع."
 
-#: templates/contacts.php:449
+#: templates/contacts.php:445
 msgid "Postal code"
 msgstr "الرمز البريدي."
 
-#: templates/contacts.php:451
+#: templates/contacts.php:447
 msgid "City"
 msgstr "المدينة"
 
-#: templates/contacts.php:455
+#: templates/contacts.php:451
 msgid "State or province"
 msgstr "الولاية أو المنطقة."
 
-#: templates/contacts.php:459
+#: templates/contacts.php:455
 msgid "Country"
 msgstr "البلد"
 
-#: templates/contacts.php:486
+#: templates/contacts.php:482
 msgid "Instant Messenger"
 msgstr "رسائل فورية."
 
-#: templates/contacts.php:499
+#: templates/contacts.php:495
 msgid "Active"
 msgstr "فعال"
 
-#: templates/contacts.php:502
+#: templates/contacts.php:498
 msgid "Share"
 msgstr "شارك"
 
-#: templates/contacts.php:503
+#: templates/contacts.php:499
 msgid "Export"
 msgstr "تصدير"
 
-#: templates/contacts.php:504
+#: templates/contacts.php:500
 msgid "CardDAV link"
 msgstr "رابط - وصلة - CardDA لنقل و مشاركة جهات الاتصال"
 
-#: templates/contacts.php:505
+#: templates/contacts.php:501
 msgid "Edit"
 msgstr "تعديل"

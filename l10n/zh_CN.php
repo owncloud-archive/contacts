@@ -140,7 +140,6 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
-"ownCloud handle" => "ownCloud 处理",
 "Work" => "工作",
 "Home" => "家庭",
 "Mobile" => "手机",

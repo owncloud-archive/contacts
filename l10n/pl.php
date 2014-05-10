@@ -156,7 +156,6 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GG",
-"ownCloud handle" => "ownCloud zajmie się",
 "Work" => "Zawodowe",
 "Home" => "Dom",
 "Mobile" => "Komórka",
