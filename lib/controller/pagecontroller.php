@@ -52,6 +52,7 @@ class PageController extends Controller {
 		\OCP\Util::addScript('contacts', 'storage');
 		\OCP\Util::addScript('contacts', 'groups');
 		\OCP\Util::addScript('contacts', 'jquery.ocaddnew');
+		\OCP\Util::addScript('contacts', 'otherbackendconfig');
 		\OCP\Util::addScript('files', 'jquery.fileupload');
 		\OCP\Util::addScript('3rdparty/Jcrop', 'jquery.Jcrop');
 		\OCP\Util::addStyle('', 'jquery.multiselect');

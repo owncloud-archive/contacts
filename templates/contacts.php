@@ -1,3 +1,6 @@
+<?php
+use OCA\Contacts\ImportManager;
+?>
 <div id="app">
 	<div id="app-navigation" class="loading">
 		<ul id="grouplist" class="hidden-on-load">
@@ -20,6 +23,15 @@
 					<ul class="addressbooklist">
 					</ul>
 					<input type="text" tabindex="0" autofocus id="add-address-book" placeholder="<?php p($l->t('Display name')); ?>" title="<?php p($l->t('Add Address Book')); ?>" />
+					<?php
+					if (\OCP\Config::getAppValue('contacts', 'backend_ldap', "false") === "true") {
+					?>
+					<ul class="oc-addnew">
+						<li id="add-ldap-address-book-element"><a class="oc-addnew-init"><?php p($l->t('Add LDAP Address Book')); ?></a></li>
+					</ul>
+					<?php
+					}
+					?>
 				</div>
 				<div id="import">
 				<h2 data-id="import" tabindex="0" role="button"><?php p($l->t('Import')); ?></h2>
@@ -31,7 +43,8 @@
 							<select id="import_format">
 								<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
 								<?php
-								$types = $_['importManager']->getTypes();
+								$importManager = new ImportManager();
+								$types = $importManager->getTypes();
 								foreach ($types as $id => $label) {
 									echo "<option value=\"$id\">$label</option>";
 								}
@@ -502,4 +515,118 @@
 		<a title="<?php p($l->t('Delete')); ?>" class="icon-delete delete action"></a>
 	</span>
 </li>
+</script>
+
+<script id="addressBookConfigTemplate" class="hidden" type="text/template">
+<div id="addressbooks-ui-div" class="addressbooks-ui-class">
+	<input type="hidden" id="addressbooks-ui-addressbookid" />
+	<input type="hidden" id="addressbooks-ui-backend" value="{backend}" />
+	<p id="addressbooks-ui-name-p">
+	<label for="addressbooks-ui-name">
+	<?php p($l->t('Name')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="addressbooks-ui-name" value=""
+		placeholder="<?php p($l->t('Name')); ?>" required />
+	</p>
+	<p id="addressbooks-ui-uri-p">
+	<label for="addressbooks-ui-uri">
+	<?php p($l->t('Addressbook URI')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="addressbooks-ui-uri" value=""
+		placeholder="<?php p($l->t('URI')); ?>" required />
+	</p>
+	<p id="addressbooks-ui-description-p">
+	<label for="addressbooks-ui-description">
+	<?php p($l->t('Description')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="addressbooks-ui-description" value=""
+		placeholder="<?php p($l->t('Description')); ?>" />
+	</p>
+	<p id="addressbooks-ui-ldapurl-p">
+	<label for="addressbooks-ui-ldapurl">
+	<?php p($l->t('LDAP URL')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapurl" value=""
+		placeholder="<?php p($l->t('LDAP URL')); ?>" required />
+	</p>
+	<p id="addressbooks-ui-ldapanonymous-p">
+	<label for="addressbooks-ui-ldapanonymous">
+	<?php p($l->t('Anonymous')); ?>:
+	</label>
+	<input type="checkbox" id="addressbooks-ui-ldapanonymous" title="<?php p($l->t('Anonymous')); ?>" />
+	</p>
+	<p id="addressbooks-ui-ldapreadonly-p">
+	<label for="addressbooks-ui-ldapreadonly">
+	<?php p($l->t('Read-only')); ?>:
+	</label>
+	<input type="checkbox" id="addressbooks-ui-ldapreadonly" title="<?php p($l->t('Read-Only')); ?>" />
+	</p>
+	<p id="addressbooks-ui-ldapuser-p">
+	<label for="addressbooks-ui-ldapuser">
+	<?php p($l->t('User')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapuser" value=""
+		placeholder="<?php p($l->t('User')); ?>" required />
+	</p>
+	<p id="addressbooks-ui-ldappass-p">
+	<input type="hidden" id="addressbooks-ui-ldappass-modified" />
+	<label for="addressbooks-ui-ldappass">
+	<?php p($l->t('Password')); ?>:
+	</label>
+	<input type="password" class="nonempty value" id="addressbooks-ui-ldappass" value=""
+		placeholder="<?php p($l->t('Password')); ?>" required />
+	</p>
+	<p id="addressbooks-ui-ldappagesize-p">
+	<label for="addressbooks-ui-ldappagesize">
+	<?php p($l->t('Page size')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldappagesize" value="20"
+		placeholder="<?php p($l->t('Page size')); ?>" required />
+	</p>
+	<p id="addressbooks-ui-ldapbasednsearch-p">
+	<label for="addressbooks-ui-ldapbasednsearch">
+	<?php p($l->t('Base DN for search')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapbasednsearch" value=""
+		placeholder="<?php p($l->t('Base DN')); ?>" required />
+	</p>
+	<p id="addressbooks-ui-ldapfilter-p">
+	<label for="addressbooks-ui-ldapfilter">
+	<?php p($l->t('Search filter')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapfilter" value=""
+		placeholder="<?php p($l->t('Filter')); ?>" required />
+	</p>
+	<p id="addressbooks-ui-ldapbasednmodify-p">
+	<label for="addressbooks-ui-ldapbasednmodify">
+	<?php p($l->t('Base DN for modification')); ?>:
+	</label>
+	<input type="text" class="nonempty value" id="addressbooks-ui-ldapbasednmodify" value=""
+		placeholder="<?php p($l->t('Base DN modification')); ?>" required />
+	</p>
+	<p id="addressbooks-ui-ldapvcardconnector-p">
+	<label for="addressbooks-ui-ldapvcardconnector">
+	<?php p($l->t('Connector')); ?>:
+	</label>
+	<select id="addressbooks-ui-ldapvcardconnector">
+	</select>
+	</p>
+	<p id="addressbooks-ui-ldapvcardconnector-value-p">
+	<label for="addressbooks-ui-ldapvcardconnector-value">
+	<?php p($l->t('Connector value (Better use external editor and copy/paste)')); ?>:
+	</label>
+	<textarea id="addressbooks-ui-ldapvcardconnector-value"></textarea>
+	</p>
+	<p id="addressbooks-ui-ldapvcardconnector-copyfrom-p">
+	<label for="addressbooks-ui-ldapvcardconnector-copyfrom">
+	<?php p($l->t('Copy from (Warning, replaces current custom value)')); ?>:
+	</label>
+	<select id="addressbooks-ui-ldapvcardconnector-copyfrom">
+	</select>
+	</p>
+	<p id="addressbooks-ui-errortitle-p">&nbsp;
+	</p>
+	<p id="addressbooks-ui-errormessage-p">&nbsp;
+	</p>
+</div>
 </script>

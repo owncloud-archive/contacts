@@ -824,6 +824,27 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	transition: all 0.5s ease-in-out;
 }
 
+#addressbooks-ui-div > p > select {
+	width:200px;
+	display: inline-block;
+}
+
+#addressbooks-ui-div > p > input:not([type="checkbox"]) {
+	width:200px;
+	display: inline-block;
+}
+
+#addressbooks-ui-div > p > textarea {
+	width:200px;
+	display: inline-block;
+}
+
+#addressbooks-ui-div > p > label {
+	vertical-align:top;
+	width:200px;
+	display: inline-block;
+}
+
 @media screen and (min-width: 1400px) {
 	#contact > ul.propertylist {
 		-moz-column-count: 3;

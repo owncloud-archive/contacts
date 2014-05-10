@@ -34,6 +34,39 @@ $this->create('contacts_address_books_for_user', 'addressbooks/')
 		}
 	);
 
+$this->create('contacts_address_book_connectors', 'connectors/{backend}')
+	->get()
+	->action(
+		function($params) {
+			\OC::$session->close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('BackendController', 'getConnectors');
+		}
+	)
+	->requirements(array('backend'));
+
+$this->create('contacts_backend_enable', 'backend/{backend}/{enable}')
+	->get()
+	->action(
+		function($params) {
+			\OC::$session->close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('BackendController', 'enableBackend');
+		}
+	)
+	->requirements(array('backend', 'enable'));
+
+$this->create('contacts_backend_status', 'backend/{backend}')
+	->get()
+	->action(
+		function($params) {
+			\OC::$session->close();
+			$dispatcher = new Dispatcher($params);
+			$dispatcher->dispatch('BackendController', 'backendStatus');
+		}
+	)
+	->requirements(array('backend'));
+
 $this->create('contacts_address_book_add', 'addressbook/{backend}/add')
 	->post()
 	->action(
@@ -428,4 +461,3 @@ $this->create('contacts_index_properties', 'indexproperties/{user}/')
 	)
 	->requirements(array('user'))
 	->defaults(array('user' => \OCP\User::getUser()));
-

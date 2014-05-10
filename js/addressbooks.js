@@ -13,6 +13,8 @@ OC.Contacts = OC.Contacts || {};
 
 	AddressBook.prototype.render = function() {
 		var self = this;
+		//var dialog = OC.Contacts.Dialog(null, null);
+		
 		this.$li = this.$template.octemplate({
 			id: this.book.id,
 			displayname: this.book.displayname,
@@ -72,41 +74,127 @@ OC.Contacts = OC.Contacts || {};
 				});
 			});
 		});
-		this.$li.find('a.action.edit').on('click keypress', function(event) {
-			if($(this).data('open')) {
-				return;
-			}
-			var editor = this;
-			event.stopPropagation();
-			event.preventDefault();
-			var $dropdown = $('<li><div><input type="text" value="{name}" /></div></li>')
-				.octemplate({name:self.getDisplayName()}).insertAfter(self.$li);
-			var $input = $dropdown.find('input');
-			//$input.focus().get(0).select();
-			$input.addnew({
-				autoOpen: true,
-				//autoClose: false,
-				addText: t('contacts', 'Save'),
-				ok: function(event, name) {
-					console.log('edit-address-book ok', name);
-					$input.addClass('loading');
-					self.update({displayname:name}, function(response) {
-						console.log('response', response);
-						if(response.error) {
-							$(document).trigger('status.contacts.error', response);
-						} else {
-							self.setDisplayName(response.data.displayname);
-							$input.addnew('close');
+		$('#add-ldap-address-book-element').on('click keypress', function() {
+			var $rightContent = $('#app-content');
+			$rightContent.append('<div id="addressbook-ui-dialog"></div>');
+			var $dlg = $('#addressBookConfigTemplate').octemplate({backend: 'ldap'});
+			var $divDlg = $('#addressbook-ui-dialog');
+			$divDlg.html($dlg).ocdialog({
+				modal: true,
+				closeOnEscape: true,
+				title: t('contacts', 'Add new LDAP Addressbook'),
+				height: 'auto',
+				width: 'auto',
+				buttons: [
+					{
+						text: t('contacts', 'Ok'),
+						click: function() {
+							OC.Contacts.otherBackendConfig.addressbookUiOk($divDlg);
+						},
+						defaultButton: true
+					},
+					{
+						text: t('contacts', 'Cancel'),
+						click: function() {
+							OC.Contacts.otherBackendConfig.addressbookUiClose($divDlg);
 						}
-						$input.removeClass('loading');
-					});
+					}
+				],
+				close: function(/*event, ui*/) {
+					OC.Contacts.otherBackendConfig.addressbookUiClose($divDlg);
 				},
-				close: function() {
-					$dropdown.remove();
-					$(editor).data('open', false);
+				open: function(/*event, ui*/) {
+					OC.Contacts.otherBackendConfig.openAddressbookUi();
 				}
 			});
-			$(this).data('open', true);
+		});
+		this.$li.find('a.action.edit').on('click keypress', function(event) {
+			$.when(self.storage.getAddressBook(self.getBackend(), self.getId()))
+			.then(function(response) {
+			if(!response.error) {
+				if(response.data) {
+					var addressbook = response.data;
+					console.log('addressbook', addressbook);
+					if (addressbook.backend === 'local') {
+						if($(this).data('open')) {
+							return;
+						}
+						var editor = this;
+						event.stopPropagation();
+						event.preventDefault();
+						var $dropdown = $('<li><div><input type="text" value="{name}" /></div></li>')
+							.octemplate({name:self.getDisplayName()}).insertAfter(self.$li);
+						var $input = $dropdown.find('input');
+						//$input.focus().get(0).select();
+						$input.addnew({
+							autoOpen: true,
+							//autoClose: false,
+							addText: t('contacts', 'Save'),
+							ok: function(event, name) {
+								console.log('edit-address-book ok', name);
+								$input.addClass('loading');
+								self.update({displayname:name}, function(response) {
+									console.log('response', response);
+									if(response.error) {
+										$(document).trigger('status.contacts.error', response);
+									} else {
+										self.setDisplayName(response.data.displayname);
+										$input.addnew('close');
+									}
+									$input.removeClass('loading');
+								});
+							},
+							close: function() {
+								$dropdown.remove();
+								$(editor).data('open', false);
+							}
+						});
+						$(this).data('open', true);
+					} else {
+						var $rightContent = $('#app-content');
+						$rightContent.append('<div id="addressbook-ui-dialog"></div>');
+						var $dlg = $('#addressBookConfigTemplate').octemplate({backend: 'ldap'});
+						var $divDlg = $('#addressbook-ui-dialog');
+						//var $divDlg = $('#addressbook-ui-dialog');
+						$divDlg.html($dlg).ocdialog({
+							modal: true,
+							closeOnEscape: true,
+							title: t('contacts', 'Edit Addressbook'),
+							height: 'auto', width: 'auto',
+							buttons: [
+								{
+									text: t('contacts', 'Ok'),
+									click: function() {
+										OC.Contacts.otherBackendConfig.addressbookUiEditOk($divDlg);
+										self.setDisplayName($('#addressbooks-ui-name').val());
+									},
+									defaultButton: true
+								},
+								{
+									text: t('contacts', 'Cancel'),
+									click: function() {
+										OC.Contacts.otherBackendConfig.addressbookUiClose($divDlg);
+									}
+								}
+							],
+							close: function() {
+								OC.Contacts.otherBackendConfig.addressbookUiClose($divDlg);
+							},
+							open: function() {
+								OC.Contacts.otherBackendConfig.editAddressbookUI(addressbook);
+							}
+						});
+					}
+					return this.$li;
+				}
+			} else {
+				console.warn('Addressbook getAddressbook - no data !!');
+			}
+			})
+			.fail(function(response) {
+				console.warn('Request Failed:', response.message);
+				$(document).trigger('status.contacts.error', response);
+			});
 		});
 		return this.$li;
 	};
@@ -303,7 +391,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 		this.$importFileInput.fileupload({
 			dataType: 'json',
-			start: function(e, data) {
+			start: function(/*e, data*/) {
 				self.$importProgress.progressbar({value:false});
 				$('.tipsy').remove();
 				$('.import-upload').hide();
