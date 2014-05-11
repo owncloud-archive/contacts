@@ -1,7 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contactes",
-"Save" => "Enregistra",
 "Cancel" => "Annula",
+"Save" => "Enregistra",
 "OK" => "D'accòrdi",
 "Add" => "Ajusta",
 "Import" => "Importa",
@@ -13,6 +13,7 @@
 "Missing a temporary folder" => "Un dorsièr temporari manca",
 "Failed to write to disk" => "L'escriptura sul disc a fracassat",
 "Other" => "Autres",
+"ownCloud" => "ownCloud",
 "Work" => "Trabalh",
 "Delete" => "Escafa",
 "Groups" => "Grops",

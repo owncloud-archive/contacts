@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ارتباط‌ها",
+"Cancel" => "منصرف شدن",
 "Save" => "ذخیره",
 "An address book called {name} already exists" => "دفتر تلفن با نام {name} در حال حاضر وجود دارد",
 "Failed adding address book: {error}" => "خطا در خصوص اضافه نمودن دفتر تلفن: {error}",
@@ -10,7 +11,6 @@
 "Remove from..." => "حذف از...",
 "Add group..." => "اضافه کردن گروه...",
 "Select photo" => "تصویر را انتخاب کنید",
-"Cancel" => "منصرف شدن",
 "OK" => "باشه",
 "Add" => "افزودن",
 "Shared by {owner}" => "اشتراک گذارنده {owner}",
@@ -37,6 +37,7 @@
 "Could not set preference: " => "نمی‌توان تنظیمات را ثبت نمود:",
 "Contact" => "اشخاص",
 "Other" => "دیگر",
+"ownCloud" => "ownCloud",
 "Work" => "کار",
 "Home" => "خانه",
 "Mobile" => "موبایل",

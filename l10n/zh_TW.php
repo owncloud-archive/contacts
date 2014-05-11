@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "通訊錄",
+"Cancel" => "取消",
 "Save" => "儲存",
 "An address book called {name} already exists" => "通訊錄 {name} 已存在",
 "Failed adding address book: {error}" => "通訊錄匯入失敗：{error}",
@@ -21,7 +22,6 @@
 "Error removing from group." => "從群組中移除出錯。",
 "Error setting {name} as favorite." => "設定 {name} 為最愛時發生錯誤。",
 "Merge contacts" => "合併聯絡人",
-"Cancel" => "取消",
 "Add group" => "新增群組",
 "OK" => "好",
 "Could not find contact: {id}" => "找不到聯絡人：{id}",
@@ -127,6 +127,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "工作",
 "Home" => "住宅",
 "Mobile" => "行動電話",

@@ -1,7 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакти",
-"Save" => "Запис",
 "Cancel" => "Отказ",
+"Save" => "Запис",
 "OK" => "ОК",
 "Add" => "Добавяне",
 "Import" => "Внасяне",
@@ -14,6 +14,7 @@
 "Missing a temporary folder" => "Липсва временна папка",
 "Failed to write to disk" => "Възникна проблем при запис в диска",
 "Other" => "Други",
+"ownCloud" => "ownCloud",
 "Work" => "Работен",
 "Home" => "Домашен",
 "Text" => "Текст",

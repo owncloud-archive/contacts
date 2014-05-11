@@ -1,6 +1,6 @@
 <?php $TRANSLATIONS = array(
-"Save" => "భద్రపరచు",
 "Cancel" => "రద్దుచేయి",
+"Save" => "భద్రపరచు",
 "Add" => "చేర్చు",
 "Import" => "దిగుమతించు",
 "Close" => "మూసివేయి",

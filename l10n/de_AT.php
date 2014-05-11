@@ -1,6 +1,6 @@
 <?php $TRANSLATIONS = array(
-"Save" => "Speichern",
 "Cancel" => "Abbrechen",
+"Save" => "Speichern",
 "Import" => "Importieren",
 "Other" => "Anderes",
 "Work" => "Arbeit",

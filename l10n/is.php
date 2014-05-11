@@ -1,6 +1,6 @@
 <?php $TRANSLATIONS = array(
-"Save" => "Vista",
 "Cancel" => "Hætta við",
+"Save" => "Vista",
 "Add" => "Bæta við",
 "Import" => "Flytja inn",
 "Close" => "Loka",

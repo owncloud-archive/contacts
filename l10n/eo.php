@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontaktoj",
+"Cancel" => "Nuligi",
 "Save" => "Konservi",
 "Indexing contacts" => "Indeksante kontaktojn",
 "Error." => "Eraro.",
@@ -16,7 +17,6 @@
 "Error adding to group." => "Eraro dum aldono al grupo.",
 "Error removing from group." => "Eraro dum forigo el grupo.",
 "Merge contacts" => "Kunfandi kontaktojn",
-"Cancel" => "Nuligi",
 "Add group" => "Aldoni grupon",
 "OK" => "Akcepti",
 "Could not find contact: {id}" => "Ne troviĝis kontakto: {id}",
@@ -100,6 +100,7 @@
 "Skype" => "Skajpo",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Laboro",
 "Home" => "Hejmo",
 "Mobile" => "Poŝtelefono",

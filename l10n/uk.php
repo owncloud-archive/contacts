@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакти",
+"Cancel" => "Відмінити",
 "Save" => "Зберегти",
 "An address book called {name} already exists" => "Адресна книга з назвою {name} вже існує",
 "Failed adding address book: {error}" => "Неможливо додати адресну книгу: {error}",
@@ -21,7 +22,6 @@
 "Error removing from group." => "Помилка при видаленні з групи.",
 "Error setting {name} as favorite." => "Помилка при встановленні {name} як улюбленого.",
 "Merge contacts" => "Об'єднання контактів",
-"Cancel" => "Відмінити",
 "Add group" => "Додати групу",
 "OK" => "OK",
 "Could not find contact: {id}" => "Неможливо знайти контакт: {id}",
@@ -107,6 +107,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Робота",
 "Home" => "Домашня адреса",
 "Mobile" => "Мобільний",

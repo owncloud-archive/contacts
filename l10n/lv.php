@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakti",
+"Cancel" => "Atcelt",
 "Save" => "Saglabāt",
 "Error." => "Kļūda.",
 "Remove from..." => "Izņemt no...",
@@ -8,7 +9,6 @@
 "Network or server error. Please inform administrator." => "Tīkla vai servera kļūda. Lūdzu, informējiet administratoru.",
 "Error adding to group." => "Kļūda, pievienojot grupai.",
 "Error removing from group." => "Kļūda, izņemot no grupas.",
-"Cancel" => "Atcelt",
 "Add group" => "Pievienot grupu",
 "OK" => "Labi",
 "# groups" => "# grupas",
@@ -48,6 +48,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Darbs",
 "Home" => "Mājas",
 "Mobile" => "Mobilais",

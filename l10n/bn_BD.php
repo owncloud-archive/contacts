@@ -1,7 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ঠিকানাপঞ্জী",
-"Save" => "সংরক্ষণ",
 "Cancel" => "বাতির",
+"Save" => "সংরক্ষণ",
 "OK" => "তথাস্তু",
 "Add" => "যোগ কর",
 "Please choose the addressbook" => "ঠিকানাপঞ্জীটি নির্বাচন করুন",

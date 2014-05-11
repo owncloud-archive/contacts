@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "联系人",
+"Cancel" => "取消",
 "Save" => "保存",
 "Starting file import" => "开始文件导入",
 "Format selected: {format}" => "已选择格式：{format}",
@@ -25,7 +26,6 @@
 "Error removing from group." => "从组删除时出错。",
 "Error setting {name} as favorite." => "无法将{name}设为喜欢。",
 "Merge contacts" => "合并联系人",
-"Cancel" => "取消",
 "Add group" => "添加分组",
 "OK" => "OK",
 "Could not find contact: {id}" => "不能找到联系人: {id}",
@@ -140,6 +140,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "工作",
 "Home" => "家庭",
 "Mobile" => "手机",

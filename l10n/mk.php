@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакти",
+"Cancel" => "Откажи",
 "Save" => "Сними",
 "Indexing contacts" => "Индексирање на контактите",
 "Error." => "Грешка.",
@@ -10,7 +11,6 @@
 "Select photo" => "Одбери фотографија",
 "Error adding to group." => "Грешки при додавањето во група.",
 "Merge contacts" => "Спои ги контактите",
-"Cancel" => "Откажи",
 "Add group" => "Додади група",
 "OK" => "Во ред",
 "Edit profile picture" => "Уреди ја фотографијата за профилот",
@@ -51,6 +51,7 @@
 "Error uploading contacts to storage." => "Грешка во снимање на контактите на диск.",
 "Contact" => "Контакт",
 "Other" => "Останато",
+"ownCloud" => "ownCloud",
 "Work" => "Работа",
 "Home" => "Дома",
 "Mobile" => "Мобилен",

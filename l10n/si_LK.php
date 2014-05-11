@@ -1,7 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "සබඳතා",
-"Save" => "සුරකින්න",
 "Cancel" => "එපා",
+"Save" => "සුරකින්න",
 "OK" => "හරි",
 "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." => "සමහර සම්බන්ධතා මකන ලෙස ලකුණු කොට ඇත. කරුණාකර ඒවා මැකෙන තෙක් සිටින්න",
 "Add" => "එකතු කරන්න",
@@ -24,6 +24,7 @@
 "Error uploading contacts to storage." => "ගබඩාවට පුද්ගල විස්තර උඩුගත කිරීමේ දෝෂයක්",
 "Contact" => "සබඳතාව",
 "Other" => "වෙනත්",
+"ownCloud" => "ownCloud",
 "Work" => "කාර්යය",
 "Home" => "නිවස",
 "Mobile" => "ජංගම",

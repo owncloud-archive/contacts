@@ -1,8 +1,8 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Hubungi ",
+"Cancel" => "Batal",
 "Save" => "Simpan",
 "Select photo" => "Pilih foto",
-"Cancel" => "Batal",
 "OK" => "OK",
 "Add" => "Tambah",
 "Please choose the addressbook" => "Sila pilih buku alamat",
@@ -24,6 +24,7 @@
 "Error uploading contacts to storage." => "Ralat memuatnaik senarai kenalan.",
 "Contact" => "Hubungan",
 "Other" => "Lain",
+"ownCloud" => "ownCloud",
 "Work" => "Kerja",
 "Home" => "Rumah",
 "Mobile" => "Mudah alih",

@@ -1,7 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Cysylltiadau",
-"Save" => "Cadw",
 "Cancel" => "Diddymu",
+"Save" => "Cadw",
 "OK" => "Iawn",
 "Add" => "Ychwanegu",
 "Import" => "Mewnforio",
@@ -15,6 +15,7 @@
 "Failed to write to disk" => "Methwyd ysgrifennu i'r ddisg",
 "Not enough storage available" => "Dim digon o le storio ar gael",
 "Other" => "Arall",
+"ownCloud" => "ownCloud",
 "Work" => "Gwaith",
 "Text" => "Testun",
 "Delete" => "Dileu",

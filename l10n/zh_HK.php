@@ -1,7 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "聯絡人",
-"Save" => "儲存",
 "Cancel" => "取消",
+"Save" => "儲存",
 "OK" => "確定",
 "Add" => "加入",
 "Import" => "導入",

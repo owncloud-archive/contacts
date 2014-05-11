@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontake",
+"Cancel" => "Anulo",
 "Save" => "Ruaj",
 "Error." => "Gabim.",
 "Add to..." => "Shto tek...",
@@ -7,7 +8,6 @@
 "Add group..." => "Shto grup...",
 "Select photo" => "Zgjidhni foto",
 "Error adding to group." => "Gabim shtim në grup.",
-"Cancel" => "Anulo",
 "OK" => "Ok",
 "Add" => "Shto",
 "Import" => "Importo",

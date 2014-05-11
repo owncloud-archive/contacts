@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Danh bạ",
+"Cancel" => "Hủy",
 "Save" => "Lưu",
 "An address book called {name} already exists" => "Danh sách địa chỉ {name} đã tồn t",
 "Failed adding address book: {error}" => "Thêm danh sách liên lạc thất bại : {error}",
@@ -21,7 +22,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Bạn đã chọn hơn 300 địa chỉ liên lạc. \nRất có thể sẽ thất bại ! nh vào đây để thử .",
 "Error setting {name} as favorite." => "Lỗi cài đặt {name} yêu thích",
 "Merge contacts" => "Kết hợp danh sách ",
-"Cancel" => "Hủy",
 "Add group" => "Thêm nhóm",
 "OK" => "Chấp nhận",
 "Could not find contact: {id}" => "Không tìm thấy danh sách: {id}",
@@ -110,6 +110,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Công việc",
 "Home" => "Nhà",
 "Mobile" => "Di động",

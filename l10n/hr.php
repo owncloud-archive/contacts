@@ -1,7 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakti",
-"Save" => "Snimi",
 "Cancel" => "Odustani",
+"Save" => "Snimi",
 "Add" => "Dodaj",
 "Import" => "Uvezi",
 "Close" => "Zatvori",
@@ -29,6 +29,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Posao",
 "Home" => "Kuća",
 "Mobile" => "Mobitel",
