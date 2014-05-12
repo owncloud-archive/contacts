@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contactos",
+"Ok" => "Ok",
+"Cancel" => "Cancelar",
 "Save" => "Guardar",
+"Edit Addressbook" => "Editar livro de endereços",
 "Starting file import" => "A iniciar importação de ficheiro",
 "Format selected: {format}" => "Format selected: {format}",
 "Automatic format detection" => "Deteção automática do formato",
@@ -9,6 +12,7 @@
 "An address book called {name} already exists" => "O livro de endereços {name} já existe",
 "Failed adding address book: {error}" => "Não foi possível adicionar o livro de endereços: {error}",
 "Failed loading address books: {error}" => "Não foi possível carregar o livro de endereços: {error}",
+"Server error! Please inform system administator" => "Erro no servidor! Por favor informe o Administrador do Sistema",
 "Indexing contacts" => "A indexar os contactos",
 "Unrecoverable error loading address books: {msg}" => "Erro irrecuperável enquanto tentava carregar os livros de endereço: {msg}",
 "Error." => "Erro.",
@@ -29,7 +33,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Você selecionou mais de 300 contactos.\nIsto irá falhar de certeza! Clique aqui para tentar na mesma.",
 "Error setting {name} as favorite." => "Erro ao marcar {name} como favorito.",
 "Merge contacts" => "Juntar contactos",
-"Cancel" => "Cancelar",
 "Add group" => "Adicionar grupo",
 "OK" => "OK",
 "Could not find contact: {id}" => "Não foi possível encontrar o contacto: {id}",
@@ -65,7 +68,6 @@
 "Importing..." => "A importar...",
 "Import done" => "Importação terminada",
 "Close" => "Fechar",
-"Server error! Please inform system administator" => "Erro no servidor! Por favor informe o Administrador do Sistema",
 "Failed loading photo: {error}" => "Erro ao carregar fotografia: {error}",
 "You do not have permissions to see this contacts" => "Não tem permissões para ver este contacto",
 "Contact not found" => "Contacto não encontrado",
@@ -156,6 +158,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Emprego",
 "Home" => "Casa",
 "Mobile" => "Telemóvel",
@@ -244,5 +247,9 @@
 "Share" => "Partilhar",
 "Export" => "Exportar",
 "CardDAV link" => "Endereço CardDAV",
-"Edit" => "Editar"
+"Edit" => "Editar",
+"Description" => "Descrição",
+"User" => "Utilizador",
+"Password" => "Palavra-passe",
+"Base DN" => "DN base"
 );

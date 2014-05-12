@@ -1,9 +1,12 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontak",
+"Ok" => "Oke",
+"Cancel" => "Batal",
 "Save" => "Simpan",
 "An address book called {name} already exists" => "Buku alamat yang bernama {name} sudah ada",
 "Failed adding address book: {error}" => "Gagal menambahkan buku alamat: {error}",
 "Failed loading address books: {error}" => "Gagal memuat buku alamat: {error}",
+"Server error! Please inform system administator" => "Server galat! Silakan menginformasikan administrator sistem.",
 "Indexing contacts" => "Mengindeks kontak",
 "Unrecoverable error loading address books: {msg}" => "Galat yang tidak diketahui ketika memuat buku alamat: {msg}",
 "Error." => "Galat.",
@@ -22,7 +25,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Anda telah memilih lebih dari 300 kontak.\nIni kemungkinan besar akan gagal! Klik di sini untuk mencoba.",
 "Error setting {name} as favorite." => "Galat mengatur {name} sebagai favorit",
 "Merge contacts" => "Gabung kontak",
-"Cancel" => "Batal",
 "Add group" => "Tambah grup",
 "OK" => "Oke",
 "Could not find contact: {id}" => "Tidak menemukan kontak: {id}",
@@ -57,7 +59,6 @@
 "Importing..." => "Mengimpor...",
 "Import done" => "Impor selesai",
 "Close" => "Tutup",
-"Server error! Please inform system administator" => "Server galat! Silakan menginformasikan administrator sistem.",
 "Failed loading photo: {error}" => "Gagal memuat foto: {error}",
 "You do not have permissions to see this contacts" => "Anda tidak memiliki akses untuk melihat kontak ini",
 "Contact not found" => "Kontak tidak ditemukan",
@@ -139,6 +140,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Kantor",
 "Home" => "Rumah",
 "Mobile" => "Ponsel",
@@ -220,5 +222,9 @@
 "Share" => "Bagikan",
 "Export" => "Ekspor",
 "CardDAV link" => "Tautan CardDAV",
-"Edit" => "Edit"
+"Edit" => "Edit",
+"Description" => "Penjelasan",
+"User" => "Pengguna",
+"Password" => "Sandi",
+"Base DN" => "Base DN"
 );

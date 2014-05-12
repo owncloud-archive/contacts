@@ -1,6 +1,6 @@
 <?php $TRANSLATIONS = array(
-"Save" => "Speichern",
 "Cancel" => "Abbrechen",
+"Save" => "Speichern",
 "Import" => "Importieren",
 "Other" => "Anderes",
 "Work" => "Arbeit",
@@ -10,5 +10,7 @@
 "Title" => "Titel",
 "Birthday" => "Geburtstag",
 "Share" => "Freigeben",
-"Edit" => "Bearbeiten"
+"Edit" => "Bearbeiten",
+"Description" => "Beschreibung",
+"Password" => "Passwort"
 );

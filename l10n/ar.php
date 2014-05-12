@@ -1,9 +1,13 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "جهات الاتصال",
+"Ok" => "موافق",
+"Cancel" => "الغاء",
 "Save" => "حفظ",
+"Edit Addressbook" => "عدل كتاب العناوين",
 "An address book called {name} already exists" => " دفتر العناوين يحمل  {اسم } موجود مسبقاً",
 "Failed adding address book: {error}" => "{خطأ} فشلت مهمة إضافة عنوان ",
 "Failed loading address books: {error}" => "{خطأ} فشلت مهمة تحميل دفتر العناوين",
+"Server error! Please inform system administator" => "خطأ في الخادم! يرجى ابلاغ مدير النظام.",
 "Indexing contacts" => "فهرسة جهات الاتصال",
 "Unrecoverable error loading address books: {msg}" => "حدث خطأ فادح أثناء تحميل دفتر العناوين: {msg}",
 "Error." => "خطأ.",
@@ -22,7 +26,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "لقد قمت بتحديد أكثر من 300 جهة إتصال.\nفي العادة سوف يفشل! إضغط هنا للمحاولة على أي حال.",
 "Error setting {name} as favorite." => "حدث خطأ أثناء إعداد {name} كمفضلة .",
 "Merge contacts" => "دمج جهات الاتصال",
-"Cancel" => "الغاء",
 "Add group" => "إضافة مجموعة",
 "OK" => "تم",
 "Could not find contact: {id}" => "تعذر ايجاد جهة الاتصال:  {id}",
@@ -54,7 +57,6 @@
 "Importing..." => "استيراد...",
 "Import done" => "تمت عملية الاستيراد ",
 "Close" => "إغلاق",
-"Server error! Please inform system administator" => "خطأ في الخادم! يرجى ابلاغ مدير النظام.",
 "Failed loading photo: {error}" => "{خطأ}: فشلت مهمة تحميل الصورة",
 "You do not have permissions to see this contacts" => "ليس لديك الصلاحية  لمشاهدة جهة الاتصال هذه",
 "Contact not found" => "تعذر إيجاد جهة الاتصال.",
@@ -119,6 +121,7 @@
 "Skype" => "سكايب",
 "QQ" => "كيوكيو",
 "GaduGadu" => "قادو قادو البولندي للمراسلة الفورية",
+"ownCloud" => "ownCloud",
 "Work" => "العمل",
 "Home" => "البيت",
 "Mobile" => "الهاتف المحمول",
@@ -203,5 +206,8 @@
 "Share" => "شارك",
 "Export" => "تصدير",
 "CardDAV link" => "رابط - وصلة - CardDA لنقل و مشاركة جهات الاتصال",
-"Edit" => "تعديل"
+"Edit" => "تعديل",
+"Description" => "وصف",
+"User" => "مستخدم",
+"Password" => "كلمة السر"
 );

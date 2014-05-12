@@ -1,6 +1,6 @@
 <?php $TRANSLATIONS = array(
-"Save" => "Gorde",
 "Cancel" => "Ezeztatu",
+"Save" => "Gorde",
 "Other" => "Bestea",
 "Work" => "Lana",
 "Delete" => "Ezabatu",
@@ -8,5 +8,6 @@
 "Title" => "titulua",
 "Birthday" => "Urtebetetze",
 "Export" => "Esportazio",
-"Edit" => "Aldatu"
+"Edit" => "Aldatu",
+"Description" => "Deskripzioa"
 );

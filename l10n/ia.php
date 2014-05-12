@@ -1,7 +1,10 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contactos",
-"Save" => "Salveguardar",
+"Ok" => "Ok",
 "Cancel" => "Cancellar",
+"Save" => "Salveguardar",
+"Edit Addressbook" => "Modificar adressario",
+"OK" => "Ok",
 "Add" => "Adder",
 "Please choose the addressbook" => "Per favor selige le adressario",
 "Import" => "Importar",
@@ -48,5 +51,7 @@
 "Active" => "Active",
 "Share" => "Compartir",
 "Export" => "Exportar",
-"Edit" => "Modificar"
+"Edit" => "Modificar",
+"Description" => "Description",
+"Password" => "Contrasigno"
 );

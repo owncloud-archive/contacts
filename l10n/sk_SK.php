@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakty",
+"Ok" => "Ok",
+"Cancel" => "Zrušiť",
 "Save" => "Uložiť",
+"Edit Addressbook" => "Upraviť Adresár",
 "Starting file import" => "Spusteni importu súboru",
 "Format selected: {format}" => "Zvolený formát: {format}",
 "Automatic format detection" => "Automatická detekcia formátu",
@@ -9,6 +12,7 @@
 "An address book called {name} already exists" => "Adresár s názvom {name} už existuje",
 "Failed adding address book: {error}" => "Pridanie adresára zlyhalo: {error}",
 "Failed loading address books: {error}" => "Načítanie adresára zlyhalo: {error}",
+"Server error! Please inform system administator" => "Chyba servera! Informujte vášho administrátora",
 "Indexing contacts" => "Indexovanie kontaktov",
 "Unrecoverable error loading address books: {msg}" => "Neodstrániteľná chyba pri načítaní adresára: {msg}",
 "Error." => "Chyba.",
@@ -29,7 +33,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Označených je viac ako 300 kontaktov.\nToto pravdepodobne zlyhá! Kliknite tu, ak chcete aj naďalej pokračovať.",
 "Error setting {name} as favorite." => "Chyba pri nastavení {name} medzi obľúbené.",
 "Merge contacts" => "Zlúčiť kontakty",
-"Cancel" => "Zrušiť",
 "Add group" => "Pridať skupinu",
 "OK" => "OK",
 "Could not find contact: {id}" => "Nemožno nájsť kontakt: {id}",
@@ -65,7 +68,6 @@
 "Importing..." => "Importujem...",
 "Import done" => "Import ukončený",
 "Close" => "Zavrieť",
-"Server error! Please inform system administator" => "Chyba servera! Informujte vášho administrátora",
 "Failed loading photo: {error}" => "Načítanie fotografie sa nepodarilo: {error}",
 "You do not have permissions to see this contacts" => "Nemáte oprávnenie na prezeranie týchto kontaktov",
 "Contact not found" => "Kontakt nenájdený",
@@ -156,6 +158,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Práca",
 "Home" => "Domov",
 "Mobile" => "Mobil",
@@ -244,5 +247,9 @@
 "Share" => "Zdieľať",
 "Export" => "Export",
 "CardDAV link" => "CardDAV odkaz",
-"Edit" => "Upraviť"
+"Edit" => "Upraviť",
+"Description" => "Popis",
+"User" => "Používateľ",
+"Password" => "Heslo",
+"Base DN" => "Základné DN"
 );

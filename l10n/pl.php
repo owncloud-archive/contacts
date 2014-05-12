@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakty",
+"Ok" => "OK",
+"Cancel" => "Anuluj",
 "Save" => "Zapisz",
+"Edit Addressbook" => "Edytowanie książki adresowej",
 "Starting file import" => "Rozpoczęcie importu pliku",
 "Format selected: {format}" => "Wybrany format: {format}",
 "Automatic format detection" => "Automatyczna detekcja formatu",
@@ -9,6 +12,7 @@
 "An address book called {name} already exists" => "Książka adresowa o nazwie {name} już istnieje",
 "Failed adding address book: {error}" => "Nieudane dodanie książki: {error}",
 "Failed loading address books: {error}" => "Nieudane wczytywanie książek adresowych: {error}",
+"Server error! Please inform system administator" => "Błąd serwera@ Skontaktuj się z administratorem",
 "Indexing contacts" => "Indeksuj kontakty",
 "Unrecoverable error loading address books: {msg}" => "Nieodwracalny błąd podczas ładowania książek adresowych: {msg}",
 "Error." => "Błąd.",
@@ -29,7 +33,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Zaznaczyłeś więcej niż 300 kontaktów.\nTo kończy się zazwyczaj błędem! Kliknij tutaj aby spróbować mimo to. ",
 "Error setting {name} as favorite." => "Błąd ustawienia {name} jako ulubione.",
 "Merge contacts" => "Połącz kontakty",
-"Cancel" => "Anuluj",
 "Add group" => "Dodaj drupę",
 "OK" => "OK",
 "Could not find contact: {id}" => "Nie można znaleźć kontaktu: {id}",
@@ -65,7 +68,6 @@
 "Importing..." => "Importowanie...",
 "Import done" => "Import zakończony",
 "Close" => "Zamknij",
-"Server error! Please inform system administator" => "Błąd serwera@ Skontaktuj się z administratorem",
 "Failed loading photo: {error}" => "Nieudane wczytanie zdjęcia: {error}",
 "You do not have permissions to see this contacts" => "Nie masz uprawnień do podglądania tego kontaktu",
 "Contact not found" => "Kontaktu nie znaleziono",
@@ -156,6 +158,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GG",
+"ownCloud" => "ownCloud",
 "Work" => "Zawodowe",
 "Home" => "Dom",
 "Mobile" => "Komórka",
@@ -244,5 +247,9 @@
 "Share" => "Udostępnij",
 "Export" => "Eksportuj",
 "CardDAV link" => "Link CardDAV",
-"Edit" => "Edytuj"
+"Edit" => "Edytuj",
+"Description" => "Opis",
+"User" => "Użytkownik",
+"Password" => "Hasło",
+"Base DN" => "Baza DN"
 );

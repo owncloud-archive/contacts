@@ -1,6 +1,8 @@
 <?php $TRANSLATIONS = array(
-"Save" => "Snimi",
+"Ok" => "Ok",
 "Cancel" => "Otkaži",
+"Save" => "Snimi",
+"OK" => "Ok",
 "Add" => "Dodaj",
 "Close" => "Zatvori",
 "Information about vCard is incorrect. Please reload the page." => "Podaci o vKarti su neispravni. Ponovo učitajte stranicu.",
@@ -34,5 +36,7 @@
 "Country" => "Zemlja",
 "Active" => "Aktivan",
 "Share" => "Podeli",
-"Edit" => "Uredi"
+"Edit" => "Uredi",
+"Description" => "Opis",
+"Password" => "Lozinka"
 );

@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contacts",
+"Ok" => "Ok",
+"Cancel" => "Annuler",
 "Save" => "Sauvegarder",
+"Edit Addressbook" => "Éditer le carnet d'adresses",
 "Starting file import" => "Démarrage de l'importation de fichier",
 "Format selected: {format}" => "Format sélectionné : {format}",
 "Automatic format detection" => "Détection automatique de format",
@@ -9,6 +12,7 @@
 "An address book called {name} already exists" => "Un carnet d'adresse appelé {name} existe déjà",
 "Failed adding address book: {error}" => "Échec de l'ajout du carnet d'adresses : {error}",
 "Failed loading address books: {error}" => "Echec du chargement des carnets d'adresses : {error}",
+"Server error! Please inform system administator" => "Erreur du serveur ! Veuillez contacter votre administrateur.",
 "Indexing contacts" => "Indexation des contacts",
 "Unrecoverable error loading address books: {msg}" => "Erreur irrécupérable lors du chargement des carnets d'adresses : {msg}",
 "Error." => "Erreur.",
@@ -29,7 +33,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Vous avez sélectionné plus de 300 contacts.\nCela va très probablement échouer ! Cliquer ici pour essayer cependant.",
 "Error setting {name} as favorite." => "Erreur lors de la mise en favori de {name}.",
 "Merge contacts" => "Fusionner les contacts",
-"Cancel" => "Annuler",
 "Add group" => "Ajouter un groupe",
 "OK" => "OK",
 "Could not find contact: {id}" => "Impossible de trouver le contact : {id}",
@@ -65,7 +68,6 @@
 "Importing..." => "Import en cours…",
 "Import done" => "Fichiers importés",
 "Close" => "Fermer",
-"Server error! Please inform system administator" => "Erreur du serveur ! Veuillez contacter votre administrateur.",
 "Failed loading photo: {error}" => "Echec du chargement de la photo : {error}",
 "You do not have permissions to see this contacts" => "Vous n'avez pas les droits suffisants pour voir ces contacts.",
 "Contact not found" => "Contact introuvable",
@@ -156,6 +158,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Travail",
 "Home" => "Domicile",
 "Mobile" => "Mobile",
@@ -244,5 +247,9 @@
 "Share" => "Partager",
 "Export" => "Exporter",
 "CardDAV link" => "Lien CardDAV",
-"Edit" => "Modifier"
+"Edit" => "Modifier",
+"Description" => "Description",
+"User" => "Utilisateur",
+"Password" => "Mot de passe",
+"Base DN" => "DN racine"
 );

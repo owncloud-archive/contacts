@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Stiki",
+"Ok" => "V redu",
+"Cancel" => "Prekliči",
 "Save" => "Shrani",
+"Edit Addressbook" => "Uredi imenik",
 "Starting file import" => "Začenjanje uvoza datoteke",
 "Format selected: {format}" => "Izbran zapis: {format}",
 "Automatic format detection" => "Samodejno zaznavanje zapisa",
@@ -9,6 +12,7 @@
 "An address book called {name} already exists" => "Imenik z imenom {name} že obstaja",
 "Failed adding address book: {error}" => "Dodajanje imenika je spodletelo: {error}",
 "Failed loading address books: {error}" => "Nalaganje imenikov je spodletelo: {error}",
+"Server error! Please inform system administator" => "Napaka strežnika! Stopite v stik s skrbnikom sistema.",
 "Indexing contacts" => "Ustvarjanje seznama stikov",
 "Unrecoverable error loading address books: {msg}" => "Prišlo je do nepopravljive napake med nalaganjem imenikov: {msg}",
 "Error." => "Napaka",
@@ -29,7 +33,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Izbranih je več kot 300 stikov.\nOpravilo bo najverjetneje spodletelo. Kliknite, če želite vseeno poskusiti.",
 "Error setting {name} as favorite." => "Napaka med nastavljanjem {name} kot priljubljenega.",
 "Merge contacts" => "Združi stike",
-"Cancel" => "Prekliči",
 "Add group" => "Dodaj skupino",
 "OK" => "V redu",
 "Could not find contact: {id}" => "Stika ni mogoče najti: {id}",
@@ -65,7 +68,6 @@
 "Importing..." => "Uvažanje ...",
 "Import done" => "Uvoz je končan",
 "Close" => "Zapri",
-"Server error! Please inform system administator" => "Napaka strežnika! Stopite v stik s skrbnikom sistema.",
 "Failed loading photo: {error}" => "Nalaganje slike je spodletelo: {error}",
 "You do not have permissions to see this contacts" => "Ni ustreznih dovoljenj za ogled teh stikov.",
 "Contact not found" => "Stika ni mogoče najti",
@@ -156,6 +158,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Služba",
 "Home" => "Doma",
 "Mobile" => "Mobilni telefon",
@@ -244,5 +247,9 @@
 "Share" => "Souporaba",
 "Export" => "Izvozi",
 "CardDAV link" => "Povezava CardDAV",
-"Edit" => "Uredi"
+"Edit" => "Uredi",
+"Description" => "Opis",
+"User" => "Uporabnik",
+"Password" => "Geslo",
+"Base DN" => "Osnovni DN"
 );

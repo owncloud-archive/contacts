@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontaktoj",
+"Ok" => "Akcepti",
+"Cancel" => "Nuligi",
 "Save" => "Konservi",
+"Edit Addressbook" => "Redakti adresaron",
 "Indexing contacts" => "Indeksante kontaktojn",
 "Error." => "Eraro.",
 "Add to..." => "Aldoni al...",
@@ -16,7 +19,6 @@
 "Error adding to group." => "Eraro dum aldono al grupo.",
 "Error removing from group." => "Eraro dum forigo el grupo.",
 "Merge contacts" => "Kunfandi kontaktojn",
-"Cancel" => "Nuligi",
 "Add group" => "Aldoni grupon",
 "OK" => "Akcepti",
 "Could not find contact: {id}" => "Ne troviĝis kontakto: {id}",
@@ -100,6 +102,7 @@
 "Skype" => "Skajpo",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Laboro",
 "Home" => "Hejmo",
 "Mobile" => "Poŝtelefono",
@@ -172,5 +175,9 @@
 "Active" => "Aktiva",
 "Share" => "Kunhavigi",
 "Export" => "Elporti",
-"Edit" => "Redakti"
+"Edit" => "Redakti",
+"Description" => "Priskribo",
+"User" => "Uzanto",
+"Password" => "Pasvorto",
+"Base DN" => "Bazo-DN"
 );

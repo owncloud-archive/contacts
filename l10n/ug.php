@@ -1,7 +1,8 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ئالاقەداشلار",
-"Save" => "ساقلا",
+"Ok" => "جەزملە",
 "Cancel" => "ۋاز كەچ",
+"Save" => "ساقلا",
 "OK" => "جەزملە",
 "Add" => "قوش",
 "Import" => "ئەكىر",
@@ -13,6 +14,7 @@
 "Failed to write to disk" => "دىسكىغا يازالمىدى",
 "Not enough storage available" => "يېتەرلىك ساقلاش بوشلۇقى يوق",
 "Other" => "باشقا",
+"ownCloud" => "ownCloud",
 "Work" => "ئىش",
 "Text" => "قىسقا ئۇچۇر",
 "Family" => "جەمەتىم",
@@ -28,5 +30,8 @@
 "Active" => "ئاكتىپ",
 "Share" => "ھەمبەھىر",
 "Export" => "چىقار",
-"Edit" => "تەھرىر"
+"Edit" => "تەھرىر",
+"Description" => "چۈشەندۈرۈش",
+"User" => "ئىشلەتكۈچى",
+"Password" => "ئىم"
 );

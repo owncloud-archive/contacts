@@ -1,6 +1,6 @@
 <?php $TRANSLATIONS = array(
-"Save" => "Uložiť",
 "Cancel" => "Zrušiť",
+"Save" => "Uložiť",
 "Import" => "Importovať",
 "Other" => "Ostatné",
 "Delete" => "Odstrániť",
@@ -8,5 +8,6 @@
 "Title" => "Názov",
 "Birthday" => "Narodeniny",
 "Share" => "Zdieľať",
-"Edit" => "Upraviť"
+"Edit" => "Upraviť",
+"Description" => "Popis"
 );

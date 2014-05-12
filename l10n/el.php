@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Επαφές",
+"Ok" => "Οκ",
+"Cancel" => "Άκυρο",
 "Save" => "Αποθήκευση",
+"Edit Addressbook" => "Επεξεργασία βιβλίου διευθύνσεων",
 "Starting file import" => "Έναρξη εισαγωγής αρχείου",
 "Format selected: {format}" => "Επιλεγμένη μορφή: {format}",
 "Automatic format detection" => "Αυτόματη ανίχνευση μορφής",
@@ -9,6 +12,7 @@
 "An address book called {name} already exists" => "Το βιβλίο διευθύνσεων με το όνομα {name} υπάρχει ήδη ",
 "Failed adding address book: {error}" => "Αποτυχία πρόσθεσης βιβλίου διευθύνσεων: {error}",
 "Failed loading address books: {error}" => "Αποτυχία φόρτωσης βιβλίων διευθύνσεων: {error}",
+"Server error! Please inform system administator" => "Σφάλμα διακομιστή! Παρακαλώ ενημερώστε το διαχειριστή",
 "Indexing contacts" => "Ευρετηρίαση επαφών",
 "Unrecoverable error loading address books: {msg}" => "Ανεπανόρθωτο σφάλμα κατά τη φόρτωση των βιβλίων διευθύνσεων: {msg}",
 "Error." => "Σφάλμα.",
@@ -29,7 +33,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Έχετε επιλέξει πάνω από 300 επαφές.\nΑυτό μάλλον θα αποτύχει! Κλικάρετε εδώ για να δοκιμάσετε ούτως ή άλλως.",
 "Error setting {name} as favorite." => "Σφάλμα κατά τον ορισμό του {name} σαν αγαπημένο.",
 "Merge contacts" => "Συγχώνευση επαφών",
-"Cancel" => "Άκυρο",
 "Add group" => "Προσθήκη ομάδας",
 "OK" => "ΟΚ",
 "Could not find contact: {id}" => "Αδυναμία εύρεσης επαφής: {id}",
@@ -65,7 +68,6 @@
 "Importing..." => "Γίνεται εισαγωγή...",
 "Import done" => "Η εισαγωγή ολοκληρώθηκε",
 "Close" => "Κλείσιμο",
-"Server error! Please inform system administator" => "Σφάλμα διακομιστή! Παρακαλώ ενημερώστε το διαχειριστή",
 "Failed loading photo: {error}" => "Αποτυχία φόρτωσης φωτογραφίας: {error}",
 "You do not have permissions to see this contacts" => "Δεν έχετε άδεια για να δείτε αυτήν την επαφή",
 "Contact not found" => "Δεν βρέθηκε επαφή",
@@ -155,6 +157,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Εργασία",
 "Home" => "Σπίτι",
 "Mobile" => "Κινητό",
@@ -242,5 +245,10 @@
 "Share" => "Διαμοιρασμός",
 "Export" => "Εξαγωγή",
 "CardDAV link" => "Σύνδεσμος CardDAV",
-"Edit" => "Επεξεργασία"
+"Edit" => "Επεξεργασία",
+"Description" => "Περιγραφή",
+"Anonymous" => "Ανώνυμος",
+"User" => "Χρήστης",
+"Password" => "Κωδικός πρόσβασης",
+"Base DN" => "Base DN"
 );

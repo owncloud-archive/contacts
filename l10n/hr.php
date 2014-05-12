@@ -1,7 +1,10 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakti",
-"Save" => "Snimi",
+"Ok" => "U redu",
 "Cancel" => "Odustani",
+"Save" => "Snimi",
+"Edit Addressbook" => "Uredi adresar",
+"OK" => "U redu",
 "Add" => "Dodaj",
 "Import" => "Uvezi",
 "Close" => "Zatvori",
@@ -29,6 +32,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Posao",
 "Home" => "Kuća",
 "Mobile" => "Mobitel",
@@ -66,5 +70,7 @@
 "Active" => "Aktivno",
 "Share" => "Podijeli",
 "Export" => "Izvoz",
-"Edit" => "Uredi"
+"Edit" => "Uredi",
+"Description" => "Opis",
+"Password" => "Lozinka"
 );

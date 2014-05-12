@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kotaktar",
+"Ok" => "Greitt",
+"Cancel" => "Avbryt",
 "Save" => "Lagra",
+"Edit Addressbook" => "Endre adressebok",
 "An address book called {name} already exists" => "Det finst alt ei adressebok som heiter {name}",
 "Failed adding address book: {error}" => "Klarte ikkje leggja til adresseboka: {error}",
 "Failed loading address books: {error}" => "Klarte ikkje lasta adressebøkene: {error}",
@@ -21,7 +24,6 @@
 "Error removing from group." => "Klarte ikkje fjerna frå gruppe.",
 "Error setting {name} as favorite." => "Klarte ikkje lagra {name} som favoritt.",
 "Merge contacts" => "Føy saman kontaktar",
-"Cancel" => "Avbryt",
 "Add group" => "Legg til gruppe",
 "OK" => "Greitt",
 "Could not find contact: {id}" => "Klarte ikkje finna kontakt: {id}",
@@ -50,6 +52,7 @@
 "Could not set preference: " => "Klarte ikkje lagra innstilling:",
 "Contact" => "Kontakt",
 "Other" => "Anna",
+"ownCloud" => "ownCloud",
 "Work" => "Arbeid",
 "Home" => "Heime",
 "Mobile" => "Mobil",
@@ -80,5 +83,8 @@
 "Active" => "Aktiv",
 "Share" => "Del",
 "Export" => "Eksporter",
-"Edit" => "Endra"
+"Edit" => "Endra",
+"Description" => "Skildring",
+"User" => "Brukar",
+"Password" => "Passord"
 );

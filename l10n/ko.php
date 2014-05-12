@@ -1,9 +1,13 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "연락처",
+"Ok" => "확인",
+"Cancel" => "취소",
 "Save" => "저장",
+"Edit Addressbook" => "주소록 편집",
 "An address book called {name} already exists" => "주소록 {name}이(가) 이미 존재함",
 "Failed adding address book: {error}" => "주소록 추가 실패: {error}",
 "Failed loading address books: {error}" => "주소록 불러오기 실패: {error}",
+"Server error! Please inform system administator" => "서버 오류! 시스템 관리자에게 연락하십시오",
 "Indexing contacts" => "연락처 색인 중",
 "Unrecoverable error loading address books: {msg}" => "주소록을 불러오는 중 복구할 수 없는 오류 발생: {msg}",
 "Error." => "오류.",
@@ -22,7 +26,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "300명 이상의 연락처를 선택하였습니다.\n오류가 발생할 수도 있습니다! 그래도 시도하려면 여기를 누르십시오.",
 "Error setting {name} as favorite." => "{name} 님을 즐겨찾는 연락처로 설정할 수 없음.",
 "Merge contacts" => "연락처 합치기",
-"Cancel" => "취소",
 "Add group" => "그룹 추가",
 "OK" => "확인",
 "Could not find contact: {id}" => "연락처를 찾을 수 없음: {id}",
@@ -55,7 +58,6 @@
 "Importing..." => "가져오는 중...",
 "Import done" => "가져오기 완료",
 "Close" => "닫기",
-"Server error! Please inform system administator" => "서버 오류! 시스템 관리자에게 연락하십시오",
 "Failed loading photo: {error}" => "사진 불러오기 오류: {error}",
 "You do not have permissions to see this contacts" => "연락처를 볼 수 있는 권한이 없습니다",
 "Contact not found" => "연락처를 찾을 수 없음",
@@ -137,6 +139,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "직장",
 "Home" => "가정",
 "Mobile" => "휴대폰",
@@ -214,5 +217,9 @@
 "Share" => "공유",
 "Export" => "내보내기",
 "CardDAV link" => "CardDAV 링크",
-"Edit" => "편집"
+"Edit" => "편집",
+"Description" => "종류",
+"User" => "사용자 이름",
+"Password" => "암호",
+"Base DN" => "기본 DN"
 );

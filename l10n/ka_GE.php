@@ -1,7 +1,8 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "კონტაქტები",
-"Save" => "შენახვა",
+"Ok" => "დიახ",
 "Cancel" => "უარყოფა",
+"Save" => "შენახვა",
 "OK" => "დიახ",
 "Add" => "დამატება",
 "Shared by {owner}" => "გაზიარდა {owner} –ის მიერ",
@@ -19,6 +20,7 @@
 "Not enough storage available" => "საცავში საკმარისი ადგილი არ არის",
 "Contact" => "კონტაქტი",
 "Other" => "სხვა",
+"ownCloud" => "ownCloud–ი",
 "Work" => "სამსახური",
 "Home" => "სახლი",
 "Mobile" => "მობილური",
@@ -51,5 +53,9 @@
 "Active" => "აქტიური",
 "Share" => "გაზიარება",
 "Export" => "ექსპორტი",
-"Edit" => "რედაქტირება"
+"Edit" => "რედაქტირება",
+"Description" => "გვერდის დახასიათება",
+"User" => "მომხმარებელი",
+"Password" => "პაროლი",
+"Base DN" => "საწყისი DN"
 );

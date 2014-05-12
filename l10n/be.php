@@ -1,3 +1,4 @@
 <?php $TRANSLATIONS = array(
-"Error" => "Памылка"
+"Ok" => "Добра",
+"OK" => "Добра"
 );

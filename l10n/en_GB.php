@@ -1,5 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contacts",
+"Ok" => "OK",
+"Cancel" => "Cancel",
 "Save" => "Save",
 "Starting file import" => "Starting file import",
 "Format selected: {format}" => "Format selected: {format}",
@@ -9,6 +11,7 @@
 "An address book called {name} already exists" => "An address book called {name} already exists",
 "Failed adding address book: {error}" => "Failed adding address book: {error}",
 "Failed loading address books: {error}" => "Failed loading address books: {error}",
+"Server error! Please inform system administator" => "Server error! Please inform a system administrator",
 "Indexing contacts" => "Indexing contacts",
 "Unrecoverable error loading address books: {msg}" => "Unrecoverable error loading address books: {msg}",
 "Error." => "Error.",
@@ -29,7 +32,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway.",
 "Error setting {name} as favorite." => "Error setting {name} as favourite.",
 "Merge contacts" => "Merge contacts",
-"Cancel" => "Cancel",
 "Add group" => "Add group",
 "OK" => "OK",
 "Could not find contact: {id}" => "Could not find contact: {id}",
@@ -65,7 +67,6 @@
 "Importing..." => "Importing...",
 "Import done" => "Import done",
 "Close" => "Close",
-"Server error! Please inform system administator" => "Server error! Please inform a system administrator",
 "Failed loading photo: {error}" => "Failed to load photo: {error}",
 "You do not have permissions to see this contacts" => "You do not have permission to see these contacts",
 "Contact not found" => "Contact not found",
@@ -156,6 +157,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Work",
 "Home" => "Home",
 "Mobile" => "Mobile",
@@ -244,5 +246,9 @@
 "Share" => "Share",
 "Export" => "Export",
 "CardDAV link" => "CardDAV link",
-"Edit" => "Edit"
+"Edit" => "Edit",
+"Description" => "Description",
+"User" => "User",
+"Password" => "Password",
+"Base DN" => "Base DN"
 );

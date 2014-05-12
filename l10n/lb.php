@@ -1,10 +1,12 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakter",
+"Ok" => "OK",
+"Cancel" => "Ofbriechen",
 "Save" => "Späicheren",
+"Edit Addressbook" => "Adressbuch editéieren",
 "Error." => "Fehler.",
 "Add group..." => "Grupp bäisetzen...",
 "Select photo" => "Foto auswielen",
-"Cancel" => "Ofbriechen",
 "Add group" => "Grupp bäisetzen",
 "OK" => "OK",
 "# groups" => "# Gruppen",
@@ -41,6 +43,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Aarbecht",
 "Home" => "Doheem",
 "Mobile" => "GSM",
@@ -81,5 +84,7 @@
 "Share" => "Deelen",
 "Export" => "Exporteieren",
 "CardDAV link" => "CardDav Link",
-"Edit" => "Editéieren"
+"Edit" => "Editéieren",
+"Description" => "Beschreiwung",
+"Password" => "Passwuert"
 );

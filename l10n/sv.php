@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakter",
+"Ok" => "Ok",
+"Cancel" => "Avbryt",
 "Save" => "Spara",
+"Edit Addressbook" => "Redigera adressbok",
 "Starting file import" => "Startar fil import",
 "Format selected: {format}" => "Format valt: {format}",
 "Automatic format detection" => "Automatisk detektering av format",
@@ -9,6 +12,7 @@
 "An address book called {name} already exists" => "En adressbok vid namn {name} finns redan",
 "Failed adding address book: {error}" => "Kan inte lägga till adressbok: {error}",
 "Failed loading address books: {error}" => "Misslyckades ladda adressböcker: {error}",
+"Server error! Please inform system administator" => "Serverfel! Vänligen Informera administratören.",
 "Indexing contacts" => "Indexerar kontakter",
 "Unrecoverable error loading address books: {msg}" => "Irreparabelt fel när adressböckerna skulle laddas: {msg}",
 "Error." => "Fel.",
@@ -29,7 +33,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Du har valt mer än 300 kontakter.\nDetta kommer troligen misslyckas! Klicka här för att försöka i alla fall.",
 "Error setting {name} as favorite." => "Fel när {name} skulle läggas till favoriter.",
 "Merge contacts" => "Sammanfoga kontakter",
-"Cancel" => "Avbryt",
 "Add group" => "Lägg till grupp",
 "OK" => "OK",
 "Could not find contact: {id}" => "Kunde inte hitta kontakt: {id}",
@@ -65,7 +68,6 @@
 "Importing..." => "Importerar...",
 "Import done" => "Import klar",
 "Close" => "Stäng",
-"Server error! Please inform system administator" => "Serverfel! Vänligen Informera administratören.",
 "Failed loading photo: {error}" => "Kan inte ladda foton:{error}",
 "You do not have permissions to see this contacts" => "Du saknar behörighet för att se denna kontakt",
 "Contact not found" => "Kontakten kunde inte hittas",
@@ -156,6 +158,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Arbete",
 "Home" => "Hem",
 "Mobile" => "Mobil",
@@ -244,5 +247,9 @@
 "Share" => "Dela",
 "Export" => "Exportera",
 "CardDAV link" => "CardDAV-länk",
-"Edit" => "Redigera"
+"Edit" => "Redigera",
+"Description" => "Beskrivning",
+"User" => "Användare",
+"Password" => "Lösenord",
+"Base DN" => "Start DN"
 );

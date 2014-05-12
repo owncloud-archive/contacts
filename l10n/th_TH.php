@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ข้อมูลผู้ติดต่อ",
+"Ok" => "ตกลง",
+"Cancel" => "ยกเลิก",
 "Save" => "บันทึก",
+"Edit Addressbook" => "แก้ไขสมุดบันทึกที่อยู่",
 "Indexing contacts" => "จัดทำสารบัญรายชื่อผู้ติดต่อ",
 "Error." => "ข้อผิดพลาด",
 "Add to..." => "เพิ่มเข้าไปที่...",
@@ -11,7 +14,6 @@
 "Error adding to group." => "เกิดข้อผิดพลาดในการเพิ่มเข้าไปยังกลุ่ม",
 "Error removing from group." => "เกิดข้อผิดพลาดในการลบออกจากกลุ่ม",
 "Merge contacts" => "รวมข้อมูลผู้ติดต่อ",
-"Cancel" => "ยกเลิก",
 "Add group" => "เพิ่มกลุ่ม",
 "OK" => "ตกลง",
 "Edit profile picture" => "แก้ไขรูปภาพหน้าโปรไฟล์",
@@ -73,6 +75,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "ที่ทำงาน",
 "Home" => "บ้าน",
 "Mobile" => "มือถือ",
@@ -139,5 +142,9 @@
 "Active" => "เปิดใช้",
 "Share" => "แชร์",
 "Export" => "ส่งออก",
-"Edit" => "แก้ไข"
+"Edit" => "แก้ไข",
+"Description" => "คำอธิบาย",
+"User" => "ผู้ใช้งาน",
+"Password" => "รหัสผ่าน",
+"Base DN" => "DN ฐาน"
 );

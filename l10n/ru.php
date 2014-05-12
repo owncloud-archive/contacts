@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакты",
+"Ok" => "Ок",
+"Cancel" => "Отменить",
 "Save" => "Сохранить",
+"Edit Addressbook" => "Править адресную книгу",
 "Starting file import" => "Начинается импорт",
 "Format selected: {format}" => "Выбран формат: {format}",
 "Automatic format detection" => "Автоматическое определение формата",
@@ -9,6 +12,7 @@
 "An address book called {name} already exists" => "Адресная книга {name} уже существует",
 "Failed adding address book: {error}" => "Не удалось добавить адресную книгу: {error}",
 "Failed loading address books: {error}" => "Ошибка загрузки адресных книг: {error}",
+"Server error! Please inform system administator" => "Ошибка сервера! Пожалуйста, уведомите об этом системного администратора",
 "Indexing contacts" => "Индексация контактов",
 "Unrecoverable error loading address books: {msg}" => "Невосстановимая ошибка загрузки адресных книг: {msg}",
 "Error." => "Ошибка.",
@@ -29,7 +33,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Вы выбрали более 300 контактов.\nCкорее всего, это действие закончится неудачей! Нажмите сюда, чтобы в любом случае попробовать.",
 "Error setting {name} as favorite." => "Ошибка установки {name} избранным.",
 "Merge contacts" => "Объединить контакты",
-"Cancel" => "Отменить",
 "Add group" => "Добавить группу",
 "OK" => "ОК",
 "Could not find contact: {id}" => "Не удалось найти контакт: {id}",
@@ -65,7 +68,6 @@
 "Importing..." => "Импортирую...",
 "Import done" => "Импорт завершен",
 "Close" => "Закрыть",
-"Server error! Please inform system administator" => "Ошибка сервера! Пожалуйста, уведомите об этом системного администратора",
 "Failed loading photo: {error}" => "Ошибка загрузки фото: {error}",
 "You do not have permissions to see this contacts" => "У Вас нет разрешений просматривать этот контакт.",
 "Contact not found" => "Контакт не найден",
@@ -155,6 +157,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Рабочий",
 "Home" => "Домашний",
 "Mobile" => "Мобильный",
@@ -243,5 +246,9 @@
 "Share" => "Открыть доступ",
 "Export" => "Экспорт",
 "CardDAV link" => "Ссылка CardDAV",
-"Edit" => "Редактировать"
+"Edit" => "Редактировать",
+"Description" => "Описание",
+"User" => "Пользователь",
+"Password" => "Пароль",
+"Base DN" => "Базовый DN"
 );

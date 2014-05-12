@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "אנשי קשר",
-"Save" => "שמירה",
+"Ok" => "בסדר",
 "Cancel" => "ביטול",
+"Save" => "שמירה",
+"Edit Addressbook" => "עריכת פנקס הכתובות",
 "OK" => "אישור",
 "Add" => "הוספה",
 "Shared by {owner}" => "שותף בידי {owner}",
@@ -26,6 +28,7 @@
 "Error uploading contacts to storage." => "התרשה שגיאה בהעלאת אנשי הקשר לאכסון.",
 "Contact" => "איש קשר",
 "Other" => "אחר",
+"ownCloud" => "ownCloud",
 "Work" => "עבודה",
 "Home" => "בית",
 "Mobile" => "נייד",
@@ -66,5 +69,8 @@
 "Active" => "פעיל",
 "Share" => "שיתוף",
 "Export" => "ייצוא",
-"Edit" => "עריכה"
+"Edit" => "עריכה",
+"Description" => "תיאור",
+"User" => "שתמש",
+"Password" => "סיסמא"
 );

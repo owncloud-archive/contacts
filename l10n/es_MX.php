@@ -1,9 +1,12 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contactos",
+"Ok" => "Aceptar",
+"Cancel" => "Cancelar",
 "Save" => "Guardar",
 "An address book called {name} already exists" => "Ya existe una libreta de contactos llamada {name}",
 "Failed adding address book: {error}" => "Hubo un fallo al agregar la libreta de contactos: {error}",
 "Failed loading address books: {error}" => "Se produjo un error al cargar las libretas de contactos: {error}",
+"Server error! Please inform system administator" => "Error en el servidor. Por favor, informe al administrador.",
 "Indexing contacts" => "Indexando contactos",
 "Unrecoverable error loading address books: {msg}" => "Error irrecuperable mientras se cargaban las libretas de contactos: {msg}",
 "Error." => "Error.",
@@ -22,7 +25,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Ha seleccionado más de 300 contactos.\n¡Puede que no tenga éxito! Pulse aquí para intentarlo de todas formas.",
 "Error setting {name} as favorite." => "Error configurando {name} como favorito.",
 "Merge contacts" => "Combinar contactos",
-"Cancel" => "Cancelar",
 "Add group" => "Añadir grupo",
 "OK" => "Aceptar",
 "Could not find contact: {id}" => "No se puede encontrar el contacto: {id}",
@@ -55,7 +57,6 @@
 "Importing..." => "Importando...",
 "Import done" => "Importación realizada",
 "Close" => "Cerrar",
-"Server error! Please inform system administator" => "Error en el servidor. Por favor, informe al administrador.",
 "Failed loading photo: {error}" => "Error cargando foto: {error}",
 "You do not have permissions to see this contacts" => "No tiene permisos para ver este contacto",
 "Contact not found" => "Contacto no encontrado",
@@ -214,5 +215,8 @@
 "Share" => "Compartir",
 "Export" => "Exportar",
 "CardDAV link" => "Enlace CardDav",
-"Edit" => "Editar"
+"Edit" => "Editar",
+"Description" => "Descripción",
+"User" => "Usuario",
+"Password" => "Contraseña"
 );

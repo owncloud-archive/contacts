@@ -1,6 +1,8 @@
 <?php $TRANSLATIONS = array(
-"Save" => "Vista",
+"Ok" => "Í lagi",
 "Cancel" => "Hætta við",
+"Save" => "Vista",
+"OK" => "Í lagi",
 "Add" => "Bæta við",
 "Import" => "Flytja inn",
 "Close" => "Loka",
@@ -23,5 +25,6 @@
 "Birthday" => "Afmælisdagur",
 "Share" => "Deila",
 "Export" => "Flytja út",
-"Edit" => "Breyta"
+"Edit" => "Breyta",
+"Password" => "Lykilorð"
 );

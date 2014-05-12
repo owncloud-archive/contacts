@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "通訊錄",
+"Ok" => "好",
+"Cancel" => "取消",
 "Save" => "儲存",
+"Edit Addressbook" => "編輯電話簿",
 "An address book called {name} already exists" => "通訊錄 {name} 已存在",
 "Failed adding address book: {error}" => "通訊錄匯入失敗：{error}",
 "Failed loading address books: {error}" => "通訊錄載入失敗：{error}",
@@ -21,7 +24,6 @@
 "Error removing from group." => "從群組中移除出錯。",
 "Error setting {name} as favorite." => "設定 {name} 為最愛時發生錯誤。",
 "Merge contacts" => "合併聯絡人",
-"Cancel" => "取消",
 "Add group" => "新增群組",
 "OK" => "好",
 "Could not find contact: {id}" => "找不到聯絡人：{id}",
@@ -127,6 +129,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "工作",
 "Home" => "住宅",
 "Mobile" => "行動電話",
@@ -203,5 +206,12 @@
 "Share" => "分享",
 "Export" => "匯出",
 "CardDAV link" => "顯示 CardDav 連結",
-"Edit" => "編輯"
+"Edit" => "編輯",
+"Description" => "描述",
+"Anonymous" => "匿名",
+"User" => "使用者名稱",
+"Password" => "密碼",
+"Base DN for search" => "Base DN for search",
+"Base DN" => "Base DN",
+"Base DN for modification" => "Base DN for modification"
 );

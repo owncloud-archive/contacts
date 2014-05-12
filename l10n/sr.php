@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакти",
-"Save" => "Сачувај",
+"Ok" => "У реду",
 "Cancel" => "Откажи",
+"Save" => "Сачувај",
+"Edit Addressbook" => "Уреди адресар",
 "OK" => "У реду",
 "Add" => "Додај",
 "Import" => "Увези",
@@ -18,6 +20,7 @@
 "Not enough storage available" => "Нема довољно простора",
 "Contact" => "Контакт",
 "Other" => "Друго",
+"ownCloud" => "ownCloud",
 "Work" => "Посао",
 "Home" => "Кућа",
 "Mobile" => "Мобилни",
@@ -43,5 +46,8 @@
 "Active" => "Активан",
 "Share" => "Дели",
 "Export" => "Извези",
-"Edit" => "Уреди"
+"Edit" => "Уреди",
+"Description" => "Опис",
+"Password" => "Лозинка",
+"Base DN" => "База DN"
 );

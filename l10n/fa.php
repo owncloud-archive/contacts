@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ارتباط‌ها",
+"Ok" => "قبول",
+"Cancel" => "منصرف شدن",
 "Save" => "ذخیره",
+"Edit Addressbook" => "ویرایش کتابچه نشانی",
 "An address book called {name} already exists" => "دفتر تلفن با نام {name} در حال حاضر وجود دارد",
 "Failed adding address book: {error}" => "خطا در خصوص اضافه نمودن دفتر تلفن: {error}",
 "Failed loading address books: {error}" => "خطا در خصوص فراخوانی دفتر تلفن: {error}",
@@ -10,7 +13,6 @@
 "Remove from..." => "حذف از...",
 "Add group..." => "اضافه کردن گروه...",
 "Select photo" => "تصویر را انتخاب کنید",
-"Cancel" => "منصرف شدن",
 "OK" => "باشه",
 "Add" => "افزودن",
 "Shared by {owner}" => "اشتراک گذارنده {owner}",
@@ -37,6 +39,7 @@
 "Could not set preference: " => "نمی‌توان تنظیمات را ثبت نمود:",
 "Contact" => "اشخاص",
 "Other" => "دیگر",
+"ownCloud" => "ownCloud",
 "Work" => "کار",
 "Home" => "خانه",
 "Mobile" => "موبایل",
@@ -77,5 +80,9 @@
 "Active" => "فعال",
 "Share" => "اشتراک‌گذاری",
 "Export" => "گرفتن خروجی",
-"Edit" => "ویرایش"
+"Edit" => "ویرایش",
+"Description" => "توضیحات",
+"User" => "کاربر",
+"Password" => "گذرواژه",
+"Base DN" => "پایه DN"
 );

@@ -1,7 +1,8 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ঠিকানাপঞ্জী",
-"Save" => "সংরক্ষণ",
+"Ok" => "তথাস্তু",
 "Cancel" => "বাতির",
+"Save" => "সংরক্ষণ",
 "OK" => "তথাস্তু",
 "Add" => "যোগ কর",
 "Please choose the addressbook" => "ঠিকানাপঞ্জীটি নির্বাচন করুন",
@@ -30,5 +31,8 @@
 "Active" => "সক্রিয়",
 "Share" => "ভাগাভাগি কর",
 "Export" => "রপ্তানি",
-"Edit" => "সম্পাদনা"
+"Edit" => "সম্পাদনা",
+"Description" => "বিবরণ",
+"Password" => "কূটশব্দ",
+"Base DN" => "ভিত্তি  DN"
 );

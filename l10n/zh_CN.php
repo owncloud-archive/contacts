@@ -1,6 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "联系人",
+"Ok" => "好",
+"Cancel" => "取消",
 "Save" => "保存",
+"Edit Addressbook" => "编辑地址簿",
 "Starting file import" => "开始文件导入",
 "Format selected: {format}" => "已选择格式：{format}",
 "Automatic format detection" => "自动格式检测",
@@ -25,7 +28,6 @@
 "Error removing from group." => "从组删除时出错。",
 "Error setting {name} as favorite." => "无法将{name}设为喜欢。",
 "Merge contacts" => "合并联系人",
-"Cancel" => "取消",
 "Add group" => "添加分组",
 "OK" => "OK",
 "Could not find contact: {id}" => "不能找到联系人: {id}",
@@ -140,6 +142,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "工作",
 "Home" => "家庭",
 "Mobile" => "手机",
@@ -220,5 +223,9 @@
 "Share" => "共享",
 "Export" => "导出",
 "CardDAV link" => "CardDAV 链接",
-"Edit" => "编辑"
+"Edit" => "编辑",
+"Description" => "描述",
+"User" => "用户",
+"Password" => "密码",
+"Base DN" => "Base DN"
 );

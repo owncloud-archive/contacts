@@ -1,9 +1,13 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakter",
+"Ok" => "Ok",
+"Cancel" => "Avbryt",
 "Save" => "Lagre",
+"Edit Addressbook" => "Endre adressebok",
 "An address book called {name} already exists" => "En adressebok med navn {name} finnes allerede",
 "Failed adding address book: {error}" => "Klarte ikke å legge til adressebok: {error}",
 "Failed loading address books: {error}" => "Klarte ikke å laste adressebøker: {error}",
+"Server error! Please inform system administator" => "Serverfeil! Vennligst informer systemadministratoren",
 "Indexing contacts" => "Indekserer kontakter",
 "Unrecoverable error loading address books: {msg}" => "Ugjenopprettelig feil ved lasting av adressebøker: {msg}",
 "Error." => "Feil.",
@@ -22,7 +26,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Du har valgt over 300 kontakter.\nDette vil sannsynligvis feile! Klikk her for å prøve uansett.",
 "Error setting {name} as favorite." => "Feil ved setting av {name} som favoritt.",
 "Merge contacts" => "Flett kontakter",
-"Cancel" => "Avbryt",
 "Add group" => "Legg til gruppe",
 "OK" => "OK",
 "Could not find contact: {id}" => "Fant ikke kontakt: {id}",
@@ -57,7 +60,6 @@
 "Importing..." => "Importerer...",
 "Import done" => "Import utført",
 "Close" => "Lukk",
-"Server error! Please inform system administator" => "Serverfeil! Vennligst informer systemadministratoren",
 "Failed loading photo: {error}" => "Lasting av bilde feilet: {error}",
 "You do not have permissions to see this contacts" => "Du har ikke adgang til å se denne kontakten",
 "Contact not found" => "Fant ikke kontakt",
@@ -141,6 +143,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Arbeid",
 "Home" => "Hjem",
 "Mobile" => "Mobil",
@@ -224,5 +227,9 @@
 "Share" => "Del",
 "Export" => "Eksporter",
 "CardDAV link" => "CardDAV-lenke",
-"Edit" => "Endre"
+"Edit" => "Endre",
+"Description" => "Beskrivelse",
+"User" => "Bruker",
+"Password" => "Passord",
+"Base DN" => "Base DN"
 );

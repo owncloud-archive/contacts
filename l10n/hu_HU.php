@@ -1,9 +1,13 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Névjegyek",
+"Ok" => "Ok",
+"Cancel" => "Mégsem",
 "Save" => "Mentés",
+"Edit Addressbook" => "Címlista szerkesztése",
 "An address book called {name} already exists" => "\"{name}\" névvel már létezik névjegy",
 "Failed adding address book: {error}" => "Nem sikerült hozzáadni a címjegyzékhez: {error}",
 "Failed loading address books: {error}" => "Hiba a címjegyzék betöltésekor: {error}",
+"Server error! Please inform system administator" => "Kiszolgáló hiba! Értesítse a rendszergazdát!",
 "Indexing contacts" => "Névjegyek indexelése",
 "Unrecoverable error loading address books: {msg}" => "Helyrehozhatatlan hiba a címjegyzékek betöltésekor: {msg}",
 "Error." => "Hiba.",
@@ -22,7 +26,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "300-nál több adatot választott a címjegyzékből. Ez valószínűleg hibát fog okozni. Kattintson ide, ha mégis meg akarja próbálni!",
 "Error setting {name} as favorite." => "Nem sikerült \"{name}\"-t kedvencként beállítani.",
 "Merge contacts" => "Névjegyek összefűzése.",
-"Cancel" => "Mégsem",
 "Add group" => "Csoport hozzáadása",
 "OK" => "OK",
 "Could not find contact: {id}" => "Nem található a névjegy: {id}",
@@ -57,7 +60,6 @@
 "Importing..." => "Importálás...",
 "Import done" => "Importálás befejezve",
 "Close" => "Bezárás",
-"Server error! Please inform system administator" => "Kiszolgáló hiba! Értesítse a rendszergazdát!",
 "Failed loading photo: {error}" => "Hiba a kép betöltésekor: {error}",
 "You do not have permissions to see this contacts" => "Nincs jogosultsága a névjegy megtekintéséhez",
 "Contact not found" => "Kapcsolat nem található",
@@ -139,6 +141,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Munkahelyi",
 "Home" => "Otthoni",
 "Mobile" => "Mobil",
@@ -220,5 +223,9 @@
 "Share" => "Megosztás",
 "Export" => "Exportálás",
 "CardDAV link" => "CardDav hivatkozás",
-"Edit" => "Szerkesztés"
+"Edit" => "Szerkesztés",
+"Description" => "Leírás",
+"User" => "Felhasználó",
+"Password" => "Jelszó",
+"Base DN" => "DN-gyökér"
 );

@@ -1,5 +1,7 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "தொடர்புகள்",
+"Ok" => "சரி",
+"Cancel" => "இரத்து செய்க",
 "Save" => "சேமிக்க ",
 "Indexing contacts" => "தொடர்புகளை அட்டவணையிடுதல்",
 "Add to..." => "இற்கு சேர்க்கப்பட்டது...",
@@ -9,7 +11,6 @@
 "Network or server error. Please inform administrator." => "வ​லைய​மைப்பு அல்லது சேவையக வழு. தயவுசெய்து நிர்வாகிக்கு தெரியப்படுத்தவும்.",
 "Error adding to group." => "குழுவில் சேர்ப்பதில் வழு.",
 "Error removing from group." => "குழுவிலிருந்து அகற்றுவதிலிருந்து வழு.",
-"Cancel" => "இரத்து செய்க",
 "Add group" => "குழுவில் சேர்க்க",
 "OK" => "சரி ",
 "Edit profile picture" => "விபரக்கோவை படத்தை தொகுக்க ",
@@ -61,6 +62,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "OwnCloud",
 "Work" => "வேலை",
 "Home" => "அகம்",
 "Mobile" => "இடமாற்றக்கூடிய",
@@ -125,5 +127,9 @@
 "Active" => "இயங்கும்",
 "Share" => "பகிர்வு",
 "Export" => "ஏற்றுமதி",
-"Edit" => "தொகுக்க"
+"Edit" => "தொகுக்க",
+"Description" => "விவரிப்பு",
+"User" => "பயனாளர்",
+"Password" => "கடவுச்சொல்",
+"Base DN" => "தள DN"
 );

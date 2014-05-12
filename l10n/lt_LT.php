@@ -1,9 +1,13 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontaktai",
+"Ok" => "Gerai",
+"Cancel" => "Atšaukti",
 "Save" => "Išsaugoti",
+"Edit Addressbook" => "Redaguoti adresų knygą",
 "An address book called {name} already exists" => "Adresų knyga pavadinimu {group} jau egzistuoja",
 "Failed adding address book: {error}" => "Nepavyko pridėti adresų knygos: {error}",
 "Failed loading address books: {error}" => "Nepavyko įkelti adresų knygų: {error}",
+"Server error! Please inform system administator" => "Serverio klaida! Prašome informuoti administratorių",
 "Indexing contacts" => "Indeksuojami kontaktai",
 "Error." => "Klaida.",
 "Add to..." => "Pridėti į...",
@@ -21,7 +25,6 @@
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Jūs pažymėjote daugiau nei 300 kontaktų.\nTai greičiausiai nepavyks! Spauskite, kad vis tiek bandyti.",
 "Error setting {name} as favorite." => "Klaida nustatant {name} mėgstamu.",
 "Merge contacts" => "Sulieti kontaktus",
-"Cancel" => "Atšaukti",
 "Add group" => "Pridėti grupę",
 "OK" => "Gerai",
 "Could not find contact: {id}" => "Nepavyko rasti kontakto: {id}",
@@ -56,7 +59,6 @@
 "Importing..." => "Importuojama...",
 "Import done" => "Importas baigas",
 "Close" => "Užverti",
-"Server error! Please inform system administator" => "Serverio klaida! Prašome informuoti administratorių",
 "Failed loading photo: {error}" => "Nepavyko įkelti nuotraukos: {error}",
 "You do not have permissions to see this contacts" => "Jūs neturite leidimo matyti šių kontaktų",
 "Contact not found" => "Kontaktas nerastas",
@@ -132,6 +134,7 @@
 "Skype" => "Skype",
 "QQ" => "QQ",
 "GaduGadu" => "GaduGadu",
+"ownCloud" => "ownCloud",
 "Work" => "Darbas",
 "Home" => "Namų",
 "Mobile" => "Mobilusis",
@@ -213,5 +216,9 @@
 "Share" => "Dalintis",
 "Export" => "Eksportuoti",
 "CardDAV link" => "CardDAV nuoroda",
-"Edit" => "Redaguoti"
+"Edit" => "Redaguoti",
+"Description" => "Aprašymas",
+"User" => "Naudotojas",
+"Password" => "Slaptažodis",
+"Base DN" => "Bazinis DN"
 );
