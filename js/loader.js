@@ -51,7 +51,7 @@ OC.ContactsImporter = OC.ContactsImporter || {
 						self.$dialog = null;
 					}
 				});
-				self.$importIntoSelect = self.$dialog.find('#import_into');
+				self.$importIntoSelect = $('#contacts-import-into');
 				self.$importIntoSelect.on('change', function() {
 					var $selected = $(this).find('option:selected');
 					if($(this).val() === '-1') {
