@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contacts",
+"Ok" => "OK",
 "Cancel" => "Cancel",
 "Save" => "Save",
 "Starting file import" => "Starting file import",
@@ -245,5 +246,9 @@
 "Share" => "Share",
 "Export" => "Export",
 "CardDAV link" => "CardDAV link",
-"Edit" => "Edit"
+"Edit" => "Edit",
+"Description" => "Description",
+"User" => "User",
+"Password" => "Password",
+"Base DN" => "Base DN"
 );

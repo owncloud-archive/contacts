@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-11 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 04:49+0000\n"
+"POT-Creation-Date: 2014-05-12 00:49-0400\n"
+"PO-Revision-Date: 2014-05-11 05:01+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr ""
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
@@ -52,7 +52,7 @@ msgstr "Uložit"
 
 #: js/addressbooks.js:162
 msgid "Edit Addressbook"
-msgstr ""
+msgstr "Editace adresáře"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
@@ -1094,7 +1094,7 @@ msgstr ""
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
@@ -1102,7 +1102,7 @@ msgstr ""
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anonymní"
 
 #: templates/contacts.php:560
 msgid "Read-only"
@@ -1114,11 +1114,11 @@ msgstr ""
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
-msgstr ""
+msgstr "Uživatel"
 
 #: templates/contacts.php:574 templates/contacts.php:577
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
@@ -1126,11 +1126,11 @@ msgstr ""
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Výchozí DN pro vyhledávávní"
 
 #: templates/contacts.php:591
 msgid "Base DN"
-msgstr ""
+msgstr "Základní DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
@@ -1142,7 +1142,7 @@ msgstr ""
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Výchozí DN pro změnu"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"

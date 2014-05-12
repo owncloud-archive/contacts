@@ -1,9 +1,13 @@
 <?php $TRANSLATIONS = array(
+"Contacts" => "ទំនាក់​ទំនង",
+"Ok" => "ព្រម",
 "Cancel" => "លើកលែង",
 "Save" => "រក្សាទុក",
+"An address book called {name} already exists" => "មាន​សៀវភៅ​អាសយដ្ឋាន​ឈ្មោះ {name} រួច​ហើយ",
 "OK" => "OK",
 "Add" => "បញ្ចូល",
 "Import" => "នាំយកចូល",
+"Importing..." => "កំពុង​នាំចូល...",
 "Close" => "បិទ",
 "Unknown error" => "មិន​ស្គាល់​កំហុស",
 "Other" => "ផ្សេងៗ",
@@ -20,5 +24,8 @@
 "Birthday" => "ថ្ងៃ​កំណើត",
 "Share" => "ចែក​រំលែក",
 "Export" => "នាំចេញ",
-"Edit" => "កែ"
+"Edit" => "កែ",
+"Description" => "ការ​អធិប្បាយ",
+"User" => "អ្នកប្រើ",
+"Password" => "ពាក្យសម្ងាត់"
 );

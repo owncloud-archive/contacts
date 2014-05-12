@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакты",
+"Ok" => "Ок",
 "Cancel" => "Отменить",
 "Save" => "Сохранить",
+"Edit Addressbook" => "Править адресную книгу",
 "Starting file import" => "Начинается импорт",
 "Format selected: {format}" => "Выбран формат: {format}",
 "Automatic format detection" => "Автоматическое определение формата",
@@ -244,5 +246,9 @@
 "Share" => "Открыть доступ",
 "Export" => "Экспорт",
 "CardDAV link" => "Ссылка CardDAV",
-"Edit" => "Редактировать"
+"Edit" => "Редактировать",
+"Description" => "Описание",
+"User" => "Пользователь",
+"Password" => "Пароль",
+"Base DN" => "Базовый DN"
 );

@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakti",
+"Ok" => "Labi",
 "Cancel" => "Atcelt",
 "Save" => "Saglabāt",
 "Error." => "Kļūda.",
@@ -107,5 +108,9 @@
 "Share" => "Dalīties",
 "Export" => "Eksportēt",
 "CardDAV link" => "CardDAV saite",
-"Edit" => "Rediģēt"
+"Edit" => "Rediģēt",
+"Description" => "Apraksts",
+"User" => "Lietotājs",
+"Password" => "Parole",
+"Base DN" => "Bāzes DN"
 );

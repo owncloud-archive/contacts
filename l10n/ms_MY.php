@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Hubungi ",
+"Ok" => "Ok",
 "Cancel" => "Batal",
 "Save" => "Simpan",
+"Edit Addressbook" => "Kemaskini Buku Alamat",
 "Select photo" => "Pilih foto",
 "OK" => "OK",
 "Add" => "Tambah",
@@ -64,5 +66,7 @@
 "Active" => "Aktif",
 "Share" => "Kongsi",
 "Export" => "Export",
-"Edit" => "Sunting"
+"Edit" => "Sunting",
+"Description" => "Keterangan",
+"Password" => "Kata laluan"
 );

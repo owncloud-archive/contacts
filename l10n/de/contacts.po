@@ -42,9 +42,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-11 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-12 00:49-0400\n"
+"PO-Revision-Date: 2014-05-11 11:30+0000\n"
+"Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/owncloud/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,11 +58,11 @@ msgstr "Kontakte"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Neues LDAP-Adressbuch hinzufügen"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
-msgstr ""
+msgstr "OK"
 
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
@@ -75,7 +75,7 @@ msgstr "Speichern"
 
 #: js/addressbooks.js:162
 msgid "Edit Addressbook"
-msgstr ""
+msgstr "Adressbuch editieren"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
@@ -343,7 +343,7 @@ msgstr "Schließen"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Fehler, fehlende Parameter:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -775,15 +775,15 @@ msgstr "Familie"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "LDAP-Backend aktivieren"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "LDAP-Backend für die Kontakte-Anwendungen aktivieren"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Warnung: LDAP-Backend ist im Beta-Modus, mit Vorsichtsmaßnahmen verwenden"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -811,7 +811,7 @@ msgstr "Adressbuch hinzufügen"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "LDAP-Adressbuch hinzufügen"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -1109,76 +1109,76 @@ msgstr "Bearbeiten"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "Adressbuch-URI"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP-URL"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anonym"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Schreibgeschützt"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Schreibgeschützt"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
-msgstr ""
+msgstr "Benutzer"
 
 #: templates/contacts.php:574 templates/contacts.php:577
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Seitengröße"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Basis DN für die Suche"
 
 #: templates/contacts.php:591
 msgid "Base DN"
-msgstr ""
+msgstr "Basis-DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Suchfilter"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Basis DN für Änderungen"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Basis-DN Änderung"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Anschluss"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Anschlusswert (Am Besten einen externen Editor und kopieren/einfügen nutzen)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Kopie von (Warnung, überschreibt den aktuellen benutzerdefinierten Wert)"

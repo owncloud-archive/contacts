@@ -243,5 +243,8 @@
 "Share" => "Compartir",
 "Export" => "Esportar",
 "CardDAV link" => "Enllaz CardDav",
-"Edit" => "Editar"
+"Edit" => "Editar",
+"Description" => "Descripción",
+"User" => "Usuariu",
+"Password" => "Contraseña"
 );

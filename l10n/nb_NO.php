@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakter",
+"Ok" => "Ok",
 "Cancel" => "Avbryt",
 "Save" => "Lagre",
+"Edit Addressbook" => "Endre adressebok",
 "An address book called {name} already exists" => "En adressebok med navn {name} finnes allerede",
 "Failed adding address book: {error}" => "Klarte ikke å legge til adressebok: {error}",
 "Failed loading address books: {error}" => "Klarte ikke å laste adressebøker: {error}",
@@ -225,5 +227,9 @@
 "Share" => "Del",
 "Export" => "Eksporter",
 "CardDAV link" => "CardDAV-lenke",
-"Edit" => "Endre"
+"Edit" => "Endre",
+"Description" => "Beskrivelse",
+"User" => "Bruker",
+"Password" => "Passord",
+"Base DN" => "Base DN"
 );

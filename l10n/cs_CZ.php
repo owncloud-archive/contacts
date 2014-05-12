@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakty",
+"Ok" => "Ok",
 "Cancel" => "Zrušit",
 "Save" => "Uložit",
+"Edit Addressbook" => "Editace adresáře",
 "Starting file import" => "Zahajuje se import souboru",
 "Format selected: {format}" => "Zvolený formát: {format}",
 "Automatic format detection" => "Automatická detekce formátu",
@@ -244,5 +246,12 @@
 "Share" => "Sdílet",
 "Export" => "Exportovat",
 "CardDAV link" => "CardDAV odkaz",
-"Edit" => "Upravit"
+"Edit" => "Upravit",
+"Description" => "Popis",
+"Anonymous" => "Anonymní",
+"User" => "Uživatel",
+"Password" => "Heslo",
+"Base DN for search" => "Výchozí DN pro vyhledávávní",
+"Base DN" => "Základní DN",
+"Base DN for modification" => "Výchozí DN pro změnu"
 );

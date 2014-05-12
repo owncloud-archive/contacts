@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-11 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 04:49+0000\n"
+"POT-Creation-Date: 2014-05-12 00:49-0400\n"
+"PO-Revision-Date: 2014-05-11 05:10+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Telugu (http://www.transifex.com/projects/p/owncloud/language/te/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
-msgstr ""
+msgstr "సరే"
 
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
@@ -167,7 +167,7 @@ msgstr ""
 
 #: js/app.js:1421
 msgid "OK"
-msgstr ""
+msgstr "సరే"
 
 #: js/app.js:1528
 msgid "Could not find contact: {id}"
@@ -1102,11 +1102,11 @@ msgstr ""
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
-msgstr ""
+msgstr "వాడుకరి"
 
 #: templates/contacts.php:574 templates/contacts.php:577
 msgid "Password"
-msgstr ""
+msgstr "సంకేతపదం"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"

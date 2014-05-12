@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакти",
+"Ok" => "Ok",
 "Cancel" => "Відмінити",
 "Save" => "Зберегти",
 "An address book called {name} already exists" => "Адресна книга з назвою {name} вже існує",
@@ -172,5 +173,9 @@
 "Active" => "Активний",
 "Share" => "Поділитися",
 "Export" => "Експорт",
-"Edit" => "Редагувати"
+"Edit" => "Редагувати",
+"Description" => "Опис",
+"User" => "Користувач",
+"Password" => "Пароль",
+"Base DN" => "Базовий DN"
 );

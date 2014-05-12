@@ -1,7 +1,10 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Yhteystiedot",
+"Add new LDAP Addressbook" => "Lisää uusi LDAP-osoitekirja",
+"Ok" => "Ok",
 "Cancel" => "Peru",
 "Save" => "Tallenna",
+"Edit Addressbook" => "Muokkaa osoitekirjaa",
 "Starting file import" => "Aloitetaan tiedoston tuominen",
 "Format selected: {format}" => "Muoto valittu: {format}",
 "Automatic format detection" => "Automaattinen muodon havaitseminen",
@@ -57,6 +60,7 @@
 "Importing..." => "Tuodaan...",
 "Import done" => "Tuonti valmis",
 "Close" => "Sulje",
+"Error, missing parameters: " => "Virhe, puuttuvat parametrit:",
 "Failed loading photo: {error}" => "Kuvan lataaminen epäonnistui: {error}",
 "You do not have permissions to see this contacts" => "Oikeutesi eivät riitä tämän yhteystiedon katseluun",
 "Contact not found" => "Yhteystietoa ei löydy",
@@ -146,6 +150,7 @@
 "Address books" => "Osoitekirjat",
 "Display name" => "Näyttönimi",
 "Add Address Book" => "Lisää osoitekirja",
+"Add LDAP Address Book" => "Lisää LDAP-osoitekirja",
 "Automatic format" => "Automaattinen muoto",
 "Select file..." => "Valitse tiedosto...",
 "Sort order" => "Lajittelujärjestys",
@@ -213,5 +218,11 @@
 "Share" => "Jaa",
 "Export" => "Vie",
 "CardDAV link" => "CardDAV-linkki",
-"Edit" => "Muokkaa"
+"Edit" => "Muokkaa",
+"Description" => "Kuvaus",
+"Read-only" => "Vain luku",
+"Read-Only" => "Vain luku",
+"User" => "Käyttäjä",
+"Password" => "Salasana",
+"Base DN" => "Oletus DN"
 );

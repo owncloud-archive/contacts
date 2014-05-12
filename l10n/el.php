@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Επαφές",
+"Ok" => "Οκ",
 "Cancel" => "Άκυρο",
 "Save" => "Αποθήκευση",
+"Edit Addressbook" => "Επεξεργασία βιβλίου διευθύνσεων",
 "Starting file import" => "Έναρξη εισαγωγής αρχείου",
 "Format selected: {format}" => "Επιλεγμένη μορφή: {format}",
 "Automatic format detection" => "Αυτόματη ανίχνευση μορφής",
@@ -243,5 +245,10 @@
 "Share" => "Διαμοιρασμός",
 "Export" => "Εξαγωγή",
 "CardDAV link" => "Σύνδεσμος CardDAV",
-"Edit" => "Επεξεργασία"
+"Edit" => "Επεξεργασία",
+"Description" => "Περιγραφή",
+"Anonymous" => "Ανώνυμος",
+"User" => "Χρήστης",
+"Password" => "Κωδικός πρόσβασης",
+"Base DN" => "Base DN"
 );

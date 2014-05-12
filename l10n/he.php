@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "אנשי קשר",
+"Ok" => "בסדר",
 "Cancel" => "ביטול",
 "Save" => "שמירה",
+"Edit Addressbook" => "עריכת פנקס הכתובות",
 "OK" => "אישור",
 "Add" => "הוספה",
 "Shared by {owner}" => "שותף בידי {owner}",
@@ -67,5 +69,8 @@
 "Active" => "פעיל",
 "Share" => "שיתוף",
 "Export" => "ייצוא",
-"Edit" => "עריכה"
+"Edit" => "עריכה",
+"Description" => "תיאור",
+"User" => "שתמש",
+"Password" => "סיסמא"
 );

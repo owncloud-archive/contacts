@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "جهات الاتصال",
+"Ok" => "موافق",
 "Cancel" => "الغاء",
 "Save" => "حفظ",
+"Edit Addressbook" => "عدل كتاب العناوين",
 "An address book called {name} already exists" => " دفتر العناوين يحمل  {اسم } موجود مسبقاً",
 "Failed adding address book: {error}" => "{خطأ} فشلت مهمة إضافة عنوان ",
 "Failed loading address books: {error}" => "{خطأ} فشلت مهمة تحميل دفتر العناوين",
@@ -204,5 +206,8 @@
 "Share" => "شارك",
 "Export" => "تصدير",
 "CardDAV link" => "رابط - وصلة - CardDA لنقل و مشاركة جهات الاتصال",
-"Edit" => "تعديل"
+"Edit" => "تعديل",
+"Description" => "وصف",
+"User" => "مستخدم",
+"Password" => "كلمة السر"
 );

@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "联系人",
+"Ok" => "好",
 "Cancel" => "取消",
 "Save" => "保存",
+"Edit Addressbook" => "编辑地址簿",
 "Starting file import" => "开始文件导入",
 "Format selected: {format}" => "已选择格式：{format}",
 "Automatic format detection" => "自动格式检测",
@@ -221,5 +223,9 @@
 "Share" => "共享",
 "Export" => "导出",
 "CardDAV link" => "CardDAV 链接",
-"Edit" => "编辑"
+"Edit" => "编辑",
+"Description" => "描述",
+"User" => "用户",
+"Password" => "密码",
+"Base DN" => "Base DN"
 );

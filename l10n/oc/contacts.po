@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-11 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 04:49+0000\n"
+"POT-Creation-Date: 2014-05-12 00:49-0400\n"
+"PO-Revision-Date: 2014-05-11 05:01+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/projects/p/owncloud/language/oc/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
-msgstr ""
+msgstr "D'accòrdi"
 
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
@@ -1082,7 +1082,7 @@ msgstr ""
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
-msgstr ""
+msgstr "Descripcion"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
@@ -1106,7 +1106,7 @@ msgstr ""
 
 #: templates/contacts.php:574 templates/contacts.php:577
 msgid "Password"
-msgstr ""
+msgstr "Senhal"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"

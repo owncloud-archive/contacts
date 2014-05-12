@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Cysylltiadau",
+"Ok" => "Iawn",
 "Cancel" => "Diddymu",
 "Save" => "Cadw",
 "OK" => "Iawn",
@@ -29,5 +30,7 @@
 "Active" => "Gweithredol",
 "Share" => "Rhannu",
 "Export" => "Allforio",
-"Edit" => "Golygu"
+"Edit" => "Golygu",
+"Description" => "Disgrifiad",
+"Password" => "Cyfrinair"
 );

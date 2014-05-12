@@ -1,7 +1,10 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakti",
+"Ok" => "U redu",
 "Cancel" => "Odustani",
 "Save" => "Snimi",
+"Edit Addressbook" => "Uredi adresar",
+"OK" => "U redu",
 "Add" => "Dodaj",
 "Import" => "Uvezi",
 "Close" => "Zatvori",
@@ -67,5 +70,7 @@
 "Active" => "Aktivno",
 "Share" => "Podijeli",
 "Export" => "Izvoz",
-"Edit" => "Uredi"
+"Edit" => "Uredi",
+"Description" => "Opis",
+"Password" => "Lozinka"
 );

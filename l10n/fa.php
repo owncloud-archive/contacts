@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "ارتباط‌ها",
+"Ok" => "قبول",
 "Cancel" => "منصرف شدن",
 "Save" => "ذخیره",
+"Edit Addressbook" => "ویرایش کتابچه نشانی",
 "An address book called {name} already exists" => "دفتر تلفن با نام {name} در حال حاضر وجود دارد",
 "Failed adding address book: {error}" => "خطا در خصوص اضافه نمودن دفتر تلفن: {error}",
 "Failed loading address books: {error}" => "خطا در خصوص فراخوانی دفتر تلفن: {error}",
@@ -78,5 +80,9 @@
 "Active" => "فعال",
 "Share" => "اشتراک‌گذاری",
 "Export" => "گرفتن خروجی",
-"Edit" => "ویرایش"
+"Edit" => "ویرایش",
+"Description" => "توضیحات",
+"User" => "کاربر",
+"Password" => "گذرواژه",
+"Base DN" => "پایه DN"
 );

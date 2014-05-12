@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontaktid",
+"Ok" => "Ok",
 "Cancel" => "Loobu",
 "Save" => "Salvesta",
+"Edit Addressbook" => "Muuda aadressiraamatut",
 "Starting file import" => "Käivitan faili impordi",
 "Format selected: {format}" => "Valitud formaat: {format}",
 "Automatic format detection" => "Automaatne formaadi tuvastus",
@@ -245,5 +247,12 @@
 "Share" => "Jaga",
 "Export" => "Ekspordi",
 "CardDAV link" => "CardDAV link",
-"Edit" => "Muuda"
+"Edit" => "Muuda",
+"Description" => "Kirjeldus",
+"Anonymous" => "Anonüümne",
+"User" => "Kasutaja",
+"Password" => "Parool",
+"Base DN for search" => "Otsingu baas-DN",
+"Base DN" => "Baas DN",
+"Base DN for modification" => "Muudatuste baas-DN"
 );

@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contactes",
+"Ok" => "D'accòrdi",
 "Cancel" => "Annula",
 "Save" => "Enregistra",
 "OK" => "D'accòrdi",
@@ -25,5 +26,7 @@
 "Active" => "Actiu",
 "Share" => "Parteja",
 "Export" => "Exporta",
-"Edit" => "Editar"
+"Edit" => "Editar",
+"Description" => "Descripcion",
+"Password" => "Senhal"
 );

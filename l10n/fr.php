@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contacts",
+"Ok" => "Ok",
 "Cancel" => "Annuler",
 "Save" => "Sauvegarder",
+"Edit Addressbook" => "Éditer le carnet d'adresses",
 "Starting file import" => "Démarrage de l'importation de fichier",
 "Format selected: {format}" => "Format sélectionné : {format}",
 "Automatic format detection" => "Détection automatique de format",
@@ -245,5 +247,9 @@
 "Share" => "Partager",
 "Export" => "Exporter",
 "CardDAV link" => "Lien CardDAV",
-"Edit" => "Modifier"
+"Edit" => "Modifier",
+"Description" => "Description",
+"User" => "Utilisateur",
+"Password" => "Mot de passe",
+"Base DN" => "DN racine"
 );

@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Stiki",
+"Ok" => "V redu",
 "Cancel" => "Prekliči",
 "Save" => "Shrani",
+"Edit Addressbook" => "Uredi imenik",
 "Starting file import" => "Začenjanje uvoza datoteke",
 "Format selected: {format}" => "Izbran zapis: {format}",
 "Automatic format detection" => "Samodejno zaznavanje zapisa",
@@ -245,5 +247,9 @@
 "Share" => "Souporaba",
 "Export" => "Izvozi",
 "CardDAV link" => "Povezava CardDAV",
-"Edit" => "Uredi"
+"Edit" => "Uredi",
+"Description" => "Opis",
+"User" => "Uporabnik",
+"Password" => "Geslo",
+"Base DN" => "Osnovni DN"
 );

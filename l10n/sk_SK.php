@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakty",
+"Ok" => "Ok",
 "Cancel" => "Zrušiť",
 "Save" => "Uložiť",
+"Edit Addressbook" => "Upraviť Adresár",
 "Starting file import" => "Spusteni importu súboru",
 "Format selected: {format}" => "Zvolený formát: {format}",
 "Automatic format detection" => "Automatická detekcia formátu",
@@ -245,5 +247,9 @@
 "Share" => "Zdieľať",
 "Export" => "Export",
 "CardDAV link" => "CardDAV odkaz",
-"Edit" => "Upraviť"
+"Edit" => "Upraviť",
+"Description" => "Popis",
+"User" => "Používateľ",
+"Password" => "Heslo",
+"Base DN" => "Základné DN"
 );

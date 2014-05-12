@@ -3,5 +3,6 @@
 "Close" => "Փակել",
 "Other" => "Այլ",
 "Delete" => "Ջնջել",
-"Download" => "Բեռնել"
+"Download" => "Բեռնել",
+"Description" => "Նկարագրություն"
 );

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-11 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 04:49+0000\n"
+"POT-Creation-Date: 2014-05-12 00:49-0400\n"
+"PO-Revision-Date: 2014-05-11 05:01+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Kurdish (Iraq) (http://www.transifex.com/projects/p/owncloud/language/ku_IQ/)\n"
 "MIME-Version: 1.0\n"
@@ -1083,7 +1083,7 @@ msgstr ""
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
-msgstr ""
+msgstr "پێناسه"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
@@ -1107,7 +1107,7 @@ msgstr ""
 
 #: templates/contacts.php:574 templates/contacts.php:577
 msgid "Password"
-msgstr ""
+msgstr "وشەی تێپەربو"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"

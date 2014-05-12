@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "聯絡人",
+"Ok" => "OK",
 "Cancel" => "取消",
 "Save" => "儲存",
 "OK" => "確定",
@@ -18,5 +19,6 @@
 "Title" => "標題",
 "Birthday" => "生日",
 "Share" => "分享",
-"Edit" => "編輯"
+"Edit" => "編輯",
+"Password" => "密碼"
 );

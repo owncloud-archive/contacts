@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакти",
+"Ok" => "Добре",
 "Cancel" => "Отказ",
 "Save" => "Запис",
 "OK" => "ОК",
@@ -30,5 +31,7 @@
 "Active" => "Активен",
 "Share" => "Споделяне",
 "Export" => "Експорт",
-"Edit" => "Промяна"
+"Edit" => "Промяна",
+"Description" => "Описание",
+"Password" => "Парола"
 );

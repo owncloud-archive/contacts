@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "コンタクト",
+"Ok" => "OK",
 "Cancel" => "キャンセル",
 "Save" => "保存",
+"Edit Addressbook" => "アドレスブックを編集",
 "An address book called {name} already exists" => "{name} という名前のアドレス帳はすでに存在します",
 "Failed adding address book: {error}" => "アドレス帳の追加に失敗: {error}",
 "Failed loading address books: {error}" => "アドレス帳の読み込みに失敗: {error}",
@@ -229,5 +231,11 @@
 "Share" => "共有",
 "Export" => "エクスポート",
 "CardDAV link" => "CardDAVリンク",
-"Edit" => "編集"
+"Edit" => "編集",
+"Description" => "説明",
+"User" => "ユーザー",
+"Password" => "パスワード",
+"Base DN for search" => "検索のベースDN",
+"Base DN" => "ベースDN",
+"Base DN for modification" => "変更のベースDN"
 );

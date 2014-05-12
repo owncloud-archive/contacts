@@ -36,9 +36,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-11 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-12 00:49-0400\n"
+"PO-Revision-Date: 2014-05-11 18:00+0000\n"
+"Last-Translator: Art O. Pal <artopal@fastmail.fm>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,11 +52,11 @@ msgstr "Contactos"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Agregar nueva libreta de direcciones LDAP"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
-msgstr ""
+msgstr "Aceptar"
 
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
@@ -69,7 +69,7 @@ msgstr "Guardar"
 
 #: js/addressbooks.js:162
 msgid "Edit Addressbook"
-msgstr ""
+msgstr "Editar libreta de direcciones"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
@@ -337,7 +337,7 @@ msgstr "Cerrar"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Error, parámetros faltantes:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -769,15 +769,15 @@ msgstr "Familia"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Habilitar backend de LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Habilitar backend de LDAP para la aplicación de contactos"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Advertencia: el backend de LDAP está en modo beta, usar con precaución"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -805,7 +805,7 @@ msgstr "Añadir libreta de direcciones"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Agregar libreta de direcciones LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -1103,43 +1103,43 @@ msgstr "Editar"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI de la libreta de direcciones"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "URL de LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anónimo"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Solo-lectura"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Solo-lectura"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
-msgstr ""
+msgstr "Usuario"
 
 #: templates/contacts.php:574 templates/contacts.php:577
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Tamaño de página"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1147,15 +1147,15 @@ msgstr ""
 
 #: templates/contacts.php:591
 msgid "Base DN"
-msgstr ""
+msgstr "DN base"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Filtro de búsqueda"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
@@ -1167,12 +1167,12 @@ msgstr ""
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Conector"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Valor del conector (mejor usar un editor externo y copiar/pegar)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Copiar de (advertencia: reemplaza el valor actual)"

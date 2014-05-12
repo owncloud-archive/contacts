@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Danh bạ",
+"Ok" => "Đồng ý",
 "Cancel" => "Hủy",
 "Save" => "Lưu",
+"Edit Addressbook" => "Sửa sổ địa chỉ",
 "An address book called {name} already exists" => "Danh sách địa chỉ {name} đã tồn t",
 "Failed adding address book: {error}" => "Thêm danh sách liên lạc thất bại : {error}",
 "Failed loading address books: {error}" => "Lỗi khi tải danh sách địa chỉ : {error}",
@@ -186,5 +188,9 @@
 "Share" => "Chia sẻ",
 "Export" => "Xuất ra",
 "CardDAV link" => "Liên kết CardDAV ",
-"Edit" => "Sửa"
+"Edit" => "Sửa",
+"Description" => "Mô tả",
+"User" => "Người dùng",
+"Password" => "Mật khẩu",
+"Base DN" => "DN cơ bản"
 );

@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contactos",
+"Ok" => "Aceptar",
 "Cancel" => "Cancelar",
 "Save" => "Guardar",
 "An address book called {name} already exists" => "Ya existe una libreta de direcciones con nombre {name}",
@@ -219,5 +220,9 @@
 "Share" => "Compartir",
 "Export" => "Exportar",
 "CardDAV link" => "Enlace CardDav",
-"Edit" => "Editar"
+"Edit" => "Editar",
+"Description" => "Descripción",
+"User" => "Usuario",
+"Password" => "Contraseña",
+"Base DN" => "DN base"
 );

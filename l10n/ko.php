@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "연락처",
+"Ok" => "확인",
 "Cancel" => "취소",
 "Save" => "저장",
+"Edit Addressbook" => "주소록 편집",
 "An address book called {name} already exists" => "주소록 {name}이(가) 이미 존재함",
 "Failed adding address book: {error}" => "주소록 추가 실패: {error}",
 "Failed loading address books: {error}" => "주소록 불러오기 실패: {error}",
@@ -215,5 +217,9 @@
 "Share" => "공유",
 "Export" => "내보내기",
 "CardDAV link" => "CardDAV 링크",
-"Edit" => "편집"
+"Edit" => "편집",
+"Description" => "종류",
+"User" => "사용자 이름",
+"Password" => "암호",
+"Base DN" => "기본 DN"
 );

@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakte",
+"Ok" => "OK",
 "Cancel" => "Abbrechen",
 "Save" => "Speichern",
 "An address book called {name} already exists" => "Ein Adressbuch mit dem Namen {group} ist schon vorhanden",
@@ -214,5 +215,12 @@
 "Share" => "Teilen",
 "Export" => "Exportieren",
 "CardDAV link" => "CardDAV-Link",
-"Edit" => "Bearbeiten"
+"Edit" => "Bearbeiten",
+"Description" => "Beschreibung",
+"Anonymous" => "Anonym",
+"User" => "Benutzer",
+"Password" => "Passwort",
+"Base DN for search" => "Basis DN für die Suche",
+"Base DN" => "Basis-DN",
+"Base DN for modification" => "Basis DN für Änderungen"
 );

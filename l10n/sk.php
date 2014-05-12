@@ -8,5 +8,6 @@
 "Title" => "Názov",
 "Birthday" => "Narodeniny",
 "Share" => "Zdieľať",
-"Edit" => "Upraviť"
+"Edit" => "Upraviť",
+"Description" => "Popis"
 );

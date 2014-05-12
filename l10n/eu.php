@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontaktuak",
+"Ok" => "Ados",
 "Cancel" => "Ezeztatu",
 "Save" => "Gorde",
+"Edit Addressbook" => "Editatu helbide-liburua",
 "Starting file import" => "Inportazioa hasieratzen",
 "Format selected: {format}" => "Hautatutako formatua: [format]",
 "Automatic format detection" => "Formatuaren atzemate automatikoa",
@@ -234,5 +236,9 @@
 "Share" => "Partekatu",
 "Export" => "Exportatu",
 "CardDAV link" => "CardDAV lotura",
-"Edit" => "Editatu"
+"Edit" => "Editatu",
+"Description" => "Deskribapena",
+"User" => "Erabiltzailea",
+"Password" => "Pasahitza",
+"Base DN" => "Oinarrizko DN"
 );

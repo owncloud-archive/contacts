@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "தொடர்புகள்",
+"Ok" => "சரி",
 "Cancel" => "இரத்து செய்க",
 "Save" => "சேமிக்க ",
 "Indexing contacts" => "தொடர்புகளை அட்டவணையிடுதல்",
@@ -126,5 +127,9 @@
 "Active" => "இயங்கும்",
 "Share" => "பகிர்வு",
 "Export" => "ஏற்றுமதி",
-"Edit" => "தொகுக்க"
+"Edit" => "தொகுக்க",
+"Description" => "விவரிப்பு",
+"User" => "பயனாளர்",
+"Password" => "கடவுச்சொல்",
+"Base DN" => "தள DN"
 );

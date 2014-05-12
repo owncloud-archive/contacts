@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontake",
+"Ok" => "Në rregull",
 "Cancel" => "Anulo",
 "Save" => "Ruaj",
 "Error." => "Gabim.",
@@ -36,5 +37,8 @@
 "Active" => "Aktiv",
 "Share" => "Nda",
 "Export" => "Eksporto",
-"Edit" => "Ndrysho"
+"Edit" => "Ndrysho",
+"Description" => "Përshkrimi",
+"Password" => "fjalëkalim",
+"Base DN" => "Baza DN"
 );

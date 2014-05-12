@@ -10,5 +10,7 @@
 "Title" => "Titel",
 "Birthday" => "Geburtstag",
 "Share" => "Freigeben",
-"Edit" => "Bearbeiten"
+"Edit" => "Bearbeiten",
+"Description" => "Beschreibung",
+"Password" => "Passwort"
 );

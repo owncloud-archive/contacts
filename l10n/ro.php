@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contacte",
+"Ok" => "Ok",
 "Cancel" => "Anulare",
 "Save" => "Salvează",
+"Edit Addressbook" => "Modifică agenda",
 "Format selected: {format}" => "Format selectat : {format}",
 "Automatic format detection" => "Detectare automata a formatului ",
 "An address book called {name} already exists" => "Numele exista deja în agenda",
@@ -162,5 +164,9 @@
 "Active" => "Activ",
 "Share" => "Partajează",
 "Export" => "Exportă",
-"Edit" => "Editează"
+"Edit" => "Editează",
+"Description" => "Descriere",
+"User" => "Utilizator",
+"Password" => "Parolă",
+"Base DN" => "DN de bază"
 );

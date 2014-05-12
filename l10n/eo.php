@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontaktoj",
+"Ok" => "Akcepti",
 "Cancel" => "Nuligi",
 "Save" => "Konservi",
+"Edit Addressbook" => "Redakti adresaron",
 "Indexing contacts" => "Indeksante kontaktojn",
 "Error." => "Eraro.",
 "Add to..." => "Aldoni al...",
@@ -173,5 +175,9 @@
 "Active" => "Aktiva",
 "Share" => "Kunhavigi",
 "Export" => "Elporti",
-"Edit" => "Redakti"
+"Edit" => "Redakti",
+"Description" => "Priskribo",
+"User" => "Uzanto",
+"Password" => "Pasvorto",
+"Base DN" => "Bazo-DN"
 );

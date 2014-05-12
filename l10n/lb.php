@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakter",
+"Ok" => "OK",
 "Cancel" => "Ofbriechen",
 "Save" => "Späicheren",
+"Edit Addressbook" => "Adressbuch editéieren",
 "Error." => "Fehler.",
 "Add group..." => "Grupp bäisetzen...",
 "Select photo" => "Foto auswielen",
@@ -82,5 +84,7 @@
 "Share" => "Deelen",
 "Export" => "Exporteieren",
 "CardDAV link" => "CardDav Link",
-"Edit" => "Editéieren"
+"Edit" => "Editéieren",
+"Description" => "Beschreiwung",
+"Password" => "Passwuert"
 );

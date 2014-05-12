@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Contactes",
+"Ok" => "D'acord",
 "Cancel" => "Cancel·la",
 "Save" => "Desa",
+"Edit Addressbook" => "Edita la llibreta d'adreces",
 "Starting file import" => "Iniciant la importació del fitxer",
 "Format selected: {format}" => "Format seleccionat: {format}",
 "Automatic format detection" => "Detecció automàtica del format",
@@ -245,5 +247,12 @@
 "Share" => "Comparteix",
 "Export" => "Exporta",
 "CardDAV link" => "Enllaç CardDAV",
-"Edit" => "Edita"
+"Edit" => "Edita",
+"Description" => "Descripció",
+"Anonymous" => "Anònim",
+"User" => "Usuari",
+"Password" => "Contrasenya",
+"Base DN for search" => "DN base per la cerca",
+"Base DN" => "DN Base",
+"Base DN for modification" => "DN Base per modificació"
 );

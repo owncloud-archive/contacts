@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontaktai",
+"Ok" => "Gerai",
 "Cancel" => "Atšaukti",
 "Save" => "Išsaugoti",
+"Edit Addressbook" => "Redaguoti adresų knygą",
 "An address book called {name} already exists" => "Adresų knyga pavadinimu {group} jau egzistuoja",
 "Failed adding address book: {error}" => "Nepavyko pridėti adresų knygos: {error}",
 "Failed loading address books: {error}" => "Nepavyko įkelti adresų knygų: {error}",
@@ -214,5 +216,9 @@
 "Share" => "Dalintis",
 "Export" => "Eksportuoti",
 "CardDAV link" => "CardDAV nuoroda",
-"Edit" => "Redaguoti"
+"Edit" => "Redaguoti",
+"Description" => "Aprašymas",
+"User" => "Naudotojas",
+"Password" => "Slaptažodis",
+"Base DN" => "Bazinis DN"
 );

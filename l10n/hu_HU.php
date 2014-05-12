@@ -1,7 +1,9 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Névjegyek",
+"Ok" => "Ok",
 "Cancel" => "Mégsem",
 "Save" => "Mentés",
+"Edit Addressbook" => "Címlista szerkesztése",
 "An address book called {name} already exists" => "\"{name}\" névvel már létezik névjegy",
 "Failed adding address book: {error}" => "Nem sikerült hozzáadni a címjegyzékhez: {error}",
 "Failed loading address books: {error}" => "Hiba a címjegyzék betöltésekor: {error}",
@@ -221,5 +223,9 @@
 "Share" => "Megosztás",
 "Export" => "Exportálás",
 "CardDAV link" => "CardDav hivatkozás",
-"Edit" => "Szerkesztés"
+"Edit" => "Szerkesztés",
+"Description" => "Leírás",
+"User" => "Felhasználó",
+"Password" => "Jelszó",
+"Base DN" => "DN-gyökér"
 );
