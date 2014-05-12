@@ -469,7 +469,7 @@ OC.Contacts = OC.Contacts || {};
 				$.each(response.data.addressbooks, function(idx, addressBook) {
 					if (addressBook.permissions & OC.PERMISSION_UPDATE) {
 						var $option=$('<option></option>').val(addressBook.id).html(addressBook.displayname).attr('backend', addressBook.backend);
-						self.insertAddressBook(addressBook, false);
+						self.insertAddressBookWithoutRender(addressBook);
 						$import_into.append($option);
 						nbOptions++;
 					}
@@ -619,12 +619,25 @@ OC.Contacts = OC.Contacts || {};
 	 * @param bool rendered If true add the addressbook to the addressbook list
 	 * @return AddressBook
 	 */
-	AddressBookList.prototype.insertAddressBook = function(addressBook, rendered = true) {
+	AddressBookList.prototype.insertAddressBook = function(addressBook) {
 		var book = new AddressBook(this.storage, addressBook, this.$bookItemTemplate, this.isFileAction);
-		if(!this.isFileAction && rendered) {
+		if(!this.isFileAction) {
 			var result = book.render();
 			this.$bookList.append(result);
 		}
+		this.addressBooks.push(book);
+		return book;
+	};
+	
+	/**
+	 * Create an AddressBook object, save it in internal list and append it's rendered result to the list
+	 *
+	 * @param object addressBook
+	 * @param bool rendered If true add the addressbook to the addressbook list
+	 * @return AddressBook
+	 */
+	AddressBookList.prototype.insertAddressBookWithoutRender = function(addressBook) {
+		var book = new AddressBook(this.storage, addressBook, this.$bookItemTemplate, this.isFileAction);
 		this.addressBooks.push(book);
 		return book;
 	};
