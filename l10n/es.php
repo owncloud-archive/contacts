@@ -264,9 +264,11 @@
 "User" => "Usuario",
 "Password" => "Contraseña",
 "Page size" => "Tamaño de página",
+"Base DN for search" => "Nombre Distinguido (DN) base para búsqueda",
 "Base DN" => "DN base",
 "Search filter" => "Filtro de búsqueda",
 "Filter" => "Filtro",
+"Base DN for modification" => "Nombre Distinguido (DN) base para modificación",
 "Connector" => "Conector",
 "Connector value (Better use external editor and copy/paste)" => "Valor del conector (mejor usar un editor externo y copiar/pegar)",
 "Copy from (Warning, replaces current custom value)" => "Copiar de (advertencia: reemplaza el valor actual)"
