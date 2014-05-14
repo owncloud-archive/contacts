@@ -68,6 +68,7 @@
 "Importing..." => "A importar...",
 "Import done" => "Importação terminada",
 "Close" => "Fechar",
+"Error, missing parameters: " => "Erro, parâmetros em falta:",
 "Failed loading photo: {error}" => "Erro ao carregar fotografia: {error}",
 "You do not have permissions to see this contacts" => "Não tem permissões para ver este contacto",
 "Contact not found" => "Contacto não encontrado",
@@ -249,7 +250,14 @@
 "CardDAV link" => "Endereço CardDAV",
 "Edit" => "Editar",
 "Description" => "Descrição",
+"Anonymous" => "Anónimos",
+"Read-only" => "Apenas de leitura",
+"Read-Only" => "Apenas de leitura",
 "User" => "Utilizador",
 "Password" => "Palavra-passe",
-"Base DN" => "DN base"
+"Page size" => "Tamanho da página",
+"Base DN" => "DN base",
+"Search filter" => "Filtro de pesquisa",
+"Filter" => "Filtro",
+"Connector" => "Conector"
 );

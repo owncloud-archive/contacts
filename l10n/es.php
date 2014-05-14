@@ -269,6 +269,7 @@
 "Search filter" => "Filtro de búsqueda",
 "Filter" => "Filtro",
 "Base DN for modification" => "Nombre Distinguido (DN) base para modificación",
+"Base DN modification" => "DN base modificación",
 "Connector" => "Conector",
 "Connector value (Better use external editor and copy/paste)" => "Valor del conector (mejor usar un editor externo y copiar/pegar)",
 "Copy from (Warning, replaces current custom value)" => "Copiar de (advertencia: reemplaza el valor actual)"

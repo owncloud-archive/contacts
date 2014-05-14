@@ -4,7 +4,7 @@
 "Ok" => "Aceutar",
 "Cancel" => "Encaboxar",
 "Save" => "Guardar",
-"Edit Addressbook" => "Edita to Axenda de Direciones",
+"Edit Addressbook" => "Edita l'Axenda de Direiciones",
 "Starting file import" => "Aniciando la importación de ficheros",
 "Format selected: {format}" => "Formatu escoyíu: {format}",
 "Automatic format detection" => "Deteición automática de formatu",
@@ -69,7 +69,7 @@
 "Importing..." => "Importando...",
 "Import done" => "Importación fecha",
 "Close" => "Zarrar",
-"Error, missing parameters: " => "Error, falten parámetros: ",
+"Error, missing parameters: " => "Fallu, falten parámetros: ",
 "Failed loading photo: {error}" => "Fallu cargando semeya: {error}",
 "You do not have permissions to see this contacts" => "Nun tienes permisos pa ver estos contautos",
 "Contact not found" => "Contautu non atopáu",
@@ -83,7 +83,7 @@
 "The backend for this address book does not support updating" => "El backend d'esta llibreta de direiciones nun permite anovamientos",
 "You don't have permissions to delete the address book." => "Nun tienes permisos pa desaniciar esta llibreta de direiciones.",
 "Address book not found" => "Nun s'atoparon llibretes de direiciones.",
-"On this %s" => "Nesti/Nesta %s",
+"On this %s" => "Nesti %s",
 "You do not have permissions to see this contact" => "Nun tienes permisos pa ver esti contautu",
 "You do not have permissions to update this contact" => "Nun tienes permisos p'anovar esti contautu",
 "The backend for this contact does not support updating it" => "El backend d'esti contautu nun permite anovalu",
@@ -175,7 +175,7 @@
 "Family" => "Familia",
 "Enable LDAP Backend" => "Activar motor de LDAP",
 "Enable LDAP backend for the contacts application" => "Activar motor de LDAP pa los contautos de l'aplicación",
-"Warning: LDAP Backend is in beta mode, use with precautions" => "Avisu: el motor de LDAP aínda ta'n mou beta, úselu con curiáu",
+"Warning: LDAP Backend is in beta mode, use with precautions" => "Avisu: el motor de LDAP aínda ta en mou beta, úsalu con curiáu",
 "New contact" => "Contautu nuevu",
 "Group name" => "Nome de grupu",
 "New group" => "Grupu nuevu",
@@ -272,5 +272,5 @@
 "Base DN modification" => "Edición de Base DN",
 "Connector" => "Coneutor",
 "Connector value (Better use external editor and copy/paste)" => "Valor del coneutor (Ye meyor usar un editor esternu y copiar/apegar)",
-"Copy from (Warning, replaces current custom value)" => "Copiar dende (Avisu, tronca'l valor personalizáu actual)"
+"Copy from (Warning, replaces current custom value)" => "Copiar dende (Avisu, troca'l valor personalizáu actual)"
 );

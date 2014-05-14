@@ -36,8 +36,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-13 00:49-0400\n"
-"PO-Revision-Date: 2014-05-13 00:04+0000\n"
+"POT-Creation-Date: 2014-05-14 00:48-0400\n"
+"PO-Revision-Date: 2014-05-13 06:34+0000\n"
 "Last-Translator: juanman <juanma@kde.org.ar>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -1163,7 +1163,7 @@ msgstr "Nombre Distinguido (DN) base para modificación"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "DN base modificación"
 
 #: templates/contacts.php:609
 msgid "Connector"

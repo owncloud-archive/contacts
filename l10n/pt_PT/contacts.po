@@ -24,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-14 00:48-0400\n"
+"PO-Revision-Date: 2014-05-13 20:35+0000\n"
+"Last-Translator: Helder Meneses <helder.meneses@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -325,7 +325,7 @@ msgstr "Fechar"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Erro, parâmetros em falta:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -1107,15 +1107,15 @@ msgstr ""
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anónimos"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Apenas de leitura"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Apenas de leitura"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1127,7 +1127,7 @@ msgstr "Palavra-passe"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Tamanho da página"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1139,11 +1139,11 @@ msgstr "DN base"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Filtro de pesquisa"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
@@ -1155,7 +1155,7 @@ msgstr ""
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Conector"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
