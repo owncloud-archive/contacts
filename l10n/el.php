@@ -222,6 +222,7 @@
 "Organization" => "Οργανισμός",
 "Birthday" => "Γενέθλια",
 "Website" => "Ιστοσελίδα",
+"Instant messaging" => "Άμεσα μηνύματα",
 "Notes go here..." => "Πρόσθεσε τις σημειώσεις εδώ...",
 "Add field..." => "Προσθήκη πεδίου...",
 "Instant Messaging" => "Άμεσα μηνύματα",

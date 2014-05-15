@@ -4,6 +4,7 @@
 # 
 # Translators:
 # 2rock <hub2rock@free.fr>, 2014
+# ReDiX <froment.a@gmail.com>, 2014
 # square <benben390-390@yahoo.fr>, 2013
 # Borjan Tchakaloff <borjan@tchaka.fr>, 2012
 # b_b <brunobergot@gmail.com>, 2014
@@ -36,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-15 00:48-0400\n"
+"PO-Revision-Date: 2014-05-14 09:46+0000\n"
+"Last-Translator: ReDiX <froment.a@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/owncloud/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +53,7 @@ msgstr "Contacts"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Ajouter un carnet d'adresse LDAP"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -134,7 +135,7 @@ msgstr "Ajouter un groupe…"
 
 #: js/app.js:478
 msgid "Invalid URL: \"{url}\""
-msgstr "Adresse URL invalide : \"{URL}\""
+msgstr "URL invalide : \"{URL}\""
 
 #: js/app.js:504
 msgid "Invalid email: \"{url}\""
@@ -337,7 +338,7 @@ msgstr "Fermer"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Erreur, paramètre manquant:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -769,15 +770,15 @@ msgstr "Famille"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Activer le Backend LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Activer le backend LDAP pour l'application contacts"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Attention: Le Backend LDAP est en mode beta, utilisez le avec précaution."
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -805,7 +806,7 @@ msgstr "Ajouter un carnet d'adresse"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Ajouter un carnet d'adresse LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -1103,11 +1104,11 @@ msgstr "Modifier"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "Carnet d'adresse URI"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1115,19 +1116,19 @@ msgstr "Description"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "URL LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anonyme"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Lecture seule"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Lecture seule"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1139,7 +1140,7 @@ msgstr "Mot de passe"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Taille de la page"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1151,11 +1152,11 @@ msgstr "DN racine"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Filtre de recherche"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Flitre"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
@@ -1167,7 +1168,7 @@ msgstr ""
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Connecteur"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
@@ -1175,4 +1176,4 @@ msgstr ""
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Copie depuis (Attention, les valeurs actuelles seront remplacées)"

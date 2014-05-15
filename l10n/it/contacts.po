@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-15 00:48-0400\n"
+"PO-Revision-Date: 2014-05-14 17:30+0000\n"
+"Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgstr "Contatti"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Aggiungi una nuova rubrica LDAP"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -318,7 +318,7 @@ msgstr "Chiudi"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Errore, parametro mancante:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -750,15 +750,15 @@ msgstr "Famiglia"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Abilita il motore LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Abilita il motore LDAP per l'applicazione dei contatti"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Avviso: il motore LDAP è in fase di beta, utilizzalo con cautela"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -786,7 +786,7 @@ msgstr "Aggiungi rubrica"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Aggiungi rubrica LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -1084,11 +1084,11 @@ msgstr "Modifica"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI della rubrica"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1096,7 +1096,7 @@ msgstr "Descrizione"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "URL LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
@@ -1104,11 +1104,11 @@ msgstr "Anonimo"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Sola lettura"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Sola lettura"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1120,7 +1120,7 @@ msgstr "Password"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Dimensioni della pagina"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1132,11 +1132,11 @@ msgstr "DN base"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Filtro di ricerca"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
@@ -1148,12 +1148,12 @@ msgstr ""
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Connettore"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Valore del connettore (meglio utilizzare un editor esterno e copia/incolla)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Copia da (attenzione, sostituisce i valori attuali personalizzati)"
