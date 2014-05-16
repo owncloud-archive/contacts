@@ -36,8 +36,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-15 00:48-0400\n"
-"PO-Revision-Date: 2014-05-14 11:18+0000\n"
+"POT-Creation-Date: 2014-05-16 00:48-0400\n"
+"PO-Revision-Date: 2014-05-15 14:58+0000\n"
 "Last-Translator: pe_ppe <peppe@cs.uoi.gr>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgstr "Επαφές"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Προσθήκη νέου βιβλίου διευθύνσεων LDAP"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -337,7 +337,7 @@ msgstr "Κλείσιμο"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Σφάλμα, ελλιπείς παράμετροι:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -769,15 +769,15 @@ msgstr "Οικογένεια"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Ενεργοποίηση υποσυστήματος LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Ενεργοποίηση υποσυστήματος LDAP για την εφαρμογή επαφών"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Προσοχή: Το υποσύστημα LDAP είναι σε δοκιμαστική φάση, χρησιμοποιείτε με επιφύλαξη"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -805,7 +805,7 @@ msgstr "Προσθήκη Βιβλίου Διευθύνσεων"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Προσθήκη βιβλίου διευθύνσεων LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -1103,11 +1103,11 @@ msgstr "Επεξεργασία"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "Διεύθυνση URI βιβλίου διευθύνσεων"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "Διεύθυνση URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1115,7 +1115,7 @@ msgstr "Περιγραφή"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "Διεύθυνση URL LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
@@ -1123,11 +1123,11 @@ msgstr "Ανώνυμος"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Μόνο για ανάγνωση"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Μόνο για ανάγνωση"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1139,11 +1139,11 @@ msgstr "Κωδικός πρόσβασης"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Μέγεθος σελίδας"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Αρχικό Διακεκριμένο Όνομα για αναζήτηση"
 
 #: templates/contacts.php:591
 msgid "Base DN"
@@ -1151,19 +1151,19 @@ msgstr "Base DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Φίλτρο αναζήτησης"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Φίλτρο"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Αρχικό Διακεκριμένο Όνομα για μεταβολή"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Μεταβολή αρχικού Διακεκριμένου Ονόματος"
 
 #: templates/contacts.php:609
 msgid "Connector"
@@ -1175,4 +1175,4 @@ msgstr ""
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Αντιγραφή από (Προσοχή, αντικαθιστά την τρέχουσα τιμή)"

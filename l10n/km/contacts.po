@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:50+0000\n"
+"POT-Creation-Date: 2014-05-16 00:48-0400\n"
+"PO-Revision-Date: 2014-05-15 14:58+0000\n"
 "Last-Translator: សុវិចិត្រ Sovichet ទេព Tep\n"
 "Language-Team: Khmer (http://www.transifex.com/projects/p/owncloud/language/km/)\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgstr "ព្រម"
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
 msgid "Cancel"
-msgstr "លើកលែង"
+msgstr "បោះបង់"
 
 #: js/addressbooks.js:132 js/groups.js:519
 msgid "Save"
@@ -90,47 +90,47 @@ msgstr ""
 
 #: js/app.js:234
 msgid "Error."
-msgstr ""
+msgstr "កំហុស។"
 
 #: js/app.js:329 js/app.js:343
 msgid "Add to..."
-msgstr ""
+msgstr "បន្ថែម​ទៅ..."
 
 #: js/app.js:333 js/app.js:345
 msgid "Remove from..."
-msgstr ""
+msgstr "ដកចេញ​ពី..."
 
 #: js/app.js:350
 msgid "Add group..."
-msgstr ""
+msgstr "បន្ថែម​ក្រុម..."
 
 #: js/app.js:478
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "ខុស URL៖ \"{url}\""
 
 #: js/app.js:504
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "ខុស​អ៊ីមែល៖ \"{url}\""
 
 #: js/app.js:587
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "បញ្ចូល​គ្នា​មិន​បាន។ រក​មិន​ឃើញ​ទំនាក់ទំនង៖ {id}"
 
 #: js/app.js:600
 msgid "Merge failed."
-msgstr ""
+msgstr "បញ្ចូល​គ្នា​មិន​បាន។"
 
 #: js/app.js:607
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "បញ្ចូល​គ្នា​មិន​បាន។ មាន​កំហុស​ក្នុង​ការ​រក្សាទុក​ទំនាក់ទំនង។"
 
 #: js/app.js:627
 msgid "Select photo"
-msgstr ""
+msgstr "ជ្រើស​រូបថត"
 
 #: js/app.js:710 js/app.js:1686
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "បណ្ដាញ​ឬ​ម៉ាស៊ីន​បម្រើ​មាន​បញ្ហា។ សូម​ផ្ដល់​ដំណឹង​ឲ្យ​អភិបាល។"
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
@@ -142,11 +142,11 @@ msgstr ""
 
 #: js/app.js:972
 msgid "Error adding to group."
-msgstr ""
+msgstr "មាន​កំហុស​ក្នុង​ការ​បន្ថែម​ទៅ​ក្រុម។"
 
 #: js/app.js:995
 msgid "Error removing from group."
-msgstr ""
+msgstr "មាន​កំហុស​ក្នុង​ការ​ដកចេញ​ពី​ក្រុម។"
 
 #: js/app.js:1188
 msgid ""
@@ -164,19 +164,19 @@ msgstr ""
 
 #: js/app.js:1417 templates/contacts.php:167
 msgid "Add group"
-msgstr ""
+msgstr "បន្ថែម​ក្រុម"
 
 #: js/app.js:1421
 msgid "OK"
-msgstr "OK"
+msgstr "ព្រម"
 
 #: js/app.js:1528
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "រក​មិន​ឃើញ​ទំនាក់ទំនង៖ {id}"
 
 #: js/app.js:1641
 msgid "Edit profile picture"
-msgstr ""
+msgstr "កែប្រែ​រូបថត​ប្រវត្តិរូប"
 
 #: js/app.js:1645
 msgid "Crop photo"
@@ -214,7 +214,7 @@ msgstr ""
 
 #: js/groups.js:53
 msgid "Add"
-msgstr "បញ្ចូល"
+msgstr "បន្ថែម"
 
 #: js/groups.js:264
 msgid "Contact is already in this group."
@@ -264,11 +264,11 @@ msgstr ""
 
 #: js/groups.js:751
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "{owner} បាន​ចែករំលែក"
 
 #: js/groups.js:766
 msgid "Not grouped"
-msgstr ""
+msgstr "គ្មាន​ក្រុម"
 
 #: js/groups.js:795
 msgid "Failed loading groups: {error}"
@@ -1071,7 +1071,7 @@ msgstr ""
 
 #: templates/contacts.php:514
 msgid "Edit"
-msgstr "កែ"
+msgstr "កែប្រែ"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
