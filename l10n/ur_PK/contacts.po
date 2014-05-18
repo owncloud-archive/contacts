@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-17 00:48-0400\n"
-"PO-Revision-Date: 2014-05-16 15:33+0000\n"
+"POT-Creation-Date: 2014-05-18 00:48-0400\n"
+"PO-Revision-Date: 2014-05-17 18:22+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Urdu (Pakistan) (http://www.transifex.com/projects/p/owncloud/language/ur_PK/)\n"
 "MIME-Version: 1.0\n"
@@ -36,7 +36,7 @@ msgstr "منسوخ کریں"
 
 #: js/addressbooks.js:132 js/groups.js:519
 msgid "Save"
-msgstr ""
+msgstr "حفظ"
 
 #: js/addressbooks.js:162
 msgid "Edit Addressbook"
@@ -304,7 +304,7 @@ msgstr ""
 #: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
 #: templates/contacts.php:377
 msgid "Close"
-msgstr ""
+msgstr "بند "
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
@@ -344,7 +344,7 @@ msgstr ""
 
 #: lib/addressbook.php:374
 msgid "Unknown error"
-msgstr ""
+msgstr "غیر معروف خرابی"
 
 #: lib/addressbook.php:415
 msgid "Access denied"
@@ -932,7 +932,7 @@ msgstr ""
 #: templates/contacts.php:246 templates/contacts.php:248
 #: templates/contacts.php:526 templates/contacts.php:529
 msgid "Name"
-msgstr ""
+msgstr "اسم"
 
 #: templates/contacts.php:254
 msgid "First name"
