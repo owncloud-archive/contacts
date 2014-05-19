@@ -11,7 +11,7 @@
 # Gunnar Norin <blittan@xbmc.org>, 2013
 # Gustav Smedberg <shadow.elf@hotmail.com>, 2013
 # Jan Busk, 2013
-# medialabs, 2013
+# medialabs, 2013-2014
 # Magnus Höglund <magnus@linux.com>, 2012-2013
 # Magnus Höglund <magnus@linux.com>, 2012
 # medialabs, 2013
@@ -24,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-19 00:48-0400\n"
+"PO-Revision-Date: 2014-05-18 21:21+0000\n"
+"Last-Translator: medialabs\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +40,7 @@ msgstr "Kontakter"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Lägg till ny LDAP adressbok"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -1095,7 +1095,7 @@ msgstr ""
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1139,11 +1139,11 @@ msgstr "Start DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Sökfilter"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"

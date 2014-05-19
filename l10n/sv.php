@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakter",
+"Add new LDAP Addressbook" => "Lägg till ny LDAP adressbok",
 "Ok" => "Ok",
 "Cancel" => "Avbryt",
 "Save" => "Spara",
@@ -248,8 +249,11 @@
 "Export" => "Exportera",
 "CardDAV link" => "CardDAV-länk",
 "Edit" => "Redigera",
+"URI" => "URI",
 "Description" => "Beskrivning",
 "User" => "Användare",
 "Password" => "Lösenord",
-"Base DN" => "Start DN"
+"Base DN" => "Start DN",
+"Search filter" => "Sökfilter",
+"Filter" => "Filter"
 );
