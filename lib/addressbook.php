@@ -189,6 +189,8 @@ class Addressbook extends AbstractPIMCollection {
 			$curContact->retrieve();
 			$this->objects[$id] = $curContact;
 			return $curContact;
+		} else {
+			return $this->objects[$id];
 		}
 	}
 
