@@ -262,7 +262,7 @@
 "Read-only" => "Salt okunur",
 "Read-Only" => "Salt okunur",
 "User" => "Kullanıcı",
-"Password" => "Parola:",
+"Password" => "Parola",
 "Page size" => "Sayfa boyutu",
 "Base DN for search" => "Arama için temel DN",
 "Base DN" => "Ana DN",
