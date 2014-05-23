@@ -182,7 +182,7 @@
 #contact footer a:hover, #contact header a:hover {
 	opacity: 1;
 }
-#contact footer .close img, #contact footer .export img, #contact header .delete img {
+#contact footer .close img, #contact footer .export img, #contact header .delete img, #contact footer .cancel img {
 	vertical-align: middle;
 	margin-bottom: 2px;
 	margin-bottom: 2px;
