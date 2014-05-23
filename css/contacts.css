@@ -246,10 +246,8 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	background-repeat: no-repeat;
 }
 .action:not(.text), .icon:not(.text), [class^="icon-"]:not(.text), [class*=" icon-"]:not(.text) {
-	width: 16px; height: 16px; 
-	padding: 0; margin: 0; 
-	background-position: center;
-	background-size:contain;
+	width: 16px; height: 16px;
+	padding: 0; margin: 0;
 	display: inline-block;
 }
 
@@ -769,8 +767,8 @@ tbody tr.contact.active, tbody tr.contact:hover {
 
 #contactlist tbody > tr > td > a.delete {
 	position: absolute;
-	margin-top: 17px;
-	right: 17px; clear: none;
+	padding: 25px;
+	right: 0px;
 	cursor:pointer;
 	z-index: 200;
 }
@@ -871,7 +869,7 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	}
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 1201px) {
 	#contactlist tr td.categories { display: none; }
 	#contactsHeader tr td.categories { display: none; }
 	#app-navigation .oc-addnew input[type=text] { width: 204px; }
