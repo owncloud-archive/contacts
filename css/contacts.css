@@ -604,7 +604,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	color: #999;
 	z-index: 2;
 	width: 100%;
-	line-height: 51px;
+	line-height: 50px;
 }
 .multiselect #contactsHeader {
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
