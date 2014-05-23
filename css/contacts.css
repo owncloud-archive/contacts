@@ -97,6 +97,7 @@
 #app-navigation li.active[data-type="category"] > .utils > * {
 	display: inline-block;
 	float: left;
+	background-color: rgba(0,0,0,0);
 }
 #app-navigation li > .utils > .numcontacts {
 	padding-right: 5px;
