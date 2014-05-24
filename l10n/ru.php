@@ -1,5 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Контакты",
+"Add new LDAP Addressbook" => "Добавить новую LDAP адресную книгу",
 "Ok" => "Ок",
 "Cancel" => "Отменить",
 "Save" => "Сохранить",
@@ -68,6 +69,7 @@
 "Importing..." => "Импортирую...",
 "Import done" => "Импорт завершен",
 "Close" => "Закрыть",
+"Error, missing parameters: " => "Ошибка, отсутствуют параметры:",
 "Failed loading photo: {error}" => "Ошибка загрузки фото: {error}",
 "You do not have permissions to see this contacts" => "У Вас нет разрешений просматривать этот контакт.",
 "Contact not found" => "Контакт не найден",
@@ -81,6 +83,7 @@
 "The backend for this address book does not support updating" => "Реализация этой адресной книги не поддерживает обновление",
 "You don't have permissions to delete the address book." => "У Вас нет разрешений удалять эту адресную книгу.",
 "Address book not found" => "Адресная книга не найдена",
+"On this %s" => "Об этом %s",
 "You do not have permissions to see this contact" => "У Вас нет разрешений просматривать этот контакт",
 "You do not have permissions to update this contact" => "У Вас нет разрешений обновлять этот контакт",
 "The backend for this contact does not support updating it" => "Реализация этого контакта не поддерживает обновления",
@@ -176,6 +179,7 @@
 "Address books" => "Адресная книга",
 "Display name" => "Отобразить имя",
 "Add Address Book" => "Добавить адресную книгу",
+"Add LDAP Address Book" => "Добавить LDAP адресную книгу",
 "Automatic format" => "Автоматический формат",
 "Select file..." => "Выбрать файл...",
 "(De-)select all" => "(Отменить) отметить все",
@@ -248,7 +252,13 @@
 "CardDAV link" => "Ссылка CardDAV",
 "Edit" => "Редактировать",
 "Description" => "Описание",
+"Anonymous" => "Аноним",
+"Read-only" => "Только для чтения",
+"Read-Only" => "Только для чтения",
 "User" => "Пользователь",
 "Password" => "Пароль",
-"Base DN" => "Базовый DN"
+"Page size" => "Размер страницы ",
+"Base DN" => "Базовый DN",
+"Search filter" => "Фильтр поиска",
+"Filter" => "Фильтр"
 );

@@ -13,6 +13,7 @@
 # ggam <ggam@brainleakage.com>, 2013
 # eSSeneX <israel@expander.es>, 2013
 # Javier Llorente <javier@opensuse.org>, 2012
+# jesus guzman <jaguzman123@gmail.com>, 2014
 # Jose Luis Tirado <joseluis.tirado@gmail.com>, 2014
 # juanman <juanma@kde.org.ar>, 2013-2014
 # juanman <juanma@kde.org.ar>, 2011-2012
@@ -36,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-14 00:48-0400\n"
-"PO-Revision-Date: 2014-05-13 06:34+0000\n"
-"Last-Translator: juanman <juanma@kde.org.ar>\n"
+"POT-Creation-Date: 2014-05-24 00:48-0400\n"
+"PO-Revision-Date: 2014-05-22 23:30+0000\n"
+"Last-Translator: jesus guzman <jaguzman123@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,7 +74,7 @@ msgstr "Editar libreta de direcciones"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr "Iniciando la importación de archivos"
+msgstr "Iniciando importación de archivos"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
@@ -162,7 +163,7 @@ msgstr "Error en la red o en el servidor. Por favor, informe al administrador."
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
-msgstr "Solo se pueden usar imágenes como fotos de contactos"
+msgstr "Solo imágenes pueden ser usadas como fotos de contactos"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
@@ -224,7 +225,7 @@ msgstr "Error al analizar la fecha de nacimiento {bday}"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr "El backend no permite caracteres multi-byte."
+msgstr "El backend no Soporta caracteres multi-byte."
 
 #: js/contacts.js:2232
 msgid ""
@@ -347,43 +348,43 @@ msgstr "Error cargando foto: {error}"
 msgid "You do not have permissions to see this contacts"
 msgstr "No tiene permisos para ver este contacto"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "Contacto no encontrado"
 
-#: lib/addressbook.php:219
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "No tiene permisos para ver estos contactos"
 
-#: lib/addressbook.php:252
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "No tiene permisos para agregar contactos a esta libreta de direcciones"
 
-#: lib/addressbook.php:259
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "El backend de esta libreta de direcciones no permite agregar contactos"
 
-#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "No tiene permisos para borrar este contacto"
 
-#: lib/addressbook.php:311 lib/addressbook.php:351
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "El backend de esta libreta de direcciones no permite eliminar contactos"
 
-#: lib/addressbook.php:374
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "Error desconocido"
 
-#: lib/addressbook.php:415
+#: lib/addressbook.php:413
 msgid "Access denied"
-msgstr "Acceso denegado"
+msgstr "Acceso negado"
 
-#: lib/addressbook.php:422
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "El backend de esta libreta de direcciones no permite actualizaciones"
 
-#: lib/addressbook.php:453
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "No tiene permisos para borrar esta libreta de direcciones."
 
@@ -435,7 +436,7 @@ msgstr "Error creando libreta de direcciones"
 #: lib/controller/addressbookcontroller.php:206
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr "El backend \"%s\" no permite eliminar libretas de direcciones"
+msgstr "El backend \"%s\" no Soporta eliminacion de libretas de direcciones"
 
 #: lib/controller/addressbookcontroller.php:214
 #, php-format

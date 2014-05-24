@@ -14,6 +14,7 @@
 # Gontxi <goncalo.baiao@gmail.com>, 2013
 # Helder Meneses <helder.meneses@gmail.com>, 2011
 # Helder Meneses <helder.meneses@gmail.com>, 2012-2014
+# Nelson Rosado <nelsontrosado@gmail.com>, 2014
 # Drew Melim <nokostya.translation@gmail.com>, 2014
 # amgomesdionisio, 2013
 # PapiMigas Migas <papimigas@gmail.com>, 2013
@@ -25,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-15 00:48-0400\n"
-"PO-Revision-Date: 2014-05-14 13:06+0000\n"
-"Last-Translator: Drew Melim <nokostya.translation@gmail.com>\n"
+"POT-Creation-Date: 2014-05-24 00:48-0400\n"
+"PO-Revision-Date: 2014-05-23 12:23+0000\n"
+"Last-Translator: Nelson Rosado <nelsontrosado@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/owncloud/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -336,43 +337,43 @@ msgstr "Erro ao carregar fotografia: {error}"
 msgid "You do not have permissions to see this contacts"
 msgstr "Não tem permissões para ver este contacto"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "Contacto não encontrado"
 
-#: lib/addressbook.php:219
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "Não tem permissões para ver estes contactos"
 
-#: lib/addressbook.php:252
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Não tem permissões para adicionar contactos ao livro de endereços"
 
-#: lib/addressbook.php:259
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "O bastidor para este livro de endereços não suporta o adicionar de contactos"
 
-#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "Não tem permissões para apagar este contacto."
 
-#: lib/addressbook.php:311 lib/addressbook.php:351
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "O bastidor para este livro de endereços não suporta o apagar de contactos"
 
-#: lib/addressbook.php:374
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "Erro Desconhecido"
 
-#: lib/addressbook.php:415
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr "Acesso negado"
 
-#: lib/addressbook.php:422
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "O suporte deste  livro de endereços não suporta atualizações"
 
-#: lib/addressbook.php:453
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "Não tem permissões para apagar este livro de endereços."
 
@@ -1160,8 +1161,8 @@ msgstr "Conector"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Valor de ligação (Utilize um editor externo e copy/paste)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Copiar de (Aviso, substitua o actual valor configurado)"

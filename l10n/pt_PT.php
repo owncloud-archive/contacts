@@ -270,5 +270,7 @@
 "Filter" => "Filtro",
 "Base DN for modification" => "Base DN para alteracao ",
 "Base DN modification" => "Alteracao da Base DN",
-"Connector" => "Conector"
+"Connector" => "Conector",
+"Connector value (Better use external editor and copy/paste)" => "Valor de ligação (Utilize um editor externo e copy/paste)",
+"Copy from (Warning, replaces current custom value)" => "Copiar de (Aviso, substitua o actual valor configurado)"
 );

@@ -5,6 +5,7 @@
 # Translators:
 # Alexander Savchenko <>, 2013
 # Alexander Shashkevych <alex@stunpix.com>, 2013
+# BuxarNET <buxarnet@gmail.com>, 2014
 # Denis <reg.transifex.net@demitel.ru>, 2014
 # Denis <reg.transifex.net@demitel.ru>, 2012
 # Dmitry <linuxsquirrel.dev@gmail.com>, 2013
@@ -22,6 +23,7 @@
 # eurekafag <rkfg@rkfg.me>, 2013
 # m4rkell <sergey@markevich.ru>, 2013
 # adol <sharov3@gmail.com>, 2013
+# anshibanov <shibanovan@yandex.ru>, 2014
 # skoptev <skoptev@ukr.net>, 2012
 # tonymc <tony.mccourin@gmail.com>, 2011
 # Victor Bravo <>, 2012
@@ -34,9 +36,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-24 00:48-0400\n"
+"PO-Revision-Date: 2014-05-23 21:22+0000\n"
+"Last-Translator: BuxarNET <buxarnet@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +52,7 @@ msgstr "Контакты"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Добавить новую LDAP адресную книгу"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -335,7 +337,7 @@ msgstr "Закрыть"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Ошибка, отсутствуют параметры:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -345,43 +347,43 @@ msgstr "Ошибка загрузки фото: {error}"
 msgid "You do not have permissions to see this contacts"
 msgstr "У Вас нет разрешений просматривать этот контакт."
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "Контакт не найден"
 
-#: lib/addressbook.php:219
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "У Вас нет разрешений просматривать эти контакты"
 
-#: lib/addressbook.php:252
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "У Вас нет разрешений добавлять контакты в эту адресную книгу."
 
-#: lib/addressbook.php:259
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Реализация этой адресной книги не поддерживает добавление контактов."
 
-#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "У Вас нет разрешений удалять этот контакт."
 
-#: lib/addressbook.php:311 lib/addressbook.php:351
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Реализация этой адресной книги не поддерживает удаление контактов."
 
-#: lib/addressbook.php:374
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "Неизвестная ошибка"
 
-#: lib/addressbook.php:415
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr "Доступ разрешен"
 
-#: lib/addressbook.php:422
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "Реализация этой адресной книги не поддерживает обновление"
 
-#: lib/addressbook.php:453
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "У Вас нет разрешений удалять эту адресную книгу."
 
@@ -392,7 +394,7 @@ msgstr "Адресная книга не найдена"
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "Об этом %s"
 
 #: lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
@@ -803,7 +805,7 @@ msgstr "Добавить адресную книгу"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Добавить LDAP адресную книгу"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -1117,15 +1119,15 @@ msgstr ""
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Аноним"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Только для чтения"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Только для чтения"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1137,7 +1139,7 @@ msgstr "Пароль"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Размер страницы "
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1149,11 +1151,11 @@ msgstr "Базовый DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Фильтр поиска"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Фильтр"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
