@@ -10,6 +10,7 @@
 # dtsang29 <dtsang29@hotmail.com>, 2013
 # Dianjin Wang <1132321739qq@gmail.com>, 2012-2013
 # heyinglong <heyinglong@hotmail.com>, 2013
+# jsgang <jsgang9@gmail.com>, 2014
 # fkj <fengkaijia@gmail.com>, 2013
 # marguerite su <i@marguerite.su>, 2013
 # Martin Liu <liuzh66@gmail.com>, 2014
@@ -27,9 +28,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-25 00:48-0400\n"
+"PO-Revision-Date: 2014-05-25 03:31+0000\n"
+"Last-Translator: jsgang <jsgang9@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +38,7 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "联系人"
 
@@ -199,7 +200,7 @@ msgstr "编辑配置图片"
 
 #: js/app.js:1645
 msgid "Crop photo"
-msgstr ""
+msgstr "裁剪照片"
 
 #: js/contacts.js:904
 msgid "Error parsing date: {date}"
@@ -229,7 +230,7 @@ msgstr "点击以撤销删除这{num}个联系人"
 
 #: js/contacts.js:2252
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "取消删除{num}个联系人 "
 
 #: js/groups.js:53
 msgid "Add"
@@ -338,43 +339,43 @@ msgstr "加载照片失败：{error}"
 msgid "You do not have permissions to see this contacts"
 msgstr "你没有权限查看此联系人"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "联系人未找到"
 
-#: lib/addressbook.php:219
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "您没有权限查看这些联系人"
 
-#: lib/addressbook.php:252
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "您没有权限添加联系人到此地址簿"
 
-#: lib/addressbook.php:259
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "此地址簿的后端不支持添加联系人"
 
-#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "你没有权限删除此联系人"
 
-#: lib/addressbook.php:311 lib/addressbook.php:351
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "此地址簿的后端不支持删除联系人"
 
-#: lib/addressbook.php:374
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "未知错误"
 
-#: lib/addressbook.php:415
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr "访问被拒绝"
 
-#: lib/addressbook.php:422
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "此地址簿的后端不支持更新"
 
-#: lib/addressbook.php:453
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "您没有权限删除地址簿"
 
@@ -506,7 +507,7 @@ msgstr "保存联系人到后台出错。"
 
 #: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
-msgstr ""
+msgstr "获取用户照片失败"
 
 #: lib/controller/contactphotocontroller.php:143
 msgid "No photo path was submitted."
