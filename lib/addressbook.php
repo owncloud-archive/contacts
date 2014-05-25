@@ -166,7 +166,7 @@ class Addressbook extends AbstractPIMCollection {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$id, \OCP\Util::DEBUG);
 		if (!$this->hasPermission(\OCP\PERMISSION_READ)) {
 			throw new \Exception(
-				self::$l10n->t('You do not have permissions to see this contacts'),
+				self::$l10n->t('You do not have permissions to see this contact'),
 				Http::STATUS_FORBIDDEN
 			);
 		}
