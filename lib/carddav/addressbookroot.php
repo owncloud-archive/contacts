@@ -23,10 +23,10 @@
 namespace OCA\Contacts\CardDAV;
 
 /**
- * This class overrides Sabre_CardDAV_AddressBookRoot::getChildForPrincipal()
+ * This class overrides \Sabre\CardDAV\AddressBookRoot::getChildForPrincipal()
  * to instantiate OC_Connector_CardDAV_UserAddressBooks.
 */
-class AddressBookRoot extends \Sabre_CardDAV_AddressBookRoot {
+class AddressBookRoot extends \Sabre\CardDAV\AddressBookRoot {
 
 	/**
 	* This method returns a node for a principal.
@@ -36,7 +36,7 @@ class AddressBookRoot extends \Sabre_CardDAV_AddressBookRoot {
 	* supplied by the authentication backend.
 	*
 	* @param array $principal
-	* @return Sabre_DAV_INode
+	* @return \Sabre\DAV\INode
 	*/
 	public function getChildForPrincipal(array $principal) {
 

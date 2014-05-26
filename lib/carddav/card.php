@@ -25,10 +25,10 @@ namespace OCA\Contacts\CardDAV;
 use OCA\Contacts;
 
 /**
- * This class overrides Sabre_CardDAV_Card::getACL()
+ * This class overrides \Sabre\CardDAV\Card::getACL()
  * to return read/write permissions based on user and shared state.
 */
-class Card extends \Sabre_CardDAV_Card {
+class Card extends \Sabre\CardDAV\Card {
 
 	/**
 	* Array with information about the containing addressbook
@@ -40,11 +40,11 @@ class Card extends \Sabre_CardDAV_Card {
 	/**
 	* Constructor
 	*
-	* @param Sabre_CardDAV_Backend_Abstract $carddavBackend
+	* @param \Sabre\CardDAV\Backend\AbstractBackend $carddavBackend
 	* @param array $addressBookInfo
 	* @param array $cardData
 	*/
-	public function __construct(\Sabre_CardDAV_Backend_Abstract $carddavBackend, array $addressBookInfo, array $cardData) {
+	public function __construct(\Sabre\CardDAV\Backend\AbstractBackend $carddavBackend, array $addressBookInfo, array $cardData) {
 
 		$this->addressBookInfo = $addressBookInfo;
 		parent::__construct($carddavBackend, $addressBookInfo, $cardData);
