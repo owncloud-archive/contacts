@@ -256,9 +256,16 @@
 "LDAP URL" => "LDAP URL",
 "Anonymous" => "Anonym",
 "Read-only" => "Skrivskyddad",
+"Read-Only" => "Skrivskyddad",
 "User" => "Användare",
 "Password" => "Lösenord",
+"Page size" => "sidstorlek",
+"Base DN for search" => "Base DN för sök",
 "Base DN" => "Start DN",
 "Search filter" => "Sökfilter",
-"Filter" => "Filter"
+"Filter" => "Filter",
+"Base DN for modification" => "Bas DN för modifiering",
+"Base DN modification" => "Base DN modifiering",
+"Connector value (Better use external editor and copy/paste)" => "Anslutning värde (Bättre använda extern redigerare och kopiera / klistra in)",
+"Copy from (Warning, replaces current custom value)" => "Kopiera från (Varning, ersätter nuvarande anpassade värde)"
 );
