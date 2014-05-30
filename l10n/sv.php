@@ -69,6 +69,7 @@
 "Importing..." => "Importerar...",
 "Import done" => "Import klar",
 "Close" => "Stäng",
+"Error, missing parameters: " => "Fel, parametrar saknas:",
 "Failed loading photo: {error}" => "Kan inte ladda foton:{error}",
 "You do not have permissions to see this contacts" => "Du saknar behörighet för att se denna kontakt",
 "Contact not found" => "Kontakten kunde inte hittas",
@@ -172,6 +173,9 @@
 "Internet" => "Internet",
 "Friends" => "Vänner",
 "Family" => "Familj",
+"Enable LDAP Backend" => "Aktivera LDAP Backend",
+"Enable LDAP backend for the contacts application" => "Aktivera LDAP backend för kontakter-applikationen",
+"Warning: LDAP Backend is in beta mode, use with precautions" => "Varning: LDAP Backend är i betaläge, använd med försiktighet",
 "New contact" => "Ny kontakt",
 "Group name" => "Gruppnamn",
 "New group" => "Ny grupp",
@@ -266,6 +270,7 @@
 "Filter" => "Filter",
 "Base DN for modification" => "Bas DN för modifiering",
 "Base DN modification" => "Base DN modifiering",
+"Connector" => "Connector",
 "Connector value (Better use external editor and copy/paste)" => "Anslutning värde (Bättre använda extern redigerare och kopiera / klistra in)",
 "Copy from (Warning, replaces current custom value)" => "Kopiera från (Varning, ersätter nuvarande anpassade värde)"
 );

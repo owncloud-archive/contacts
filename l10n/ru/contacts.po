@@ -10,6 +10,7 @@
 # Denis <reg.transifex.net@demitel.ru>, 2012
 # Dmitry <linuxsquirrel.dev@gmail.com>, 2013
 # Evgeniy Spitsyn <evgeniy@spitsyn.net>, 2013
+# Gennady <mxiru@mail.ru>, 2014
 # Dmitry Kurenkov <ideamk@gmail.com>, 2012
 # jekader <jekader@gmail.com>, 2013-2014
 # jekader <jekader@gmail.com>, 2012
@@ -36,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-24 00:48-0400\n"
-"PO-Revision-Date: 2014-05-23 21:22+0000\n"
-"Last-Translator: BuxarNET <buxarnet@gmail.com>\n"
+"POT-Creation-Date: 2014-05-30 00:48-0400\n"
+"PO-Revision-Date: 2014-05-29 08:11+0000\n"
+"Last-Translator: Gennady <mxiru@mail.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +47,7 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -769,15 +770,15 @@ msgstr "Семья"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Включить бэкенд LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Включить бэкенд LDAP для приложений контактов"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Внимание: бэкенд LDAP работает в beta-режиме, пользуйтесь с предостережением"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -1103,11 +1104,11 @@ msgstr "Редактировать"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI адресной книги"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1115,7 +1116,7 @@ msgstr "Описание"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "Ссылка LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
@@ -1143,7 +1144,7 @@ msgstr "Размер страницы "
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Основной DN для поиска"
 
 #: templates/contacts.php:591
 msgid "Base DN"
@@ -1159,11 +1160,11 @@ msgstr "Фильтр"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Основной DN для модификации"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Модификация основного DN"
 
 #: templates/contacts.php:609
 msgid "Connector"
@@ -1175,4 +1176,4 @@ msgstr ""
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Копировать из (Внимание, земеняет текущее произвольное значение)"
