@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-05-31 00:48-0400\n"
+"PO-Revision-Date: 2014-05-30 18:51+0000\n"
+"Last-Translator: vidaren <news@vidartysse.net>\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/projects/p/owncloud/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,13 +29,13 @@ msgstr ""
 "Language: nb_NO\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Kontakter"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Legg til ny LDAP-adressebok"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -56,23 +56,23 @@ msgstr "Endre adressebok"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr ""
+msgstr "Starter import av fil"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Format valgt: {format}"
 
 #: js/addressbooks.js:407 js/addressbooks.js:435
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Automatisk påvisning av format"
 
 #: js/addressbooks.js:485
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Behandler {count}/{total} kort"
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Totalt:{total}, Vellykket:{imported}, Mislykket:{failed}"
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
@@ -145,11 +145,11 @@ msgstr "Nettverks- eller serverfeil. Vennligs informer administratoren."
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Kun bilder kan brukes som kontakt-foto"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "Størrelsen på \"{filename}\" overstiger det maksimalt tillatte {size}"
 
 #: js/app.js:972
 msgid "Error adding to group."
@@ -207,7 +207,7 @@ msgstr "Klarer ikke å tyde fødselsdag {bday}"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Serveren støtter ikke multibyte-tegn."
 
 #: js/contacts.js:2232
 msgid ""
@@ -320,7 +320,7 @@ msgstr "Lukk"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Feil, manglende parametre:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -330,43 +330,43 @@ msgstr "Lasting av bilde feilet: {error}"
 msgid "You do not have permissions to see this contacts"
 msgstr "Du har ikke adgang til å se denne kontakten"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "Fant ikke kontakt"
 
-#: lib/addressbook.php:219
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "Du har ikke adgang til å se disse kontaktene"
 
-#: lib/addressbook.php:252
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Du har ikke adgang til å legge inn kontakter i adresseboken"
 
-#: lib/addressbook.php:259
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "Server-komponenten for denne adresseboken støtter ikke innlegging av kontakter"
 
-#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "Du har ikke adgang til å slette denne kontakten"
 
-#: lib/addressbook.php:311 lib/addressbook.php:351
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "Server-komponenten for denne adresseboken støtter ikke sletting av kontakter"
 
-#: lib/addressbook.php:374
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "Ukjent feil"
 
-#: lib/addressbook.php:415
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr "Adgang nektet"
 
-#: lib/addressbook.php:422
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "Server-komponenten for denne adresseboken støtter ikke oppdatering"
 
-#: lib/addressbook.php:453
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "Du har ikke adgang til å slette adresseboken."
 
@@ -377,7 +377,7 @@ msgstr "Fant ikke adressebok"
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "På denne %s"
 
 #: lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
@@ -435,19 +435,19 @@ msgstr "Oppretting av kontakt feilet."
 
 #: lib/controller/addressbookcontroller.php:270
 msgid "Error creating contact"
-msgstr ""
+msgstr "Feil ved oppretting av kontakt"
 
 #: lib/controller/addressbookcontroller.php:302
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Feil ved sletting av kontakt"
 
 #: lib/controller/addressbookcontroller.php:342
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Feil ved uthenting av kontakt"
 
 #: lib/controller/addressbookcontroller.php:353
 msgid "Error saving contact"
-msgstr ""
+msgstr "Feil ved lagring av kontakt"
 
 #: lib/controller/addressbookcontroller.php:359
 msgid "Error removing contact from other address book."
@@ -455,7 +455,7 @@ msgstr "Feil ved fjerning av kontakt fra annen adressebok."
 
 #: lib/controller/addressbookcontroller.php:366
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Feil ved uhenting av flyttet kontakt"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -506,7 +506,7 @@ msgstr "Ingen filsti ble lagt inn."
 
 #: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Feil ved lasting av bilde fra mellomlager"
 
 #: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
@@ -752,15 +752,15 @@ msgstr "Familie"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Aktiver LDAP-server"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Aktiver LDAP-server for Kontakter-applikasjonen"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Advarsel: LDAP-server er i beta-modus. Bruk med forsiktighet"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -788,11 +788,11 @@ msgstr "Ny adressebok"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Legg til LDAP-adressebok"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
-msgstr ""
+msgstr "Automatisk format"
 
 #: templates/contacts.php:53 templates/contacts.php:54
 msgid "Select file..."
@@ -903,11 +903,11 @@ msgstr "Slett kontakten"
 #: templates/contacts.php:135
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "Du har ingen kontakter i adresseboken eller adresseboken din er deaktivert."
 
 #: templates/contacts.php:136
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Legg til en ny kontakt eller importer eksisterende kontakter fra en VCF-fil."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -980,11 +980,11 @@ msgstr "Bursdag"
 
 #: templates/contacts.php:341
 msgid "Website"
-msgstr ""
+msgstr "Nettsted"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
-msgstr ""
+msgstr "Direktemeldinger"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
@@ -1086,11 +1086,11 @@ msgstr "Endre"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI for adressebok"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1098,19 +1098,19 @@ msgstr "Beskrivelse"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "URL for LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anonym"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Skrivebeskyttet"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Skrivebeskyttet"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1122,11 +1122,11 @@ msgstr "Passord"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Sidestørrelse"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Basis-DN for søk"
 
 #: templates/contacts.php:591
 msgid "Base DN"
@@ -1134,28 +1134,28 @@ msgstr "Base DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Søkefilter"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Basis-DN for endring"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Basis-DN endring"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Kobling"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Verdi for kobling (best å bruke ekstern editor og kopier/lim)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Kopier fra (Advarsel: Erstatter nåværende egendefinert verdi)"
