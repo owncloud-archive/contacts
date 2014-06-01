@@ -27,7 +27,7 @@
 # nferrari <nferrari@alwaysdata.com>, 2013
 # nicoroud <nicolas@tycho.fr>, 2013
 # ouafnico <nicolas@shivaserv.fr>, 2012
-# ogre_sympathique <ogre.sympathique@speed.1s.fr>, 2013
+# ogre_sympathique, 2013
 # akaN44 <134331@supinfo.com>, 2013
 # red0ne <red-0ne@smarty-concept.com>, 2013
 # Robert Di Rosa <>, 2012
@@ -38,8 +38,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-24 00:48-0400\n"
-"PO-Revision-Date: 2014-05-23 01:02+0000\n"
+"POT-Creation-Date: 2014-06-01 00:48-0400\n"
+"PO-Revision-Date: 2014-05-31 06:11+0000\n"
 "Last-Translator: Gauth <gauthier@openux.org>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/owncloud/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Contacts"
 

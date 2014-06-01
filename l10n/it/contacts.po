@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-24 00:48-0400\n"
-"PO-Revision-Date: 2014-05-23 00:33+0000\n"
+"POT-Creation-Date: 2014-06-01 00:48-0400\n"
+"PO-Revision-Date: 2014-05-31 06:11+0000\n"
 "Last-Translator: Paolo Stivanin <paolostivanin@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Contatti"
 

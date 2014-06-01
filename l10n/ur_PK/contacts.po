@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-18 00:48-0400\n"
-"PO-Revision-Date: 2014-05-17 18:22+0000\n"
+"POT-Creation-Date: 2014-06-01 00:48-0400\n"
+"PO-Revision-Date: 2014-05-31 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Urdu (Pakistan) (http://www.transifex.com/projects/p/owncloud/language/ur_PK/)\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Language: ur_PK\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr ""
 
@@ -318,43 +318,43 @@ msgstr ""
 msgid "You do not have permissions to see this contacts"
 msgstr ""
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr ""
 
-#: lib/addressbook.php:219
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr ""
 
-#: lib/addressbook.php:252
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr ""
 
-#: lib/addressbook.php:259
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr ""
 
-#: lib/addressbook.php:311 lib/addressbook.php:351
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:374
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "غیر معروف خرابی"
 
-#: lib/addressbook.php:415
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr ""
 
-#: lib/addressbook.php:422
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:453
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
@@ -626,7 +626,7 @@ msgstr ""
 #: lib/utils/properties.php:178 lib/utils/properties.php:185
 #: lib/utils/properties.php:200
 msgid "Other"
-msgstr ""
+msgstr "دیگر"
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
@@ -691,7 +691,7 @@ msgstr ""
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
 msgid "Work"
-msgstr ""
+msgstr "کام"
 
 #: lib/utils/properties.php:164 lib/utils/properties.php:169
 #: lib/utils/properties.php:183
@@ -815,7 +815,7 @@ msgstr ""
 #: templates/contacts.php:88 templates/contacts.php:380
 #: templates/contacts.php:381
 msgid "Download"
-msgstr ""
+msgstr "ڈاؤن لوڈ،"
 
 #: templates/contacts.php:89
 msgid "Merge"
@@ -956,7 +956,7 @@ msgstr ""
 
 #: templates/contacts.php:295 templates/contacts.php:361
 msgid "Title"
-msgstr ""
+msgstr "عنوان"
 
 #: templates/contacts.php:305 templates/contacts.php:360
 msgid "Organization"
@@ -964,7 +964,7 @@ msgstr ""
 
 #: templates/contacts.php:315 templates/contacts.php:363
 msgid "Birthday"
-msgstr ""
+msgstr "سالگرہ"
 
 #: templates/contacts.php:341
 msgid "Website"
@@ -1070,7 +1070,7 @@ msgstr ""
 
 #: templates/contacts.php:514
 msgid "Edit"
-msgstr ""
+msgstr "تدوین کریں"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
@@ -1082,7 +1082,7 @@ msgstr ""
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
-msgstr ""
+msgstr "تصریح"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"

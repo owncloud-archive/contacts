@@ -8,16 +8,16 @@
 # plazmism <gomidori@live.jp>, 2013-2014
 # Koichi MATSUMOTO <mzch@me.com>, 2013-2014
 # kuromabo <md81bird@hitaki.net>, 2014
-# pabook <pabook.32@gmail.com>, 2013
+# pabook <inactive+pabook@transifex.com>, 2013
 # tt yn <tetuyano+transi@gmail.com>, 2012
 # tt yn <tetuyano+transi@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-01 00:48-0400\n"
+"PO-Revision-Date: 2014-05-31 06:11+0000\n"
+"Last-Translator: Daisuke Deguchi <ddeguchi@nagoya-u.jp>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,13 +25,13 @@ msgstr ""
 "Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "コンタクト"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "新しいLDAPアドレス帳を追加"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -203,7 +203,7 @@ msgstr "誕生日 {bday} の解析エラー"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "バックエンドはマルチバイト文字列をサポートしていません。"
 
 #: js/contacts.js:2232
 msgid ""
@@ -316,7 +316,7 @@ msgstr "閉じる"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "エラー、パラメータが不足しています:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -326,43 +326,43 @@ msgstr "写真の読み込みに失敗: {error}"
 msgid "You do not have permissions to see this contacts"
 msgstr "この連絡先を閲覧する権限がありません"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr "連絡先が見つかりません"
 
-#: lib/addressbook.php:219
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr "これらの連絡先を閲覧する権限がありません"
 
-#: lib/addressbook.php:252
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr "アドレス帳に連絡先を追加する権限がありません"
 
-#: lib/addressbook.php:259
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr "このアドレス帳のバックエンドは連絡先の追加をサポートしていません"
 
-#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "この連絡先を削除する権限がありません"
 
-#: lib/addressbook.php:311 lib/addressbook.php:351
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "このアドレス帳のバックエンドは連絡先の削除をサポートしていません"
 
-#: lib/addressbook.php:374
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr "不明なエラー"
 
-#: lib/addressbook.php:415
+#: lib/addressbook.php:413
 msgid "Access denied"
-msgstr ""
+msgstr "アクセスが拒否されました"
 
-#: lib/addressbook.php:422
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr "このアドレス帳のバックエンドは更新をサポートしていません"
 
-#: lib/addressbook.php:453
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr "アドレス帳を削除する権限がありません。"
 
@@ -748,7 +748,7 @@ msgstr "家族"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "LDAP バックエンドを有効にする"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
@@ -976,11 +976,11 @@ msgstr "誕生日"
 
 #: templates/contacts.php:341
 msgid "Website"
-msgstr ""
+msgstr "ウェブサイト"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
-msgstr ""
+msgstr "インスタントメッセージ"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
@@ -1086,7 +1086,7 @@ msgstr ""
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1094,19 +1094,19 @@ msgstr "説明"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP URL"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "匿名"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "読み取り専用"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "読み取り専用"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1118,7 +1118,7 @@ msgstr "パスワード"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "ページサイズ"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1130,11 +1130,11 @@ msgstr "ベースDN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "検索フィルタ"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "フィルタ"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
@@ -1142,7 +1142,7 @@ msgstr "変更のベースDN"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "ベースDNの変更"
 
 #: templates/contacts.php:609
 msgid "Connector"
