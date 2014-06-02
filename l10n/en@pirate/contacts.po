@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
+"POT-Creation-Date: 2014-06-02 00:48-0400\n"
+"PO-Revision-Date: 2014-06-02 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Pirate English (http://www.transifex.com/projects/p/owncloud/language/en@pirate/)\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Language: en@pirate\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr ""
 
@@ -315,47 +315,47 @@ msgstr ""
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:169 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr ""
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:180
 msgid "Contact not found"
 msgstr ""
 
-#: lib/addressbook.php:219
+#: lib/addressbook.php:217
 msgid "You do not have permissions to see these contacts"
 msgstr ""
 
-#: lib/addressbook.php:252
+#: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
 msgstr ""
 
-#: lib/addressbook.php:259
+#: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
+#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr ""
 
-#: lib/addressbook.php:311 lib/addressbook.php:351
+#: lib/addressbook.php:309 lib/addressbook.php:349
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:374
+#: lib/addressbook.php:372
 msgid "Unknown error"
 msgstr ""
 
-#: lib/addressbook.php:415
+#: lib/addressbook.php:413
 msgid "Access denied"
 msgstr ""
 
-#: lib/addressbook.php:422
+#: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:453
+#: lib/addressbook.php:451
 msgid "You don't have permissions to delete the address book."
 msgstr ""
 
@@ -368,10 +368,6 @@ msgstr ""
 msgid "On this %s"
 msgstr ""
 
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr ""
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr ""
@@ -381,7 +377,7 @@ msgid "The backend for this contact does not support updating it"
 msgstr ""
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
+msgid "This backend does not support adding contacts"
 msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482

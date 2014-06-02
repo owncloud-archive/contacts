@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-01 00:48-0400\n"
-"PO-Revision-Date: 2014-05-31 06:11+0000\n"
+"POT-Creation-Date: 2014-06-02 00:48-0400\n"
+"PO-Revision-Date: 2014-06-02 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Malay (Malaysia) (http://www.transifex.com/projects/p/owncloud/language/ms_MY/)\n"
 "MIME-Version: 1.0\n"
@@ -319,8 +319,8 @@ msgstr ""
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:169 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr ""
 
 #: lib/addressbook.php:180
@@ -372,10 +372,6 @@ msgstr ""
 msgid "On this %s"
 msgstr ""
 
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr ""
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr ""
@@ -385,7 +381,7 @@ msgid "The backend for this contact does not support updating it"
 msgstr ""
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
+msgid "This backend does not support adding contacts"
 msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482

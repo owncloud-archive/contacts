@@ -36,9 +36,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-01 00:48-0400\n"
-"PO-Revision-Date: 2014-05-31 06:11+0000\n"
-"Last-Translator: pe_ppe <peppe@cs.uoi.gr>\n"
+"POT-Creation-Date: 2014-06-02 00:48-0400\n"
+"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -343,9 +343,9 @@ msgstr "Σφάλμα, ελλιπείς παράμετροι:"
 msgid "Failed loading photo: {error}"
 msgstr "Αποτυχία φόρτωσης φωτογραφίας: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
-msgstr "Δεν έχετε άδεια για να δείτε αυτήν την επαφή"
+#: lib/addressbook.php:169 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
+msgstr "Δεν έχετε άδεια να δείτε αυτή την επαφή"
 
 #: lib/addressbook.php:180
 msgid "Contact not found"
@@ -396,10 +396,6 @@ msgstr "Δε βρέθηκε βιβλίο διευθύνσεων"
 msgid "On this %s"
 msgstr ""
 
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "Δεν έχετε άδεια να δείτε αυτή την επαφή"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Δεν έχετε άδεια για να ενημερώσετε αυτή την επαφή"
@@ -409,8 +405,8 @@ msgid "The backend for this contact does not support updating it"
 msgstr "Το σύστημα για αυτή την επαφή δεν υποστηρίζει την ενημέρωσή της"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
-msgstr "Αυτό το σύστημα δεν υποστηρίζει προσθήκη επαφών"
+msgid "This backend does not support adding contacts"
+msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"

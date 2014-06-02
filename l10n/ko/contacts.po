@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-01 00:48-0400\n"
-"PO-Revision-Date: 2014-05-31 06:11+0000\n"
+"POT-Creation-Date: 2014-06-02 00:48-0400\n"
+"PO-Revision-Date: 2014-06-02 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -333,9 +333,9 @@ msgstr ""
 msgid "Failed loading photo: {error}"
 msgstr "사진 불러오기 오류: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
-msgstr "연락처를 볼 수 있는 권한이 없습니다"
+#: lib/addressbook.php:169 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
+msgstr "이 연락처를 볼 수 있는 권한이 없습니다"
 
 #: lib/addressbook.php:180
 msgid "Contact not found"
@@ -386,10 +386,6 @@ msgstr "주소록을 찾을 수 없음"
 msgid "On this %s"
 msgstr ""
 
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "이 연락처를 볼 수 있는 권한이 없습니다"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "이 연락처를 업데이트할 수 있는 권한이 없습니다"
@@ -399,8 +395,8 @@ msgid "The backend for this contact does not support updating it"
 msgstr "이 연락처의 백엔드는 업데이트를 지원하지 않습니다"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
-msgstr "이 백엔드는 연락처 추가를 지원하지 않습니다"
+msgid "This backend does not support adding contacts"
+msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
