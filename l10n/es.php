@@ -86,6 +86,7 @@
 "On this %s" => "En este %s",
 "You do not have permissions to update this contact" => "No tiene permisos para actualizar este contacto",
 "The backend for this contact does not support updating it" => "El backend de este contacto no permite actualizarlo",
+"This backend does not support adding contacts" => "Este backend no permite agregar contactos",
 "Property not found" => "Propiedad no encontrada",
 " Missing IM parameter for: " => "Falta el parámetro de IM para:",
 "Unknown IM: " => "Servicio IM desconocido:",

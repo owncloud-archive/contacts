@@ -15,6 +15,7 @@
 # Javier Llorente <javier@opensuse.org>, 2012
 # jesus guzman <jaguzman123@gmail.com>, 2014
 # Jose Luis Tirado <joseluis.tirado@gmail.com>, 2014
+# joses <jose_mari_s@hotmail.com>, 2014
 # juanman <juanma@kde.org.ar>, 2013-2014
 # juanman <juanma@kde.org.ar>, 2011-2012
 # valarauco <manudeloz86@gmail.com>, 2012
@@ -37,9 +38,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-04 00:48-0400\n"
+"PO-Revision-Date: 2014-06-02 08:31+0000\n"
+"Last-Translator: joses <jose_mari_s@hotmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -407,7 +408,7 @@ msgstr "El backend de este contacto no permite actualizarlo"
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr ""
+msgstr "Este backend no permite agregar contactos"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"

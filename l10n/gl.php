@@ -86,6 +86,7 @@
 "On this %s" => "Neste %s",
 "You do not have permissions to update this contact" => "Vostede non ten permisos para actualizar este contacto",
 "The backend for this contact does not support updating it" => "A infraestrutura para este contacto non admite a súa actualización",
+"This backend does not support adding contacts" => "Esta infraestrutura non admite que se engadan contactos",
 "Property not found" => "Non se atopou a propiedade",
 " Missing IM parameter for: " => " Falta o parámetro MI para:",
 "Unknown IM: " => "MI descoñecido:",

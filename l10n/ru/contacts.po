@@ -29,6 +29,7 @@
 # tonymc <tony.mccourin@gmail.com>, 2011
 # Victor Bravo <>, 2012
 # VicDeo <victor.dubiniuk@gmail.com>, 2012
+# Алексей Выскубов <viskubov@gmail.com>, 2014
 # not_your_conscience <hex.void@gmail.com>, 2013
 # navigator666 <yuriy.malyovaniy@gmail.com>, 2013
 # Vyacheslav Muranov <s@neola.ru>, 2013
@@ -37,9 +38,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-04 00:48-0400\n"
+"PO-Revision-Date: 2014-06-03 07:21+0000\n"
+"Last-Translator: Алексей Выскубов <viskubov@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -407,7 +408,7 @@ msgstr "Реализация этого контакта не поддержив
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr ""
+msgstr "Этот бэкенд не поддерживает добавление контактов"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -1164,11 +1165,11 @@ msgstr "Модификация основного DN"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Коннектор"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Значение коннектора (лучше использовать внешний редактор и буфер обмена)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-04 00:48-0400\n"
+"PO-Revision-Date: 2014-06-02 06:21+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Khmer (http://www.transifex.com/projects/p/owncloud/language/km/)\n"
 "MIME-Version: 1.0\n"
@@ -538,11 +538,11 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:48
 msgid "No file was uploaded. Unknown error"
-msgstr ""
+msgstr "មិន​មាន​ឯកសារ​ដែល​បាន​ផ្ទុក​ឡើង។ មិន​ស្គាល់​កំហុស"
 
 #: lib/controller/importcontroller.php:57
 msgid "There is no error, the file uploaded with success"
-msgstr ""
+msgstr "មិន​មាន​កំហុស​អ្វី​ទេ ហើយ​ឯកសារ​ត្រូវ​បាន​ផ្ទុកឡើង​ដោយ​ជោគជ័យ"
 
 #: lib/controller/importcontroller.php:58
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"

@@ -86,6 +86,7 @@
 "On this %s" => "Bu %s üzerinde",
 "You do not have permissions to update this contact" => "Bu kişi bilgilerini güncelleme izniniz yok",
 "The backend for this contact does not support updating it" => "Arka uç, bu kişi için güncellemeyi desteklemiyor",
+"This backend does not support adding contacts" => "Bu geri plan mekanizması kişi eklemeyi desteklemiyor.",
 "Property not found" => "Özellik bulunamadı",
 " Missing IM parameter for: " => "Şu kişi için eksik IM parametresi:",
 "Unknown IM: " => "Bilinmeyen IM:",

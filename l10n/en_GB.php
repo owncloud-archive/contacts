@@ -86,6 +86,7 @@
 "On this %s" => "On this %s",
 "You do not have permissions to update this contact" => "You do not have permission to update this contact",
 "The backend for this contact does not support updating it" => "The backend for this contact does not support updating it",
+"This backend does not support adding contacts" => "This backend does not support adding contacts",
 "Property not found" => "Property not found",
 " Missing IM parameter for: " => " Missing IM parameter for: ",
 "Unknown IM: " => "Unknown IM: ",

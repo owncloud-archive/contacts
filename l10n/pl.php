@@ -86,6 +86,7 @@
 "On this %s" => "Na tym %s",
 "You do not have permissions to update this contact" => "Nie masz uprawnień edytowania tego kontaktu.",
 "The backend for this contact does not support updating it" => "Zaplecze dla tego kontaktu nie obsługuje aktualizacji",
+"This backend does not support adding contacts" => "To zaplecze nie wspiera dodawania kontaktór",
 "Property not found" => "Nie znaleziono właściwości",
 " Missing IM parameter for: " => "Brak parametru komunikator dla:",
 "Unknown IM: " => "Nieznany Komunikator",

@@ -86,6 +86,7 @@
 "On this %s" => "Об этом %s",
 "You do not have permissions to update this contact" => "У Вас нет разрешений обновлять этот контакт",
 "The backend for this contact does not support updating it" => "Реализация этого контакта не поддерживает обновления",
+"This backend does not support adding contacts" => "Этот бэкенд не поддерживает добавление контактов",
 "Property not found" => "Свойство не найдено",
 " Missing IM parameter for: " => "Отсутствует параметр IM для:",
 "Unknown IM: " => "Неизвестный IM:",
@@ -268,5 +269,7 @@
 "Filter" => "Фильтр",
 "Base DN for modification" => "Основной DN для модификации",
 "Base DN modification" => "Модификация основного DN",
+"Connector" => "Коннектор",
+"Connector value (Better use external editor and copy/paste)" => "Значение коннектора (лучше использовать внешний редактор и буфер обмена)",
 "Copy from (Warning, replaces current custom value)" => "Копировать из (Внимание, земеняет текущее произвольное значение)"
 );
