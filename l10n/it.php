@@ -86,6 +86,7 @@
 "On this %s" => "Su questo %s",
 "You do not have permissions to update this contact" => "Non hai i permessi per aggiornare questo contatto",
 "The backend for this contact does not support updating it" => "Il motore per questo contatto non supporta l'aggiornamento",
+"This backend does not support adding contacts" => "Questo motore non supporta l'aggiunta di contatti",
 "Property not found" => "Proprietà non trovata",
 " Missing IM parameter for: " => "Parametro IM mancante per:",
 "Unknown IM: " => "IM sconosciuto:",
@@ -267,7 +268,7 @@
 "Search filter" => "Filtro di ricerca",
 "Filter" => "Filtro",
 "Base DN for modification" => "DN base per le modifiche",
-"Base DN modification" => "Modifica Base DN",
+"Base DN modification" => "Modifica DN base",
 "Connector" => "Connettore",
 "Connector value (Better use external editor and copy/paste)" => "Valore del connettore (meglio utilizzare un editor esterno e copia/incolla)",
 "Copy from (Warning, replaces current custom value)" => "Copia da (attenzione, sostituisce i valori attuali personalizzati)"

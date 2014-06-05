@@ -3,18 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# amirlord <pnetsale@gmail.com>, 2013
+# Amir Keshavarz <pnetsale@gmail.com>, 2013
 # Amir Reza Asadi <amirreza.asadi@live.com>, 2013
-# Hossein Rayeshman <rayeshman@gmail.com>, 2012
-# miki_mika1362 <miki_mika1362@yahoo.com>, 2013
-# hajibaba <majid.hajibaba@gmail.com>, 2014
-# S. Wasim Tayyeb, 2014
+# Hossein Raysehman <rayeshman@gmail.com>, 2012
+# mahdi Kereshteh <miki_mika1362@yahoo.com>, 2013
+# majid hajibaba <majid.hajibaba@gmail.com>, 2014
+# wtayyeb, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:21+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Persian (http://www.transifex.com/projects/p/owncloud/language/fa/)\n"
 "MIME-Version: 1.0\n"
@@ -261,7 +261,7 @@ msgstr ""
 
 #: js/groups.js:672
 msgid "All"
-msgstr ""
+msgstr "همه"
 
 #: js/groups.js:687 js/groups.js:690
 msgid "Favorites"

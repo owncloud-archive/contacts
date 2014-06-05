@@ -15,6 +15,7 @@
 "Select photo" => "تصویر را انتخاب کنید",
 "OK" => "باشه",
 "Add" => "افزودن",
+"All" => "همه",
 "Shared by {owner}" => "اشتراک گذارنده {owner}",
 "Please choose the addressbook" => "لطفا یک کتابچه نشانی انتخاب کنید",
 "Import" => "وارد کردن",

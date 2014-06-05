@@ -3,11 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# AnAstAsiA <anastasia2501@hotmail.com>, 2012
-# AnAstAsiA <anastasia2501@hotmail.com>, 2012
-# axil Pι, 2013
-# axil Pι, 2013
-# axil Pι, 2013
+# Anastasia Lanning <anastasia2501@hotmail.com>, 2012
+# Anastasia Lanning <anastasia2501@hotmail.com>, 2012
+# Achilleas Pipinellis, 2013
+# Achilleas Pipinellis, 2013
+# Achilleas Pipinellis, 2013
 # christosvas <christosvas@in.gr>, 2011
 # christosvas <christosvas@in.gr>, 2011
 # Dimitris M. <monopatis@gmail.com>, 2012
@@ -15,29 +15,29 @@
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2012-2014
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012, 2012-2013, 2013
-# gtsamis <gtsamis@yahoo.com>, 2013
+# Georgios Tsamis <gtsamis@yahoo.com>, 2013
 # thea_rad <inactive+thea_rad@transifex.com>, 2014
-# KAT.RAT12 <spanish.katerina@gmail.com>, 2013
+# Αικατερίνη Χ. Καταπόδη <spanish.katerina@gmail.com>, 2013
 # Marios Bekatoros <>, 2012-2013
 # Nisok Kosin <nikos.efthimiou@gmail.com>, 2012
 # Petros Kyladitis <petros.kyladitis@gmail.com>, 2011-2012
 # Serenata <pamponiros@yahoo.com>, 2013
-# pe_ppe <peppe@cs.uoi.gr>, 2014
+# Spyros Melissovas <peppe@cs.uoi.gr>, 2014
 # stratosgl <stratos_gl@yahoo.com>, 2014
-# Teogramm <theodorewii121@hotmail.com>, 2013
+# Theodore Grammenos <theodorewii121@hotmail.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012
-# vkehayas <vkehayas@gmail.com>, 2013-2014
-# Wasilis <inactive+Wasilis@transifex.com>, 2013
-# Wasilis <inactive+Wasilis@transifex.com>, 2013
+# Vassilis Kehayas <vkehayas@gmail.com>, 2013-2014
+# Wasilis Mandratzis <inactive+Wasilis@transifex.com>, 2013
+# Wasilis Mandratzis <inactive+Wasilis@transifex.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012-2013
-# KAT.RAT12 <spanish.katerina@gmail.com>, 2013
+# Αικατερίνη Χ. Καταπόδη <spanish.katerina@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"

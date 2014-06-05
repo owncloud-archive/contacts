@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# llaera <llaera@outlook.com>, 2013
-# Michel Weimerskirch <michel@weimerskirch.net>, 2013
+# Laera Loris <llaera@outlook.com>, 2013
+# michel.weimerskirch <michel@weimerskirch.net>, 2013
 # sim0n <sim0n@trypill.org>, 2013
 # sim0n <sim0n@trypill.org>, 2011, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Luxembourgish (http://www.transifex.com/projects/p/owncloud/language/lb/)\n"
 "MIME-Version: 1.0\n"

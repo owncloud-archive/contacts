@@ -9,26 +9,26 @@
 # Cyryl Sochacki <cyrylsochacki@gmail.com>, 2012
 # Cyryl Sochacki <cyrylsochacki@gmail.com>, 2012-2014
 # czarnystokrotek <czarnystokrotek@mailoo.org>, 2012
-# hoek <hoek@hoek.pl>, 2014
-# orcio6 <orcio6@o2.pl>, 2013
-# paszczak000 <paszczak000@gmail.com>, 2013
-# maxxx <maxxxrally@gmail.com>, 2014
-# bobie <maciej.przybecki@gmail.com>, 2013-2014
+# Dawid <hoek@hoek.pl>, 2014
+# Jerzy Ruszczak <orcio6@o2.pl>, 2013
+# Kamil Porembiński <paszczak000@gmail.com>, 2013
+# Krzysztof Łojowski <maxxxrally@gmail.com>, 2014
+# Maciej Przybecki <maciej.przybecki@gmail.com>, 2013-2014
 # Maciej Tarmas <maciej@tarmas.pl>, 2013
 # Marcin Małecki <gerber@tkdami.net>, 2011-2012
 # MarPiRK <marpirk@gmail.com>, 2014
-# Michal Plichta <mplichta@gmail.com>, 2013
-# Michal Plichta <mplichta@gmail.com>, 2012
+# Michał Plichta <mplichta@gmail.com>, 2013
+# Michał Plichta <mplichta@gmail.com>, 2012
 # Paweł Ciecierski <pciecierski@gmail.com>, 2012
 # Piotr Sokół <psokol@jabster.pl>, 2012
-# urban <urban@fail.pl>, 2012
+# Krzysztof Urbaniak <urban@fail.pl>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-04 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 11:11+0000\n"
-"Last-Translator: bobie <maciej.przybecki@gmail.com>\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
+"Last-Translator: Maciej Przybecki <maciej.przybecki@gmail.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/owncloud/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

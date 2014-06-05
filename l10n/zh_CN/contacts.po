@@ -5,31 +5,31 @@
 # Translators:
 # hanfeng <appweb.cn@gmail.com>, 2013
 # hanfeng <appweb.cn@gmail.com>, 2012
-# ccb <ccb3275@gmail.com>, 2013
-# houqp <dave2008713@gmail.com>, 2012
-# dtsang29 <dtsang29@hotmail.com>, 2013
+# CyberCowBoy <ccb3275@gmail.com>, 2013
+# Qingping Hou <dave2008713@gmail.com>, 2012
+# Dennis <dtsang29@hotmail.com>, 2013
 # Dianjin Wang <1132321739qq@gmail.com>, 2012-2013
 # heyinglong <heyinglong@hotmail.com>, 2013
 # jsgang <jsgang9@gmail.com>, 2014
-# fkj <fengkaijia@gmail.com>, 2013
+# Kaijia Feng <fengkaijia@gmail.com>, 2013
 # marguerite su <i@marguerite.su>, 2013
 # Martin Liu <liuzh66@gmail.com>, 2014
 # Phoenix Nemo <mrphoenixlzx@gmail.com>, 2012
 # leonfeng <chaofeng111@gmail.com>, 2012
 # waterone <suiy02@gmail.com>, 2013
 # waterone <suiy02@gmail.com>, 2012
-# tonnie <supertonnie@hotmail.com>, 2012
-# modokwang <modokwang@gmail.com>, 2013
-# Xuetian Weng <wengxt@gmail.com>, 2013-2014
-# Xuetian Weng <wengxt@gmail.com>, 2011, 2012
-# yhsih <shuxq@sina.com>, 2014
-# min zhang <zm1990s@gmail.com>, 2013
+# Tonnie Yang <supertonnie@hotmail.com>, 2012
+# wang <modokwang@gmail.com>, 2013
+# csslayer <wengxt@gmail.com>, 2013-2014
+# csslayer <wengxt@gmail.com>, 2011, 2012
+# XiaoQiang <shuxq@sina.com>, 2014
+# zhangmin <zm1990s@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"

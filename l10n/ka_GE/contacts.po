@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# drlinux64 <romeo@energo-pro.ge>, 2012
-# drlinux64 <romeo@energo-pro.ge>, 2013
+# Romeo Pirtskhalava <romeo@energo-pro.ge>, 2012
+# Romeo Pirtskhalava <romeo@energo-pro.ge>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:21+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Georgian (Georgia) (http://www.transifex.com/projects/p/owncloud/language/ka_GE/)\n"
 "MIME-Version: 1.0\n"
@@ -257,7 +257,7 @@ msgstr ""
 
 #: js/groups.js:672
 msgid "All"
-msgstr ""
+msgstr "ყველა"
 
 #: js/groups.js:687 js/groups.js:690
 msgid "Favorites"

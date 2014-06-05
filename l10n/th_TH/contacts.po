@@ -5,13 +5,13 @@
 # Translators:
 # AriesAnywhere Anywhere <ariesanywhere@gmail.com>, 2012-2013
 # AriesAnywhere Anywhere <ariesanywhere@gmail.com>, 2012
-# minkbear beary <minkbear@gmail.com>, 2014
+# minkbear <minkbear@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Thai (Thailand) (http://www.transifex.com/projects/p/owncloud/language/th_TH/)\n"
 "MIME-Version: 1.0\n"

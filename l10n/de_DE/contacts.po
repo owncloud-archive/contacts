@@ -5,28 +5,28 @@
 # Translators:
 # ako84 <a0306265@unet.univie.ac.at>, 2013
 # goeck <admin@s-goecker.de>, 2012
-# a.tangemann <a.tangemann@web.de>, 2013
-# a.tangemann <a.tangemann@web.de>, 2012-2013
-# Mirodin <blobbyjj@ymail.com>, 2012
-# nIerSify <chris.schuette86@googlemail.com>, 2012
-# arkascha <foss@christian-reiner.info>, 2013
-# Christoph Sczigiol <inactive+christoph.sczigiol@transifex.com>, 2013
-# deh3nne, 2012
+# Andreas Tangemann <a.tangemann@web.de>, 2013
+# Andreas Tangemann <a.tangemann@web.de>, 2012-2013
+# Tristan <blobbyjj@ymail.com>, 2012
+# Christoph Schütte <chris.schuette86@googlemail.com>, 2012
+# Christian Reiner <foss@christian-reiner.info>, 2013
+# christoph.sczigiol <inactive+christoph.sczigiol@transifex.com>, 2013
+# Fenton Crackshell, 2012
 # driz <driz@i2pmail.org>, 2012
 # CBiX <fh@cbix.de>, 2012
 # javex, 2012
 # george <social@georgehrke.com>, 2011
 # hebbet <pascal.herbert@gmail.com>, 2012
 # SteinQuadrat, 2013
-# toolking, 2013
+# Ingo, 2013
 # I Robot, 2012
 # Jan-Christoph Borchardt <JanCBorchardt@fsfe.org>, 2011
 # Jan-Christoph Borchardt <jan@unhosted.org>, 2011
-# lysathor, 2014
+# Lysathor, 2014
 # Marcel Kühlhorn <tux93@opensuse.org>, 2012-2014
 # Mario Siegmann <mario_siegmann@web.de>, 2013-2014
 # Melvin Gundlach <mail@melvin-gundlach.de>, 2012
-# Michael Krell, 2012
+# m4dmike, 2012
 # LittleBuddha <mi.sc@gmx.net>, 2012
 # piccobello <nelsonfritsch@gmail.com>, 2012
 # JamFX <niko@nik-o-mat.de>, 2012
@@ -41,14 +41,14 @@
 # traductor, 2014
 # traductor, 2012
 # noxin <transifex.com@davidmainzer.com>, 2013
-# Mirodin <blobbyjj@ymail.com>, 2013
+# Tristan <blobbyjj@ymail.com>, 2013
 # kabum <uu.kabum@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-04 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 11:41+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/owncloud/language/de_DE/)\n"
 "MIME-Version: 1.0\n"

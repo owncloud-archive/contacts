@@ -30,6 +30,7 @@
 "Edit profile picture" => "Rediger profilbilete",
 "# groups" => "# grupper",
 "Add" => "Legg til",
+"All" => "Alle",
 "Shared by {owner}" => "Delt av {owner}",
 "Import" => "Importer",
 "Importing..." => "Importerer …",

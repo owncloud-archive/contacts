@@ -194,10 +194,12 @@
 "First name" => "Fornavn",
 "Additional names" => "Mellemnavne",
 "Last name" => "Efternavn",
+"Address book" => "Adressebog",
 "Nickname" => "Kaldenavn",
 "Title" => "Titel",
 "Organization" => "Organisation",
 "Birthday" => "Fødselsdag",
+"Website" => "Hjemmeside",
 "Notes go here..." => "Skriv noter her...",
 "Add field..." => "Tilføj felt...",
 "Instant Messaging" => "Instant Messaging",
@@ -223,7 +225,9 @@
 "CardDAV link" => "CardDAV link",
 "Edit" => "Rediger",
 "Description" => "Beskrivelse",
+"Anonymous" => "Anonymt",
 "User" => "Bruger",
 "Password" => "Kodeord",
-"Base DN" => "Base DN"
+"Base DN" => "Base DN",
+"Filter" => "Filter"
 );

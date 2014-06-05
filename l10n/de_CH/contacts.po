@@ -4,14 +4,14 @@
 # 
 # Translators:
 # ako84 <a0306265@unet.univie.ac.at>, 2013
-# arkascha <foss@christian-reiner.info>, 2013
-# a.tangemann <a.tangemann@web.de>, 2013
+# Christian Reiner <foss@christian-reiner.info>, 2013
+# Andreas Tangemann <a.tangemann@web.de>, 2013
 # CBiX <fh@cbix.de>, 2012
-# Christoph Sczigiol <inactive+christoph.sczigiol@transifex.com>, 2013
+# christoph.sczigiol <inactive+christoph.sczigiol@transifex.com>, 2013
 # deh3nne, 2012
 # driz <driz@i2pmail.org>, 2012
-# FlorianScholz <work@bgstyle.de>, 2013
-# FlorianScholz <work@bgstyle.de>, 2013
+# Florian Scholz <work@bgstyle.de>, 2013
+# Florian Scholz <work@bgstyle.de>, 2013
 # george <social@georgehrke.com>, 2011
 # goeck <admin@s-goecker.de>, 2012
 # hebbet <pascal.herbert@gmail.com>, 2012
@@ -20,13 +20,13 @@
 # Jan-Christoph Borchardt <JanCBorchardt@fsfe.org>, 2011
 # Jan-Christoph Borchardt <jan@unhosted.org>, 2011
 # javex, 2012
-# kenwood <kenwood@gmx.ch>, 2013
+# KenWood <kenwood@gmx.ch>, 2013
 # LittleBuddha <mi.sc@gmx.net>, 2012
 # Mario Siegmann <mario_siegmann@web.de>, 2013
 # Melvin Gundlach <mail@melvin-gundlach.de>, 2012
 # Michael Krell, 2012
-# Mirodin <blobbyjj@ymail.com>, 2012-2013
-# nIerSify <chris.schuette86@googlemail.com>, 2012
+# Tristan <blobbyjj@ymail.com>, 2012-2013
+# Christoph Schütte <chris.schuette86@googlemail.com>, 2012
 # Phi Lieb <>, 2012
 # piccobello <nelsonfritsch@gmail.com>, 2012
 # seeed <seeed@freenet.de>, 2013
@@ -40,8 +40,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: German (Switzerland) (http://www.transifex.com/projects/p/owncloud/language/de_CH/)\n"
 "MIME-Version: 1.0\n"

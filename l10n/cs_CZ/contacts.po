@@ -3,24 +3,24 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Twiguard, 2013
-# Honza K. <honza889@gmail.com>, 2013
+# Albion von Darx, 2013
+# Jan Kalina <honza889@gmail.com>, 2013
 # Jan Krejci <krejca85@gmail.com>, 2011-2012
-# liska_, 2013-2014
-# svetlemodry <jaroslav@lichtblau.cz>, 2014
-# xmorave2 <josef.moravec@gmail.com>, 2014
-# Martin <fireball@atlas.cz>, 2013
-# Martin <fireball@atlas.cz>, 2011-2012
-# m23 <black23@gmail.com>, 2014
+# Jan Liska, 2013-2014
+# Jaroslav Lichtblau <jaroslav@lichtblau.cz>, 2014
+# Josef Moravec <josef.moravec@gmail.com>, 2014
+# Martin Skopal <fireball@atlas.cz>, 2013
+# Martin Skopal <fireball@atlas.cz>, 2011-2012
+# MICHAL D. <black23@gmail.com>, 2014
 # Michal Hrušecký <Michal@hrusecky.net>, 2012-2013
-# pstast <petr@stastny.eu>, 2013-2014
+# Petr Šťastný <petr@stastny.eu>, 2013-2014
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"

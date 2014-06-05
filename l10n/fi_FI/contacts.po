@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ehdoton <sampsa.somerma@gmail.com>, 2013
+# duuduu <sampsa.somerma@gmail.com>, 2013
 # Jesse Jaara <jesse.jaara@gmail.com>, 2012
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2012-2014
 # Johannes Korpela <>, 2012
-# Larso <larso@gmx.com>, 2013
+# Lasse Liehu <larso@gmx.com>, 2013
 # teho <tehoratopato@gmail.com>, 2012
 # tscooter <tscooter@hotmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/projects/p/owncloud/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"

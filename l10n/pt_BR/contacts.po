@@ -4,23 +4,23 @@
 # 
 # Translators:
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014
-# bjamalaro <bjamalaro@yahoo.com.br>, 2013
+# Bruno Jamalaro <bjamalaro@yahoo.com.br>, 2013
 # Flávio Veras <flaviove@gmail.com>, 2013-2014
-# Schopfer <glauber.guimaraes@poli.ufrj.br>, 2012
+# Thiago Gláuber Guimarães de Almeida <glauber.guimaraes@poli.ufrj.br>, 2012
 # Guilherme Maluf Balzana <guimalufb@gmail.com>, 2012
-# sedir <philippi.sedir@gmail.com>, 2012
+# Sedir G. Morais <philippi.sedir@gmail.com>, 2012
 # Rodrigo Tavares <rodrigost23@gmail.com>, 2013
-# sedir <philippi.sedir@gmail.com>, 2013
+# Sedir G. Morais <philippi.sedir@gmail.com>, 2013
 # targinosilveira <targinosilveira@gmail.com>, 2012
-# Thiago Rafael Vicente <thiagovice@gmail.com>, 2012
-# tuliouel, 2013
+# Thiago Vicente <thiagovice@gmail.com>, 2012
+# Tulio Simoes Martins Padilha, 2013
 # Van Der Fran <transifex@vanderland.com>, 2011, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-04 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 11:41+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: Flávio Veras <flaviove@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"

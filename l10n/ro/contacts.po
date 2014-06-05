@@ -5,18 +5,18 @@
 # Translators:
 # alinaa, 2014
 # andreiacob <andrei.iacob@y7mail.com>, 2014
-# Claudiu, 2011, 2012
-# Dimon Pockemon <>, 2012
+# Rawbeef64, 2011, 2012
+# Dumitru Ursu <>, 2012
 # Eugen Mihalache <eugemjj@gmail.com>, 2012
-# g.ciprian <g.ciprian@osn.ro>, 2012
-# inaina <ina.c.ina@gmail.com>, 2013
-# lauraberindei <lauraagavriloae@yahoo.com>, 2014
+# Ciprian Ghenciu <g.ciprian@osn.ro>, 2012
+# ina <ina.c.ina@gmail.com>, 2013
+# laura berindei <lauraagavriloae@yahoo.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/owncloud/language/ro/)\n"
 "MIME-Version: 1.0\n"

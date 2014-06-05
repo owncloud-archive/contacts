@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Tuấn Kiệt Hồ <hotuankiet_2000@yahoo.com>, 2013
-# khanhnd <khanhnd@kenhgiaiphap.vn>, 2012
-# Nguyễn Tài <mattheu.9x@gmail.com>, 2012
-# Nguyễn Tài <mattheu.9x@gmail.com>, 2012
-# Nguyễn Tài <mattheu.9x@gmail.com>, 2014
-# saosangm <saosangmo@yahoo.com>, 2013
+# Hồ Tuấn Kiệt <hotuankiet_2000@yahoo.com>, 2013
+# Ngo Duy Khanh <khanhnd@kenhgiaiphap.vn>, 2012
+# Nguyễn Hữu Tài <mattheu.9x@gmail.com>, 2012
+# Nguyễn Hữu Tài <mattheu.9x@gmail.com>, 2012
+# Nguyễn Hữu Tài <mattheu.9x@gmail.com>, 2014
+# sao sang <saosangmo@yahoo.com>, 2013
 # Sơn Nguyễn <sonnghit@gmail.com>, 2012,2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Vietnamese (http://www.transifex.com/projects/p/owncloud/language/vi/)\n"
 "MIME-Version: 1.0\n"

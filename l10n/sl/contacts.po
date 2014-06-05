@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# mateju <>, 2013
-# mateju <>, 2012
+# Matej Urbančič <>, 2013
+# Matej Urbančič <>, 2012
 # barbarak <barbarak@arnes.si>, 2013
-# mateju <>, 2013-2014
+# Matej Urbančič <>, 2013-2014
 # Peter Peroša <peter.perosa@gmail.com>, 2012
 # Peter Peroša <peter.perosa@gmail.com>, 2012
 # urossolar <urossolar@hotmail.com>, 2011
@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"

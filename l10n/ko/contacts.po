@@ -5,29 +5,29 @@
 # Translators:
 # aoiob4305 <aoiob4305@gmail.com>, 2013
 # aoiob4305 <aoiob4305@gmail.com>, 2013
-# 남자사람 <cessnagi@gmail.com>, 2012
-# 남자사람 <cessnagi@gmail.com>, 2012
-# chohy <chohy@yahoo.com>, 2013
+# youlmu <cessnagi@gmail.com>, 2012
+# youlmu <cessnagi@gmail.com>, 2012
+# Mandy Cho <chohy@yahoo.com>, 2013
 # Daisuke Deguchi <ddeguchi@is.nagoya-u.ac.jp>, 2012
-# madeng <jongyoul@gmail.com>, 2013
+# Jongyoul Lee <jongyoul@gmail.com>, 2013
 # yunhye <limonade83@gmail.com>, 2012
-# madeng <jongyoul@gmail.com>, 2013
-# chohy <chohy@yahoo.com>, 2013
+# Jongyoul Lee <jongyoul@gmail.com>, 2013
+# Mandy Cho <chohy@yahoo.com>, 2013
 # Shinjo Park <kde@peremen.name>, 2013
 # Park Shinjo <peremen@gmail.com>, 2013
 # Shinjo Park <kde@peremen.name>, 2012-2013
-# ujuc Gang <potopro@gmail.com>, 2013
-# ujuc Gang <potopro@gmail.com>, 2013
-# tt yn <tetuyano+transi@gmail.com>, 2012
-# tt yn <tetuyano+transi@gmail.com>, 2012
-# ujuc Gang <potopro@gmail.com>, 2013
+# Sungjin Kang <potopro@gmail.com>, 2013
+# Sungjin Kang <potopro@gmail.com>, 2013
+# YANO Tetsu <tetuyano+transi@gmail.com>, 2012
+# YANO Tetsu <tetuyano+transi@gmail.com>, 2012
+# Sungjin Kang <potopro@gmail.com>, 2013
 # yunhye <limonade83@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-02 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 04:48+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"

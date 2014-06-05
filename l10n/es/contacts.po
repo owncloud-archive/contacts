@@ -5,41 +5,41 @@
 # Translators:
 # Agustin Ferrario <agustin.ferrario@hotmail.com.ar>, 2012-2013
 # Art O. Pal <artopal@fastmail.fm>, 2012-2014
-# Bui <bui@g.pl>, 2012
-# VaCi0 <cvargas@linuxmail.org>, 2013
-# telco2011 <davidlopez.david@gmail.com>, 2012
+# Mark Stone <bui@g.pl>, 2012
+# Cesar Augusto Vargas Deza <cvargas@linuxmail.org>, 2013
+# David López Felguera <davidlopez.david@gmail.com>, 2012
 # Dominique Couot <dcouot@hotmail.com>, 2014
 # Francisco Losada, 2013
-# ggam <ggam@brainleakage.com>, 2013
-# eSSeneX <israel@expander.es>, 2013
+# Guillermo G. <ggam@brainleakage.com>, 2013
+# Israel Ortuño <israel@expander.es>, 2013
 # Javier Llorente <javier@opensuse.org>, 2012
-# jesus guzman <jaguzman123@gmail.com>, 2014
-# Jose Luis Tirado <joseluis.tirado@gmail.com>, 2014
+# Jesús  Guzmán <jaguzman123@gmail.com>, 2014
+# Jose Luis <joseluis.tirado@gmail.com>, 2014
 # joses <jose_mari_s@hotmail.com>, 2014
 # juanman <juanma@kde.org.ar>, 2013-2014
 # juanman <juanma@kde.org.ar>, 2011-2012
-# valarauco <manudeloz86@gmail.com>, 2012
-# msoko <sokolovitch@yahoo.com>, 2013
-# mikelanabitarte <inactive+mikelanabitarte@transifex.com>, 2013
+# Valarauco <manudeloz86@gmail.com>, 2012
+# Marc Sokolovitch <sokolovitch@yahoo.com>, 2013
+# mikel anabitarte <inactive+mikelanabitarte@transifex.com>, 2013
 # oSiNaReF  <>, 2012
-# plaguna <laguna.sanchez@gmail.com>, 2013
-# pablomillaquen <pablomillaquen@gmail.com>, 2013
+# Pablo Laguna <laguna.sanchez@gmail.com>, 2013
+# Pablo Millaquen <pablomillaquen@gmail.com>, 2013
 # Raul Fernandez Garcia <raulfg3@gmail.com>, 2012-2014
-# qdneren <renanqd@yahoo.com.mx>, 2013
+# Renan Quezada <renanqd@yahoo.com.mx>, 2013
 # rodrigo.calvo <rodrigo.calvo@gmail.com>, 2012
-# Rubén del Campo <yo@rubendelcampo.es>, 2013
+# Rubén del Campo Gómez <yo@rubendelcampo.es>, 2013
 # Rubén Trujillo <rubentrf@gmail.com>, 2012
-# saskarip <saskarip@gmail.com>, 2013
+# Sam Askari <saskarip@gmail.com>, 2013
 # xsergiolpx <sergioballesterossolanas@gmail.com>, 2011-2012
-# scambra <sergio@programatica.es>, 2013
+# Sergio Cambra <sergio@programatica.es>, 2013
 # victormce <victormce@gmail.com>, 2014
 # William Díaz <wdiazux@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-04 00:48-0400\n"
-"PO-Revision-Date: 2014-06-02 08:31+0000\n"
+"POT-Creation-Date: 2014-06-05 00:48-0400\n"
+"PO-Revision-Date: 2014-06-04 06:11+0000\n"
 "Last-Translator: joses <jose_mari_s@hotmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/owncloud/language/es/)\n"
 "MIME-Version: 1.0\n"
