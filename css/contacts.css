@@ -554,10 +554,6 @@ input[type=checkbox].propertytype { width: 10px; }
 
 .svg .favorite { display: inline-block; float: left; height: 20px; width: 20px; background-size:contain; }
 
-#app-content {
-	top: 44px;
-}
-
 /* Contact layout */
 
 #contact > ul > li { white-space: nowrap; margin-right: 110px; }
