@@ -86,6 +86,7 @@
 "On this %s" => "På denna %s",
 "You do not have permissions to update this contact" => "Du har inte behörighet att uppdatera denna kontakt",
 "The backend for this contact does not support updating it" => "Gränssnittet för denna kontakt saknar stöd för uppdatering av den.",
+"This backend does not support adding contacts" => "Detta bakomliggande system stödjer inte att kontakter läggs till",
 "Property not found" => "Egenskap kunde inte hittas",
 " Missing IM parameter for: " => "IM-parametrar saknas för:",
 "Unknown IM: " => "Okänt IM:",

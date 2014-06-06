@@ -14,6 +14,7 @@
 # mikkel_ilu <mikkelbjerglarsen@gmail.com>, 2011
 # Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2011-2012,2014
 # Ole Holm Frandsen <froksen@gmail.com>, 2012-2013
+# osos <osos@openeyes.dk>, 2014
 # Pascal d'Hermilly <pascal@dhermilly.dk>, 2011
 # Rasmus Paasch <rasmuspaasch@gmail.com>, 2013
 # muunsim <simon@rosmi.dk>, 2012
@@ -23,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-05 00:48-0400\n"
-"PO-Revision-Date: 2014-06-04 14:26+0000\n"
-"Last-Translator: Peter Jespersen <flywheeldk@gmail.com>\n"
+"POT-Creation-Date: 2014-06-06 00:48-0400\n"
+"PO-Revision-Date: 2014-06-05 20:41+0000\n"
+"Last-Translator: osos <osos@openeyes.dk>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -935,7 +936,7 @@ msgstr "Upload nyt foto"
 
 #: templates/contacts.php:241
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Vælg foto fra Filer"
 
 #: templates/contacts.php:243
 msgid "Favorite"

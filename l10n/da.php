@@ -189,6 +189,7 @@
 "Delete current photo" => "Slet nuværende foto",
 "Edit current photo" => "Rediger nuværende foto",
 "Upload new photo" => "Upload nyt foto",
+"Select photo from Files" => "Vælg foto fra Filer",
 "Favorite" => "Foretrukken",
 "Name" => "Navn",
 "First name" => "Fornavn",

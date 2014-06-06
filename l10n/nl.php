@@ -86,6 +86,7 @@
 "On this %s" => "Op deze %s",
 "You do not have permissions to update this contact" => "U heeft geen permissie om deze contactpersoon te bewerken",
 "The backend for this contact does not support updating it" => "De backend voor deze contactpersoon heeft geen ondersteuning voor bewerk acties",
+"This backend does not support adding contacts" => "Deze backend heeft geen ondersteuning voor het toevoegen van contacten",
 "Property not found" => "Eigenschap niet gevonden",
 " Missing IM parameter for: " => "Ontbrekende IM parameter voor:",
 "Unknown IM: " => "Onbekende IM:",

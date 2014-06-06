@@ -13,6 +13,7 @@
 # Jian, Wei-Hang <tonytonyjan@gmail.com>, 2013
 # kaiser1350 <shark.zero@outlook.com>, 2013
 # Pellaeon Lin <nfsmwlin@gmail.com>, 2013
+# tifa_choi <tifa_choi@tungtex.com>, 2014
 # ronnietse <tseronnie@ymail.com>, 2013
 # Will Tsai <mktsai@sweea.com>, 2013
 # ywang <ywang1007@gmail.com>, 2012
@@ -20,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-05 00:48-0400\n"
-"PO-Revision-Date: 2014-06-04 06:11+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-06 00:48-0400\n"
+"PO-Revision-Date: 2014-06-06 02:50+0000\n"
+"Last-Translator: tifa_choi <tifa_choi@tungtex.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/owncloud/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,7 +91,7 @@ msgstr "通訊錄載入失敗：{error}"
 
 #: js/admin.js:92 js/storage.js:27
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "伺服器錯誤! 請通知系統管理員"
 
 #: js/app.js:223
 msgid "Indexing contacts"
@@ -164,7 +165,7 @@ msgstr "從群組中移除出錯。"
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "你已經選取了超過300個聯絡人。\n可能會導致失敗！點擊這兒繼續嘗試。"
 
 #: js/app.js:1226
 msgid "Error setting {name} as favorite."
@@ -204,7 +205,7 @@ msgstr "# groups"
 
 #: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "解析生日 {bday} 時發生錯誤"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
@@ -250,7 +251,7 @@ msgstr "聯絡人皆不在此群組中。"
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "群組 \"{group}\" 已存在"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -288,7 +289,7 @@ msgstr "載入群組失敗：{error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
-msgstr ""
+msgstr "請選擇通訊錄"
 
 #: js/loader.js:22 templates/contacts.php:41
 msgid "Import into..."
@@ -296,11 +297,11 @@ msgstr "匯入至…"
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "載入匯入樣板時發生錯誤"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "匯入聯絡人"
 
 #: js/loader.js:61 templates/contacts.php:37
 msgid "Import"
@@ -312,7 +313,7 @@ msgstr "匯入中…"
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr ""
+msgstr "匯入完成"
 
 #: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
 #: templates/contacts.php:377
@@ -432,7 +433,7 @@ msgstr "建立聯絡人出現錯誤"
 
 #: lib/controller/addressbookcontroller.php:270
 msgid "Error creating contact"
-msgstr ""
+msgstr "創建聯絡人時發生錯誤"
 
 #: lib/controller/addressbookcontroller.php:302
 msgid "Error deleting contact"
@@ -487,11 +488,11 @@ msgstr "有關 vCard 的資訊不正確，請重新載入此頁。"
 
 #: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
-msgstr ""
+msgstr "更新聯絡人時發生錯誤"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "儲存聯絡人資料至後台時發生錯誤"
 
 #: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
@@ -596,7 +597,7 @@ msgstr "上傳聯絡人到儲存空間時發生錯誤"
 
 #: lib/controller/importcontroller.php:148
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "移動檔案至匯入資料夾時發生錯誤"
 
 #: lib/controller/importcontroller.php:167
 msgid "You do not have permissions to import into this address book."
@@ -761,7 +762,7 @@ msgstr ""
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
-msgstr ""
+msgstr "新聯絡人"
 
 #: templates/contacts.php:13
 msgid "Group name"
@@ -769,7 +770,7 @@ msgstr "群組名稱"
 
 #: templates/contacts.php:13
 msgid "New group"
-msgstr ""
+msgstr "新群組"
 
 #: templates/contacts.php:22
 msgid "Address books"
@@ -828,7 +829,7 @@ msgstr "下載"
 
 #: templates/contacts.php:89
 msgid "Merge"
-msgstr ""
+msgstr "合併"
 
 #: templates/contacts.php:92 templates/contacts.php:326
 #: templates/contacts.php:365
@@ -847,7 +848,7 @@ msgstr "網址"
 
 #: templates/contacts.php:95
 msgid "Group"
-msgstr ""
+msgstr "群組"
 
 #: templates/contacts.php:103
 msgid "Keyboard shortcuts"
@@ -932,7 +933,7 @@ msgstr "上傳新照片"
 
 #: templates/contacts.php:241
 msgid "Select photo from Files"
-msgstr ""
+msgstr "從檔案中選擇相片"
 
 #: templates/contacts.php:243
 msgid "Favorite"
@@ -957,7 +958,7 @@ msgstr "姓氏"
 
 #: templates/contacts.php:278
 msgid "Address book"
-msgstr ""
+msgstr "通訊錄"
 
 #: templates/contacts.php:285 templates/contacts.php:362
 msgid "Nickname"
@@ -989,7 +990,7 @@ msgstr "註釋在此處"
 
 #: templates/contacts.php:359
 msgid "Add field..."
-msgstr ""
+msgstr "新增欄位..."
 
 #: templates/contacts.php:366
 msgid "Instant Messaging"
