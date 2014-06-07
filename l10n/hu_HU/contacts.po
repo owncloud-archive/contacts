@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Ádám Matisz <complic@vipmail.hu>, 2013
-# Adam Toth <adazlord@gmail.com>, 2012
+# Adam Toth <adazlord@gmail.com>, 2012,2014
 # Akos <nagy.akos@libreoffice.ro>, 2013
 # David Szilagyi <inactive+sherlock79@transifex.com>, 2013
 # ebela <bela@dandre.hu>, 2013
@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-06 00:48-0400\n"
-"PO-Revision-Date: 2014-06-05 06:11+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-07 00:48-0400\n"
+"PO-Revision-Date: 2014-06-06 11:00+0000\n"
+"Last-Translator: Adam Toth <adazlord@gmail.com>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "Névjegyek"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Vegyél fel új LDAP-névjegyalbumot"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -56,23 +56,23 @@ msgstr "Címlista szerkesztése"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr ""
+msgstr "Fájlimportálás megkezdése"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Kiválasztott formátum: {format}"
 
 #: js/addressbooks.js:407 js/addressbooks.js:435
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Automatikus formátum-felderítés"
 
 #: js/addressbooks.js:485
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "{count}/{total} kártya feldolgozása"
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Összes:{total}, Sikeres:{imported}, Hibás:{failed}"
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
@@ -145,11 +145,11 @@ msgstr "Hiba történt a hálózatban vagy a kiszolgálón. Értesítse a rendsz
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Csak képek használhatóak a kontaktok fotóihoz"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "\"{filename}\" mérete meghaladja a maximálisan megengedett \"{size}\" méretet"
 
 #: js/app.js:972
 msgid "Error adding to group."
@@ -207,7 +207,7 @@ msgstr "Hiba a születésnap értelmezésekor {bday}"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Az alrendszer nem támogatja a több byte-os karaktereket"
 
 #: js/contacts.js:2232
 msgid ""
@@ -320,7 +320,7 @@ msgstr "Bezárás"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Hiba, hiányzó paraméterek: "
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -360,7 +360,7 @@ msgstr "Ismeretlen hiba"
 
 #: lib/addressbook.php:413
 msgid "Access denied"
-msgstr ""
+msgstr "Hozzáférés megtagadva"
 
 #: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
@@ -377,7 +377,7 @@ msgstr "A címjegyzék nem található"
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "Ezen a(z) %s-on"
 
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
@@ -389,7 +389,7 @@ msgstr "A névjegyhez tartozó háttérrendszer nem támogatja a frissítést"
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr ""
+msgstr "Ez az alrendszer nem támogatja a kontakt-hozzáadást"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -414,7 +414,7 @@ msgstr "Hiba a címjegyzék létrehozásakor"
 #: lib/controller/addressbookcontroller.php:206
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "A %s alrendszer nem támogatja a névjegyalbumok törlését."
 
 #: lib/controller/addressbookcontroller.php:214
 #, php-format
@@ -431,19 +431,19 @@ msgstr "Hiba a névjegy létrehozásakor."
 
 #: lib/controller/addressbookcontroller.php:270
 msgid "Error creating contact"
-msgstr ""
+msgstr "Nem sikerült a kontakt létrehozása"
 
 #: lib/controller/addressbookcontroller.php:302
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Nem sikerült a kontakt törlése"
 
 #: lib/controller/addressbookcontroller.php:342
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Nem sikerült a kontakt lekérdezése"
 
 #: lib/controller/addressbookcontroller.php:353
 msgid "Error saving contact"
-msgstr ""
+msgstr "Nem sikerült a kontakt mentése"
 
 #: lib/controller/addressbookcontroller.php:359
 msgid "Error removing contact from other address book."
@@ -451,7 +451,7 @@ msgstr "Hiba a névjegy más címjegyzékből történő törlésekor."
 
 #: lib/controller/addressbookcontroller.php:366
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Nem sikerült a hozzáférés az átmozgatott kontakthoz"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -502,7 +502,7 @@ msgstr "Nincs fénykép-útvonal megadva"
 
 #: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Nem tölthető be a kép a gyorsítótárból"
 
 #: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
@@ -748,15 +748,15 @@ msgstr "Család"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "LDAP alrendszer engedélyezése"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "LDAP alrendszer engedélyezése a kapcsolatkezelő alkalmazáshoz"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Figyelmeztetés: az LDAP-alrendszer béta üzemmődban van, elővigyázattal használandó"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -784,11 +784,11 @@ msgstr "Címjegyzék hozzáadása"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "LDAP alrendszer hozzáadása"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
-msgstr ""
+msgstr "Automatikus formátum"
 
 #: templates/contacts.php:53 templates/contacts.php:54
 msgid "Select file..."
@@ -899,11 +899,11 @@ msgstr "Jelenlegi kapcsolat törlése"
 #: templates/contacts.php:135
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "Nincs kontaktod a névjegyalbumodban, vagy a névjegyalbumod le van tiltva"
 
 #: templates/contacts.php:136
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Vegyél fel új kontaktot, vagy importáld be a létrezőket egy VCF-fájlból"
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -931,7 +931,7 @@ msgstr "Új kép feltöltése"
 
 #: templates/contacts.php:241
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Fotó kiválasztása a Fájlok közül"
 
 #: templates/contacts.php:243
 msgid "Favorite"
@@ -956,7 +956,7 @@ msgstr "Vezetéknév"
 
 #: templates/contacts.php:278
 msgid "Address book"
-msgstr ""
+msgstr "Névjegyalbum"
 
 #: templates/contacts.php:285 templates/contacts.php:362
 msgid "Nickname"
@@ -976,11 +976,11 @@ msgstr "Születésap"
 
 #: templates/contacts.php:341
 msgid "Website"
-msgstr ""
+msgstr "Weboldal"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
-msgstr ""
+msgstr "Azonnali üzenetküldés"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
@@ -1082,11 +1082,11 @@ msgstr "Szerkesztés"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "Névjegyalbum URI"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1094,19 +1094,19 @@ msgstr "Leírás"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP URL"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Névtelen"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Csak olvasható"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Csak olvasható"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1118,11 +1118,11 @@ msgstr "Jelszó"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Oldalméret"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "DN-gyökér a kereséshez"
 
 #: templates/contacts.php:591
 msgid "Base DN"
@@ -1130,28 +1130,28 @@ msgstr "DN-gyökér"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Keresési szűrő"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Szűrő"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "DN-gyökér módosításhoz"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "DN-gyökér"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Interfész"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Interfész-érték (külső szövegszerkesztő használandó, majd másolás/beillesztés)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Másolás innen (Figyelem, lecseréli az aktuális egyedi értéket)"

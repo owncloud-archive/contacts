@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-06 00:48-0400\n"
-"PO-Revision-Date: 2014-06-05 06:11+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-07 00:48-0400\n"
+"PO-Revision-Date: 2014-06-06 15:11+0000\n"
+"Last-Translator: Alexander Gabilondo <alexgabi@openmailbox.org>\n"
 "Language-Team: Basque (http://www.transifex.com/projects/p/owncloud/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +29,7 @@ msgstr "Kontaktuak"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Gehitu LDAP helbide-liburua"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -62,11 +62,11 @@ msgstr "Formatuaren atzemate automatikoa"
 
 #: js/addressbooks.js:485
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Prozesatzen  {count}/{total} txartel"
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Denetara:{total}, arrakastaz:{imported}, erroreak:{failed}"
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
@@ -139,7 +139,7 @@ msgstr "Errore bat izan da sare edo zerbitzarian. Mesedez abisatu administradore
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Bakarrik irudiak erabil daitezke profil irudietan"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
@@ -197,7 +197,7 @@ msgstr "# taldeak"
 
 #: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Errorea urtebetetzea  {bday} aztertzerakoan"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
@@ -314,7 +314,7 @@ msgstr "Itxi"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Errorea, parametroak falta dira:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -354,7 +354,7 @@ msgstr "Errore ezezaguna"
 
 #: lib/addressbook.php:413
 msgid "Access denied"
-msgstr ""
+msgstr "Sarrera ukatua"
 
 #: lib/addressbook.php:420
 msgid "The backend for this address book does not support updating"
@@ -371,7 +371,7 @@ msgstr "Ez da helbide liburua aurkitu."
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "%s honetan"
 
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
@@ -383,7 +383,7 @@ msgstr "Kontaktu honen euskarriak ez du eguneratzerik onartzen"
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr ""
+msgstr "Sarbide honek ez du onartzen kontaktuak gehitzea"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -496,7 +496,7 @@ msgstr "Ez da argazkiaren bide-izenik eman."
 
 #: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Errore bat izan da irudia cachetik kargatzerakoan"
 
 #: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
@@ -693,12 +693,12 @@ msgstr "ownCloud"
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
 msgid "Work"
-msgstr "Lana"
+msgstr "Lanekoa"
 
 #: lib/utils/properties.php:164 lib/utils/properties.php:169
 #: lib/utils/properties.php:183
 msgid "Home"
-msgstr "Etxea"
+msgstr "Etxekoa"
 
 #: lib/utils/properties.php:170
 msgid "Mobile"
@@ -742,15 +742,15 @@ msgstr "Familia"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Gaitu LDAP sarbidea"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Gaitu LDAP sarbidea kontaktuen aplikazioarentzat"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Erne: LDAP sarbidea beta fasean dago, erabili kontu handiz"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -778,11 +778,11 @@ msgstr "Gehitu Helbide-liburua"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Gehitu LDAP helbide-liburua"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
-msgstr ""
+msgstr "Formatu automatikoa"
 
 #: templates/contacts.php:53 templates/contacts.php:54
 msgid "Select file..."
@@ -897,7 +897,7 @@ msgstr "Ez duzu kontakturik helbide-liburuan edo zure helbide-liburua desgaituta
 
 #: templates/contacts.php:136
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Gehitu kontaktu berria edo inportatu kontaktuak VCF fitxategi batetik."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -970,11 +970,11 @@ msgstr "Jaioteguna"
 
 #: templates/contacts.php:341
 msgid "Website"
-msgstr ""
+msgstr "Webgunea"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
-msgstr ""
+msgstr "Istanteko mezularitza"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
@@ -1076,11 +1076,11 @@ msgstr "Editatu"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI helbide-liburua"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1088,19 +1088,19 @@ msgstr "Deskribapena"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP URLa"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anonimoa"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Irakurtzeko soilik"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Irakurtzeko soilik"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1112,11 +1112,11 @@ msgstr "Pasahitza"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Orriaren tamaina"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Base DN bilaketetarako"
 
 #: templates/contacts.php:591
 msgid "Base DN"
@@ -1124,28 +1124,28 @@ msgstr "Oinarrizko DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Bilaketen iragazkia"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Iragazkia"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Base DN aldaketetarako"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Base DN aldaketa"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Konektorea"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Konektorearen balioa (hobe kanpoko editorea erabiltzailea eta kopiatu/itsatsi)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Hemendik kopiatu (erne, aldatu oraingo pertsonalizazio-balioa)"

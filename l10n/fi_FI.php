@@ -202,6 +202,7 @@
 "Web site" => "Verkkosivu",
 "Preferred" => "Ensisijainen",
 "Please specify a valid email address." => "Anna kelvollinen sähköpostiosoite.",
+"someone@example.com" => "esimerkki@osoite.fi",
 "Mail to address" => "Lähetä sähköpostia",
 "Delete email address" => "Poista sähköpostiosoite",
 "Enter phone number" => "Anna puhelinnumero",

@@ -85,6 +85,7 @@
 "Address book not found" => "Adresář kontaktů nenalezen",
 "You do not have permissions to update this contact" => "Nemáte oprávnění ke změně tohoto kontaktu",
 "The backend for this contact does not support updating it" => "Úložiště tohoto kontaktu nepodporuje jeho změnu",
+"This backend does not support adding contacts" => "Toto úložiště nepodporuje přidávání kontaktů",
 "Property not found" => "Vlastnost nenalezena",
 " Missing IM parameter for: " => "Chybí IM parametr pro:",
 "Unknown IM: " => "Neznámý komunikátor: ",
