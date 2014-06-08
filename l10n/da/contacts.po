@@ -13,7 +13,7 @@
 # Leif Lodahl <leiflodahl@gmail.com>, 2013-2014
 # mikkel_ilu <mikkelbjerglarsen@gmail.com>, 2011
 # Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2011-2012,2014
-# Ole Holm Frandsen <froksen@gmail.com>, 2012-2013
+# Ole Holm Frandsen <froksen@gmail.com>, 2012-2014
 # Johannes Hessellund <osos@openeyes.dk>, 2014
 # Pascal d'Hermilly <pascal@dhermilly.dk>, 2011
 # Rasmus Paasch <rasmuspaasch@gmail.com>, 2013
@@ -24,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-07 00:48-0400\n"
-"PO-Revision-Date: 2014-06-06 06:20+0000\n"
-"Last-Translator: Johannes Hessellund <osos@openeyes.dk>\n"
+"POT-Creation-Date: 2014-06-08 00:48-0400\n"
+"PO-Revision-Date: 2014-06-07 11:40+0000\n"
+"Last-Translator: Ole Holm Frandsen <froksen@gmail.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +40,7 @@ msgstr "Kontakter"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Tilføj ny LDAP adressebog"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -212,7 +212,7 @@ msgstr "Fejl ved indlæsning af fødselsdag {bday}"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Backenden understøtter ikke multi-byte karakterer"
 
 #: js/contacts.js:2232
 msgid ""
@@ -325,7 +325,7 @@ msgstr "Luk"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Fejl, mangler parametre:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -382,7 +382,7 @@ msgstr "Adressebog ikke fundet"
 #: lib/backend/localusers.php:102 lib/backend/localusers.php:103
 #, php-format
 msgid "On this %s"
-msgstr ""
+msgstr "På denne %s"
 
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
@@ -419,7 +419,7 @@ msgstr "Fejl ved oprettelse af adressebog"
 #: lib/controller/addressbookcontroller.php:206
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "\"%s\" backenden understøtter ikke sletning af adressebøger"
 
 #: lib/controller/addressbookcontroller.php:214
 #, php-format
@@ -436,19 +436,19 @@ msgstr "Fejl ved oprettelse af kontaktperson."
 
 #: lib/controller/addressbookcontroller.php:270
 msgid "Error creating contact"
-msgstr ""
+msgstr "Fejl ved oprettelse af kontakt"
 
 #: lib/controller/addressbookcontroller.php:302
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Fejl ved sletning af kontakt"
 
 #: lib/controller/addressbookcontroller.php:342
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Fejl ved hentning af kontaktperson."
 
 #: lib/controller/addressbookcontroller.php:353
 msgid "Error saving contact"
-msgstr ""
+msgstr "Kunne ikke gemme kontaktpersonen."
 
 #: lib/controller/addressbookcontroller.php:359
 msgid "Error removing contact from other address book."
@@ -456,7 +456,7 @@ msgstr "Fejl ved fjernelse af kontaktperson fra anden adressebog."
 
 #: lib/controller/addressbookcontroller.php:366
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Fejl ved hentning af flyttet kontakt"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -753,15 +753,15 @@ msgstr "Familie"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Aktiver LDAP Backend"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Aktiver LDAP backend for kontakt programmet"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Advarsel: LDAP backend er i beta tilstand, anvend med forsigtighed"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -789,11 +789,11 @@ msgstr "Tilføj Adressebog"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Tilføj LDAP adressebog"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
-msgstr ""
+msgstr "Automatisk format"
 
 #: templates/contacts.php:53 templates/contacts.php:54
 msgid "Select file..."
@@ -904,11 +904,11 @@ msgstr "Slet aktuelle kontaktperson"
 #: templates/contacts.php:135
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "Du har ingen kontaktpersoner i din adressebog eller din adressebog er ikke aktiv."
 
 #: templates/contacts.php:136
 msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgstr "Tilføj en ny kontakt eller importer eksisterende kontakt fra en VCF fil."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -1087,11 +1087,11 @@ msgstr "Rediger"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "Adressebog URI"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1099,7 +1099,7 @@ msgstr "Beskrivelse"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP URL"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
@@ -1127,7 +1127,7 @@ msgstr "Sidestørrelse"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Base DN for søgning"
 
 #: templates/contacts.php:591
 msgid "Base DN"

@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-06 00:48-0400\n"
-"PO-Revision-Date: 2014-06-05 06:11+0000\n"
+"POT-Creation-Date: 2014-06-08 00:48-0400\n"
+"PO-Revision-Date: 2014-06-07 17:02+0000\n"
 "Last-Translator: Flávio Veras <flaviove@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgstr "Cancelar"
 
 #: js/addressbooks.js:132 js/groups.js:519
 msgid "Save"
-msgstr "Guardar"
+msgstr "Salvar"
 
 #: js/addressbooks.js:162
 msgid "Edit Addressbook"
@@ -567,7 +567,7 @@ msgstr "O arquivo carregado excede o argumento MAX_FILE_SIZE especificado no for
 
 #: lib/controller/importcontroller.php:61
 msgid "The uploaded file was only partially uploaded"
-msgstr "O arquivo foi parcialmente enviado"
+msgstr "O arquivo foi somente parcialmente enviado"
 
 #: lib/controller/importcontroller.php:62
 msgid "No file was uploaded"

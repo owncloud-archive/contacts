@@ -83,8 +83,10 @@
 "The backend for this address book does not support updating" => "Το σύστημα για αυτό το βιβλίο διευθύνσεων δεν υποστηρίζει ενημέρωση ",
 "You don't have permissions to delete the address book." => "Δεν έχετε άδεια να διαγράψετε το βιβλίο διευθύνσεων.",
 "Address book not found" => "Δε βρέθηκε βιβλίο διευθύνσεων",
+"On this %s" => "Σε αυτό το %s ",
 "You do not have permissions to update this contact" => "Δεν έχετε άδεια για να ενημερώσετε αυτή την επαφή",
 "The backend for this contact does not support updating it" => "Το σύστημα για αυτή την επαφή δεν υποστηρίζει την ενημέρωσή της",
+"This backend does not support adding contacts" => "Αυτό το σύστημα δεν υποστηρίζει προσθήκη επαφών",
 "Property not found" => "H ιδιότητα δεν βρέθηκε",
 " Missing IM parameter for: " => "Λείπει παράμετρος AM για:",
 "Unknown IM: " => "Άγνωστο AM:",
@@ -267,5 +269,7 @@
 "Filter" => "Φίλτρο",
 "Base DN for modification" => "Αρχικό Διακεκριμένο Όνομα για μεταβολή",
 "Base DN modification" => "Μεταβολή αρχικού Διακεκριμένου Ονόματος",
+"Connector" => "Σύνδεσμος",
+"Connector value (Better use external editor and copy/paste)" => "Μεταβλητή συνδέσμου (Καλύτερα χρησιμοποιείστε εξωτερικό επεξεργαστή και αντιγράψτε/επικολλήστε)",
 "Copy from (Warning, replaces current custom value)" => "Αντιγραφή από (Προσοχή, αντικαθιστά την τρέχουσα τιμή)"
 );
