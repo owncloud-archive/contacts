@@ -104,7 +104,7 @@
 	text-align: right;
 }
 #grouplist {
-	z-index: 100;
+	/*z-index: 100;*/
 }
 #grouplist .oc-addnew-init {
 	padding: 0 31px;
