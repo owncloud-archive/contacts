@@ -86,6 +86,7 @@
 "On this %s" => "Nesti %s",
 "You do not have permissions to update this contact" => "Nun tienes permisos p'anovar esti contautu",
 "The backend for this contact does not support updating it" => "El backend d'esti contautu nun permite anovalu",
+"This backend does not support adding contacts" => "Esti backend nun sofita amestar contautos",
 "Property not found" => "Propiedá non atopada",
 " Missing IM parameter for: " => "Falta'l parámetru d'IM pa:",
 "Unknown IM: " => "Serviciu IM desconocíu:",
