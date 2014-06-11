@@ -19,6 +19,7 @@
 # waterone <suiy02@gmail.com>, 2013
 # waterone <suiy02@gmail.com>, 2012
 # Tonnie Yang <supertonnie@hotmail.com>, 2012
+# phy <transifex@phy25.com>, 2014
 # wang <modokwang@gmail.com>, 2013
 # csslayer <wengxt@gmail.com>, 2013-2014
 # csslayer <wengxt@gmail.com>, 2011, 2012
@@ -28,9 +29,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-08 00:48-0400\n"
-"PO-Revision-Date: 2014-06-07 06:11+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-11 00:48-0400\n"
+"PO-Revision-Date: 2014-06-11 04:00+0000\n"
+"Last-Translator: phy <transifex@phy25.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,7 +91,7 @@ msgstr "名为{name}的地址薄已存在"
 #: js/addressbooks.js:697 js/otherbackendconfig.js:141
 #: js/otherbackendconfig.js:200
 msgid "Failed adding address book: {error}"
-msgstr "添加地址薄失败：{error}"
+msgstr "增加地址薄失败：{error}"
 
 #: js/addressbooks.js:738
 msgid "Failed loading address books: {error}"
@@ -114,7 +115,7 @@ msgstr "错误"
 
 #: js/app.js:329 js/app.js:343
 msgid "Add to..."
-msgstr "添加到"
+msgstr "增加到"
 
 #: js/app.js:333 js/app.js:345
 msgid "Remove from..."
@@ -122,7 +123,7 @@ msgstr "从…删除"
 
 #: js/app.js:350
 msgid "Add group..."
-msgstr "添加分组…"
+msgstr "增加分组…"
 
 #: js/app.js:478
 msgid "Invalid URL: \"{url}\""
@@ -162,7 +163,7 @@ msgstr ""
 
 #: js/app.js:972
 msgid "Error adding to group."
-msgstr "添加到组时出错。"
+msgstr "增加到组时出错。"
 
 #: js/app.js:995
 msgid "Error removing from group."
@@ -184,7 +185,7 @@ msgstr "合并联系人"
 
 #: js/app.js:1417 templates/contacts.php:167
 msgid "Add group"
-msgstr "添加分组"
+msgstr "增加分组"
 
 #: js/app.js:1421
 msgid "OK"
@@ -272,7 +273,7 @@ msgstr "您可以通过拖拽分组的方式来按您喜欢的方式摆放他们
 
 #: js/groups.js:659
 msgid "Failed adding group: {error}"
-msgstr "添加分组失败：{error}"
+msgstr "增加分组失败：{error}"
 
 #: js/groups.js:672
 msgid "All"
@@ -349,11 +350,11 @@ msgstr "您没有权限查看这些联系人"
 
 #: lib/addressbook.php:250
 msgid "You do not have permissions add contacts to the address book"
-msgstr "您没有权限添加联系人到此地址簿"
+msgstr "您没有权限增加联系人到此地址簿"
 
 #: lib/addressbook.php:257
 msgid "The backend for this address book does not support adding contacts"
-msgstr "此地址簿的后端不支持添加联系人"
+msgstr "此地址簿的后端不支持增加联系人"
 
 #: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
@@ -527,7 +528,7 @@ msgstr "未指定组名称。"
 
 #: lib/controller/groupcontroller.php:74
 msgid "Error adding group."
-msgstr "添加分组错误。"
+msgstr "增加分组错误。"
 
 #: lib/controller/groupcontroller.php:150
 msgid "No group name to rename from given."
@@ -789,7 +790,7 @@ msgstr "显示名称"
 
 #: templates/contacts.php:25
 msgid "Add Address Book"
-msgstr "添加地址薄"
+msgstr "增加地址薄"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
