@@ -86,6 +86,7 @@
 "On this %s" => "På denne %s",
 "You do not have permissions to update this contact" => "Du har ikke rettigheder til at opdatere denne kontaktperson",
 "The backend for this contact does not support updating it" => "Systemet for denne kontakt understøtter ikke opdatering",
+"This backend does not support adding contacts" => "Dette system understøtter ikke tilføjelse af kontakter",
 "Property not found" => "Egenskab ikke fundet",
 " Missing IM parameter for: " => "Manglende IM-parameter for:",
 "Unknown IM: " => "Ukendt IM:",
@@ -265,5 +266,6 @@
 "Base DN for search" => "Base DN for søgning",
 "Base DN" => "Base DN",
 "Search filter" => "Søgefilter",
-"Filter" => "Filter"
+"Filter" => "Filter",
+"Copy from (Warning, replaces current custom value)" => "Kopier fra (Advarsel, dete erstatter eksisterende data)"
 );

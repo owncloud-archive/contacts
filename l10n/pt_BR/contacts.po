@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-11 00:48-0400\n"
-"PO-Revision-Date: 2014-06-10 09:10+0000\n"
+"POT-Creation-Date: 2014-06-12 00:48-0400\n"
+"PO-Revision-Date: 2014-06-11 09:50+0000\n"
 "Last-Translator: Flávio Veras <flaviove@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/owncloud/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgstr "Iniciando importação de arquivos"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
-msgstr "Formato selecionado: {formato}"
+msgstr "Formato selecionado: {format}"
 
 #: js/addressbooks.js:407 js/addressbooks.js:435
 msgid "Automatic format detection"
@@ -68,11 +68,11 @@ msgstr "Detecção automática de formato"
 
 #: js/addressbooks.js:485
 msgid "Processing {count}/{total} cards"
-msgstr "Processamento {count}/{total} de cartões"
+msgstr "Processando {count}/{total} cartões"
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr "Total:{total},  de Sucesso:{imported}, Erros:{failed}"
+msgstr "Total:{total},  Sucesso:{imported}, Erros:{failed}"
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
@@ -385,11 +385,11 @@ msgstr "Você não tem permissão para atualizar esse contato"
 
 #: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
-msgstr "O final deste contato não suporta atualização"
+msgstr "O backend deste contato não suporta atualização"
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr "Este final não suporta a adição de contatos"
+msgstr "Este backend não suporta a adição de contatos"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -470,7 +470,7 @@ msgstr "Erro mesclando contato."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
-msgstr "Erro salvando contato no final."
+msgstr "Erro salvando contato no backend."
 
 #: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
@@ -490,7 +490,7 @@ msgstr "Erro ao atualizar o contato"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr "Erro salvando contato no final."
+msgstr "Erro salvando contato no backend."
 
 #: lib/controller/contactphotocontroller.php:71
 msgid "Error getting user photo"
@@ -587,7 +587,7 @@ msgstr "Espaço de armazenamento insuficiente"
 
 #: lib/controller/importcontroller.php:83
 msgid "Attempt to upload blacklisted file:"
-msgstr "Tente fazer o envio do arquivo de lista negra:"
+msgstr "Tentativa de fazer o envio do arquivo de lista negra:"
 
 #: lib/controller/importcontroller.php:103
 msgid "Error uploading contacts to storage."
@@ -612,7 +612,7 @@ msgstr "Chave de progresso faltando no pedido."
 
 #: lib/controller/importcontroller.php:186
 msgid "Attempt to access blacklisted file:"
-msgstr "Tentando acessar o arquivo de lista negra:"
+msgstr "Tentativa de acesso ao arquivo de lista negra:"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
@@ -796,7 +796,7 @@ msgstr "Selecionar arquivo..."
 
 #: templates/contacts.php:71
 msgid "(De-)select all"
-msgstr "(Des)selecionar tudo"
+msgstr "(De)selecionar tudo"
 
 #: templates/contacts.php:73
 msgid "Sort order"
@@ -927,11 +927,11 @@ msgstr "Editar imagem atual"
 
 #: templates/contacts.php:240
 msgid "Upload new photo"
-msgstr "Carregar nova foto"
+msgstr "Enviar nova foto"
 
 #: templates/contacts.php:241
 msgid "Select photo from Files"
-msgstr "Selecionar foto dos arquivos"
+msgstr "Selecionar foto dos Arquivos"
 
 #: templates/contacts.php:243
 msgid "Favorite"
@@ -948,7 +948,7 @@ msgstr "Primeiro nome"
 
 #: templates/contacts.php:258
 msgid "Additional names"
-msgstr "Segundo Nome"
+msgstr "Nomes adicionais"
 
 #: templates/contacts.php:262
 msgid "Last name"
@@ -1018,7 +1018,7 @@ msgstr "alguem@exemplo.com"
 
 #: templates/contacts.php:400
 msgid "Mail to address"
-msgstr "Correio para endereço"
+msgstr "Enviar email para o endereço"
 
 #: templates/contacts.php:401
 msgid "Delete email address"

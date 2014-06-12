@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-11 00:48-0400\n"
-"PO-Revision-Date: 2014-06-10 13:01+0000\n"
+"POT-Creation-Date: 2014-06-12 00:48-0400\n"
+"PO-Revision-Date: 2014-06-11 08:00+0000\n"
 "Last-Translator: Marián Hvolka <marian.hvolka@stuba.sk>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
@@ -214,7 +214,7 @@ msgstr "Počkajte prosím do skončenia mazania kontaktov označených na mazani
 
 #: js/contacts.js:2243
 msgid "Click to undo deletion of {num} contacts"
-msgstr "Kliknite pre odvrátenie operácie zmazania {num} kontaktov."
+msgstr "Kliknite pre zrušenie operácie zmazania {num} kontaktov."
 
 #: js/contacts.js:2252
 msgid "Cancelled deletion of {num} contacts"
@@ -234,7 +234,7 @@ msgstr "Kontakty sa už nachádzajú v danej skupine."
 
 #: js/groups.js:343
 msgid "Couldn't get contact list."
-msgstr "Nemožno získať kontaktný list."
+msgstr "Nemožno získať zoznam kontaktov."
 
 #: js/groups.js:354
 msgid "Contact is not in this group."
@@ -411,7 +411,7 @@ msgstr "Chyba pri vytváraní adresára"
 #: lib/controller/addressbookcontroller.php:206
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr "\"%s\" úložiskonepodporuje vymazanie adresárov"
+msgstr "\"%s\" úložisko nepodporuje vymazanie adresárov"
 
 #: lib/controller/addressbookcontroller.php:214
 #, php-format
