@@ -53,7 +53,13 @@ class User extends BaseTemporaryPhoto {
 	 * depending on the type.
 	 */
 	protected function processImage() {
-		$localPath = \OCP\Config::getSystemValue('datadirectory') . '/' . $this->userId . '/avatar.png';
+		$localPath = \OCP\Config::getSystemValue('datadirectory') . '/' . $this->userId . '/avatar.';
+		if (file_exists($localPath . 'png')){
+			$localPath .= 'png';
+		} else if (file_exists($localPath . 'jpg')){
+			$localPath .= 'jpg';
+		}
+
 		$this->image = new \OCP\Image();
 		$this->image->loadFromFile($localPath);
 	}

@@ -225,7 +225,7 @@ class LocalUsers extends AbstractBackend {
 	}
 
 	/**
-	* Help function to remove contacts from an addressbook.
+	* Help function to rsove contacts from an addressbook.
 	* This only happens when an admin remove an ownCloud user
 	* @param array $contacts array with userid of ownCloud users
 	* @param string $addressBookId
