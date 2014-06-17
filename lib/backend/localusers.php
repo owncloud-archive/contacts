@@ -376,7 +376,7 @@ class LocalUsers extends AbstractBackend {
 	}
 
 	public function updateDatabase($addressBookId) {
-		$sql = 'SELECT * FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
+		$sql = 'SELECT id, displayname FROM ' . $this->cardsTableName . ' WHERE addressbookid = ?';
 		$query = \OCP\DB::prepare($sql);
 		$result = $query->execute(array($addressBookId));
 
@@ -386,7 +386,9 @@ class LocalUsers extends AbstractBackend {
 			return true; // Huh?
 		} else {
 			$contactsId = array();
+			$contacts = array();
 			while ($row = $result->fetchRow()) {
+				$contacts[$row['id']] = $row['displayname'];
 				$contactsId[] = $row['id'];
 			}
 
@@ -403,10 +405,33 @@ class LocalUsers extends AbstractBackend {
 				$this->removeContacts($remove, $addressBookId);
 				$recall = true;
 			}
+			
+			$this->updateDisplayNames($contacts);
 			return true;
 		}
 	}
-
+	
+	private function updateDisplayNames($contacts){
+		foreach($contacts as $id => $displayname){
+			if(\OCP\User::getDisplayName($id) !== $displayname){
+				$this->updateDisplayName($id);
+			}
+		}
+	}
+	
+	private function updateDisplayName($id){
+		$sql = 'UPDATE ' . $this->cardsTableName . ' SET `displayname` = ? WHERE id = ?';
+		$query = \OCP\DB::prepare($sql);
+		$result = $query->execute(array(\OCP\User::getDisplayName($id), $id));
+		
+		if (\OCP\DB::isError($result)) {
+			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: '
+					. \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
+			return false;
+		}
+		return true;
+	}
+	
 	/**
 	 * Don't cache
 	 */
