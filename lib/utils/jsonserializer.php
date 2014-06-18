@@ -199,7 +199,7 @@ class JSONSerializer {
 				$parameter->name = 'PREF';
 				$parameter->value = '1';
 			}
-			// NOTE: Apparently Sabre_VObject_Reader can't always deal with value list parameters
+			// NOTE: Apparently \Sabre\VObject\Reader can't always deal with value list parameters
 			// like TYPE=HOME,CELL,VOICE. Tanghus.
 			// TODO: Check if parameter is has commas and split + merge if so.
 			if ($parameter->name == 'TYPE') {
