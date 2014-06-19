@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-11 00:48-0400\n"
-"PO-Revision-Date: 2014-06-10 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-19 00:48-0400\n"
+"PO-Revision-Date: 2014-06-18 06:10+0000\n"
+"Last-Translator: Pisike Sipelgas <pisike.sipelgas@gmail.com>\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/projects/p/owncloud/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -380,7 +380,7 @@ msgstr "Tagarakend ei toeta selle kontakti muutmist"
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr ""
+msgstr "See tagarakend ei toeta kontaktide lisamist"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -739,15 +739,15 @@ msgstr "Pereliikmed"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Luba LDAP tagarakend"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Luba LDAP tagarakend kontaktide rakendusele"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Hoiatus: LDAP tagarakend on alles beeta, kasuta ettevaatlikult"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -1133,7 +1133,7 @@ msgstr "Muudatuste baas-DN"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Baas-DN muutmine"
 
 #: templates/contacts.php:609
 msgid "Connector"
@@ -1141,8 +1141,8 @@ msgstr "Ühendaja"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Ühenduja väärtus (parem kasuta välist redaktorid ja kopeeri/aseta)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Kopeeri (hoiatus, asendab olemasoleva muudetud väärtuse)"

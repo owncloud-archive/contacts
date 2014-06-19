@@ -86,6 +86,7 @@
 "On this %s" => "Sellel %s",
 "You do not have permissions to update this contact" => "Sul pole õigusi selle kontakti uuendamiseks.",
 "The backend for this contact does not support updating it" => "Tagarakend ei toeta selle kontakti muutmist",
+"This backend does not support adding contacts" => "See tagarakend ei toeta kontaktide lisamist",
 "Property not found" => "Omadust ei leitud",
 " Missing IM parameter for: " => "Puuduv IM parameeter:",
 "Unknown IM: " => "Tundmatu IM:",
@@ -171,6 +172,9 @@
 "Internet" => "Internet",
 "Friends" => "Sõbrad",
 "Family" => "Pereliikmed",
+"Enable LDAP Backend" => "Luba LDAP tagarakend",
+"Enable LDAP backend for the contacts application" => "Luba LDAP tagarakend kontaktide rakendusele",
+"Warning: LDAP Backend is in beta mode, use with precautions" => "Hoiatus: LDAP tagarakend on alles beeta, kasuta ettevaatlikult",
 "New contact" => "Uus kontakt",
 "Group name" => "Grupi nimi",
 "New group" => "Uus grupp",
@@ -264,5 +268,8 @@
 "Search filter" => "Otsingu filter",
 "Filter" => "Filter",
 "Base DN for modification" => "Muudatuste baas-DN",
-"Connector" => "Ühendaja"
+"Base DN modification" => "Baas-DN muutmine",
+"Connector" => "Ühendaja",
+"Connector value (Better use external editor and copy/paste)" => "Ühenduja väärtus (parem kasuta välist redaktorid ja kopeeri/aseta)",
+"Copy from (Warning, replaces current custom value)" => "Kopeeri (hoiatus, asendab olemasoleva muudetud väärtuse)"
 );
