@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "El backend d'esta llibreta de direiciones nun permite anovamientos",
 "You don't have permissions to delete the address book." => "Nun tienes permisos pa desaniciar esta llibreta de direiciones.",
 "Address book not found" => "Nun s'atoparon llibretes de direiciones.",
-"On this %s" => "Nesti %s",
 "You do not have permissions to update this contact" => "Nun tienes permisos p'anovar esti contautu",
 "The backend for this contact does not support updating it" => "El backend d'esti contautu nun permite anovalu",
 "This backend does not support adding contacts" => "Esti backend nun sofita amestar contautos",

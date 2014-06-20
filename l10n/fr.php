@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "L'infrastructure pour ce carnet d'adresses ne supporte pas la mise à jour",
 "You don't have permissions to delete the address book." => "Vous n'avez pas les droits suffisants pour supprimer ce carnet d'adresses.",
 "Address book not found" => "Carnet d'adresses non trouvé.",
-"On this %s" => "Sur ce %s",
 "You do not have permissions to update this contact" => "Vous n'avez pas les droits suffisants pour mettre à jour ce contact",
 "The backend for this contact does not support updating it" => "L'infrastructure pour ce contact ne supporte pas sa mise à jour",
 "This backend does not support adding contacts" => "Cette infrastructure ne gère pas l'ajout de contacts",

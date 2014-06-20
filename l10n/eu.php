@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "Helbide-liburu honen euskarriak ez du eguneraketarik onartzen",
 "You don't have permissions to delete the address book." => "Ez duzu helbide-liburu hau ezabatzeko baimenik",
 "Address book not found" => "Ez da helbide liburua aurkitu.",
-"On this %s" => "%s honetan",
 "You do not have permissions to update this contact" => "Ez duzu kontaktu hau eguneraktzeko baimenik",
 "The backend for this contact does not support updating it" => "Kontaktu honen euskarriak ez du eguneratzerik onartzen",
 "This backend does not support adding contacts" => "Sarbide honek ez du onartzen kontaktuak gehitzea",

@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "Реализация этой адресной книги не поддерживает обновление",
 "You don't have permissions to delete the address book." => "У Вас нет разрешений удалять эту адресную книгу.",
 "Address book not found" => "Адресная книга не найдена",
-"On this %s" => "Об этом %s",
 "You do not have permissions to update this contact" => "У Вас нет разрешений обновлять этот контакт",
 "The backend for this contact does not support updating it" => "Реализация этого контакта не поддерживает обновления",
 "This backend does not support adding contacts" => "Этот бэкенд не поддерживает добавление контактов",

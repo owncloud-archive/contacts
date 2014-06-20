@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "Selle aadressiraamatu tagarakend ei toeta uuendamist",
 "You don't have permissions to delete the address book." => "Sul pole õigusi aadressiraamatu kustutamiseks.",
 "Address book not found" => "Aadressiraamatut ei leitud",
-"On this %s" => "Sellel %s",
 "You do not have permissions to update this contact" => "Sul pole õigusi selle kontakti uuendamiseks.",
 "The backend for this contact does not support updating it" => "Tagarakend ei toeta selle kontakti muutmist",
 "This backend does not support adding contacts" => "See tagarakend ei toeta kontaktide lisamist",

@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "Το σύστημα για αυτό το βιβλίο διευθύνσεων δεν υποστηρίζει ενημέρωση ",
 "You don't have permissions to delete the address book." => "Δεν έχετε άδεια να διαγράψετε το βιβλίο διευθύνσεων.",
 "Address book not found" => "Δε βρέθηκε βιβλίο διευθύνσεων",
-"On this %s" => "Σε αυτό το %s ",
 "You do not have permissions to update this contact" => "Δεν έχετε άδεια για να ενημερώσετε αυτή την επαφή",
 "The backend for this contact does not support updating it" => "Το σύστημα για αυτή την επαφή δεν υποστηρίζει την ενημέρωσή της",
 "This backend does not support adding contacts" => "Αυτό το σύστημα δεν υποστηρίζει προσθήκη επαφών",

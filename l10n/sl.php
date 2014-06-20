@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "Zaledje tega imenika ne omogoča posodobitev",
 "You don't have permissions to delete the address book." => "Ni ustreznih dovoljenj za brisanje imenika.",
 "Address book not found" => "Imenika ni mogoče najti",
-"On this %s" => "Na %s",
 "You do not have permissions to update this contact" => "Ni ustreznih dovoljenj za posodabljanje tega stika",
 "The backend for this contact does not support updating it" => "Hrbtišče stika ne omogoča posodabljanja podatkov",
 "This backend does not support adding contacts" => "Ta podpora ne omogoča dodajanja stikov",

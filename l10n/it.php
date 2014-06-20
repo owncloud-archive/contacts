@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "Il motore per questa rubrica non supporta l'aggiornamento",
 "You don't have permissions to delete the address book." => "Non hai i permessi per eliminare la rubrica.",
 "Address book not found" => "Rubrica non trovata.",
-"On this %s" => "Su questo %s",
 "You do not have permissions to update this contact" => "Non hai i permessi per aggiornare questo contatto",
 "The backend for this contact does not support updating it" => "Il motore per questo contatto non supporta l'aggiornamento",
 "This backend does not support adding contacts" => "Questo motore non supporta l'aggiunta di contatti",

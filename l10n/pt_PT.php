@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "O suporte deste  livro de endereços não suporta atualizações",
 "You don't have permissions to delete the address book." => "Não tem permissões para apagar este livro de endereços.",
 "Address book not found" => "Nenhum livro de endereços encontrado.",
-"On this %s" => "Neste %s",
 "You do not have permissions to update this contact" => "Não tem permissões para atualizar este contacto",
 "The backend for this contact does not support updating it" => "O suporte deste contacto não suporta atualizações",
 "Property not found" => "Propriedade não encontrada",

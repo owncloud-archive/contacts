@@ -67,7 +67,6 @@
 "Access denied" => "الوصول محظور",
 "You don't have permissions to delete the address book." => "ليس لديك الصلاحية  لحذف دفتر العناوين.",
 "Address book not found" => "تعذر ايجاد دفتر العناوين",
-"On this %s" => "على هذا %s",
 "You do not have permissions to update this contact" => "ليس لديك الصلاحية  لتحديث جهة الاتصال هذه",
 "Property not found" => "لم يتم العثور على الملكية",
 "Unknown IM: " => "جهة تراسل فوري غير معروفة",

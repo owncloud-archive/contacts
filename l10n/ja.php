@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "このアドレス帳のバックエンドは更新をサポートしていません",
 "You don't have permissions to delete the address book." => "アドレス帳を削除する権限がありません。",
 "Address book not found" => "アドレス帳が見つかりません",
-"On this %s" => "%s 上で",
 "You do not have permissions to update this contact" => "この連絡先を更新する権限がありません",
 "The backend for this contact does not support updating it" => "この連絡先のバックエンドは更新をサポートしていません",
 "This backend does not support adding contacts" => "このバックエンドは連絡先の追加をサポートしていません",

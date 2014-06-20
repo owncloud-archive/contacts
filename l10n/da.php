@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "Systemet for denne adressebog understøtter ikke opdatering",
 "You don't have permissions to delete the address book." => "Du har ikke rettigheder til at slette denne adressebog",
 "Address book not found" => "Adressebog ikke fundet",
-"On this %s" => "På denne %s",
 "You do not have permissions to update this contact" => "Du har ikke rettigheder til at opdatere denne kontaktperson",
 "The backend for this contact does not support updating it" => "Systemet for denne kontakt understøtter ikke opdatering",
 "This backend does not support adding contacts" => "Dette system understøtter ikke tilføjelse af kontakter",

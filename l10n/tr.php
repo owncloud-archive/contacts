@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "Arka uç, bu adres defteri için güncellemeyi desteklemiyor",
 "You don't have permissions to delete the address book." => "Bu adres defterini silme izniniz yok.",
 "Address book not found" => "Adres defteri bulunamadı.",
-"On this %s" => "Bu %s üzerinde",
 "You do not have permissions to update this contact" => "Bu kişi bilgilerini güncelleme izniniz yok",
 "The backend for this contact does not support updating it" => "Arka uç, bu kişi için güncellemeyi desteklemiyor",
 "This backend does not support adding contacts" => "Bu geri plan mekanizması kişi eklemeyi desteklemiyor.",

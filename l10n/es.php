@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "El backend de esta libreta de direcciones no permite actualizaciones",
 "You don't have permissions to delete the address book." => "No tiene permisos para borrar esta libreta de direcciones.",
 "Address book not found" => "No se encontraron libretas de direcciones.",
-"On this %s" => "En este %s",
 "You do not have permissions to update this contact" => "No tiene permisos para actualizar este contacto",
 "The backend for this contact does not support updating it" => "El backend de este contacto no permite actualizarlo",
 "This backend does not support adding contacts" => "Este backend no permite agregar contactos",

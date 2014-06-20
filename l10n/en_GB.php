@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "The backend for this address book does not support updating",
 "You don't have permissions to delete the address book." => "You don't have permission to delete the address book.",
 "Address book not found" => "Address book not found",
-"On this %s" => "On this %s",
 "You do not have permissions to update this contact" => "You do not have permission to update this contact",
 "The backend for this contact does not support updating it" => "The backend for this contact does not support updating it",
 "This backend does not support adding contacts" => "This backend does not support adding contacts",

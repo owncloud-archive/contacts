@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "A címjegyzék háttérrendszere nem támogatja a frissítést",
 "You don't have permissions to delete the address book." => "Nincs jogosultsága törölni a címjegyzéket!",
 "Address book not found" => "A címjegyzék nem található",
-"On this %s" => "Ezen a(z) %s-on",
 "You do not have permissions to update this contact" => "Nincs jogosultsága frissíteni ezt a névjegyet",
 "The backend for this contact does not support updating it" => "A névjegyhez tartozó háttérrendszer nem támogatja a frissítést",
 "This backend does not support adding contacts" => "Ez az alrendszer nem támogatja a kontakt-hozzáadást",

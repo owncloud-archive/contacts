@@ -83,7 +83,6 @@
 "The backend for this address book does not support updating" => "Úložiště tohoto adresáře kontaktů nepodporuje změnu kontaktů",
 "You don't have permissions to delete the address book." => "Nemáte oprávnění pro mazání v adresáři kontaktů",
 "Address book not found" => "Adresář kontaktů nenalezen",
-"On this %s" => "Na tomto %s",
 "You do not have permissions to update this contact" => "Nemáte oprávnění ke změně tohoto kontaktu",
 "The backend for this contact does not support updating it" => "Úložiště tohoto kontaktu nepodporuje jeho změnu",
 "This backend does not support adding contacts" => "Toto úložiště nepodporuje přidávání kontaktů",
