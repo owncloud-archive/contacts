@@ -85,6 +85,7 @@
 "Address book not found" => "Nenhum livro de endereços encontrado.",
 "You do not have permissions to update this contact" => "Não tem permissões para atualizar este contacto",
 "The backend for this contact does not support updating it" => "O suporte deste contacto não suporta atualizações",
+"This backend does not support adding contacts" => "Backend não suporta contatos adicionais",
 "Property not found" => "Propriedade não encontrada",
 " Missing IM parameter for: " => "Falta o parâmetro de mensagens instantâneas para:",
 "Unknown IM: " => "Mensagens instantâneas desconhecida (IM)",
@@ -265,8 +266,8 @@
 "Base DN" => "DN base",
 "Search filter" => "Filtro de pesquisa",
 "Filter" => "Filtro",
-"Base DN for modification" => "Base DN para alteracao ",
-"Base DN modification" => "Alteracao da Base DN",
+"Base DN for modification" => "Base DN para alteracão ",
+"Base DN modification" => "Alteracão da Base DN",
 "Connector" => "Conector",
 "Connector value (Better use external editor and copy/paste)" => "Valor de ligação (Utilize um editor externo e copy/paste)",
 "Copy from (Warning, replaces current custom value)" => "Copiar de (Aviso, substitua o actual valor configurado)"
