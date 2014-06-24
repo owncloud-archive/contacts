@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-24 00:48-0400\n"
+"PO-Revision-Date: 2014-06-23 14:32+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/projects/p/owncloud/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -738,15 +738,15 @@ msgstr "Perhe"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Käytä LDAP-taustaosaa"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Käytä LDAP-taustaosaa yhteystietosovellukselle"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Varoitus: LDAP-taustaosa on beta-tilassa, käytä varoen"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -1084,7 +1084,7 @@ msgstr "Kuvaus"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP-osoite"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"

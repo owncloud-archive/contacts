@@ -26,7 +26,7 @@
 "Merge failed." => "Fletting feilet.",
 "Merge failed. Error saving contact." => "Fletting feilet. Feil ved lagring av kontakt.",
 "Select photo" => "Velg bilde",
-"Network or server error. Please inform administrator." => "Nettverks- eller serverfeil. Vennligs informer administratoren.",
+"Network or server error. Please inform administrator." => "Nettverks- eller serverfeil. Vennligst informer administratoren.",
 "Only images can be used as contact photos" => "Kun bilder kan brukes som kontakt-foto",
 "The size of \"{filename}\" exceeds the maximum allowed {size}" => "Størrelsen på \"{filename}\" overstiger det maksimalt tillatte {size}",
 "Error adding to group." => "Feil ved innlegging i gruppe.",
