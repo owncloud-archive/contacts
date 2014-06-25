@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-25 06:28-0400\n"
+"PO-Revision-Date: 2014-06-24 13:48+0000\n"
+"Last-Translator: Matej Urbančič <>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/owncloud/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr "Stiki"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr "Dodaj nov LDAP imenik"
+msgstr "Dodaj imenik LDAP"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -316,7 +316,7 @@ msgstr "Zapri"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr "Napaka, mankajoči parametri:"
+msgstr "Napaka! Mankajkajo parametri:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -380,7 +380,7 @@ msgstr "Hrbtišče stika ne omogoča posodabljanja podatkov"
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr "Ta podpora ne omogoča dodajanja stikov"
+msgstr "Ta ozadnji program ne omogoča dodajanja stikov"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -739,15 +739,15 @@ msgstr "Družina"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr "Omogoči LDAP podporo"
+msgstr "Omogoči ozadnji program LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr "Omogoči LDAP podporo za aplikacijo Stiki"
+msgstr "Omogoči ozadnji program LDAP za delo s stiki"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr "Opozorilo: LDAP podpora je v beta stanju; uporabiti previdno"
+msgstr "Opozorilo: Podpora LDAP je v preizkusni različici. Uporaba v delovnem okolju ni priporočljiva."
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -775,7 +775,7 @@ msgstr "Dodaj imenik"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr "Dodaj LDAP Imenik"
+msgstr "Dodaj imenik LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -1073,11 +1073,11 @@ msgstr "Uredi"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr "URI Imenika"
+msgstr "Naslov URI imenika"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr "URI"
+msgstr "Naslov URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1085,11 +1085,11 @@ msgstr "Opis"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr "LDAP URL"
+msgstr "Naslov URL LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr "Anonimen"
+msgstr "Brezimni dostop"
 
 #: templates/contacts.php:560
 msgid "Read-only"
@@ -1129,7 +1129,7 @@ msgstr "Filter"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr "Osnovni DN za spremembo"
+msgstr "Osnovni DN za spreminjanje"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
@@ -1145,4 +1145,4 @@ msgstr ""
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr "Kopiraj iz (Opozorilo, nadomesti trenutno vrednost po meri)"
+msgstr "Kopiraj iz (Opozorilo, možnost trenutno nadomesti vrednost po meri)"
