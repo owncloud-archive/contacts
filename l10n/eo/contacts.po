@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Mariano <mstreet@kde.org.ar>, 2013
+# Mariano <mstreet@kde.org.ar>, 2013-2014
 # Mariano <mstreet@kde.org.ar>, 2012
 # Mariano <mstreet@kde.org.ar>, 2011, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-06-27 00:48-0400\n"
+"PO-Revision-Date: 2014-06-26 14:41+0000\n"
+"Last-Translator: Mariano <mstreet@kde.org.ar>\n"
 "Language-Team: Esperanto (http://www.transifex.com/projects/p/owncloud/language/eo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,20 +67,20 @@ msgstr ""
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "Adresaro nomata {name} jam ekzistas"
 
 #: js/addressbooks.js:697 js/otherbackendconfig.js:141
 #: js/otherbackendconfig.js:200
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "Malsukcesis aldono de adresaro: {error}"
 
 #: js/addressbooks.js:738
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "Malsukcesis ŝargado de adresaroj: {error}"
 
 #: js/admin.js:92 js/storage.js:27
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Eraro de servilo! Bonvolu sciigi vian sistemadministranton"
 
 #: js/app.js:223
 msgid "Indexing contacts"
@@ -182,7 +182,7 @@ msgstr "Redakti profilbildon"
 
 #: js/app.js:1645
 msgid "Crop photo"
-msgstr ""
+msgstr "Stuci foton"
 
 #: js/contacts.js:904
 msgid "Error parsing date: {date}"
@@ -240,7 +240,7 @@ msgstr "La kontaktoj ne estas en ĉi tiu grupo."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "Grupo nomata “{group}” jam ekzistas"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -286,7 +286,7 @@ msgstr "Enporti en..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Eraris ŝargo de enporta ŝablono"
 
 #: js/loader.js:48
 msgid "Import contacts"
@@ -405,7 +405,7 @@ msgstr ""
 #: lib/controller/addressbookcontroller.php:214
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "Vi ne havas permeson forigi la adresaron “%s”"
 
 #: lib/controller/addressbookcontroller.php:221
 msgid "Error deleting address book"
@@ -417,19 +417,19 @@ msgstr "Eraris kreo de kontakto."
 
 #: lib/controller/addressbookcontroller.php:270
 msgid "Error creating contact"
-msgstr ""
+msgstr "Eraris kreo de kontakto"
 
 #: lib/controller/addressbookcontroller.php:302
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Eraris forigo de kontakto"
 
 #: lib/controller/addressbookcontroller.php:342
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Eraris venigo de kontakto"
 
 #: lib/controller/addressbookcontroller.php:353
 msgid "Error saving contact"
-msgstr ""
+msgstr "Eraris konservo de kontakto"
 
 #: lib/controller/addressbookcontroller.php:359
 msgid "Error removing contact from other address book."
@@ -437,7 +437,7 @@ msgstr "Eraris forigo de kontakto el aliaj adresaroj."
 
 #: lib/controller/addressbookcontroller.php:366
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Eraris movo de kontakto"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -488,7 +488,7 @@ msgstr "Neniu vojo al foto sendiĝis."
 
 #: lib/controller/contactphotocontroller.php:204
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Eraris ŝargo de bildo el kaŝmemoro"
 
 #: lib/controller/contactphotocontroller.php:214
 msgid "Error getting PHOTO property."
@@ -500,7 +500,7 @@ msgstr "Eraro dum konserviĝis kontakto."
 
 #: lib/controller/groupcontroller.php:68 lib/controller/groupcontroller.php:90
 msgid "No group name given."
-msgstr ""
+msgstr "Neniu gruponomo doniĝis."
 
 #: lib/controller/groupcontroller.php:74
 msgid "Error adding group."
@@ -581,7 +581,7 @@ msgstr "Eraro dum alŝutiĝis kontaktoj al konservejo."
 
 #: lib/controller/importcontroller.php:148
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Eraris movo de dosiero al enporta dosierujo."
 
 #: lib/controller/importcontroller.php:167
 msgid "You do not have permissions to import into this address book."
@@ -746,7 +746,7 @@ msgstr ""
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
-msgstr ""
+msgstr "Nova kontakto"
 
 #: templates/contacts.php:13
 msgid "Group name"
@@ -754,7 +754,7 @@ msgstr "Gruponomo"
 
 #: templates/contacts.php:13
 msgid "New group"
-msgstr ""
+msgstr "Nova grupo"
 
 #: templates/contacts.php:22
 msgid "Address books"
@@ -762,7 +762,7 @@ msgstr "Adresaroj"
 
 #: templates/contacts.php:25 templates/contacts.php:74
 msgid "Display name"
-msgstr ""
+msgstr "Montra nomo"
 
 #: templates/contacts.php:25
 msgid "Add Address Book"
@@ -770,7 +770,7 @@ msgstr "Aldoni adresaron"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Aldoni LDAP-adresaron"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -813,7 +813,7 @@ msgstr "Elŝuti"
 
 #: templates/contacts.php:89
 msgid "Merge"
-msgstr ""
+msgstr "Kunfandi"
 
 #: templates/contacts.php:92 templates/contacts.php:326
 #: templates/contacts.php:365
@@ -917,7 +917,7 @@ msgstr "Alŝuti novan foton"
 
 #: templates/contacts.php:241
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Elekti foton el Dosieroj"
 
 #: templates/contacts.php:243
 msgid "Favorite"
@@ -942,7 +942,7 @@ msgstr "Familia nomo"
 
 #: templates/contacts.php:278
 msgid "Address book"
-msgstr ""
+msgstr "Adresaro"
 
 #: templates/contacts.php:285 templates/contacts.php:362
 msgid "Nickname"
@@ -962,11 +962,11 @@ msgstr "Naskiĝotago"
 
 #: templates/contacts.php:341
 msgid "Website"
-msgstr ""
+msgstr "TTT-ejo"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
-msgstr ""
+msgstr "Tujmesaĝado"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
@@ -1068,11 +1068,11 @@ msgstr "Redakti"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI de adresaro"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1080,19 +1080,19 @@ msgstr "Priskribo"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP-URL"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Sennoma"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Nurlega"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Nurlega"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1104,7 +1104,7 @@ msgstr "Pasvorto"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Grando de paĝo"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1116,11 +1116,11 @@ msgstr "Bazo-DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Serĉi filtrilon"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filtrilo"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
