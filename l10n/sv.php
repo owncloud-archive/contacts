@@ -59,7 +59,7 @@
 "All" => "Alla",
 "Favorites" => "Favoriter",
 "Shared by {owner}" => "Delad av {owner}",
-"Not grouped" => "Inte grupperad.",
+"Not grouped" => "Inte grupperad",
 "Failed loading groups: {error}" => "Kan inte ladda grupper: {error}",
 "Please choose the addressbook" => "Vänligen välj adressboken",
 "Import into..." => "Importera till...",
