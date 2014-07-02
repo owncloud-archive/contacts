@@ -268,5 +268,7 @@
 "Filter" => "Filter",
 "Base DN for modification" => "Osnovni DN za spreminjanje",
 "Base DN modification" => "Sprememba osnovnega DN",
+"Connector" => "Povezovalnik",
+"Connector value (Better use external editor and copy/paste)" => "Vrednost povezovalnika (priporočljivo je uporabiti zunanji urejevalnik in vsebino prilepiti)",
 "Copy from (Warning, replaces current custom value)" => "Kopiraj iz (Opozorilo, možnost trenutno nadomesti vrednost po meri)"
 );
