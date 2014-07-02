@@ -1332,7 +1332,9 @@ OC.Contacts = OC.Contacts || {};
 		$bdayinput.datepicker({
 			dateFormat : datepickerFormatDate,
 			changeMonth: true,
-			changeYear: true
+			changeYear: true,
+			minDate : new Date(1900,1,1),
+			maxDate : new Date()
 		});
 		$bdayinput.attr('placeholder', $.datepicker.formatDate(datepickerFormatDate, new Date()));
 
