@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Informationen om vCard er forkert. Genindlæs siden.",
 "Error updating contact" => "Kunne ikke opdatere kontakt",
 "Error saving contact to backend" => "Kunne ikke gemme kontakt til server",
-"Error getting user photo" => "Fejl ved indlæsning af brugerfoto",
 "No photo path was submitted." => "Der blev ikke medsendt en sti til fotoet.",
 "Error loading image from cache" => "Kunne ikke indlæse billede fra cache.",
 "Error getting PHOTO property." => "Fejl ved indlæsning af PHOTO feltet.",

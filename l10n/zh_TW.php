@@ -92,7 +92,6 @@
 "Information about vCard is incorrect. Please reload the page." => "有關 vCard 的資訊不正確，請重新載入此頁。",
 "Error updating contact" => "更新聯絡人時發生錯誤",
 "Error saving contact to backend" => "儲存聯絡人資料至後台時發生錯誤",
-"Error getting user photo" => "取得使用者相片時發生錯誤",
 "No photo path was submitted." => "沒有提供相片路徑",
 "Error getting PHOTO property." => "讀取 PHOTO 屬性時發生錯誤",
 "Error saving contact." => "儲存聯絡人時發生錯誤",

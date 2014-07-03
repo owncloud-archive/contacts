@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Οι πληροφορίες σχετικά με τη vCard είναι εσφαλμένες. Παρακαλώ επαναφορτώστε τη σελίδα.",
 "Error updating contact" => "Σφάλμα κατά την ενημέρωση επαφής ",
 "Error saving contact to backend" => "Σφάλμα κατά την αποθήκευση επαφής στο σύστημα",
-"Error getting user photo" => "Σφάλμα κατά την λήψη φωτογραφίας χρήστη",
 "No photo path was submitted." => "Δεν δόθηκε διαδρομή εικόνας",
 "Error loading image from cache" => "Σφάλμα κατά την φόρτωση της εικόνας από την προσωρινή μνήμη",
 "Error getting PHOTO property." => "Σφάλμα κατά τη λήψη ιδιοτήτων ΦΩΤΟΓΡΑΦΙΑΣ.",

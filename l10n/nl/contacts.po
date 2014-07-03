@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
+"POT-Creation-Date: 2014-07-03 00:48-0400\n"
+"PO-Revision-Date: 2014-07-03 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -210,17 +210,17 @@ msgstr "Error bij interpreteren geboortedatum {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Het backend ondersteunt geen multi--byte tekens"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik om het verwijderen van {num} contactpersonen ongedaan te maken."
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Verwijderen van {num} contacten geannuleerd"
 
@@ -488,23 +488,19 @@ msgstr "Fout bij bijwerken contactpersoon"
 msgid "Error saving contact to backend"
 msgstr "Fout bij opslaan contactpersoongegevens baar backend"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Fout bij ophalen gebruikersfoto"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Geen fotopad opgestuurd."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Fout bij ophalen afbeelding vanuit cache"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Fout om PHOTO eigenschap te verkrijgen"
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Fout om contact op te slaan"
 

@@ -91,7 +91,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Informasi tentang VCard salah. Silakan memuat ulang halaman.",
 "Error updating contact" => "Kesalahan saat memperbarui kontak",
 "Error saving contact to backend" => "Kesalahan saat menyimpan kontak ke backend",
-"Error getting user photo" => "Galat mendapatkan foto pengguna",
 "No photo path was submitted." => "Tidak ada foto yang ditambahkan.",
 "Error getting PHOTO property." => "Kesalahan saat mengambil properti FOTO.",
 "Error saving contact." => "Kesalahan saat menyimpan kontak.",

@@ -24,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
+"POT-Creation-Date: 2014-07-03 00:48-0400\n"
+"PO-Revision-Date: 2014-07-03 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -214,17 +214,17 @@ msgstr "Fejl ved indlæsning af fødselsdag {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Backenden understøtter ikke multi-byte karakterer"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Nogle kontakter er markeret til sletning, men er endnu ikke slettet. Vent venligst på, at de bliver slettet."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik for at fortryde sletning af {num} kontakter"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "annullerede sletning af {num} kontakter"
 
@@ -492,23 +492,19 @@ msgstr "Kunne ikke opdatere kontakt"
 msgid "Error saving contact to backend"
 msgstr "Kunne ikke gemme kontakt til server"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Fejl ved indlæsning af brugerfoto"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Der blev ikke medsendt en sti til fotoet."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Kunne ikke indlæse billede fra cache."
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Fejl ved indlæsning af PHOTO feltet."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Kunne ikke gemme kontaktpersonen."
 

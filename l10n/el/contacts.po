@@ -36,8 +36,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
+"POT-Creation-Date: 2014-07-03 00:48-0400\n"
+"PO-Revision-Date: 2014-07-03 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -226,17 +226,17 @@ msgstr "Σφάλμα κατά την ανάλυση των γενεθλίων {b
 msgid "The backend does not support multi-byte characters."
 msgstr "Το σύστημα δεν υποστηρίζει χαρακτήρες πολλών byte"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή αλλά δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Επιλέξτε για να αναιρέσετε τη διαγραφή {num} επαφών"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Αναιρέθηκε η διαγραφή {num} επαφών"
 
@@ -504,23 +504,19 @@ msgstr "Σφάλμα κατά την ενημέρωση επαφής "
 msgid "Error saving contact to backend"
 msgstr "Σφάλμα κατά την αποθήκευση επαφής στο σύστημα"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Σφάλμα κατά την λήψη φωτογραφίας χρήστη"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Δεν δόθηκε διαδρομή εικόνας"
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Σφάλμα κατά την φόρτωση της εικόνας από την προσωρινή μνήμη"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Σφάλμα κατά τη λήψη ιδιοτήτων ΦΩΤΟΓΡΑΦΙΑΣ."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Σφάλμα κατά την αποθήκευση επαφής."
 

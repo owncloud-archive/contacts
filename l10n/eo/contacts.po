@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-27 00:48-0400\n"
-"PO-Revision-Date: 2014-06-26 14:41+0000\n"
-"Last-Translator: Mariano <mstreet@kde.org.ar>\n"
+"POT-Creation-Date: 2014-07-03 00:48-0400\n"
+"PO-Revision-Date: 2014-07-03 04:48+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Esperanto (http://www.transifex.com/projects/p/owncloud/language/eo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -200,17 +200,17 @@ msgstr ""
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Iuj kontaktoj estas markitaj por forigo, sed ankoraŭ ne forigitaj. Bonvolu atendi ĝis ili foriĝos."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klaku por malfari forigon de {num} kontaktoj"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Nuliĝis forigo de {num} kontaktoj"
 
@@ -478,23 +478,19 @@ msgstr "Eraris ĝisdatigo de kontakto"
 msgid "Error saving contact to backend"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Eraris ekhavo de uzantofoto"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Neniu vojo al foto sendiĝis."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Eraris ŝargo de bildo el kaŝmemoro"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Eraro dum ekhaviĝis la propraĵon PHOTO."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Eraro dum konserviĝis kontakto."
 

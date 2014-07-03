@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Information om vCard är felaktigt. Vänligen ladda om sidan.",
 "Error updating contact" => "Fel uppstod när kontakt skulle uppdateras",
 "Error saving contact to backend" => "Fel när kontakt skulle sparas till server",
-"Error getting user photo" => "Fel uppstod under hämtning av användarbild",
 "No photo path was submitted." => "Ingen sökväg till foto angavs.",
 "Error loading image from cache" => "fel uppstod när bild laddades från cache",
 "Error getting PHOTO property." => "Fel vid hämtning av egenskaper för FOTO.",

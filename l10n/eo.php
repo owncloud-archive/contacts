@@ -75,7 +75,6 @@
 "Error merging into contact." => "Eraris kunfando en kontakton.",
 "Information about vCard is incorrect. Please reload the page." => "Informo pri vCard estas malĝusta. Bonvolu reŝargi la paĝon.",
 "Error updating contact" => "Eraris ĝisdatigo de kontakto",
-"Error getting user photo" => "Eraris ekhavo de uzantofoto",
 "No photo path was submitted." => "Neniu vojo al foto sendiĝis.",
 "Error loading image from cache" => "Eraris ŝargo de bildo el kaŝmemoro",
 "Error getting PHOTO property." => "Eraro dum ekhaviĝis la propraĵon PHOTO.",

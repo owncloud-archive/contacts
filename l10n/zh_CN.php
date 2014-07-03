@@ -97,7 +97,6 @@
 "Information about vCard is incorrect. Please reload the page." => "vCard 的信息不正确。请重新加载页面。",
 "Error updating contact" => "更新联系人错误。",
 "Error saving contact to backend" => "保存联系人到后台出错。",
-"Error getting user photo" => "获取用户照片失败",
 "No photo path was submitted." => "未提供照片路径。",
 "Error getting PHOTO property." => "获取照片属性时出错。",
 "Error saving contact." => "保存联系人时出错。",

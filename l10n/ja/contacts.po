@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
+"POT-Creation-Date: 2014-07-03 00:48-0400\n"
+"PO-Revision-Date: 2014-07-03 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/owncloud/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
@@ -205,17 +205,17 @@ msgstr "誕生日 {bday} の解析エラー"
 msgid "The backend does not support multi-byte characters."
 msgstr "バックエンドはマルチバイト文字列をサポートしていません。"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "一部の連絡先が削除対象としてマークされていますが、まだ削除されていません。削除されるまでお待ちください。"
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "クリックして {num} 個の連絡先の削除を取り消す"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num}件の連絡先の削除がキャンセルされました"
 
@@ -483,23 +483,19 @@ msgstr "連絡先の更新エラー"
 msgid "Error saving contact to backend"
 msgstr "バックエンドへの連絡先の保存エラー"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "ユーザーフォト取得エラー"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "写真のパスが登録されていません。"
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "キャッシュからの画像読み込みエラー"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "写真属性の取得エラー。"
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "連絡先の保存エラー。"
 

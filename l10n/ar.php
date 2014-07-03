@@ -84,7 +84,6 @@
 "Information about vCard is incorrect. Please reload the page." => "المعلومات الموجودة في ال vCard غير صحيحة. الرجاء إعادة تحديث الصفحة.",
 "Error updating contact" => "خطأ في تحديث جهات الاتصال",
 "Error saving contact to backend" => "حدث خطأ أثناء حفظ جهات الاتصال في الخلفية.",
-"Error getting user photo" => "حدث خطأ أثناء جلب صورة المستخدم",
 "No photo path was submitted." => "لم يتم عرض مسار الصورة. \nلم يتم تقديم مسار للصورة. ",
 "Error getting PHOTO property." => "خطأ في الحصول على ملكية الصورة.",
 "Error saving contact." => "خطأ في حفظ جهة الإتصال.",

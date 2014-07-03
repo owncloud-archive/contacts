@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "vCardの情報に誤りがあります。ページをリロードしてください。",
 "Error updating contact" => "連絡先の更新エラー",
 "Error saving contact to backend" => "バックエンドへの連絡先の保存エラー",
-"Error getting user photo" => "ユーザーフォト取得エラー",
 "No photo path was submitted." => "写真のパスが登録されていません。",
 "Error loading image from cache" => "キャッシュからの画像読み込みエラー",
 "Error getting PHOTO property." => "写真属性の取得エラー。",

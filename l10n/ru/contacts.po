@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Alexander Savchenko <a.v.savchenko@mail.ru>, 2013
+# Alexander Savchenko, 2013
 # Alexander Shashkevych <alex@stunpix.com>, 2013
 # BuxarNET <buxarnet@gmail.com>, 2014
 # Denis <reg.transifex.net@demitel.ru>, 2014
@@ -38,8 +38,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
+"POT-Creation-Date: 2014-07-03 00:48-0400\n"
+"PO-Revision-Date: 2014-07-03 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -228,17 +228,17 @@ msgstr "Ошибка анализа даты рождения {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Реализация не поддерживает мультибайтовые символы."
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Некоторые контакты помечены на удаление, но ещё не удалены. Подождите, пока они удаляются."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Нажмите для отмены удаления {num} контактов"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Отмена удаления {num} контактов"
 
@@ -506,23 +506,19 @@ msgstr "Ошибка при обновлении контакта"
 msgid "Error saving contact to backend"
 msgstr "Ошибка сохранения контакта в бэкенд"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Ошибка загрузки фото пользователя"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Нет фото по адресу."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Ошибка загрузки изображения из кэша"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Ошибка при получении ФОТО."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Ошибка при сохранении контактов."
 

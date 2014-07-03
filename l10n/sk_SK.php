@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Informácie o vCard sú neplatné. Prosím obnovte stránku.",
 "Error updating contact" => "Chyba pri ukladaní zmien kontaktu",
 "Error saving contact to backend" => "Chyba pri zápise kontaktu do úložiska",
-"Error getting user photo" => "Chyba pri získavaní používateľovej fotky",
 "No photo path was submitted." => "Žiadna fotka nebola odoslaná.",
 "Error loading image from cache" => "Chyba pri načítaní obrázka z vyrovnávacej pamäte",
 "Error getting PHOTO property." => "Chyba počas získavania vlastností fotografie.",

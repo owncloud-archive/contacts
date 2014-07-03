@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Informatie over de vCard is onjuist. Herlaad de pagina.",
 "Error updating contact" => "Fout bij bijwerken contactpersoon",
 "Error saving contact to backend" => "Fout bij opslaan contactpersoongegevens baar backend",
-"Error getting user photo" => "Fout bij ophalen gebruikersfoto",
 "No photo path was submitted." => "Geen fotopad opgestuurd.",
 "Error loading image from cache" => "Fout bij ophalen afbeelding vanuit cache",
 "Error getting PHOTO property." => "Fout om PHOTO eigenschap te verkrijgen",

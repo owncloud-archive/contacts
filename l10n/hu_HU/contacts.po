@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
+"POT-Creation-Date: 2014-07-03 00:48-0400\n"
+"PO-Revision-Date: 2014-07-03 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -209,17 +209,17 @@ msgstr "Hiba a születésnap értelmezésekor {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Az alrendszer nem támogatja a több byte-os karaktereket"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Néhány névjegy ki lett jelölve törlésre, de még nem lett törölve. Várja meg a végleges törlést."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Kattintson ide {num} névjegy törlésének visszavonásához"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "{num} névjegy törlése visszavonva"
 
@@ -487,23 +487,19 @@ msgstr "Hiba, a kapcsolat aktualizálásakor"
 msgid "Error saving contact to backend"
 msgstr "Hiba a kapcsolat háttérmentésekor."
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Nem sikerült beolvasni a felhasználó fényképét"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Nincs fénykép-útvonal megadva"
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Nem tölthető be a kép a gyorsítótárból"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "A PHOTO-tulajdonság  feldolgozása sikertelen"
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "A névjegy mentése sikertelen"
 

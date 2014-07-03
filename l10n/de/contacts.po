@@ -42,8 +42,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
+"POT-Creation-Date: 2014-07-03 00:48-0400\n"
+"PO-Revision-Date: 2014-07-03 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: German (http://www.transifex.com/projects/p/owncloud/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -232,17 +232,17 @@ msgstr "Fehler beim Analysieren des Geburtstages {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Das Backend unterstüzt keine Multibyte-Zeichen."
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Einige zum Löschen vorgemerkte Kontakte wurden noch nicht gelöscht. Bitte warten."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klicken um das Löschen von {num} Kontakten rückgängig zu machen."
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Die Löschung von {num} Kontakten wurde abgebrochen"
 
@@ -510,23 +510,19 @@ msgstr "Fehler beim Aktualisieren eines Kontakts"
 msgid "Error saving contact to backend"
 msgstr "Fehler beim Speichern eines Kontakts ins Backend"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Fehler beim Abrufen des Benutzerfotos"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Kein Foto-Pfad angegeben."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Fehler beim Laden des Bildes aus dem Zwischenspeicher"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Fehler beim Abrufen der PHOTO-Eigenschaft."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Fehler beim Speichern des Kontaktes."
 

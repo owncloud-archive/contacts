@@ -43,7 +43,6 @@
 "Couldn't find contact." => "Не можев да го пронајдам контактот.",
 "Error merging into contact." => "Грешка при спојување на контактите.",
 "Information about vCard is incorrect. Please reload the page." => "Информацијата за vCard не е точна. Ве молам превчитајте ја страницава.",
-"Error getting user photo" => "Грешка при преземањето на фотографијата на корисникот.",
 "No photo path was submitted." => "Не беше поднесена патека за фотографија.",
 "Error getting PHOTO property." => "Грешка при утврдувањето на карактеристиките на фотографијата.",
 "Error saving contact." => "Грешка при снимање на контактите.",

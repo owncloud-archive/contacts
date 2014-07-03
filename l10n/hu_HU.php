@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "A vCardról szóló információ helytelen. Töltsd újra az oldalt.",
 "Error updating contact" => "Hiba, a kapcsolat aktualizálásakor",
 "Error saving contact to backend" => "Hiba a kapcsolat háttérmentésekor.",
-"Error getting user photo" => "Nem sikerült beolvasni a felhasználó fényképét",
 "No photo path was submitted." => "Nincs fénykép-útvonal megadva",
 "Error loading image from cache" => "Nem tölthető be a kép a gyorsítótárból",
 "Error getting PHOTO property." => "A PHOTO-tulajdonság  feldolgozása sikertelen",

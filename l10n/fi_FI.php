@@ -93,7 +93,6 @@
 "Information about vCard is incorrect. Please reload the page." => "vCardin tiedot eivät kelpaa. Lataa sivu uudelleen.",
 "Error updating contact" => "Virhe yhteystietoa päivittäessä",
 "Error saving contact to backend" => "Virhe tallennettaessa yhteystietoa taustajärjestelmään",
-"Error getting user photo" => "Virhe hankkiessa kuvaa ",
 "No photo path was submitted." => "Kuvan polkua ei annettu.",
 "Error loading image from cache" => "Virhe ladatessa kuvaa välimuistista",
 "Error getting PHOTO property." => "Virhe KUVA ominaisuuden saamisessa.",

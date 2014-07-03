@@ -86,7 +86,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Informacija apie vCard yra neteisinga. ",
 "Error updating contact" => "Klaida atnaujinant kontaktą",
 "Error saving contact to backend" => "Klaida išsaugant kontaktą į sistemą.",
-"Error getting user photo" => "Klaida gaunant naudotojo nuotrauką",
 "No photo path was submitted." => "Nenurodytas nuotraukos kelias. ",
 "Error getting PHOTO property." => "Klaida gaunant nuotraukos  savybes.",
 "Error saving contact." => "Klaida išsaugant kontaktą.",

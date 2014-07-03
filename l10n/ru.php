@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Информация о vCard некорректна. Пожалуйста, обновите страницу.",
 "Error updating contact" => "Ошибка при обновлении контакта",
 "Error saving contact to backend" => "Ошибка сохранения контакта в бэкенд",
-"Error getting user photo" => "Ошибка загрузки фото пользователя",
 "No photo path was submitted." => "Нет фото по адресу.",
 "Error loading image from cache" => "Ошибка загрузки изображения из кэша",
 "Error getting PHOTO property." => "Ошибка при получении ФОТО.",

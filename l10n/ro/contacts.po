@@ -5,6 +5,7 @@
 # Translators:
 # alinaa, 2014
 # andreiacob <andrei.iacob@y7mail.com>, 2014
+# astalush <astalush@yahoo.com>, 2014
 # Rawbeef64, 2011, 2012
 # Dumitru Ursu <>, 2012
 # Eugen Mihalache <eugemjj@gmail.com>, 2012
@@ -15,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-06-20 00:48-0400\n"
-"PO-Revision-Date: 2014-06-20 04:48+0000\n"
+"POT-Creation-Date: 2014-07-03 00:48-0400\n"
+"PO-Revision-Date: 2014-07-03 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/owncloud/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +53,7 @@ msgstr "Modifică agenda"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr ""
+msgstr "Incepe import fișiere"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
@@ -141,7 +142,7 @@ msgstr "Eroare de server sau de retea. Va rugam informati administratorul."
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Numai imaginile pot fi utilizate ca fotografii de contact"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
@@ -205,17 +206,17 @@ msgstr ""
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Anumite contacte sunt selectate pentru ştergere, dar încă nu au fost şterse. Va rugam aşteptaţi ştergerea lor"
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -372,7 +373,7 @@ msgstr "Agenda nu poate fi gasita ."
 
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Nu aveți permisiunea de a actualiza acest contact"
 
 #: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
@@ -483,23 +484,19 @@ msgstr "Eroare in actualizarea contactului"
 msgid "Error saving contact to backend"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Eroare in obtinerea fotografiei utilizatorului"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Nici o adresă către fotografie nu a fost transmisă"
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "eroare în găsirea proprietăţilor fotografiei"
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "eroare in salvarea contactului"
 
@@ -690,7 +687,7 @@ msgstr "ownCloud"
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
 msgid "Work"
-msgstr "Servicu"
+msgstr "Serviciu"
 
 #: lib/utils/properties.php:164 lib/utils/properties.php:169
 #: lib/utils/properties.php:183
@@ -873,7 +870,7 @@ msgstr "Acțiuni"
 
 #: templates/contacts.php:123
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "Actualizează lista de contacte"
 
 #: templates/contacts.php:125
 msgid "Add new contact"
@@ -926,7 +923,7 @@ msgstr "Selectaţi poza din fişier"
 
 #: templates/contacts.php:243
 msgid "Favorite"
-msgstr ""
+msgstr "Favorit"
 
 #: templates/contacts.php:246 templates/contacts.php:248
 #: templates/contacts.php:526 templates/contacts.php:529
@@ -935,7 +932,7 @@ msgstr "Nume"
 
 #: templates/contacts.php:254
 msgid "First name"
-msgstr ""
+msgstr "Prenume"
 
 #: templates/contacts.php:258
 msgid "Additional names"
@@ -943,7 +940,7 @@ msgstr ""
 
 #: templates/contacts.php:262
 msgid "Last name"
-msgstr ""
+msgstr "Nume"
 
 #: templates/contacts.php:278
 msgid "Address book"

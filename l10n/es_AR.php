@@ -89,7 +89,6 @@
 "Information about vCard is incorrect. Please reload the page." => "La información sobre la vCard es incorrecta. Por favor, cargá nuevamente la página",
 "Error updating contact" => "Error actualizando contacto",
 "Error saving contact to backend" => "Error guardando el contacto",
-"Error getting user photo" => "Error obteniendo la imagen de usuario",
 "No photo path was submitted." => "La ruta de la imagen no fue enviada",
 "Error getting PHOTO property." => "Error al obtener la propiedades de la foto.",
 "Error saving contact." => "Error al guardar el contacto.",

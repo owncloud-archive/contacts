@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "vCard bilgileri doğru değil. Lütfen sayfayı yenileyin.",
 "Error updating contact" => "Kişi güncellenirken hata",
 "Error saving contact to backend" => "Kişi arka uca kaydedilirken hata",
-"Error getting user photo" => "Kullanıcı fotoğrafı alınırken hata",
 "No photo path was submitted." => "Fotoğraf yolu gönderilmedi.",
 "Error loading image from cache" => "Resim önbellekten yüklenirken hata",
 "Error getting PHOTO property." => "PHOTO özelliği alınırken hata oluştu.",

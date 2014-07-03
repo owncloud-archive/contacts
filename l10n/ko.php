@@ -90,7 +90,6 @@
 "Information about vCard is incorrect. Please reload the page." => "vCard 정보가 올바르지 않습니다. 페이지를 새로 고치십시오.",
 "Error updating contact" => "연락처 업데이트 오류",
 "Error saving contact to backend" => "연락처 백엔드 저장 오류",
-"Error getting user photo" => "사용자 사진 가져오기 오류",
 "No photo path was submitted." => "사진 경로가 제출되지 않았습니다.",
 "Error getting PHOTO property." => "PHOTO 속성을 가져오는 중 오류가 발생했습니다.",
 "Error saving contact." => "연락처 저장 중 오류가 발생했습니다.",

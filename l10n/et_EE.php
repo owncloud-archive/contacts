@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Visiitkaardi info pole korrektne. Palun lae leht uuesti.",
 "Error updating contact" => "Viga kontakti uuendamisel",
 "Error saving contact to backend" => "Viga kontakti salvestamisel tagarakendisse",
-"Error getting user photo" => "Viga kasutaja foto hankimisel",
 "No photo path was submitted." => "Foto asukohta pole määratud.",
 "Error loading image from cache" => "Viga pildi puhvrist laadimisel",
 "Error getting PHOTO property." => "Viga PHOTO omaduse hankimisel.",

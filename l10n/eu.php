@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "vCard-aren inguruko informazioa okerra da. Mesedez birkargatu orrialdea.",
 "Error updating contact" => "Errore bat izan da kontaktua eguneratzerakoan",
 "Error saving contact to backend" => "Errorea kontaktua euskarrian gordetzen",
-"Error getting user photo" => "Errorea erabiltzailearen argazkia eskuratzerakoan",
 "No photo path was submitted." => "Ez da argazkiaren bide-izenik eman.",
 "Error loading image from cache" => "Errore bat izan da irudia cachetik kargatzerakoan",
 "Error getting PHOTO property." => "Errore bat izan da PHOTO propietatea lortzean.",

@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "Podrobnosti kartice vCard niso pravilne. Ponovno naložite stran.",
 "Error updating contact" => "Napaka posodabljanja stika",
 "Error saving contact to backend" => "Napaka shranjevanja stika v hrbtišče sistema",
-"Error getting user photo" => "Napaka pridobivanja fotografije uporabnika",
 "No photo path was submitted." => "Pot slike ni poslana.",
 "Error loading image from cache" => "Napaka nalaganja slike iz predpomnilnika",
 "Error getting PHOTO property." => "Napaka med pridobivanjem lastnosti fotografije.",

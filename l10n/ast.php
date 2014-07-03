@@ -110,7 +110,6 @@
 "Information about vCard is incorrect. Please reload the page." => "La información sobre la vCard ye incorreuta. Por favor, recarga la páxina.",
 "Error updating contact" => "Fallu anovando contautu",
 "Error saving contact to backend" => "Fallu guardando'l contautu",
-"Error getting user photo" => "Fallu obteniendo la imaxe d'usuariu",
 "No photo path was submitted." => "Nun s'introduxo'l camín a la semeya.",
 "Error loading image from cache" => "Fallu al cargar la imaxe de la memoria caché",
 "Error getting PHOTO property." => "Fallu obteniendo les propiedaes de la semeya.",
