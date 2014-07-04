@@ -25,9 +25,10 @@ use OCA\Contacts\App,
  */
 class ImportController extends Controller {
 
-	public function __construct($appName, IRequest $request, App $app, ICache $cache) {
+	public function __construct($appName, IRequest $request, App $app, ICache $cache, ITags $tags) {
 		parent::__construct($appName, $request, $app);
 		$this->cache = $cache;
+    $this->tagMgr = $tags;
 	}
 
 	/**
@@ -246,8 +247,7 @@ class ImportController extends Controller {
 						$favourites = $part->select('X-FAVOURITES');
 						foreach ($favourites as $favourite) {
 							if ($favourite->getValue() == 'yes') {
-								$tagMgr = $this->server->getTagManager()->load('contact');
-								$tagMgr->addToFavorites($id);
+								$this->tagMgr->addToFavorites($id);
 							}
 						}
 					} else {
@@ -321,7 +321,6 @@ class ImportController extends Controller {
 			return $response;
 		}
 
-		error_log("progresskey: ".$this->cache->get($progresskey)." total: ".$this->cache->get($progresskey.'_total') );
 		$response->setParams(array('progress' => $this->cache->get($progresskey), 'total' => $this->cache->get($progresskey.'_total') ));
 		return $response;
 	}
