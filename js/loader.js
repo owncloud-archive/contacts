@@ -34,10 +34,10 @@ OC.ContactsImporter = OC.ContactsImporter || {
 			.fail(function(jqxhr, settings, exception) {
 				console.warn('Error loading storage backend', jqxhr, settings, exception);
 			});
-		})*/
+		})
 		.fail(function(jqxhr, settings, exception) {
 			console.warn('Error loading address book backend', jqxhr, settings, exception);
-		});
+		});*/
 	},
 	showDialog:function() {
 		var self = this;
