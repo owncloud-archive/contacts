@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-04 00:48-0400\n"
-"PO-Revision-Date: 2014-07-03 06:11+0000\n"
+"POT-Creation-Date: 2014-07-05 00:48-0400\n"
+"PO-Revision-Date: 2014-07-04 15:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Albanian (http://www.transifex.com/projects/p/owncloud/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -528,70 +528,70 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "No file was uploaded. Unknown error"
 msgstr "Nuk u ngarkua asnjë skedar. Veprim i gabuar i panjohur"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "There is no error, the file uploaded with success"
 msgstr "Nuk pati veprime të gabuara, skedari u ngarkua me sukses"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:59
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Skedari i ngarkuar tejkalon udhëzimin MAX_FILE_SIZE të specifikuar në formularin HTML"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "The uploaded file was only partially uploaded"
 msgstr "Skedari i ngarkuar u ngarkua vetëm pjesërisht"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "No file was uploaded"
 msgstr "Nuk u ngarkua asnjë skedar"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Missing a temporary folder"
 msgstr "Një dosje e përkohshme nuk u gjet"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Failed to write to disk"
 msgstr "Ruajtja në disk dështoi"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:76
 msgid "Not enough storage available"
 msgstr "Hapsira e arkivimit e pamjaftueshme"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:84
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:104
 msgid "Error uploading contacts to storage."
 msgstr ""
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:149
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:168
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:176
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:181
 #: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:187
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 

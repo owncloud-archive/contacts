@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-04 00:48-0400\n"
-"PO-Revision-Date: 2014-07-03 06:11+0000\n"
+"POT-Creation-Date: 2014-07-05 00:48-0400\n"
+"PO-Revision-Date: 2014-07-04 15:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
@@ -535,70 +535,70 @@ msgstr "V požiadavke chýba názov skupiny."
 msgid "Contact ID missing from request."
 msgstr "Chýbajúce kontaktné ID pri požiadavke."
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "No file was uploaded. Unknown error"
 msgstr "Žiaden súbor nebol odoslaný. Neznáma chyba"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "There is no error, the file uploaded with success"
 msgstr "Nenastala žiadna chyba, súbor bol úspešne nahraný"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:59
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Nahrávaný súbor prekračuje nastavenie upload_max_filesize v php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Nahrávaný súbor prekračuje nastavenie MAX_FILE_SIZE z volieb HTML formulára"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "The uploaded file was only partially uploaded"
 msgstr "Nahrávaný súbor sa nahral len čiastočne"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "No file was uploaded"
 msgstr "Žiadny súbor nebol nahraný"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Missing a temporary folder"
 msgstr "Chýba dočasný priečinok"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Failed to write to disk"
 msgstr "Zápis na disk sa nepodaril"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:76
 msgid "Not enough storage available"
 msgstr "Nedostatok dostupného úložného priestoru"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:84
 msgid "Attempt to upload blacklisted file:"
 msgstr "Pokus o nahratie zakázaného súboru:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:104
 msgid "Error uploading contacts to storage."
 msgstr "Chyba pri nahrávaní kontaktov do úložiska."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:149
 msgid "Error moving file to imports folder."
 msgstr "Chyba pri presune súboru do priečinka importov"
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:168
 msgid "You do not have permissions to import into this address book."
 msgstr "Nemáte oprávnenie na import do tohto adresára."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:176
 msgid "File name missing from request."
 msgstr "V požiadavke chýba názov súboru."
 
-#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:181
 #: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr "V požiadavke chýba položka priebehu."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:187
 msgid "Attempt to access blacklisted file:"
 msgstr "Pokus o prístup k zakázanému súboru:"
 

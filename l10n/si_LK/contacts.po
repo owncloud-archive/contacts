@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-03 00:48-0400\n"
-"PO-Revision-Date: 2014-07-03 04:48+0000\n"
+"POT-Creation-Date: 2014-07-05 00:48-0400\n"
+"PO-Revision-Date: 2014-07-04 15:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Sinhala (Sri Lanka) (http://www.transifex.com/projects/p/owncloud/language/si_LK/)\n"
 "MIME-Version: 1.0\n"
@@ -529,70 +529,70 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "No file was uploaded. Unknown error"
 msgstr "ගොනුවක් උඩුගත නොවුනි. නොහැඳිනු දෝෂයක්"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "There is no error, the file uploaded with success"
 msgstr "දෝෂයක් නොමැත. සාර්ථකව ගොනුව උඩුගත කෙරුණි"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:59
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "php.ini හි upload_max_filesize නියමයට වඩා ගොනුව විශාලය"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "උඩුගත කළ ගොනුවේ විශාලත්වය HTML පෝරමයේ නියම කළ ඇති MAX_FILE_SIZE විශාලත්වයට වඩා වැඩිය"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "The uploaded file was only partially uploaded"
 msgstr "උඩුගත කළ ගොනුවේ කොටසක් පමණක් උඩුගත විය"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "No file was uploaded"
 msgstr "ගොනුවක් උඩුගත නොවුණි"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Missing a temporary folder"
 msgstr "තාවකාලික ෆොල්ඩරයක් අතුරුදහන්"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Failed to write to disk"
 msgstr "තැටිගත කිරීම අසාර්ථකයි"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:76
 msgid "Not enough storage available"
 msgstr ""
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:84
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:104
 msgid "Error uploading contacts to storage."
 msgstr "ගබඩාවට පුද්ගල විස්තර උඩුගත කිරීමේ දෝෂයක්"
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:149
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:168
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:176
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:181
 #: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:187
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 

@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-04 00:48-0400\n"
-"PO-Revision-Date: 2014-07-03 06:11+0000\n"
+"POT-Creation-Date: 2014-07-05 00:48-0400\n"
+"PO-Revision-Date: 2014-07-04 15:11+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -545,70 +545,70 @@ msgstr "요청에 그룹 이름이 없습니다."
 msgid "Contact ID missing from request."
 msgstr "요청에 연락처 ID가 없습니다."
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "No file was uploaded. Unknown error"
 msgstr "파일이 업로드되지 않았습니다. 알 수 없는 오류입니다"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "There is no error, the file uploaded with success"
 msgstr "파일 업로드에 성공하였습니다."
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:59
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "업로드된 파일이 php.ini의 upload_max_filesize보다 큼"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "업로드한 파일 크기가 HTML 양식의 MAX_FILE_SIZE보다 큼"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "The uploaded file was only partially uploaded"
 msgstr "파일의 일부분만 업로드됨"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "No file was uploaded"
 msgstr "파일이 업로드되지 않았음"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Missing a temporary folder"
 msgstr "임시 폴더가 없음"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Failed to write to disk"
 msgstr "디스크에 쓸 수 없음"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:76
 msgid "Not enough storage available"
 msgstr "저장소 용량이 충분하지 않음"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:84
 msgid "Attempt to upload blacklisted file:"
 msgstr "허용되지 않은 파일을 업로드하려고 함:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:104
 msgid "Error uploading contacts to storage."
 msgstr "연락처를 저장소에 업로드할 수 없습니다."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:149
 msgid "Error moving file to imports folder."
 msgstr "가져오기 폴더로 파일을 이동할 수 없습니다."
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:168
 msgid "You do not have permissions to import into this address book."
 msgstr "이 주소록으로 가져올 수 있는 권한이 없습니다."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:176
 msgid "File name missing from request."
 msgstr "요청에 파일 이름이 없습니다."
 
-#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:181
 #: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr "요청에 진행 키가 없습니다."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:187
 msgid "Attempt to access blacklisted file:"
 msgstr "허용되지 않은 파일에 접근하려고 함:"
 

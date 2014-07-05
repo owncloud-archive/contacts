@@ -224,7 +224,11 @@
 "Export" => "导出",
 "CardDAV link" => "CardDAV 链接",
 "Edit" => "编辑",
+"URI" => "URI",
 "Description" => "描述",
+"LDAP URL" => "LDAP 地址",
+"Read-only" => "只读",
+"Read-Only" => "只读",
 "User" => "用户",
 "Password" => "密码",
 "Base DN" => "Base DN"
