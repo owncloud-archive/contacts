@@ -29,8 +29,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-05 00:48-0400\n"
-"PO-Revision-Date: 2014-07-05 03:00+0000\n"
+"POT-Creation-Date: 2014-07-06 00:48-0400\n"
+"PO-Revision-Date: 2014-07-05 18:43+0000\n"
 "Last-Translator: Kaijia Feng <fengkaijia@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "总共：{total}，成功：{imported}，错误：{failed}"
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
@@ -259,7 +259,7 @@ msgstr "联系人都不在此分组中。"
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "名为“{group}”的组已经存在"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -761,7 +761,7 @@ msgstr ""
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
-msgstr ""
+msgstr "新建联系人"
 
 #: templates/contacts.php:13
 msgid "Group name"
@@ -769,7 +769,7 @@ msgstr "组名称"
 
 #: templates/contacts.php:13
 msgid "New group"
-msgstr ""
+msgstr "新建组"
 
 #: templates/contacts.php:22
 msgid "Address books"
@@ -828,7 +828,7 @@ msgstr "下载"
 
 #: templates/contacts.php:89
 msgid "Merge"
-msgstr ""
+msgstr "合并"
 
 #: templates/contacts.php:92 templates/contacts.php:326
 #: templates/contacts.php:365
@@ -932,7 +932,7 @@ msgstr "上传新照片"
 
 #: templates/contacts.php:241
 msgid "Select photo from Files"
-msgstr ""
+msgstr "从文件中选择照片"
 
 #: templates/contacts.php:243
 msgid "Favorite"
@@ -981,7 +981,7 @@ msgstr "网站"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
-msgstr ""
+msgstr "即时通讯"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
@@ -989,7 +989,7 @@ msgstr "注释放在这里..."
 
 #: templates/contacts.php:359
 msgid "Add field..."
-msgstr ""
+msgstr "增加项目...."
 
 #: templates/contacts.php:366
 msgid "Instant Messaging"
@@ -1099,7 +1099,7 @@ msgstr "LDAP 地址"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "匿名"
 
 #: templates/contacts.php:560
 msgid "Read-only"
