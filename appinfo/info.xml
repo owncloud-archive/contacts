@@ -13,4 +13,5 @@
 		<contacts>appinfo/remote.php</contacts>
 		<carddav>appinfo/remote.php</carddav>
 	</remote>
+	<ocsid>166044</ocsid>
 </info>
