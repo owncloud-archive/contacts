@@ -604,7 +604,8 @@ class Ldap extends AbstractBackend {
 
 		$uri = isset($options['uri']) ? $options['uri'] : null;
 		
-		$contact->REV = (new \DateTime)->format(\DateTime::W3C);
+		$datetime = new \DateTime; 
+		$contact->REV = $datetime->format(\DateTime::W3C);
 		
 		// 2014/02/13 Sometimes, a card is created without a name (I don't like that)...
 		if (!isset($contact->N)) {
