@@ -88,7 +88,13 @@ abstract class ImportConnector {
 					if (isset($importEntry->vcard_entry['value'])) {
 						$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($value));
 					} else {
-						$property->setValue(StringUtil::convertToUTF8($value));
+						$curVal = $property->getValue();
+						if ($curVal != '') {
+							$curVal .= ',' . StringUtil::convertToUTF8($value);
+						} else {
+							$curVal = StringUtil::convertToUTF8($value);
+						}
+						$property->setValue($curVal);
 					}
 				}
 			}
