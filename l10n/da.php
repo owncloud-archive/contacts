@@ -265,5 +265,9 @@
 "Base DN" => "Base DN",
 "Search filter" => "Søgefilter",
 "Filter" => "Filter",
+"Base DN for modification" => "Base DN for modifikation",
+"Base DN modification" => " Base DN-modifikation",
+"Connector" => "Connector",
+"Connector value (Better use external editor and copy/paste)" => "Connector-værdi (Det er bedre at bruge en ekstern tekstredigering og kopiere/indsætte)",
 "Copy from (Warning, replaces current custom value)" => "Kopier fra (Advarsel, dete erstatter eksisterende data)"
 );
