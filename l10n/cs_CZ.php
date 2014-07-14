@@ -170,6 +170,8 @@
 "Internet" => "Internet",
 "Friends" => "Přátelé",
 "Family" => "Rodina",
+"Enable LDAP Backend" => "Povolit podpůrnou vrstvu LDAP",
+"Enable LDAP backend for the contacts application" => "Povolit LDAP pro aplikaci správy kontaktů",
 "New contact" => "Nový kontakt",
 "Group name" => "Název skupiny",
 "New group" => "Nová skupina",
