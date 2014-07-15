@@ -172,6 +172,7 @@
 "Family" => "Rodina",
 "Enable LDAP Backend" => "Povolit podpůrnou vrstvu LDAP",
 "Enable LDAP backend for the contacts application" => "Povolit LDAP pro aplikaci správy kontaktů",
+"Warning: LDAP Backend is in beta mode, use with precautions" => "Varování: LDAP rozhraní je pouze v beta módu, používejte s rozvahou",
 "New contact" => "Nový kontakt",
 "Group name" => "Název skupiny",
 "New group" => "Nová skupina",
