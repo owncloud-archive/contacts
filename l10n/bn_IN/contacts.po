@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-03 00:48-0400\n"
-"PO-Revision-Date: 2014-07-03 04:48+0000\n"
+"POT-Creation-Date: 2014-07-17 00:48-0400\n"
+"PO-Revision-Date: 2014-07-16 14:41+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Bengali (India) (http://www.transifex.com/projects/p/owncloud/language/bn_IN/)\n"
 "MIME-Version: 1.0\n"
@@ -32,11 +32,11 @@ msgstr ""
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
 msgid "Cancel"
-msgstr ""
+msgstr "বাতিল করা"
 
 #: js/addressbooks.js:132 js/groups.js:519
 msgid "Save"
-msgstr ""
+msgstr "সেভ"
 
 #: js/addressbooks.js:162
 msgid "Edit Addressbook"
@@ -213,7 +213,7 @@ msgstr ""
 
 #: js/groups.js:53
 msgid "Add"
-msgstr ""
+msgstr "যোগ করা"
 
 #: js/groups.js:264
 msgid "Contact is already in this group."
@@ -291,7 +291,7 @@ msgstr ""
 
 #: js/loader.js:61 templates/contacts.php:37
 msgid "Import"
-msgstr ""
+msgstr "ইম্পোর্ট"
 
 #: js/loader.js:68
 msgid "Importing..."
@@ -304,7 +304,7 @@ msgstr ""
 #: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
 #: templates/contacts.php:377
 msgid "Close"
-msgstr ""
+msgstr "বন্ধ"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
@@ -526,70 +526,70 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:49
 msgid "No file was uploaded. Unknown error"
 msgstr ""
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:58
 msgid "There is no error, the file uploaded with success"
 msgstr ""
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:59
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:61
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "No file was uploaded"
 msgstr ""
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "Missing a temporary folder"
 msgstr ""
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Failed to write to disk"
 msgstr ""
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:76
 msgid "Not enough storage available"
 msgstr ""
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:84
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:104
 msgid "Error uploading contacts to storage."
 msgstr ""
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:149
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:168
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:176
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:180
+#: lib/controller/importcontroller.php:181
 #: lib/controller/importcontroller.php:307
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:187
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
@@ -793,7 +793,7 @@ msgstr ""
 #: templates/contacts.php:230 templates/contacts.php:231
 #: templates/contacts.php:515
 msgid "Delete"
-msgstr ""
+msgstr "মুছে ফেলা"
 
 #: templates/contacts.php:86 templates/contacts.php:271
 msgid "Groups"
@@ -821,7 +821,7 @@ msgstr ""
 #: templates/contacts.php:94 templates/contacts.php:336
 #: templates/contacts.php:367
 msgid "Address"
-msgstr ""
+msgstr "ঠিকানা"
 
 #: templates/contacts.php:95
 msgid "Group"
@@ -919,7 +919,7 @@ msgstr ""
 #: templates/contacts.php:246 templates/contacts.php:248
 #: templates/contacts.php:526 templates/contacts.php:529
 msgid "Name"
-msgstr ""
+msgstr "নাম"
 
 #: templates/contacts.php:254
 msgid "First name"
@@ -1045,11 +1045,11 @@ msgstr ""
 
 #: templates/contacts.php:511
 msgid "Share"
-msgstr ""
+msgstr "শেয়ার"
 
 #: templates/contacts.php:512
 msgid "Export"
-msgstr ""
+msgstr "এক্সপোর্ট"
 
 #: templates/contacts.php:513
 msgid "CardDAV link"
@@ -1057,7 +1057,7 @@ msgstr ""
 
 #: templates/contacts.php:514
 msgid "Edit"
-msgstr ""
+msgstr "এডিট"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"

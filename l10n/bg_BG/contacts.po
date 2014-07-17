@@ -6,13 +6,14 @@
 # Dimitar Krastev <dimitar.t.krastev@gmail.com>, 2013
 # Stefan Ilivanov <ilivanov@gmail.com>, 2013
 # Svetoslav Slavkov <contact@sslavkov.eu>, 2013
+# Yasen Pramatarov <yasen@lindeas.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-09 00:48-0400\n"
-"PO-Revision-Date: 2014-07-08 06:11+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-07-17 00:48-0400\n"
+"PO-Revision-Date: 2014-07-16 23:41+0000\n"
+"Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/projects/p/owncloud/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -92,19 +93,19 @@ msgstr ""
 
 #: js/app.js:234
 msgid "Error."
-msgstr ""
+msgstr "Грешка"
 
 #: js/app.js:329 js/app.js:343
 msgid "Add to..."
-msgstr ""
+msgstr "Добавяне към..."
 
 #: js/app.js:333 js/app.js:345
 msgid "Remove from..."
-msgstr ""
+msgstr "Премахване от..."
 
 #: js/app.js:350
 msgid "Add group..."
-msgstr ""
+msgstr "Добавяне на група..."
 
 #: js/app.js:478
 msgid "Invalid URL: \"{url}\""
@@ -166,7 +167,7 @@ msgstr ""
 
 #: js/app.js:1417 templates/contacts.php:167
 msgid "Add group"
-msgstr ""
+msgstr "Добавяне на група"
 
 #: js/app.js:1421
 msgid "OK"
@@ -258,7 +259,7 @@ msgstr ""
 
 #: js/groups.js:672
 msgid "All"
-msgstr ""
+msgstr "Всички"
 
 #: js/groups.js:687 js/groups.js:690
 msgid "Favorites"
@@ -270,7 +271,7 @@ msgstr ""
 
 #: js/groups.js:766
 msgid "Not grouped"
-msgstr ""
+msgstr "Негрупирани"
 
 #: js/groups.js:795
 msgid "Failed loading groups: {error}"
@@ -282,7 +283,7 @@ msgstr ""
 
 #: js/loader.js:22 templates/contacts.php:41
 msgid "Import into..."
-msgstr ""
+msgstr "Внасяне в..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
@@ -290,7 +291,7 @@ msgstr ""
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "Внасяне на контакти"
 
 #: js/loader.js:61 templates/contacts.php:37
 msgid "Import"
@@ -298,11 +299,11 @@ msgstr "Внасяне"
 
 #: js/loader.js:68
 msgid "Importing..."
-msgstr ""
+msgstr "Внасяне..."
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr ""
+msgstr "Внасянето приключи"
 
 #: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
 #: templates/contacts.php:377
@@ -347,7 +348,7 @@ msgstr ""
 
 #: lib/addressbook.php:372
 msgid "Unknown error"
-msgstr ""
+msgstr "Непозната грешка"
 
 #: lib/addressbook.php:413
 msgid "Access denied"
@@ -531,7 +532,7 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:49
 msgid "No file was uploaded. Unknown error"
-msgstr ""
+msgstr "Неуспешно качвачване на файл. Непозната грешка"
 
 #: lib/controller/importcontroller.php:58
 msgid "There is no error, the file uploaded with success"
@@ -565,7 +566,7 @@ msgstr "Възникна проблем при запис в диска"
 
 #: lib/controller/importcontroller.php:76
 msgid "Not enough storage available"
-msgstr ""
+msgstr "Недостатъчно място"
 
 #: lib/controller/importcontroller.php:84
 msgid "Attempt to upload blacklisted file:"
@@ -610,7 +611,7 @@ msgstr ""
 
 #: lib/searchprovider.php:37
 msgid "Contact"
-msgstr ""
+msgstr "Кантакт"
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
 #: lib/utils/properties.php:178 lib/utils/properties.php:185
@@ -620,7 +621,7 @@ msgstr "Други"
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
-msgstr ""
+msgstr "Домашна страница"
 
 #: lib/utils/properties.php:71
 msgid "Jabber"
@@ -722,11 +723,11 @@ msgstr ""
 
 #: lib/utils/properties.php:197
 msgid "Friends"
-msgstr ""
+msgstr "Приятели"
 
 #: lib/utils/properties.php:198
 msgid "Family"
-msgstr ""
+msgstr "Семейство"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
@@ -742,7 +743,7 @@ msgstr ""
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
-msgstr ""
+msgstr "Нов контакт"
 
 #: templates/contacts.php:13
 msgid "Group name"
@@ -750,19 +751,19 @@ msgstr ""
 
 #: templates/contacts.php:13
 msgid "New group"
-msgstr ""
+msgstr "Нова група"
 
 #: templates/contacts.php:22
 msgid "Address books"
-msgstr ""
+msgstr "Адресници"
 
 #: templates/contacts.php:25 templates/contacts.php:74
 msgid "Display name"
-msgstr ""
+msgstr "Видимо име"
 
 #: templates/contacts.php:25
 msgid "Add Address Book"
-msgstr ""
+msgstr "Добавяне на адресник"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
@@ -782,7 +783,7 @@ msgstr ""
 
 #: templates/contacts.php:73
 msgid "Sort order"
-msgstr ""
+msgstr "Подреждане"
 
 #: templates/contacts.php:75
 msgid "First- Lastname"
@@ -809,7 +810,7 @@ msgstr "Изтегляне"
 
 #: templates/contacts.php:89
 msgid "Merge"
-msgstr ""
+msgstr "Сливане"
 
 #: templates/contacts.php:92 templates/contacts.php:326
 #: templates/contacts.php:365
@@ -819,7 +820,7 @@ msgstr "E-mail"
 #: templates/contacts.php:93 templates/contacts.php:331
 #: templates/contacts.php:364
 msgid "Phone"
-msgstr ""
+msgstr "Телефон"
 
 #: templates/contacts.php:94 templates/contacts.php:336
 #: templates/contacts.php:367
@@ -860,7 +861,7 @@ msgstr ""
 
 #: templates/contacts.php:120
 msgid "Actions"
-msgstr ""
+msgstr "Действия"
 
 #: templates/contacts.php:123
 msgid "Refresh contacts list"
@@ -868,15 +869,15 @@ msgstr ""
 
 #: templates/contacts.php:125
 msgid "Add new contact"
-msgstr ""
+msgstr "Добавяне на нов контакт"
 
 #: templates/contacts.php:127
 msgid "Add new addressbook"
-msgstr ""
+msgstr "Добавяне на нов адресник"
 
 #: templates/contacts.php:129
 msgid "Delete current contact"
-msgstr ""
+msgstr "Изтриване на текущия контакт"
 
 #: templates/contacts.php:135
 msgid ""
@@ -938,11 +939,11 @@ msgstr ""
 
 #: templates/contacts.php:278
 msgid "Address book"
-msgstr ""
+msgstr "Адресник"
 
 #: templates/contacts.php:285 templates/contacts.php:362
 msgid "Nickname"
-msgstr ""
+msgstr "Псевдоним"
 
 #: templates/contacts.php:295 templates/contacts.php:361
 msgid "Title"
@@ -950,7 +951,7 @@ msgstr "Заглавие"
 
 #: templates/contacts.php:305 templates/contacts.php:360
 msgid "Organization"
-msgstr ""
+msgstr "Организация"
 
 #: templates/contacts.php:315 templates/contacts.php:363
 msgid "Birthday"
@@ -970,7 +971,7 @@ msgstr ""
 
 #: templates/contacts.php:359
 msgid "Add field..."
-msgstr ""
+msgstr "Добавяне на поле..."
 
 #: templates/contacts.php:366
 msgid "Instant Messaging"
@@ -1024,19 +1025,19 @@ msgstr ""
 
 #: templates/contacts.php:458
 msgid "Postal code"
-msgstr ""
+msgstr "Пощенски код"
 
 #: templates/contacts.php:460
 msgid "City"
-msgstr ""
+msgstr "Град"
 
 #: templates/contacts.php:464
 msgid "State or province"
-msgstr ""
+msgstr "Страна или област"
 
 #: templates/contacts.php:468
 msgid "Country"
-msgstr ""
+msgstr "Държава"
 
 #: templates/contacts.php:495
 msgid "Instant Messenger"
