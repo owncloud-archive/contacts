@@ -50,6 +50,7 @@
 "Email" => "E-mail",
 "Phone" => "Телефон",
 "Address" => "Адрес",
+"Group" => "Група",
 "Actions" => "Действия",
 "Add new contact" => "Добавяне на нов контакт",
 "Add new addressbook" => "Добавяне на нов адресник",
