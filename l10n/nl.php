@@ -172,7 +172,7 @@
 "Family" => "Familie",
 "Enable LDAP Backend" => "Activeren LDAP backend",
 "Enable LDAP backend for the contacts application" => "Activeren LDAP backend voor de contactpersonen applicatie",
-"Warning: LDAP Backend is in beta mode, use with precautions" => "Waarschuwing: LDAP Backend in in betamodus, gebruik voorzichtig",
+"Warning: LDAP Backend is in beta mode, use with precautions" => "Waarschuwing: LDAP Backend is in betamodus, gebruik voorzichtig",
 "New contact" => "Nieuwe contactpersoon",
 "Group name" => "Groepsnaam",
 "New group" => "Nieuwe groep",

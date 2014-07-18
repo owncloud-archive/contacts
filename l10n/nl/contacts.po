@@ -748,7 +748,7 @@ msgstr "Activeren LDAP backend voor de contactpersonen applicatie"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr "Waarschuwing: LDAP Backend in in betamodus, gebruik voorzichtig"
+msgstr "Waarschuwing: LDAP Backend is in betamodus, gebruik voorzichtig"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
