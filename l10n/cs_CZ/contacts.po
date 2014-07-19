@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-15 00:48-0400\n"
-"PO-Revision-Date: 2014-07-14 17:11+0000\n"
+"POT-Creation-Date: 2014-07-19 00:48-0400\n"
+"PO-Revision-Date: 2014-07-18 09:31+0000\n"
 "Last-Translator: Jaroslav Lichtblau <jaroslav@lichtblau.cz>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -1133,7 +1133,7 @@ msgstr "Výchozí DN pro změnu"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Základní DN úprava"
 
 #: templates/contacts.php:609
 msgid "Connector"

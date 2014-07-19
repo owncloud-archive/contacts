@@ -266,5 +266,6 @@
 "Search filter" => "Vyhledávací filtr",
 "Filter" => "Filtr",
 "Base DN for modification" => "Výchozí DN pro změnu",
+"Base DN modification" => "Základní DN úprava",
 "Copy from (Warning, replaces current custom value)" => "Zkopírovat z (Varování, nahradí současnou hodnotu)"
 );

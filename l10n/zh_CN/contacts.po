@@ -29,8 +29,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-09 00:48-0400\n"
-"PO-Revision-Date: 2014-07-08 06:11+0000\n"
+"POT-Creation-Date: 2014-07-19 00:48-0400\n"
+"PO-Revision-Date: 2014-07-18 16:03+0000\n"
 "Last-Translator: Kaijia Feng <fengkaijia@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr "联系人"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "添加新 LDAP 地址簿"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -159,7 +159,7 @@ msgstr "只有图像才可用作联系人照片"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "{filename} 的文件大小超过了最大的 {size} 限制"
 
 #: js/app.js:972
 msgid "Error adding to group."
@@ -217,7 +217,7 @@ msgstr "生日格式错误 {bday}"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "此后端不支持多字节字符。"
 
 #: js/contacts.js:2234
 msgid ""
@@ -330,7 +330,7 @@ msgstr "关闭"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "错误，缺失的参数："
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -394,7 +394,7 @@ msgstr "此地址簿的后端不支持更新它"
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr ""
+msgstr "此后端不支持添加联系人"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -503,7 +503,7 @@ msgstr "未提供照片路径。"
 
 #: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "从缓存中载入图像时发生了错误"
 
 #: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
@@ -749,15 +749,15 @@ msgstr "家庭"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "启用 LDAP 后端"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "为联系人应用启用 LDAP 后端"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "警告：LDAP 后端尚在测试阶段，请在使用时注意"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -785,7 +785,7 @@ msgstr "增加地址薄"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "添加 LDAP 地址簿"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -1083,7 +1083,7 @@ msgstr "编辑"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "地址簿 URI"
 
 #: templates/contacts.php:536
 msgid "URI"
@@ -1119,7 +1119,7 @@ msgstr "密码"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "页面大小"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
