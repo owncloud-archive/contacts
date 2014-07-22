@@ -22,6 +22,8 @@
 
 namespace OCA\Contacts;
 
+use OC_L10N;
+use OCA\Contacts\Backend\AbstractBackend;
 use OCP\AppFramework\Http;
 
 /**
@@ -148,7 +150,7 @@ class Addressbook extends AbstractPIMCollection {
 
 	/**
 	 * @brief Activate an address book
-	 * @param bool active
+	 * @param bool $active
 	 * @return void
 	 */
 	public function setActive($active) {
@@ -411,7 +413,7 @@ class Addressbook extends AbstractPIMCollection {
 		if (!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
 			throw new \Exception(
 				self::$l10n->t('Access denied'),
-				STATUS_FORBIDDEN
+				Http::STATUS_FORBIDDEN
 			);
 		}
 
@@ -447,7 +449,7 @@ class Addressbook extends AbstractPIMCollection {
 	 */
 	public function delete() {
 		if (!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
-			throw new Exception(
+			throw new \Exception(
 				self::$l10n->t('You don\'t have permissions to delete the address book.'),
 				Http::STATUS_FORBIDDEN
 			);
