@@ -17,7 +17,8 @@ use OCA\Contacts\App,
 	OCA\Contacts\VObject\VCard as MyVCard,
 	OCA\Contacts\ImportManager,
 	OCP\IRequest,
-	OCP\ICache;
+	OCP\ICache,
+	OCP\ITags;
 
 /**
  * Controller importing contacts
