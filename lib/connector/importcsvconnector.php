@@ -68,7 +68,8 @@ class ImportCsvConnector extends ImportConnector {
 				$delimiter = (string)$this->configContent->import_core->delimiter;
 			} else {
 				// Look for the delimiter in the first line, should be the most present character between ',', ';' and '\t'
-				$firstLine = (new SplFileObject($file))->fgets();
+				$splFile = new SplFileObject($file);
+				$firstLine = $splFile->fgets();
 				$nbComma = substr_count($firstLine, ',');
 				$nbSemicolon = substr_count($firstLine, ';');
 				$nbTab = substr_count($firstLine, "\t");
