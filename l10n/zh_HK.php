@@ -10,6 +10,7 @@
 "Work" => "工作",
 "Home" => "主頁",
 "Text" => "文字",
+"Message" => "信息",
 "Family" => "家庭",
 "Delete" => "刪除",
 "Groups" => "群組",

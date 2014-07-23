@@ -59,6 +59,7 @@
 "Mobile" => "Mobil",
 "Text" => "Tekst",
 "Voice" => "Tale",
+"Message" => "Melding",
 "Fax" => "Faks",
 "Video" => "Video",
 "Pager" => "Personsøkjar",

@@ -18,6 +18,7 @@
 "ownCloud" => "ownCloud",
 "Work" => "ئىش",
 "Text" => "قىسقا ئۇچۇر",
+"Message" => "خەت",
 "Family" => "جەمەتىم",
 "Delete" => "ئۆچۈر",
 "Groups" => "گۇرۇپپا",
