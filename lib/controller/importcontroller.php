@@ -193,19 +193,6 @@ class ImportController extends Controller {
 		$file = $view->file_get_contents('/imports/' . $filename);
 		\OC_FileProxy::$enabled = $proxyStatus;
 
-		$writeProgress = function($pct, $total) use ($progresskey) {
-			$this->cache->set($progresskey, $pct, 300);
-			$this->cache->set($progresskey.'_total', $total, 300);
-		};
-
-		$cleanup = function() use ($view, $filename, $progresskey, $response) {
-			if(!$view->unlink('/imports/' . $filename)) {
-				$response->debug('Unable to unlink /imports/' . $filename);
-			}
-			$this->cache->remove($progresskey);
-			$this->cache->remove($progresskey.'_total');
-		};
-		
 		$importManager = new ImportManager();
 		
 		$formatList = $importManager->getTypes();
@@ -271,7 +258,7 @@ class ImportController extends Controller {
 					$failed++;
 				}
 				$processed++;
-				$writeProgress($processed, $total);
+				$this->writeProcess($processed, $total, $progresskey);
 			}
 		} else {
 			$imported = 0;
@@ -279,7 +266,8 @@ class ImportController extends Controller {
 			$processed = 0;
 			$total = 0;
 		}
-		$cleanup();
+
+		$this->cleanup($view, $filename, $progresskey, $response);
 		//done the import
 		sleep(3); // Give client side a chance to read the progress.
 		$response->setParams(
@@ -294,6 +282,30 @@ class ImportController extends Controller {
 			)
 		);
 		return $response;
+	}
+
+	/**
+	 * @param $pct
+	 * @param $total
+	 * @param $progresskey
+	 */
+	protected function writeProcess($pct, $total, $progresskey) {
+		$this->cache->set($progresskey, $pct, 300);
+		$this->cache->set($progresskey . '_total', $total, 300);
+	}
+
+	/**
+	 * @param $view
+	 * @param $filename
+	 * @param $progresskey
+	 * @param $response
+	 */
+	protected function cleanup($view, $filename, $progresskey, $response) {
+		if (!$view->unlink('/imports/' . $filename)) {
+			$response->debug('Unable to unlink /imports/' . $filename);
+		}
+		$this->cache->remove($progresskey);
+		$this->cache->remove($progresskey . '_total');
 	}
 
 	/**
