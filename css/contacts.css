@@ -56,13 +56,6 @@
 	border-bottom: 1px solid silver;
 }
 
-#app-navigation {
-	width: 250px;
-}
-#app-settings {
-	width: 249px;
-}
-
 #app-navigation a.unshare {
 	float: right;
 }
@@ -71,9 +64,6 @@
 #app-navigation img.shared:hover { opacity: 1; }*/
 #app-navigation input[type="text"] {
 	width: 180px;
-}
-
-#app-navigation .oc-addnew input[type="text"] {
 }
 
 #app-navigation .utils {
@@ -869,22 +859,15 @@ tbody tr.contact.active, tbody tr.contact:hover {
 @media screen and (min-width: 1201px) {
 	#contactlist tr td.categories { display: none; }
 	#contactsHeader tr td.categories { display: none; }
-	#app-navigation .oc-addnew input[type=text] { width: 204px; }
 }
 @media screen and (max-width: 1200px) {
 	#contactlist tr td.adr { display: none; }
 	#contactsHeader tr td.adr { display: none; }
-	#app-navigation { width: 220px; }
-	#app-navigation .oc-addnew input[type=text] { width: 174px; }
-	#app-settings { width: 219px; }
 	.multiselect #contactsHeader { margin-left: 300px; padding-right: 300px; }
 }
 @media screen and (max-width: 1000px) {
 	#contactlist tr td.tel { display: none; }
 	#contactsHeader tr td.tel { display: none; }
-	#app-navigation { width: 200px; }
-	#app-navigation .oc-addnew input[type=text] { width: 154px; }
-	#app-settings { width: 199px; }
 	.multiselect #contactsHeader { margin-left: 280px; padding-right: 280px; }
 }
 @media screen and (max-width: 900px) {
@@ -894,8 +877,5 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	#contactlist tr td.email { display: none; }
 	#contactlist tr { width: 100%; }
 	#contactsHeader tr td.email { display: none; }
-	#app-navigation { width: 170px; }
-	#app-navigation .oc-addnew input[type=text] { width: 124px; }
-	#app-settings { width: 169px; }
 	.multiselect #contactsHeader { margin-left: 250px; padding-right: 250px; }
 }
