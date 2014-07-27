@@ -133,7 +133,7 @@ use OCA\Contacts\ImportManager;
 		<div id="firstrun" class="hidden">
 			<div>
 				<h3><?php p($l->t('You have no contacts in your address book or your address book is disabled.')); ?></h3>
-				<p><?php p($l->t('Add a new contact or import existing contacts from a VCF file.')); ?></p>
+				<p><?php p($l->t('Add a new contact or import existing contacts from a file (VCF, CSV or LDIF).')); ?></p>
 				<div id="selections">
 					<input type="button" class="add-contact text" value="<?php p($l->t('New contact')) ?>">
 				</div>
