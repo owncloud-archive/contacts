@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-23 00:48-0400\n"
-"PO-Revision-Date: 2014-07-22 07:11+0000\n"
+"POT-Creation-Date: 2014-07-27 00:48-0400\n"
+"PO-Revision-Date: 2014-07-26 17:00+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Chinese (Hong Kong) (http://www.transifex.com/projects/p/owncloud/language/zh_HK/)\n"
 "MIME-Version: 1.0\n"
@@ -345,7 +345,7 @@ msgstr ""
 
 #: lib/addressbook.php:372
 msgid "Unknown error"
-msgstr ""
+msgstr "不明錯誤"
 
 #: lib/addressbook.php:413
 msgid "Access denied"
@@ -1050,7 +1050,7 @@ msgstr "分享"
 
 #: templates/contacts.php:512
 msgid "Export"
-msgstr ""
+msgstr "輸出"
 
 #: templates/contacts.php:513
 msgid "CardDAV link"
