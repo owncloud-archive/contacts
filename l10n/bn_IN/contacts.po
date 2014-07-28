@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-20 00:48-0400\n"
-"PO-Revision-Date: 2014-07-19 21:20+0000\n"
+"POT-Creation-Date: 2014-07-28 00:48-0400\n"
+"PO-Revision-Date: 2014-07-27 15:51+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Bengali (India) (http://www.transifex.com/projects/p/owncloud/language/bn_IN/)\n"
 "MIME-Version: 1.0\n"
@@ -943,7 +943,7 @@ msgstr ""
 
 #: templates/contacts.php:295 templates/contacts.php:361
 msgid "Title"
-msgstr ""
+msgstr "পদবি"
 
 #: templates/contacts.php:305 templates/contacts.php:360
 msgid "Organization"
@@ -1069,7 +1069,7 @@ msgstr ""
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
-msgstr ""
+msgstr "বর্ণনা"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
@@ -1089,7 +1089,7 @@ msgstr ""
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
-msgstr ""
+msgstr "ব্যবহারকারী"
 
 #: templates/contacts.php:574 templates/contacts.php:577
 msgid "Password"
