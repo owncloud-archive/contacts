@@ -164,6 +164,7 @@
 "Email" => "이메일",
 "Phone" => "전화 번호",
 "Address" => "주소",
+"Group" => "그룹",
 "Keyboard shortcuts" => "단축키",
 "Navigation" => "탐색",
 "Next contact in list" => "목록의 다음 연락처",
