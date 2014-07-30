@@ -1452,7 +1452,7 @@ OC.Contacts = OC.Contacts || {};
 								}
 								else if(param.toUpperCase() === 'TYPE') {
 									for(var etype in property.parameters[param]) {
-										if(!property.parameters[param].hasOwnProperty(etype)) {
+										if(property.parameters[param].hasOwnProperty(etype)) {
 											var found = false;
 											var et = property.parameters[param][etype];
 											if(typeof et !== 'string') {
