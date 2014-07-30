@@ -116,6 +116,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			foreach($ids as $id){
 				$contact = $this->addressBook->getChild($id);
 				$j = JSONSerializer::serializeContact($contact);
+				$j['data']['id'] = $id;
 				if (isset($contact->PHOTO)) {
 					$url =\OCP\Util::linkToRoute('contacts_contact_photo',
 							array(
@@ -126,7 +127,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 					$url = \OC_Helper::makeURLAbsolute($url);
 					$j['data']['PHOTO'] = "VALUE=uri:$url";
 				}
-				$results[]= $j['data'];
+				$results[]= $this->convertToSearchResult($j);
 			}
 		}
 
@@ -239,5 +240,30 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			return false;
 		}
 		return VCard::delete($id);
+	}
+
+	/**
+	 * @param $j
+	 * @return array
+	 */
+	private function convertToSearchResult($j) {
+		$data = $j['data'];
+		$result = array();
+		foreach( $data as $key => $d) {
+			$d = $data[$key];
+			if (in_array($key, Properties::$multiProperties)) {
+				$result[$key] = array_map(function($v){
+					return $v['value'];
+				}, $d);
+			} else {
+				if (is_array($d)) {
+					$result[$key] = $d[0]['value'];
+				} else {
+					$result[$key] = $d;
+				}
+			}
+		}
+
+		return $result;
 	}
 }
