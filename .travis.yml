@@ -2,8 +2,7 @@ language: php
 php:
   - 5.3
   - 5.4
-
-#  - 5.5
+  - 5.5
 
 branches:
   except:
@@ -27,6 +26,7 @@ before_install:
 #  - sudo ln -s $(pwd)/phantomjs-1.9.0-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
 
 script:
+  - sh -c "if [ '$DB' = 'sqlite' ]; then ant test; fi"
   - phpunit --configuration tests/phpunit.xml --testsuite unit-tests
 
 #&& make javascript-tests
