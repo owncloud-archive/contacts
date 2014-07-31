@@ -207,7 +207,6 @@
 "Add new addressbook" => "新しいアドレス帳を追加",
 "Delete current contact" => "現在の連絡先を削除",
 "You have no contacts in your address book or your address book is disabled." => "アドレス帳に連絡先が登録されていないか、アドレス帳が無効です。",
-"Add a new contact or import existing contacts from a VCF file." => "新しい連絡先を追加、もしくは既存の連絡先をVCFファイルからインポートしてください。",
 "Which contact should the data be merged into?" => "どの連絡先のデータをマージしますか？",
 "Delete the other(s) after successful merge?" => "マージが成功した後に他を削除しますか？",
 "Compose mail" => "メールを作成",

@@ -17,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-23 00:48-0400\n"
-"PO-Revision-Date: 2014-07-22 07:01+0000\n"
-"Last-Translator: Alex <__sashok@mail.ru>\n"
+"POT-Creation-Date: 2014-07-31 00:48-0400\n"
+"PO-Revision-Date: 2014-07-31 04:48+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/owncloud/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -324,47 +324,47 @@ msgstr ""
 msgid "Failed loading photo: {error}"
 msgstr "Încărcarea fotografiei a eșuat: {error}"
 
-#: lib/addressbook.php:169 lib/contact.php:116 lib/contact.php:165
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
 msgstr "Nu aveţi permisiunea sa vedeţi acest contact . "
 
-#: lib/addressbook.php:180
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Contactul nu a putut fi găsit "
 
-#: lib/addressbook.php:217
+#: lib/addressbook.php:219
 msgid "You do not have permissions to see these contacts"
 msgstr "Nu aveţi permisiunea sa vedeţi aceste contacte "
 
-#: lib/addressbook.php:250
+#: lib/addressbook.php:252
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Nu aveţi permisiunea sa adaugaţi contacte în agenda ."
 
-#: lib/addressbook.php:257
+#: lib/addressbook.php:259
 msgid "The backend for this address book does not support adding contacts"
 msgstr ""
 
-#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
+#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "Nu aveţi permisiunea sa ştergeţi acest contact ."
 
-#: lib/addressbook.php:309 lib/addressbook.php:349
+#: lib/addressbook.php:311 lib/addressbook.php:351
 msgid "The backend for this address book does not support deleting contacts"
 msgstr ""
 
-#: lib/addressbook.php:372
+#: lib/addressbook.php:374
 msgid "Unknown error"
 msgstr "Eroare necunoscută"
 
-#: lib/addressbook.php:413
+#: lib/addressbook.php:415
 msgid "Access denied"
 msgstr "Acces refuzat"
 
-#: lib/addressbook.php:420
+#: lib/addressbook.php:422
 msgid "The backend for this address book does not support updating"
 msgstr ""
 
-#: lib/addressbook.php:451
+#: lib/addressbook.php:453
 msgid "You don't have permissions to delete the address book."
 msgstr "Nu aveţi permisiunea sa ştergeţi agenda ."
 
@@ -536,70 +536,70 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Nici un fișier nu a fost încărcat. Eroare necunoscută"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Nu a apărut nici o eroare, fișierul a fost încărcat cu succes"
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Fișierul are o dimensiune mai mare decât cea specificată în variabila upload_max_filesize din php.ini"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Fișierul are o dimensiune mai mare decât variabile MAX_FILE_SIZE specificată în formularul HTML"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Fișierul a fost încărcat doar parțial"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Nu a fost încărcat nici un fișier"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Lipsește un director temporar"
 
-#: lib/controller/importcontroller.php:65
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Eroare la scriere pe disc"
 
-#: lib/controller/importcontroller.php:76
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Nu este disponibil suficient spațiu"
 
-#: lib/controller/importcontroller.php:84
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:104
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Eroare la "
 
-#: lib/controller/importcontroller.php:149
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Nu ai permisiunea sa imporţi în aceasta agenda "
 
-#: lib/controller/importcontroller.php:176
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:181
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:187
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
@@ -891,7 +891,9 @@ msgid ""
 msgstr "Nu aveţi nici un contact în agenda sau agenda este dezactivata"
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
 msgstr ""
 
 #: templates/contacts.php:187

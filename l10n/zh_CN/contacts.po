@@ -30,9 +30,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-27 00:48-0400\n"
-"PO-Revision-Date: 2014-07-26 06:20+0000\n"
-"Last-Translator: Mave <mave@foxmail.com>\n"
+"POT-Creation-Date: 2014-07-31 00:48-0400\n"
+"PO-Revision-Date: 2014-07-31 04:48+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/owncloud/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -337,47 +337,47 @@ msgstr "错误，缺失的参数："
 msgid "Failed loading photo: {error}"
 msgstr "加载照片失败：{error}"
 
-#: lib/addressbook.php:169 lib/contact.php:116 lib/contact.php:165
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
 msgstr "你没有权限查看此联系人"
 
-#: lib/addressbook.php:180
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "联系人未找到"
 
-#: lib/addressbook.php:217
+#: lib/addressbook.php:219
 msgid "You do not have permissions to see these contacts"
 msgstr "您没有权限查看这些联系人"
 
-#: lib/addressbook.php:250
+#: lib/addressbook.php:252
 msgid "You do not have permissions add contacts to the address book"
 msgstr "您没有权限增加联系人到此地址簿"
 
-#: lib/addressbook.php:257
+#: lib/addressbook.php:259
 msgid "The backend for this address book does not support adding contacts"
 msgstr "此地址簿的后端不支持增加联系人"
 
-#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
+#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "你没有权限删除此联系人"
 
-#: lib/addressbook.php:309 lib/addressbook.php:349
+#: lib/addressbook.php:311 lib/addressbook.php:351
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "此地址簿的后端不支持删除联系人"
 
-#: lib/addressbook.php:372
+#: lib/addressbook.php:374
 msgid "Unknown error"
 msgstr "未知错误"
 
-#: lib/addressbook.php:413
+#: lib/addressbook.php:415
 msgid "Access denied"
 msgstr "访问被拒绝"
 
-#: lib/addressbook.php:420
+#: lib/addressbook.php:422
 msgid "The backend for this address book does not support updating"
 msgstr "此地址簿的后端不支持更新"
 
-#: lib/addressbook.php:451
+#: lib/addressbook.php:453
 msgid "You don't have permissions to delete the address book."
 msgstr "您没有权限删除地址簿"
 
@@ -549,70 +549,70 @@ msgstr "请求中缺少分组名"
 msgid "Contact ID missing from request."
 msgstr "请求缺少联系人ID。"
 
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "没有文件被上传。未知错误"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "文件上传成功，没有错误发生"
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "上传的文件长度超出了 php.ini 中 upload_max_filesize 的限制"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "上传的文件超过MAX_FILE_SIZE的指令是在HTML表单中中指定的"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "已上传文件只上传了部分（不完整）"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "没有文件被上传"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "缺少临时目录"
 
-#: lib/controller/importcontroller.php:65
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "写入磁盘失败"
 
-#: lib/controller/importcontroller.php:76
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "没有足够的存储空间"
 
-#: lib/controller/importcontroller.php:84
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "尝试上传黑名单文件："
 
-#: lib/controller/importcontroller.php:104
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "上传联系人到存储空间时出错"
 
-#: lib/controller/importcontroller.php:149
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "您没有权限导入到此地址簿。"
 
-#: lib/controller/importcontroller.php:176
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "请求缺少文件名。"
 
-#: lib/controller/importcontroller.php:181
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "请求缺少进度。"
 
-#: lib/controller/importcontroller.php:187
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "尝试访问黑名单文件："
 
@@ -904,7 +904,9 @@ msgid ""
 msgstr ""
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
 msgstr ""
 
 #: templates/contacts.php:187

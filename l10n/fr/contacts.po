@@ -39,8 +39,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-23 00:48-0400\n"
-"PO-Revision-Date: 2014-07-22 07:01+0000\n"
+"POT-Creation-Date: 2014-07-31 00:48-0400\n"
+"PO-Revision-Date: 2014-07-31 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: French (http://www.transifex.com/projects/p/owncloud/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -346,47 +346,47 @@ msgstr "Erreur, paramètre manquant:"
 msgid "Failed loading photo: {error}"
 msgstr "Echec du chargement de la photo : {error}"
 
-#: lib/addressbook.php:169 lib/contact.php:116 lib/contact.php:165
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
 msgstr "Vous n'avez pas les droits suffisants pour voir ce contact."
 
-#: lib/addressbook.php:180
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Contact introuvable"
 
-#: lib/addressbook.php:217
+#: lib/addressbook.php:219
 msgid "You do not have permissions to see these contacts"
 msgstr "Vous n'avez pas les droits suffisants pour voir ces contacts."
 
-#: lib/addressbook.php:250
+#: lib/addressbook.php:252
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Vous n'avez pas les droits suffisants pour ajouter des contacts à ce carnet d'adresses."
 
-#: lib/addressbook.php:257
+#: lib/addressbook.php:259
 msgid "The backend for this address book does not support adding contacts"
 msgstr "L'infrastructure pour ce carnet d'adresses ne supporte pas l'ajout de contacts."
 
-#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
+#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "Vous n'avez pas les droits suffisants pour supprimer ce contact."
 
-#: lib/addressbook.php:309 lib/addressbook.php:349
+#: lib/addressbook.php:311 lib/addressbook.php:351
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "L'infrastructure pour ce carnet d'adresses ne supporte pas la suppression de contacts."
 
-#: lib/addressbook.php:372
+#: lib/addressbook.php:374
 msgid "Unknown error"
 msgstr "Erreur Inconnue "
 
-#: lib/addressbook.php:413
+#: lib/addressbook.php:415
 msgid "Access denied"
 msgstr "Accès refusé"
 
-#: lib/addressbook.php:420
+#: lib/addressbook.php:422
 msgid "The backend for this address book does not support updating"
 msgstr "L'infrastructure pour ce carnet d'adresses ne supporte pas la mise à jour"
 
-#: lib/addressbook.php:451
+#: lib/addressbook.php:453
 msgid "You don't have permissions to delete the address book."
 msgstr "Vous n'avez pas les droits suffisants pour supprimer ce carnet d'adresses."
 
@@ -558,70 +558,70 @@ msgstr "Nom de groupe manquant dans la requête."
 msgid "Contact ID missing from request."
 msgstr "Identifiant du contact manquant dans la requête."
 
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Aucun fichier n'a été envoyé. Erreur inconnue"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Aucune erreur, le fichier a été envoyé avec succès."
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Le fichier envoyé dépasse la directive upload_max_filesize dans php.ini"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Le fichier envoyé dépasse la directive MAX_FILE_SIZE qui est spécifiée dans le formulaire HTML."
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Le fichier n'a été que partiellement envoyé."
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Pas de fichier envoyé."
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Absence de dossier temporaire."
 
-#: lib/controller/importcontroller.php:65
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Erreur d'écriture sur le disque"
 
-#: lib/controller/importcontroller.php:76
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Plus assez d'espace de stockage disponible"
 
-#: lib/controller/importcontroller.php:84
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Tentative de téléverser un fichier appartenant à la liste noire :"
 
-#: lib/controller/importcontroller.php:104
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Erreur lors de l'envoi des contacts vers le stockage."
 
-#: lib/controller/importcontroller.php:149
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Erreur lors du déplacement du fichier vers le dossier cible."
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Vous n'avez pas les droits suffisants pour importer ce carnet d'adresses."
 
-#: lib/controller/importcontroller.php:176
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Nom de fichier manquant dans la requête."
 
-#: lib/controller/importcontroller.php:181
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "Clé de progression manquante dans la requête."
 
-#: lib/controller/importcontroller.php:187
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Tentative d'accès à un fichier appartenant à la liste noire :"
 
@@ -913,8 +913,10 @@ msgid ""
 msgstr "Vous n'avez aucun contact dans votre carnet d'adresses ou votre carnet d'adresses est désactivé."
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr "Ajouter un nouveau contact ou importer des contacts existants à partir d'un fichier VCF."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr ""
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"

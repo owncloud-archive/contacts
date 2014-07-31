@@ -177,7 +177,6 @@
 "Add new addressbook" => "Lisää uusi osoitekirja",
 "Delete current contact" => "Poista nykyinen yhteystieto",
 "You have no contacts in your address book or your address book is disabled." => "Osoitekirjassasi ei ole yhteystietoja, tai osoitekirjasi on pois käytöstä.",
-"Add a new contact or import existing contacts from a VCF file." => "Lisää uusi yhteystieto tai tuo olemassa olevia yhteystietoja VCF-tiedostosta.",
 "Which contact should the data be merged into?" => "Mihin yhteystietoon tiedot tulee yhdistää?",
 "Delete the other(s) after successful merge?" => "Poistetaanko muut onnistuneen yhdistämisen jälkeen?",
 "Compose mail" => "Lähetä sähköpostia",

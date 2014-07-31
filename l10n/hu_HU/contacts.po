@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-23 00:48-0400\n"
-"PO-Revision-Date: 2014-07-22 07:01+0000\n"
+"POT-Creation-Date: 2014-07-31 00:48-0400\n"
+"PO-Revision-Date: 2014-07-31 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -326,47 +326,47 @@ msgstr "Hiba, hiányzó paraméterek: "
 msgid "Failed loading photo: {error}"
 msgstr "Hiba a kép betöltésekor: {error}"
 
-#: lib/addressbook.php:169 lib/contact.php:116 lib/contact.php:165
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
 msgstr "Nincs jogosultsága megnézni ez a névjegyet"
 
-#: lib/addressbook.php:180
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Kapcsolat nem található"
 
-#: lib/addressbook.php:217
+#: lib/addressbook.php:219
 msgid "You do not have permissions to see these contacts"
 msgstr "Nincs jogosultsága megnézni ezeket a névjegyeket"
 
-#: lib/addressbook.php:250
+#: lib/addressbook.php:252
 msgid "You do not have permissions add contacts to the address book"
 msgstr "Nincs jogosultsága új névjegyeket hozzáadni a címjegyzékhez"
 
-#: lib/addressbook.php:257
+#: lib/addressbook.php:259
 msgid "The backend for this address book does not support adding contacts"
 msgstr "A címjegyzék háttérredszere nem támogatja az új névjegyek felvételét"
 
-#: lib/addressbook.php:302 lib/addressbook.php:342 lib/contact.php:254
+#: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
 msgstr "Nincs jogosultsága törölni ezt a névjegyet!"
 
-#: lib/addressbook.php:309 lib/addressbook.php:349
+#: lib/addressbook.php:311 lib/addressbook.php:351
 msgid "The backend for this address book does not support deleting contacts"
 msgstr "A címjegyzék háttérrendszere nem támogatja a névjegyek törlését"
 
-#: lib/addressbook.php:372
+#: lib/addressbook.php:374
 msgid "Unknown error"
 msgstr "Ismeretlen hiba"
 
-#: lib/addressbook.php:413
+#: lib/addressbook.php:415
 msgid "Access denied"
 msgstr "Hozzáférés megtagadva"
 
-#: lib/addressbook.php:420
+#: lib/addressbook.php:422
 msgid "The backend for this address book does not support updating"
 msgstr "A címjegyzék háttérrendszere nem támogatja a frissítést"
 
-#: lib/addressbook.php:451
+#: lib/addressbook.php:453
 msgid "You don't have permissions to delete the address book."
 msgstr "Nincs jogosultsága törölni a címjegyzéket!"
 
@@ -538,70 +538,70 @@ msgstr "A csoport neve hiányzik a kérésből."
 msgid "Contact ID missing from request."
 msgstr "A névjegy azonosítója (ID) hiányzik a kérésből."
 
-#: lib/controller/importcontroller.php:49
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Nem történt feltöltés. Ismeretlen hiba"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "A fájlt sikerült feltölteni"
 
-#: lib/controller/importcontroller.php:59
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "A feltöltött fájl mérete meghaladja az upload_max_filesize értéket a php.ini-ben"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "A feltöltött fájl mérete meghaladja a HTML űrlapon beállított MAX_FILE_SIZE méretet."
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Az eredeti fájlt csak részben sikerült feltölteni"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Egy fájlt sem töltött fel"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Hiányzik egy ideiglenes mappa"
 
-#: lib/controller/importcontroller.php:65
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Nem sikerült a lemezre írás"
 
-#: lib/controller/importcontroller.php:76
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Nincs elég tárhely."
 
-#: lib/controller/importcontroller.php:84
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Tiltólistán szereplő fájl feltöltésének kísérlete:"
 
-#: lib/controller/importcontroller.php:104
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Hiba a névjegyek feltöltésekor a tárhelyre."
 
-#: lib/controller/importcontroller.php:149
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Az állomány áthelyezése az importáltak mappába nem sikerült."
 
-#: lib/controller/importcontroller.php:168
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Nincs jogosultsága importálni ebbe a címjegyzékbe."
 
-#: lib/controller/importcontroller.php:176
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "A kérésből hiányzik a fájl neve."
 
-#: lib/controller/importcontroller.php:181
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "A kérésből hiányzik a folyamat kulcsa."
 
-#: lib/controller/importcontroller.php:187
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Feketelistán szereplő fájl hozzáférési kísérlet:"
 
@@ -893,8 +893,10 @@ msgid ""
 msgstr "Nincs kontaktod a névjegyalbumodban, vagy a névjegyalbumod le van tiltva"
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr "Vegyél fel új kontaktot, vagy importáld be a létrezőket egy VCF-fájlból"
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr ""
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"

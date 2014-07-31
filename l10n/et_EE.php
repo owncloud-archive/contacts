@@ -207,7 +207,6 @@
 "Add new addressbook" => "Lisa uus aadressiraamat",
 "Delete current contact" => "Kustuta praegune kontakt",
 "You have no contacts in your address book or your address book is disabled." => "Aadressiraamatus puuduvad kontaktid või on aadressiraamatu kasutus keelatud.",
-"Add a new contact or import existing contacts from a VCF file." => "Lisa uus kontakt või impordi olemasolevad VCF failist.",
 "Which contact should the data be merged into?" => "Millisele kontaktile tuleks andmed lisada?",
 "Delete the other(s) after successful merge?" => "Kustuta teine (teised) peale edukat ühendamist?",
 "Compose mail" => "Koosta kiri",

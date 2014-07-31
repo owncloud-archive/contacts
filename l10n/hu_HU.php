@@ -207,7 +207,6 @@
 "Add new addressbook" => "Új címlista létrehozása",
 "Delete current contact" => "Jelenlegi kapcsolat törlése",
 "You have no contacts in your address book or your address book is disabled." => "Nincs kontaktod a névjegyalbumodban, vagy a névjegyalbumod le van tiltva",
-"Add a new contact or import existing contacts from a VCF file." => "Vegyél fel új kontaktot, vagy importáld be a létrezőket egy VCF-fájlból",
 "Which contact should the data be merged into?" => "Melyik kapcsolathoz adódjon hozzá az adat?",
 "Delete the other(s) after successful merge?" => "Sikeres összefűzés után törölje a többit.",
 "Compose mail" => "Levél írás",

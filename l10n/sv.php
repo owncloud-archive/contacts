@@ -207,7 +207,6 @@
 "Add new addressbook" => "Lägg till ny adressbok",
 "Delete current contact" => "Radera denna kontakt",
 "You have no contacts in your address book or your address book is disabled." => "Du har inga kontakter i din adressbok eller så är din adressbok inaktiverad.",
-"Add a new contact or import existing contacts from a VCF file." => "Lägg till en ny kontakt eller importera från en en VCF-fil.",
 "Which contact should the data be merged into?" => "Vilken kontakt ska informationen slås ihop med?",
 "Delete the other(s) after successful merge?" => "Radera dom andra efter lyckad sammanslagning?",
 "Compose mail" => "Skapa e-post",

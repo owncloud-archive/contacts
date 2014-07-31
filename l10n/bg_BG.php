@@ -207,7 +207,6 @@
 "Add new addressbook" => "Добави нов адресник",
 "Delete current contact" => "Изтрий текущия контакт",
 "You have no contacts in your address book or your address book is disabled." => "Нямаш контаткти в адресника или адресникът е изключен.",
-"Add a new contact or import existing contacts from a VCF file." => "Добави нови контакти или внеси вече съществуващи контакти от VCF файл.",
 "Which contact should the data be merged into?" => "В кой контакт да бъде слята информацията?",
 "Delete the other(s) after successful merge?" => "Изтрий другия(ите) след успешно сливане?",
 "Compose mail" => "Създай имейл",

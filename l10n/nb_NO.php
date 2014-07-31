@@ -207,7 +207,6 @@
 "Add new addressbook" => "Legg til ny adressebok",
 "Delete current contact" => "Slett kontakten",
 "You have no contacts in your address book or your address book is disabled." => "Du har ingen kontakter i adresseboken eller adresseboken din er deaktivert.",
-"Add a new contact or import existing contacts from a VCF file." => "Legg til en ny kontakt eller importer eksisterende kontakter fra en VCF-fil.",
 "Which contact should the data be merged into?" => "Hvilken kontakt skal dataene flettes inn i?",
 "Delete the other(s) after successful merge?" => "Slett den/de andre etter vellykket fletting?",
 "Compose mail" => "Skriv epost",
