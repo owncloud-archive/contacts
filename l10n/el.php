@@ -207,6 +207,7 @@
 "Add new addressbook" => "Προσθήκη νέου βιβλίου επαφών",
 "Delete current contact" => "Διαγραφή τρέχουσας επαφής",
 "You have no contacts in your address book or your address book is disabled." => "Δεν έχετε καθόλου επαφές στο βιβλίο διευθύνσεών σας ή το βιβλίο διευθύνσεων σας είναι απενεργοποιημένο.",
+"Add a new contact or import existing contacts from a file (VCF, CSV or LDIF)." => "Προσθέστε μια νέα επαφή ή εισαγάγετε υπάρχουσες επαφές από ένα αρχείο (VCF, CSV ή LDIF).",
 "Which contact should the data be merged into?" => "Με ποιά επαφή θα θέλατε να συγχωνευτούν τα δεδομένα?",
 "Delete the other(s) after successful merge?" => "Διαγραφή του(ων) άλλου(ων) μετά την επιτυχή συγχώνευση?",
 "Compose mail" => "Σύνθεση μηνύματος",

@@ -207,6 +207,7 @@
 "Add new addressbook" => "Gehitu helbide-liburu berria",
 "Delete current contact" => "Ezabatu uneko kontaktuak",
 "You have no contacts in your address book or your address book is disabled." => "Ez duzu kontakturik helbide-liburuan edo zure helbide-liburua desgaituta dago",
+"Add a new contact or import existing contacts from a file (VCF, CSV or LDIF)." => "Gehitu kontaktu berria edo inportatu kontaktuak fitxategi batetik (VCF, CSV edo LDIF).",
 "Which contact should the data be merged into?" => "Ze kontaktura bateratu beharko dira datuak?",
 "Delete the other(s) after successful merge?" => "Ezabatu besteak bateratze arrakastatsu baten ondoren?",
 "Compose mail" => "Idatzi eposta",

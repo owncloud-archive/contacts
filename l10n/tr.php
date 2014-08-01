@@ -207,6 +207,7 @@
 "Add new addressbook" => "Yeni adres defteri ekle",
 "Delete current contact" => "Geçerli kişiyi sil",
 "You have no contacts in your address book or your address book is disabled." => "Adres defterinizde hiç bağlantınız yok veya adres defteriniz devre dışı.",
+"Add a new contact or import existing contacts from a file (VCF, CSV or LDIF)." => "Yeni bir bağlantı ekleyin veya mevcut kişileri bir dosyadan (VCF, CSV veya LDIF) içe aktarın.",
 "Which contact should the data be merged into?" => "Veri hangi kişi ile birleştirilmeli?",
 "Delete the other(s) after successful merge?" => "Başarılı bir şekilde birleştirme yaptıktan sonra diğer(ler)i silinsin mi?",
 "Compose mail" => "Posta oluştur",

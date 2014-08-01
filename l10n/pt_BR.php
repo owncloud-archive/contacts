@@ -207,6 +207,7 @@
 "Add new addressbook" => "Adicionar nova agenda",
 "Delete current contact" => "Remover contato atual",
 "You have no contacts in your address book or your address book is disabled." => "Não existe nenhum contato em seu livro de endereço ou seu livro de endereços está desabilitado.",
+"Add a new contact or import existing contacts from a file (VCF, CSV or LDIF)." => "Adicionar um novo contato ou importar contatos de um arquivo (VCF, CSV ou LDIF).",
 "Which contact should the data be merged into?" => "Quais os dados de contato que devem ser incorporados?",
 "Delete the other(s) after successful merge?" => "Eliminar os outros após o sucesso da mesclagem?",
 "Compose mail" => "Escrever e-mail",

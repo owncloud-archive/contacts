@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Playerthe12 <a7652246@drdrb.net>, 2014
 # Anastasia Lanning <anastasia2501@hotmail.com>, 2012
 # Anastasia Lanning <anastasia2501@hotmail.com>, 2012
 # Achilleas Pipinellis, 2013
@@ -36,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-31 00:48-0400\n"
-"PO-Revision-Date: 2014-07-31 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-01 00:48-0400\n"
+"PO-Revision-Date: 2014-07-31 16:21+0000\n"
+"Last-Translator: Playerthe12 <a7652246@drdrb.net>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -913,7 +914,7 @@ msgstr "Δεν έχετε καθόλου επαφές στο βιβλίο διε
 msgid ""
 "Add a new contact or import existing contacts from a file (VCF, CSV or "
 "LDIF)."
-msgstr ""
+msgstr "Προσθέστε μια νέα επαφή ή εισαγάγετε υπάρχουσες επαφές από ένα αρχείο (VCF, CSV ή LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
