@@ -42,7 +42,7 @@
 			<ldif_entry vcard_position="3" name="l"/>
 			<ldif_entry vcard_position="4" name="st"/>
 			<ldif_entry vcard_position="5" name="postalcode"/>
-			<ldif_entry vcard_position="6" name="vcardcountry" unique="true"/>
+			<ldif_entry vcard_position="6" name="c" unique="true"/>
 		</vcard_entry>
     
 		<vcard_entry property="CATEGORIES" enabled="true">
