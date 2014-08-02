@@ -207,6 +207,7 @@
 "Add new addressbook" => "Amestar llibreta de direiciones nueva",
 "Delete current contact" => "Desaniciar contautu actual",
 "You have no contacts in your address book or your address book is disabled." => "Nun tienes contautos na to llibreta de direiciones, o la llibreta ta desactivada.",
+"Add a new contact or import existing contacts from a file (VCF, CSV or LDIF)." => "Amestar un contautu nuevu o importar contautos d'un ficheru (VCF, CSV o LDIF).",
 "Which contact should the data be merged into?" => "¿En qué contautu tienen de fusionase los datos?",
 "Delete the other(s) after successful merge?" => "¿Desaniciar el/los otru(os) dempués d'una combinación satisfactoria?",
 "Compose mail" => "Redactar mensaxe",
