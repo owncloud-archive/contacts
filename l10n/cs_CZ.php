@@ -207,6 +207,7 @@
 "Add new addressbook" => "Přidat nový adresář kontaktů",
 "Delete current contact" => "Odstranit současný kontakt",
 "You have no contacts in your address book or your address book is disabled." => "Nemáte žádné kontakty v adresáři nebo je adresář kontaktů vypnutý.",
+"Add a new contact or import existing contacts from a file (VCF, CSV or LDIF)." => "Přidat nový kontakt nebo importovat existující kontakty ze souboru (VCF, CSV nebo LDIF).",
 "Which contact should the data be merged into?" => "Do kterého kontaktu mají být data sjednocena?",
 "Delete the other(s) after successful merge?" => "Smazat ostatní po úspěšném sjednocení?",
 "Compose mail" => "Napsat e-mail",
