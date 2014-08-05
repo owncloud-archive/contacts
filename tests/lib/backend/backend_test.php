@@ -30,7 +30,7 @@ class BackendTest extends \PHPUnit_Framework_TestCase {
 	);
 
 	/**
-	* @var OCA\Contacts\Backend\AbstractBackend
+	* @var \OCA\Contacts\Backend\AbstractBackend
 	*/
 	protected $backend;
 
