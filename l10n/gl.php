@@ -207,6 +207,7 @@
 "Add new addressbook" => "Engadir un novo caderno de enderezos",
 "Delete current contact" => "Eliminar o contacto actual",
 "You have no contacts in your address book or your address book is disabled." => "Non ten contactos no caderno de enderezos ou o caderno de enderezos está desactivado.",
+"Add a new contact or import existing contacts from a file (VCF, CSV or LDIF)." => "Engada un novo contacto ou importe os contactos existentes desde un ficheiro (VCF, CSV ou LDIF).",
 "Which contact should the data be merged into?" => "A cales contactos misturaránselle os datos?",
 "Delete the other(s) after successful merge?" => "Eliminar o(s) outro(s) após unha mistura satisfactoria?",
 "Compose mail" => "Redactar un correo",
