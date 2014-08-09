@@ -359,7 +359,7 @@ class VCard extends VObject\Component\VCard {
 	*/
 	public function inGroup($name) {
 		if(!isset($this->CATEGORIES)) {
-			false;
+			return false;
 		}
 
 		return $this->CATEGORIES->hasGroup($name);
