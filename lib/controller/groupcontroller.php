@@ -39,7 +39,7 @@ class GroupController extends Controller {
 				$ids = $this->tags->getIdsForTag($tag['name']);
 				$tag['contacts'] = $ids;
 			} catch(\Exception $e) {
-				$this->api->log(__METHOD__ . ' ' . $e->getMessage());
+				\OCP\Util::writeLog('contacts', __METHOD__ . ', ' . $e->getMessage(), \OCP\Util::ERROR);
 			}
 		}
 
