@@ -310,6 +310,11 @@ Class Properties {
 			if (is_null($vcard)) {
 				$app = new App();
 				$vcard = $app->getContact($backendName, $addressBookId, $contactId);
+				if (isset($vcard['carddata'])) {
+					$vcard = \Sabre\VObject\Reader::read($vcard['carddata']);
+				} else {
+					$vcard = $vcard['vcard'];
+				}
 			}
 			$image = $vcard->getPhoto();
 			if (is_null($image)) {
