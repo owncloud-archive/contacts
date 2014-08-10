@@ -328,6 +328,11 @@ Class Properties {
 			if (is_null($vCard)) {
 				$app = new App();
 				$vCard = $app->getContact($backendName, $addressBookId, $contactId);
+				if (isset($vCard['carddata'])) {
+					$vCard = \Sabre\VObject\Reader::read($vCard['carddata']);
+				} else {
+					$vCard = $vCard['vcard'];
+				}
 			}
 			$image = new \OCP\Image();
 			if (!isset($vCard->PHOTO) || !$image->loadFromBase64((string)$vCard->PHOTO)) {
