@@ -60,6 +60,7 @@
 "Email" => "ایمیل",
 "Phone" => "شماره تلفن",
 "Address" => "آدرس",
+"Group" => "گروه",
 "Delete current photo" => "پاک کردن تصویر کنونی",
 "Edit current photo" => "ویرایش تصویر کنونی",
 "Upload new photo" => "بار گذاری یک تصویر جدید",
