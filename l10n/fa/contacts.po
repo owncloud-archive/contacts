@@ -8,14 +8,15 @@
 # Hossein Raysehman <rayeshman@gmail.com>, 2012
 # mahdi Kereshteh <miki_mika1362@yahoo.com>, 2013
 # majid hajibaba <majid.hajibaba@gmail.com>, 2014
+# Mohammad <mohammadsharifi666@gmail.com>, 2014
 # wtayyeb, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-12 00:48-0400\n"
-"PO-Revision-Date: 2014-08-11 17:58+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-13 00:48-0400\n"
+"PO-Revision-Date: 2014-08-12 11:06+0000\n"
+"Last-Translator: Mohammad <mohammadsharifi666@gmail.com>\n"
 "Language-Team: Persian (http://www.transifex.com/projects/p/owncloud/language/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +51,7 @@ msgstr "ویرایش کتابچه نشانی"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr ""
+msgstr "آغاز وارد کردن فایل"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
@@ -169,7 +170,7 @@ msgstr ""
 
 #: js/app.js:1417 templates/contacts.php:167
 msgid "Add group"
-msgstr ""
+msgstr "افزودن گروه"
 
 #: js/app.js:1421
 msgid "OK"
@@ -185,7 +186,7 @@ msgstr ""
 
 #: js/app.js:1645
 msgid "Crop photo"
-msgstr ""
+msgstr "بریدن عکس"
 
 #: js/contacts.js:904
 msgid "Error parsing date: {date}"
@@ -193,7 +194,7 @@ msgstr ""
 
 #: js/contacts.js:1102
 msgid "# groups"
-msgstr ""
+msgstr "# گروه ها"
 
 #: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
@@ -265,7 +266,7 @@ msgstr "همه"
 
 #: js/groups.js:687 js/groups.js:690
 msgid "Favorites"
-msgstr ""
+msgstr "موارد محبوب"
 
 #: js/groups.js:751
 msgid "Shared by {owner}"
@@ -293,7 +294,7 @@ msgstr ""
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "وارد کردن لیست افراد"
 
 #: js/loader.js:61 templates/contacts.php:37
 msgid "Import"
@@ -305,7 +306,7 @@ msgstr "در حال وارد کردن..."
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr ""
+msgstr "وارد کردن کامل شد"
 
 #: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
 #: templates/contacts.php:377
@@ -314,7 +315,7 @@ msgstr "بستن"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "خطا، پارامترهای نا موجود:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -354,7 +355,7 @@ msgstr "خطای نامشخص"
 
 #: lib/addressbook.php:415
 msgid "Access denied"
-msgstr ""
+msgstr "دسترسی غیر مجاز"
 
 #: lib/addressbook.php:422
 msgid "The backend for this address book does not support updating"
@@ -382,7 +383,7 @@ msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
-msgstr ""
+msgstr "مشخصه یافت تشد"
 
 #: lib/contact.php:530
 msgid " Missing IM parameter for: "
@@ -390,7 +391,7 @@ msgstr ""
 
 #: lib/contact.php:538
 msgid "Unknown IM: "
-msgstr ""
+msgstr "IM نا مشخص:"
 
 #: lib/contact.php:815
 msgid "{name}'s Birthday"
@@ -416,11 +417,11 @@ msgstr ""
 
 #: lib/controller/addressbookcontroller.php:261
 msgid "Error creating contact."
-msgstr ""
+msgstr "خطا در ایجاد مخاطب."
 
 #: lib/controller/addressbookcontroller.php:270
 msgid "Error creating contact"
-msgstr ""
+msgstr "خطا در ایجاد مخاطب"
 
 #: lib/controller/addressbookcontroller.php:302
 msgid "Error deleting contact"
