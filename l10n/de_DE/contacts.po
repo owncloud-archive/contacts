@@ -37,6 +37,7 @@
 # Susi  <>, 2012
 # I Robot, 2012
 # Thomas Müller <>, 2012
+# Tobias Bannert, 2014
 # traductor, 2013
 # traductor, 2014
 # traductor, 2012
@@ -47,9 +48,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-14 00:48-0400\n"
-"PO-Revision-Date: 2014-08-13 16:01+0000\n"
-"Last-Translator: Mario Siegmann <mario_siegmann@web.de>\n"
+"POT-Creation-Date: 2014-08-15 00:48-0400\n"
+"PO-Revision-Date: 2014-08-14 16:21+0000\n"
+"Last-Translator: Tobias Bannert\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/owncloud/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,7 +85,7 @@ msgstr "Adressbuch editieren"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr "Beginne Datei-Import"
+msgstr "Dateiimport startet"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
@@ -92,11 +93,11 @@ msgstr "Ausgewähltes Format: {format}"
 
 #: js/addressbooks.js:407 js/addressbooks.js:435
 msgid "Automatic format detection"
-msgstr "Automatische Format-Erkennung"
+msgstr "Automatische Formaterkennung"
 
 #: js/addressbooks.js:485
 msgid "Processing {count}/{total} cards"
-msgstr "Bearbeite {count}/{total} Visitenkarten"
+msgstr "{count}/{total} Visitenkarten werden bearbeitet"
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
@@ -133,19 +134,19 @@ msgstr "Fehler."
 
 #: js/app.js:329 js/app.js:343
 msgid "Add to..."
-msgstr "Füge hinzu..."
+msgstr "Hinzufügen zu …"
 
 #: js/app.js:333 js/app.js:345
 msgid "Remove from..."
-msgstr "Entferne von..."
+msgstr "Entfernen von …"
 
 #: js/app.js:350
 msgid "Add group..."
-msgstr "Gruppe hinzufügen..."
+msgstr "Gruppe hinzufügen …"
 
 #: js/app.js:478
 msgid "Invalid URL: \"{url}\""
-msgstr "Ungültige Adresse: \"{url}\""
+msgstr "Ungültige Adresse: „{url}“"
 
 #: js/app.js:504
 msgid "Invalid email: \"{url}\""
@@ -165,7 +166,7 @@ msgstr "Zusammenführung fehlgeschlagen. Fehler beim Speichern des Kontakts."
 
 #: js/app.js:627
 msgid "Select photo"
-msgstr "Wählen Sie ein Foto"
+msgstr "Foto auswählen"
 
 #: js/app.js:710 js/app.js:1686
 msgid "Network or server error. Please inform administrator."
@@ -177,7 +178,7 @@ msgstr "Nur Bilder können als Kontaktfotos genutzt werden"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr "Die Größe von \"{filename}\" überschreitet die maximal erlaubte Größe von {size}"
+msgstr "Die Größe von „{filename}“ überschreitet die maximal erlaubte Größe von {size}"
 
 #: js/app.js:972
 msgid "Error adding to group."
@@ -277,7 +278,7 @@ msgstr "Kontakte sind nicht in der Gruppe."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr "Eine Gruppe namens \"{group}\" existiert bereits"
+msgstr "Eine Gruppe namens „{group}“ existiert bereits"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -287,7 +288,7 @@ msgstr "Das Umbenennen der Gruppe ist fehlgeschlagen: {error}"
 msgid ""
 "You can drag groups to\n"
 "arrange them as you like."
-msgstr "Per \"Drag & Drop\" können Sie Gruppen\nnach Ihren Wünschen anordnen."
+msgstr "Per „ziehen und ablegen“ können Sie \nGruppen nach Ihren Wünschen anordnen."
 
 #: js/groups.js:659
 msgid "Failed adding group: {error}"
@@ -319,7 +320,7 @@ msgstr "Bitte Adressbuch auswählen"
 
 #: js/loader.js:22 templates/contacts.php:41
 msgid "Import into..."
-msgstr "Importiere nach..."
+msgstr "Importieren nach …"
 
 #: js/loader.js:31
 msgid "Error loading import template"
@@ -811,7 +812,7 @@ msgstr "Automatisches Format"
 
 #: templates/contacts.php:53 templates/contacts.php:54
 msgid "Select file..."
-msgstr "Datei auswählen ..."
+msgstr "Datei auswählen …"
 
 #: templates/contacts.php:71
 msgid "(De-)select all"
@@ -1005,11 +1006,11 @@ msgstr "Instant Messaging"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
-msgstr "Notizen hier hinein..."
+msgstr "Notizen hier ablegen …"
 
 #: templates/contacts.php:359
 msgid "Add field..."
-msgstr "Feld hinzufügen..."
+msgstr "Feld hinzufügen …"
 
 #: templates/contacts.php:366
 msgid "Instant Messaging"

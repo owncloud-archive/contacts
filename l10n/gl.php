@@ -171,7 +171,7 @@
 "Friends" => "Amigos",
 "Family" => "Familia",
 "Enable LDAP Backend" => "Activar a infraestrutura LDAP",
-"Enable LDAP backend for the contacts application" => "Activar a infraestrutura LDAP para os contactos do aplicativo",
+"Enable LDAP backend for the contacts application" => "Activar a infraestrutura LDAP para os contactos da aplicación",
 "Warning: LDAP Backend is in beta mode, use with precautions" => "Aviso: A infraestrutura LDAP está en modo «beta», usea con precaución",
 "New contact" => "Novo contacto",
 "Group name" => "Nome do grupo",

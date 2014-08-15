@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-14 00:48-0400\n"
-"PO-Revision-Date: 2014-08-13 16:01+0000\n"
+"POT-Creation-Date: 2014-08-15 00:48-0400\n"
+"PO-Revision-Date: 2014-08-14 18:01+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/owncloud/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -738,7 +738,7 @@ msgstr "Activar a infraestrutura LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr "Activar a infraestrutura LDAP para os contactos do aplicativo"
+msgstr "Activar a infraestrutura LDAP para os contactos da aplicación"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
