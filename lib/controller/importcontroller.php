@@ -28,7 +28,7 @@ class ImportController extends Controller {
 	public function __construct($appName, IRequest $request, App $app, ICache $cache, ITags $tags) {
 		parent::__construct($appName, $request, $app);
 		$this->cache = $cache;
-    $this->tags = $tags;
+		$this->tagMgr = $tags;
 	}
 
 	/**
