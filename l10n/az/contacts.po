@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# unixidzero <unixidzero@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-07-31 00:48-0400\n"
-"PO-Revision-Date: 2014-07-31 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-17 00:48-0400\n"
+"PO-Revision-Date: 2014-08-16 09:50+0000\n"
+"Last-Translator: unixidzero <unixidzero@gmail.com>\n"
 "Language-Team: Azerbaijani (http://www.transifex.com/projects/p/owncloud/language/az/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,28 +20,28 @@ msgstr ""
 
 #: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
-msgstr ""
+msgstr "Əlaqələr"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Yeni LDAP ünvan kitabçasını əlavə edin"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
-msgstr ""
+msgstr "Oldu"
 
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
 msgid "Cancel"
-msgstr ""
+msgstr "Dayandır"
 
 #: js/addressbooks.js:132 js/groups.js:519
 msgid "Save"
-msgstr ""
+msgstr "Saxlamaq"
 
 #: js/addressbooks.js:162
 msgid "Edit Addressbook"
-msgstr ""
+msgstr "ÜnvanKitabçasında Dəyişiklik"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
@@ -291,7 +292,7 @@ msgstr ""
 
 #: js/loader.js:61 templates/contacts.php:37
 msgid "Import"
-msgstr ""
+msgstr "Əlavə et"
 
 #: js/loader.js:68
 msgid "Importing..."
@@ -304,7 +305,7 @@ msgstr ""
 #: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
 #: templates/contacts.php:377
 msgid "Close"
-msgstr ""
+msgstr "Bağla"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
@@ -344,7 +345,7 @@ msgstr ""
 
 #: lib/addressbook.php:374
 msgid "Unknown error"
-msgstr ""
+msgstr "Bəlli olmayan səhv baş verdi"
 
 #: lib/addressbook.php:415
 msgid "Access denied"
@@ -921,7 +922,7 @@ msgstr ""
 #: templates/contacts.php:246 templates/contacts.php:248
 #: templates/contacts.php:526 templates/contacts.php:529
 msgid "Name"
-msgstr ""
+msgstr "Ad"
 
 #: templates/contacts.php:254
 msgid "First name"
@@ -1047,11 +1048,11 @@ msgstr ""
 
 #: templates/contacts.php:511
 msgid "Share"
-msgstr ""
+msgstr "Yayımla"
 
 #: templates/contacts.php:512
 msgid "Export"
-msgstr ""
+msgstr "Çıxarış"
 
 #: templates/contacts.php:513
 msgid "CardDAV link"
@@ -1071,7 +1072,7 @@ msgstr ""
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
-msgstr ""
+msgstr "Açıqlanma"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
