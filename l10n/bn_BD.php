@@ -8,6 +8,7 @@
 "Please choose the addressbook" => "ঠিকানাপঞ্জীটি নির্বাচন করুন",
 "Import" => "আমদানি",
 "Close" => "বন্ধ",
+"Unknown error" => "অজানা জটিলতা",
 "No file was uploaded. Unknown error" => "কোন ফাইল আপলোড করা হয় নি। সমস্যার কারণটি অজ্ঞাত।",
 "There is no error, the file uploaded with success" => "কোন সমস্যা হয় নি, ফাইল আপলোড সুসম্পন্ন হয়েছে।",
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form" => "আপলোড করা ফাইলটি  HTML  ফর্মে উল্লিখিত MAX_FILE_SIZE নির্ধারিত ফাইলের সর্বোচ্চ আকার  অতিক্রম করতে চলেছে ",
