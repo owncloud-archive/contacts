@@ -70,8 +70,7 @@ author: Nicolas Mora mail@babelouest.org
 		<active>1</active>
 		<card_begin>BEGIN:VCARD</card_begin>
 		<card_end>END:VCARD</card_end>
-		<replace from="http\://" to="http://" />
-		<replace from="https\://" to="https://" />
+		<replace from="\://" to="://" />
 	</import_core>
 	
 	<import_entry property="URL" enabled="true">
