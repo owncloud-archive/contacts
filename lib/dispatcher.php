@@ -104,7 +104,8 @@ class Dispatcher extends MainApp {
 		$this->container->registerService('ImportController', function(IAppContainer $container) use($app, $appName) {
 			$request = $container->query('Request');
 			$cache = $container->getServer()->getCache();
-			return new ImportController($appName, $request, $app, $cache);
+			$tags = $container->getServer()->getTagManager()->load('contact');
+			return new ImportController($appName, $request, $app, $cache, $tags);
 		});
 		$this->container->registerService('ExportController', function(IAppContainer $container) use($app, $appName) {
 			$request = $container->query('Request');
