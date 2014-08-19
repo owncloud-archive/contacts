@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-17 00:48-0400\n"
-"PO-Revision-Date: 2014-08-16 09:50+0000\n"
+"POT-Creation-Date: 2014-08-19 00:48-0400\n"
+"PO-Revision-Date: 2014-08-18 13:20+0000\n"
 "Last-Translator: unixidzero <unixidzero@gmail.com>\n"
 "Language-Team: Azerbaijani (http://www.transifex.com/projects/p/owncloud/language/az/)\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: js/addressbooks.js:407 js/addressbooks.js:435
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Formatın avtomatik təyinatı"
 
 #: js/addressbooks.js:485
 msgid "Processing {count}/{total} cards"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Ümumi:{total}, Uğurlu:{imported}, Səhvlər:{failed} "
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
@@ -214,7 +214,7 @@ msgstr ""
 
 #: js/groups.js:53
 msgid "Add"
-msgstr ""
+msgstr "Əlavə etmək"
 
 #: js/groups.js:264
 msgid "Contact is already in this group."
@@ -794,7 +794,7 @@ msgstr ""
 #: templates/contacts.php:230 templates/contacts.php:231
 #: templates/contacts.php:515
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 #: templates/contacts.php:86 templates/contacts.php:271
 msgid "Groups"

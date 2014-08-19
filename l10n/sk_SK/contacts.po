@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# helix84 <helix84@centrum.sk>, 2014
 # intense <intense.feel@gmail.com>, 2012
 # Lubomir Grejtak <l.grejtak@gmail.com>, 2013
 # Marián Hvolka <marian.hvolka@stuba.sk>, 2013-2014
@@ -16,9 +17,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-18 00:48-0400\n"
-"PO-Revision-Date: 2014-08-17 05:21+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-19 00:48-0400\n"
+"PO-Revision-Date: 2014-08-18 12:51+0000\n"
+"Last-Translator: helix84 <helix84@centrum.sk>\n"
 "Language-Team: Slovak (Slovakia) (http://www.transifex.com/projects/p/owncloud/language/sk_SK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -893,7 +894,7 @@ msgstr "Nemáte žiadne kontakty vo vašom adresári alebo je váš adresár vyp
 msgid ""
 "Add a new contact or import existing contacts from a file (VCF, CSV or "
 "LDIF)."
-msgstr ""
+msgstr "Pridať nový kontakt alebo importovať existujúce kontakty zo súboru (VCF, CSV alebo LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"

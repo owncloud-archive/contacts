@@ -1,8 +1,10 @@
 <?php $TRANSLATIONS = array(
-"Contacts" => "ঠিকানাপঞ্জী",
+"Contacts" => "পরিচিতজন",
+"Add new LDAP Addressbook" => "নতুন  LDAP ঠিকানাবই যুক্ত করূন",
 "Ok" => "তথাস্তু",
-"Cancel" => "বাতির",
+"Cancel" => "বাতিল",
 "Save" => "সংরক্ষণ",
+"Edit Addressbook" => "ঠিকানাবই সম্পাদনা",
 "OK" => "তথাস্তু",
 "Add" => "যোগ কর",
 "Please choose the addressbook" => "ঠিকানাপঞ্জীটি নির্বাচন করুন",
