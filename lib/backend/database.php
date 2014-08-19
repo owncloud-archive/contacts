@@ -526,7 +526,12 @@ class Database extends AbstractBackend {
 		$row = $result->fetchRow();
 
 		if (!$row) {
-			\OCP\Util::writeLog('contacts', __METHOD__.', Not found, id: '. $id, \OCP\Util::DEBUG);
+			if (is_array($id)) {
+				$idstr = implode(", ", $id);
+			} else {
+				$idstr = $id;
+			}
+			\OCP\Util::writeLog('contacts', __METHOD__.', Not found, id: '. $idstr, \OCP\Util::DEBUG);
 			return null;
 		}
 

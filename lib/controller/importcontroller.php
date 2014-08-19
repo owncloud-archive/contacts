@@ -246,7 +246,7 @@ class ImportController extends Controller {
 						$favourites = $part->select('X-FAVOURITES');
 						foreach ($favourites as $favourite) {
 							if ($favourite->getValue() == 'yes') {
-								$tagMgr = $this->server->getTagManager()->load('contact');
+								$tagMgr = \OC::$server->getTagManager()->load('contact');
 								$tagMgr->addToFavorites($id);
 							}
 						}
