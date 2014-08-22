@@ -56,7 +56,7 @@ abstract class AbstractBackend {
 	public $name;
 
 	/**
-	 * The current usert.
+	 * The current user.
 	 * @var string
 	 */
 	public $userid;
