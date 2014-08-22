@@ -316,8 +316,8 @@ Class Properties {
 					$vcard = $vcard['vcard'];
 				}
 			}
-			$image = $vcard->getPhoto();
-			if (is_null($image)) {
+			$image = new \OCP\Image();
+			if (!isset($vcard->PHOTO) || !$image->loadFromBase64((string)$vcard->PHOTO)) {
 				return false;
 			}
 		}
