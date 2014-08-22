@@ -7,13 +7,20 @@
 "Edit Addressbook" => "ÜnvanKitabçasında Dəyişiklik",
 "Automatic format detection" => "Formatın avtomatik təyinatı",
 "Total:{total}, Success:{imported}, Errors:{failed}" => "Ümumi:{total}, Uğurlu:{imported}, Səhvlər:{failed} ",
+"Indexing contacts" => "Əlaqələr indekslənir",
+"Error." => "Səhv.",
+"Remove from..." => "Sil budan...",
 "Add" => "Əlavə etmək",
 "Import" => "Əlavə et",
 "Close" => "Bağla",
 "Unknown error" => "Bəlli olmayan səhv baş verdi",
 "Delete" => "Sil",
+"Download" => "Yüklə",
 "Name" => "Ad",
 "Share" => "Yayımla",
 "Export" => "Çıxarış",
-"Description" => "Açıqlanma"
+"Edit" => "Dəyişiklik et",
+"Description" => "Açıqlanma",
+"User" => "İstifadəçi",
+"Password" => "Şifrə"
 );

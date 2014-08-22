@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-21 00:48-0400\n"
-"PO-Revision-Date: 2014-08-20 05:01+0000\n"
+"POT-Creation-Date: 2014-08-22 00:48-0400\n"
+"PO-Revision-Date: 2014-08-21 14:41+0000\n"
 "Last-Translator: unixidzero <unixidzero@gmail.com>\n"
 "Language-Team: Azerbaijani (http://www.transifex.com/projects/p/owncloud/language/az/)\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: js/app.js:223
 msgid "Indexing contacts"
-msgstr ""
+msgstr "Əlaqələr indekslənir"
 
 #: js/app.js:233
 msgid "Unrecoverable error loading address books: {msg}"
@@ -90,7 +90,7 @@ msgstr ""
 
 #: js/app.js:234
 msgid "Error."
-msgstr ""
+msgstr "Səhv."
 
 #: js/app.js:329 js/app.js:343
 msgid "Add to..."
@@ -98,7 +98,7 @@ msgstr ""
 
 #: js/app.js:333 js/app.js:345
 msgid "Remove from..."
-msgstr ""
+msgstr "Sil budan..."
 
 #: js/app.js:350
 msgid "Add group..."
@@ -803,7 +803,7 @@ msgstr ""
 #: templates/contacts.php:88 templates/contacts.php:380
 #: templates/contacts.php:381
 msgid "Download"
-msgstr ""
+msgstr "Yüklə"
 
 #: templates/contacts.php:89
 msgid "Merge"
@@ -1060,7 +1060,7 @@ msgstr ""
 
 #: templates/contacts.php:514
 msgid "Edit"
-msgstr ""
+msgstr "Dəyişiklik et"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
@@ -1092,11 +1092,11 @@ msgstr ""
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
-msgstr ""
+msgstr "İstifadəçi"
 
 #: templates/contacts.php:574 templates/contacts.php:577
 msgid "Password"
-msgstr ""
+msgstr "Şifrə"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
