@@ -1,6 +1,6 @@
 <?php $TRANSLATIONS = array(
 "Contacts" => "Kontakty",
-"Add new LDAP Addressbook" => "Přidat nový LDAP adresář",
+"Add new LDAP Addressbook" => "Přidat nový LDAP adresář kontaktů",
 "Ok" => "Ok",
 "Cancel" => "Zrušit",
 "Save" => "Uložit",
@@ -170,9 +170,9 @@
 "Internet" => "Internet",
 "Friends" => "Přátelé",
 "Family" => "Rodina",
-"Enable LDAP Backend" => "Povolit podpůrnou vrstvu LDAP",
-"Enable LDAP backend for the contacts application" => "Povolit LDAP pro aplikaci správy kontaktů",
-"Warning: LDAP Backend is in beta mode, use with precautions" => "Varování: LDAP rozhraní je pouze v beta módu, používejte s rozvahou",
+"Enable LDAP Backend" => "Povolit úložiště LDAP",
+"Enable LDAP backend for the contacts application" => "Povolit úložiště LDAP pro aplikaci kontaktů",
+"Warning: LDAP Backend is in beta mode, use with precautions" => "Varování: LDAP rozhraní je v beta módu, používejte s rozvahou",
 "New contact" => "Nový kontakt",
 "Group name" => "Název skupiny",
 "New group" => "Nová skupina",
@@ -266,7 +266,7 @@
 "Search filter" => "Vyhledávací filtr",
 "Filter" => "Filtr",
 "Base DN for modification" => "Výchozí DN pro změnu",
-"Base DN modification" => "Základní DN úprava",
+"Base DN modification" => "Základní DN změny",
 "Connector" => "Konektor",
 "Copy from (Warning, replaces current custom value)" => "Zkopírovat z (Varování, nahradí současnou hodnotu)"
 );
