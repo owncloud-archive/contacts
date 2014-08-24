@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-23 00:48-0400\n"
-"PO-Revision-Date: 2014-08-22 05:01+0000\n"
+"POT-Creation-Date: 2014-08-24 00:48-0400\n"
+"PO-Revision-Date: 2014-08-23 10:21+0000\n"
 "Last-Translator: unixidzero <unixidzero@gmail.com>\n"
 "Language-Team: Azerbaijani (http://www.transifex.com/projects/p/owncloud/language/az/)\n"
 "MIME-Version: 1.0\n"
@@ -65,16 +65,16 @@ msgstr "Ümumi:{total}, Uğurlu:{imported}, Səhvlər:{failed} "
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "{name} adlı ünvan kitabçası artıq mövcuddur"
 
 #: js/addressbooks.js:697 js/otherbackendconfig.js:141
 #: js/otherbackendconfig.js:200
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "Ünvan kitabçasını əlavə etdikdə səhv baş verdi: {error}"
 
 #: js/addressbooks.js:738
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "Ünvan kitabçasının yüklənməsində səhv baş verdi: {error}"
 
 #: js/admin.js:92 js/storage.js:27
 msgid "Server error! Please inform system administator"
@@ -822,7 +822,7 @@ msgstr ""
 #: templates/contacts.php:94 templates/contacts.php:336
 #: templates/contacts.php:367
 msgid "Address"
-msgstr ""
+msgstr "Ünvan"
 
 #: templates/contacts.php:95
 msgid "Group"
@@ -946,7 +946,7 @@ msgstr ""
 
 #: templates/contacts.php:295 templates/contacts.php:361
 msgid "Title"
-msgstr ""
+msgstr "Başlıq"
 
 #: templates/contacts.php:305 templates/contacts.php:360
 msgid "Organization"
