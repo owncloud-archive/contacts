@@ -25,25 +25,25 @@ class GroupController extends Controller {
 	public function __construct($appName, IRequest $request, App $app, ITags $tags) {
 		parent::__construct($appName, $request, $app);
 		$this->app = $app;
-		$this->tagMgr = $tags;
+		$this->tags = $tags;
 	}
 
 	/**
 	 * @NoAdminRequired
 	 */
 	public function getGroups() {
-		$tags = $this->tagMgr->getTags();
+		$tags = $this->tags->getTags();
 
 		foreach ($tags as &$tag) {
 			try {
-				$ids = $this->tagMgr->getIdsForTag($tag['name']);
+				$ids = $this->tags->getIdsForTag($tag['name']);
 				$tag['contacts'] = $ids;
 			} catch(\Exception $e) {
 				$this->api->log(__METHOD__ . ' ' . $e->getMessage());
 			}
 		}
 
-		$favorites = $this->tagMgr->getFavorites();
+		$favorites = $this->tags->getFavorites();
 
 		$groups = array(
 			'categories' => $tags,
@@ -68,7 +68,7 @@ class GroupController extends Controller {
 			$response->bailOut(App::$l10n->t('No group name given.'));
 		}
 
-		$id = $this->tagMgr->add($name);
+		$id = $this->tags->add($name);
 
 		if ($id === false) {
 			$response->bailOut(App::$l10n->t('Error adding group.'));
@@ -92,7 +92,7 @@ class GroupController extends Controller {
 		}
 
 		try {
-			$ids = $this->tagMgr->getIdsForTag($name);
+			$ids = $this->tags->getIdsForTag($name);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
@@ -128,7 +128,7 @@ class GroupController extends Controller {
 		}
 
 		try {
-			$this->tagMgr->delete($name);
+			$this->tags->delete($name);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
@@ -156,12 +156,12 @@ class GroupController extends Controller {
 			return $response;
 		}
 
-		if (!$this->tagMgr->rename($from, $to)) {
+		if (!$this->tags->rename($from, $to)) {
 			$response->bailOut(App::$l10n->t('Error renaming group.'));
 			return $response;
 		}
 
-		$ids = $this->tagMgr->getIdsForTag($to);
+		$ids = $this->tags->getIdsForTag($to);
 
 		if ($ids !== false) {
 
@@ -245,7 +245,7 @@ class GroupController extends Controller {
 			}
 
 			$response->debug('contactId: ' . $contactId . ', categoryId: ' . $categoryId);
-			$this->tagMgr->tagAs($contactId, $categoryId);
+			$this->tags->tagAs($contactId, $categoryId);
 		}
 
 		return $response;
@@ -314,7 +314,7 @@ class GroupController extends Controller {
 			}
 
 			$response->debug('contactId: ' . $contactId . ', categoryId: ' . $categoryId);
-			$this->tagMgr->unTag($contactId, $categoryId);
+			$this->tags->unTag($contactId, $categoryId);
 		}
 
 		return $response;

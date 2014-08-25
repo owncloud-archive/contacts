@@ -28,7 +28,7 @@ class ImportController extends Controller {
 	public function __construct($appName, IRequest $request, App $app, ICache $cache, ITags $tags) {
 		parent::__construct($appName, $request, $app);
 		$this->cache = $cache;
-    $this->tagMgr = $tags;
+    $this->tags = $tags;
 	}
 
 	/**
@@ -247,7 +247,7 @@ class ImportController extends Controller {
 						$favourites = $part->select('X-FAVOURITES');
 						foreach ($favourites as $favourite) {
 							if ($favourite->getValue() == 'yes') {
-								$this->tagMgr->addToFavorites($id);
+								$this->tags->addToFavorites($id);
 							}
 						}
 					} else {
