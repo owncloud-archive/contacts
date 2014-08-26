@@ -23,10 +23,10 @@
 namespace OCA\Contacts\CardDAV;
 
 /**
- * This class overrides Sabre_CardDAV_UserAddressBooks::getChildren()
+ * This class overrides \Sabre\CardDAV\UserAddressBooks::getChildren()
  * to instantiate \OCA\Contacts\CardDAV\AddressBooks.
 */
-class UserAddressBooks extends \Sabre_CardDAV_UserAddressBooks {
+class UserAddressBooks extends \Sabre\CardDAV\UserAddressBooks {
 
 	/**
 	* Returns a list of addressbooks

@@ -37,6 +37,7 @@ class TemporaryPhoto {
 	const PHOTO_CURRENT		=	0;
 	const PHOTO_FILESYSTEM	=	1;
 	const PHOTO_UPLOADED	=	2;
+	const PHOTO_USER		=	3;
 
 	/**
 	 * @var \OCP\ICache
@@ -79,6 +80,7 @@ class TemporaryPhoto {
 		'OCA\\Contacts\\Utils\\TemporaryPhoto\\Contact',
 		'OCA\\Contacts\\Utils\\TemporaryPhoto\\FileSystem',
 		'OCA\\Contacts\\Utils\\TemporaryPhoto\\Uploaded',
+		'OCA\\Contacts\\Utils\\TemporaryPhoto\\User',
 	);
 
 	/**
@@ -197,4 +199,11 @@ class TemporaryPhoto {
 		$this->normalized = true;
 	}
 
+	public function getMimeType(){
+		return $this->image->mimeType();
+	}
+
+	public function getImage(){
+		return $this->image;
+	}
 }

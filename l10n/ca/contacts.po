@@ -7,6 +7,7 @@
 # duub, 2014
 # jmontane <joan@montane.cat>, 2012
 # Josep Tomàs <jtomas.binsoft@gmail.com>, 2012-2013
+# Josep Torné <josep@substantiu.com>, 2014
 # mickymadsystems <micky@madsystems.cat>, 2014
 # rogerc, 2013
 # rogerc, 2011-2013
@@ -15,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/owncloud/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -25,13 +26,13 @@ msgstr ""
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Contactes"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Afegeix una llibreta d'adreces LDAP nova"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -205,17 +206,17 @@ msgstr "Error en processar l'aniversari {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "El backend no admet caràcters multi-byte."
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Heu marcat eliminar alguns contactes, però encara no s'han eliminat. Espereu mentre s'esborren."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Feu clic a desfés eliminació de {num} contactes"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Cancel·la l'eliminació de {num} contactes"
 
@@ -316,17 +317,17 @@ msgstr "Tanca"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Error, falten paràmetres:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
 msgstr "Ha fallat en carregar la foto: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr "No teniu permisos per veure aquest contacte"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "El contacte no s'ha trobat"
 
@@ -370,15 +371,6 @@ msgstr "No teniu permisos per esborar la llibreta d'adreces."
 msgid "Address book not found"
 msgstr "No s'han trobat llibretes d'adreces."
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr "En aquest %s"
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "No teniu permisos per veure aquest contacte"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "No teniu permisos per actualitzar aquest contacte"
@@ -388,8 +380,8 @@ msgid "The backend for this contact does not support updating it"
 msgstr "El dorsal d'aquest contacte no permet actualitzar-lo"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
-msgstr "Aquest dorsal no permet afegir contactes"
+msgid "This backend does not support adding contacts"
+msgstr "Aquest rerefons no permet afegir contactes"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -492,23 +484,19 @@ msgstr "Error en actualitzar el contacte"
 msgid "Error saving contact to backend"
 msgstr "Error en desar el contacte en el dorsal"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Error en obtenir la fotografia d'usuari."
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "No heu tramès el camí de la foto."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
-msgstr "Error en carregar la imatge de la memòria de cau"
+msgstr "Error en carregar la imatge de la memòria cau"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Error en obtenir la propietat PHOTO."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Error en desar el contacte."
 
@@ -547,70 +535,70 @@ msgstr "Al requeriment li falta el nom del grup."
 msgid "Contact ID missing from request."
 msgstr "La ID del contacte s'ha perdut en el requeriment."
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "No s'ha carregat cap fitxer. Error desconegut"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "No hi ha errors, el fitxer s'ha carregat correctament"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "El fitxer carregat supera la directiva upload_max_filesize de php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "El fitxer carregat supera la directiva MAX_FILE_SIZE especificada al formulari HTML"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "El fitxer només s'ha carregat parcialment"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "No s'ha carregat cap fitxer"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Falta un fitxer temporal"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Ha fallat en escriure al disc"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "No hi ha prou espai disponible"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Intent de pujar un fitxer de la llista negra:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Error en carregar contactes a l'emmagatzemament."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Error en moure el fitxer a la carpeta d'importació."
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "No teniu permisos per importar dins d'aquesta llibreta d'adreces."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Falta el nom del fitxer en la petició."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "Falta la clau de progrés en la petició."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Intent d'accés a un fitxer de la llista negra:"
 
@@ -748,15 +736,15 @@ msgstr "Familia"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Activa el rerefons LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Activa el rerefons LDAP per a l'aplicació contactes"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Compte: el rerefons LDAP és en mode beta, useu-lo amb precaució"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -784,7 +772,7 @@ msgstr "Afegeix una llibreta d'adreces"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Afegeix llibreta d'adreces LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -902,8 +890,10 @@ msgid ""
 msgstr "No teniu contactes a la llibreta d'adreces o aquesta està desactivada."
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr "Afegiu un contacte nou o importeu contactes existents des d'un fitxer VCF."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr ""
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -1082,11 +1072,11 @@ msgstr "Edita"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI de la llibreta d'adreces"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1094,7 +1084,7 @@ msgstr "Descripció"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "URL LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
@@ -1102,11 +1092,11 @@ msgstr "Anònim"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Només de lectura"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Només de lectura"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1118,7 +1108,7 @@ msgstr "Contrasenya"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Mida de la pàgina"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1130,11 +1120,11 @@ msgstr "DN Base"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Filtre de cerca"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filtre"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
@@ -1142,16 +1132,16 @@ msgstr "DN Base per modificació"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "modificació DN base"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Connector"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Valor del connector (Millor utilitzar un editor extern i copiar/engaxar)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Copiar de (Avís, sobreescriu el valor personalitzat actual)"

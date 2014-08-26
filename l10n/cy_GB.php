@@ -19,6 +19,7 @@
 "ownCloud" => "ownCloud",
 "Work" => "Gwaith",
 "Text" => "Testun",
+"Message" => "Neges",
 "Delete" => "Dileu",
 "Groups" => "Grwpiau",
 "Download" => "Llwytho i lawr",

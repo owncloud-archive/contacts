@@ -48,7 +48,7 @@ $carddavBackend = new OCA\Contacts\CardDAV\Backend($backends);
 $requestBackend = new OC_Connector_Sabre_Request();
 
 // Root nodes
-$principalCollection = new Sabre_CalDAV_Principal_Collection($principalBackend);
+$principalCollection = new \Sabre\CalDAV\Principal\Collection($principalBackend);
 $principalCollection->disableListing = true; // Disable listing
 
 $addressBookRoot = new OCA\Contacts\CardDAV\AddressBookRoot($principalBackend, $carddavBackend);
@@ -60,15 +60,15 @@ $nodes = array(
 );
 
 // Fire up server
-$server = new Sabre_DAV_Server($nodes);
+$server = new \Sabre\DAV\Server($nodes);
 $server->httpRequest = $requestBackend;
 $server->setBaseUri($baseuri);
 // Add plugins
-$server->addPlugin(new Sabre_DAV_Auth_Plugin($authBackend, 'ownCloud'));
+$server->addPlugin(new \Sabre\DAV\Auth\Plugin($authBackend, 'ownCloud'));
 $server->addPlugin(new OCA\Contacts\CardDAV\Plugin());
-$server->addPlugin(new Sabre_DAVACL_Plugin());
-$server->addPlugin(new Sabre_DAV_Browser_Plugin(false)); // Show something in the Browser, but no upload
-$server->addPlugin(new Sabre_CardDAV_VCFExportPlugin());
+$server->addPlugin(new \Sabre\DAVACL\Plugin());
+$server->addPlugin(new \Sabre\DAV\Browser\Plugin(false)); // Show something in the Browser, but no upload
+$server->addPlugin(new \Sabre\CardDAV\VCFExportPlugin());
 $server->addPlugin(new OC_Connector_Sabre_ExceptionLoggerPlugin('carddav'));
 
 if (defined('DEBUG') && DEBUG) {

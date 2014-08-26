@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Sappe, 2013
+# Anders J. Sørensen, 2013-2014
+# Aputsiaĸ Niels Janussen <aj@isit.gl>, 2014
 # Bawl <transifex@bawl.dk>, 2013
 # cnovrup <christian@novrup.com>, 2014
-# claus_chr <claus_chr@webspeed.dk>, 2013
-# claus_chr <claus_chr@webspeed.dk>, 2012
-# cronner <cronner@gmail.com>, 2012
-# kaffeldt <kasper.affeldt@gmail.com>, 2013
-# lodahl <leiflodahl@gmail.com>, 2013-2014
-# mikkel_ilu <mikkelbjerglarsen@gmail.com>, 2011
+# Claus Christensen <claus_chr@webspeed.dk>, 2013
+# Claus Christensen <claus_chr@webspeed.dk>, 2012
+# Thomas <cronner@gmail.com>, 2012
+# Kasper Affeldt <kasper.affeldt@gmail.com>, 2013
+# Leif Lodahl <leiflodahl@gmail.com>, 2013-2014
+# Mikkel Bjerg Larsen <mikkelbjerglarsen@gmail.com>, 2011
 # Morten Juhl-Johansen Zölde-Fejér <morten@writtenandread.net>, 2011-2012,2014
-# Ole Holm Frandsen <froksen@gmail.com>, 2012-2013
+# Ole Holm Frandsen <froksen@gmail.com>, 2012-2014
+# Johannes Hessellund <osos@openeyes.dk>, 2014
 # Pascal d'Hermilly <pascal@dhermilly.dk>, 2011
-# rpaasch <rasmuspaasch@gmail.com>, 2013
+# Rasmus Paasch <rasmuspaasch@gmail.com>, 2013
 # muunsim <simon@rosmi.dk>, 2012
 # Thomas Tanghus <thomas@tanghus.net>, 2012
 # Thomas Tanghus <thomas@tanghus.net>, 2012
@@ -23,9 +25,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-26 04:40+0000\n"
+"Last-Translator: Aputsiaĸ Niels Janussen <aj@isit.gl>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/owncloud/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,13 +35,13 @@ msgstr ""
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Kontakter"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Tilføj ny LDAP adressebog"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -60,23 +62,23 @@ msgstr "Rediger adressebog"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr ""
+msgstr "Begynd filimport"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Valgt format: {format}"
 
 #: js/addressbooks.js:407 js/addressbooks.js:435
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Automatisk format vælger"
 
 #: js/addressbooks.js:485
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Importeret {count} af {total} kontakter"
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Total:{total}, Succes:{imported}, Fejl:{failed}"
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
@@ -149,11 +151,11 @@ msgstr "Netværks- eller serverfejl: Informér administrator."
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Kun billedfiler kan bruges som profilbilleder"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "Størrelsen af \"{filename}\" overstiger de tilladte {size}"
 
 #: js/app.js:972
 msgid "Error adding to group."
@@ -211,19 +213,19 @@ msgstr "Fejl ved indlæsning af fødselsdag {bday}"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Backenden understøtter ikke multi-byte karakterer"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Nogle kontakter er markeret til sletning, men er endnu ikke slettet. Vent venligst på, at de bliver slettet."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik for at fortryde sletning af {num} kontakter"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "annullerede sletning af {num} kontakter"
 
@@ -324,17 +326,17 @@ msgstr "Luk"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Fejl, mangler parametre:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
 msgstr "Kunne ikke hente billede: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr "Du har ikke rettigheder til at se denne kontaktperson"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Kontakt ikke fundet"
 
@@ -364,7 +366,7 @@ msgstr "Ukendt fejl"
 
 #: lib/addressbook.php:415
 msgid "Access denied"
-msgstr ""
+msgstr "Adgang nægtet"
 
 #: lib/addressbook.php:422
 msgid "The backend for this address book does not support updating"
@@ -378,15 +380,6 @@ msgstr "Du har ikke rettigheder til at slette denne adressebog"
 msgid "Address book not found"
 msgstr "Adressebog ikke fundet"
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "Du har ikke rettigheder til at se denne kontaktperson"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Du har ikke rettigheder til at opdatere denne kontaktperson"
@@ -396,7 +389,7 @@ msgid "The backend for this contact does not support updating it"
 msgstr "Systemet for denne kontakt understøtter ikke opdatering"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
+msgid "This backend does not support adding contacts"
 msgstr "Dette system understøtter ikke tilføjelse af kontakter"
 
 #: lib/contact.php:465 lib/contact.php:482
@@ -422,7 +415,7 @@ msgstr "Fejl ved oprettelse af adressebog"
 #: lib/controller/addressbookcontroller.php:206
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "\"%s\" backenden understøtter ikke sletning af adressebøger"
 
 #: lib/controller/addressbookcontroller.php:214
 #, php-format
@@ -439,19 +432,19 @@ msgstr "Fejl ved oprettelse af kontaktperson."
 
 #: lib/controller/addressbookcontroller.php:270
 msgid "Error creating contact"
-msgstr ""
+msgstr "Fejl ved oprettelse af kontakt"
 
 #: lib/controller/addressbookcontroller.php:302
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Fejl ved sletning af kontakt"
 
 #: lib/controller/addressbookcontroller.php:342
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Fejl ved hentning af kontaktperson."
 
 #: lib/controller/addressbookcontroller.php:353
 msgid "Error saving contact"
-msgstr ""
+msgstr "Kunne ikke gemme kontaktpersonen."
 
 #: lib/controller/addressbookcontroller.php:359
 msgid "Error removing contact from other address book."
@@ -459,7 +452,7 @@ msgstr "Fejl ved fjernelse af kontaktperson fra anden adressebog."
 
 #: lib/controller/addressbookcontroller.php:366
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Fejl ved hentning af flyttet kontakt"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -500,23 +493,19 @@ msgstr "Kunne ikke opdatere kontakt"
 msgid "Error saving contact to backend"
 msgstr "Kunne ikke gemme kontakt til server"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Fejl ved indlæsning af brugerfoto"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Der blev ikke medsendt en sti til fotoet."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Kunne ikke indlæse billede fra cache."
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Fejl ved indlæsning af PHOTO feltet."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Kunne ikke gemme kontaktpersonen."
 
@@ -555,70 +544,70 @@ msgstr "Gruppenavn mangler i forespørgsel."
 msgid "Contact ID missing from request."
 msgstr "Kontaktpersons-id mangler i forespørgsel."
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Ingen fil blev uploadet. Ukendt fejl."
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Der skete ingen fejl, filen blev succesfuldt uploadet"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Den uploadede fil er større end upload_max_filesize indstillingen i php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Den uploadede fil overstiger MAX_FILE_SIZE indstilingen, som specificeret i HTML formularen"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Filen blev kun delvist uploadet."
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Ingen fil uploadet"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Manglende midlertidig mappe."
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Fejl ved skrivning til disk."
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Der er ikke nok plads til rådlighed"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Forsøg på at oploade sortlistede filer:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Kunne ikke uploade kontaktepersoner til midlertidig opbevaring."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Kunne ikke flytte filer til importmappe."
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Du har ikke rettigheder til at importere til denne adressebog"
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Filnavn mangler fra forespørgsel."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "Fremskridts nøglen mangler fra anmodningen."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Forsøg på at tilgå sortlistet fil:"
 
@@ -756,15 +745,15 @@ msgstr "Familie"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Aktiver LDAP Backend"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Aktiver LDAP backend for kontakt programmet"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Advarsel: LDAP backend er i beta tilstand, anvend med forsigtighed"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -792,11 +781,11 @@ msgstr "Tilføj Adressebog"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Tilføj LDAP adressebog"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
-msgstr ""
+msgstr "Automatisk format"
 
 #: templates/contacts.php:53 templates/contacts.php:54
 msgid "Select file..."
@@ -907,11 +896,13 @@ msgstr "Slet aktuelle kontaktperson"
 #: templates/contacts.php:135
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "Du har ingen kontaktpersoner i din adressebog eller din adressebog er ikke aktiv."
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr ""
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr "Tilføj en ny kontakt eller importér eksisterende kontakter fra en fil (VCF, CSV eller LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -939,7 +930,7 @@ msgstr "Upload nyt foto"
 
 #: templates/contacts.php:241
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Vælg foto fra Filer"
 
 #: templates/contacts.php:243
 msgid "Favorite"
@@ -964,7 +955,7 @@ msgstr "Efternavn"
 
 #: templates/contacts.php:278
 msgid "Address book"
-msgstr ""
+msgstr "Adressebog"
 
 #: templates/contacts.php:285 templates/contacts.php:362
 msgid "Nickname"
@@ -984,11 +975,11 @@ msgstr "Fødselsdag"
 
 #: templates/contacts.php:341
 msgid "Website"
-msgstr ""
+msgstr "Hjemmeside"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
-msgstr ""
+msgstr "Instant Messaging"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
@@ -1090,11 +1081,11 @@ msgstr "Rediger"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "Adressebog URI"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1102,19 +1093,19 @@ msgstr "Beskrivelse"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP URL"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anonymt"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Skrivebeskyttet"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Skrivebeskyttet"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1126,11 +1117,11 @@ msgstr "Kodeord"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Sidestørrelse"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Base DN for søgning"
 
 #: templates/contacts.php:591
 msgid "Base DN"
@@ -1138,28 +1129,28 @@ msgstr "Base DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Søgefilter"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Base DN for modifikation"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr " Base DN-modifikation"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Connector"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Connector-værdi (Det er bedre at bruge en ekstern tekstredigering og kopiere/indsætte)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Kopier fra (Advarsel, dete erstatter eksisterende data)"

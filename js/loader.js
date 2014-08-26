@@ -10,7 +10,7 @@ OC.ContactsImporter = OC.ContactsImporter || {
 		self.path = $('#dir').val();
 		self.fileName = fileName;
 		console.log('fileName', self.path, self.fileName);
-		OC.addScript('contacts', 'addressbooks', function() {
+		/*OC.addScript('contacts', 'addressbooks', function() {
 			OC.addScript('contacts', 'storage', function() {
 				$.when(self._getTemplate()).then(function($tmpl) {
 					self.$template = $tmpl;
@@ -37,7 +37,7 @@ OC.ContactsImporter = OC.ContactsImporter || {
 		})
 		.fail(function(jqxhr, settings, exception) {
 			console.warn('Error loading address book backend', jqxhr, settings, exception);
-		});
+		});*/
 	},
 	showDialog:function() {
 		var self = this;

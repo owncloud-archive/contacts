@@ -3,19 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ehdoton <sampsa.somerma@gmail.com>, 2013
+# duuduu <sampsa.somerma@gmail.com>, 2013
 # Jesse Jaara <jesse.jaara@gmail.com>, 2012
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2012-2014
 # Johannes Korpela <>, 2012
-# Larso <larso@gmx.com>, 2013
+# Lasse Liehu <larso@gmx.com>, 2013
 # teho <tehoratopato@gmail.com>, 2012
 # tscooter <tscooter@hotmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 14:00+0000\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/projects/p/owncloud/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Language: fi_FI\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
@@ -204,17 +204,17 @@ msgstr ""
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Jotkin yhteystiedot on merkitty poistettaviksi, mutta niitä ei ole vielä poistettu. Odota hetki, että kyseiset yhteystiedot poistetaan."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -321,11 +321,11 @@ msgstr "Virhe, puuttuvat parametrit:"
 msgid "Failed loading photo: {error}"
 msgstr "Kuvan lataaminen epäonnistui: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr "Oikeutesi eivät riitä tämän yhteystiedon katseluun"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Yhteystietoa ei löydy"
 
@@ -369,15 +369,6 @@ msgstr "Oikeutesi eivät riitä tämän osoitekirjan poistamiseen."
 msgid "Address book not found"
 msgstr "Osoitekirjaa ei löytynyt"
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "Oikeutesi eivät riitä tämän yhteystiedon katseluun"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Oikeutesi eivät riitä tämän yhteystiedon päivittämiseen"
@@ -387,8 +378,8 @@ msgid "The backend for this contact does not support updating it"
 msgstr ""
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
-msgstr "Tämä taustaosa ei tue yhteystietojen lisäämistä"
+msgid "This backend does not support adding contacts"
+msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -491,23 +482,19 @@ msgstr "Virhe yhteystietoa päivittäessä"
 msgid "Error saving contact to backend"
 msgstr "Virhe tallennettaessa yhteystietoa taustajärjestelmään"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Virhe hankkiessa kuvaa "
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Kuvan polkua ei annettu."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Virhe ladatessa kuvaa välimuistista"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Virhe KUVA ominaisuuden saamisessa."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Virhe yhteystietoa tallennettaessa."
 
@@ -546,70 +533,70 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Tiedostoa ei lähetetty. Tuntematon virhe"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Ei virheitä, tiedosto lähetettiin onnistuneesti"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Lähetetty tiedosto ylittää upload_max_filesize-arvon rajan php.ini-tiedostossa"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Ladattavan tiedoston maksimikoko ylittää MAX_FILE_SIZE dirketiivin, joka on määritelty HTML-lomakkeessa"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Tiedoston lähetys onnistui vain osittain"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Yhtäkään tiedostoa ei lähetetty"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Tilapäiskansio puuttuu"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Levylle kirjoitus epäonnistui"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Tallennustilaa ei ole riittävästi käytettävissä"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Virhe yhteystietojen lataamisessa talletettavaksi."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Sinulla ei ole oikeuksia tuoda tähän osoitekirjaan."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Tiedoston nimi puuttuu pyynnöstä."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
@@ -747,15 +734,15 @@ msgstr "Perhe"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Käytä LDAP-taustaosaa"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Käytä LDAP-taustaosaa yhteystietosovellukselle"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Varoitus: LDAP-taustaosa on beta-tilassa, käytä varoen"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -901,8 +888,10 @@ msgid ""
 msgstr "Osoitekirjassasi ei ole yhteystietoja, tai osoitekirjasi on pois käytöstä."
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr "Lisää uusi yhteystieto tai tuo olemassa olevia yhteystietoja VCF-tiedostosta."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr "Lisää uusi yhteystieto tai tuo olemassa olevia yhteystietoja tiedostoista (VCF, CSV tai LDIF)"
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -1013,7 +1002,7 @@ msgstr "Anna kelvollinen sähköpostiosoite."
 
 #: templates/contacts.php:398
 msgid "someone@example.com"
-msgstr ""
+msgstr "esimerkki@osoite.fi"
 
 #: templates/contacts.php:400
 msgid "Mail to address"
@@ -1093,7 +1082,7 @@ msgstr "Kuvaus"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP-osoite"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"

@@ -51,9 +51,8 @@ class ContactPhotoController extends Controller {
 			$contact
 		);
 
-		$image = $tempPhoto->getPhoto();
-
-		if($image->valid()) {
+		if($tempPhoto->isValid()) {
+			$image = $tempPhoto->getPhoto();
 			$response = new ImageResponse($image);
 			$lastModified = $contact->lastModified();
 			// Force refresh if modified within the last minute.
@@ -68,7 +67,7 @@ class ContactPhotoController extends Controller {
 			}
 			return $response;
 		} else {
-			throw new \Exception(App::$l10n->t('Error getting user photo'));
+			return array("data"=> array("FN"=> $contact->getDisplayName()));
 		}
 	}
 

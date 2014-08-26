@@ -6,6 +6,7 @@
 "Edit Addressbook" => "עריכת פנקס הכתובות",
 "OK" => "אישור",
 "Add" => "הוספה",
+"All" => "הכל",
 "Shared by {owner}" => "שותף בידי {owner}",
 "Please choose the addressbook" => "אנא בחר ספר כתובות",
 "Import" => "יבוא",

@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# AnAstAsiA <anastasia2501@hotmail.com>, 2012
-# AnAstAsiA <anastasia2501@hotmail.com>, 2012
-# axil Pι, 2013
-# axil Pι, 2013
-# axil Pι, 2013
+# Playerthe12 <a7652246@drdrb.net>, 2014
+# Anastasia Lanning <anastasia2501@hotmail.com>, 2012
+# Anastasia Lanning <anastasia2501@hotmail.com>, 2012
+# Achilleas Pipinellis, 2013
+# Achilleas Pipinellis, 2013
+# Achilleas Pipinellis, 2013
 # christosvas <christosvas@in.gr>, 2011
 # christosvas <christosvas@in.gr>, 2011
 # Dimitris M. <monopatis@gmail.com>, 2012
@@ -15,30 +16,30 @@
 # Efstathios Iosifidis <iefstathios@gmail.com>, 2012-2014
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2012, 2012-2013, 2013
-# gtsamis <gtsamis@yahoo.com>, 2013
+# Georgios Tsamis <gtsamis@yahoo.com>, 2013
 # thea_rad <inactive+thea_rad@transifex.com>, 2014
-# KAT.RAT12 <spanish.katerina@gmail.com>, 2013
+# Αικατερίνη Χ. Καταπόδη <spanish.katerina@gmail.com>, 2013
 # Marios Bekatoros <>, 2012-2013
 # Nisok Kosin <nikos.efthimiou@gmail.com>, 2012
 # Petros Kyladitis <petros.kyladitis@gmail.com>, 2011-2012
 # Serenata <pamponiros@yahoo.com>, 2013
-# pe_ppe <peppe@cs.uoi.gr>, 2014
+# Spyros Melissovas <peppe@cs.uoi.gr>, 2014
 # stratosgl <stratos_gl@yahoo.com>, 2014
-# Teogramm <theodorewii121@hotmail.com>, 2013
+# Theodore Grammenos <theodorewii121@hotmail.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012
-# vkehayas <vkehayas@gmail.com>, 2013-2014
-# Wasilis <inactive+Wasilis@transifex.com>, 2013
-# Wasilis <inactive+Wasilis@transifex.com>, 2013
+# Vassilis Kehayas <vkehayas@gmail.com>, 2013-2014
+# Wasilis Mandratzis <inactive+Wasilis@transifex.com>, 2013
+# Wasilis Mandratzis <inactive+Wasilis@transifex.com>, 2013
 # xneo1 <vagelis@cyberdest.com>, 2012-2013
-# KAT.RAT12 <spanish.katerina@gmail.com>, 2013
+# Αικατερίνη Χ. Καταπόδη <spanish.katerina@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"Last-Translator: Playerthe12 <a7652246@drdrb.net>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/owncloud/language/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,13 +47,13 @@ msgstr ""
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Επαφές"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Προσθήκη νέου βιβλίου διευθύνσεων LDAP"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -77,11 +78,11 @@ msgstr "Έναρξη εισαγωγής αρχείου"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
-msgstr "Επιλεγμένη μορφή: {format}"
+msgstr "Επιλεγμένη μορφοποίηση: {format}"
 
 #: js/addressbooks.js:407 js/addressbooks.js:435
 msgid "Automatic format detection"
-msgstr "Αυτόματη ανίχνευση μορφής"
+msgstr "Αυτόματη ανίχνευση μορφοποίησης"
 
 #: js/addressbooks.js:485
 msgid "Processing {count}/{total} cards"
@@ -224,19 +225,19 @@ msgstr "Σφάλμα κατά την ανάλυση των γενεθλίων {b
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr "Το σύστημα δεν υποστηρίζει χαρακτήρες πολλών bytes"
+msgstr "Το σύστημα δεν υποστηρίζει χαρακτήρες πολλών byte"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Κάποιες επαφές σημειώθηκαν προς διαγραφή αλλά δεν έχουν διαγραφεί ακόμα. Παρακαλώ περιμένετε μέχρι να διαγραφούν."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Επιλέξτε για να αναιρέσετε τη διαγραφή {num} επαφών"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Αναιρέθηκε η διαγραφή {num} επαφών"
 
@@ -337,17 +338,17 @@ msgstr "Κλείσιμο"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Σφάλμα, ελλιπείς παράμετροι:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
 msgstr "Αποτυχία φόρτωσης φωτογραφίας: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
-msgstr "Δεν έχετε άδεια για να δείτε αυτήν την επαφή"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
+msgstr "Δεν έχετε άδεια να δείτε αυτή την επαφή"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Δεν βρέθηκε επαφή"
 
@@ -391,15 +392,6 @@ msgstr "Δεν έχετε άδεια να διαγράψετε το βιβλίο
 msgid "Address book not found"
 msgstr "Δε βρέθηκε βιβλίο διευθύνσεων"
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "Δεν έχετε άδεια να δείτε αυτή την επαφή"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Δεν έχετε άδεια για να ενημερώσετε αυτή την επαφή"
@@ -409,7 +401,7 @@ msgid "The backend for this contact does not support updating it"
 msgstr "Το σύστημα για αυτή την επαφή δεν υποστηρίζει την ενημέρωσή της"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
+msgid "This backend does not support adding contacts"
 msgstr "Αυτό το σύστημα δεν υποστηρίζει προσθήκη επαφών"
 
 #: lib/contact.php:465 lib/contact.php:482
@@ -435,7 +427,7 @@ msgstr "Σφάλμα κατά την δημιουργία βιβλίου διε�
 #: lib/controller/addressbookcontroller.php:206
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr "Το σύστημα \"%s\" δεν υποστηρίζει την διαγραφή βιβλίων διευθύνσεων"
+msgstr "Το σύστημα \"%s\" δεν υποστηρίζει τη διαγραφή βιβλίων διευθύνσεων"
 
 #: lib/controller/addressbookcontroller.php:214
 #, php-format
@@ -513,23 +505,19 @@ msgstr "Σφάλμα κατά την ενημέρωση επαφής "
 msgid "Error saving contact to backend"
 msgstr "Σφάλμα κατά την αποθήκευση επαφής στο σύστημα"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Σφάλμα κατά την λήψη φωτογραφίας χρήστη"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Δεν δόθηκε διαδρομή εικόνας"
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
-msgstr "Σφάλμα κατά την φόρτωση της εικόνας από την προσωρινή αποθήκευση"
+msgstr "Σφάλμα κατά την φόρτωση της εικόνας από την προσωρινή μνήμη"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Σφάλμα κατά τη λήψη ιδιοτήτων ΦΩΤΟΓΡΑΦΙΑΣ."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Σφάλμα κατά την αποθήκευση επαφής."
 
@@ -568,70 +556,70 @@ msgstr "Το όνομα ομάδας λείπει από το αίτημα."
 msgid "Contact ID missing from request."
 msgstr "Το ID επαφής λείπει από το αίτημα."
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Δεν μεταφορτώθηκε κάποιο αρχείο. Άγνωστο σφάλμα"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Δεν υπάρχει σφάλμα, το αρχείο μεταφορτώθηκε επιτυχώς"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Το αρχείο που μεταφορτώθηκε υπερβαίνει την οδηγία μέγιστου επιτρεπτού μεγέθους \"upload_max_filesize\" του php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Το αρχείο που μεταφορτώθηκε υπερβαίνει την οδηγία MAX_FILE_SIZE που ορίζεται στην φόρμα HTML"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Το αρχείο μεταφορτώθηκε μόνο εν μέρει"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Κανένα αρχείο δεν μεταφορτώθηκε"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Λείπει ένας προσωρινός φάκελος"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Αποτυχία εγγραφής στο δίσκο"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
-msgstr "Μη επαρκής διαθέσιμος αποθηκευτικός χώρος"
+msgstr "Ανεπαρκής διαθέσιμος αποθηκευτικός χώρος"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Προσπάθεια μεταφόρτωσης αρχείου που βρίσκεται στη μαύρη λίστα:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Σφάλμα κατά την μεταφόρτωση επαφών"
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Σφάλμα μετακίνησης αρχείου στο φάκελο εισαγωγών."
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Δεν έχετε άδεια για εισαγωγή σε αυτό το βιβλίο διευθύνσεων."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Το όνομα αρχείου λείπει από το αίτημα."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "Το κλειδί προόδου λείπει από το αίτημα."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Προσπάθεια πρόσβασης αρχείου που βρίσκεται στη μαύρη λίστα:"
 
@@ -769,15 +757,15 @@ msgstr "Οικογένεια"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Ενεργοποίηση συστήματος LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Ενεργοποίηση συστήματος LDAP για την εφαρμογή επαφών"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Προσοχή: Το σύστημα LDAP είναι σε δοκιμαστική φάση, χρησιμοποιείτε με επιφύλαξη"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -805,7 +793,7 @@ msgstr "Προσθήκη Βιβλίου Διευθύνσεων"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Προσθήκη βιβλίου διευθύνσεων LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -920,11 +908,13 @@ msgstr "Διαγραφή τρέχουσας επαφής"
 #: templates/contacts.php:135
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr "Δεν έχετε επαφές στο βιβλίο διευθύνσεών σας ή το βιβλίο διευθύνσεων σας είναι απενεργοποιημένο."
+msgstr "Δεν έχετε καθόλου επαφές στο βιβλίο διευθύνσεών σας ή το βιβλίο διευθύνσεων σας είναι απενεργοποιημένο."
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr "Προσθέστε μια νέα επαφή ή εισαγάγετε υπάρχουσες επαφές από ένα VCF αρχείο."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr "Προσθέστε μια νέα επαφή ή εισαγάγετε υπάρχουσες επαφές από ένα αρχείο (VCF, CSV ή LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -1001,7 +991,7 @@ msgstr "Ιστοσελίδα"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
-msgstr ""
+msgstr "Άμεσα μηνύματα"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
@@ -1103,11 +1093,11 @@ msgstr "Επεξεργασία"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "Διεύθυνση URI βιβλίου διευθύνσεων"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "Διεύθυνση URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1115,7 +1105,7 @@ msgstr "Περιγραφή"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "Διεύθυνση URL LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
@@ -1123,11 +1113,11 @@ msgstr "Ανώνυμος"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Μόνο για ανάγνωση"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Μόνο για ανάγνωση"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1139,40 +1129,40 @@ msgstr "Κωδικός πρόσβασης"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Μέγεθος σελίδας"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Αρχικό ΔΟ για αναζήτηση"
 
 #: templates/contacts.php:591
 msgid "Base DN"
-msgstr "Base DN"
+msgstr "Αρχικό ΔΟ"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Φίλτρο αναζήτησης"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Φίλτρο"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Αρχικό ΔΟ για μεταβολή"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Μεταβολή αρχικού ΔΟ"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Σύνδεσμος"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Μεταβλητή συνδέσμου (Καλύτερα χρησιμοποιείστε εξωτερικό επεξεργαστή και αντιγράψτε/επικολλήστε)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Αντιγραφή από (Προσοχή, αντικαθιστά την τρέχουσα προσαρμοσμένη τιμή)"

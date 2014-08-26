@@ -56,13 +56,6 @@
 	border-bottom: 1px solid silver;
 }
 
-#app-navigation {
-	width: 250px;
-}
-#app-settings {
-	width: 249px;
-}
-
 #app-navigation a.unshare {
 	float: right;
 }
@@ -71,9 +64,6 @@
 #app-navigation img.shared:hover { opacity: 1; }*/
 #app-navigation input[type="text"] {
 	width: 180px;
-}
-
-#app-navigation .oc-addnew input[type="text"] {
 }
 
 #app-navigation .utils {
@@ -101,9 +91,6 @@
 #app-navigation li > .utils > .numcontacts {
 	padding-right: 5px;
 	text-align: right;
-}
-#grouplist {
-	z-index: 100;
 }
 #grouplist .oc-addnew-init {
 	padding: 0 31px;
@@ -181,7 +168,7 @@
 #contact footer a:hover, #contact header a:hover {
 	opacity: 1;
 }
-#contact footer .close img, #contact footer .export img, #contact header .delete img {
+#contact footer .close img, #contact footer .export img, #contact header .delete img, #contact footer .cancel img {
 	vertical-align: middle;
 	margin-bottom: 2px;
 	margin-bottom: 2px;
@@ -555,10 +542,6 @@ input[type=checkbox].propertytype { width: 10px; }
 
 .svg .favorite { display: inline-block; float: left; height: 20px; width: 20px; background-size:contain; }
 
-#app-content {
-	top: 44px;
-}
-
 /* Contact layout */
 
 #contact > ul > li { white-space: nowrap; margin-right: 110px; }
@@ -605,7 +588,7 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
 	color: #999;
 	z-index: 2;
 	width: 100%;
-	line-height: 51px;
+	line-height: 50px;
 }
 .multiselect #contactsHeader {
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -882,36 +865,26 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	display: inline-block;
 }
 
-@media screen and (max-width: 1400px) {
-	#contactlist tr td.categories { display: none; }
-	#contactsHeader tr td.categories { display: none; }
-	#app-navigation .oc-addnew input[type=text] { width: 204px; }
+@media screen and (min-width: 1201px) {
+#contactlist tr td.categories { display: none; }
+#contactsHeader tr td.categories { display: none; }
 }
 @media screen and (max-width: 1200px) {
-	#contactlist tr td.adr { display: none; }
-	#contactsHeader tr td.adr { display: none; }
-	#app-navigation { width: 220px; }
-	#app-navigation .oc-addnew input[type=text] { width: 174px; }
-	#app-settings { width: 219px; }
-	.multiselect #contactsHeader { margin-left: 300px; padding-right: 300px; }
+#contactlist tr td.adr { display: none; }
+#contactsHeader tr td.adr { display: none; }
+.multiselect #contactsHeader { margin-left: 300px; padding-right: 300px; }
 }
 @media screen and (max-width: 1000px) {
-	#contactlist tr td.tel { display: none; }
-	#contactsHeader tr td.tel { display: none; }
-	#app-navigation { width: 200px; }
-	#app-navigation .oc-addnew input[type=text] { width: 154px; }
-	#app-settings { width: 199px; }
-	.multiselect #contactsHeader { margin-left: 280px; padding-right: 280px; }
+#contactlist tr td.tel { display: none; }
+#contactsHeader tr td.tel { display: none; }
+.multiselect #contactsHeader { margin-left: 280px; padding-right: 280px; }
 }
 @media screen and (max-width: 900px) {
-	#contactsHeader .delete { display: none; }
+#contactsHeader .delete { display: none; }
 }
 @media screen and (max-width: 800px) {
-	#contactlist tr td.email { display: none; }
-	#contactlist tr { width: 100%; }
-	#contactsHeader tr td.email { display: none; }
-	#app-navigation { width: 170px; }
-	#app-navigation .oc-addnew input[type=text] { width: 124px; }
-	#app-settings { width: 169px; }
-	.multiselect #contactsHeader { margin-left: 250px; padding-right: 250px; }
+#contactlist tr td.email { display: none; }
+#contactlist tr { width: 100%; }
+#contactsHeader tr td.email { display: none; }
+.multiselect #contactsHeader { margin-left: 250px; padding-right: 250px; }
 }

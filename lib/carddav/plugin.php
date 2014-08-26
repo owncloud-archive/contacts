@@ -28,11 +28,11 @@ use Sabre\VObject;
 use OCA\Contacts\VObject\VCard;
 
 /**
- * This class overrides Sabre_CardDAV_Plugin::validateVCard() to be able
+ * This class overrides \Sabre\CardDAV\Plugin::validateVCard() to be able
  * to import partially invalid vCards by ignoring invalid lines and to
  * validate and upgrade using \OCA\Contacts\VCard.
 */
-class Plugin extends \Sabre_CardDAV_Plugin {
+class Plugin extends \Sabre\CardDAV\Plugin {
 
 	/**
 	* Checks if the submitted vCard data is in fact, valid.
@@ -54,11 +54,11 @@ class Plugin extends \Sabre_CardDAV_Plugin {
 		try {
 			$vobj = VObject\Reader::read($data, VObject\Reader::OPTION_IGNORE_INVALID_LINES);
 		} catch (VObject\ParseException $e) {
-			throw new \Sabre_DAV_Exception_UnsupportedMediaType('This resource only supports valid vcard data. Parse error: ' . $e->getMessage());
+			throw new \Sabre\DAV\Exception\UnsupportedMediaType('This resource only supports valid vcard data. Parse error: ' . $e->getMessage());
 		}
 
 		if ($vobj->name !== 'VCARD') {
-			throw new \Sabre_DAV_Exception_UnsupportedMediaType('This collection can only support vcard objects.');
+			throw new \Sabre\DAV\Exception\UnsupportedMediaType('This collection can only support vcard objects.');
 		}
 
 		$vobj->validate(VCard::REPAIR|VCard::UPGRADE);

@@ -5,10 +5,11 @@
 # Translators:
 # formalist <formalist@email.it>, 2012
 # Francesco Apruzzese <cescoap@gmail.com>, 2011,2013
-# Francesco Capuano <francesco@capu.it>, 2013
+# francesco.capuano.587 <francesco@capu.it>, 2013
 # ufic <marco@carnazzo.it>, 2011, 2012
 # idetao <marcxosm@gmail.com>, 2013-2014
-# Monica Crapanzano <m.crapanzano@estartup.it>, 2013
+# Monica Maria Crapanzano <m.crapanzano@estartup.it>, 2013
+# Paolo Stivanin <paolostivanin@gmail.com>, 2014
 # Paolo Velati <paolo.velati@gmail.com>, 2013-2014
 # pgcloud <pgcloud@imballaggi.net>, 2013
 # Stefano Maffulli <smaffulli@gmail.com>, 2013
@@ -17,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/owncloud/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,13 +28,13 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Contatti"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Aggiungi una nuova rubrica LDAP"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -207,17 +208,17 @@ msgstr "Errore durante l'elaborazione della data di nascita {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Il motore non supporta i caratteri multi-byte."
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Alcuni contatti sono marcati per l'eliminazione, ma non sono stati ancora rimossi. Attendi fino al completamento dell'operazione."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Un clic per annullare l'eliminazione di {num} contatti"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Eliminazione di {num} contatti annullata"
 
@@ -318,17 +319,17 @@ msgstr "Chiudi"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Errore, parametro mancante:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
 msgstr "Caricamento foto non riuscito: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr "Non hai i permessi per vedere questo contatto"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Contatto non trovato"
 
@@ -372,15 +373,6 @@ msgstr "Non hai i permessi per eliminare la rubrica."
 msgid "Address book not found"
 msgstr "Rubrica non trovata."
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr "Su questo %s"
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "Non hai i permessi per vedere questo contatto"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Non hai i permessi per aggiornare questo contatto"
@@ -390,7 +382,7 @@ msgid "The backend for this contact does not support updating it"
 msgstr "Il motore per questo contatto non supporta l'aggiornamento"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
+msgid "This backend does not support adding contacts"
 msgstr "Questo motore non supporta l'aggiunta di contatti"
 
 #: lib/contact.php:465 lib/contact.php:482
@@ -494,23 +486,19 @@ msgstr "Errore durante l'aggiornamento del contatto"
 msgid "Error saving contact to backend"
 msgstr "Errore durante il salvataggio del contatto nel motore"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Errore durante il recupero della foto dell'utente"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Non è stato inviato alcun percorso a una foto."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Errore durante il caricamento dell'immagine dalla cache"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Errore di recupero della proprietà FOTO."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Errore di salvataggio del contatto."
 
@@ -549,70 +537,70 @@ msgstr "Nome del gruppo mancante nella richiesta."
 msgid "Contact ID missing from request."
 msgstr "ID del contatta mancante nella richiesta."
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Nessun file è stato inviato. Errore sconosciuto"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Non ci sono errori, il file è stato caricato correttamente"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Il file inviato supera la direttiva upload_max_filesize nel php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Il file inviato supera la direttiva MAX_FILE_SIZE specificata nel modulo HTML"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Il file è stato caricato solo parzialmente"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Nessun file è stato caricato"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Manca una cartella temporanea"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Scrittura su disco non riuscita"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Spazio di archiviazione insufficiente"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Tentativo di caricare un file della lista nera:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Errore di invio dei contatti in archivio."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Errore durante lo spostamento del file nella cartella di importazione."
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Non hai i permessi per importare in questa rubrica."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Manca il nome del file nella richiesta."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "Manca la chiave di avanzamento nella richiesta."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Tentativo di accedere a un file della lista nera:"
 
@@ -750,15 +738,15 @@ msgstr "Famiglia"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Abilita il motore LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Abilita il motore LDAP per l'applicazione dei contatti"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Avviso: il motore LDAP è in fase di beta, utilizzalo con cautela"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -786,7 +774,7 @@ msgstr "Aggiungi rubrica"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Aggiungi rubrica LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -904,8 +892,10 @@ msgid ""
 msgstr "Non hai contatti nella rubrica o la tua rubrica è disabilitata."
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr "Aggiungi un nuovo contatto o importa contatti esistenti da un file VCF."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr "Aggiungi un nuovo contatto o importa contatti esistenti da un file (VCF, CSV o LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -1084,11 +1074,11 @@ msgstr "Modifica"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI della rubrica"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1096,7 +1086,7 @@ msgstr "Descrizione"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "URL LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
@@ -1104,11 +1094,11 @@ msgstr "Anonimo"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Sola lettura"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Sola lettura"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1120,7 +1110,7 @@ msgstr "Password"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Dimensioni della pagina"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1132,11 +1122,11 @@ msgstr "DN base"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Filtro di ricerca"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filtro"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
@@ -1144,16 +1134,16 @@ msgstr "DN base per le modifiche"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Modifica DN base"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Connettore"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Valore del connettore (meglio utilizzare un editor esterno e copia/incolla)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Copia da (attenzione, sostituisce i valori attuali personalizzati)"

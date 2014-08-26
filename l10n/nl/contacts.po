@@ -6,22 +6,22 @@
 # André Koot <meneer@tken.net>, 2012-2014
 # isama <bart.formosus@gmail.com>, 2011
 # bartv <transifex@thisnet.nl>, 2011
-# diederikdehaas <inactive+diederikdehaas@transifex.com>, 2012
+# Diederik <inactive+diederikdehaas@transifex.com>, 2012
 # Erik Bent <hj.bent.60@gmail.com>, 2012
-# gertvdw <gertvdw@gmail.com>, 2012
+# Gert van der Weyde <gertvdw@gmail.com>, 2012
 # Robin Appelman <icewind1991@gmail.com>, 2012
 # koenvervloesem <inactive+koenvervloesem@transifex.com>, 2012
-# Len <lenny@weijl.org>, 2013
-# Len <lenny@weijl.org>, 2012
+# Lennart Weijl <lenny@weijl.org>, 2013
+# Lennart Weijl <lenny@weijl.org>, 2012
 # Richard Bos <radoeka@gmail.com>, 2012
 # bartv <transifex@thisnet.nl>, 2012
-# translatemonkey <translator@it-dept.eu>, 2012
+# J. Rappard <translator@it-dept.eu>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 11:00+0000\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
 "Last-Translator: André Koot <meneer@tken.net>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/owncloud/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Contactpersonen"
 
@@ -210,17 +210,17 @@ msgstr "Error bij interpreteren geboortedatum {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Het backend ondersteunt geen multi--byte tekens"
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Enkele contacten zijn gemarkeerd om verwijderd te worden, maar zijn nog niet verwijderd.  Wacht totdat ze zijn verwijderd."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik om het verwijderen van {num} contactpersonen ongedaan te maken."
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Verwijderen van {num} contacten geannuleerd"
 
@@ -327,11 +327,11 @@ msgstr "Fout, ontbrekende parameters:"
 msgid "Failed loading photo: {error}"
 msgstr "Mislukt: inladen foto: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
-msgstr "U heeft geen permissie om deze contactpersonen te bekijken"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
+msgstr "U heeft geen permissie om deze contactpersoon te bekijken"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Contact niet gevonden"
 
@@ -375,15 +375,6 @@ msgstr "U heeft geen permissie om dit adresboek te verwijderen."
 msgid "Address book not found"
 msgstr "Adresboek niet gevonden"
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr "Op deze %s"
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "U heeft geen permissie om deze contactpersoon te bekijken"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "U heeft geen permissie om deze contactpersoon te bewerken"
@@ -393,8 +384,8 @@ msgid "The backend for this contact does not support updating it"
 msgstr "De backend voor deze contactpersoon heeft geen ondersteuning voor bewerk acties"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
-msgstr "De backend heeft geen ondersteuning voor het toevoegen van contactpersonen"
+msgid "This backend does not support adding contacts"
+msgstr "Deze backend heeft geen ondersteuning voor het toevoegen van contacten"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -497,23 +488,19 @@ msgstr "Fout bij bijwerken contactpersoon"
 msgid "Error saving contact to backend"
 msgstr "Fout bij opslaan contactpersoongegevens baar backend"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Fout bij ophalen gebruikersfoto"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Geen fotopad opgestuurd."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Fout bij ophalen afbeelding vanuit cache"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Fout om PHOTO eigenschap te verkrijgen"
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Fout om contact op te slaan"
 
@@ -552,70 +539,70 @@ msgstr "Groepsnaam niet aanwezig bij aanvraag."
 msgid "Contact ID missing from request."
 msgstr "Contact ID niet opgegeven"
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Er was geen bestand geladen.  Onbekende fout"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "De upload van het bestand is goedgegaan."
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Het bestand overschrijdt de upload_max_filesize instelling in php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Het bestand overschrijdt de MAX_FILE_SIZE instelling dat is opgegeven in het HTML formulier"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Het bestand is gedeeltelijk geüpload"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Er is geen bestand geüpload"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Er ontbreekt een tijdelijke map"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Schrijven naar schijf mislukt"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Niet genoeg opslagruimte beschikbaar"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Poging om geblacklist bestand te uploaden:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Fout bij opslaan van contacten."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Fout bij verplaatsen bestand naar importmap."
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "U heeft geen permissie om te importeren naar dit adresboek."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Bestandsnaam ontbreekt in aanvraag."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "Voortgangssleutel ontbreekt in aanvraag."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Poging om geblacklist bestand te openen:"
 
@@ -907,8 +894,10 @@ msgid ""
 msgstr "U hebt geen contacten in uw adresboek, of uw adresboek is gedeactiveerd."
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr "Een nieuw contact toevoegen, of importeren vanuit een VCF-bestand"
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr "Een nieuw contact toevoegen of importeren vanuit een bestand (VCF, CSV of LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"

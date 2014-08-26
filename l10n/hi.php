@@ -1,4 +1,5 @@
 <?php $TRANSLATIONS = array(
+"Cancel" => "रद्द करें ",
 "Save" => "सहेजें",
 "Add" => "डाले",
 "Close" => "बंद करें ",

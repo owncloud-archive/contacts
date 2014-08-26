@@ -21,7 +21,10 @@
  */
 
 namespace OCA\Contacts;
+use OCA\Contacts\Utils\JSONSerializer;
 use OCA\Contacts\Utils\Properties;
+use OCA\Contacts\Utils\TemporaryPhoto;
+use OCA\Contacts\VObject\VCard;
 
 /**
  * This class manages our addressbooks.
@@ -79,47 +82,6 @@ class AddressbookProvider implements \OCP\IAddressBook {
 		return $this->addressBook->getPermissions();
 	}
 
-	private function getProperty(&$results, $row) {
-		if(!$row['name'] || !$row['value']) {
-			return false;
-		}
-
-		$value = null;
-
-		switch($row['name']) {
-			case 'PHOTO':
-				$value = 'VALUE=uri:' . \OCP\Util::linkToAbsolute('contacts', 'photo.php') . '?id=' . $row['contactid'];
-				break;
-			case 'N':
-			case 'ORG':
-			case 'ADR':
-			case 'GEO':
-			case 'CATEGORIES':
-				$property = \Sabre\VObject\Property::create($row['name'], $row['value']);
-				$value = $property->getParts();
-				break;
-			default:
-				$value = $value = strtr($row['value'], array('\,' => ',', '\;' => ';'));
-				break;
-		}
-		
-		if(in_array($row['name'], Properties::$multiProperties)) {
-			if(!isset($results[$row['contactid']])) {
-				$results[$row['contactid']] = array('id' => $row['contactid'], $row['name'] => array($value));
-			} elseif(!isset($results[$row['contactid']][$row['name']])) {
-				$results[$row['contactid']][$row['name']] = array($value);
-			} else {
-				$results[$row['contactid']][$row['name']][] = $value;
-			}
-		} else {
-			if(!isset($results[$row['contactid']])) {
-				$results[$row['contactid']] = array('id' => $row['contactid'], $row['name'] => $value);
-			} elseif(!isset($results[$row['contactid']][$row['name']])) {
-				$results[$row['contactid']][$row['name']] = $value;
-			}
-		}
-	}
-	
 	/**
 	* @param $pattern
 	* @param $searchProperties
@@ -151,21 +113,24 @@ class AddressbookProvider implements \OCP\IAddressBook {
 		}
 
 		if(count($ids) > 0) {
-			$query = 'SELECT `' . self::CONTACT_TABLE . '`.`addressbookid`, `' . self::PROPERTY_TABLE . '`.`contactid`, `' 
-				. self::PROPERTY_TABLE . '`.`name`, `' . self::PROPERTY_TABLE . '`.`value` FROM `' 
-				. self::PROPERTY_TABLE . '`,`' . self::CONTACT_TABLE . '` WHERE `'
-				. self::CONTACT_TABLE . '`.`addressbookid` = \'' . $this->addressBook->getId() . '\' AND `'
-				. self::PROPERTY_TABLE . '`.`contactid` = `' . self::CONTACT_TABLE . '`.`id` AND `' 
-				. self::PROPERTY_TABLE . '`.`contactid` IN (' . join(',', array_fill(0, count($ids), '?')) . ')';
+			foreach($ids as $id){
+				$contact = $this->addressBook->getChild($id);
+				$j = JSONSerializer::serializeContact($contact);
+				$j['data']['id'] = $id;
+				if (isset($contact->PHOTO)) {
+					$url =\OCP\Util::linkToRoute('contacts_contact_photo',
+							array(
+								'backend' => $contact->getBackend()->name,
+								'addressBookId' => $this->addressBook->getId(),
+								'contactId' => $contact->getId()
+							));
+					$url = \OC_Helper::makeURLAbsolute($url);
+					$j['data']['PHOTO'] = "VALUE=uri:$url";
+				}
+				$results[]= $this->convertToSearchResult($j);
+			}
+		}
 
-			//\OCP\Util::writeLog('contacts', __METHOD__ . 'DB query: ' . $query, \OCP\Util::DEBUG);
-			$stmt = \OCP\DB::prepare($query);
-			$result = $stmt->execute($ids);
-		}
-		while( $row = $result->fetchRow()) {
-			$this->getProperty($results, $row);
-		}
-		
 		return $results;
 	}
 
@@ -275,5 +240,30 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			return false;
 		}
 		return VCard::delete($id);
+	}
+
+	/**
+	 * @param $j
+	 * @return array
+	 */
+	private function convertToSearchResult($j) {
+		$data = $j['data'];
+		$result = array();
+		foreach( $data as $key => $d) {
+			$d = $data[$key];
+			if (in_array($key, Properties::$multiProperties)) {
+				$result[$key] = array_map(function($v){
+					return $v['value'];
+				}, $d);
+			} else {
+				if (is_array($d)) {
+					$result[$key] = $d[0]['value'];
+				} else {
+					$result[$key] = $d;
+				}
+			}
+		}
+
+		return $result;
 	}
 }

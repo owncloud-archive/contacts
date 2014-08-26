@@ -4,19 +4,19 @@
 # 
 # Translators:
 # Arif Budiman <arifpedia@gmail.com>, 2014
+# Dimas Ahmad Eka Putra, 2013
+# Albert Abimanyu <mr.pige_ina@yahoo.co.id>, 2012
 # minion, 2013
-# elmakong <mr.pige_ina@yahoo.co.id>, 2012
-# minion, 2013
-# elmakong <mr.pige_ina@yahoo.co.id>, 2012
+# Albert Abimanyu <mr.pige_ina@yahoo.co.id>, 2012
 # rodin <romihardiyanto@gmail.com>, 2013
 # rodin <romihardiyanto@gmail.com>, 2013
-# Sugeng Tigefa <tigefa@gmail.com>, 2014
+# sugeng tigefa <tigefa@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Indonesian (http://www.transifex.com/projects/p/owncloud/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Kontak"
 
@@ -205,17 +205,17 @@ msgstr "Hari ulang tahun Kesalahan penguraian {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Beberapa kontak telah ditandai untuk dihapus, tetapi belum selesai dihapus. Mohon tunggu."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Klik untuk membatalkan penghapusan {num} kontak"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Penghapusan dibatalkan  {num} kontak"
 
@@ -322,11 +322,11 @@ msgstr ""
 msgid "Failed loading photo: {error}"
 msgstr "Gagal memuat foto: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr "Anda tidak memiliki akses untuk melihat kontak ini"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Kontak tidak ditemukan"
 
@@ -370,15 +370,6 @@ msgstr "Anda tidak memiliki akses untuk menghapus buku alamat"
 msgid "Address book not found"
 msgstr "Alamat tidak ditemukan"
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "Anda tidak memiliki akses untuk melihat kontak ini"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Anda tidak memiliki akses untuk memperbahui kontak ini"
@@ -388,8 +379,8 @@ msgid "The backend for this contact does not support updating it"
 msgstr "Backend untuk kontak ini tidak mendukung memperbarui"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
-msgstr "Backend ini tidak mendukung menambahkan kontak"
+msgid "This backend does not support adding contacts"
+msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -492,23 +483,19 @@ msgstr "Kesalahan saat memperbarui kontak"
 msgid "Error saving contact to backend"
 msgstr "Kesalahan saat menyimpan kontak ke backend"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Galat mendapatkan foto pengguna"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Tidak ada foto yang ditambahkan."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Kesalahan saat mengambil properti FOTO."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Kesalahan saat menyimpan kontak."
 
@@ -547,70 +534,70 @@ msgstr "Nama grup hilang dari permintaan."
 msgid "Contact ID missing from request."
 msgstr "ID kontak hilang dari permintaan."
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Tidak ada berkas yang diunggah. Galat tidak dikenal."
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Tidak ada kesalahan, berkas sukses diunggah"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "File yang diunggah melampaui directive upload_max_filesize di php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Berkas yang diunggah melampaui direktif MAX_FILE_SIZE yang ditentukan dalam formulir HTML."
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Berkas hanya diunggah sebagian"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Tidak ada berkas yang diunggah"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Folder sementara tidak ada"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Gagal menulis ke disk"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Ruang penyimpanan tidak mencukupi"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Mencoba untuk mengupload file daftar hitam:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Kesalahan saat mengunggah kontak ke penyimpanan"
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Kesalahan saat memindahkan berkas ke folder impor."
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Anda tidak memiliki izin untuk mengimpor ke buku alamat ini"
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Nama berkas hilang dari permintaan."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "Kunci Perkembangan hilang dari permintaan."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Mencoba untuk mengakses berkas daftar hitam:"
 
@@ -902,7 +889,9 @@ msgid ""
 msgstr ""
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
 msgstr ""
 
 #: templates/contacts.php:187

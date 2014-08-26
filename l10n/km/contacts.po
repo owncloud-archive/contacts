@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# សុវិចិត្រ Sovichet ទេព Tep, 2014
+# Sovichet Tep, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:50+0000\n"
-"Last-Translator: សុវិចិត្រ Sovichet ទេព Tep\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:01+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Khmer (http://www.transifex.com/projects/p/owncloud/language/km/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Language: km\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "ទំនាក់​ទំនង"
 
@@ -33,7 +33,7 @@ msgstr "ព្រម"
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
 msgid "Cancel"
-msgstr "លើកលែង"
+msgstr "បោះបង់"
 
 #: js/addressbooks.js:132 js/groups.js:519
 msgid "Save"
@@ -90,47 +90,47 @@ msgstr ""
 
 #: js/app.js:234
 msgid "Error."
-msgstr ""
+msgstr "កំហុស។"
 
 #: js/app.js:329 js/app.js:343
 msgid "Add to..."
-msgstr ""
+msgstr "បន្ថែម​ទៅ..."
 
 #: js/app.js:333 js/app.js:345
 msgid "Remove from..."
-msgstr ""
+msgstr "ដកចេញ​ពី..."
 
 #: js/app.js:350
 msgid "Add group..."
-msgstr ""
+msgstr "បន្ថែម​ក្រុម..."
 
 #: js/app.js:478
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "ខុស URL៖ \"{url}\""
 
 #: js/app.js:504
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "ខុស​អ៊ីមែល៖ \"{url}\""
 
 #: js/app.js:587
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "បញ្ចូល​គ្នា​មិន​បាន។ រក​មិន​ឃើញ​ទំនាក់ទំនង៖ {id}"
 
 #: js/app.js:600
 msgid "Merge failed."
-msgstr ""
+msgstr "បញ្ចូល​គ្នា​មិន​បាន។"
 
 #: js/app.js:607
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "បញ្ចូល​គ្នា​មិន​បាន។ មាន​កំហុស​ក្នុង​ការ​រក្សាទុក​ទំនាក់ទំនង។"
 
 #: js/app.js:627
 msgid "Select photo"
-msgstr ""
+msgstr "ជ្រើស​រូបថត"
 
 #: js/app.js:710 js/app.js:1686
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "បណ្ដាញ​ឬ​ម៉ាស៊ីន​បម្រើ​មាន​បញ្ហា។ សូម​ផ្ដល់​ដំណឹង​ឲ្យ​អភិបាល។"
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
@@ -142,11 +142,11 @@ msgstr ""
 
 #: js/app.js:972
 msgid "Error adding to group."
-msgstr ""
+msgstr "មាន​កំហុស​ក្នុង​ការ​បន្ថែម​ទៅ​ក្រុម។"
 
 #: js/app.js:995
 msgid "Error removing from group."
-msgstr ""
+msgstr "មាន​កំហុស​ក្នុង​ការ​ដកចេញ​ពី​ក្រុម។"
 
 #: js/app.js:1188
 msgid ""
@@ -164,19 +164,19 @@ msgstr ""
 
 #: js/app.js:1417 templates/contacts.php:167
 msgid "Add group"
-msgstr ""
+msgstr "បន្ថែម​ក្រុម"
 
 #: js/app.js:1421
 msgid "OK"
-msgstr "OK"
+msgstr "ព្រម"
 
 #: js/app.js:1528
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "រក​មិន​ឃើញ​ទំនាក់ទំនង៖ {id}"
 
 #: js/app.js:1641
 msgid "Edit profile picture"
-msgstr ""
+msgstr "កែប្រែ​រូបថត​ប្រវត្តិរូប"
 
 #: js/app.js:1645
 msgid "Crop photo"
@@ -198,23 +198,23 @@ msgstr ""
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
 #: js/groups.js:53
 msgid "Add"
-msgstr "បញ្ចូល"
+msgstr "បន្ថែម"
 
 #: js/groups.js:264
 msgid "Contact is already in this group."
@@ -264,11 +264,11 @@ msgstr ""
 
 #: js/groups.js:751
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "{owner} បាន​ចែករំលែក"
 
 #: js/groups.js:766
 msgid "Not grouped"
-msgstr ""
+msgstr "គ្មាន​ក្រុម"
 
 #: js/groups.js:795
 msgid "Failed loading groups: {error}"
@@ -315,11 +315,11 @@ msgstr ""
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr ""
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr ""
 
@@ -363,15 +363,6 @@ msgstr ""
 msgid "Address book not found"
 msgstr ""
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr ""
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr ""
@@ -381,7 +372,7 @@ msgid "The backend for this contact does not support updating it"
 msgstr ""
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
+msgid "This backend does not support adding contacts"
 msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482
@@ -485,23 +476,19 @@ msgstr ""
 msgid "Error saving contact to backend"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr ""
 
@@ -540,70 +527,70 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
-msgstr ""
+msgstr "មិន​មាន​ឯកសារ​ដែល​បាន​ផ្ទុក​ឡើង។ មិន​ស្គាល់​កំហុស"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
-msgstr ""
+msgstr "មិន​មាន​កំហុស​អ្វី​ទេ ហើយ​ឯកសារ​ត្រូវ​បាន​ផ្ទុកឡើង​ដោយ​ជោគជ័យ"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr ""
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr ""
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr ""
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr ""
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr ""
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr ""
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr ""
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
@@ -895,7 +882,9 @@ msgid ""
 msgstr ""
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
 msgstr ""
 
 #: templates/contacts.php:187
@@ -1071,7 +1060,7 @@ msgstr ""
 
 #: templates/contacts.php:514
 msgid "Edit"
-msgstr "កែ"
+msgstr "កែប្រែ"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"

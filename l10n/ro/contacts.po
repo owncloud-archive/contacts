@@ -3,20 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Alex <__sashok@mail.ru>, 2014
 # alinaa, 2014
 # andreiacob <andrei.iacob@y7mail.com>, 2014
-# Claudiu, 2011, 2012
-# Dimon Pockemon <>, 2012
+# astalush <astalush@yahoo.com>, 2014
+# Rawbeef64, 2011, 2012
+# Dumitru Ursu <>, 2012
 # Eugen Mihalache <eugemjj@gmail.com>, 2012
-# g.ciprian <g.ciprian@osn.ro>, 2012
-# inaina <ina.c.ina@gmail.com>, 2013
-# lauraberindei <lauraagavriloae@yahoo.com>, 2014
+# Ciprian Ghenciu <g.ciprian@osn.ro>, 2012
+# ina <ina.c.ina@gmail.com>, 2013
+# laura berindei <lauraagavriloae@yahoo.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/owncloud/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -25,13 +27,13 @@ msgstr ""
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Contacte"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Adăugați o nouă agendă LDAP"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -52,7 +54,7 @@ msgstr "Modifică agenda"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr ""
+msgstr "Incepe import fișiere"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
@@ -68,7 +70,7 @@ msgstr ""
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "Total:{total}, Reușite:{imported}, Nereușite: {failed}"
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
@@ -141,7 +143,7 @@ msgstr "Eroare de server sau de retea. Va rugam informati administratorul."
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "Numai imaginile pot fi utilizate ca fotografii de contact"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
@@ -205,17 +207,17 @@ msgstr ""
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Anumite contacte sunt selectate pentru ştergere, dar încă nu au fost şterse. Va rugam aşteptaţi ştergerea lor"
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
-msgstr ""
+msgstr "Click pentru a anula ștergerea celor {num} contacte"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -271,7 +273,7 @@ msgstr "Favorite"
 
 #: js/groups.js:751
 msgid "Shared by {owner}"
-msgstr ""
+msgstr "Partajat de {owner}"
 
 #: js/groups.js:766
 msgid "Not grouped"
@@ -279,7 +281,7 @@ msgstr "Negrupate"
 
 #: js/groups.js:795
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "Încărcarea grupurilor a eșuat: {error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
@@ -320,13 +322,13 @@ msgstr ""
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "Încărcarea fotografiei a eșuat: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
-msgstr "Nu aveţi permisiunea sa vedeţi aceste contacte "
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
+msgstr "Nu aveţi permisiunea sa vedeţi acest contact . "
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Contactul nu a putut fi găsit "
 
@@ -370,25 +372,16 @@ msgstr "Nu aveţi permisiunea sa ştergeţi agenda ."
 msgid "Address book not found"
 msgstr "Agenda nu poate fi gasita ."
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "Nu aveţi permisiunea sa vedeţi acest contact . "
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "Nu aveți permisiunea de a actualiza acest contact"
 
 #: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
 msgstr ""
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
+msgid "This backend does not support adding contacts"
 msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482
@@ -451,7 +444,7 @@ msgstr "Eroare in stergerea contactului din alta agenda ."
 
 #: lib/controller/addressbookcontroller.php:366
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Eroare la mutarea contactului"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -492,23 +485,19 @@ msgstr "Eroare in actualizarea contactului"
 msgid "Error saving contact to backend"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Eroare in obtinerea fotografiei utilizatorului"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Nici o adresă către fotografie nu a fost transmisă"
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "eroare în găsirea proprietăţilor fotografiei"
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "eroare in salvarea contactului"
 
@@ -547,70 +536,70 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Nici un fișier nu a fost încărcat. Eroare necunoscută"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Nu a apărut nici o eroare, fișierul a fost încărcat cu succes"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Fișierul are o dimensiune mai mare decât cea specificată în variabila upload_max_filesize din php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Fișierul are o dimensiune mai mare decât variabile MAX_FILE_SIZE specificată în formularul HTML"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Fișierul a fost încărcat doar parțial"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Nu a fost încărcat nici un fișier"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Lipsește un director temporar"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Eroare la scriere pe disc"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Nu este disponibil suficient spațiu"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Eroare la "
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Nu ai permisiunea sa imporţi în aceasta agenda "
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
@@ -642,39 +631,39 @@ msgstr "Pagina de pornire "
 
 #: lib/utils/properties.php:71
 msgid "Jabber"
-msgstr ""
+msgstr "Jabber"
 
 #: lib/utils/properties.php:76
 msgid "Internet call"
-msgstr ""
+msgstr "Apel Internet"
 
 #: lib/utils/properties.php:81
 msgid "AIM"
-msgstr ""
+msgstr "AIM"
 
 #: lib/utils/properties.php:86
 msgid "MSN"
-msgstr ""
+msgstr "MSN"
 
 #: lib/utils/properties.php:91
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: lib/utils/properties.php:96
 msgid "GoogleTalk"
-msgstr ""
+msgstr "GoogleTalk"
 
 #: lib/utils/properties.php:101
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: lib/utils/properties.php:106
 msgid "XMPP"
-msgstr ""
+msgstr "XMPP"
 
 #: lib/utils/properties.php:111
 msgid "ICQ"
-msgstr ""
+msgstr "ICQ"
 
 #: lib/utils/properties.php:116
 msgid "Yahoo"
@@ -686,11 +675,11 @@ msgstr "Skype"
 
 #: lib/utils/properties.php:126
 msgid "QQ"
-msgstr ""
+msgstr "QQ"
 
 #: lib/utils/properties.php:131
 msgid "GaduGadu"
-msgstr ""
+msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
 msgid "ownCloud"
@@ -699,7 +688,7 @@ msgstr "ownCloud"
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
 msgid "Work"
-msgstr "Servicu"
+msgstr "Serviciu"
 
 #: lib/utils/properties.php:164 lib/utils/properties.php:169
 #: lib/utils/properties.php:183
@@ -784,11 +773,11 @@ msgstr "Adaugaţi agenda"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Adăugați agendă LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
-msgstr ""
+msgstr "Format automat"
 
 #: templates/contacts.php:53 templates/contacts.php:54
 msgid "Select file..."
@@ -804,11 +793,11 @@ msgstr "Sortează ordinea"
 
 #: templates/contacts.php:75
 msgid "First- Lastname"
-msgstr ""
+msgstr "Prenume- Nume"
 
 #: templates/contacts.php:76
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "Nume-, Prenume"
 
 #: templates/contacts.php:82 templates/contacts.php:83
 #: templates/contacts.php:230 templates/contacts.php:231
@@ -882,7 +871,7 @@ msgstr "Acțiuni"
 
 #: templates/contacts.php:123
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "Actualizează lista de contacte"
 
 #: templates/contacts.php:125
 msgid "Add new contact"
@@ -902,7 +891,9 @@ msgid ""
 msgstr "Nu aveţi nici un contact în agenda sau agenda este dezactivata"
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
 msgstr ""
 
 #: templates/contacts.php:187
@@ -935,7 +926,7 @@ msgstr "Selectaţi poza din fişier"
 
 #: templates/contacts.php:243
 msgid "Favorite"
-msgstr ""
+msgstr "Favorit"
 
 #: templates/contacts.php:246 templates/contacts.php:248
 #: templates/contacts.php:526 templates/contacts.php:529
@@ -944,7 +935,7 @@ msgstr "Nume"
 
 #: templates/contacts.php:254
 msgid "First name"
-msgstr ""
+msgstr "Prenume"
 
 #: templates/contacts.php:258
 msgid "Additional names"
@@ -952,7 +943,7 @@ msgstr ""
 
 #: templates/contacts.php:262
 msgid "Last name"
-msgstr ""
+msgstr "Nume"
 
 #: templates/contacts.php:278
 msgid "Address book"
@@ -976,7 +967,7 @@ msgstr "Zi de naștere"
 
 #: templates/contacts.php:341
 msgid "Website"
-msgstr ""
+msgstr "Website"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
@@ -1014,7 +1005,7 @@ msgstr "Te rog să specifici un e-mail corect"
 
 #: templates/contacts.php:398
 msgid "someone@example.com"
-msgstr ""
+msgstr "nume@exemplu.com"
 
 #: templates/contacts.php:400
 msgid "Mail to address"
@@ -1050,7 +1041,7 @@ msgstr "Oraș"
 
 #: templates/contacts.php:464
 msgid "State or province"
-msgstr ""
+msgstr "Județ sau provincie"
 
 #: templates/contacts.php:468
 msgid "Country"
@@ -1094,19 +1085,19 @@ msgstr "Descriere"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP URL"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anonim"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Doar citire"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Doar Citire"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"

@@ -3,40 +3,45 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Alexander Savchenko <>, 2013
+# Alexander Savchenko, 2013
 # Alexander Shashkevych <alex@stunpix.com>, 2013
+# BuxarNET <buxarnet@gmail.com>, 2014
 # Denis <reg.transifex.net@demitel.ru>, 2014
 # Denis <reg.transifex.net@demitel.ru>, 2012
 # Dmitry <linuxsquirrel.dev@gmail.com>, 2013
-# Evgeniy Spitsyn <evgeniy@spitsyn.net>, 2013
-# Dmitry Kurenkov <ideamk@gmail.com>, 2012
+# Evgenij Spitsyn <evgeniy@spitsyn.net>, 2013
+# Gennady <mxiru@mail.ru>, 2014
+# ideamk <ideamk@gmail.com>, 2012
 # jekader <jekader@gmail.com>, 2013-2014
 # jekader <jekader@gmail.com>, 2012
 # Yaroslav Petrov <lankme@gmail.com>, 2012
-# Mihail Vasiliev <mickvav@gmail.com>, 2012
-# mPolr <mpolr21@gmail.com>, 2012
-# Nick Homolibere <homolibere@gmail.com>, 2012
-# sam002 <semen@sam002.net>, 2012
-# sam002 <semen@sam002.net>, 2014
-# eurekafag <rkfg@rkfg.me>, 2013
-# eurekafag <rkfg@rkfg.me>, 2013
-# m4rkell <sergey@markevich.ru>, 2013
+# sbh12 <mail_123@mail.ru>, 2014
+# mickvav <mickvav@gmail.com>, 2012
+# Pavel <mpolr21@gmail.com>, 2012
+# Nick Remeslennikov <homolibere@gmail.com>, 2012
+# Semen V. Dubina <semen@sam002.net>, 2012
+# Semen V. Dubina <semen@sam002.net>, 2014
+# Serge Shpikin <rkfg@rkfg.me>, 2013
+# Serge Shpikin <rkfg@rkfg.me>, 2013
+# Sergey <sergey@markevich.ru>, 2013
 # adol <sharov3@gmail.com>, 2013
-# skoptev <skoptev@ukr.net>, 2012
+# anshibanov <shibanovan@yandex.ru>, 2014
+# Сергей Коптев <skoptev@ukr.net>, 2012
 # tonymc <tony.mccourin@gmail.com>, 2011
 # Victor Bravo <>, 2012
-# VicDeo <victor.dubiniuk@gmail.com>, 2012
-# not_your_conscience <hex.void@gmail.com>, 2013
-# navigator666 <yuriy.malyovaniy@gmail.com>, 2013
-# Vyacheslav Muranov <s@neola.ru>, 2013
-# Langaru <langaru@gmail.com>, 2013
+# Victor Dubiniuk <victor.dubiniuk@gmail.com>, 2012
+# viskubov <viskubov@gmail.com>, 2014
+# Void Ayanami <hex.void@gmail.com>, 2013
+# Yuriy Malyovaniy <yuriy.malyovaniy@gmail.com>, 2013
+# Вячеслав <s@neola.ru>, 2013
+# Дмитрий <langaru@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"Last-Translator: sbh12 <mail_123@mail.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,13 +49,13 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Контакты"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Добавить новую LDAP адресную книгу"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -224,17 +229,17 @@ msgstr "Ошибка анализа даты рождения {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "Реализация не поддерживает мультибайтовые символы."
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Некоторые контакты помечены на удаление, но ещё не удалены. Подождите, пока они удаляются."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Нажмите для отмены удаления {num} контактов"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Отмена удаления {num} контактов"
 
@@ -335,17 +340,17 @@ msgstr "Закрыть"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Ошибка, отсутствуют параметры:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
 msgstr "Ошибка загрузки фото: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
-msgstr "У Вас нет разрешений просматривать этот контакт."
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
+msgstr "У Вас нет разрешений просматривать этот контакт"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Контакт не найден"
 
@@ -389,15 +394,6 @@ msgstr "У Вас нет разрешений удалять эту адресн
 msgid "Address book not found"
 msgstr "Адресная книга не найдена"
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "У Вас нет разрешений просматривать этот контакт"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "У Вас нет разрешений обновлять этот контакт"
@@ -407,8 +403,8 @@ msgid "The backend for this contact does not support updating it"
 msgstr "Реализация этого контакта не поддерживает обновления"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
-msgstr "Реализация не поддерживает добавление контактов"
+msgid "This backend does not support adding contacts"
+msgstr "Этот бэкенд не поддерживает добавление контактов"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -511,23 +507,19 @@ msgstr "Ошибка при обновлении контакта"
 msgid "Error saving contact to backend"
 msgstr "Ошибка сохранения контакта в бэкенд"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Ошибка загрузки фото пользователя"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Нет фото по адресу."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Ошибка загрузки изображения из кэша"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Ошибка при получении ФОТО."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Ошибка при сохранении контактов."
 
@@ -566,70 +558,70 @@ msgstr "Имя группы отсутствует в запросе."
 msgid "Contact ID missing from request."
 msgstr "ID контакта из запроса отсутствует."
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Файл не был загружен. Неизвестная ошибка"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Файл загружен успешно."
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Загружаемый файл первосходит значение переменной upload_max_filesize, установленно в php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Загружаемый файл превосходит значение переменной MAX_FILE_SIZE, указанной в форме HTML"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Файл загружен частично"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Файл не был загружен"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Отсутствует временная папка"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Ошибка записи на диск"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Недостаточно доступного места в хранилище"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Попытка загрузки файла черного списка:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Ошибка загрузки контактов в хранилище."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Ошибка перемещения файла в папку импорта"
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "У Вас нет разрешений импортировать в эту адресную книгу."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Имя файла из запроса отсутствует."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "Ключ прогреса из запроса отсутствует."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Попытка доступа к файлу черного списка:"
 
@@ -767,15 +759,15 @@ msgstr "Семья"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Включить бэкенд LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Включить бэкенд LDAP для приложений контактов"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Внимание: бэкенд LDAP работает в beta-режиме, пользуйтесь с предостережением"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -803,7 +795,7 @@ msgstr "Добавить адресную книгу"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Добавить LDAP адресную книгу"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -921,8 +913,10 @@ msgid ""
 msgstr "В адресной книге нет контактов, либо Ваша адресная книга отключена."
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr "Добавить новый контакт или импортировать существующие контакты из файла VCF."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr "Добавить новый контакт или импортировать существующие контакты из файла (VCF, CSV или LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -1101,11 +1095,11 @@ msgstr "Редактировать"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI адресной книги"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1113,19 +1107,19 @@ msgstr "Описание"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "Ссылка LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Аноним"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Только для чтения"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Только для чтения"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1137,11 +1131,11 @@ msgstr "Пароль"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Размер страницы "
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Основной DN для поиска"
 
 #: templates/contacts.php:591
 msgid "Base DN"
@@ -1149,28 +1143,28 @@ msgstr "Базовый DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Фильтр поиска"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Фильтр"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Основной DN для модификации"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Модификация основного DN"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Коннектор"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Значение коннектора (лучше использовать внешний редактор и буфер обмена)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Копировать из (Внимание, земеняет текущее произвольное значение)"

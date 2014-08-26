@@ -56,7 +56,7 @@ class App {
 	public static $backendClasses = array(
 		'local' => 'OCA\Contacts\Backend\Database',
 		'shared' => 'OCA\Contacts\Backend\Shared',
-		'localusers' => 'OCA\Contacts\Backend\LocalUsers',
+//		'localusers' => 'OC\Contacts\Backend\LocalUsers',
 	);
 
 	public function __construct(

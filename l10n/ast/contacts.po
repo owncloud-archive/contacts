@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# David López Castañón <davidlopezcastanon@gmail.com>, 2014
 # Iñigo Varela <ivarela@softastur.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 16:10+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"Last-Translator: Iñigo Varela <ivarela@softastur.org>\n"
 "Language-Team: Asturian (http://www.transifex.com/projects/p/owncloud/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,17 +19,17 @@ msgstr ""
 "Language: ast\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Contautos"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Amestar nueva Axenda de Direiciones de LDAP"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
-msgstr ""
+msgstr "Aceutar"
 
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
@@ -41,7 +42,7 @@ msgstr "Guardar"
 
 #: js/addressbooks.js:162
 msgid "Edit Addressbook"
-msgstr ""
+msgstr "Edita l'Axenda de Direiciones"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
@@ -198,17 +199,17 @@ msgstr "Fallu al analizar la data de nacencia {bday}"
 msgid "The backend does not support multi-byte characters."
 msgstr "El backend nun permite caráuteres multi-byte."
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr "Dellos contautos tán marcaos pa desaniciar, pero entá nun se desaniciaron. Por favor, espere a que se desanicien."
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr "Calca pa desfacer el desaniciu de {num} contautos"
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr "Encaboxáu'l desaniciu de {num} contautos"
 
@@ -309,17 +310,17 @@ msgstr "Zarrar"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Fallu, falten parámetros: "
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
 msgstr "Fallu cargando semeya: {error}"
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
-msgstr "Nun tienes permisos pa ver estos contautos"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
+msgstr "Nun tienes permisos pa ver esti contautu"
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr "Contautu non atopáu"
 
@@ -363,15 +364,6 @@ msgstr "Nun tienes permisos pa desaniciar esta llibreta de direiciones."
 msgid "Address book not found"
 msgstr "Nun s'atoparon llibretes de direiciones."
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr "Nun tienes permisos pa ver esti contautu"
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr "Nun tienes permisos p'anovar esti contautu"
@@ -381,8 +373,8 @@ msgid "The backend for this contact does not support updating it"
 msgstr "El backend d'esti contautu nun permite anovalu"
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
-msgstr "Esti backend nun permite amestar contautos"
+msgid "This backend does not support adding contacts"
+msgstr "Esti backend nun sofita amestar contautos"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -485,23 +477,19 @@ msgstr "Fallu anovando contautu"
 msgid "Error saving contact to backend"
 msgstr "Fallu guardando'l contautu"
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr "Fallu obteniendo la imaxe d'usuariu"
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Nun s'introduxo'l camín a la semeya."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr "Fallu al cargar la imaxe de la memoria caché"
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Fallu obteniendo les propiedaes de la semeya."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Fallu guardando'l contautu."
 
@@ -540,70 +528,70 @@ msgstr "Falta'l nome del grupu na solicitú."
 msgid "Contact ID missing from request."
 msgstr "Falta'l ID de contautu na solicitú."
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Nun se xubió dengún ficheru. Fallu desconocíu"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Nun hai dengún fallu, el ficheru xubióse ensin problemes"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "El ficheru xubíu perpasa la direutiva \"upload_max_filesize\" del ficheru php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "El ficheru xubíu perpasa la direutiva \"MAX_FILE_SIZE\" especificada nel formulariu HTML"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "El ficheru xubióse de mou parcial"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Nun se xubió dengún ficheru"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Falta una carpeta temporal"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Fallu al escribir al discu"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Nun hai abondu espaciu disponible"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr "Intentóse xubir un ficheru en llista prieta:"
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Fallu xubiendo contautos al almacenamientu."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr "Fallu moviendo ficheros a la carpeta d'importaciones."
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr "Nun tienes permisu pa importar nesta llibreta de direiciones."
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr "Falta'l nome del ficheru na solicitú."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr "Falta la contraseña de progresu na solicitú."
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr "Intentó acceder a un ficheru na llista prieta:"
 
@@ -687,7 +675,7 @@ msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
 msgid "ownCloud"
-msgstr ""
+msgstr "ownCloud"
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
@@ -741,15 +729,15 @@ msgstr "Familia"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Activar motor de LDAP"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Activar motor de LDAP pa los contautos de l'aplicación"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Avisu: el motor de LDAP aínda ta en mou beta, úsalu con curiáu"
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
@@ -777,7 +765,7 @@ msgstr "Amestar llibreta de direiciones"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Amestar Axenda de Direiciones de LDAP"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -895,8 +883,10 @@ msgid ""
 msgstr "Nun tienes contautos na to llibreta de direiciones, o la llibreta ta desactivada."
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
-msgstr "Amiesta un contautu nuevu o importa contautos esistentes d'un ficheru VCF."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
+msgstr "Amestar un contautu nuevu o importar contautos d'un ficheru (VCF, CSV o LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
@@ -1075,11 +1065,11 @@ msgstr "Editar"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "Llibreta de Direiciones URI"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1087,19 +1077,19 @@ msgstr "Descripción"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "URL de LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "Anónimu"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "Namái llectura"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "Namái llectura"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1111,40 +1101,40 @@ msgstr "Contraseña"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "Tamañu de la páxina"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
-msgstr ""
+msgstr "Base DN pa guetar"
 
 #: templates/contacts.php:591
 msgid "Base DN"
-msgstr ""
+msgstr "Base DN"
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "Filtru de gueta"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "Filtru"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Base DN pa edición"
 
 #: templates/contacts.php:605
 msgid "Base DN modification"
-msgstr ""
+msgstr "Edición de Base DN"
 
 #: templates/contacts.php:609
 msgid "Connector"
-msgstr ""
+msgstr "Coneutor"
 
 #: templates/contacts.php:616
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Valor del coneutor (Ye meyor usar un editor esternu y copiar/apegar)"
 
 #: templates/contacts.php:622
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Copiar dende (Avisu, troca'l valor personalizáu actual)"

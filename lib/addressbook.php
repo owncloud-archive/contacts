@@ -22,6 +22,8 @@
 
 namespace OCA\Contacts;
 
+use OC_L10N;
+use OCA\Contacts\Backend\AbstractBackend;
 use OCP\AppFramework\Http;
 
 /**
@@ -148,7 +150,7 @@ class Addressbook extends AbstractPIMCollection {
 
 	/**
 	 * @brief Activate an address book
-	 * @param bool active
+	 * @param bool $active
 	 * @return void
 	 */
 	public function setActive($active) {
@@ -166,16 +168,15 @@ class Addressbook extends AbstractPIMCollection {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$id, \OCP\Util::DEBUG);
 		if (!$this->hasPermission(\OCP\PERMISSION_READ)) {
 			throw new \Exception(
-				self::$l10n->t('You do not have permissions to see this contacts'),
+				self::$l10n->t('You do not have permissions to see this contact'),
 				Http::STATUS_FORBIDDEN
 			);
 		}
 
-		if (!isset($this->objects[$id])) {
+		if (!isset($this->objects[(string)$id])) {
 			$contact = $this->backend->getContact($this->getId(), $id);
 			if ($contact) {
-				//$this->objects[$id] = new Contact($this, $this->backend, $contact);
-				$curContact = new Contact($this, $this->backend, $contact);
+				$this->objects[(string)$id] = new Contact($this, $this->backend, $contact);
 			} else {
 				throw new \Exception(
 					self::$l10n->t('Contact not found'),
@@ -185,10 +186,9 @@ class Addressbook extends AbstractPIMCollection {
 		}
 
 		// When requesting a single contact we preparse it
-		if (isset($curContact)) {
-			$curContact->retrieve();
-			$this->objects[$id] = $curContact;
-			return $curContact;
+		if (isset($this->objects[(string)$id])) {
+			$this->objects[(string)$id]->retrieve();
+			return $this->objects[(string)$id];
 		}
 	}
 
@@ -413,7 +413,7 @@ class Addressbook extends AbstractPIMCollection {
 		if (!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
 			throw new \Exception(
 				self::$l10n->t('Access denied'),
-				STATUS_FORBIDDEN
+				Http::STATUS_FORBIDDEN
 			);
 		}
 
@@ -449,7 +449,7 @@ class Addressbook extends AbstractPIMCollection {
 	 */
 	public function delete() {
 		if (!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
-			throw new Exception(
+			throw new \Exception(
 				self::$l10n->t('You don\'t have permissions to delete the address book.'),
 				Http::STATUS_FORBIDDEN
 			);

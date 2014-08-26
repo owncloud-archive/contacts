@@ -17,16 +17,18 @@ use OCA\Contacts\App,
 	OCA\Contacts\VObject\VCard as MyVCard,
 	OCA\Contacts\ImportManager,
 	OCP\IRequest,
-	OCP\ICache;
+	OCP\ICache,
+	OCP\ITags;
 
 /**
  * Controller importing contacts
  */
 class ImportController extends Controller {
 
-	public function __construct($appName, IRequest $request, App $app, ICache $cache) {
+	public function __construct($appName, IRequest $request, App $app, ICache $cache, ITags $tags) {
 		parent::__construct($appName, $request, $app);
 		$this->cache = $cache;
+    $this->tags = $tags;
 	}
 
 	/**
@@ -192,19 +194,6 @@ class ImportController extends Controller {
 		$file = $view->file_get_contents('/imports/' . $filename);
 		\OC_FileProxy::$enabled = $proxyStatus;
 
-		$writeProgress = function($pct, $total) use ($progresskey) {
-			$this->cache->set($progresskey, $pct, 300);
-			$this->cache->set($progresskey.'_total', $total, 300);
-		};
-
-		$cleanup = function() use ($view, $filename, $progresskey, $response) {
-			if(!$view->unlink('/imports/' . $filename)) {
-				$response->debug('Unable to unlink /imports/' . $filename);
-			}
-			$this->cache->remove($progresskey);
-			$this->cache->remove($progresskey.'_total');
-		};
-		
 		$importManager = new ImportManager();
 		
 		$formatList = $importManager->getTypes();
@@ -259,7 +248,7 @@ class ImportController extends Controller {
 						foreach ($favourites as $favourite) {
 							if ($favourite->getValue() == 'yes') {
 								$tagMgr = \OC::$server->getTagManager()->load('contact');
-								$tagMgr->addToFavorites($id);
+								$this->tags->addToFavorites($id);
 							}
 						}
 					} else {
@@ -270,7 +259,7 @@ class ImportController extends Controller {
 					$failed++;
 				}
 				$processed++;
-				$writeProgress($processed, $total);
+				$this->writeProcess($processed, $total, $progresskey);
 			}
 		} else {
 			$imported = 0;
@@ -278,7 +267,8 @@ class ImportController extends Controller {
 			$processed = 0;
 			$total = 0;
 		}
-		$cleanup();
+
+		$this->cleanup($view, $filename, $progresskey, $response);
 		//done the import
 		sleep(3); // Give client side a chance to read the progress.
 		$response->setParams(
@@ -296,6 +286,30 @@ class ImportController extends Controller {
 	}
 
 	/**
+	 * @param $pct
+	 * @param $total
+	 * @param $progresskey
+	 */
+	protected function writeProcess($pct, $total, $progresskey) {
+		$this->cache->set($progresskey, $pct, 300);
+		$this->cache->set($progresskey . '_total', $total, 300);
+	}
+
+	/**
+	 * @param $view
+	 * @param $filename
+	 * @param $progresskey
+	 * @param $response
+	 */
+	protected function cleanup($view, $filename, $progresskey, $response) {
+		if (!$view->unlink('/imports/' . $filename)) {
+			$response->debug('Unable to unlink /imports/' . $filename);
+		}
+		$this->cache->remove($progresskey);
+		$this->cache->remove($progresskey . '_total');
+	}
+
+	/**
 	 * @NoAdminRequired
 	 */
 	public function status() {
@@ -307,6 +321,7 @@ class ImportController extends Controller {
 			$response->bailOut(App::$l10n->t('Progress key missing from request.'));
 			return $response;
 		}
+
 		$response->setParams(array('progress' => $this->cache->get($progresskey), 'total' => $this->cache->get($progresskey.'_total') ));
 		return $response;
 	}

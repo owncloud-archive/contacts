@@ -33,7 +33,7 @@ use OCA\Contacts;
  * in that backend. For your own address books it can be e.g 'local::1' for
  * an address book shared with you it could be 'shared::2' an so forth.
  */
-class Backend extends \Sabre_CardDAV_Backend_Abstract {
+class Backend extends \Sabre\CardDAV\Backend\AbstractBackend {
 
 	public function __construct($backends) {
 		$this->backends = $backends;
@@ -64,11 +64,11 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 						'uri' => $addressBook['uri'],
 						'principaluri' => 'principals/'.$addressBook['owner'],
 						'{DAV:}displayname' => $addressBook['displayname'],
-						'{' . \Sabre_CardDAV_Plugin::NS_CARDDAV . '}addressbook-description'
+						'{' . \Sabre\CardDAV\Plugin::NS_CARDDAV . '}addressbook-description'
 								=> $addressBook['description'],
 						'{http://calendarserver.org/ns/}getctag' => $addressBook['lastmodified'],
-						'{' . \Sabre_CardDAV_Plugin::NS_CARDDAV . '}supported-address-data' =>
-							new \Sabre_CardDAV_Property_SupportedAddressData(),
+						'{' . \Sabre\CardDAV\Plugin::NS_CARDDAV . '}supported-address-data' =>
+							new \Sabre\CardDAV\Property\SupportedAddressData(),
 					);
 				}
 			}
@@ -81,12 +81,12 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	/**
 	 * Updates an addressbook's properties
 	 *
-	 * See Sabre_DAV_IProperties for a description of the mutations array, as
+	 * See \Sabre\DAV\IProperties for a description of the mutations array, as
 	 * well as the return value.
 	 *
 	 * @param mixed $addressbookid
 	 * @param array $mutations
-	 * @see Sabre_DAV_IProperties::updateProperties
+	 * @see \Sabre\DAV\IProperties::updateProperties
 	 * @return bool|array
 	 */
 	public function updateAddressBook($addressbookid, array $mutations) {
@@ -97,7 +97,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 				case '{DAV:}displayname' :
 					$changes['displayname'] = $newvalue;
 					break;
-				case '{' . \Sabre_CardDAV_Plugin::NS_CARDDAV
+				case '{' . \Sabre\CardDAV\Plugin::NS_CARDDAV
 						. '}addressbook-description' :
 					$changes['description'] = $newvalue;
 					break;
@@ -129,12 +129,12 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 				case '{DAV:}displayname' :
 					$properties['displayname'] = $newvalue;
 					break;
-				case '{' . \Sabre_CardDAV_Plugin::NS_CARDDAV
+				case '{' . \Sabre\CardDAV\Plugin::NS_CARDDAV
 						. '}addressbook-description' :
 					$properties['description'] = $newvalue;
 					break;
 				default :
-					throw new \Sabre_DAV_Exception_BadRequest('Unknown property: '
+					throw new \Sabre\DAV\Exception\BadRequest('Unknown property: '
 						. $property);
 			}
 
@@ -206,7 +206,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 		try {
 			$contact = $backend->getContact($id, array('uri' => urldecode($carduri)));
 		} catch(\Exception $e) {
-			//throw new \Sabre_DAV_Exception_NotFound($e->getMessage());
+			//throw new \Sabre\DAV\Exception\NotFound($e->getMessage());
 			\OCP\Util::writeLog('contacts', __METHOD__.', Exception: '. $e->getMessage(), \OCP\Util::DEBUG);
 			return false;
 		}
@@ -214,7 +214,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 			$contact['etag'] = '"' . md5($contact['carddata']) . '"';
 			return $contact;
 		}
-		//throw new \Sabre_DAV_Exception('Error retrieving the card');
+		//throw new \Sabre\DAV\Exception('Error retrieving the card');
 		return false;
 	}
 
@@ -266,7 +266,7 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 	 * @return string
 	 */
 	public function userIDByPrincipal($principaluri) {
-		list(, $userid) = \Sabre_DAV_URLUtil::splitPath($principaluri);
+		list(, $userid) = \Sabre\DAV\URLUtil::splitPath($principaluri);
 		return $userid;
 	}
 
@@ -283,6 +283,6 @@ class Backend extends \Sabre_CardDAV_Backend_Abstract {
 		if($backend->name === $backendName && $backend->hasAddressBook($id)) {
 			return array($id, $backend);
 		}
-		throw new \Sabre_DAV_Exception_NotFound('Backend not found: ' . $addressbookid);
+		throw new \Sabre\DAV\Exception\NotFound('Backend not found: ' . $addressbookid);
 	}
 }

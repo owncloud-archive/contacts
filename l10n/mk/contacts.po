@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Miroslav Jovanovic <j.miroslav@gmail.com>, 2012
-# miroj <jmiroslav@softhome.net>, 2012-2013
+# Miroslav Jovanovic <jmiroslav@softhome.net>, 2012-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Macedonian (http://www.transifex.com/projects/p/owncloud/language/mk/)\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Language: mk\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
 msgstr "Контакти"
 
@@ -147,7 +147,7 @@ msgstr "Грешки при додавањето во група."
 
 #: js/app.js:995
 msgid "Error removing from group."
-msgstr ""
+msgstr "Грешка при отстранување од група"
 
 #: js/app.js:1188
 msgid ""
@@ -173,7 +173,7 @@ msgstr "Во ред"
 
 #: js/app.js:1528
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "Не можам да го најдам контактот: {id}"
 
 #: js/app.js:1641
 msgid "Edit profile picture"
@@ -189,7 +189,7 @@ msgstr ""
 
 #: js/contacts.js:1102
 msgid "# groups"
-msgstr ""
+msgstr "# групи"
 
 #: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
@@ -199,17 +199,17 @@ msgstr ""
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -281,7 +281,7 @@ msgstr "Ве молам изберете адресар"
 
 #: js/loader.js:22 templates/contacts.php:41
 msgid "Import into..."
-msgstr ""
+msgstr "Внеси во..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
@@ -316,17 +316,17 @@ msgstr ""
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr ""
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr ""
 
 #: lib/addressbook.php:219
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "Немаш привилегии да ги видиш овеи контакти"
 
 #: lib/addressbook.php:252
 msgid "You do not have permissions add contacts to the address book"
@@ -364,15 +364,6 @@ msgstr ""
 msgid "Address book not found"
 msgstr "Адресарот не е пронајден"
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr ""
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr ""
@@ -382,7 +373,7 @@ msgid "The backend for this contact does not support updating it"
 msgstr ""
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
+msgid "This backend does not support adding contacts"
 msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482
@@ -486,33 +477,29 @@ msgstr ""
 msgid "Error saving contact to backend"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr "Не беше поднесена патека за фотографија."
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr "Грешка при утврдувањето на карактеристиките на фотографијата."
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr "Грешка при снимање на контактите."
 
 #: lib/controller/groupcontroller.php:68 lib/controller/groupcontroller.php:90
 msgid "No group name given."
-msgstr ""
+msgstr "Не е дадено името на групата."
 
 #: lib/controller/groupcontroller.php:74
 msgid "Error adding group."
-msgstr ""
+msgstr "Грешки при додавање на група."
 
 #: lib/controller/groupcontroller.php:150
 msgid "No group name to rename from given."
@@ -524,12 +511,12 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:160
 msgid "Error renaming group."
-msgstr ""
+msgstr "Грешка при преименување на група."
 
 #: lib/controller/groupcontroller.php:210
 #: lib/controller/groupcontroller.php:267
 msgid "Group ID missing from request."
-msgstr ""
+msgstr "Групното ID недостасува од барањето."
 
 #: lib/controller/groupcontroller.php:217
 #: lib/controller/groupcontroller.php:274
@@ -541,80 +528,80 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "Ниту еден фајл не се вчита. Непозната грешка"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "Датотеката беше успешно подигната."
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr "Големината на датотеката ја надминува upload_max_filesize директивата во php.ini"
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "Големината на датотеката ја надминува MAX_FILE_SIZE директивата која беше специфицирана во HTML формата"
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "Датотеката беше само делумно подигната."
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "Не беше подигната датотека."
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "Недостасува привремена папка"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "Неуспеав да запишам на диск"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr "Нема доволно слободен сториџ"
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr "Грешка во снимање на контактите на диск."
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
-msgstr ""
+msgstr "Името на датотеката недостасува во барањето."
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "Обида да се пристапи кон датотека која е на црна листа:"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
-msgstr ""
+msgstr "Не е даден клуч."
 
 #: lib/controller/settingscontroller.php:40
 msgid "No value is given."
-msgstr ""
+msgstr "Не е дадена вредност."
 
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
@@ -636,7 +623,7 @@ msgstr ""
 
 #: lib/utils/properties.php:71
 msgid "Jabber"
-msgstr ""
+msgstr "Jabber"
 
 #: lib/utils/properties.php:76
 msgid "Internet call"
@@ -644,47 +631,47 @@ msgstr ""
 
 #: lib/utils/properties.php:81
 msgid "AIM"
-msgstr ""
+msgstr "AIM"
 
 #: lib/utils/properties.php:86
 msgid "MSN"
-msgstr ""
+msgstr "MSN"
 
 #: lib/utils/properties.php:91
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: lib/utils/properties.php:96
 msgid "GoogleTalk"
-msgstr ""
+msgstr "GoogleTalk"
 
 #: lib/utils/properties.php:101
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: lib/utils/properties.php:106
 msgid "XMPP"
-msgstr ""
+msgstr "XMPP"
 
 #: lib/utils/properties.php:111
 msgid "ICQ"
-msgstr ""
+msgstr "ICQ"
 
 #: lib/utils/properties.php:116
 msgid "Yahoo"
-msgstr ""
+msgstr "Yahoo"
 
 #: lib/utils/properties.php:121
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: lib/utils/properties.php:126
 msgid "QQ"
-msgstr ""
+msgstr "QQ"
 
 #: lib/utils/properties.php:131
 msgid "GaduGadu"
-msgstr ""
+msgstr "GaduGadu"
 
 #: lib/utils/properties.php:136
 msgid "ownCloud"
@@ -734,11 +721,11 @@ msgstr "Интернет"
 
 #: lib/utils/properties.php:197
 msgid "Friends"
-msgstr ""
+msgstr "Пријатели"
 
 #: lib/utils/properties.php:198
 msgid "Family"
-msgstr ""
+msgstr "Фамилија"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
@@ -754,23 +741,23 @@ msgstr ""
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
-msgstr ""
+msgstr "Нов контакт"
 
 #: templates/contacts.php:13
 msgid "Group name"
-msgstr ""
+msgstr "Име на група"
 
 #: templates/contacts.php:13
 msgid "New group"
-msgstr ""
+msgstr "Нова група"
 
 #: templates/contacts.php:22
 msgid "Address books"
-msgstr ""
+msgstr "Адресари"
 
 #: templates/contacts.php:25 templates/contacts.php:74
 msgid "Display name"
-msgstr ""
+msgstr "Прикажи го Името"
 
 #: templates/contacts.php:25
 msgid "Add Address Book"
@@ -786,7 +773,7 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:54
 msgid "Select file..."
-msgstr ""
+msgstr "Одбери датотека..."
 
 #: templates/contacts.php:71
 msgid "(De-)select all"
@@ -794,15 +781,15 @@ msgstr ""
 
 #: templates/contacts.php:73
 msgid "Sort order"
-msgstr ""
+msgstr "Начин на сортирање"
 
 #: templates/contacts.php:75
 msgid "First- Lastname"
-msgstr ""
+msgstr "Име- Презиме"
 
 #: templates/contacts.php:76
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "Презиме-, Име"
 
 #: templates/contacts.php:82 templates/contacts.php:83
 #: templates/contacts.php:230 templates/contacts.php:231
@@ -821,7 +808,7 @@ msgstr "Преземи"
 
 #: templates/contacts.php:89
 msgid "Merge"
-msgstr ""
+msgstr "Спои"
 
 #: templates/contacts.php:92 templates/contacts.php:326
 #: templates/contacts.php:365
@@ -840,55 +827,55 @@ msgstr "Адреса"
 
 #: templates/contacts.php:95
 msgid "Group"
-msgstr ""
+msgstr "Група"
 
 #: templates/contacts.php:103
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Кратенки преку тастатура"
 
 #: templates/contacts.php:105
 msgid "Navigation"
-msgstr ""
+msgstr "Навигација"
 
 #: templates/contacts.php:108
 msgid "Next contact in list"
-msgstr ""
+msgstr "Следен контакт во листата"
 
 #: templates/contacts.php:110
 msgid "Previous contact in list"
-msgstr ""
+msgstr "Петходен контакт во листата"
 
 #: templates/contacts.php:112
 msgid "Expand/collapse current addressbook"
-msgstr ""
+msgstr "Прошири/собери го тековниот асресар "
 
 #: templates/contacts.php:114
 msgid "Next addressbook"
-msgstr ""
+msgstr "Следен адресар"
 
 #: templates/contacts.php:116
 msgid "Previous addressbook"
-msgstr ""
+msgstr "Претходниот адресар"
 
 #: templates/contacts.php:120
 msgid "Actions"
-msgstr ""
+msgstr "Акции"
 
 #: templates/contacts.php:123
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "Освежи ја контакт листата"
 
 #: templates/contacts.php:125
 msgid "Add new contact"
-msgstr ""
+msgstr "Додади нов контакт"
 
 #: templates/contacts.php:127
 msgid "Add new addressbook"
-msgstr ""
+msgstr "Додади нов адресар"
 
 #: templates/contacts.php:129
 msgid "Delete current contact"
-msgstr ""
+msgstr "Избриши го тековниот контакт"
 
 #: templates/contacts.php:135
 msgid ""
@@ -896,7 +883,9 @@ msgid ""
 msgstr ""
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
 msgstr ""
 
 #: templates/contacts.php:187
@@ -938,7 +927,7 @@ msgstr "Име"
 
 #: templates/contacts.php:254
 msgid "First name"
-msgstr ""
+msgstr "Име"
 
 #: templates/contacts.php:258
 msgid "Additional names"
@@ -946,7 +935,7 @@ msgstr "Дополнителни имиња"
 
 #: templates/contacts.php:262
 msgid "Last name"
-msgstr ""
+msgstr "Презиме"
 
 #: templates/contacts.php:278
 msgid "Address book"
@@ -978,11 +967,11 @@ msgstr ""
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
-msgstr ""
+msgstr "Забелешките одат тука..."
 
 #: templates/contacts.php:359
 msgid "Add field..."
-msgstr ""
+msgstr "Додади поле..."
 
 #: templates/contacts.php:366
 msgid "Instant Messaging"
@@ -994,7 +983,7 @@ msgstr "Забелешка"
 
 #: templates/contacts.php:369
 msgid "Web site"
-msgstr ""
+msgstr "Веб сајт"
 
 #: templates/contacts.php:393 templates/contacts.php:408
 #: templates/contacts.php:422 templates/contacts.php:437
@@ -1008,7 +997,7 @@ msgstr "Ве молам внесете правилна адреса за е-п�
 
 #: templates/contacts.php:398
 msgid "someone@example.com"
-msgstr ""
+msgstr "someone@example.com"
 
 #: templates/contacts.php:400
 msgid "Mail to address"
@@ -1024,7 +1013,7 @@ msgstr "Внесете телефонски број"
 
 #: templates/contacts.php:429
 msgid "Go to web site"
-msgstr ""
+msgstr "Оди на веб страната"
 
 #: templates/contacts.php:446
 msgid "View on map"
@@ -1032,11 +1021,11 @@ msgstr "Погледајте на мапа"
 
 #: templates/contacts.php:454
 msgid "Street address"
-msgstr ""
+msgstr "Улична адреса"
 
 #: templates/contacts.php:458
 msgid "Postal code"
-msgstr ""
+msgstr "Поштенски број"
 
 #: templates/contacts.php:460
 msgid "City"
@@ -1044,7 +1033,7 @@ msgstr "Град"
 
 #: templates/contacts.php:464
 msgid "State or province"
-msgstr ""
+msgstr "Град или провинција"
 
 #: templates/contacts.php:468
 msgid "Country"
@@ -1068,7 +1057,7 @@ msgstr "Извези"
 
 #: templates/contacts.php:513
 msgid "CardDAV link"
-msgstr ""
+msgstr "CardDAV link"
 
 #: templates/contacts.php:514
 msgid "Edit"

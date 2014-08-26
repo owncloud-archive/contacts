@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# azizul <aziz.murad3@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-05-12 00:49-0400\n"
-"PO-Revision-Date: 2014-05-11 05:01+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-08-26 00:48-0400\n"
+"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,13 +18,13 @@ msgstr ""
 "Language: bn_BD\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: appinfo/app.php:38 lib/app.php:109
+#: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
-msgstr "ঠিকানাপঞ্জী"
+msgstr "পরিচিতজন"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "নতুন  LDAP ঠিকানাবই যুক্ত করূন"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -32,7 +33,7 @@ msgstr "তথাস্তু"
 #: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
 #: templates/contacts.php:372 templates/contacts.php:373
 msgid "Cancel"
-msgstr "বাতির"
+msgstr "বাতিল"
 
 #: js/addressbooks.js:132 js/groups.js:519
 msgid "Save"
@@ -40,7 +41,7 @@ msgstr "সংরক্ষণ"
 
 #: js/addressbooks.js:162
 msgid "Edit Addressbook"
-msgstr ""
+msgstr "ঠিকানাবই সম্পাদনা"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
@@ -89,19 +90,19 @@ msgstr ""
 
 #: js/app.js:234
 msgid "Error."
-msgstr ""
+msgstr "ভ্রান্তি"
 
 #: js/app.js:329 js/app.js:343
 msgid "Add to..."
-msgstr ""
+msgstr "যোগ কর..."
 
 #: js/app.js:333 js/app.js:345
 msgid "Remove from..."
-msgstr ""
+msgstr "সরিয়ে না্ও..."
 
 #: js/app.js:350
 msgid "Add group..."
-msgstr ""
+msgstr "গ্রুপ যোগ কর"
 
 #: js/app.js:478
 msgid "Invalid URL: \"{url}\""
@@ -125,7 +126,7 @@ msgstr ""
 
 #: js/app.js:627
 msgid "Select photo"
-msgstr ""
+msgstr "আলোকচিত্র নির্বাচন"
 
 #: js/app.js:710 js/app.js:1686
 msgid "Network or server error. Please inform administrator."
@@ -163,7 +164,7 @@ msgstr ""
 
 #: js/app.js:1417 templates/contacts.php:167
 msgid "Add group"
-msgstr ""
+msgstr "গ্রুপ যোগ কর"
 
 #: js/app.js:1421
 msgid "OK"
@@ -187,7 +188,7 @@ msgstr ""
 
 #: js/contacts.js:1102
 msgid "# groups"
-msgstr ""
+msgstr "# গ্রুপ"
 
 #: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
@@ -197,17 +198,17 @@ msgstr ""
 msgid "The backend does not support multi-byte characters."
 msgstr ""
 
-#: js/contacts.js:2232
+#: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
 msgstr ""
 
-#: js/contacts.js:2243
+#: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
 msgstr ""
 
-#: js/contacts.js:2252
+#: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
 msgstr ""
 
@@ -255,11 +256,11 @@ msgstr ""
 
 #: js/groups.js:672
 msgid "All"
-msgstr ""
+msgstr "সবাই"
 
 #: js/groups.js:687 js/groups.js:690
 msgid "Favorites"
-msgstr ""
+msgstr "প্রিয়জন"
 
 #: js/groups.js:751
 msgid "Shared by {owner}"
@@ -314,11 +315,11 @@ msgstr ""
 msgid "Failed loading photo: {error}"
 msgstr ""
 
-#: lib/addressbook.php:169
-msgid "You do not have permissions to see this contacts"
+#: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
+msgid "You do not have permissions to see this contact"
 msgstr ""
 
-#: lib/addressbook.php:181
+#: lib/addressbook.php:182
 msgid "Contact not found"
 msgstr ""
 
@@ -344,7 +345,7 @@ msgstr ""
 
 #: lib/addressbook.php:374
 msgid "Unknown error"
-msgstr ""
+msgstr "অজানা জটিলতা"
 
 #: lib/addressbook.php:415
 msgid "Access denied"
@@ -362,15 +363,6 @@ msgstr ""
 msgid "Address book not found"
 msgstr ""
 
-#: lib/backend/localusers.php:102 lib/backend/localusers.php:103
-#, php-format
-msgid "On this %s"
-msgstr ""
-
-#: lib/contact.php:116 lib/contact.php:165
-msgid "You do not have permissions to see this contact"
-msgstr ""
-
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
 msgstr ""
@@ -380,7 +372,7 @@ msgid "The backend for this contact does not support updating it"
 msgstr ""
 
 #: lib/contact.php:299
-msgid "This backend not support adding contacts"
+msgid "This backend does not support adding contacts"
 msgstr ""
 
 #: lib/contact.php:465 lib/contact.php:482
@@ -393,11 +385,11 @@ msgstr ""
 
 #: lib/contact.php:538
 msgid "Unknown IM: "
-msgstr ""
+msgstr "অজ্ঞাত IM:"
 
 #: lib/contact.php:815
 msgid "{name}'s Birthday"
-msgstr ""
+msgstr "{নাম}'এর জন্মদিন"
 
 #: lib/controller/addressbookcontroller.php:174
 msgid "Error creating address book"
@@ -484,23 +476,19 @@ msgstr ""
 msgid "Error saving contact to backend"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:71
-msgid "Error getting user photo"
-msgstr ""
-
-#: lib/controller/contactphotocontroller.php:143
+#: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:204
+#: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:214
+#: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
 msgstr ""
 
-#: lib/controller/contactphotocontroller.php:218
+#: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
 msgstr ""
 
@@ -539,70 +527,70 @@ msgstr ""
 msgid "Contact ID missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:48
+#: lib/controller/importcontroller.php:50
 msgid "No file was uploaded. Unknown error"
 msgstr "কোন ফাইল আপলোড করা হয় নি। সমস্যার কারণটি অজ্ঞাত।"
 
-#: lib/controller/importcontroller.php:57
+#: lib/controller/importcontroller.php:59
 msgid "There is no error, the file uploaded with success"
 msgstr "কোন সমস্যা হয় নি, ফাইল আপলোড সুসম্পন্ন হয়েছে।"
 
-#: lib/controller/importcontroller.php:58
+#: lib/controller/importcontroller.php:60
 msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
 msgstr ""
 
-#: lib/controller/importcontroller.php:60
+#: lib/controller/importcontroller.php:62
 msgid ""
 "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
 "the HTML form"
 msgstr "আপলোড করা ফাইলটি  HTML  ফর্মে উল্লিখিত MAX_FILE_SIZE নির্ধারিত ফাইলের সর্বোচ্চ আকার  অতিক্রম করতে চলেছে "
 
-#: lib/controller/importcontroller.php:61
+#: lib/controller/importcontroller.php:63
 msgid "The uploaded file was only partially uploaded"
 msgstr "আপলোড করা ফাইলটি আংশিক আপলোড করা হয়েছে"
 
-#: lib/controller/importcontroller.php:62
+#: lib/controller/importcontroller.php:64
 msgid "No file was uploaded"
 msgstr "কোন ফাইল আপলোড করা হয় নি"
 
-#: lib/controller/importcontroller.php:63
+#: lib/controller/importcontroller.php:65
 msgid "Missing a temporary folder"
 msgstr "অস্থায়ী ফোল্ডারটি হারানো গিয়েছে"
 
-#: lib/controller/importcontroller.php:64
+#: lib/controller/importcontroller.php:66
 msgid "Failed to write to disk"
 msgstr "ডিস্কে লিখতে ব্যর্থ"
 
-#: lib/controller/importcontroller.php:75
+#: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
 msgstr ""
 
-#: lib/controller/importcontroller.php:83
+#: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
 msgstr ""
 
-#: lib/controller/importcontroller.php:103
+#: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
 msgstr ""
 
-#: lib/controller/importcontroller.php:148
+#: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
 msgstr ""
 
-#: lib/controller/importcontroller.php:167
+#: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
 msgstr ""
 
-#: lib/controller/importcontroller.php:175
+#: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:180
-#: lib/controller/importcontroller.php:307
+#: lib/controller/importcontroller.php:182
+#: lib/controller/importcontroller.php:320
 msgid "Progress key missing from request."
 msgstr ""
 
-#: lib/controller/importcontroller.php:186
+#: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
 msgstr ""
 
@@ -620,7 +608,7 @@ msgstr ""
 
 #: lib/searchprovider.php:37
 msgid "Contact"
-msgstr ""
+msgstr "পরিচিতজন"
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
 #: lib/utils/properties.php:178 lib/utils/properties.php:185
@@ -630,63 +618,63 @@ msgstr "অন্যান্য"
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
-msgstr ""
+msgstr "হোমপেজ"
 
 #: lib/utils/properties.php:71
 msgid "Jabber"
-msgstr ""
+msgstr "জ্যাবার"
 
 #: lib/utils/properties.php:76
 msgid "Internet call"
-msgstr ""
+msgstr "ইন্টারনেট কল"
 
 #: lib/utils/properties.php:81
 msgid "AIM"
-msgstr ""
+msgstr "এআইএম"
 
 #: lib/utils/properties.php:86
 msgid "MSN"
-msgstr ""
+msgstr "এমএসএন"
 
 #: lib/utils/properties.php:91
 msgid "Twitter"
-msgstr ""
+msgstr "টুইটার"
 
 #: lib/utils/properties.php:96
 msgid "GoogleTalk"
-msgstr ""
+msgstr "গুগল টক"
 
 #: lib/utils/properties.php:101
 msgid "Facebook"
-msgstr ""
+msgstr "ফেসবুক"
 
 #: lib/utils/properties.php:106
 msgid "XMPP"
-msgstr ""
+msgstr "এক্সএমপিপি"
 
 #: lib/utils/properties.php:111
 msgid "ICQ"
-msgstr ""
+msgstr "আইসিকিউ"
 
 #: lib/utils/properties.php:116
 msgid "Yahoo"
-msgstr ""
+msgstr "ইয়াহু"
 
 #: lib/utils/properties.php:121
 msgid "Skype"
-msgstr ""
+msgstr "স্কাইপি"
 
 #: lib/utils/properties.php:126
 msgid "QQ"
-msgstr ""
+msgstr "কিউকিউ"
 
 #: lib/utils/properties.php:131
 msgid "GaduGadu"
-msgstr ""
+msgstr "গাড়ুগাড়ু"
 
 #: lib/utils/properties.php:136
 msgid "ownCloud"
-msgstr ""
+msgstr "ওউনক্লাউড"
 
 #: lib/utils/properties.php:163 lib/utils/properties.php:171
 #: lib/utils/properties.php:182 lib/utils/properties.php:199
@@ -700,7 +688,7 @@ msgstr "নিবাস"
 
 #: lib/utils/properties.php:170
 msgid "Mobile"
-msgstr ""
+msgstr "মোবাইল"
 
 #: lib/utils/properties.php:172
 msgid "Text"
@@ -708,35 +696,35 @@ msgstr "টেক্সট"
 
 #: lib/utils/properties.php:173
 msgid "Voice"
-msgstr ""
+msgstr "কন্ঠ"
 
 #: lib/utils/properties.php:174
 msgid "Message"
-msgstr ""
+msgstr "বার্তা"
 
 #: lib/utils/properties.php:175
 msgid "Fax"
-msgstr ""
+msgstr "ফ্যাক্স"
 
 #: lib/utils/properties.php:176
 msgid "Video"
-msgstr ""
+msgstr "ভিডিও"
 
 #: lib/utils/properties.php:177
 msgid "Pager"
-msgstr ""
+msgstr "পেজার"
 
 #: lib/utils/properties.php:184
 msgid "Internet"
-msgstr ""
+msgstr "ইন্টারনেট"
 
 #: lib/utils/properties.php:197
 msgid "Friends"
-msgstr ""
+msgstr "বন্ধু"
 
 #: lib/utils/properties.php:198
 msgid "Family"
-msgstr ""
+msgstr "পরিবার"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
@@ -752,19 +740,19 @@ msgstr ""
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
-msgstr ""
+msgstr "নতুন ঠিকানা"
 
 #: templates/contacts.php:13
 msgid "Group name"
-msgstr ""
+msgstr "গ্রুপের নাম"
 
 #: templates/contacts.php:13
 msgid "New group"
-msgstr ""
+msgstr "নতুন গ্রুপ"
 
 #: templates/contacts.php:22
 msgid "Address books"
-msgstr ""
+msgstr "ঠিকানাপন্জী"
 
 #: templates/contacts.php:25 templates/contacts.php:74
 msgid "Display name"
@@ -829,7 +817,7 @@ msgstr "ইমেইল"
 #: templates/contacts.php:93 templates/contacts.php:331
 #: templates/contacts.php:364
 msgid "Phone"
-msgstr ""
+msgstr "ফোন"
 
 #: templates/contacts.php:94 templates/contacts.php:336
 #: templates/contacts.php:367
@@ -838,11 +826,11 @@ msgstr "ঠিকানা"
 
 #: templates/contacts.php:95
 msgid "Group"
-msgstr ""
+msgstr "গোষ্ঠীসমূহ"
 
 #: templates/contacts.php:103
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "কী-বোর্ড শর্টকাট"
 
 #: templates/contacts.php:105
 msgid "Navigation"
@@ -894,7 +882,9 @@ msgid ""
 msgstr ""
 
 #: templates/contacts.php:136
-msgid "Add a new contact or import existing contacts from a VCF file."
+msgid ""
+"Add a new contact or import existing contacts from a file (VCF, CSV or "
+"LDIF)."
 msgstr ""
 
 #: templates/contacts.php:187
@@ -927,32 +917,32 @@ msgstr ""
 
 #: templates/contacts.php:243
 msgid "Favorite"
-msgstr ""
+msgstr "প্রিয়জন"
 
 #: templates/contacts.php:246 templates/contacts.php:248
 #: templates/contacts.php:526 templates/contacts.php:529
 msgid "Name"
-msgstr "রাম"
+msgstr "নাম"
 
 #: templates/contacts.php:254
 msgid "First name"
-msgstr ""
+msgstr "নামের প্রথমাংশ "
 
 #: templates/contacts.php:258
 msgid "Additional names"
-msgstr ""
+msgstr "অতিরিক্ত নামসমূহ"
 
 #: templates/contacts.php:262
 msgid "Last name"
-msgstr ""
+msgstr "নামের শেষাংশ"
 
 #: templates/contacts.php:278
 msgid "Address book"
-msgstr ""
+msgstr "ঠিকানাপঞ্জী"
 
 #: templates/contacts.php:285 templates/contacts.php:362
 msgid "Nickname"
-msgstr ""
+msgstr "ছদ্মনাম"
 
 #: templates/contacts.php:295 templates/contacts.php:361
 msgid "Title"
@@ -960,7 +950,7 @@ msgstr "শিরোনাম"
 
 #: templates/contacts.php:305 templates/contacts.php:360
 msgid "Organization"
-msgstr ""
+msgstr "প্রতিষ্ঠান"
 
 #: templates/contacts.php:315 templates/contacts.php:363
 msgid "Birthday"
@@ -968,7 +958,7 @@ msgstr "জন্মদিন"
 
 #: templates/contacts.php:341
 msgid "Website"
-msgstr ""
+msgstr "ওয়েবসাইট"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
@@ -1026,7 +1016,7 @@ msgstr ""
 
 #: templates/contacts.php:446
 msgid "View on map"
-msgstr ""
+msgstr "মানচিত্রে দেখুন"
 
 #: templates/contacts.php:454
 msgid "Street address"
@@ -1038,19 +1028,19 @@ msgstr ""
 
 #: templates/contacts.php:460
 msgid "City"
-msgstr ""
+msgstr "শহর"
 
 #: templates/contacts.php:464
 msgid "State or province"
-msgstr ""
+msgstr "রাজ্য কিংবা প্রদেশ"
 
 #: templates/contacts.php:468
 msgid "Country"
-msgstr ""
+msgstr "দেশ"
 
 #: templates/contacts.php:495
 msgid "Instant Messenger"
-msgstr ""
+msgstr "তাৎক্ষণিক বার্তাবাহক"
 
 #: templates/contacts.php:508
 msgid "Active"
@@ -1090,7 +1080,7 @@ msgstr ""
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "অপরিচিত"
 
 #: templates/contacts.php:560
 msgid "Read-only"
@@ -1102,7 +1092,7 @@ msgstr ""
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
-msgstr ""
+msgstr "ব্যবহারকারি"
 
 #: templates/contacts.php:574 templates/contacts.php:577
 msgid "Password"

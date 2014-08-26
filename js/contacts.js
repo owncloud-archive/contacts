@@ -1332,7 +1332,9 @@ OC.Contacts = OC.Contacts || {};
 		$bdayinput.datepicker({
 			dateFormat : datepickerFormatDate,
 			changeMonth: true,
-			changeYear: true
+			changeYear: true,
+			minDate : new Date(1900,1,1),
+			maxDate : new Date()
 		});
 		$bdayinput.attr('placeholder', $.datepicker.formatDate(datepickerFormatDate, new Date()));
 
@@ -1450,7 +1452,7 @@ OC.Contacts = OC.Contacts || {};
 								}
 								else if(param.toUpperCase() === 'TYPE') {
 									for(var etype in property.parameters[param]) {
-										if(!property.parameters[param].hasOwnProperty(etype)) {
+										if(property.parameters[param].hasOwnProperty(etype)) {
 											var found = false;
 											var et = property.parameters[param][etype];
 											if(typeof et !== 'string') {
