@@ -87,6 +87,7 @@
 #app-navigation li.active[data-type="category"] > .utils > * {
 	display: inline-block;
 	float: left;
+	background-color: rgba(0,0,0,0);
 }
 #app-navigation li > .utils > .numcontacts {
 	padding-right: 5px;
@@ -865,26 +866,30 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	display: inline-block;
 }
 
+#file_upload_target {
+	display: none;
+}
+
 @media screen and (min-width: 1201px) {
-#contactlist tr td.categories { display: none; }
-#contactsHeader tr td.categories { display: none; }
+	#contactlist tr td.categories { display: none; }
+	#contactsHeader tr td.categories { display: none; }
 }
 @media screen and (max-width: 1200px) {
-#contactlist tr td.adr { display: none; }
-#contactsHeader tr td.adr { display: none; }
-.multiselect #contactsHeader { margin-left: 300px; padding-right: 300px; }
+	#contactlist tr td.adr { display: none; }
+	#contactsHeader tr td.adr { display: none; }
+	.multiselect #contactsHeader { margin-left: 300px; padding-right: 300px; }
 }
 @media screen and (max-width: 1000px) {
-#contactlist tr td.tel { display: none; }
-#contactsHeader tr td.tel { display: none; }
-.multiselect #contactsHeader { margin-left: 280px; padding-right: 280px; }
+	#contactlist tr td.tel { display: none; }
+	#contactsHeader tr td.tel { display: none; }
+	.multiselect #contactsHeader { margin-left: 280px; padding-right: 280px; }
 }
 @media screen and (max-width: 900px) {
-#contactsHeader .delete { display: none; }
+	#contactsHeader .delete { display: none; }
 }
 @media screen and (max-width: 800px) {
-#contactlist tr td.email { display: none; }
-#contactlist tr { width: 100%; }
-#contactsHeader tr td.email { display: none; }
-.multiselect #contactsHeader { margin-left: 250px; padding-right: 250px; }
+	#contactlist tr td.email { display: none; }
+	#contactlist tr { width: 100%; }
+	#contactsHeader tr td.email { display: none; }
+	.multiselect #contactsHeader { margin-left: 250px; padding-right: 250px; }
 }
