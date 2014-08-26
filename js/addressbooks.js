@@ -372,11 +372,11 @@ OC.Contacts = OC.Contacts || {};
 			self.addressBooks.splice(self.addressBooks.indexOf(addressBook), 1);
 		});
 		$('#oc-import-nocontact').unbind('click').click(function(event) {
-			console.log("triggered", event);
+			console.log('triggered', event);
 			self.importDialog();
 		});
 		$('#import-contacts').unbind('click').click(function() {
-			console.log("Import clicked");
+			console.log('Import clicked');
 			self.importDialog();
 		});
 	};
@@ -408,7 +408,7 @@ OC.Contacts = OC.Contacts || {};
 				self.openImportDialog();
 			}
 		});
-	}
+	};
 	
 	AddressBookList.prototype.openImportDialog = function() {
 		this.$importIntoSelect = $('#contacts-import-into');
@@ -445,7 +445,7 @@ OC.Contacts = OC.Contacts || {};
 		});
 		var $import_into = $('#contacts-import-into');
 		$import_into.change(function() {
-			if ($(this).val() != '-1') {
+			if ($(this).val() !== '-1') {
 				var url = OC.generateUrl(
 					'apps/contacts/addressbook/{backend}/{addressBookId}/{importType}/import/upload',
 					{
@@ -492,7 +492,7 @@ OC.Contacts = OC.Contacts || {};
 				console.log('status.contacts.error', response);
 			}
 		});
-	}
+	};
 
 	AddressBookList.prototype.count = function() {
 		return this.addressBooks.length;
