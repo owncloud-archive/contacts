@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-26 00:48-0400\n"
-"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"POT-Creation-Date: 2014-08-27 00:48-0400\n"
+"PO-Revision-Date: 2014-08-26 18:41+0000\n"
 "Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
@@ -268,7 +268,7 @@ msgstr ""
 
 #: js/groups.js:766
 msgid "Not grouped"
-msgstr ""
+msgstr "দলবদ্ধ নয়"
 
 #: js/groups.js:795
 msgid "Failed loading groups: {error}"
@@ -280,7 +280,7 @@ msgstr "ঠিকানাপঞ্জীটি নির্বাচন কর�
 
 #: js/loader.js:22 templates/contacts.php:41
 msgid "Import into..."
-msgstr ""
+msgstr "এখানে আমদানী কর....."
 
 #: js/loader.js:31
 msgid "Error loading import template"
@@ -288,7 +288,7 @@ msgstr ""
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "ঠিকানাপঞ্জী আমদানি"
 
 #: js/loader.js:61 templates/contacts.php:37
 msgid "Import"
@@ -296,11 +296,11 @@ msgstr "আমদানি"
 
 #: js/loader.js:68
 msgid "Importing..."
-msgstr ""
+msgstr "আমদানি হচ্ছে...."
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr ""
+msgstr "আমদানি সমাপ্ত"
 
 #: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
 #: templates/contacts.php:377
@@ -361,7 +361,7 @@ msgstr ""
 
 #: lib/app.php:156
 msgid "Address book not found"
-msgstr ""
+msgstr "কোন ঠিকানাপঞ্জী খুঁজে পাওয়া গেল না।"
 
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
@@ -850,15 +850,15 @@ msgstr ""
 
 #: templates/contacts.php:114
 msgid "Next addressbook"
-msgstr ""
+msgstr "পরবর্তী ঠিকানাবহি "
 
 #: templates/contacts.php:116
 msgid "Previous addressbook"
-msgstr ""
+msgstr "পূর্ববর্তী ঠিকানাবহি"
 
 #: templates/contacts.php:120
 msgid "Actions"
-msgstr ""
+msgstr "পদক্ষেপসমূহ"
 
 #: templates/contacts.php:123
 msgid "Refresh contacts list"
@@ -897,7 +897,7 @@ msgstr ""
 
 #: templates/contacts.php:210
 msgid "Compose mail"
-msgstr ""
+msgstr "মেইল লিখুন"
 
 #: templates/contacts.php:238
 msgid "Delete current photo"
@@ -982,13 +982,13 @@ msgstr "দ্রষ্টব্য"
 
 #: templates/contacts.php:369
 msgid "Web site"
-msgstr ""
+msgstr "ওয়েবসাইট"
 
 #: templates/contacts.php:393 templates/contacts.php:408
 #: templates/contacts.php:422 templates/contacts.php:437
 #: templates/contacts.php:479 templates/contacts.php:489
 msgid "Preferred"
-msgstr ""
+msgstr "পছন্দনীয়"
 
 #: templates/contacts.php:398
 msgid "Please specify a valid email address."
@@ -1012,7 +1012,7 @@ msgstr ""
 
 #: templates/contacts.php:429
 msgid "Go to web site"
-msgstr ""
+msgstr "ওয়েব সাইটে যাও "
 
 #: templates/contacts.php:446
 msgid "View on map"
@@ -1020,11 +1020,11 @@ msgstr "মানচিত্রে দেখুন"
 
 #: templates/contacts.php:454
 msgid "Street address"
-msgstr ""
+msgstr "সড়ক ঠিকানা"
 
 #: templates/contacts.php:458
 msgid "Postal code"
-msgstr ""
+msgstr "পোস্টাল কোড"
 
 #: templates/contacts.php:460
 msgid "City"
@@ -1056,7 +1056,7 @@ msgstr "রপ্তানি"
 
 #: templates/contacts.php:513
 msgid "CardDAV link"
-msgstr ""
+msgstr "CardDav লিংক"
 
 #: templates/contacts.php:514
 msgid "Edit"
@@ -1064,11 +1064,11 @@ msgstr "সম্পাদনা"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "ঠিকানাবহি URI"
 
 #: templates/contacts.php:536
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:540 templates/contacts.php:543
 msgid "Description"
@@ -1084,11 +1084,11 @@ msgstr "অপরিচিত"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "কেবলমাত্র পড়া"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "কেবলমাত্র পড়া"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
