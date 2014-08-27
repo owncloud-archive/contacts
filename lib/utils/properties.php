@@ -333,7 +333,6 @@ Class Properties {
 
 		 // Cache as base64 for around a month
 		$cache->set($key, strval($image), 3000000);
-		\OCP\Util::writeLog('contacts', 'Caching ' . $key, \OCP\Util::DEBUG);
 		return $cache->get($key);
 	}
 
