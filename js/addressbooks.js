@@ -382,8 +382,8 @@ OC.Contacts = OC.Contacts || {};
 	};
 	
 	AddressBookList.prototype.importDialog = function() {
-		var $rightContent = $('#app-content');
-		$rightContent.append('<div id="import-dialog"></div>');
+		var $parent = $('body');
+		$parent.append('<div id="import-dialog"></div>');
 		var $dlg = $('#contactsImportTemplate').clone().octemplate();
 		var $divDlg = $('#import-dialog');
 		var self = this;
@@ -391,7 +391,7 @@ OC.Contacts = OC.Contacts || {};
 			modal: true,
 			closeOnEscape: true,
 			title: t('contacts', 'Import contacts'),
-			height: '220',
+			height: 'auto',
 			width: 'auto',
 			buttons: [
 				{
