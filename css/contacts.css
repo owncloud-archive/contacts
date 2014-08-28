@@ -435,13 +435,8 @@ dt[data-element="org"] { margin-top: 4px; }
 
 /* Single elements */
 #file_upload_form { display:none; }
-#contacts-import-upload-start, .import-upload-button {
-    width: 30px !important; height: 30px !important;
-	display:block;
-	position: absolute;
-	right: 0; bottom: 0;
-	margin: 5px !important;
-	cursor: pointer;
+#import-dialog {
+	width: auto !important;
 }
 #contacts-import-upload-start {
 	cursor: pointer;
@@ -861,8 +856,8 @@ tbody tr.contact.active, tbody tr.contact:hover {
 }
 
 #contacts-import-div > p > label {
-	vertical-align:top;
-	width:200px;
+	vertical-align: baseline;
+	width:100px;
 	display: inline-block;
 }
 

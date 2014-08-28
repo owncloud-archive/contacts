@@ -395,9 +395,9 @@ OC.Contacts = OC.Contacts || {};
 			width: 'auto',
 			buttons: [
 				{
-					text: t('contacts', 'Close'),
+					text: t('contacts', 'Upload file...'),
 					click: function() {
-						$('#import-dialog').ocdialog('close').ocdialog('destroy').remove();
+						$('#contacts-import-upload-start').click();
 					}
 				}
 			],

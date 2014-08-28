@@ -518,9 +518,7 @@ use OCA\Contacts\ImportManager;
 		?>
 	</select>
 </p>
-<p id="contacts-import-upload">
-	<!--<label for="contacts-import-upload"><?php p($l->t('Select file')); ?></label>-->
-	<button class="icon-upload svg tooltipped import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
+<p id="contacts-import-upload" class="hidden">
 	<input id="contacts-import-upload-start" class="tooltipped" title="<?php p($l->t('Select file...')); ?>" type="file" name="file" disabled />
 </p>
 <p id="contacts-import-status">
