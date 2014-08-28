@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-27 00:48-0400\n"
-"PO-Revision-Date: 2014-08-26 18:41+0000\n"
+"POT-Creation-Date: 2014-08-28 00:48-0400\n"
+"PO-Revision-Date: 2014-08-27 19:00+0000\n"
 "Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
@@ -45,48 +45,48 @@ msgstr "ঠিকানাবই সম্পাদনা"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr ""
+msgstr "ফাইল আমদানী শুরু হচ্ছে"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "প্রকৃতি নির্বাচিত: {format}"
 
 #: js/addressbooks.js:407 js/addressbooks.js:435
 msgid "Automatic format detection"
-msgstr ""
+msgstr "স্বয়ংক্রিয় প্রকৃতি নির্ণয়ক"
 
 #: js/addressbooks.js:485
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "কার্ড প্রক্রিয়াকরণ {count}/{total} চলছে"
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "মোট:{total}, সার্থকতা:{imported}, ভ্রান্তি:{failed}"
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "ইতোমধ্যে {name} নামেেএকটি ঠিকানাবহি আছে"
 
 #: js/addressbooks.js:697 js/otherbackendconfig.js:141
 #: js/otherbackendconfig.js:200
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "ঠিকানাবহি যুক্তকরণ ব্যার্থ: {error}"
 
 #: js/addressbooks.js:738
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "ঠিকানাবহি চালুকরণ ব্যার্থ: {error}"
 
 #: js/admin.js:92 js/storage.js:27
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "সার্ভার ভ্রান্তি! দয়া করে প্রশাসককে অবহিত করুন"
 
 #: js/app.js:223
 msgid "Indexing contacts"
-msgstr ""
+msgstr "পরিচিতজনদের সাজানো হচ্ছে"
 
 #: js/app.js:233
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "ঠিকানাবহি চালুকরণে অফেরতযোগ্য ভ্রান্তি: {msg}"
 
 #: js/app.js:234
 msgid "Error."
