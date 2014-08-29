@@ -105,20 +105,6 @@ class App {
 			foreach (array_keys(self::$backendClasses) as $backendName) {
 				$backend = self::getBackend($backendName, $this->user);
 				$addressBooks = $backend->getAddressBooksForUser();
-				if ($backendName === 'local' && count($addressBooks) === 0) {
-					$id = $backend->createAddressBook(array('displayname' => self::$l10n->t('Contacts')));
-					if ($id !== false) {
-						$addressBook = $backend->getAddressBook($id);
-						$addressBooks = array($addressBook);
-					} else {
-						\OCP\Util::writeLog(
-							'contacts',
-							__METHOD__ . ', Error creating default address book',
-							\OCP\Util::ERROR
-						);
-					}
-
-				}
 
 				foreach ($addressBooks as $addressBook) {
 					$addressBook['backend'] = $backendName;

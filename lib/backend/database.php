@@ -117,6 +117,22 @@ class Database extends AbstractBackend {
 			$this->addressBooks[$row['id']] = $row;
 		}
 
+		// Create default address book if the list is empty
+		if (count($this->addressBooks) === 0) {
+			$l10n = \OCP\Util::getL10N('contacts');
+			$id = $this->createAddressBook(array('displayname' => $l10n->t('Contacts')));
+			if ($id !== false) {
+				$addressBook = $this->getAddressBook($id);
+				$this->addressBooks = array($addressBook);
+			} else {
+				\OCP\Util::writeLog(
+					'contacts',
+					__METHOD__ . ', Error creating default address book',
+					\OCP\Util::ERROR
+				);
+			}
+		}
+
 		return $this->addressBooks;
 	}
 
