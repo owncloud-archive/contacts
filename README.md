@@ -18,7 +18,7 @@ Build status
 - [Bart Visscher](https://github.com/bartv2)
  
 ###Original author:
- - Jacob Sack
+ - Jakob Sack
 
 Developer setup info:
 ---------------------
