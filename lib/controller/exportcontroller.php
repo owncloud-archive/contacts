@@ -79,7 +79,7 @@ class ExportController extends Controller {
 	 * @NoCSRFRequired
 	 */
 	public function exportSelected() {
-		$targets = $this->request['t'];
+		$targets = json_decode($this->request['t']);
 
 		$exports = '';
 		foreach($targets as $backend => $addressBooks) {
