@@ -596,7 +596,8 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
     left: 0;
     top: 44px;
-    margin-left: 330px; padding-right: 330px;
+    margin-left: 250px;
+    padding-right: 250px;
     position: fixed;
     z-index: 10;
 }

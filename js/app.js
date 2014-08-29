@@ -266,6 +266,7 @@ OC.notify = function(params) {
 				this.$contactListHeader.find('.'+act.join(',.')).css('display', '');
 			} else {
 				this.$contactListHeader.find('.actions').css('display', 'none');
+				this.$contactListHeader.find('.action').css('display', '');
 				this.$contactListHeader.find('.name').attr('colspan', '1');
 				this.$contactListHeader.find('.info').css('display', '');
 				this.$contactList.removeClass('multiselect');
