@@ -1175,7 +1175,7 @@ OC.notify = function(params) {
 						}
 						targets[contact.backend][contact.addressBookId].push(contact.contactId);
 					});
-					var url = OC.generateUrl('exportSelected', {t:targets});
+					var url = OC.generateUrl('apps/contacts/exportSelected', {t:targets});
 					//console.log('export url', url);
 					document.location.href = url;
 				};
