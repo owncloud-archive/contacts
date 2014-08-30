@@ -54,7 +54,6 @@
 "Contacts are not in this group." => "Οι επαφές δεν είναι σε αυτήν την ομάδα.",
 "A group named \"{group}\" already exists" => "Μια ομάδα με το όνομα \"{group}\" υπάρχει ήδη",
 "Failed renaming group: {error}" => "Σφάλμα μετονομασίας της ομάδας: {error}",
-"You can drag groups to\narrange them as you like." => "Μπορείτε να σύρετε τις ομάδες για να\nτις τακτοποιήσετε όπως θέλετε.",
 "Failed adding group: {error}" => "Σφάλμα προσθήκης της ομάδας: {error}",
 "All" => "Όλες",
 "Favorites" => "Αγαπημένες",

@@ -54,7 +54,6 @@
 "Contacts are not in this group." => "Kontakte sind nicht in dieser Gruppe.",
 "A group named \"{group}\" already exists" => "Eine Gruppe namens \"{group}\" existiert bereits",
 "Failed renaming group: {error}" => "Fehler beim Umbenennen einer Gruppe: {error}",
-"You can drag groups to\narrange them as you like." => "Per \"Drag & Drop\" kannst Du Gruppen\nnach Deinen Wünschen anordnen.",
 "Failed adding group: {error}" => "Fehler beim Hinzufügen einer Gruppe: {error}",
 "All" => "Alle",
 "Favorites" => "Favoriten",

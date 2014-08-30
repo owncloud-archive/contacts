@@ -53,7 +53,6 @@
 "Contacts are not in this group." => "联系人都不在此分组中。",
 "A group named \"{group}\" already exists" => "名为“{group}”的组已经存在",
 "Failed renaming group: {error}" => "重命名分组失败：{error}",
-"You can drag groups to\narrange them as you like." => "您可以通过拖拽分组的方式来按您喜欢的方式摆放他们。",
 "Failed adding group: {error}" => "增加分组失败：{error}",
 "All" => "全部",
 "Favorites" => "收藏",

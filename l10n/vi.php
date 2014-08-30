@@ -39,7 +39,6 @@
 "Contact is not in this group." => "Không có Liên hệ trong nhóm này",
 "Contacts are not in this group." => "Thông tin liên lạc không có trong nhóm",
 "Failed renaming group: {error}" => "Đổi tên nhóm thất bại : {error}",
-"You can drag groups to\narrange them as you like." => "Bạn có thể kéo nhóm\nĐể sắp xếp như ý b.",
 "Failed adding group: {error}" => "Không thêm được nh: {error}",
 "All" => "Tất cả",
 "Favorites" => "Ưa thích",

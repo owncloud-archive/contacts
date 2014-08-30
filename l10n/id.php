@@ -44,7 +44,6 @@
 "Contacts are not in this group." => "Kontak tidak di dalam grup ini.",
 "A group named \"{group}\" already exists" => "Sebuah kelompok bernama \"{group}\" sudah ada",
 "Failed renaming group: {error}" => "Gagal menamai grup: {error}",
-"You can drag groups to\narrange them as you like." => "Anda bisa seret grup untuk\nmenyusunnya seperti yang Anda inginkan.",
 "Failed adding group: {error}" => "Gagal menambahkan grup: {error}",
 "All" => "Semua",
 "Favorites" => "Favorit",

@@ -54,7 +54,6 @@
 "Contacts are not in this group." => "Kontaktene er ikke med i denne gruppen.",
 "A group named \"{group}\" already exists" => "Det finnes allerede en gruppe med navnet \"{group}\"",
 "Failed renaming group: {error}" => "Omdøping av gruppe feilet: {error}",
-"You can drag groups to\narrange them as you like." => "Du kan dra og slippe grupper for\nordne dem slik du ønsker.",
 "Failed adding group: {error}" => "Innlegging av gruppe feilet: {error}",
 "All" => "Alle",
 "Favorites" => "Favoritter",

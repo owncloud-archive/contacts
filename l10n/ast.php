@@ -54,7 +54,6 @@
 "Contacts are not in this group." => "Los contautos nun s'alcuentren nesti grupu.",
 "A group named \"{group}\" already exists" => "Yá esiste un grupu denomáu \"{group}\"",
 "Failed renaming group: {error}" => "Fallu renomando'l grupu: {error}",
-"You can drag groups to\narrange them as you like." => "Pue arrastrar grupos pa\nallugalos como quieras.",
 "Failed adding group: {error}" => "Fallu amestando'l grupu: {error}",
 "All" => "Toos",
 "Favorites" => "Favoritos",

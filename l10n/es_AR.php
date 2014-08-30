@@ -42,7 +42,6 @@
 "Contact is not in this group." => "El contacto no está en este grupo.",
 "Contacts are not in this group." => "Los contactos no están en este grupo.",
 "Failed renaming group: {error}" => "Error al renombrar el grupo: {error}",
-"You can drag groups to\narrange them as you like." => "Podés arrastrar grupos para\nordenarlos como quieras",
 "Failed adding group: {error}" => "Error agregando el grupo: {error}",
 "All" => "Todos",
 "Favorites" => "Favoritos",
