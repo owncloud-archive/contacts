@@ -18,6 +18,7 @@
 "Close" => "Bağla",
 "Unknown error" => "Bəlli olmayan səhv baş verdi",
 "Delete" => "Sil",
+"Groups" => "Qruplar",
 "Download" => "Yüklə",
 "Address" => "Ünvan",
 "Name" => "Ad",

@@ -267,5 +267,6 @@
 "Base DN for modification" => "Výchozí DN pro změnu",
 "Base DN modification" => "Základní DN změny",
 "Connector" => "Konektor",
+"Connector value (Better use external editor and copy/paste)" => "Hodnota připojení (lepší využít externí editor a zkopírovat/vložit)",
 "Copy from (Warning, replaces current custom value)" => "Zkopírovat z (Varování, nahradí současnou hodnotu)"
 );
