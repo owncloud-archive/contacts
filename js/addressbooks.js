@@ -426,6 +426,7 @@ OC.Contacts = OC.Contacts || {};
 				$('.import-status').show();
 				me.$importProgress.fadeIn();
 				me.$importStatusText.text(t('contacts', 'Starting file import'));
+				$('.oc-dialog-buttonrow button, #contacts-import-into-p, #contacts-import-format-p').hide();
 			},
 			done: function (e, data) {
 				if (me.$importFormatSelect.find('option:selected').val() != 'automatic') {
@@ -441,6 +442,7 @@ OC.Contacts = OC.Contacts || {};
 				console.log('fail', data);
 				OC.notify({message:data.errorThrown + ': ' + data.textStatus});
 				$('.import-status').hide();
+				$('.oc-dialog-buttonrow button, #contacts-import-into-p, #contacts-import-format-p').show();
 			}
 		});
 		var $import_into = $('#contacts-import-into');
@@ -580,7 +582,7 @@ OC.Contacts = OC.Contacts || {};
 				if(!response.error) {
 					console.log('Import done');
 					$('#contacts-import-upload').hide();
-					self.$importStatusText.text(t('contacts', 'Total:{total}, Success:{imported}, Errors:{failed}',
+					self.$importStatusText.text(t('contacts', 'Total: {total}, Success: {imported}, Errors: {failed}',
 													  {total: response.data.total, imported:response.data.imported, failed: response.data.failed}));
 					self.$importProgress.progressbar('option', 'max', response.data.total);
 					self.$importProgress.progressbar('value', response.data.total);
