@@ -123,7 +123,7 @@ class Database extends AbstractBackend {
 			$id = $this->createAddressBook(array('displayname' => $l10n->t('Contacts')));
 			if ($id !== false) {
 				$addressBook = $this->getAddressBook($id);
-				$this->addressBooks = array($addressBook);
+				$this->addressBooks[$id] = $addressBook;
 			} else {
 				\OCP\Util::writeLog(
 					'contacts',
@@ -466,7 +466,7 @@ class Database extends AbstractBackend {
 			}
 
 		}
-		
+
 		return $cards;
 	}
 
@@ -1052,5 +1052,5 @@ class Database extends AbstractBackend {
 	public function getSearchProvider($addressbook) {
 		return new \OCA\Contacts\AddressbookProvider($addressbook);
 	}
-	
+
 }
