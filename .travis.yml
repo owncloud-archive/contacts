@@ -10,8 +10,7 @@ branches:
 
 env:
     - DB=sqlite
-
-#  - DB=mysql
+    - DB=mysql
 #  - DB=pgsql
 
 before_install:
