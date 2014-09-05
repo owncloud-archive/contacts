@@ -36,7 +36,7 @@ class GroupController extends Controller {
 
 		foreach ($tags as &$tag) {
 			try {
-				$ids = $this->tags->getIdsForTag($tag['name']);
+				$ids = $this->tags->getIdsForTag($tag['id']);
 				$tag['contacts'] = $ids;
 				$tag['displayname'] = $this->displayName($tag);
 			} catch(\Exception $e) {
@@ -162,6 +162,14 @@ class GroupController extends Controller {
 			return $response;
 		}
 
+		$tag = $this->tags->getTag($from);
+
+		if (!$tag) {
+			$response->bailOut(App::$l10n->t('Error renaming group.'));
+			return $response;
+		}
+
+		$response->setParams(array('displayname'=>$this->displayName($tag)));
 		$ids = $this->tags->getIdsForTag($to);
 
 		if ($ids !== false) {

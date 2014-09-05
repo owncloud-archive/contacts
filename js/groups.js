@@ -127,8 +127,8 @@ OC.Contacts = OC.Contacts || {};
 	 * @param string name
 	 * @return bool
 	 */
-	GroupList.prototype.hasGroup = function(name) {
-		return (this.findByName(name) !== null);
+	GroupList.prototype.hasGroup = function(name, owner) {
+		return (this.findByName(name, owner) !== null);
 	};
 
 	/**
@@ -150,12 +150,19 @@ OC.Contacts = OC.Contacts || {};
 	 * @param string name. The name of the group to search for (case-insensitive).
 	 * @returns object|null The jQuery object.
 	 */
-	GroupList.prototype.findByName = function(name) {
+	GroupList.prototype.findByName = function(name, owner) {
 		var $elem = null;
 		this.$groupList.find('li[data-type="category"]').each(function() {
 			if ($(this).data('rawname').toLowerCase() === name.toLowerCase()) {
-				$elem = $(this);
-				return false; //break out of loop
+				if (typeof owner === 'undefined') {
+					$elem = $(this);
+					return false; //break out of loop
+				} else {
+					if ($(this).data('owner') === owner) {
+						$elem = $(this);
+						return false; //break out of loop
+					}
+				}
 			}
 		});
 		return $elem;
@@ -507,6 +514,7 @@ OC.Contacts = OC.Contacts || {};
 		var self = this;
 		var oldname = $element.data('rawname');
 		var id = $element.data('id');
+		var owner = $element.data('owner');
 
 		var $editInput = $('<input type="text" />').val(oldname);
 		$element.hide();
@@ -519,7 +527,7 @@ OC.Contacts = OC.Contacts || {};
 			addText: t('contacts', 'Save'),
 			ok: function(event, newname) {
 				console.log('New name', newname);
-				if(self.hasGroup(newname)) {
+				if(self.hasGroup(newname, owner)) {
 					$(document).trigger('status.contacts.error', {
 						error: true,
 						message: t('contacts', 'A group named "{group}" already exists', {group: escapeHTML(newname)})
@@ -539,7 +547,7 @@ OC.Contacts = OC.Contacts || {};
 							contacts: $element.data('contacts')
 						});
 						$element.data('rawname', newname);
-						$element.find('.name').text(escapeHTML(newname));
+						$element.find('.name').text(escapeHTML(response.data.displayname));
 					}
 					$editInput.removeClass('loading');
 				});
@@ -566,7 +574,7 @@ OC.Contacts = OC.Contacts || {};
 	 */
 	GroupList.prototype.renameGroup = function(from, to, cb) {
 		$.when(this.storage.renameGroup(from, to)).then(function(response) {
-			cb({error:false});
+			cb({data:response.data});
 		})
 		.fail(function(response) {
 			console.log('Request Failed:', response);
@@ -600,7 +608,7 @@ OC.Contacts = OC.Contacts || {};
 		var name = params.name;
 		var contacts = []; // $.map(contacts, function(c) {return parseInt(c)});
 		var self = this;
-		if(this.hasGroup(name)) {
+		if(this.hasGroup(name, OC.currentUser)) {
 			if(typeof cb === 'function') {
 				cb({error:true, message:t('contacts', 'A group named "{group}" already exists', {group: escapeHTML(name)})});
 			}
@@ -713,11 +721,13 @@ OC.Contacts = OC.Contacts || {};
 							id: category.id,
 							type: 'category',
 							num: contacts.length,
-							name: category.name
+							name: category.displayname
 						});
 						self.categories.push({id: category.id, name: category.name});
 						$elem.data('obj', self);
 						$elem.data('rawname', category.name);
+						$elem.data('displayname', category.displayname);
+						$elem.data('owner', category.owner);
 						$elem.data('id', category.id);
 						$elem.droppable({
 										drop: self.contactDropped,
