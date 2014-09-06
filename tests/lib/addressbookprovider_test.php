@@ -51,6 +51,7 @@ class AddressBookProviderTest extends \PHPUnit_Framework_TestCase {
 		$card->add('FN', 'Max Mustermann');
 		$id = $this->ab->addChild($card);
 		Utils\Properties::updateIndex($id, $card);
+		$this->contactIds[] = $id;
 
 		// Add extra contact
 		$card = \Sabre\VObject\Component::create('VCARD');
@@ -61,13 +62,14 @@ class AddressBookProviderTest extends \PHPUnit_Framework_TestCase {
 		Utils\Properties::updateIndex($id, $card);
 		$this->ab->deleteChild($id);
 
-		$this->contactIds[] = $id;
 
 	}
 
 	public function tearDown() {
 		unset($this->backend);
 		unset($this->ab);
+//		var_dump($this->contactIds);
+//		die();
 		Utils\Properties::purgeIndexes($this->contactIds);
 	}
 
