@@ -68,8 +68,6 @@ class AddressBookProviderTest extends \PHPUnit_Framework_TestCase {
 	public function tearDown() {
 		unset($this->backend);
 		unset($this->ab);
-//		var_dump($this->contactIds);
-//		die();
 		Utils\Properties::purgeIndexes($this->contactIds);
 	}
 
