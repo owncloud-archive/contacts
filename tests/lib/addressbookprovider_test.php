@@ -52,6 +52,15 @@ class AddressBookProviderTest extends \PHPUnit_Framework_TestCase {
 		$id = $this->ab->addChild($card);
 		Utils\Properties::updateIndex($id, $card);
 
+		// Add extra contact
+		$card = \Sabre\VObject\Component::create('VCARD');
+		$uid = substr(md5(rand().time()), 0, 10);
+		$card->add('UID', $uid);
+		$card->add('FN', 'Jan Janssens');
+		$id = $this->ab->addChild($card);
+		Utils\Properties::updateIndex($id, $card);
+		$this->ab->deleteChild($id);
+
 		$this->contactIds[] = $id;
 
 	}
