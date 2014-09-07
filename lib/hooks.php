@@ -190,20 +190,19 @@ class Hooks{
 
 		foreach ($addressBookInfos as $addressBookInfo) {
 			$addressBook = new AddressBook($backend, $addressBookInfo);
-			while ($contacts = $addressBook->getChildren($limit, $offset, false)) {
-				\OCP\Util::writeLog('contacts',
-					__METHOD__ . ', indexing: ' . $limit . ' starting from ' . $offset,
-					\OCP\Util::DEBUG);
-				foreach ($contacts as $contact) {
-					if(!$contact->retrieve()) {
-						\OCP\Util::writeLog('contacts',
-							__METHOD__ . ', Error loading contact ' .print_r($contact, true),
-							\OCP\Util::DEBUG);
-					}
-					Utils\Properties::updateIndex($contact->getId(), $contact);
+			$contacts = $addressBook->getChildren($limit, $offset, false);
+			\OCP\Util::writeLog('contacts',
+				__METHOD__ . ', indexing: ' . $limit . ' starting from ' . $offset,
+				\OCP\Util::DEBUG);
+			foreach ($contacts as $contact) {
+				if(!$contact->retrieve()) {
+					\OCP\Util::writeLog('contacts',
+						__METHOD__ . ', Error loading contact ' .print_r($contact, true),
+						\OCP\Util::DEBUG);
 				}
-				$offset += $limit;
+				Utils\Properties::updateIndex($contact->getId(), $contact);
 			}
+			$offset += $limit;
 		}
 	}
 
