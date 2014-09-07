@@ -13,6 +13,7 @@
 "Indexing contacts" => "Əlaqələr indekslənir",
 "Error." => "Səhv.",
 "Remove from..." => "Sil budan...",
+"OK" => "Oldu",
 "Add" => "Əlavə etmək",
 "Import" => "Əlavə et",
 "Close" => "Bağla",
