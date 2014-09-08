@@ -83,22 +83,24 @@ class GroupController extends Controller {
 	 * @NoAdminRequired
 	 */
 	public function deleteGroup() {
+		$id = $this->request->post['id'];
 		$name = $this->request->post['name'];
 
 		$response = new JSONResponse();
-		if (is_null($name) || $name === '') {
-			$response->bailOut(App::$l10n->t('No group name given.'));
+		if (is_null($id) || $id === '') {
+			$response->bailOut(App::$l10n->t('No group ID given.'));
 			return $response;
 		}
 
 		try {
-			$ids = $this->tags->getIdsForTag($name);
+			$ids = $this->tags->getIdsForTag($id);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
 			return $response;
 		}
 
+		$tagId = $id;
 		if ($ids !== false) {
 
 			$backend = $this->app->getBackend('local');
@@ -128,12 +130,11 @@ class GroupController extends Controller {
 		}
 
 		try {
-			$this->tags->delete($name);
+			$this->tags->delete($tagId);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
 		}
-
 		return $response;
 	}
 
