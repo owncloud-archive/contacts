@@ -475,7 +475,7 @@ OC.Contacts = OC.Contacts || {};
 		var contacts = $elem.data('contacts');
 		var self = this;
 		console.log('delete group', $elem, groupid, contacts);
-		$.when(this.storage.deleteGroup(name)).then(function(response) {
+		$.when(this.storage.deleteGroup(groupid, name)).then(function(response) {
 			if (!response.error) {
 				$.each(self.categories, function(idx, category) {
 					if(category.id === groupid) {
