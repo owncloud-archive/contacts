@@ -266,6 +266,7 @@ OC.notify = function(params) {
 				this.$contactListHeader.find('.'+act.join(',.')).css('display', '');
 			} else {
 				this.$contactListHeader.find('.actions').css('display', 'none');
+				this.$contactListHeader.find('.action').css('display', '');
 				this.$contactListHeader.find('.name').attr('colspan', '1');
 				this.$contactListHeader.find('.info').css('display', '');
 				this.$contactList.removeClass('multiselect');
@@ -1174,7 +1175,8 @@ OC.notify = function(params) {
 						}
 						targets[contact.backend][contact.addressBookId].push(contact.contactId);
 					});
-					var url = OC.generateUrl('exportSelected', {t:targets});
+					targets = JSON.stringify(targets);
+					var url = OC.generateUrl('apps/contacts/exportSelected?t={t}', {t:targets});
 					//console.log('export url', url);
 					document.location.href = url;
 				};

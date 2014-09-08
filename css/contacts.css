@@ -596,7 +596,8 @@ fieldset.adr ul li input.label { margin-top: -4px !important; }
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
     left: 0;
     top: 44px;
-    margin-left: 330px; padding-right: 330px;
+    margin-left: 250px;
+    padding-right: 250px;
     position: fixed;
     z-index: 10;
 }
@@ -856,19 +857,18 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	}
 }
 
-@media screen and (min-width: 1201px) {
+/* Hide some columns on smaller screens */
+@media screen and (max-width: 1400px) {
 	#contactlist tr td.categories { display: none; }
 	#contactsHeader tr td.categories { display: none; }
 }
 @media screen and (max-width: 1200px) {
 	#contactlist tr td.adr { display: none; }
 	#contactsHeader tr td.adr { display: none; }
-	.multiselect #contactsHeader { margin-left: 300px; padding-right: 300px; }
 }
 @media screen and (max-width: 1000px) {
 	#contactlist tr td.tel { display: none; }
 	#contactsHeader tr td.tel { display: none; }
-	.multiselect #contactsHeader { margin-left: 280px; padding-right: 280px; }
 }
 @media screen and (max-width: 900px) {
 	#contactsHeader .delete { display: none; }
@@ -877,5 +877,4 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	#contactlist tr td.email { display: none; }
 	#contactlist tr { width: 100%; }
 	#contactsHeader tr td.email { display: none; }
-	.multiselect #contactsHeader { margin-left: 250px; padding-right: 250px; }
 }
