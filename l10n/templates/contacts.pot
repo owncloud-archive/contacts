@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud contacts 5.0.0\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-07 00:48-0400\n"
+"POT-Creation-Date: 2014-09-09 00:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
+#: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1392 js/app.js:1445
 #: templates/contacts.php:372 templates/contacts.php:373
 msgid "Cancel"
 msgstr ""
@@ -91,93 +91,93 @@ msgstr ""
 msgid "Error."
 msgstr ""
 
-#: js/app.js:329 js/app.js:343
+#: js/app.js:330 js/app.js:344
 msgid "Add to..."
 msgstr ""
 
-#: js/app.js:333 js/app.js:345
+#: js/app.js:334 js/app.js:346
 msgid "Remove from..."
 msgstr ""
 
-#: js/app.js:350
+#: js/app.js:351
 msgid "Add group..."
 msgstr ""
 
-#: js/app.js:478
+#: js/app.js:479
 msgid "Invalid URL: \"{url}\""
 msgstr ""
 
-#: js/app.js:504
+#: js/app.js:505
 msgid "Invalid email: \"{url}\""
 msgstr ""
 
-#: js/app.js:587
+#: js/app.js:588
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr ""
 
-#: js/app.js:600
+#: js/app.js:601
 msgid "Merge failed."
 msgstr ""
 
-#: js/app.js:607
+#: js/app.js:608
 msgid "Merge failed. Error saving contact."
 msgstr ""
 
-#: js/app.js:627
+#: js/app.js:628
 msgid "Select photo"
 msgstr ""
 
-#: js/app.js:710 js/app.js:1686
+#: js/app.js:711 js/app.js:1688
 msgid "Network or server error. Please inform administrator."
 msgstr ""
 
-#: js/app.js:794
+#: js/app.js:795
 msgid "Only images can be used as contact photos"
 msgstr ""
 
-#: js/app.js:803
+#: js/app.js:804
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
 msgstr ""
 
-#: js/app.js:972
+#: js/app.js:973
 msgid "Error adding to group."
 msgstr ""
 
-#: js/app.js:995
+#: js/app.js:996
 msgid "Error removing from group."
 msgstr ""
 
-#: js/app.js:1188
+#: js/app.js:1190
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr ""
 
-#: js/app.js:1226
+#: js/app.js:1228
 msgid "Error setting {name} as favorite."
 msgstr ""
 
-#: js/app.js:1364 js/app.js:1368 templates/contacts.php:186
+#: js/app.js:1366 js/app.js:1370 templates/contacts.php:186
 msgid "Merge contacts"
 msgstr ""
 
-#: js/app.js:1417 templates/contacts.php:167
+#: js/app.js:1419 templates/contacts.php:167
 msgid "Add group"
 msgstr ""
 
-#: js/app.js:1421
+#: js/app.js:1423
 msgid "OK"
 msgstr ""
 
-#: js/app.js:1528
+#: js/app.js:1530
 msgid "Could not find contact: {id}"
 msgstr ""
 
-#: js/app.js:1641
+#: js/app.js:1643
 msgid "Edit profile picture"
 msgstr ""
 
-#: js/app.js:1645
+#: js/app.js:1647
 msgid "Crop photo"
 msgstr ""
 
