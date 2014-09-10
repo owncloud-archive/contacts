@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-03 00:48-0400\n"
-"PO-Revision-Date: 2014-09-02 05:21+0000\n"
+"POT-Creation-Date: 2014-09-10 00:48-0400\n"
+"PO-Revision-Date: 2014-09-09 09:12+0000\n"
 "Last-Translator: Petr Šťastný <petr@stastny.eu>\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "Přidat nový LDAP adresář kontaktů"
 msgid "Ok"
 msgstr "Ok"
 
-#: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
+#: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1392 js/app.js:1445
 #: templates/contacts.php:372 templates/contacts.php:373
 msgid "Cancel"
 msgstr "Zrušit"
@@ -103,93 +103,93 @@ msgstr "Neodstranitelná chyba při načítání adresářů kontaktů: {msg}"
 msgid "Error."
 msgstr "Chyba."
 
-#: js/app.js:329 js/app.js:343
+#: js/app.js:330 js/app.js:344
 msgid "Add to..."
 msgstr "Přidat do..."
 
-#: js/app.js:333 js/app.js:345
+#: js/app.js:334 js/app.js:346
 msgid "Remove from..."
 msgstr "Odebrat z..."
 
-#: js/app.js:350
+#: js/app.js:351
 msgid "Add group..."
 msgstr "Přidat skupinu..."
 
-#: js/app.js:478
+#: js/app.js:479
 msgid "Invalid URL: \"{url}\""
 msgstr "Neplatná URL: \"{url}\""
 
-#: js/app.js:504
+#: js/app.js:505
 msgid "Invalid email: \"{url}\""
 msgstr "Neplatný e-mail: \"{url}\""
 
-#: js/app.js:587
+#: js/app.js:588
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Sloučení selhalo. Nelze nalézt kontakt: {id}"
 
-#: js/app.js:600
+#: js/app.js:601
 msgid "Merge failed."
 msgstr "Sloučení selhalo."
 
-#: js/app.js:607
+#: js/app.js:608
 msgid "Merge failed. Error saving contact."
 msgstr "Sloučení selhalo. Chyba při ukládání kontaktu."
 
-#: js/app.js:627
+#: js/app.js:628
 msgid "Select photo"
 msgstr "Vybrat fotku"
 
-#: js/app.js:710 js/app.js:1686
+#: js/app.js:711 js/app.js:1688
 msgid "Network or server error. Please inform administrator."
 msgstr "Chyba sítě či serveru. Kontaktujte prosím správce."
 
-#: js/app.js:794
+#: js/app.js:795
 msgid "Only images can be used as contact photos"
 msgstr "Pouze obrázky lze použít jako fotografii u kontaktu"
 
-#: js/app.js:803
+#: js/app.js:804
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
 msgstr "Velikost \"{filename}\" překračuje maximální povolenou {size}"
 
-#: js/app.js:972
+#: js/app.js:973
 msgid "Error adding to group."
 msgstr "Chyba při přidávání do skupiny"
 
-#: js/app.js:995
+#: js/app.js:996
 msgid "Error removing from group."
 msgstr "Chyba při odebírání ze skupiny"
 
-#: js/app.js:1188
+#: js/app.js:1190
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Je označeno více než 300 kontaktů.\nToto pravděpodobně selže. Klikněte zde, pokud chcete přesto pokračovat."
 
-#: js/app.js:1226
+#: js/app.js:1228
 msgid "Error setting {name} as favorite."
 msgstr "Chyba při nastavování {name} jako oblíbený."
 
-#: js/app.js:1364 js/app.js:1368 templates/contacts.php:186
+#: js/app.js:1366 js/app.js:1370 templates/contacts.php:186
 msgid "Merge contacts"
 msgstr "Sloučit kontakty"
 
-#: js/app.js:1417 templates/contacts.php:167
+#: js/app.js:1419 templates/contacts.php:167
 msgid "Add group"
 msgstr "Přidat skupinu"
 
-#: js/app.js:1421
+#: js/app.js:1423
 msgid "OK"
 msgstr "OK"
 
-#: js/app.js:1528
+#: js/app.js:1530
 msgid "Could not find contact: {id}"
 msgstr "Nelze nalézt kontakt: {id}"
 
-#: js/app.js:1641
+#: js/app.js:1643
 msgid "Edit profile picture"
 msgstr "Upravit obrázek profilu"
 
-#: js/app.js:1645
+#: js/app.js:1647
 msgid "Crop photo"
 msgstr "Oříznout fotku"
 
