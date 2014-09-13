@@ -42,3 +42,11 @@ if (version_compare($installedVersion, '0.3.0.14', '==')) {
 	$stmt = OCP\DB::prepare('DELETE FROM `*PREFIX*contacts_ocu_cards_properties`');
 	$result = $stmt->execute(array());
 }
+
+if(version_compare($installedVersion, '0.3.0.18', '<')){
+	$stmt = OCP\DB::prepare('DELETE FROM `*PREFIX*contacts_cards_properties`
+							WHERE NOT EXISTS(SELECT NULL
+                    		FROM `*PREFIX*contacts_cards`
+                   			WHERE `*PREFIX*contacts_cards`.id = `*PREFIX*contacts_cards_properties`.contactid)');
+	$result = $stmt->execute(array());
+}
