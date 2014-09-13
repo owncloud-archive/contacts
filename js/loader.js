@@ -4,13 +4,13 @@
  * later.
  * See the COPYING-README file.
  */
-OC.ContactsImporter = OC.ContactsImporter || {
+/*OC.ContactsImporter = OC.ContactsImporter || {
 	init:function(fileName) {
 		var self = OC.ContactsImporter;
 		self.path = $('#dir').val();
 		self.fileName = fileName;
 		console.log('fileName', self.path, self.fileName);
-		/*OC.addScript('contacts', 'addressbooks', function() {
+		OC.addScript('contacts', 'addressbooks', function() {
 			OC.addScript('contacts', 'storage', function() {
 				$.when(self._getTemplate()).then(function($tmpl) {
 					self.$template = $tmpl;
@@ -37,7 +37,7 @@ OC.ContactsImporter = OC.ContactsImporter || {
 		})
 		.fail(function(jqxhr, settings, exception) {
 			console.warn('Error loading address book backend', jqxhr, settings, exception);
-		});*/
+		});
 	},
 	showDialog:function() {
 		var self = this;
@@ -125,7 +125,7 @@ OC.ContactsImporter = OC.ContactsImporter || {
 		}
 		return defer.promise();
 	}
-};
+};*/
 
 $(document).ready(function(){
 
@@ -140,11 +140,11 @@ $(document).ready(function(){
 		//OC.notify({message:data.message});
 	});
 
-	if(typeof FileActions !== 'undefined'){
+	/*if(typeof FileActions !== 'undefined'){
 		FileActions.register('text/vcard','importaddressbook', OC.PERMISSION_READ, '', OC.ContactsImporter.init);
 		FileActions.setDefault('text/vcard','importaddressbook');
 		FileActions.register('text/x-vcard','importaddressbook', OC.PERMISSION_READ, '', OC.ContactsImporter.init);
 		FileActions.setDefault('text/x-vcard','importaddressbook');
-	}
+	}*/
 	
 });
