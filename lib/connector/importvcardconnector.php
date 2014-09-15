@@ -45,7 +45,10 @@ class ImportVCardConnector extends ImportConnector{
 		
 		$elements = array();
 		foreach($parts as $part) {
-			$elements[] = $this->convertElementToVCard($part);
+			$converted = $this->convertElementToVCard($part);
+			if ($converted) {
+				$elements[] = $converted;
+			}
 		}
 		
 		return array_values($elements);
@@ -100,10 +103,14 @@ class ImportVCardConnector extends ImportConnector{
 	/**
 	 * @brief converts a VCard into a owncloud VCard
 	 * @param $element the VCard element to convert
-	 * @return VCard
+	 * @return VCard|false
 	 */
 	public function convertElementToVCard($element) {
-		$source = VObject\Reader::read($element);
+		try {
+			$source = VObject\Reader::read($element, VObject\Reader::OPTION_FORGIVING);
+		} catch (VObject\ParseException $error) {
+			return false;
+		}
 		$dest = \Sabre\VObject\Component::create('VCARD');
 		
 		foreach ($source->children() as $sourceProperty) {

@@ -34,29 +34,8 @@ use OCA\Contacts\ImportManager;
 					?>
 				</div>
 				<div id="import">
-				<h2 data-id="import" tabindex="0" role="button"><?php p($l->t('Import')); ?></h2>
-					<ul>
-						<li class="import-upload">
-							<select id="import_into">
-								<option value="-1"><?php p($l->t('Import into...')); ?></option>
-							</select>
-							<select id="import_format">
-								<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
-								<?php
-								$importManager = new ImportManager();
-								$types = $importManager->getTypes();
-								foreach ($types as $id => $label) {
-									echo "<option value=\"$id\">$label</option>";
-								}
-								?>
-							</select>
-							<button class="icon-upload svg tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
-							<input id="import_upload_start" class="tooltipped rightwards" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
-						</li>
-						<li class="import-status">
-							<label id="import-status-text"></label>
-							<div id="import-status-progress"></div>
-						</li>
+					<ul class="oc-addnew">
+						<li id="import-contacts"><a class="oc-addnew-init"><?php p($l->t('Import')); ?></a></li>
 					</ul>
 				</div>
 			</div> <!-- app-settings-content -->
@@ -136,6 +115,7 @@ use OCA\Contacts\ImportManager;
 				<p><?php p($l->t('Add a new contact or import existing contacts from a file (VCF, CSV or LDIF).')); ?></p>
 				<div id="selections">
 					<input type="button" class="add-contact text" value="<?php p($l->t('New contact')) ?>">
+					<input type="button" id="oc-import-nocontact" value="<?php p($l->t('Import contacts')); ?>">
 				</div>
 			</div>
 		</div>
@@ -515,6 +495,39 @@ use OCA\Contacts\ImportManager;
 		<a title="<?php p($l->t('Delete')); ?>" class="icon-delete delete action"></a>
 	</span>
 </li>
+</script>
+
+<script id="contactsImportTemplate" class="hidden" type="text/template">
+<div id="contacts-import-div" class="contacts-import-class">
+<p id="contacts-import-into-p">
+	<label for="contacts-import-into"><?php p($l->t('Addresbook')); ?></label>
+	<select id="contacts-import-into">
+		<option value="-1"><?php p($l->t('Import into...')); ?></option>
+	</select>
+</p>
+<p id="contacts-import-format-p">
+	<label for="contacts-import-into"><?php p($l->t('Format')); ?></label>
+	<select id="contacts-import-format">
+		<option value="automatic"><?php p($l->t('Automatic format')); ?></option>
+		<?php
+		$importManager = new ImportManager();
+		$types = $importManager->getTypes();
+		foreach ($types as $id => $label) {
+			echo "<option value=\"$id\">$label</option>";
+		}
+		?>
+	</select>
+</p>
+<p id="contacts-import-upload" class="hidden">
+	<input id="contacts-import-upload-start" class="tooltipped" title="<?php p($l->t('Select file...')); ?>" type="file" name="file" disabled />
+</p>
+<p id="contacts-import-status">
+	<div class="import-status">
+		<label id="import-status-text"></label>
+		<div id="import-status-progress"></div>
+	</div>
+</p>
+</div>
 </script>
 
 <script id="addressBookConfigTemplate" class="hidden" type="text/template">
