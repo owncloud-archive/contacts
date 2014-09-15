@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-26 00:48-0400\n"
-"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"POT-Creation-Date: 2014-09-03 00:48-0400\n"
+"PO-Revision-Date: 2014-09-02 05:22+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Norwegian Nynorsk (Norway) (http://www.transifex.com/projects/p/owncloud/language/nn_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,11 @@ msgstr ""
 
 #: appinfo/app.php:38 lib/app.php:109 templates/admin.php:16
 msgid "Contacts"
-msgstr "Kotaktar"
+msgstr "Kontaktar"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Legg til ny LDAP-adressebok"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -155,7 +155,7 @@ msgstr "Klarte ikkje fjerna frå gruppe."
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "Du har valt over 300 kontaktar.\nDette vil mest sannsynleg gå gale! Klikk her for å prøva likevel."
 
 #: js/app.js:1226
 msgid "Error setting {name} as favorite."
@@ -199,7 +199,7 @@ msgstr ""
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Dette bakstykket støttar ikkje multi-byte-teikn."
 
 #: js/contacts.js:2234
 msgid ""
@@ -247,33 +247,27 @@ msgstr ""
 msgid "Failed renaming group: {error}"
 msgstr ""
 
-#: js/groups.js:646
-msgid ""
-"You can drag groups to\n"
-"arrange them as you like."
-msgstr ""
-
-#: js/groups.js:659
+#: js/groups.js:657
 msgid "Failed adding group: {error}"
 msgstr ""
 
-#: js/groups.js:672
+#: js/groups.js:670
 msgid "All"
 msgstr "Alle"
 
-#: js/groups.js:687 js/groups.js:690
+#: js/groups.js:685 js/groups.js:688
 msgid "Favorites"
 msgstr ""
 
-#: js/groups.js:751
+#: js/groups.js:749
 msgid "Shared by {owner}"
 msgstr "Delt av {owner}"
 
-#: js/groups.js:766
+#: js/groups.js:764
 msgid "Not grouped"
 msgstr ""
 
-#: js/groups.js:795
+#: js/groups.js:793
 msgid "Failed loading groups: {error}"
 msgstr ""
 
@@ -348,7 +342,7 @@ msgstr ""
 
 #: lib/addressbook.php:374
 msgid "Unknown error"
-msgstr ""
+msgstr "Ukjend feil"
 
 #: lib/addressbook.php:415
 msgid "Access denied"
@@ -364,7 +358,7 @@ msgstr ""
 
 #: lib/app.php:156
 msgid "Address book not found"
-msgstr ""
+msgstr "Fann ikkje adresseboka"
 
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
@@ -645,11 +639,11 @@ msgstr ""
 
 #: lib/utils/properties.php:96
 msgid "GoogleTalk"
-msgstr ""
+msgstr "GoogleTalk"
 
 #: lib/utils/properties.php:101
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: lib/utils/properties.php:106
 msgid "XMPP"
@@ -665,7 +659,7 @@ msgstr ""
 
 #: lib/utils/properties.php:121
 msgid "Skype"
-msgstr ""
+msgstr "Skype"
 
 #: lib/utils/properties.php:126
 msgid "QQ"
@@ -731,11 +725,11 @@ msgstr "Familie"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Skru på LDAP-bakstykke"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Skru på LDAP-bakstykke for kontaktprogrammet"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
@@ -755,7 +749,7 @@ msgstr ""
 
 #: templates/contacts.php:22
 msgid "Address books"
-msgstr ""
+msgstr "Adressebøker"
 
 #: templates/contacts.php:25 templates/contacts.php:74
 msgid "Display name"
@@ -763,11 +757,11 @@ msgstr ""
 
 #: templates/contacts.php:25
 msgid "Add Address Book"
-msgstr ""
+msgstr "Legg til adressebok"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Legg til LDAP-adressebok"
 
 #: templates/contacts.php:44
 msgid "Automatic format"
@@ -833,7 +827,7 @@ msgstr "Gruppe"
 
 #: templates/contacts.php:103
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Tastatursnarvegar"
 
 #: templates/contacts.php:105
 msgid "Navigation"
@@ -853,11 +847,11 @@ msgstr ""
 
 #: templates/contacts.php:114
 msgid "Next addressbook"
-msgstr ""
+msgstr "Neste adressebok"
 
 #: templates/contacts.php:116
 msgid "Previous addressbook"
-msgstr ""
+msgstr "Førre adressebok"
 
 #: templates/contacts.php:120
 msgid "Actions"
@@ -873,7 +867,7 @@ msgstr ""
 
 #: templates/contacts.php:127
 msgid "Add new addressbook"
-msgstr ""
+msgstr "Legg til ny adressebok"
 
 #: templates/contacts.php:129
 msgid "Delete current contact"
@@ -941,7 +935,7 @@ msgstr ""
 
 #: templates/contacts.php:278
 msgid "Address book"
-msgstr ""
+msgstr "Adressebok"
 
 #: templates/contacts.php:285 templates/contacts.php:362
 msgid "Nickname"
@@ -1059,7 +1053,7 @@ msgstr "Eksporter"
 
 #: templates/contacts.php:513
 msgid "CardDAV link"
-msgstr ""
+msgstr "CardDAV-lenkje"
 
 #: templates/contacts.php:514
 msgid "Edit"
@@ -1067,7 +1061,7 @@ msgstr "Endra"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "Adressebok-URI"
 
 #: templates/contacts.php:536
 msgid "URI"

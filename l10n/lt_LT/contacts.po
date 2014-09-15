@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-26 00:48-0400\n"
-"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"POT-Creation-Date: 2014-09-03 00:48-0400\n"
+"PO-Revision-Date: 2014-09-02 05:22+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Lithuanian (Lithuania) (http://www.transifex.com/projects/p/owncloud/language/lt_LT/)\n"
 "MIME-Version: 1.0\n"
@@ -251,33 +251,27 @@ msgstr "Grupė pavadinimu „{group}“ jau egzistuoja"
 msgid "Failed renaming group: {error}"
 msgstr "Nepavyko pervadinti grupės: {error}"
 
-#: js/groups.js:646
-msgid ""
-"You can drag groups to\n"
-"arrange them as you like."
-msgstr "Galite tempti grupes, kad\nišrikiuoti jas kaip Jums reikia."
-
-#: js/groups.js:659
+#: js/groups.js:657
 msgid "Failed adding group: {error}"
 msgstr "Nepavyko pridėti grupės: {error}"
 
-#: js/groups.js:672
+#: js/groups.js:670
 msgid "All"
 msgstr "Viskas"
 
-#: js/groups.js:687 js/groups.js:690
+#: js/groups.js:685 js/groups.js:688
 msgid "Favorites"
 msgstr "Mėgstamiausi"
 
-#: js/groups.js:751
+#: js/groups.js:749
 msgid "Shared by {owner}"
 msgstr "Bendrina {owner}"
 
-#: js/groups.js:766
+#: js/groups.js:764
 msgid "Not grouped"
 msgstr "Nesugrupuotas"
 
-#: js/groups.js:795
+#: js/groups.js:793
 msgid "Failed loading groups: {error}"
 msgstr "Nepavyko įkelti grupių: {error}"
 

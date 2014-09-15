@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-26 00:48-0400\n"
-"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"POT-Creation-Date: 2014-09-03 00:48-0400\n"
+"PO-Revision-Date: 2014-09-02 05:21+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/owncloud/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -262,33 +262,27 @@ msgstr ""
 msgid "Failed renaming group: {error}"
 msgstr "그룹 이름 변경 오류: {error}"
 
-#: js/groups.js:646
-msgid ""
-"You can drag groups to\n"
-"arrange them as you like."
-msgstr "그룹을 드래그하여\n순서를 변경할 수 있습니다."
-
-#: js/groups.js:659
+#: js/groups.js:657
 msgid "Failed adding group: {error}"
 msgstr "그룹 추가 오류: {error}"
 
-#: js/groups.js:672
+#: js/groups.js:670
 msgid "All"
 msgstr "모두"
 
-#: js/groups.js:687 js/groups.js:690
+#: js/groups.js:685 js/groups.js:688
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-#: js/groups.js:751
+#: js/groups.js:749
 msgid "Shared by {owner}"
 msgstr "{owner} 님이 공유함"
 
-#: js/groups.js:766
+#: js/groups.js:764
 msgid "Not grouped"
 msgstr "그룹에 없음"
 
-#: js/groups.js:795
+#: js/groups.js:793
 msgid "Failed loading groups: {error}"
 msgstr "그룹 불러오기 오류: {error}"
 

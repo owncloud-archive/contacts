@@ -39,7 +39,7 @@ class GroupController extends Controller {
 				$ids = $this->tags->getIdsForTag($tag['name']);
 				$tag['contacts'] = $ids;
 			} catch(\Exception $e) {
-				$this->api->log(__METHOD__ . ' ' . $e->getMessage());
+				\OCP\Util::writeLog('contacts', __METHOD__ . ', ' . $e->getMessage(), \OCP\Util::ERROR);
 			}
 		}
 
@@ -258,7 +258,7 @@ class GroupController extends Controller {
 		$response = new JSONResponse();
 		$params = $this->request->urlParams;
 		$categoryId = $params['categoryId'];
-		$categoryname = $this->request->post['name'];
+		$categoryName = $this->request->post['name'];
 		$ids = $this->request->post['contactIds'];
 		//$response->debug('request: '.print_r($this->request->post, true));
 
@@ -305,7 +305,7 @@ class GroupController extends Controller {
 					return $response;
 				}
 
-				if ($obj->removeFromGroup($categoryname)) {
+				if ($obj->removeFromGroup($categoryName)) {
 					$backend->updateContact(null, $contactId, $obj, array('noCollection' => true));
 				}
 

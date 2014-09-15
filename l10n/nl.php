@@ -54,7 +54,6 @@
 "Contacts are not in this group." => "De contactpersonen bevinden zich niet in deze groep",
 "A group named \"{group}\" already exists" => "Er bestaat al een groep met de naam \"{group}\"",
 "Failed renaming group: {error}" => "Mislukt: hernoemen van groep: {error}",
-"You can drag groups to\narrange them as you like." => "U kunt groepen slepen\nom ze naar wens te rangschikken.",
 "Failed adding group: {error}" => "Mislukt: toevoegen groep: {error}",
 "All" => "Alle",
 "Favorites" => "Favorieten",

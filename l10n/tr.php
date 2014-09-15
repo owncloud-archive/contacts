@@ -54,7 +54,6 @@
 "Contacts are not in this group." => "Kişiler bu grupta değiller.",
 "A group named \"{group}\" already exists" => "\"{group}\" isimli bir grup zaten mevcut",
 "Failed renaming group: {error}" => "Grup adını değiştirme başarısız: {error}",
-"You can drag groups to\narrange them as you like." => "Grupları sürükleyerek\nistediğiniz gibi düzenleyebilirsiniz.",
 "Failed adding group: {error}" => "Grup ekleme başarısız: {error}",
 "All" => "Tümü",
 "Favorites" => "Sık Kullanılanlar",

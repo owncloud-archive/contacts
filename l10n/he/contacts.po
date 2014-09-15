@@ -5,14 +5,15 @@
 # Translators:
 # Gilad Naaman <gilad.doom@gmail.com>, 2012
 # idop <ido.parag@gmail.com>, 2012
+# duvdevan <the_noam@yahoo.com>, 2014
 # Tomer Cohen <tomerc+transifex.net@gmail.com>, 2011
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2012-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-26 00:48-0400\n"
-"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"POT-Creation-Date: 2014-09-03 00:48-0400\n"
+"PO-Revision-Date: 2014-09-02 05:22+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/owncloud/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +28,7 @@ msgstr "אנשי קשר"
 
 #: js/addressbooks.js:85
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "הוספת ספר כתובות LDAP חדש"
 
 #: js/addressbooks.js:90 js/addressbooks.js:166
 msgid "Ok"
@@ -48,11 +49,11 @@ msgstr "עריכת פנקס הכתובות"
 
 #: js/addressbooks.js:400
 msgid "Starting file import"
-msgstr ""
+msgstr "מתחיל יבוא קובץ"
 
 #: js/addressbooks.js:404 js/addressbooks.js:432
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "עיצוב נבחר: {format}"
 
 #: js/addressbooks.js:407 js/addressbooks.js:435
 msgid "Automatic format detection"
@@ -64,110 +65,110 @@ msgstr ""
 
 #: js/addressbooks.js:509
 msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr ""
+msgstr "סך הכול:{total}, יובאו בהצלחה:{imported}, שגיאות:{failed}"
 
 #: js/addressbooks.js:663
 msgid "An address book called {name} already exists"
-msgstr ""
+msgstr "ספר כתובות בשם {name} כבר קיים"
 
 #: js/addressbooks.js:697 js/otherbackendconfig.js:141
 #: js/otherbackendconfig.js:200
 msgid "Failed adding address book: {error}"
-msgstr ""
+msgstr "הוספת ספר כתובות נכשלה: {error}"
 
 #: js/addressbooks.js:738
 msgid "Failed loading address books: {error}"
-msgstr ""
+msgstr "טעינת ספרי כתובות נכשלה: {error}"
 
 #: js/admin.js:92 js/storage.js:27
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "שגיאת שרת! יש להודיע למנהל המערכת"
 
 #: js/app.js:223
 msgid "Indexing contacts"
-msgstr ""
+msgstr "הכנת מפתח לרשימת כתובות"
 
 #: js/app.js:233
 msgid "Unrecoverable error loading address books: {msg}"
-msgstr ""
+msgstr "שגיאה שלא ניתנת לתיקון בזמן טעינת ספרי כתובות: {msg}"
 
 #: js/app.js:234
 msgid "Error."
-msgstr ""
+msgstr "שגיאה."
 
 #: js/app.js:329 js/app.js:343
 msgid "Add to..."
-msgstr ""
+msgstr "הוספה אל..."
 
 #: js/app.js:333 js/app.js:345
 msgid "Remove from..."
-msgstr ""
+msgstr "הסרה מ-..."
 
 #: js/app.js:350
 msgid "Add group..."
-msgstr ""
+msgstr "הוספת קבוצה..."
 
 #: js/app.js:478
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "קישור לא חוקי: \"{url}\""
 
 #: js/app.js:504
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "כתובת דואר אלקטרוני שגויה: \"{url}\""
 
 #: js/app.js:587
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "שגיאת מיזוג. לא ניתן למצוא איש קשר: {id}"
 
 #: js/app.js:600
 msgid "Merge failed."
-msgstr ""
+msgstr "מיזוג נכשל."
 
 #: js/app.js:607
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "מיזוג נכשל. שגיאה בשמירת איש קשר"
 
 #: js/app.js:627
 msgid "Select photo"
-msgstr ""
+msgstr "בחירת תמונה"
 
 #: js/app.js:710 js/app.js:1686
 msgid "Network or server error. Please inform administrator."
-msgstr ""
+msgstr "שגיאת רשת או שרת. יש להודיע למנהל."
 
 #: js/app.js:794
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "רק קבצי תמונה יכולים להוות כתמונות איש קשר"
 
 #: js/app.js:803
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "גודל \"{filename}\" עולה על המקסימום המותר {size}"
 
 #: js/app.js:972
 msgid "Error adding to group."
-msgstr ""
+msgstr "שגיאה בזמן הוספה לקבוצה."
 
 #: js/app.js:995
 msgid "Error removing from group."
-msgstr ""
+msgstr "שגיאה בזמן הסרה מקבוצה."
 
 #: js/app.js:1188
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "בחרת יותר מ- 300 אנשי קשר.\nככל הנראה התהליך ייכשל! יש ללחוץ כאן לניסיון בכל זאת."
 
 #: js/app.js:1226
 msgid "Error setting {name} as favorite."
-msgstr ""
+msgstr "שגיאה בזמן הוספה למועדפים של {name}."
 
 #: js/app.js:1364 js/app.js:1368 templates/contacts.php:186
 msgid "Merge contacts"
-msgstr ""
+msgstr "מיזוג אנשי קשר"
 
 #: js/app.js:1417 templates/contacts.php:167
 msgid "Add group"
-msgstr ""
+msgstr "הוספת קבוצה"
 
 #: js/app.js:1421
 msgid "OK"
@@ -175,45 +176,45 @@ msgstr "אישור"
 
 #: js/app.js:1528
 msgid "Could not find contact: {id}"
-msgstr ""
+msgstr "לא ניתן למצוא איש קשר: {id}"
 
 #: js/app.js:1641
 msgid "Edit profile picture"
-msgstr ""
+msgstr "עריכת תמונת פרופיל"
 
 #: js/app.js:1645
 msgid "Crop photo"
-msgstr ""
+msgstr "חיתוך תמונה"
 
 #: js/contacts.js:904
 msgid "Error parsing date: {date}"
-msgstr ""
+msgstr "שגיאה בזמן ניתוח תאריך: {date}"
 
 #: js/contacts.js:1102
 msgid "# groups"
-msgstr ""
+msgstr "# קבוצות"
 
 #: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "שגיאה בזמן ניתוח תאריך יום הולדת {bday}"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "הצד האחורי אינו תומך תווי multi-byte"
 
 #: js/contacts.js:2234
 msgid ""
 "Some contacts are marked for deletion, but not deleted yet. Please wait for "
 "them to be deleted."
-msgstr ""
+msgstr "קיימים אנשי קשר שסומנו למחיקה אך עדיין לא נמחקו. יש להמתין למחיקתם."
 
 #: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
-msgstr ""
+msgstr "יש ללחוץ לביטול המחיקה של אנשי הקשר {num}"
 
 #: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "ביטול מחיקת אנשי הקשר {num}"
 
 #: js/groups.js:53
 msgid "Add"
@@ -221,61 +222,55 @@ msgstr "הוספה"
 
 #: js/groups.js:264
 msgid "Contact is already in this group."
-msgstr ""
+msgstr "איש הקשר כבר קיים בקבוצה"
 
 #: js/groups.js:277
 msgid "Contacts are already in this group."
-msgstr ""
+msgstr "אנשי הקשר כבר קיימים בקבוצה."
 
 #: js/groups.js:343
 msgid "Couldn't get contact list."
-msgstr ""
+msgstr "לא ניתן לקבל את רשימת אנשי הקשר."
 
 #: js/groups.js:354
 msgid "Contact is not in this group."
-msgstr ""
+msgstr "איש הקשר אינו בקבוצה."
 
 #: js/groups.js:368
 msgid "Contacts are not in this group."
-msgstr ""
+msgstr "אנשי הקשר אינם בקבוצה."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "קבוצה בשם \"{group}\" כבר קיימת"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
-msgstr ""
+msgstr "שגיאה בזמן שינוי שם הקבוצה: {error}"
 
-#: js/groups.js:646
-msgid ""
-"You can drag groups to\n"
-"arrange them as you like."
-msgstr ""
-
-#: js/groups.js:659
+#: js/groups.js:657
 msgid "Failed adding group: {error}"
-msgstr ""
+msgstr "שגיאה בזמן הוספת קבוצה: {error}"
 
-#: js/groups.js:672
+#: js/groups.js:670
 msgid "All"
 msgstr "הכל"
 
-#: js/groups.js:687 js/groups.js:690
+#: js/groups.js:685 js/groups.js:688
 msgid "Favorites"
-msgstr ""
+msgstr "מועדפים"
 
-#: js/groups.js:751
+#: js/groups.js:749
 msgid "Shared by {owner}"
 msgstr "שותף בידי {owner}"
 
-#: js/groups.js:766
+#: js/groups.js:764
 msgid "Not grouped"
-msgstr ""
+msgstr "לא שויך לקבוצה"
 
-#: js/groups.js:795
+#: js/groups.js:793
 msgid "Failed loading groups: {error}"
-msgstr ""
+msgstr "שגיאה בזמן טעינת הקבוצות: {error}"
 
 #: js/loader.js:21
 msgid "Please choose the addressbook"
@@ -283,15 +278,15 @@ msgstr "אנא בחר ספר כתובות"
 
 #: js/loader.js:22 templates/contacts.php:41
 msgid "Import into..."
-msgstr ""
+msgstr "מידע יבוא..."
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "שגיאה בטעינה תבנית יבוא"
 
 #: js/loader.js:48
 msgid "Import contacts"
-msgstr ""
+msgstr "יבוא אנשי קשר"
 
 #: js/loader.js:61 templates/contacts.php:37
 msgid "Import"
@@ -299,11 +294,11 @@ msgstr "יבוא"
 
 #: js/loader.js:68
 msgid "Importing..."
-msgstr ""
+msgstr "מייבא..."
 
 #: js/loader.js:92
 msgid "Import done"
-msgstr ""
+msgstr "יבוא הסתיים"
 
 #: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
 #: templates/contacts.php:377
@@ -312,39 +307,39 @@ msgstr "סגירה"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "שגיאה, חסרים פרמטרים:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
-msgstr ""
+msgstr "שגיאה בזמן טעינת תמונה: {error}"
 
 #: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
-msgstr ""
+msgstr "אין לך הרשאות לצפייה באיש קשר זה"
 
 #: lib/addressbook.php:182
 msgid "Contact not found"
-msgstr ""
+msgstr "איש קשר לא נמצא"
 
 #: lib/addressbook.php:219
 msgid "You do not have permissions to see these contacts"
-msgstr ""
+msgstr "אין לך הרשאות לצפות באנשי קשר אלו"
 
 #: lib/addressbook.php:252
 msgid "You do not have permissions add contacts to the address book"
-msgstr ""
+msgstr "אין לך הרשאות להוסיף אנשי קשר לספר הכתובות"
 
 #: lib/addressbook.php:259
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "הצד האחורי של ספר כתובות זה אינו תומך בהוספת אנשי קשר"
 
 #: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
-msgstr ""
+msgstr "אין לך הרשאות למחוק איש קשר זה"
 
 #: lib/addressbook.php:311 lib/addressbook.php:351
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "הצד האחורי של ספר כתובות זה אינו תומך במחיקת אנשי קשר"
 
 #: lib/addressbook.php:374
 msgid "Unknown error"
@@ -352,43 +347,43 @@ msgstr "שגיאה בלתי ידועה"
 
 #: lib/addressbook.php:415
 msgid "Access denied"
-msgstr ""
+msgstr "גישה נדחתה"
 
 #: lib/addressbook.php:422
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "הצד האחורי של ספר כתובות זה אינו תומך בעדכון"
 
 #: lib/addressbook.php:453
 msgid "You don't have permissions to delete the address book."
-msgstr ""
+msgstr "אין לך הרשאות למחיקת ספר הכתובות."
 
 #: lib/app.php:156
 msgid "Address book not found"
-msgstr ""
+msgstr "ספר כתובות לא נמצא"
 
 #: lib/contact.php:269
 msgid "You do not have permissions to update this contact"
-msgstr ""
+msgstr "אין לך הרשאות לעדכון איש קשר זה"
 
 #: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "הצד האחורי של ספר כתובות זה אינו תומך בעדכון שלו"
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr ""
+msgstr "הצד האחורי אינו תומך בהוספת אנשי קשר"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
-msgstr ""
+msgstr "תכונה לא אותרה"
 
 #: lib/contact.php:530
 msgid " Missing IM parameter for: "
-msgstr ""
+msgstr "חסר פרמטר IM עבור:"
 
 #: lib/contact.php:538
 msgid "Unknown IM: "
-msgstr ""
+msgstr "IM לא ידוע:"
 
 #: lib/contact.php:815
 msgid "{name}'s Birthday"
@@ -396,56 +391,56 @@ msgstr "יום ההולדת של {name}"
 
 #: lib/controller/addressbookcontroller.php:174
 msgid "Error creating address book"
-msgstr ""
+msgstr "שגיאה בזמן יצירת ספר כתובות"
 
 #: lib/controller/addressbookcontroller.php:206
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "הצד האחורי של \"%s\" אינו תומך במחיקת ספרי כתובות"
 
 #: lib/controller/addressbookcontroller.php:214
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "אין לך הרשאות למחיקת ספר הכתובות \"%s\""
 
 #: lib/controller/addressbookcontroller.php:221
 msgid "Error deleting address book"
-msgstr ""
+msgstr "שגיאה בזמן מחיקת ספר הכתובות"
 
 #: lib/controller/addressbookcontroller.php:261
 msgid "Error creating contact."
-msgstr ""
+msgstr "שגיאה בזמן יצירת איש קשר."
 
 #: lib/controller/addressbookcontroller.php:270
 msgid "Error creating contact"
-msgstr ""
+msgstr "שגיאה בזמן יצירת איש קשר"
 
 #: lib/controller/addressbookcontroller.php:302
 msgid "Error deleting contact"
-msgstr ""
+msgstr "שגיאה בזמן מחיקת איש קשר"
 
 #: lib/controller/addressbookcontroller.php:342
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "שגיאה בזמן העלאת איש קשר"
 
 #: lib/controller/addressbookcontroller.php:353
 msgid "Error saving contact"
-msgstr ""
+msgstr "שגיאה בזמן שמירת איש קשר"
 
 #: lib/controller/addressbookcontroller.php:359
 msgid "Error removing contact from other address book."
-msgstr ""
+msgstr "שגיאה בזמן הסרת איש קשר מספר הכתובות."
 
 #: lib/controller/addressbookcontroller.php:366
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "שגיאה בזמן העברת איש קשר"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
 #: lib/controller/contactcontroller.php:97
 #: lib/controller/exportcontroller.php:67
 msgid "Couldn't find contact."
-msgstr ""
+msgstr "לא ניתן למצוא את איש הקשר."
 
 #: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
@@ -453,11 +448,11 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
-msgstr ""
+msgstr "שגיאה בזמן מיזוג לתוך איש קשר."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
-msgstr ""
+msgstr "שגיאה בזמן שמירה למסד הנתונים."
 
 #: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
@@ -473,11 +468,11 @@ msgstr "המידע אודות vCard אינו נכון. נא לטעון מחדש 
 
 #: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
-msgstr ""
+msgstr "שגיאה בזמן עדכון איש קשר"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "שגיאה בזמן שמירת איש קשר למסד הנתונים"
 
 #: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
@@ -485,7 +480,7 @@ msgstr "כתובת התמונה לא נשלחה"
 
 #: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "שגיאה בזמן טעינת תמונה מזיכרון המטמון"
 
 #: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
@@ -497,11 +492,11 @@ msgstr "שגיאה בשמירת איש הקשר"
 
 #: lib/controller/groupcontroller.php:68 lib/controller/groupcontroller.php:90
 msgid "No group name given."
-msgstr ""
+msgstr "לא הוגדר שם קבוצה."
 
 #: lib/controller/groupcontroller.php:74
 msgid "Error adding group."
-msgstr ""
+msgstr "שגיאה בזמן הוספת קבוצה."
 
 #: lib/controller/groupcontroller.php:150
 msgid "No group name to rename from given."
@@ -513,7 +508,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:160
 msgid "Error renaming group."
-msgstr ""
+msgstr "שגיאה בזמן שינוי שם קבוצה."
 
 #: lib/controller/groupcontroller.php:210
 #: lib/controller/groupcontroller.php:267
@@ -570,7 +565,7 @@ msgstr "אין די שטח פנוי באחסון"
 
 #: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "ניסיון להעלות קובץ מהרשימה השחורה:"
 
 #: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
@@ -621,7 +616,7 @@ msgstr "אחר"
 
 #: lib/utils/jsonserializer.php:114
 msgid "HomePage"
-msgstr ""
+msgstr "דף בית"
 
 #: lib/utils/properties.php:71
 msgid "Jabber"
@@ -629,7 +624,7 @@ msgstr ""
 
 #: lib/utils/properties.php:76
 msgid "Internet call"
-msgstr ""
+msgstr "שיחת אינטרנט"
 
 #: lib/utils/properties.php:81
 msgid "AIM"
@@ -641,7 +636,7 @@ msgstr ""
 
 #: lib/utils/properties.php:91
 msgid "Twitter"
-msgstr ""
+msgstr "טוויטר"
 
 #: lib/utils/properties.php:96
 msgid "GoogleTalk"
@@ -649,7 +644,7 @@ msgstr ""
 
 #: lib/utils/properties.php:101
 msgid "Facebook"
-msgstr ""
+msgstr "פייסבוק"
 
 #: lib/utils/properties.php:106
 msgid "XMPP"
@@ -661,11 +656,11 @@ msgstr ""
 
 #: lib/utils/properties.php:116
 msgid "Yahoo"
-msgstr ""
+msgstr "יאהו"
 
 #: lib/utils/properties.php:121
 msgid "Skype"
-msgstr ""
+msgstr "סקייפ"
 
 #: lib/utils/properties.php:126
 msgid "QQ"
@@ -743,27 +738,27 @@ msgstr ""
 
 #: templates/contacts.php:9 templates/contacts.php:138
 msgid "New contact"
-msgstr ""
+msgstr "איש קשר חדש"
 
 #: templates/contacts.php:13
 msgid "Group name"
-msgstr ""
+msgstr "שם קבוצה"
 
 #: templates/contacts.php:13
 msgid "New group"
-msgstr ""
+msgstr "הוספת קבוצה"
 
 #: templates/contacts.php:22
 msgid "Address books"
-msgstr ""
+msgstr "ספרי כתובות"
 
 #: templates/contacts.php:25 templates/contacts.php:74
 msgid "Display name"
-msgstr ""
+msgstr "שם תצוגה"
 
 #: templates/contacts.php:25
 msgid "Add Address Book"
-msgstr ""
+msgstr "הוספת ספר כתובות"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
@@ -775,23 +770,23 @@ msgstr ""
 
 #: templates/contacts.php:53 templates/contacts.php:54
 msgid "Select file..."
-msgstr ""
+msgstr "בחירת קובץ..."
 
 #: templates/contacts.php:71
 msgid "(De-)select all"
-msgstr ""
+msgstr "(De-)בחירת הכול"
 
 #: templates/contacts.php:73
 msgid "Sort order"
-msgstr ""
+msgstr "סדר מיון"
 
 #: templates/contacts.php:75
 msgid "First- Lastname"
-msgstr ""
+msgstr "שם פרטי, שם משפחה"
 
 #: templates/contacts.php:76
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "שם משפחה, שם פרטי"
 
 #: templates/contacts.php:82 templates/contacts.php:83
 #: templates/contacts.php:230 templates/contacts.php:231
@@ -810,7 +805,7 @@ msgstr "הורדה"
 
 #: templates/contacts.php:89
 msgid "Merge"
-msgstr ""
+msgstr "מיזוג"
 
 #: templates/contacts.php:92 templates/contacts.php:326
 #: templates/contacts.php:365
@@ -833,74 +828,74 @@ msgstr "קבוצה"
 
 #: templates/contacts.php:103
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "קיצורי מקלדת"
 
 #: templates/contacts.php:105
 msgid "Navigation"
-msgstr ""
+msgstr "ניווט"
 
 #: templates/contacts.php:108
 msgid "Next contact in list"
-msgstr ""
+msgstr "איש קשר הבא ברשימה"
 
 #: templates/contacts.php:110
 msgid "Previous contact in list"
-msgstr ""
+msgstr "איש קשר קודם ברשימה"
 
 #: templates/contacts.php:112
 msgid "Expand/collapse current addressbook"
-msgstr ""
+msgstr "הרחב\\צמצם ספר כתובות נוכחי"
 
 #: templates/contacts.php:114
 msgid "Next addressbook"
-msgstr ""
+msgstr "ספר כתובות הבא"
 
 #: templates/contacts.php:116
 msgid "Previous addressbook"
-msgstr ""
+msgstr "ספר כתובות קודם"
 
 #: templates/contacts.php:120
 msgid "Actions"
-msgstr ""
+msgstr "פעולות"
 
 #: templates/contacts.php:123
 msgid "Refresh contacts list"
-msgstr ""
+msgstr "רענון רשימת אנשי קשר"
 
 #: templates/contacts.php:125
 msgid "Add new contact"
-msgstr ""
+msgstr "הוספת איש קשר חדש"
 
 #: templates/contacts.php:127
 msgid "Add new addressbook"
-msgstr ""
+msgstr "הוספת ספר כתובות חדש"
 
 #: templates/contacts.php:129
 msgid "Delete current contact"
-msgstr ""
+msgstr "מחיקת איש קשר נוכחי"
 
 #: templates/contacts.php:135
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "אין לך אנשי קשר בספר הכתובות שלך או שספר הכתובות מנוטרל."
 
 #: templates/contacts.php:136
 msgid ""
 "Add a new contact or import existing contacts from a file (VCF, CSV or "
 "LDIF)."
-msgstr ""
+msgstr "הוספת איש קשר חדש או יבוא אנשי קובץ מקובץ (VCF, CSV או LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "לאיזה איש קשר המידע יתמזג?"
 
 #: templates/contacts.php:195
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "מחיקת האחר (אחרים) לאחר מיזוג?"
 
 #: templates/contacts.php:210
 msgid "Compose mail"
-msgstr ""
+msgstr "כתיבת הודעה"
 
 #: templates/contacts.php:238
 msgid "Delete current photo"
@@ -916,7 +911,7 @@ msgstr "העלה תמונה חדשה"
 
 #: templates/contacts.php:241
 msgid "Select photo from Files"
-msgstr ""
+msgstr "בחירת תמונה מקבצים"
 
 #: templates/contacts.php:243
 msgid "Favorite"
@@ -929,7 +924,7 @@ msgstr "שם"
 
 #: templates/contacts.php:254
 msgid "First name"
-msgstr ""
+msgstr "שם פרטי"
 
 #: templates/contacts.php:258
 msgid "Additional names"
@@ -937,11 +932,11 @@ msgstr "שמות נוספים"
 
 #: templates/contacts.php:262
 msgid "Last name"
-msgstr ""
+msgstr "שם משפחה"
 
 #: templates/contacts.php:278
 msgid "Address book"
-msgstr ""
+msgstr "ספר כתובות"
 
 #: templates/contacts.php:285 templates/contacts.php:362
 msgid "Nickname"
@@ -961,23 +956,23 @@ msgstr "יום הולדת"
 
 #: templates/contacts.php:341
 msgid "Website"
-msgstr ""
+msgstr "אתר אינטרנט"
 
 #: templates/contacts.php:346
 msgid "Instant messaging"
-msgstr ""
+msgstr "מסרים מיידיים"
 
 #: templates/contacts.php:352
 msgid "Notes go here..."
-msgstr ""
+msgstr "הערות..."
 
 #: templates/contacts.php:359
 msgid "Add field..."
-msgstr ""
+msgstr "הוספת שדה..."
 
 #: templates/contacts.php:366
 msgid "Instant Messaging"
-msgstr ""
+msgstr "מסרים מיידיים"
 
 #: templates/contacts.php:368
 msgid "Note"
@@ -985,7 +980,7 @@ msgstr "הערה"
 
 #: templates/contacts.php:369
 msgid "Web site"
-msgstr ""
+msgstr "אתר אינטרנט"
 
 #: templates/contacts.php:393 templates/contacts.php:408
 #: templates/contacts.php:422 templates/contacts.php:437
@@ -999,7 +994,7 @@ msgstr "אנא הזן כתובת דוא\"ל חוקית"
 
 #: templates/contacts.php:398
 msgid "someone@example.com"
-msgstr ""
+msgstr "someone@example.com"
 
 #: templates/contacts.php:400
 msgid "Mail to address"
@@ -1015,7 +1010,7 @@ msgstr "הכנס מספר טלפון"
 
 #: templates/contacts.php:429
 msgid "Go to web site"
-msgstr ""
+msgstr "מעבר לאתר אינטרנט"
 
 #: templates/contacts.php:446
 msgid "View on map"
@@ -1023,11 +1018,11 @@ msgstr "ראה במפה"
 
 #: templates/contacts.php:454
 msgid "Street address"
-msgstr ""
+msgstr "כתובת רחוב"
 
 #: templates/contacts.php:458
 msgid "Postal code"
-msgstr ""
+msgstr "מיקוד"
 
 #: templates/contacts.php:460
 msgid "City"
@@ -1035,7 +1030,7 @@ msgstr "עיר"
 
 #: templates/contacts.php:464
 msgid "State or province"
-msgstr ""
+msgstr "מדינה או מחוז"
 
 #: templates/contacts.php:468
 msgid "Country"
@@ -1043,7 +1038,7 @@ msgstr "מדינה"
 
 #: templates/contacts.php:495
 msgid "Instant Messenger"
-msgstr ""
+msgstr "מסרים מיידיים"
 
 #: templates/contacts.php:508
 msgid "Active"
@@ -1059,7 +1054,7 @@ msgstr "ייצוא"
 
 #: templates/contacts.php:513
 msgid "CardDAV link"
-msgstr ""
+msgstr "קישור CardDAV"
 
 #: templates/contacts.php:514
 msgid "Edit"
@@ -1067,7 +1062,7 @@ msgstr "עריכה"
 
 #: templates/contacts.php:533
 msgid "Addressbook URI"
-msgstr ""
+msgstr "ספר כתובות URI"
 
 #: templates/contacts.php:536
 msgid "URI"
@@ -1079,19 +1074,19 @@ msgstr "תיאור"
 
 #: templates/contacts.php:547 templates/contacts.php:550
 msgid "LDAP URL"
-msgstr ""
+msgstr "קישור LDAP"
 
 #: templates/contacts.php:554 templates/contacts.php:556
 msgid "Anonymous"
-msgstr ""
+msgstr "אנונימי"
 
 #: templates/contacts.php:560
 msgid "Read-only"
-msgstr ""
+msgstr "לקריאה בלבד"
 
 #: templates/contacts.php:562
 msgid "Read-Only"
-msgstr ""
+msgstr "לקריאה בלבד"
 
 #: templates/contacts.php:566 templates/contacts.php:569
 msgid "User"
@@ -1103,7 +1098,7 @@ msgstr "סיסמא"
 
 #: templates/contacts.php:581 templates/contacts.php:584
 msgid "Page size"
-msgstr ""
+msgstr "גודל עמוד"
 
 #: templates/contacts.php:588
 msgid "Base DN for search"
@@ -1115,11 +1110,11 @@ msgstr ""
 
 #: templates/contacts.php:595
 msgid "Search filter"
-msgstr ""
+msgstr "חיפוש על בסיס סינון"
 
 #: templates/contacts.php:598
 msgid "Filter"
-msgstr ""
+msgstr "סינון"
 
 #: templates/contacts.php:602
 msgid "Base DN for modification"

@@ -54,7 +54,6 @@
 "Contacts are not in this group." => "A névjegyek nincsenek ebben a csoportban.",
 "A group named \"{group}\" already exists" => "\"{group}\" néven már van csoport",
 "Failed renaming group: {error}" => "Hiba a csoport átnevezésekor: {error}",
-"You can drag groups to\narrange them as you like." => "A sorrend megváltoztatásához\\n\negérrel húzza a csoportokat.",
 "Failed adding group: {error}" => "Hiba a csoport hozzáadásakor: {error}",
 "All" => "Mind",
 "Favorites" => "Kedvencek",

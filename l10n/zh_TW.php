@@ -45,7 +45,6 @@
 "Contacts are not in this group." => "聯絡人皆不在此群組中。",
 "A group named \"{group}\" already exists" => "群組 \"{group}\" 已存在",
 "Failed renaming group: {error}" => "重新命名群組失敗：{error}",
-"You can drag groups to\narrange them as you like." => "你可以拖曳群組以你喜歡的方式排列。",
 "Failed adding group: {error}" => "加入群組失敗：{error}",
 "All" => "所有",
 "Favorites" => "最愛",

@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-26 00:48-0400\n"
-"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"POT-Creation-Date: 2014-09-03 00:48-0400\n"
+"PO-Revision-Date: 2014-09-02 05:22+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Estonian (Estonia) (http://www.transifex.com/projects/p/owncloud/language/et_EE/)\n"
 "MIME-Version: 1.0\n"
@@ -246,33 +246,27 @@ msgstr "Grupp nimega \"{group}\" on juba olemas"
 msgid "Failed renaming group: {error}"
 msgstr "Grupi ümber nimetamine ebaõnnestus: {error}"
 
-#: js/groups.js:646
-msgid ""
-"You can drag groups to\n"
-"arrange them as you like."
-msgstr "Pukseeri gruppe märgile ⏎\nsobivamaks reastuseks"
-
-#: js/groups.js:659
+#: js/groups.js:657
 msgid "Failed adding group: {error}"
 msgstr "Grupi lisamine ebaõnnestus: {error}"
 
-#: js/groups.js:672
+#: js/groups.js:670
 msgid "All"
 msgstr "Kõik"
 
-#: js/groups.js:687 js/groups.js:690
+#: js/groups.js:685 js/groups.js:688
 msgid "Favorites"
 msgstr "Lemmikud"
 
-#: js/groups.js:751
+#: js/groups.js:749
 msgid "Shared by {owner}"
 msgstr "Jagas {owner}"
 
-#: js/groups.js:766
+#: js/groups.js:764
 msgid "Not grouped"
 msgstr "Pole grupeeritud"
 
-#: js/groups.js:795
+#: js/groups.js:793
 msgid "Failed loading groups: {error}"
 msgstr "Gruppide laadimine ebaõnnestus: {error}"
 
@@ -887,7 +881,7 @@ msgstr "Aadressiraamatus puuduvad kontaktid või on aadressiraamatu kasutus keel
 msgid ""
 "Add a new contact or import existing contacts from a file (VCF, CSV or "
 "LDIF)."
-msgstr ""
+msgstr "Lisa uus kontakt või impordi olemasolevaid kontakte failist (VCF, CSV või LDIF)."
 
 #: templates/contacts.php:187
 msgid "Which contact should the data be merged into?"

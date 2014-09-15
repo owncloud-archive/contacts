@@ -54,7 +54,6 @@
 "Contacts are not in this group." => "Kontakty nie sú v danej skupine.",
 "A group named \"{group}\" already exists" => "Skupina pomenovaná ako \"{group}\" už existuje",
 "Failed renaming group: {error}" => "Chyba pri premenovávaní skupiny: {error}",
-"You can drag groups to\narrange them as you like." => "Môžete presúvať skupiny pre\njednoduché zoradenie podľa vašich potrieb.",
 "Failed adding group: {error}" => "Pridanie skupiny sa nepodarilo: {error}",
 "All" => "Všetky",
 "Favorites" => "Obľúbené",

@@ -54,7 +54,6 @@
 "Contacts are not in this group." => "Контактите не са в тази група.",
 "A group named \"{group}\" already exists" => "Група кръстена \"{group}\" вече съществува.",
 "Failed renaming group: {error}" => "Неуспешно преименуване на група: {error}.",
-"You can drag groups to\narrange them as you like." => "Можеш да провлачваш гупи, за да\nги подредиш, както искаш.",
 "Failed adding group: {error}" => "Неуспешно добавяне на група: {group}.",
 "All" => "Всички",
 "Favorites" => "Любими",

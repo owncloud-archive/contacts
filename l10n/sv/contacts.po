@@ -25,8 +25,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-08-26 00:48-0400\n"
-"PO-Revision-Date: 2014-08-25 05:21+0000\n"
+"POT-Creation-Date: 2014-09-03 00:48-0400\n"
+"PO-Revision-Date: 2014-09-02 05:22+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/owncloud/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -261,33 +261,27 @@ msgstr "En grupp med namnet \"{group}\" finns redan"
 msgid "Failed renaming group: {error}"
 msgstr "Det gick inte att ändra namn på gruppen: {error}"
 
-#: js/groups.js:646
-msgid ""
-"You can drag groups to\n"
-"arrange them as you like."
-msgstr "Du kan dra och släppa grupper⏎\nför att arrangera dem som du vill."
-
-#: js/groups.js:659
+#: js/groups.js:657
 msgid "Failed adding group: {error}"
 msgstr "Det gick inte att lägga till gruppen :{error}"
 
-#: js/groups.js:672
+#: js/groups.js:670
 msgid "All"
 msgstr "Alla"
 
-#: js/groups.js:687 js/groups.js:690
+#: js/groups.js:685 js/groups.js:688
 msgid "Favorites"
 msgstr "Favoriter"
 
-#: js/groups.js:751
+#: js/groups.js:749
 msgid "Shared by {owner}"
 msgstr "Delad av {owner}"
 
-#: js/groups.js:766
+#: js/groups.js:764
 msgid "Not grouped"
 msgstr "Inte grupperad"
 
-#: js/groups.js:795
+#: js/groups.js:793
 msgid "Failed loading groups: {error}"
 msgstr "Kan inte ladda grupper: {error}"
 

@@ -37,7 +37,6 @@
 "Contact is not in this group." => "Контакт не в даній групі.",
 "Contacts are not in this group." => "Контакти не в даній групі.",
 "Failed renaming group: {error}" => "Не вдалося перейменувати групу: {error}",
-"You can drag groups to\narrange them as you like." => "Ви можете перетягнути групи для того,\nщоб організувати їх, як вам заманеться.",
 "Failed adding group: {error}" => "Не вдалося додати групу: {error}",
 "All" => "Всі",
 "Favorites" => "Улюблені",

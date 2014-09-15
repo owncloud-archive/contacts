@@ -643,8 +643,6 @@ OC.Contacts = OC.Contacts || {};
 					$elem.insertAfter($insertAfter);
 				}
 				self.selectGroup({element:$elem});
-				$elem.tipsy({trigger:'manual', gravity:'w', fallback: t('contacts', 'You can drag groups to\narrange them as you like.')});
-				$elem.tipsy('show');
 				if(typeof cb === 'function') {
 					cb({id:parseInt(id), name:name});
 				}
