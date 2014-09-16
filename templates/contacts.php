@@ -500,7 +500,7 @@ use OCA\Contacts\ImportManager;
 <script id="contactsImportTemplate" class="hidden" type="text/template">
 <div id="contacts-import-div" class="contacts-import-class">
 <p id="contacts-import-into-p">
-	<label for="contacts-import-into"><?php p($l->t('Addresbook')); ?></label>
+	<label for="contacts-import-into"><?php p($l->t('Address book')); ?></label>
 	<select id="contacts-import-into">
 		<option value="-1"><?php p($l->t('Import into...')); ?></option>
 	</select>
