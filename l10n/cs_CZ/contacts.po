@@ -7,7 +7,7 @@
 # Jan Kalina <honza889@gmail.com>, 2013
 # Jan Krejci <krejca85@gmail.com>, 2011-2012
 # Jan Liska, 2013-2014
-# Jaroslav Lichtblau <jaroslav@lichtblau.cz>, 2014
+# Jaroslav Lichtblau <jlichtblau@seznam.cz>, 2014
 # Josef Moravec <josef.moravec@gmail.com>, 2014
 # Martin Skopal <fireball@atlas.cz>, 2013
 # Martin Skopal <fireball@atlas.cz>, 2011-2012
@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-10 00:48-0400\n"
-"PO-Revision-Date: 2014-09-09 09:12+0000\n"
-"Last-Translator: Petr Šťastný <petr@stastny.eu>\n"
+"POT-Creation-Date: 2014-09-16 00:54-0400\n"
+"PO-Revision-Date: 2014-09-16 04:54+0000\n"
+"Last-Translator: I Robot\n"
 "Language-Team: Czech (Czech Republic) (http://www.transifex.com/projects/p/owncloud/language/cs_CZ/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,57 +33,69 @@ msgstr ""
 msgid "Contacts"
 msgstr "Kontakty"
 
-#: js/addressbooks.js:85
+#: js/addressbooks.js:90
 msgid "Add new LDAP Addressbook"
 msgstr "Přidat nový LDAP adresář kontaktů"
 
-#: js/addressbooks.js:90 js/addressbooks.js:166
+#: js/addressbooks.js:95 js/addressbooks.js:171
 msgid "Ok"
 msgstr "Ok"
 
-#: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1392 js/app.js:1445
-#: templates/contacts.php:372 templates/contacts.php:373
+#: js/addressbooks.js:102 js/addressbooks.js:179 js/app.js:1392 js/app.js:1445
+#: templates/contacts.php:352 templates/contacts.php:353
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: js/addressbooks.js:132 js/groups.js:519
+#: js/addressbooks.js:137 js/groups.js:519
 msgid "Save"
 msgstr "Uložit"
 
-#: js/addressbooks.js:162
+#: js/addressbooks.js:167
 msgid "Edit Addressbook"
 msgstr "Editace adresáře"
 
-#: js/addressbooks.js:400
+#: js/addressbooks.js:393 js/loader.js:48 templates/contacts.php:118
+msgid "Import contacts"
+msgstr "Importovat kontakty"
+
+#: js/addressbooks.js:398
+msgid "Upload file..."
+msgstr ""
+
+#: js/addressbooks.js:428
 msgid "Starting file import"
 msgstr "Zahajuje se import souboru"
 
-#: js/addressbooks.js:404 js/addressbooks.js:432
+#: js/addressbooks.js:433 js/addressbooks.js:512
 msgid "Format selected: {format}"
 msgstr "Zvolený formát: {format}"
 
-#: js/addressbooks.js:407 js/addressbooks.js:435
+#: js/addressbooks.js:436 js/addressbooks.js:515
 msgid "Automatic format detection"
 msgstr "Automatická detekce formátu"
 
-#: js/addressbooks.js:485
+#: js/addressbooks.js:468 js/loader.js:22 templates/contacts.php:505
+msgid "Import into..."
+msgstr "Importovat do..."
+
+#: js/addressbooks.js:559
 msgid "Processing {count}/{total} cards"
 msgstr "Zpracovávání {count}/{total} karet"
 
-#: js/addressbooks.js:509
-msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr "Celkem:{total}, Úspěšně:{imported}, Chyby:{failed}"
+#: js/addressbooks.js:585
+msgid "Total: {total}, Success: {imported}, Errors: {failed}"
+msgstr ""
 
-#: js/addressbooks.js:663
+#: js/addressbooks.js:727
 msgid "An address book called {name} already exists"
 msgstr "Adresář kontaktů s názvem {name} již existuje"
 
-#: js/addressbooks.js:697 js/otherbackendconfig.js:141
+#: js/addressbooks.js:761 js/otherbackendconfig.js:141
 #: js/otherbackendconfig.js:200
 msgid "Failed adding address book: {error}"
 msgstr "Přidání adresáře kontaktů selhalo: {error}"
 
-#: js/addressbooks.js:738
+#: js/addressbooks.js:800
 msgid "Failed loading address books: {error}"
 msgstr "Načtení adresářů kontaktů selhalo: {error}"
 
@@ -169,11 +181,11 @@ msgstr "Je označeno více než 300 kontaktů.\nToto pravděpodobně selže. Kli
 msgid "Error setting {name} as favorite."
 msgstr "Chyba při nastavování {name} jako oblíbený."
 
-#: js/app.js:1366 js/app.js:1370 templates/contacts.php:186
+#: js/app.js:1366 js/app.js:1370 templates/contacts.php:166
 msgid "Merge contacts"
 msgstr "Sloučit kontakty"
 
-#: js/app.js:1419 templates/contacts.php:167
+#: js/app.js:1419 templates/contacts.php:147
 msgid "Add group"
 msgstr "Přidat skupinu"
 
@@ -283,19 +295,11 @@ msgstr "Načtení skupin se nezdařilo: {error}"
 msgid "Please choose the addressbook"
 msgstr "Prosím zvolte adresář kontaktů"
 
-#: js/loader.js:22 templates/contacts.php:41
-msgid "Import into..."
-msgstr "Importovat do..."
-
 #: js/loader.js:31
 msgid "Error loading import template"
 msgstr "Chyba při nahrávání šablony importu"
 
-#: js/loader.js:48
-msgid "Import contacts"
-msgstr "Importovat kontakty"
-
-#: js/loader.js:61 templates/contacts.php:37
+#: js/loader.js:61 templates/contacts.php:38
 msgid "Import"
 msgstr "Importovat"
 
@@ -307,8 +311,8 @@ msgstr "Importuji..."
 msgid "Import done"
 msgstr "Import dokončen"
 
-#: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
-#: templates/contacts.php:377
+#: js/loader.js:95 templates/contacts.php:81 templates/contacts.php:356
+#: templates/contacts.php:357
 msgid "Close"
 msgstr "Zavřít"
 
@@ -591,7 +595,7 @@ msgid "File name missing from request."
 msgstr "V požadavku chybí název souboru."
 
 #: lib/controller/importcontroller.php:182
-#: lib/controller/importcontroller.php:320
+#: lib/controller/importcontroller.php:321
 msgid "Progress key missing from request."
 msgstr "V požadavku chybí položka průběhu."
 
@@ -743,7 +747,7 @@ msgstr "Povolit úložiště LDAP pro aplikaci kontaktů"
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
 msgstr "Varování: LDAP rozhraní je v beta módu, používejte s rozvahou"
 
-#: templates/contacts.php:9 templates/contacts.php:138
+#: templates/contacts.php:9 templates/contacts.php:117
 msgid "New contact"
 msgstr "Nový kontakt"
 
@@ -759,7 +763,7 @@ msgstr "Nová skupina"
 msgid "Address books"
 msgstr "Adresáře kontaktů"
 
-#: templates/contacts.php:25 templates/contacts.php:74
+#: templates/contacts.php:25 templates/contacts.php:53
 msgid "Display name"
 msgstr "Zobrazované jméno"
 
@@ -771,374 +775,382 @@ msgstr "Přidat adresář kontaktů"
 msgid "Add LDAP Address Book"
 msgstr "Přidat LDAP adresář"
 
-#: templates/contacts.php:44
-msgid "Automatic format"
-msgstr "Automatický formát"
-
-#: templates/contacts.php:53 templates/contacts.php:54
-msgid "Select file..."
-msgstr "Vybrat soubor..."
-
-#: templates/contacts.php:71
+#: templates/contacts.php:50
 msgid "(De-)select all"
 msgstr "Vybrat (odznačit) vše"
 
-#: templates/contacts.php:73
+#: templates/contacts.php:52
 msgid "Sort order"
 msgstr "Řazení"
 
-#: templates/contacts.php:75
+#: templates/contacts.php:54
 msgid "First- Lastname"
 msgstr "Jméno, Příjmení"
 
-#: templates/contacts.php:76
+#: templates/contacts.php:55
 msgid "Last-, Firstname"
 msgstr "Příjmení, Jméno"
 
-#: templates/contacts.php:82 templates/contacts.php:83
-#: templates/contacts.php:230 templates/contacts.php:231
-#: templates/contacts.php:515
+#: templates/contacts.php:61 templates/contacts.php:62
+#: templates/contacts.php:210 templates/contacts.php:211
+#: templates/contacts.php:495
 msgid "Delete"
 msgstr "Smazat"
 
-#: templates/contacts.php:86 templates/contacts.php:271
+#: templates/contacts.php:65 templates/contacts.php:251
 msgid "Groups"
 msgstr "Skupiny"
 
-#: templates/contacts.php:88 templates/contacts.php:380
-#: templates/contacts.php:381
+#: templates/contacts.php:67 templates/contacts.php:360
+#: templates/contacts.php:361
 msgid "Download"
 msgstr "Stáhnout"
 
-#: templates/contacts.php:89
+#: templates/contacts.php:68
 msgid "Merge"
 msgstr "Sloučit"
 
-#: templates/contacts.php:92 templates/contacts.php:326
-#: templates/contacts.php:365
+#: templates/contacts.php:71 templates/contacts.php:306
+#: templates/contacts.php:345
 msgid "Email"
 msgstr "E-mail"
 
-#: templates/contacts.php:93 templates/contacts.php:331
-#: templates/contacts.php:364
+#: templates/contacts.php:72 templates/contacts.php:311
+#: templates/contacts.php:344
 msgid "Phone"
 msgstr "Telefon"
 
-#: templates/contacts.php:94 templates/contacts.php:336
-#: templates/contacts.php:367
+#: templates/contacts.php:73 templates/contacts.php:316
+#: templates/contacts.php:347
 msgid "Address"
 msgstr "Adresa"
 
-#: templates/contacts.php:95
+#: templates/contacts.php:74
 msgid "Group"
 msgstr "Skupina"
 
-#: templates/contacts.php:103
+#: templates/contacts.php:82
 msgid "Keyboard shortcuts"
 msgstr "Klávesové zkratky"
 
-#: templates/contacts.php:105
+#: templates/contacts.php:84
 msgid "Navigation"
 msgstr "Navigace"
 
-#: templates/contacts.php:108
+#: templates/contacts.php:87
 msgid "Next contact in list"
 msgstr "Následující kontakt v seznamu"
 
-#: templates/contacts.php:110
+#: templates/contacts.php:89
 msgid "Previous contact in list"
 msgstr "Předchozí kontakt v seznamu"
 
-#: templates/contacts.php:112
+#: templates/contacts.php:91
 msgid "Expand/collapse current addressbook"
 msgstr "Rozbalit/svinout současnou knihu adres"
 
-#: templates/contacts.php:114
+#: templates/contacts.php:93
 msgid "Next addressbook"
 msgstr "Následující adresář kontaktů"
 
-#: templates/contacts.php:116
+#: templates/contacts.php:95
 msgid "Previous addressbook"
 msgstr "Předchozí adresář kontaktů"
 
-#: templates/contacts.php:120
+#: templates/contacts.php:99
 msgid "Actions"
 msgstr "Činnosti"
 
-#: templates/contacts.php:123
+#: templates/contacts.php:102
 msgid "Refresh contacts list"
 msgstr "Obnovit seznam kontaktů"
 
-#: templates/contacts.php:125
+#: templates/contacts.php:104
 msgid "Add new contact"
 msgstr "Přidat nový kontakt"
 
-#: templates/contacts.php:127
+#: templates/contacts.php:106
 msgid "Add new addressbook"
 msgstr "Přidat nový adresář kontaktů"
 
-#: templates/contacts.php:129
+#: templates/contacts.php:108
 msgid "Delete current contact"
 msgstr "Odstranit současný kontakt"
 
-#: templates/contacts.php:135
+#: templates/contacts.php:114
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
 msgstr "Nemáte žádné kontakty v adresáři nebo je adresář kontaktů vypnutý."
 
-#: templates/contacts.php:136
+#: templates/contacts.php:115
 msgid ""
 "Add a new contact or import existing contacts from a file (VCF, CSV or "
 "LDIF)."
 msgstr "Přidat nový kontakt nebo importovat existující kontakty ze souboru (VCF, CSV nebo LDIF)."
 
-#: templates/contacts.php:187
+#: templates/contacts.php:167
 msgid "Which contact should the data be merged into?"
 msgstr "Do kterého kontaktu mají být data sjednocena?"
 
-#: templates/contacts.php:195
+#: templates/contacts.php:175
 msgid "Delete the other(s) after successful merge?"
 msgstr "Smazat ostatní po úspěšném sjednocení?"
 
-#: templates/contacts.php:210
+#: templates/contacts.php:190
 msgid "Compose mail"
 msgstr "Napsat e-mail"
 
-#: templates/contacts.php:238
+#: templates/contacts.php:218
 msgid "Delete current photo"
 msgstr "Smazat současnou fotku"
 
-#: templates/contacts.php:239
+#: templates/contacts.php:219
 msgid "Edit current photo"
 msgstr "Upravit současnou fotku"
 
-#: templates/contacts.php:240
+#: templates/contacts.php:220
 msgid "Upload new photo"
 msgstr "Nahrát novou fotku"
 
-#: templates/contacts.php:241
+#: templates/contacts.php:221
 msgid "Select photo from Files"
 msgstr "Vybrat fotku ze souborů"
 
-#: templates/contacts.php:243
+#: templates/contacts.php:223
 msgid "Favorite"
 msgstr "Oblíbené"
 
-#: templates/contacts.php:246 templates/contacts.php:248
-#: templates/contacts.php:526 templates/contacts.php:529
+#: templates/contacts.php:226 templates/contacts.php:228
+#: templates/contacts.php:539 templates/contacts.php:542
 msgid "Name"
 msgstr "Název"
 
-#: templates/contacts.php:254
+#: templates/contacts.php:234
 msgid "First name"
 msgstr "Křestní jméno"
 
-#: templates/contacts.php:258
+#: templates/contacts.php:238
 msgid "Additional names"
 msgstr "Další jména"
 
-#: templates/contacts.php:262
+#: templates/contacts.php:242
 msgid "Last name"
 msgstr "Příjmení"
 
-#: templates/contacts.php:278
+#: templates/contacts.php:258
 msgid "Address book"
 msgstr "Adresář kontaktů"
 
-#: templates/contacts.php:285 templates/contacts.php:362
+#: templates/contacts.php:265 templates/contacts.php:342
 msgid "Nickname"
 msgstr "Přezdívka"
 
-#: templates/contacts.php:295 templates/contacts.php:361
+#: templates/contacts.php:275 templates/contacts.php:341
 msgid "Title"
 msgstr "Název"
 
-#: templates/contacts.php:305 templates/contacts.php:360
+#: templates/contacts.php:285 templates/contacts.php:340
 msgid "Organization"
 msgstr "Organizace"
 
-#: templates/contacts.php:315 templates/contacts.php:363
+#: templates/contacts.php:295 templates/contacts.php:343
 msgid "Birthday"
 msgstr "Narozeniny"
 
-#: templates/contacts.php:341
+#: templates/contacts.php:321
 msgid "Website"
 msgstr "Stránka"
 
-#: templates/contacts.php:346
+#: templates/contacts.php:326
 msgid "Instant messaging"
 msgstr "Komunikátor"
 
-#: templates/contacts.php:352
+#: templates/contacts.php:332
 msgid "Notes go here..."
 msgstr "Sem vložte poznámky..."
 
-#: templates/contacts.php:359
+#: templates/contacts.php:339
 msgid "Add field..."
 msgstr "Přidat položku..."
 
-#: templates/contacts.php:366
+#: templates/contacts.php:346
 msgid "Instant Messaging"
 msgstr "Komunikátor"
 
-#: templates/contacts.php:368
+#: templates/contacts.php:348
 msgid "Note"
 msgstr "Poznámka"
 
-#: templates/contacts.php:369
+#: templates/contacts.php:349
 msgid "Web site"
 msgstr "Webová stránka"
 
-#: templates/contacts.php:393 templates/contacts.php:408
-#: templates/contacts.php:422 templates/contacts.php:437
-#: templates/contacts.php:479 templates/contacts.php:489
+#: templates/contacts.php:373 templates/contacts.php:388
+#: templates/contacts.php:402 templates/contacts.php:417
+#: templates/contacts.php:459 templates/contacts.php:469
 msgid "Preferred"
 msgstr "Preferované"
 
-#: templates/contacts.php:398
+#: templates/contacts.php:378
 msgid "Please specify a valid email address."
 msgstr "Prosím zadejte platnou e-mailovou adresu."
 
-#: templates/contacts.php:398
+#: templates/contacts.php:378
 msgid "someone@example.com"
 msgstr "někdo@example.com"
 
-#: templates/contacts.php:400
+#: templates/contacts.php:380
 msgid "Mail to address"
 msgstr "Odeslat na adresu"
 
-#: templates/contacts.php:401
+#: templates/contacts.php:381
 msgid "Delete email address"
 msgstr "Smazat e-mailovou adresu"
 
-#: templates/contacts.php:413
+#: templates/contacts.php:393
 msgid "Enter phone number"
 msgstr "Zadejte telefonní číslo"
 
-#: templates/contacts.php:429
+#: templates/contacts.php:409
 msgid "Go to web site"
 msgstr "Přejít na webovou stránku"
 
-#: templates/contacts.php:446
+#: templates/contacts.php:426
 msgid "View on map"
 msgstr "Zobrazit na mapě"
 
-#: templates/contacts.php:454
+#: templates/contacts.php:434
 msgid "Street address"
 msgstr "Ulice"
 
-#: templates/contacts.php:458
+#: templates/contacts.php:438
 msgid "Postal code"
 msgstr "Směrovací číslo"
 
-#: templates/contacts.php:460
+#: templates/contacts.php:440
 msgid "City"
 msgstr "Město"
 
-#: templates/contacts.php:464
+#: templates/contacts.php:444
 msgid "State or province"
 msgstr "Stát nebo provincie"
 
-#: templates/contacts.php:468
+#: templates/contacts.php:448
 msgid "Country"
 msgstr "Země"
 
-#: templates/contacts.php:495
+#: templates/contacts.php:475
 msgid "Instant Messenger"
 msgstr "Komunikátor"
 
-#: templates/contacts.php:508
+#: templates/contacts.php:488
 msgid "Active"
 msgstr "Aktivní"
 
-#: templates/contacts.php:511
+#: templates/contacts.php:491
 msgid "Share"
 msgstr "Sdílet"
 
-#: templates/contacts.php:512
+#: templates/contacts.php:492
 msgid "Export"
 msgstr "Exportovat"
 
-#: templates/contacts.php:513
+#: templates/contacts.php:493
 msgid "CardDAV link"
 msgstr "CardDAV odkaz"
 
-#: templates/contacts.php:514
+#: templates/contacts.php:494
 msgid "Edit"
 msgstr "Upravit"
 
-#: templates/contacts.php:533
+#: templates/contacts.php:503
+msgid "Addresbook"
+msgstr ""
+
+#: templates/contacts.php:509
+msgid "Format"
+msgstr ""
+
+#: templates/contacts.php:511
+msgid "Automatic format"
+msgstr "Automatický formát"
+
+#: templates/contacts.php:522
+msgid "Select file..."
+msgstr "Vybrat soubor..."
+
+#: templates/contacts.php:546
 msgid "Addressbook URI"
 msgstr "URI adresáře"
 
-#: templates/contacts.php:536
+#: templates/contacts.php:549
 msgid "URI"
 msgstr "URI"
 
-#: templates/contacts.php:540 templates/contacts.php:543
+#: templates/contacts.php:553 templates/contacts.php:556
 msgid "Description"
 msgstr "Popis"
 
-#: templates/contacts.php:547 templates/contacts.php:550
+#: templates/contacts.php:560 templates/contacts.php:563
 msgid "LDAP URL"
 msgstr "LDAP URL"
 
-#: templates/contacts.php:554 templates/contacts.php:556
+#: templates/contacts.php:567 templates/contacts.php:569
 msgid "Anonymous"
 msgstr "Anonymní"
 
-#: templates/contacts.php:560
+#: templates/contacts.php:573
 msgid "Read-only"
 msgstr "Pouze ke čtení"
 
-#: templates/contacts.php:562
+#: templates/contacts.php:575
 msgid "Read-Only"
 msgstr "Pouze ke čtení"
 
-#: templates/contacts.php:566 templates/contacts.php:569
+#: templates/contacts.php:579 templates/contacts.php:582
 msgid "User"
 msgstr "Uživatel"
 
-#: templates/contacts.php:574 templates/contacts.php:577
+#: templates/contacts.php:587 templates/contacts.php:590
 msgid "Password"
 msgstr "Heslo"
 
-#: templates/contacts.php:581 templates/contacts.php:584
+#: templates/contacts.php:594 templates/contacts.php:597
 msgid "Page size"
 msgstr "Velikost strany"
 
-#: templates/contacts.php:588
+#: templates/contacts.php:601
 msgid "Base DN for search"
 msgstr "Výchozí DN pro vyhledávávní"
 
-#: templates/contacts.php:591
+#: templates/contacts.php:604
 msgid "Base DN"
 msgstr "Základní DN"
 
-#: templates/contacts.php:595
+#: templates/contacts.php:608
 msgid "Search filter"
 msgstr "Vyhledávací filtr"
 
-#: templates/contacts.php:598
+#: templates/contacts.php:611
 msgid "Filter"
 msgstr "Filtr"
 
-#: templates/contacts.php:602
+#: templates/contacts.php:615
 msgid "Base DN for modification"
 msgstr "Výchozí DN pro změnu"
 
-#: templates/contacts.php:605
+#: templates/contacts.php:618
 msgid "Base DN modification"
 msgstr "Základní DN změny"
 
-#: templates/contacts.php:609
+#: templates/contacts.php:622
 msgid "Connector"
 msgstr "Konektor"
 
-#: templates/contacts.php:616
+#: templates/contacts.php:629
 msgid "Connector value (Better use external editor and copy/paste)"
 msgstr "Hodnota připojení (lepší využít externí editor a zkopírovat/vložit)"
 
-#: templates/contacts.php:622
+#: templates/contacts.php:635
 msgid "Copy from (Warning, replaces current custom value)"
 msgstr "Zkopírovat z (Varování, nahradí současnou hodnotu)"

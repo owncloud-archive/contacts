@@ -4,6 +4,7 @@
 "Cancel" => "Откажи",
 "Save" => "Сними",
 "Edit Addressbook" => "Уреди адресар",
+"Import into..." => "Внеси во...",
 "Indexing contacts" => "Индексирање на контактите",
 "Error." => "Грешка.",
 "Add to..." => "Додади на...",
@@ -25,7 +26,6 @@
 "Shared by {owner}" => "Споделени од {owner}",
 "Not grouped" => "Не групирани",
 "Please choose the addressbook" => "Ве молам изберете адресар",
-"Import into..." => "Внеси во...",
 "Import" => "Увези",
 "Importing..." => "Увезувам...",
 "Close" => "Затвори",
@@ -96,7 +96,6 @@
 "New group" => "Нова група",
 "Address books" => "Адресари",
 "Display name" => "Прикажи го Името",
-"Select file..." => "Одбери датотека...",
 "Sort order" => "Начин на сортирање",
 "First- Lastname" => "Име- Презиме",
 "Last-, Firstname" => "Презиме-, Име",
@@ -153,6 +152,7 @@
 "Export" => "Извези",
 "CardDAV link" => "CardDAV link",
 "Edit" => "Уреди",
+"Select file..." => "Одбери датотека...",
 "Description" => "Опис",
 "Password" => "Лозинка"
 );

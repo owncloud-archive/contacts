@@ -6,7 +6,6 @@
 "Save" => "Saxlamaq",
 "Edit Addressbook" => "ÜnvanKitabçasında Dəyişiklik",
 "Automatic format detection" => "Formatın avtomatik təyinatı",
-"Total:{total}, Success:{imported}, Errors:{failed}" => "Ümumi:{total}, Uğurlu:{imported}, Səhvlər:{failed} ",
 "An address book called {name} already exists" => "{name} adlı ünvan kitabçası artıq mövcuddur",
 "Failed adding address book: {error}" => "Ünvan kitabçasını əlavə etdikdə səhv baş verdi: {error}",
 "Failed loading address books: {error}" => "Ünvan kitabçasının yüklənməsində səhv baş verdi: {error}",

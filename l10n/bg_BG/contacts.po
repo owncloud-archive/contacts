@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-03 00:48-0400\n"
-"PO-Revision-Date: 2014-09-02 05:21+0000\n"
+"POT-Creation-Date: 2014-09-16 00:54-0400\n"
+"PO-Revision-Date: 2014-09-16 04:54+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/projects/p/owncloud/language/bg_BG/)\n"
 "MIME-Version: 1.0\n"
@@ -26,57 +26,69 @@ msgstr ""
 msgid "Contacts"
 msgstr "Контакти"
 
-#: js/addressbooks.js:85
+#: js/addressbooks.js:90
 msgid "Add new LDAP Addressbook"
 msgstr "Добави нов LDAP Адресник"
 
-#: js/addressbooks.js:90 js/addressbooks.js:166
+#: js/addressbooks.js:95 js/addressbooks.js:171
 msgid "Ok"
 msgstr "ОК"
 
-#: js/addressbooks.js:97 js/addressbooks.js:174 js/app.js:1390 js/app.js:1443
-#: templates/contacts.php:372 templates/contacts.php:373
+#: js/addressbooks.js:102 js/addressbooks.js:179 js/app.js:1392 js/app.js:1445
+#: templates/contacts.php:352 templates/contacts.php:353
 msgid "Cancel"
 msgstr "Откажи"
 
-#: js/addressbooks.js:132 js/groups.js:519
+#: js/addressbooks.js:137 js/groups.js:519
 msgid "Save"
 msgstr "Запиши"
 
-#: js/addressbooks.js:162
+#: js/addressbooks.js:167
 msgid "Edit Addressbook"
 msgstr "Промени Адресника"
 
-#: js/addressbooks.js:400
+#: js/addressbooks.js:393 js/loader.js:48 templates/contacts.php:118
+msgid "Import contacts"
+msgstr "Внасяне на контакти"
+
+#: js/addressbooks.js:398
+msgid "Upload file..."
+msgstr ""
+
+#: js/addressbooks.js:428
 msgid "Starting file import"
 msgstr "Започване на внасяне"
 
-#: js/addressbooks.js:404 js/addressbooks.js:432
+#: js/addressbooks.js:433 js/addressbooks.js:512
 msgid "Format selected: {format}"
 msgstr "Избран формат: {format}."
 
-#: js/addressbooks.js:407 js/addressbooks.js:435
+#: js/addressbooks.js:436 js/addressbooks.js:515
 msgid "Automatic format detection"
 msgstr "Автоматично откриване на формата."
 
-#: js/addressbooks.js:485
+#: js/addressbooks.js:468 js/loader.js:22 templates/contacts.php:505
+msgid "Import into..."
+msgstr "Внеси в..."
+
+#: js/addressbooks.js:559
 msgid "Processing {count}/{total} cards"
 msgstr "Обработва {count}/{total} визитки."
 
-#: js/addressbooks.js:509
-msgid "Total:{total}, Success:{imported}, Errors:{failed}"
-msgstr "Общо:{total}, Успешно за:{imported}, Грешки при:{failed}."
+#: js/addressbooks.js:585
+msgid "Total: {total}, Success: {imported}, Errors: {failed}"
+msgstr ""
 
-#: js/addressbooks.js:663
+#: js/addressbooks.js:727
 msgid "An address book called {name} already exists"
 msgstr "Адресникът {name} вече съществува."
 
-#: js/addressbooks.js:697 js/otherbackendconfig.js:141
+#: js/addressbooks.js:761 js/otherbackendconfig.js:141
 #: js/otherbackendconfig.js:200
 msgid "Failed adding address book: {error}"
 msgstr "Неуспешно добавяне на адресника: {error}."
 
-#: js/addressbooks.js:738
+#: js/addressbooks.js:800
 msgid "Failed loading address books: {error}"
 msgstr "Неуспешно зареждане на адресниците: {error}."
 
@@ -96,93 +108,93 @@ msgstr "Невъзстановима грешка при зареждането 
 msgid "Error."
 msgstr "Грешка."
 
-#: js/app.js:329 js/app.js:343
+#: js/app.js:330 js/app.js:344
 msgid "Add to..."
 msgstr "Добави към..."
 
-#: js/app.js:333 js/app.js:345
+#: js/app.js:334 js/app.js:346
 msgid "Remove from..."
 msgstr "Премахни от..."
 
-#: js/app.js:350
+#: js/app.js:351
 msgid "Add group..."
 msgstr "Добави група..."
 
-#: js/app.js:478
+#: js/app.js:479
 msgid "Invalid URL: \"{url}\""
 msgstr "Невалиден Интернет Адресс: \"{url}\"."
 
-#: js/app.js:504
+#: js/app.js:505
 msgid "Invalid email: \"{url}\""
 msgstr "Невалиден имейл: \"{url}\"."
 
-#: js/app.js:587
+#: js/app.js:588
 msgid "Merge failed. Cannot find contact: {id}"
 msgstr "Неуспешно сливане. Неуспешно намиране на контакт: {id}."
 
-#: js/app.js:600
+#: js/app.js:601
 msgid "Merge failed."
 msgstr "Неуспешно сливане."
 
-#: js/app.js:607
+#: js/app.js:608
 msgid "Merge failed. Error saving contact."
 msgstr "Неуспешно сливане. Грешка при запазването на контакт."
 
-#: js/app.js:627
+#: js/app.js:628
 msgid "Select photo"
 msgstr "Избери снимка"
 
-#: js/app.js:710 js/app.js:1686
+#: js/app.js:711 js/app.js:1688
 msgid "Network or server error. Please inform administrator."
 msgstr "Интернет или сървърна грешка. Моля, свържи се с администратора."
 
-#: js/app.js:794
+#: js/app.js:795
 msgid "Only images can be used as contact photos"
 msgstr "Само изображения могат да бъдат ползвани за аватари."
 
-#: js/app.js:803
+#: js/app.js:804
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
 msgstr "Размерът на \"{filename}\" надвишава максмималния разрешен {size}."
 
-#: js/app.js:972
+#: js/app.js:973
 msgid "Error adding to group."
 msgstr "Грешка при добавяне към група."
 
-#: js/app.js:995
+#: js/app.js:996
 msgid "Error removing from group."
 msgstr "Грешка при премахване от група."
 
-#: js/app.js:1188
+#: js/app.js:1190
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
 msgstr "Избрал си повече от 300 контакта.\nТова най-вероятно няма да успее! Натисни, за да опиташ все пак."
 
-#: js/app.js:1226
+#: js/app.js:1228
 msgid "Error setting {name} as favorite."
 msgstr "Грешка при задаване на {name} като любим."
 
-#: js/app.js:1364 js/app.js:1368 templates/contacts.php:186
+#: js/app.js:1366 js/app.js:1370 templates/contacts.php:166
 msgid "Merge contacts"
 msgstr "Сливане на контакти"
 
-#: js/app.js:1417 templates/contacts.php:167
+#: js/app.js:1419 templates/contacts.php:147
 msgid "Add group"
 msgstr "Добави група"
 
-#: js/app.js:1421
+#: js/app.js:1423
 msgid "OK"
 msgstr "ОК"
 
-#: js/app.js:1528
+#: js/app.js:1530
 msgid "Could not find contact: {id}"
 msgstr "Неуспешно намиране на контакт: {id}."
 
-#: js/app.js:1641
+#: js/app.js:1643
 msgid "Edit profile picture"
 msgstr "Промени аватара"
 
-#: js/app.js:1645
+#: js/app.js:1647
 msgid "Crop photo"
 msgstr "Отрежи снимката"
 
@@ -276,19 +288,11 @@ msgstr "Неуспешно зареждане на групи: {error}."
 msgid "Please choose the addressbook"
 msgstr "Моля, избери адресник."
 
-#: js/loader.js:22 templates/contacts.php:41
-msgid "Import into..."
-msgstr "Внеси в..."
-
 #: js/loader.js:31
 msgid "Error loading import template"
 msgstr "Грешка при зареждане на шабло за внасяне."
 
-#: js/loader.js:48
-msgid "Import contacts"
-msgstr "Внасяне на контакти"
-
-#: js/loader.js:61 templates/contacts.php:37
+#: js/loader.js:61 templates/contacts.php:38
 msgid "Import"
 msgstr "Внасяне"
 
@@ -300,8 +304,8 @@ msgstr "Внасяне..."
 msgid "Import done"
 msgstr "Внасянето приключи"
 
-#: js/loader.js:95 templates/contacts.php:102 templates/contacts.php:376
-#: templates/contacts.php:377
+#: js/loader.js:95 templates/contacts.php:81 templates/contacts.php:356
+#: templates/contacts.php:357
 msgid "Close"
 msgstr "Затвори"
 
@@ -584,7 +588,7 @@ msgid "File name missing from request."
 msgstr "Липсва име на файла в заявката."
 
 #: lib/controller/importcontroller.php:182
-#: lib/controller/importcontroller.php:320
+#: lib/controller/importcontroller.php:321
 msgid "Progress key missing from request."
 msgstr "Ключ за прогреса липсва в заявката."
 
@@ -736,7 +740,7 @@ msgstr "Включи LDAP сървъра за приложението Конт�
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
 msgstr "Предупреждение: LDAP сървъра е в тестов режим, използвай предпазливост."
 
-#: templates/contacts.php:9 templates/contacts.php:138
+#: templates/contacts.php:9 templates/contacts.php:117
 msgid "New contact"
 msgstr "Нов контакт"
 
@@ -752,7 +756,7 @@ msgstr "Нова група"
 msgid "Address books"
 msgstr "Адресници"
 
-#: templates/contacts.php:25 templates/contacts.php:74
+#: templates/contacts.php:25 templates/contacts.php:53
 msgid "Display name"
 msgstr "Видимо име"
 
@@ -764,374 +768,382 @@ msgstr "Добавяне на Адресник"
 msgid "Add LDAP Address Book"
 msgstr "Добави LDAP Адресник"
 
-#: templates/contacts.php:44
-msgid "Automatic format"
-msgstr "Автоматично форматиране"
-
-#: templates/contacts.php:53 templates/contacts.php:54
-msgid "Select file..."
-msgstr "Избери файл..."
-
-#: templates/contacts.php:71
+#: templates/contacts.php:50
 msgid "(De-)select all"
 msgstr "Избери всчико(нищо):"
 
-#: templates/contacts.php:73
+#: templates/contacts.php:52
 msgid "Sort order"
 msgstr "Ред на подреждане"
 
-#: templates/contacts.php:75
+#: templates/contacts.php:54
 msgid "First- Lastname"
 msgstr "Първо- Последно Име"
 
-#: templates/contacts.php:76
+#: templates/contacts.php:55
 msgid "Last-, Firstname"
 msgstr "Последно-, Първо Име"
 
-#: templates/contacts.php:82 templates/contacts.php:83
-#: templates/contacts.php:230 templates/contacts.php:231
-#: templates/contacts.php:515
+#: templates/contacts.php:61 templates/contacts.php:62
+#: templates/contacts.php:210 templates/contacts.php:211
+#: templates/contacts.php:495
 msgid "Delete"
 msgstr "Изтрий"
 
-#: templates/contacts.php:86 templates/contacts.php:271
+#: templates/contacts.php:65 templates/contacts.php:251
 msgid "Groups"
 msgstr "Групи"
 
-#: templates/contacts.php:88 templates/contacts.php:380
-#: templates/contacts.php:381
+#: templates/contacts.php:67 templates/contacts.php:360
+#: templates/contacts.php:361
 msgid "Download"
 msgstr "Изтегли"
 
-#: templates/contacts.php:89
+#: templates/contacts.php:68
 msgid "Merge"
 msgstr "Сливане"
 
-#: templates/contacts.php:92 templates/contacts.php:326
-#: templates/contacts.php:365
+#: templates/contacts.php:71 templates/contacts.php:306
+#: templates/contacts.php:345
 msgid "Email"
 msgstr "Имейл"
 
-#: templates/contacts.php:93 templates/contacts.php:331
-#: templates/contacts.php:364
+#: templates/contacts.php:72 templates/contacts.php:311
+#: templates/contacts.php:344
 msgid "Phone"
 msgstr "Телефон"
 
-#: templates/contacts.php:94 templates/contacts.php:336
-#: templates/contacts.php:367
+#: templates/contacts.php:73 templates/contacts.php:316
+#: templates/contacts.php:347
 msgid "Address"
 msgstr "Адрес"
 
-#: templates/contacts.php:95
+#: templates/contacts.php:74
 msgid "Group"
 msgstr "Група"
 
-#: templates/contacts.php:103
+#: templates/contacts.php:82
 msgid "Keyboard shortcuts"
 msgstr "Клавишни комбинации"
 
-#: templates/contacts.php:105
+#: templates/contacts.php:84
 msgid "Navigation"
 msgstr "Навигация"
 
-#: templates/contacts.php:108
+#: templates/contacts.php:87
 msgid "Next contact in list"
 msgstr "Следващия контакт в списъка"
 
-#: templates/contacts.php:110
+#: templates/contacts.php:89
 msgid "Previous contact in list"
 msgstr "Предния контакт в списъка"
 
-#: templates/contacts.php:112
+#: templates/contacts.php:91
 msgid "Expand/collapse current addressbook"
 msgstr "Разшири/свий сегашания адресник"
 
-#: templates/contacts.php:114
+#: templates/contacts.php:93
 msgid "Next addressbook"
 msgstr "Следващия адресник"
 
-#: templates/contacts.php:116
+#: templates/contacts.php:95
 msgid "Previous addressbook"
 msgstr "Предния адресник"
 
-#: templates/contacts.php:120
+#: templates/contacts.php:99
 msgid "Actions"
 msgstr "Действия"
 
-#: templates/contacts.php:123
+#: templates/contacts.php:102
 msgid "Refresh contacts list"
 msgstr "Освежи списъка с контакти"
 
-#: templates/contacts.php:125
+#: templates/contacts.php:104
 msgid "Add new contact"
 msgstr "Добави нов контакт"
 
-#: templates/contacts.php:127
+#: templates/contacts.php:106
 msgid "Add new addressbook"
 msgstr "Добави нов адресник"
 
-#: templates/contacts.php:129
+#: templates/contacts.php:108
 msgid "Delete current contact"
 msgstr "Изтрий текущия контакт"
 
-#: templates/contacts.php:135
+#: templates/contacts.php:114
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
 msgstr "Нямаш контаткти в адресника или адресникът е изключен."
 
-#: templates/contacts.php:136
+#: templates/contacts.php:115
 msgid ""
 "Add a new contact or import existing contacts from a file (VCF, CSV or "
 "LDIF)."
 msgstr "Дабaви нов контакт или внеси съществуващ контакт от файл (VCF, CSV или LDIF)."
 
-#: templates/contacts.php:187
+#: templates/contacts.php:167
 msgid "Which contact should the data be merged into?"
 msgstr "В кой контакт да бъде слята информацията?"
 
-#: templates/contacts.php:195
+#: templates/contacts.php:175
 msgid "Delete the other(s) after successful merge?"
 msgstr "Изтрий другия(ите) след успешно сливане?"
 
-#: templates/contacts.php:210
+#: templates/contacts.php:190
 msgid "Compose mail"
 msgstr "Създай имейл"
 
-#: templates/contacts.php:238
+#: templates/contacts.php:218
 msgid "Delete current photo"
 msgstr "Изтрий текущата снимка"
 
-#: templates/contacts.php:239
+#: templates/contacts.php:219
 msgid "Edit current photo"
 msgstr "Промени текущата снимка"
 
-#: templates/contacts.php:240
+#: templates/contacts.php:220
 msgid "Upload new photo"
 msgstr "Качи нова снимка"
 
-#: templates/contacts.php:241
+#: templates/contacts.php:221
 msgid "Select photo from Files"
 msgstr "Избери снимка от Файлове."
 
-#: templates/contacts.php:243
+#: templates/contacts.php:223
 msgid "Favorite"
 msgstr "Любими"
 
-#: templates/contacts.php:246 templates/contacts.php:248
-#: templates/contacts.php:526 templates/contacts.php:529
+#: templates/contacts.php:226 templates/contacts.php:228
+#: templates/contacts.php:539 templates/contacts.php:542
 msgid "Name"
 msgstr "Име"
 
-#: templates/contacts.php:254
+#: templates/contacts.php:234
 msgid "First name"
 msgstr "Първо Име"
 
-#: templates/contacts.php:258
+#: templates/contacts.php:238
 msgid "Additional names"
 msgstr "Други имена"
 
-#: templates/contacts.php:262
+#: templates/contacts.php:242
 msgid "Last name"
 msgstr "Последно име"
 
-#: templates/contacts.php:278
+#: templates/contacts.php:258
 msgid "Address book"
 msgstr "Адресник"
 
-#: templates/contacts.php:285 templates/contacts.php:362
+#: templates/contacts.php:265 templates/contacts.php:342
 msgid "Nickname"
 msgstr "Псевдоним"
 
-#: templates/contacts.php:295 templates/contacts.php:361
+#: templates/contacts.php:275 templates/contacts.php:341
 msgid "Title"
 msgstr "Заглавие"
 
-#: templates/contacts.php:305 templates/contacts.php:360
+#: templates/contacts.php:285 templates/contacts.php:340
 msgid "Organization"
 msgstr "Организация"
 
-#: templates/contacts.php:315 templates/contacts.php:363
+#: templates/contacts.php:295 templates/contacts.php:343
 msgid "Birthday"
 msgstr "Рожден ден"
 
-#: templates/contacts.php:341
+#: templates/contacts.php:321
 msgid "Website"
 msgstr "Интернет Страница"
 
-#: templates/contacts.php:346
+#: templates/contacts.php:326
 msgid "Instant messaging"
 msgstr "Чат"
 
-#: templates/contacts.php:352
+#: templates/contacts.php:332
 msgid "Notes go here..."
 msgstr "Сложи бележки тук..."
 
-#: templates/contacts.php:359
+#: templates/contacts.php:339
 msgid "Add field..."
 msgstr "Добави поле..."
 
-#: templates/contacts.php:366
+#: templates/contacts.php:346
 msgid "Instant Messaging"
 msgstr "Чат"
 
-#: templates/contacts.php:368
+#: templates/contacts.php:348
 msgid "Note"
 msgstr "Бележка"
 
-#: templates/contacts.php:369
+#: templates/contacts.php:349
 msgid "Web site"
 msgstr "Интернет страница"
 
-#: templates/contacts.php:393 templates/contacts.php:408
-#: templates/contacts.php:422 templates/contacts.php:437
-#: templates/contacts.php:479 templates/contacts.php:489
+#: templates/contacts.php:373 templates/contacts.php:388
+#: templates/contacts.php:402 templates/contacts.php:417
+#: templates/contacts.php:459 templates/contacts.php:469
 msgid "Preferred"
 msgstr "Предпочитан"
 
-#: templates/contacts.php:398
+#: templates/contacts.php:378
 msgid "Please specify a valid email address."
 msgstr "Моля, посочи валиден имейл адрес."
 
-#: templates/contacts.php:398
+#: templates/contacts.php:378
 msgid "someone@example.com"
 msgstr "someone@example.com"
 
-#: templates/contacts.php:400
+#: templates/contacts.php:380
 msgid "Mail to address"
 msgstr "Изпрати имейл до адреса"
 
-#: templates/contacts.php:401
+#: templates/contacts.php:381
 msgid "Delete email address"
 msgstr "Изтрий имейл адреса"
 
-#: templates/contacts.php:413
+#: templates/contacts.php:393
 msgid "Enter phone number"
 msgstr "Въведи телефонен номер"
 
-#: templates/contacts.php:429
+#: templates/contacts.php:409
 msgid "Go to web site"
 msgstr "Отиди на интернет страницата"
 
-#: templates/contacts.php:446
+#: templates/contacts.php:426
 msgid "View on map"
 msgstr "Виж на карта"
 
-#: templates/contacts.php:454
+#: templates/contacts.php:434
 msgid "Street address"
 msgstr "Улица"
 
-#: templates/contacts.php:458
+#: templates/contacts.php:438
 msgid "Postal code"
 msgstr "Пощенски код"
 
-#: templates/contacts.php:460
+#: templates/contacts.php:440
 msgid "City"
 msgstr "Град"
 
-#: templates/contacts.php:464
+#: templates/contacts.php:444
 msgid "State or province"
 msgstr "Страна или област"
 
-#: templates/contacts.php:468
+#: templates/contacts.php:448
 msgid "Country"
 msgstr "Държава"
 
-#: templates/contacts.php:495
+#: templates/contacts.php:475
 msgid "Instant Messenger"
 msgstr "Чат"
 
-#: templates/contacts.php:508
+#: templates/contacts.php:488
 msgid "Active"
 msgstr "Активен"
 
-#: templates/contacts.php:511
+#: templates/contacts.php:491
 msgid "Share"
 msgstr "Сподели"
 
-#: templates/contacts.php:512
+#: templates/contacts.php:492
 msgid "Export"
 msgstr "Експортирай"
 
-#: templates/contacts.php:513
+#: templates/contacts.php:493
 msgid "CardDAV link"
 msgstr "CardDAV връзка"
 
-#: templates/contacts.php:514
+#: templates/contacts.php:494
 msgid "Edit"
 msgstr "Промени"
 
-#: templates/contacts.php:533
+#: templates/contacts.php:503
+msgid "Addresbook"
+msgstr ""
+
+#: templates/contacts.php:509
+msgid "Format"
+msgstr ""
+
+#: templates/contacts.php:511
+msgid "Automatic format"
+msgstr "Автоматично форматиране"
+
+#: templates/contacts.php:522
+msgid "Select file..."
+msgstr "Избери файл..."
+
+#: templates/contacts.php:546
 msgid "Addressbook URI"
 msgstr "URI до Адресника"
 
-#: templates/contacts.php:536
+#: templates/contacts.php:549
 msgid "URI"
 msgstr "URI"
 
-#: templates/contacts.php:540 templates/contacts.php:543
+#: templates/contacts.php:553 templates/contacts.php:556
 msgid "Description"
 msgstr "Описание"
 
-#: templates/contacts.php:547 templates/contacts.php:550
+#: templates/contacts.php:560 templates/contacts.php:563
 msgid "LDAP URL"
 msgstr "LDAP Адрес"
 
-#: templates/contacts.php:554 templates/contacts.php:556
+#: templates/contacts.php:567 templates/contacts.php:569
 msgid "Anonymous"
 msgstr "Анонимен"
 
-#: templates/contacts.php:560
+#: templates/contacts.php:573
 msgid "Read-only"
 msgstr "Само за четене"
 
-#: templates/contacts.php:562
+#: templates/contacts.php:575
 msgid "Read-Only"
 msgstr "Само за Четене"
 
-#: templates/contacts.php:566 templates/contacts.php:569
+#: templates/contacts.php:579 templates/contacts.php:582
 msgid "User"
 msgstr "Потребител"
 
-#: templates/contacts.php:574 templates/contacts.php:577
+#: templates/contacts.php:587 templates/contacts.php:590
 msgid "Password"
 msgstr "Парола"
 
-#: templates/contacts.php:581 templates/contacts.php:584
+#: templates/contacts.php:594 templates/contacts.php:597
 msgid "Page size"
 msgstr "Брой на всяка страница"
 
-#: templates/contacts.php:588
+#: templates/contacts.php:601
 msgid "Base DN for search"
 msgstr "Base DN за търсене"
 
-#: templates/contacts.php:591
+#: templates/contacts.php:604
 msgid "Base DN"
 msgstr "Base DN"
 
-#: templates/contacts.php:595
+#: templates/contacts.php:608
 msgid "Search filter"
 msgstr "Филтър за търсене"
 
-#: templates/contacts.php:598
+#: templates/contacts.php:611
 msgid "Filter"
 msgstr "Филтър"
 
-#: templates/contacts.php:602
+#: templates/contacts.php:615
 msgid "Base DN for modification"
 msgstr "Base DN за промени"
 
-#: templates/contacts.php:605
+#: templates/contacts.php:618
 msgid "Base DN modification"
 msgstr "Base DN промяна"
 
-#: templates/contacts.php:609
+#: templates/contacts.php:622
 msgid "Connector"
 msgstr "Connector"
 
-#: templates/contacts.php:616
+#: templates/contacts.php:629
 msgid "Connector value (Better use external editor and copy/paste)"
 msgstr "Стойност на Connector (По-добре използвай външен редактор и копирай)"
 
-#: templates/contacts.php:622
+#: templates/contacts.php:635
 msgid "Copy from (Warning, replaces current custom value)"
 msgstr "Копирай от (Предупреждение, променя текущо зададената стойност)"
