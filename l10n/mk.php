@@ -152,6 +152,7 @@
 "Export" => "Извези",
 "CardDAV link" => "CardDAV link",
 "Edit" => "Уреди",
+"Format" => "Форматирање",
 "Select file..." => "Одбери датотека...",
 "Description" => "Опис",
 "Password" => "Лозинка"

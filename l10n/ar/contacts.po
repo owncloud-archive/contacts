@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-16 00:54-0400\n"
-"PO-Revision-Date: 2014-09-16 04:54+0000\n"
+"POT-Creation-Date: 2014-09-17 00:48-0400\n"
+"PO-Revision-Date: 2014-09-17 04:49+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/owncloud/language/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -933,7 +933,7 @@ msgstr "الاسماء الإضافية"
 msgid "Last name"
 msgstr "اسم العائلة"
 
-#: templates/contacts.php:258
+#: templates/contacts.php:258 templates/contacts.php:503
 msgid "Address book"
 msgstr "دفتر العناوين"
 
@@ -1059,13 +1059,9 @@ msgstr "رابط - وصلة - CardDA لنقل و مشاركة جهات الات�
 msgid "Edit"
 msgstr "تعديل"
 
-#: templates/contacts.php:503
-msgid "Addresbook"
-msgstr ""
-
 #: templates/contacts.php:509
 msgid "Format"
-msgstr ""
+msgstr "الشكل"
 
 #: templates/contacts.php:511
 msgid "Automatic format"

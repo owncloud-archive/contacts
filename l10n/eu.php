@@ -247,6 +247,7 @@
 "Export" => "Exportatu",
 "CardDAV link" => "CardDAV lotura",
 "Edit" => "Editatu",
+"Format" => "Formatua",
 "Automatic format" => "Formatu automatikoa",
 "Select file..." => "Hautatu fitxategia...",
 "Addressbook URI" => "URI helbide-liburua",

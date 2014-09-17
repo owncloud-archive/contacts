@@ -199,6 +199,7 @@
 "Share" => "Kunhavigi",
 "Export" => "Elporti",
 "Edit" => "Redakti",
+"Format" => "Aranĝo",
 "Select file..." => "Elekti dosieron...",
 "Addressbook URI" => "URI de adresaro",
 "URI" => "URI",

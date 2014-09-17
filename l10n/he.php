@@ -216,6 +216,7 @@
 "Export" => "ייצוא",
 "CardDAV link" => "קישור CardDAV",
 "Edit" => "עריכה",
+"Format" => "עיצוב",
 "Select file..." => "בחירת קובץ...",
 "Addressbook URI" => "ספר כתובות URI",
 "Description" => "תיאור",

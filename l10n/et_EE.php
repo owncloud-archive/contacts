@@ -247,6 +247,7 @@
 "Export" => "Ekspordi",
 "CardDAV link" => "CardDAV link",
 "Edit" => "Muuda",
+"Format" => "Formaat",
 "Automatic format" => "Automaatne formaat",
 "Select file..." => "Vali fail...",
 "Addressbook URI" => "Aadressiraamatu URI",

@@ -247,6 +247,7 @@
 "Export" => "Експортирай",
 "CardDAV link" => "CardDAV връзка",
 "Edit" => "Промени",
+"Format" => "Форматиране",
 "Automatic format" => "Автоматично форматиране",
 "Select file..." => "Избери файл...",
 "Addressbook URI" => "URI до Адресника",

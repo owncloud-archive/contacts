@@ -247,6 +247,7 @@
 "Export" => "Exportálás",
 "CardDAV link" => "CardDav hivatkozás",
 "Edit" => "Szerkesztés",
+"Format" => "Formátum",
 "Automatic format" => "Automatikus formátum",
 "Select file..." => "Fájl kiválasztása...",
 "Addressbook URI" => "Névjegyalbum URI",

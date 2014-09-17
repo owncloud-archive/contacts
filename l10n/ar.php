@@ -201,6 +201,7 @@
 "Export" => "تصدير",
 "CardDAV link" => "رابط - وصلة - CardDA لنقل و مشاركة جهات الاتصال",
 "Edit" => "تعديل",
+"Format" => "الشكل",
 "Automatic format" => "تنسيق تلقائي",
 "Select file..." => "تحديد ملف...",
 "Description" => "وصف",

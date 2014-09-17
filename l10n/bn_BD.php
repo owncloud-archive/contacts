@@ -6,6 +6,7 @@
 "Save" => "সংরক্ষণ",
 "Edit Addressbook" => "ঠিকানাবই সম্পাদনা",
 "Import contacts" => "ঠিকানাপঞ্জী আমদানি",
+"Upload file..." => "ফাইল আপলোড কর ....",
 "Starting file import" => "ফাইল আমদানী শুরু হচ্ছে",
 "Format selected: {format}" => "প্রকৃতি নির্বাচিত: {format}",
 "Automatic format detection" => "স্বয়ংক্রিয় প্রকৃতি নির্ণয়ক",

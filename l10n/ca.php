@@ -247,6 +247,7 @@
 "Export" => "Exporta",
 "CardDAV link" => "Enllaç CardDAV",
 "Edit" => "Edita",
+"Format" => "Format",
 "Automatic format" => "Format automàtic",
 "Select file..." => "Selecciona un fitxer...",
 "Addressbook URI" => "URI de la llibreta d'adreces",

@@ -186,6 +186,7 @@
 "Export" => "Xuất ra",
 "CardDAV link" => "Liên kết CardDAV ",
 "Edit" => "Sửa",
+"Format" => "Định dạng",
 "Select file..." => "Chọn tập tin...",
 "Description" => "Mô tả",
 "User" => "Người dùng",

@@ -221,6 +221,7 @@
 "Export" => "匯出",
 "CardDAV link" => "顯示 CardDav 連結",
 "Edit" => "編輯",
+"Format" => "格式",
 "Select file..." => "選擇檔案…",
 "Description" => "描述",
 "Anonymous" => "匿名",

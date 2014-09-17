@@ -214,6 +214,7 @@
 "Export" => "내보내기",
 "CardDAV link" => "CardDAV 링크",
 "Edit" => "편집",
+"Format" => "서식",
 "Select file..." => "파일 선택...",
 "Description" => "종류",
 "User" => "사용자 이름",

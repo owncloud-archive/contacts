@@ -246,6 +246,7 @@
 "Export" => "Exportera",
 "CardDAV link" => "CardDAV-länk",
 "Edit" => "Redigera",
+"Format" => "Format",
 "Automatic format" => "Automatiskt format",
 "Select file..." => "Välj fil...",
 "Addressbook URI" => "Adressbok URI",

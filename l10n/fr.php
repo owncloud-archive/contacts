@@ -247,6 +247,7 @@
 "Export" => "Exporter",
 "CardDAV link" => "Lien CardDAV",
 "Edit" => "Modifier",
+"Format" => "Format",
 "Automatic format" => "Format automatique",
 "Select file..." => "Sélectionner un fichier...",
 "Addressbook URI" => "Carnet d'adresse URI",

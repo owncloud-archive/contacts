@@ -240,6 +240,7 @@
 "Export" => "导出",
 "CardDAV link" => "CardDAV 链接",
 "Edit" => "编辑",
+"Format" => "格式",
 "Automatic format" => "自动格式",
 "Select file..." => "选择文件...",
 "Addressbook URI" => "地址簿 URI",

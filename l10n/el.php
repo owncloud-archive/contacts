@@ -247,6 +247,7 @@
 "Export" => "Εξαγωγή",
 "CardDAV link" => "Σύνδεσμος CardDAV",
 "Edit" => "Επεξεργασία",
+"Format" => "Μορφοποίηση",
 "Automatic format" => "Αυτόματη μορφοποίηση",
 "Select file..." => "Επιλογή αρχείου...",
 "Addressbook URI" => "Διεύθυνση URI βιβλίου διευθύνσεων",

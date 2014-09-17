@@ -218,6 +218,7 @@
 "Export" => "Ekspor",
 "CardDAV link" => "Tautan CardDAV",
 "Edit" => "Edit",
+"Format" => "Format",
 "Select file..." => "Pilih berkas...",
 "Description" => "Penjelasan",
 "User" => "Pengguna",

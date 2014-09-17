@@ -211,6 +211,7 @@
 "Export" => "Exportar",
 "CardDAV link" => "Enlace CardDav",
 "Edit" => "Editar",
+"Format" => "Formato",
 "Select file..." => "Seleccionar archivo",
 "Description" => "Descripción",
 "User" => "Usuario",

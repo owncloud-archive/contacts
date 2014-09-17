@@ -24,5 +24,6 @@
 "Share" => "分享",
 "Export" => "輸出",
 "Edit" => "編輯",
+"Format" => "格式",
 "Password" => "密碼"
 );

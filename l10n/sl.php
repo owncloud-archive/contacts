@@ -247,6 +247,7 @@
 "Export" => "Izvozi",
 "CardDAV link" => "Povezava CardDAV",
 "Edit" => "Uredi",
+"Format" => "Zapis",
 "Automatic format" => "Samodejno zaznavanje zapisa",
 "Select file..." => "Izbor datoteke ...",
 "Addressbook URI" => "Naslov URI imenika",

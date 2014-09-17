@@ -247,6 +247,7 @@
 "Export" => "エクスポート",
 "CardDAV link" => "CardDAVリンク",
 "Edit" => "編集",
+"Format" => "書式",
 "Automatic format" => "自動フォーマット",
 "Select file..." => "ファイルを選択...",
 "Addressbook URI" => "アドレス帳 URI",
