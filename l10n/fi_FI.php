@@ -152,6 +152,7 @@
 "Display name" => "Näyttönimi",
 "Add Address Book" => "Lisää osoitekirja",
 "Add LDAP Address Book" => "Lisää LDAP-osoitekirja",
+"(De-)select all" => "Valitse kaikki (tai älä valitse mitään)",
 "Sort order" => "Lajittelujärjestys",
 "First- Lastname" => "Etu-/sukunimi",
 "Last-, Firstname" => "Suku-/etunimi",

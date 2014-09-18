@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-17 00:48-0400\n"
-"PO-Revision-Date: 2014-09-17 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-09-18 00:48-0400\n"
+"PO-Revision-Date: 2014-09-17 18:20+0000\n"
+"Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,7 +73,7 @@ msgstr "কার্ড প্রক্রিয়াকরণ {count}/{total} চ
 
 #: js/addressbooks.js:585
 msgid "Total: {total}, Success: {imported}, Errors: {failed}"
-msgstr ""
+msgstr "মোট:{total}, সার্থকতা:{imported}, ভ্রান্তি:{failed}"
 
 #: js/addressbooks.js:727
 msgid "An address book called {name} already exists"
@@ -118,11 +118,11 @@ msgstr "গ্রুপ যোগ কর"
 
 #: js/app.js:479
 msgid "Invalid URL: \"{url}\""
-msgstr ""
+msgstr "অবৈধ URL: \"{url}\""
 
 #: js/app.js:505
 msgid "Invalid email: \"{url}\""
-msgstr ""
+msgstr "ই-মেইলটি সঠিক নয়: \"{url}\""
 
 #: js/app.js:588
 msgid "Merge failed. Cannot find contact: {id}"

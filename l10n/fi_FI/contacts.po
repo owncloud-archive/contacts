@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-17 00:48-0400\n"
-"PO-Revision-Date: 2014-09-17 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-09-18 00:48-0400\n"
+"PO-Revision-Date: 2014-09-17 05:40+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/projects/p/owncloud/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -772,7 +772,7 @@ msgstr "Lisää LDAP-osoitekirja"
 
 #: templates/contacts.php:50
 msgid "(De-)select all"
-msgstr ""
+msgstr "Valitse kaikki (tai älä valitse mitään)"
 
 #: templates/contacts.php:52
 msgid "Sort order"
