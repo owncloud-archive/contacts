@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-18 00:48-0400\n"
-"PO-Revision-Date: 2014-09-17 18:20+0000\n"
+"POT-Creation-Date: 2014-09-19 00:48-0400\n"
+"PO-Revision-Date: 2014-09-18 14:30+0000\n"
 "Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
@@ -126,15 +126,15 @@ msgstr "ই-মেইলটি সঠিক নয়: \"{url}\""
 
 #: js/app.js:588
 msgid "Merge failed. Cannot find contact: {id}"
-msgstr ""
+msgstr "মেশানোর কমান্ড ব্যার্থ। পরিচিতজন {id}কে পাওয়া গেলনা"
 
 #: js/app.js:601
 msgid "Merge failed."
-msgstr ""
+msgstr "মার্জ ব্যার্থ"
 
 #: js/app.js:608
 msgid "Merge failed. Error saving contact."
-msgstr ""
+msgstr "মার্জ ব্যার্থ। ঠিকানা যোগ করতে সমস্যা দেখা দিয়েছে।"
 
 #: js/app.js:628
 msgid "Select photo"
@@ -561,7 +561,7 @@ msgstr "ডিস্কে লিখতে ব্যর্থ"
 
 #: lib/controller/importcontroller.php:77
 msgid "Not enough storage available"
-msgstr ""
+msgstr "সংরক্ষণের যথেষ্ট জায়গা প্রাপ্তব্য নয়"
 
 #: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"

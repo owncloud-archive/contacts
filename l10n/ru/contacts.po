@@ -19,6 +19,7 @@
 # mickvav <mickvav@gmail.com>, 2012
 # Pavel <mpolr21@gmail.com>, 2012
 # Nick Remeslennikov <homolibere@gmail.com>, 2012
+# lifeslice <root@lifeslice.ru>, 2014
 # Semen V. Dubina <semen@sam002.net>, 2012
 # Semen V. Dubina <semen@sam002.net>, 2014
 # Serge Shpikin <rkfg@rkfg.me>, 2013
@@ -39,9 +40,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-17 00:48-0400\n"
-"PO-Revision-Date: 2014-09-17 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-09-19 00:48-0400\n"
+"PO-Revision-Date: 2014-09-18 14:30+0000\n"
+"Last-Translator: lifeslice <root@lifeslice.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/owncloud/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -80,7 +81,7 @@ msgstr "Импортировать контакты"
 
 #: js/addressbooks.js:398
 msgid "Upload file..."
-msgstr ""
+msgstr "Загрузить файл..."
 
 #: js/addressbooks.js:428
 msgid "Starting file import"
@@ -104,7 +105,7 @@ msgstr "Обработано {count} из {total} контактов"
 
 #: js/addressbooks.js:585
 msgid "Total: {total}, Success: {imported}, Errors: {failed}"
-msgstr ""
+msgstr "Всего: {total}, успешно: {imported}, ошибок: {failed}"
 
 #: js/addressbooks.js:727
 msgid "An address book called {name} already exists"

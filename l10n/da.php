@@ -12,6 +12,7 @@
 "Automatic format detection" => "Automatisk format-vælger",
 "Import into..." => "Importér til...",
 "Processing {count}/{total} cards" => "Importeret {count} af {total} kontakter",
+"Total: {total}, Success: {imported}, Errors: {failed}" => "Total: {total}, Succes: {imported}, Fejl: {failed}",
 "An address book called {name} already exists" => "Der eksisterer allerede en adressebog med navnet: {name}",
 "Failed adding address book: {error}" => "Kunne ikke tilføje adressebog: {error}",
 "Failed loading address books: {error}" => "Kunne ikke hente adressebøger: {error}",
