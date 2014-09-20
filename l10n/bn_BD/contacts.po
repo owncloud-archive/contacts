@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-19 00:48-0400\n"
-"PO-Revision-Date: 2014-09-18 14:30+0000\n"
+"POT-Creation-Date: 2014-09-20 00:48-0400\n"
+"PO-Revision-Date: 2014-09-19 14:21+0000\n"
 "Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
@@ -230,23 +230,23 @@ msgstr "যোগ কর"
 
 #: js/groups.js:264
 msgid "Contact is already in this group."
-msgstr ""
+msgstr "ব্যক্তি ইতোমধ্যে গোষ্ঠির সদস্য।"
 
 #: js/groups.js:277
 msgid "Contacts are already in this group."
-msgstr ""
+msgstr "ব্যক্তিবর্গ ইতোমধ্যে গোষ্ঠিভুক্ত।"
 
 #: js/groups.js:343
 msgid "Couldn't get contact list."
-msgstr ""
+msgstr "পরিচিত তালিকা পাওয়া গেলনা"
 
 #: js/groups.js:354
 msgid "Contact is not in this group."
-msgstr ""
+msgstr "ব্যক্তি গোষ্ঠিভুক্ত নয়"
 
 #: js/groups.js:368
 msgid "Contacts are not in this group."
-msgstr ""
+msgstr "ব্যক্তিবর্গ গোষ্ঠিভুক্ত নয়।"
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
