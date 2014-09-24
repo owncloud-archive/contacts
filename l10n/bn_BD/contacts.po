@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-20 00:48-0400\n"
-"PO-Revision-Date: 2014-09-19 14:21+0000\n"
+"POT-Creation-Date: 2014-09-24 00:48-0400\n"
+"PO-Revision-Date: 2014-09-23 22:01+0000\n"
 "Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
@@ -577,32 +577,32 @@ msgstr ""
 
 #: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
-msgstr ""
+msgstr "আপনার এই ঠিকানাঞ্জীতে কিছু যোগ করার অনুমতি নেই৷"
 
 #: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
-msgstr ""
+msgstr "অনুরোধে ফাইলের নাম নেই"
 
 #: lib/controller/importcontroller.php:182
 #: lib/controller/importcontroller.php:321
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "অনুরোধে অগ্রগামীতার কি নেই।"
 
 #: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "কালোতালিকাভুক্ত ফাইলে প্রবেশের প্রচেষ্টা:"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
-msgstr ""
+msgstr "কোন কি দেয়া হয়নি।"
 
 #: lib/controller/settingscontroller.php:40
 msgid "No value is given."
-msgstr ""
+msgstr "কোন ভ্যালু দেয়া হয়নি।"
 
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr ""
+msgstr "অগ্রাধিকার নির্ণয় করা গেলনা:"
 
 #: lib/searchprovider.php:37
 msgid "Contact"
