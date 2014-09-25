@@ -43,14 +43,14 @@
 # traductor, 2012
 # noxin <transifex.com@davidmainzer.com>, 2013
 # Tristan <blobbyjj@ymail.com>, 2013
-# kabum <uu.kabum@gmail.com>, 2014
+# kabum <morris.jobke@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-17 00:48-0400\n"
-"PO-Revision-Date: 2014-09-17 04:49+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-09-25 00:48-0400\n"
+"PO-Revision-Date: 2014-09-24 20:35+0000\n"
+"Last-Translator: Tobias Bannert\n"
 "Language-Team: German (Germany) (http://www.transifex.com/projects/p/owncloud/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -89,7 +89,7 @@ msgstr "Kontakte werden importiert"
 
 #: js/addressbooks.js:398
 msgid "Upload file..."
-msgstr "Lade Datei hoch..."
+msgstr "Datei hochladen …"
 
 #: js/addressbooks.js:428
 msgid "Starting file import"
@@ -134,7 +134,7 @@ msgstr "Serverfehler! Bitte informieren Sie den System-Administrator"
 
 #: js/app.js:223
 msgid "Indexing contacts"
-msgstr "Indiziere Kontakte"
+msgstr "Kontakte werden indiziert"
 
 #: js/app.js:233
 msgid "Unrecoverable error loading address books: {msg}"
@@ -208,7 +208,7 @@ msgstr "Sie haben über 300 Kontakte ausgewählt.\nDies wird höchstwahrscheinli
 
 #: js/app.js:1228
 msgid "Error setting {name} as favorite."
-msgstr "Fehler beim Setzen von {name} als Favorit."
+msgstr "Fehler beim Einstellen von {name} als Favorit."
 
 #: js/app.js:1366 js/app.js:1370 templates/contacts.php:166
 msgid "Merge contacts"
@@ -248,7 +248,7 @@ msgstr "Fehler beim Analysieren des Geburtstages {bday}"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr "Das Backend unterstüzt keine Multibyte-Zeichen."
+msgstr "Das Hintergrundprogramm unterstüzt keine Multibyte-Zeichen."
 
 #: js/contacts.js:2234
 msgid ""
@@ -258,7 +258,7 @@ msgstr "Einige zum Löschen vorgemerkte Kontakte wurden noch nicht gelöscht. Bi
 
 #: js/contacts.js:2245
 msgid "Click to undo deletion of {num} contacts"
-msgstr "Klicken Sie hier um das Löschen von {num} Kontakten rückgängig zu machen"
+msgstr "Hier klicken, um das Löschen von {num} Kontakten rückgängig zu machen"
 
 #: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
@@ -355,7 +355,7 @@ msgstr "Fehler beim Laden eines Fotos: {error}"
 
 #: lib/addressbook.php:171 lib/contact.php:116 lib/contact.php:165
 msgid "You do not have permissions to see this contact"
-msgstr "Sie haben nicht die erforderlichen Rechte, diesen Kontakt zu sehen."
+msgstr "Sie haben nicht die erforderlichen Rechte, um diesen Kontakt zu sehen."
 
 #: lib/addressbook.php:182
 msgid "Contact not found"
@@ -363,7 +363,7 @@ msgstr "Kontakt nicht gefunden"
 
 #: lib/addressbook.php:219
 msgid "You do not have permissions to see these contacts"
-msgstr "Sie haben nicht die erforderlichen Rechte, diese Kontakte zu sehen."
+msgstr "Sie haben nicht die erforderlichen Rechte, um diese Kontakte zu sehen."
 
 #: lib/addressbook.php:252
 msgid "You do not have permissions add contacts to the address book"
@@ -371,7 +371,7 @@ msgstr "Sie haben nicht die erforderlichen Rechte, Kontakte zum Adressbuch hinzu
 
 #: lib/addressbook.php:259
 msgid "The backend for this address book does not support adding contacts"
-msgstr "Das Backend für dieses Adressbuch unterstützt nicht das Hinzufügen von Kontakten."
+msgstr "Das Hintergrundprogramm für dieses Adressbuch unterstützt nicht das Hinzufügen von Kontakten."
 
 #: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
@@ -379,7 +379,7 @@ msgstr "Sie haben nicht die erforderlichen Rechte, diesen Kontakt zu löschen."
 
 #: lib/addressbook.php:311 lib/addressbook.php:351
 msgid "The backend for this address book does not support deleting contacts"
-msgstr "Das Backend für dieses Adressbuch unterstützt nicht das Löschen von Kontakten."
+msgstr "Das Hintergrundprogramm für dieses Adressbuch unterstützt nicht das Löschen von Kontakten."
 
 #: lib/addressbook.php:374
 msgid "Unknown error"
@@ -391,7 +391,7 @@ msgstr "Zugriff verweigert"
 
 #: lib/addressbook.php:422
 msgid "The backend for this address book does not support updating"
-msgstr "Das Backend für dieses Adressbuch unterstützt keine Aktualisierung."
+msgstr "Das Hintergrundprogramm für dieses Adressbuch unterstützt keine Aktualisierung."
 
 #: lib/addressbook.php:453
 msgid "You don't have permissions to delete the address book."
@@ -407,11 +407,11 @@ msgstr "Sie haben nicht die erforderlichen Rechte, diesen Kontakt zu aktualisier
 
 #: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
-msgstr "Das Backend für diesen Kontakt unterstützt nicht dessen Aktualisierung."
+msgstr "Das Hintergrundprogramm für diesen Kontakt unterstützt nicht dessen Aktualisierung."
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr "Dieses Backend unterstützt nicht das Hinzufügen von Kontakten"
+msgstr "Dieses Hintergrundprogramm unterstützt nicht das Hinzufügen von Kontakten"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -664,7 +664,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:76
 msgid "Internet call"
-msgstr "Internet-Anruf"
+msgstr "Internetanruf"
 
 #: lib/utils/properties.php:81
 msgid "AIM"
@@ -988,7 +988,7 @@ msgstr "Geburtstag"
 
 #: templates/contacts.php:321
 msgid "Website"
-msgstr "Webseite"
+msgstr "Internetseite"
 
 #: templates/contacts.php:326
 msgid "Instant messaging"
@@ -1012,7 +1012,7 @@ msgstr "Notiz"
 
 #: templates/contacts.php:349
 msgid "Web site"
-msgstr "Webseite"
+msgstr "Internetseite"
 
 #: templates/contacts.php:373 templates/contacts.php:388
 #: templates/contacts.php:402 templates/contacts.php:417
@@ -1042,11 +1042,11 @@ msgstr "Telefonnummer angeben"
 
 #: templates/contacts.php:409
 msgid "Go to web site"
-msgstr "Webseite aufrufen"
+msgstr "Internetseite aufrufen"
 
 #: templates/contacts.php:426
 msgid "View on map"
-msgstr "Auf der Karte zeigen"
+msgstr "Auf der Karte anzeigen"
 
 #: templates/contacts.php:434
 msgid "Street address"
@@ -1062,7 +1062,7 @@ msgstr "Stadt"
 
 #: templates/contacts.php:444
 msgid "State or province"
-msgstr "Staat oder Provinz"
+msgstr "Bundesland oder Region"
 
 #: templates/contacts.php:448
 msgid "Country"
@@ -1174,7 +1174,7 @@ msgstr "Anschluss"
 
 #: templates/contacts.php:629
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr "Anschlusswert (Am Besten einen externen Editor und kopieren/einfügen nutzen)"
+msgstr "Anschlusswert (Am Besten eine externes Bearbeitungsprogramm und kopieren/einfügen benutzen)"
 
 #: templates/contacts.php:635
 msgid "Copy from (Warning, replaces current custom value)"

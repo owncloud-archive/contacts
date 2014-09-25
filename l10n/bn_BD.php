@@ -145,5 +145,7 @@
 "Read-Only" => "কেবলমাত্র পড়া",
 "User" => "ব্যবহারকারি",
 "Password" => "কূটশব্দ",
-"Base DN" => "ভিত্তি  DN"
+"Base DN" => "ভিত্তি  DN",
+"Connector" => "সংযোজক",
+"Connector value (Better use external editor and copy/paste)" => "সংযোজক মান (বাহ্যিক সম্পাদনাকারী এবং কপি/পেস্ট ব্যবহার করা ভালো)"
 );
