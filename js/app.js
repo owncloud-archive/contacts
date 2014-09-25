@@ -217,7 +217,7 @@ OC.notify = function(params) {
 					if(!contacts_properties_indexed) {
 						// Wait a couple of mins then check if contacts are indexed.
 						setTimeout(function() {
-								$.when($.post(OC.generateUrl('apps/contacts/indexproperties/{user}/')))
+								$.when($.post(OC.generateUrl('apps/contacts/indexproperties/{user}/', {user: OC.currentUser})))
 									.then(function(response) {
 										if(!response.isIndexed) {
 											OC.notify({message:t('contacts', 'Indexing contacts'), timeout:20});
