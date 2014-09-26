@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-25 00:48-0400\n"
-"PO-Revision-Date: 2014-09-24 20:35+0000\n"
+"POT-Creation-Date: 2014-09-26 00:48-0400\n"
+"PO-Revision-Date: 2014-09-25 18:20+0000\n"
 "Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
@@ -456,11 +456,11 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
-msgstr ""
+msgstr "উপাদানের নামটি নির্ধারণ করা হয় নি।"
 
 #: lib/controller/contactcontroller.php:109
 msgid "Property checksum is not set."
-msgstr ""
+msgstr "চেকসাম প্রপার্টি নির্ধারণ করা হয়নি।"
 
 #: lib/controller/contactcontroller.php:131
 msgid "Information about vCard is incorrect. Please reload the page."
@@ -468,7 +468,7 @@ msgstr ""
 
 #: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
-msgstr ""
+msgstr "ঠিকানা পরিবর্ধনে সমস্যা হয়েছে"
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
@@ -476,7 +476,7 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
-msgstr ""
+msgstr "ছবির জন্য কোন পথ নির্দেশ প্রদান করা হয় নি।"
 
 #: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
@@ -488,7 +488,7 @@ msgstr ""
 
 #: lib/controller/contactphotocontroller.php:217
 msgid "Error saving contact."
-msgstr ""
+msgstr "ঠিকানা যোগ করতে সমস্যা দেখা দিয়েছে।"
 
 #: lib/controller/groupcontroller.php:68 lib/controller/groupcontroller.php:90
 msgid "No group name given."
@@ -496,7 +496,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:74
 msgid "Error adding group."
-msgstr ""
+msgstr "দল যোগ করতে সমস্যা।"
 
 #: lib/controller/groupcontroller.php:150
 msgid "No group name to rename from given."
@@ -508,7 +508,7 @@ msgstr ""
 
 #: lib/controller/groupcontroller.php:160
 msgid "Error renaming group."
-msgstr ""
+msgstr "দলের পূণঃনামকরণে সমস্যা।"
 
 #: lib/controller/groupcontroller.php:210
 #: lib/controller/groupcontroller.php:267
