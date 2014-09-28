@@ -109,8 +109,8 @@ setup_db '$DB'
 ls $BASEDIR/tests/
 ls $BASEDIR/../core/config/
 cat $BASEDIR/../core/config/config.php
-ls $BASEDIR/../core/data/
-cat $BASEDIR/../core/data/owncloud.log
+#ls $BASEDIR/../core/data/
+#cat $BASEDIR/../core/data/owncloud.log
 
 #
 # NOTES on mysql:
