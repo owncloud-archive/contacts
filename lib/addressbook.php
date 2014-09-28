@@ -202,7 +202,11 @@ class Addressbook extends AbstractPIMCollection {
 		if(isset($this->objects[$id])) {
 			return true;
 		}
-		return ($this->getChild($id) !== null);
+		try {
+			return ($this->getChild($id) !== null);
+		} catch (\Exception $e) {
+			return false;
+		}
 	}
 
 	/**
