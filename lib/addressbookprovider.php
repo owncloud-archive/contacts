@@ -91,8 +91,8 @@ class AddressbookProvider implements \OCP\IAddressBook {
 	public function search($pattern, $searchProperties, $options) {
 		$ids = array();
 		$results = array();
-		$query = 'SELECT DISTINCT `contactid` FROM `' . self::PROPERTY_TABLE . '` WHERE (';
-		$params = array();
+		$query = 'SELECT DISTINCT `contactid` FROM `' . self::PROPERTY_TABLE . '` WHERE `userid` = ? AND (';
+		$params = array(\OCP\User::getUser());
 		foreach($searchProperties as $property) {
 			$params[] = $property;
 			$params[] = '%' . $pattern . '%';

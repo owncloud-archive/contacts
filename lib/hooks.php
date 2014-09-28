@@ -190,21 +190,25 @@ class Hooks{
 
 		foreach ($addressBookInfos as $addressBookInfo) {
 			$addressBook = new AddressBook($backend, $addressBookInfo);
-			while ($contacts = $addressBook->getChildren($limit, $offset, false)) {
-				\OCP\Util::writeLog('contacts',
-					__METHOD__ . ', indexing: ' . $limit . ' starting from ' . $offset,
-					\OCP\Util::DEBUG);
-				foreach ($contacts as $contact) {
-					if(!$contact->retrieve()) {
-						\OCP\Util::writeLog('contacts',
-							__METHOD__ . ', Error loading contact ' .print_r($contact, true),
-							\OCP\Util::DEBUG);
-					}
-					Utils\Properties::updateIndex($contact->getId(), $contact);
+			$contacts = $addressBook->getChildren($limit, $offset, false);
+			\OCP\Util::writeLog('contacts',
+				__METHOD__ . ', indexing: ' . $limit . ' starting from ' . $offset,
+				\OCP\Util::DEBUG);
+			foreach ($contacts as $contact) {
+				if(!$contact->retrieve()) {
+					\OCP\Util::writeLog('contacts',
+						__METHOD__ . ', Error loading contact ' .print_r($contact, true),
+						\OCP\Util::DEBUG);
 				}
-				$offset += $limit;
+				Utils\Properties::updateIndex($contact->getId(), $contact);
 			}
+			$offset += $limit;
 		}
+		$stmt = OCP\DB::prepare('DELETE FROM `*PREFIX*contacts_cards_properties`
+							WHERE NOT EXISTS(SELECT NULL
+                    		FROM `*PREFIX*contacts_cards`
+                   			WHERE `*PREFIX*contacts_cards`.id = `*PREFIX*contacts_cards_properties`.contactid)');
+		$result = $stmt->execute(array());
 	}
 
 	public static function getCalenderSources($parameters) {
