@@ -20,39 +20,53 @@
 */
 
 namespace OCA\Contacts\Share;
-use OCA\Contacts;
+use OCA\Contacts\App;
 
 class Contact implements \OCP\Share_Backend {
 
 	const FORMAT_CONTACT = 0;
 
-	private static $contact;
+	/**
+	 * @var \OCA\Contacts\App;
+	 */
+	public $app;
+
+	/**
+	 * @var \OCA\Contacts\Backend\Database;
+	 */
+	public $backend;
 
 	public function __construct() {
-		// Currently only share
-		$this->backend = new Backend\Database();
+		$this->app = new App(\OCP\User::getUser());
+		$this->backend = $this->app->getBackend('local');
 	}
 
 	public function isValidSource($itemSource, $uidOwner) {
-		self::$contact = VCard::find($itemSource);
-		if (self::$contact) {
-			return true;
+		// TODO: Cache address books.
+		$app = new App($uidOwner);
+		$userAddressBooks = $app->getAddressBooksForUser();
+
+		foreach ($userAddressBooks as $addressBook) {
+			if ($addressBook->childExists($itemSource)) {
+				return true;
+			}
 		}
 		return false;
 	}
 
 	public function generateTarget($itemSource, $shareWith, $exclude = null) {
 		// TODO Get default addressbook and check for conflicts
-		return self::$contact['fullname'];
+		$contact = $this->backend->getContact(null, $itemSource,
+			array('noCollection' => true));
+		return $contact['fullname'];
 	}
 
 	public function formatItems($items, $format, $parameters = null) {
 		$contacts = array();
 		if ($format == self::FORMAT_CONTACT) {
 			foreach ($items as $item) {
-				$contact = VCard::find($item['item_source']);
-				$contact['fullname'] = $item['item_target'];
-				$contacts[] = $contact;
+				$contacts[] = $this->backend->getContact(null, $item,
+					array('noCollection' => true));
 			}
 		}
 		return $contacts;
