@@ -26,8 +26,6 @@ class Contact implements \OCP\Share_Backend {
 
 	const FORMAT_CONTACT = 0;
 
-	private static $contact;
-
 	/**
 	 * @var \OCA\Contacts\App;
 	 */
@@ -58,8 +56,8 @@ class Contact implements \OCP\Share_Backend {
 
 	public function generateTarget($itemSource, $shareWith, $exclude = null) {
 		// TODO Get default addressbook and check for conflicts
-		$contact = $this->backend->getContact(null, $item,
-		                                      array('noCollection' => true));
+		$contact = $this->backend->getContact(null, $itemSource,
+			array('noCollection' => true));
 		return $contact['fullname'];
 	}
 
@@ -68,7 +66,7 @@ class Contact implements \OCP\Share_Backend {
 		if ($format == self::FORMAT_CONTACT) {
 			foreach ($items as $item) {
 				$contacts[] = $this->backend->getContact(null, $item,
-				                                         array('noCollection' => true));
+					array('noCollection' => true));
 			}
 		}
 		return $contacts;
