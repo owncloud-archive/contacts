@@ -578,12 +578,12 @@ OC.Contacts = OC.Contacts || {};
 	 *
 	 * @param string name
 	 */
-	Storage.prototype.deleteGroup = function(name) {
+	Storage.prototype.deleteGroup = function(id, name) {
 		return this.requestRoute(
 			'groups/delete',
 			'POST',
 			{},
-			JSON.stringify({name: name})
+			JSON.stringify({id: id, name: name})
 		);
 	};
 
