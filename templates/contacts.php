@@ -182,7 +182,6 @@ use OCA\Contacts\ImportManager;
 		<td class="name thumbnail">
 			<input type="checkbox" id="select-{id}" name="id" value="{id}" />
 			<label for="select-{id}"></label>
-			<div class="avatar"></div>
 			<a href="#{id}" class="nametext">{name}</a>
 		</td>
 		<td class="email">
