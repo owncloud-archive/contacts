@@ -129,6 +129,23 @@ OC.ContactsImporter = OC.ContactsImporter || {
 
 $(document).ready(function(){
 
+	// translate search result type
+	OC.search.resultTypes.contact = t('contacts', 'Contact');
+
+	OC.search.customResults.contact = function (row, item){
+		var text = '';
+		if (item.email) {
+			text += '✉ ' + item.email;
+			if (item.phone) {
+				text += ', '
+			}
+		}
+		if (item.phone) {
+			text += '☎ ' + item.phone
+		}
+		row.find('td.result .text').text(text);
+	};
+
 	// If the app is already active there's no need for the FileActions
 	if(OC.Contacts) {
 		return;
