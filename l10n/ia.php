@@ -25,6 +25,7 @@
 "Video" => "Video",
 "Pager" => "Pager",
 "Internet" => "Internet",
+"Family" => "Familia",
 "Delete" => "Deler",
 "Groups" => "Gruppos",
 "Download" => "Discargar",

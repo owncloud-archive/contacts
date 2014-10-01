@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-27 00:48-0400\n"
-"PO-Revision-Date: 2014-09-26 10:00+0000\n"
+"POT-Creation-Date: 2014-10-01 06:53-0400\n"
+"PO-Revision-Date: 2014-09-30 17:50+0000\n"
 "Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
@@ -952,19 +952,19 @@ msgstr "ওয়েবসাইট"
 
 #: templates/contacts.php:326
 msgid "Instant messaging"
-msgstr ""
+msgstr "তাৎক্ষণিক বার্তা"
 
 #: templates/contacts.php:332
 msgid "Notes go here..."
-msgstr ""
+msgstr "এখানে মন্তব্য যায়...."
 
 #: templates/contacts.php:339
 msgid "Add field..."
-msgstr ""
+msgstr "ফিল্ড যোগ কর...."
 
 #: templates/contacts.php:346
 msgid "Instant Messaging"
-msgstr ""
+msgstr "তাৎক্ষণিক বার্তা"
 
 #: templates/contacts.php:348
 msgid "Note"
@@ -982,23 +982,23 @@ msgstr "পছন্দনীয়"
 
 #: templates/contacts.php:378
 msgid "Please specify a valid email address."
-msgstr ""
+msgstr "দয়া করে একটি সঠিক ই-মেইল ঠিকানা প্রদান করুন।"
 
 #: templates/contacts.php:378
 msgid "someone@example.com"
-msgstr ""
+msgstr "someone@example.com"
 
 #: templates/contacts.php:380
 msgid "Mail to address"
-msgstr ""
+msgstr "ঠিকানায় বার্তা পাঠান"
 
 #: templates/contacts.php:381
 msgid "Delete email address"
-msgstr ""
+msgstr "ইমেইল ঠিকানা মুছে ফেল"
 
 #: templates/contacts.php:393
 msgid "Enter phone number"
-msgstr ""
+msgstr "ফোন নাম্বার দিন"
 
 #: templates/contacts.php:409
 msgid "Go to web site"
