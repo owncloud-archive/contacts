@@ -23,7 +23,7 @@ namespace OCA\Contacts\Search;
 /**
  * A contact search result
  */
-class Contact extends \OC\Search\Result {
+class Contact extends \OCP\Search\Result {
 
 	/**
 	 * Type name; translated in templates
@@ -71,7 +71,7 @@ class Contact extends \OC\Search\Result {
 	 * Constructor
 	 *
 	 * @param array $data
-	 * @return \OCA\Calendar\Search\Contact
+	 * @return \OCA\Contacts\Search\Contact
 	 */
 	public function __construct(array $data = null) {
 		$this->id = $data['id'];

@@ -23,7 +23,7 @@ namespace OCA\Contacts\Search;
 /**
  * The updated contacts search provider
  */
-class Provider extends \OC\Search\Provider {
+class Provider extends \OCP\Search\Provider {
 
 	/**
 	 * Search for contacts
