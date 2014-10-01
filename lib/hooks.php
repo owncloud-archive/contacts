@@ -204,10 +204,10 @@ class Hooks{
 			}
 			$offset += $limit;
 		}
-		$stmt = OCP\DB::prepare('DELETE FROM `*PREFIX*contacts_cards_properties`
+		$stmt = \OCP\DB::prepare('DELETE FROM `*PREFIX*contacts_cards_properties`
 							WHERE NOT EXISTS(SELECT NULL
-                    		FROM `*PREFIX*contacts_cards`
-                   			WHERE `*PREFIX*contacts_cards`.id = `*PREFIX*contacts_cards_properties`.contactid)');
+							FROM `*PREFIX*contacts_cards`
+							WHERE `*PREFIX*contacts_cards`.id = `*PREFIX*contacts_cards_properties`.contactid)');
 		$result = $stmt->execute(array());
 	}
 
