@@ -38,6 +38,7 @@ class GroupController extends Controller {
 			try {
 				$ids = $this->tags->getIdsForTag($tag['name']);
 				$tag['contacts'] = $ids;
+				$tag['displayname'] = $this->displayName($tag);
 			} catch(\Exception $e) {
 				\OCP\Util::writeLog('contacts', __METHOD__ . ', ' . $e->getMessage(), \OCP\Util::ERROR);
 			}
@@ -320,5 +321,21 @@ class GroupController extends Controller {
 		return $response;
 	}
 
+	/**
+	* Returns a tag's name as it should be displayed.
+	*
+	* @param Tag
+	* @return string
+	*
+	* If the tag belongs to the current user, simply returns the tag's name.
+	* Otherwise, the tag's name is returned with it's owner's name appended
+	* in parentheses, like "Tag (owner)".
+	*/
+	private function displayName($tag) {
+		if ($tag['owner'] != \OCP\User::getUser()) {
+			return $tag['name'] . ' ('. $tag['owner'] . ')';
+		}
+		return $tag['name'];
+	}
 }
 
