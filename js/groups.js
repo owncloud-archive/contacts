@@ -535,7 +535,7 @@ OC.Contacts = OC.Contacts || {};
 					return;
 				}
 				$editInput.addClass('loading');
-				self.renameGroup(oldname, newname, function(response) {
+				self.renameGroup(id, newname, function(response) {
 					if(response.error) {
 						$(document).trigger('status.contacts.error', response);
 					} else {
