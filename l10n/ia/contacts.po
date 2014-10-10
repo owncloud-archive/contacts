@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-10-01 06:53-0400\n"
-"PO-Revision-Date: 2014-09-30 14:10+0000\n"
+"POT-Creation-Date: 2014-10-10 00:48-0400\n"
+"PO-Revision-Date: 2014-10-09 06:10+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Interlingua (http://www.transifex.com/projects/p/owncloud/language/ia/)\n"
 "MIME-Version: 1.0\n"
@@ -305,6 +305,10 @@ msgstr ""
 #: templates/contacts.php:357
 msgid "Close"
 msgstr "Clauder"
+
+#: js/loader.js:133
+msgid "Contact"
+msgstr "Contacto"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
@@ -604,10 +608,6 @@ msgstr ""
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
 msgstr ""
-
-#: lib/searchprovider.php:37
-msgid "Contact"
-msgstr "Contacto"
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
 #: lib/utils/properties.php:178 lib/utils/properties.php:185

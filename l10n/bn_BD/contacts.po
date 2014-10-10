@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-10-01 06:53-0400\n"
-"PO-Revision-Date: 2014-09-30 17:50+0000\n"
+"POT-Creation-Date: 2014-10-10 00:48-0400\n"
+"PO-Revision-Date: 2014-10-09 06:10+0000\n"
 "Last-Translator: azizul <aziz.murad3@gmail.com>\n"
 "Language-Team: Bengali (Bangladesh) (http://www.transifex.com/projects/p/owncloud/language/bn_BD/)\n"
 "MIME-Version: 1.0\n"
@@ -304,6 +304,10 @@ msgstr "আমদানি সমাপ্ত"
 #: templates/contacts.php:357
 msgid "Close"
 msgstr "বন্ধ"
+
+#: js/loader.js:133
+msgid "Contact"
+msgstr "পরিচিতজন"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
@@ -603,10 +607,6 @@ msgstr "কোন ভ্যালু দেয়া হয়নি।"
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
 msgstr "অগ্রাধিকার নির্ণয় করা গেলনা:"
-
-#: lib/searchprovider.php:37
-msgid "Contact"
-msgstr "পরিচিতজন"
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
 #: lib/utils/properties.php:178 lib/utils/properties.php:185

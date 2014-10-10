@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-27 00:48-0400\n"
-"PO-Revision-Date: 2014-09-26 10:00+0000\n"
+"POT-Creation-Date: 2014-10-10 00:48-0400\n"
+"PO-Revision-Date: 2014-10-09 06:10+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
@@ -316,6 +316,10 @@ msgstr "Importálás befejezve"
 #: templates/contacts.php:357
 msgid "Close"
 msgstr "Bezárás"
+
+#: js/loader.js:133
+msgid "Contact"
+msgstr "Névjegy"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
@@ -615,10 +619,6 @@ msgstr "Nincs érték megadva."
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
 msgstr "Nem állítható be a tulajdonság:"
-
-#: lib/searchprovider.php:37
-msgid "Contact"
-msgstr "Névjegy"
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
 #: lib/utils/properties.php:178 lib/utils/properties.php:185

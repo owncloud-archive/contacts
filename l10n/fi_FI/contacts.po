@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-27 00:48-0400\n"
-"PO-Revision-Date: 2014-09-26 10:00+0000\n"
+"POT-Creation-Date: 2014-10-10 00:48-0400\n"
+"PO-Revision-Date: 2014-10-09 06:10+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish (Finland) (http://www.transifex.com/projects/p/owncloud/language/fi_FI/)\n"
 "MIME-Version: 1.0\n"
@@ -310,6 +310,10 @@ msgstr "Tuonti valmis"
 #: templates/contacts.php:357
 msgid "Close"
 msgstr "Sulje"
+
+#: js/loader.js:133
+msgid "Contact"
+msgstr "Yhteystieto"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
@@ -609,10 +613,6 @@ msgstr "Arvoa ei ole annettu."
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
 msgstr ""
-
-#: lib/searchprovider.php:37
-msgid "Contact"
-msgstr "Yhteystieto"
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
 #: lib/utils/properties.php:178 lib/utils/properties.php:185
