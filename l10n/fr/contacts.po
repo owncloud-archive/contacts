@@ -40,8 +40,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-10-10 00:48-0400\n"
-"PO-Revision-Date: 2014-10-09 20:41+0000\n"
+"POT-Creation-Date: 2014-10-11 00:48-0400\n"
+"PO-Revision-Date: 2014-10-10 16:10+0000\n"
 "Last-Translator: Thomas Imbreckx <zinks@iozero.be>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/owncloud/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -109,7 +109,7 @@ msgstr "Total : {total}, Succès : {imported}, Erreurs : {failed}"
 
 #: js/addressbooks.js:727
 msgid "An address book called {name} already exists"
-msgstr "Un carnet d'adresse appelé {name} existe déjà"
+msgstr "Un carnet d'adresses appelé {name} existe déjà"
 
 #: js/addressbooks.js:761 js/otherbackendconfig.js:141
 #: js/otherbackendconfig.js:200
@@ -182,7 +182,7 @@ msgstr "Seules des images peuvent être utilisées comme photo de contact"
 
 #: js/app.js:804
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr "La taille de \"{filename}\" excède le taille maximale autorisée {size}"
+msgstr "La taille de \"{filename}\" excède la taille maximale autorisée (max. {size})"
 
 #: js/app.js:973
 msgid "Error adding to group."
@@ -196,7 +196,7 @@ msgstr "Erreur lors du retrait du groupe."
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr "Vous avez sélectionné plus de 300 contacts.\nCela va très probablement échouer ! Cliquer ici pour essayer cependant."
+msgstr "Vous avez sélectionné plus de 300 contacts.\nCela va très probablement échouer ! Cliquez ici pour essayer quand même."
 
 #: js/app.js:1228
 msgid "Error setting {name} as favorite."
