@@ -130,7 +130,7 @@ OC.ContactsImporter = OC.ContactsImporter || {
 $(document).ready(function(){
 
 	// translate search result type
-	OC.search.resultTypes.contact = t('contacts', 'Contact');
+	OC.search.resultTypes.contact =  'Contact';
 
 	OC.search.customResults.contact = function (row, item){
 		var text = '';
