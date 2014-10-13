@@ -69,7 +69,6 @@
 "Importing..." => "Importuji...",
 "Import done" => "Import dokončen",
 "Close" => "Zavřít",
-"Contact" => "Kontakt",
 "Error, missing parameters: " => "Chyba, chybějící parametry:",
 "Failed loading photo: {error}" => "Načtení fotografie se nezdařilo: {error}",
 "You do not have permissions to see this contact" => "Nemáte oprávnění k zobrazení tohoto kontaktu",

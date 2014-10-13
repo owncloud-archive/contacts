@@ -9,7 +9,6 @@
 "Please choose the addressbook" => "Per favor selige le adressario",
 "Import" => "Importar",
 "Close" => "Clauder",
-"Contact" => "Contacto",
 "Unknown error" => "Error Incognite",
 "The uploaded file was only partially uploaded" => "Le file incargate solmente esseva incargate partialmente",
 "No file was uploaded" => "Nulle file esseva incargate.",

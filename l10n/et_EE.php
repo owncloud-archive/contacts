@@ -67,7 +67,6 @@
 "Importing..." => "Importimine...",
 "Import done" => "Importimine on tehtud",
 "Close" => "Sulge",
-"Contact" => "Kontakt",
 "Error, missing parameters: " => "Viga, puuduvad parameetrid:",
 "Failed loading photo: {error}" => "Pildi laadimine ebaõnnestus: {error}",
 "You do not have permissions to see this contact" => "Sul pole selle kontakti vaatamiseks õigusi",

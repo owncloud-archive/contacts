@@ -51,7 +51,6 @@
 "Importing..." => "Đang nhập vào...",
 "Import done" => "Thực hiện import",
 "Close" => "Đóng",
-"Contact" => "Liên lạc",
 "Failed loading photo: {error}" => "Thất bại khi tải ảnh: {error}",
 "You do not have permissions to see this contact" => "Bạn không có quyền xem địa chỉ liên hệ này",
 "Contact not found" => "Không tìm th",

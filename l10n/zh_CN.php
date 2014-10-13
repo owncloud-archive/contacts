@@ -66,7 +66,6 @@
 "Importing..." => "导入中",
 "Import done" => "导入完毕",
 "Close" => "关闭",
-"Contact" => "联系人",
 "Error, missing parameters: " => "错误，缺失的参数：",
 "Failed loading photo: {error}" => "加载照片失败：{error}",
 "You do not have permissions to see this contact" => "你没有权限查看此联系人",

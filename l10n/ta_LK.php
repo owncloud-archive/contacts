@@ -47,7 +47,6 @@
 "Failed to write to disk" => "வட்டில் எழுத முடியவில்லை",
 "Error uploading contacts to storage." => "சேமிப்பகத்தில் தொடர்புகளை பதிவேற்றுவதில் வழு",
 "Could not set preference: " => "விருப்பங்களை அமைக்கமுடியவில்லை:",
-"Contact" => "தொடர்பு",
 "Other" => "மற்றவை",
 "HomePage" => "தொடக்க பக்கம்",
 "Jabber" => "Jabber",

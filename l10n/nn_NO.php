@@ -38,7 +38,6 @@
 "Import" => "Importer",
 "Importing..." => "Importerer …",
 "Close" => "Lukk",
-"Contact" => "Kontakt",
 "Unknown error" => "Ukjend feil",
 "Address book not found" => "Fann ikkje adresseboka",
 "Error merging into contact." => "Klarte ikkje føya saman med kontakten.",

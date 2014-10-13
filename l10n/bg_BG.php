@@ -69,7 +69,6 @@
 "Importing..." => "Внасяне...",
 "Import done" => "Внасянето приключи",
 "Close" => "Затвори",
-"Contact" => "Кантакт",
 "Error, missing parameters: " => "Греша, липсващи параметри:",
 "Failed loading photo: {error}" => "Неуспешно зареждане на снимка: {error}.",
 "You do not have permissions to see this contact" => "Нямаш разрешение да разгледаш този контакт.",

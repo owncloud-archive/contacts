@@ -29,7 +29,6 @@
 "Import" => "Увези",
 "Importing..." => "Увезувам...",
 "Close" => "Затвори",
-"Contact" => "Контакт",
 "You do not have permissions to see these contacts" => "Немаш привилегии да ги видиш овеи контакти",
 "Unknown error" => "Непозната грешка",
 "Address book not found" => "Адресарот не е пронајден",

@@ -69,7 +69,6 @@
 "Importing..." => "Importeren...",
 "Import done" => "Import uitgevoerd",
 "Close" => "Sluit",
-"Contact" => "Contact",
 "Error, missing parameters: " => "Fout, ontbrekende parameters:",
 "Failed loading photo: {error}" => "Mislukt: inladen foto: {error}",
 "You do not have permissions to see this contact" => "U heeft geen permissie om deze contactpersoon te bekijken",

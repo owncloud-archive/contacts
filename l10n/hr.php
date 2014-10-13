@@ -67,7 +67,6 @@
 "Importing..." => "Uvoz... u tijeku",
 "Import done" => "Uvoz završen",
 "Close" => "Zatvorite",
-"Contact" => "Kontakt",
 "Error, missing parameters: " => "Pogreška, nedostaju parametri: ",
 "Failed loading photo: {error}" => "Učitavanje fotografije nije uspjelo: {error}",
 "You do not have permissions to see this contact" => "Nije vam dopušteno vidjeti ovaj kontakt.",

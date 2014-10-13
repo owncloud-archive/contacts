@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-27 00:48-0400\n"
-"PO-Revision-Date: 2014-09-26 10:00+0000\n"
+"POT-Creation-Date: 2014-10-13 00:48-0400\n"
+"PO-Revision-Date: 2014-10-13 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Tamil (Sri-Lanka) (http://www.transifex.com/projects/p/owncloud/language/ta_LK/)\n"
 "MIME-Version: 1.0\n"
@@ -603,10 +603,6 @@ msgstr ""
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
 msgstr "விருப்பங்களை அமைக்கமுடியவில்லை:"
-
-#: lib/searchprovider.php:37
-msgid "Contact"
-msgstr "தொடர்பு"
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165
 #: lib/utils/properties.php:178 lib/utils/properties.php:185

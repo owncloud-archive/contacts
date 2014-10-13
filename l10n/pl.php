@@ -69,7 +69,6 @@
 "Importing..." => "Importowanie...",
 "Import done" => "Import zakończony",
 "Close" => "Zamknij",
-"Contact" => "Kontakt",
 "Error, missing parameters: " => "Błąd, brakujące parametry:",
 "Failed loading photo: {error}" => "Nieudane wczytanie zdjęcia: {error}",
 "You do not have permissions to see this contact" => "Nie masz uprawnień do podglądania tego kontaktu",

@@ -67,7 +67,6 @@
 "Importing..." => "Important...",
 "Import done" => "S'ha importat",
 "Close" => "Tanca",
-"Contact" => "Contacte",
 "Error, missing parameters: " => "Error, falten paràmetres:",
 "Failed loading photo: {error}" => "Ha fallat en carregar la foto: {error}",
 "You do not have permissions to see this contact" => "No teniu permisos per veure aquest contacte",

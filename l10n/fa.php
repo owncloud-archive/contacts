@@ -28,7 +28,6 @@
 "Importing..." => "در حال وارد کردن...",
 "Import done" => "وارد کردن کامل شد",
 "Close" => "بستن",
-"Contact" => "اشخاص",
 "Error, missing parameters: " => "خطا، پارامترهای نا موجود:",
 "Unknown error" => "خطای نامشخص",
 "Access denied" => "دسترسی غیر مجاز",

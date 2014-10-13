@@ -58,7 +58,6 @@
 "Importing..." => "Mengimpor...",
 "Import done" => "Impor selesai",
 "Close" => "Tutup",
-"Contact" => "Kontak",
 "Failed loading photo: {error}" => "Gagal memuat foto: {error}",
 "You do not have permissions to see this contact" => "Anda tidak memiliki akses untuk melihat kontak ini",
 "Contact not found" => "Kontak tidak ditemukan",

@@ -33,7 +33,6 @@
 "Importing..." => "กำลังนำเข้าข้อมูล...",
 "Import done" => "เสร็จสิ้นการนำเข้าข้อมูล",
 "Close" => "ปิด",
-"Contact" => "ข้อมูลการติดต่อ",
 "Unknown error" => "ข้อผิดพลาดที่ไม่ทราบสาเหตุ",
 "You don't have permissions to delete the address book." => "คุณไม่ได้รับสิทธิ์ให้ลบสมุดบันทึกที่อยู่นี้ทิ้ง",
 "Address book not found" => "ไม่พบสมุดบันทึกที่อยู่ที่ต้องการ",

@@ -69,7 +69,6 @@
 "Importing..." => "İçeri aktarılıyor...",
 "Import done" => "İçe aktarma tamamlandı",
 "Close" => "Kapat",
-"Contact" => "Kişi",
 "Error, missing parameters: " => "Hata, eksik parametreler:",
 "Failed loading photo: {error}" => "Fotoğrafı yükleme başarısız: {error}",
 "You do not have permissions to see this contact" => "Bu kişiyi görme izniniz yok",

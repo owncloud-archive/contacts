@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-09-17 00:48-0400\n"
-"PO-Revision-Date: 2014-09-17 04:49+0000\n"
+"POT-Creation-Date: 2014-10-13 00:48-0400\n"
+"PO-Revision-Date: 2014-10-13 04:48+0000\n"
 "Last-Translator: I Robot\n"
 "Language-Team: Adyghe (http://www.transifex.com/projects/p/owncloud/language/ady/)\n"
 "MIME-Version: 1.0\n"
@@ -601,10 +601,6 @@ msgstr ""
 
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
-msgstr ""
-
-#: lib/searchprovider.php:37
-msgid "Contact"
 msgstr ""
 
 #: lib/utils/jsonserializer.php:111 lib/utils/properties.php:165

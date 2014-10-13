@@ -56,7 +56,6 @@
 "Importing..." => "Se importa",
 "Import done" => "Import realizat",
 "Close" => "Închide",
-"Contact" => "Contact",
 "Failed loading photo: {error}" => "Încărcarea fotografiei a eșuat: {error}",
 "You do not have permissions to see this contact" => "Nu aveţi permisiunea sa vedeţi acest contact . ",
 "Contact not found" => "Contactul nu a putut fi găsit ",

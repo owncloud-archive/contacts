@@ -46,7 +46,6 @@
 "Importing..." => "আমদানি হচ্ছে....",
 "Import done" => "আমদানি সমাপ্ত",
 "Close" => "বন্ধ",
-"Contact" => "পরিচিতজন",
 "Unknown error" => "অজানা জটিলতা",
 "Address book not found" => "কোন ঠিকানাপঞ্জী খুঁজে পাওয়া গেল না।",
 "Unknown IM: " => "অজ্ঞাত IM:",

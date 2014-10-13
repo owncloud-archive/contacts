@@ -16,7 +16,6 @@
 "Import" => "Importeieren",
 "Importing..." => "Gett importéiert...",
 "Close" => "Zoumaachen",
-"Contact" => "Kontakt",
 "Unknown error" => "Et ass en onbekannte Fehler opgetrueden",
 "{name}'s Birthday" => "{name} säi Gebuertsdag",
 "Information about vCard is incorrect. Please reload the page." => "Informatioun iwwert vCard ass net richteg. Lued d'Säit wegl nei.",

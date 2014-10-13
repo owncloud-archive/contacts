@@ -20,7 +20,6 @@
 "Import" => "Importēt",
 "Importing..." => "Importē...",
 "Close" => "Aizvērt",
-"Contact" => "Kontakts",
 "Contact not found" => "Kontakts netika atrasts",
 "Unknown error" => "Nezināma kļūda",
 "Access denied" => "Pieeja liegta",

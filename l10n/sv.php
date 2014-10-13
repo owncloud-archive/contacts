@@ -69,7 +69,6 @@
 "Importing..." => "Importerar...",
 "Import done" => "Import klar",
 "Close" => "Stäng",
-"Contact" => "Kontakt",
 "Error, missing parameters: " => "Fel, parametrar saknas:",
 "Failed loading photo: {error}" => "Kan inte ladda foton:{error}",
 "You do not have permissions to see this contact" => "Du saknar behörighet att se denna kontakt",

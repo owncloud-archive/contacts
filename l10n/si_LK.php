@@ -23,7 +23,6 @@
 "Missing a temporary folder" => "තාවකාලික ෆොල්ඩරයක් අතුරුදහන්",
 "Failed to write to disk" => "තැටිගත කිරීම අසාර්ථකයි",
 "Error uploading contacts to storage." => "ගබඩාවට පුද්ගල විස්තර උඩුගත කිරීමේ දෝෂයක්",
-"Contact" => "සබඳතාව",
 "Other" => "වෙනත්",
 "ownCloud" => "ownCloud",
 "Work" => "කාර්යය",

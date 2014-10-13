@@ -59,7 +59,6 @@
 "Importing..." => "匯入中…",
 "Import done" => "匯入完成",
 "Close" => " 關閉",
-"Contact" => "通訊錄",
 "Failed loading photo: {error}" => "圖片載入失敗： {error}",
 "You do not have permissions to see this contact" => "您沒有權限檢視這個聯絡人",
 "Contact not found" => "找不到聯絡人",

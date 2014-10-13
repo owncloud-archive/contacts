@@ -9,7 +9,6 @@
 "Shared by {owner}" => "გაზიარდა {owner} –ის მიერ",
 "Import" => "იმპორტი",
 "Close" => "დახურვა",
-"Contact" => "კონტაქტი",
 "Unknown error" => "უცნობი შეცდომა",
 "No file was uploaded. Unknown error" => "ფაილი არ აიტვირთა. უცნობი შეცდომა",
 "There is no error, the file uploaded with success" => "ჭოცდომა არ დაფიქსირდა, ფაილი წარმატებით აიტვირთა",

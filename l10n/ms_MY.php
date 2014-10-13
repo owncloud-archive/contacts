@@ -24,7 +24,6 @@
 "Missing a temporary folder" => "Direktori sementara hilang",
 "Failed to write to disk" => "Gagal untuk disimpan",
 "Error uploading contacts to storage." => "Ralat memuatnaik senarai kenalan.",
-"Contact" => "Hubungan",
 "Other" => "Lain",
 "ownCloud" => "ownCloud",
 "Work" => "Kerja",

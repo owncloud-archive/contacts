@@ -56,7 +56,6 @@
 "Importing..." => "استيراد...",
 "Import done" => "تمت عملية الاستيراد ",
 "Close" => "إغلاق",
-"Contact" => "معرفه",
 "Failed loading photo: {error}" => "{خطأ}: فشلت مهمة تحميل الصورة",
 "You do not have permissions to see this contact" => "ليس لديك الصلاحية  لمشاهدة جهة الاتصال ",
 "Contact not found" => "تعذر إيجاد جهة الاتصال.",

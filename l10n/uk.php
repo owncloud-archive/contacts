@@ -48,7 +48,6 @@
 "Importing..." => "Імпортування...",
 "Import done" => "Імпортування виконано",
 "Close" => "Закрити",
-"Contact" => "Контакт",
 "Failed loading photo: {error}" => "Не вдалося завантажити фото: {error}",
 "You do not have permissions to see this contact" => "Вам бракує прав для того, щоб побачити цей контакт",
 "You do not have permissions to see these contacts" => "Вам бракує прав для того, щоб побачити ці контакти",

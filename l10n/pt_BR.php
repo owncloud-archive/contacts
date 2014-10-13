@@ -69,7 +69,6 @@
 "Importing..." => "Importando...",
 "Import done" => "Importação concluída",
 "Close" => "Fechar",
-"Contact" => "Contato",
 "Error, missing parameters: " => "Erro, parâmetros que faltam:",
 "Failed loading photo: {error}" => "Falha carregando foto: {error}",
 "You do not have permissions to see this contact" => "Você não tem permissão para ver este contato",

@@ -60,7 +60,6 @@
 "Importing..." => "Tuodaan...",
 "Import done" => "Tuonti valmis",
 "Close" => "Sulje",
-"Contact" => "Yhteystieto",
 "Error, missing parameters: " => "Virhe, puuttuvat parametrit:",
 "Failed loading photo: {error}" => "Kuvan lataaminen epäonnistui: {error}",
 "You do not have permissions to see this contact" => "Oikeutesi eivät riitä tämän yhteystiedon katseluun",
