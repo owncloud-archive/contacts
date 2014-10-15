@@ -41,8 +41,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-10-14 00:48-0400\n"
-"PO-Revision-Date: 2014-10-13 19:01+0000\n"
+"POT-Creation-Date: 2014-10-15 00:48-0400\n"
+"PO-Revision-Date: 2014-10-14 19:40+0000\n"
 "Last-Translator: Thomas Imbreckx <zinks@member.fsf.org>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/owncloud/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1135,11 +1135,11 @@ msgstr "Taille de la page"
 
 #: templates/contacts.php:601
 msgid "Base DN for search"
-msgstr "Nom unique de base pour la recherche"
+msgstr "DN racine (Base DN) pour la recherche"
 
 #: templates/contacts.php:604
 msgid "Base DN"
-msgstr "DN racine"
+msgstr "DN racine (Base DN)"
 
 #: templates/contacts.php:608
 msgid "Search filter"
@@ -1151,11 +1151,11 @@ msgstr "Flitre"
 
 #: templates/contacts.php:615
 msgid "Base DN for modification"
-msgstr "Nom unique de base pour la modification"
+msgstr "DN racine (Base DN) pour la modification"
 
 #: templates/contacts.php:618
 msgid "Base DN modification"
-msgstr "Modification du nom unique de base"
+msgstr "Modification du DN racine (Base DN)"
 
 #: templates/contacts.php:622
 msgid "Connector"
@@ -1163,7 +1163,7 @@ msgstr "Connecteur"
 
 #: templates/contacts.php:629
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr "Valeur du connecteur (Utilisez un éditeur externe et copier/coller)"
+msgstr "Valeur du connecteur (Utilisez un éditeur externe et copiez/collez)"
 
 #: templates/contacts.php:635
 msgid "Copy from (Warning, replaces current custom value)"

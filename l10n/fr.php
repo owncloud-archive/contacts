@@ -261,13 +261,13 @@
 "User" => "Utilisateur",
 "Password" => "Mot de passe",
 "Page size" => "Taille de la page",
-"Base DN for search" => "Nom unique de base pour la recherche",
-"Base DN" => "DN racine",
+"Base DN for search" => "DN racine (Base DN) pour la recherche",
+"Base DN" => "DN racine (Base DN)",
 "Search filter" => "Filtre de recherche",
 "Filter" => "Flitre",
-"Base DN for modification" => "Nom unique de base pour la modification",
-"Base DN modification" => "Modification du nom unique de base",
+"Base DN for modification" => "DN racine (Base DN) pour la modification",
+"Base DN modification" => "Modification du DN racine (Base DN)",
 "Connector" => "Connecteur",
-"Connector value (Better use external editor and copy/paste)" => "Valeur du connecteur (Utilisez un éditeur externe et copier/coller)",
+"Connector value (Better use external editor and copy/paste)" => "Valeur du connecteur (Utilisez un éditeur externe et copiez/collez)",
 "Copy from (Warning, replaces current custom value)" => "Copie depuis (Attention, les valeurs actuelles seront remplacées)"
 );
