@@ -330,6 +330,7 @@ OC.Contacts = OC.Contacts || {};
 
 	Contact.prototype.deleteProperty = function(params) {
 		var obj = params.obj;
+		params = {};
 		if(!this.enabled) {
 			return;
 		}
