@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Sergiy, 2014
 # Сергей Коптев <skoptev@ukr.net>, 2012
 # Soul Kim <warlock.rf@gmail.com>, 2012
 # Victor Dubiniuk <victor.dubiniuk@gmail.com>, 2012
@@ -12,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-10-13 00:48-0400\n"
-"PO-Revision-Date: 2014-10-13 04:48+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-10-20 00:48-0400\n"
+"PO-Revision-Date: 2014-10-19 18:20+0000\n"
+"Last-Translator: Sergiy\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/owncloud/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +29,7 @@ msgstr "Контакти"
 
 #: js/addressbooks.js:90
 msgid "Add new LDAP Addressbook"
-msgstr ""
+msgstr "Додати нову LDAP адресну книгу"
 
 #: js/addressbooks.js:95 js/addressbooks.js:171
 msgid "Ok"
@@ -45,39 +46,39 @@ msgstr "Зберегти"
 
 #: js/addressbooks.js:167
 msgid "Edit Addressbook"
-msgstr ""
+msgstr "Редагувати адресну книгу"
 
 #: js/addressbooks.js:393 js/loader.js:48 templates/contacts.php:118
 msgid "Import contacts"
-msgstr ""
+msgstr "Імпорт контактів"
 
 #: js/addressbooks.js:398
 msgid "Upload file..."
-msgstr ""
+msgstr "Завантажити файл..."
 
 #: js/addressbooks.js:428
 msgid "Starting file import"
-msgstr ""
+msgstr "Починається імпорт"
 
 #: js/addressbooks.js:433 js/addressbooks.js:512
 msgid "Format selected: {format}"
-msgstr ""
+msgstr "Обраний формат: {format}"
 
 #: js/addressbooks.js:436 js/addressbooks.js:515
 msgid "Automatic format detection"
-msgstr ""
+msgstr "Автоматичне визначення формату"
 
 #: js/addressbooks.js:468 js/loader.js:22 templates/contacts.php:505
 msgid "Import into..."
-msgstr ""
+msgstr "Імпортувати в..."
 
 #: js/addressbooks.js:559
 msgid "Processing {count}/{total} cards"
-msgstr ""
+msgstr "Оброблено {count} з {total} контактів"
 
 #: js/addressbooks.js:585
 msgid "Total: {total}, Success: {imported}, Errors: {failed}"
-msgstr ""
+msgstr "Всього: {total}, Вдало: {imported}, Помилок: {failed}"
 
 #: js/addressbooks.js:727
 msgid "An address book called {name} already exists"
@@ -94,7 +95,7 @@ msgstr "Неможливо завантажити адресні книги: {er
 
 #: js/admin.js:92 js/storage.js:27
 msgid "Server error! Please inform system administator"
-msgstr ""
+msgstr "Серверна помилка! Будь ласка, проінформуйте адміністратора"
 
 #: js/app.js:223
 msgid "Indexing contacts"
@@ -150,11 +151,11 @@ msgstr "Мережева або серверна помилка. Будь лас
 
 #: js/app.js:795
 msgid "Only images can be used as contact photos"
-msgstr ""
+msgstr "В якості фото контактів можна використовувати лише зображення"
 
 #: js/app.js:804
 msgid "The size of \"{filename}\" exceeds the maximum allowed {size}"
-msgstr ""
+msgstr "Розмір \"{filename}\" перевищує максимально дозволений {size}"
 
 #: js/app.js:973
 msgid "Error adding to group."
@@ -168,7 +169,7 @@ msgstr "Помилка при видаленні з групи."
 msgid ""
 "You have selected over 300 contacts.\n"
 "This will most likely fail! Click here to try anyway."
-msgstr ""
+msgstr "Ви обрали більше 300 контактів.\nШвидше за все, дія закінчиться помилкою! Натисніть сюди, щоб все одно спробувати."
 
 #: js/app.js:1228
 msgid "Error setting {name} as favorite."
@@ -196,11 +197,11 @@ msgstr "Редагувати зображення облікового запи�
 
 #: js/app.js:1647
 msgid "Crop photo"
-msgstr ""
+msgstr "Обрізати фото"
 
 #: js/contacts.js:904
 msgid "Error parsing date: {date}"
-msgstr ""
+msgstr "Помилка формату дати: {date}"
 
 #: js/contacts.js:1102
 msgid "# groups"
@@ -208,11 +209,11 @@ msgstr "# groups"
 
 #: js/contacts.js:1182
 msgid "Error parsing birthday {bday}"
-msgstr ""
+msgstr "Помилка аналізу дати народження {bday}"
 
 #: js/contacts.js:1320
 msgid "The backend does not support multi-byte characters."
-msgstr ""
+msgstr "Реалізація не підтримує багатобайтові символи."
 
 #: js/contacts.js:2234
 msgid ""
@@ -226,7 +227,7 @@ msgstr "Натисніть для відміни видалення {num} кон
 
 #: js/contacts.js:2254
 msgid "Cancelled deletion of {num} contacts"
-msgstr ""
+msgstr "Відмінено видалення {num} контактів"
 
 #: js/groups.js:53
 msgid "Add"
@@ -254,7 +255,7 @@ msgstr "Контакти не в даній групі."
 
 #: js/groups.js:525 js/groups.js:605
 msgid "A group named \"{group}\" already exists"
-msgstr ""
+msgstr "Група з назвою \"{group}\" вже існує"
 
 #: js/groups.js:574
 msgid "Failed renaming group: {error}"
@@ -290,7 +291,7 @@ msgstr "Будь ласка, оберіть адресну книгу"
 
 #: js/loader.js:31
 msgid "Error loading import template"
-msgstr ""
+msgstr "Помилка завантаження шаблона імпорту"
 
 #: js/loader.js:61 templates/contacts.php:38
 msgid "Import"
@@ -311,7 +312,7 @@ msgstr "Закрити"
 
 #: js/otherbackendconfig.js:149 js/otherbackendconfig.js:207
 msgid "Error, missing parameters: "
-msgstr ""
+msgstr "Помилка, відсутні параметри:"
 
 #: js/storage.js:431 js/storage.js:470
 msgid "Failed loading photo: {error}"
@@ -323,7 +324,7 @@ msgstr "Вам бракує прав для того, щоб побачити ц
 
 #: lib/addressbook.php:182
 msgid "Contact not found"
-msgstr ""
+msgstr "Контакт не знайдено"
 
 #: lib/addressbook.php:219
 msgid "You do not have permissions to see these contacts"
@@ -335,7 +336,7 @@ msgstr "Вам бракує прав щоб додати контакти до �
 
 #: lib/addressbook.php:259
 msgid "The backend for this address book does not support adding contacts"
-msgstr ""
+msgstr "Реалізація даної адресної книги не підтримує додавання контактів"
 
 #: lib/addressbook.php:304 lib/addressbook.php:344 lib/contact.php:254
 msgid "You do not have permissions to delete this contact"
@@ -343,7 +344,7 @@ msgstr "Вам бракує прав для того, щоб видалити ц
 
 #: lib/addressbook.php:311 lib/addressbook.php:351
 msgid "The backend for this address book does not support deleting contacts"
-msgstr ""
+msgstr "Реалізація даної адресної книги не підтримує видалення контактів"
 
 #: lib/addressbook.php:374
 msgid "Unknown error"
@@ -351,11 +352,11 @@ msgstr "Невідома помилка"
 
 #: lib/addressbook.php:415
 msgid "Access denied"
-msgstr ""
+msgstr "Доступ заборонено"
 
 #: lib/addressbook.php:422
 msgid "The backend for this address book does not support updating"
-msgstr ""
+msgstr "Реалізація даної адресної книги не підтримує оновлення"
 
 #: lib/addressbook.php:453
 msgid "You don't have permissions to delete the address book."
@@ -371,11 +372,11 @@ msgstr "Вам бракує прав для того, щоб оновити це
 
 #: lib/contact.php:282
 msgid "The backend for this contact does not support updating it"
-msgstr ""
+msgstr "Реалізація даного контакта не підтримує оновлення"
 
 #: lib/contact.php:299
 msgid "This backend does not support adding contacts"
-msgstr ""
+msgstr "Реалізація не підтримує додавання контактів"
 
 #: lib/contact.php:465 lib/contact.php:482
 msgid "Property not found"
@@ -400,12 +401,12 @@ msgstr "Помилка створення адресної книги"
 #: lib/controller/addressbookcontroller.php:206
 #, php-format
 msgid "The \"%s\" backend does not support deleting address books"
-msgstr ""
+msgstr "Реалізація %s не підтримує видалення адресної книги"
 
 #: lib/controller/addressbookcontroller.php:214
 #, php-format
 msgid "You do not have permissions to delete the \"%s\" address book"
-msgstr ""
+msgstr "Ви не маєте повноважень, щоб видалити %s адресну книгу."
 
 #: lib/controller/addressbookcontroller.php:221
 msgid "Error deleting address book"
@@ -417,19 +418,19 @@ msgstr "Помилка при створенні контакту."
 
 #: lib/controller/addressbookcontroller.php:270
 msgid "Error creating contact"
-msgstr ""
+msgstr "Помилка створення контакту"
 
 #: lib/controller/addressbookcontroller.php:302
 msgid "Error deleting contact"
-msgstr ""
+msgstr "Помилка видалення контакту"
 
 #: lib/controller/addressbookcontroller.php:342
 msgid "Error retrieving contact"
-msgstr ""
+msgstr "Помилка отримання контакту"
 
 #: lib/controller/addressbookcontroller.php:353
 msgid "Error saving contact"
-msgstr ""
+msgstr "Помилка збереження контакту"
 
 #: lib/controller/addressbookcontroller.php:359
 msgid "Error removing contact from other address book."
@@ -437,7 +438,7 @@ msgstr "Помилка при переміщенні контакту з інш�
 
 #: lib/controller/addressbookcontroller.php:366
 msgid "Error getting moved contact"
-msgstr ""
+msgstr "Помилка при отриманні переміщеного контакту"
 
 #: lib/controller/contactcontroller.php:37
 #: lib/controller/contactcontroller.php:63
@@ -448,7 +449,7 @@ msgstr "Не вдалося знайти контакт."
 
 #: lib/controller/contactcontroller.php:59
 msgid "No contact data in request."
-msgstr ""
+msgstr "Немає контактних даних в запиті."
 
 #: lib/controller/contactcontroller.php:67
 msgid "Error merging into contact."
@@ -456,7 +457,7 @@ msgstr "Помилка злиття в контакт."
 
 #: lib/controller/contactcontroller.php:71
 msgid "Error saving contact to backend."
-msgstr ""
+msgstr "Помилка при збереженні контакту в бекенд."
 
 #: lib/controller/contactcontroller.php:103
 msgid "Property name is not set."
@@ -472,11 +473,11 @@ msgstr "Інформація про vCard помилкова. Будь ласк�
 
 #: lib/controller/contactcontroller.php:142
 msgid "Error updating contact"
-msgstr ""
+msgstr "Помилка оновлення контакта."
 
 #: lib/controller/contactcontroller.php:149
 msgid "Error saving contact to backend"
-msgstr ""
+msgstr "Помилка при збереженні контакту в бекенд"
 
 #: lib/controller/contactphotocontroller.php:142
 msgid "No photo path was submitted."
@@ -484,7 +485,7 @@ msgstr "Не надано шлях до зображення."
 
 #: lib/controller/contactphotocontroller.php:203
 msgid "Error loading image from cache"
-msgstr ""
+msgstr "Помилка завантаження зображення з кешу"
 
 #: lib/controller/contactphotocontroller.php:213
 msgid "Error getting PHOTO property."
@@ -504,11 +505,11 @@ msgstr "Помилка при додаванні групи."
 
 #: lib/controller/groupcontroller.php:150
 msgid "No group name to rename from given."
-msgstr ""
+msgstr "Не вказано ім'я групи для перейменування з обраного."
 
 #: lib/controller/groupcontroller.php:155
 msgid "No group name to rename to given."
-msgstr ""
+msgstr "Не вказано ім'я групи для перейменування в обране."
 
 #: lib/controller/groupcontroller.php:160
 msgid "Error renaming group."
@@ -569,7 +570,7 @@ msgstr "Місця більше немає"
 
 #: lib/controller/importcontroller.php:85
 msgid "Attempt to upload blacklisted file:"
-msgstr ""
+msgstr "Спроба завантажити файл з чорного списку:"
 
 #: lib/controller/importcontroller.php:105
 msgid "Error uploading contacts to storage."
@@ -577,7 +578,7 @@ msgstr "Помилка завантаження контактів у схови
 
 #: lib/controller/importcontroller.php:150
 msgid "Error moving file to imports folder."
-msgstr ""
+msgstr "Помилка переміщення файлу до теки імпорту."
 
 #: lib/controller/importcontroller.php:169
 msgid "You do not have permissions to import into this address book."
@@ -585,24 +586,24 @@ msgstr "У вас немає дозволу імпортувати щось у �
 
 #: lib/controller/importcontroller.php:177
 msgid "File name missing from request."
-msgstr ""
+msgstr "В запиті відсутнє ім'я файла."
 
 #: lib/controller/importcontroller.php:182
 #: lib/controller/importcontroller.php:321
 msgid "Progress key missing from request."
-msgstr ""
+msgstr "В запиті відсутній ключ прогресу."
 
 #: lib/controller/importcontroller.php:188
 msgid "Attempt to access blacklisted file:"
-msgstr ""
+msgstr "Спроба доступу до файлу з чорного списку:"
 
 #: lib/controller/settingscontroller.php:36
 msgid "No key is given."
-msgstr ""
+msgstr "Ключ не заданий."
 
 #: lib/controller/settingscontroller.php:40
 msgid "No value is given."
-msgstr ""
+msgstr "Значення не задано."
 
 #: lib/controller/settingscontroller.php:51
 msgid "Could not set preference: "
@@ -624,7 +625,7 @@ msgstr "Jabber"
 
 #: lib/utils/properties.php:76
 msgid "Internet call"
-msgstr ""
+msgstr "Інтернет виклик"
 
 #: lib/utils/properties.php:81
 msgid "AIM"
@@ -726,43 +727,43 @@ msgstr "Сім'я"
 
 #: templates/admin.php:18
 msgid "Enable LDAP Backend"
-msgstr ""
+msgstr "Ввімкнути LDAP Backend"
 
 #: templates/admin.php:19
 msgid "Enable LDAP backend for the contacts application"
-msgstr ""
+msgstr "Ввімкнути LDAP Backend для додатку контактів"
 
 #: templates/admin.php:20
 msgid "Warning: LDAP Backend is in beta mode, use with precautions"
-msgstr ""
+msgstr "Увага: LDAP Backend працює в beta-режимі, використовувати з пересторогами"
 
 #: templates/contacts.php:9 templates/contacts.php:117
 msgid "New contact"
-msgstr ""
+msgstr "Новий контакт"
 
 #: templates/contacts.php:13
 msgid "Group name"
-msgstr ""
+msgstr "Ім'я групи"
 
 #: templates/contacts.php:13
 msgid "New group"
-msgstr ""
+msgstr "Нова група"
 
 #: templates/contacts.php:22
 msgid "Address books"
-msgstr ""
+msgstr "Адресні книги"
 
 #: templates/contacts.php:25 templates/contacts.php:53
 msgid "Display name"
-msgstr ""
+msgstr "Показати Ім'я"
 
 #: templates/contacts.php:25
 msgid "Add Address Book"
-msgstr ""
+msgstr "Додати адресну книгу"
 
 #: templates/contacts.php:30
 msgid "Add LDAP Address Book"
-msgstr ""
+msgstr "Додати LDAP адресну книгу"
 
 #: templates/contacts.php:50
 msgid "(De-)select all"
@@ -770,15 +771,15 @@ msgstr "(Відміна) виділення усіх"
 
 #: templates/contacts.php:52
 msgid "Sort order"
-msgstr ""
+msgstr "Порядок сортування"
 
 #: templates/contacts.php:54
 msgid "First- Lastname"
-msgstr ""
+msgstr "Ім'я Прізвище"
 
 #: templates/contacts.php:55
 msgid "Last-, Firstname"
-msgstr ""
+msgstr "Прізвище Ім'я"
 
 #: templates/contacts.php:61 templates/contacts.php:62
 #: templates/contacts.php:210 templates/contacts.php:211
@@ -797,7 +798,7 @@ msgstr "Завантажити"
 
 #: templates/contacts.php:68
 msgid "Merge"
-msgstr ""
+msgstr "Об'єднати"
 
 #: templates/contacts.php:71 templates/contacts.php:306
 #: templates/contacts.php:345
@@ -816,7 +817,7 @@ msgstr "Адреса"
 
 #: templates/contacts.php:74
 msgid "Group"
-msgstr ""
+msgstr "Група"
 
 #: templates/contacts.php:82
 msgid "Keyboard shortcuts"
@@ -869,21 +870,21 @@ msgstr "Видалити даний контакт"
 #: templates/contacts.php:114
 msgid ""
 "You have no contacts in your address book or your address book is disabled."
-msgstr ""
+msgstr "У вашій адресній книзі немає контактів, або ваша адресна книга відключена."
 
 #: templates/contacts.php:115
 msgid ""
 "Add a new contact or import existing contacts from a file (VCF, CSV or "
 "LDIF)."
-msgstr ""
+msgstr "Додати новий контакт або імпортувати існуючі контакти з файлу (VCF, CSV або LDIF)."
 
 #: templates/contacts.php:167
 msgid "Which contact should the data be merged into?"
-msgstr ""
+msgstr "В який контакт об'єднати дані?"
 
 #: templates/contacts.php:175
 msgid "Delete the other(s) after successful merge?"
-msgstr ""
+msgstr "Видалити інші(ий) після вдалого об'єднання?"
 
 #: templates/contacts.php:190
 msgid "Compose mail"
@@ -903,7 +904,7 @@ msgstr "Завантажити нове фото"
 
 #: templates/contacts.php:221
 msgid "Select photo from Files"
-msgstr ""
+msgstr "Обрати фото з файлів"
 
 #: templates/contacts.php:223
 msgid "Favorite"
@@ -928,7 +929,7 @@ msgstr "Прізвище"
 
 #: templates/contacts.php:258 templates/contacts.php:503
 msgid "Address book"
-msgstr ""
+msgstr "Адресна книга"
 
 #: templates/contacts.php:265 templates/contacts.php:342
 msgid "Nickname"
@@ -948,11 +949,11 @@ msgstr "День народження"
 
 #: templates/contacts.php:321
 msgid "Website"
-msgstr ""
+msgstr "Web-сайт"
 
 #: templates/contacts.php:326
 msgid "Instant messaging"
-msgstr ""
+msgstr "Швидкі повідомлення"
 
 #: templates/contacts.php:332
 msgid "Notes go here..."
@@ -960,7 +961,7 @@ msgstr "Тут будуть примітки..."
 
 #: templates/contacts.php:339
 msgid "Add field..."
-msgstr ""
+msgstr "Додати поле..."
 
 #: templates/contacts.php:346
 msgid "Instant Messaging"
@@ -1022,7 +1023,7 @@ msgstr "Місто"
 
 #: templates/contacts.php:444
 msgid "State or province"
-msgstr ""
+msgstr "Область або район"
 
 #: templates/contacts.php:448
 msgid "Country"
@@ -1046,7 +1047,7 @@ msgstr "Експорт"
 
 #: templates/contacts.php:493
 msgid "CardDAV link"
-msgstr ""
+msgstr "CardDAV посилання"
 
 #: templates/contacts.php:494
 msgid "Edit"
@@ -1054,23 +1055,23 @@ msgstr "Редагувати"
 
 #: templates/contacts.php:509
 msgid "Format"
-msgstr ""
+msgstr "Формат"
 
 #: templates/contacts.php:511
 msgid "Automatic format"
-msgstr ""
+msgstr "Автоматичний формат"
 
 #: templates/contacts.php:522
 msgid "Select file..."
-msgstr ""
+msgstr "Обрати файл..."
 
 #: templates/contacts.php:546
 msgid "Addressbook URI"
-msgstr ""
+msgstr "URI адресної книги"
 
 #: templates/contacts.php:549
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: templates/contacts.php:553 templates/contacts.php:556
 msgid "Description"
@@ -1078,19 +1079,19 @@ msgstr "Опис"
 
 #: templates/contacts.php:560 templates/contacts.php:563
 msgid "LDAP URL"
-msgstr ""
+msgstr "LDAP URL"
 
 #: templates/contacts.php:567 templates/contacts.php:569
 msgid "Anonymous"
-msgstr ""
+msgstr "Анонім"
 
 #: templates/contacts.php:573
 msgid "Read-only"
-msgstr ""
+msgstr "Тільки перегляд"
 
 #: templates/contacts.php:575
 msgid "Read-Only"
-msgstr ""
+msgstr "Тільки перегляд"
 
 #: templates/contacts.php:579 templates/contacts.php:582
 msgid "User"
@@ -1102,11 +1103,11 @@ msgstr "Пароль"
 
 #: templates/contacts.php:594 templates/contacts.php:597
 msgid "Page size"
-msgstr ""
+msgstr "Розмір сторінки"
 
 #: templates/contacts.php:601
 msgid "Base DN for search"
-msgstr ""
+msgstr "Основний DN для пошуку"
 
 #: templates/contacts.php:604
 msgid "Base DN"
@@ -1114,28 +1115,28 @@ msgstr "Базовий DN"
 
 #: templates/contacts.php:608
 msgid "Search filter"
-msgstr ""
+msgstr "Пошуковий фільтр"
 
 #: templates/contacts.php:611
 msgid "Filter"
-msgstr ""
+msgstr "Фільтр"
 
 #: templates/contacts.php:615
 msgid "Base DN for modification"
-msgstr ""
+msgstr "Основний DN для модифікації"
 
 #: templates/contacts.php:618
 msgid "Base DN modification"
-msgstr ""
+msgstr "Основний DN модифікації"
 
 #: templates/contacts.php:622
 msgid "Connector"
-msgstr ""
+msgstr "Конектор"
 
 #: templates/contacts.php:629
 msgid "Connector value (Better use external editor and copy/paste)"
-msgstr ""
+msgstr "Значення конектора (Краще використовувати зовнішній редактор та буфер обміну)"
 
 #: templates/contacts.php:635
 msgid "Copy from (Warning, replaces current custom value)"
-msgstr ""
+msgstr "Копіювати з (Увага, заміняє поточне значення)"
