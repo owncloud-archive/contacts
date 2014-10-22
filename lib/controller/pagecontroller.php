@@ -44,6 +44,10 @@ class PageController extends Controller {
 
 		\OCP\Util::addScript('', 'jquery.multiselect');
 		\OCP\Util::addScript('', 'tags');
+		\OCP\Util::addScript('placeholder');
+		\OCP\Util::addScript('3rdparty', 'md5/md5.min');
+		\OCP\Util::addScript('jquery.avatar');
+		\OCP\Util::addScript('avatar');
 		\OCP\Util::addScript('contacts', 'jquery.combobox');
 		\OCP\Util::addScript('contacts', 'modernizr.custom');
 		\OCP\Util::addScript('contacts', 'app');
