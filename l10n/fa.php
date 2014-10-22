@@ -73,6 +73,7 @@
 "Phone" => "شماره تلفن",
 "Address" => "آدرس",
 "Group" => "گروه",
+"Keyboard shortcuts" => "میان بر صفحه ی کلید",
 "Delete current photo" => "پاک کردن تصویر کنونی",
 "Edit current photo" => "ویرایش تصویر کنونی",
 "Upload new photo" => "بار گذاری یک تصویر جدید",

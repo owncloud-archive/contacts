@@ -25,6 +25,7 @@
 "Download" => "Llwytho i lawr",
 "Email" => "E-bost",
 "Address" => "Cyfeiriad",
+"Keyboard shortcuts" => "Llwybrau byr bysellfwrdd",
 "Name" => "Enw",
 "Title" => "Teitl",
 "Birthday" => "Penblwydd",
