@@ -10,6 +10,7 @@
 # ebela <bela@dandre.hu>, 2013
 # Gyönki Bendegúz <gyonkibendeguz@gmail.com>, 2013
 # Gyönki Bendegúz <gyonkibendeguz@gmail.com>, 2013
+# jolly.joker <jolly.joker@freemail.hu>, 2014
 # Laszlo Tornoci <torlasz@gmail.com>, 2013
 # Tamas Nagy <mail@tamas-nagy.net>, 2011
 # Melinda <ghostgirl1983@gmail.com>, 2014
@@ -20,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ownCloud\n"
 "Report-Msgid-Bugs-To: translations@owncloud.org\n"
-"POT-Creation-Date: 2014-10-22 00:48-0400\n"
-"PO-Revision-Date: 2014-10-21 05:21+0000\n"
-"Last-Translator: I Robot\n"
+"POT-Creation-Date: 2014-10-23 00:48-0400\n"
+"PO-Revision-Date: 2014-10-22 13:48+0000\n"
+"Last-Translator: jolly.joker <jolly.joker@freemail.hu>\n"
 "Language-Team: Hungarian (Hungary) (http://www.transifex.com/projects/p/owncloud/language/hu_HU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,7 +62,7 @@ msgstr "Kapcsolatok importálása"
 
 #: js/addressbooks.js:398
 msgid "Upload file..."
-msgstr ""
+msgstr "Állomány feltöltés..."
 
 #: js/addressbooks.js:428
 msgid "Starting file import"
@@ -85,7 +86,7 @@ msgstr "{count}/{total} kártya feldolgozása"
 
 #: js/addressbooks.js:585
 msgid "Total: {total}, Success: {imported}, Errors: {failed}"
-msgstr ""
+msgstr "Összesen:{összesen}, Sikeres: {importált}, Hibák: {sikertelen}"
 
 #: js/addressbooks.js:727
 msgid "An address book called {name} already exists"
