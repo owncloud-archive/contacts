@@ -65,7 +65,7 @@ class GroupController extends Controller {
 
 		$response = new JSONResponse();
 
-		if (is_null($name) || $name === "") {
+		if (empty($name)) {
 			$response->bailOut(App::$l10n->t('No group name given.'));
 		}
 
@@ -88,7 +88,7 @@ class GroupController extends Controller {
 		$name = $this->request->post['name'];
 
 		$response = new JSONResponse();
-		if (is_null($id) || $id === '') {
+		if (empty($id)) {
 			$response->bailOut(App::$l10n->t('No group ID given.'));
 			return $response;
 		}
@@ -148,12 +148,12 @@ class GroupController extends Controller {
 
 		$response = new JSONResponse();
 
-		if (is_null($from) || $from === '') {
+		if (empty($from)) {
 			$response->bailOut(App::$l10n->t('No group name to rename from given.'));
 			return $response;
 		}
 
-		if (is_null($to) || $to === '') {
+		if (empty($to)) {
 			$response->bailOut(App::$l10n->t('No group name to rename to given.'));
 			return $response;
 		}
@@ -215,14 +215,14 @@ class GroupController extends Controller {
 		$ids = $this->request->post['contactIds'];
 		$response->debug('request: '.print_r($this->request->post, true));
 
-		if (is_null($categoryId) || $categoryId === '') {
+		if (empty($categoryId)) {
 			throw new \Exception(
 				App::$l10n->t('Group ID missing from request.'),
 				Http::STATUS_PRECONDITION_FAILED
 			);
 		}
 
-		if (is_null($categoryName) || $categoryName === '') {
+		if (empty($categoryName)) {
 			throw new \Exception(
 				App::$l10n->t('Group name missing from request.'),
 				Http::STATUS_PRECONDITION_FAILED
@@ -272,14 +272,14 @@ class GroupController extends Controller {
 		$ids = $this->request->post['contactIds'];
 		//$response->debug('request: '.print_r($this->request->post, true));
 
-		if (is_null($categoryId) || $categoryId === '') {
+		if (empty($categoryId)) {
 			throw new \Exception(
 				App::$l10n->t('Group ID missing from request.'),
 				Http::STATUS_PRECONDITION_FAILED
 			);
 		}
 
-		if (is_null($categoryName) || $categoryName === '') {
+		if (empty($categoryName)) {
 			throw new \Exception(
 				App::$l10n->t('Group name missing from request.'),
 				Http::STATUS_PRECONDITION_FAILED
