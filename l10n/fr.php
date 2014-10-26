@@ -55,7 +55,7 @@
 "Couldn't get contact list." => "Impossible d'obtenir la liste des contacts.",
 "Contact is not in this group." => "Ce contact n'est pas présent dans le groupe.",
 "Contacts are not in this group." => "Ces contacts ne sont pas présents dans le groupe.",
-"A group named \"{group}\" already exists" => "Un groupe nommé {group} existe déjà",
+"A group named \"{group}\" already exists" => "Un groupe nommé \"{group}\" existe déjà",
 "Failed renaming group: {error}" => "Échec du renommage du groupe : {error}",
 "Failed adding group: {error}" => "Echec de l'ajout du groupe : {error}",
 "All" => "Tous",
