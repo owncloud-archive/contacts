@@ -17,6 +17,7 @@
 "Other" => "باشقا",
 "ownCloud" => "ownCloud",
 "Work" => "ئىش",
+"Home" => "ئۆي",
 "Text" => "قىسقا ئۇچۇر",
 "Message" => "خەت",
 "Family" => "جەمەتىم",

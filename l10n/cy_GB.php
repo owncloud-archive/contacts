@@ -18,6 +18,7 @@
 "Other" => "Arall",
 "ownCloud" => "ownCloud",
 "Work" => "Gwaith",
+"Home" => "Cartref",
 "Text" => "Testun",
 "Message" => "Neges",
 "Delete" => "Dileu",

@@ -26,6 +26,7 @@
 "Not enough storage available" => "Hapsira e arkivimit e pamjaftueshme",
 "Other" => "Të tjera",
 "Work" => "Punë",
+"Home" => "Shtëpi",
 "Text" => "Tekst",
 "Delete" => "Elimino",
 "Groups" => "Grupet",
