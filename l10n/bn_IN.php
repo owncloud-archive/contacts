@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Cancel" => "বাতিল করা",
 "Save" => "সেভ",
 "Add" => "যোগ করা",
@@ -23,3 +24,4 @@
 "Description" => "বর্ণনা",
 "User" => "ব্যবহারকারী"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

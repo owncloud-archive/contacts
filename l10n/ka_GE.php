@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "კონტაქტები",
 "Ok" => "დიახ",
 "Cancel" => "უარყოფა",
@@ -60,3 +61,4 @@
 "Password" => "პაროლი",
 "Base DN" => "საწყისი DN"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

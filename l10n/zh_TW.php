@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "通訊錄",
 "Ok" => "好",
 "Cancel" => "取消",
@@ -230,3 +231,4 @@
 "Base DN" => "Base DN",
 "Base DN for modification" => "Base DN for modification"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

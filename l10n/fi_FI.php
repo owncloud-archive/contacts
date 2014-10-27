@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Yhteystiedot",
 "Add new LDAP Addressbook" => "Lisää uusi LDAP-osoitekirja",
 "Ok" => "Ok",
@@ -237,3 +238,4 @@
 "Page size" => "Sivun koko",
 "Base DN" => "Oletus DN"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

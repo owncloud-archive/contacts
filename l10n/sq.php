@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Kontake",
 "Ok" => "Në rregull",
 "Cancel" => "Anulo",
@@ -45,3 +46,4 @@
 "Password" => "fjalëkalim",
 "Base DN" => "Baza DN"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

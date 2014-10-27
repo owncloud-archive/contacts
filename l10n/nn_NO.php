@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Kontaktar",
 "Add new LDAP Addressbook" => "Legg til ny LDAP-adressebok",
 "Ok" => "Greitt",
@@ -109,3 +110,4 @@
 "User" => "Brukar",
 "Password" => "Passord"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

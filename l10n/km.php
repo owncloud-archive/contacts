@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "ទំនាក់​ទំនង",
 "Ok" => "ព្រម",
 "Cancel" => "បោះបង់",
@@ -50,3 +51,4 @@
 "User" => "អ្នកប្រើ",
 "Password" => "ពាក្យសម្ងាត់"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

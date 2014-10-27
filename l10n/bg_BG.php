@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Контакти",
 "Add new LDAP Addressbook" => "Добави нов LDAP Адресник",
 "Ok" => "ОК",
@@ -271,3 +272,4 @@
 "Connector value (Better use external editor and copy/paste)" => "Стойност на Connector (По-добре използвай външен редактор и копирай)",
 "Copy from (Warning, replaces current custom value)" => "Копирай от (Предупреждение, променя текущо зададената стойност)"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

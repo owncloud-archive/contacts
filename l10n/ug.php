@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "ئالاقەداشلار",
 "Ok" => "جەزملە",
 "Cancel" => "ۋاز كەچ",
@@ -38,3 +39,4 @@
 "User" => "ئىشلەتكۈچى",
 "Password" => "ئىم"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

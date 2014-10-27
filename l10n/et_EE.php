@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Kontaktid",
 "Add new LDAP Addressbook" => "Lisa uus LDAP aadressiraamat",
 "Ok" => "Ok",
@@ -271,3 +272,4 @@
 "Connector value (Better use external editor and copy/paste)" => "Ühenduja väärtus (parem kasuta välist redaktorid ja kopeeri/aseta)",
 "Copy from (Warning, replaces current custom value)" => "Kopeeri (hoiatus, asendab olemasoleva muudetud väärtuse)"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

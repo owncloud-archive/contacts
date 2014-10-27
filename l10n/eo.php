@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Kontaktoj",
 "Ok" => "Akcepti",
 "Cancel" => "Nuligi",
@@ -214,3 +215,4 @@
 "Search filter" => "Serĉi filtrilon",
 "Filter" => "Filtrilo"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

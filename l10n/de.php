@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Kontakte",
 "Add new LDAP Addressbook" => "Neues LDAP-Adressbuch hinzufügen",
 "Ok" => "OK",
@@ -271,3 +272,4 @@
 "Connector value (Better use external editor and copy/paste)" => "Anschlusswert (Am Besten einen externen Editor und kopieren/einfügen nutzen)",
 "Copy from (Warning, replaces current custom value)" => "Kopie von (Warnung, überschreibt den aktuellen benutzerdefinierten Wert)"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

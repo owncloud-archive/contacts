@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Save" => "Պահպանել",
 "Close" => "Փակել",
 "Other" => "Այլ",
@@ -6,3 +7,4 @@
 "Download" => "Բեռնել",
 "Description" => "Նկարագրություն"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

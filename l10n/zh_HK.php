@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "聯絡人",
 "Ok" => "OK",
 "Cancel" => "取消",
@@ -27,3 +28,4 @@
 "Format" => "格式",
 "Password" => "密碼"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

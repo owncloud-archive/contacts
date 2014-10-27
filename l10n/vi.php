@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Danh bạ",
 "Ok" => "Đồng ý",
 "Cancel" => "Hủy",
@@ -192,3 +193,4 @@
 "Password" => "Mật khẩu",
 "Base DN" => "DN cơ bản"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

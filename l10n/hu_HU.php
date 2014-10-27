@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Névjegyek",
 "Add new LDAP Addressbook" => "Vegyél fel új LDAP-névjegyalbumot",
 "Ok" => "Ok",
@@ -271,3 +272,4 @@
 "Connector value (Better use external editor and copy/paste)" => "Interfész-érték (külső szövegszerkesztő használandó, majd másolás/beillesztés)",
 "Copy from (Warning, replaces current custom value)" => "Másolás innen (Figyelem, lecseréli az aktuális egyedi értéket)"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Cancel" => "Ezeztatu",
 "Save" => "Gorde",
 "Other" => "Bestea",
@@ -11,3 +12,4 @@
 "Edit" => "Aldatu",
 "Description" => "Deskripzioa"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

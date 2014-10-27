@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Kontak",
 "Ok" => "Oke",
 "Cancel" => "Batal",
@@ -224,3 +225,4 @@
 "Password" => "Sandi",
 "Base DN" => "Base DN"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "연락처",
 "Ok" => "확인",
 "Cancel" => "취소",
@@ -220,3 +221,4 @@
 "Password" => "암호",
 "Base DN" => "기본 DN"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "אנשי קשר",
 "Add new LDAP Addressbook" => "הוספת ספר כתובות LDAP חדש",
 "Ok" => "בסדר",
@@ -229,3 +230,4 @@
 "Search filter" => "חיפוש על בסיס סינון",
 "Filter" => "סינון"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

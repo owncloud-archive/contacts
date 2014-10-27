@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Ok" => "အိုကေ",
 "Cancel" => "ပယ်ဖျက်မည်",
 "OK" => "အိုကေ",
@@ -9,3 +10,4 @@
 "Description" => "ဖော်ပြချက်",
 "Password" => "စကားဝှက်"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

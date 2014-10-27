@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Kontakty",
 "Add new LDAP Addressbook" => "Pridať nový LDAP adresár",
 "Ok" => "Ok",
@@ -271,3 +272,4 @@
 "Connector value (Better use external editor and copy/paste)" => "Hodnota konektora (najlepšie bude použiť externý editor a copy / paste)",
 "Copy from (Warning, replaces current custom value)" => "Kopírovanie z (Pozor, nahradí súčasnú vlastnou hodnotou)"
 );
+$PLURAL_FORMS = "nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;";

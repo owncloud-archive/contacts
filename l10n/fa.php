@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "ارتباط‌ها",
 "Ok" => "قبول",
 "Cancel" => "منصرف شدن",
@@ -102,3 +103,4 @@
 "Password" => "گذرواژه",
 "Base DN" => "پایه DN"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

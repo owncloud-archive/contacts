@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Ok" => "సరే",
 "Cancel" => "రద్దుచేయి",
 "Save" => "భద్రపరచు",
@@ -14,3 +15,4 @@
 "User" => "వాడుకరి",
 "Password" => "సంకేతపదం"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

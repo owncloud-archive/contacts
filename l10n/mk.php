@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Контакти",
 "Ok" => "Во ред",
 "Cancel" => "Откажи",
@@ -156,3 +157,4 @@
 "Description" => "Опис",
 "Password" => "Лозинка"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;";

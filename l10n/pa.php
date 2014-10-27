@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "ਸੰਪਰਕ",
 "Ok" => "ਠੀਕ ਹੈ",
 "Cancel" => "ਰੱਦ ਕਰੋ",
@@ -11,3 +12,4 @@
 "Share" => "ਸਾਂਝਾ ਕਰੋ",
 "Password" => "ਪਾਸਵਰ"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

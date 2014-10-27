@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "联系人",
 "Add new LDAP Addressbook" => "添加新 LDAP 地址簿",
 "Ok" => "好",
@@ -254,3 +255,4 @@
 "Page size" => "页面大小",
 "Base DN" => "Base DN"
 );
+$PLURAL_FORMS = "nplurals=1; plural=0;";

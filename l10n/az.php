@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Əlaqələr",
 "Add new LDAP Addressbook" => "Yeni LDAP ünvan kitabçasını əlavə edin",
 "Ok" => "Oldu",
@@ -38,3 +39,4 @@
 "User" => "İstifadəçi",
 "Password" => "Şifrə"
 );
+$PLURAL_FORMS = "nplurals=2; plural=(n != 1);";

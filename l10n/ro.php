@@ -1,4 +1,5 @@
-<?php $TRANSLATIONS = array(
+<?php
+$TRANSLATIONS = array(
 "Contacts" => "Contacte",
 "Add new LDAP Addressbook" => "Adăugați o nouă agendă LDAP",
 "Ok" => "Ok",
@@ -203,3 +204,4 @@
 "Password" => "Parolă",
 "Base DN" => "DN de bază"
 );
+$PLURAL_FORMS = "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));";
