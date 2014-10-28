@@ -70,6 +70,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Importiere...",
 "Import done" => "Import ausgeführt",
 "Close" => "Schließen",
+"Contact" => "Kontakt",
 "Error, missing parameters: " => "Fehler, fehlende Parameter:",
 "Failed loading photo: {error}" => "Fehler beim Laden eines Bildes: {error}",
 "You do not have permissions to see this contact" => "Du besitzt nicht die Berechtigung, diese Veranstaltung zu sehen.",

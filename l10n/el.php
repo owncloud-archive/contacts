@@ -70,6 +70,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Γίνεται εισαγωγή...",
 "Import done" => "Η εισαγωγή ολοκληρώθηκε",
 "Close" => "Κλείσιμο",
+"Contact" => "Επαφή",
 "Error, missing parameters: " => "Σφάλμα, ελλιπείς παράμετροι:",
 "Failed loading photo: {error}" => "Αποτυχία φόρτωσης φωτογραφίας: {error}",
 "You do not have permissions to see this contact" => "Δεν έχετε άδεια να δείτε αυτή την επαφή",

@@ -59,6 +59,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Importuojama...",
 "Import done" => "Importas baigas",
 "Close" => "Užverti",
+"Contact" => "Kontaktas",
 "Failed loading photo: {error}" => "Nepavyko įkelti nuotraukos: {error}",
 "You do not have permissions to see this contact" => "Jūs neturite leidimo matyti šį kontaktą",
 "Contact not found" => "Kontaktas nerastas",

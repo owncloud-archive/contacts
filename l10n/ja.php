@@ -70,6 +70,7 @@ $TRANSLATIONS = array(
 "Importing..." => "インポート中...",
 "Import done" => "インポート完了",
 "Close" => "閉じる",
+"Contact" => "連絡先",
 "Error, missing parameters: " => "エラー、パラメータが不足しています:",
 "Failed loading photo: {error}" => "写真の読み込みに失敗: {error}",
 "You do not have permissions to see this contact" => "この連絡先を閲覧する権限がありません",

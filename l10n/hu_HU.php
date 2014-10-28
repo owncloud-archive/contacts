@@ -70,6 +70,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Importálás...",
 "Import done" => "Importálás befejezve",
 "Close" => "Bezárás",
+"Contact" => "Névjegy",
 "Error, missing parameters: " => "Hiba, hiányzó paraméterek: ",
 "Failed loading photo: {error}" => "Hiba a kép betöltésekor: {error}",
 "You do not have permissions to see this contact" => "Nincs jogosultsága megnézni ez a névjegyet",

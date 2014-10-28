@@ -57,6 +57,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Importando...",
 "Import done" => "Importación completada",
 "Close" => "Cerrar",
+"Contact" => "Contacto",
 "Failed loading photo: {error}" => "Error cargando foto: {error}",
 "You do not have permissions to see this contact" => "No tiene atribuciones para ver este contacto.",
 "Contact not found" => "Contacto no encontrado",

@@ -68,6 +68,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Inportatzen",
 "Import done" => "Inportazioa burutua",
 "Close" => "Itxi",
+"Contact" => "Kontaktua",
 "Error, missing parameters: " => "Errorea, parametroak falta dira:",
 "Failed loading photo: {error}" => "Argazkia kargatzeak huts egin du: {error}",
 "You do not have permissions to see this contact" => "Ez duzu kontaktu hau ikusteko baimenik",

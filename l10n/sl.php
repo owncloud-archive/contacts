@@ -70,6 +70,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Uvažanje ...",
 "Import done" => "Uvoz je končan",
 "Close" => "Zapri",
+"Contact" => "Stik",
 "Error, missing parameters: " => "Napaka! Mankajkajo parametri:",
 "Failed loading photo: {error}" => "Nalaganje slike je spodletelo: {error}",
 "You do not have permissions to see this contact" => "Ni ustreznih dovoljenj za ogled tega stika",

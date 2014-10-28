@@ -66,6 +66,7 @@ $TRANSLATIONS = array(
 "Importing..." => "מייבא...",
 "Import done" => "יבוא הסתיים",
 "Close" => "סגירה",
+"Contact" => "איש קשר",
 "Error, missing parameters: " => "שגיאה, חסרים פרמטרים:",
 "Failed loading photo: {error}" => "שגיאה בזמן טעינת תמונה: {error}",
 "You do not have permissions to see this contact" => "אין לך הרשאות לצפייה באיש קשר זה",

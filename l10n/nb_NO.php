@@ -70,6 +70,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Importerer...",
 "Import done" => "Import utført",
 "Close" => "Lukk",
+"Contact" => "Kontakt",
 "Error, missing parameters: " => "Feil, manglende parametre:",
 "Failed loading photo: {error}" => "Lasting av bilde feilet: {error}",
 "You do not have permissions to see this contact" => "Du har ikke adgang til å se denne kontakten",

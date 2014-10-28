@@ -68,6 +68,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Importando...",
 "Import done" => "Importación fecha",
 "Close" => "Zarrar",
+"Contact" => "Contautu",
 "Error, missing parameters: " => "Fallu, falten parámetros: ",
 "Failed loading photo: {error}" => "Fallu cargando semeya: {error}",
 "You do not have permissions to see this contact" => "Nun tienes permisos pa ver esti contautu",

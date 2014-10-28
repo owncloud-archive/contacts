@@ -70,6 +70,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Імпортування...",
 "Import done" => "Імпортування виконано",
 "Close" => "Закрити",
+"Contact" => "Контакт",
 "Error, missing parameters: " => "Помилка, відсутні параметри:",
 "Failed loading photo: {error}" => "Не вдалося завантажити фото: {error}",
 "You do not have permissions to see this contact" => "Вам бракує прав для того, щоб побачити цей контакт",

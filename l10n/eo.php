@@ -55,6 +55,7 @@ $TRANSLATIONS = array(
 "Importing..." => "Enportante...",
 "Import done" => "Enporto plenumiĝis",
 "Close" => "Fermi",
+"Contact" => "Kontakto",
 "Failed loading photo: {error}" => "Malsukcesis ŝargo de foto: {error}",
 "Contact not found" => "La kontakto ne troviĝis",
 "Unknown error" => "Nekonata eraro",

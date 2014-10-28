@@ -58,6 +58,7 @@ $TRANSLATIONS = array(
 "Importing..." => "가져오는 중...",
 "Import done" => "가져오기 완료",
 "Close" => "닫기",
+"Contact" => "연락처",
 "Failed loading photo: {error}" => "사진 불러오기 오류: {error}",
 "You do not have permissions to see this contact" => "이 연락처를 볼 수 있는 권한이 없습니다",
 "Contact not found" => "연락처를 찾을 수 없음",
