@@ -45,10 +45,17 @@ class GroupController extends Controller {
 
 		$favorites = $this->tags->getFavorites();
 
+		$shares = \OCP\Share::getItemsSharedWith('addressbook', \OCA\Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS);
+		$addressbookShare = new \OCA\Contacts\Share\Addressbook();
+		foreach ($shares as $key => $share) {
+			$children = $addressbookShare->getChildren($share['id']); // FIXME: This should be cheaper!
+			$shares[$key]['length'] = count($children);
+		}
+
 		$groups = array(
 			'categories' => $tags,
 			'favorites' => $favorites,
-			'shared' => \OCP\Share::getItemsSharedWith('addressbook', \OCA\Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS),
+			'shared' => $shares,
 			'lastgroup' => \OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'lastgroup', 'all'),
 			'sortorder' => \OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'groupsort', ''),
 			);

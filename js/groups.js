@@ -751,7 +751,7 @@ OC.Contacts = OC.Contacts || {};
 					$elem = $elem.length ? $elem : (tmpl).octemplate({
 						id: shared.id,
 						type: 'shared',
-						num: response.data.shared.length,
+						num: shared.length,
 						name: shared.displayname
 					});
 					$elem.find('.numcontacts').after(sharedindicator);
