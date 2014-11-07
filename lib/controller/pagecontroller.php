@@ -45,7 +45,7 @@ class PageController extends Controller {
 		\OCP\Util::addScript('', 'jquery.multiselect');
 		\OCP\Util::addScript('', 'tags');
 		\OCP\Util::addScript('placeholder');
-		\OCP\Util::addScript('3rdparty', 'md5/md5.min');
+		\OC_Util::addVendorScript('blueimp-md5/js/md5');
 		\OCP\Util::addScript('jquery.avatar');
 		\OCP\Util::addScript('avatar');
 		\OCP\Util::addScript('contacts', 'jquery.combobox');
@@ -58,11 +58,11 @@ class PageController extends Controller {
 		\OCP\Util::addScript('contacts', 'jquery.ocaddnew');
 		\OCP\Util::addScript('contacts', 'otherbackendconfig');
 		\OCP\Util::addScript('files', 'jquery.fileupload');
-		\OCP\Util::addScript('3rdparty/Jcrop', 'jquery.Jcrop');
+		\OC_Util::addVendorScript('jcrop/js/jquery.Jcrop');
 		\OCP\Util::addStyle('', 'jquery.multiselect');
 		\OCP\Util::addStyle('contacts', 'jquery.combobox');
 		\OCP\Util::addStyle('contacts', 'jquery.ocaddnew');
-		\OCP\Util::addStyle('3rdparty/Jcrop', 'jquery.Jcrop');
+		\OC_Util::addVendorStyle('jcrop/css/jquery.Jcrop');
 		\OCP\Util::addStyle('contacts', 'contacts');
 
 		$response = new TemplateResponse($this->appName, 'contacts');
