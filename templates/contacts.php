@@ -1,5 +1,43 @@
 <?php
 use OCA\Contacts\ImportManager;
+
+script('', [
+	'jquery.multiselect',
+	'tags',
+	'placeholder',
+	'jquery.avatar',
+	'avatar',
+]);
+
+vendor_script('', [
+	'blueimp-md5/js/md5',
+	'jcrop/js/jquery.Jcrop',
+]);
+
+script('files', 'jquery.fileupload');
+
+script('contacts', [
+	'jquery.combobox',
+	'modernizr.custom',
+	'app',
+	'addressbooks',
+	'contacts',
+	'storage',
+	'groups',
+	'jquery.ocaddnew',
+	'otherbackendconfig',
+]);
+
+style('', 'jquery.multiselect');
+
+vendor_style('jcrop/css/jquery.Jcrop');
+
+style('contacts', [
+	'jquery.combobox',
+	'jquery.ocaddnew',
+	'contacts',
+]);
+
 ?>
 <div id="app">
 	<div id="app-navigation" class="loading">

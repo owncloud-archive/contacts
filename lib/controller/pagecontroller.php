@@ -42,29 +42,6 @@ class PageController extends Controller {
 
 		$maxUploadFilesize = \OCP\Util::maxUploadFilesize('/');
 
-		\OCP\Util::addScript('', 'jquery.multiselect');
-		\OCP\Util::addScript('', 'tags');
-		\OCP\Util::addScript('placeholder');
-		\OC_Util::addVendorScript('blueimp-md5/js/md5');
-		\OCP\Util::addScript('jquery.avatar');
-		\OCP\Util::addScript('avatar');
-		\OCP\Util::addScript('contacts', 'jquery.combobox');
-		\OCP\Util::addScript('contacts', 'modernizr.custom');
-		\OCP\Util::addScript('contacts', 'app');
-		\OCP\Util::addScript('contacts', 'addressbooks');
-		\OCP\Util::addScript('contacts', 'contacts');
-		\OCP\Util::addScript('contacts', 'storage');
-		\OCP\Util::addScript('contacts', 'groups');
-		\OCP\Util::addScript('contacts', 'jquery.ocaddnew');
-		\OCP\Util::addScript('contacts', 'otherbackendconfig');
-		\OCP\Util::addScript('files', 'jquery.fileupload');
-		\OC_Util::addVendorScript('jcrop/js/jquery.Jcrop');
-		\OCP\Util::addStyle('', 'jquery.multiselect');
-		\OCP\Util::addStyle('contacts', 'jquery.combobox');
-		\OCP\Util::addStyle('contacts', 'jquery.ocaddnew');
-		\OC_Util::addVendorStyle('jcrop/css/jquery.Jcrop');
-		\OCP\Util::addStyle('contacts', 'contacts');
-
 		$response = new TemplateResponse($this->appName, 'contacts');
 		$response->setParams(array(
 			'uploadMaxFilesize' => $maxUploadFilesize,
