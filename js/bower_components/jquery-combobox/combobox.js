@@ -1,4 +1,4 @@
-﻿/*
+﻿/home/tobia/Workspace/chat-xmpp/app/apps/contacts/css//*
  * jQuery Combobox Plugin 1.1.2
  * Copyright 2011 Eugene Poltorakov (http://poltorakov.com) 
  * Licensed under the MIT License: http://www.opensource.org/licenses/mit-license.php
