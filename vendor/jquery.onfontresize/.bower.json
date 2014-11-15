@@ -1,0 +1,15 @@
+{
+  "name": "jquery.onfontresize",
+  "_cacheHeaders": {
+    "ETag": "\"876e3-733-4f611014f2a87\"",
+    "Last-Modified": "Wed, 02 Apr 2014 15:33:23 GMT",
+    "Content-Length": "1843",
+    "Content-Type": "text/javascript"
+  },
+  "_release": "e-tag:876e3-733",
+  "main": "index.js",
+  "_source": "http://www.tomdeater.com/jquery/onfontresize/jquery.onfontresize.js",
+  "_target": "*",
+  "_originalSource": "http://www.tomdeater.com/jquery/onfontresize/jquery.onfontresize.js",
+  "_direct": true
+}
