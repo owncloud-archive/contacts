@@ -1,0 +1,93 @@
+.combo-wrapper { 
+  border: 1px solid #cccccc;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 21px;
+  cursor: pointer;
+  zoom: 1;
+}
+.combo-wrapper-hover {
+  border-color: #4444aa;
+}
+.combo-wrapper-active {
+  border-color: #a0a0a0;
+}
+.combo-disabled {
+  background: #eeeeee;
+}
+.combo-selected {
+  padding: 0 0 0 8px;
+  margin: 0 -8px 0 0;
+  float: left;
+}
+.combo-button {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #cccccc;
+  float: right;
+}
+.combo-list {
+	list-style: none;
+	background: #ffffff;
+  padding: 0;
+  margin: 1px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border: 1px solid #efefef;
+  z-index: 9999;
+  
+  li {
+    padding: 3px 4px;
+    margin: 0;
+    cursor: pointer;
+  }
+  .combo-group-label {
+    font-style: italic;
+    font-weight: bold;
+    cursor: default;
+  }
+  .combo-group {
+    padding: 0;
+    margin: 0;
+    
+    li {
+      width: auto;
+      float: none;
+      padding-left: 10px;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    overflow: hidden;
+    font-size: 10px;
+  }
+}
+.combo-multiple {
+	margin: 0;
+	zoom: 1;
+  clear: both;
+  overflow: hidden;
+  border: 1px solid green;
+  
+  li {
+    float: left;
+    width: 100%;
+  }
+}
+.combo-item-hover {
+  background: #aaaaaa;
+}
+.combo-item-active {
+  background: #4444aa;
+  color: #ffffff;
+}
+.combo-list-long {}
+
+.combo-focus {
+  border-color:yellow;
+}

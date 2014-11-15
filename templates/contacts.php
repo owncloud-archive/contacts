@@ -2,7 +2,6 @@
 use OCA\Contacts\ImportManager;
 
 script('', [
-	'jquery.multiselect',
 	'tags',
 	'placeholder',
 	'jquery.avatar',
@@ -17,7 +16,8 @@ vendor_script('', [
 script('files', 'jquery.fileupload');
 
 script('contacts', [
-	'jquery.combobox',
+	'bower_components/jquery-combobox/combobox',
+    'bower_components/multiselect/js/jquery.multi-select',
 	'modernizr.custom',
 	'app',
 	'addressbooks',
@@ -28,7 +28,9 @@ script('contacts', [
 	'otherbackendconfig',
 ]);
 
-style('', 'jquery.multiselect');
+style('contacts', array(
+    'multi-select'
+));
 
 vendor_style('jcrop/css/jquery.Jcrop');
 
