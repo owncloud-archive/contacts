@@ -4,20 +4,15 @@ use OCA\Contacts\ImportManager;
 script('', [
 	'tags',
 	'placeholder',
-	'jquery.avatar',
 	'avatar',
 ]);
-
-vendor_script('', [
-	'blueimp-md5/js/md5',
-	'jcrop/js/jquery.Jcrop',
-]);
-
-script('files', 'jquery.fileupload');
 
 script('contacts', [
 	'bower_components/jquery-combobox/combobox',
     'bower_components/multiselect/js/jquery.multi-select',
+    'bower_components/blueimp-md5/js/md5.min',
+    'bower_components/jcrop/js/jquery.Jcrop.min',
+    'bower_components/blueimp-file-upload/js/jquery.fileupload',
 	'modernizr.custom',
 	'app',
 	'addressbooks',
@@ -32,12 +27,11 @@ style('contacts', array(
     'multi-select'
 ));
 
-vendor_style('jcrop/css/jquery.Jcrop');
-
 style('contacts', [
 	'jquery.combobox',
 	'jquery.ocaddnew',
 	'contacts',
+    'jquery.Jcrop.min'
 ]);
 
 ?>
