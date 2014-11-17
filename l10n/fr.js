@@ -173,7 +173,7 @@ OC.L10N.register(
     "Friends" : "Amis",
     "Family" : "Famille",
     "Enable LDAP Backend" : "Activer le backend LDAP",
-    "Enable LDAP backend for the contacts application" : "Activer le backend LDAP pour l'application Contacts",
+    "Enable LDAP backend for the contacts application" : "Active le backend LDAP pour l'application Contacts",
     "Warning: LDAP Backend is in beta mode, use with precautions" : "Attention : le backend LDAP est en mode beta, utilisez-le avec précaution.",
     "New contact" : "Nouveau contact",
     "Group name" : "Nom du groupe",
