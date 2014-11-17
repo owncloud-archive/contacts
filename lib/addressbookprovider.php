@@ -178,51 +178,35 @@ SQL;
 	* @return mixed
 	*/
 	public function createOrUpdate($properties) {
-		$id = null;
 
-		/**
-		 * @var \OCA\Contacts\VObject\VCard
-		 */
-		$vcard = null;
-		if(array_key_exists('id', $properties)) {
-			// TODO: test if $id belongs to this addressbook
-			$id = $properties['id'];
-			// TODO: Test $vcard
-			$vcard = $this->addressBook->getChild($properties['id']);
-			foreach(array_keys($properties) as $name) {
-				if(isset($vcard->{$name})) {
-					unset($vcard->{$name});
-				}
-			}
-		} else {
-			$vcard = \Sabre\VObject\Component::create('VCARD');
-			$uid = substr(md5(rand().time()), 0, 10);
-			$vcard->add('UID', $uid);
-			try {
-				$id = $this->addressBook->addChild($vcard);
-			} catch(\Exception $e) {
-				\OCP\Util::writeLog('contacts', __METHOD__ . ' ' . $e->getMessage(), \OCP\Util::ERROR);
-				return false;
-			}
-		}
+        $addressBook = $this->getAddressbook();
 
-		foreach($properties as $name => $value) {
+        try {
+            $id = $addressBook->addChild();
+        } catch(\Exception $e) {
+        }
+
+        if ($id === false) {
+        }
+
+        $contact = $addressBook->getChild($id);
+        foreach($properties as $name => $value) {
 			switch($name) {
 				case 'ADR':
 				case 'N':
 					if(is_array($value)) {
 						$property = \Sabre\VObject\Property::create($name);
-						$property->setParts($value);
-						$vcard->add($property);
+						$property->setValue($value);
+						$contact->add($property);
 					} else {
-						$vcard->{$name} = $value;
+						$contact->{$name} = $value;
 					}
 					break;
 				case 'BDAY':
 					// TODO: try/catch
 					$date = New \DateTime($value);
-					$vcard->BDAY = $date->format('Y-m-d');
-					$vcard->BDAY->VALUE = 'DATE';
+					$contact->BDAY = $date->format('Y-m-d');
+					$contact->BDAY->VALUE = 'DATE';
 					break;
 				case 'EMAIL':
 				case 'TEL':
@@ -230,27 +214,21 @@ SQL;
 				case 'URL':
 					if(is_array($value)) {
 						foreach($value as $val) {
-							$vcard->add($name, strip_tags($val));
+							$contact->add($name, strip_tags($val));
 						}
 					} else {
-						$vcard->add($name, strip_tags($value));
+						$contact->add($name, strip_tags($value));
 					}
+                    break;
 				default:
-					$vcard->{$name} = $value;
+					$contact->{$name} = $value;
 					break;
 			}
 		}
+        $contact->save();
 
-		try {
-			VCard::edit($id, $vcard);
-		} catch(\Exception $e) {
-			\OCP\Util::writeLog('contacts', __METHOD__ . ' ' . $e->getMessage(), \OCP\Util::ERROR);
-			return false;
-		}
-		
-		$asarray = VCard::structureContact($vcard);
-		$asarray['id'] = $id;
-		return $asarray;
+
+		return $this->getAddressbook()->getChild($contact->getId());
 	}
 
 	/**
