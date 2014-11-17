@@ -36,8 +36,9 @@ class GroupController extends Controller {
 
 		foreach ($tags as &$tag) {
 			try {
-				$ids = $this->tags->getIdsForTag($tag['name']);
+				$ids = $this->tags->getIdsForTag($tag['id']);
 				$tag['contacts'] = $ids;
+				$tag['displayname'] = $this->displayName($tag);
 			} catch(\Exception $e) {
 				\OCP\Util::writeLog('contacts', __METHOD__ . ', ' . $e->getMessage(), \OCP\Util::ERROR);
 			}
@@ -71,7 +72,7 @@ class GroupController extends Controller {
 
 		$response = new JSONResponse();
 
-		if (is_null($name) || $name === "") {
+		if (empty($name)) {
 			$response->bailOut(App::$l10n->t('No group name given.'));
 		}
 
@@ -90,22 +91,24 @@ class GroupController extends Controller {
 	 * @NoAdminRequired
 	 */
 	public function deleteGroup() {
+		$id = $this->request->post['id'];
 		$name = $this->request->post['name'];
 
 		$response = new JSONResponse();
-		if (is_null($name) || $name === '') {
-			$response->bailOut(App::$l10n->t('No group name given.'));
+		if (empty($id)) {
+			$response->bailOut(App::$l10n->t('No group ID given.'));
 			return $response;
 		}
 
 		try {
-			$ids = $this->tags->getIdsForTag($name);
+			$ids = $this->tags->getIdsForTag($id);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
 			return $response;
 		}
 
+		$tagId = $id;
 		if ($ids !== false) {
 
 			$backend = $this->app->getBackend('local');
@@ -135,12 +138,11 @@ class GroupController extends Controller {
 		}
 
 		try {
-			$this->tags->delete($name);
+			$this->tags->delete($tagId);
 		} catch(\Exception $e) {
 			$response->setErrorMessage($e->getMessage());
 			\OCP\Util::writeLog('contacts', __METHOD__.', ' . $e->getMessage(), \OCP\Util::ERROR);
 		}
-
 		return $response;
 	}
 
@@ -153,12 +155,12 @@ class GroupController extends Controller {
 
 		$response = new JSONResponse();
 
-		if (is_null($from) || $from === '') {
+		if (empty($from)) {
 			$response->bailOut(App::$l10n->t('No group name to rename from given.'));
 			return $response;
 		}
 
-		if (is_null($to) || $to === '') {
+		if (empty($to)) {
 			$response->bailOut(App::$l10n->t('No group name to rename to given.'));
 			return $response;
 		}
@@ -168,6 +170,14 @@ class GroupController extends Controller {
 			return $response;
 		}
 
+		$tag = $this->tags->getTag($from);
+
+		if (!$tag) {
+			$response->bailOut(App::$l10n->t('Error renaming group.'));
+			return $response;
+		}
+
+		$response->setParams(array('displayname'=>$this->displayName($tag)));
 		$ids = $this->tags->getIdsForTag($to);
 
 		if ($ids !== false) {
@@ -212,14 +222,14 @@ class GroupController extends Controller {
 		$ids = $this->request->post['contactIds'];
 		$response->debug('request: '.print_r($this->request->post, true));
 
-		if (is_null($categoryId) || $categoryId === '') {
+		if (empty($categoryId)) {
 			throw new \Exception(
 				App::$l10n->t('Group ID missing from request.'),
 				Http::STATUS_PRECONDITION_FAILED
 			);
 		}
 
-		if (is_null($categoryName) || $categoryName === '') {
+		if (empty($categoryName)) {
 			throw new \Exception(
 				App::$l10n->t('Group name missing from request.'),
 				Http::STATUS_PRECONDITION_FAILED
@@ -269,14 +279,14 @@ class GroupController extends Controller {
 		$ids = $this->request->post['contactIds'];
 		//$response->debug('request: '.print_r($this->request->post, true));
 
-		if (is_null($categoryId) || $categoryId === '') {
+		if (empty($categoryId)) {
 			throw new \Exception(
 				App::$l10n->t('Group ID missing from request.'),
 				Http::STATUS_PRECONDITION_FAILED
 			);
 		}
 
-		if (is_null($categoryName) || $categoryName === '') {
+		if (empty($categoryName)) {
 			throw new \Exception(
 				App::$l10n->t('Group name missing from request.'),
 				Http::STATUS_PRECONDITION_FAILED
@@ -327,5 +337,21 @@ class GroupController extends Controller {
 		return $response;
 	}
 
+	/**
+	* Returns a tag's name as it should be displayed.
+	*
+	* @param Tag
+	* @return string
+	*
+	* If the tag belongs to the current user, simply returns the tag's name.
+	* Otherwise, the tag's name is returned with it's owner's name appended
+	* in parentheses, like "Tag (owner)".
+	*/
+	private function displayName($tag) {
+		if ($tag['owner'] != \OCP\User::getUser()) {
+			return $tag['name'] . ' ('. $tag['owner'] . ')';
+		}
+		return $tag['name'];
+	}
 }
 

@@ -228,7 +228,7 @@ Class Properties {
 			\OCP\Util::writeLog('contacts', __METHOD__.
 				', exception: ' . $e->getMessage(), \OCP\Util::ERROR);
 			\OCP\Util::writeLog('contacts', __METHOD__.', ids: '
-				. $ids, \OCP\Util::DEBUG);
+				. print_r($ids, true), \OCP\Util::DEBUG);
 			return false;
 		}
 	}

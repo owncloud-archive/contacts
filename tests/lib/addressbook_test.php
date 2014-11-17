@@ -68,6 +68,13 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 
 	}
 
+	public function testChildExists() {
+
+		$this->assertFalse($this->ab->childExists('12'));
+		$this->assertTrue($this->ab->childExists('123'));
+
+	}
+
 	public function testAddChild() {
 
 		$carddata = file_get_contents(__DIR__ . '/../data/test2.vcf');
