@@ -16,7 +16,7 @@ filter:
         - 'css/placeholder*'
         - 'l10n/*'
         - 'templates/*'
-        - 'js/bower_components/*'
+        - 'vendor/*'
         - 'css/jquery*'
         - 'css/multi-select.css'
 
