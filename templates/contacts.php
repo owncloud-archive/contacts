@@ -9,7 +9,7 @@ script('', [
 
 script('contacts', [
 	'bower_components/jquery-combobox/combobox',
-    'bower_components/multiselect/js/jquery.multi-select',
+    'bower_components/ui-multiselect/src/jquery.multiselect',
     'bower_components/blueimp-md5/js/md5.min',
     'bower_components/jcrop/js/jquery.Jcrop.min',
     'bower_components/blueimp-file-upload/js/jquery.fileupload',
@@ -23,15 +23,13 @@ script('contacts', [
 	'otherbackendconfig',
 ]);
 
-style('contacts', array(
-    'multi-select'
-));
-
 style('contacts', [
+    'multi-select',
 	'jquery.combobox',
 	'jquery.ocaddnew',
 	'contacts',
-    'jquery.Jcrop.min'
+    'jquery.Jcrop.min',
+    '../js/bower_components/ui-multiselect/jquery.multiselect',
 ]);
 
 ?>
