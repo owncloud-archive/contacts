@@ -1,13 +1,13 @@
 <?php
 use OCA\Contacts\ImportManager;
 
-script('', [
+script('', array(
 	'tags',
 	'placeholder',
 	'avatar',
-]);
+));
 
-script('contacts', [
+script('contacts', array(
 	'modernizr.custom',
 	'app',
 	'addressbooks',
@@ -16,27 +16,27 @@ script('contacts', [
 	'groups',
 	'jquery.ocaddnew',
 	'otherbackendconfig',
-]);
+));
 
-style('contacts', [
+style('contacts', array(
 	'multi-select',
 	'jquery.combobox',
 	'jquery.ocaddnew',
 	'contacts',
 	'jquery.Jcrop.min',
-]);
+));
 
-vendor_script('contacts', [
+vendor_script('contacts', array(
 	'jquery-combobox/combobox',
 	'ui-multiselect/src/jquery.multiselect',
 	'blueimp-md5/js/md5.min',
 	'jcrop/js/jquery.Jcrop.min',
 	'blueimp-file-upload/js/jquery.fileupload',
-]);
+));
 
-vendor_style('contacts', [
+vendor_style('contacts', array(
 	'ui-multiselect/jquery.multiselect',
-]);
+));
 
 ?>
 <div id="app">
