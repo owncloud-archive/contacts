@@ -16,6 +16,9 @@ filter:
         - 'css/placeholder*'
         - 'l10n/*'
         - 'templates/*'
+        - 'vendor/*'
+        - 'css/jquery*'
+        - 'css/multi-select.css'
 
 imports:
     - php
