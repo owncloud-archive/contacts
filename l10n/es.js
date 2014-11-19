@@ -119,6 +119,7 @@ OC.L10N.register(
     "Error saving contact." : "Error guardando el contacto.",
     "No group name given." : "No se ha especificado un nombre de grupo.",
     "Error adding group." : "Error añadiendo el grupo.",
+    "No group ID given." : "No se ha dado una ID al grupo.",
     "No group name to rename from given." : "No hay nombre de grupo para renombrar el que se ha dado.",
     "No group name to rename to given." : "No se ha especificado un nombre de grupo para renombrar el que se ha dado",
     "Error renaming group." : "Error renombrando grupo.",

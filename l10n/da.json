@@ -117,6 +117,7 @@
     "Error saving contact." : "Kunne ikke gemme kontaktpersonen.",
     "No group name given." : "Intet gruppenavn givet.",
     "Error adding group." : "Fejl ved tilføjelse af gruppe.",
+    "No group ID given." : "Der er ikke angivet gruppe-ID.",
     "No group name to rename from given." : "Intet gruppenavn at omdøbe fra det givne.",
     "No group name to rename to given." : "Intet gruppenavn at omdøbe til det givne.",
     "Error renaming group." : "Fejl ved omdøbning af gruppenavn.",

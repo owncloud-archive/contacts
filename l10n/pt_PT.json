@@ -117,6 +117,7 @@
     "Error saving contact." : "Erro a guardar o contacto.",
     "No group name given." : "Grupo sem nome.",
     "Error adding group." : "Erro a adicionar o grupo",
+    "No group ID given." : "Não foi dado o ID do grupo.",
     "No group name to rename from given." : "Não foi dado um novo nome ao grupo recebido.",
     "No group name to rename to given." : "Não foi dado um novo nome ao grupo dado.",
     "Error renaming group." : "Erro ao renomear grupo.",

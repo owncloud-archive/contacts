@@ -118,6 +118,7 @@ $TRANSLATIONS = array(
 "Error saving contact." => "Chyba při ukládání kontaktu.",
 "No group name given." => "Nebyl zadán název skupiny.",
 "Error adding group." => "Chyba při přidávání skupiny.",
+"No group ID given." => "Nebylo zadáno ID skupiny.",
 "No group name to rename from given." => "Nebyl zadán název skupiny k přejmenování.",
 "No group name to rename to given." => "Nebyl zadán nový název skupiny.",
 "Error renaming group." => "Chyba při přejmenování skupiny.",

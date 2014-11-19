@@ -118,6 +118,7 @@ $TRANSLATIONS = array(
 "Error saving contact." => "Fout om contact op te slaan",
 "No group name given." => "Geen groepsnaam opgegeven.",
 "Error adding group." => "Fout bij toevoegen groep",
+"No group ID given." => "Geen groeps-ID opgegeven.",
 "No group name to rename from given." => "Geen groepsnaam opgegeven om vanaf te hernoemen.",
 "No group name to rename to given." => "Geen groepsnaam opgegeven om naar te hernoemen.",
 "Error renaming group." => "Fout bij het hernoemen van groep.",
