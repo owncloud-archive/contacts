@@ -179,18 +179,15 @@ SQL;
 	*/
 	public function createOrUpdate($properties) {
 
-        $addressBook = $this->getAddressbook();
+		$addressBook = $this->getAddressbook();
 
-        try {
-            $id = $addressBook->addChild();
-        } catch(\Exception $e) {
-        }
+		try {
+			$id = $addressBook->addChild();
+		} catch(\Exception $e) {
+		}
 
-        if ($id === false) {
-        }
-
-        $contact = $addressBook->getChild($id);
-        foreach($properties as $name => $value) {
+		$contact = $addressBook->getChild($id);
+		foreach($properties as $name => $value) {
 			switch($name) {
 				case 'ADR':
 				case 'N':
@@ -219,13 +216,13 @@ SQL;
 					} else {
 						$contact->add($name, strip_tags($value));
 					}
-                    break;
+				break;
 				default:
 					$contact->{$name} = $value;
 					break;
 			}
 		}
-        $contact->save();
+		$contact->save();
 
 
 		return $this->getAddressbook()->getChild($contact->getId());
@@ -247,12 +244,12 @@ SQL;
 			}
 			if((int)$result['count'] === 0) {
 				\OCP\Util::writeLog('contacts', __METHOD__
-					. 'Contact with id ' . $id . 'doesn\'t belong to addressbook with id ' . $this->id, 
+					. 'Contact with id ' . $id . 'doesn\'t belong to addressbook with id ' . $this->id,
 					\OCP\Util::ERROR);
 				return false;
 			}
 		} catch(\Exception $e) {
-			\OCP\Util::writeLog('contacts', __METHOD__ . ', exception: ' . $e->getMessage(), 
+			\OCP\Util::writeLog('contacts', __METHOD__ . ', exception: ' . $e->getMessage(),
 				\OCP\Util::ERROR);
 			return false;
 		}
