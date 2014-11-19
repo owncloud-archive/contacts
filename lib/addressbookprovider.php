@@ -225,7 +225,7 @@ SQL;
 		$contact->save();
 
 
-		return $this->getAddressbook()->getChild($contact->getId());
+		return $contact;
 	}
 
 	/**
