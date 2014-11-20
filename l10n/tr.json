@@ -117,6 +117,7 @@
     "Error saving contact." : "Kişi kaydedilirken hata.",
     "No group name given." : "Grup adı belirtilmedi.",
     "Error adding group." : "Grup ekleme hatası.",
+    "No group ID given." : "Grup kimliği belirtilmemiş.",
     "No group name to rename from given." : "Değiştirmek için bir grup adı belirtilmedi.",
     "No group name to rename to given." : "Değiştirmek için bir grup adı belirtilmedi.",
     "Error renaming group." : "Grup adını değiştirirken hata oluştu.",
