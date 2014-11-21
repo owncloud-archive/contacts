@@ -90,11 +90,26 @@ class AddressbookProvider implements \OCP\IAddressBook {
 	* @return array|false
 	*/
 	public function search($pattern, $searchProperties, $options) {
-		$contacts = array();
+		$propTable = self::PROPERTY_TABLE;
+		$contTable = self::CONTACT_TABLE;
 		$results = array();
-		$query = 'SELECT DISTINCT `contactid` FROM `' . self::PROPERTY_TABLE . '` WHERE `userid` = ? AND (';
+		$query = <<<SQL
+			SELECT
+				DISTINCT
+				`$propTable`.`contactid`,
+				`$contTable`.`addressbookid`
+			FROM
+				`$propTable`
+			INNER JOIN
+				`$contTable`
+			ON `$contTable`.`id` = `$propTable`.`contactid`
+			WHERE
+			  `$propTable`.`userid` = ?
+			AND (
+SQL;
+
 		$params = array(\OCP\User::getUser());
-		foreach($searchProperties as $property) {
+		foreach ($searchProperties as $property) {
 			$params[] = $property;
 			$params[] = '%' . $pattern . '%';
 			$query .= '(`name` = ? AND `value` LIKE ?) OR ';
@@ -109,14 +124,14 @@ class AddressbookProvider implements \OCP\IAddressBook {
 				\OCP\Util::ERROR);
 			return false;
 		}
-		while( $row = $result->fetchRow()) {
+		while ($row = $result->fetchRow()) {
 			$id = $row['contactid'];
-			$addressbookKey = $this->getAddresbookKeyForContact($row['contactid']);
+			$addressbookKey = $row['addressbookid'];
 			try {
 				// gues that it is a local addressbook
 				$contact = $this->app->getContact('local', $addressbookKey, $id);
 			} catch (\Exception $e) {
-				if ($e->getCode() === 404){
+				if ($e->getCode() === 404) {
 					// not a local thus it is a shared
 					$contact = $this->app->getContact('shared', $addressbookKey, $id);
 				}
@@ -124,7 +139,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			$j = JSONSerializer::serializeContact($contact);
 			$j['data']['id'] = $id;
 			if (isset($contact->PHOTO)) {
-				$url =\OCP\Util::linkToRoute('contacts_contact_photo',
+				$url = \OCP\Util::linkToRoute('contacts_contact_photo',
 					array(
 						'backend' => $contact->getBackend()->name,
 						'addressBookId' => $this->addressBook->getId(),
@@ -133,7 +148,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 				$url = \OC_Helper::makeURLAbsolute($url);
 				$j['data']['PHOTO'] = "VALUE=uri:$url";
 			}
-			$results[]= $this->convertToSearchResult($j);
+			$results[] = $this->convertToSearchResult($j);
 		}
 		return $results;
 	}
