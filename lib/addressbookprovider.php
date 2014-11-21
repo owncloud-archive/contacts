@@ -287,18 +287,4 @@ SQL;
 		return $result;
 	}
 
-	private function getAddresbookKeyForContact($id){
-		$table = self::CONTACT_TABLE;
-		$query = <<<SQL
-			SELECT
-				`addressbookid`
-			FROM
-				`$table`
-			WHERE `id` = ?
-SQL;
-		$stmt = \OCP\DB::prepare($query);
-		$result = $stmt->execute(array($id));
-		$row = $result->fetchOne();
-		return $row['addressbookid'];
-	}
 }
