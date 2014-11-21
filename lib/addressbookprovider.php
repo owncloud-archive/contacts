@@ -206,7 +206,6 @@ SQL;
 					break;
 				case 'EMAIL':
 				case 'TEL':
-				case 'TEL':
 				case 'IMPP': // NOTE: We don't know if it's GTalk, Jabber etc. only the protocol
 				case 'URL':
 					if(is_array($value)) {
