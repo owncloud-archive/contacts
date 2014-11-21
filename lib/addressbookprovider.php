@@ -53,6 +53,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 	 */
 	public function __construct($addressBook) {
 		$this->addressBook = $addressBook;
+		$this->app = new App();
 	}
 	
 	public function getAddressbook() {
@@ -89,7 +90,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 	* @return array|false
 	*/
 	public function search($pattern, $searchProperties, $options) {
-		$ids = array();
+		$contacts = array();
 		$results = array();
 		$query = 'SELECT DISTINCT `contactid` FROM `' . self::PROPERTY_TABLE . '` WHERE `userid` = ? AND (';
 		$params = array(\OCP\User::getUser());
@@ -109,14 +110,25 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			return false;
 		}
 		while( $row = $result->fetchRow()) {
-			$ids[] = $row['contactid'];
+			$contacts[] = array(
+				"id" => $row['contactid'],
+				"addressbook_key" => $this->getAddresbookKeyForContact($row['contactid'])
+			);
 		}
 
-		if(count($ids) > 0) {
-			foreach($ids as $id){
-				$contact = $this->addressBook->getChild($id);
+		if(count($contacts) > 0) {
+			foreach($contacts as $id){
+				try {
+					// gues that it is a local addressbook
+					$contact = $this->app->getContact('local', $id['addressbook_key'], $id['id']);
+				} catch (\Exception $e) {
+					if ($e->getCode() === 404){
+						// not a local thus it is a shared
+						$contact = $this->app->getContact('shared', $id['addressbook_key'], $id['id']);
+					}
+				}
 				$j = JSONSerializer::serializeContact($contact);
-				$j['data']['id'] = $id;
+				$j['data']['id'] = $id['id'];
 				if (isset($contact->PHOTO)) {
 					$url =\OCP\Util::linkToRoute('contacts_contact_photo',
 							array(
@@ -186,6 +198,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 					$vcard->BDAY->VALUE = 'DATE';
 					break;
 				case 'EMAIL':
+				case 'TEL':
 				case 'TEL':
 				case 'IMPP': // NOTE: We don't know if it's GTalk, Jabber etc. only the protocol
 				case 'URL':
@@ -265,5 +278,20 @@ class AddressbookProvider implements \OCP\IAddressBook {
 		}
 
 		return $result;
+	}
+
+	private function getAddresbookKeyForContact($id){
+		$table = self::CONTACT_TABLE;
+		$query = <<<SQL
+			SELECT
+				`addressbookid`
+			FROM
+				`$table`
+			WHERE `id` = ?
+SQL;
+		$stmt = \OCP\DB::prepare($query);
+		$result = $stmt->execute(array($id));
+		$row = $result->fetchOne();
+		return $row['addressbookid'];
 	}
 }
