@@ -110,39 +110,31 @@ class AddressbookProvider implements \OCP\IAddressBook {
 			return false;
 		}
 		while( $row = $result->fetchRow()) {
-			$contacts[] = array(
-				"id" => $row['contactid'],
-				"addressbook_key" => $this->getAddresbookKeyForContact($row['contactid'])
-			);
-		}
-
-		if(count($contacts) > 0) {
-			foreach($contacts as $id){
-				try {
-					// gues that it is a local addressbook
-					$contact = $this->app->getContact('local', $id['addressbook_key'], $id['id']);
-				} catch (\Exception $e) {
-					if ($e->getCode() === 404){
-						// not a local thus it is a shared
-						$contact = $this->app->getContact('shared', $id['addressbook_key'], $id['id']);
-					}
+			$id = $row['contactid'];
+			$addressbookKey = $this->getAddresbookKeyForContact($row['contactid']);
+			try {
+				// gues that it is a local addressbook
+				$contact = $this->app->getContact('local', $addressbookKey, $id);
+			} catch (\Exception $e) {
+				if ($e->getCode() === 404){
+					// not a local thus it is a shared
+					$contact = $this->app->getContact('shared', $addressbookKey, $id);
 				}
-				$j = JSONSerializer::serializeContact($contact);
-				$j['data']['id'] = $id['id'];
-				if (isset($contact->PHOTO)) {
-					$url =\OCP\Util::linkToRoute('contacts_contact_photo',
-							array(
-								'backend' => $contact->getBackend()->name,
-								'addressBookId' => $this->addressBook->getId(),
-								'contactId' => $contact->getId()
-							));
-					$url = \OC_Helper::makeURLAbsolute($url);
-					$j['data']['PHOTO'] = "VALUE=uri:$url";
-				}
-				$results[]= $this->convertToSearchResult($j);
 			}
+			$j = JSONSerializer::serializeContact($contact);
+			$j['data']['id'] = $id;
+			if (isset($contact->PHOTO)) {
+				$url =\OCP\Util::linkToRoute('contacts_contact_photo',
+					array(
+						'backend' => $contact->getBackend()->name,
+						'addressBookId' => $this->addressBook->getId(),
+						'contactId' => $contact->getId()
+					));
+				$url = \OC_Helper::makeURLAbsolute($url);
+				$j['data']['PHOTO'] = "VALUE=uri:$url";
+			}
+			$results[]= $this->convertToSearchResult($j);
 		}
-
 		return $results;
 	}
 
