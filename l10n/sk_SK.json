@@ -117,6 +117,7 @@
     "Error saving contact." : "Chyba počas ukladania kontaktu.",
     "No group name given." : "Názov skupiny nie je zadaný.",
     "Error adding group." : "Chyba vytvárania danej skupiny.",
+    "No group ID given." : "ID skupiny nebolo zadané.",
     "No group name to rename from given." : "Názov skupiny na premenovanie nie je zadaný.",
     "No group name to rename to given." : "Nový názov skupiny nie je zadaný.",
     "Error renaming group." : "Chyba pri premenovávaní skupiny.",
