@@ -117,6 +117,7 @@
     "Error saving contact." : "Помилка при збереженні контакту.",
     "No group name given." : "Не задано ім'я групи.",
     "Error adding group." : "Помилка при додаванні групи.",
+    "No group ID given." : "Не заданий ідентіфікатор групи",
     "No group name to rename from given." : "Не вказано ім'я групи для перейменування з обраного.",
     "No group name to rename to given." : "Не вказано ім'я групи для перейменування в обране.",
     "Error renaming group." : "Помилка при перейменуванні групи.",
