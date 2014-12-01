@@ -458,8 +458,7 @@ abstract class AbstractBackend {
 	public function removePreferences($addressbookid) {
 		$key = $this->combinedKey($addressbookid);
 		$key = 'prefs_' . $key;
-		
-		\OC_Preferences::deleteKey( $this->userid, 'contacts', $key );
+		\OC::$server->getConfig()->deleteUserValue( $this->userid, 'contacts', $key );
 		
 	}
 }
