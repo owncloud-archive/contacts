@@ -20,18 +20,19 @@ script('contacts', array(
 
 style('contacts', array(
 	'multi-select',
-	'jquery.combobox',
+//	'jquery.combobox',
 	'jquery.ocaddnew',
 	'contacts',
 	'jquery.Jcrop.min',
 ));
 
 vendor_script('contacts', array(
-	'jquery-combobox/combobox',
+//	'jquery-combobox/combobox',
 	'ui-multiselect/src/jquery.multiselect',
 	'blueimp-md5/js/md5.min',
 	'jcrop/js/jquery.Jcrop.min',
 	'blueimp-file-upload/js/jquery.fileupload',
+	'combobox'
 ));
 
 vendor_style('contacts', array(
