@@ -20,15 +20,15 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 	*/
 	protected $abinfo;
 	/**
-	* @var OCA\Contacts\AddressBook
+	* @var \OCA\Contacts\AddressBook
 	*/
 	protected $ab;
 	/**
-	* @var OCA\Contacts\Contact
+	* @var \OCA\Contacts\Contact
 	*/
 	protected $contact;
 	/**
-	* @var OCA\Contacts\Backend\AbstractBackend
+	* @var \OCA\Contacts\Backend\AbstractBackend
 	*/
 	protected $backend;
 

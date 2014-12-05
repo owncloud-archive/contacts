@@ -19,11 +19,11 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 	*/
 	protected $abinfo;
 	/**
-	* @var OCA\Contacts\AddressBook
+	* @var \OCA\Contacts\Addressbook
 	*/
 	protected $ab;
 	/**
-	* @var OCA\Contacts\Backend\AbstractBackend
+	* @var \OCA\Contacts\Backend\AbstractBackend
 	*/
 	protected $backend;
 
