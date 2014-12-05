@@ -1757,6 +1757,7 @@ OC.Contacts = OC.Contacts || {};
 				}
 				for(var param in prop.parameters) {
 					if(param.toUpperCase() === 'PREF') {
+						pref = prop.value;
 						found = true; //
 						break;
 					}
