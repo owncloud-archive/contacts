@@ -34,6 +34,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 
 	const CONTACT_TABLE = '*PREFIX*contacts_cards';
 	const PROPERTY_TABLE = '*PREFIX*contacts_cards_properties';
+	const ADDRESSBOOK_TABLE = '*PREFIX*contacts_addressbooks';
 
 	/**
 	 * Addressbook id
@@ -53,6 +54,7 @@ class AddressbookProvider implements \OCP\IAddressBook {
 	 */
 	public function __construct($addressBook) {
 		$this->addressBook = $addressBook;
+		$this->app = new App();
 	}
 	
 	public function getAddressbook() {
@@ -89,11 +91,35 @@ class AddressbookProvider implements \OCP\IAddressBook {
 	* @return array|false
 	*/
 	public function search($pattern, $searchProperties, $options) {
-		$ids = array();
+		$propTable = self::PROPERTY_TABLE;
+		$contTable = self::CONTACT_TABLE;
+		$addrTable = self::ADDRESSBOOK_TABLE;
 		$results = array();
-		$query = 'SELECT DISTINCT `contactid` FROM `' . self::PROPERTY_TABLE . '` WHERE `userid` = ? AND (';
-		$params = array(\OCP\User::getUser());
-		foreach($searchProperties as $property) {
+
+		/**
+		 * This query will fetch all contacts which match the $searchProperties
+		 * It will look up the addressbookid of the contact and the user id of the owner of the contact app
+		 */
+		$query = <<<SQL
+			SELECT
+				DISTINCT
+				`$propTable`.`contactid`,
+				`$contTable`.`addressbookid`,
+				`$addrTable`.`userid`
+
+			FROM
+				`$propTable`
+			INNER JOIN
+				`$contTable`
+			ON `$contTable`.`id` = `$propTable`.`contactid`
+  				INNER JOIN `$addrTable`
+			ON `$addrTable`.id = `$contTable`.addressbookid
+			WHERE
+			(
+SQL;
+
+		$params = array();
+		foreach ($searchProperties as $property) {
 			$params[] = $property;
 			$params[] = '%' . $pattern . '%';
 			$query .= '(`name` = ? AND `value` LIKE ?) OR ';
@@ -108,29 +134,42 @@ class AddressbookProvider implements \OCP\IAddressBook {
 				\OCP\Util::ERROR);
 			return false;
 		}
-		while( $row = $result->fetchRow()) {
-			$ids[] = $row['contactid'];
-		}
-
-		if(count($ids) > 0) {
-			foreach($ids as $id){
-				$contact = $this->addressBook->getChild($id);
+		while ($row = $result->fetchRow()) {
+			$id = $row['contactid'];
+			$addressbookKey = $row['addressbookid'];
+			// Check if we are the owner of the contact
+			if ($row['userid'] !== \OCP\User::getUser()) {
+				// we aren't the owner of the contact
+				try {
+					// it is possible that the contact is shared with us
+					// if so, $contact will be an object
+					// if not getContact will throw an Exception
+					$contact = $this->app->getContact('shared', $addressbookKey, $id);
+				} catch (\Exception $e){
+					// the contact isn't shared with us
+					$contact = null;
+				}
+			} else {
+				// We are the owner of the contact
+				// thus we can easily fetch it
+				$contact = $this->app->getContact('local', $addressbookKey, $id);
+			}
+			if ($contact !== null) {
 				$j = JSONSerializer::serializeContact($contact);
 				$j['data']['id'] = $id;
 				if (isset($contact->PHOTO)) {
-					$url =\OCP\Util::linkToRoute('contacts_contact_photo',
-							array(
-								'backend' => $contact->getBackend()->name,
-								'addressBookId' => $this->addressBook->getId(),
-								'contactId' => $contact->getId()
-							));
+					$url = \OCP\Util::linkToRoute('contacts_contact_photo',
+						array(
+							'backend' => $contact->getBackend()->name,
+							'addressBookId' => $addressbookKey,
+							'contactId' => $contact->getId()
+						));
 					$url = \OC_Helper::makeURLAbsolute($url);
 					$j['data']['PHOTO'] = "VALUE=uri:$url";
 				}
-				$results[]= $this->convertToSearchResult($j);
+				$results[] = $this->convertToSearchResult($j);
 			}
 		}
-
 		return $results;
 	}
 
@@ -266,4 +305,5 @@ class AddressbookProvider implements \OCP\IAddressBook {
 
 		return $result;
 	}
+
 }
