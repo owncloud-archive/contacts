@@ -1,6 +1,8 @@
 <?php
 use OCA\Contacts\ImportManager;
 
+require_once(__DIR__ . "/../lib/compat.php");
+
 script('', array(
 	'tags',
 	'placeholder',
