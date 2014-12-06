@@ -191,9 +191,9 @@ class ImportVCardConnector extends ImportConnector{
 			// Doesn't look like a vcf file
 			return 0;
 		} else {
-      $element = $this->convertElementToVCard($parts[0]);
-      $unknownElements = $element->select("X-Unknown-Element");
-      return (1 - (0.5 * count($unknownElements)/count($parts[0])));
+			$element = $this->convertElementToVCard($parts[0]);
+			$unknownElements = $element->select("X-Unknown-Element");
+			return (1 - (0.5 * count($unknownElements)/count($parts[0])));
 		}
 	}
 	
