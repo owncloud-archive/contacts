@@ -178,21 +178,31 @@ SQL;
 	* @return mixed
 	*/
 	public function createOrUpdate($properties) {
-
 		$addressBook = $this->getAddressbook();
 
-		try {
-			$id = $addressBook->addChild();
-		} catch(\Exception $e) {
+		if(array_key_exists('id', $properties)) {
+			// we must "update" the contact by replacing the entire data set
+			$id = $properties['id'];
+			$contact = $this->addressBook->getChild($properties['id']);
+			foreach(array_keys($properties) as $name) {
+				if(isset($contact->{$name})) {
+					unset($contact->{$name});
+				 }
+			}
+		} else {
+			// the contact doesn't exist
+			// we must create a new one
+			try {
+				$id = $addressBook->addChild();
+			} catch(\Exception $e) {
+			}
+			$contact = $addressBook->getChild($id);
 		}
 
-		$contact = $addressBook->getChild($id);
 		foreach($properties as $name => $value) {
 			$contact->setPropertyByName($name, $value);
 		}
 		$contact->save();
-
-
 		return $contact;
 	}
 
