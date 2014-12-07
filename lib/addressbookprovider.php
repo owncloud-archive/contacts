@@ -188,39 +188,7 @@ SQL;
 
 		$contact = $addressBook->getChild($id);
 		foreach($properties as $name => $value) {
-			switch($name) {
-				case 'ADR':
-				case 'N':
-					if(is_array($value)) {
-						$property = \Sabre\VObject\Property::create($name);
-						$property->setValue($value);
-						$contact->add($property);
-					} else {
-						$contact->{$name} = $value;
-					}
-					break;
-				case 'BDAY':
-					// TODO: try/catch
-					$date = New \DateTime($value);
-					$contact->BDAY = $date->format('Y-m-d');
-					$contact->BDAY->VALUE = 'DATE';
-					break;
-				case 'EMAIL':
-				case 'TEL':
-				case 'IMPP': // NOTE: We don't know if it's GTalk, Jabber etc. only the protocol
-				case 'URL':
-					if(is_array($value)) {
-						foreach($value as $val) {
-							$contact->add($name, strip_tags($val));
-						}
-					} else {
-						$contact->add($name, strip_tags($value));
-					}
-				break;
-				default:
-					$contact->{$name} = $value;
-					break;
-			}
+			$contact->setPropertyByName($name, $value);
 		}
 		$contact->save();
 
