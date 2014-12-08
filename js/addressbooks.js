@@ -456,7 +456,7 @@ OC.Contacts = OC.Contacts || {};
 						backend: $import_into.find('option:selected').attr('backend')
 					}
 				);
-				me.$importFileInput.fileupload('option', 'url', url);
+				me.$importFileInput.fileupload().fileupload('option', 'url', url);
 				me.$importFileInput.attr('disabled', false);
 			} else {
 				me.$importFileInput.attr('disabled', true);
@@ -573,7 +573,16 @@ OC.Contacts = OC.Contacts || {};
 			console.log('vertige', data);
 			$.when(
 				self.storage.startImport(
-					data.backend, data.addressBookId, data.importType,
+					/* this is a hack for a workaround on a bug. (described in contacts/issues/#488 for example)
+ 					 * instead of using data.backend, data.addressBookId and data.importType, I use
+ 					 * this.$importIntoSelect.find('option:selected').data('backend'),
+ 					 * this.$importIntoSelect.val() and this.$importFormatSelect.val()
+ 					 * This is because for some unknown reason yet, data isn't updated with select data after an import has been made
+	 				 * so every import was made on the same addressbook with the same import type
+ 					 * I don't understand yet why the data object isn't updated after an upload, so I put this patch which works
+ 					 * but is ugly as hell
+ 					 */
+					this.$importIntoSelect.find('option:selected').attr('backend'), this.$importIntoSelect.val(), this.$importFormatSelect.val(),
 					{filename:data.filename, progresskey:data.progresskey}
 				)
 			)
