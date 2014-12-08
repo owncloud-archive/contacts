@@ -386,7 +386,7 @@ OC.Contacts = OC.Contacts || {};
 						backend: $(this).find('option:selected').data('backend')
 					}
 				);
-				self.$importFileInput.fileupload('option', 'url', url);
+				self.$importFileInput.fileupload().fileupload('option', 'url', url);
 			}
 		});
 		this.$importFileInput.fileupload({
@@ -400,11 +400,11 @@ OC.Contacts = OC.Contacts || {};
 				self.$importStatusText.text(t('contacts', 'Starting file import'));
 			},
 			done: function (e, data) {
-				if ($('#import_format').find('option:selected').val() != 'automatic') {
-					$('#import-status-text').text(t('contacts', 'Format selected: {format}',
-													{format: $('#import_format').find('option:selected').text() }));
+				if (self.$importFormatSelect.find('option:selected').val() != 'automatic') {
+					self.$importStatusText.text(t('contacts', 'Format selected: {format}',
+													{format: self.$importFormatSelect.find('option:selected').text() }));
 				} else {
-					$('#import-status-text').text(t('contacts', 'Automatic format detection'));
+					self.$importStatusText.text(t('contacts', 'Automatic format detection'));
 				}
 				console.log('Upload done:', data);
 				self.doImport(self.storage.formatResponse(data.jqXHR));
@@ -498,8 +498,17 @@ OC.Contacts = OC.Contacts || {};
 			};
 			$.when(
 				self.storage.startImport(
-					data.backend, data.addressBookId, data.importType,
-					{filename:data.filename, progresskey:data.progresskey}
+				/* this is a hack for a workaround on a bug. (described in contacts/issues/#488 for example)
+				 * instead of using data.backend, data.addressBookId and data.importType, I use
+				 * this.$importIntoSelect.find('option:selected').data('backend'),
+				 * this.$importIntoSelect.val() and this.$importFormatSelect.val()
+				 * This is because for some unknown reason yet, data isn't updated with select data after an import has been made
+				 * so every import was made on the same addressbook with the same import type
+				 * I don't understand yet why the data object isn't updated after an upload, so I put this patch which works
+				 * but is ugly as hell
+				 */
+				this.$importIntoSelect.find('option:selected').data('backend'), this.$importIntoSelect.val(), this.$importFormatSelect.val(),
+				{filename:data.filename, progresskey:data.progresskey}
 				)
 			)
 			.then(function(response) {
