@@ -117,6 +117,7 @@
     "Error saving contact." : "Napaka med shranjevanjem stika.",
     "No group name given." : "Ni podanega imena skupine.",
     "Error adding group." : "Napaka dodajanja skupine.",
+    "No group ID given." : "Ni navedenega ID skupine.",
     "No group name to rename from given." : "Ni podanega imena skupine za preimenovanje.",
     "No group name to rename to given." : "Ni imena skupine za preimenovanje podane.",
     "Error renaming group." : "Napaka preimenovanja skupine.",
