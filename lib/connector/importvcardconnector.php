@@ -198,20 +198,9 @@ class ImportVCardConnector extends ImportConnector{
 			// Doesn't look like a vcf file
 			return 0;
 		} else {
-			try {
-				$vcard = VObject\Reader::read($parts[0]);
-			} catch (VObject\ParseException $e) {
-				// error while parsing, doesn't look like a vcard
-				return 0;
-			}
-			$toTranslate=1;
-			foreach ($vcard->children() as $vcardProperty) {
-				$importEntry = $this->getImportEntry($vcardProperty, $vcard);
-				if ($importEntry) {
-					$toTranslate++;
-				}
-			}
-			return (1 - pow(0.5, $toTranslate));
+			$element = $this->convertElementToVCard($parts[0]);
+			$unknownElements = $element->select("X-Unknown-Element");
+			return (1 - (0.5 * count($unknownElements)/count($parts[0])));
 		}
 	}
 	
