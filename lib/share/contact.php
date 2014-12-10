@@ -72,4 +72,8 @@ class Contact implements \OCP\Share_Backend {
 		return $contacts;
 	}
 
+	public function isShareTypeAllowed($shareType) {
+		return true;
+	}
+
 }

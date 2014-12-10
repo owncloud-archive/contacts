@@ -127,4 +127,8 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 		return $children;
 	}
 
+	public function isShareTypeAllowed($shareType) {
+		return true;
+	}
+
 }
