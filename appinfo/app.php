@@ -55,7 +55,7 @@ $api->connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Hooks', 'getCalende
 \OCP\Util::addscript('contacts', 'loader');
 \OCP\Util::addscript('contacts', 'admin');
 
-\OC_Search::registerProvider('OCA\Contacts\Search\Provider');
+\OC::$server->getSearch()->registerProvider('OCA\Contacts\Search\Provider', array('apps' => array('contacts')));
 \OCP\Share::registerBackend('contact', 'OCA\Contacts\Share\Contact');
 \OCP\Share::registerBackend('addressbook', 'OCA\Contacts\Share\Addressbook', 'contact');
 //\OCP\App::registerPersonal('contacts','personalsettings');
