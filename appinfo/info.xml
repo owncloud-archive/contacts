@@ -4,13 +4,13 @@
 	<name>Contacts</name>
 	<licence>AGPL</licence>
 	<author>Jakob Sack,Thomas Tanghus</author>
-	<require>6.00</require>
+	<require>8</require>
 	<shipped>true</shipped>
 	<description>Address book with CardDAV support.</description>
 	<standalone/>
 	<default_enable/>
 	<documentation>
-		<user>http://doc.owncloud.org/server/7.0/user_manual/pim/contacts.html</user>
+		<user>http://doc.owncloud.org/server/8.0/user_manual/pim/contacts.html</user>
 	</documentation>
 	<remote>
 		<contacts>appinfo/remote.php</contacts>
