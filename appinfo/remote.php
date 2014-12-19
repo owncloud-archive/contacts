@@ -38,7 +38,10 @@ OC_App::loadApps($RUNTIME_APPTYPES);
 
 // Backends
 $authBackend = new OC_Connector_Sabre_Auth();
-$principalBackend = new OC_Connector_Sabre_Principal();
+$principalBackend = new \OC\Connector\Sabre\Principal(
+	\OC::$server->getConfig(),
+	\OC::$server->getUserManager()
+);
 
 $addressbookbackends = array();
 $addressbookbackends[] = new OCA\Contacts\Backend\Database(\OCP\User::getUser());
