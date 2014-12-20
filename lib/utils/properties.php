@@ -295,7 +295,7 @@ Class Properties {
 		//$cache->remove($key);
 		$haskey = $cache->hasKey($key);
 
-		if (!array_key_exists($options, 'remove') && !array_key_exists($options, 'update')){
+		if (!array_key_exists('remove', $options) && !array_key_exists('update', $options)){
 			if ($cache->hasKey($key) && $image === null){
 				return $cache->get($key);
 			}
