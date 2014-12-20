@@ -293,11 +293,18 @@ Class Properties {
 		$cache = \OC::$server->getCache();
 		$key = self::THUMBNAIL_PREFIX . $backendName . '::' . $addressBookId . '::' . $contactId;
 		//$cache->remove($key);
-		if ($cache->hasKey($key) && $image === null
-			&& (isset($options['remove']) && $options['remove'] === false)
-			&& (isset($options['update']) && $options['update'] === false)) {
-			return $cache->get($key);
+		$haskey = $cache->hasKey($key);
+
+		if (!array_key_exists($options, 'remove') && !array_key_exists($options, 'update')){
+			if ($cache->hasKey($key) && $image === null){
+				return $cache->get($key);
+			}
+		} else {
+			if ($options['remove'] === false && $options['update'] === false){
+				return $cache->get($key);
+			}
 		}
+
 
 		if (isset($options['remove']) && $options['remove']) {
 			$cache->remove($key);
