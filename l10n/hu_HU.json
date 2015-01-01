@@ -117,6 +117,7 @@
     "Error saving contact." : "A névjegy mentése sikertelen",
     "No group name given." : "Nem adott meg csoportnevet.",
     "Error adding group." : "Hiba a csoport hozzáadása közben.",
+    "No group ID given." : "Nem adott meg csoport ID-t",
     "No group name to rename from given." : "Nem adta meg, hogy miről nevezzük át a csoportot.",
     "No group name to rename to given." : "Nem adta meg, hogy mire nevezzük át a csoportot.",
     "Error renaming group." : "Hiba a csoport átnevezésekor.",
