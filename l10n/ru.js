@@ -248,7 +248,7 @@ OC.L10N.register(
     "Country" : "Страна",
     "Instant Messenger" : "Instant Messenger",
     "Active" : "Активно",
-    "Share" : "Открыть доступ",
+    "Share" : "Поделиться",
     "Export" : "Экспорт",
     "CardDAV link" : "Ссылка CardDAV",
     "Edit" : "Редактировать",
