@@ -118,6 +118,7 @@ $TRANSLATIONS = array(
 "Error saving contact." => "Klarte ikke å lagre kontakt.",
 "No group name given." => "Gruppenavn ikke oppgitt.",
 "Error adding group." => "Feil ved innsetting av gruppe.",
+"No group ID given." => "Gruppe-ID ikke oppgitt.",
 "No group name to rename from given." => "Navn på gruppe som skal gis nytt navn er ikke oppgitt.",
 "No group name to rename to given." => "Nytt gruppenavn er ikke oppgitt.",
 "Error renaming group." => "Omdøping av gruppe feilet.",

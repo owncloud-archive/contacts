@@ -119,6 +119,7 @@ OC.L10N.register(
     "Error saving contact." : "Fel vid spara kontakt.",
     "No group name given." : "Inget gruppnamn angivet.",
     "Error adding group." : "Fel uppstod när grupp skulle läggas till.",
+    "No group ID given." : "Inget grupp-ID angivet.",
     "No group name to rename from given." : "Inget gruppnamn att byta från angivet.",
     "No group name to rename to given." : "Inget gruppnamn att byta till angivet.",
     "Error renaming group." : "Fel vid omdöpning av grupp.",
