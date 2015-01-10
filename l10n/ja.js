@@ -168,7 +168,7 @@ OC.L10N.register(
     "Voice" : "音声番号",
     "Message" : "メッセージ",
     "Fax" : "FAX",
-    "Video" : "テレビ電話",
+    "Video" : "動画",
     "Pager" : "ポケベル",
     "Internet" : "インターネット",
     "Friends" : "友達",
