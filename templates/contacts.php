@@ -1,7 +1,7 @@
 <?php
 use OCA\Contacts\ImportManager;
 
-script('', array(
+script('core', array(
 	'tags',
 	'placeholder',
 	'avatar',
