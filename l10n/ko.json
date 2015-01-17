@@ -1,10 +1,13 @@
 { "translations": {
     "Contacts" : "연락처",
+    "Add new LDAP Addressbook" : "새 LDAP 주소록 추가",
     "Ok" : "확인",
     "Cancel" : "취소",
     "Save" : "저장",
     "Edit Addressbook" : "주소록 편집",
     "Import contacts" : "연락처 가져오기",
+    "Upload file..." : "파일 업로드...",
+    "Starting file import" : "파일 가져오기 시작",
     "Import into..." : "다음으로 가져오기...",
     "An address book called {name} already exists" : "주소록 {name}이(가) 이미 존재함",
     "Failed adding address book: {error}" : "주소록 추가 실패: {error}",
