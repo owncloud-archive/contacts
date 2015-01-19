@@ -119,7 +119,7 @@ OC.L10N.register(
     "Error saving contact." : "Σφάλμα κατά την αποθήκευση επαφής.",
     "No group name given." : "Δεν δόθηκε όνομα ομάδας.",
     "Error adding group." : "Σφάλμα κατά την προσθήκη ομάδας.",
-    "No group ID given." : "Δεν δόθηκε όνομα ομάδας.",
+    "No group ID given." : "Δεν δόθηκε ID ομάδας.",
     "No group name to rename from given." : "Κανένα όνομα ομάδας για μετονομασία από το δοθέν.",
     "No group name to rename to given." : "Κανένα όνομα ομάδας για μετονομασία στο δοθέν.",
     "Error renaming group." : "Σφάλμα κατά τη μετονομασία της ομάδας",
