@@ -213,8 +213,7 @@ Class Properties {
 	 * @return string
 	 */
 	public static function generateUID() {
-		$uuid = UUIDUtil::getUUID();
-		return $uuid . '@' . \OCP\Util::getServerHostName();
+		return UUIDUtil::getUUID();
 	}
 
 	/**
