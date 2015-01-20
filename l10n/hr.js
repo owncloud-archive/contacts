@@ -8,6 +8,7 @@ OC.L10N.register(
     "Save" : "Spremite",
     "Edit Addressbook" : "Uredite adresar",
     "Import contacts" : "Uvoz kontakata",
+    "Upload file..." : "Aplodiraj fajl",
     "Starting file import" : "Početak unosa datoteke",
     "Format selected: {format}" : "Odabran format: {format}",
     "Automatic format detection" : "Automatska detekcija formata",
