@@ -100,7 +100,7 @@
     "Error deleting contact" : "Erreur à la suppression du contact.",
     "Error retrieving contact" : "Erreur à la récupération du contact.",
     "Error saving contact" : "Erreur de sauvegarde du contact",
-    "Error removing contact from other address book." : "Erreur à la suppression du contact d'un autre carnet d'adresses.",
+    "Error removing contact from other address book." : "Erreur à la suppression du contact de l'autre carnet d'adresses.",
     "Error getting moved contact" : "Erreur lors de l'obtention du contact déplacé",
     "Couldn't find contact." : "Impossible de trouver le contact.",
     "No contact data in request." : "Aucune donnée de contact dans la requête.",
