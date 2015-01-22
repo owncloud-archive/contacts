@@ -272,6 +272,7 @@ $TRANSLATIONS = array(
 "Base DN modification" => "Base DN modification",
 "Connector" => "Connector",
 "Connector value (Better use external editor and copy/paste)" => "Connector value (Better use external editor and copy/paste)",
-"Copy from (Warning, replaces current custom value)" => "Copy from (Warning, replaces current custom value)"
+"Copy from (Warning, replaces current custom value)" => "Copy from (Warning, replaces current custom value)",
+"Delete address book"=>"Delete address book"  
 );
 $PLURAL_FORMS = "nplurals=2; plural=(n != 1);";
