@@ -142,7 +142,7 @@
     "Attempt to access blacklisted file:" : "Tentative d'accès à un fichier appartenant à la liste noire :",
     "No key is given." : "Aucune clef n'a été spécifiée.",
     "No value is given." : "Aucune valeur n'a été spécifiée.",
-    "Could not set preference: " : "Impossible de spécifier le paramètre :",
+    "Could not set preference: " : "Erreur à l'enregistrement de la préférence :",
     "Other" : "Autre",
     "HomePage" : "Page d'Accueil",
     "Jabber" : "Jabber",
