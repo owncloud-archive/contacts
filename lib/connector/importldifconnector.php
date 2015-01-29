@@ -202,7 +202,7 @@ class ImportLdifConnector extends ImportConnector{
 		// Examining the first element only
 		$parts = $this->getSourceElementsFromFile($file, 1);
 
-		if (!$parts) {
+		if (!$parts || count($parts[0]) == 0) {
 			// Doesn't look like a ldif file
 			return 0;
 		} else {
