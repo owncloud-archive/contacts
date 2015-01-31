@@ -270,6 +270,7 @@ $TRANSLATIONS = array(
 "Filter" => "过滤器",
 "Base DN for modification" => "修改的 Base DN",
 "Base DN modification" => "Base DN 修改",
-"Connector" => "连接器"
+"Connector" => "连接器",
+"Copy from (Warning, replaces current custom value)" => "复制于(注意, 替换当前预设值)"
 );
 $PLURAL_FORMS = "nplurals=1; plural=0;";
