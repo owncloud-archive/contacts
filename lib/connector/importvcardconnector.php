@@ -194,7 +194,7 @@ class ImportVCardConnector extends ImportConnector{
 		// Examining the first element only
 		$parts = $this->getSourceElementsFromFile($file, 1);
 		
-		if (!$parts || ($parts && count($parts) == 0)) {
+		if (!$parts || ($parts && count($parts[0]) == 0)) {
 			// Doesn't look like a vcf file
 			return 0;
 		} else {
