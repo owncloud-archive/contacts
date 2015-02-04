@@ -119,6 +119,7 @@ OC.L10N.register(
     "Error saving contact." : "Грешка при запазване на контакта.",
     "No group name given." : "Липсва име на групата.",
     "Error adding group." : "Грешка при добавяне на групата.",
+    "No group ID given." : "Не е зададен идентификатор на група",
     "No group name to rename from given." : "Не е зададено име на групата, която да бъде преименувана.",
     "No group name to rename to given." : "Не е зададено име на групата, до която да бъде преименувана.",
     "Error renaming group." : "Грешка при преименуване на групата.",
