@@ -39,7 +39,7 @@ OC.Contacts = OC.Contacts || {};
 		if (!this.hasPermission(OC.PERMISSION_SHARE)) {
 			this.$li.find('a.action.share').hide();
 		}
-		if (['local', 'ldap'].indexOf(this.getBackend()) === -1) {
+		if (['local', 'ldap', 'shared'].indexOf(this.getBackend()) === -1) {
 			this.$li.find('a.action.carddav').hide();
 		}
 		this.$li.find('input:checkbox').prop('checked', this.book.active).on('change', function() {
