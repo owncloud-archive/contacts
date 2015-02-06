@@ -1048,7 +1048,7 @@ OC.Contacts = OC.Contacts || {};
 		var buildGroupSelect = function(availableGroups) {
 			//this.$groupSelect.find('option').remove();
 			$.each(availableGroups, function(idx, group) {
-				var $option = $('<option value="' + group.id + '">' + group.name + '</option>');
+				var $option = $('<option value="' + group.id + '">' + escapeHTML(group.name) + '</option>');
 				if(self.inGroup(group.name)) {
 					$option.attr('selected', 'selected');
 				}
@@ -1487,7 +1487,7 @@ OC.Contacts = OC.Contacts || {};
 						var val = self.valueFor(input);
 						var params = self.parametersFor(input, true);
 						$(this).find('.meta').html(params['TYPE'].join('/'));
-						$(this).find('.adr').html(self.valueFor($editor.find('input').first()).clean('').join(', '));
+						$(this).find('.adr').text(self.valueFor($editor.find('input').first()).clean('').join(', '));
 						$(this).next('.listactions').css('display', 'inline-block');
 						$('body').unbind('click', bodyListener);
 					});
