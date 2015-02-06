@@ -119,6 +119,7 @@ OC.L10N.register(
     "Error saving contact." : "Errore bat izan da kontaktua gordetzean.",
     "No group name given." : "Ez da talde izenik eman.",
     "Error adding group." : "Errore bat izan da taldea gehitzean.",
+    "No group ID given." : "Ez da talde IDrik eman.",
     "No group name to rename from given." : "Ez dago talde izenik emandakotik berrizendatzeko.",
     "No group name to rename to given." : "Ez dago talde izenik emandakoa berrizendatzeko.",
     "Error renaming group." : "Errore bat izan da taldea berrizendatzerakoan.",
