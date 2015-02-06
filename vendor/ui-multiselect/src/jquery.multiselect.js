@@ -158,11 +158,11 @@ $.widget("ech.multiselect", {
 				labelClasses.push( 'ui-state-active' );
 			}
 
-			html += '<li class="' + liClasses + '">';
+			html += '<li class="' + escapeHTML(liClasses) + '">';
 
 			// create the label
-			html += '<label for="' + inputID + '" title="' + description + '" class="' + labelClasses.join(' ') + '">';
-			html += '<input id="' + inputID + '" name="multiselect_' + id + '" type="' + (o.multiple ? "checkbox" : "radio") + '" value="' + value + '" title="' + title + '"';
+			html += '<label for="' + escapeHTML(inputID) + '" title="' + escapeHTML(description) + '" class="' + escapeHTML(labelClasses.join(' ')) + '">';
+			html += '<input id="' + escapeHTML(inputID) + '" name="multiselect_' + escapeHTML(id) + '" type="' + (o.multiple ? "checkbox" : "radio") + '" value="' + escapeHTML(value) + '" title="' + escapeHTML(title) + '"';
 
 			// pre-selected?
 			if( isSelected ){
@@ -703,3 +703,4 @@ $.widget("ech.multiselect", {
 });
 
 })(jQuery);
+
