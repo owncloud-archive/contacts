@@ -1094,31 +1094,35 @@ OC.notify = function(params) {
 			});
 
 			var addContact = function() {
-				console.log('add');
-				if(self.currentid) {
-					if(self.currentid === 'new') {
-						return;
-					} else {
-						var contact = self.contacts.findById(self.currentid);
-						if(contact) {
-							contact.close(true);
-						}
-					}
-				}
-				self.currentid = 'new';
-				// Properties that the contact doesn't know
-				console.log('addContact, groupid', self.currentgroup);
-				var groupprops = {
-					favorite: false,
-					groups: self.groups.categories,
-					currentgroup: {id:self.currentgroup, name:self.groups.nameById(self.currentgroup)}
-				};
-				self.$firstRun.hide();
-				self.$contactList.show();
-				self.tmpcontact = self.contacts.addContact(groupprops);
-				self.tmpcontact.prependTo(self.$contactList.find('tbody')).show().find('.fullname').focus();
-				self.$rightContent.scrollTop(0);
-				self.hideActions();
+				if(self.contacts.addressBooks.count() > 0){
+                    console.log('add');
+                    if(self.currentid) {
+                        if(self.currentid === 'new') {
+                            return;
+                        } else {
+                            var contact = self.contacts.findById(self.currentid);
+                            if(contact) {
+                                contact.close(true);
+                            }
+                        }
+                    }
+                    self.currentid = 'new';
+                    // Properties that the contact doesn't know
+                    console.log('addContact, groupid', self.currentgroup);
+                    var groupprops = {
+                        favorite: false,
+                        groups: self.groups.categories,
+                        currentgroup: {id:self.currentgroup, name:self.groups.nameById(self.currentgroup)}
+                    };
+                    self.$firstRun.hide();
+                    self.$contactList.show();
+                    self.tmpcontact = self.contacts.addContact(groupprops);
+                    self.tmpcontact.prependTo(self.$contactList.find('tbody')).show().find('.fullname').focus();
+                    self.$rightContent.scrollTop(0);
+                    self.hideActions();
+                }else{
+                    OC.dialogs.alert(t('contacts','Please create an addressbook first'),t('contacts','Contacts'));
+                }
 			};
 
 			this.$firstRun.on('click keydown', '.import', function(event) {
