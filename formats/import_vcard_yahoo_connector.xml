@@ -93,7 +93,7 @@ author: Nicolas Mora mail@babelouest.org
 	</import_entry>
 	
 	<import_entry property="X-PRIMARY-PHONE" enabled="true">
-		<vcard_entry property="PHONE" type="HOME">
+		<vcard_entry property="TEL" type="HOME">
 		</vcard_entry>
 	</import_entry>
 	

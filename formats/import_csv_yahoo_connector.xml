@@ -115,37 +115,37 @@ author: Nicolas Mora mail@babelouest.org
 	</import_entry>
 	
 	<import_entry name="Home" enabled="true">
-		<vcard_entry property="PHONE" type="HOME">
+		<vcard_entry property="TEL" type="HOME">
 		</vcard_entry>
 	</import_entry>
 	
 	<import_entry name="Work" enabled="true">
-		<vcard_entry property="PHONE" type="WORK">
+		<vcard_entry property="TEL" type="WORK">
 		</vcard_entry>
 	</import_entry>
 	
 	<import_entry name="Pager" enabled="true">
-		<vcard_entry property="PHONE" type="PAGER">
+		<vcard_entry property="TEL" type="PAGER">
 		</vcard_entry>
 	</import_entry>
 	
 	<import_entry name="Fax" enabled="true">
-		<vcard_entry property="PHONE" type="FAX">
+		<vcard_entry property="TEL" type="FAX">
 		</vcard_entry>
 	</import_entry>
 	
 	<import_entry name="Mobile" enabled="true">
-		<vcard_entry property="PHONE" type="CELL">
+		<vcard_entry property="TEL" type="CELL">
 		</vcard_entry>
 	</import_entry>
 	
 	<import_entry name="Other" enabled="true">
-		<vcard_entry property="PHONE" type="OTHER">
+		<vcard_entry property="TEL" type="OTHER">
 		</vcard_entry>
 	</import_entry>
 	
 	<import_entry name="Yahoo Phone" enabled="true">
-		<vcard_entry property="PHONE" type="OTHER,YAHOO">
+		<vcard_entry property="TEL" type="OTHER,YAHOO">
 		</vcard_entry>
 	</import_entry>
 	
