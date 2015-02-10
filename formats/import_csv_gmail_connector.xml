@@ -162,12 +162,12 @@ author: Nicolas Mora mail@babelouest.org
 	</import_entry>
 	
 	<import_entry name="Phone 1 - Type" enabled="true" remove="*">
-		<vcard_entry property="PHONE" group="phone1" value="type">
+		<vcard_entry property="TEL" group="phone1" value="type">
 		</vcard_entry>
 	</import_entry>
 	
 	<import_entry name="Phone 1 - Value" enabled="true">
-		<vcard_entry property="PHONE" group="phone1">
+		<vcard_entry property="TEL" group="phone1">
 		</vcard_entry>
 	</import_entry>
 	
