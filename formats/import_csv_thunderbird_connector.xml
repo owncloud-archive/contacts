@@ -162,7 +162,7 @@ author: Nicolas Mora mail@babelouest.org
 	</import_entry>
 	
 	<import_entry position="17" enabled="true">
-		<vcard_entry property="ADR" type="WORK" position="8" >
+		<vcard_entry property="ADR" type="HOME" position="8" >
 		</vcard_entry>
 	</import_entry>
 	
