@@ -1,17 +1,31 @@
-<phpunit
-	bootstrap="bootstrap.php"
-	convertErrorsToExceptions="true"
-	convertNoticesToExceptions="true"
-	convertWarningsToExceptions="true"
-	verbose="true"
-	colors="true"
-	>
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit bootstrap="bootstrap.php"
+		 verbose="true"
+		 timeoutForSmallTests="900"
+		 timeoutForMediumTests="900"
+		 timeoutForLargeTests="900"
+		>
 	<testsuites>
 		<testsuite name="unit-tests">
-			<directory suffix="_test.php">lib</directory>
+			<directory suffix=".php">unit</directory>
 		</testsuite>
 		<testsuite name="app-tests">
-			<directory suffix="_app.php">lib</directory>
+			<directory suffix=".php">integration</directory>
 		</testsuite>
 	</testsuites>
+	<!-- filters for code coverage -->
+	<filter>
+		<whitelist>
+			<directory suffix=".php">../../contacts</directory>
+			<exclude>
+				<directory suffix=".php">../../contacts/l10n</directory>
+				<directory suffix=".php">../../contacts/templates</directory>
+				<directory suffix=".php">../../contacts/tests</directory>
+			</exclude>
+		</whitelist>
+	</filter>
+	<logging>
+		<!-- and this is where your report will be written -->
+		<log type="coverage-clover" target="./clover.xml"/>
+	</logging>
 </phpunit>

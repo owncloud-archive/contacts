@@ -9,6 +9,7 @@
 namespace OCA\Contacts;
 
 use OCA\Contacts\Utils\JSONSerializer;
+use Test\TestCase;
 
 require_once __DIR__ . '/backend/mock.php';
 
