@@ -34,6 +34,7 @@
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "O tamanho do \"{filename}\" excede o máximo permitido {size}",
     "Error adding to group." : "Ocorreu um erro ao adicionar ao grupo.",
     "Error removing from group." : "Ocorreu um erro ao remover do grupo.",
+    "Please create an addressbook first" : "Por favor, primeiro crie um livro de endereços",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "Selecionou mais de 300 contactos.\nÉ provável que isto vá falhar! Mesmo assim, clique aqui para tentar.",
     "Error setting {name} as favorite." : "Ocorreu um erro ao definir {name} como favorito.",
     "Merge contacts" : "Juntar contactos",

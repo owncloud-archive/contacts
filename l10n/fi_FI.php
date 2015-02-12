@@ -34,6 +34,7 @@ $TRANSLATIONS = array(
 "The size of \"{filename}\" exceeds the maximum allowed {size}" => "Tiedoston \"{filename}\" koko ylittää sallitus enimmäiskoon {size}",
 "Error adding to group." => "Virhe ryhmään lisättäessä.",
 "Error removing from group." => "Virhe poistaessa ryhmästä.",
+"Please create an addressbook first" => "Luo osoitekirja ensin",
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Olet valinnut yli 300 yhteystietoa.\nTämä johtaa mitä luultavimmin epäonnistumiseen! Napsauta tästä yrittääksesi silti.",
 "Error setting {name} as favorite." => "Virhe asettaessa henkilöä {name} suosikiksi.",
 "Merge contacts" => "Yhdistä yhteystiedot",

@@ -36,6 +36,7 @@ OC.L10N.register(
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "Размер \"{filename}\" превышает разрешённый максимум {size}",
     "Error adding to group." : "Ошибка добавления в группу.",
     "Error removing from group." : "Ошибка удаления из группы.",
+    "Please create an addressbook first" : "Пожалуйста сначала создайте адресную книгу ",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "Вы выбрали более 300 контактов.\nCкорее всего, это действие закончится неудачей! Нажмите сюда, чтобы в любом случае попробовать.",
     "Error setting {name} as favorite." : "Ошибка установки {name} в качестве избранного.",
     "Merge contacts" : "Объединить контакты",

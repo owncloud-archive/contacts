@@ -34,6 +34,7 @@
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "The size of \"{filename}\" exceeds the maximum allowed {size}",
     "Error adding to group." : "Error adding to group.",
     "Error removing from group." : "Error removing from group.",
+    "Please create an addressbook first" : "Please create an address book first",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway.",
     "Error setting {name} as favorite." : "Error setting {name} as favourite.",
     "Merge contacts" : "Merge contacts",
