@@ -85,18 +85,6 @@ class Shared extends Database {
 			Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS
 		);
 
-		// Not sure if I'm doing it wrongly, or if its supposed to return
-		// the info in an array?
-		// https://github.com/owncloud/core/blob/master/lib/private/share/share.php
-		// \-> getItemSharedWithBySource()
-		//     \-> self::getItems()
-		//          -> return array();
-		//       or -> return formatResult(); 
-		//             \-> https://github.com/owncloud/contacts/blob/master/lib/share/addressbook.php
-		//                 \-> formatItems()
-		//                      \--> which in turn also always returns an array
-		// thus $addressBook is an array. either empty or having one entry
-		
 		if(count($addressBook) == 0) {
 			return null;
 		}
