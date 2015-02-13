@@ -87,8 +87,22 @@ class Shared extends Database {
 
 		// Not sure if I'm doing it wrongly, or if its supposed to return
 		// the info in an array?
-		$addressBook = (isset($addressBook['permissions']) ? $addressBook : $addressBook[0]);
-
+		// https://github.com/owncloud/core/blob/master/lib/private/share/share.php
+		// \-> getItemSharedWithBySource()
+		//     \-> self::getItems()
+		//          -> return array();
+		//       or -> return formatResult(); 
+		//             \-> https://github.com/owncloud/contacts/blob/master/lib/share/addressbook.php
+		//                 \-> formatItems()
+		//                      \--> which in turn also always returns an array
+		// thus $addressBook is an array. either empty or having one entry
+		
+		if(count($addressBook) == 0) {
+			return null;
+		}
+		
+		$addressBook = $addressBook[0];
+		
 		if(!isset($addressBook['permissions'])) {
 			return null;
 		}
