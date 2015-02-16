@@ -77,20 +77,22 @@ class AddressBook extends \Sabre\CardDAV\AddressBook {
 		$deleteprincipal = $this->getOwner();
 		$uid = $this->carddavBackend->userIDByPrincipal($this->getOwner());
 
+		$currentUid = \OC::$server->getUserSession()->getUser()->getUId();
+
 		$readWriteACL = array(
 			array(
 				'privilege' => '{DAV:}read',
-				'principal' => 'principals/' . \OCP\User::getUser(),
+				'principal' => 'principals/' . $currentUid,
 				'protected' => true,
 			),
 			array(
 				'privilege' => '{DAV:}write',
-				'principal' => 'principals/' . \OCP\User::getUser(),
+				'principal' => 'principals/' . $currentUid,
 				'protected' => true,
 			),
 		);
 
-		if($uid !== \OCP\User::getUser()) {
+		if($uid !== $currentUid) {
 			list(, $id) = explode('::', $this->addressBookInfo['id']);
 			$sharedAddressbook = \OCP\Share::getItemSharedWithBySource('addressbook', $id);
 			if($sharedAddressbook) {
@@ -101,16 +103,16 @@ class AddressBook extends \Sabre\CardDAV\AddressBook {
 					return $readWriteACL;
 				}
 				if ($sharedAddressbook['permissions'] & \OCP\PERMISSION_CREATE) {
-					$createprincipal = 'principals/' . \OCP\User::getUser();
+					$createprincipal = 'principals/' . $currentUid;
 				}
 				if ($sharedAddressbook['permissions'] & \OCP\PERMISSION_READ) {
-					$readprincipal = 'principals/' . \OCP\User::getUser();
+					$readprincipal = 'principals/' . $currentUid;
 				}
 				if ($sharedAddressbook['permissions'] & \OCP\PERMISSION_UPDATE) {
-					$writeprincipal = 'principals/' . \OCP\User::getUser();
+					$writeprincipal = 'principals/' . $currentUid;
 				}
 				if ($sharedAddressbook['permissions'] & \OCP\PERMISSION_DELETE) {
-					$deleteprincipal = 'principals/' . \OCP\User::getUser();
+					$deleteprincipal = 'principals/' . $currentUid;
 				}
 			}
 		} else {

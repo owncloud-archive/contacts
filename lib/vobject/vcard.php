@@ -121,22 +121,22 @@ class VCard extends VObject\Component\VCard {
 		foreach($property->parameters as $key=>&$parameter) {
 			// Check for values without names which Sabre interprets
 			// as names without values.
-			if(trim($parameter->value) === '') {
-				$parameter->value = $parameter->name;
+			if(trim($parameter->getValue()) === '') {
+				$parameter->setValue($parameter->name);
 				$parameter->name = $this->paramName($parameter->name);
 			}
 			// Check out for encoded string and decode them :-[
 			if(strtoupper($parameter->name) == 'ENCODING') {
-				if(strtoupper($parameter->value) == 'QUOTED-PRINTABLE') {
-					$property->value = str_replace(
+				if(strtoupper($parameter->getValue()) == 'QUOTED-PRINTABLE') {
+					$property->setValue(str_replace(
 						"\r\n", "\n",
 						VObject\StringUtil::convertToUTF8(
-							quoted_printable_decode($property->value)
+							quoted_printable_decode($property->getValue())
 						)
-					);
+					));
 					unset($property->parameters[$key]);
-				} elseif(strtoupper($parameter->value) == 'BASE64') {
-					$parameter->value = 'b';
+				} elseif(strtoupper($parameter->getValue()) == 'BASE64') {
+					$parameter->setValue('b');
 				}
 			} elseif(strtoupper($parameter->name) == 'CHARSET') {
 				unset($property->parameters[$key]);
@@ -154,12 +154,12 @@ class VCard extends VObject\Component\VCard {
 		// Work around issue in older VObject sersions
 		// https://github.com/fruux/sabre-vobject/issues/24
 		foreach($property->parameters as $key=>$parameter) {
-			if(strpos($parameter->value, ',') === false) {
+			if(strpos($parameter->getValue(), ',') === false) {
 				continue;
 			}
-			$values = explode(',', $parameter->value);
+			$values = explode(',', $parameter->getValue());
 			$values = array_map('trim', $values);
-			$parameter->value = array_shift($values);
+			$parameter->setValue(array_shift($values));
 			foreach($values as $value) {
 				$property->add($parameter->name, $value);
 			}
@@ -305,7 +305,7 @@ class VCard extends VObject\Component\VCard {
 				if(count($slice) < 2) { // If not enought, add one more...
 					$slice[] = "";
 				}
-				$this->N = implode(';', $slice).';;;';
+				$this->N = $slice;
 			}
 		}
 

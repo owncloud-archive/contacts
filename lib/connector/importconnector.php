@@ -90,7 +90,10 @@ abstract class ImportConnector {
 					} else {
 						$curVal = $property->getValue();
 						if ($curVal != '') {
-							$curVal .= ',' . StringUtil::convertToUTF8($value);
+							if (!is_array($curVal)) {
+								$curVal = array($curVal);
+							}
+							$curVal[] = StringUtil::convertToUTF8($value);
 						} else {
 							$curVal = StringUtil::convertToUTF8($value);
 						}
@@ -139,7 +142,7 @@ abstract class ImportConnector {
 				}
 				foreach ($property->parameters as $parameter) {
 					// Filtering types
-					if ($parameter->name == 'TYPE' && !strcmp($parameter->value, $importEntry['type'])) {
+					if ($parameter->name == 'TYPE' && !strcmp($parameter->getValue(), $importEntry['type'])) {
 						$found=0;
 						if (isset($importEntry->additional_property)) {
 							// Filtering additional properties if necessary (I know, there are a lot of inner loops, sorry)
@@ -162,7 +165,7 @@ abstract class ImportConnector {
 			}		
 			
 			// Property not found, creating one
-			$property = \Sabre\VObject\Property::create($importEntry['property']);
+			$property = $vcard->createProperty($importEntry['property']);
 			$vcard->add($property);
 			if ($importEntry['type']!=null) {
 				$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($importEntry['type']));

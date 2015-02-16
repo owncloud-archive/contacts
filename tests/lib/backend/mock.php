@@ -17,7 +17,7 @@ class Mock extends AbstractBackend {
 
 	function __construct($userid = null, $addressBooks = null, $contacts = null) {
 
-		$this->userid = $userid ? $userid : \OCP\User::getUser();
+		$this->userid = $userid ? $userid : \OC::$server->getUserSession()->getUser()->getUId();
 		$this->addressBooks = $addressBooks;
 		$this->contacts = $contacts;
 

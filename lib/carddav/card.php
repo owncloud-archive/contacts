@@ -68,15 +68,16 @@ class Card extends \Sabre\CardDAV\Card {
 		$readprincipal = $this->getOwner();
 		$writeprincipal = $this->getOwner();
 		$uid = $this->carddavBackend->userIDByPrincipal($this->getOwner());
+		$currentUid = \OC::$server->getUserSession()->getUser()->getUId();
 
-		if($uid != \OCP\USER::getUser()) {
+		if($uid != $currentUid) {
 			list(, $id) = explode('::', $this->addressBookInfo['id']);
 			$sharedAddressbook = \OCP\Share::getItemSharedWithBySource('addressbook', $id);
 			if ($sharedAddressbook && ($sharedAddressbook['permissions'] & \OCP\PERMISSION_READ)) {
-				$readprincipal = 'principals/' . \OCP\USER::getUser();
+				$readprincipal = 'principals/' . $currentUid;
 			}
 			if ($sharedAddressbook && ($sharedAddressbook['permissions'] & \OCP\PERMISSION_UPDATE)) {
-				$writeprincipal = 'principals/' . \OCP\USER::getUser();
+				$writeprincipal = 'principals/' . $currentUid;
 			}
 		}
 

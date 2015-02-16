@@ -53,12 +53,13 @@ class GroupController extends Controller {
 			$shares[$key]['length'] = count($children);
 		}
 
+		$currentUid = \OC::$server->getUserSession()->getUser()->getUId();
 		$groups = array(
 			'categories' => $tags,
 			'favorites' => $favorites,
 			'shared' => $shares,
-			'lastgroup' => \OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'lastgroup', 'all'),
-			'sortorder' => \OCP\Config::getUserValue(\OCP\User::getUser(), 'contacts', 'groupsort', ''),
+			'lastgroup' => \OCP\Config::getUserValue($currentUid, 'contacts', 'lastgroup', 'all'),
+			'sortorder' => \OCP\Config::getUserValue($currentUid, 'contacts', 'groupsort', ''),
 			);
 
 		return new JSONResponse($groups);
@@ -348,7 +349,7 @@ class GroupController extends Controller {
 	* in parentheses, like "Tag (owner)".
 	*/
 	private function displayName($tag) {
-		if ($tag['owner'] != \OCP\User::getUser()) {
+		if ($tag['owner'] != \OC::$server->getUserSession()->getUser()->getUId()) {
 			return $tag['name'] . ' ('. $tag['owner'] . ')';
 		}
 		return $tag['name'];

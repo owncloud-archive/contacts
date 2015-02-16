@@ -6,12 +6,10 @@
  * See the COPYING-README file.
  */
 
-class Test_VObjects extends PHPUnit_Framework_TestCase {
+class Test_VObjects extends \OCA\Contacts\TestCase {
 
 	public static function setUpBeforeClass() {
-		\Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
-		\Sabre\VObject\Property::$classMap['CATEGORIES'] = 'OCA\Contacts\VObject\GroupProperty';
-
+		\Sabre\VObject\Component\VCard::$propertyMap['CATEGORIES'] = 'OCA\Contacts\VObject\GroupProperty';
 	}
 
 	public function testCrappyVCard() {
@@ -47,11 +45,13 @@ class Test_VObjects extends PHPUnit_Framework_TestCase {
 			'Friends, Family',
 		);
 
-		$property = \Sabre\VObject\Property::create('CATEGORIES');
+		$vcard = new \OCA\Contacts\VObject\VCard();
+
+		$property = $vcard->createProperty('CATEGORIES');
 		$property->setParts($arr);
 
 		// Test parsing and serializing
-		$this->assertEquals('Home,work,Friends\, Family', $property->value);
+		$this->assertEquals('Home,work,Friends\, Family', $property->getValue());
 		$this->assertEquals('CATEGORIES:Home,work,Friends\, Family' . "\r\n", $property->serialize());
 		$this->assertEquals(3, count($property->getParts()));
 
@@ -59,7 +59,7 @@ class Test_VObjects extends PHPUnit_Framework_TestCase {
 		$property->addGroup('Coworkers');
 		$this->assertTrue($property->hasGroup('coworkers'));
 		$this->assertEquals(4, count($property->getParts()));
-		$this->assertEquals('Home,work,Friends\, Family,Coworkers', $property->value);
+		$this->assertEquals('Home,work,Friends\, Family,Coworkers', $property->getValue());
 
 		// Test remove
 		$this->assertTrue($property->hasGroup('Friends, fAmIlY'));

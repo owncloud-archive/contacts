@@ -37,7 +37,7 @@ class Contact implements \OCP\Share_Backend {
 	public $backend;
 
 	public function __construct() {
-		$this->app = new App(\OCP\User::getUser());
+		$this->app = new App(\OC::$server->getUserSession()->getUser()->getUId());
 		$this->backend = $this->app->getBackend('local');
 	}
 

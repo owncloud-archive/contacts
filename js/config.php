@@ -24,7 +24,7 @@ OCP\JSON::setContentTypeHeader('text/javascript');
 OCP\JSON::checkLoggedIn();
 OCP\JSON::checkAppEnabled('contacts');
 
-$user = OCP\User::getUser();
+$user = \OC::$server->getUserSession()->getUser()->getUId();
 
 $groupsort = OCP\Config::getUserValue($user, 'contacts', 'groupsort', '');
 $groupsort = explode(',', $groupsort);

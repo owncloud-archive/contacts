@@ -40,9 +40,10 @@ class Plugin extends \Sabre\CardDAV\Plugin {
 	* An exception is thrown if it's not.
 	*
 	* @param resource|string $data
+	* @param boolean $modified whether the data was modified
 	* @return void
 	*/
-	protected function validateVCard(&$data) {
+	protected function validateVCard(&$data, &$modified) {
 
 		// If it's a stream, we convert it to a string first.
 		if (is_resource($data)) {
@@ -61,6 +62,7 @@ class Plugin extends \Sabre\CardDAV\Plugin {
 			throw new \Sabre\DAV\Exception\UnsupportedMediaType('This collection can only support vcard objects.');
 		}
 
+		$modified = true; // FIXME: set to false if neither repair nor upgrade was done
 		$vobj->validate(VCard::REPAIR|VCard::UPGRADE);
 		$data = $vobj->serialize();
 	}

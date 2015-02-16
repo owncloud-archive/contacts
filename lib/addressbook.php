@@ -129,7 +129,7 @@ class Addressbook extends AbstractPIMCollection {
 	public function getOwner() {
 		return isset($this->addressBookInfo['owner'])
 			? $this->addressBookInfo['owner']
-			: \OCP\User::getUser();
+			: \OC::$server->getUserSession()->getUser()->getUId();
 	}
 
 	/**

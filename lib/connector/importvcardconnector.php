@@ -111,14 +111,14 @@ class ImportVCardConnector extends ImportConnector{
 		} catch (VObject\ParseException $error) {
 			return false;
 		}
-		$dest = \Sabre\VObject\Component::create('VCARD');
+		$dest = new \OCA\Contacts\VObject\VCard();
 		
 		foreach ($source->children() as $sourceProperty) {
 			$importEntry = $this->getImportEntry($sourceProperty, $source);
 			if ($importEntry) {
-				$value = $sourceProperty->value;
+				$value = $sourceProperty->getValue();
 				if (isset($importEntry['remove'])) {
-					$value = str_replace($importEntry['remove'], '', $sourceProperty->value);
+					$value = str_replace($importEntry['remove'], '', $sourceProperty->getValue());
 				}
 				$values = array($value);
 				if (isset($importEntry['separator'])) {
@@ -129,7 +129,7 @@ class ImportVCardConnector extends ImportConnector{
 					if (isset($importEntry->vcard_favourites)) {
 						foreach ($importEntry->vcard_favourites as $vcardFavourite) {
 							if (strcasecmp((string)$vcardFavourite, trim($oneValue)) == 0) {
-								$property = \Sabre\VObject\Property::create("X-FAVOURITES", 'yes');
+								$property = $dest->createProperty("X-FAVOURITES", 'yes');
 								$dest->add($property);
 							} else {
 								$property = $this->getOrCreateVCardProperty($dest, $importEntry->vcard_entry);
@@ -138,7 +138,7 @@ class ImportVCardConnector extends ImportConnector{
 						}
 					} else {
 						$property = $this->getOrCreateVCardProperty($dest, $importEntry->vcard_entry);
-						$this->updateProperty($property, $importEntry, $sourceProperty->value);
+						$this->updateProperty($property, $importEntry, $sourceProperty->getValue());
 					}
 				}
 			} else {
@@ -166,7 +166,7 @@ class ImportVCardConnector extends ImportConnector{
 						$sourceGroupList = $vcard->select($groupEntry['property']);
 						if (count($sourceGroupList>0)) {
 							foreach ($sourceGroupList as $oneSourceGroup) {
-								if ($oneSourceGroup->value == $groupEntry['value'] && isset($oneSourceGroup->group) && isset($property->group) && $oneSourceGroup->group == $property->group) {
+								if ($oneSourceGroup->getValue() == $groupEntry['value'] && isset($oneSourceGroup->group) && isset($property->group) && $oneSourceGroup->group == $property->group) {
 									$numElt++;
 								}
 							}

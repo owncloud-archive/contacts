@@ -57,6 +57,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @param mixed $data
 	 */
 	public function __construct($parent, $backend, $data = null) {
+		parent::__construct('VCARD');
+
 		self::$l10n = $parent::$l10n;
 		//\OCP\Util::writeLog('contacts', __METHOD__ . ' , data: ' . print_r($data, true), \OCP\Util::DEBUG);
 		$this->props['parent'] = $parent;
@@ -313,7 +315,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @return bool
 	 */
 	public function retrieve() {
-		if ($this->isRetrieved() || count($this->children) > 1) {
+		if ($this->isRetrieved()) {
 			//\OCP\Util::writeLog('contacts', __METHOD__. ' children', \OCP\Util::DEBUG);
 			return true;
 		} else {
@@ -324,7 +326,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 					$this->add($child);
 					if($child->name === 'FN') {
 						$this->props['displayname']
-							= strtr($child->value, array('\,' => ',', '\;' => ';', '\\\\' => '\\'));
+							= strtr($child->getValue(), array('\,' => ',', '\;' => ';', '\\\\' => '\\'));
 					}
 				}
 				$this->setRetrieved(true);
@@ -374,7 +376,11 @@ class Contact extends VObject\VCard implements IPIMObject {
 				);
 				if ($obj) {
 					foreach ($obj->children as $child) {
-						$this->add($child);
+						if($child->name === 'VERSION' || $child->name === 'PRODID') {
+							parent::__set($child->name, $child);
+						} else {
+							$this->add($child);
+						}
 					}
 					$this->setRetrieved(true);
 					$this->setSaved(true);
@@ -508,7 +514,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	*/
 	public function setPropertyByChecksum($checksum, $name, $value, $parameters=array()) {
 		if ($checksum === 'new') {
-			$property = Property::create($name);
+			$property = $this->createProperty($name);
 			$this->add($property);
 		} else {
 			$property = $this->getPropertyByChecksum($checksum);
@@ -582,7 +588,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			case 'ORG':
 				$property = $this->select($name);
 				if (count($property) === 0) {
-					$property = \Sabre\VObject\Property::create($name);
+					$property = $this->createProperty($name);
 					$this->add($property);
 				} else {
 					// Actually no idea why this works
@@ -715,7 +721,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 					continue;
 				} else {
 					foreach ($ownproperties as $ownproperty) {
-						if (strtolower($property->value) === strtolower($ownproperty->value)) {
+						if (strtolower($property->getValue()) === strtolower($ownproperty->getValue())) {
 							// We already have this property, so skip both loops
 							continue 2;
 						}
@@ -728,7 +734,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 					$this->add($property);
 					$updated = true;
 				} else {
-					$this->setPropertyByName($property->name, $property->value, $property->parameters);
+					$this->setPropertyByName($property->name, $property->getValue(), $property->parameters);
 				}
 			}
 		}
@@ -819,18 +825,18 @@ class Contact extends VObject\VCard implements IPIMObject {
 			} catch(\Exception $e) {
 				return;
 			}
-			$vevent = \Sabre\VObject\Component::create('VEVENT');
+			$vcal = new \Sabre\VObject\Component\VCalendar();
+			$vcal->VERSION = '2.0';
+			$vcal->createComponent('VEVENT');
 			$vevent->add('DTSTART');
 			$vevent->DTSTART->setDateTime(
-				$date,
-				\Sabre\VObject\Property\DateTime::DATE
+				$date
 			);
+			$event->DTSTART['VALUE'] = 'date';
 			$vevent->add('DURATION', 'P1D');
 			$vevent->{'UID'} = $this->UID;
 			$vevent->{'RRULE'} = 'FREQ=YEARLY';
 			$vevent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
-			$vcal = \Sabre\VObject\Component::create('VCALENDAR');
-			$vcal->VERSION = '2.0';
 			$appinfo = \OCP\App::getAppInfo('contacts');
 			$appversion = \OCP\App::getAppVersion('contacts');
 			$vcal->PRODID = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
