@@ -36,6 +36,7 @@ OC.L10N.register(
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "Velikost datoteke \"{filename}\" presega največjo dovoljeno velikost {size}",
     "Error adding to group." : "Napaka med dodajanjem stika v skupino.",
     "Error removing from group." : "Napaka med odstranjevanjem stika iz skupino.",
+    "Please create an addressbook first" : "Najprej je treba ustvariti imenik",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "Izbranih je več kot 300 stikov.\nOpravilo bo najverjetneje spodletelo. Kliknite, če želite vseeno poskusiti.",
     "Error setting {name} as favorite." : "Napaka med nastavljanjem {name} kot priljubljenega.",
     "Merge contacts" : "Združi stike",
