@@ -35,6 +35,7 @@ $TRANSLATIONS = array(
 "The size of \"{filename}\" exceeds the maximum allowed {size}" => "{filename} 的文件大小超过了最大的 {size} 限制",
 "Error adding to group." => "增加到群组时出错。",
 "Error removing from group." => "从群组删除时出错。",
+"Please create an addressbook first" => "请先创建一个地址簿",
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "您选择了超过 300 联系人.\n很可能会执行失败，点击这里继续尝试.",
 "Error setting {name} as favorite." => "无法将{name}设为喜欢。",
 "Merge contacts" => "合并联系人",
@@ -271,6 +272,7 @@ $TRANSLATIONS = array(
 "Base DN for modification" => "修改的 Base DN",
 "Base DN modification" => "Base DN 修改",
 "Connector" => "连接器",
-"Copy from (Warning, replaces current custom value)" => "复制于(注意, 替换当前预设值)"
+"Connector value (Better use external editor and copy/paste)" => "连接器值 (建议在外边编辑，再复制粘贴进这里)",
+"Copy from (Warning, replaces current custom value)" => "复制来源 (小心, 会替换当前预设值)"
 );
 $PLURAL_FORMS = "nplurals=1; plural=0;";
