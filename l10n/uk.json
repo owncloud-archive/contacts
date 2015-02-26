@@ -34,6 +34,7 @@
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "Розмір \"{filename}\" перевищує максимально дозволений {size}",
     "Error adding to group." : "Помилка при додаванні у групу.",
     "Error removing from group." : "Помилка при видаленні з групи.",
+    "Please create an addressbook first" : "Будь ласка, спочатку створіть адресну книгу",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "Ви обрали більше 300 контактів.\nШвидше за все, дія закінчиться помилкою! Натисніть сюди, щоб все одно спробувати.",
     "Error setting {name} as favorite." : "Помилка при встановленні {name} як улюбленого.",
     "Merge contacts" : "Об'єднання контактів",
