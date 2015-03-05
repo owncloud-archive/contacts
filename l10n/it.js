@@ -163,7 +163,7 @@ OC.L10N.register(
     "GaduGadu" : "GaduGadu",
     "ownCloud" : "ownCloud",
     "Work" : "Lavoro",
-    "Home" : "Casa",
+    "Home" : "Home",
     "Mobile" : "Cellulare",
     "Text" : "Testo",
     "Voice" : "Voce",
