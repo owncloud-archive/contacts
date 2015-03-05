@@ -297,6 +297,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 }
 .singleproperties { float: left; width: 100%; }
 .singleproperties .fullname { float: none !important; width: 300px; font-size: 20px; }
+.singleproperties .icon-rename { position:absolute; }
 .singleproperties input { width: 300px; }
 .singleproperties dd { float:left; }
 .singleproperties dd .listactions a { margin-top: 10px; }
