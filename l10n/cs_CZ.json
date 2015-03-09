@@ -34,7 +34,7 @@
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "Velikost \"{filename}\" překračuje maximální povolenou {size}",
     "Error adding to group." : "Chyba při přidávání do skupiny",
     "Error removing from group." : "Chyba při odebírání ze skupiny",
-    "Please create an addressbook first" : "Nejdříve si prosím vytvořte svůj adresář",
+    "Please create an addressbook first" : "Nejdříve si prosím vytvořte svůj adresář kontaktů",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "Je označeno více než 300 kontaktů.\nToto pravděpodobně selže. Klikněte zde, pokud chcete přesto pokračovat.",
     "Error setting {name} as favorite." : "Chyba při nastavování {name} jako oblíbený.",
     "Merge contacts" : "Sloučit kontakty",
