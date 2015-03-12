@@ -828,7 +828,10 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vevent->add('DURATION', 'P1D');
 			$vevent->{'UID'} = $this->UID;
 			$vevent->{'RRULE'} = 'FREQ=YEARLY';
-			$vevent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
+			$today = New \DateTime(date('d.m.Y'));
+			$bdaythisyear = New \DateTime($date->format('d') . '.' . $date->format('m') . '.' . $today->format('Y'));
+			$age = $bdaythisyear->diff($date);
+			$vevent->{'SUMMARY'} = $title . ' (' . $age->y . ')';
 			$vcal = \Sabre\VObject\Component::create('VCALENDAR');
 			$vcal->VERSION = '2.0';
 			$appinfo = \OCP\App::getAppInfo('contacts');
