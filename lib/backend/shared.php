@@ -85,10 +85,12 @@ class Shared extends Database {
 			Contacts\Share\Addressbook::FORMAT_ADDRESSBOOKS
 		);
 
-		// Not sure if I'm doing it wrongly, or if its supposed to return
-		// the info in an array?
-		$addressBook = (isset($addressBook['permissions']) ? $addressBook : $addressBook[0]);
-
+		if(count($addressBook) == 0) {
+			return null;
+		}
+		
+		$addressBook = $addressBook[0];
+		
 		if(!isset($addressBook['permissions'])) {
 			return null;
 		}
