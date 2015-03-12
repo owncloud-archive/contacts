@@ -676,7 +676,7 @@ class Database extends AbstractBackend {
 			} elseif (isset($id['uri'])) {
 				$updateRevision = false;
 				$isCardDAV = true;
-				$id = $this->getIdFromUri($id['uri']);
+				$id = $this->getIdFromUri($addressBookId,$id['uri']);
 
 				if (is_null($id)) {
 					\OCP\Util::writeLog('contacts', __METHOD__ . ' Couldn\'t find contact', \OCP\Util::ERROR);
@@ -760,7 +760,7 @@ class Database extends AbstractBackend {
 				$id = $id['id'];
 			} elseif (isset($id['uri'])) {
 
-				$id = $this->getIdFromUri($id['uri']);
+				$id = $this->getIdFromUri($addressBookId,$id['uri']);
 
 				if (is_null($id)) {
 					\OCP\Util::writeLog('contacts', __METHOD__ . ' Couldn\'t find contact', \OCP\Util::ERROR);
@@ -828,13 +828,13 @@ class Database extends AbstractBackend {
 	/**
 	 * @brief Get the contact id from the uri.
 	 *
-	 * @param mixed $id
+	 * @param mixed $addressBookId,$id
 	 * @returns int | null
 	 */
-	public function getIdFromUri($uri) {
+	public function getIdFromUri($addressBookId,$uri) {
 
 		$stmt = $this->getPreparedQuery('contactidfromuri');
-		$result = $stmt->execute(array($uri));
+		$result = $stmt->execute(array($addressBookId,$uri));
 
 		if (\OCP\DB::isError($result)) {
 			\OCP\Util::writeLog('contacts', __METHOD__. 'DB error: ' . \OC_DB::getErrorMessage($result), \OCP\Util::ERROR);
@@ -982,7 +982,7 @@ class Database extends AbstractBackend {
 			case 'contactidfromuri':
 				$args[] = 'SELECT `id` FROM `'
 						. $this->cardsTableName
-						. '` WHERE `uri` = ?';
+						. '` WHERE `addressbookid` = ? AND `uri` = ? ';
 				break;
 			case 'deletecontact':
 				$args[] = 'DELETE FROM `'
