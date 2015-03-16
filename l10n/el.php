@@ -35,6 +35,7 @@ $TRANSLATIONS = array(
 "The size of \"{filename}\" exceeds the maximum allowed {size}" => "Το μέγεθος του \"{filename}\" υπερβαίνει το μέγιστο επιτρεπόμενο {size}",
 "Error adding to group." => "Σφάλμα κατά την προσθήκη σε ομάδα.",
 "Error removing from group." => "Σφάλμα κατά την αφαίρεση από ομάδα.",
+"Please create an addressbook first" => "Παρακαλώ πρώτα δημιουργήστε ένα βιβλίο διευθύνσεων",
 "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." => "Έχετε επιλέξει πάνω από 300 επαφές.\nΑυτό μάλλον θα αποτύχει! Κλικάρετε εδώ για να δοκιμάσετε ούτως ή άλλως.",
 "Error setting {name} as favorite." => "Σφάλμα κατά τον ορισμό του {name} σαν αγαπημένο.",
 "Merge contacts" => "Συγχώνευση επαφών",
