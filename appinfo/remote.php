@@ -72,7 +72,7 @@ $server->addPlugin(new \Sabre\DAV\Auth\Plugin($authBackend, 'ownCloud'));
 $server->addPlugin(new OCA\Contacts\CardDAV\Plugin());
 $server->addPlugin(new \Sabre\DAVACL\Plugin());
 $server->addPlugin(new \Sabre\CardDAV\VCFExportPlugin());
-$server->addPlugin(new \OC\Connector\Sabre\ExceptionLoggerPlugin('carddav'));
+$server->addPlugin(new \OC\Connector\Sabre\ExceptionLoggerPlugin('carddav', \OC::$server->getLogger()));
 $server->addPlugin(new \OC\Connector\Sabre\AppEnabledPlugin(
 	'contacts',
 	OC::$server->getAppManager()
