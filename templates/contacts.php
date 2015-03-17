@@ -449,7 +449,7 @@ vendor_style('contacts', array(
 		</li>
 	</div>
 	<div class="adr" type="text/template">
-		<li data-element="adr" data-checksum="{checksum}" data-lang="<?php p(OCP\Config::getUserValue(OCP\USER::getUser(), 'core', 'lang', 'en')); ?>" class="propertycontainer">
+		<li data-element="adr" data-checksum="{checksum}" data-lang="<?php p(OCP\Config::getUserValue(\OC::$server->getUserSession()->getUser()->getUId(), 'core', 'lang', 'en')); ?>" class="propertycontainer">
 			<span class="parameters">
 				<input type="checkbox" id="adr_pref_{idx}" class="parameter tooltipped downwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
 				<select class="type parameter" data-parameter="TYPE" name="parameters[TYPE][]">
@@ -491,7 +491,7 @@ vendor_style('contacts', array(
 		</li>
 	</div>
 	<!--
-		<li data-element="adr" data-checksum="{checksum}" data-lang="<?php p(OCP\Config::getUserValue(OCP\USER::getUser(), 'core', 'lang', 'en')); ?>" class="propertycontainer">
+		<li data-element="adr" data-checksum="{checksum}" data-lang="<?php p(OCP\Config::getUserValue(\OC::$server->getUserSession()->getUser()->getUId(), 'core', 'lang', 'en')); ?>" class="propertycontainer">
 			<span class="parameters">
 				<input type="checkbox" id="adr_pref_{idx}" class="parameter tooltipped downwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
 				<select class="type parameter" data-parameter="TYPE" name="parameters[TYPE][]">

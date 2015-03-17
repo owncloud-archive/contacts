@@ -22,7 +22,7 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 	public $app;
 
 	public function __construct() {
-		$this->app = new App(\OCP\User::getUser());
+		$this->app = new App(\OC::$server->getUserSession()->getUser()->getUId());
 	}
 
 	/**

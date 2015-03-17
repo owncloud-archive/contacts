@@ -159,7 +159,7 @@ class ImportController extends Controller {
 		$request = $this->request;
 		$response = new JSONResponse();
 		$params = $this->request->urlParams;
-		$app = new App(\OCP\User::getUser());
+		$app = new App(\OC::$server->getUserSession()->getUser()->getUId());
 		$addressBookId = $params['addressBookId'];
 		$format = $params['importType'];
 

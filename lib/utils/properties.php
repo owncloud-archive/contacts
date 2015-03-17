@@ -260,7 +260,7 @@ Class Properties {
 			}
 			$preferred = 0;
 			foreach($property->parameters as $parameter) {
-				if($parameter->name == 'TYPE' && strtoupper($parameter->value) == 'PREF') {
+				if($parameter->name == 'TYPE' && strtoupper($parameter->getValue()) == 'PREF') {
 					$preferred = 1;
 					break;
 				}
@@ -268,10 +268,10 @@ Class Properties {
 			try {
 				$result = self::$updateindexstmt->execute(
 					array(
-						\OCP\User::getUser(),
+						\OC::$server->getUserSession()->getUser()->getUId(),
 						$contactid,
 						$property->name,
-						substr($property->value, 0, 254),
+						substr($property->getValue(), 0, 254),
 						$preferred,
 					)
 				);

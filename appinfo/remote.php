@@ -37,7 +37,7 @@ $RUNTIME_APPTYPES = array('authentication');
 OC_App::loadApps($RUNTIME_APPTYPES);
 
 // Backends
-$authBackend = new OC_Connector_Sabre_Auth();
+$authBackend = new \OC\Connector\Sabre\Auth();
 $principalBackend = new \OC\Connector\Sabre\Principal(
 	\OC::$server->getConfig(),
 	\OC::$server->getUserManager()
@@ -50,7 +50,6 @@ if (\OCP\Config::getAppValue('contacts', 'backend_ldap', "false") === "true") {
 	$backends[] = 'ldap';
 }
 $carddavBackend = new OCA\Contacts\CardDAV\Backend($backends);
-$requestBackend = new OC_Connector_Sabre_Request();
 
 // Root nodes
 $principalCollection = new \Sabre\CalDAV\Principal\Collection($principalBackend);
@@ -66,23 +65,19 @@ $nodes = array(
 
 // Fire up server
 $server = new \Sabre\DAV\Server($nodes);
-$server->httpRequest = $requestBackend;
+$server->httpRequest->setUrl(\OC::$server->getRequest()->getRequestUri());
 $server->setBaseUri($baseuri);
 // Add plugins
 $server->addPlugin(new \Sabre\DAV\Auth\Plugin($authBackend, 'ownCloud'));
 $server->addPlugin(new OCA\Contacts\CardDAV\Plugin());
 $server->addPlugin(new \Sabre\DAVACL\Plugin());
-$server->addPlugin(new \Sabre\DAV\Browser\Plugin(false)); // Show something in the Browser, but no upload
 $server->addPlugin(new \Sabre\CardDAV\VCFExportPlugin());
-$server->addPlugin(new OC_Connector_Sabre_ExceptionLoggerPlugin('carddav'));
+$server->addPlugin(new \OC\Connector\Sabre\ExceptionLoggerPlugin('carddav', \OC::$server->getLogger()));
 $server->addPlugin(new \OC\Connector\Sabre\AppEnabledPlugin(
 	'contacts',
 	OC::$server->getAppManager()
 ));
 
-if (defined('DEBUG') && DEBUG) {
-	$server->debugExceptions = true;
-}
 
 // And off we go!
 $server->exec();

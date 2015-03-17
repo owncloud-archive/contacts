@@ -12,7 +12,7 @@ use Sabre\VObject\Reader;
 
 require_once __DIR__ .'/mock.php';
 
-class BackendTest extends \PHPUnit_Framework_TestCase {
+class BackendTest extends \OCA\Contacts\TestCase {
 
 	/**
 	* @var array

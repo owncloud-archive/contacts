@@ -1,6 +1,6 @@
 <?php
 $CONFIG = array (
-  'loglevel' => '0',
+  'loglevel' => '1',
   'appstoreenabled' => false,
   'apps_paths' =>
   array (

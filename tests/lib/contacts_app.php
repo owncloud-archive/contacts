@@ -6,7 +6,7 @@
  * See the COPYING-README file.
  */
 OC_App::loadApp('contacts');
-class Test_Contacts_Backend_Datebase extends PHPUnit_Framework_TestCase {
+class Test_Contacts_Backend_Datebase extends \OCA\Contacts\TestCase {
 	protected static $schema_file = 'static://test_db_scheme';
 	protected static $test_prefix;
 	protected static $backend;

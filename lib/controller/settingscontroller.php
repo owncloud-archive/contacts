@@ -40,7 +40,7 @@ class SettingsController extends Controller {
 			$response->bailOut(App::$l10n->t('No value is given.'));
 		}
 
-		if(\OCP\Config::setUserValue(\OCP\User::getUser(), 'contacts', $key, $value)) {
+		if(\OCP\Config::setUserValue(\OC::$server->getUserSession()->getUser()->getUId(), 'contacts', $key, $value)) {
 			$response->setParams(array(
 				'key' => $key,
 				'value' => $value)

@@ -4,7 +4,6 @@
 	<name>Contacts</name>
 	<licence>AGPL</licence>
 	<author>Jakob Sack,Thomas Tanghus</author>
-	<require>8</require>
 	<description>Address book with CardDAV support.</description>
 	<standalone/>
 	<documentation>
@@ -14,5 +13,9 @@
 		<contacts>appinfo/remote.php</contacts>
 		<carddav>appinfo/remote.php</carddav>
 	</remote>
+    <dependencies>
+        <owncloud min-version="8" />
+        <php min-version="5.4" />
+    </dependencies>
 	<ocsid>166044</ocsid>
 </info>

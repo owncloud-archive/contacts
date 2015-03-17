@@ -29,7 +29,7 @@ use OC\VObject\CompoundProperty;
  *
  * NOTE: Group names are case-insensitive.
  */
-class GroupProperty extends CompoundProperty {
+class GroupProperty extends \Sabre\VObject\Property\Text {
 
 	/**
 	* Add a group.

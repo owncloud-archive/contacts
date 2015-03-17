@@ -49,7 +49,7 @@ class LdapConnector {
 	 * @return OC_VCard
 	 */
 	public function ldapToVCard($ldapEntry) {
-		$vcard = \Sabre\VObject\Component::create('VCARD');
+		$vcard = new \OCA\Contacts\VObject\VCard();
 		$vcard->REV = $this->convertDate($ldapEntry['modifytimestamp'][0])->format(\DateTime::W3C);
 		//error_log("modifytimestamp: ".$vcard->REV);
 		$vcard->{'X-LDAP-DN'} = base64_encode($ldapEntry['dn']);
@@ -116,9 +116,9 @@ class LdapConnector {
 				return $property;
 			}
 			foreach ($property->parameters as $parameter) {
-				//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' <> '.$v_param['type'], \OCP\Util::DEBUG);
-				if (!strcmp($parameter->value, $v_param['type'])) {
-					//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->value.' found', \OCP\Util::DEBUG);
+				//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->getValue().' <> '.$v_param['type'], \OCP\Util::DEBUG);
+				if (!strcmp($parameter->getValue(), $v_param['type'])) {
+					//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.' parameter '.$parameter->getValue().' found', \OCP\Util::DEBUG);
 					if ($counter==$index) {
 						return $property;
 					}
@@ -130,7 +130,7 @@ class LdapConnector {
 		// Property not found, creating one
 		//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', create one '.$v_param['property'].';TYPE='.$v_param['type'], \OCP\Util::DEBUG);
 		$line = count($vcard->children) - 1;
-		$property = \Sabre\VObject\Property::create($v_param['property']);
+		$property = $vcard->createProperty($v_param['property']);
 		$vcard->add($property);
 		if ($v_param['type']!=null) {
 			//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', creating one '.$v_param['property'].';TYPE='.$v_param['type'], \OCP\Util::DEBUG);
@@ -284,10 +284,10 @@ class LdapConnector {
 					}
 				} else {
 					// Last, if the ldif entry has a vcard_position set, take only the value in the position index
-					$value = $property->value;
+					$value = $property->getValue();
 					if (isset($ldifEntry['vcard_position'])) {
 						//\OC_Log::write('ldapconnector', __METHOD__." position set ".$ldifEntry['vcard_position'], \OC_Log::DEBUG);
-						$tmpValues = explode(";", $property->value);
+						$tmpValues = explode(";", $property->getValue());
 						$value = $tmpValues[$ldifEntry['vcard_position']];
 					}
 					//\OC_Log::write('ldapconnector', __METHOD__.__METHOD__." entry : ".$ldifEntry['name']." - value : $value", \OC_Log::DEBUG);

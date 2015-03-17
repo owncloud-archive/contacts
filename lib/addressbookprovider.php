@@ -138,7 +138,7 @@ SQL;
 			$id = $row['contactid'];
 			$addressbookKey = $row['addressbookid'];
 			// Check if we are the owner of the contact
-			if ($row['userid'] !== \OCP\User::getUser()) {
+			if ($row['userid'] !== \OC::$server->getUserSession()->getUser()->getUId()) {
 				// we aren't the owner of the contact
 				try {
 					// it is possible that the contact is shared with us

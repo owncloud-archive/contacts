@@ -12,7 +12,7 @@ use Sabre\VObject\Reader;
 
 require_once __DIR__ . '/backend/mock.php';
 
-class AddressBookTest extends \PHPUnit_Framework_TestCase {
+class AddressBookTest extends TestCase {
 
 	/**
 	* @var array
@@ -28,8 +28,7 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 	protected $backend;
 
 	public function setUp() {
-
-		\Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
+		parent::setUp();
 
 		$this->backend = new Backend\Mock('foobar');
 		$this->abinfo = $this->backend->getAddressBook('foo');
@@ -40,6 +39,8 @@ class AddressBookTest extends \PHPUnit_Framework_TestCase {
 	public function tearDown() {
 		unset($this->backend);
 		unset($this->ab);
+
+		parent::tearDown();
 	}
 
 	public function testGetDisplayName() {

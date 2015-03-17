@@ -245,7 +245,7 @@ class Ldap extends AbstractBackend {
 		$userid = null,
 		$addressBooksTableName = '*PREFIX*contacts_ldap_addressbooks'
 	) {
-		$this->userid = $userid ? $userid : \OCP\User::getUser();
+		$this->userid = $userid ? $userid : \OC::$server->getUserSession()->getUser()->getUId();
 		$this->addressbooks = array();
 	}
 

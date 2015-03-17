@@ -65,7 +65,7 @@ class App {
 		$backendsTableName = '*PREFIX*addressbooks_backend',
 		$dbBackend = null
 	) {
-		$this->user = $user ? $user : \OCP\User::getUser();
+		$this->user = $user ? $user : \OC::$server->getUserSession()->getUser()->getUId();
 		$this->addressBooksTableName = $addressBooksTableName;
 		$this->backendsTableName = $backendsTableName;
 		$this->dbBackend = $dbBackend

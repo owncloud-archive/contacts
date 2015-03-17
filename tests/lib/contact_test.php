@@ -13,7 +13,7 @@ use OCA\Contacts\Utils\JSONSerializer;
 
 require_once __DIR__ . '/backend/mock.php';
 
-class ContactTest extends \PHPUnit_Framework_TestCase {
+class ContactTest extends TestCase {
 
 	/**
 	* @var array
@@ -33,7 +33,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 	protected $backend;
 
 	public function setUp() {
-
+		parent::setUp();
 		$this->backend = new Backend\Mock('foobar');
 		$this->abinfo = $this->backend->getAddressBook('foo');
 		$this->ab = new AddressBook($this->backend, $this->abinfo);
@@ -44,6 +44,7 @@ class ContactTest extends \PHPUnit_Framework_TestCase {
 		unset($this->backend);
 		unset($this->ab);
 		unset($this->contact);
+		parent::tearDown();
 	}
 
 	public function testGetDisplayName() {

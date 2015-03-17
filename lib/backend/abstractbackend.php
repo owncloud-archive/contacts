@@ -80,7 +80,7 @@ abstract class AbstractBackend {
 	*
 	*/
 	public function __construct($userid = null) {
-		$this->userid = $userid ? $userid : \OCP\User::getUser();
+		$this->userid = $userid ? $userid : \OC::$server->getUserSession()->getUser()->getUId();
 	}
 
 	/**

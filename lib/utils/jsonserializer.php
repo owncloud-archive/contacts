@@ -106,7 +106,7 @@ class JSONSerializer {
 			if(!is_null($temp)) {
 				// Get Apple X-ABLabels
 				if(isset($contact->{$property->group . '.X-ABLABEL'})) {
-					$temp['label'] = $contact->{$property->group . '.X-ABLABEL'}->value;
+					$temp['label'] = $contact->{$property->group . '.X-ABLABEL'}->getValue();
 					if($temp['label'] == '_$!<Other>!$_') {
 						$temp['label'] = Properties::$l10n->t('Other');
 					}
@@ -142,7 +142,7 @@ class JSONSerializer {
 		if(!in_array($property->name, Properties::$indexProperties)) {
 			return;
 		}
-		$value = $property->value;
+		$value = $property->getValue();
 		if($property->name == 'ADR' || $property->name == 'N' || $property->name == 'ORG' || $property->name == 'CATEGORIES') {
 			$value = $property->getParts();
 			$value = array_map('trim', $value);
@@ -195,15 +195,15 @@ class JSONSerializer {
 			// Faulty entries by kaddressbook
 			// Actually TYPE=PREF is correct according to RFC 2426
 			// but this way is more handy in the UI. Tanghus.
-			if($parameter->name == 'TYPE' && strtoupper($parameter->value) == 'PREF') {
+			if($parameter->name == 'TYPE' && strtoupper($parameter->getValue()) == 'PREF') {
 				$parameter->name = 'PREF';
-				$parameter->value = '1';
+				$parameter->setValue('1');
 			}
 			// NOTE: Apparently \Sabre\VObject\Reader can't always deal with value list parameters
 			// like TYPE=HOME,CELL,VOICE. Tanghus.
 			// TODO: Check if parameter is has commas and split + merge if so.
 			if ($parameter->name == 'TYPE') {
-				$pvalue = $parameter->value;
+				$pvalue = $parameter->getValue();
 				if(is_string($pvalue) && strpos($pvalue, ',') !== false) {
 					$pvalue = array_map('trim', explode(',', $pvalue));
 				}
@@ -216,7 +216,7 @@ class JSONSerializer {
 				}
 			}
 			else{
-				$temp['parameters'][$parameter->name] = \OCP\Util::sanitizeHTML($parameter->value);
+				$temp['parameters'][$parameter->name] = \OCP\Util::sanitizeHTML($parameter->getValue());
 			}
 		}
 		return $temp;

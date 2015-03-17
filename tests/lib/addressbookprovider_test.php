@@ -9,7 +9,7 @@
 namespace OCA\Contacts;
 
 
-class AddressBookProviderTest extends \PHPUnit_Framework_TestCase {
+class AddressBookProviderTest extends TestCase {
 
 	/**
 	* @var array
@@ -35,17 +35,15 @@ class AddressBookProviderTest extends \PHPUnit_Framework_TestCase {
 	private $contactIds = array();
 
 	public function setUp() {
+		parent::setUp();
 
-		\Sabre\VObject\Component::$classMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
-
-		$user = uniqid('user_');
-		$this->backend = new Backend\Database($user);
+		$this->backend = new Backend\Database($this->testUser);
 		$this->abinfo = array('displayname' => uniqid('display_'));
 		$this->ab = new AddressBook($this->backend, $this->abinfo);
 
 		$this->provider = new AddressbookProvider($this->ab);
 
-		$card = \Sabre\VObject\Component::create('VCARD');
+		$card = new \OCA\Contacts\VObject\VCard();
 		$uid = substr(md5(rand().time()), 0, 10);
 		$card->add('UID', $uid);
 		$card->add('FN', 'Max Mustermann');
@@ -54,21 +52,21 @@ class AddressBookProviderTest extends \PHPUnit_Framework_TestCase {
 		$this->contactIds[] = $id;
 
 		// Add extra contact
-		$card = \Sabre\VObject\Component::create('VCARD');
+		$card = new \OCA\Contacts\VObject\VCard();
 		$uid = substr(md5(rand().time()), 0, 10);
 		$card->add('UID', $uid);
 		$card->add('FN', 'Jan Janssens');
 		$id = $this->ab->addChild($card);
 		Utils\Properties::updateIndex($id, $card);
 		$this->ab->deleteChild($id);
-
-
 	}
 
 	public function tearDown() {
 		unset($this->backend);
 		unset($this->ab);
 		Utils\Properties::purgeIndexes($this->contactIds);
+
+		parent::tearDown();
 	}
 
 	public function testSearch() {
