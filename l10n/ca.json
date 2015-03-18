@@ -34,6 +34,7 @@
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "El fitxer \"{filename}\" excedeix el pes màxim permès {size}",
     "Error adding to group." : "Error en afegir grup",
     "Error removing from group." : "Error en eliminar del grup",
+    "Please create an addressbook first" : "Si us plau primer heu de crear una llibreta d'adreces",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "Heu seleccionat més de 300 contactes.\nAixò segurament fallarà!  Feu clic aquí per provar-ho igualment.",
     "Error setting {name} as favorite." : "Error en establir {name} com a preferit.",
     "Merge contacts" : "Combina contactes",
