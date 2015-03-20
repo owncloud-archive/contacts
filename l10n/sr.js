@@ -223,7 +223,7 @@ OC.L10N.register(
     "Postal code" : "Поштански број",
     "City" : "Место",
     "State or province" : "Покрајина или провинција",
-    "Country" : "Земља",
+    "Country" : "Држава",
     "Instant Messenger" : "Брзи гласник",
     "Active" : "Активан",
     "Share" : "Дели",
