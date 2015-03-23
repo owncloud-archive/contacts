@@ -34,6 +34,7 @@
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "\"{filename}\" mérete meghaladja a maximálisan megengedett \"{size}\" méretet",
     "Error adding to group." : "Hiba a csoporthoz adás közben.",
     "Error removing from group." : "Hiba a csoportból való eltávolítás közben.",
+    "Please create an addressbook first" : "Készítsen először címlistát",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "300-nál több adatot választott a címjegyzékből. Ez valószínűleg hibát fog okozni. Kattintson ide, ha mégis meg akarja próbálni!",
     "Error setting {name} as favorite." : "Nem sikerült \"{name}\"-t kedvencként beállítani.",
     "Merge contacts" : "Névjegyek összefűzése.",
