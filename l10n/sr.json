@@ -104,6 +104,8 @@
     "Couldn't find contact." : "Не могу да нађем контакт.",
     "No contact data in request." : "Нема података о контакту у захтеву.",
     "Error merging into contact." : "Грешка при спајању контакта.",
+    "Property name is not set." : "Назив својства није постављен.",
+    "Property checksum is not set." : "Контролна сума својства није постављена.",
     "Information about vCard is incorrect. Please reload the page." : "Подаци о вКарти су неисправни. Поново учитајте страницу.",
     "Error updating contact" : "Грешка при ажурирању контакта",
     "No photo path was submitted." : "Није добијена путања слике.",
@@ -132,6 +134,7 @@
     "Error moving file to imports folder." : "Грешка при премештању фајла у увозне фасцикле.",
     "You do not have permissions to import into this address book." : "Немате дозволе да увозите у овај адресар.",
     "File name missing from request." : "Назив фајла недостаје у захтеву.",
+    "Progress key missing from request." : "Кључ напретка недостаје у захтеву",
     "Attempt to access blacklisted file:" : "Покушај да се приступи забрањеном фајлу:",
     "No key is given." : "Није наведен кључ.",
     "No value is given." : "Није наведена вредност.",
@@ -261,6 +264,7 @@
     "Search filter" : "Филтер претраге",
     "Filter" : "Филтер",
     "Base DN for modification" : "Основни јединствени назив (DN) за измене",
-    "Base DN modification" : "Измене јединственог назива (DN)"
+    "Base DN modification" : "Измене јединственог назива (DN)",
+    "Copy from (Warning, replaces current custom value)" : "Копирај из (замениће тренутну вредност)"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);"
 }
