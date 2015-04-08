@@ -68,6 +68,7 @@ $server = new \Sabre\DAV\Server($nodes);
 $server->httpRequest->setUrl(\OC::$server->getRequest()->getRequestUri());
 $server->setBaseUri($baseuri);
 // Add plugins
+$server->addPlugin(new \OC\Connector\Sabre\MaintenancePlugin());
 $server->addPlugin(new \Sabre\DAV\Auth\Plugin($authBackend, 'ownCloud'));
 $server->addPlugin(new OCA\Contacts\CardDAV\Plugin());
 $server->addPlugin(new \Sabre\DAVACL\Plugin());
