@@ -51,7 +51,7 @@ OC.L10N.register(
     "The backend does not support multi-byte characters." : "L'infrastructure ne prend pas en charge les caractères multi-octets.",
     "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." : "Certains contacts sont marqués pour être supprimés, mais ne le sont pas encore. Veuillez attendre que l'opération se termine.",
     "Click to undo deletion of {num} contacts" : "Cliquez ici pour annuler la suppression de {num} contact(s)",
-    "Cancelled deletion of {num} contacts" : "La suppression des  {num} contacts a été annulée",
+    "Cancelled deletion of {num} contacts" : "Suppression annulée pour {num} contact(s)",
     "Add" : "Ajouter",
     "Contact is already in this group." : "Ce contact est déjà présent dans le groupe.",
     "Contacts are already in this group." : "Ces contacts sont déjà présents dans le groupe.",
