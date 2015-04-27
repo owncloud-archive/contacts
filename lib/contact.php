@@ -840,7 +840,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$appinfo = \OCP\App::getAppInfo('contacts');
 			$appversion = \OCP\App::getAppVersion('contacts');
 			$vcal->PRODID = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
-			$vcal->add($vevent);
 			return $vcal;
 		}
 	}
