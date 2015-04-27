@@ -86,10 +86,7 @@ class ImportController extends Controller {
 				return $response;
 			}
 			$content = file_get_contents($tmpname);
-			$proxyStatus = \OC_FileProxy::$enabled;
-			\OC_FileProxy::$enabled = false;
 			if($view->file_put_contents('/imports/'.$filename, $content)) {
-				\OC_FileProxy::$enabled = $proxyStatus;
 				$progresskey = 'contacts-import-' . rand();
 				$response->setParams(
 					array(
@@ -101,7 +98,6 @@ class ImportController extends Controller {
 					)
 				);
 			} else {
-				\OC_FileProxy::$enabled = $proxyStatus;
 				$response->bailOut(App::$l10n->t('Error uploading contacts to storage.'));
 			return $response;
 			}
@@ -129,12 +125,8 @@ class ImportController extends Controller {
 			$view->mkdir('imports');
 		}
 
-		$proxyStatus = \OC_FileProxy::$enabled;
-		\OC_FileProxy::$enabled = false;
 		$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
-		//$content = file_get_contents('oc://' . $path . '/' . $filename);
 		if($view->file_put_contents('/imports/' . $filename, $content)) {
-			\OC_FileProxy::$enabled = $proxyStatus;
 			$progresskey = 'contacts-import-' . rand();
 			$response->setParams(
 				array(
@@ -146,7 +138,6 @@ class ImportController extends Controller {
 				)
 			);
 		} else {
-			\OC_FileProxy::$enabled = $proxyStatus;
 			$response->bailOut(App::$l10n->t('Error moving file to imports folder.'));
 		}
 		return $response;
@@ -189,10 +180,7 @@ class ImportController extends Controller {
 			return $response;
 		}
 		$view = \OCP\Files::getStorage('contacts');
-		$proxyStatus = \OC_FileProxy::$enabled;
-		\OC_FileProxy::$enabled = false;
 		$file = $view->file_get_contents('/imports/' . $filename);
-		\OC_FileProxy::$enabled = $proxyStatus;
 
 		$importManager = new ImportManager();
 		
