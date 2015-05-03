@@ -13,29 +13,29 @@ class Test_VObjects extends \OCA\Contacts\TestCase {
 	}
 
 	public function testCrappyVCard() {
-		$carddata = file_get_contents(__DIR__ . '/../data/test3.vcf');
+		$cardData = file_get_contents(__DIR__ . '/../data/test3.vcf');
 		$obj = \Sabre\VObject\Reader::read(
-			$carddata,
+			$cardData,
 			\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
 		);
-		$obj->validate($obj::REPAIR|$obj::UPGRADE);
+		$obj->validate($obj::REPAIR);
 
-		$this->assertEquals('3.0', (string)$obj->VERSION);
+		$this->assertEquals('2.1', (string)$obj->VERSION);
 		$this->assertEquals('Adèle Fermée', (string)$obj->FN);
 		$this->assertEquals('Fermée;Adèle;;;', (string)$obj->N);
 	}
 
 	public function testEscapedParameters() {
-		$carddata = file_get_contents(__DIR__ . '/../data/test6.vcf');
+		$cardData = file_get_contents(__DIR__ . '/../data/test6.vcf');
 		$obj = \Sabre\VObject\Reader::read(
-			$carddata,
+			$cardData,
 			\Sabre\VObject\Reader::OPTION_IGNORE_INVALID_LINES
 		);
-		$obj->validate($obj::REPAIR|$obj::UPGRADE);
+		$obj->validate($obj::REPAIR);
 
 		$this->assertEquals('3.0', (string)$obj->VERSION);
 		$this->assertEquals('Parameters;Escaped;;;', (string)$obj->N);
-		$this->assertEquals('TEL;TYPE=PREF;TYPE=WORK;TYPE=VOICE:123456789' . "\r\n", $obj->TEL->serialize());
+		$this->assertEquals('TEL;TYPE=PREF\,WORK\,VOICE:123456789' . "\r\n", $obj->TEL->serialize());
 	}
 
 	public function testGroupProperty() {
