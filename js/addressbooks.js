@@ -62,9 +62,12 @@ OC.Contacts = OC.Contacts || {};
 				}
 			));
 		this.$li.find('a.action.delete').on('click keypress', function() {
-			$('.tipsy').remove();
-			console.log('delete', self.getId());
-			self.destroy();
+            var confirmBox = confirm(t('contacts', 'Delete address book'));
+            if(confirmBox === true){
+                $('.tipsy').remove();
+                console.log('delete', self.getId());
+                self.destroy();
+            }
 		});
 		this.$li.find('a.action.carddav').on('click keypress', function() {
 			var uri = (self.book.owner === oc_current_user ) ? self.book.uri : self.book.uri + '_shared_by_' + self.book.owner;

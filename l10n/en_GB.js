@@ -274,6 +274,7 @@ OC.L10N.register(
     "Base DN modification" : "Base DN modification",
     "Connector" : "Connector",
     "Connector value (Better use external editor and copy/paste)" : "Connector value (Better use external editor and copy/paste)",
-    "Copy from (Warning, replaces current custom value)" : "Copy from (Warning, replaces current custom value)"
+    "Copy from (Warning, replaces current custom value)" : "Copy from (Warning, replaces current custom value)",
+    "Delete address book":"Delete address book"    
 },
 "nplurals=2; plural=(n != 1);");
