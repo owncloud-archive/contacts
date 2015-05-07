@@ -827,7 +827,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			}
 			$vcal = new \Sabre\VObject\Component\VCalendar();
 			$vcal->VERSION = '2.0';
-			$vcal->createComponent('VEVENT');
+			$vevent = $vcal->createComponent('VEVENT');
 			$vevent->add('DTSTART');
 			$vevent->DTSTART->setDateTime(
 				$date

@@ -300,11 +300,11 @@ Class Properties {
 				return $cache->get($key);
 			}
 		} else {
-			if ($options['remove'] === false && $options['update'] === false){
+			if ( (isset($options['remove']) && $options['remove'] === false) 
+			&&   (isset($options['update']) && $options['update'] === false) ){
 				return $cache->get($key);
 			}
 		}
-
 
 		if (isset($options['remove']) && $options['remove']) {
 			$cache->remove($key);
