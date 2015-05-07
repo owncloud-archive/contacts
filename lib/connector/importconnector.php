@@ -22,8 +22,7 @@
  
 namespace OCA\Contacts\Connector;
 
-use Sabre\VObject\Component,
-	Sabre\VObject\StringUtil;
+use Sabre\VObject\StringUtil;
 
 /**
  * Abstract class used to implement import classes
@@ -33,6 +32,9 @@ abstract class ImportConnector {
 	// XML Configuration, class SimpleXml format
 	protected $configContent;
 	
+	/**
+	 * @param \SimpleXMLElement $xml_config
+	 */
 	public function __construct($xml_config = null) {
 		if ($xml_config != null) {
 			$this->setConfig($xml_config);

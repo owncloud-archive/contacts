@@ -22,9 +22,9 @@
 
 namespace OCA\Contacts\Utils\TemporaryPhoto;
 
-use OCA\Contacts\Contact as ContactObject,
-	OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto,
-	OCP\ICache;
+use OCA\Contacts\Contact as ContactObject;
+use OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto;
+use OCP\ICache;
 
 /**
  * This class loads the PHOTO or LOGO property from a contact.

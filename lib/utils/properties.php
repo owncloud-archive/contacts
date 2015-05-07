@@ -195,7 +195,7 @@ Class Properties {
 
 	/**
 	 * @brief returns the default categories of ownCloud
-	 * @return (array) $categories
+	 * @return string[] $categories
 	 */
 	public static function getDefaultCategories() {
 		$l10n = self::$l10n;

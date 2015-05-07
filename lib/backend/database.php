@@ -22,10 +22,10 @@
 
 namespace OCA\Contacts\Backend;
 
-use OCA\Contacts\Contact,
-	OCA\Contacts\VObject\VCard,
-	OCA\Contacts\Utils\Properties,
-	Sabre\VObject\Reader;
+use OCA\Contacts\Contact;
+use OCA\Contacts\VObject\VCard;
+use OCA\Contacts\Utils\Properties;
+use Sabre\VObject\Reader;
 
 /**
  * Backend class for a users own contacts.
@@ -73,8 +73,6 @@ class Database extends AbstractBackend {
 	/**
 	* Sets up the backend
 	*
-	* @param string $addressBooksTableName
-	* @param string $cardsTableName
 	*/
 	public function __construct(
 		$userid = null,
@@ -179,6 +177,7 @@ class Database extends AbstractBackend {
 
 	/**
 	* {@inheritdoc}
+	* @param string|false $addressBookId
 	*/
 	public function hasAddressBook($addressBookId) {
 
@@ -268,7 +267,6 @@ class Database extends AbstractBackend {
 	 * 'displayname' MUST be present.
 	 *
 	 * @param array $properties
-	 * @param array $options - Optional (backend specific options)
 	 * @return string|false The ID if the newly created AddressBook or false on error.
 	 */
 	public function createAddressBook(array $properties) {
@@ -356,7 +354,6 @@ class Database extends AbstractBackend {
 	 * property indexes and category/group relations by itself.
 	 *
 	 * @param string $addressBookId
-	 * @param array $options - Optional (backend specific options)
 	 * @return bool
 	 */
 	public function deleteAddressBook($addressBookId) {
@@ -420,8 +417,7 @@ class Database extends AbstractBackend {
 	 * Returns the number of contacts in a specific address book.
 	 *
 	 * @param string $addressBookId
-	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
-	 * @return array
+	 * @return null|integer
 	 */
 	public function numContacts($addressBookId) {
 
@@ -555,6 +551,10 @@ class Database extends AbstractBackend {
 		return $row;
 	}
 
+	/**
+	 * @param string|false $addressBookId
+	 * @param false|string $id
+	 */
 	public function hasContact($addressBookId, $id) {
 		try {
 			return $this->getContact($addressBookId, $id) !== null;
@@ -575,9 +575,9 @@ class Database extends AbstractBackend {
 	 * set, or the contact has a UID. If neither is set, it will fail.
 	 *
 	 * @param string $addressBookId
-	 * @param VCard|string $contact
+	 * @param string $contact
 	 * @param array $options - Optional (backend specific options)
-	 * @return string|bool The identifier for the new contact or false on error.
+	 * @return false|string The identifier for the new contact or false on error.
 	 */
 	public function createContact($addressBookId, $contact, array $options = array()) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' addressBookId: ' . $addressBookId, \OCP\Util::DEBUG);
@@ -644,8 +644,8 @@ class Database extends AbstractBackend {
 	 * Updates a contact
 	 *
 	 * @param string $addressBookId
-	 * @param string|array $id Contact ID
-	 * @param VCard|string $contact
+	 * @param false|string $id Contact ID
+	 * @param string $contact
 	 * @param array $options - Optional (backend specific options)
 	 * @see getContact
 	 * @return bool
@@ -743,7 +743,7 @@ class Database extends AbstractBackend {
 	 * Deletes a contact
 	 *
 	 * @param string $addressBookId
-	 * @param string|array $id
+	 * @param false|string $id
 	 * @param array $options - Optional (backend specific options)
 	 * @see getContact
 	 * @return bool
@@ -828,7 +828,7 @@ class Database extends AbstractBackend {
 	/**
 	 * @brief Get the contact id from the uri.
 	 *
-	 * @param mixed $addressBookId,$id
+	 * @param string $addressBookId
 	 * @returns int | null
 	 */
 	public function getIdFromUri($addressBookId,$uri) {

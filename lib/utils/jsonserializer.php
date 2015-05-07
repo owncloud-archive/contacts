@@ -23,8 +23,8 @@
 namespace OCA\Contacts\Utils;
 
 use OCA\Contacts\VObject;
-use OCA\Contacts\Contact,
-	OCA\Contacts\Utils\Properties;
+use OCA\Contacts\Contact;
+use OCA\Contacts\Utils\Properties;
 
 /**
  * This class serializes properties, components an

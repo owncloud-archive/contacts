@@ -21,7 +21,6 @@
  */
  
 namespace OCA\Contacts\Connector;
-use Sabre\VObject\Component;
 
 class LdapConnector {
 	
@@ -45,7 +44,7 @@ class LdapConnector {
 	 * @brief transform a ldap entry into an VCard object
 	 *	for each ldap entry which is like "property: value"
 	 *	to a VCard entry which is like "PROPERTY[;PARAMETER=param]:value"
-	 * @param array $ldap_entry
+	 * @param array $ldapEntry
 	 * @return OC_VCard
 	 */
 	public function ldapToVCard($ldapEntry) {
@@ -102,7 +101,7 @@ class LdapConnector {
 	 * creates the property if it doesn't exists yet
 	 * @param $vcard the vcard to get or create the properties with
 	 * @param $v_param the parameter the find
-	 * @param $index the position of the property in the vcard to find
+	 * @param integer $index the position of the property in the vcard to find
 	 */
 	public function getOrCreateVCardProperty(&$vcard, $v_param, $index) {
 		
@@ -309,7 +308,7 @@ class LdapConnector {
 	 * @brief updates the ldifEntry with $ldifNewValues
 	 * @param $ldifEntry the array to modify
 	 * @param $ldifNewValues the new values
-	 * @return boolean
+	 * @return boolean|null
 	 */
 	public function updateLdifProperty(&$ldifEntries, $ldifNewValues) {
 		foreach ($ldifNewValues as $key => $value) {

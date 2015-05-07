@@ -179,7 +179,7 @@ class ImportCsvConnector extends ImportConnector {
 
 	/**
 	 * @brief gets the import entry corresponding to the position given in parameter
-	 * @param $position the position to look for in the connector
+	 * @param string $position the position to look for in the connector
 	 * @return int|false
 	 */
 	private function getImportEntryFromPosition($position) {

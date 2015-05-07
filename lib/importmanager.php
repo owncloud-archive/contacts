@@ -21,17 +21,18 @@
  */
  
 namespace OCA\Contacts;
-use Sabre\VObject\Component;
 use OCA\Contacts\Connector\ImportCsvConnector;
 use OCA\Contacts\Connector\ImportVCardConnector;
 use OCA\Contacts\Connector\ImportLdifConnector;
-use OCA\Contacts\Addressbook;
 
 /**
  * Manages the import with basic functionalities
  */
 class ImportManager {
 	
+	/**
+	 * @param string $path
+	 */
 	private function loadXmlFile($path) {
 		if (file_exists($path)) {
 			$format = simplexml_load_file ( $path );
@@ -72,7 +73,6 @@ class ImportManager {
 	
 	/**
 	 * @brief get all the preferences for the addressbook
-	 * @param string $id
 	 * @return SimpleXml
 	 */
 	public function getType($typeName) {

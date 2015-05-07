@@ -22,12 +22,11 @@
 
 namespace OCA\Contacts\Utils\TemporaryPhoto;
 
-use OCA\Contacts\Contact as ContactObject,
-	OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto,
-	OCP\IRequest,
-	OCP\AppFramework\Http,
-	OCP\Image,
-	OCP\ICache;
+use OCA\Contacts\Utils\TemporaryPhoto as BaseTemporaryPhoto;
+use OCP\IRequest;
+use OCP\AppFramework\Http;
+use OCP\Image;
+use OCP\ICache;
 
 /**
  * This class loads an image from the virtual file system.
