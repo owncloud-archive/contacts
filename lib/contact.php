@@ -837,6 +837,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vevent->{'UID'} = $this->UID;
 			$vevent->{'RRULE'} = 'FREQ=YEARLY';
 			$vevent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
+			$vevent->{'TRANSP'} = 'TRANSPARENT';
 			$appinfo = \OCP\App::getAppInfo('contacts');
 			$appversion = \OCP\App::getAppVersion('contacts');
 			$vcal->PRODID = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
