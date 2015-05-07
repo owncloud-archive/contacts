@@ -115,10 +115,12 @@ class AddressbookProvider implements \OCP\IAddressBook {
   				INNER JOIN `$addrTable`
 			ON `$addrTable`.id = `$contTable`.addressbookid
 			WHERE
-			(
+				(`$contTable`.addressbookid = ?) AND
+				(
 SQL;
 
 		$params = array();
+		$params[] = $this->addressBook->getMetaData()['id'];		
 		foreach ($searchProperties as $property) {
 			$params[] = $property;
 			$params[] = '%' . $pattern . '%';
