@@ -832,7 +832,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vevent->DTSTART->setDateTime(
 				$date
 			);
-			$event->DTSTART['VALUE'] = 'date';
+			$vevent->DTSTART['VALUE'] = 'date';
 			$vevent->add('DURATION', 'P1D');
 			$vevent->{'UID'} = $this->UID;
 			$vevent->{'RRULE'} = 'FREQ=YEARLY';
