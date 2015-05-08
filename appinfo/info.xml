@@ -14,7 +14,7 @@
 		<carddav>appinfo/remote.php</carddav>
 	</remote>
     <dependencies>
-        <owncloud min-version="8" />
+		<owncloud min-version="8.1" max-version="8.1" />
         <php min-version="5.4" />
     </dependencies>
 	<ocsid>166044</ocsid>
