@@ -827,16 +827,17 @@ class Contact extends VObject\VCard implements IPIMObject {
 			}
 			$vcal = new \Sabre\VObject\Component\VCalendar();
 			$vcal->VERSION = '2.0';
-			$vcal->createComponent('VEVENT');
+			$vevent = $vcal->createComponent('VEVENT');
 			$vevent->add('DTSTART');
 			$vevent->DTSTART->setDateTime(
 				$date
 			);
-			$event->DTSTART['VALUE'] = 'date';
+			$vevent->DTSTART['VALUE'] = 'date';
 			$vevent->add('DURATION', 'P1D');
 			$vevent->{'UID'} = $this->UID;
 			$vevent->{'RRULE'} = 'FREQ=YEARLY';
 			$vevent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
+			$vevent->{'TRANSP'} = 'TRANSPARENT';
 			$appinfo = \OCP\App::getAppInfo('contacts');
 			$appversion = \OCP\App::getAppVersion('contacts');
 			$vcal->PRODID = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';

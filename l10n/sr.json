@@ -91,7 +91,7 @@
     "Property not found" : "Својство није нађено",
     " Missing IM parameter for: " : "Недостају парам за брзе поруке за:",
     "Unknown IM: " : "Непозната брза порука:",
-    "{name}'s Birthday" : "Рођендан {name}",
+    "{name}'s Birthday" : "{name} - рођендан",
     "Error creating address book" : "Грешка при стварању адресара",
     "The \"%s\" backend does not support deleting address books" : "\"%s\" не подржава брисање адресара",
     "You do not have permissions to delete the \"%s\" address book" : "Немате дозволе да обришете адресар „%s“",

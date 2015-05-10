@@ -1,13 +1,3 @@
-build_failure_conditions:
-    #- 'elements.rating(<= D).exists'               # No classes/methods with a rating of D or worse
-    - 'elements.rating(<= D).new.exists'           # No new classes/methods with a rating of D or worse
-
-    - 'issues.label("coding-style").new.exists'    # No new coding style issues allowed
-
-    - 'issues.severity(>= MAJOR).new.exists'       # New issues of major or higher severity
-
-    - 'project.metric("scrutinizer.quality", < 6)' # Code Quality Rating drops below 6
-
 filter:
     excluded_paths:
         - 'js/modernizr.custom.js'
@@ -24,7 +14,10 @@ imports:
     - php
     - javascript
 
+
 tools:
+    external_code_coverage: true
+
     js_hint:
         use_native_config: true
 

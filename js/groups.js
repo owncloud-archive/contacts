@@ -530,7 +530,7 @@ OC.Contacts = OC.Contacts || {};
 				if(self.hasGroup(newname, owner)) {
 					$(document).trigger('status.contacts.error', {
 						error: true,
-						message: t('contacts', 'A group named "{group}" already exists', {group: escapeHTML(newname)})
+						message: t('contacts', 'A group named "{group}" already exists', {group: newname})
 					});
 					return;
 				}
@@ -610,7 +610,7 @@ OC.Contacts = OC.Contacts || {};
 		var self = this;
 		if(this.hasGroup(name, OC.currentUser)) {
 			if(typeof cb === 'function') {
-				cb({error:true, message:t('contacts', 'A group named "{group}" already exists', {group: escapeHTML(name)})});
+				cb({error:true, message:t('contacts', 'A group named "{group}" already exists', {group: name})});
 			}
 			return;
 		}
