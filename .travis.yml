@@ -7,7 +7,7 @@ php:
 branches:
   only:
     - master
-    - /^stable\d*$/
+    - /^stable\d+(\.\d+)?$/
 
 env:
   global:
