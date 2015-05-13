@@ -36,7 +36,7 @@ OC.L10N.register(
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "\"{filename}\"의 크기가 허용된 최대 크기 {size}보다 큽니다",
     "Error adding to group." : "그룹에 추가하는 중 오류가 발생하였습니다.",
     "Error removing from group." : "그룹에서 삭제하는 중 오류가 발생하였습니다.",
-    "Please create an addressbook first" : "먼저 주소록을 만들어 주십시요.",
+    "Please create an addressbook first" : "먼저 주소록을 만드십시오",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "300명 이상의 연락처를 선택하였습니다.\n오류가 발생할 수도 있습니다! 그래도 시도하려면 여기를 누르십시오.",
     "Error setting {name} as favorite." : "{name} 님을 즐겨찾는 연락처로 설정할 수 없음.",
     "Merge contacts" : "연락처 합치기",

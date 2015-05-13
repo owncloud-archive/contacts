@@ -34,6 +34,7 @@
     "The size of \"{filename}\" exceeds the maximum allowed {size}" : "Storleken på \"{filname}\" överskrider den maximalt tillåtna {size}",
     "Error adding to group." : "Fel vid tillägg i grupp.",
     "Error removing from group." : "Fel vid radering från grupp.",
+    "Please create an addressbook first" : "Vänligen skapa en adressbok först",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "Du har valt mer än 300 kontakter.\nDetta kommer troligen misslyckas! Klicka här för att försöka i alla fall.",
     "Error setting {name} as favorite." : "Fel när {name} skulle läggas till favoriter.",
     "Merge contacts" : "Sammanfoga kontakter",
