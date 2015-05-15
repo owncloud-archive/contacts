@@ -268,6 +268,7 @@ author: Nicolas Mora mail@babelouest.org
 	<import_entry name="Home Phone" enabled="true">
 		<altname lang="fr">Téléphone (domicile)</altname>
 		<altname lang="de">Telefon (privat)</altname>
+		<altname lang="de">Telefon privat</altname>
 		<vcard_entry property="TEL" type="HOME" >
 		</vcard_entry>
 	</import_entry>
@@ -275,6 +276,7 @@ author: Nicolas Mora mail@babelouest.org
 	<import_entry name="Home Phone 2" enabled="true">
 		<altname lang="fr">Téléphone 2 (domicile)</altname>
 		<altname lang="de">Telefon (privat 2)</altname>
+		<altname lang="de">Telefon privat 2</altname>
 		<vcard_entry property="TEL" type="HOME" group="homephone2">
 		</vcard_entry>
 	</import_entry>
@@ -331,12 +333,14 @@ author: Nicolas Mora mail@babelouest.org
 	<import_entry name="Assistant's Name" enabled="true">
 		<vcard_entry property="RELATED" type="assistant">
 		<altname lang="de">Assistent(in)</altname>
+		<altname lang="de">Name Assistent</altname>
 		</vcard_entry>
 	</import_entry>
 	
 	<import_entry name="Manager's Name" enabled="true">
 		<altname lang="fr">Responsable</altname>
 		<altname lang="de">Name des/r Vorgesetzten</altname>
+		<altname lang="de">Name des/der Vorgesetzten</altname>
 		<vcard_entry property="RELATED" type="manager">
 		</vcard_entry>
 	</import_entry>
