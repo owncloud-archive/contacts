@@ -163,7 +163,7 @@ class ImportLdifConnector extends ImportConnector{
 					if (isset($importEntry['image']) && $importEntry['image'] == "true") {
 						$this->updateImageProperty($property, $value);
 					} else {
-						$this->updateProperty($property, $importEntry, $value);
+						$this->updateProperty($property, $importEntry, $value, $dest);
 					}
 				}
 			}
@@ -172,7 +172,7 @@ class ImportLdifConnector extends ImportConnector{
 			if (isset($importEntry['image']) && $importEntry['image'] == "true") {
 				$this->updateImageProperty($property, $value);
 			} else {
-				$this->updateProperty($property, $importEntry, $value);
+				$this->updateProperty($property, $importEntry, $value, $dest);
 			}
 		}
 	}

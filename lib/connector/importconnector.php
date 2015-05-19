@@ -58,7 +58,7 @@ abstract class ImportConnector {
 	 * @param $importEntry the entry configuration to update in SimpleXml format
 	 * @value the value to update
 	 */
-	protected function updateProperty(&$property, $importEntry, $value) {
+	protected function updateProperty(&$property, $importEntry, $value, $root = null) {
 		if (isset($property) && isset($importEntry) && isset($value)) {
 			if (isset($importEntry->vcard_entry)) {
 				if (isset($importEntry->vcard_entry['type'])) {
@@ -66,7 +66,7 @@ abstract class ImportConnector {
 				}
 				if (isset($importEntry->vcard_entry->additional_property)) {
 					foreach ($importEntry->vcard_entry->additional_property as $additionalProperty) {
-						$property->parameters[] = new \Sabre\VObject\Parameter(''.$additionalProperty['name'], ''.$additionalProperty['value']);
+						$property->parameters[] = new \Sabre\VObject\Parameter($root, ''.$additionalProperty['name'], ''.$additionalProperty['value']);
 					}
 				}
 				if (isset($importEntry->vcard_entry['prefix'])) {
