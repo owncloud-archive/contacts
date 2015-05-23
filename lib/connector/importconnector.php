@@ -161,7 +161,7 @@ abstract class ImportConnector {
 			$property = $vcard->createProperty($importEntry['property']);
 			$vcard->add($property);
 			if ($importEntry['type']!=null) {
-        $property->add('TYPE', StringUtil::convertToUTF8($importEntry['type']));
+				$property->add('TYPE', StringUtil::convertToUTF8($importEntry['type']));
 				switch ($importEntry['property']) {
 					case "ADR":
 						$property->setValue(";;;;;;");
