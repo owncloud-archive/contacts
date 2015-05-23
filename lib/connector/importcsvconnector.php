@@ -158,12 +158,12 @@ class ImportCsvConnector extends ImportConnector {
 									$vcard->add($property);
 								} else {
 									$property = $this->getOrCreateVCardProperty($vcard, $importEntry->vcard_entry);
-									$this->updateProperty($property, $importEntry, trim($oneValue), $vcard);
+									$this->updateProperty($property, $importEntry, trim($oneValue));
 								}
 							}
 						} else {
 							$property = $this->getOrCreateVCardProperty($vcard, $importEntry->vcard_entry);
-							$this->updateProperty($property, $importEntry, trim($oneValue), $vcard);
+							$this->updateProperty($property, $importEntry, trim($oneValue));
 						}
 					}
 				} else if (isset($element[$i]) && isset($title[$i])) {

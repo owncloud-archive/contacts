@@ -133,12 +133,12 @@ class ImportVCardConnector extends ImportConnector{
 								$dest->add($property);
 							} else {
 								$property = $this->getOrCreateVCardProperty($dest, $importEntry->vcard_entry);
-								$this->updateProperty($property, $importEntry, trim($oneValue), $dest);
+								$this->updateProperty($property, $importEntry, trim($oneValue));
 							}
 						}
 					} else {
 						$property = $this->getOrCreateVCardProperty($dest, $importEntry->vcard_entry);
-						$this->updateProperty($property, $importEntry, $sourceProperty->getValue(), $dest);
+						$this->updateProperty($property, $importEntry, $sourceProperty->getValue());
 					}
 				}
 			} else {

@@ -58,7 +58,7 @@ abstract class ImportConnector {
 	 * @param $importEntry the entry configuration to update in SimpleXml format
 	 * @value the value to update
 	 */
-	protected function updateProperty(&$property, $importEntry, $value, $root = null) {
+	protected function updateProperty(&$property, $importEntry, $value) {
 		if (isset($property) && isset($importEntry) && isset($value)) {
 			if (isset($importEntry->vcard_entry)) {
 				if (isset($importEntry->vcard_entry['type'])) {
@@ -86,17 +86,10 @@ abstract class ImportConnector {
 					$property->setValue(implode($separator, $vArray));
 				} else {
 					if (isset($importEntry->vcard_entry['value'])) {
-            $property->add('TYPE', StringUtil::convertToUTF8($value));
+						$property->add('TYPE', StringUtil::convertToUTF8($value));
 					} else {
-						$curVal = $property->getValue();
-						if ($curVal != '') {
-							if (!is_array($curVal)) {
-								$curVal = array($curVal);
-							}
-							$curVal[] = StringUtil::convertToUTF8($value);
-						} else {
-							$curVal = StringUtil::convertToUTF8($value);
-						}
+						$curVal = $property->getParts();
+						$curVal[] = StringUtil::convertToUTF8($value);
 						$property->setValue($curVal);
 					}
 				}
