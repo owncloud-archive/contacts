@@ -62,7 +62,7 @@ abstract class ImportConnector {
 		if (isset($property) && isset($importEntry) && isset($value)) {
 			if (isset($importEntry->vcard_entry)) {
 				if (isset($importEntry->vcard_entry['type'])) {
-          $property->add('TYPE', StringUtil::convertToUTF8($importEntry->vcard_entry['type']));
+					$property->add('TYPE', StringUtil::convertToUTF8($importEntry->vcard_entry['type']));
 				}
 				if (isset($importEntry->vcard_entry->additional_property)) {
 					foreach ($importEntry->vcard_entry->additional_property as $additionalProperty) {
@@ -95,7 +95,7 @@ abstract class ImportConnector {
 				}
 			}
 			if (isset($importEntry->vcard_parameter)) {
-        $property->add($importEntry->vcard_parameter['parameter'], StringUtil::convertToUTF8($value));
+				$property->add($importEntry->vcard_parameter['parameter'], StringUtil::convertToUTF8($value));
 			}
 		}
 	}

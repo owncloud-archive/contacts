@@ -168,7 +168,7 @@ class ImportCsvConnector extends ImportConnector {
 					}
 				} else if (isset($element[$i]) && isset($title[$i])) {
 					$property = $vcard->createProperty("X-Unknown-Element", StringUtil::convertToUTF8($element[$i]));
-          $property->add('TYPE', StringUtil::convertToUTF8($title[$i]));
+					$property->add('TYPE', StringUtil::convertToUTF8($title[$i]));
 					$vcard->add($property);
 				}
 			}
