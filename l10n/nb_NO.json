@@ -265,11 +265,11 @@
     "Password" : "Passord",
     "Page size" : "Sidestørrelse",
     "Base DN for search" : "Basis-DN for søk",
-    "Base DN" : "Base DN",
+    "Base DN" : "Basis-DN",
     "Search filter" : "Søkefilter",
     "Filter" : "Filter",
     "Base DN for modification" : "Basis-DN for endring",
-    "Base DN modification" : "Basis-DN endring",
+    "Base DN modification" : "Basis-DN-endring",
     "Connector" : "Kobling",
     "Connector value (Better use external editor and copy/paste)" : "Verdi for kobling (best å bruke ekstern editor og kopier/lim)",
     "Copy from (Warning, replaces current custom value)" : "Kopier fra (Advarsel: Erstatter nåværende egendefinert verdi)"
