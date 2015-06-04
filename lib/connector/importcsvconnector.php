@@ -158,17 +158,17 @@ class ImportCsvConnector extends ImportConnector {
 									$vcard->add($property);
 								} else {
 									$property = $this->getOrCreateVCardProperty($vcard, $importEntry->vcard_entry);
-									$this->updateProperty($property, $importEntry, trim($oneValue));
+									$this->updateProperty($property, $importEntry, trim($oneValue), $vcard);
 								}
 							}
 						} else {
 							$property = $this->getOrCreateVCardProperty($vcard, $importEntry->vcard_entry);
-							$this->updateProperty($property, $importEntry, trim($oneValue));
+							$this->updateProperty($property, $importEntry, trim($oneValue), $vcard);
 						}
 					}
 				} else if (isset($element[$i]) && isset($title[$i])) {
 					$property = $vcard->createProperty("X-Unknown-Element", StringUtil::convertToUTF8($element[$i]));
-					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($title[$i]));
+          $property->add('TYPE', StringUtil::convertToUTF8($title[$i]));
 					$vcard->add($property);
 				}
 			}

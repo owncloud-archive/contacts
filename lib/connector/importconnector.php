@@ -58,15 +58,15 @@ abstract class ImportConnector {
 	 * @param $importEntry the entry configuration to update in SimpleXml format
 	 * @value the value to update
 	 */
-	protected function updateProperty(&$property, $importEntry, $value) {
+	protected function updateProperty(&$property, $importEntry, $value, $root = null) {
 		if (isset($property) && isset($importEntry) && isset($value)) {
 			if (isset($importEntry->vcard_entry)) {
 				if (isset($importEntry->vcard_entry['type'])) {
-					$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($importEntry->vcard_entry['type']));
+          $property->add('TYPE', StringUtil::convertToUTF8($importEntry->vcard_entry['type']));
 				}
 				if (isset($importEntry->vcard_entry->additional_property)) {
 					foreach ($importEntry->vcard_entry->additional_property as $additionalProperty) {
-						$property->parameters[] = new \Sabre\VObject\Parameter(''.$additionalProperty['name'], ''.$additionalProperty['value']);
+						$property->add($additionalProperty['name'], $additionalProperty['value']);
 					}
 				}
 				if (isset($importEntry->vcard_entry['prefix'])) {
@@ -86,7 +86,7 @@ abstract class ImportConnector {
 					$property->setValue(implode($separator, $vArray));
 				} else {
 					if (isset($importEntry->vcard_entry['value'])) {
-						$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($value));
+            $property->add('TYPE', StringUtil::convertToUTF8($value));
 					} else {
 						$curVal = $property->getValue();
 						if ($curVal != '') {
@@ -102,7 +102,7 @@ abstract class ImportConnector {
 				}
 			}
 			if (isset($importEntry->vcard_parameter)) {
-				$property->parameters[] = new \Sabre\VObject\Parameter($importEntry->vcard_parameter['parameter'], ''.StringUtil::convertToUTF8($value));
+        $property->add($importEntry->vcard_parameter['parameter'], StringUtil::convertToUTF8($value));
 			}
 		}
 	}
@@ -168,7 +168,7 @@ abstract class ImportConnector {
 			$property = $vcard->createProperty($importEntry['property']);
 			$vcard->add($property);
 			if ($importEntry['type']!=null) {
-				$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($importEntry['type']));
+        $property->add('TYPE', StringUtil::convertToUTF8($importEntry['type']));
 				switch ($importEntry['property']) {
 					case "ADR":
 						$property->setValue(";;;;;;");
