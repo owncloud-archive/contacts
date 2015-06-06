@@ -125,7 +125,7 @@ class ImportController extends Controller {
 			$view->mkdir('imports');
 		}
 
-		$content = \OC_Filesystem::file_get_contents($path . '/' . $filename);
+		$content = \OC\Files\Filesystem::file_get_contents($path . '/' . $filename);
 		if($view->file_put_contents('/imports/' . $filename, $content)) {
 			$progresskey = 'contacts-import-' . rand();
 			$response->setParams(
@@ -183,9 +183,9 @@ class ImportController extends Controller {
 		$file = $view->file_get_contents('/imports/' . $filename);
 
 		$importManager = new ImportManager();
-		
+
 		$formatList = $importManager->getTypes();
-		
+
 		$found = false;
 		$parts = array();
 		foreach ($formatList as $formatName => $formatDisplayName) {
@@ -194,7 +194,7 @@ class ImportController extends Controller {
 				$found = true;
 			}
 		}
-		
+
 		if (!$found) {
 			// detect file type
 			$mostLikelyName = "";
@@ -206,13 +206,13 @@ class ImportController extends Controller {
 					$mostLikelyValue = $probValue;
 				}
 			}
-			
+
 			if ($mostLikelyValue > 0) {
 				// found one (most likely...)
 				$parts = $importManager->importFile($view->getLocalFile('/imports/' . $filename), $mostLikelyName);
 			}
 		}
-		
+
 		if ($parts) {
 			//import the contacts
 			$imported = 0;
