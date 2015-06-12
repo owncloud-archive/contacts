@@ -230,7 +230,7 @@ OC.L10N.register(
     "Website" : "เว็บไซต์",
     "Instant messaging" : "ส่งข้อความโต้ตอบแบบทันที",
     "Notes go here..." : "เขียนบันทึกกำกับตรงนี้...",
-    "Add field..." : "เพิ่มฟิลด์ ...",
+    "Add field..." : "เพิ่มช่อง ...",
     "Instant Messaging" : "ส่งข้อความโต้ตอบแบบทันที",
     "Note" : "หมายเหตุ",
     "Web site" : "เว็บไซต์",
