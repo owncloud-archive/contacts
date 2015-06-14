@@ -138,12 +138,12 @@ class Shared extends Database {
 		$card = parent::getContact($addressBookId, $id, $options);
 
 		if (!$card) {
-                        if (is_array($id)) {
-                                $idstr = implode(", ", $id);
-                        } else {
-                                $idstr = $id;
-                        }
-                        throw new \Exception('Shared Contact not found: ' . $idstr, 404);
+			if (is_array($id)) {
+				$idstr = implode(", ", $id);
+			} else {
+				$idstr = $id;
+			}
+			throw new \Exception('Shared Contact not found: ' . $idstr, 404);
 		}
 
 		$card['permissions'] = $permissions;
