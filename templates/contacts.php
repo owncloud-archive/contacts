@@ -336,7 +336,7 @@ vendor_style('contacts', array(
 						<a role="button" class="icon-delete action delete"></a>
 					</span>
 				</dd>
-			</d>
+			</div>
 		</li>
 		<li>
 			<ul class="email propertylist hidden">
