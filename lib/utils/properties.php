@@ -48,7 +48,7 @@ Class Properties {
 	 *
 	 * @var array
 	 */
-	public static $multiProperties = array('EMAIL', 'TEL', 'IMPP', 'ADR', 'URL');
+	public static $multiProperties = array('EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'CLOUD');
 
 	/**
 	 * Properties to index.
@@ -57,7 +57,7 @@ Class Properties {
 	 */
 	public static $indexProperties = array(
 		'BDAY', 'UID', 'N', 'FN', 'TITLE', 'ROLE', 'NOTE', 'NICKNAME',
-		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO');
+		'ORG', 'CATEGORIES', 'EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'GEO', 'CLOUD');
 
 	/**
 	 * Get options for IMPP properties
@@ -182,6 +182,12 @@ Class Properties {
 					'WORK' => (string)$l->t('Work'),
 					'HOME' => (string)$l->t('Home'),
 					'INTERNET' => (string)$l->t('Internet'),
+					'OTHER' =>  (string)$l->t('Other'),
+				);
+			case 'CLOUD':
+				return array(
+					'HOME' => (string)$l->t('Home'),
+					'WORK' => (string)$l->t('Work'),
 					'OTHER' =>  (string)$l->t('Other'),
 				);
 		}

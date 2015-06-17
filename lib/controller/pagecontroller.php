@@ -34,6 +34,7 @@ class PageController extends Controller {
 		$adrTypes = Properties::getTypesForProperty('ADR');
 		$phoneTypes = Properties::getTypesForProperty('TEL');
 		$emailTypes = Properties::getTypesForProperty('EMAIL');
+		$cloudTypes = Properties::getTypesForProperty('CLOUD');
 		$ims = Properties::getIMOptions();
 		$imProtocols = array();
 		foreach($ims as $name => $values) {
@@ -48,6 +49,7 @@ class PageController extends Controller {
 			'uploadMaxHumanFilesize' => \OCP\Util::humanFileSize($maxUploadFilesize),
 			'phoneTypes' => $phoneTypes,
 			'emailTypes' => $emailTypes,
+			'cloudTypes' => $cloudTypes,
 			'adrTypes' => $adrTypes,
 			'imppTypes' => $imppTypes,
 			'imProtocols' => $imProtocols,

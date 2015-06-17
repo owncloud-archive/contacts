@@ -359,6 +359,11 @@ vendor_style('contacts', array(
 			</ul>
 		</li>
 		<li>
+			<ul class="cloud propertylist hidden">
+				<h3><?php p($l->t('Federated Cloud ID')); ?></h3>
+			</ul>
+		</li>
+		<li>
 			<ul class="impp propertylist hidden">
 				<h3><?php p($l->t('Instant messaging')); ?></h3>
 			</ul>
@@ -384,6 +389,7 @@ vendor_style('contacts', array(
 			<option value="ADR"><?php p($l->t('Address')); ?></option>
 			<option value="NOTE"><?php p($l->t('Note')); ?></option>
 			<option value="URL"><?php p($l->t('Web site')); ?></option>
+			<option value="CLOUD"><?php p($l->t('Federated Cloud ID')); ?></option>
 		</select>
 		<a class="cancel">
 			<?php p($l->t('Cancel')); ?>
@@ -416,6 +422,20 @@ vendor_style('contacts', array(
 			<span class="listactions">
 				<a class="icon-mail action mail tooltipped leftwards" title="<?php p($l->t('Mail to address')); ?>"></a>
 				<a role="button" class="icon-delete action delete tooltipped leftwards" title="<?php p($l->t('Delete email address')); ?>"></a>
+			</span>
+		</li>
+	</div>
+	<div class="cloud" type="text/template">
+		<li data-element="cloud" data-checksum="{checksum}" class="propertycontainer">
+			<span class="parameters">
+				<input type="checkbox" class="parameter tooltipped rightwards" data-parameter="TYPE" name="parameters[TYPE][]" value="PREF" title="<?php p($l->t('Preferred')); ?>" />
+				<select class="rtl type parameter" data-parameter="TYPE" name="parameters[TYPE][]">
+					<?php print_unescaped(OCP\html_select_options($_['cloudTypes'], array())) ?>
+				</select>
+			</span>
+			<input type="text" class="nonempty value" name="value" value="{value}" x-moz-errormessage="<?php p($l->t('Please specify a valid Federated Cloud ID.')); ?>" placeholder="<?php p($l->t('username@example.com/owncloud')); ?>" required />
+			<span class="listactions">
+				<a role="button" class="icon-delete action delete tooltipped leftwards" title="<?php p($l->t('Delete Federated Cloud ID')); ?>"></a>
 			</span>
 		</li>
 	</div>

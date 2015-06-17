@@ -332,7 +332,7 @@ span.ui-icon { margin: 1px 3px 10px 0px; }
 	padding-left: 0;
 }
 
-div.email li .parameters .label, div.url li .parameters .label { margin-top: 7px !important; }
+div.email li .parameters .label, div.url li .parameters .label, div.cloud li .parameters .label { margin-top: 7px !important; }
 div.tel li .parameters .label { margin-top: 6px !important; margin-bottom: 4px; }
 div.url li .parameters .label, div.impp li .parameters .label { margin-top: 6px !important; }
 div.tel li input, div.url li input { margin-left: 3px; font-size: 1em; }
@@ -882,6 +882,8 @@ tbody tr.contact.active, tbody tr.contact:hover {
 }
 @media screen and (max-width: 800px) {
 	#contactlist tr td.email { display: none; }
+	#contactlist tr td.cloud { display: none; }
 	#contactlist tr { width: 100%; }
 	#contactsHeader tr td.email { display: none; }
+	#contactsHeader tr td.cloud { display: none; }
 }

@@ -521,6 +521,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 		switch ($name) {
 			case 'EMAIL':
+			case 'CLOUD':
 				$value = strtolower($value);
 				$property->setValue($value);
 				break;
