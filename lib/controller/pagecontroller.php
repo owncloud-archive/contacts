@@ -42,6 +42,11 @@ class PageController extends Controller {
 
 		$maxUploadFilesize = \OCP\Util::maxUploadFilesize('/');
 
+		\OCP\Util::addScript('placeholder', null);
+		\OCP\Util::addScript('../vendor/blueimp-md5/js/md5', null);
+		\OCP\Util::addScript('jquery.avatar', null);
+		\OCP\Util::addScript('avatar', null);
+
 		$response = new TemplateResponse($this->appName, 'contacts');
 		$response->setParams(array(
 			'uploadMaxFilesize' => $maxUploadFilesize,
