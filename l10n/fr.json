@@ -24,7 +24,7 @@
     "Remove from..." : "Retirer de…",
     "Add group..." : "Ajouter un groupe…",
     "Invalid URL: \"{url}\"" : "URL invalide : \"{URL}\"",
-    "Invalid email: \"{url}\"" : "Courriel invalide : \"{url}\"",
+    "Invalid email: \"{url}\"" : "Courriel non valable : \"{url}\"",
     "Merge failed. Cannot find contact: {id}" : "Échec de la fusion. Impossible de trouver le contact : {id}",
     "Merge failed." : "Echec de la fusion.",
     "Merge failed. Error saving contact." : "Échec de la fusion. Erreur d'enregistrement du contact.",
