@@ -27,7 +27,7 @@ OC.Contacts = OC.Contacts || {};
 			this.displayNames = {};
 			this.sortOrder = contacts_sortby || 'fn';
 		this.undoQueue = [];
-		this.multi_properties = ['EMAIL', 'TEL', 'IMPP', 'ADR', 'URL'];
+		this.multi_properties = ['EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'CLOUD'];
 	};
 
 	Contact.prototype.metaData = function() {
@@ -283,6 +283,7 @@ OC.Contacts = OC.Contacts || {};
 				break;
 			case 'TEL':
 			case 'URL':
+			case 'CLOUD':
 			case 'EMAIL':
 				$elem = this.renderStandardProperty(name.toLowerCase());
 				$list = this.$fullelem.find('ul.' + name.toLowerCase());
@@ -1414,6 +1415,7 @@ OC.Contacts = OC.Contacts || {};
 						switch(name) {
 							case 'TEL':
 							case 'URL':
+							case 'CLOUD':
 							case 'EMAIL':
 								$property = self.renderStandardProperty(name.toLowerCase(), property);
 								if(self.data[name].length === 1) {
