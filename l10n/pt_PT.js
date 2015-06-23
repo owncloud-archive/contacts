@@ -190,7 +190,7 @@ OC.L10N.register(
     "Last-, Firstname" : "Último-, Primeiro Nome",
     "Delete" : "Eliminar",
     "Groups" : "Grupos",
-    "Download" : "Transferir",
+    "Download" : "Descarregar",
     "Merge" : "Fundir",
     "Email" : "Email",
     "Phone" : "Telefone",
