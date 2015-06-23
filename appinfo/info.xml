@@ -5,6 +5,9 @@
 	<licence>AGPL</licence>
 	<author>Jakob Sack,Thomas Tanghus</author>
 	<require>8</require>
+	<dependencies>
+		<owncloud min-version="8.0" max-version="8.0" />
+	</dependencies>
 	<description>Address book with CardDAV support.</description>
 	<standalone/>
 	<documentation>
