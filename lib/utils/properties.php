@@ -160,8 +160,8 @@ Class Properties {
 			case 'ADR':
 			case 'IMPP':
 				return array(
-					'WORK' => (string)$l->t('Work'),
 					'HOME' => (string)$l->t('Home'),
+					'WORK' => (string)$l->t('Work'),
 					'OTHER' => (string)$l->t('Other'),
 				);
 			case 'TEL':
@@ -179,8 +179,8 @@ Class Properties {
 				);
 			case 'EMAIL':
 				return array(
-					'WORK' => (string)$l->t('Work'),
 					'HOME' => (string)$l->t('Home'),
+					'WORK' => (string)$l->t('Work'),
 					'INTERNET' => (string)$l->t('Internet'),
 					'OTHER' =>  (string)$l->t('Other'),
 				);
