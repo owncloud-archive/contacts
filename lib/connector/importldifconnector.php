@@ -136,7 +136,7 @@ class ImportLdifConnector extends ImportConnector{
 				}
 			} else {
 				$property = $dest->createProperty("X-Unknown-Element", ''.StringUtil::convertToUTF8($ldifProperty[1]));
-				$property->parameters[] = new \Sabre\VObject\Parameter('TYPE', ''.StringUtil::convertToUTF8($ldifProperty[0]));
+				$property->add('TYPE', StringUtil::convertToUTF8($ldifProperty[0]));
 				$dest->add($property);
 			}
 		}
