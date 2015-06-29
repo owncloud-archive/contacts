@@ -57,7 +57,8 @@ class Dispatcher extends MainApp {
 		parent::__construct($this->appName, $params);
 		$this->container = $this->getContainer();
 		$this->server = $this->container->getServer();
-		$this->app = new App($this->container->query('API')->getUserId());
+		$userId = \OC::$server->getUserSession()->getUser()->getUID();
+		$this->app = new App($userId);
 		$this->registerServices();
 		$this->container->registerMiddleware('HttpMiddleware');
 	}
@@ -76,8 +77,8 @@ class Dispatcher extends MainApp {
 		});
 		$this->container->registerService('AddressBookController', function(IAppContainer $container) use($app, $appName) {
 			$request = $container->query('Request');
-			$api = $container->query('API');
-			return new AddressBookController($appName, $request, $app, $api);
+			$userId = \OC::$server->getUserSession()->getUser()->getUID();
+			return new AddressBookController($appName, $request, $app, $userId);
 		});
 		$this->container->registerService('BackendController', function(IAppContainer $container) use($app, $appName) {
 			$request = $container->query('Request');
