@@ -239,6 +239,7 @@ OC.L10N.register(
     "someone@example.com" : "someone@example.com",
     "Mail to address" : "Kiri aadressile",
     "Delete email address" : "Kustuta e-posti aadress",
+    "username@example.com/owncloud" : "username@example.com/owncloud",
     "Enter phone number" : "Sisesta telefoninumber",
     "Go to web site" : "Mine veebisaidile",
     "View on map" : "Vaata kaardil",
