@@ -1611,7 +1611,7 @@ OC.Contacts = OC.Contacts || {};
 	 * Set a thumbnail for the contact if a PHOTO property exists
 	 */
 	Contact.prototype.setThumbnail = function($elem, refresh) {
-		if(!this.data.thumbnail && !refresh) {
+		if(!this.data.photo && !refresh) {
 			this.getListItemElement().find('.avatar').css('height', '32px');
 			var name = String(this.getDisplayName()).replace(' ', '').replace(',', '');
 			this.getListItemElement().find('.avatar').imageplaceholder(name || '#');
@@ -1623,9 +1623,17 @@ OC.Contacts = OC.Contacts || {};
 		if(!$elem.hasClass('thumbnail') && !refresh) {
 			return;
 		}
-		if(this.data.thumbnail) {
+		if(this.data.photo) {
 			$elem.removeClass('thumbnail').find('.avatar').remove();
-			$elem.css('background-image', 'url(data:image/png;base64,' + this.data.thumbnail + ')');
+			var contactId = this.id || 'new',
+				backend = this.metadata.backend,
+				addressBookId = this.metadata.parent;
+			var url = OC.generateUrl(
+				'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo?maxSize=32',
+				{backend: backend, addressBookId: addressBookId, contactId: contactId}
+			);
+
+			$elem.css('background-image', 'url(' + url + ')');
 		} else {
 			$elem.addClass('thumbnail');
 			$elem.removeAttr('style');
