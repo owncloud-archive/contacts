@@ -22,8 +22,8 @@
 
 namespace OCA\Contacts\Utils;
 
-use OCP\ICache,
-	OCP\Image;
+use OCP\ICache;
+use OCP\Image;
 
 /**
  * This class is used for getting a temporary contact photo for cropping.
@@ -98,9 +98,6 @@ class TemporaryPhoto {
 	/**
 	* Returns an instance of a subclass of this class
 	*
-	* @param \OCP\IServerContainer $server
-	* @param int|null $type One of the pre-defined types.
-	* @param mixed|null $data Whatever data is needed to load the photo.
 	*/
 	public static function create(ICache $cache, $type = null, $data = null) {
 		if (isset(self::$classMap[$type])) {

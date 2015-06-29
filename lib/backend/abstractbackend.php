@@ -175,7 +175,7 @@ abstract class AbstractBackend {
 	 * cannot determine the number.
 	 *
 	 * @param string $addressBookId
-	 * @return integer|null
+	 * @return integer
 	 */
 	public function numContacts($addressBookId) {
 
@@ -313,7 +313,7 @@ abstract class AbstractBackend {
 	 * Same as getContacts except that either 'carddata' or 'vcard' is mandatory.
 	 *
 	 * @param string $addressBookId
-	 * @param mixed $id
+	 * @param string $id
 	 * @param array $options - Optional options
 	 * @return array|null
 	 */
@@ -401,7 +401,7 @@ abstract class AbstractBackend {
 
 	/**
 	 * @brief Query whether a backend or an address book is active
-	 * @param string $addressbookid If null it checks whether the backend is activated.
+	 * @param string $addressBookId If null it checks whether the backend is activated.
 	 * @return boolean
 	 */
 	public function isActive($addressBookId = null) {
@@ -415,7 +415,7 @@ abstract class AbstractBackend {
 	/**
 	 * @brief Activate a backend or an address book
 	 * @param bool active
-	 * @param string $addressbookid If null it activates the backend.
+	 * @param string $addressBookId If null it activates the backend.
 	 * @return boolean
 	 */
 	public function setActive($active, $addressBookId = null) {
@@ -429,7 +429,6 @@ abstract class AbstractBackend {
 
 	/**
 	 * @brief get all the preferences for the addressbook
-	 * @param string $id
 	 * @return array Format array('param1' => 'value', 'param2' => 'value')
 	 */
 	public function getPreferences($addressBookId) {
@@ -442,7 +441,6 @@ abstract class AbstractBackend {
 	
 	/**
 	 * @brief sets the preferences for the addressbook given in parameter
-	 * @param string $id
 	 * @param array the preferences, format array('param1' => 'value', 'param2' => 'value')
 	 * @return boolean
 	 */
@@ -455,6 +453,9 @@ abstract class AbstractBackend {
 			: false;
 	}
 	
+	/**
+	 * @param string $addressbookid
+	 */
 	public function removePreferences($addressbookid) {
 		$key = $this->combinedKey($addressbookid);
 		$key = 'prefs_' . $key;

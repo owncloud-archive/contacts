@@ -86,7 +86,6 @@ class Backend extends \Sabre\CardDAV\Backend\AbstractBackend {
 	 * well as the return value.
 	 *
 	 * @param mixed $addressbookid
-	 * @param PropPatch $mutations
 	 * @see \Sabre\DAV\IProperties::updateProperties
 	 * @return bool|array
 	 */

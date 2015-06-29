@@ -15,6 +15,9 @@ class Mock extends AbstractBackend {
 	public $contacts;
 	public $userid;
 
+	/**
+	 * @param string $userid
+	 */
 	function __construct($userid = null, $addressBooks = null, $contacts = null) {
 
 		$this->userid = $userid ? $userid : \OC::$server->getUserSession()->getUser()->getUId();

@@ -29,7 +29,7 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 	* @brief Get the source of the item to be stored in the database
 	* @param string Item
 	* @param string Owner of the item
-	* @return mixed|array|false Source
+	* @return boolean Source
 	*
 	* Return an array if the item is file dependent, the array needs two keys: 'item' and 'file'
 	* Return false if the item does not exist for the user

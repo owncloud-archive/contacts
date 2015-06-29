@@ -10,21 +10,22 @@
 
 namespace OCA\Contacts\Controller;
 
-use OCA\Contacts\App,
-	OCA\Contacts\JSONResponse,
-	OCA\Contacts\Controller,
-	Sabre\VObject,
-	OCA\Contacts\VObject\VCard as MyVCard,
-	OCA\Contacts\ImportManager,
-	OCP\IRequest,
-	OCP\ICache,
-	OCP\ITags;
+use OCA\Contacts\App;
+use OCA\Contacts\JSONResponse;
+use OCA\Contacts\Controller;
+use OCA\Contacts\ImportManager;
+use OCP\IRequest;
+use OCP\ICache;
+use OCP\ITags;
 
 /**
  * Controller importing contacts
  */
 class ImportController extends Controller {
 
+	/**
+	 * @param string $appName
+	 */
 	public function __construct($appName, IRequest $request, App $app, ICache $cache, ITags $tags) {
 		parent::__construct($appName, $request, $app);
 		$this->cache = $cache;
@@ -274,8 +275,8 @@ class ImportController extends Controller {
 	}
 
 	/**
-	 * @param $pct
-	 * @param $total
+	 * @param integer $pct
+	 * @param integer $total
 	 * @param $progresskey
 	 */
 	protected function writeProcess($pct, $total, $progresskey) {
@@ -285,9 +286,9 @@ class ImportController extends Controller {
 
 	/**
 	 * @param $view
-	 * @param $filename
+	 * @param string $filename
 	 * @param $progresskey
-	 * @param $response
+	 * @param JSONResponse $response
 	 */
 	protected function cleanup($view, $filename, $progresskey, $response) {
 		if (!$view->unlink('/imports/' . $filename)) {

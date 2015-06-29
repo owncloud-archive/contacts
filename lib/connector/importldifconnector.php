@@ -22,9 +22,9 @@
  
 namespace OCA\Contacts\Connector;
 
-use Sabre\VObject\Component,
-	Sabre\VObject\StringUtil,
-	Sabre\VObject;
+use Sabre\VObject\Component;
+use Sabre\VObject\StringUtil;
+use Sabre\VObject;
 
 /**
  * @brief Implementation of the LDIF import format

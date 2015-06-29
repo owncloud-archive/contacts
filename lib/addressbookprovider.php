@@ -23,7 +23,6 @@
 namespace OCA\Contacts;
 use OCA\Contacts\Utils\JSONSerializer;
 use OCA\Contacts\Utils\Properties;
-use OCA\Contacts\Utils\TemporaryPhoto;
 use OCA\Contacts\VObject\VCard;
 
 /**
@@ -71,22 +70,22 @@ class AddressbookProvider implements \OCP\IAddressBook {
 
 	/**
 	* In comparison to getKey() this function returns a human readable (maybe translated) name
-	* @return mixed
+	* @return string
 	*/
 	public function getDisplayName() {
 		return $this->addressBook->getDisplayName();
 	}
 
 	/**
-	* @return mixed
+	* @return integer
 	*/
 	public function getPermissions() {
 		return $this->addressBook->getPermissions();
 	}
 
 	/**
-	* @param $pattern
-	* @param $searchProperties
+	* @param string $pattern
+	* @param string[] $searchProperties
 	* @param $options
 	* @return array|false
 	*/
@@ -177,7 +176,7 @@ SQL;
 
 	/**
 	* @param $properties
-	* @return mixed
+	* @return Contact|null
 	*/
 	public function createOrUpdate($properties) {
 		$addressBook = $this->getAddressbook();

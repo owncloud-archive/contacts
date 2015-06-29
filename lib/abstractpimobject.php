@@ -38,7 +38,7 @@ abstract class AbstractPIMObject implements IPIMObject {
 
 	/**
 	 * @param integer $permission
-	 * @return boolean
+	 * @return integer
 	 */
 	public function hasPermission($permission) {
 		return $this->getPermissions() & $permission;

@@ -22,7 +22,6 @@
 
 namespace OCA\Contacts\Backend;
 
-use OCA\Contacts\Contact;
 use OCA\Contacts\VObject\VCard;
 use Sabre\VObject\Reader;
 use OCA\Contacts\Connector\LdapConnector;
@@ -90,7 +89,7 @@ class Ldap extends AbstractBackend {
 	
 	/**
 	 * @brief close the current connection
-	 * @return boolean closing success
+	 * @return boolean|null closing success
 	 */
 	public function ldapCloseConnection() {
 		if (self::ldapIsConnected()) {
@@ -199,7 +198,7 @@ class Ldap extends AbstractBackend {
 
 	/**
 	 * @brief adds a new ldap entry
-	 * @param $ldapDN the new DN (must be unique)
+	 * @param string $ldapDN the new DN (must be unique)
 	 * @param $ldapValues the ldif values
 	 * @return boolean insert status
 	 */
@@ -212,7 +211,7 @@ class Ldap extends AbstractBackend {
 	
 	/**
 	 * @brief modify a ldap entry
-	 * @param $ldapDN the DN (must exists)
+	 * @param string $ldapDN the DN (must exists)
 	 * @param $ldapValues the ldif values
 	 * @return boolean modify status
 	 */
@@ -225,7 +224,7 @@ class Ldap extends AbstractBackend {
 	
 	/**
 	 * @brief delete a ldap entry
-	 * @param $ldapDN the DN (must exists)
+	 * @param string $ldapDN the DN (must exists)
 	 * @return boolean delete status
 	 */
 	public function ldapDelete($ldapDN) {
@@ -239,7 +238,6 @@ class Ldap extends AbstractBackend {
 	/**
 	* Sets up the backend
 	*
-	* @param string $cardsTableName
 	*/
 	public function __construct(
 		$userid = null,
@@ -252,7 +250,6 @@ class Ldap extends AbstractBackend {
 	/**
 	 * Returns the list of active addressbooks for a specific user.
  	 *
-	 * @param string $userid
 	 * @return array
 	 */
 	public function getAddressBooksForUser(array $options = array()) {
@@ -471,7 +468,6 @@ class Ldap extends AbstractBackend {
 	 * TODO: Some sort of ETag?
 	 *
 	 * @param string $addressbookid
-	 * @param bool $omitdata Don't fetch the entire carddata or vcard.
 	 * @return array
 	 */
 	public function getContacts($addressbookid, array $options = array()) {
@@ -522,7 +518,7 @@ class Ldap extends AbstractBackend {
 	 * Same as getContacts except that either 'carddata' or 'vcard' is mandatory.
 	 *
 	 * @param string $addressbookid
-	 * @param mixed $id
+	 * @param mixed $ids
 	 * @return array|bool
 	 */
 	public function getContact($addressbookid, $ids, array $options = array()) {
@@ -564,7 +560,7 @@ class Ldap extends AbstractBackend {
 	/**
 	 * @brief construct a vcard in Sabre format
 	 * @param integer $aid Addressbook Id
-	 * @param OC_VObject $card VCard
+	 * @param OC_VObject $vcard VCard
 	 * @return array
 	 */
 	public static function getSabreFormatCard($aid, $vcard) {
@@ -597,7 +593,6 @@ class Ldap extends AbstractBackend {
 	 * Creates a new contact
 	 *
 	 * @param string $addressbookid
-	 * @param VCard|string $carddata
 	 * @return string|bool The identifier for the new contact or false on error.
 	 */
 	public function createContact($addressbookid, $contact, array $options = array()) {

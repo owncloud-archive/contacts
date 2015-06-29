@@ -10,19 +10,19 @@
 
 namespace OCA\Contacts;
 
-use OCP\AppFramework\App as MainApp,
-	OCP\AppFramework\IAppContainer,
-	OCA\Contacts\App,
-	OCA\Contacts\Middleware\Http as HttpMiddleware,
-	OCA\Contacts\Controller\PageController,
-	OCA\Contacts\Controller\AddressBookController,
-	OCA\Contacts\Controller\BackendController,
-	OCA\Contacts\Controller\GroupController,
-	OCA\Contacts\Controller\ContactController,
-	OCA\Contacts\Controller\ContactPhotoController,
-	OCA\Contacts\Controller\SettingsController,
-	OCA\Contacts\Controller\ImportController,
-	OCA\Contacts\Controller\ExportController;
+use OCP\AppFramework\App as MainApp;
+use OCP\AppFramework\IAppContainer;
+use OCA\Contacts\App;
+use OCA\Contacts\Middleware\Http as HttpMiddleware;
+use OCA\Contacts\Controller\PageController;
+use OCA\Contacts\Controller\AddressBookController;
+use OCA\Contacts\Controller\BackendController;
+use OCA\Contacts\Controller\GroupController;
+use OCA\Contacts\Controller\ContactController;
+use OCA\Contacts\Controller\ContactPhotoController;
+use OCA\Contacts\Controller\SettingsController;
+use OCA\Contacts\Controller\ImportController;
+use OCA\Contacts\Controller\ExportController;
 
 /**
  * This class manages our app actions

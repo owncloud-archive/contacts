@@ -42,7 +42,7 @@ class Hooks{
 	/**
 	 * @brief Add default Addressbook for a certain user
 	 * @param paramters parameters from postCreateUser-Hook
-	 * @return array
+	 * @return boolean
 	 */
 	public static function userCreated($parameters) {
 		//Addressbook::addDefault($parameters['uid']);

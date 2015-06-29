@@ -8,7 +8,6 @@
 
 namespace OCA\Contacts;
 
-use Sabre\VObject\Reader;
 use OCA\Contacts\Utils\JSONSerializer;
 
 require_once __DIR__ . '/backend/mock.php';

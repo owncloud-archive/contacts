@@ -22,8 +22,8 @@
 
 namespace OCA\Contacts;
 
-use Sabre\VObject\Property,
-	OCA\Contacts\Utils\Properties;
+use Sabre\VObject\Property;
+use OCA\Contacts\Utils\Properties;
 
 /**
  * Subclass this class or implement IPIMObject interface for PIM objects
@@ -179,7 +179,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	}
 
 	/**
-	 * @return string|null
+	 * @return string
 	 * TODO: Cache result.
 	 */
 	public function getETag() {
@@ -212,7 +212,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 
 	/**
 	 * @param integer $permission
-	 * @return bool
+	 * @return integer
 	 */
 	public function hasPermission($permission) {
 		return $this->getPermissions() & $permission;
@@ -456,7 +456,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	* Get a property index in the contact by the checksum of its serialized value
 	*
 	* @param string $checksum An 8 char m5d checksum.
-	* @return \Sabre\VObject\Property Property by reference
+	* @return integer Property by reference
 	* @throws An exception with error code 404 if the property is not found.
 	*/
 	public function getPropertyIndexByChecksum($checksum) {
@@ -790,6 +790,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 		$this->setSaved(false);
 	}
 
+	/**
+	 * @param boolean $state
+	 */
 	public function setRetrieved($state) {
 		$this->props['retrieved'] = $state;
 	}
