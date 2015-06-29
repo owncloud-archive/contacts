@@ -9,9 +9,6 @@
 
 namespace OCA\Contacts;
 
-use \OC\AppFramework\Core\API;
-
-//require_once __DIR__ . '/../lib/controller/pagecontroller.php';
 \Sabre\VObject\Component\VCard::$componentMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
 \Sabre\VObject\Component\VCard::$propertyMap['CATEGORIES'] = '\OCA\Contacts\VObject\GroupProperty';
 
@@ -24,18 +21,16 @@ use \OC\AppFramework\Core\API;
 	)
 );
 
-$api = new API('contacts');
-
-$api->connectHook('OC_User', 'post_createUser', '\OCA\Contacts\Hooks', 'userCreated');
-$api->connectHook('OC_User', 'post_deleteUser', '\OCA\Contacts\Hooks', 'userDeleted');
-$api->connectHook('OCA\Contacts', 'pre_deleteAddressBook', '\OCA\Contacts\Hooks', 'addressBookDeletion');
-$api->connectHook('OCA\Contacts', 'pre_deleteContact', '\OCA\Contacts\Hooks', 'contactDeletion');
-$api->connectHook('OCA\Contacts', 'post_createContact', 'OCA\Contacts\Hooks', 'contactAdded');
-$api->connectHook('OCA\Contacts', 'post_updateContact', '\OCA\Contacts\Hooks', 'contactUpdated');
-$api->connectHook('OCA\Contacts', 'scanCategories', '\OCA\Contacts\Hooks', 'scanCategories');
-$api->connectHook('OCA\Contacts', 'indexProperties', '\OCA\Contacts\Hooks', 'indexProperties');
-$api->connectHook('OC_Calendar', 'getEvents', 'OCA\Contacts\Hooks', 'getBirthdayEvents');
-$api->connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Hooks', 'getCalenderSources');
+\OCP\Util::connectHook('OC_User', 'post_createUser', '\OCA\Contacts\Hooks', 'userCreated');
+\OCP\Util::connectHook('OC_User', 'post_deleteUser', '\OCA\Contacts\Hooks', 'userDeleted');
+\OCP\Util::connectHook('OCA\Contacts', 'pre_deleteAddressBook', '\OCA\Contacts\Hooks', 'addressBookDeletion');
+\OCP\Util::connectHook('OCA\Contacts', 'pre_deleteContact', '\OCA\Contacts\Hooks', 'contactDeletion');
+\OCP\Util::connectHook('OCA\Contacts', 'post_createContact', 'OCA\Contacts\Hooks', 'contactAdded');
+\OCP\Util::connectHook('OCA\Contacts', 'post_updateContact', '\OCA\Contacts\Hooks', 'contactUpdated');
+\OCP\Util::connectHook('OCA\Contacts', 'scanCategories', '\OCA\Contacts\Hooks', 'scanCategories');
+\OCP\Util::connectHook('OCA\Contacts', 'indexProperties', '\OCA\Contacts\Hooks', 'indexProperties');
+\OCP\Util::connectHook('OC_Calendar', 'getEvents', 'OCA\Contacts\Hooks', 'getBirthdayEvents');
+\OCP\Util::connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Hooks', 'getCalenderSources');
 
 \OCP\Util::addscript('contacts', 'loader');
 \OCP\Util::addscript('contacts', 'admin');
@@ -47,12 +42,16 @@ $api->connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Hooks', 'getCalende
 \OCP\App::registerAdmin('contacts', 'admin');
 
 if (\OCP\User::isLoggedIn()) {
-	$app = new App($api->getUserId());
-	$addressBooks = $app->getAddressBooksForUser();
-	foreach ($addressBooks as $addressBook)  {
-		if ($addressBook->isActive()) {
-            \OCP\Contacts::registerAddressBook($addressBook->getSearchProvider());
-        }
-	}
+	$cm = \OC::$server->getContactsManager();
+	$cm->register(function() use ($cm) {
+		$userId = \OC::$server->getUserSession()->getUser()->getUID();
+		$app = new App($userId);
+		$addressBooks = $app->getAddressBooksForUser();
+		foreach ($addressBooks as $addressBook)  {
+			if ($addressBook->isActive()) {
+				$cm->registerAddressBook($addressBook->getSearchProvider());
+			}
+		}
+	});
 }
 

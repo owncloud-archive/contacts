@@ -38,7 +38,7 @@ class App {
 	/**
 	 * @brief language object for calendar app
 	 *
-	 * @var OC_L10N
+	 * @var \OCP\IL10N
 	 */
 	public static $l10n;
 
