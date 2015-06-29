@@ -91,13 +91,6 @@ class JSONSerializer {
 
 		if(isset($contact->PHOTO) || isset($contact->LOGO)) {
 			$details['photo'] = true;
-			$details['thumbnail'] = Properties::cacheThumbnail(
-				$contact->getBackend()->name,
-				$contact->getParent()->getId(),
-				$contact->getId(),
-				null,
-				$contact
-			);
 		}
 
 		foreach($contact->children as $property) {
