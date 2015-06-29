@@ -324,7 +324,7 @@ OC.Contacts = OC.Contacts || {};
 			$elem.find('select.type[name="parameters[TYPE][]"], select.type[name="parameters[X-SERVICE-TYPE]"]')
 				.combobox({
 					singleclick: true,
-					classes: ['propertytype', 'float', 'label'],
+					classes: ['propertytype', 'float', 'label']
 				});
 		}
 	};
@@ -557,13 +557,13 @@ OC.Contacts = OC.Contacts || {};
 							action:'add', 
 							name: element,
 							newchecksum: response.data.checksum,
-							newvalue: value,
+							newvalue: value
 						});
 						self.data[element].push({
 							name: element,
 							value: value,
 							parameters: parameters,
-							checksum: response.data.checksum,
+							checksum: response.data.checksum
 						});
 					}
 					self.propertyContainerFor(obj).data('checksum', response.data.checksum);
@@ -573,7 +573,7 @@ OC.Contacts = OC.Contacts || {};
 					self.pushToUndo({
 						action: ((obj && obj.defaultValue) || self.data[element].length) ? 'save' : 'add', // FIXME
 						name: element,
-						newvalue: value,
+						newvalue: value
 					});
 					switch(element) {
 						case 'CATEGORIES':
