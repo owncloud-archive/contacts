@@ -43,7 +43,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	/**
 	 * @brief language object
 	 *
-	 * @var OC_L10N
+	 * @var \OCP\IL10N
 	 */
 	public static $l10n;
 
@@ -429,24 +429,10 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$type = strtoupper(array_pop($type));
 		}
 		if (isset($this->PHOTO)) {
-			$property = $this->PHOTO;
-			if (!$property) {
-				return false;
-			}
-			$property->setValue(strval($photo));
-			$property->parameters = array();
-			$property->parameters[]
-				= new \Sabre\VObject\Parameter('ENCODING', 'b');
-			$property->parameters[]
-				= new \Sabre\VObject\Parameter('TYPE', $photo->mimeType());
-			$this->PHOTO = $property;
-		} else {
-			$this->add('PHOTO',
-				strval($photo), array('ENCODING' => 'b',
-				'TYPE' => $type));
-			// TODO: Fix this hack
-			$this->setSaved(false);
+			$this->remove('PHOTO');
 		}
+		$this->add('PHOTO', $photo->data(), ['ENCODING' => 'b', 'TYPE' => $type]);
+		$this->setSaved(false);
 
 		return true;
 
