@@ -22,6 +22,7 @@
 
 namespace OCA\Contacts;
 
+use Exception;
 use Sabre\VObject\Property;
 use OCA\Contacts\Utils\Properties;
 
@@ -43,7 +44,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	/**
 	 * @brief language object
 	 *
-	 * @var OC_L10N
+	 * @var \OCP\IL10N
 	 */
 	public static $l10n;
 
@@ -114,8 +115,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @return array|null
 	 */
 	public function getMetaData() {
-		if (!$this->hasPermission(\OCP\PERMISSION_READ)) {
-			throw new \Exception(self::$l10n->t('You do not have permissions to see this contact'), 403);
+		if (!$this->hasPermission(\OCP\Constants::PERMISSION_READ)) {
+			throw new Exception(self::$l10n->t('You do not have permissions to see this contact'), 403);
 		}
 		if (!isset($this->props['displayname'])) {
 			if (!$this->retrieve()) {
@@ -163,8 +164,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @return string|null
 	 */
 	public function getDisplayName() {
-		if (!$this->hasPermission(\OCP\PERMISSION_READ)) {
-			throw new \Exception(self::$l10n->t('You do not have permissions to see this contact'), 403);
+		if (!$this->hasPermission(\OCP\Constants::PERMISSION_READ)) {
+			throw new Exception(self::$l10n->t('You do not have permissions to see this contact'), 403);
 		}
 		return isset($this->props['displayname'])
 			? $this->props['displayname']
@@ -252,8 +253,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @return bool
 	 */
 	public function delete() {
-		if (!$this->hasPermission(\OCP\PERMISSION_DELETE)) {
-			throw new \Exception(self::$l10n->t('You do not have permissions to delete this contact'), 403);
+		if (!$this->hasPermission(\OCP\Constants::PERMISSION_DELETE)) {
+			throw new Exception(self::$l10n->t('You do not have permissions to delete this contact'), 403);
 		}
 		return $this->props['backend']->deleteContact(
 			$this->getParent()->getId(),
@@ -267,8 +268,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 * @return bool
 	 */
 	public function save($force = false) {
-		if (!$this->hasPermission(\OCP\PERMISSION_UPDATE)) {
-			throw new \Exception(self::$l10n->t('You do not have permissions to update this contact'), 403);
+		if (!$this->hasPermission(\OCP\Constants::PERMISSION_UPDATE)) {
+			throw new Exception(self::$l10n->t('You do not have permissions to update this contact'), 403);
 		}
 		if ($this->isSaved() && !$force) {
 			\OCP\Util::writeLog('contacts', __METHOD__.' Already saved: ' . print_r($this->props, true), \OCP\Util::DEBUG);
@@ -280,8 +281,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 		}
 
 		if ($this->getId()) {
-			if (!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_UPDATE)) {
-				throw new \Exception(self::$l10n->t('The backend for this contact does not support updating it'), 501);
+			if (!$this->getBackend()->hasContactMethodFor(\OCP\Constants::PERMISSION_UPDATE)) {
+				throw new Exception(self::$l10n->t('The backend for this contact does not support updating it'), 501);
 			}
 			if ($this->getBackend()
 				->updateContact(
@@ -297,8 +298,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 				return false;
 			}
 		} else {
-			if (!$this->getBackend()->hasContactMethodFor(\OCP\PERMISSION_CREATE)) {
-				throw new \Exception(self::$l10n->t('This backend does not support adding contacts'), 501);
+			if (!$this->getBackend()->hasContactMethodFor(\OCP\Constants::PERMISSION_CREATE)) {
+				throw new Exception(self::$l10n->t('This backend does not support adding contacts'), 501);
 			}
 			$this->props['id'] = $this->getBackend()->createContact(
 				$this->getParent()->getId(), $this
@@ -388,7 +389,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 					\OCP\Util::writeLog('contacts', __METHOD__.' Error reading: ' . print_r($data, true), \OCP\Util::DEBUG);
 					return false;
 				}
-			} catch (\Exception $e) {
+			} catch (Exception $e) {
 				\OCP\Util::writeLog('contacts', __METHOD__ .
 					' Error parsing carddata  for: ' . $this->getId() . ' ' . $e->getMessage(),
 						\OCP\Util::ERROR);
@@ -406,11 +407,13 @@ class Contact extends VObject\VCard implements IPIMObject {
 	public function getPhoto() {
 		$image = new \OCP\Image();
 
-		if (isset($this->PHOTO) && $image->loadFromBase64((string)$this->PHOTO)) {
+		if (isset($this->PHOTO) && $image->loadFromData($this->PHOTO->getValue())) {
 			return $image;
-		} elseif (isset($this->LOGO) && $image->loadFromBase64((string)$this->LOGO)) {
+		} elseif (isset($this->LOGO) && $image->loadFromData($this->LOGO->getValue())) {
 			return $image;
 		}
+
+		return null;
 	}
 
 	/**
@@ -429,27 +432,12 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$type = strtoupper(array_pop($type));
 		}
 		if (isset($this->PHOTO)) {
-			$property = $this->PHOTO;
-			if (!$property) {
-				return false;
-			}
-			$property->setValue(strval($photo));
-			$property->parameters = array();
-			$property->parameters[]
-				= new \Sabre\VObject\Parameter('ENCODING', 'b');
-			$property->parameters[]
-				= new \Sabre\VObject\Parameter('TYPE', $photo->mimeType());
-			$this->PHOTO = $property;
-		} else {
-			$this->add('PHOTO',
-				strval($photo), array('ENCODING' => 'b',
-				'TYPE' => $type));
-			// TODO: Fix this hack
-			$this->setSaved(false);
+			$this->remove('PHOTO');
 		}
+		$this->add('PHOTO', $photo->data(), ['ENCODING' => 'b', 'TYPE' => $type]);
+		$this->setSaved(false);
 
 		return true;
-
 	}
 
 	/**
@@ -457,7 +445,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	*
 	* @param string $checksum An 8 char m5d checksum.
 	* @return integer Property by reference
-	* @throws An exception with error code 404 if the property is not found.
+	* @throws Exception with error code 404 if the property is not found.
 	*/
 	public function getPropertyIndexByChecksum($checksum) {
 		$this->retrieve();
@@ -468,7 +456,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			}
 			$idx += 1;
 		}
-		throw new \Exception(self::$l10n->t('Property not found'), 404);
+		throw new Exception(self::$l10n->t('Property not found'), 404);
 	}
 
 	/**
@@ -476,7 +464,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	*
 	* @param string $checksum An 8 char m5d checksum.
 	* @return \Sabre\VObject\Property Property by reference
-	* @throws An exception with error code 404 if the property is not found.
+	* @throws Exception with error code 404 if the property is not found.
 	*/
 	public function getPropertyByChecksum($checksum) {
 		$this->retrieve();
@@ -485,7 +473,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				return $property;
 			}
 		}
-		throw new \Exception(self::$l10n->t('Property not found'), 404);
+		throw new Exception(self::$l10n->t('Property not found'), 404);
 	}
 
 	/**
@@ -572,7 +560,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			case 'BDAY':
 				try {
 					$date = New \DateTime($value);
-				} catch(\Exception $e) {
+				} catch(Exception $e) {
 					\OCP\Util::writeLog('contacts',
 						__METHOD__.' DateTime exception: ' . $e->getMessage(),
 						\OCP\Util::ERROR
@@ -698,53 +686,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 		return true;
 	}
 
-	/**
-	 * Merge in data from another VCard
-	 * Used on import if a matching UID is found. Returns true if any updates
-	 * take place, otherwise false.
-	 *
-	 * @param VCard $vcard
-	 * @return bool
-	 */
-	public function mergeFromVCard(VCard $vcard) {
-		$updated = false;
-		foreach ($vcard->children as $property) {
-			if (in_array($property->name, array('REV', 'UID'))) {
-				continue;
-			}
-			\OCP\Util::writeLog('contacts', __METHOD__.' merging: ' .$property->name, \OCP\Util::DEBUG);
-			if (in_array($property->name, Utils\Properties::$multiProperties)) {
-				$ownproperties = $this->select($property->name);
-				if (count($ownproperties) === 0) {
-					// We don't have any instances of this property, so just add it.
-					$this->add($property);
-					$updated = true;
-					continue;
-				} else {
-					foreach ($ownproperties as $ownproperty) {
-						if (strtolower($property->getValue()) === strtolower($ownproperty->getValue())) {
-							// We already have this property, so skip both loops
-							continue 2;
-						}
-					}
-					$this->add($property);
-					$updated = true;
-				}
-			} else {
-				if(!isset($this->{$property->name})) {
-					$this->add($property);
-					$updated = true;
-				} else {
-					$this->setPropertyByName($property->name, $property->getValue(), $property->parameters);
-				}
-			}
-		}
-
-		$this->setSaved(!$updated);
-
-		return $updated;
-	}
-
 	public function __get($key) {
 		if (!$this->isRetrieved()) {
 			$this->retrieve();
@@ -816,7 +757,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 	 */
 	public function getBirthdayEvent() {
 		if (!isset($this->BDAY)) {
-			return;
+			return null;
 		}
 		$birthday = $this->BDAY;
 		if ((string)$birthday) {
@@ -826,27 +767,29 @@ class Contact extends VObject\VCard implements IPIMObject {
 			);
 			try {
 				$date = new \DateTime($birthday);
-			} catch(\Exception $e) {
-				return;
+			} catch(Exception $e) {
+				return null;
 			}
-			$vcal = new \Sabre\VObject\Component\VCalendar();
-			$vcal->VERSION = '2.0';
-			$vevent = $vcal->createComponent('VEVENT');
-			$vevent->add('DTSTART');
-			$vevent->DTSTART->setDateTime(
+			$vCal = new \Sabre\VObject\Component\VCalendar();
+			$vCal->VERSION = '2.0';
+			$vEvent = $vCal->createComponent('VEVENT');
+			$vEvent->add('DTSTART');
+			$vEvent->DTSTART->setDateTime(
 				$date
 			);
-			$vevent->DTSTART['VALUE'] = 'date';
-			$vevent->add('DURATION', 'P1D');
-			$vevent->{'UID'} = $this->UID;
-			$vevent->{'RRULE'} = 'FREQ=YEARLY';
-			$vevent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
-			$vevent->{'TRANSP'} = 'TRANSPARENT';
-			$appinfo = \OCP\App::getAppInfo('contacts');
-			$appversion = \OCP\App::getAppVersion('contacts');
-			$vcal->PRODID = '-//ownCloud//NONSGML '.$appinfo['name'].' '.$appversion.'//EN';
-			return $vcal;
+			$vEvent->DTSTART['VALUE'] = 'date';
+			$vEvent->add('DURATION', 'P1D');
+			$vEvent->{'UID'} = $this->UID;
+			$vEvent->{'RRULE'} = 'FREQ=YEARLY';
+			$vEvent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
+			$vEvent->{'TRANSP'} = 'TRANSPARENT';
+			$appInfo = \OCP\App::getAppInfo('contacts');
+			$appVersion = \OCP\App::getAppVersion('contacts');
+			$vCal->PRODID = '-//ownCloud//NONSGML '.$appInfo['name'].' '.$appVersion.'//EN';
+			return $vCal;
 		}
+
+		return null;
 	}
 
 }

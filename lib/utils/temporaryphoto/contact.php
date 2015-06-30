@@ -34,7 +34,7 @@ class Contact extends BaseTemporaryPhoto {
 	/**
 	 * The Contact object to load the image from
 	 *
-	 * @var OCA\Contacts\Contact
+	 * @var \OCA\Contacts\Contact
 	 */
 	protected $contact;
 
