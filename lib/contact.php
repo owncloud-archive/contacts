@@ -407,9 +407,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 	public function getPhoto() {
 		$image = new \OCP\Image();
 
-		if (isset($this->PHOTO) && $image->loadFromBase64((string)$this->PHOTO)) {
+		if (isset($this->PHOTO) && $image->loadFromData($this->PHOTO->getValue())) {
 			return $image;
-		} elseif (isset($this->LOGO) && $image->loadFromBase64((string)$this->LOGO)) {
+		} elseif (isset($this->LOGO) && $image->loadFromData($this->LOGO->getValue())) {
 			return $image;
 		}
 

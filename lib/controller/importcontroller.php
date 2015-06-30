@@ -181,7 +181,6 @@ class ImportController extends Controller {
 			return $response;
 		}
 		$view = \OCP\Files::getStorage('contacts');
-		$file = $view->file_get_contents('/imports/' . $filename);
 
 		$importManager = new ImportManager();
 
