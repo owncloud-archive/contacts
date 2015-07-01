@@ -156,18 +156,18 @@ author: Nicolas Mora mail@babelouest.org
 		</vcard_entry>
 	</import_entry>
 	
-	<import_entry name="E-mail 1 - Value" enabled="true">
+	<import_entry name="E-mail 1 - Value" enabled="true" separator=":::">
 		<vcard_entry property="EMAIL" group="email1">
 		</vcard_entry>
 	</import_entry>
 	
 	<import_entry name="Phone 1 - Type" enabled="true" remove="*">
-		<vcard_entry property="PHONE" group="phone1" value="type">
+		<vcard_entry property="TEL" group="phone1" value="type">
 		</vcard_entry>
 	</import_entry>
 	
-	<import_entry name="Phone 1 - Value" enabled="true">
-		<vcard_entry property="PHONE" group="phone1">
+	<import_entry name="Phone 1 - Value" enabled="true" separator=":::">
+		<vcard_entry property="TEL" group="phone1">
 		</vcard_entry>
 	</import_entry>
 	

@@ -207,8 +207,12 @@ class ImportLdifConnector extends ImportConnector{
 			return 0;
 		} else {
 			$element = $this->convertElementToVCard($parts[0]);
-			$unknownElements = $element->select("X-Unknown-Element");
-			return (1 - (0.5 * count($unknownElements)/count($parts[0])));
+			if ($element) {
+				$unknownElements = $element->select("X-Unknown-Element");
+				return (1 - (0.5 * count($unknownElements)/count($parts[0])));
+			} else {
+				return 0;
+			}
 		}
 	}	
 }
