@@ -8,7 +8,7 @@ OC.L10N.register(
     "Save" : "Desa",
     "Edit Addressbook" : "Edita la llibreta d'adreces",
     "Import contacts" : "Importa contactes",
-    "Upload file..." : "puja un fitxer",
+    "Upload file..." : "Puja un fitxer",
     "Starting file import" : "Iniciant la importació del fitxer",
     "Format selected: {format}" : "Format seleccionat: {format}",
     "Automatic format detection" : "Detecció automàtica del format",
