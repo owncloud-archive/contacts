@@ -58,7 +58,7 @@ class AddressBookProviderTest extends TestCase {
 		$card->add('FN', 'Jan Janssens');
 		$id = $this->ab->addChild($card);
 		Utils\Properties::updateIndex($id, $card);
-		$this->ab->deleteChild($id);
+		$this->contactIds[] = $id;
 	}
 
 	public function tearDown() {
@@ -69,13 +69,25 @@ class AddressBookProviderTest extends TestCase {
 		parent::tearDown();
 	}
 
-	public function testSearch() {
-		$result = $this->provider->search('',array('FN'), array());
+	/**
+	 * @dataProvider providesSearchData
+	 */
+	public function testSearch($expected, $pattern) {
+		$result = $this->provider->search($pattern, ['FN'], array());
 
 		$this->assertTrue(is_array($result));
-		$this->assertEquals(1, count($result));
-		$this->assertEquals('Max Mustermann', $result[0]['FN']);
+		$this->assertEquals(count($expected), count($result));
+		$result = array_map(function($c){
+			return $c['FN'];
+		}, $result);
+		$this->assertEquals($expected, $result);
 	}
 
+	public function providesSearchData() {
+		return [
+			'empty pattern' => [['Max Mustermann', 'Jan Janssens'], ''],
+			'case insensitive' => [['Max Mustermann'], 'max'],
+		];
+	}
 
 }
