@@ -23,6 +23,8 @@
 namespace OCA\Contacts\Utils;
 
 use OCA\Contacts\App;
+use OCA\Contacts\VObject\VCard;
+use Sabre\VObject\UUIDUtil;
 
 Properties::$l10n = \OCP\Util::getL10N('contacts');
 
@@ -39,7 +41,7 @@ Class Properties {
 	/**
 	 * @brief language object for calendar app
 	 *
-	 * @var OC_L10N
+	 * @var \OCP\IL10N
 	 */
 	public static $l10n;
 
@@ -207,9 +209,12 @@ Class Properties {
 		);
 	}
 
-	public static function generateUID($app = 'contacts') {
-		$uuid = new UUID();
-		return $uuid->get() . '@' . \OCP\Util::getServerHostName();
+	/**
+	 * @return string
+	 */
+	public static function generateUID() {
+		$uuid = UUIDUtil::getUUID();
+		return $uuid . '@' . \OCP\Util::getServerHostName();
 	}
 
 	/**
@@ -246,13 +251,13 @@ Class Properties {
 	 * If it is a valid object the old properties will first be purged
 	 * and the current properties indexed.
 	 *
-	 * @param string $contactid
-	 * @param \OCA\VObject\VCard|null $vcard
+	 * @param string $contactId
+	 * @param VCard|null $vCard
 	 */
-	public static function updateIndex($contactid, $vcard = null) {
-		self::purgeIndexes(array($contactid));
+	public static function updateIndex($contactId, $vCard = null) {
+		self::purgeIndexes(array($contactId));
 
-		if(is_null($vcard)) {
+		if(is_null($vCard)) {
 			return;
 		}
 
@@ -260,7 +265,7 @@ Class Properties {
 			self::$updateindexstmt = \OCP\DB::prepare( 'INSERT INTO `' . self::$indexTableName . '` '
 				. '(`userid`, `contactid`,`name`,`value`,`preferred`) VALUES(?,?,?,?,?)' );
 		}
-		foreach($vcard->children as $property) {
+		foreach($vCard->children as $property) {
 			if(!in_array($property->name, self::$indexProperties)) {
 				continue;
 			}
@@ -275,7 +280,7 @@ Class Properties {
 				$result = self::$updateindexstmt->execute(
 					array(
 						\OC::$server->getUserSession()->getUser()->getUId(),
-						$contactid,
+						$contactId,
 						$property->name,
 						substr($property->getValue(), 0, 254),
 						$preferred,
@@ -294,7 +299,7 @@ Class Properties {
 	}
 
 	public static function cacheThumbnail($backendName, $addressBookId, $contactId,
-		\OCP\Image $image = null, $vcard = null, $options = array()
+		\OCP\Image $image = null, $vCard = null, $options = array()
 	) {
 		$cache = \OC::$server->getCache();
 		$key = self::THUMBNAIL_PREFIX . $backendName . '::' . $addressBookId . '::' . $contactId;
@@ -320,12 +325,12 @@ Class Properties {
 		}
 
 		if (is_null($image)) {
-			if (is_null($vcard)) {
+			if (is_null($vCard)) {
 				$app = new App();
-				$vcard = $app->getContact($backendName, $addressBookId, $contactId);
+				$vCard = $app->getContact($backendName, $addressBookId, $contactId);
 			}
 			$image = new \OCP\Image();
-			if (!isset($vcard->PHOTO) || !$image->loadFromBase64((string)$vcard->PHOTO)) {
+			if (!isset($vCard->PHOTO) || !$image->loadFromBase64((string)$vCard->PHOTO)) {
 				return false;
 			}
 		}
