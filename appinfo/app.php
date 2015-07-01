@@ -32,8 +32,11 @@ namespace OCA\Contacts;
 \OCP\Util::connectHook('OC_Calendar', 'getEvents', 'OCA\Contacts\Hooks', 'getBirthdayEvents');
 \OCP\Util::connectHook('OC_Calendar', 'getSources', 'OCA\Contacts\Hooks', 'getCalenderSources');
 
-\OCP\Util::addscript('contacts', 'loader');
-\OCP\Util::addscript('contacts', 'admin');
+$url = \OC::$server->getRequest()->server['REQUEST_URI'];
+
+if (preg_match('%index.php/apps/files(/.*)?%', $url)) {
+	\OCP\Util::addscript('contacts', 'loader');
+}
 
 \OC::$server->getSearch()->registerProvider('OCA\Contacts\Search\Provider', array('apps' => array('contacts')));
 \OCP\Share::registerBackend('contact', 'OCA\Contacts\Share\Contact');
