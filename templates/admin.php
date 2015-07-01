@@ -10,7 +10,6 @@
  * later.
  */
 
-script('contacts', 'admin')
 ?>
 
 <div class="section">
