@@ -324,7 +324,7 @@ OC.Contacts = OC.Contacts || {};
 			$elem.find('select.type[name="parameters[TYPE][]"], select.type[name="parameters[X-SERVICE-TYPE]"]')
 				.combobox({
 					singleclick: true,
-					classes: ['propertytype', 'float', 'label'],
+					classes: ['propertytype', 'float', 'label']
 				});
 		}
 	};
@@ -556,13 +556,13 @@ OC.Contacts = OC.Contacts || {};
 							action:'add', 
 							name: element,
 							newchecksum: response.data.checksum,
-							newvalue: value,
+							newvalue: value
 						});
 						self.data[element].push({
 							name: element,
 							value: value,
 							parameters: parameters,
-							checksum: response.data.checksum,
+							checksum: response.data.checksum
 						});
 					}
 					self.propertyContainerFor(obj).data('checksum', response.data.checksum);
@@ -572,7 +572,7 @@ OC.Contacts = OC.Contacts || {};
 					self.pushToUndo({
 						action: ((obj && obj.defaultValue) || self.data[element].length) ? 'save' : 'add', // FIXME
 						name: element,
-						newvalue: value,
+						newvalue: value
 					});
 					switch(element) {
 						case 'CATEGORIES':
@@ -1611,7 +1611,7 @@ OC.Contacts = OC.Contacts || {};
 	 * Set a thumbnail for the contact if a PHOTO property exists
 	 */
 	Contact.prototype.setThumbnail = function($elem, refresh) {
-		if(!this.data.thumbnail && !refresh) {
+		if(!this.data.photo && !refresh) {
 			this.getListItemElement().find('.avatar').css('height', '32px');
 			var name = String(this.getDisplayName()).replace(' ', '').replace(',', '');
 			this.getListItemElement().find('.avatar').imageplaceholder(name || '#');
@@ -1623,9 +1623,17 @@ OC.Contacts = OC.Contacts || {};
 		if(!$elem.hasClass('thumbnail') && !refresh) {
 			return;
 		}
-		if(this.data.thumbnail) {
+		if(this.data.photo) {
 			$elem.removeClass('thumbnail').find('.avatar').remove();
-			$elem.css('background-image', 'url(data:image/png;base64,' + this.data.thumbnail + ')');
+			var contactId = this.id || 'new',
+				backend = this.metadata.backend,
+				addressBookId = this.metadata.parent;
+			var url = OC.generateUrl(
+				'apps/contacts/addressbook/{backend}/{addressBookId}/contact/{contactId}/photo?maxSize=32',
+				{backend: backend, addressBookId: addressBookId, contactId: contactId}
+			);
+
+			$elem.css('background-image', 'url(' + url + ')');
 		} else {
 			$elem.addClass('thumbnail');
 			$elem.removeAttr('style');
