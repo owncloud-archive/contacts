@@ -15,17 +15,17 @@ OC.Contacts = OC.Contacts || {};
 	*/
 	var Contact = function(parent, id, metadata, data, listtemplate, dragtemplate, fulltemplate, detailtemplates) {
 		//console.log('contact:', id, metadata, data); //parent, id, data, listtemplate, fulltemplate);
-		this.parent = parent,
-			this.storage = parent.storage,
-			this.id = id,
-			this.metadata = metadata,
-			this.data = data,
-			this.$dragTemplate = dragtemplate,
-			this.$listTemplate = listtemplate,
-			this.$fullTemplate = fulltemplate;
-			this.detailTemplates = detailtemplates;
-			this.displayNames = {};
-			this.sortOrder = contacts_sortby || 'fn';
+		this.parent = parent;
+		this.storage = parent.storage;
+		this.id = id;
+		this.metadata = metadata;
+		this.data = data;
+		this.$dragTemplate = dragtemplate;
+		this.$listTemplate = listtemplate;
+		this.$fullTemplate = fulltemplate;
+		this.detailTemplates = detailtemplates;
+		this.displayNames = {};
+		this.sortOrder = contacts_sortby || 'fn';
 		this.undoQueue = [];
 		this.multi_properties = ['EMAIL', 'TEL', 'IMPP', 'ADR', 'URL', 'CLOUD'];
 	};
@@ -2307,13 +2307,15 @@ OC.Contacts = OC.Contacts || {};
 			// Make a map of backends, address books and contacts for easier processing.
 			do {
 				contact = this.deletionQueue.shift();
-				if(!contactMap[contact.getBackend()]) {
-					contactMap[contact.getBackend()] = {};
+				if (!_.isUndefined(contact)) {
+					if(!contactMap[contact.getBackend()]) {
+						contactMap[contact.getBackend()] = {};
+					}
+					if(!contactMap[contact.getBackend()][contact.getParent()]) {
+						contactMap[contact.getBackend()][contact.getParent()] = [];
+					}
+					contactMap[contact.getBackend()][contact.getParent()].push(contact.getId());
 				}
-				if(!contactMap[contact.getBackend()][contact.getParent()]) {
-					contactMap[contact.getBackend()][contact.getParent()] = [];
-				}
-				contactMap[contact.getBackend()][contact.getParent()].push(contact.getId());
 			} while(this.deletionQueue.length > 0);
 			console.log('map', contactMap);
 
