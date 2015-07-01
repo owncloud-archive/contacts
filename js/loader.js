@@ -67,7 +67,7 @@ OC.ContactsImporter = OC.ContactsImporter || {
 									closeButton: false,
 									title: t('contacts', 'Importing...')
 								});
-								self.startImport($selected.data('backend'), $selected.val());
+								self.startImport($selected.data('backend'), $selected.val(), self.$importFormatSelect.find('option:selected').val());
 							}
 						}]);
 					}
