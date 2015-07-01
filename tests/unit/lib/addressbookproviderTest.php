@@ -42,7 +42,8 @@ class AddressBookProviderTest extends TestCase {
 
 	public function setUp() {
 		parent::setUp();
-		$this->testUser = uniqid('user_');
+
+		$this->testUser = $this->getUniqueID('user_');
 		// needed because some parts of code call "getRequest()" and "getSession()"
 		$session = $this->getMockBuilder('\OC\Session\Memory')
 			->disableOriginalConstructor()
@@ -72,11 +73,10 @@ class AddressBookProviderTest extends TestCase {
 		$this->backend = new Backend\Database($this->testUser);
 		$this->abinfo = array('displayname' => uniqid('display_'));
 		$this->ab = new AddressBook($this->backend, $this->abinfo);
-
 		$this->provider = new AddressbookProvider($this->ab);
 
 		$card = new \OCA\Contacts\VObject\VCard();
-		$uid = substr(md5(rand().time()), 0, 10);
+		$uid = substr(md5($this->getUniqueID()), 0, 10);
 		$card->add('UID', $uid);
 		$card->add('FN', 'Max Mustermann');
 		$id = $this->ab->addChild($card);
