@@ -1335,6 +1335,7 @@ OC.Contacts = OC.Contacts || {};
 			dateFormat : datepickerFormatDate,
 			changeMonth: true,
 			changeYear: true,
+			yearRange: '-100:+0',
 			minDate : new Date(1900,1,1),
 			maxDate : new Date()
 		});
