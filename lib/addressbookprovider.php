@@ -123,7 +123,7 @@ SQL;
 		foreach ($searchProperties as $property) {
 			$params[] = $property;
 			$params[] = '%' . $pattern . '%';
-			$query .= '(`name` = ? AND `value` LIKE ?) OR ';
+			$query .= '(`name` = ? AND `value` ILIKE ?) OR ';
 		}
 		$query = substr($query, 0, strlen($query) - 4);
 		$query .= ')';
