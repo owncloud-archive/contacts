@@ -51,7 +51,7 @@ use OCA\Contacts\ImportManager;
 								?>
 							</select>
 							<button class="icon-upload svg tooltipped rightwards import-upload-button" title="<?php p($l->t('Select file...')); ?>"></button>
-							<input id="import_upload_start" class="tooltipped rightwards" title="<?php p($l->t('Select file...')); ?>" type="file" accept="text/vcard,text/x-vcard,text/directory" name="file" disabled />
+							<input id="import_upload_start" class="tooltipped rightwards" title="<?php p($l->t('Select file...')); ?>" type="file" name="file" disabled />
 						</li>
 						<li class="import-status">
 							<label id="import-status-text"></label>
