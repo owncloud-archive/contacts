@@ -311,13 +311,13 @@ OC.notify = function(params) {
 		// Build the select to add/remove from groups.
 		buildGroupSelect: function() {
 			// If a contact is open we know which categories it's in
+			var addopts = '', rmopts = '';
 			if(this.currentid) {
 				var contact = this.contacts.findById(this.currentid);
 				if(contact === null) {
 					return false;
 				}
 				this.$groups.find('optgroup,option:not([value="-1"])').remove();
-				var addopts = '', rmopts = '';
 				$.each(this.groups.categories, function(i, category) {
 					if(contact.inGroup(category.name)) {
 						rmopts += '<option value="' + category.id + '">' + category.name + '</option>';
@@ -335,7 +335,6 @@ OC.notify = function(params) {
 				}
 			} else if(this.contacts.getSelectedContacts().length > 0) { // Otherwise add all categories to both add and remove
 				this.$groups.find('optgroup,option:not([value="-1"])').remove();
-				var addopts = '', rmopts = '';
 				$.each(this.groups.categories, function(i, category) {
 					rmopts += '<option value="' + category.id + '">' + category.name + '</option>';
 					addopts += '<option value="' + category.id + '">' + category.name + '</option>';
@@ -471,8 +470,7 @@ OC.notify = function(params) {
 						var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!-\/]))?/;
 						//if(new RegExp("[a-zA-Z0-9]+://([a-zA-Z0-9_]+:[a-zA-Z0-9_]+@)?([a-zA-Z0-9.-]+\\.[A-Za-z]{2,4})(:[0-9]+)?(/.*)?").test(data.url)) {
 						if(regexp.test(data.url)) {
-							var newWindow = window.open(data.url,'_blank');
-							newWindow.focus();
+							window.open(data.url,'_blank').focus();
 						} else {
 							$(document).trigger('status.contacts.error', {
 								error: true,
@@ -481,8 +479,8 @@ OC.notify = function(params) {
 						}
 						break;
 					case 'email':
-						var regexp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-						if(regexp.test(data.url)) {
+						var emailRegEx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+						if(emailRegEx.test(data.url)) {
 							console.log('success');
 							var url = 'mailto:' + data.url;
 							try {
@@ -510,8 +508,7 @@ OC.notify = function(params) {
 						var address = data.url.filter(function(n) {
 							return n;
 						});
-						var newWindow = window.open('http://open.mapquest.com/?q='+address, '_blank');
-						newWindow.focus();
+						window.open('http://open.mapquest.com/?q='+address, '_blank').focus();
 						break;
 				}
 			});
@@ -607,7 +604,6 @@ OC.notify = function(params) {
 						$(document).trigger('status.contacts.error', {
 							message: t('contacts', 'Merge failed. Error saving contact.')
 						});
-						return;
 					} else {
 						if(data.deleteOther) {
 							self.contacts.delayedDelete(mergees);
@@ -715,7 +711,6 @@ OC.notify = function(params) {
 				.fail(function(response) {
 					console.log(response.message);
 					$(document).trigger('status.contacts.error', response);
-					done = true;
 				});
 			});
 			// Group selected, only show contacts from that group
@@ -747,7 +742,6 @@ OC.notify = function(params) {
 				.fail(function(response) {
 					console.log(response.message);
 					$(document).trigger('status.contacts.error', response);
-					done = true;
 				});
 				self.$rightContent.scrollTop(0);
 			});
@@ -1011,7 +1005,7 @@ OC.notify = function(params) {
 				}
 			});
 
-			this.$contactList.on('mouseleave', 'tr.contact', function(event) {
+			this.$contactList.on('mouseleave', 'tr.contact', function() {
 				$(this).find('a.delete').remove();
 			});
 
@@ -1095,34 +1089,34 @@ OC.notify = function(params) {
 
 			var addContact = function() {
 				if(self.contacts.addressBooks.count() > 0){
-                    			console.log('add');
-                    			if(self.currentid) {
-                        			if(self.currentid === 'new') {
-                            				return;
-                        			} else {
-                            				var contact = self.contacts.findById(self.currentid);
-                            				if(contact) {
-                                				contact.close(true);
-                            				}
-                        			}
-                    			}
-				    	self.currentid = 'new';
-				    	// Properties that the contact doesn't know
-				    	console.log('addContact, groupid', self.currentgroup);
-				    	var groupprops = {
-				        	favorite: false,
-				        	groups: self.groups.categories,
-				        	currentgroup: {id:self.currentgroup, name:self.groups.nameById(self.currentgroup)}
-				    	};
-				    	self.$firstRun.hide();
-				    	self.$contactList.show();
-				    	self.tmpcontact = self.contacts.addContact(groupprops);
-				    	self.tmpcontact.prependTo(self.$contactList.find('tbody')).show().find('.fullname').focus();
-				    	self.$rightContent.scrollTop(0);
-				    	self.hideActions();
-                		}else{
-                    			OC.dialogs.alert(t('contacts','Please create an addressbook first'),t('contacts','Contacts'));
-                		}
+					console.log('add');
+					if(self.currentid) {
+						if(self.currentid === 'new') {
+							return;
+						} else {
+							var contact = self.contacts.findById(self.currentid);
+							if(contact) {
+								contact.close(true);
+							}
+						}
+					}
+					self.currentid = 'new';
+					// Properties that the contact doesn't know
+					console.log('addContact, groupid', self.currentgroup);
+					var groupprops = {
+						favorite: false,
+						groups: self.groups.categories,
+						currentgroup: {id:self.currentgroup, name:self.groups.nameById(self.currentgroup)}
+					};
+					self.$firstRun.hide();
+					self.$contactList.show();
+					self.tmpcontact = self.contacts.addContact(groupprops);
+					self.tmpcontact.prependTo(self.$contactList.find('tbody')).show().find('.fullname').focus();
+					self.$rightContent.scrollTop(0);
+					self.hideActions();
+				}else{
+					OC.dialogs.alert(t('contacts','Please create an addressbook first'),t('contacts','Contacts'));
+				}
 			};
 
 			this.$firstRun.on('click keydown', '.import', function(event) {
@@ -1152,7 +1146,7 @@ OC.notify = function(params) {
 				console.log('delete');
 				if(self.currentid) {
 					console.assert(typeof self.currentid === 'string', 'self.currentid is not a string');
-					contactInfo = self.contacts[self.currentid].metaData();
+					var contactInfo = self.contacts[self.currentid].metaData();
 					self.contacts.delayedDelete(contactInfo);
 				} else {
 					self.contacts.delayedDelete(self.contacts.getSelectedContacts());
@@ -1240,12 +1234,12 @@ OC.notify = function(params) {
 				self.hideActions();
 			});
 
-			this.$contactList.on('mouseenter', 'td.email', function(event) {
+			this.$contactList.on('mouseenter', 'td.email', function() {
 				if($.trim($(this).text()).length > 3) {
 					$(this).find('.mailto').css('display', 'inline-block'); //.fadeIn(100);
 				}
 			});
-			this.$contactList.on('mouseleave', 'td.email', function(event) {
+			this.$contactList.on('mouseleave', 'td.email', function() {
 				$(this).find('.mailto').fadeOut(100);
 			});
 
@@ -1635,7 +1629,7 @@ OC.notify = function(params) {
 					onRelease:	clearCoords,
 					//maxSize:	[w, h],
 					bgColor:	'black',
-					bgOpacity:	.4,
+					bgOpacity:	0.4,
 					boxWidth:	400,
 					boxHeight:	400,
 					setSelect:	[ x, y, w-10, h-10 ],
