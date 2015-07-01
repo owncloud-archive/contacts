@@ -14,7 +14,6 @@ use OCA\Contacts\App,
 	OCA\Contacts\Utils\JSONSerializer,
 	OCA\Contacts\Controller,
 	OCP\AppFramework\Http,
-	OCP\AppFramework\IApi,
 	OCP\IRequest;
 
 /**
@@ -22,14 +21,12 @@ use OCA\Contacts\App,
  */
 class AddressBookController extends Controller {
 
-	/**
-	 * @var \OCP\AppFramework\IApi
-	 */
-	protected $api;
+	/** @var string */
+	protected $userId;
 
-	public function __construct($appName, IRequest $request, App $app, IApi $api) {
+	public function __construct($appName, IRequest $request, App $app, $userId) {
 		parent::__construct($appName, $request, $app);
-		$this->api = $api;
+		$this->userId = $userId;
 	}
 
 	/**
@@ -55,7 +52,7 @@ class AddressBookController extends Controller {
 		// To avoid invalid cache deletion time is saved
 		/*$lastModified = max(
 			$lastModified,
-			\OCP\Config::getUserValue($this->api->getUserId(), 'contacts', 'last_address_book_deleted', 0)
+			\OCP\Config::getUserValue($this->userId, 'contacts', 'last_address_book_deleted', 0)
 		);*/
 
 		$response = new JSONResponse(array(
@@ -222,7 +219,7 @@ class AddressBookController extends Controller {
 			), 500);
 		}
 
-		\OCP\Config::setUserValue($this->api->getUserId(), 'contacts', 'last_address_book_deleted', time());
+		\OCP\Config::setUserValue($this->userId, 'contacts', 'last_address_book_deleted', time());
 		return $response;
 	}
 

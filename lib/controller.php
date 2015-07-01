@@ -11,25 +11,13 @@
 
 namespace OCA\Contacts;
 
-use OCP\AppFramework\IAppContainer,
-	OCP\AppFramework\Controller as  BaseController,
-	OCP\IRequest,
-	OCA\Contacts\App;
+use OCP\AppFramework\Controller as  BaseController;
+use OCP\IRequest;
 
 /**
  * Base Controller class for Contacts App
  */
 class Controller extends BaseController {
-
-	/**
-	* @var Api
-	*/
-	protected $api;
-
-	/**
-	* @var IRequest
-	*/
-	protected $request;
 
 	/**
 	* @var App
