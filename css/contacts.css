@@ -368,9 +368,13 @@ ul.propertylist { width: 100%; line-height: 34px; }
 .propertylist li > input[type=checkbox].impp { clear: none; }
 .propertylist li > label.xab { display: block; color: #bbb; float:left; clear: both; padding: 0.5em 0 0 2.5em; }
 .propertylist li > label.xab:hover { color: #777; }
-#contact label, #contact dt, #contact th, #contact .label {
+
+#contact label,
+#contact .label,
+#contact dt,
+#contact th {
 	float: left;
-	font-size: 100%; font-weight: bold;
+	font-size: 100%;
 	color: #bbb !important;
 	border: 0;
 	display: inline-block;
