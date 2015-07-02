@@ -1099,7 +1099,7 @@ OC.Contacts = OC.Contacts || {};
 		self.$groupSelect.multiselect({
 			header: false,
 			selectedList: 3,
-			noneSelectedText: self.$groupSelect.attr('title'),
+			noneSelectedText: t('contacts', 'Select groups'),
 			selectedText: t('contacts', '# groups'),
 			minWidth: 300
 		});
