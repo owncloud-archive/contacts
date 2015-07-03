@@ -893,3 +893,8 @@ tbody tr.contact.active, tbody tr.contact:hover {
 	#contactsHeader tr td.email { display: none; }
 	#contactsHeader tr td.cloud { display: none; }
 }
+
+#searchresults {
+	margin-top: 0 !important;
+	margin-left: 10px;
+}

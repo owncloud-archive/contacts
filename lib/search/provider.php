@@ -32,10 +32,13 @@ class Provider extends \OCP\Search\Provider {
 	 * @return array list of \OCA\Calendar\Search\Contact
 	 */
 	function search($query) {
-		$_results = \OCP\Contacts::search($query, array('N', 'FN', 'EMAIL', 'NICKNAME', 'ORG'));
+		$_results = \OC::$server->getContactsManager()->search($query, ['N', 'FN', 'EMAIL', 'NICKNAME', 'ORG', 'PHOTO']);
 		$results = array();
 		foreach ($_results as $_result) {
-			$results[] = new \OCA\Contacts\Search\Contact($_result);
+			if ($_result['addressbook-key'] === 'local') {
+				continue;
+			}
+			$results[] = new Contact($_result);
 		}
 		return $results;
 	}
