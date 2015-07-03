@@ -11,8 +11,8 @@
 namespace OCA\Contacts;
 
 use OCP\AppFramework\App as MainApp;
+use OCP\AppFramework\Http;
 use OCP\AppFramework\IAppContainer;
-use OCA\Contacts\App;
 use OCA\Contacts\Middleware\Http as HttpMiddleware;
 use OCA\Contacts\Controller\PageController;
 use OCA\Contacts\Controller\AddressBookController;
@@ -27,9 +27,8 @@ use OCA\Contacts\Controller\ExportController;
 /**
  * This class manages our app actions
  *
- * TODO: Merge with App
+ * TODO: Build app properly on basis of AppFramework
  */
-
 class Dispatcher extends MainApp {
 
 	/**
@@ -57,7 +56,11 @@ class Dispatcher extends MainApp {
 		parent::__construct($this->appName, $params);
 		$this->container = $this->getContainer();
 		$this->server = $this->container->getServer();
-		$userId = \OC::$server->getUserSession()->getUser()->getUID();
+		$user = \OC::$server->getUserSession()->getUser();
+		if (is_null($user)) {
+			\OC_Util::redirectToDefaultPage();
+		}
+		$userId = $user->getUID();
 		$this->app = new App($userId);
 		$this->registerServices();
 		$this->container->registerMiddleware('HttpMiddleware');
