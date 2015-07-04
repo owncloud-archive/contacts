@@ -45,6 +45,7 @@ OC.L10N.register(
     "Edit profile picture" : "編輯大頭貼照",
     "Crop photo" : "裁切相片",
     "Error parsing date: {date}" : "錯誤的解析日期:{date}",
+    "Select groups" : "選擇群組",
     "# groups" : "# groups",
     "Error parsing birthday {bday}" : "解析生日 {bday} 時發生錯誤",
     "The backend does not support multi-byte characters." : "後台不支援多位元字元。",

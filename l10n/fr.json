@@ -44,6 +44,7 @@
     "Edit profile picture" : "Éditer l'image de profil",
     "Crop photo" : "Recadrer la photo",
     "Error parsing date: {date}" : "Erreur lors de l'analyse de la date : {date}",
+    "Select groups" : "Sélectionnez les groupes",
     "# groups" : "# groupes",
     "Error parsing birthday {bday}" : "Erreur lors de l’analyse de l’anniversaire {bday}",
     "The backend does not support multi-byte characters." : "L'infrastructure ne prend pas en charge les caractères multi-octets.",

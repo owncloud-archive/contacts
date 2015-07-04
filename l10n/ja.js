@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "プロフィール写真を編集",
     "Crop photo" : "フォトをトリミング",
     "Error parsing date: {date}" : "日付の読み取りでエラー発生: {date}",
+    "Select groups" : "グループを選択",
     "# groups" : "グループ数",
     "Error parsing birthday {bday}" : "誕生日 {bday} の解析エラー",
     "The backend does not support multi-byte characters." : "バックエンドはマルチバイト文字列をサポートしていません。",

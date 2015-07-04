@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "Edytuj zdjęcie profilu",
     "Crop photo" : "Kadruj zdjęcie",
     "Error parsing date: {date}" : "Błąd przetwarzania daty : {date}",
+    "Select groups" : "Wybierz grupy",
     "# groups" : "# grupy",
     "Error parsing birthday {bday}" : "Błąd przetwarzania urodzin {bday}",
     "The backend does not support multi-byte characters." : "Zaplecze nie obsługuje wielobajtowych znaków",

@@ -33,6 +33,7 @@
     "Edit profile picture" : "Redaguoti profilio paveikslėlį",
     "Crop photo" : "Apkirpti nuotrauką",
     "Error parsing date: {date}" : "Klaida apdorojant datą: {date}",
+    "Select groups" : "Pasirinkti grupes",
     "# groups" : "# grupės",
     "Error parsing birthday {bday}" : "Klaida apdorojant gimtadienį {bday}",
     "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." : "Keletas kontaktų buvo pažymėti ištrinimui, bet dar neištrinti. Prašome palaukti kol jie bus ištrinti.",

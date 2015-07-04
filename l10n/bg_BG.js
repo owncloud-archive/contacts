@@ -45,6 +45,7 @@ OC.L10N.register(
     "Edit profile picture" : "Промени аватара",
     "Crop photo" : "Отрежи снимката",
     "Error parsing date: {date}" : "Грешка при разчитането на дата: {date}.",
+    "Select groups" : "Избери Групи",
     "# groups" : "# групи",
     "Error parsing birthday {bday}" : "Грешка при разчитане на рожден ден {bday}.",
     "The backend does not support multi-byte characters." : "Сървърът не поддържа много байтови символи.",

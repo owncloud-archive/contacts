@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "Редагувати зображення облікового запису",
     "Crop photo" : "Обрізати фото",
     "Error parsing date: {date}" : "Помилка формату дати: {date}",
+    "Select groups" : "Оберіть групи",
     "# groups" : "# groups",
     "Error parsing birthday {bday}" : "Помилка аналізу дати народження {bday}",
     "The backend does not support multi-byte characters." : "Реалізація не підтримує багатобайтові символи.",

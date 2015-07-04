@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "Upraviť profilový avatar",
     "Crop photo" : "Orezať fotku",
     "Error parsing date: {date}" : "Chyba pri parsovaní dátumu: {date}",
+    "Select groups" : "Vybrať skupinu",
     "# groups" : "# skupiny",
     "Error parsing birthday {bday}" : "Chyba parsovania narodenín {bday}",
     "The backend does not support multi-byte characters." : "Úložisko nepodporuje viacbajtové znaky.",

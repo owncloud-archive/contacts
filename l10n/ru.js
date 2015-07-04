@@ -2,6 +2,8 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "Контакты",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "Вы уверены, что хотите удалить адресную книгу {addressbook} ?",
+    "Remove addressbook" : "Удалить адресную книгу",
     "Add new LDAP Addressbook" : "Добавить новую адресную книгу LDAP",
     "Ok" : "Ок",
     "Cancel" : "Отмена",
@@ -46,6 +48,7 @@ OC.L10N.register(
     "Edit profile picture" : "Редактировать изображение профиля",
     "Crop photo" : "Обрезать фото",
     "Error parsing date: {date}" : "Ошибка формата даты: {date}",
+    "Select groups" : "Выберите группы",
     "# groups" : "# группы",
     "Error parsing birthday {bday}" : "Ошибка анализа даты рождения {bday}",
     "The backend does not support multi-byte characters." : "Реализация не поддерживает мультибайтовые символы.",

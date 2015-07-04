@@ -45,6 +45,7 @@ OC.L10N.register(
     "Edit profile picture" : "Rediģēt profila attēlu",
     "Crop photo" : "Apgriezt foto",
     "Error parsing date: {date}" : "Kļuda apstrādājot datumu: {date}",
+    "Select groups" : "Izvēlieties grupas",
     "# groups" : "# grupas",
     "Error parsing birthday {bday}" : "Kļūda apstrādājot jubileju {bday}",
     "The backend does not support multi-byte characters." : "Serveris neatbalsta multi-byte teksta simbolus.",

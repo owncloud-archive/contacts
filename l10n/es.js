@@ -2,6 +2,8 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "Contactos",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "¿Está seguro que quiere borrar la libreta de direcciones {addressbook} ?",
+    "Remove addressbook" : "Quitar libreta de direcciones",
     "Add new LDAP Addressbook" : "Agregar nueva libreta de direcciones LDAP",
     "Ok" : "Aceptar",
     "Cancel" : "Cancelar",
@@ -46,6 +48,7 @@ OC.L10N.register(
     "Edit profile picture" : "Editar imagen de perfil.",
     "Crop photo" : "Recortar imagen",
     "Error parsing date: {date}" : "Error al analizar la fecha: {date}",
+    "Select groups" : "Seleccionar grupos",
     "# groups" : "# grupos",
     "Error parsing birthday {bday}" : "Error al analizar la fecha de nacimiento {bday}",
     "The backend does not support multi-byte characters." : "El backend no Soporta caracteres multi-byte.",

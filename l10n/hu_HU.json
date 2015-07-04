@@ -44,6 +44,7 @@
     "Edit profile picture" : "Profilkép szerkesztése",
     "Crop photo" : "Fénykép vágása",
     "Error parsing date: {date}" : "Nem sikerült értelmezni ezt a dátumot: {date}",
+    "Select groups" : "Csoportok kiválasztása",
     "# groups" : "# csoport",
     "Error parsing birthday {bday}" : "Hiba a születésnap értelmezésekor {bday}",
     "The backend does not support multi-byte characters." : "Az alrendszer nem támogatja a több byte-os karaktereket",

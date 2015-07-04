@@ -44,6 +44,7 @@
     "Edit profile picture" : "编辑配置图片",
     "Crop photo" : "裁剪照片",
     "Error parsing date: {date}" : "解析日期出错：{date}",
+    "Select groups" : "选择分组",
     "# groups" : "#群组",
     "Error parsing birthday {bday}" : "生日格式错误 {bday}",
     "The backend does not support multi-byte characters." : "此后端不支持多字节字符。",

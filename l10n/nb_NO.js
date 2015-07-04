@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "Rediger profilbilde",
     "Crop photo" : "Beskjær bilde",
     "Error parsing date: {date}" : "Tyding av dato feilet: {date}",
+    "Select groups" : "Velg grupper",
     "# groups" : "Ant. grupper",
     "Error parsing birthday {bday}" : "Klarer ikke å tyde fødselsdag {bday}",
     "The backend does not support multi-byte characters." : "Serveren støtter ikke multibyte-tegn.",
