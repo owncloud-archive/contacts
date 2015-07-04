@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "Edit profile picture",
     "Crop photo" : "Crop photo",
     "Error parsing date: {date}" : "Error parsing date: {date}",
+    "Select groups" : "Select groups",
     "# groups" : "# groups",
     "Error parsing birthday {bday}" : "Error parsing birthday {bday}",
     "The backend does not support multi-byte characters." : "The backend does not support multi-byte characters.",

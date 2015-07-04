@@ -33,6 +33,7 @@
     "Edit profile picture" : "Editar imagen de perfil.",
     "Crop photo" : "Recortar imagen",
     "Error parsing date: {date}" : "Error al analizar la fecha: {date}",
+    "Select groups" : "Seleccionar grupos",
     "# groups" : "# grupos",
     "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." : "Algunos contactos están marcados para su eliminación, pero no eliminados todavía. Por favor, espere a que sean eliminados.",
     "Click to undo deletion of {num} contacts" : "Pulse para deshacer la eliminación de {num} contactos",

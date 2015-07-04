@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "Edita la fotografia de perfil",
     "Crop photo" : "Talla la fotografia",
     "Error parsing date: {date}" : "Error en processar la data: {date}",
+    "Select groups" : "Selecciona els grups",
     "# groups" : "# grups",
     "Error parsing birthday {bday}" : "Error en processar l'aniversari {bday}",
     "The backend does not support multi-byte characters." : "El backend no admet caràcters multi-byte.",

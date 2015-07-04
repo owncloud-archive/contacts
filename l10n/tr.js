@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "Profil fotoğrafını düzenle",
     "Crop photo" : "Fotoğrafı kırp",
     "Error parsing date: {date}" : "Tarih ayıklanırken hata: {date}",
+    "Select groups" : "Grupları seç",
     "# groups" : "# gruplar",
     "Error parsing birthday {bday}" : "{bday} doğum günü ayıklanırken hata",
     "The backend does not support multi-byte characters." : "Arka uç, çok baytlı karakterleri desteklemiyor.",

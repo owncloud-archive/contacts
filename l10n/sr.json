@@ -44,6 +44,7 @@
     "Edit profile picture" : "Уреди слику профила",
     "Crop photo" : "Опсеци фотографију",
     "Error parsing date: {date}" : "Грешка рашчлањивања датума: {date}",
+    "Select groups" : "Изаберите групе",
     "# groups" : "# група",
     "Error parsing birthday {bday}" : "Грешка при рашчлањивању рођендана {bday}",
     "The backend does not support multi-byte characters." : "Нису подржани вишебајтни карактери.",

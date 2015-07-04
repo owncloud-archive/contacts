@@ -44,6 +44,7 @@
     "Edit profile picture" : "Upravit obrázek profilu",
     "Crop photo" : "Oříznout fotku",
     "Error parsing date: {date}" : "Chyba při parsování data: {date}",
+    "Select groups" : "Vyberte skupiny",
     "# groups" : "počet skupin",
     "Error parsing birthday {bday}" : "Chyba parsování narozenin {bday}",
     "The backend does not support multi-byte characters." : "Úložiště nepodporuje více-bajtové znaky.",

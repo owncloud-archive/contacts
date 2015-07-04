@@ -44,6 +44,7 @@
     "Edit profile picture" : "Uredi fotografijo profila",
     "Crop photo" : "Obreži sliko",
     "Error parsing date: {date}" : "Napaka razčlenjevanja datuma: {date}",
+    "Select groups" : "Izbor skupin",
     "# groups" : "# skupine",
     "Error parsing birthday {bday}" : "Ni mogoče razčleniti rojstnega dne {bday}",
     "The backend does not support multi-byte characters." : "Ozadnji program ne podpira večbitnih znakov.",

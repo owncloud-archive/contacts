@@ -45,6 +45,7 @@ OC.L10N.register(
     "Edit profile picture" : "Editatu profilaren argazkia",
     "Crop photo" : "Moztu argazkia",
     "Error parsing date: {date}" : "Errorea data aztertzerakoan: {date}",
+    "Select groups" : "Hautatu taldeak",
     "# groups" : "# taldeak",
     "Error parsing birthday {bday}" : "Errorea urtebetetzea  {bday} aztertzerakoan",
     "The backend does not support multi-byte characters." : "Euskarriak ez du karaktere byte-anitzik onartzen",
