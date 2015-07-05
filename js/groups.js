@@ -552,7 +552,7 @@ OC.Contacts = OC.Contacts || {};
 					$editInput.removeClass('loading');
 				});
 			},
-			cancel: function(event) {
+			cancel: function() {
 				console.log('cancel');
 				$editInput.removeClass('loading');
 			},
@@ -656,7 +656,7 @@ OC.Contacts = OC.Contacts || {};
 				}
 			} else {
 				if(typeof cb === 'function') {
-					cb({error:true, message:response.data.message});
+					cb({error:true, message:response.message});
 				}
 			}
 		})
@@ -669,7 +669,6 @@ OC.Contacts = OC.Contacts || {};
 
 	GroupList.prototype.loadGroups = function(cb) {
 		var self = this;
-		var acceptdrop = '.dragContact';
 		var $groupList = this.$groupList;
 		var tmpl = this.$groupListItemTemplate;
 		var $elem;
