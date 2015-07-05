@@ -44,6 +44,7 @@
     "Edit profile picture" : "Editar a fotografia do perfil.",
     "Crop photo" : "Recortar fotografia",
     "Error parsing date: {date}" : "Erro ao analisar a data: {date}",
+    "Select groups" : "Seleccionar grupos",
     "# groups" : "# grupos",
     "Error parsing birthday {bday}" : "Erro ao analisar o aniversário {bday}",
     "The backend does not support multi-byte characters." : "A interface não permite a programação de carateres de múltiplos bytes.",
