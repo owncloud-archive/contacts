@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "Muuda profiili pilti",
     "Crop photo" : "Lõika pilti",
     "Error parsing date: {date}" : "Viga kuupäeva parsimisel: {date}",
+    "Select groups" : "Vali grupid",
     "# groups" : "# grupid",
     "Error parsing birthday {bday}" : "Viga sünnipäeva lugemisel {bday}",
     "The backend does not support multi-byte characters." : "Tagarakend ei toeta mitme baidilisi sümboleid.",

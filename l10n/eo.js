@@ -32,6 +32,7 @@ OC.L10N.register(
     "Could not find contact: {id}" : "Ne troviĝis kontakto: {id}",
     "Edit profile picture" : "Redakti profilbildon",
     "Crop photo" : "Stuci foton",
+    "Select groups" : "Elekti grupojn",
     "# groups" : "# grupoj",
     "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." : "Iuj kontaktoj estas markitaj por forigo, sed ankoraŭ ne forigitaj. Bonvolu atendi ĝis ili foriĝos.",
     "Click to undo deletion of {num} contacts" : "Klaku por malfari forigon de {num} kontaktoj",

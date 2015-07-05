@@ -46,6 +46,7 @@ OC.L10N.register(
     "Edit profile picture" : "Επεξεργασία εικόνας προφίλ",
     "Crop photo" : "Περικοπή φωτογραφίας",
     "Error parsing date: {date}" : "Σφάλμα κατά την ανάλυση της ημερομηνίας: {date}",
+    "Select groups" : "Επιλογή ομάδων",
     "# groups" : "# ομάδων",
     "Error parsing birthday {bday}" : "Σφάλμα κατά την ανάλυση των γενεθλίων {bday}",
     "The backend does not support multi-byte characters." : "Το σύστημα δεν υποστηρίζει χαρακτήρες πολλών byte",

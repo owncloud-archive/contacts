@@ -47,6 +47,7 @@ OC.L10N.register(
     "Edit profile picture" : "Muokkaa profiilikuvaa",
     "Crop photo" : "Rajaa valokuva",
     "Error parsing date: {date}" : "Virhe päivää jäsentäessä: {date}",
+    "Select groups" : "Valitse ryhmät",
     "# groups" : "# ryhmää",
     "Some contacts are marked for deletion, but not deleted yet. Please wait for them to be deleted." : "Jotkin yhteystiedot on merkitty poistettaviksi, mutta niitä ei ole vielä poistettu. Odota hetki, että kyseiset yhteystiedot poistetaan.",
     "Click to undo deletion of {num} contacts" : "Napsauta kumotaksesi {num} yhteystiedon poistamisen",

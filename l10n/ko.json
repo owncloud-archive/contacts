@@ -44,6 +44,7 @@
     "Edit profile picture" : "프로필 사진 편집",
     "Crop photo" : "사진 자르기",
     "Error parsing date: {date}" : "날짜 처리 중 오류 발생: {date}",
+    "Select groups" : "그룹 선택",
     "# groups" : "그룹 수",
     "Error parsing birthday {bday}" : "생일 {bday} 처리 오류",
     "The backend does not support multi-byte characters." : "백엔드에서 멀티바이트 글자를 지원하지 않습니다.",
