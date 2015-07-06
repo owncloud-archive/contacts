@@ -2,6 +2,8 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "Contacts",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "Êtes-vous certain de vouloir supprimer le carnet d'adresses {addressbook} ?",
+    "Remove addressbook" : "Supprimer le carnet d'adresses",
     "Add new LDAP Addressbook" : "Ajouter un carnet d'adresses LDAP",
     "Ok" : "Ok",
     "Cancel" : "Annuler",
