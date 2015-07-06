@@ -12,7 +12,6 @@ if(!class_exists('PHPUnit_Framework_TestCase')) {
 include_once('lib/testcase.php');
 
 OC_Hook::clear();
-OC_Log::$enabled = true;
 \OCP\Util::connectHook('OCA\Contacts', 'pre_deleteContact', '\OCA\Contacts\Hooks', 'contactDeletion');
 
 \Sabre\VObject\Component\VCard::$componentMap['VCARD']	= '\OCA\Contacts\VObject\VCard';

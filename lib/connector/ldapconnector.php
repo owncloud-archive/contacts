@@ -132,8 +132,6 @@ class LdapConnector {
 		$property = $vcard->createProperty($v_param['property']);
 		$vcard->add($property);
 		if ($v_param['type']!=null) {
-			//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', creating one '.$v_param['property'].';TYPE='.$v_param['type'], \OCP\Util::DEBUG);
-			//\OC_Log::write('ldapconnector', __METHOD__.', creating one '.$v_param['property'].';TYPE='.$v_param['type'], \OC_Log::DEBUG);
 			$property->parameters[] = new	\Sabre\VObject\Parameter('TYPE', ''.$v_param['type']);
 			switch ($v_param['property']) {
 				case "ADR":
@@ -214,7 +212,6 @@ class LdapConnector {
 	 * @param $propertyType the type of the parameter
 	 */
 	public function getLdifEntry($propertyName, $propertyType) {
-		//\OC_Log::write('ldapconnector', __METHOD__."looking for $propertyName, $propertyType", \OC_Log::DEBUG);
 		if ($this->config_content !=null) {
 			$ldifEntries = array();
 			foreach ($this->config_content->vcard_entries->vcard_entry as $vcardEntry) {
@@ -285,11 +282,9 @@ class LdapConnector {
 					// Last, if the ldif entry has a vcard_position set, take only the value in the position index
 					$value = $property->getValue();
 					if (isset($ldifEntry['vcard_position'])) {
-						//\OC_Log::write('ldapconnector', __METHOD__." position set ".$ldifEntry['vcard_position'], \OC_Log::DEBUG);
 						$tmpValues = explode(";", $property->getValue());
 						$value = $tmpValues[$ldifEntry['vcard_position']];
 					}
-					//\OC_Log::write('ldapconnector', __METHOD__.__METHOD__." entry : ".$ldifEntry['name']." - value : $value", \OC_Log::DEBUG);
 					// finally, sets tab['ldif_entry'][] with the value
 					if (strcmp($value, "") != 0) {
 						if ($ldifEntry['image']) {

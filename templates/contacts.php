@@ -16,6 +16,7 @@ script('contacts', array(
 	'groups',
 	'jquery.ocaddnew',
 	'otherbackendconfig',
+	'search'
 ));
 
 style('contacts', array(
@@ -114,6 +115,7 @@ vendor_style('contacts', array(
 			<tbody>
 			</tbody>
 		</table>
+		<div id="searchresults" class="hidden"></div>
 		<div class="hidden popup" id="ninjahelp">
 			<a class="close" tabindex="0" role="button" title="<?php p($l->t('Close')); ?>"></a>
 			<h2><?php p($l->t('Keyboard shortcuts')); ?></h2>

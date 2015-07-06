@@ -19,11 +19,12 @@
  */
 
 namespace OCA\Contacts\Search;
+use OCP\Search\Result;
 
 /**
  * A contact search result
  */
-class Contact extends \OCP\Search\Result {
+class Contact extends Result {
 
 	/**
 	 * Type name; translated in templates
@@ -67,6 +68,9 @@ class Contact extends \OCP\Search\Result {
 	 */
 	public $organization;
 
+	/** @var string */
+	public $url;
+
 	/**
 	 * Constructor
 	 *
@@ -82,6 +86,16 @@ class Contact extends \OCP\Search\Result {
 		$this->email = $this->checkAndMerge($data, 'EMAIL');
 		$this->nickname = $this->checkAndMerge($data, 'NICKNAME');
 		$this->organization = $this->checkAndMerge($data, 'ORG');
+		if (isset($data['photo']) && $data['photo']) {
+			list($backend, $addressBookId) = explode(':', $data['addressbook-key']);
+			$contactId = $data['id'];
+			$this->url = \OC::$server->getURLGenerator()->linkToRoute('contacts_contact_photo', [
+				'backend' =>$backend,
+				'addressBookId' => $addressBookId,
+				'contactId' => $contactId,
+				'maxSize' => 32
+			]);
+		}
 	}
 
 	/**
