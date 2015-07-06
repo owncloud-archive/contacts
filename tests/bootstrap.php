@@ -10,8 +10,6 @@ if(!class_exists('PHPUnit_Framework_TestCase')) {
 	require_once('PHPUnit/Autoload.php');
 }
 
-OC_App::enable('contacts');
-
 OC_Hook::clear();
 OCP\Util::connectHook('OCA\Contacts', 'pre_deleteContact', '\OCA\Contacts\Hooks', 'contactDeletion');
 Sabre\VObject\Component\VCard::$componentMap['VCARD']	= '\OCA\Contacts\VObject\VCard';

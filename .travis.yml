@@ -5,7 +5,6 @@ php:
   - 5.6
   - 7
   - hhvm
-  - 7
 
 env:
   global:
@@ -23,7 +22,7 @@ before_install:
   - wget https://raw.githubusercontent.com/owncloud/administration/master/travis-ci/before_install.sh
   - bash ./before_install.sh $APP_NAME $CORE_BRANCH $DB
   - cd ../core
-  - php occ app:enable mail
+  - php occ app:enable $APP_NAME
 
 script:
   # Test lint

@@ -9,9 +9,6 @@
 		<testsuite name="unit-tests">
 			<directory suffix=".php">unit</directory>
 		</testsuite>
-		<testsuite name="app-tests">
-			<directory suffix=".php">integration</directory>
-		</testsuite>
 	</testsuites>
 	<!-- filters for code coverage -->
 	<filter>
