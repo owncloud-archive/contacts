@@ -3,6 +3,7 @@ php:
   - 5.4
   - 5.5
   - 5.6
+  - 7
   - hhvm
   - 7
 
@@ -21,10 +22,12 @@ branches:
 before_install:
   - wget https://raw.githubusercontent.com/owncloud/administration/master/travis-ci/before_install.sh
   - bash ./before_install.sh $APP_NAME $CORE_BRANCH $DB
+  - cd ../core
+  - php occ app:enable mail
 
 script:
   # Test lint
-  - cd ../core/apps/$APP_NAME
+  - cd apps/$APP_NAME
   - find . -name \*.php -exec php -l "{}" \;
 
   # Run phpunit tests
@@ -41,6 +44,8 @@ matrix:
       env: DB=mysql
     - php: 5.4
       env: DB=pgsql
+    - php: 5.4
+      env: "DB=mysql CORE_BRANCH=stable8.1"
   allow_failures:
     - php: hhvm
     - php: 7
