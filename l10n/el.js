@@ -2,6 +2,8 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "Επαφές",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "Είστε σίγουροι πως θέλετε να διαγράψετε το βιβλίο διευθύνσεων {addressbook};",
+    "Remove addressbook" : "Αφαίρεση βιβλίου διευθύνσεων",
     "Add new LDAP Addressbook" : "Προσθήκη νέου βιβλίου διευθύνσεων LDAP",
     "Ok" : "Οκ",
     "Cancel" : "Άκυρο",
