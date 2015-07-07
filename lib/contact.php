@@ -786,6 +786,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$appInfo = \OCP\App::getAppInfo('contacts');
 			$appVersion = \OCP\App::getAppVersion('contacts');
 			$vCal->PRODID = '-//ownCloud//NONSGML '.$appInfo['name'].' '.$appVersion.'//EN';
+			$vCal->add($vEvent);
 			return $vCal;
 		}
 
