@@ -6,7 +6,9 @@
  * See the COPYING-README file.
  */
 
-class Test_VObjects extends \OCA\Contacts\TestCase {
+use Test\TestCase;
+
+class Test_VObjects extends TestCase {
 
 	public static function setUpBeforeClass() {
 		\Sabre\VObject\Component\VCard::$propertyMap['CATEGORIES'] = 'OCA\Contacts\VObject\GroupProperty';

@@ -8,6 +8,7 @@
 
 namespace OCA\Contacts;
 
+use Test\TestCase;
 
 class AddressBookProviderTest extends TestCase {
 
@@ -30,6 +31,11 @@ class AddressBookProviderTest extends TestCase {
 	private $provider;
 
 	/**
+	 * @var string
+	 */
+	protected $testUser;
+
+	/**
 	 * @var array
 	 */
 	private $contactIds = array();
@@ -37,14 +43,40 @@ class AddressBookProviderTest extends TestCase {
 	public function setUp() {
 		parent::setUp();
 
+		$this->testUser = $this->getUniqueID('user_');
+		// needed because some parts of code call "getRequest()" and "getSession()"
+		$session = $this->getMockBuilder('\OC\Session\Memory')
+			->disableOriginalConstructor()
+			->getMock();
+		$session->expects($this->any())
+			->method('get')
+			->with('user_id')
+			->will($this->returnValue($this->testUser));
+		$userObject = $this->getMock('\OCP\IUser');
+		$userObject->expects($this->any())
+			->method('getUId')
+			->will($this->returnValue($this->testUser));
+		$userSession = $this->getMockBuilder('\OC\User\Session')
+			->disableOriginalConstructor()
+			->getMock();
+		$userSession->expects($this->any())
+			->method('getUser')
+			->will($this->returnValue($userObject));
+		$userSession->expects($this->any())
+			->method('getSession')
+			->will($this->returnValue($session));
+		\OC::$server->registerService('UserSession', function (\OCP\IServerContainer $c) use ($userSession){
+			return $userSession;
+		});
+
+
 		$this->backend = new Backend\Database($this->testUser);
 		$this->abinfo = array('displayname' => uniqid('display_'));
 		$this->ab = new AddressBook($this->backend, $this->abinfo);
-
 		$this->provider = new AddressbookProvider($this->ab);
 
 		$card = new \OCA\Contacts\VObject\VCard();
-		$uid = substr(md5(rand().time()), 0, 10);
+		$uid = substr(md5($this->getUniqueID()), 0, 10);
 		$card->add('UID', $uid);
 		$card->add('FN', 'Max Mustermann');
 		$id = $this->ab->addChild($card);

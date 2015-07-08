@@ -6,9 +6,29 @@
  * later.
  * See the COPYING-README file.
  */
-namespace OCA\Contacts;
+namespace OCA\Contacts\AppInfo;
 
 use OCA\Contacts\Dispatcher;
+use OCP\AppFramework\App;
+
+$app = new App('contacts');
+$app->registerRoutes(
+	$this,
+	[
+		'routes' => [
+			[
+				'name' => 'page#index',
+				'url' => '/',
+				'verb' => 'GET',
+			],
+			[
+				'name' => 'settings#set',
+				'url' => 'preference/set',
+				'verb' => 'POST',
+			],
+		]
+	]
+);
 
 //define the routes
 $this->create('contacts_index', '/')
@@ -437,7 +457,7 @@ $this->create('contacts_categories_removefrom', 'groups/removefrom/{categoryId}'
 	)
 	->requirements(array('categoryId'));
 
-$this->create('contacts_setpreference', 'preference/set')
+$this->create('contacts_index_properties', 'indexproperties/{user}/')
 	->post()
 	->action(
 		function($params) {

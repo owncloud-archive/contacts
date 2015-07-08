@@ -9,6 +9,7 @@
 namespace OCA\Contacts;
 
 use Sabre\VObject\Reader;
+use Test\TestCase;
 
 require_once __DIR__ . '/backend/mock.php';
 
@@ -109,7 +110,8 @@ class AddressBookTest extends TestCase {
 
 	/**
 	* @depends testAddChild
-	*/
+	 * @param $ab
+	 */
 	public function testGetChildren($ab) {
 
 		$contacts = $ab->getChildren();

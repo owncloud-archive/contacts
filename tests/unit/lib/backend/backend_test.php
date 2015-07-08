@@ -9,10 +9,11 @@
 namespace OCA\Contacts\Backend;
 
 use Sabre\VObject\Reader;
+use Test\TestCase;
 
 require_once __DIR__ .'/mock.php';
 
-class BackendTest extends \OCA\Contacts\TestCase {
+class BackendTest extends TestCase {
 
 	/**
 	* @var array
