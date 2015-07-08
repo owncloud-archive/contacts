@@ -79,41 +79,39 @@ vendor_style('contacts', array(
 		</div>
 	</div>
 	<div id="app-content" class="loading">
-		<table id="contactlist">
-			<thead>
-				<tr id="contactsHeader" class="hidden-on-load">
-					<td class="name">
-						<span class="actions_left">
-						<input type="checkbox" class="toggle" id="select_all" title="<?php p($l->t('(De-)select all')); ?>" />
-						<label for="select_all"></label>
-						<select class="action sort permanent" name="sort" title="<?php p($l->t('Sort order')); ?>">
-							<option value="fn"><?php p($l->t('Display name')); ?></option>
-							<option value="fl"><?php p($l->t('First- Lastname')); ?></option>
-							<option value="lf"><?php p($l->t('Last-, Firstname')); ?></option>
+		<div id="contactlist">
+			<div id="contactsHeader" class="hidden-on-load">
+				<div class="name">
+					<span class="actions_left">
+					<input type="checkbox" class="toggle" id="select_all" title="<?php p($l->t('(De-)select all')); ?>" />
+					<label for="select_all"></label>
+					<select class="action sort permanent" name="sort" title="<?php p($l->t('Sort order')); ?>">
+						<option value="fn"><?php p($l->t('Display name')); ?></option>
+						<option value="fl"><?php p($l->t('First- Lastname')); ?></option>
+						<option value="lf"><?php p($l->t('Last-, Firstname')); ?></option>
+					</select>
+					</span>
+
+					<span class="actions">
+						<a class="icon-delete delete svg action text permanent">
+							<?php p($l->t('Delete')); ?>
+							<img class="svg" alt="<?php p($l->t('Delete'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/delete.svg")); ?>" />
+						</a>
+						<select class="groups svg action text permanent shared" name="groups">
+							<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
 						</select>
-						</span>
-						
-						<span class="actions">
-							<a class="icon-delete delete svg action text permanent">
-								<?php p($l->t('Delete')); ?>
-								<img class="svg" alt="<?php p($l->t('Delete'))?>" src="<?php print_unescaped(OCP\image_path("core", "actions/delete.svg")); ?>" />
-							</a>
-							<select class="groups svg action text permanent shared" name="groups">
-								<option value="-1" disabled="disabled" selected="selected"><?php p($l->t('Groups')); ?></option>
-							</select>
-							<a class="icon-download download svg action text permanent"><?php p($l->t('Download')); ?></a>
-							<a class="icon-rename action svg text permanent merge edit"><?php p($l->t('Merge')); ?></a>
-						</span>
-					</td>
-					<td class="info email"><?php p($l->t('Email')); ?></td>
-					<td class="info tel"><?php p($l->t('Phone')); ?></td>
-					<td class="info adr"><?php p($l->t('Address')); ?></td>
-					<td class="info categories"><?php p($l->t('Group')); ?></td>
-				</tr>
-			</thead>
-			<tbody>
-			</tbody>
-		</table>
+						<a class="icon-download download svg action text permanent"><?php p($l->t('Download')); ?></a>
+						<a class="icon-rename action svg text permanent merge edit"><?php p($l->t('Merge')); ?></a>
+					</span>
+				</div>
+				<div class="info email"><?php p($l->t('Email')); ?></div>
+				<div class="info tel"><?php p($l->t('Phone')); ?></div>
+				<div class="info adr"><?php p($l->t('Address')); ?></div>
+				<div class="info categories"><?php p($l->t('Group')); ?></div>
+			</div>
+			<div id="contacts-body">
+			</div>
+		</div>
 		<div class="hidden popup" id="ninjahelp">
 			<a class="close" tabindex="0" role="button" title="<?php p($l->t('Close')); ?>"></a>
 			<h2><?php p($l->t('Keyboard shortcuts')); ?></h2>
@@ -215,21 +213,21 @@ vendor_style('contacts', array(
 </script>
 
 <script id="contactListItemTemplate" type="text/template">
-	<tr class="contact" data-id="{id}" data-parent="{parent}" data-backend="{backend}">
-		<td class="name thumbnail">
+	<div class="contact" data-id="{id}" data-parent="{parent}" data-backend="{backend}">
+		<div class="name thumbnail">
 			<input type="checkbox" id="select-{id}" name="id" value="{id}" />
 			<label for="select-{id}"></label>
 			<div class="avatar"></div>
 			<a href="#{id}" class="nametext">{name}</a>
-		</td>
-		<td class="email">
+		</div>
+		<div class="email">
 			<a href="mailto:{email}">{email}</a>
 			<a class="icon-mail svg mailto hidden" title="<?php p($l->t('Compose mail')); ?>"></a>
-		</td>
-		<td class="tel">{tel}</td>
-		<td class="adr">{adr}</td>
-		<td class="categories">{categories}</td>
-	</tr>
+		</div>
+		<div class="tel">{tel}</div>
+		<div class="adr">{adr}</div>
+		<div class="categories">{categories}</div>
+	</div>
 </script>
 
 <script id="contactDragItemTemplate" type="text/template">
@@ -239,7 +237,7 @@ vendor_style('contacts', array(
 </script>
 
 <script id="contactFullTemplate" type="text/template">
-	<tr><td colspan="6">
+	<div>
 	<form action="<?php print_unescaped(OCP\Util::linkTo('contacts', 'index.php')); ?>" method="post" enctype="multipart/form-data">
 	<section id="contact" data-id="{id}">
 	<header>
@@ -267,15 +265,15 @@ vendor_style('contacts', array(
 				<fieldset class="n hidden editor propertycontainer" data-element="n">
 					<ul>
 						<li>
-							<input class="value rightwards onfocus" type="text" id="n_1" name="value[1]" value="{n1}" 
+							<input class="value rightwards onfocus" type="text" id="n_1" name="value[1]" value="{n1}"
 								placeholder="<?php p($l->t('First name')); ?>" />
 						</li>
 						<li>
-							<input class="value rightwards onfocus" type="text" id="n_2" name="value[2]" value="{n2}" 
+							<input class="value rightwards onfocus" type="text" id="n_2" name="value[2]" value="{n2}"
 								placeholder="<?php p($l->t('Additional names')); ?>" />
 						</li>
 						<li>
-							<input class="value rightwards onfocus" type="text" id="n_0" name="value[0]" value="{n0}" 
+							<input class="value rightwards onfocus" type="text" id="n_0" name="value[0]" value="{n0}"
 								placeholder="<?php p($l->t('Last name')); ?>" />
 						</li>
 					</ul>
@@ -406,7 +404,7 @@ vendor_style('contacts', array(
 	</footer>
 	</section>
 	</form>
-	</td></tr>
+	</div>
 </script>
 
 <script id="contactDetailsTemplate" class="hidden" type="text/template">
@@ -487,21 +485,21 @@ vendor_style('contacts', array(
 				<ul>
 					<li><!-- Note to translators: The placeholders for address properties should be a well known address
 							so users can see where the data belongs according to https://tools.ietf.org/html/rfc2426#section-3.2.1 -->
-						<input class="value stradr tooltipped rightwards onfocus" type="text" id="adr_2" name="value[2]" value="{adr2}" 
+						<input class="value stradr tooltipped rightwards onfocus" type="text" id="adr_2" name="value[2]" value="{adr2}"
 						placeholder="<?php p($l->t('Street address')); ?>" />
 					</li>
 					<li>
-						<input class="value zip tooltipped rightwards onfocus" type="text" id="adr_5" name="value[5]" value="{adr5}" 
+						<input class="value zip tooltipped rightwards onfocus" type="text" id="adr_5" name="value[5]" value="{adr5}"
 							placeholder="<?php p($l->t('Postal code')); ?>" />
-						<input class="value city tooltipped rightwards onfocus" type="text" id="adr_3" name="value[3]" value="{adr3}" 
+						<input class="value city tooltipped rightwards onfocus" type="text" id="adr_3" name="value[3]" value="{adr3}"
 							placeholder="<?php p($l->t('City')); ?>" />
 					</li>
 					<li>
-						<input class="value region tooltipped rightwards onfocus" type="text" id="adr_4" name="value[4]" value="{adr4}" 
+						<input class="value region tooltipped rightwards onfocus" type="text" id="adr_4" name="value[4]" value="{adr4}"
 							placeholder="<?php p($l->t('State or province')); ?>" />
 					</li>
 					<li>
-						<input class="value country tooltipped rightwards onfocus" type="text" id="adr_6" name="value[6]" value="{adr6}" 
+						<input class="value country tooltipped rightwards onfocus" type="text" id="adr_6" name="value[6]" value="{adr6}"
 							placeholder="<?php p($l->t('Country')); ?>" />
 					</li>
 				</ul>
@@ -519,7 +517,7 @@ vendor_style('contacts', array(
 				</select>
 			</span>
 	-->
-	
+
 	<div class="impp" type="text/template">
 		<li data-element="impp" data-checksum="{checksum}" class="propertycontainer">
 			<span class="parameters">
@@ -535,9 +533,9 @@ vendor_style('contacts', array(
 			</span>
 		</li>
 	</div>
-	
-	
-	
+
+
+
 </script>
 
 <script id="addressBookTemplate" class="hidden" type="text/template">
