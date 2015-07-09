@@ -128,8 +128,6 @@ OC.L10N.register(
     "Error uploading contacts to storage." : "Virhe yhteystietojen lataamisessa talletettavaksi.",
     "You do not have permissions to import into this address book." : "Sinulla ei ole oikeuksia tuoda tähän osoitekirjaan.",
     "File name missing from request." : "Tiedoston nimi puuttuu pyynnöstä.",
-    "No key is given." : "Avainta ei annettu.",
-    "No value is given." : "Arvoa ei ole annettu.",
     "Other" : "Muu",
     "HomePage" : "Kotisivu",
     "Jabber" : "Jabber",

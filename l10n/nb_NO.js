@@ -2,6 +2,8 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "Kontakter",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "Er du sikker på at du vil slette adresseboken {addressbook}?",
+    "Remove addressbook" : "Fjern adressebok",
     "Add new LDAP Addressbook" : "Legg til ny LDAP-adressebok",
     "Ok" : "Ok",
     "Cancel" : "Avbryt",
@@ -144,9 +146,6 @@ OC.L10N.register(
     "File name missing from request." : "Filnavn mangler i anmodningen.",
     "Progress key missing from request." : "Framdriftsnøkkel mangler i anmodningen.",
     "Attempt to access blacklisted file:" : "Forsøk på å aksessere svartelistet fil:",
-    "No key is given." : "Nøkkel er ikke oppgitt.",
-    "No value is given." : "Verdi er ikke oppgitt.",
-    "Could not set preference: " : "Kunne ikke sette preferanse:",
     "Other" : "Annet",
     "HomePage" : "Hjemmeside",
     "Jabber" : "Jabber",
