@@ -2,6 +2,8 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "Kontakty",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "Opravdu si přejete odstranit adresář {addressbook} ?",
+    "Remove addressbook" : "Odstranit adresář",
     "Add new LDAP Addressbook" : "Přidat nový LDAP adresář kontaktů",
     "Ok" : "Ok",
     "Cancel" : "Zrušit",
