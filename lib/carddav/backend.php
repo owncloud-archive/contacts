@@ -63,7 +63,7 @@ class Backend extends \Sabre\CardDAV\Backend\AbstractBackend {
 					$userAddressBooks[] = array(
 						'id'  => $backend->name . '::' . $addressBook['id'],
 						'uri' => $addressBook['uri'],
-						'principaluri' => 'principals/'.$addressBook['owner'],
+						'principaluri' => 'principals/'.\OCP\User::getUser(),
 						'{DAV:}displayname' => $addressBook['displayname'],
 						'{' . \Sabre\CardDAV\Plugin::NS_CARDDAV . '}addressbook-description'
 								=> $addressBook['description'],
