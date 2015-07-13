@@ -783,10 +783,11 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vEvent->{'RRULE'} = 'FREQ=YEARLY';
 			$vEvent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
 			$vEvent->{'TRANSP'} = 'TRANSPARENT';
-			$alarm = \Sabre\Vobject\Component::create('VALARM');
-			$alarm->TRIGGER = '-PT0M';
-			$alarm->{'ACTION'} = 'DISPLAY';
-			$alarm->{'DESCRIPTION'} = $vevent->{'SUMMARY'};
+			$alarm = $vCal->createComponent('VALARM');
+			$alarm->{'TRIGGER'} = '-PT0M';
+			$alarm->add($vCal->createProperty('TRIGGER', '-PT0M', ['VALUE' => 'DURATION']));
+			$alarm->add($vCal->createProperty('ACTION', 'DISPLAY'));
+			$alarm->add($vCal->createProperty('DESCRIPTION', $title . ' (' . $date->format('Y') . ')'));
 			$vEvent->add($alarm);
 			$appInfo = \OCP\App::getAppInfo('contacts');
 			$appVersion = \OCP\App::getAppVersion('contacts');
