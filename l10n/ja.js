@@ -2,6 +2,8 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "アドレス帳",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "アドレス帳 {addressbook} を削除してもよろしいですか？",
+    "Remove addressbook" : "アドレス帳を削除",
     "Add new LDAP Addressbook" : "新しいLDAPアドレス帳を追加",
     "Ok" : "OK",
     "Cancel" : "キャンセル",
