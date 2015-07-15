@@ -1446,13 +1446,13 @@ OC.Contacts = OC.Contacts || {};
 							property.parameters.TYPE.push(property.label);
 							meta.push(property.label);
 						}
+						var preferred = false;
 						for(var param in property.parameters) {
 							if(property.parameters.hasOwnProperty(param)) {
 								//console.log('param', param);
 								if(param.toUpperCase() === 'PREF') {
-									var $cb = $property.find('input[type="checkbox"]');
-									$cb.attr('checked', 'checked');
-									meta.push($cb.attr('title'));
+									preferred = true;
+									continue;
 								}
 								else if(param.toUpperCase() === 'TYPE') {
 									for(var etype in property.parameters[param]) {
@@ -1460,6 +1460,10 @@ OC.Contacts = OC.Contacts || {};
 											var found = false;
 											var et = property.parameters[param][etype];
 											if(typeof et !== 'string') {
+												continue;
+											}
+											if (et.toUpperCase() === 'PREF') {
+												preferred = true;
 												continue;
 											}
 											$property.find('select.type option').each(function() {
@@ -1480,6 +1484,11 @@ OC.Contacts = OC.Contacts || {};
 									$property.find('select.rtl').val(property.parameters[param].toLowerCase());
 								}
 							}
+						}
+						if (preferred) {
+							var $cb = $property.find('input[type="checkbox"]');
+							$cb.attr('checked', 'checked');
+							meta.push($cb.attr('title'));
 						}
 						var $meta = $property.find('.meta');
 						if($meta.length) {
