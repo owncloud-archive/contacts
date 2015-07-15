@@ -529,7 +529,7 @@ OC.Contacts = OC.Contacts || {};
 					var parameters = self.parametersFor(obj);
 					if(parameters.TYPE && parameters.TYPE.indexOf('PREF') !== -1) {
 						parameters.PREF = 1;
-						parameters.TYPE.splice(parameters.TYPE.indexOf('PREF', 1));
+						parameters.TYPE.splice(parameters.TYPE.indexOf('PREF'), 1);
 					}
 					if(checksum && checksum !== 'new') {
 						self.pushToUndo({
