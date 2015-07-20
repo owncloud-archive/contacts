@@ -120,7 +120,8 @@ class AddressbookProvider implements \OCP\IAddressBook {
 SQL;
 
 		$params = array();
-		$params[] = $this->addressBook->getMetaData()['id'];
+		$meta = $this->addressBook->getMetaData();
+		$params[] = $meta['id'];
 		foreach ($searchProperties as $property) {
 			$params[] = $property;
 			$params[] = '%' . $pattern . '%';
