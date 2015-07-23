@@ -104,6 +104,10 @@ class Hooks{
 
 	public static function contactAdded($parameters) {
 		\OCP\Util::writeLog('contacts', __METHOD__.' id: '.$parameters['id'], \OCP\Util::DEBUG);
+		$app = new App();
+		$backend = $app->getBackend( (isset($parameters['backend'])) ? $parameters['backend'] :'local' );
+		$ab = $backend->getAddressBook( $parameters['addressBookId'] );
+
 		$contact = $parameters['contact'];
 		if(isset($contact->CATEGORIES)) {
 			\OCP\Util::writeLog('contacts', __METHOD__.' groups: '.print_r($contact->CATEGORIES->getParts(), true), \OCP\Util::DEBUG);
@@ -113,13 +117,17 @@ class Hooks{
 				$tagMgr->tagAs($parameters['id'], $group);
 			}
 		}
-		Utils\Properties::updateIndex($parameters['id'], $contact);
+		Utils\Properties::updateIndex($parameters['id'], $contact, $ab['owner']);
 	}
 
 	public static function contactUpdated($parameters) {
 		//\OCP\Util::writeLog('contacts', __METHOD__.' parameters: '.print_r($parameters, true), \OCP\Util::DEBUG);
+		$app = new App();
+		$backend = $app->getBackend( (isset($parameters['backend'])) ? $parameters['backend'] :'local' );
+		$ab = $backend->getAddressBook( $parameters['addressBookId'] );
+
 		$contact = $parameters['contact'];
-		Utils\Properties::updateIndex($parameters['contactId'], $contact);
+		Utils\Properties::updateIndex($parameters['contactId'], $contact, $ab['owner']);
 		// If updated via CardDAV we don't know if PHOTO has changed
 		if(isset($parameters['carddav']) && $parameters['carddav']) {
 			if(isset($contact->PHOTO) || isset($contact->LOGO)) {
