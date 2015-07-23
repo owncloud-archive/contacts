@@ -2,6 +2,8 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "Névjegyek",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "Biztosan ki szeretné törölni a  {addressbook} címlistát?",
+    "Remove addressbook" : "Címlista eltávolítása",
     "Add new LDAP Addressbook" : "Vegyél fel új LDAP-névjegyalbumot",
     "Ok" : "Ok",
     "Cancel" : "Mégsem",
