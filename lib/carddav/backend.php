@@ -189,7 +189,7 @@ class Backend extends \Sabre\CardDAV\Backend\AbstractBackend {
 				//'carddata' => $i['carddata'],
 				'size' => strlen($contact['carddata']),
 				'etag' => '"' . md5($contact['carddata']) . '"',
-				'uri' => urlencode($contact['uri']),
+				'uri' => $contact['uri'],
 				'lastmodified' => $contact['lastmodified'] );
 		}
 
