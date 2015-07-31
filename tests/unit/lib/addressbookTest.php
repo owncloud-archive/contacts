@@ -109,7 +109,7 @@ class AddressBookTest extends TestCase {
 	}
 
 	/**
-	* @depends testAddChild
+	 * @depends testAddChild
 	 * @param $ab
 	 */
 	public function testGetChildren($ab) {
@@ -150,8 +150,8 @@ class AddressBookTest extends TestCase {
 	}
 
 	/**
-	* @depends testUpdate
-	*/
+	 * @depends testUpdate
+	 */
 	public function testGetMetaData($ab) {
 
 		$props = $ab->getMetaData();

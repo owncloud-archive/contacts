@@ -1,0 +1,12 @@
+<phpunit bootstrap="bootstrap.php"
+		 verbose="true"
+		 timeoutForSmallTests="900"
+		 timeoutForMediumTests="900"
+		 timeoutForLargeTests="900"
+		>
+    <testsuites>
+        <testsuite name="integration">
+            <directory>integration</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
