@@ -28,7 +28,8 @@ use OCA\Contacts;
  * This class overrides __construct to get access to $addressBookInfo and
  * $carddavBackend, \Sabre\CardDAV\AddressBook::getACL() to return read/write
  * permissions based on user and shared state and it overrides
- * \Sabre\CardDAV\AddressBook::getChild() and \Sabre\CardDAV\AddressBook::getChildren()
+ * \Sabre\CardDAV\AddressBook::getChild(), \Sabre\CardDAV\AddressBook::getChildren()
+ * and \Sabre\CardDAV\AddressBook::getMultipleChildren()
  * to instantiate \OCA\Contacts\CardDAV\Cards.
 */
 class AddressBook extends \Sabre\CardDAV\AddressBook {
@@ -223,6 +224,26 @@ class AddressBook extends \Sabre\CardDAV\AddressBook {
 		$objs = $this->carddavBackend->getCards($this->addressBookInfo['id']);
 		$children = array();
 		foreach($objs as $obj) {
+			$children[] = new Card($this->carddavBackend,$this->addressBookInfo,$obj);
+		}
+		return $children;
+
+	}
+
+	/**
+	 * This method receives a list of paths in it's first argument.
+	 * It must return an array with Node objects.
+	 *
+	 * If any children are not found, you do not have to return them.
+	 *
+	 * @return array
+	 */
+	function getMultipleChildren(array $paths) {
+
+		$objs = $this->carddavBackend->getMultipleCards($this->addressBookInfo['id'], $paths);
+		$children = [];
+		foreach($objs as $obj) {
+#			$obj['acl'] = $this->getChildACL();
 			$children[] = new Card($this->carddavBackend,$this->addressBookInfo,$obj);
 		}
 		return $children;
