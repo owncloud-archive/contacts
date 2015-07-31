@@ -53,7 +53,7 @@ class Backend extends \Sabre\CardDAV\Backend\AbstractBackend {
 		foreach($this->backends as $backendName) {
 			$backend = $app->getBackend($backendName);
 			$addressBooks = $backend->getAddressBooksForUser();
-			
+
 			if (is_array($addressBooks)) {
 				foreach($addressBooks as $addressBook) {
 					if($addressBook['owner'] != \OC::$server->getUserSession()->getUser()->getUId()) {
@@ -189,7 +189,7 @@ class Backend extends \Sabre\CardDAV\Backend\AbstractBackend {
 				//'carddata' => $i['carddata'],
 				'size' => strlen($contact['carddata']),
 				'etag' => '"' . md5($contact['carddata']) . '"',
-				'uri' => urlencode($contact['uri']),
+				'uri' => $contact['uri'],
 				'lastmodified' => $contact['lastmodified'] );
 		}
 
