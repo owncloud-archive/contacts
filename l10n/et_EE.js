@@ -2,6 +2,8 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "Kontaktid",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "Oled sa kindel, et sa soovid kustutada aadressiraamatut {addressbook} ?",
+    "Remove addressbook" : "Eemalda aadressiraamat",
     "Add new LDAP Addressbook" : "Lisa uus LDAP aadressiraamat",
     "Ok" : "Ok",
     "Cancel" : "Loobu",
