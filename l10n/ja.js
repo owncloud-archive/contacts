@@ -276,8 +276,8 @@ OC.L10N.register(
     "Filter" : "フィルター",
     "Base DN for modification" : "変更のベースDN",
     "Base DN modification" : "ベースDNの変更",
-    "Connector" : "コネクタ",
-    "Connector value (Better use external editor and copy/paste)" : "コネクタの値 (外部エディタ使って、コピー/ペーストするのをお勧め)",
+    "Connector" : "コネクター",
+    "Connector value (Better use external editor and copy/paste)" : "コネクターの値 (外部エディターを使ってのコピー/ペーストを推奨)",
     "Copy from (Warning, replaces current custom value)" : "からコピー (注意、現在の設定値を置き換えます)"
 },
 "nplurals=1; plural=0;");
