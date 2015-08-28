@@ -2,7 +2,7 @@ OC.L10N.register(
     "contacts",
     {
     "Contacts" : "Contactos",
-    "Are you sure you want to delete the addressbook {addressbook} ?" : "¿Está seguro que quiere borrar la libreta de direcciones {addressbook} ?",
+    "Are you sure you want to delete the addressbook {addressbook} ?" : "¿Está seguro de que quiere borrar la libreta de direcciones {addressbook} ?",
     "Remove addressbook" : "Quitar libreta de direcciones",
     "Add new LDAP Addressbook" : "Agregar nueva libreta de direcciones LDAP",
     "Ok" : "Aceptar",
