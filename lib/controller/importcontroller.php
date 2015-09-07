@@ -100,7 +100,7 @@ class ImportController extends Controller {
 				);
 			} else {
 				$response->bailOut(App::$l10n->t('Error uploading contacts to storage.'));
-			return $response;
+        return $response;
 			}
 		} else {
 			$response->bailOut('Temporary file: \''.$tmpname.'\' has gone AWOL?');

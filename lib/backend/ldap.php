@@ -169,16 +169,9 @@ class Ldap extends AbstractBackend {
 	* @param $num the number of entries to return
 	* @return array|false
 	*/
-	public function ldapFindOne($ldapbasedn, $bindsearch, $entries, $start=null, $num=null) {
+	public function ldapFindOne($ldapbasedn, $bindsearch, $entries) {
 		if (($entries != null) && self::ldapCreateAndBindConnection() && $ldapbasedn != null && $bindsearch != null) {
 
-			if ($start==null) {
-				$start=0;
-			}
-
-			if ($num==null) {
-				$num=PHP_INT_MAX;
-			}
 			\OCP\Util::writeLog('contacts_ldap', __METHOD__." - search $ldapbasedn, $bindsearch ", \OCP\Util::DEBUG);
 
 			$ldap_results = @ldap_search ($this->ldapConnection, $ldapbasedn, $bindsearch, $entries);
@@ -550,7 +543,7 @@ class Ldap extends AbstractBackend {
 																	$this->connector->getLdapEntries());
 				}
 			}
-			if ($card != null) {
+			if ($card != false) {
 				return self::getSabreFormatCard($addressbookid, $this->connector->ldapToVCard($card));
 			}
 		}

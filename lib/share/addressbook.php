@@ -3,6 +3,7 @@
  * @author Bart Visscher
  * @copyright 2012 Bart Visscher <bartv@thisnet.nl>
  * @copyright 2013-2014 Thomas Tanghus (thomas@tanghus.net)
+ * @copyright 2015 Nicolas Mora (mail@babelouest.org)
  *
  * This file is licensed under the Affero General Public License version 3 or
  * later.
@@ -38,13 +39,15 @@ class Addressbook implements \OCP\Share_Backend_Collection {
 	*/
 	public function isValidSource($itemSource, $uidOwner) {
 		$app = new App($uidOwner);
-
-		try {
-			$app->getAddressBook('local', $itemSource);
-		} catch(\Exception $e) {
-			return false;
-		}
-		return true;
+    
+    $addressBookList = $app->getAddressBooksForUser();
+    
+    foreach($addressBookList as $addressBook) {
+      if ($addressBook->getId() === $itemSource) {
+        return true;
+      }
+    }
+    return false;
 	}
 
 	/**

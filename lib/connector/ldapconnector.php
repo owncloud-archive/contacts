@@ -28,7 +28,7 @@ class LdapConnector {
 		try {
 			//OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', setting xml config', \OCP\Util::DEBUG);
 			$this->config_content = new \SimpleXMLElement($xml_config);
-		} catch (Exception $e) {
+		} catch (\Exception $e) {
 			\OCP\Util::writeLog('ldap_vcard_connector', __METHOD__.', error in setting xml config', \OCP\Util::DEBUG);
 		}
 	}
@@ -71,7 +71,7 @@ class LdapConnector {
 						try {
 							$property = \Sabre\VObject\Reader::read($ldapEntry[$lProperty][$j]);
 							$vcard->add($property);
-						} catch (exception $e) {
+						} catch (\Exception $e) {
 						}
 					} else {
 						// Checks if a same kind of property already exists in the VCard (property and parameters)
