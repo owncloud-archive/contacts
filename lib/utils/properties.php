@@ -252,12 +252,17 @@ Class Properties {
 	 *
 	 * @param string $contactId
 	 * @param VCard|null $vCard
+         * @param string|null $owner
 	 */
-	public static function updateIndex($contactId, $vCard = null) {
+	public static function updateIndex($contactId, $vCard = null, $owner = null) {
 		self::purgeIndexes(array($contactId));
 
 		if(is_null($vCard)) {
 			return;
+		}
+
+		if(is_null($owner) || empty($owner) ) {
+			$owner = \OC::$server->getUserSession()->getUser()->getUId();
 		}
 
 		if(!isset(self::$updateindexstmt)) {
@@ -278,7 +283,7 @@ Class Properties {
 			try {
 				$result = self::$updateindexstmt->execute(
 					array(
-						\OC::$server->getUserSession()->getUser()->getUId(),
+						$owner,
 						$contactId,
 						$property->name,
 						substr($property->getValue(), 0, 254),
