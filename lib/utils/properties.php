@@ -333,8 +333,22 @@ Class Properties {
 				$app = new App();
 				$vCard = $app->getContact($backendName, $addressBookId, $contactId);
 			}
+			if (!isset($vCard->PHOTO)) {
+				return false;
+			}
 			$image = new \OCP\Image();
-			if (!isset($vCard->PHOTO) || !$image->loadFromBase64((string)$vCard->PHOTO)) {
+			$photostring = (string) $vCard->PHOTO;
+
+		        if ( $vCard->PHOTO instanceof \Sabre\VObject\Property\Uri && substr($photostring, 0, 5) === 'data:' ) {
+				$mimeType = substr($photostring, 5, strpos($photostring, ',')-5);
+				if (strpos($mimeType, ';')) {
+				    $mimeType = substr($mimeType,0,strpos($mimeType, ';'));
+				}
+				$photostring = substr($photostring, strpos($photostring,',')+1);
+			}
+
+			if (!$image->loadFromBase64($photostring)) {
+				#\OCP\Util::writeLog('contacts', __METHOD__.', photo: ' . print_r($photostring, true), \OCP\Util::DEBUG);
 				return false;
 			}
 		}

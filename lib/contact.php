@@ -407,9 +407,28 @@ class Contact extends VObject\VCard implements IPIMObject {
 	public function getPhoto() {
 		$image = new \OCP\Image();
 
-		if (isset($this->PHOTO) && $image->loadFromData($this->PHOTO->getValue())) {
-			return $image;
-		} elseif (isset($this->LOGO) && $image->loadFromData($this->LOGO->getValue())) {
+		if (isset($this->PHOTO)) {
+			$photo = $this->PHOTO;
+		} elseif (isset($this->LOGO)) {
+			$photo = $this->LOGO;
+		} else {
+			return null;
+		}
+
+		$photovalue = $photo->getValue();
+
+		if ( $photo instanceof \Sabre\VObject\Property\Uri && substr($photovalue, 0, 5) === 'data:' ) {
+			$mimeType = substr($photovalue, 5, strpos($photovalue, ',')-5);
+			if (strpos($mimeType, ';')) {
+			    $mimeType = substr($mimeType,0,strpos($mimeType, ';'));
+			}
+
+			$photovalue = substr($photovalue, strpos($photovalue,',')+1);
+
+                        if ($image->loadFromBase64($photovalue)) {
+                                return $image;
+			}
+		} elseif ($image->loadFromData($photovalue)) {
 			return $image;
 		}
 
