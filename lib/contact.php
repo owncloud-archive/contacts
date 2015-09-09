@@ -579,14 +579,23 @@ class Contact extends VObject\VCard implements IPIMObject {
 				if (count($property) === 0) {
 					$property = $this->createProperty($name);
 					$this->add($property);
+				} elseif (count($property) > 1) {
+					\OCP\Util::writeLog('contacts',
+						__METHOD__.' more than one property for ' . $name,
+						\OCP\Util::ERROR
+					);
+					return false;
 				} else {
-					// Actually no idea why this works
+					// select returns an array...
 					$property = array_shift($property);
+				}
+				if (($name === 'N') && !is_array($value)) {
+					$value = explode(';', (string)$value);
 				}
 				if (is_array($value)) {
 					$property->setParts($value);
 				} else {
-					$this->{$name} = $value;
+					$property->setValue($value);
 				}
 				break;
 			default:
