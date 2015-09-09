@@ -15,4 +15,8 @@ OCP\Util::connectHook('OCA\Contacts', 'pre_deleteContact', '\OCA\Contacts\Hooks'
 Sabre\VObject\Component\VCard::$componentMap['VCARD']	= '\OCA\Contacts\VObject\VCard';
 Sabre\VObject\Component\VCard::$propertyMap['CATEGORIES'] = '\OCA\Contacts\VObject\GroupProperty';
 
-\OC_App::loadApp('my_app');
+if (version_compare(implode('.', \OCP\Util::getVersion()), '8.2', '>=')) {
+ 	\OC::$loader->addValidRoot(OC::$SERVERROOT . '/tests');
+	\OC_App::loadApp('contacts');
+}
+ 
