@@ -807,6 +807,9 @@ class Contact extends VObject\VCard implements IPIMObject {
 			);
 			$vEvent->DTSTART['VALUE'] = 'date';
 			$vEvent->add('DURATION', 'P1D');
+			$lm = new \DateTime('@' . $this->lastModified());
+			$lm->setTimeZone(new \DateTimeZone('UTC'));
+			$vEvent->DTSTAMP->setDateTime($lm);
 			$vEvent->{'UID'} = $this->UID;
 			$vEvent->{'RRULE'} = 'FREQ=YEARLY';
 			$vEvent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
