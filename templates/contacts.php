@@ -8,6 +8,7 @@ script('core', array(
 ));
 
 script('contacts', array(
+	'share',
 	'modernizr.custom',
 	'app',
 	'addressbooks',
@@ -19,6 +20,7 @@ script('contacts', array(
 ));
 
 style('contacts', array(
+	'share',
 	'multi-select',
 	'jquery.ocaddnew',
 	'contacts',
