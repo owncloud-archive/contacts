@@ -805,8 +805,13 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vEvent->DTSTART->setDateTime(
 				$date
 			);
-			$vEvent->DTSTART['VALUE'] = 'date';
-			$vEvent->add('DURATION', 'P1D');
+			$vEvent->DTSTART['VALUE'] = 'DATE';
+			$vEvent->add('DTEND');
+			$date->add(new \DateInterval('P1D'));
+			$vEvent->DTEND->setDateTime(
+				$date
+			);
+			$vEvent->DTEND['VALUE'] = 'DATE';
 			$lm = new \DateTime('@' . $this->lastModified());
 			$lm->setTimeZone(new \DateTimeZone('UTC'));
 			$vEvent->DTSTAMP->setDateTime($lm);
