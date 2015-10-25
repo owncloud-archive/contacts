@@ -70,7 +70,11 @@ class Contact extends VObject\VCard implements IPIMObject {
 		if (!is_null($data)) {
 			if ($data instanceof VObject\VCard) {
 				foreach ($data->children as $child) {
-					$this->add($child);
+					if($child->name === 'VERSION' || $child->name === 'PRODID') {
+						parent::__set($child->name, $child);
+					} else {
+						$this->add($child);
+					}
 				}
 				$this->setRetrieved(true);
 			} elseif (is_array($data)) {
@@ -324,7 +328,11 @@ class Contact extends VObject\VCard implements IPIMObject {
 			if(isset($this->props['vcard'])
 				&& $this->props['vcard'] instanceof VObject\VCard) {
 				foreach($this->props['vcard']->children() as $child) {
-					$this->add($child);
+					if($child->name === 'VERSION' || $child->name === 'PRODID') {
+						parent::__set($child->name, $child);
+					} else {
+						$this->add($child);
+					}
 					if($child->name === 'FN') {
 						$this->props['displayname']
 							= strtr($child->getValue(), array('\,' => ',', '\;' => ';', '\\\\' => '\\'));
@@ -344,7 +352,11 @@ class Contact extends VObject\VCard implements IPIMObject {
 					if (isset($result['vcard'])
 						&& $result['vcard'] instanceof VObject\VCard) {
 						foreach ($result['vcard']->children() as $child) {
-							$this->add($child);
+							if($child->name === 'VERSION' || $child->name === 'PRODID') {
+								parent::__set($child->name, $child);
+							} else {
+								$this->add($child);
+							}
 						}
 						$this->setRetrieved(true);
 						return true;
