@@ -37,8 +37,11 @@ $RUNTIME_APPTYPES = array('authentication');
 OC_App::loadApps($RUNTIME_APPTYPES);
 
 // Backends
-$authBackend = new \OC\Connector\Sabre\Auth();
-$principalBackend = new \OC\Connector\Sabre\Principal(
+$authBackend = new \OCA\Contacts\Sabre\Auth(
+	\OC::$server->getSession(),
+	\OC::$server->getUserSession()
+);
+$principalBackend = new \OCA\Contacts\Sabre\Principal(
 	\OC::$server->getConfig(),
 	\OC::$server->getUserManager()
 );
@@ -68,13 +71,13 @@ $server = new \Sabre\DAV\Server($nodes);
 $server->httpRequest->setUrl(\OC::$server->getRequest()->getRequestUri());
 $server->setBaseUri($baseuri);
 // Add plugins
-$server->addPlugin(new \OC\Connector\Sabre\MaintenancePlugin());
+$server->addPlugin(new \OCA\Contacts\Sabre\MaintenancePlugin());
 $server->addPlugin(new \Sabre\DAV\Auth\Plugin($authBackend, 'ownCloud'));
 $server->addPlugin(new OCA\Contacts\CardDAV\Plugin());
 $server->addPlugin(new \Sabre\DAVACL\Plugin());
 $server->addPlugin(new \Sabre\CardDAV\VCFExportPlugin());
-$server->addPlugin(new \OC\Connector\Sabre\ExceptionLoggerPlugin('carddav', \OC::$server->getLogger()));
-$server->addPlugin(new \OC\Connector\Sabre\AppEnabledPlugin(
+$server->addPlugin(new \OCA\Contacts\Sabre\ExceptionLoggerPlugin('carddav', \OC::$server->getLogger()));
+$server->addPlugin(new \OCA\Contacts\Sabre\AppEnabledPlugin(
 	'contacts',
 	OC::$server->getAppManager()
 ));
