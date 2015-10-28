@@ -44,7 +44,7 @@ matrix:
     - php: 5.4
       env: DB=pgsql
     - php: 5.4
-      env: "DB=mysql CORE_BRANCH=stable8.1"
+      env: "DB=mysql CORE_BRANCH=stable8.2"
   allow_failures:
     - php: hhvm
     - php: 7
