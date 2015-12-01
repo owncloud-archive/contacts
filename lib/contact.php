@@ -444,16 +444,17 @@ class Contact extends VObject\VCard implements IPIMObject {
 		// For vCard 3.0 the type must be e.g. JPEG or PNG
 		// For version 4.0 the full mimetype should be used.
 		// https://tools.ietf.org/html/rfc2426#section-3.1.4
-		if (strval($this->VERSION) === '4.0') {
-			$type = $photo->mimeType();
-		} else {
-			$type = explode('/', $photo->mimeType());
-			$type = strtoupper(array_pop($type));
-		}
 		if (isset($this->PHOTO)) {
 			$this->remove('PHOTO');
 		}
-		$this->add('PHOTO', $photo->data(), ['ENCODING' => 'b', 'TYPE' => $type]);
+		if (strval($this->VERSION) === '4.0') {
+			$type = $photo->mimeType();
+			$this->add('PHOTO', 'data:'.$type.';base64,'.base64_encode($photo->data()));
+		} else {
+			$type = explode('/', $photo->mimeType());
+			$type = strtoupper(array_pop($type));
+			$this->add('PHOTO', $photo->data(), ['ENCODING' => 'b', 'TYPE' => $type]);
+		}
 		$this->setSaved(false);
 
 		return true;
