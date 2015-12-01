@@ -806,6 +806,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 				$date
 			);
 			$vEvent->DTSTART['VALUE'] = 'DATE';
+			$vEvent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
 			$vEvent->add('DTEND');
 			$date->add(new \DateInterval('P1D'));
 			$vEvent->DTEND->setDateTime(
@@ -817,7 +818,6 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vEvent->DTSTAMP->setDateTime($lm);
 			$vEvent->{'UID'} = $this->UID;
 			$vEvent->{'RRULE'} = 'FREQ=YEARLY';
-			$vEvent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
 			$vEvent->{'TRANSP'} = 'TRANSPARENT';
 			$appInfo = \OCP\App::getAppInfo('contacts');
 			$appVersion = \OCP\App::getAppVersion('contacts');
