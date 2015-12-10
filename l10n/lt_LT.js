@@ -36,6 +36,7 @@ OC.L10N.register(
     "Network or server error. Please inform administrator." : "Tinklo arba serverio klaida. Prašome informuoti administratorių.",
     "Error adding to group." : "Klaida pridedant į grupę.",
     "Error removing from group." : "Klaida pašalinant iš grupės.",
+    "Please create an addressbook first" : "Pirmiausia prašome susikurti adresų knygą",
     "You have selected over 300 contacts.\nThis will most likely fail! Click here to try anyway." : "Jūs pažymėjote daugiau nei 300 kontaktų.\nTai greičiausiai nepavyks! Spauskite, kad vis tiek bandyti.",
     "Error setting {name} as favorite." : "Klaida nustatant {name} mėgstamu.",
     "Merge contacts" : "Sulieti kontaktus",
