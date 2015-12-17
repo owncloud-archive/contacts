@@ -77,7 +77,7 @@ OC.L10N.register(
     "Close" : "Fechar",
     "Contact" : "Contato",
     "Error, missing parameters: " : "Erro, parâmetros que faltam:",
-    "Shared" : "Compartilhados",
+    "Shared" : "Compartilhado",
     "Error" : "Erro",
     "Error while sharing" : "Erro ao compartilhar",
     "Error while unsharing" : "Erro ao descompartilhar",
