@@ -165,7 +165,7 @@ SQL;
 							'addressBookId' => $addressbookKey,
 							'contactId' => $contact->getId()
 						));
-					$url = \OC_Helper::makeURLAbsolute($url);
+					$url = \OC::$server->getURLGenerator()->getAbsoluteURL($url);
 					$j['data']['PHOTO'] = "VALUE=uri:$url";
 				}
 				$results[] = $this->convertToSearchResult($j);
