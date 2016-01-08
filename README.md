@@ -9,7 +9,7 @@ Build status
 
 
 ##Maintainer:
-- [Thomas Tanghus](https://github.com/tanghus) - Back- and front-end code
+- unmaintained
 
 ###Design / front-end:
 - [Jan ten Bokkel](https://github.com/jbtbnl)
