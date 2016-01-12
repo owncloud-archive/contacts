@@ -409,12 +409,12 @@ abstract class AbstractBackend {
 		$key = $this->combinedKey($addressBookId);
 		$key = 'active_' . $key;
 
-		return !!(\OCP\Config::getUserValue($this->userid, 'contacts', $key, 1));
+		return !!(\OC::$server->getConfig()->getUserValue($this->userid, 'contacts', $key, 1));
 	}
 
 	/**
 	 * @brief Activate a backend or an address book
-	 * @param bool active
+	 * @param bool $active
 	 * @param string $addressBookId If null it activates the backend.
 	 * @return boolean
 	 */
