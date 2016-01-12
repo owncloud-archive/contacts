@@ -8,9 +8,14 @@
 
 use Test\TestCase;
 
+/**
+ * Class Test_VObjects
+ * @group DB
+ */
 class Test_VObjects extends TestCase {
 
 	public static function setUpBeforeClass() {
+		parent::setUpBeforeClass();
 		\Sabre\VObject\Component\VCard::$propertyMap['CATEGORIES'] = 'OCA\Contacts\VObject\GroupProperty';
 	}
 
