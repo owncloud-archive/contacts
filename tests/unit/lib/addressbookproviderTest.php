@@ -112,7 +112,7 @@ class AddressBookProviderTest extends TestCase {
 		$result = array_map(function($c){
 			return $c['FN'];
 		}, $result);
-		$this->assertEquals($expected, $result);
+		$this->assertEquals($expected, $result, '', 0.0, 10, true);
 	}
 
 	public function providesSearchData() {

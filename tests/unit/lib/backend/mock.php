@@ -96,7 +96,7 @@ class Mock extends AbstractBackend {
 			return false;
 		}
 
-		$id = \OC_Util::generateRandomBytes('4');
+		$id = \OC::$server->getSecureRandom()->getMediumStrengthGenerator()->generate('4');
 		$this->addressBooks[] = array_merge($properties, array(
 			'id' => $id,
 			'permissions' => \OCP\PERMISSION_ALL,
@@ -162,7 +162,7 @@ class Mock extends AbstractBackend {
 
 	function createContact($addressBookId, $contact, array $options = array()) {
 
-		$id = \OC_Util::generateRandomBytes('4');
+		$id = \OC::$server->getSecureRandom()->getMediumStrengthGenerator()->generate('4');
 		$this->contacts[$addressBookId][$id] = array(
 						'id' => $id,
 						'displayname' => $contact->FN,

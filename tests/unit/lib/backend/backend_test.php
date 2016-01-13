@@ -36,13 +36,13 @@ class BackendTest extends TestCase {
 	protected $backend;
 
 	public function setUp() {
-
+		parent::setUp();
 		$this->backend = new Mock('foobar');
-
 	}
 
 	public function tearDown() {
 		unset($this->backend);
+		parent::tearDown();
 	}
 
 	public function testHasContactMethodFor() {
