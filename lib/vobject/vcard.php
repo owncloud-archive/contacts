@@ -277,6 +277,11 @@ class VCard extends VObject\Component\VCard {
 					&& is_int(substr($bday, 6, 2))) {
 					$this->BDAY = substr($bday, 0, 4).'-'.substr($bday, 4, 2).'-'.substr($bday, 6, 2);
 					$this->BDAY->VALUE = 'DATE';
+				} else if(empty($bday)) {
+					// We don't want "New \DateTime($bday)" evaluate to current date because of empty value.
+					// So we'll leave this item empty.
+					\OCP\Util::writeLog('contacts', __METHOD__.' Removing invalid/empty BDAY.' , \OCP\Util::DEBUG);
+					unset($this->BDAY);
 				} else if($bday[5] !== '-' || $bday[7] !== '-') {
 					try {
 						// Skype exports as e.g. Jan 14, 1996

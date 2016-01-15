@@ -577,6 +577,11 @@ class Contact extends VObject\VCard implements IPIMObject {
 		// TODO: parameters are ignored for now.
 		switch ($name) {
 			case 'BDAY':
+				if (empty($value)) {
+					// We don't want "New \DateTime($value)" evaluate to current date because of empty value.
+					// So returning false at this point.
+					return false;
+				}
 				try {
 					$date = New \DateTime($value);
 				} catch(Exception $e) {
