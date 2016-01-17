@@ -143,7 +143,13 @@ class ImportVCardConnector extends ImportConnector{
 				}
 			} else {
 				$property = clone $sourceProperty;
-				$dest->add($property);
+				// VERSION and PRODID are set by default in any new empty vcard object.
+				// Thus it needs to be replaced instead of simply added as additional value.
+				if ( $property->name === 'PRODID' || $property->name === 'VERSION' ) {
+					$dest->__set($property->name, $property);
+				} else {
+					$dest->add($property);
+				}
 			}
 		}
 		
