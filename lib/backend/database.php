@@ -635,7 +635,7 @@ class Database extends AbstractBackend {
 
 		$this->setModifiedAddressBook($addressBookId);
 		\OCP\Util::emitHook('OCA\Contacts', 'post_createContact',
-			array('id' => $newid, 'parent' => $addressBookId, 'backend' => $this->name, 'contact' => $contact)
+			array('id' => $newid, 'addressBookId' => $addressBookId, 'backend' => $this->name, 'contact' => $contact)
 		);
 		return (string)$newid;
 	}
