@@ -314,7 +314,7 @@ OC.L10N.register(
     "Base DN for search" : "DN de base pour la recherche",
     "Base DN" : "DN de base",
     "Search filter" : "Filtre de recherche",
-    "Filter" : "Flitre",
+    "Filter" : "Filtre",
     "Base DN for modification" : "DN de base pour la modification",
     "Base DN modification" : "Modification du DN de base",
     "Connector" : "Connecteur",
