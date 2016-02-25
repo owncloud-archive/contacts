@@ -803,7 +803,7 @@ class Contact extends VObject\VCard implements IPIMObject {
 		if ((string)$birthday) {
 			$title = str_replace('{name}',
 				strtr((string)$this->FN, array('\,' => ',', '\;' => ';')),
-				App::$l10n->t('{name}\'s Birthday')
+                		'{name}'
 			);
 			try {
 				$date = new \DateTime($birthday);
@@ -829,7 +829,8 @@ class Contact extends VObject\VCard implements IPIMObject {
 			$vEvent->DTSTAMP->setDateTime($lm);
 			$vEvent->{'UID'} = $this->UID;
 			$vEvent->{'RRULE'} = 'FREQ=YEARLY';
-			$vEvent->{'SUMMARY'} = $title . ' (' . $date->format('Y') . ')';
+			$bCake = (string)"\xf0\x9f\x8e\x82";
+			$vEvent->{'SUMMARY'} = $bCake . ' ' . $title . ' (' . $date->format('Y') . ')';
 			$vEvent->{'TRANSP'} = 'TRANSPARENT';
 			$appInfo = \OCP\App::getAppInfo('contacts');
 			$appVersion = \OCP\App::getAppVersion('contacts');
