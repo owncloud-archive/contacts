@@ -47,6 +47,7 @@ use Sabre\VObject;
  * @property \Sabre\VObject\Property\Text REV
  * @property \Sabre\VObject\Property\Binary PHOTO
  * @property \Sabre\VObject\Property\Binary LOGO
+ * @property \Sabre\VObject\Property\FlatText PRODID
 */
 class VCard extends VObject\Component\VCard {
 
@@ -187,9 +188,44 @@ class VCard extends VObject\Component\VCard {
 	public function validate($options = 0) {
 
 		$warnings = array();
+		$repaired = false;
 
-		if ($options & self::UPGRADE) {
+		$version = $this->select('VERSION');
+		if (count($version) !== 1) {
+			$warnings[] = array(
+				'level' => 1,
+				'message' => 'The VERSION property must appear in the VCARD component exactly 1 time',
+				'node' => $this,
+			);
+			if ($options & self::REPAIR) {
+				if (count($version) > 1) {
+					$version = (string) current($version);
+					$this->remove('VERSION');
+					$this->VERSION = $version;
+				} else {
+					$this->VERSION = self::DEFAULT_VERSION;
+				}
+				$repaired = true;
+			}
+		} 
+
+		$version = (string)$this->VERSION;
+		if ($version!=='2.1' && $version!=='3.0' && $version!=='4.0') {
+			$warnings[] = array(
+				'level' => 1,
+				'message' => 'Only vcard version 4.0 (RFC6350), version 3.0 (RFC2426) or version 2.1 (icm-vcard-2.1) are supported.',
+				'node' => $this,
+			);
+			if ($options & self::REPAIR) {
+				$this->VERSION = self::DEFAULT_VERSION;
+				$repaired = true;
+			}
+		}
+
+		# upgrade 2.1 cards to 3.0 cards.
+		if ($options & self::UPGRADE && $version === '2.1') {
 			$this->VERSION = self::DEFAULT_VERSION;
+			$repaired = true;
 			foreach($this->children as $idx => &$property) {
 
 				$this->decodeProperty($property);
@@ -206,37 +242,6 @@ class VCard extends VObject\Component\VCard {
 			}
 		}
 
-		$version = $this->select('VERSION');
-		if (count($version) !== 1) {
-			$warnings[] = array(
-				'level' => 1,
-				'message' => 'The VERSION property must appear in the VCARD component exactly 1 time',
-				'node' => $this,
-			);
-			if ($options & self::REPAIR) {
-				$this->VERSION = self::DEFAULT_VERSION;
-				if (!$options & self::UPGRADE) {
-					$options |= self::UPGRADE;
-				}
-			}
-		} else {
-			$version = (string)$this->VERSION;
-			if ($version!=='2.1' && $version!=='3.0' && $version!=='4.0') {
-				$warnings[] = array(
-					'level' => 1,
-					'message' => 'Only vcard version 4.0 (RFC6350), version 3.0 (RFC2426) or version 2.1 (icm-vcard-2.1) are supported.',
-					'node' => $this,
-				);
-				if ($options & self::REPAIR) {
-					$this->VERSION = self::DEFAULT_VERSION;
-					if (!$options & self::UPGRADE) {
-						$options |= self::UPGRADE;
-					}
-				}
-			}
-
-		}
-
 		$fn = $this->select('FN');
 		if (count($fn) !== 1 || trim((string)$this->FN) === '') {
 			$warnings[] = array(
@@ -247,6 +252,7 @@ class VCard extends VObject\Component\VCard {
 			if ($options & self::REPAIR) {
 				// We're going to try to see if we can use the contents of the
 				// N property.
+				$repaired = true;
 				if (isset($this->N)
 					&& substr((string)$this->N, 2) !== ';;'
 					&& (string)$this->N !== ''
@@ -277,12 +283,14 @@ class VCard extends VObject\Component\VCard {
 					&& is_int(substr($bday, 6, 2))) {
 					$this->BDAY = substr($bday, 0, 4).'-'.substr($bday, 4, 2).'-'.substr($bday, 6, 2);
 					$this->BDAY->VALUE = 'DATE';
+					$repaired = true;
 				} else if($bday[5] !== '-' || $bday[7] !== '-') {
 					try {
 						// Skype exports as e.g. Jan 14, 1996
 						$date = new \DateTime($bday);
 						$this->BDAY = $date->format('Y-m-d');
 						$this->BDAY->VALUE = 'DATE';
+						$repaired = true;
 					} catch(\Exception $e) {
 						\OCP\Util::writeLog('contacts', __METHOD__.' Removing invalid BDAY: ' . $bday, \OCP\Util::DEBUG);
 						unset($this->BDAY);
@@ -306,6 +314,7 @@ class VCard extends VObject\Component\VCard {
 					$slice[] = "";
 				}
 				$this->N = $slice;
+				$repaired = true;
 			}
 		}
 
@@ -317,12 +326,20 @@ class VCard extends VObject\Component\VCard {
 			);
 			if ($options & self::REPAIR) {
 				$this->UID = Utils\Properties::generateUID();
+				$repaired = true;
 			}
 		}
 
-		if (($options & self::REPAIR) || ($options & self::UPGRADE)) {
+		if ($repaired) {
 			$now = new \DateTime;
 			$this->REV = $now->format(\DateTime::W3C);
+
+			if (count($this->select('PRODID')) > 1) {
+				$this->remove('PRODID');
+			}
+			$appInfo = \OCP\App::getAppInfo('contacts');
+			$appVersion = \OCP\App::getAppVersion('contacts');
+			$this->PRODID = '-//ownCloud//NONSGML '.$appInfo['name'].' '.$appVersion.'//EN';
 		}
 
 		return array_merge(
