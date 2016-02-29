@@ -83,9 +83,9 @@ abstract class ImportConnector {
 						$separator=$importEntry->vcard_entry['separator'];
 					}
 					$position = $importEntry->vcard_entry['position'];
-					$vArray = explode($separator, $property);
+					$vArray = $property->getParts();
 					$vArray[intval($position)] = StringUtil::convertToUTF8($value);
-					$property->setValue(implode($separator, $vArray));
+					$property->setParts($vArray);
 				} else {
 					if (isset($importEntry->vcard_entry['value'])) {
 						$property->add('TYPE', StringUtil::convertToUTF8($value));
@@ -164,14 +164,14 @@ abstract class ImportConnector {
 			$vcard->add($property);
 			if ($importEntry['type']!=null) {
 				$property->add('TYPE', StringUtil::convertToUTF8($importEntry['type']));
-				switch ($importEntry['property']) {
-					case "ADR":
-						$property->setValue(";;;;;;");
-						break;
-					case "FN":
-						$property->setValue(";;;;");
-						break;
-				}
+			}
+			switch ($importEntry['property']) {
+				case "ADR":
+					$property->setValue(array('', '', '', '', '', '', ''));
+					break;
+				case "N":
+					$property->setValue(array('', '', '', '', ''));
+					break;
 			}
 			if ($importEntry['group']!=null) {
 				$property->group = $importEntry['group'];
