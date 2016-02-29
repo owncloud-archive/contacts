@@ -46,7 +46,7 @@
 		</vcard_entry>
     
 		<vcard_entry property="CATEGORIES" enabled="true">
-			<ldif_entry name="o" unique="true"/>
+			<ldif_entry name="ou" unique="true"/>
 		</vcard_entry>
 		
 		<!--<vcard_entry property="" type="" enabled="true">

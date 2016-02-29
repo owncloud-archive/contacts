@@ -134,7 +134,7 @@ class Ldap extends AbstractBackend {
 			
 			$cpt=0;
 			
-			\OC_Log::write('contacts_ldap', __METHOD__." - search what $ldapbasedn, $bindsearch $pageSize", \OC_Log::DEBUG);
+			\OCP\Util::writeLog('contacts_ldap', __METHOD__." - search what $ldapbasedn, $bindsearch $pageSize", \OCP\Util::DEBUG);
 			do {
 				
 				ldap_control_paged_result($this->ldapConnection, $pageSize, true, $cookie);
@@ -169,17 +169,10 @@ class Ldap extends AbstractBackend {
 	* @param $num the number of entries to return
 	* @return array|false
 	*/
-	public function ldapFindOne($ldapbasedn, $bindsearch, $entries, $start=null, $num=null) {
+	public function ldapFindOne($ldapbasedn, $bindsearch, $entries) {
 		if (($entries != null) && self::ldapCreateAndBindConnection() && $ldapbasedn != null && $bindsearch != null) {
 
-			if ($start==null) {
-				$start=0;
-			}
-
-			if ($num==null) {
-				$num=PHP_INT_MAX;
-			}
-			\OC_Log::write('contacts_ldap', __METHOD__." - search $ldapbasedn, $bindsearch ", \OC_Log::DEBUG);
+			\OCP\Util::writeLog('contacts_ldap', __METHOD__." - search $ldapbasedn, $bindsearch ", \OCP\Util::DEBUG);
 
 			$ldap_results = @ldap_search ($this->ldapConnection, $ldapbasedn, $bindsearch, $entries);
 			if ($ldap_results) {
@@ -273,8 +266,8 @@ class Ldap extends AbstractBackend {
 	 * @return array $properties
 	 */
 	public function getAddressBook($addressbookid, array $options = array()) {
-		//\OC_Log::write('contacts', __METHOD__.' id: '
-		//	. $addressbookid, \OC_Log::DEBUG);
+		//\OCP\Util::writeLog('contacts', __METHOD__.' id: '
+		//	. $addressbookid, \OCP\Util::DEBUG);
 		if($this->addressbooks && isset($this->addressbooks[$addressbookid])) {
 			//print(__METHOD__ . ' ' . __LINE__ .' addressBookInfo: ' . print_r($this->addressbooks[$addressbookid], true));
 			return $this->addressbooks[$addressbookid];
@@ -488,13 +481,13 @@ class Ldap extends AbstractBackend {
 		} elseif(is_int($addressbookid) || is_string($addressbookid)) {
 			$id_array = array($addressbookid);
 		} else {
-			\OC_Log::write('contacts_ldap', __METHOD__.'. Addressbook id(s) argument is empty: '. print_r($id, true), \OC_Log::DEBUG);
+			\OCP\Util::writeLog('contacts_ldap', __METHOD__.'. Addressbook id(s) argument is empty: '. print_r($id, true), \OCP\Util::DEBUG);
 			return false;
 		}
 		
 		foreach ($id_array as $one_id) {
 			if (self::setLdapParams($one_id)) {
-				//OCP\Util::writeLog('contacts_ldap', __METHOD__.' Connector OK', \OC_Log::DEBUG);
+				//OCP\Util::writeLog('contacts_ldap', __METHOD__.' Connector OK', \OCP\Util::DEBUG);
 				$info = self::ldapFindMultiple(
 					$this->ldapParams['ldapbasednsearch'],
 					$this->ldapParams['ldapfilter'],
@@ -506,7 +499,7 @@ class Ldap extends AbstractBackend {
 					$a_card = $this->connector->ldapToVCard($info[$i]);
 					$cards[] = self::getSabreFormatCard($addressbookid, $a_card);
 				}
-				//OCP\Util::writeLog('contacts_ldap', __METHOD__.' counts '.count($cards), \OC_Log::DEBUG);
+				//OCP\Util::writeLog('contacts_ldap', __METHOD__.' counts '.count($cards), \OCP\Util::DEBUG);
 			}
 		}
 		return $cards;
@@ -550,7 +543,7 @@ class Ldap extends AbstractBackend {
 																	$this->connector->getLdapEntries());
 				}
 			}
-			if ($card != null) {
+			if ($card != false) {
 				return self::getSabreFormatCard($addressbookid, $this->connector->ldapToVCard($card));
 			}
 		}
